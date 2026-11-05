@@ -1,0 +1,2737 @@
+[
+  {
+    "questId": "purpose-path-one",
+    "title": "purposePathOne.questTitle",
+    "progress": "0/15",
+    "description": "purposePathOne.questDescription",
+    "conditions": {
+      "goal": "purposePathOne.questGoal",
+      "minCorrect": 15,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
+    "vocabulary": [
+      {
+        "word": "um … zu",
+        "translation-ru": "чтобы",
+        "translation-en": "in order to",
+        "translation-uk": "щоб",
+        "translation-pl": "żeby",
+        "translation-es": "para",
+        "translation-fr": "pour",
+        "translation-tr": "-mek için",
+        "translation-ro": "ca să",
+        "translation-uz": "…ish uchun",
+        "translation-hi": "के लिए",
+        "translation-ar": "لكي"
+      },
+      {
+        "word": "erreichen",
+        "translation-ru": "достигать, успевать на",
+        "translation-en": "to reach, to catch",
+        "translation-uk": "досягати, встигати на",
+        "translation-pl": "osiągać, zdążyć na",
+        "translation-es": "alcanzar, llegar a tiempo",
+        "translation-fr": "atteindre, attraper",
+        "translation-tr": "ulaşmak, yetişmek",
+        "translation-ro": "a atinge, a prinde",
+        "translation-uz": "erishmoq, ulgurmoq",
+        "translation-hi": "पहुँचना, पकड़ना",
+        "translation-ar": "يصل إلى، يلحق بـ"
+      },
+      {
+        "word": "bestehen",
+        "translation-ru": "сдать (экзамен)",
+        "translation-en": "to pass (an exam)",
+        "translation-uk": "скласти (іспит)",
+        "translation-pl": "zdać (egzamin)",
+        "translation-es": "aprobar",
+        "translation-fr": "réussir (un examen)",
+        "translation-tr": "(sınavı) geçmek",
+        "translation-ro": "a lua (un examen)",
+        "translation-uz": "(imtihondan) o‘tmoq",
+        "translation-hi": "(परीक्षा) पास करना",
+        "translation-ar": "ينجح (في امتحان)"
+      },
+      {
+        "word": "das Ende",
+        "translation-ru": "конец",
+        "translation-en": "end",
+        "translation-uk": "кінець",
+        "translation-pl": "koniec",
+        "translation-es": "el final",
+        "translation-fr": "la fin",
+        "translation-tr": "son",
+        "translation-ro": "sfârșitul",
+        "translation-uz": "oxir",
+        "translation-hi": "अंत",
+        "translation-ar": "النهاية"
+      },
+      {
+        "word": "trotzdem",
+        "translation-ru": "всё равно, несмотря на это",
+        "translation-en": "anyway, nevertheless",
+        "translation-uk": "усе одно, попри це",
+        "translation-pl": "mimo to",
+        "translation-es": "aun así",
+        "translation-fr": "quand même",
+        "translation-tr": "yine de",
+        "translation-ro": "totuși",
+        "translation-uz": "baribir",
+        "translation-hi": "फिर भी",
+        "translation-ar": "ومع ذلك"
+      }
+    ],
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "purposePathOne.questTask1",
+        "options": [
+          "Ich lerne Deutsch, um in Deutschland arbeiten zu.",
+          "Ich lerne Deutsch, um zu in Deutschland arbeiten.",
+          "Ich lerne Deutsch, um in Deutschland zu arbeiten."
+        ],
+        "answer": "Ich lerne Deutsch, um in Deutschland zu arbeiten.",
+        "tip": "purposePathOne.questDescription"
+      },
+      {
+        "id": 2,
+        "type": "input",
+        "question": "purposePathOne.questTask2",
+        "correctAnswer": "um",
+        "tip": "purposePathOne.questDescription"
+      },
+      {
+        "id": 3,
+        "type": "input",
+        "question": "purposePathOne.questTask3",
+        "correctAnswer": "zu",
+        "tip": "purposePathOne.questDescription"
+      },
+      {
+        "id": 4,
+        "type": "reorder",
+        "question": "purposePathOne.questTask4",
+        "words": [
+          "Zug",
+          "zu",
+          "um",
+          "erreichen",
+          "damit",
+          "stehe",
+          "Ich",
+          "früh",
+          "den",
+          "auf"
+        ],
+        "correctOrder": [
+          "Ich",
+          "stehe",
+          "früh",
+          "auf",
+          "um",
+          "den",
+          "Zug",
+          "zu",
+          "erreichen"
+        ],
+        "tip": "purposePathOne.questDescription"
+      },
+      {
+        "id": 5,
+        "type": "select",
+        "question": "purposePathOne.questTask5",
+        "options": [
+          "Sie ging in die Bibliothek, um liest.",
+          "Sie ging in die Bibliothek, um zu lesen.",
+          "Sie ging in die Bibliothek, um lesen zu."
+        ],
+        "answer": "Sie ging in die Bibliothek, um zu lesen.",
+        "tip": "purposePathOne.questDescription"
+      },
+      {
+        "id": 6,
+        "type": "input",
+        "question": "purposePathOne.questTask6",
+        "correctAnswer": "essen",
+        "tip": "purposePathOne.questDescription"
+      },
+      {
+        "id": 7,
+        "type": "readAndAnswer",
+        "question": "purposePathOne.questTask7",
+        "text": "Max spart jeden Monat Geld. Im Sommer will er nach Spanien fahren. Er spart, um eine Reise zu machen.",
+        "options": [
+          "um ein Haus zu kaufen",
+          "um eine Reise zu machen",
+          "um ein Auto zu kaufen"
+        ],
+        "answer": "um eine Reise zu machen",
+        "tip": "purposePathOne.questDescription"
+      },
+      {
+        "id": 8,
+        "type": "input",
+        "question": "purposePathOne.questTask8",
+        "correctAnswer": "bestehen",
+        "tip": "purposePathOne.questDescription"
+      },
+      {
+        "id": 9,
+        "type": "reorder",
+        "question": "purposePathOne.questTask10",
+        "words": [
+          "um",
+          "studieren",
+          "lernen",
+          "zu",
+          "in",
+          "Deutsch",
+          "Wir",
+          "weil",
+          "Berlin"
+        ],
+        "correctOrder": [
+          "Wir",
+          "lernen",
+          "Deutsch",
+          "um",
+          "in",
+          "Berlin",
+          "zu",
+          "studieren"
+        ],
+        "tip": "purposePathOne.questDescription"
+      },
+      {
+        "id": 10,
+        "type": "select",
+        "question": "purposePathOne.questTask11",
+        "options": [
+          "Er kam, um uns helfen zu.",
+          "Er kam, um uns zu helfen.",
+          "Er kam, um zu uns helfen."
+        ],
+        "answer": "Er kam, um uns zu helfen.",
+        "tip": "purposePathOne.questDescription"
+      },
+      {
+        "id": 11,
+        "type": "input",
+        "question": "reasonBridgeEight.questTask9",
+        "correctAnswer": "Obwohl",
+        "tip": "reasonBridgeEight.questDescription",
+        "reviewOf": "reason-bridge-eight",
+        "reviewLand": "reason-bridge"
+      },
+      {
+        "id": 12,
+        "type": "select",
+        "question": "reasonBridgeFive.questTask12",
+        "options": [
+          "Es war laut, trotzdem habe ich geschlafen.",
+          "Es war laut, obwohl habe ich geschlafen.",
+          "Es war laut, trotzdem ich habe geschlafen."
+        ],
+        "answer": "Es war laut, trotzdem habe ich geschlafen.",
+        "tip": "reasonBridgeFive.questDescription",
+        "reviewOf": "reason-bridge-five",
+        "reviewLand": "reason-bridge"
+      },
+      {
+        "id": 13,
+        "type": "readAndAnswer",
+        "question": "reasonBridgeTwo.questTask13",
+        "text": "Anna fährt mit dem Zug nach Berlin, weil das Fliegen zu teuer ist.",
+        "options": [
+          "Fliegen ist zu teuer.",
+          "Sie hat Angst vor dem Fliegen.",
+          "Der Zug ist schneller."
+        ],
+        "answer": "Fliegen ist zu teuer.",
+        "tip": "reasonBridgeTwo.questDescription",
+        "reviewOf": "reason-bridge-two",
+        "reviewLand": "reason-bridge"
+      },
+      {
+        "id": 14,
+        "type": "input",
+        "question": "purposePathOne.questTask14",
+        "correctAnswer": "trotzdem",
+        "tip": "purposePathOne.questDescription"
+      },
+      {
+        "id": 15,
+        "type": "input",
+        "question": "purposePathOne.questTask15",
+        "correctAnswer": "schrieb",
+        "tip": "purposePathOne.questDescription"
+      }
+    ]
+  },
+  {
+    "questId": "purpose-path-two",
+    "title": "purposePathTwo.questTitle",
+    "progress": "0/15",
+    "description": "purposePathTwo.questDescription",
+    "conditions": {
+      "goal": "purposePathTwo.questGoal",
+      "minCorrect": 15,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
+    "vocabulary": [
+      {
+        "word": "abholen",
+        "translation-ru": "забирать (кого-то)",
+        "translation-en": "to pick up",
+        "translation-uk": "забирати",
+        "translation-pl": "odbierać",
+        "translation-es": "recoger",
+        "translation-fr": "aller chercher",
+        "translation-tr": "almak (birini)",
+        "translation-ro": "a lua (pe cineva)",
+        "translation-uz": "olib kelmoq",
+        "translation-hi": "लेने जाना",
+        "translation-ar": "يُقلّ، يأخذ"
+      },
+      {
+        "word": "aufräumen",
+        "translation-ru": "убирать",
+        "translation-en": "to tidy up",
+        "translation-uk": "прибирати",
+        "translation-pl": "sprzątać",
+        "translation-es": "ordenar",
+        "translation-fr": "ranger",
+        "translation-tr": "toplamak",
+        "translation-ro": "a face ordine",
+        "translation-uz": "yig‘ishtirmoq",
+        "translation-hi": "साफ़-सफ़ाई करना",
+        "translation-ar": "يرتّب"
+      },
+      {
+        "word": "kennenlernen",
+        "translation-ru": "знакомиться",
+        "translation-en": "to get to know",
+        "translation-uk": "знайомитися",
+        "translation-pl": "poznawać",
+        "translation-es": "conocer",
+        "translation-fr": "faire connaissance",
+        "translation-tr": "tanışmak",
+        "translation-ro": "a cunoaște",
+        "translation-uz": "tanishmoq",
+        "translation-hi": "जान-पहचान करना",
+        "translation-ar": "يتعرّف على"
+      },
+      {
+        "word": "das Telefon",
+        "translation-ru": "телефон",
+        "translation-en": "phone",
+        "translation-uk": "телефон",
+        "translation-pl": "telefon",
+        "translation-es": "el teléfono",
+        "translation-fr": "le téléphone",
+        "translation-tr": "telefon",
+        "translation-ro": "telefonul",
+        "translation-uz": "telefon",
+        "translation-hi": "फ़ोन",
+        "translation-ar": "الهاتف"
+      },
+      {
+        "word": "der Wecker",
+        "translation-ru": "будильник",
+        "translation-en": "alarm clock",
+        "translation-uk": "будильник",
+        "translation-pl": "budzik",
+        "translation-es": "el despertador",
+        "translation-fr": "le réveil",
+        "translation-tr": "çalar saat",
+        "translation-ro": "ceasul deșteptător",
+        "translation-uz": "budilnik",
+        "translation-hi": "अलार्म घड़ी",
+        "translation-ar": "المنبّه"
+      },
+      {
+        "word": "stellen",
+        "translation-ru": "ставить",
+        "translation-en": "to set, to put",
+        "translation-uk": "ставити",
+        "translation-pl": "stawiać, nastawiać",
+        "translation-es": "poner",
+        "translation-fr": "mettre, régler",
+        "translation-tr": "kurmak, koymak",
+        "translation-ro": "a pune, a fixa",
+        "translation-uz": "qo‘ymoq",
+        "translation-hi": "लगाना",
+        "translation-ar": "يضبط، يضع"
+      }
+    ],
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "purposePathTwo.questTask1",
+        "options": [
+          "Ich fahre in die Stadt, um einkaufen zu.",
+          "Ich fahre in die Stadt, um zu einkaufen.",
+          "Ich fahre in die Stadt, um einzukaufen."
+        ],
+        "answer": "Ich fahre in die Stadt, um einzukaufen.",
+        "tip": "purposePathTwo.questDescription"
+      },
+      {
+        "id": 2,
+        "type": "input",
+        "question": "purposePathTwo.questTask2",
+        "correctAnswer": "abzuholen",
+        "tip": "purposePathTwo.questDescription"
+      },
+      {
+        "id": 3,
+        "type": "input",
+        "question": "purposePathTwo.questTask3",
+        "correctAnswer": "aufzustehen",
+        "tip": "purposePathTwo.questDescription"
+      },
+      {
+        "id": 4,
+        "type": "reorder",
+        "question": "purposePathTwo.questTask4",
+        "words": [
+          "das",
+          "anzurufen",
+          "Er",
+          "Mutter",
+          "um",
+          "anrufen",
+          "seine",
+          "nahm",
+          "Telefon"
+        ],
+        "correctOrder": [
+          "Er",
+          "nahm",
+          "das",
+          "Telefon",
+          "um",
+          "seine",
+          "Mutter",
+          "anzurufen"
+        ],
+        "tip": "purposePathTwo.questDescription"
+      },
+      {
+        "id": 5,
+        "type": "select",
+        "question": "purposePathTwo.questTask5",
+        "options": [
+          "Ich bin gekommen, um die Küche aufräumen.",
+          "Ich bin gekommen, um die Küche aufzuräumen.",
+          "Ich bin gekommen, um die Küche zu aufräumen."
+        ],
+        "answer": "Ich bin gekommen, um die Küche aufzuräumen.",
+        "tip": "purposePathTwo.questDescription"
+      },
+      {
+        "id": 6,
+        "type": "input",
+        "question": "purposePathTwo.questTask6",
+        "correctAnswer": "kennenzulernen",
+        "tip": "purposePathTwo.questDescription"
+      },
+      {
+        "id": 7,
+        "type": "readAndAnswer",
+        "question": "purposePathTwo.questTask7",
+        "text": "Am Samstag fuhr Lena in die Stadt, um einzukaufen. Danach holte sie ihren Bruder vom Bahnhof ab.",
+        "options": [
+          "um einzukaufen",
+          "um ihre Freundin zu besuchen",
+          "um zu arbeiten"
+        ],
+        "answer": "um einzukaufen",
+        "tip": "purposePathTwo.questDescription"
+      },
+      {
+        "id": 8,
+        "type": "input",
+        "question": "purposePathTwo.questTask8",
+        "correctAnswer": "aufzuräumen",
+        "tip": "purposePathTwo.questDescription"
+      },
+      {
+        "id": 9,
+        "type": "reorder",
+        "question": "purposePathTwo.questTask10",
+        "words": [
+          "früh",
+          "Ich",
+          "einzukaufen",
+          "einkaufen",
+          "auf",
+          "stand",
+          "um"
+        ],
+        "correctOrder": [
+          "Ich",
+          "stand",
+          "früh",
+          "auf",
+          "um",
+          "einzukaufen"
+        ],
+        "tip": "purposePathTwo.questDescription"
+      },
+      {
+        "id": 10,
+        "type": "select",
+        "question": "purposePathTwo.questTask11",
+        "options": [
+          "Er kam, um den Schlüssel abholen.",
+          "Er kam, um den Schlüssel abzuholen.",
+          "Er kam, um den Schlüssel zu abholen."
+        ],
+        "answer": "Er kam, um den Schlüssel abzuholen.",
+        "tip": "purposePathTwo.questDescription"
+      },
+      {
+        "id": 11,
+        "type": "input",
+        "question": "purposePathOne.questTask9",
+        "correctAnswer": "um",
+        "tip": "purposePathOne.questDescription",
+        "reviewOf": "purpose-path-one",
+        "reviewLand": "purpose-path"
+      },
+      {
+        "id": 12,
+        "type": "select",
+        "question": "reasonBridgeSix.questTask12",
+        "options": [
+          "Ich habe diesen Kurs gewählt, obwohl er nicht teuer ist.",
+          "Ich habe diesen Kurs gewählt, weil er nicht teuer ist.",
+          "Ich habe diesen Kurs gewählt, weil er ist nicht teuer."
+        ],
+        "answer": "Ich habe diesen Kurs gewählt, weil er nicht teuer ist.",
+        "tip": "reasonBridgeSix.questDescription",
+        "reviewOf": "reason-bridge-six",
+        "reviewLand": "reason-bridge"
+      },
+      {
+        "id": 13,
+        "type": "readAndAnswer",
+        "question": "reasonBridgeThree.questTask13",
+        "text": "Das Hotel war klein und alt. Trotzdem war Max zufrieden, denn das Hotel war am Meer.",
+        "options": [
+          "Das Hotel war groß.",
+          "Das Hotel war am Meer.",
+          "Das Hotel war neu."
+        ],
+        "answer": "Das Hotel war am Meer.",
+        "tip": "reasonBridgeThree.questDescription",
+        "reviewOf": "reason-bridge-three",
+        "reviewLand": "reason-bridge"
+      },
+      {
+        "id": 14,
+        "type": "input",
+        "question": "purposePathTwo.questTask14",
+        "correctAnswer": "koche",
+        "tip": "purposePathTwo.questDescription"
+      },
+      {
+        "id": 15,
+        "type": "input",
+        "question": "purposePathTwo.questTask15",
+        "correctAnswer": "war",
+        "tip": "purposePathTwo.questDescription"
+      }
+    ]
+  },
+  {
+    "questId": "purpose-path-three",
+    "title": "purposePathThree.questTitle",
+    "progress": "0/15",
+    "description": "purposePathThree.questDescription",
+    "conditions": {
+      "goal": "purposePathThree.questGoal",
+      "minCorrect": 15,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
+    "vocabulary": [
+      {
+        "word": "damit",
+        "translation-ru": "чтобы (кто-то другой)",
+        "translation-en": "so that",
+        "translation-uk": "щоб (хтось інший)",
+        "translation-pl": "żeby (ktoś inny)",
+        "translation-es": "para que",
+        "translation-fr": "pour que",
+        "translation-tr": "(başkası) … için",
+        "translation-ro": "ca (altcineva) să",
+        "translation-uz": "(boshqasi) … uchun",
+        "translation-hi": "ताकि",
+        "translation-ar": "لكي (شخص آخر)"
+      },
+      {
+        "word": "deutlich",
+        "translation-ru": "чётко",
+        "translation-en": "clearly",
+        "translation-uk": "чітко",
+        "translation-pl": "wyraźnie",
+        "translation-es": "claramente",
+        "translation-fr": "clairement",
+        "translation-tr": "açıkça",
+        "translation-ro": "clar",
+        "translation-uz": "aniq",
+        "translation-hi": "साफ़-साफ़",
+        "translation-ar": "بوضوح"
+      },
+      {
+        "word": "pünktlich",
+        "translation-ru": "вовремя, пунктуальный",
+        "translation-en": "on time",
+        "translation-uk": "вчасно",
+        "translation-pl": "punktualnie",
+        "translation-es": "puntual",
+        "translation-fr": "à l’heure",
+        "translation-tr": "zamanında",
+        "translation-ro": "punctual",
+        "translation-uz": "o‘z vaqtida",
+        "translation-hi": "समय पर",
+        "translation-ar": "في الموعد"
+      },
+      {
+        "word": "wecken",
+        "translation-ru": "будить",
+        "translation-en": "to wake (someone)",
+        "translation-uk": "будити",
+        "translation-pl": "budzić",
+        "translation-es": "despertar",
+        "translation-fr": "réveiller",
+        "translation-tr": "uyandırmak",
+        "translation-ro": "a trezi",
+        "translation-uz": "uyg‘otmoq",
+        "translation-hi": "जगाना",
+        "translation-ar": "يوقظ"
+      },
+      {
+        "word": "leise",
+        "translation-ru": "тихо",
+        "translation-en": "quietly",
+        "translation-uk": "тихо",
+        "translation-pl": "cicho",
+        "translation-es": "en voz baja",
+        "translation-fr": "doucement",
+        "translation-tr": "sessizce",
+        "translation-ro": "încet",
+        "translation-uz": "sekin",
+        "translation-hi": "धीरे से",
+        "translation-ar": "بهدوء"
+      }
+    ],
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "purposePathThree.questTask1",
+        "options": [
+          "Ich spreche langsam, damit du verstehst mich.",
+          "Ich spreche langsam, um du mich verstehst.",
+          "Ich spreche langsam, damit du mich verstehst."
+        ],
+        "answer": "Ich spreche langsam, damit du mich verstehst.",
+        "tip": "purposePathThree.questDescription"
+      },
+      {
+        "id": 2,
+        "type": "input",
+        "question": "purposePathThree.questTask2",
+        "correctAnswer": "damit",
+        "tip": "purposePathThree.questDescription"
+      },
+      {
+        "id": 3,
+        "type": "input",
+        "question": "purposePathThree.questTask3",
+        "correctAnswer": "findest",
+        "tip": "purposePathThree.questDescription"
+      },
+      {
+        "id": 4,
+        "type": "reorder",
+        "question": "purposePathThree.questTask4",
+        "words": [
+          "um",
+          "wir",
+          "verstehen",
+          "Sprich",
+          "deutlich",
+          "dich",
+          "damit"
+        ],
+        "correctOrder": [
+          "Sprich",
+          "deutlich",
+          "damit",
+          "wir",
+          "dich",
+          "verstehen"
+        ],
+        "tip": "purposePathThree.questDescription"
+      },
+      {
+        "id": 5,
+        "type": "select",
+        "question": "purposePathThree.questTask5",
+        "options": [
+          "Ich gebe dir den Schlüssel, damit du die Tür öffnen kannst.",
+          "Ich gebe dir den Schlüssel, um du die Tür öffnen kannst.",
+          "Ich gebe dir den Schlüssel, damit du kannst die Tür öffnen."
+        ],
+        "answer": "Ich gebe dir den Schlüssel, damit du die Tür öffnen kannst.",
+        "tip": "purposePathThree.questDescription"
+      },
+      {
+        "id": 6,
+        "type": "input",
+        "question": "purposePathThree.questTask6",
+        "correctAnswer": "können",
+        "tip": "purposePathThree.questDescription"
+      },
+      {
+        "id": 7,
+        "type": "readAndAnswer",
+        "question": "purposePathThree.questTask7",
+        "text": "Herr Braun spricht im Kurs immer langsam und deutlich, damit alle ihn verstehen. Seine Schüler sind sehr zufrieden.",
+        "options": [
+          "weil er krank ist",
+          "damit alle ihn verstehen",
+          "weil er müde ist"
+        ],
+        "answer": "damit alle ihn verstehen",
+        "tip": "purposePathThree.questDescription"
+      },
+      {
+        "id": 8,
+        "type": "input",
+        "question": "purposePathThree.questTask8",
+        "correctAnswer": "siehst",
+        "tip": "purposePathThree.questDescription"
+      },
+      {
+        "id": 9,
+        "type": "reorder",
+        "question": "purposePathThree.questTask10",
+        "words": [
+          "kommen",
+          "damit",
+          "mich",
+          "komme",
+          "weckt",
+          "Mama",
+          "pünktlich",
+          "ich"
+        ],
+        "correctOrder": [
+          "Mama",
+          "weckt",
+          "mich",
+          "damit",
+          "ich",
+          "pünktlich",
+          "komme"
+        ],
+        "tip": "purposePathThree.questDescription"
+      },
+      {
+        "id": 10,
+        "type": "select",
+        "question": "purposePathThree.questTask11",
+        "options": [
+          "Wir sprechen leise, damit das Baby schläft.",
+          "Wir sprechen leise, damit das Baby schlafen.",
+          "Wir sprechen leise, damit schläft das Baby."
+        ],
+        "answer": "Wir sprechen leise, damit das Baby schläft.",
+        "tip": "purposePathThree.questDescription"
+      },
+      {
+        "id": 11,
+        "type": "input",
+        "question": "purposePathTwo.questTask9",
+        "correctAnswer": "fernzusehen",
+        "tip": "purposePathTwo.questDescription",
+        "reviewOf": "purpose-path-two",
+        "reviewLand": "purpose-path"
+      },
+      {
+        "id": 12,
+        "type": "input",
+        "question": "reasonBridgeSeven.questTask12",
+        "correctAnswer": "darum",
+        "tip": "reasonBridgeSeven.questDescription",
+        "reviewOf": "reason-bridge-seven",
+        "reviewLand": "reason-bridge"
+      },
+      {
+        "id": 13,
+        "type": "readAndAnswer",
+        "question": "reasonBridgeFour.questTask13",
+        "text": "Obwohl Lenas Wohnung klein ist, ist sie zufrieden. Die Wohnung ist hell und ruhig.",
+        "options": [
+          "Sie ist hell und ruhig.",
+          "Sie ist groß.",
+          "Sie ist billig."
+        ],
+        "answer": "Sie ist hell und ruhig.",
+        "tip": "reasonBridgeFour.questDescription",
+        "reviewOf": "reason-bridge-four",
+        "reviewLand": "reason-bridge"
+      },
+      {
+        "id": 14,
+        "type": "input",
+        "question": "purposePathThree.questTask14",
+        "correctAnswer": "obwohl",
+        "tip": "purposePathThree.questDescription"
+      },
+      {
+        "id": 15,
+        "type": "input",
+        "question": "purposePathThree.questTask15",
+        "correctAnswer": "war",
+        "tip": "purposePathThree.questDescription"
+      }
+    ]
+  },
+  {
+    "questId": "purpose-path-four",
+    "title": "purposePathFour.questTitle",
+    "progress": "0/15",
+    "description": "purposePathFour.questDescription",
+    "conditions": {
+      "goal": "purposePathFour.questGoal",
+      "minCorrect": 15,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
+    "vocabulary": [
+      {
+        "word": "die Nachricht",
+        "translation-ru": "сообщение",
+        "translation-en": "message",
+        "translation-uk": "повідомлення",
+        "translation-pl": "wiadomość",
+        "translation-es": "el mensaje",
+        "translation-fr": "le message",
+        "translation-tr": "mesaj",
+        "translation-ro": "mesajul",
+        "translation-uz": "xabar",
+        "translation-hi": "संदेश",
+        "translation-ar": "الرسالة"
+      },
+      {
+        "word": "schicken",
+        "translation-ru": "отправлять",
+        "translation-en": "to send",
+        "translation-uk": "надсилати",
+        "translation-pl": "wysyłać",
+        "translation-es": "enviar",
+        "translation-fr": "envoyer",
+        "translation-tr": "göndermek",
+        "translation-ro": "a trimite",
+        "translation-uz": "yubormoq",
+        "translation-hi": "भेजना",
+        "translation-ar": "يرسل"
+      },
+      {
+        "word": "der Platz",
+        "translation-ru": "место",
+        "translation-en": "seat, place",
+        "translation-uk": "місце",
+        "translation-pl": "miejsce",
+        "translation-es": "el sitio",
+        "translation-fr": "la place",
+        "translation-tr": "yer",
+        "translation-ro": "locul",
+        "translation-uz": "joy",
+        "translation-hi": "जगह",
+        "translation-ar": "المكان"
+      },
+      {
+        "word": "denn",
+        "translation-ru": "потому что, ведь",
+        "translation-en": "because",
+        "translation-uk": "бо",
+        "translation-pl": "bo",
+        "translation-es": "porque",
+        "translation-fr": "car",
+        "translation-tr": "çünkü",
+        "translation-ro": "căci",
+        "translation-uz": "chunki",
+        "translation-hi": "क्योंकि",
+        "translation-ar": "لأنّ"
+      },
+      {
+        "word": "deshalb",
+        "translation-ru": "поэтому",
+        "translation-en": "that’s why",
+        "translation-uk": "тому",
+        "translation-pl": "dlatego",
+        "translation-es": "por eso",
+        "translation-fr": "c’est pourquoi",
+        "translation-tr": "bu yüzden",
+        "translation-ro": "de aceea",
+        "translation-uz": "shuning uchun",
+        "translation-hi": "इसलिए",
+        "translation-ar": "لذلك"
+      }
+    ],
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "purposePathFour.questTask1",
+        "options": [
+          "Ich helfe dir, damit du bestehst die Prüfung.",
+          "Ich helfe dir, um die Prüfung zu bestehen.",
+          "Ich helfe dir, damit du die Prüfung bestehst."
+        ],
+        "answer": "Ich helfe dir, damit du die Prüfung bestehst.",
+        "tip": "purposePathFour.questDescription"
+      },
+      {
+        "id": 2,
+        "type": "input",
+        "question": "purposePathFour.questTask2",
+        "correctAnswer": "um",
+        "tip": "purposePathFour.questDescription"
+      },
+      {
+        "id": 3,
+        "type": "input",
+        "question": "purposePathFour.questTask3",
+        "correctAnswer": "damit",
+        "tip": "purposePathFour.questDescription"
+      },
+      {
+        "id": 4,
+        "type": "reorder",
+        "question": "purposePathFour.questTask4",
+        "words": [
+          "schicke",
+          "du",
+          "damit",
+          "um",
+          "Ich",
+          "wartest",
+          "nicht",
+          "Nachricht",
+          "eine"
+        ],
+        "correctOrder": [
+          "Ich",
+          "schicke",
+          "eine",
+          "Nachricht",
+          "damit",
+          "du",
+          "nicht",
+          "wartest"
+        ],
+        "tip": "purposePathFour.questDescription"
+      },
+      {
+        "id": 5,
+        "type": "select",
+        "question": "purposePathFour.questTask5",
+        "options": [
+          "Er spart, damit sein Sohn kann studieren.",
+          "Er spart, damit sein Sohn studieren kann.",
+          "Er spart, um sein Sohn studieren kann."
+        ],
+        "answer": "Er spart, damit sein Sohn studieren kann.",
+        "tip": "purposePathFour.questDescription"
+      },
+      {
+        "id": 6,
+        "type": "input",
+        "question": "purposePathFour.questTask6",
+        "correctAnswer": "um",
+        "tip": "purposePathFour.questDescription"
+      },
+      {
+        "id": 7,
+        "type": "readAndAnswer",
+        "question": "purposePathFour.questTask7",
+        "text": "Anna lernt jeden Abend mit ihrem Bruder. Sie erklärt ihm alles, damit er die Prüfung besteht. Anna lernt Englisch, um in London zu arbeiten.",
+        "options": [
+          "um in London zu arbeiten",
+          "um ihrem Bruder alles zu erklären",
+          "damit ihr Bruder die Prüfung besteht"
+        ],
+        "answer": "um in London zu arbeiten",
+        "tip": "purposePathFour.questDescription"
+      },
+      {
+        "id": 8,
+        "type": "input",
+        "question": "purposePathFour.questTask8",
+        "correctAnswer": "damit",
+        "tip": "purposePathFour.questDescription"
+      },
+      {
+        "id": 9,
+        "type": "reorder",
+        "question": "purposePathFour.questTask10",
+        "words": [
+          "kommen",
+          "früh",
+          "zu",
+          "Wir",
+          "bekommen",
+          "damit",
+          "gute",
+          "um",
+          "Plätze"
+        ],
+        "correctOrder": [
+          "Wir",
+          "kommen",
+          "früh",
+          "um",
+          "gute",
+          "Plätze",
+          "zu",
+          "bekommen"
+        ],
+        "tip": "purposePathFour.questDescription"
+      },
+      {
+        "id": 10,
+        "type": "select",
+        "question": "purposePathFour.questTask11",
+        "options": [
+          "Ich rufe den Arzt an, um er kommt.",
+          "Ich rufe den Arzt an, damit er kommt.",
+          "Ich rufe den Arzt an, um zu kommen."
+        ],
+        "answer": "Ich rufe den Arzt an, damit er kommt.",
+        "tip": "purposePathFour.questDescription"
+      },
+      {
+        "id": 11,
+        "type": "input",
+        "question": "purposePathThree.questTask9",
+        "correctAnswer": "damit",
+        "tip": "purposePathThree.questDescription",
+        "reviewOf": "purpose-path-three",
+        "reviewLand": "purpose-path"
+      },
+      {
+        "id": 12,
+        "type": "input",
+        "question": "reasonBridgeEight.questTask12",
+        "correctAnswer": "denn",
+        "tip": "reasonBridgeEight.questDescription",
+        "reviewOf": "reason-bridge-eight",
+        "reviewLand": "reason-bridge"
+      },
+      {
+        "id": 13,
+        "type": "readAndAnswer",
+        "question": "reasonBridgeFive.questTask13",
+        "text": "Obwohl Paul sehr müde war, kochte er für seine Familie ein großes Abendessen.",
+        "options": [
+          "Er kochte ein Abendessen.",
+          "Er sah fern.",
+          "Er ging ins Bett."
+        ],
+        "answer": "Er kochte ein Abendessen.",
+        "tip": "reasonBridgeFive.questDescription",
+        "reviewOf": "reason-bridge-five",
+        "reviewLand": "reason-bridge"
+      },
+      {
+        "id": 14,
+        "type": "input",
+        "question": "purposePathFour.questTask14",
+        "correctAnswer": "bleiben",
+        "tip": "purposePathFour.questDescription"
+      },
+      {
+        "id": 15,
+        "type": "input",
+        "question": "purposePathFour.questTask15",
+        "correctAnswer": "hatten",
+        "tip": "purposePathFour.questDescription"
+      }
+    ]
+  },
+  {
+    "questId": "purpose-path-five",
+    "title": "purposePathFive.questTitle",
+    "progress": "0/15",
+    "description": "purposePathFive.questDescription",
+    "conditions": {
+      "goal": "purposePathFive.questGoal",
+      "minCorrect": 15,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
+    "vocabulary": [
+      {
+        "word": "wozu",
+        "translation-ru": "зачем, для чего",
+        "translation-en": "what for",
+        "translation-uk": "навіщо",
+        "translation-pl": "po co",
+        "translation-es": "para qué",
+        "translation-fr": "pour quoi faire",
+        "translation-tr": "ne için",
+        "translation-ro": "pentru ce",
+        "translation-uz": "nima uchun",
+        "translation-hi": "किसलिए",
+        "translation-ar": "لأي غرض"
+      },
+      {
+        "word": "der Führerschein",
+        "translation-ru": "водительские права",
+        "translation-en": "driving licence",
+        "translation-uk": "водійські права",
+        "translation-pl": "prawo jazdy",
+        "translation-es": "el carné de conducir",
+        "translation-fr": "le permis de conduire",
+        "translation-tr": "ehliyet",
+        "translation-ro": "permisul de conducere",
+        "translation-uz": "haydovchilik guvohnomasi",
+        "translation-hi": "ड्राइविंग लाइसेंस",
+        "translation-ar": "رخصة القيادة"
+      },
+      {
+        "word": "das Visum",
+        "translation-ru": "виза",
+        "translation-en": "visa",
+        "translation-uk": "віза",
+        "translation-pl": "wiza",
+        "translation-es": "el visado",
+        "translation-fr": "le visa",
+        "translation-tr": "vize",
+        "translation-ro": "viza",
+        "translation-uz": "viza",
+        "translation-hi": "वीज़ा",
+        "translation-ar": "التأشيرة"
+      },
+      {
+        "word": "entscheiden",
+        "translation-ru": "решать / принимать решение",
+        "translation-en": "to decide",
+        "translation-uk": "вирішувати",
+        "translation-pl": "decydować",
+        "translation-es": "decidir",
+        "translation-fr": "décider",
+        "translation-tr": "karar vermek",
+        "translation-ro": "a decide",
+        "translation-uz": "qaror qilmoq",
+        "translation-hi": "निर्णय लेना",
+        "translation-ar": "يقرر"
+      },
+      {
+        "word": "trotzdem",
+        "translation-ru": "всё равно, несмотря на это",
+        "translation-en": "anyway, nevertheless",
+        "translation-uk": "усе одно, попри це",
+        "translation-pl": "mimo to",
+        "translation-es": "aun así",
+        "translation-fr": "quand même",
+        "translation-tr": "yine de",
+        "translation-ro": "totuși",
+        "translation-uz": "baribir",
+        "translation-hi": "फिर भी",
+        "translation-ar": "ومع ذلك"
+      }
+    ],
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "purposePathFive.questTask1",
+        "options": [
+          "Wozu du lernst Deutsch? Um in Deutschland zu studieren.",
+          "Wozu lernst du Deutsch? Weil in Deutschland zu studieren.",
+          "Wozu lernst du Deutsch? Um in Deutschland zu studieren."
+        ],
+        "answer": "Wozu lernst du Deutsch? Um in Deutschland zu studieren.",
+        "tip": "purposePathFive.questDescription"
+      },
+      {
+        "id": 2,
+        "type": "select",
+        "question": "purposePathFive.questTask2",
+        "options": [
+          "Wo brauchst du ein Auto?",
+          "Wann brauchst du ein Auto?",
+          "Wozu brauchst du ein Auto?"
+        ],
+        "answer": "Wozu brauchst du ein Auto?",
+        "tip": "purposePathFive.questDescription"
+      },
+      {
+        "id": 3,
+        "type": "input",
+        "question": "purposePathFive.questTask3",
+        "correctAnswer": "fahren",
+        "tip": "purposePathFive.questDescription"
+      },
+      {
+        "id": 4,
+        "type": "reorder",
+        "question": "purposePathFive.questTask4",
+        "words": [
+          "nehmen",
+          "damit",
+          "Geld",
+          "um",
+          "zu",
+          "sparen",
+          "Zug",
+          "Wir",
+          "den"
+        ],
+        "correctOrder": [
+          "Wir",
+          "nehmen",
+          "den",
+          "Zug",
+          "um",
+          "Geld",
+          "zu",
+          "sparen"
+        ],
+        "tip": "purposePathFive.questDescription"
+      },
+      {
+        "id": 5,
+        "type": "select",
+        "question": "purposePathFive.questTask5",
+        "options": [
+          "Warum bist du zu Hause? Weil ich krank bin.",
+          "Warum bist du zu Hause? Um krank zu sein.",
+          "Wozu bist du zu Hause? Weil ich krank bin."
+        ],
+        "answer": "Warum bist du zu Hause? Weil ich krank bin.",
+        "tip": "purposePathFive.questDescription"
+      },
+      {
+        "id": 6,
+        "type": "input",
+        "question": "purposePathFive.questTask6",
+        "correctAnswer": "arbeiten",
+        "tip": "purposePathFive.questDescription"
+      },
+      {
+        "id": 7,
+        "type": "readAndAnswer",
+        "question": "purposePathFive.questTask7",
+        "text": "Olga lernt Deutsch, um in Berlin als Ärztin zu arbeiten. Sie lernt jeden Tag zwei Stunden.",
+        "options": [
+          "um als Ärztin zu arbeiten",
+          "weil ihr Mann in Berlin wohnt",
+          "um zu reisen"
+        ],
+        "answer": "um als Ärztin zu arbeiten",
+        "tip": "purposePathFive.questDescription"
+      },
+      {
+        "id": 8,
+        "type": "select",
+        "question": "purposePathFive.questTask8",
+        "options": [
+          "Warum kamst du zu spät? Um einen Stau zu haben.",
+          "Warum kamst du zu spät? Weil es einen Stau gab.",
+          "Wozu kamst du zu spät? Weil es einen Stau gab."
+        ],
+        "answer": "Warum kamst du zu spät? Weil es einen Stau gab.",
+        "tip": "purposePathFive.questDescription"
+      },
+      {
+        "id": 9,
+        "type": "reorder",
+        "question": "purposePathFive.questTask10",
+        "words": [
+          "weil",
+          "helfen",
+          "um",
+          "zu",
+          "gekommen",
+          "bin",
+          "Ich",
+          "dir"
+        ],
+        "correctOrder": [
+          "Ich",
+          "bin",
+          "gekommen",
+          "um",
+          "dir",
+          "zu",
+          "helfen"
+        ],
+        "tip": "purposePathFive.questDescription"
+      },
+      {
+        "id": 10,
+        "type": "select",
+        "question": "purposePathFive.questTask11",
+        "options": [
+          "Wozu brauchst du den Führerschein? Um zur Arbeit zu fahren.",
+          "Wozu brauchst du den Führerschein? Weil zur Arbeit fahren.",
+          "Wozu brauchst du den Führerschein? Damit zur Arbeit zu fahren."
+        ],
+        "answer": "Wozu brauchst du den Führerschein? Um zur Arbeit zu fahren.",
+        "tip": "purposePathFive.questDescription"
+      },
+      {
+        "id": 11,
+        "type": "input",
+        "question": "purposePathFour.questTask9",
+        "correctAnswer": "um",
+        "tip": "purposePathFour.questDescription",
+        "reviewOf": "purpose-path-four",
+        "reviewLand": "purpose-path"
+      },
+      {
+        "id": 12,
+        "type": "input",
+        "question": "purposePathOne.questTask12",
+        "correctAnswer": "reisen",
+        "tip": "purposePathOne.questDescription",
+        "reviewOf": "purpose-path-one",
+        "reviewLand": "purpose-path"
+      },
+      {
+        "id": 13,
+        "type": "readAndAnswer",
+        "question": "reasonBridgeSix.questTask13",
+        "text": "Sara hatte ein Angebot aus München. Obwohl ihre Freunde in Berlin wohnen, hat sie sich für München entschieden.",
+        "options": [
+          "Sie sucht eine andere Stelle.",
+          "Sie geht nach München.",
+          "Sie bleibt zu Hause."
+        ],
+        "answer": "Sie geht nach München.",
+        "tip": "reasonBridgeSix.questDescription",
+        "reviewOf": "reason-bridge-six",
+        "reviewLand": "reason-bridge"
+      },
+      {
+        "id": 14,
+        "type": "input",
+        "question": "purposePathFive.questTask14",
+        "correctAnswer": "trotzdem",
+        "tip": "purposePathFive.questDescription"
+      },
+      {
+        "id": 15,
+        "type": "input",
+        "question": "purposePathFive.questTask15",
+        "correctAnswer": "jünger",
+        "tip": "purposePathFive.questDescription"
+      }
+    ]
+  },
+  {
+    "questId": "purpose-path-six",
+    "title": "purposePathSix.questTitle",
+    "progress": "0/15",
+    "description": "purposePathSix.questDescription",
+    "conditions": {
+      "goal": "purposePathSix.questGoal",
+      "minCorrect": 15,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
+    "vocabulary": [
+      {
+        "word": "die Note",
+        "translation-ru": "оценка",
+        "translation-en": "grade, mark",
+        "translation-uk": "оцінка",
+        "translation-pl": "ocena",
+        "translation-es": "la nota",
+        "translation-fr": "la note",
+        "translation-tr": "not",
+        "translation-ro": "nota",
+        "translation-uz": "baho",
+        "translation-hi": "अंक",
+        "translation-ar": "الدرجة"
+      },
+      {
+        "word": "sich anmelden",
+        "translation-ru": "записываться",
+        "translation-en": "to sign up",
+        "translation-uk": "записуватися",
+        "translation-pl": "zapisywać się",
+        "translation-es": "inscribirse",
+        "translation-fr": "s’inscrire",
+        "translation-tr": "kaydolmak",
+        "translation-ro": "a se înscrie",
+        "translation-uz": "ro‘yxatdan o‘tmoq",
+        "translation-hi": "नाम लिखवाना",
+        "translation-ar": "يسجّل نفسه"
+      },
+      {
+        "word": "verbessern",
+        "translation-ru": "улучшать",
+        "translation-en": "to improve",
+        "translation-uk": "покращувати",
+        "translation-pl": "poprawiać",
+        "translation-es": "mejorar",
+        "translation-fr": "améliorer",
+        "translation-tr": "geliştirmek",
+        "translation-ro": "a îmbunătăți",
+        "translation-uz": "yaxshilamoq",
+        "translation-hi": "सुधारना",
+        "translation-ar": "يحسّن"
+      },
+      {
+        "word": "das Formular",
+        "translation-ru": "бланк, анкета",
+        "translation-en": "form",
+        "translation-uk": "бланк",
+        "translation-pl": "formularz",
+        "translation-es": "el formulario",
+        "translation-fr": "le formulaire",
+        "translation-tr": "form",
+        "translation-ro": "formularul",
+        "translation-uz": "anketa",
+        "translation-hi": "फ़ॉर्म",
+        "translation-ar": "الاستمارة"
+      },
+      {
+        "word": "ausfüllen",
+        "translation-ru": "заполнять",
+        "translation-en": "to fill in",
+        "translation-uk": "заповнювати",
+        "translation-pl": "wypełniać",
+        "translation-es": "rellenar",
+        "translation-fr": "remplir",
+        "translation-tr": "doldurmak",
+        "translation-ro": "a completa",
+        "translation-uz": "to‘ldirmoq",
+        "translation-hi": "भरना",
+        "translation-ar": "يملأ"
+      },
+      {
+        "word": "das Märchen",
+        "translation-ru": "сказка",
+        "translation-en": "fairy tale",
+        "translation-uk": "казка",
+        "translation-pl": "bajka",
+        "translation-es": "el cuento",
+        "translation-fr": "le conte",
+        "translation-tr": "masal",
+        "translation-ro": "basmul",
+        "translation-uz": "ertak",
+        "translation-hi": "परीकथा",
+        "translation-ar": "الحكاية"
+      }
+    ],
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "purposePathSix.questTask1",
+        "options": [
+          "Ich melde mich für einen Kurs an, um mein Deutsch verbessern zu.",
+          "Ich melde mich für einen Kurs an, damit mein Deutsch zu verbessern.",
+          "Ich melde mich für einen Kurs an, um mein Deutsch zu verbessern."
+        ],
+        "answer": "Ich melde mich für einen Kurs an, um mein Deutsch zu verbessern.",
+        "tip": "purposePathSix.questDescription"
+      },
+      {
+        "id": 2,
+        "type": "input",
+        "question": "purposePathSix.questTask2",
+        "correctAnswer": "bekommen",
+        "tip": "purposePathSix.questDescription"
+      },
+      {
+        "id": 3,
+        "type": "input",
+        "question": "purposePathSix.questTask3",
+        "correctAnswer": "um",
+        "tip": "purposePathSix.questDescription"
+      },
+      {
+        "id": 4,
+        "type": "reorder",
+        "question": "purposePathSix.questTask4",
+        "words": [
+          "damit",
+          "finden",
+          "zu",
+          "bessere",
+          "Stelle",
+          "mache",
+          "einen",
+          "um",
+          "Ich",
+          "eine",
+          "Kurs"
+        ],
+        "correctOrder": [
+          "Ich",
+          "mache",
+          "einen",
+          "Kurs",
+          "um",
+          "eine",
+          "bessere",
+          "Stelle",
+          "zu",
+          "finden"
+        ],
+        "tip": "purposePathSix.questDescription"
+      },
+      {
+        "id": 5,
+        "type": "select",
+        "question": "purposePathSix.questTask5",
+        "options": [
+          "Sie spricht laut, damit alle hören sie.",
+          "Sie spricht laut, um alle sie hören.",
+          "Sie spricht laut, damit alle sie hören."
+        ],
+        "answer": "Sie spricht laut, damit alle sie hören.",
+        "tip": "purposePathSix.questDescription"
+      },
+      {
+        "id": 6,
+        "type": "input",
+        "question": "purposePathSix.questTask6",
+        "correctAnswer": "zu",
+        "tip": "purposePathSix.questDescription"
+      },
+      {
+        "id": 7,
+        "type": "readAndAnswer",
+        "question": "purposePathSix.questTask7",
+        "text": "Marco wohnt seit einem Jahr in Deutschland. Er macht einen Kurs am Abend, um besser Deutsch zu sprechen. Seine Frau hilft ihm, damit er schneller lernt.",
+        "options": [
+          "um eine Wohnung zu finden",
+          "um besser Deutsch zu sprechen",
+          "damit seine Frau Deutsch lernt"
+        ],
+        "answer": "um besser Deutsch zu sprechen",
+        "tip": "purposePathSix.questDescription"
+      },
+      {
+        "id": 8,
+        "type": "input",
+        "question": "purposePathSix.questTask8",
+        "correctAnswer": "anzumelden",
+        "tip": "purposePathSix.questDescription"
+      },
+      {
+        "id": 9,
+        "type": "reorder",
+        "question": "purposePathSix.questTask10",
+        "words": [
+          "langsam",
+          "Lehrer",
+          "verstehen",
+          "erklärt",
+          "Der",
+          "alles",
+          "wir",
+          "um",
+          "damit"
+        ],
+        "correctOrder": [
+          "Der",
+          "Lehrer",
+          "erklärt",
+          "langsam",
+          "damit",
+          "wir",
+          "alles",
+          "verstehen"
+        ],
+        "tip": "purposePathSix.questDescription"
+      },
+      {
+        "id": 10,
+        "type": "select",
+        "question": "purposePathSix.questTask11",
+        "options": [
+          "Wozu meldest du dich an? Damit mein Deutsch zu verbessern.",
+          "Wozu meldest du dich an? Um mein Deutsch zu verbessern.",
+          "Wozu meldest du dich an? Weil mein Deutsch zu verbessern."
+        ],
+        "answer": "Wozu meldest du dich an? Um mein Deutsch zu verbessern.",
+        "tip": "purposePathSix.questDescription"
+      },
+      {
+        "id": 11,
+        "type": "input",
+        "question": "purposePathFive.questTask9",
+        "correctAnswer": "kaufen",
+        "tip": "purposePathFive.questDescription",
+        "reviewOf": "purpose-path-five",
+        "reviewLand": "purpose-path"
+      },
+      {
+        "id": 12,
+        "type": "input",
+        "question": "purposePathTwo.questTask12",
+        "correctAnswer": "abzuholen",
+        "tip": "purposePathTwo.questDescription",
+        "reviewOf": "purpose-path-two",
+        "reviewLand": "purpose-path"
+      },
+      {
+        "id": 13,
+        "type": "input",
+        "question": "reasonBridgeSeven.questTask13",
+        "correctAnswer": "war",
+        "tip": "reasonBridgeSeven.questDescription",
+        "reviewOf": "reason-bridge-seven",
+        "reviewLand": "reason-bridge"
+      },
+      {
+        "id": 14,
+        "type": "input",
+        "question": "purposePathSix.questTask14",
+        "correctAnswer": "war",
+        "tip": "purposePathSix.questDescription"
+      },
+      {
+        "id": 15,
+        "type": "input",
+        "question": "purposePathSix.questTask15",
+        "correctAnswer": "sahen",
+        "tip": "purposePathSix.questDescription"
+      }
+    ]
+  },
+  {
+    "questId": "purpose-path-seven",
+    "title": "purposePathSeven.questTitle",
+    "progress": "0/15",
+    "description": "purposePathSeven.questDescription",
+    "conditions": {
+      "goal": "purposePathSeven.questGoal",
+      "minCorrect": 15,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
+    "vocabulary": [
+      {
+        "word": "das Konto",
+        "translation-ru": "банковский счёт",
+        "translation-en": "bank account",
+        "translation-uk": "банківський рахунок",
+        "translation-pl": "konto",
+        "translation-es": "la cuenta bancaria",
+        "translation-fr": "le compte",
+        "translation-tr": "banka hesabı",
+        "translation-ro": "contul bancar",
+        "translation-uz": "bank hisobi",
+        "translation-hi": "बैंक खाता",
+        "translation-ar": "الحساب البنكي"
+      },
+      {
+        "word": "die Bank",
+        "translation-ru": "банк",
+        "translation-en": "bank",
+        "translation-uk": "банк",
+        "translation-pl": "bank",
+        "translation-es": "el banco",
+        "translation-fr": "la banque",
+        "translation-tr": "banka",
+        "translation-ro": "banca",
+        "translation-uz": "bank",
+        "translation-hi": "बैंक",
+        "translation-ar": "البنك"
+      },
+      {
+        "word": "das Amt",
+        "translation-ru": "ведомство, учреждение",
+        "translation-en": "office, authority",
+        "translation-uk": "установа",
+        "translation-pl": "urząd",
+        "translation-es": "la oficina pública",
+        "translation-fr": "l’administration",
+        "translation-tr": "resmi daire",
+        "translation-ro": "biroul",
+        "translation-uz": "idora",
+        "translation-hi": "सरकारी दफ़्तर",
+        "translation-ar": "المكتب الحكومي"
+      },
+      {
+        "word": "der Ausweis",
+        "translation-ru": "удостоверение личности",
+        "translation-en": "ID card",
+        "translation-uk": "посвідчення особи",
+        "translation-pl": "dowód osobisty",
+        "translation-es": "el carné de identidad",
+        "translation-fr": "la carte d’identité",
+        "translation-tr": "kimlik kartı",
+        "translation-ro": "buletinul",
+        "translation-uz": "shaxsiy guvohnoma",
+        "translation-hi": "पहचान पत्र",
+        "translation-ar": "بطاقة الهوية"
+      },
+      {
+        "word": "der Termin",
+        "translation-ru": "запись, встреча",
+        "translation-en": "appointment",
+        "translation-uk": "запис, зустріч",
+        "translation-pl": "termin, wizyta",
+        "translation-es": "la cita",
+        "translation-fr": "le rendez-vous",
+        "translation-tr": "randevu",
+        "translation-ro": "programarea",
+        "translation-uz": "uchrashuv vaqti",
+        "translation-hi": "अपॉइंटमेंट",
+        "translation-ar": "الموعد"
+      },
+      {
+        "word": "eröffnen",
+        "translation-ru": "открывать (впервые)",
+        "translation-en": "to open (officially)",
+        "translation-uk": "відкривати",
+        "translation-pl": "otwierać",
+        "translation-es": "inaugurar",
+        "translation-fr": "inaugurer",
+        "translation-tr": "açılışını yapmak",
+        "translation-ro": "a inaugura",
+        "translation-uz": "ochmoq",
+        "translation-hi": "उद्घाटन करना",
+        "translation-ar": "يفتتح"
+      },
+      {
+        "word": "der Mitarbeiter",
+        "translation-ru": "сотрудник",
+        "translation-en": "employee",
+        "translation-uk": "співробітник",
+        "translation-pl": "pracownik",
+        "translation-es": "el empleado",
+        "translation-fr": "l’employé",
+        "translation-tr": "çalışan",
+        "translation-ro": "angajatul",
+        "translation-uz": "xodim",
+        "translation-hi": "कर्मचारी",
+        "translation-ar": "الموظف"
+      },
+      {
+        "word": "gießen",
+        "translation-ru": "лить / поливать",
+        "translation-en": "to pour / water",
+        "translation-uk": "лити / поливати",
+        "translation-pl": "podlewać / lać",
+        "translation-es": "verter / regar",
+        "translation-fr": "verser / arroser",
+        "translation-tr": "dökmek / sulamak",
+        "translation-ro": "a turna / a uda",
+        "translation-uz": "quymoq / sug'ormoq",
+        "translation-hi": "डालना / सींचना",
+        "translation-ar": "يصب / يسقي"
+      },
+      {
+        "word": "prüfen",
+        "translation-ru": "проверять",
+        "translation-en": "to check",
+        "translation-uk": "перевіряти",
+        "translation-pl": "sprawdzać",
+        "translation-es": "revisar",
+        "translation-fr": "vérifier",
+        "translation-tr": "kontrol etmek",
+        "translation-ro": "a verifica",
+        "translation-uz": "tekshirmoq",
+        "translation-hi": "जाँचना",
+        "translation-ar": "يفحص، يتحقّق"
+      }
+    ],
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "purposePathSeven.questTask1",
+        "options": [
+          "Ich gehe zur Bank, damit ein Konto zu eröffnen.",
+          "Ich gehe zur Bank, um ein Konto eröffnen zu.",
+          "Ich gehe zur Bank, um ein Konto zu eröffnen."
+        ],
+        "answer": "Ich gehe zur Bank, um ein Konto zu eröffnen.",
+        "tip": "purposePathSeven.questDescription"
+      },
+      {
+        "id": 2,
+        "type": "input",
+        "question": "purposePathSeven.questTask2",
+        "correctAnswer": "um",
+        "tip": "purposePathSeven.questDescription"
+      },
+      {
+        "id": 3,
+        "type": "input",
+        "question": "purposePathSeven.questTask3",
+        "correctAnswer": "finden",
+        "tip": "purposePathSeven.questDescription"
+      },
+      {
+        "id": 4,
+        "type": "reorder",
+        "question": "purposePathSeven.questTask4",
+        "words": [
+          "der",
+          "Ich",
+          "kann",
+          "mir",
+          "um",
+          "helfen",
+          "aus",
+          "Mitarbeiter",
+          "fülle",
+          "damit",
+          "das",
+          "Formular"
+        ],
+        "correctOrder": [
+          "Ich",
+          "fülle",
+          "das",
+          "Formular",
+          "aus",
+          "damit",
+          "der",
+          "Mitarbeiter",
+          "mir",
+          "helfen",
+          "kann"
+        ],
+        "tip": "purposePathSeven.questDescription"
+      },
+      {
+        "id": 5,
+        "type": "select",
+        "question": "purposePathSeven.questTask5",
+        "options": [
+          "Sie fährt zum Amt, um sich zu anmelden.",
+          "Sie fährt zum Amt, um sich anmelden.",
+          "Sie fährt zum Amt, um sich anzumelden."
+        ],
+        "answer": "Sie fährt zum Amt, um sich anzumelden.",
+        "tip": "purposePathSeven.questDescription"
+      },
+      {
+        "id": 6,
+        "type": "input",
+        "question": "purposePathSeven.questTask6",
+        "correctAnswer": "damit",
+        "tip": "purposePathSeven.questDescription"
+      },
+      {
+        "id": 7,
+        "type": "readAndAnswer",
+        "question": "purposePathSeven.questTask7",
+        "text": "Ahmed wohnt seit drei Monaten in Köln. Er geht jeden Abend in einen Deutschkurs, um später als Arzt zu arbeiten. Seine Frau hilft ihm, damit er schneller lernt.",
+        "options": [
+          "um später als Arzt zu arbeiten",
+          "um in Urlaub zu fahren",
+          "um Freunde zu finden"
+        ],
+        "answer": "um später als Arzt zu arbeiten",
+        "tip": "purposePathSeven.questDescription"
+      },
+      {
+        "id": 8,
+        "type": "input",
+        "question": "purposePathSeven.questTask8",
+        "correctAnswer": "kaufen",
+        "tip": "purposePathSeven.questDescription"
+      },
+      {
+        "id": 9,
+        "type": "reorder",
+        "question": "purposePathSeven.questTask10",
+        "words": [
+          "Termin",
+          "machen",
+          "Ich",
+          "damit",
+          "um",
+          "zu",
+          "an",
+          "rufe",
+          "einen"
+        ],
+        "correctOrder": [
+          "Ich",
+          "rufe",
+          "an",
+          "um",
+          "einen",
+          "Termin",
+          "zu",
+          "machen"
+        ],
+        "tip": "purposePathSeven.questDescription"
+      },
+      {
+        "id": 10,
+        "type": "select",
+        "question": "purposePathSeven.questTask11",
+        "options": [
+          "Der Lehrer spricht langsam, damit verstehen die neuen Schüler ihn.",
+          "Der Lehrer spricht langsam, damit die neuen Schüler ihn verstehen.",
+          "Der Lehrer spricht langsam, um die neuen Schüler ihn verstehen."
+        ],
+        "answer": "Der Lehrer spricht langsam, damit die neuen Schüler ihn verstehen.",
+        "tip": "purposePathSeven.questDescription"
+      },
+      {
+        "id": 11,
+        "type": "input",
+        "question": "purposePathSix.questTask9",
+        "correctAnswer": "verbessern",
+        "tip": "purposePathSix.questDescription",
+        "reviewOf": "purpose-path-six",
+        "reviewLand": "purpose-path"
+      },
+      {
+        "id": 12,
+        "type": "input",
+        "question": "purposePathThree.questTask12",
+        "correctAnswer": "haben",
+        "tip": "purposePathThree.questDescription",
+        "reviewOf": "purpose-path-three",
+        "reviewLand": "purpose-path"
+      },
+      {
+        "id": 13,
+        "type": "input",
+        "question": "reasonBridgeEight.questTask13",
+        "correctAnswer": "liefen",
+        "tip": "reasonBridgeEight.questDescription",
+        "reviewOf": "reason-bridge-eight",
+        "reviewLand": "reason-bridge"
+      },
+      {
+        "id": 14,
+        "type": "input",
+        "question": "purposePathSeven.questTask14",
+        "correctAnswer": "weil",
+        "tip": "purposePathSeven.questDescription"
+      },
+      {
+        "id": 15,
+        "type": "input",
+        "question": "purposePathSeven.questTask15",
+        "correctAnswer": "prüften",
+        "tip": "purposePathSeven.questDescription"
+      }
+    ]
+  },
+  {
+    "questId": "purpose-path-eight",
+    "title": "purposePathEight.questTitle",
+    "progress": "0/15",
+    "description": "purposePathEight.questDescription",
+    "conditions": {
+      "goal": "purposePathEight.questGoal",
+      "minCorrect": 15,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
+    "vocabulary": [
+      {
+        "word": "satt",
+        "translation-ru": "сытый",
+        "translation-en": "full (not hungry)",
+        "translation-uk": "ситий",
+        "translation-pl": "syty",
+        "translation-es": "lleno, saciado",
+        "translation-fr": "rassasié",
+        "translation-tr": "tok",
+        "translation-ro": "sătul",
+        "translation-uz": "to‘q",
+        "translation-hi": "पेट भरा",
+        "translation-ar": "شبعان"
+      },
+      {
+        "word": "die Musik",
+        "translation-ru": "музыка",
+        "translation-en": "music",
+        "translation-uk": "музика",
+        "translation-pl": "muzyka",
+        "translation-es": "la música",
+        "translation-fr": "la musique",
+        "translation-tr": "müzik",
+        "translation-ro": "muzica",
+        "translation-uz": "musiqa",
+        "translation-hi": "संगीत",
+        "translation-ar": "الموسيقى"
+      },
+      {
+        "word": "vorbereiten",
+        "translation-ru": "готовить, подготавливать",
+        "translation-en": "to prepare",
+        "translation-uk": "готувати",
+        "translation-pl": "przygotowywać",
+        "translation-es": "preparar",
+        "translation-fr": "préparer",
+        "translation-tr": "hazırlamak",
+        "translation-ro": "a pregăti",
+        "translation-uz": "tayyorlamoq",
+        "translation-hi": "तैयारी करना",
+        "translation-ar": "يحضّر"
+      },
+      {
+        "word": "die Getränke",
+        "translation-ru": "напитки",
+        "translation-en": "drinks",
+        "translation-uk": "напої",
+        "translation-pl": "napoje",
+        "translation-es": "las bebidas",
+        "translation-fr": "les boissons",
+        "translation-tr": "içecekler",
+        "translation-ro": "băuturile",
+        "translation-uz": "ichimliklar",
+        "translation-hi": "पेय",
+        "translation-ar": "المشروبات"
+      },
+      {
+        "word": "sich wohlfühlen",
+        "translation-ru": "хорошо себя чувствовать",
+        "translation-en": "to feel good",
+        "translation-uk": "добре почуватися",
+        "translation-pl": "dobrze się czuć",
+        "translation-es": "sentirse bien",
+        "translation-fr": "se sentir bien",
+        "translation-tr": "kendini iyi hissetmek",
+        "translation-ro": "a se simți bine",
+        "translation-uz": "o‘zini yaxshi his qilmoq",
+        "translation-hi": "अच्छा महसूस करना",
+        "translation-ar": "يشعر بالراحة"
+      },
+      {
+        "word": "der Lautsprecher",
+        "translation-ru": "колонки",
+        "translation-en": "speakers",
+        "translation-uk": "колонки",
+        "translation-pl": "głośniki",
+        "translation-es": "altavoces",
+        "translation-fr": "haut-parleurs",
+        "translation-tr": "hoparlör",
+        "translation-ro": "boxe",
+        "translation-uz": "kalonkalar",
+        "translation-hi": "स्पीकर",
+        "translation-ar": "مكبرات صوت"
+      }
+    ],
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "purposePathEight.questTask1",
+        "options": [
+          "Ich fahre zur Bäckerei, um eine Torte bestellen zu.",
+          "Ich fahre zur Bäckerei, damit eine Torte zu bestellen.",
+          "Ich fahre zur Bäckerei, um eine Torte zu bestellen."
+        ],
+        "answer": "Ich fahre zur Bäckerei, um eine Torte zu bestellen.",
+        "tip": "purposePathEight.questDescription"
+      },
+      {
+        "id": 2,
+        "type": "input",
+        "question": "purposePathEight.questTask2",
+        "correctAnswer": "vorzubereiten",
+        "tip": "purposePathEight.questDescription"
+      },
+      {
+        "id": 3,
+        "type": "input",
+        "question": "purposePathEight.questTask3",
+        "correctAnswer": "damit",
+        "tip": "purposePathEight.questDescription"
+      },
+      {
+        "id": 4,
+        "type": "reorder",
+        "question": "purposePathEight.questTask4",
+        "words": [
+          "einzuladen",
+          "ruft",
+          "ihre",
+          "zu",
+          "um",
+          "Sie",
+          "Freunde",
+          "an"
+        ],
+        "correctOrder": [
+          "Sie",
+          "ruft",
+          "an",
+          "um",
+          "ihre",
+          "Freunde",
+          "einzuladen"
+        ],
+        "tip": "purposePathEight.questDescription"
+      },
+      {
+        "id": 5,
+        "type": "select",
+        "question": "purposePathEight.questTask5",
+        "options": [
+          "Er räumt die Wohnung auf, damit fühlen sich die Gäste wohl.",
+          "Er räumt die Wohnung auf, um sich die Gäste wohlfühlen.",
+          "Er räumt die Wohnung auf, damit sich die Gäste wohlfühlen."
+        ],
+        "answer": "Er räumt die Wohnung auf, damit sich die Gäste wohlfühlen.",
+        "tip": "purposePathEight.questDescription"
+      },
+      {
+        "id": 6,
+        "type": "input",
+        "question": "purposePathEight.questTask6",
+        "correctAnswer": "einzukaufen",
+        "tip": "purposePathEight.questDescription"
+      },
+      {
+        "id": 7,
+        "type": "readAndAnswer",
+        "question": "purposePathEight.questTask7",
+        "text": "Paula hat am Samstag Geburtstag. Sie räumt die Wohnung auf, um Platz für alle zu haben. Sie kauft neue Lautsprecher, damit die Musik laut genug ist. Ihr Bruder backt einen Kuchen.",
+        "options": [
+          "um einen Kuchen zu backen",
+          "damit die Musik laut genug ist",
+          "um Platz zu haben"
+        ],
+        "answer": "damit die Musik laut genug ist",
+        "tip": "purposePathEight.questDescription"
+      },
+      {
+        "id": 8,
+        "type": "input",
+        "question": "purposePathEight.questTask8",
+        "correctAnswer": "damit",
+        "tip": "purposePathEight.questDescription"
+      },
+      {
+        "id": 9,
+        "type": "reorder",
+        "question": "purposePathEight.questTask10",
+        "words": [
+          "an",
+          "Wir",
+          "Musik",
+          "um",
+          "machen",
+          "die",
+          "tanzen",
+          "Gäste",
+          "damit"
+        ],
+        "correctOrder": [
+          "Wir",
+          "machen",
+          "Musik",
+          "an",
+          "damit",
+          "die",
+          "Gäste",
+          "tanzen"
+        ],
+        "tip": "purposePathEight.questDescription"
+      },
+      {
+        "id": 10,
+        "type": "select",
+        "question": "purposePathEight.questTask11",
+        "options": [
+          "Wozu brauchst du so viele Stühle? Damit alle sitzen können.",
+          "Wozu brauchst du so viele Stühle? Damit alle können sitzen.",
+          "Wozu brauchst du so viele Stühle? Um alle sitzen können."
+        ],
+        "answer": "Wozu brauchst du so viele Stühle? Damit alle sitzen können.",
+        "tip": "purposePathEight.questDescription"
+      },
+      {
+        "id": 11,
+        "type": "input",
+        "question": "purposePathSeven.questTask9",
+        "correctAnswer": "Wozu",
+        "tip": "purposePathSeven.questDescription",
+        "reviewOf": "purpose-path-seven",
+        "reviewLand": "purpose-path"
+      },
+      {
+        "id": 12,
+        "type": "input",
+        "question": "purposePathFour.questTask12",
+        "correctAnswer": "damit",
+        "tip": "purposePathFour.questDescription",
+        "reviewOf": "purpose-path-four",
+        "reviewLand": "purpose-path"
+      },
+      {
+        "id": 13,
+        "type": "input",
+        "question": "purposePathOne.questTask13",
+        "correctAnswer": "zu",
+        "tip": "purposePathOne.questDescription",
+        "reviewOf": "purpose-path-one",
+        "reviewLand": "purpose-path"
+      },
+      {
+        "id": 14,
+        "type": "input",
+        "question": "purposePathEight.questTask14",
+        "correctAnswer": "blieben",
+        "tip": "purposePathEight.questDescription"
+      },
+      {
+        "id": 15,
+        "type": "input",
+        "question": "purposePathEight.questTask15",
+        "correctAnswer": "deshalb",
+        "tip": "purposePathEight.questDescription"
+      }
+    ]
+  },
+  {
+    "questId": "purpose-path-nine",
+    "title": "purposePathNine.questTitle",
+    "progress": "0/15",
+    "description": "purposePathNine.questDescription",
+    "conditions": {
+      "goal": "purposePathNine.questGoal",
+      "minCorrect": 15,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
+    "vocabulary": [
+      {
+        "word": "die Nummer",
+        "translation-ru": "номер",
+        "translation-en": "number",
+        "translation-uk": "номер",
+        "translation-pl": "numer",
+        "translation-es": "el número",
+        "translation-fr": "le numéro",
+        "translation-tr": "numara",
+        "translation-ro": "numărul",
+        "translation-uz": "raqam",
+        "translation-hi": "नंबर",
+        "translation-ar": "الرقم"
+      },
+      {
+        "word": "die Liste",
+        "translation-ru": "список",
+        "translation-en": "list",
+        "translation-uk": "список",
+        "translation-pl": "lista",
+        "translation-es": "la lista",
+        "translation-fr": "la liste",
+        "translation-tr": "liste",
+        "translation-ro": "lista",
+        "translation-uz": "ro‘yxat",
+        "translation-hi": "सूची",
+        "translation-ar": "القائمة"
+      },
+      {
+        "word": "vergessen",
+        "translation-ru": "забывать",
+        "translation-en": "to forget",
+        "translation-uk": "забувати",
+        "translation-pl": "zapominać",
+        "translation-es": "olvidar",
+        "translation-fr": "oublier",
+        "translation-tr": "unutmak",
+        "translation-ro": "a uita",
+        "translation-uz": "unutmoq",
+        "translation-hi": "भूलना",
+        "translation-ar": "ينسى"
+      },
+      {
+        "word": "schneller",
+        "translation-ru": "быстрее",
+        "translation-en": "faster",
+        "translation-uk": "швидше",
+        "translation-pl": "szybciej",
+        "translation-es": "más rápido",
+        "translation-fr": "plus vite",
+        "translation-tr": "daha hızlı",
+        "translation-ro": "mai repede",
+        "translation-uz": "tezroq",
+        "translation-hi": "ज़्यादा जल्दी",
+        "translation-ar": "أسرع"
+      },
+      {
+        "word": "wozu",
+        "translation-ru": "зачем, для чего",
+        "translation-en": "what for",
+        "translation-uk": "навіщо",
+        "translation-pl": "po co",
+        "translation-es": "para qué",
+        "translation-fr": "pour quoi faire",
+        "translation-tr": "ne için",
+        "translation-ro": "pentru ce",
+        "translation-uz": "nima uchun",
+        "translation-hi": "किसलिए",
+        "translation-ar": "لأي غرض"
+      }
+    ],
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "purposePathNine.questTask1",
+        "options": [
+          "Ich gehe in den Laden, damit Milch zu kaufen.",
+          "Ich gehe in den Laden, um Milch kaufen zu.",
+          "Ich gehe in den Laden, um Milch zu kaufen."
+        ],
+        "answer": "Ich gehe in den Laden, um Milch zu kaufen.",
+        "tip": "purposePathNine.questDescription"
+      },
+      {
+        "id": 2,
+        "type": "input",
+        "question": "purposePathNine.questTask2",
+        "correctAnswer": "damit",
+        "tip": "purposePathNine.questDescription"
+      },
+      {
+        "id": 3,
+        "type": "input",
+        "question": "purposePathNine.questTask3",
+        "correctAnswer": "einzukaufen",
+        "tip": "purposePathNine.questDescription"
+      },
+      {
+        "id": 4,
+        "type": "reorder",
+        "question": "purposePathNine.questTask4",
+        "words": [
+          "lebt",
+          "arbeitet",
+          "seine",
+          "gut",
+          "Er",
+          "Familie",
+          "um",
+          "damit"
+        ],
+        "correctOrder": [
+          "Er",
+          "arbeitet",
+          "damit",
+          "seine",
+          "Familie",
+          "gut",
+          "lebt"
+        ],
+        "tip": "purposePathNine.questDescription"
+      },
+      {
+        "id": 5,
+        "type": "select",
+        "question": "purposePathNine.questTask5",
+        "options": [
+          "Wozu lernst du Deutsch? Weil in Berlin zu arbeiten.",
+          "Wozu lernst du Deutsch? Um in Berlin arbeiten zu.",
+          "Wozu lernst du Deutsch? Um in Berlin zu arbeiten."
+        ],
+        "answer": "Wozu lernst du Deutsch? Um in Berlin zu arbeiten.",
+        "tip": "purposePathNine.questDescription"
+      },
+      {
+        "id": 6,
+        "type": "input",
+        "question": "purposePathNine.questTask6",
+        "correctAnswer": "um",
+        "tip": "purposePathNine.questDescription"
+      },
+      {
+        "id": 7,
+        "type": "readAndAnswer",
+        "question": "purposePathNine.questTask7",
+        "text": "Tim steht jeden Tag um sechs Uhr auf, um den ersten Zug zu erreichen. Seine Mutter ruft ihn an, damit er pünktlich ist.",
+        "options": [
+          "um den ersten Zug zu erreichen",
+          "um Sport zu machen",
+          "damit seine Mutter anruft"
+        ],
+        "answer": "um den ersten Zug zu erreichen",
+        "tip": "purposePathNine.questDescription"
+      },
+      {
+        "id": 8,
+        "type": "input",
+        "question": "purposePathNine.questTask8",
+        "correctAnswer": "anrufst",
+        "tip": "purposePathNine.questDescription"
+      },
+      {
+        "id": 9,
+        "type": "select",
+        "question": "purposePathNine.questTask9",
+        "options": [
+          "Ich schreibe eine Liste, um nichts zu vergessen.",
+          "Ich schreibe eine Liste, damit nichts zu vergessen.",
+          "Ich schreibe eine Liste, um nichts vergessen zu."
+        ],
+        "answer": "Ich schreibe eine Liste, um nichts zu vergessen.",
+        "tip": "purposePathNine.questDescription"
+      },
+      {
+        "id": 10,
+        "type": "input",
+        "question": "purposePathNine.questTask10",
+        "correctAnswer": "abzuholen",
+        "tip": "purposePathNine.questDescription"
+      },
+      {
+        "id": 11,
+        "type": "reorder",
+        "question": "purposePathNine.questTask11",
+        "words": [
+          "schneller",
+          "Ich",
+          "fertig",
+          "dir",
+          "um",
+          "damit",
+          "bist",
+          "helfe",
+          "du"
+        ],
+        "correctOrder": [
+          "Ich",
+          "helfe",
+          "dir",
+          "damit",
+          "du",
+          "schneller",
+          "fertig",
+          "bist"
+        ],
+        "tip": "purposePathNine.questDescription"
+      },
+      {
+        "id": 12,
+        "type": "select",
+        "question": "purposePathNine.questTask12",
+        "options": [
+          "Warum bist du nicht gekommen? Um keine Zeit zu haben.",
+          "Warum bist du nicht gekommen? Weil ich keine Zeit hatte.",
+          "Wozu bist du nicht gekommen? Weil ich keine Zeit hatte."
+        ],
+        "answer": "Warum bist du nicht gekommen? Weil ich keine Zeit hatte.",
+        "tip": "purposePathNine.questDescription"
+      },
+      {
+        "id": 13,
+        "type": "readAndAnswer",
+        "question": "purposePathNine.questTask13",
+        "text": "Frau Klein ruft die Schule an, damit der Lehrer weiß, dass ihr Sohn krank ist. Dann geht sie in den Supermarkt, um Brot zu kaufen.",
+        "options": [
+          "damit der Lehrer es weiß",
+          "weil sie Lehrerin ist",
+          "um Brot zu kaufen"
+        ],
+        "answer": "damit der Lehrer es weiß",
+        "tip": "purposePathNine.questDescription"
+      },
+      {
+        "id": 14,
+        "type": "input",
+        "question": "purposePathNine.questTask14",
+        "correctAnswer": "zu",
+        "tip": "purposePathNine.questDescription"
+      },
+      {
+        "id": 15,
+        "type": "input",
+        "question": "purposePathNine.questTask15",
+        "correctAnswer": "sein",
+        "tip": "purposePathNine.questDescription"
+      }
+    ]
+  },
+  {
+    "questId": "purpose-path-ten",
+    "title": "purposePathTen.questTitle",
+    "progress": "0/15",
+    "description": "purposePathTen.questDescription",
+    "conditions": {
+      "goal": "purposePathTen.questGoal",
+      "minCorrect": 15,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
+    "vocabulary": [
+      {
+        "word": "sparen",
+        "translation-ru": "экономить, копить",
+        "translation-en": "to save (money)",
+        "translation-uk": "заощаджувати",
+        "translation-pl": "oszczędzać",
+        "translation-es": "ahorrar",
+        "translation-fr": "économiser",
+        "translation-tr": "biriktirmek",
+        "translation-ro": "a economisi",
+        "translation-uz": "tejamoq",
+        "translation-hi": "बचत करना",
+        "translation-ar": "يوفّر"
+      },
+      {
+        "word": "trotzdem",
+        "translation-ru": "всё равно, несмотря на это",
+        "translation-en": "anyway, nevertheless",
+        "translation-uk": "усе одно, попри це",
+        "translation-pl": "mimo to",
+        "translation-es": "aun así",
+        "translation-fr": "quand même",
+        "translation-tr": "yine de",
+        "translation-ro": "totuși",
+        "translation-uz": "baribir",
+        "translation-hi": "फिर भी",
+        "translation-ar": "ومع ذلك"
+      },
+      {
+        "word": "während",
+        "translation-ru": "пока, в то время как",
+        "translation-en": "while",
+        "translation-uk": "поки, у той час як",
+        "translation-pl": "podczas gdy",
+        "translation-es": "mientras",
+        "translation-fr": "pendant que",
+        "translation-tr": "-iken",
+        "translation-ro": "în timp ce",
+        "translation-uz": "…ayotganda",
+        "translation-hi": "जबकि, जब तक",
+        "translation-ar": "بينما"
+      },
+      {
+        "word": "bevor",
+        "translation-ru": "прежде чем",
+        "translation-en": "before (conjunction)",
+        "translation-uk": "перш ніж",
+        "translation-pl": "zanim",
+        "translation-es": "antes de que",
+        "translation-fr": "avant que",
+        "translation-tr": "-madan önce",
+        "translation-ro": "înainte să",
+        "translation-uz": "…dan oldin",
+        "translation-hi": "…से पहले",
+        "translation-ar": "قبل أن"
+      },
+      {
+        "word": "nachdem",
+        "translation-ru": "после того как",
+        "translation-en": "after (conjunction)",
+        "translation-uk": "після того як",
+        "translation-pl": "po tym, jak",
+        "translation-es": "después de que",
+        "translation-fr": "après que",
+        "translation-tr": "-dıktan sonra",
+        "translation-ro": "după ce",
+        "translation-uz": "…gandan keyin",
+        "translation-hi": "…के बाद",
+        "translation-ar": "بعد أن"
+      }
+    ],
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "purposePathTen.questTask1",
+        "options": [
+          "Wir sparten, um ein Haus kaufen zu.",
+          "Wir sparten, damit ein Haus zu kaufen.",
+          "Wir sparten, um ein Haus zu kaufen."
+        ],
+        "answer": "Wir sparten, um ein Haus zu kaufen.",
+        "tip": "purposePathTen.questDescription"
+      },
+      {
+        "id": 2,
+        "type": "input",
+        "question": "purposePathTen.questTask2",
+        "correctAnswer": "damit",
+        "tip": "purposePathTen.questDescription"
+      },
+      {
+        "id": 3,
+        "type": "input",
+        "question": "purposePathTen.questTask3",
+        "correctAnswer": "ging",
+        "tip": "purposePathTen.questDescription"
+      },
+      {
+        "id": 4,
+        "type": "input",
+        "question": "purposePathTen.questTask4",
+        "correctAnswer": "trotzdem",
+        "tip": "purposePathTen.questDescription"
+      },
+      {
+        "id": 5,
+        "type": "select",
+        "question": "purposePathTen.questTask5",
+        "options": [
+          "Ich lerne viel, um ich die Prüfung bestehen will.",
+          "Ich lerne viel, weil ich will die Prüfung bestehen.",
+          "Ich lerne viel, weil ich die Prüfung bestehen will."
+        ],
+        "answer": "Ich lerne viel, weil ich die Prüfung bestehen will.",
+        "tip": "purposePathTen.questDescription"
+      },
+      {
+        "id": 6,
+        "type": "input",
+        "question": "purposePathTen.questTask6",
+        "correctAnswer": "fahren",
+        "tip": "purposePathTen.questDescription"
+      },
+      {
+        "id": 7,
+        "type": "readAndAnswer",
+        "question": "purposePathTen.questTask7",
+        "text": "Karin wollte ein Auto kaufen. Deshalb sparte sie zwei Jahre lang. Obwohl das Auto nicht neu war, war sie sehr glücklich.",
+        "options": [
+          "damit ihr Bruder studiert",
+          "um ein Auto zu kaufen",
+          "um eine Reise zu machen"
+        ],
+        "answer": "um ein Auto zu kaufen",
+        "tip": "purposePathTen.questDescription"
+      },
+      {
+        "id": 8,
+        "type": "input",
+        "question": "purposePathTen.questTask8",
+        "correctAnswer": "Nachdem",
+        "tip": "purposePathTen.questDescription"
+      },
+      {
+        "id": 9,
+        "type": "reorder",
+        "question": "purposePathTen.questTask9",
+        "words": [
+          "verstehe",
+          "um",
+          "dich",
+          "damit",
+          "langsam",
+          "Sprich",
+          "ich"
+        ],
+        "correctOrder": [
+          "Sprich",
+          "langsam",
+          "damit",
+          "ich",
+          "dich",
+          "verstehe"
+        ],
+        "tip": "purposePathTen.questDescription"
+      },
+      {
+        "id": 10,
+        "type": "input",
+        "question": "purposePathTen.questTask10",
+        "correctAnswer": "ist",
+        "tip": "purposePathTen.questDescription"
+      },
+      {
+        "id": 11,
+        "type": "input",
+        "question": "purposePathTen.questTask11",
+        "correctAnswer": "größte",
+        "tip": "purposePathTen.questDescription"
+      },
+      {
+        "id": 12,
+        "type": "select",
+        "question": "purposePathTen.questTask12",
+        "options": [
+          "Während ich telefonierte, kochte mein Mann.",
+          "Während telefonierte ich, kochte mein Mann.",
+          "Während ich telefonierte, mein Mann kochte."
+        ],
+        "answer": "Während ich telefonierte, kochte mein Mann.",
+        "tip": "purposePathTen.questDescription"
+      },
+      {
+        "id": 13,
+        "type": "readAndAnswer",
+        "question": "purposePathTen.questTask13",
+        "text": "Herr Wolf ging zum Arzt, weil er krank war. Der Arzt sagte: „Sie sollten mehr schlafen.“",
+        "options": [
+          "mehr Kaffee trinken",
+          "mehr schlafen",
+          "mehr arbeiten"
+        ],
+        "answer": "mehr schlafen",
+        "tip": "purposePathTen.questDescription"
+      },
+      {
+        "id": 14,
+        "type": "input",
+        "question": "purposePathTen.questTask14",
+        "correctAnswer": "gab",
+        "tip": "purposePathTen.questDescription"
+      },
+      {
+        "id": 15,
+        "type": "input",
+        "question": "purposePathTen.questTask15",
+        "correctAnswer": "meiner",
+        "tip": "purposePathTen.questDescription"
+      }
+    ]
+  }
+]

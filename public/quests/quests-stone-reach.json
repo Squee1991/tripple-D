@@ -1,4 +1,4 @@
-  [
+[
   {
     "questId": "village-1",
     "title": "questsStoneReachFirstQuests.title",
@@ -395,34 +395,6 @@
         "translation-uz": "Vanna xonasi"
       },
       {
-        "word": "das Wohnzimmer",
-        "translation-ru": "Гостиная",
-        "translation-en": "Living room",
-        "translation-uk": "Вітальня",
-        "translation-pl": "Salon",
-        "translation-es": "Sala de estar",
-        "translation-fr": "Salon",
-        "translation-ar": "غرفة المعيشة",
-        "translation-hi": "लिविंग रूम",
-        "translation-ro": "Sufragerie / Living",
-        "translation-tr": "Oturma odası",
-        "translation-uz": "Mehmonxona"
-      },
-      {
-        "word": "das Kinderzimmer",
-        "translation-ru": "Детская комната",
-        "translation-en": "Children's room",
-        "translation-uk": "Дитяча кімната",
-        "translation-pl": "Pokój dziecięcy",
-        "translation-es": "Habitación infantil",
-        "translation-fr": "Chambre d'enfant",
-        "translation-ar": "غرفة الأطفال",
-        "translation-hi": "बच्चों का कमरा",
-        "translation-ro": "Cameră pentru copii",
-        "translation-tr": "Çocuk odası",
-        "translation-uz": "Bolalar xonasi"
-      },
-      {
         "word": "das Bett",
         "translation-ru": "Кровать",
         "translation-en": "Bed",
@@ -435,20 +407,6 @@
         "translation-ro": "Pat",
         "translation-tr": "Yatak",
         "translation-uz": "Karavot"
-      },
-      {
-        "word": "der Schrank",
-        "translation-ru": "Шкаф",
-        "translation-en": "Wardrobe / Cabinet",
-        "translation-uk": "Шафа",
-        "translation-pl": "Szafa",
-        "translation-es": "Armario",
-        "translation-fr": "Armoire",
-        "translation-ar": "خزانة",
-        "translation-hi": "अलमारी",
-        "translation-ro": "Dulap",
-        "translation-tr": "Dolap",
-        "translation-uz": "Javon"
       },
       {
         "word": "das Bild",
@@ -1921,7 +1879,7 @@
         "options": [
           "questsStoneReachSixthQuests.questThirteenFirstOption",
           "questsStoneReachSixthQuests.questThirteenSecondOption",
-          "questsStoneReachSixthQuests.questThirteenSecondOption"
+          "questsStoneReachSixthQuests.questThirteenThirdOption"
         ],
         "answer": "questsStoneReachSixthQuests.questThirteenFirstOption"
       },
@@ -2949,6 +2907,20 @@
         "translation-ro": "Lopată",
         "translation-tr": "Kürek",
         "translation-uz": "Kurak / Belkurak"
+      },
+      {
+        "word": "die Blumen",
+        "translation-ru": "цветы",
+        "translation-en": "flowers",
+        "translation-uk": "квіти",
+        "translation-pl": "kwiaty",
+        "translation-es": "las flores",
+        "translation-fr": "les fleurs",
+        "translation-tr": "çiçekler",
+        "translation-ro": "florile",
+        "translation-uz": "gullar",
+        "translation-hi": "फूल",
+        "translation-ar": "الزهور"
       }
     ],
     "tasks": [

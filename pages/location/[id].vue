@@ -7,74 +7,33 @@
       <header class="location-header" :class="{ 'rtl-locale': locale === 'ar' }">
         <VBackBtn/>
         <h1 class="region__title-name">{{ t(currentRegion?.name || '') }}</h1>
-      </header>
-      <div class="lives-bar__content" v-if="!authStore.isPremium">
         <VHearts
+            v-if="!authStore.isPremium"
+            class="location-header__lives"
             :lives="chainStore.lives"
             :max-lives="chainStore.maxLives"
             :last-life-at-ms="chainStore.lastLifeAtMs"
             :regen-interval-ms="chainStore.currentRegenIntervalMs"
             show-timer
+            compact
         />
-      </div>
+      </header>
       <div class="quests">
         <div v-if="errorMessage" class="error">{{ t('locationQuests.error') }}</div>
         <VTransition v-else-if="processedQuests.length">
-          <ul class="quest-list">
-            <li
-                v-for="quest in processedQuests"
-                :key="quest.questId"
-                class="quest-card"
-                :class="{ completed: quest.isSuccess }"
-            >
-              <div v-if="quest.isPerfect" class="stamp">{{ t('locationQuests.done') }}</div>
-              <div v-else-if="quest.hasMistakes" class="stamp stamp--mistakes">{{ t('locationQuests.mistakes') }}</div>
-              <div class="stamp__icon-wrapper">
-                <img class="stamp__icon" src="../../assets/images/questList.svg" alt="questList">
-              </div>
-              <p class="quest__description">{{ t(quest.description) }}</p>
-              <div class="quest-meta">
-                <span v-if="!quest.isSuccess" class="rewards-container">
-                  <span>{{ t('locationQuests.awards') }}</span>
-                  <span class="reward-item">
-                    <span>{{ quest.rewards.points }}</span>
-                    <img src="assets/images/article.svg" alt="Articlus" class="icon-articlus">
-                  </span>
-                  <span class="reward-item">{{ quest.rewards.xp }}<span class="xp-badge-3d">XP</span></span>
-                </span>
-                <span class="rewards-container" v-else>
-                  {{ t('locationQuests.gotAward') }} <span style="font-size:18px;">✅</span>
-                </span>
-              </div>
-              <div class="quest-actions">
-                <button
-                    :data-track="'region_wordsLearn_clicked_' + quest.questId"
-                    v-if="quest.vocabulary && quest.vocabulary.length"
-                    class="btn btn--secondary"
-                    @click="handleLearnWords(quest)"
-                >
-                  📚 {{ t('locationWordSession.stuff')}}
-                </button>
-                <button
-                    class="btn"
-                    :style="quest.btnStyle"
-                    :data-track="'region_startQuest_clicked_' + quest.questId"
-                    @click="handleStartQuest(quest)"
-                >
-                  <template v-if="quest.hasMistakes">
-                    {{ t('locationQuests.repeatMistakes') }}
-                  </template>
-                  <template v-else-if="quest.isPerfect">
-                    {{ t('locationQuests.repeat') }}
-                  </template>
-                  <template v-else>
-                    {{ t('locationQuests.start') }}
-                  </template>
-                </button>
-              </div>
-            </li>
-          </ul>
+          <VQuestPath
+              :quests="processedQuests"
+              :region="currentRegion"
+              :write-progress="writeProgress"
+              :chest-claimed="chestClaimed"
+              :chest-reward="CHEST_REWARD"
+              @start="handleStartQuest"
+              @learn="handleLearnWords"
+              @write="handleWrite"
+              @claim-chest="handleClaimChest"
+          />
         </VTransition>
+
         <div v-else-if="!isLoading" class="empty">{{ t('locationQuests.notFound') }}</div>
       </div>
     </div>
@@ -104,12 +63,14 @@ import {userAuthStore} from "~/store/authStore.js";
 import {useSeoMeta} from '#imports';
 import VHearts from '../../src/components/V-hearts.vue';
 import VBackBtn from "~/src/components/V-back-btn.vue";
+import VQuestPath from "~/src/components/V-questPath.vue";
 import VReviveModal from "~/src/components/V-reviveModal.vue";
 import {showRewarded} from '~/utils/admob.js';
 import VTransition from "~/src/components/V-transition.vue";
 import {Capacitor} from "@capacitor/core";
 import VLandIntro from "~/src/components/V-landIntro.vue";
 import {isLandIntroSeen} from "~/utils/landIntro.js";
+import {useDictationStore} from "~/store/dictationStore.js";
 
 const route = useRoute();
 const router = useRouter();
@@ -117,6 +78,7 @@ const {t, te, locale} = useI18n();
 const chainStore = userChainStore();
 const langStore = userlangStore();
 const authStore = userAuthStore();
+const dictationStore = useDictationStore();
 const { $track } = useNuxtApp()
 const questList = ref([]);
 const isLoading = ref(true);
@@ -260,6 +222,45 @@ function handleLearnWords(quest) {
   });
 }
 
+// ветка «Письмо»: диктант из фраз квеста, после него — обратно на эту землю
+// письмо открывается только после прохождения квеста (тряску и подсказку показывает VQuestPath)
+function handleWrite(quest) {
+  if (!quest?.questId || !currentRegion.value || !quest.isSuccess) return;
+  dictationStore.setCurrent(currentRegion.value.id, quest.questId);
+  router.push({
+    path: '/dictation/session',
+    query: {back: `/location/${currentRegionKey.value}`}
+  });
+}
+
+const dictationParts = ref([]);
+
+const writeProgress = computed(() => {
+  const progress = dictationStore.userProgress[currentRegion.value?.id] || {};
+  return Object.fromEntries(dictationParts.value.map(part => [part.id, {
+    done: part.items.filter(item => progress[item.id] === 'success').length,
+    total: part.items.length
+  }]));
+});
+
+const CHEST_REWARD = 10;
+
+const chestClaimed = computed(() => dictationStore.isChestClaimed(currentRegion.value?.id));
+
+async function handleClaimChest() {
+  const regionId = currentRegion.value?.id;
+  if (!regionId) return;
+  // сначала отмечаем сундук открытым, чтобы награду нельзя было получить дважды
+  if (!await dictationStore.claimChest(regionId)) return;
+  await langStore.addPoints(CHEST_REWARD);
+}
+
+async function loadDictation() {
+  const regionId = currentRegion.value?.id;
+  if (!regionId) return;
+  dictationParts.value = await dictationStore.fetchRegion(regionId);
+}
+
 async function trySpendLocal(amount) {
   amount = Number(amount) || 0;
   if (amount <= 0) return true;
@@ -326,6 +327,7 @@ function closeModal() {
 }
 
 watch(currentRegionKey, fetchQuests, {immediate: true});
+watch(() => currentRegion.value?.id, loadDictation, {immediate: true});
 
 // Ёжик один раз рассказывает, что изучаем в этой земле
 const showLandIntro = ref(false);
@@ -338,12 +340,15 @@ watch(() => currentRegion.value?.id, (id) => {
 onMounted(async () => {
   await chainStore.loadProgressFromFirebase();
   updateRemainingAds();
+  await dictationStore.loadUserProgress();
 });
 </script>
 
 <style scoped>
 
 .location-page {
+  display: flex;
+  flex-direction: column;
   height: 100%;
   overflow-y: hidden;
   overflow-x: hidden;
@@ -361,11 +366,21 @@ onMounted(async () => {
   width: 0 !important;
 }
 
+/* обложка паспорта тянется до низа экрана, прокрутка — внутри неё */
+.location__wrapper {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-height: 0;
+}
+
 .quests {
-  padding: 0 15px;
-  overflow: auto;
-  height: 100vh;
-  padding-bottom: 160px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-height: 0;
+  padding: 0 15px 22px;
+  overflow: hidden;
 }
 
 .location-header {
@@ -377,22 +392,16 @@ onMounted(async () => {
   overflow: visible;
 }
 
+.location-header__lives {
+  flex-shrink: 0;
+  margin-inline-start: auto;
+}
+
 .region__title-name {
   font-size: 23px;
   color: var(--title);
   margin-left: 15px;
   text-shadow: 0px 1px var(--title);
-}
-.lives-bar__content {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 10px;
-  margin: 0 14px 10px 14px;
-  border-radius: 15px;
-  border: 3px solid var(--tabsSlideBorderColor);
-  box-shadow: var(--boxShadowMobile);
-  background: white;
 }
 
 .error, .empty {
@@ -676,5 +685,61 @@ onMounted(async () => {
 
 .quest-actions .btn {
   margin-top: 0;
+}
+/* письмо: закрыто, пока квест не пройден */
+.btn--write {
+  background: linear-gradient(180deg, #ffb04d 0%, #ff9600 100%);
+  box-shadow: 0 5px 0 #cc6f00;
+  margin-top: 0;
+}
+
+.btn--write-locked {
+  background: #a0aec0;
+  box-shadow: 0 5px 0 #718096;
+}
+
+.btn--write-done {
+  background: linear-gradient(180deg, #ffd43b 0%, #ffc800 100%);
+  box-shadow: 0 5px 0 #e5a400;
+}
+
+.btn--write:active {
+  box-shadow: 0 0px 0 transparent;
+}
+
+.btn--shake {
+  animation: write-shake 0.4s ease;
+}
+
+.write-hint {
+  margin: -2px 0 0;
+  padding: 7px 12px;
+  border-radius: 12px;
+  background: #1e272e;
+  color: #fff;
+  font-size: 13px;
+  font-weight: 800;
+  text-align: center;
+}
+
+@keyframes write-shake {
+  0%, 100% {
+    translate: 0 0;
+  }
+  25% {
+    translate: -6px 0;
+  }
+  50% {
+    translate: 6px 0;
+  }
+  75% {
+    translate: -4px 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .btn--shake {
+    animation: none;
+  }
 }
 </style>

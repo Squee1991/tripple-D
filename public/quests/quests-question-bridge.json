@@ -1,0 +1,2525 @@
+[
+  {
+    "questId": "question-bridge-one",
+    "title": "questionBridgeOne.questTitle",
+    "progress": "0/15",
+    "description": "questionBridgeOne.questDescription",
+    "conditions": {
+      "goal": "questionBridgeOne.questGoal",
+      "minCorrect": 15,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
+    "vocabulary": [
+      {
+        "word": "denken an",
+        "translation-ru": "думать о",
+        "translation-en": "to think of",
+        "translation-uk": "думати про",
+        "translation-pl": "myśleć o",
+        "translation-es": "pensar en",
+        "translation-fr": "penser à",
+        "translation-tr": "…i düşünmek",
+        "translation-ro": "a se gândi la",
+        "translation-uz": "…haqida o‘ylamoq",
+        "translation-hi": "… के बारे में सोचना",
+        "translation-ar": "يفكر في"
+      },
+      {
+        "word": "sich interessieren für",
+        "translation-ru": "интересоваться",
+        "translation-en": "to be interested in",
+        "translation-uk": "цікавитися",
+        "translation-pl": "interesować się",
+        "translation-es": "interesarse por",
+        "translation-fr": "s’intéresser à",
+        "translation-tr": "…ile ilgilenmek",
+        "translation-ro": "a se interesa de",
+        "translation-uz": "…ga qiziqmoq",
+        "translation-hi": "… में रुचि रखना",
+        "translation-ar": "يهتم بـ"
+      },
+      {
+        "word": "sich kümmern um",
+        "translation-ru": "заботиться о",
+        "translation-en": "to take care of",
+        "translation-uk": "піклуватися про",
+        "translation-pl": "opiekować się",
+        "translation-es": "cuidar de",
+        "translation-fr": "s’occuper de",
+        "translation-tr": "…e bakmak",
+        "translation-ro": "a avea grijă de",
+        "translation-uz": "…ga g‘amxo‘rlik qilmoq",
+        "translation-hi": "… की देखभाल करना",
+        "translation-ar": "يعتني بـ"
+      },
+      {
+        "word": "sich ärgern über",
+        "translation-ru": "злиться на",
+        "translation-en": "to be annoyed about",
+        "translation-uk": "сердитися на",
+        "translation-pl": "złościć się na",
+        "translation-es": "enfadarse por",
+        "translation-fr": "s’énerver à cause de",
+        "translation-tr": "…e kızmak",
+        "translation-ro": "a se supăra pe",
+        "translation-uz": "…dan jahli chiqmoq",
+        "translation-hi": "… पर नाराज़ होना",
+        "translation-ar": "ينزعج من"
+      },
+      {
+        "word": "die Bedienung",
+        "translation-ru": "обслуживание, официант(ка)",
+        "translation-en": "service, waiter",
+        "translation-uk": "обслуговування",
+        "translation-pl": "obsługa",
+        "translation-es": "el servicio",
+        "translation-fr": "le service",
+        "translation-tr": "servis",
+        "translation-ro": "servirea",
+        "translation-uz": "xizmat",
+        "translation-hi": "सेवा",
+        "translation-ar": "الخدمة"
+      }
+    ],
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "questionBridgeOne.questTask1",
+        "options": [
+          "Ich denke an dir.",
+          "Ich denke auf dich.",
+          "Ich denke an dich."
+        ],
+        "answer": "Ich denke an dich.",
+        "tip": "questionBridgeOne.questDescription"
+      },
+      {
+        "id": 2,
+        "type": "input",
+        "question": "questionBridgeOne.questTask2",
+        "correctAnswer": "auf",
+        "tip": "questionBridgeOne.questDescription"
+      },
+      {
+        "id": 3,
+        "type": "input",
+        "question": "questionBridgeOne.questTask3",
+        "correctAnswer": "für",
+        "tip": "questionBridgeOne.questDescription"
+      },
+      {
+        "id": 4,
+        "type": "reorder",
+        "question": "questionBridgeOne.questTask4",
+        "words": [
+          "für",
+          "die",
+          "Kinder",
+          "Er",
+          "kümmert",
+          "um",
+          "sich"
+        ],
+        "correctOrder": [
+          "Er",
+          "kümmert",
+          "sich",
+          "um",
+          "die",
+          "Kinder"
+        ],
+        "tip": "questionBridgeOne.questDescription"
+      },
+      {
+        "id": 5,
+        "type": "select",
+        "question": "questionBridgeOne.questTask5",
+        "options": [
+          "Ich ärgere mich auf den Lärm.",
+          "Ich ärgere mich über den Lärm.",
+          "Ich ärgere mich über dem Lärm."
+        ],
+        "answer": "Ich ärgere mich über den Lärm.",
+        "tip": "questionBridgeOne.questDescription"
+      },
+      {
+        "id": 6,
+        "type": "input",
+        "question": "questionBridgeOne.questTask6",
+        "correctAnswer": "auf",
+        "tip": "questionBridgeOne.questDescription"
+      },
+      {
+        "id": 7,
+        "type": "readAndAnswer",
+        "question": "questionBridgeOne.questTask7",
+        "text": "Lena hat einen kleinen Bruder. Wenn die Eltern arbeiten, kümmert sie sich um ihn. Lena interessiert sich für Musik und singt gern.",
+        "options": [
+          "um einen Hund",
+          "um ihren Bruder",
+          "um ihre Eltern"
+        ],
+        "answer": "um ihren Bruder",
+        "tip": "questionBridgeOne.questDescription"
+      },
+      {
+        "id": 8,
+        "type": "input",
+        "question": "questionBridgeOne.questTask8",
+        "correctAnswer": "an",
+        "tip": "questionBridgeOne.questDescription"
+      },
+      {
+        "id": 9,
+        "type": "reorder",
+        "question": "questionBridgeOne.questTask10",
+        "words": [
+          "Fußball",
+          "mich",
+          "interessiere",
+          "Ich",
+          "um",
+          "für"
+        ],
+        "correctOrder": [
+          "Ich",
+          "interessiere",
+          "mich",
+          "für",
+          "Fußball"
+        ],
+        "tip": "questionBridgeOne.questDescription"
+      },
+      {
+        "id": 10,
+        "type": "select",
+        "question": "questionBridgeOne.questTask11",
+        "options": [
+          "Wer kümmert sich an die Katze?",
+          "Wer kümmert sich um die Katze?",
+          "Wer kümmert sich um der Katze?"
+        ],
+        "answer": "Wer kümmert sich um die Katze?",
+        "tip": "questionBridgeOne.questDescription"
+      },
+      {
+        "id": 11,
+        "type": "input",
+        "question": "tasteMarketEight.questTask9",
+        "correctAnswer": "freundlicher",
+        "tip": "tasteMarketEight.questDescription",
+        "reviewOf": "taste-market-eight",
+        "reviewLand": "taste-market"
+      },
+      {
+        "id": 12,
+        "type": "input",
+        "question": "tasteMarketFive.questTask12",
+        "correctAnswer": "schlechten",
+        "tip": "tasteMarketFive.questDescription",
+        "reviewOf": "taste-market-five",
+        "reviewLand": "taste-market"
+      },
+      {
+        "id": 13,
+        "type": "input",
+        "question": "tasteMarketTwo.questTask13",
+        "correctAnswer": "roten",
+        "tip": "tasteMarketTwo.questDescription",
+        "reviewOf": "taste-market-two",
+        "reviewLand": "taste-market"
+      },
+      {
+        "id": 14,
+        "type": "input",
+        "question": "questionBridgeOne.questTask14",
+        "correctAnswer": "Kalter",
+        "tip": "questionBridgeOne.questDescription"
+      },
+      {
+        "id": 15,
+        "type": "input",
+        "question": "questionBridgeOne.questTask15",
+        "correctAnswer": "des",
+        "tip": "questionBridgeOne.questDescription"
+      }
+    ]
+  },
+  {
+    "questId": "question-bridge-two",
+    "title": "questionBridgeTwo.questTitle",
+    "progress": "0/15",
+    "description": "questionBridgeTwo.questDescription",
+    "conditions": {
+      "goal": "questionBridgeTwo.questGoal",
+      "minCorrect": 15,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
+    "vocabulary": [
+      {
+        "word": "fragen nach",
+        "translation-ru": "спрашивать о",
+        "translation-en": "to ask about",
+        "translation-uk": "питати про",
+        "translation-pl": "pytać o",
+        "translation-es": "preguntar por",
+        "translation-fr": "demander des nouvelles de",
+        "translation-tr": "…i sormak",
+        "translation-ro": "a întreba de",
+        "translation-uz": "…ni so‘ramoq",
+        "translation-hi": "… के बारे में पूछना",
+        "translation-ar": "يسأل عن"
+      },
+      {
+        "word": "frühstücken",
+        "translation-ru": "завтракать",
+        "translation-en": "to eat breakfast",
+        "translation-uk": "снідати",
+        "translation-pl": "jeść śniadanie",
+        "translation-es": "desayunar",
+        "translation-fr": "petit-déjeuner",
+        "translation-tr": "kahvaltı yapmak",
+        "translation-ro": "a lua micul dejun",
+        "translation-uz": "nonushta qilmoq",
+        "translation-hi": "नाश्ता करना",
+        "translation-ar": "يتناول الفطور"
+      },
+      {
+        "word": "das Brötchen",
+        "translation-ru": "булочка",
+        "translation-en": "bread roll",
+        "translation-uk": "булочка",
+        "translation-pl": "bułka",
+        "translation-es": "el panecillo",
+        "translation-fr": "le petit pain",
+        "translation-tr": "küçük ekmek",
+        "translation-ro": "chifla",
+        "translation-uz": "bulochka",
+        "translation-hi": "बन",
+        "translation-ar": "الخبز الصغير"
+      },
+      {
+        "word": "spät",
+        "translation-ru": "поздно",
+        "translation-en": "late",
+        "translation-uk": "пізно",
+        "translation-pl": "późno",
+        "translation-es": "tarde",
+        "translation-fr": "tard",
+        "translation-tr": "geç",
+        "translation-ro": "târziu",
+        "translation-uz": "kech",
+        "translation-hi": "देर",
+        "translation-ar": "متأخر"
+      },
+      {
+        "word": "du",
+        "translation-ru": "ты",
+        "translation-en": "you",
+        "translation-uk": "ти",
+        "translation-pl": "ty",
+        "translation-es": "tú",
+        "translation-fr": "tu",
+        "translation-tr": "sen",
+        "translation-ro": "tu",
+        "translation-uz": "sen",
+        "translation-hi": "तुम",
+        "translation-ar": "أنت"
+      }
+    ],
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "questionBridgeTwo.questTask1",
+        "options": [
+          "Mit wen wartest du?",
+          "Auf wem wartest du?",
+          "Auf wen wartest du?"
+        ],
+        "answer": "Auf wen wartest du?",
+        "tip": "questionBridgeTwo.questDescription"
+      },
+      {
+        "id": 2,
+        "type": "input",
+        "question": "questionBridgeTwo.questTask2",
+        "correctAnswer": "wen",
+        "tip": "questionBridgeTwo.questDescription"
+      },
+      {
+        "id": 3,
+        "type": "input",
+        "question": "questionBridgeTwo.questTask3",
+        "correctAnswer": "wem",
+        "tip": "questionBridgeTwo.questDescription"
+      },
+      {
+        "id": 4,
+        "type": "reorder",
+        "question": "questionBridgeTwo.questTask4",
+        "words": [
+          "Um",
+          "wem",
+          "sich",
+          "er",
+          "wen",
+          "kümmert"
+        ],
+        "correctOrder": [
+          "Um",
+          "wen",
+          "kümmert",
+          "er",
+          "sich"
+        ],
+        "tip": "questionBridgeTwo.questDescription"
+      },
+      {
+        "id": 5,
+        "type": "select",
+        "question": "questionBridgeTwo.questTask5",
+        "options": [
+          "Um wem träumst du?",
+          "Von wem träumst du?",
+          "Von wen träumst du?"
+        ],
+        "answer": "Von wem träumst du?",
+        "tip": "questionBridgeTwo.questDescription"
+      },
+      {
+        "id": 6,
+        "type": "input",
+        "question": "questionBridgeTwo.questTask6",
+        "correctAnswer": "wen",
+        "tip": "questionBridgeTwo.questDescription"
+      },
+      {
+        "id": 7,
+        "type": "readAndAnswer",
+        "question": "questionBridgeTwo.questTask7",
+        "text": "Max steht vor dem Kino. Er wartet auf seine Freundin Sara. Sie kommt zu spät, aber Max ärgert sich nicht über sie.",
+        "options": [
+          "auf Sara",
+          "auf den Bus",
+          "auf seinen Bruder"
+        ],
+        "answer": "auf Sara",
+        "tip": "questionBridgeTwo.questDescription"
+      },
+      {
+        "id": 8,
+        "type": "input",
+        "question": "questionBridgeTwo.questTask8",
+        "correctAnswer": "wem",
+        "tip": "questionBridgeTwo.questDescription"
+      },
+      {
+        "id": 9,
+        "type": "reorder",
+        "question": "questionBridgeTwo.questTask10",
+        "words": [
+          "den",
+          "Mit",
+          "Urlaub",
+          "fährst",
+          "wen",
+          "du",
+          "wem",
+          "in"
+        ],
+        "correctOrder": [
+          "Mit",
+          "wem",
+          "fährst",
+          "du",
+          "in",
+          "den",
+          "Urlaub"
+        ],
+        "tip": "questionBridgeTwo.questDescription"
+      },
+      {
+        "id": 10,
+        "type": "select",
+        "question": "questionBridgeTwo.questTask11",
+        "options": [
+          "Von wer hast du das gehört?",
+          "Von wem hast du das gehört?",
+          "Von wen hast du das gehört?"
+        ],
+        "answer": "Von wem hast du das gehört?",
+        "tip": "questionBridgeTwo.questDescription"
+      },
+      {
+        "id": 11,
+        "type": "input",
+        "question": "questionBridgeOne.questTask9",
+        "correctAnswer": "vor",
+        "tip": "questionBridgeOne.questDescription",
+        "reviewOf": "question-bridge-one",
+        "reviewLand": "question-bridge"
+      },
+      {
+        "id": 12,
+        "type": "input",
+        "question": "tasteMarketSix.questTask12",
+        "correctAnswer": "frischer",
+        "tip": "tasteMarketSix.questDescription",
+        "reviewOf": "taste-market-six",
+        "reviewLand": "taste-market"
+      },
+      {
+        "id": 13,
+        "type": "input",
+        "question": "tasteMarketThree.questTask13",
+        "correctAnswer": "braunem",
+        "tip": "tasteMarketThree.questDescription",
+        "reviewOf": "taste-market-three",
+        "reviewLand": "taste-market"
+      },
+      {
+        "id": 14,
+        "type": "input",
+        "question": "questionBridgeTwo.questTask14",
+        "correctAnswer": "meines",
+        "tip": "questionBridgeTwo.questDescription"
+      },
+      {
+        "id": 15,
+        "type": "input",
+        "question": "questionBridgeTwo.questTask15",
+        "correctAnswer": "frischen",
+        "tip": "questionBridgeTwo.questDescription"
+      }
+    ]
+  },
+  {
+    "questId": "question-bridge-three",
+    "title": "questionBridgeThree.questTitle",
+    "progress": "0/15",
+    "description": "questionBridgeThree.questDescription",
+    "conditions": {
+      "goal": "questionBridgeThree.questGoal",
+      "minCorrect": 15,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
+    "vocabulary": [
+      {
+        "word": "sich freuen über",
+        "translation-ru": "радоваться (чему-то)",
+        "translation-en": "to be happy about",
+        "translation-uk": "радіти (чомусь)",
+        "translation-pl": "cieszyć się z",
+        "translation-es": "alegrarse de",
+        "translation-fr": "être content de",
+        "translation-tr": "…e sevinmek",
+        "translation-ro": "a se bucura de",
+        "translation-uz": "…dan xursand bo‘lmoq",
+        "translation-hi": "… से ख़ुश होना",
+        "translation-ar": "يفرح بـ"
+      },
+      {
+        "word": "sich kümmern um",
+        "translation-ru": "заботиться о",
+        "translation-en": "to take care of",
+        "translation-uk": "піклуватися про",
+        "translation-pl": "opiekować się",
+        "translation-es": "cuidar de",
+        "translation-fr": "s’occuper de",
+        "translation-tr": "…e bakmak",
+        "translation-ro": "a avea grijă de",
+        "translation-uz": "…ga g‘amxo‘rlik qilmoq",
+        "translation-hi": "… की देखभाल करना",
+        "translation-ar": "يعتني بـ"
+      },
+      {
+        "word": "der Anfang",
+        "translation-ru": "начало",
+        "translation-en": "beginning",
+        "translation-uk": "початок",
+        "translation-pl": "początek",
+        "translation-es": "el comienzo",
+        "translation-fr": "le début",
+        "translation-tr": "başlangıç",
+        "translation-ro": "începutul",
+        "translation-uz": "boshlanish",
+        "translation-hi": "शुरुआत",
+        "translation-ar": "البداية"
+      },
+      {
+        "word": "die Freunde",
+        "translation-ru": "друзья",
+        "translation-en": "friends",
+        "translation-uk": "друзі",
+        "translation-pl": "przyjaciele",
+        "translation-es": "los amigos",
+        "translation-fr": "les amis",
+        "translation-tr": "arkadaşlar",
+        "translation-ro": "prietenii",
+        "translation-uz": "do‘stlar",
+        "translation-hi": "दोस्त",
+        "translation-ar": "الأصدقاء"
+      },
+      {
+        "word": "ihr",
+        "translation-ru": "вы (вы все)",
+        "translation-en": "you (plural)",
+        "translation-uk": "ви (усі)",
+        "translation-pl": "wy",
+        "translation-es": "vosotros",
+        "translation-fr": "vous (pluriel)",
+        "translation-tr": "siz (çoğul)",
+        "translation-ro": "voi",
+        "translation-uz": "sizlar",
+        "translation-hi": "तुम सब",
+        "translation-ar": "أنتم"
+      }
+    ],
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "questionBridgeThree.questTask1",
+        "options": [
+          "Worüber wartest du?",
+          "Wofür wartest du?",
+          "Worauf wartest du?"
+        ],
+        "answer": "Worauf wartest du?",
+        "tip": "questionBridgeThree.questDescription"
+      },
+      {
+        "id": 2,
+        "type": "input",
+        "question": "questionBridgeThree.questTask2",
+        "correctAnswer": "Woran",
+        "tip": "questionBridgeThree.questDescription"
+      },
+      {
+        "id": 3,
+        "type": "input",
+        "question": "questionBridgeThree.questTask3",
+        "correctAnswer": "Wofür",
+        "tip": "questionBridgeThree.questDescription"
+      },
+      {
+        "id": 4,
+        "type": "reorder",
+        "question": "questionBridgeThree.questTask4",
+        "words": [
+          "Woran",
+          "Worüber",
+          "ihr",
+          "sprecht"
+        ],
+        "correctOrder": [
+          "Worüber",
+          "sprecht",
+          "ihr"
+        ],
+        "tip": "questionBridgeThree.questDescription"
+      },
+      {
+        "id": 5,
+        "type": "select",
+        "question": "questionBridgeThree.questTask5",
+        "options": [
+          "Worüber freust du dich?",
+          "Womit freust du dich?",
+          "Woran freust du dich?"
+        ],
+        "answer": "Worüber freust du dich?",
+        "tip": "questionBridgeThree.questDescription"
+      },
+      {
+        "id": 6,
+        "type": "input",
+        "question": "questionBridgeThree.questTask6",
+        "correctAnswer": "Wovon",
+        "tip": "questionBridgeThree.questDescription"
+      },
+      {
+        "id": 7,
+        "type": "readAndAnswer",
+        "question": "questionBridgeThree.questTask7",
+        "text": "Paul fragt seine Schwester: „Worauf freust du dich am meisten?“ Sie sagt: „Auf die Ferien. Dann fahren wir ans Meer.“",
+        "options": [
+          "auf die Schule",
+          "auf die Ferien",
+          "auf ihren Geburtstag"
+        ],
+        "answer": "auf die Ferien",
+        "tip": "questionBridgeThree.questDescription"
+      },
+      {
+        "id": 8,
+        "type": "input",
+        "question": "questionBridgeThree.questTask8",
+        "correctAnswer": "Worüber",
+        "tip": "questionBridgeThree.questDescription"
+      },
+      {
+        "id": 9,
+        "type": "reorder",
+        "question": "questionBridgeThree.questTask10",
+        "words": [
+          "erinnerst",
+          "Worauf",
+          "Woran",
+          "dich",
+          "du"
+        ],
+        "correctOrder": [
+          "Woran",
+          "erinnerst",
+          "du",
+          "dich"
+        ],
+        "tip": "questionBridgeThree.questDescription"
+      },
+      {
+        "id": 10,
+        "type": "select",
+        "question": "questionBridgeThree.questTask11",
+        "options": [
+          "Wovor hast du Angst?",
+          "Worauf hast du Angst?",
+          "Woran hast du Angst?"
+        ],
+        "answer": "Wovor hast du Angst?",
+        "tip": "questionBridgeThree.questDescription"
+      },
+      {
+        "id": 11,
+        "type": "input",
+        "question": "questionBridgeTwo.questTask9",
+        "correctAnswer": "wen",
+        "tip": "questionBridgeTwo.questDescription",
+        "reviewOf": "question-bridge-two",
+        "reviewLand": "question-bridge"
+      },
+      {
+        "id": 12,
+        "type": "input",
+        "question": "tasteMarketSeven.questTask12",
+        "correctAnswer": "kaltes",
+        "tip": "tasteMarketSeven.questDescription",
+        "reviewOf": "taste-market-seven",
+        "reviewLand": "taste-market"
+      },
+      {
+        "id": 13,
+        "type": "input",
+        "question": "tasteMarketFour.questTask13",
+        "correctAnswer": "alte",
+        "tip": "tasteMarketFour.questDescription",
+        "reviewOf": "taste-market-four",
+        "reviewLand": "taste-market"
+      },
+      {
+        "id": 14,
+        "type": "input",
+        "question": "questionBridgeThree.questTask14",
+        "correctAnswer": "um",
+        "tip": "questionBridgeThree.questDescription"
+      },
+      {
+        "id": 15,
+        "type": "input",
+        "question": "questionBridgeThree.questTask15",
+        "correctAnswer": "hätten",
+        "tip": "questionBridgeThree.questDescription"
+      }
+    ]
+  },
+  {
+    "questId": "question-bridge-four",
+    "title": "questionBridgeFour.questTitle",
+    "progress": "0/15",
+    "description": "questionBridgeFour.questDescription",
+    "conditions": {
+      "goal": "questionBridgeFour.questGoal",
+      "minCorrect": 15,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
+    "vocabulary": [
+      {
+        "word": "sich gewöhnen an",
+        "translation-ru": "привыкать к",
+        "translation-en": "to get used to",
+        "translation-uk": "звикати до",
+        "translation-pl": "przyzwyczajać się do",
+        "translation-es": "acostumbrarse a",
+        "translation-fr": "s’habituer à",
+        "translation-tr": "…e alışmak",
+        "translation-ro": "a se obișnui cu",
+        "translation-uz": "…ga ko‘nikmoq",
+        "translation-hi": "… की आदत डालना",
+        "translation-ar": "يعتاد على"
+      },
+      {
+        "word": "zufrieden mit",
+        "translation-ru": "довольный (кем, чем)",
+        "translation-en": "happy with",
+        "translation-uk": "задоволений (ким, чим)",
+        "translation-pl": "zadowolony z",
+        "translation-es": "contento con",
+        "translation-fr": "satisfait de",
+        "translation-tr": "…den memnun",
+        "translation-ro": "mulțumit de",
+        "translation-uz": "…dan mamnun",
+        "translation-hi": "… से संतुष्ट",
+        "translation-ar": "راضٍ عن"
+      },
+      {
+        "word": "preisen",
+        "translation-ru": "хвалить / восхвалять",
+        "translation-en": "to praise / glorify",
+        "translation-uk": "хвалити",
+        "translation-pl": "wychwalać",
+        "translation-es": "alabar / elogiar",
+        "translation-fr": "louer / vanter",
+        "translation-tr": "övmek",
+        "translation-ro": "a lăuda",
+        "translation-uz": "maqtamoq",
+        "translation-hi": "प्रशंसा करना",
+        "translation-ar": "يمدح"
+      },
+      {
+        "word": "trotz",
+        "translation-ru": "несмотря на",
+        "translation-en": "despite",
+        "translation-uk": "попри",
+        "translation-pl": "mimo",
+        "translation-es": "a pesar de",
+        "translation-fr": "malgré",
+        "translation-tr": "rağmen",
+        "translation-ro": "în ciuda",
+        "translation-uz": "qaramay",
+        "translation-hi": "के बावजूद",
+        "translation-ar": "رغم"
+      },
+      {
+        "word": "die Reise",
+        "translation-ru": "поездка",
+        "translation-en": "trip, journey",
+        "translation-uk": "подорож",
+        "translation-pl": "podróż",
+        "translation-es": "el viaje",
+        "translation-fr": "le voyage",
+        "translation-tr": "yolculuk",
+        "translation-ro": "călătoria",
+        "translation-uz": "sayohat",
+        "translation-hi": "यात्रा",
+        "translation-ar": "الرحلة"
+      }
+    ],
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "questionBridgeFour.questTask1",
+        "options": [
+          "Wartest du auf den Bus? Ja, ich warte dafür.",
+          "Wartest du auf den Bus? Ja, ich warte daran.",
+          "Wartest du auf den Bus? Ja, ich warte darauf."
+        ],
+        "answer": "Wartest du auf den Bus? Ja, ich warte darauf.",
+        "tip": "questionBridgeFour.questDescription"
+      },
+      {
+        "id": 2,
+        "type": "input",
+        "question": "questionBridgeFour.questTask2",
+        "correctAnswer": "daran",
+        "tip": "questionBridgeFour.questDescription"
+      },
+      {
+        "id": 3,
+        "type": "input",
+        "question": "questionBridgeFour.questTask3",
+        "correctAnswer": "dafür",
+        "tip": "questionBridgeFour.questDescription"
+      },
+      {
+        "id": 4,
+        "type": "reorder",
+        "question": "questionBridgeFour.questTask4",
+        "words": [
+          "Ich",
+          "darüber",
+          "mich",
+          "daran",
+          "freue"
+        ],
+        "correctOrder": [
+          "Ich",
+          "freue",
+          "mich",
+          "darüber"
+        ],
+        "tip": "questionBridgeFour.questDescription"
+      },
+      {
+        "id": 5,
+        "type": "select",
+        "question": "questionBridgeFour.questTask5",
+        "options": [
+          "Habt ihr über die Reise gesprochen? Ja, wir haben daran gesprochen.",
+          "Habt ihr über die Reise gesprochen? Ja, wir haben darüber gesprochen.",
+          "Habt ihr über die Reise gesprochen? Ja, wir haben dafür gesprochen."
+        ],
+        "answer": "Habt ihr über die Reise gesprochen? Ja, wir haben darüber gesprochen.",
+        "tip": "questionBridgeFour.questDescription"
+      },
+      {
+        "id": 6,
+        "type": "input",
+        "question": "questionBridgeFour.questTask6",
+        "correctAnswer": "daran",
+        "tip": "questionBridgeFour.questDescription"
+      },
+      {
+        "id": 7,
+        "type": "readAndAnswer",
+        "question": "questionBridgeFour.questTask7",
+        "text": "Anna hat zum Geburtstag ein neues Fahrrad bekommen. Sie freut sich sehr darüber. Jetzt fährt sie jeden Tag damit zur Schule.",
+        "options": [
+          "mit dem neuen Fahrrad",
+          "mit dem Auto",
+          "mit dem Bus"
+        ],
+        "answer": "mit dem neuen Fahrrad",
+        "tip": "questionBridgeFour.questDescription"
+      },
+      {
+        "id": 8,
+        "type": "input",
+        "question": "questionBridgeFour.questTask8",
+        "correctAnswer": "damit",
+        "tip": "questionBridgeFour.questDescription"
+      },
+      {
+        "id": 9,
+        "type": "reorder",
+        "question": "questionBridgeFour.questTask10",
+        "words": [
+          "Wir",
+          "haben",
+          "dafür",
+          "gewartet",
+          "lange",
+          "darauf"
+        ],
+        "correctOrder": [
+          "Wir",
+          "haben",
+          "lange",
+          "darauf",
+          "gewartet"
+        ],
+        "tip": "questionBridgeFour.questDescription"
+      },
+      {
+        "id": 10,
+        "type": "select",
+        "question": "questionBridgeFour.questTask11",
+        "options": [
+          "Träumst du von einem Haus? Ja, ich träume darauf.",
+          "Träumst du von einem Haus? Ja, ich träume davon.",
+          "Träumst du von einem Haus? Ja, ich träume daran."
+        ],
+        "answer": "Träumst du von einem Haus? Ja, ich träume davon.",
+        "tip": "questionBridgeFour.questDescription"
+      },
+      {
+        "id": 11,
+        "type": "input",
+        "question": "questionBridgeThree.questTask9",
+        "correctAnswer": "Womit",
+        "tip": "questionBridgeThree.questDescription",
+        "reviewOf": "question-bridge-three",
+        "reviewLand": "question-bridge"
+      },
+      {
+        "id": 12,
+        "type": "input",
+        "question": "tasteMarketEight.questTask12",
+        "correctAnswer": "guten",
+        "tip": "tasteMarketEight.questDescription",
+        "reviewOf": "taste-market-eight",
+        "reviewLand": "taste-market"
+      },
+      {
+        "id": 13,
+        "type": "input",
+        "question": "tasteMarketFive.questTask13",
+        "correctAnswer": "starken",
+        "tip": "tasteMarketFive.questDescription",
+        "reviewOf": "taste-market-five",
+        "reviewLand": "taste-market"
+      },
+      {
+        "id": 14,
+        "type": "input",
+        "question": "questionBridgeFour.questTask14",
+        "correctAnswer": "wem",
+        "tip": "questionBridgeFour.questDescription"
+      },
+      {
+        "id": 15,
+        "type": "input",
+        "question": "questionBridgeFour.questTask15",
+        "correctAnswer": "kalten",
+        "tip": "questionBridgeFour.questDescription"
+      }
+    ]
+  },
+  {
+    "questId": "question-bridge-five",
+    "title": "questionBridgeFive.questTitle",
+    "progress": "0/15",
+    "description": "questionBridgeFive.questDescription",
+    "conditions": {
+      "goal": "questionBridgeFive.questGoal",
+      "minCorrect": 15,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
+    "vocabulary": [
+      {
+        "word": "sich verlassen auf",
+        "translation-ru": "полагаться на",
+        "translation-en": "to rely on",
+        "translation-uk": "покладатися на",
+        "translation-pl": "polegać na",
+        "translation-es": "contar con",
+        "translation-fr": "compter sur",
+        "translation-tr": "…e güvenmek",
+        "translation-ro": "a se baza pe",
+        "translation-uz": "…ga tayanmoq",
+        "translation-hi": "… पर भरोसा करना",
+        "translation-ar": "يعتمد على"
+      },
+      {
+        "word": "günstig",
+        "translation-ru": "недорогой, выгодный",
+        "translation-en": "cheap, good value",
+        "translation-uk": "недорогий, вигідний",
+        "translation-pl": "tani, korzystny",
+        "translation-es": "económico",
+        "translation-fr": "bon marché",
+        "translation-tr": "uygun fiyatlı",
+        "translation-ro": "avantajos, ieftin",
+        "translation-uz": "arzon, qulay",
+        "translation-hi": "सस्ता, किफ़ायती",
+        "translation-ar": "بسعر مناسب"
+      },
+      {
+        "word": "der Lärm",
+        "translation-ru": "шум",
+        "translation-en": "noise",
+        "translation-uk": "шум",
+        "translation-pl": "hałas",
+        "translation-es": "el ruido",
+        "translation-fr": "le bruit",
+        "translation-tr": "gürültü",
+        "translation-ro": "zgomotul",
+        "translation-uz": "shovqin",
+        "translation-hi": "शोर",
+        "translation-ar": "الضجيج"
+      },
+      {
+        "word": "sprechen",
+        "translation-ru": "говорить",
+        "translation-en": "to speak",
+        "translation-uk": "говорити",
+        "translation-pl": "mówić",
+        "translation-es": "hablar",
+        "translation-fr": "parler",
+        "translation-tr": "konuşmak",
+        "translation-ro": "a vorbi",
+        "translation-uz": "gapirmoq",
+        "translation-hi": "बोलना",
+        "translation-ar": "يتكلم"
+      },
+      {
+        "word": "ihr",
+        "translation-ru": "вы (вы все)",
+        "translation-en": "you (plural)",
+        "translation-uk": "ви (усі)",
+        "translation-pl": "wy",
+        "translation-es": "vosotros",
+        "translation-fr": "vous (pluriel)",
+        "translation-tr": "siz (çoğul)",
+        "translation-ro": "voi",
+        "translation-uz": "sizlar",
+        "translation-hi": "तुम सब",
+        "translation-ar": "أنتم"
+      }
+    ],
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "questionBridgeFive.questTask1",
+        "options": [
+          "Denkst du an Anna? Ja, ich denke an ihr.",
+          "Denkst du an Anna? Ja, ich denke daran.",
+          "Denkst du an Anna? Ja, ich denke an sie."
+        ],
+        "answer": "Denkst du an Anna? Ja, ich denke an sie.",
+        "tip": "questionBridgeFive.questDescription"
+      },
+      {
+        "id": 2,
+        "type": "input",
+        "question": "questionBridgeFive.questTask2",
+        "correctAnswer": "ihn",
+        "tip": "questionBridgeFive.questDescription"
+      },
+      {
+        "id": 3,
+        "type": "input",
+        "question": "questionBridgeFive.questTask3",
+        "correctAnswer": "daran",
+        "tip": "questionBridgeFive.questDescription"
+      },
+      {
+        "id": 4,
+        "type": "reorder",
+        "question": "questionBridgeFive.questTask4",
+        "words": [
+          "auf",
+          "kann",
+          "ihn",
+          "verlassen",
+          "ihm",
+          "Ich",
+          "mich"
+        ],
+        "correctOrder": [
+          "Ich",
+          "kann",
+          "mich",
+          "auf",
+          "ihn",
+          "verlassen"
+        ],
+        "tip": "questionBridgeFive.questDescription"
+      },
+      {
+        "id": 5,
+        "type": "select",
+        "question": "questionBridgeFive.questTask5",
+        "options": [
+          "Hast du mit Tim über die Party gesprochen? Ja, ich habe mit ihm darüber gesprochen.",
+          "Hast du mit Tim über die Party gesprochen? Ja, ich habe mit ihn darüber gesprochen.",
+          "Hast du mit Tim über die Party gesprochen? Ja, ich habe damit darüber gesprochen."
+        ],
+        "answer": "Hast du mit Tim über die Party gesprochen? Ja, ich habe mit ihm darüber gesprochen.",
+        "tip": "questionBridgeFive.questDescription"
+      },
+      {
+        "id": 6,
+        "type": "input",
+        "question": "questionBridgeFive.questTask6",
+        "correctAnswer": "sie",
+        "tip": "questionBridgeFive.questDescription"
+      },
+      {
+        "id": 7,
+        "type": "readAndAnswer",
+        "question": "questionBridgeFive.questTask7",
+        "text": "Lisa hat eine neue Arbeit. Sie spricht oft darüber. Ihre Chefin heißt Frau Braun. Lisa kann sich immer auf sie verlassen.",
+        "options": [
+          "auf ihre Chefin",
+          "auf ihren Bruder",
+          "auf ihre Arbeit"
+        ],
+        "answer": "auf ihre Chefin",
+        "tip": "questionBridgeFive.questDescription"
+      },
+      {
+        "id": 8,
+        "type": "input",
+        "question": "questionBridgeFive.questTask8",
+        "correctAnswer": "dafür",
+        "tip": "questionBridgeFive.questDescription"
+      },
+      {
+        "id": 9,
+        "type": "reorder",
+        "question": "questionBridgeFive.questTask10",
+        "words": [
+          "oft",
+          "sie",
+          "darüber",
+          "sprechen",
+          "Wir",
+          "über"
+        ],
+        "correctOrder": [
+          "Wir",
+          "sprechen",
+          "oft",
+          "über",
+          "sie"
+        ],
+        "tip": "questionBridgeFive.questDescription"
+      },
+      {
+        "id": 10,
+        "type": "select",
+        "question": "questionBridgeFive.questTask11",
+        "options": [
+          "Freust du dich auf die Ferien? Ja, ich freue mich darauf.",
+          "Freust du dich auf die Ferien? Ja, ich freue mich daran.",
+          "Freust du dich auf die Ferien? Ja, ich freue mich dafür."
+        ],
+        "answer": "Freust du dich auf die Ferien? Ja, ich freue mich darauf.",
+        "tip": "questionBridgeFive.questDescription"
+      },
+      {
+        "id": 11,
+        "type": "input",
+        "question": "questionBridgeFour.questTask9",
+        "correctAnswer": "darüber",
+        "tip": "questionBridgeFour.questDescription",
+        "reviewOf": "question-bridge-four",
+        "reviewLand": "question-bridge"
+      },
+      {
+        "id": 12,
+        "type": "input",
+        "question": "questionBridgeOne.questTask12",
+        "correctAnswer": "über",
+        "tip": "questionBridgeOne.questDescription",
+        "reviewOf": "question-bridge-one",
+        "reviewLand": "question-bridge"
+      },
+      {
+        "id": 13,
+        "type": "input",
+        "question": "tasteMarketSix.questTask13",
+        "correctAnswer": "günstige",
+        "tip": "tasteMarketSix.questDescription",
+        "reviewOf": "taste-market-six",
+        "reviewLand": "taste-market"
+      },
+      {
+        "id": 14,
+        "type": "input",
+        "question": "questionBridgeFive.questTask14",
+        "correctAnswer": "Worüber",
+        "tip": "questionBridgeFive.questDescription"
+      },
+      {
+        "id": 15,
+        "type": "input",
+        "question": "questionBridgeFive.questTask15",
+        "correctAnswer": "hätte",
+        "tip": "questionBridgeFive.questDescription"
+      }
+    ]
+  },
+  {
+    "questId": "question-bridge-six",
+    "title": "questionBridgeSix.questTitle",
+    "progress": "0/15",
+    "description": "questionBridgeSix.questDescription",
+    "conditions": {
+      "goal": "questionBridgeSix.questGoal",
+      "minCorrect": 15,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
+    "vocabulary": [
+      {
+        "word": "achten auf",
+        "translation-ru": "следить за, обращать внимание на",
+        "translation-en": "to pay attention to",
+        "translation-uk": "стежити за, звертати увагу на",
+        "translation-pl": "zwracać uwagę na",
+        "translation-es": "prestar atención a",
+        "translation-fr": "faire attention à",
+        "translation-tr": "…e dikkat etmek",
+        "translation-ro": "a fi atent la",
+        "translation-uz": "…ga e’tibor bermoq",
+        "translation-hi": "… पर ध्यान देना",
+        "translation-ar": "ينتبه إلى"
+      },
+      {
+        "word": "günstig",
+        "translation-ru": "недорогой, выгодный",
+        "translation-en": "cheap, good value",
+        "translation-uk": "недорогий, вигідний",
+        "translation-pl": "tani, korzystny",
+        "translation-es": "económico",
+        "translation-fr": "bon marché",
+        "translation-tr": "uygun fiyatlı",
+        "translation-ro": "avantajos, ieftin",
+        "translation-uz": "arzon, qulay",
+        "translation-hi": "सस्ता, किफ़ायती",
+        "translation-ar": "بسعر مناسب"
+      },
+      {
+        "word": "der Käse",
+        "translation-ru": "сыр",
+        "translation-en": "cheese",
+        "translation-uk": "сир",
+        "translation-pl": "ser",
+        "translation-es": "el queso",
+        "translation-fr": "le fromage",
+        "translation-tr": "peynir",
+        "translation-ro": "brânza",
+        "translation-uz": "pishloq",
+        "translation-hi": "पनीर",
+        "translation-ar": "الجبن"
+      },
+      {
+        "word": "auch",
+        "translation-ru": "тоже",
+        "translation-en": "also, too",
+        "translation-uk": "теж",
+        "translation-pl": "też",
+        "translation-es": "también",
+        "translation-fr": "aussi",
+        "translation-tr": "de, da",
+        "translation-ro": "și, de asemenea",
+        "translation-uz": "ham",
+        "translation-hi": "भी",
+        "translation-ar": "أيضًا"
+      },
+      {
+        "word": "schließen",
+        "translation-ru": "закрывать",
+        "translation-en": "to close",
+        "translation-uk": "зачиняти",
+        "translation-pl": "zamykać",
+        "translation-es": "cerrar",
+        "translation-fr": "fermer",
+        "translation-tr": "kapatmak",
+        "translation-ro": "a închide",
+        "translation-uz": "yopmoq",
+        "translation-hi": "बंद करना",
+        "translation-ar": "يغلق"
+      }
+    ],
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "questionBridgeSix.questTask1",
+        "options": [
+          "Ich freue mich darauf, dass du kommst nicht.",
+          "Ich freue mich dafür, dass du kommst.",
+          "Ich freue mich darauf, dass du kommst."
+        ],
+        "answer": "Ich freue mich darauf, dass du kommst.",
+        "tip": "questionBridgeSix.questDescription"
+      },
+      {
+        "id": 2,
+        "type": "input",
+        "question": "questionBridgeSix.questTask2",
+        "correctAnswer": "darauf",
+        "tip": "questionBridgeSix.questDescription"
+      },
+      {
+        "id": 3,
+        "type": "input",
+        "question": "questionBridgeSix.questTask3",
+        "correctAnswer": "daran",
+        "tip": "questionBridgeSix.questDescription"
+      },
+      {
+        "id": 4,
+        "type": "reorder",
+        "question": "questionBridgeSix.questTask4",
+        "words": [
+          "daran",
+          "sehen",
+          "zu",
+          "freue",
+          "darauf",
+          "Ich",
+          "dich",
+          "mich"
+        ],
+        "correctOrder": [
+          "Ich",
+          "freue",
+          "mich",
+          "darauf",
+          "dich",
+          "zu",
+          "sehen"
+        ],
+        "tip": "questionBridgeSix.questDescription"
+      },
+      {
+        "id": 5,
+        "type": "select",
+        "question": "questionBridgeSix.questTask5",
+        "options": [
+          "Sie ärgert sich darüber, dass der Bus kommt zu spät.",
+          "Sie ärgert sich daran, dass der Bus zu spät kommt.",
+          "Sie ärgert sich darüber, dass der Bus zu spät kommt."
+        ],
+        "answer": "Sie ärgert sich darüber, dass der Bus zu spät kommt.",
+        "tip": "questionBridgeSix.questDescription"
+      },
+      {
+        "id": 6,
+        "type": "input",
+        "question": "questionBridgeSix.questTask6",
+        "correctAnswer": "darauf",
+        "tip": "questionBridgeSix.questDescription"
+      },
+      {
+        "id": 7,
+        "type": "readAndAnswer",
+        "question": "questionBridgeSix.questTask7",
+        "text": "Tim hat bald Geburtstag. Er freut sich darauf, dass seine Oma aus Hamburg kommt. Er wartet auch darauf, ein neues Fahrrad zu bekommen.",
+        "options": [
+          "seine Lehrerin",
+          "seine Oma",
+          "sein Onkel"
+        ],
+        "answer": "seine Oma",
+        "tip": "questionBridgeSix.questDescription"
+      },
+      {
+        "id": 8,
+        "type": "input",
+        "question": "questionBridgeSix.questTask8",
+        "correctAnswer": "davon",
+        "tip": "questionBridgeSix.questDescription"
+      },
+      {
+        "id": 9,
+        "type": "reorder",
+        "question": "questionBridgeSix.questTask10",
+        "words": [
+          "darauf",
+          "wartet",
+          "Er",
+          "antwortet",
+          "sie",
+          "daran",
+          "dass"
+        ],
+        "correctOrder": [
+          "Er",
+          "wartet",
+          "darauf",
+          "dass",
+          "sie",
+          "antwortet"
+        ],
+        "tip": "questionBridgeSix.questDescription"
+      },
+      {
+        "id": 10,
+        "type": "select",
+        "question": "questionBridgeSix.questTask11",
+        "options": [
+          "Ich ärgere mich darauf, dass ich den Schlüssel verloren habe.",
+          "Ich ärgere mich darüber, dass ich den Schlüssel verloren habe.",
+          "Ich ärgere mich darüber, dass ich habe den Schlüssel verloren."
+        ],
+        "answer": "Ich ärgere mich darüber, dass ich den Schlüssel verloren habe.",
+        "tip": "questionBridgeSix.questDescription"
+      },
+      {
+        "id": 11,
+        "type": "input",
+        "question": "questionBridgeFive.questTask9",
+        "correctAnswer": "ihn",
+        "tip": "questionBridgeFive.questDescription",
+        "reviewOf": "question-bridge-five",
+        "reviewLand": "question-bridge"
+      },
+      {
+        "id": 12,
+        "type": "input",
+        "question": "questionBridgeTwo.questTask12",
+        "correctAnswer": "wem",
+        "tip": "questionBridgeTwo.questDescription",
+        "reviewOf": "question-bridge-two",
+        "reviewLand": "question-bridge"
+      },
+      {
+        "id": 13,
+        "type": "input",
+        "question": "tasteMarketSeven.questTask13",
+        "correctAnswer": "weichen",
+        "tip": "tasteMarketSeven.questDescription",
+        "reviewOf": "taste-market-seven",
+        "reviewLand": "taste-market"
+      },
+      {
+        "id": 14,
+        "type": "input",
+        "question": "questionBridgeSix.questTask14",
+        "correctAnswer": "damit",
+        "tip": "questionBridgeSix.questDescription"
+      },
+      {
+        "id": 15,
+        "type": "input",
+        "question": "questionBridgeSix.questTask15",
+        "correctAnswer": "günstiges",
+        "tip": "questionBridgeSix.questDescription"
+      }
+    ]
+  },
+  {
+    "questId": "question-bridge-seven",
+    "title": "questionBridgeSeven.questTitle",
+    "progress": "0/15",
+    "description": "questionBridgeSeven.questDescription",
+    "conditions": {
+      "goal": "questionBridgeSeven.questGoal",
+      "minCorrect": 15,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
+    "vocabulary": [
+      {
+        "word": "das Hobby",
+        "translation-ru": "хобби",
+        "translation-en": "hobby",
+        "translation-uk": "хобі",
+        "translation-pl": "hobby",
+        "translation-es": "la afición",
+        "translation-fr": "le loisir",
+        "translation-tr": "hobi",
+        "translation-ro": "hobby-ul",
+        "translation-uz": "hobbi",
+        "translation-hi": "शौक़",
+        "translation-ar": "الهواية"
+      },
+      {
+        "word": "die Kunst",
+        "translation-ru": "искусство",
+        "translation-en": "art",
+        "translation-uk": "мистецтво",
+        "translation-pl": "sztuka",
+        "translation-es": "el arte",
+        "translation-fr": "l’art",
+        "translation-tr": "sanat",
+        "translation-ro": "arta",
+        "translation-uz": "san’at",
+        "translation-hi": "कला",
+        "translation-ar": "الفن"
+      },
+      {
+        "word": "der Garten",
+        "translation-ru": "сад",
+        "translation-en": "garden",
+        "translation-uk": "сад",
+        "translation-pl": "ogród",
+        "translation-es": "el jardín",
+        "translation-fr": "le jardin",
+        "translation-tr": "bahçe",
+        "translation-ro": "grădina",
+        "translation-uz": "bog‘",
+        "translation-hi": "बगीचा",
+        "translation-ar": "الحديقة"
+      },
+      {
+        "word": "das Konzert",
+        "translation-ru": "концерт",
+        "translation-en": "concert",
+        "translation-uk": "концерт",
+        "translation-pl": "koncert",
+        "translation-es": "el concierto",
+        "translation-fr": "le concert",
+        "translation-tr": "konser",
+        "translation-ro": "concertul",
+        "translation-uz": "konsert",
+        "translation-hi": "कॉन्सर्ट",
+        "translation-ar": "الحفلة الموسيقية"
+      },
+      {
+        "word": "die Pflanze",
+        "translation-ru": "растение",
+        "translation-en": "plant",
+        "translation-uk": "рослина",
+        "translation-pl": "roślina",
+        "translation-es": "la planta",
+        "translation-fr": "la plante",
+        "translation-tr": "bitki",
+        "translation-ro": "planta",
+        "translation-uz": "o‘simlik",
+        "translation-hi": "पौधा",
+        "translation-ar": "النبتة"
+      },
+      {
+        "word": "besonders",
+        "translation-ru": "особенно",
+        "translation-en": "especially",
+        "translation-uk": "особливо",
+        "translation-pl": "szczególnie",
+        "translation-es": "especialmente",
+        "translation-fr": "surtout",
+        "translation-tr": "özellikle",
+        "translation-ro": "mai ales",
+        "translation-uz": "ayniqsa",
+        "translation-hi": "ख़ासकर",
+        "translation-ar": "خاصة"
+      },
+      {
+        "word": "der Apfelkuchen",
+        "translation-ru": "яблочный пирог",
+        "translation-en": "apple cake",
+        "translation-uk": "яблучний пиріг",
+        "translation-pl": "szarlotka",
+        "translation-es": "la tarta de manzana",
+        "translation-fr": "le gâteau aux pommes",
+        "translation-tr": "elmalı kek",
+        "translation-ro": "prăjitura cu mere",
+        "translation-uz": "olmali pirog",
+        "translation-hi": "सेब का केक",
+        "translation-ar": "كعكة التفاح"
+      }
+    ],
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "questionBridgeSeven.questTask1",
+        "options": [
+          "Meine Schwester interessiert für Kunst.",
+          "Meine Schwester interessiert sich an Kunst.",
+          "Meine Schwester interessiert sich für Kunst."
+        ],
+        "answer": "Meine Schwester interessiert sich für Kunst.",
+        "tip": "questionBridgeSeven.questDescription"
+      },
+      {
+        "id": 2,
+        "type": "input",
+        "question": "questionBridgeSeven.questTask2",
+        "correctAnswer": "um",
+        "tip": "questionBridgeSeven.questDescription"
+      },
+      {
+        "id": 3,
+        "type": "input",
+        "question": "questionBridgeSeven.questTask3",
+        "correctAnswer": "auf",
+        "tip": "questionBridgeSeven.questDescription"
+      },
+      {
+        "id": 4,
+        "type": "reorder",
+        "question": "questionBridgeSeven.questTask4",
+        "words": [
+          "du",
+          "dich?",
+          "Für",
+          "Wofür",
+          "interessierst"
+        ],
+        "correctOrder": [
+          "Wofür",
+          "interessierst",
+          "du",
+          "dich?"
+        ],
+        "tip": "questionBridgeSeven.questDescription"
+      },
+      {
+        "id": 5,
+        "type": "select",
+        "question": "questionBridgeSeven.questTask5",
+        "options": [
+          "Für wer ist das Geschenk?",
+          "Für wem ist das Geschenk?",
+          "Für wen ist das Geschenk?"
+        ],
+        "answer": "Für wen ist das Geschenk?",
+        "tip": "questionBridgeSeven.questDescription"
+      },
+      {
+        "id": 6,
+        "type": "input",
+        "question": "questionBridgeSeven.questTask6",
+        "correctAnswer": "kümmert",
+        "tip": "questionBridgeSeven.questDescription"
+      },
+      {
+        "id": 7,
+        "type": "readAndAnswer",
+        "question": "questionBridgeSeven.questTask7",
+        "text": "Finn hat viele Hobbys. Er interessiert sich besonders für Musik und geht oft auf Konzerte. Am Wochenende kümmert er sich um den Garten seiner Oma. Jetzt freut er sich auf den Sommer, denn dann gibt es viele Konzerte im Park.",
+        "options": [
+          "für Musik",
+          "für Kunst",
+          "für Sport"
+        ],
+        "answer": "für Musik",
+        "tip": "questionBridgeSeven.questDescription"
+      },
+      {
+        "id": 8,
+        "type": "input",
+        "question": "questionBridgeSeven.questTask8",
+        "correctAnswer": "an",
+        "tip": "questionBridgeSeven.questDescription"
+      },
+      {
+        "id": 9,
+        "type": "reorder",
+        "question": "questionBridgeSeven.questTask10",
+        "words": [
+          "Über",
+          "dich?",
+          "ärgerst",
+          "Worüber",
+          "du"
+        ],
+        "correctOrder": [
+          "Worüber",
+          "ärgerst",
+          "du",
+          "dich?"
+        ],
+        "tip": "questionBridgeSeven.questDescription"
+      },
+      {
+        "id": 10,
+        "type": "select",
+        "question": "questionBridgeSeven.questTask11",
+        "options": [
+          "Ich interessiere mich darfür.",
+          "Ich interessiere mich dafür.",
+          "Ich interessiere mich für es."
+        ],
+        "answer": "Ich interessiere mich dafür.",
+        "tip": "questionBridgeSeven.questDescription"
+      },
+      {
+        "id": 11,
+        "type": "input",
+        "question": "questionBridgeSix.questTask9",
+        "correctAnswer": "darüber",
+        "tip": "questionBridgeSix.questDescription",
+        "reviewOf": "question-bridge-six",
+        "reviewLand": "question-bridge"
+      },
+      {
+        "id": 12,
+        "type": "input",
+        "question": "questionBridgeThree.questTask12",
+        "correctAnswer": "Worüber",
+        "tip": "questionBridgeThree.questDescription",
+        "reviewOf": "question-bridge-three",
+        "reviewLand": "question-bridge"
+      },
+      {
+        "id": 13,
+        "type": "input",
+        "question": "tasteMarketEight.questTask13",
+        "correctAnswer": "warmer",
+        "tip": "tasteMarketEight.questDescription",
+        "reviewOf": "taste-market-eight",
+        "reviewLand": "taste-market"
+      },
+      {
+        "id": 14,
+        "type": "input",
+        "question": "questionBridgeSeven.questTask14",
+        "correctAnswer": "dass",
+        "tip": "questionBridgeSeven.questDescription"
+      },
+      {
+        "id": 15,
+        "type": "input",
+        "question": "questionBridgeSeven.questTask15",
+        "correctAnswer": "frisches",
+        "tip": "questionBridgeSeven.questDescription"
+      }
+    ]
+  },
+  {
+    "questId": "question-bridge-eight",
+    "title": "questionBridgeEight.questTitle",
+    "progress": "0/15",
+    "description": "questionBridgeEight.questDescription",
+    "conditions": {
+      "goal": "questionBridgeEight.questGoal",
+      "minCorrect": 15,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
+    "vocabulary": [
+      {
+        "word": "der Brief",
+        "translation-ru": "письмо",
+        "translation-en": "letter",
+        "translation-uk": "лист",
+        "translation-pl": "list",
+        "translation-es": "la carta",
+        "translation-fr": "la lettre",
+        "translation-tr": "mektup",
+        "translation-ro": "scrisoarea",
+        "translation-uz": "xat",
+        "translation-hi": "चिट्ठी",
+        "translation-ar": "الرسالة"
+      },
+      {
+        "word": "vermissen",
+        "translation-ru": "скучать",
+        "translation-en": "to miss",
+        "translation-uk": "сумувати",
+        "translation-pl": "tęsknić",
+        "translation-es": "echar de menos",
+        "translation-fr": "manquer à quelqu’un",
+        "translation-tr": "özlemek",
+        "translation-ro": "a-i fi dor",
+        "translation-uz": "sog‘inmoq",
+        "translation-hi": "याद आना",
+        "translation-ar": "يشتاق"
+      },
+      {
+        "word": "der Besuch",
+        "translation-ru": "визит, посещение",
+        "translation-en": "visit",
+        "translation-uk": "візит",
+        "translation-pl": "wizyta",
+        "translation-es": "la visita",
+        "translation-fr": "la visite",
+        "translation-tr": "ziyaret",
+        "translation-ro": "vizita",
+        "translation-uz": "tashrif",
+        "translation-hi": "मुलाक़ात",
+        "translation-ar": "الزيارة"
+      },
+      {
+        "word": "die Antwort",
+        "translation-ru": "ответ",
+        "translation-en": "answer",
+        "translation-uk": "відповідь",
+        "translation-pl": "odpowiedź",
+        "translation-es": "la respuesta",
+        "translation-fr": "la réponse",
+        "translation-tr": "cevap",
+        "translation-ro": "răspunsul",
+        "translation-uz": "javob",
+        "translation-hi": "जवाब",
+        "translation-ar": "الجواب"
+      },
+      {
+        "word": "bald",
+        "translation-ru": "скоро",
+        "translation-en": "soon",
+        "translation-uk": "скоро",
+        "translation-pl": "wkrótce",
+        "translation-es": "pronto",
+        "translation-fr": "bientôt",
+        "translation-tr": "yakında",
+        "translation-ro": "curând",
+        "translation-uz": "tez orada",
+        "translation-hi": "जल्द",
+        "translation-ar": "قريبًا"
+      }
+    ],
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "questionBridgeEight.questTask1",
+        "options": [
+          "Ich freue mich schon an deinen Besuch.",
+          "Ich freue mich schon auf deinem Besuch.",
+          "Ich freue mich schon auf deinen Besuch."
+        ],
+        "answer": "Ich freue mich schon auf deinen Besuch.",
+        "tip": "questionBridgeEight.questDescription"
+      },
+      {
+        "id": 2,
+        "type": "input",
+        "question": "questionBridgeEight.questTask2",
+        "correctAnswer": "darauf",
+        "tip": "questionBridgeEight.questDescription"
+      },
+      {
+        "id": 3,
+        "type": "input",
+        "question": "questionBridgeEight.questTask3",
+        "correctAnswer": "dich",
+        "tip": "questionBridgeEight.questDescription"
+      },
+      {
+        "id": 4,
+        "type": "reorder",
+        "question": "questionBridgeEight.questTask4",
+        "words": [
+          "Nachricht",
+          "deine",
+          "an",
+          "auf",
+          "Ich",
+          "nächste",
+          "warte"
+        ],
+        "correctOrder": [
+          "Ich",
+          "warte",
+          "auf",
+          "deine",
+          "nächste",
+          "Nachricht"
+        ],
+        "tip": "questionBridgeEight.questDescription"
+      },
+      {
+        "id": 5,
+        "type": "select",
+        "question": "questionBridgeEight.questTask5",
+        "options": [
+          "Erinnerst du dich an unseren Urlaub? Ja, ich denke oft darüber.",
+          "Erinnerst du dich an unseren Urlaub? Ja, ich denke oft an ihn.",
+          "Erinnerst du dich an unseren Urlaub? Ja, ich denke oft daran."
+        ],
+        "answer": "Erinnerst du dich an unseren Urlaub? Ja, ich denke oft daran.",
+        "tip": "questionBridgeEight.questDescription"
+      },
+      {
+        "id": 6,
+        "type": "input",
+        "question": "questionBridgeEight.questTask6",
+        "correctAnswer": "vermisse",
+        "tip": "questionBridgeEight.questDescription"
+      },
+      {
+        "id": 7,
+        "type": "readAndAnswer",
+        "question": "questionBridgeEight.questTask7",
+        "text": "Liebe Sara, ich habe mich sehr über deinen Brief gefreut! Ich denke oft an unsere Zeit in Wien. Jetzt freue ich mich darauf, dass du im Juli kommst. Ich warte auf deine Antwort! Deine Klara",
+        "options": [
+          "auf einen neuen Brief von Oma",
+          "darauf, dass Sara im Juli kommt",
+          "auf den Urlaub in Wien"
+        ],
+        "answer": "darauf, dass Sara im Juli kommt",
+        "tip": "questionBridgeEight.questDescription"
+      },
+      {
+        "id": 8,
+        "type": "input",
+        "question": "questionBridgeEight.questTask8",
+        "correctAnswer": "über",
+        "tip": "questionBridgeEight.questDescription"
+      },
+      {
+        "id": 9,
+        "type": "reorder",
+        "question": "questionBridgeEight.questTask10",
+        "words": [
+          "darüber",
+          "Ich",
+          "mich",
+          "dafür",
+          "freue",
+          "du",
+          "kommst",
+          "bald",
+          "dass"
+        ],
+        "correctOrder": [
+          "Ich",
+          "freue",
+          "mich",
+          "darüber",
+          "dass",
+          "du",
+          "bald",
+          "kommst"
+        ],
+        "tip": "questionBridgeEight.questDescription"
+      },
+      {
+        "id": 10,
+        "type": "select",
+        "question": "questionBridgeEight.questTask11",
+        "options": [
+          "Denkst du an meinen Geburtstag? Denk bitte daran!",
+          "Denkst du an meinen Geburtstag? Denk bitte darauf!",
+          "Denkst du an meinen Geburtstag? Denk bitte an ihn!"
+        ],
+        "answer": "Denkst du an meinen Geburtstag? Denk bitte daran!",
+        "tip": "questionBridgeEight.questDescription"
+      },
+      {
+        "id": 11,
+        "type": "input",
+        "question": "questionBridgeSeven.questTask9",
+        "correctAnswer": "warten",
+        "tip": "questionBridgeSeven.questDescription",
+        "reviewOf": "question-bridge-seven",
+        "reviewLand": "question-bridge"
+      },
+      {
+        "id": 12,
+        "type": "input",
+        "question": "questionBridgeFour.questTask12",
+        "correctAnswer": "davor",
+        "tip": "questionBridgeFour.questDescription",
+        "reviewOf": "question-bridge-four",
+        "reviewLand": "question-bridge"
+      },
+      {
+        "id": 13,
+        "type": "input",
+        "question": "questionBridgeOne.questTask13",
+        "correctAnswer": "an",
+        "tip": "questionBridgeOne.questDescription",
+        "reviewOf": "question-bridge-one",
+        "reviewLand": "question-bridge"
+      },
+      {
+        "id": 14,
+        "type": "input",
+        "question": "questionBridgeEight.questTask14",
+        "correctAnswer": "würde",
+        "tip": "questionBridgeEight.questDescription"
+      },
+      {
+        "id": 15,
+        "type": "input",
+        "question": "questionBridgeEight.questTask15",
+        "correctAnswer": "herzliche",
+        "tip": "questionBridgeEight.questDescription"
+      }
+    ]
+  },
+  {
+    "questId": "question-bridge-nine",
+    "title": "questionBridgeNine.questTitle",
+    "progress": "0/15",
+    "description": "questionBridgeNine.questDescription",
+    "conditions": {
+      "goal": "questionBridgeNine.questGoal",
+      "minCorrect": 15,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
+    "vocabulary": [
+      {
+        "word": "die Erinnerung",
+        "translation-ru": "воспоминание",
+        "translation-en": "memory",
+        "translation-uk": "спогад",
+        "translation-pl": "wspomnienie",
+        "translation-es": "el recuerdo",
+        "translation-fr": "le souvenir",
+        "translation-tr": "anı",
+        "translation-ro": "amintirea",
+        "translation-uz": "xotira",
+        "translation-hi": "याद",
+        "translation-ar": "الذكرى"
+      },
+      {
+        "word": "sich verlassen auf",
+        "translation-ru": "полагаться на",
+        "translation-en": "to rely on",
+        "translation-uk": "покладатися на",
+        "translation-pl": "polegać na",
+        "translation-es": "contar con",
+        "translation-fr": "compter sur",
+        "translation-tr": "…e güvenmek",
+        "translation-ro": "a se baza pe",
+        "translation-uz": "…ga tayanmoq",
+        "translation-hi": "… पर भरोसा करना",
+        "translation-ar": "يعتمد على"
+      },
+      {
+        "word": "grüßen",
+        "translation-ru": "приветствовать",
+        "translation-en": "to greet",
+        "translation-uk": "вітати",
+        "translation-pl": "pozdrawiać / witać",
+        "translation-es": "saludar",
+        "translation-fr": "saluer",
+        "translation-tr": "selamlamak",
+        "translation-ro": "a saluta",
+        "translation-uz": "salomlashmoq",
+        "translation-hi": "नमस्ते करना",
+        "translation-ar": "يسلم على / يحيي"
+      },
+      {
+        "word": "der Lärm",
+        "translation-ru": "шум",
+        "translation-en": "noise",
+        "translation-uk": "шум",
+        "translation-pl": "hałas",
+        "translation-es": "el ruido",
+        "translation-fr": "le bruit",
+        "translation-tr": "gürültü",
+        "translation-ro": "zgomotul",
+        "translation-uz": "shovqin",
+        "translation-hi": "शोर",
+        "translation-ar": "الضجيج"
+      },
+      {
+        "word": "lange",
+        "translation-ru": "долго",
+        "translation-en": "for a long time",
+        "translation-uk": "довго",
+        "translation-pl": "długo",
+        "translation-es": "mucho tiempo",
+        "translation-fr": "longtemps",
+        "translation-tr": "uzun süre",
+        "translation-ro": "mult timp",
+        "translation-uz": "uzoq",
+        "translation-hi": "देर तक",
+        "translation-ar": "طويلًا"
+      }
+    ],
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "questionBridgeNine.questTask1",
+        "options": [
+          "Worauf sprichst du?",
+          "Woran sprichst du?",
+          "Worüber sprichst du?"
+        ],
+        "answer": "Worüber sprichst du?",
+        "tip": "questionBridgeNine.questDescription"
+      },
+      {
+        "id": 2,
+        "type": "input",
+        "question": "questionBridgeNine.questTask2",
+        "correctAnswer": "für",
+        "tip": "questionBridgeNine.questDescription"
+      },
+      {
+        "id": 3,
+        "type": "input",
+        "question": "questionBridgeNine.questTask3",
+        "correctAnswer": "wen",
+        "tip": "questionBridgeNine.questDescription"
+      },
+      {
+        "id": 4,
+        "type": "reorder",
+        "question": "questionBridgeNine.questTask4",
+        "words": [
+          "davon",
+          "lange",
+          "Ich",
+          "schon",
+          "daran",
+          "träume"
+        ],
+        "correctOrder": [
+          "Ich",
+          "träume",
+          "schon",
+          "lange",
+          "davon"
+        ],
+        "tip": "questionBridgeNine.questDescription"
+      },
+      {
+        "id": 5,
+        "type": "select",
+        "question": "questionBridgeNine.questTask5",
+        "options": [
+          "Denkst du an deinen Freund? Ja, ich denke daran.",
+          "Denkst du an deinen Freund? Ja, ich denke an ihm.",
+          "Denkst du an deinen Freund? Ja, ich denke an ihn."
+        ],
+        "answer": "Denkst du an deinen Freund? Ja, ich denke an ihn.",
+        "tip": "questionBridgeNine.questDescription"
+      },
+      {
+        "id": 6,
+        "type": "input",
+        "question": "questionBridgeNine.questTask6",
+        "correctAnswer": "Wonach",
+        "tip": "questionBridgeNine.questDescription"
+      },
+      {
+        "id": 7,
+        "type": "readAndAnswer",
+        "question": "questionBridgeNine.questTask7",
+        "text": "Liebe Oma, ich freue mich schon darauf, dich im Sommer zu besuchen. Ich denke oft an dich und habe viele schöne Erinnerungen an deinen Garten. Viele Grüße, Mia",
+        "options": [
+          "im Sommer",
+          "am Wochenende",
+          "im Winter"
+        ],
+        "answer": "im Sommer",
+        "tip": "questionBridgeNine.questDescription"
+      },
+      {
+        "id": 8,
+        "type": "input",
+        "question": "questionBridgeNine.questTask8",
+        "correctAnswer": "darüber",
+        "tip": "questionBridgeNine.questDescription"
+      },
+      {
+        "id": 9,
+        "type": "select",
+        "question": "questionBridgeNine.questTask9",
+        "options": [
+          "Auf meine Freunde kann ich mich immer verlassen.",
+          "Für meine Freunde kann ich mich immer verlassen.",
+          "Auf meinen Freunden kann ich mich immer verlassen."
+        ],
+        "answer": "Auf meine Freunde kann ich mich immer verlassen.",
+        "tip": "questionBridgeNine.questDescription"
+      },
+      {
+        "id": 10,
+        "type": "input",
+        "question": "questionBridgeNine.questTask10",
+        "correctAnswer": "daran",
+        "tip": "questionBridgeNine.questDescription"
+      },
+      {
+        "id": 11,
+        "type": "reorder",
+        "question": "questionBridgeNine.questTask11",
+        "words": [
+          "Mit",
+          "gestern",
+          "wen",
+          "hast",
+          "gesprochen",
+          "wem",
+          "du"
+        ],
+        "correctOrder": [
+          "Mit",
+          "wem",
+          "hast",
+          "du",
+          "gestern",
+          "gesprochen"
+        ],
+        "tip": "questionBridgeNine.questDescription"
+      },
+      {
+        "id": 12,
+        "type": "select",
+        "question": "questionBridgeNine.questTask12",
+        "options": [
+          "Wir haben lange darum gesprochen.",
+          "Wir haben lange darüber gesprochen.",
+          "Wir haben lange daran gesprochen."
+        ],
+        "answer": "Wir haben lange darüber gesprochen.",
+        "tip": "questionBridgeNine.questDescription"
+      },
+      {
+        "id": 13,
+        "type": "readAndAnswer",
+        "question": "questionBridgeNine.questTask13",
+        "text": "Herr Klein hat einen Hund. Er kümmert sich jeden Tag um ihn, und am Abend gehen sie zusammen in den Park. Herr Klein interessiert sich auch für Fußball, aber dafür hat er wenig Zeit.",
+        "options": [
+          "für Fußball",
+          "für den Park",
+          "für seinen Hund"
+        ],
+        "answer": "für Fußball",
+        "tip": "questionBridgeNine.questDescription"
+      },
+      {
+        "id": 14,
+        "type": "input",
+        "question": "questionBridgeNine.questTask14",
+        "correctAnswer": "wen",
+        "tip": "questionBridgeNine.questDescription"
+      },
+      {
+        "id": 15,
+        "type": "input",
+        "question": "questionBridgeNine.questTask15",
+        "correctAnswer": "an",
+        "tip": "questionBridgeNine.questDescription"
+      }
+    ]
+  },
+  {
+    "questId": "question-bridge-ten",
+    "title": "questionBridgeTen.questTitle",
+    "progress": "0/15",
+    "description": "questionBridgeTen.questDescription",
+    "conditions": {
+      "goal": "questionBridgeTen.questGoal",
+      "minCorrect": 15,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
+    "vocabulary": [
+      {
+        "word": "die Nachricht",
+        "translation-ru": "новость, сообщение",
+        "translation-en": "news, message",
+        "translation-uk": "новина, повідомлення",
+        "translation-pl": "wiadomość",
+        "translation-es": "la noticia, el mensaje",
+        "translation-fr": "la nouvelle, le message",
+        "translation-tr": "haber, mesaj",
+        "translation-ro": "vestea, mesajul",
+        "translation-uz": "xabar",
+        "translation-hi": "ख़बर, संदेश",
+        "translation-ar": "الخبر، الرسالة"
+      },
+      {
+        "word": "der Mai",
+        "translation-ru": "май",
+        "translation-en": "may",
+        "translation-uk": "травень",
+        "translation-pl": "maj",
+        "translation-es": "mayo",
+        "translation-fr": "mai",
+        "translation-tr": "mayıs",
+        "translation-ro": "mai",
+        "translation-uz": "may",
+        "translation-hi": "मई",
+        "translation-ar": "مايو"
+      },
+      {
+        "word": "sich kümmern um",
+        "translation-ru": "заботиться о",
+        "translation-en": "to take care of",
+        "translation-uk": "піклуватися про",
+        "translation-pl": "opiekować się",
+        "translation-es": "cuidar de",
+        "translation-fr": "s’occuper de",
+        "translation-tr": "…e bakmak",
+        "translation-ro": "a avea grijă de",
+        "translation-uz": "…ga g‘amxo‘rlik qilmoq",
+        "translation-hi": "… की देखभाल करना",
+        "translation-ar": "يعتني بـ"
+      },
+      {
+        "word": "wegen",
+        "translation-ru": "из-за",
+        "translation-en": "because of",
+        "translation-uk": "через",
+        "translation-pl": "z powodu",
+        "translation-es": "por, a causa de",
+        "translation-fr": "à cause de",
+        "translation-tr": "yüzünden",
+        "translation-ro": "din cauza",
+        "translation-uz": "sababli",
+        "translation-hi": "की वजह से",
+        "translation-ar": "بسبب"
+      },
+      {
+        "word": "gewusst",
+        "translation-ru": "знал (Partizip от wissen)",
+        "translation-en": "known (participle of wissen)",
+        "translation-uk": "знав (Partizip від wissen)",
+        "translation-pl": "wiedział (Partizip od wissen)",
+        "translation-es": "sabido (participio de wissen)",
+        "translation-fr": "su (participe de wissen)",
+        "translation-tr": "bilmiş (wissen’in Partizip’i)",
+        "translation-ro": "știut (participiul lui wissen)",
+        "translation-uz": "bilgan (wissen dan Partizip)",
+        "translation-hi": "जाना (wissen का Partizip)",
+        "translation-ar": "عَلِم (اسم مفعول wissen)"
+      }
+    ],
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "questionBridgeTen.questTask1",
+        "options": [
+          "Wenn ich daran gewusst hätte, hätte ich dir geholfen.",
+          "Wenn ich davon gewusst hätte, wäre ich dir geholfen.",
+          "Wenn ich davon gewusst hätte, hätte ich dir geholfen."
+        ],
+        "answer": "Wenn ich davon gewusst hätte, hätte ich dir geholfen.",
+        "tip": "questionBridgeTen.questDescription"
+      },
+      {
+        "id": 2,
+        "type": "input",
+        "question": "questionBridgeTen.questTask2",
+        "correctAnswer": "schlechten",
+        "tip": "questionBridgeTen.questDescription"
+      },
+      {
+        "id": 3,
+        "type": "input",
+        "question": "questionBridgeTen.questTask3",
+        "correctAnswer": "Um",
+        "tip": "questionBridgeTen.questDescription"
+      },
+      {
+        "id": 4,
+        "type": "input",
+        "question": "questionBridgeTen.questTask4",
+        "correctAnswer": "gesprochen",
+        "tip": "questionBridgeTen.questDescription"
+      },
+      {
+        "id": 5,
+        "type": "select",
+        "question": "questionBridgeTen.questTask5",
+        "options": [
+          "Ich freue mich, dass das Auto meines Vaters fährt wieder.",
+          "Ich freue mich, dass das Auto meiner Vaters wieder fährt.",
+          "Ich freue mich, dass das Auto meines Vaters wieder fährt."
+        ],
+        "answer": "Ich freue mich, dass das Auto meines Vaters wieder fährt.",
+        "tip": "questionBridgeTen.questDescription"
+      },
+      {
+        "id": 6,
+        "type": "input",
+        "question": "questionBridgeTen.questTask6",
+        "correctAnswer": "den",
+        "tip": "questionBridgeTen.questDescription"
+      },
+      {
+        "id": 7,
+        "type": "readAndAnswer",
+        "question": "questionBridgeTen.questTask7",
+        "text": "Seit einem Monat wohnt Jonas in Berlin. Er hat sich schon an die große Stadt gewöhnt, aber er denkt oft an seine Freunde in München. Heute hat er eine Nachricht von ihnen bekommen. Er freut sich darauf, sie im Mai zu besuchen.",
+        "options": [
+          "an seine Eltern",
+          "an seine Freunde in München",
+          "an seine Kollegen in Berlin"
+        ],
+        "answer": "an seine Freunde in München",
+        "tip": "questionBridgeTen.questDescription"
+      },
+      {
+        "id": 8,
+        "type": "input",
+        "question": "questionBridgeTen.questTask8",
+        "correctAnswer": "frisches",
+        "tip": "questionBridgeTen.questDescription"
+      },
+      {
+        "id": 9,
+        "type": "reorder",
+        "question": "questionBridgeTen.questTask9",
+        "words": [
+          "anrufst",
+          "daran",
+          "du",
+          "darauf",
+          "warte",
+          "Ich",
+          "dass"
+        ],
+        "correctOrder": [
+          "Ich",
+          "warte",
+          "darauf",
+          "dass",
+          "du",
+          "anrufst"
+        ],
+        "tip": "questionBridgeTen.questDescription"
+      },
+      {
+        "id": 10,
+        "type": "input",
+        "question": "questionBridgeTen.questTask10",
+        "correctAnswer": "um",
+        "tip": "questionBridgeTen.questDescription"
+      },
+      {
+        "id": 11,
+        "type": "input",
+        "question": "questionBridgeTen.questTask11",
+        "correctAnswer": "würde",
+        "tip": "questionBridgeTen.questDescription"
+      },
+      {
+        "id": 12,
+        "type": "select",
+        "question": "questionBridgeTen.questTask12",
+        "options": [
+          "Womit bist du zufrieden?",
+          "Wofür bist du zufrieden?",
+          "Worüber bist du zufrieden?"
+        ],
+        "answer": "Womit bist du zufrieden?",
+        "tip": "questionBridgeTen.questDescription"
+      },
+      {
+        "id": 13,
+        "type": "readAndAnswer",
+        "question": "questionBridgeTen.questTask13",
+        "text": "Anzeige: Familie Berg sucht eine junge Frau, die sich nachmittags um zwei kleine Kinder kümmert. Wir wohnen in Bonn. Bitte anrufen!",
+        "options": [
+          "für die Familie kochen",
+          "sich um zwei kleine Kinder kümmern",
+          "im Garten arbeiten"
+        ],
+        "answer": "sich um zwei kleine Kinder kümmern",
+        "tip": "questionBridgeTen.questDescription"
+      },
+      {
+        "id": 14,
+        "type": "input",
+        "question": "questionBridgeTen.questTask14",
+        "correctAnswer": "gedacht",
+        "tip": "questionBridgeTen.questDescription"
+      },
+      {
+        "id": 15,
+        "type": "input",
+        "question": "questionBridgeTen.questTask15",
+        "correctAnswer": "was",
+        "tip": "questionBridgeTen.questDescription"
+      }
+    ]
+  }
+]

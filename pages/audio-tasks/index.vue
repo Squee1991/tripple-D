@@ -5,6 +5,7 @@ import {useRouter} from 'vue-router'
 import {storeToRefs} from 'pinia'
 import {useAudioTaskStore} from '../../store/audioTaskStore.js'
 import {userAuthStore} from '../../store/authStore.js'
+import {visibleLevels} from '~/utils/germanLevel.js'
 import Modal from "../../src/components/modal.vue"
 import VBanner from "~/src/components/V-banner.vue"
 import HeadPhones from '../../assets/images/headphones.svg'
@@ -23,8 +24,11 @@ const selectedTopic = ref(null)
 
 const showDevModal = ref(false)
 const isMounted = ref(false)
-const levels = ['A1', 'A2', 'B1']
+const ALL_LEVELS = ['A1', 'A2', 'B1']
+// уровни ниже выбранного уровня немецкого скрыты; цвет остаётся за уровнем, а не за позицией в списке
+const levels = computed(() => visibleLevels(ALL_LEVELS, authStore.germanLevel))
 const levelColors = ['#49b36a', '#88B5FF', '#FF9F7F']
+const levelColor = (level) => levelColors[ALL_LEVELS.indexOf(level)]
 const topicColors = ['#FFEB7F', '#9DFFBB', '#FFAFF3', '#88B5FF', '#FF9F7F', '#AFAFFF', '#7FFFDF', '#FFD1AF']
 const showPremiumModal = ref(false)
 const { $track } = useNuxtApp()
@@ -203,10 +207,10 @@ onUnmounted(() => {
                 <VBanner :text="t('bannerTitles.audio')" :icon="HeadPhones" />
               </div>
               <div class="topics-list-container">
-                <div v-for="(level, index) in levels" :key="level" @click="selectLevel(level)" class="topic-list-item">
+                <div v-for="level in levels" :key="level" @click="selectLevel(level)" class="topic-list-item">
                   <div class="topic-item-content">
                     <span class="topic-label">{{ t('audioTasks.level') }}</span>
-                    <div class="topic-icon-box" :style="{ color: levelColors[index] }">
+                    <div class="topic-icon-box" :style="{ color: levelColor(level) }">
                       <span style="font-size: 28px; font-weight: 900;">{{ level }}</span>
                     </div>
                   </div>

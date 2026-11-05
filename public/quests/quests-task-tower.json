@@ -1,0 +1,2571 @@
+[
+  {
+    "questId": "task-tower-one",
+    "title": "taskTowerOne.questTitle",
+    "progress": "0/15",
+    "description": "taskTowerOne.questDescription",
+    "conditions": {
+      "goal": "taskTowerOne.questGoal",
+      "minCorrect": 15,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
+    "vocabulary": [
+      {
+        "word": "die Lust",
+        "translation-ru": "желание, охота",
+        "translation-en": "desire, mood",
+        "translation-uk": "бажання",
+        "translation-pl": "ochota",
+        "translation-es": "las ganas",
+        "translation-fr": "l’envie",
+        "translation-tr": "istek, heves",
+        "translation-ro": "chef",
+        "translation-uz": "xohish",
+        "translation-hi": "मन, इच्छा",
+        "translation-ar": "الرغبة"
+      },
+      {
+        "word": "die Angst",
+        "translation-ru": "страх",
+        "translation-en": "fear",
+        "translation-uk": "страх",
+        "translation-pl": "strach",
+        "translation-es": "el miedo",
+        "translation-fr": "la peur",
+        "translation-tr": "korku",
+        "translation-ro": "frica",
+        "translation-uz": "qo‘rquv",
+        "translation-hi": "डर",
+        "translation-ar": "الخوف"
+      },
+      {
+        "word": "die Möglichkeit",
+        "translation-ru": "возможность",
+        "translation-en": "opportunity",
+        "translation-uk": "можливість",
+        "translation-pl": "możliwość",
+        "translation-es": "la posibilidad",
+        "translation-fr": "la possibilité",
+        "translation-tr": "imkân",
+        "translation-ro": "posibilitatea",
+        "translation-uz": "imkoniyat",
+        "translation-hi": "मौक़ा",
+        "translation-ar": "الفرصة"
+      },
+      {
+        "word": "fliegen",
+        "translation-ru": "летать",
+        "translation-en": "to fly",
+        "translation-uk": "літати",
+        "translation-pl": "latać",
+        "translation-es": "volar",
+        "translation-fr": "prendre l’avion",
+        "translation-tr": "uçmak",
+        "translation-ro": "a zbura",
+        "translation-uz": "uchmoq",
+        "translation-hi": "उड़ना",
+        "translation-ar": "يطير"
+      },
+      {
+        "word": "denn",
+        "translation-ru": "потому что, ведь",
+        "translation-en": "because",
+        "translation-uk": "бо",
+        "translation-pl": "bo",
+        "translation-es": "porque",
+        "translation-fr": "car",
+        "translation-tr": "çünkü",
+        "translation-ro": "căci",
+        "translation-uz": "chunki",
+        "translation-hi": "क्योंकि",
+        "translation-ar": "لأنّ"
+      }
+    ],
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "taskTowerOne.questTask1",
+        "options": [
+          "Ich habe keine Lust, heute arbeiten zu.",
+          "Ich habe keine Lust, zu heute arbeiten.",
+          "Ich habe keine Lust, heute zu arbeiten."
+        ],
+        "answer": "Ich habe keine Lust, heute zu arbeiten.",
+        "tip": "taskTowerOne.questDescription"
+      },
+      {
+        "id": 2,
+        "type": "input",
+        "question": "taskTowerOne.questTask2",
+        "correctAnswer": "zu",
+        "tip": "taskTowerOne.questDescription"
+      },
+      {
+        "id": 3,
+        "type": "input",
+        "question": "taskTowerOne.questTask3",
+        "correctAnswer": "aufzuräumen",
+        "tip": "taskTowerOne.questDescription"
+      },
+      {
+        "id": 4,
+        "type": "reorder",
+        "question": "taskTowerOne.questTask4",
+        "words": [
+          "um",
+          "zu",
+          "warten",
+          "Wir",
+          "haben",
+          "Zeit",
+          "keine"
+        ],
+        "correctOrder": [
+          "Wir",
+          "haben",
+          "keine",
+          "Zeit",
+          "zu",
+          "warten"
+        ],
+        "tip": "taskTowerOne.questDescription"
+      },
+      {
+        "id": 5,
+        "type": "select",
+        "question": "taskTowerOne.questTask5",
+        "options": [
+          "Sie hat zu Angst fliegen.",
+          "Sie hat Angst zu fliegen.",
+          "Sie hat Angst fliegen zu."
+        ],
+        "answer": "Sie hat Angst zu fliegen.",
+        "tip": "taskTowerOne.questDescription"
+      },
+      {
+        "id": 6,
+        "type": "input",
+        "question": "taskTowerOne.questTask6",
+        "correctAnswer": "gehen",
+        "tip": "taskTowerOne.questDescription"
+      },
+      {
+        "id": 7,
+        "type": "readAndAnswer",
+        "question": "taskTowerOne.questTask7",
+        "text": "Am Sonntag hat Tom keine Lust, früh aufzustehen. Er hat auch keine Zeit, Sport zu machen, denn er besucht seine Eltern.",
+        "options": [
+          "Er ist krank.",
+          "Er besucht seine Eltern.",
+          "Er schläft lange."
+        ],
+        "answer": "Er besucht seine Eltern.",
+        "tip": "taskTowerOne.questDescription"
+      },
+      {
+        "id": 8,
+        "type": "input",
+        "question": "taskTowerOne.questTask8",
+        "correctAnswer": "arbeiten",
+        "tip": "taskTowerOne.questDescription"
+      },
+      {
+        "id": 9,
+        "type": "reorder",
+        "question": "taskTowerOne.questTask10",
+        "words": [
+          "Lust",
+          "fahren",
+          "zu",
+          "ans",
+          "habe",
+          "Ich",
+          "um",
+          "Meer"
+        ],
+        "correctOrder": [
+          "Ich",
+          "habe",
+          "Lust",
+          "ans",
+          "Meer",
+          "zu",
+          "fahren"
+        ],
+        "tip": "taskTowerOne.questDescription"
+      },
+      {
+        "id": 10,
+        "type": "select",
+        "question": "taskTowerOne.questTask11",
+        "options": [
+          "Ich habe keine Zeit, dich anrufen.",
+          "Ich habe keine Zeit, dich anzurufen.",
+          "Ich habe keine Zeit, dich zu anrufen."
+        ],
+        "answer": "Ich habe keine Zeit, dich anzurufen.",
+        "tip": "taskTowerOne.questDescription"
+      },
+      {
+        "id": 11,
+        "type": "input",
+        "question": "craftValleyEight.questTask9",
+        "correctAnswer": "eingeladen",
+        "tip": "craftValleyEight.questDescription",
+        "reviewOf": "craft-valley-eight",
+        "reviewLand": "craft-valley"
+      },
+      {
+        "id": 12,
+        "type": "input",
+        "question": "craftValleyFive.questTask12",
+        "correctAnswer": "muss",
+        "tip": "craftValleyFive.questDescription",
+        "reviewOf": "craft-valley-five",
+        "reviewLand": "craft-valley"
+      },
+      {
+        "id": 13,
+        "type": "input",
+        "question": "craftValleyTwo.questTask13",
+        "correctAnswer": "werden",
+        "tip": "craftValleyTwo.questDescription",
+        "reviewOf": "craft-valley-two",
+        "reviewLand": "craft-valley"
+      },
+      {
+        "id": 14,
+        "type": "input",
+        "question": "taskTowerOne.questTask14",
+        "correctAnswer": "wird",
+        "tip": "taskTowerOne.questDescription"
+      },
+      {
+        "id": 15,
+        "type": "input",
+        "question": "taskTowerOne.questTask15",
+        "correctAnswer": "das",
+        "tip": "taskTowerOne.questDescription"
+      }
+    ]
+  },
+  {
+    "questId": "task-tower-two",
+    "title": "taskTowerTwo.questTitle",
+    "progress": "0/15",
+    "description": "taskTowerTwo.questDescription",
+    "conditions": {
+      "goal": "taskTowerTwo.questGoal",
+      "minCorrect": 15,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
+    "vocabulary": [
+      {
+        "word": "gefährlich",
+        "translation-ru": "опасный",
+        "translation-en": "dangerous",
+        "translation-uk": "небезпечний",
+        "translation-pl": "niebezpieczny",
+        "translation-es": "peligroso",
+        "translation-fr": "dangereux",
+        "translation-tr": "tehlikeli",
+        "translation-ro": "periculos",
+        "translation-uz": "xavfli",
+        "translation-hi": "ख़तरनाक",
+        "translation-ar": "خطير"
+      },
+      {
+        "word": "möglich",
+        "translation-ru": "возможный",
+        "translation-en": "possible",
+        "translation-uk": "можливий",
+        "translation-pl": "możliwy",
+        "translation-es": "posible",
+        "translation-fr": "possible",
+        "translation-tr": "mümkün",
+        "translation-ro": "posibil",
+        "translation-uz": "mumkin",
+        "translation-hi": "संभव",
+        "translation-ar": "ممكن"
+      },
+      {
+        "word": "verboten",
+        "translation-ru": "запрещено",
+        "translation-en": "forbidden",
+        "translation-uk": "заборонено",
+        "translation-pl": "zabronione",
+        "translation-es": "prohibido",
+        "translation-fr": "interdit",
+        "translation-tr": "yasak",
+        "translation-ro": "interzis",
+        "translation-uz": "taqiqlangan",
+        "translation-hi": "मना",
+        "translation-ar": "ممنوع"
+      },
+      {
+        "word": "wichtig",
+        "translation-ru": "важный",
+        "translation-en": "important",
+        "translation-uk": "важливий",
+        "translation-pl": "ważny",
+        "translation-es": "importante",
+        "translation-fr": "important",
+        "translation-tr": "önemli",
+        "translation-ro": "important",
+        "translation-uz": "muhim",
+        "translation-hi": "ज़रूरी",
+        "translation-ar": "مهم"
+      },
+      {
+        "word": "schneller",
+        "translation-ru": "быстрее",
+        "translation-en": "faster",
+        "translation-uk": "швидше",
+        "translation-pl": "szybciej",
+        "translation-es": "más rápido",
+        "translation-fr": "plus vite",
+        "translation-tr": "daha hızlı",
+        "translation-ro": "mai repede",
+        "translation-uz": "tezroq",
+        "translation-hi": "ज़्यादा जल्दी",
+        "translation-ar": "أسرع"
+      }
+    ],
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "taskTowerTwo.questTask1",
+        "options": [
+          "Es ist schwer, zu Deutsch lernen.",
+          "Es ist schwer, Deutsch lernen zu.",
+          "Es ist schwer, Deutsch zu lernen."
+        ],
+        "answer": "Es ist schwer, Deutsch zu lernen.",
+        "tip": "taskTowerTwo.questDescription"
+      },
+      {
+        "id": 2,
+        "type": "input",
+        "question": "taskTowerTwo.questTask2",
+        "correctAnswer": "zu",
+        "tip": "taskTowerTwo.questDescription"
+      },
+      {
+        "id": 3,
+        "type": "input",
+        "question": "taskTowerTwo.questTask3",
+        "correctAnswer": "fahren",
+        "tip": "taskTowerTwo.questDescription"
+      },
+      {
+        "id": 4,
+        "type": "reorder",
+        "question": "taskTowerTwo.questTask4",
+        "words": [
+          "machen",
+          "Es",
+          "um",
+          "Sport",
+          "viel",
+          "zu",
+          "ist",
+          "gesund"
+        ],
+        "correctOrder": [
+          "Es",
+          "ist",
+          "gesund",
+          "viel",
+          "Sport",
+          "zu",
+          "machen"
+        ],
+        "tip": "taskTowerTwo.questDescription"
+      },
+      {
+        "id": 5,
+        "type": "select",
+        "question": "taskTowerTwo.questTask5",
+        "options": [
+          "Es ist verboten, zu hier rauchen.",
+          "Es ist verboten, hier zu rauchen.",
+          "Es ist verboten, hier rauchen zu."
+        ],
+        "answer": "Es ist verboten, hier zu rauchen.",
+        "tip": "taskTowerTwo.questDescription"
+      },
+      {
+        "id": 6,
+        "type": "input",
+        "question": "taskTowerTwo.questTask6",
+        "correctAnswer": "sehen",
+        "tip": "taskTowerTwo.questDescription"
+      },
+      {
+        "id": 7,
+        "type": "readAndAnswer",
+        "question": "taskTowerTwo.questTask7",
+        "text": "Anna lernt seit einem Jahr Deutsch. Sie sagt: „Es ist nicht leicht, alle Wörter zu lernen. Aber es macht Spaß, mit Leuten auf Deutsch zu sprechen.“",
+        "options": [
+          "auf Deutsch zu sprechen",
+          "Englisch zu lernen",
+          "alle Wörter zu lernen"
+        ],
+        "answer": "auf Deutsch zu sprechen",
+        "tip": "taskTowerTwo.questDescription"
+      },
+      {
+        "id": 8,
+        "type": "input",
+        "question": "taskTowerTwo.questTask8",
+        "correctAnswer": "zu",
+        "tip": "taskTowerTwo.questDescription"
+      },
+      {
+        "id": 9,
+        "type": "reorder",
+        "question": "taskTowerTwo.questTask10",
+        "words": [
+          "Es",
+          "aufzustehen",
+          "aufstehen",
+          "wichtig",
+          "ist",
+          "früh"
+        ],
+        "correctOrder": [
+          "Es",
+          "ist",
+          "wichtig",
+          "früh",
+          "aufzustehen"
+        ],
+        "tip": "taskTowerTwo.questDescription"
+      },
+      {
+        "id": 10,
+        "type": "select",
+        "question": "taskTowerTwo.questTask11",
+        "options": [
+          "Es ist leicht, zu diese Straße finden.",
+          "Es ist leicht, diese Straße zu finden.",
+          "Es ist leicht, diese Straße finden zu."
+        ],
+        "answer": "Es ist leicht, diese Straße zu finden.",
+        "tip": "taskTowerTwo.questDescription"
+      },
+      {
+        "id": 11,
+        "type": "input",
+        "question": "taskTowerOne.questTask9",
+        "correctAnswer": "zu",
+        "tip": "taskTowerOne.questDescription",
+        "reviewOf": "task-tower-one",
+        "reviewLand": "task-tower"
+      },
+      {
+        "id": 12,
+        "type": "input",
+        "question": "craftValleySix.questTask12",
+        "correctAnswer": "repariert",
+        "tip": "craftValleySix.questDescription",
+        "reviewOf": "craft-valley-six",
+        "reviewLand": "craft-valley"
+      },
+      {
+        "id": 13,
+        "type": "input",
+        "question": "craftValleyThree.questTask13",
+        "correctAnswer": "gebaut",
+        "tip": "craftValleyThree.questDescription",
+        "reviewOf": "craft-valley-three",
+        "reviewLand": "craft-valley"
+      },
+      {
+        "id": 14,
+        "type": "input",
+        "question": "taskTowerTwo.questTask14",
+        "correctAnswer": "werden",
+        "tip": "taskTowerTwo.questDescription"
+      },
+      {
+        "id": 15,
+        "type": "input",
+        "question": "taskTowerTwo.questTask15",
+        "correctAnswer": "damit",
+        "tip": "taskTowerTwo.questDescription"
+      }
+    ]
+  },
+  {
+    "questId": "task-tower-three",
+    "title": "taskTowerThree.questTitle",
+    "progress": "0/15",
+    "description": "taskTowerThree.questDescription",
+    "conditions": {
+      "goal": "taskTowerThree.questGoal",
+      "minCorrect": 15,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
+    "vocabulary": [
+      {
+        "word": "versuchen",
+        "translation-ru": "пытаться",
+        "translation-en": "to try",
+        "translation-uk": "пробувати",
+        "translation-pl": "próbować",
+        "translation-es": "intentar",
+        "translation-fr": "essayer",
+        "translation-tr": "denemek",
+        "translation-ro": "a încerca",
+        "translation-uz": "urinmoq",
+        "translation-hi": "कोशिश करना",
+        "translation-ar": "يحاول"
+      },
+      {
+        "word": "anfangen",
+        "translation-ru": "начинать",
+        "translation-en": "to start",
+        "translation-uk": "починати",
+        "translation-pl": "zaczynać",
+        "translation-es": "empezar",
+        "translation-fr": "commencer",
+        "translation-tr": "başlamak",
+        "translation-ro": "a începe",
+        "translation-uz": "boshlamoq",
+        "translation-hi": "शुरू करना",
+        "translation-ar": "يبدأ"
+      },
+      {
+        "word": "aufhören",
+        "translation-ru": "переставать",
+        "translation-en": "to stop",
+        "translation-uk": "переставати",
+        "translation-pl": "przestawać",
+        "translation-es": "dejar de",
+        "translation-fr": "arrêter",
+        "translation-tr": "bırakmak",
+        "translation-ro": "a înceta",
+        "translation-uz": "to‘xtatmoq",
+        "translation-hi": "छोड़ना, रुकना",
+        "translation-ar": "يتوقف"
+      },
+      {
+        "word": "planen",
+        "translation-ru": "планировать",
+        "translation-en": "to plan",
+        "translation-uk": "планувати",
+        "translation-pl": "planować",
+        "translation-es": "planear",
+        "translation-fr": "prévoir",
+        "translation-tr": "planlamak",
+        "translation-ro": "a plănui",
+        "translation-uz": "rejalashtirmoq",
+        "translation-hi": "योजना बनाना",
+        "translation-ar": "يخطّط"
+      },
+      {
+        "word": "weniger",
+        "translation-ru": "меньше",
+        "translation-en": "less",
+        "translation-uk": "менше",
+        "translation-pl": "mniej",
+        "translation-es": "menos",
+        "translation-fr": "moins",
+        "translation-tr": "daha az",
+        "translation-ro": "mai puțin",
+        "translation-uz": "kamroq",
+        "translation-hi": "कम",
+        "translation-ar": "أقل"
+      }
+    ],
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "taskTowerThree.questTask1",
+        "options": [
+          "Ich versuche, weniger Kaffee trinken zu.",
+          "Ich versuche, zu weniger Kaffee trinken.",
+          "Ich versuche, weniger Kaffee zu trinken."
+        ],
+        "answer": "Ich versuche, weniger Kaffee zu trinken.",
+        "tip": "taskTowerThree.questDescription"
+      },
+      {
+        "id": 2,
+        "type": "input",
+        "question": "taskTowerThree.questTask2",
+        "correctAnswer": "zu",
+        "tip": "taskTowerThree.questDescription"
+      },
+      {
+        "id": 3,
+        "type": "input",
+        "question": "taskTowerThree.questTask3",
+        "correctAnswer": "lernen",
+        "tip": "taskTowerThree.questDescription"
+      },
+      {
+        "id": 4,
+        "type": "reorder",
+        "question": "taskTowerThree.questTask4",
+        "words": [
+          "zu",
+          "aufgehört",
+          "Sie",
+          "um",
+          "rauchen",
+          "hat"
+        ],
+        "correctOrder": [
+          "Sie",
+          "hat",
+          "aufgehört",
+          "zu",
+          "rauchen"
+        ],
+        "tip": "taskTowerThree.questDescription"
+      },
+      {
+        "id": 5,
+        "type": "select",
+        "question": "taskTowerThree.questTask5",
+        "options": [
+          "Vergiss nicht, Mama anzurufen!",
+          "Vergiss nicht, Mama anrufen zu!",
+          "Vergiss nicht, Mama zu anrufen!"
+        ],
+        "answer": "Vergiss nicht, Mama anzurufen!",
+        "tip": "taskTowerThree.questDescription"
+      },
+      {
+        "id": 6,
+        "type": "input",
+        "question": "taskTowerThree.questTask6",
+        "correctAnswer": "fahren",
+        "tip": "taskTowerThree.questDescription"
+      },
+      {
+        "id": 7,
+        "type": "readAndAnswer",
+        "question": "taskTowerThree.questTask7",
+        "text": "Paul hat letztes Jahr aufgehört zu rauchen. Jetzt versucht er, jeden Tag Sport zu machen. Er hat auch angefangen, gesünder zu essen.",
+        "options": [
+          "essen",
+          "rauchen",
+          "Sport machen"
+        ],
+        "answer": "rauchen",
+        "tip": "taskTowerThree.questDescription"
+      },
+      {
+        "id": 8,
+        "type": "input",
+        "question": "taskTowerThree.questTask8",
+        "correctAnswer": "anzurufen",
+        "tip": "taskTowerThree.questDescription"
+      },
+      {
+        "id": 9,
+        "type": "reorder",
+        "question": "taskTowerThree.questTask10",
+        "words": [
+          "vergessen",
+          "ausmachen",
+          "Licht",
+          "habe",
+          "Ich",
+          "auszumachen",
+          "das"
+        ],
+        "correctOrder": [
+          "Ich",
+          "habe",
+          "vergessen",
+          "das",
+          "Licht",
+          "auszumachen"
+        ],
+        "tip": "taskTowerThree.questDescription"
+      },
+      {
+        "id": 10,
+        "type": "select",
+        "question": "taskTowerThree.questTask11",
+        "options": [
+          "Es hat angefangen zu regnen.",
+          "Es hat zu angefangen regnen.",
+          "Es hat angefangen regnen zu."
+        ],
+        "answer": "Es hat angefangen zu regnen.",
+        "tip": "taskTowerThree.questDescription"
+      },
+      {
+        "id": 11,
+        "type": "input",
+        "question": "taskTowerTwo.questTask9",
+        "correctAnswer": "zu",
+        "tip": "taskTowerTwo.questDescription",
+        "reviewOf": "task-tower-two",
+        "reviewLand": "task-tower"
+      },
+      {
+        "id": 12,
+        "type": "input",
+        "question": "craftValleySeven.questTask12",
+        "correctAnswer": "wird",
+        "tip": "craftValleySeven.questDescription",
+        "reviewOf": "craft-valley-seven",
+        "reviewLand": "craft-valley"
+      },
+      {
+        "id": 13,
+        "type": "input",
+        "question": "craftValleyFour.questTask13",
+        "correctAnswer": "gebaut",
+        "tip": "craftValleyFour.questDescription",
+        "reviewOf": "craft-valley-four",
+        "reviewLand": "craft-valley"
+      },
+      {
+        "id": 14,
+        "type": "input",
+        "question": "taskTowerThree.questTask14",
+        "correctAnswer": "von",
+        "tip": "taskTowerThree.questDescription"
+      },
+      {
+        "id": 15,
+        "type": "input",
+        "question": "taskTowerThree.questTask15",
+        "correctAnswer": "trotzdem",
+        "tip": "taskTowerThree.questDescription"
+      }
+    ]
+  },
+  {
+    "questId": "task-tower-four",
+    "title": "taskTowerFour.questTitle",
+    "progress": "0/15",
+    "description": "taskTowerFour.questDescription",
+    "conditions": {
+      "goal": "taskTowerFour.questGoal",
+      "minCorrect": 15,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
+    "vocabulary": [
+      {
+        "word": "ohne … zu",
+        "translation-ru": "не делая (чего-то)",
+        "translation-en": "without doing",
+        "translation-uk": "не роблячи",
+        "translation-pl": "nie robiąc",
+        "translation-es": "sin",
+        "translation-fr": "sans",
+        "translation-tr": "-meden",
+        "translation-ro": "fără să",
+        "translation-uz": "…masdan",
+        "translation-hi": "बिना किए",
+        "translation-ar": "دون أن"
+      },
+      {
+        "word": "frühstücken",
+        "translation-ru": "завтракать",
+        "translation-en": "to have breakfast",
+        "translation-uk": "снідати",
+        "translation-pl": "jeść śniadanie",
+        "translation-es": "desayunar",
+        "translation-fr": "prendre le petit-déjeuner",
+        "translation-tr": "kahvaltı yapmak",
+        "translation-ro": "a lua micul dejun",
+        "translation-uz": "nonushta qilmoq",
+        "translation-hi": "नाश्ता करना",
+        "translation-ar": "يفطر"
+      },
+      {
+        "word": "nachdenken",
+        "translation-ru": "думать, обдумывать",
+        "translation-en": "to think about",
+        "translation-uk": "обмірковувати",
+        "translation-pl": "zastanawiać się",
+        "translation-es": "pensar, reflexionar",
+        "translation-fr": "réfléchir",
+        "translation-tr": "düşünmek",
+        "translation-ro": "a se gândi",
+        "translation-uz": "o‘ylab ko‘rmoq",
+        "translation-hi": "सोचना",
+        "translation-ar": "يفكّر"
+      },
+      {
+        "word": "die Erlaubnis",
+        "translation-ru": "разрешение",
+        "translation-en": "permission",
+        "translation-uk": "дозвіл",
+        "translation-pl": "pozwolenie",
+        "translation-es": "el permiso",
+        "translation-fr": "la permission",
+        "translation-tr": "izin",
+        "translation-ro": "permisiunea",
+        "translation-uz": "ruxsat",
+        "translation-hi": "अनुमति",
+        "translation-ar": "الإذن"
+      },
+      {
+        "word": "das Wort",
+        "translation-ru": "слово",
+        "translation-en": "word",
+        "translation-uk": "слово",
+        "translation-pl": "słowo",
+        "translation-es": "la palabra",
+        "translation-fr": "le mot",
+        "translation-tr": "kelime",
+        "translation-ro": "cuvântul",
+        "translation-uz": "so‘z",
+        "translation-hi": "शब्द",
+        "translation-ar": "الكلمة"
+      }
+    ],
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "taskTowerFour.questTask1",
+        "options": [
+          "Er ging, ohne zu sich verabschieden.",
+          "Er ging, ohne sich verabschieden zu.",
+          "Er ging, ohne sich zu verabschieden."
+        ],
+        "answer": "Er ging, ohne sich zu verabschieden.",
+        "tip": "taskTowerFour.questDescription"
+      },
+      {
+        "id": 2,
+        "type": "input",
+        "question": "taskTowerFour.questTask2",
+        "correctAnswer": "ohne",
+        "tip": "taskTowerFour.questDescription"
+      },
+      {
+        "id": 3,
+        "type": "input",
+        "question": "taskTowerFour.questTask3",
+        "correctAnswer": "nachzudenken",
+        "tip": "taskTowerFour.questDescription"
+      },
+      {
+        "id": 4,
+        "type": "reorder",
+        "question": "taskTowerFour.questTask4",
+        "words": [
+          "hat",
+          "ohne",
+          "genommen",
+          "um",
+          "Er",
+          "fragen",
+          "zu",
+          "Auto",
+          "mein"
+        ],
+        "correctOrder": [
+          "Er",
+          "hat",
+          "mein",
+          "Auto",
+          "genommen",
+          "ohne",
+          "zu",
+          "fragen"
+        ],
+        "tip": "taskTowerFour.questDescription"
+      },
+      {
+        "id": 5,
+        "type": "select",
+        "question": "taskTowerFour.questTask5",
+        "options": [
+          "Wir sind gefahren, ohne eine Karte mitnehmen.",
+          "Wir sind gefahren, ohne eine Karte mitzunehmen.",
+          "Wir sind gefahren, ohne eine Karte mit zu nehmen."
+        ],
+        "answer": "Wir sind gefahren, ohne eine Karte mitzunehmen.",
+        "tip": "taskTowerFour.questDescription"
+      },
+      {
+        "id": 6,
+        "type": "input",
+        "question": "taskTowerFour.questTask6",
+        "correctAnswer": "bezahlen",
+        "tip": "taskTowerFour.questDescription"
+      },
+      {
+        "id": 7,
+        "type": "readAndAnswer",
+        "question": "taskTowerFour.questTask7",
+        "text": "Heute Morgen bin ich zu spät aufgestanden. Ich bin aus dem Haus gegangen, ohne zu frühstücken und ohne meinen Kaffee zu trinken. Im Büro war ich sehr müde.",
+        "options": [
+          "Er hat nicht gefrühstückt.",
+          "Er hat nicht geschlafen.",
+          "Er hat nicht gearbeitet."
+        ],
+        "answer": "Er hat nicht gefrühstückt.",
+        "tip": "taskTowerFour.questDescription"
+      },
+      {
+        "id": 8,
+        "type": "input",
+        "question": "taskTowerFour.questTask8",
+        "correctAnswer": "fragen",
+        "tip": "taskTowerFour.questDescription"
+      },
+      {
+        "id": 9,
+        "type": "reorder",
+        "question": "taskTowerFour.questTask10",
+        "words": [
+          "machen",
+          "Deutsch",
+          "zu",
+          "habe",
+          "Ich",
+          "ohne",
+          "Kurs",
+          "um",
+          "gelernt",
+          "einen"
+        ],
+        "correctOrder": [
+          "Ich",
+          "habe",
+          "Deutsch",
+          "gelernt",
+          "ohne",
+          "einen",
+          "Kurs",
+          "zu",
+          "machen"
+        ],
+        "tip": "taskTowerFour.questDescription"
+      },
+      {
+        "id": 10,
+        "type": "select",
+        "question": "taskTowerFour.questTask11",
+        "options": [
+          "Sie ging, ohne zu ein Wort sagen.",
+          "Sie ging, ohne ein Wort zu sagen.",
+          "Sie ging, ohne ein Wort sagen zu."
+        ],
+        "answer": "Sie ging, ohne ein Wort zu sagen.",
+        "tip": "taskTowerFour.questDescription"
+      },
+      {
+        "id": 11,
+        "type": "input",
+        "question": "taskTowerThree.questTask9",
+        "correctAnswer": "mitzunehmen",
+        "tip": "taskTowerThree.questDescription",
+        "reviewOf": "task-tower-three",
+        "reviewLand": "task-tower"
+      },
+      {
+        "id": 12,
+        "type": "input",
+        "question": "craftValleyEight.questTask12",
+        "correctAnswer": "wurden",
+        "tip": "craftValleyEight.questDescription",
+        "reviewOf": "craft-valley-eight",
+        "reviewLand": "craft-valley"
+      },
+      {
+        "id": 13,
+        "type": "input",
+        "question": "craftValleyFive.questTask13",
+        "correctAnswer": "gesprochen",
+        "tip": "craftValleyFive.questDescription",
+        "reviewOf": "craft-valley-five",
+        "reviewLand": "craft-valley"
+      },
+      {
+        "id": 14,
+        "type": "input",
+        "question": "taskTowerFour.questTask14",
+        "correctAnswer": "wurde",
+        "tip": "taskTowerFour.questDescription"
+      },
+      {
+        "id": 15,
+        "type": "input",
+        "question": "taskTowerFour.questTask15",
+        "correctAnswer": "was",
+        "tip": "taskTowerFour.questDescription"
+      }
+    ]
+  },
+  {
+    "questId": "task-tower-five",
+    "title": "taskTowerFive.questTitle",
+    "progress": "0/15",
+    "description": "taskTowerFive.questDescription",
+    "conditions": {
+      "goal": "taskTowerFive.questGoal",
+      "minCorrect": 15,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
+    "vocabulary": [
+      {
+        "word": "lassen",
+        "translation-ru": "поручать сделать (не самому)",
+        "translation-en": "to have something done",
+        "translation-uk": "доручати зробити",
+        "translation-pl": "kazać zrobić",
+        "translation-es": "mandar hacer",
+        "translation-fr": "faire faire",
+        "translation-tr": "yaptırmak",
+        "translation-ro": "a pune pe cineva să facă",
+        "translation-uz": "qildirmoq",
+        "translation-hi": "करवाना",
+        "translation-ar": "يجعل غيره يفعل"
+      },
+      {
+        "word": "schneiden",
+        "translation-ru": "резать, стричь",
+        "translation-en": "to cut",
+        "translation-uk": "різати, стригти",
+        "translation-pl": "ciąć, strzyc",
+        "translation-es": "cortar",
+        "translation-fr": "couper",
+        "translation-tr": "kesmek",
+        "translation-ro": "a tăia",
+        "translation-uz": "kesmoq",
+        "translation-hi": "काटना",
+        "translation-ar": "يقصّ"
+      },
+      {
+        "word": "die Haare",
+        "translation-ru": "волосы",
+        "translation-en": "hair",
+        "translation-uk": "волосся",
+        "translation-pl": "włosy",
+        "translation-es": "el pelo",
+        "translation-fr": "les cheveux",
+        "translation-tr": "saç",
+        "translation-ro": "părul",
+        "translation-uz": "soch",
+        "translation-hi": "बाल",
+        "translation-ar": "الشعر"
+      },
+      {
+        "word": "der Friseur",
+        "translation-ru": "парикмахер",
+        "translation-en": "hairdresser",
+        "translation-uk": "перукар",
+        "translation-pl": "fryzjer",
+        "translation-es": "el peluquero",
+        "translation-fr": "le coiffeur",
+        "translation-tr": "kuaför",
+        "translation-ro": "frizerul",
+        "translation-uz": "sartarosh",
+        "translation-hi": "नाई",
+        "translation-ar": "الحلّاق"
+      },
+      {
+        "word": "prüfen",
+        "translation-ru": "проверять",
+        "translation-en": "to check",
+        "translation-uk": "перевіряти",
+        "translation-pl": "sprawdzać",
+        "translation-es": "revisar",
+        "translation-fr": "vérifier",
+        "translation-tr": "kontrol etmek",
+        "translation-ro": "a verifica",
+        "translation-uz": "tekshirmoq",
+        "translation-hi": "जाँचना",
+        "translation-ar": "يفحص، يتحقّق"
+      }
+    ],
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "taskTowerFive.questTask1",
+        "options": [
+          "Ich lasse mein Auto zu reparieren.",
+          "Ich lasse mein Auto repariert.",
+          "Ich lasse mein Auto reparieren."
+        ],
+        "answer": "Ich lasse mein Auto reparieren.",
+        "tip": "taskTowerFive.questDescription"
+      },
+      {
+        "id": 2,
+        "type": "input",
+        "question": "taskTowerFive.questTask2",
+        "correctAnswer": "lässt",
+        "tip": "taskTowerFive.questDescription"
+      },
+      {
+        "id": 3,
+        "type": "input",
+        "question": "taskTowerFive.questTask3",
+        "correctAnswer": "waschen",
+        "tip": "taskTowerFive.questDescription"
+      },
+      {
+        "id": 4,
+        "type": "reorder",
+        "question": "taskTowerFive.questTask4",
+        "words": [
+          "lasse",
+          "zu",
+          "die",
+          "Monat",
+          "Haare",
+          "schneiden",
+          "jeden",
+          "Ich",
+          "mir"
+        ],
+        "correctOrder": [
+          "Ich",
+          "lasse",
+          "mir",
+          "jeden",
+          "Monat",
+          "die",
+          "Haare",
+          "schneiden"
+        ],
+        "tip": "taskTowerFive.questDescription"
+      },
+      {
+        "id": 5,
+        "type": "select",
+        "question": "taskTowerFive.questTask5",
+        "options": [
+          "Er lässt sein Fahrrad reparieren.",
+          "Er lasst sein Fahrrad reparieren.",
+          "Er lässt sein Fahrrad zu reparieren."
+        ],
+        "answer": "Er lässt sein Fahrrad reparieren.",
+        "tip": "taskTowerFive.questDescription"
+      },
+      {
+        "id": 6,
+        "type": "input",
+        "question": "taskTowerFive.questTask6",
+        "correctAnswer": "lasst",
+        "tip": "taskTowerFive.questDescription"
+      },
+      {
+        "id": 7,
+        "type": "readAndAnswer",
+        "question": "taskTowerFive.questTask7",
+        "text": "Frau Becker hat wenig Zeit. Sie lässt ihre Wohnung putzen und ihr Auto waschen. Aber das Essen kocht sie immer allein.",
+        "options": [
+          "Sie kocht das Essen.",
+          "Sie wäscht das Auto.",
+          "Sie putzt die Wohnung."
+        ],
+        "answer": "Sie kocht das Essen.",
+        "tip": "taskTowerFive.questDescription"
+      },
+      {
+        "id": 8,
+        "type": "input",
+        "question": "taskTowerFive.questTask8",
+        "correctAnswer": "lassen",
+        "tip": "taskTowerFive.questDescription"
+      },
+      {
+        "id": 9,
+        "type": "reorder",
+        "question": "taskTowerFive.questTask10",
+        "words": [
+          "ihr",
+          "reparieren",
+          "repariert",
+          "lässt",
+          "Sie",
+          "Telefon"
+        ],
+        "correctOrder": [
+          "Sie",
+          "lässt",
+          "ihr",
+          "Telefon",
+          "reparieren"
+        ],
+        "tip": "taskTowerFive.questDescription"
+      },
+      {
+        "id": 10,
+        "type": "select",
+        "question": "taskTowerFive.questTask11",
+        "options": [
+          "Wir lassen die Fenster putzen.",
+          "Wir lassen die Fenster zu putzen.",
+          "Wir lassen die Fenster geputzt."
+        ],
+        "answer": "Wir lassen die Fenster putzen.",
+        "tip": "taskTowerFive.questDescription"
+      },
+      {
+        "id": 11,
+        "type": "input",
+        "question": "taskTowerFour.questTask9",
+        "correctAnswer": "ohne",
+        "tip": "taskTowerFour.questDescription",
+        "reviewOf": "task-tower-four",
+        "reviewLand": "task-tower"
+      },
+      {
+        "id": 12,
+        "type": "input",
+        "question": "taskTowerOne.questTask12",
+        "correctAnswer": "lernen",
+        "tip": "taskTowerOne.questDescription",
+        "reviewOf": "task-tower-one",
+        "reviewLand": "task-tower"
+      },
+      {
+        "id": 13,
+        "type": "input",
+        "question": "craftValleySix.questTask13",
+        "correctAnswer": "repariert",
+        "tip": "craftValleySix.questDescription",
+        "reviewOf": "craft-valley-six",
+        "reviewLand": "craft-valley"
+      },
+      {
+        "id": 14,
+        "type": "input",
+        "question": "taskTowerFive.questTask14",
+        "correctAnswer": "werden",
+        "tip": "taskTowerFive.questDescription"
+      },
+      {
+        "id": 15,
+        "type": "input",
+        "question": "taskTowerFive.questTask15",
+        "correctAnswer": "kaufte",
+        "tip": "taskTowerFive.questDescription"
+      }
+    ]
+  },
+  {
+    "questId": "task-tower-six",
+    "title": "taskTowerSix.questTitle",
+    "progress": "0/15",
+    "description": "taskTowerSix.questDescription",
+    "conditions": {
+      "goal": "taskTowerSix.questGoal",
+      "minCorrect": 15,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
+    "vocabulary": [
+      {
+        "word": "erledigen",
+        "translation-ru": "сделать, уладить (дела)",
+        "translation-en": "to get done",
+        "translation-uk": "зробити, владнати",
+        "translation-pl": "załatwić",
+        "translation-es": "hacer, despachar",
+        "translation-fr": "régler, faire",
+        "translation-tr": "halletmek",
+        "translation-ro": "a rezolva",
+        "translation-uz": "bajarmoq",
+        "translation-hi": "निपटाना",
+        "translation-ar": "يُنجز"
+      },
+      {
+        "word": "vorhaben",
+        "translation-ru": "собираться, планировать",
+        "translation-en": "to plan, to intend",
+        "translation-uk": "збиратися, планувати",
+        "translation-pl": "zamierzać",
+        "translation-es": "tener previsto",
+        "translation-fr": "avoir l’intention",
+        "translation-tr": "niyetinde olmak",
+        "translation-ro": "a avea de gând",
+        "translation-uz": "niyat qilmoq",
+        "translation-hi": "इरादा रखना",
+        "translation-ar": "ينوي"
+      },
+      {
+        "word": "endlich",
+        "translation-ru": "наконец",
+        "translation-en": "finally",
+        "translation-uk": "нарешті",
+        "translation-pl": "w końcu",
+        "translation-es": "por fin",
+        "translation-fr": "enfin",
+        "translation-tr": "sonunda",
+        "translation-ro": "în sfârșit",
+        "translation-uz": "nihoyat",
+        "translation-hi": "आख़िरकार",
+        "translation-ar": "أخيرًا"
+      },
+      {
+        "word": "schneien",
+        "translation-ru": "идёт снег",
+        "translation-en": "to snow",
+        "translation-uk": "іде сніг",
+        "translation-pl": "padać (o śniegu)",
+        "translation-es": "nevar",
+        "translation-fr": "neiger",
+        "translation-tr": "kar yağmak",
+        "translation-ro": "a ninge",
+        "translation-uz": "qor yog‘moq",
+        "translation-hi": "बर्फ़ गिरना",
+        "translation-ar": "يتساقط الثلج"
+      },
+      {
+        "word": "schneiden",
+        "translation-ru": "резать, стричь",
+        "translation-en": "to cut",
+        "translation-uk": "різати, стригти",
+        "translation-pl": "ciąć, strzyc",
+        "translation-es": "cortar",
+        "translation-fr": "couper",
+        "translation-tr": "kesmek",
+        "translation-ro": "a tăia",
+        "translation-uz": "kesmoq",
+        "translation-hi": "काटना",
+        "translation-ar": "يقصّ"
+      }
+    ],
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "taskTowerSix.questTask1",
+        "options": [
+          "Am Wochenende habe ich vor, endlich die Wohnung zu aufräumen.",
+          "Am Wochenende habe ich vor, endlich die Wohnung aufräumen zu.",
+          "Am Wochenende habe ich vor, endlich die Wohnung aufzuräumen."
+        ],
+        "answer": "Am Wochenende habe ich vor, endlich die Wohnung aufzuräumen.",
+        "tip": "taskTowerSix.questDescription"
+      },
+      {
+        "id": 2,
+        "type": "input",
+        "question": "taskTowerSix.questTask2",
+        "correctAnswer": "zu",
+        "tip": "taskTowerSix.questDescription"
+      },
+      {
+        "id": 3,
+        "type": "input",
+        "question": "taskTowerSix.questTask3",
+        "correctAnswer": "machen",
+        "tip": "taskTowerSix.questDescription"
+      },
+      {
+        "id": 4,
+        "type": "reorder",
+        "question": "taskTowerSix.questTask4",
+        "words": [
+          "reparieren",
+          "Uhr",
+          "zu",
+          "Ich",
+          "meine",
+          "lasse"
+        ],
+        "correctOrder": [
+          "Ich",
+          "lasse",
+          "meine",
+          "Uhr",
+          "reparieren"
+        ],
+        "tip": "taskTowerSix.questDescription"
+      },
+      {
+        "id": 5,
+        "type": "select",
+        "question": "taskTowerSix.questTask5",
+        "options": [
+          "Er hat die Prüfung bestanden, ohne viel lernen zu.",
+          "Er hat die Prüfung bestanden, ohne zu viel lernen.",
+          "Er hat die Prüfung bestanden, ohne viel zu lernen."
+        ],
+        "answer": "Er hat die Prüfung bestanden, ohne viel zu lernen.",
+        "tip": "taskTowerSix.questDescription"
+      },
+      {
+        "id": 6,
+        "type": "input",
+        "question": "taskTowerSix.questTask6",
+        "correctAnswer": "kommen",
+        "tip": "taskTowerSix.questDescription"
+      },
+      {
+        "id": 7,
+        "type": "readAndAnswer",
+        "question": "taskTowerSix.questTask7",
+        "text": "Lena hat am Samstag viel vor. Sie lässt ihr Fahrrad reparieren, sie geht einkaufen, und sie versucht, ihre Wohnung aufzuräumen. Aber sie hat keine Lust zu kochen. Deshalb geht sie am Abend ins Restaurant.",
+        "options": [
+          "Sie hat Geburtstag.",
+          "Sie hat keine Lust zu kochen.",
+          "Ihr Fahrrad ist kaputt."
+        ],
+        "answer": "Sie hat keine Lust zu kochen.",
+        "tip": "taskTowerSix.questDescription"
+      },
+      {
+        "id": 8,
+        "type": "input",
+        "question": "taskTowerSix.questTask8",
+        "correctAnswer": "ohne",
+        "tip": "taskTowerSix.questDescription"
+      },
+      {
+        "id": 9,
+        "type": "reorder",
+        "question": "taskTowerSix.questTask10",
+        "words": [
+          "fängt",
+          "Es",
+          "an",
+          "schneien",
+          "um",
+          "zu"
+        ],
+        "correctOrder": [
+          "Es",
+          "fängt",
+          "an",
+          "zu",
+          "schneien"
+        ],
+        "tip": "taskTowerSix.questDescription"
+      },
+      {
+        "id": 10,
+        "type": "select",
+        "question": "taskTowerSix.questTask11",
+        "options": [
+          "Ich lasse mir alle zwei Monate die Haare geschnitten.",
+          "Ich lasse mir alle zwei Monate die Haare schneiden.",
+          "Ich lasse mir alle zwei Monate die Haare zu schneiden."
+        ],
+        "answer": "Ich lasse mir alle zwei Monate die Haare schneiden.",
+        "tip": "taskTowerSix.questDescription"
+      },
+      {
+        "id": 11,
+        "type": "input",
+        "question": "taskTowerFive.questTask9",
+        "correctAnswer": "lassen",
+        "tip": "taskTowerFive.questDescription",
+        "reviewOf": "task-tower-five",
+        "reviewLand": "task-tower"
+      },
+      {
+        "id": 12,
+        "type": "input",
+        "question": "taskTowerTwo.questTask12",
+        "correctAnswer": "verstehen",
+        "tip": "taskTowerTwo.questDescription",
+        "reviewOf": "task-tower-two",
+        "reviewLand": "task-tower"
+      },
+      {
+        "id": 13,
+        "type": "input",
+        "question": "craftValleySeven.questTask13",
+        "correctAnswer": "gegessen",
+        "tip": "craftValleySeven.questDescription",
+        "reviewOf": "craft-valley-seven",
+        "reviewLand": "craft-valley"
+      },
+      {
+        "id": 14,
+        "type": "input",
+        "question": "taskTowerSix.questTask14",
+        "correctAnswer": "dem",
+        "tip": "taskTowerSix.questDescription"
+      },
+      {
+        "id": 15,
+        "type": "input",
+        "question": "taskTowerSix.questTask15",
+        "correctAnswer": "wurden",
+        "tip": "taskTowerSix.questDescription"
+      }
+    ]
+  },
+  {
+    "questId": "task-tower-seven",
+    "title": "taskTowerSeven.questTitle",
+    "progress": "0/15",
+    "description": "taskTowerSeven.questDescription",
+    "conditions": {
+      "goal": "taskTowerSeven.questGoal",
+      "minCorrect": 15,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
+    "vocabulary": [
+      {
+        "word": "der erste Tag",
+        "translation-ru": "первый день",
+        "translation-en": "the first day",
+        "translation-uk": "перший день",
+        "translation-pl": "pierwszy dzień",
+        "translation-es": "el primer día",
+        "translation-fr": "le premier jour",
+        "translation-tr": "ilk gün",
+        "translation-ro": "prima zi",
+        "translation-uz": "birinchi kun",
+        "translation-hi": "पहला दिन",
+        "translation-ar": "اليوم الأول"
+      },
+      {
+        "word": "das Passwort",
+        "translation-ru": "пароль",
+        "translation-en": "password",
+        "translation-uk": "пароль",
+        "translation-pl": "hasło",
+        "translation-es": "la contraseña",
+        "translation-fr": "le mot de passe",
+        "translation-tr": "şifre",
+        "translation-ro": "parola",
+        "translation-uz": "parol",
+        "translation-hi": "पासवर्ड",
+        "translation-ar": "كلمة المرور"
+      },
+      {
+        "word": "aufschreiben",
+        "translation-ru": "записывать",
+        "translation-en": "to write down",
+        "translation-uk": "записувати",
+        "translation-pl": "zapisywać",
+        "translation-es": "apuntar",
+        "translation-fr": "noter",
+        "translation-tr": "not etmek",
+        "translation-ro": "a nota",
+        "translation-uz": "yozib olmoq",
+        "translation-hi": "लिख लेना",
+        "translation-ar": "يدوّن"
+      },
+      {
+        "word": "pünktlich",
+        "translation-ru": "пунктуальный, вовремя",
+        "translation-en": "on time",
+        "translation-uk": "вчасно",
+        "translation-pl": "punktualnie",
+        "translation-es": "puntual",
+        "translation-fr": "ponctuel, à l’heure",
+        "translation-tr": "dakik, zamanında",
+        "translation-ro": "punctual",
+        "translation-uz": "o‘z vaqtida",
+        "translation-hi": "समय पर",
+        "translation-ar": "في الموعد"
+      },
+      {
+        "word": "der Kaffee",
+        "translation-ru": "кофе",
+        "translation-en": "coffee",
+        "translation-uk": "кава",
+        "translation-pl": "kawa",
+        "translation-es": "el café",
+        "translation-fr": "le café",
+        "translation-tr": "kahve",
+        "translation-ro": "cafeaua",
+        "translation-uz": "qahva",
+        "translation-hi": "कॉफ़ी",
+        "translation-ar": "القهوة"
+      },
+      {
+        "word": "behalten",
+        "translation-ru": "сохранять / оставлять себе",
+        "translation-en": "to keep / retain",
+        "translation-uk": "зберігати",
+        "translation-pl": "zatrzymać",
+        "translation-es": "quedarse con / mantener",
+        "translation-fr": "garder",
+        "translation-tr": "tutmak / saklamak",
+        "translation-ro": "a păstra",
+        "translation-uz": "saqlab qolmoq",
+        "translation-hi": "रखना",
+        "translation-ar": "يحتفظ"
+      },
+      {
+        "word": "rausbringen",
+        "translation-ru": "выносить",
+        "translation-en": "to take out",
+        "translation-uk": "виносити",
+        "translation-pl": "wynosić",
+        "translation-es": "sacar",
+        "translation-fr": "sortir",
+        "translation-tr": "dışarı çıkarmak",
+        "translation-ro": "a duce afară",
+        "translation-uz": "olib chiqmoq",
+        "translation-hi": "बाहर ले जाना",
+        "translation-ar": "يخرج"
+      }
+    ],
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "taskTowerSeven.questTask1",
+        "options": [
+          "Am ersten Tag ist es wichtig, pünktlich sein zu.",
+          "Am ersten Tag ist es wichtig, zu pünktlich sein.",
+          "Am ersten Tag ist es wichtig, pünktlich zu sein."
+        ],
+        "answer": "Am ersten Tag ist es wichtig, pünktlich zu sein.",
+        "tip": "taskTowerSeven.questDescription"
+      },
+      {
+        "id": 2,
+        "type": "input",
+        "question": "taskTowerSeven.questTask2",
+        "correctAnswer": "zu",
+        "tip": "taskTowerSeven.questDescription"
+      },
+      {
+        "id": 3,
+        "type": "input",
+        "question": "taskTowerSeven.questTask3",
+        "correctAnswer": "aufzuschreiben",
+        "tip": "taskTowerSeven.questDescription"
+      },
+      {
+        "id": 4,
+        "type": "reorder",
+        "question": "taskTowerSeven.questTask4",
+        "words": [
+          "Kaffee",
+          "trinken",
+          "Zeit",
+          "um",
+          "zu",
+          "Ich",
+          "einen",
+          "hatte",
+          "keine"
+        ],
+        "correctOrder": [
+          "Ich",
+          "hatte",
+          "keine",
+          "Zeit",
+          "einen",
+          "Kaffee",
+          "zu",
+          "trinken"
+        ],
+        "tip": "taskTowerSeven.questDescription"
+      },
+      {
+        "id": 5,
+        "type": "select",
+        "question": "taskTowerSeven.questTask5",
+        "options": [
+          "Der Chef hat angefangen, das Programm erklären zu.",
+          "Der Chef hat angefangen, zu das Programm erklären.",
+          "Der Chef hat angefangen, das Programm zu erklären."
+        ],
+        "answer": "Der Chef hat angefangen, das Programm zu erklären.",
+        "tip": "taskTowerSeven.questDescription"
+      },
+      {
+        "id": 6,
+        "type": "input",
+        "question": "taskTowerSeven.questTask6",
+        "correctAnswer": "arbeiten",
+        "tip": "taskTowerSeven.questDescription"
+      },
+      {
+        "id": 7,
+        "type": "readAndAnswer",
+        "question": "taskTowerSeven.questTask7",
+        "text": "Heute war Ninas erster Tag im Büro. Sie hatte keine Zeit zu frühstücken, denn sie wollte pünktlich sein. Die Kollegen waren nett und versuchten, ihr alles zu erklären. Aber Nina hat vergessen, ihr Passwort aufzuschreiben.",
+        "options": [
+          "ihr Passwort aufzuschreiben",
+          "zu frühstücken",
+          "pünktlich zu sein"
+        ],
+        "answer": "ihr Passwort aufzuschreiben",
+        "tip": "taskTowerSeven.questDescription"
+      },
+      {
+        "id": 8,
+        "type": "input",
+        "question": "taskTowerSeven.questTask8",
+        "correctAnswer": "zu",
+        "tip": "taskTowerSeven.questDescription"
+      },
+      {
+        "id": 9,
+        "type": "reorder",
+        "question": "taskTowerSeven.questTask10",
+        "words": [
+          "Wochenende",
+          "arbeiten",
+          "Sie",
+          "um",
+          "Lust",
+          "zu",
+          "keine",
+          "hat",
+          "am"
+        ],
+        "correctOrder": [
+          "Sie",
+          "hat",
+          "keine",
+          "Lust",
+          "am",
+          "Wochenende",
+          "zu",
+          "arbeiten"
+        ],
+        "tip": "taskTowerSeven.questDescription"
+      },
+      {
+        "id": 10,
+        "type": "select",
+        "question": "taskTowerSeven.questTask11",
+        "options": [
+          "Er ist gegangen, ohne zu den Computer ausmachen.",
+          "Er ist gegangen, ohne den Computer auszumachen.",
+          "Er ist gegangen, ohne den Computer auszumachen zu."
+        ],
+        "answer": "Er ist gegangen, ohne den Computer auszumachen.",
+        "tip": "taskTowerSeven.questDescription"
+      },
+      {
+        "id": 11,
+        "type": "input",
+        "question": "taskTowerSix.questTask9",
+        "correctAnswer": "anzurufen",
+        "tip": "taskTowerSix.questDescription",
+        "reviewOf": "task-tower-six",
+        "reviewLand": "task-tower"
+      },
+      {
+        "id": 12,
+        "type": "input",
+        "question": "taskTowerThree.questTask12",
+        "correctAnswer": "arbeiten",
+        "tip": "taskTowerThree.questDescription",
+        "reviewOf": "task-tower-three",
+        "reviewLand": "task-tower"
+      },
+      {
+        "id": 13,
+        "type": "input",
+        "question": "craftValleyEight.questTask13",
+        "correctAnswer": "werden",
+        "tip": "craftValleyEight.questDescription",
+        "reviewOf": "craft-valley-eight",
+        "reviewLand": "craft-valley"
+      },
+      {
+        "id": 14,
+        "type": "input",
+        "question": "taskTowerSeven.questTask14",
+        "correctAnswer": "wird",
+        "tip": "taskTowerSeven.questDescription"
+      },
+      {
+        "id": 15,
+        "type": "input",
+        "question": "taskTowerSeven.questTask15",
+        "correctAnswer": "der",
+        "tip": "taskTowerSeven.questDescription"
+      }
+    ]
+  },
+  {
+    "questId": "task-tower-eight",
+    "title": "taskTowerEight.questTitle",
+    "progress": "0/15",
+    "description": "taskTowerEight.questDescription",
+    "conditions": {
+      "goal": "taskTowerEight.questGoal",
+      "minCorrect": 15,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
+    "vocabulary": [
+      {
+        "word": "die Werkstatt",
+        "translation-ru": "мастерская, автосервис",
+        "translation-en": "garage, workshop",
+        "translation-uk": "майстерня",
+        "translation-pl": "warsztat",
+        "translation-es": "el taller",
+        "translation-fr": "le garage",
+        "translation-tr": "tamirhane",
+        "translation-ro": "atelierul",
+        "translation-uz": "ustaxona",
+        "translation-hi": "वर्कशॉप",
+        "translation-ar": "الورشة"
+      },
+      {
+        "word": "der Reifen",
+        "translation-ru": "шина",
+        "translation-en": "tyre",
+        "translation-uk": "шина",
+        "translation-pl": "opona",
+        "translation-es": "el neumático",
+        "translation-fr": "le pneu",
+        "translation-tr": "lastik",
+        "translation-ro": "cauciucul",
+        "translation-uz": "shina",
+        "translation-hi": "टायर",
+        "translation-ar": "الإطار"
+      },
+      {
+        "word": "wechseln",
+        "translation-ru": "менять",
+        "translation-en": "to change",
+        "translation-uk": "міняти",
+        "translation-pl": "zmieniać",
+        "translation-es": "cambiar",
+        "translation-fr": "changer",
+        "translation-tr": "değiştirmek",
+        "translation-ro": "a schimba",
+        "translation-uz": "almashtirmoq",
+        "translation-hi": "बदलना",
+        "translation-ar": "يغيّر"
+      },
+      {
+        "word": "reinigen",
+        "translation-ru": "чистить",
+        "translation-en": "to clean",
+        "translation-uk": "чистити",
+        "translation-pl": "czyścić",
+        "translation-es": "limpiar",
+        "translation-fr": "nettoyer",
+        "translation-tr": "temizlemek",
+        "translation-ro": "a curăța",
+        "translation-uz": "tozalamoq",
+        "translation-hi": "साफ़ करना",
+        "translation-ar": "ينظّف"
+      },
+      {
+        "word": "die Waschmaschine",
+        "translation-ru": "стиральная машина",
+        "translation-en": "washing machine",
+        "translation-uk": "пральна машина",
+        "translation-pl": "pralka",
+        "translation-es": "la lavadora",
+        "translation-fr": "le lave-linge",
+        "translation-tr": "çamaşır makinesi",
+        "translation-ro": "mașina de spălat",
+        "translation-uz": "kir yuvish mashinasi",
+        "translation-hi": "वॉशिंग मशीन",
+        "translation-ar": "الغسالة"
+      },
+      {
+        "word": "selbst",
+        "translation-ru": "сам",
+        "translation-en": "oneself",
+        "translation-uk": "сам",
+        "translation-pl": "sam",
+        "translation-es": "uno mismo",
+        "translation-fr": "soi-même",
+        "translation-tr": "kendi",
+        "translation-ro": "singur",
+        "translation-uz": "o‘zi",
+        "translation-hi": "ख़ुद",
+        "translation-ar": "بنفسه"
+      }
+    ],
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "taskTowerEight.questTask1",
+        "options": [
+          "Ich lasse die Reifen in der Werkstatt zu wechseln.",
+          "Ich lasse die Reifen in der Werkstatt gewechselt.",
+          "Ich lasse die Reifen in der Werkstatt wechseln."
+        ],
+        "answer": "Ich lasse die Reifen in der Werkstatt wechseln.",
+        "tip": "taskTowerEight.questDescription"
+      },
+      {
+        "id": 2,
+        "type": "input",
+        "question": "taskTowerEight.questTask2",
+        "correctAnswer": "lässt",
+        "tip": "taskTowerEight.questDescription"
+      },
+      {
+        "id": 3,
+        "type": "input",
+        "question": "taskTowerEight.questTask3",
+        "correctAnswer": "lassen",
+        "tip": "taskTowerEight.questDescription"
+      },
+      {
+        "id": 4,
+        "type": "reorder",
+        "question": "taskTowerEight.questTask4",
+        "words": [
+          "reinigen",
+          "ihr",
+          "zu",
+          "Sie",
+          "Kleid",
+          "lässt"
+        ],
+        "correctOrder": [
+          "Sie",
+          "lässt",
+          "ihr",
+          "Kleid",
+          "reinigen"
+        ],
+        "tip": "taskTowerEight.questDescription"
+      },
+      {
+        "id": 5,
+        "type": "select",
+        "question": "taskTowerEight.questTask5",
+        "options": [
+          "Er verließ das Café, ohne zu bezahlt.",
+          "Er verließ das Café, ohne bezahlen.",
+          "Er verließ das Café, ohne zu bezahlen."
+        ],
+        "answer": "Er verließ das Café, ohne zu bezahlen.",
+        "tip": "taskTowerEight.questDescription"
+      },
+      {
+        "id": 6,
+        "type": "input",
+        "question": "taskTowerEight.questTask6",
+        "correctAnswer": "stellen",
+        "tip": "taskTowerEight.questDescription"
+      },
+      {
+        "id": 7,
+        "type": "readAndAnswer",
+        "question": "taskTowerEight.questTask7",
+        "text": "Herr Lange hat am Samstag viel zu tun. Er lässt die Reifen in der Werkstatt wechseln und seinen Anzug reinigen. Danach lässt er sich die Haare schneiden. Aber das Auto wäscht er selbst.",
+        "options": [
+          "Er schneidet sich die Haare.",
+          "Er wäscht das Auto.",
+          "Er wechselt die Reifen."
+        ],
+        "answer": "Er wäscht das Auto.",
+        "tip": "taskTowerEight.questDescription"
+      },
+      {
+        "id": 8,
+        "type": "input",
+        "question": "taskTowerEight.questTask8",
+        "correctAnswer": "lässt",
+        "tip": "taskTowerEight.questDescription"
+      },
+      {
+        "id": 9,
+        "type": "reorder",
+        "question": "taskTowerEight.questTask10",
+        "words": [
+          "lasse",
+          "Ich",
+          "meinen",
+          "prüfen",
+          "zu",
+          "Computer"
+        ],
+        "correctOrder": [
+          "Ich",
+          "lasse",
+          "meinen",
+          "Computer",
+          "prüfen"
+        ],
+        "tip": "taskTowerEight.questDescription"
+      },
+      {
+        "id": 10,
+        "type": "select",
+        "question": "taskTowerEight.questTask11",
+        "options": [
+          "Lasst ihr das Auto waschen?",
+          "Lasst ihr das Auto zu waschen?",
+          "Lässt ihr das Auto waschen?"
+        ],
+        "answer": "Lasst ihr das Auto waschen?",
+        "tip": "taskTowerEight.questDescription"
+      },
+      {
+        "id": 11,
+        "type": "input",
+        "question": "taskTowerSeven.questTask9",
+        "correctAnswer": "anzurufen",
+        "tip": "taskTowerSeven.questDescription",
+        "reviewOf": "task-tower-seven",
+        "reviewLand": "task-tower"
+      },
+      {
+        "id": 12,
+        "type": "input",
+        "question": "taskTowerFour.questTask12",
+        "correctAnswer": "anzurufen",
+        "tip": "taskTowerFour.questDescription",
+        "reviewOf": "task-tower-four",
+        "reviewLand": "task-tower"
+      },
+      {
+        "id": 13,
+        "type": "input",
+        "question": "taskTowerOne.questTask13",
+        "correctAnswer": "schwimmen",
+        "tip": "taskTowerOne.questDescription",
+        "reviewOf": "task-tower-one",
+        "reviewLand": "task-tower"
+      },
+      {
+        "id": 14,
+        "type": "input",
+        "question": "taskTowerEight.questTask14",
+        "correctAnswer": "zu",
+        "tip": "taskTowerEight.questDescription"
+      },
+      {
+        "id": 15,
+        "type": "input",
+        "question": "taskTowerEight.questTask15",
+        "correctAnswer": "wurde",
+        "tip": "taskTowerEight.questDescription"
+      }
+    ]
+  },
+  {
+    "questId": "task-tower-nine",
+    "title": "taskTowerNine.questTitle",
+    "progress": "0/15",
+    "description": "taskTowerNine.questDescription",
+    "conditions": {
+      "goal": "taskTowerNine.questGoal",
+      "minCorrect": 15,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
+    "vocabulary": [
+      {
+        "word": "schwimmen",
+        "translation-ru": "плавать",
+        "translation-en": "to swim",
+        "translation-uk": "плавати",
+        "translation-pl": "pływać",
+        "translation-es": "nadar",
+        "translation-fr": "nager",
+        "translation-tr": "yüzmek",
+        "translation-ro": "a înota",
+        "translation-uz": "suzmoq",
+        "translation-hi": "तैरना",
+        "translation-ar": "يسبح"
+      },
+      {
+        "word": "ein bisschen",
+        "translation-ru": "немного",
+        "translation-en": "a little",
+        "translation-uk": "трохи",
+        "translation-pl": "trochę",
+        "translation-es": "un poco",
+        "translation-fr": "un peu",
+        "translation-tr": "biraz",
+        "translation-ro": "puțin",
+        "translation-uz": "ozgina",
+        "translation-hi": "थोड़ा",
+        "translation-ar": "قليلًا"
+      },
+      {
+        "word": "der Deutschkurs",
+        "translation-ru": "курс немецкого",
+        "translation-en": "German course",
+        "translation-uk": "курс німецької",
+        "translation-pl": "kurs niemieckiego",
+        "translation-es": "el curso de alemán",
+        "translation-fr": "le cours d’allemand",
+        "translation-tr": "Almanca kursu",
+        "translation-ro": "cursul de germană",
+        "translation-uz": "nemis tili kursi",
+        "translation-hi": "जर्मन कोर्स",
+        "translation-ar": "دورة اللغة الألمانية"
+      },
+      {
+        "word": "versuchen",
+        "translation-ru": "пробовать / пытаться",
+        "translation-en": "to try / attempt",
+        "translation-uk": "пробувати / намагатися",
+        "translation-pl": "próbować",
+        "translation-es": "intentar / tratar",
+        "translation-fr": "essayer / tenter",
+        "translation-tr": "denemek",
+        "translation-ro": "a încerca",
+        "translation-uz": "urinib ko'rmoq",
+        "translation-hi": "कोशिश करना",
+        "translation-ar": "يحاول"
+      },
+      {
+        "word": "prüfen",
+        "translation-ru": "проверять",
+        "translation-en": "to check",
+        "translation-uk": "перевіряти",
+        "translation-pl": "sprawdzać",
+        "translation-es": "revisar",
+        "translation-fr": "vérifier",
+        "translation-tr": "kontrol etmek",
+        "translation-ro": "a verifica",
+        "translation-uz": "tekshirmoq",
+        "translation-hi": "जाँचना",
+        "translation-ar": "يفحص، يتحقّق"
+      }
+    ],
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "taskTowerNine.questTask1",
+        "options": [
+          "Ich habe keine Lust aufräumen.",
+          "Ich habe keine Lust zu aufräumen.",
+          "Ich habe keine Lust aufzuräumen."
+        ],
+        "answer": "Ich habe keine Lust aufzuräumen.",
+        "tip": "taskTowerNine.questDescription"
+      },
+      {
+        "id": 2,
+        "type": "input",
+        "question": "taskTowerNine.questTask2",
+        "correctAnswer": "aufzustehen",
+        "tip": "taskTowerNine.questDescription"
+      },
+      {
+        "id": 3,
+        "type": "input",
+        "question": "taskTowerNine.questTask3",
+        "correctAnswer": "anzurufen",
+        "tip": "taskTowerNine.questDescription"
+      },
+      {
+        "id": 4,
+        "type": "reorder",
+        "question": "taskTowerNine.questTask4",
+        "words": [
+          "warten",
+          "zu",
+          "Wir",
+          "ohne",
+          "um",
+          "gingen"
+        ],
+        "correctOrder": [
+          "Wir",
+          "gingen",
+          "ohne",
+          "zu",
+          "warten"
+        ],
+        "tip": "taskTowerNine.questDescription"
+      },
+      {
+        "id": 5,
+        "type": "select",
+        "question": "taskTowerNine.questTask5",
+        "options": [
+          "Ich lasse das Auto gewaschen.",
+          "Ich lasse das Auto zu waschen.",
+          "Ich lasse das Auto waschen."
+        ],
+        "answer": "Ich lasse das Auto waschen.",
+        "tip": "taskTowerNine.questDescription"
+      },
+      {
+        "id": 6,
+        "type": "input",
+        "question": "taskTowerNine.questTask6",
+        "correctAnswer": "zu",
+        "tip": "taskTowerNine.questDescription"
+      },
+      {
+        "id": 7,
+        "type": "readAndAnswer",
+        "question": "taskTowerNine.questTask7",
+        "text": "Max hat keine Zeit, sein Auto zu waschen. Deshalb lässt er es waschen. Danach versucht er, seine Freundin anzurufen, aber sie geht nicht ans Telefon.",
+        "options": [
+          "Er hat keine Zeit.",
+          "Seine Freundin will es.",
+          "Das Auto ist kaputt."
+        ],
+        "answer": "Er hat keine Zeit.",
+        "tip": "taskTowerNine.questDescription"
+      },
+      {
+        "id": 8,
+        "type": "input",
+        "question": "taskTowerNine.questTask8",
+        "correctAnswer": "kaufen",
+        "tip": "taskTowerNine.questDescription"
+      },
+      {
+        "id": 9,
+        "type": "select",
+        "question": "taskTowerNine.questTask9",
+        "options": [
+          "Es ist gefährlich, hier zu schwimmen.",
+          "Es ist gefährlich, zu hier schwimmen.",
+          "Es ist gefährlich, hier schwimmen zu."
+        ],
+        "answer": "Es ist gefährlich, hier zu schwimmen.",
+        "tip": "taskTowerNine.questDescription"
+      },
+      {
+        "id": 10,
+        "type": "input",
+        "question": "taskTowerNine.questTask10",
+        "correctAnswer": "lässt",
+        "tip": "taskTowerNine.questDescription"
+      },
+      {
+        "id": 11,
+        "type": "reorder",
+        "question": "taskTowerNine.questTask11",
+        "words": [
+          "Ich",
+          "Deutsch",
+          "um",
+          "sprechen",
+          "versuche",
+          "zu"
+        ],
+        "correctOrder": [
+          "Ich",
+          "versuche",
+          "Deutsch",
+          "zu",
+          "sprechen"
+        ],
+        "tip": "taskTowerNine.questDescription"
+      },
+      {
+        "id": 12,
+        "type": "select",
+        "question": "taskTowerNine.questTask12",
+        "options": [
+          "Sie ging ins Bett, ohne zu das Licht ausmachen.",
+          "Sie ging ins Bett, ohne das Licht auszumachen.",
+          "Sie ging ins Bett, ohne das Licht ausmachen."
+        ],
+        "answer": "Sie ging ins Bett, ohne das Licht auszumachen.",
+        "tip": "taskTowerNine.questDescription"
+      },
+      {
+        "id": 13,
+        "type": "readAndAnswer",
+        "question": "taskTowerNine.questTask13",
+        "text": "Im Deutschkurs sagt die Lehrerin: „Es ist wichtig, jeden Tag ein bisschen zu lernen. Vergesst nicht, die neuen Wörter zu wiederholen!“",
+        "options": [
+          "jeden Tag ein bisschen zu lernen",
+          "nur am Wochenende zu lernen",
+          "viel zu schlafen"
+        ],
+        "answer": "jeden Tag ein bisschen zu lernen",
+        "tip": "taskTowerNine.questDescription"
+      },
+      {
+        "id": 14,
+        "type": "input",
+        "question": "taskTowerNine.questTask14",
+        "correctAnswer": "zu",
+        "tip": "taskTowerNine.questDescription"
+      },
+      {
+        "id": 15,
+        "type": "input",
+        "question": "taskTowerNine.questTask15",
+        "correctAnswer": "lasst",
+        "tip": "taskTowerNine.questDescription"
+      }
+    ]
+  },
+  {
+    "questId": "task-tower-ten",
+    "title": "taskTowerTen.questTitle",
+    "progress": "0/15",
+    "description": "taskTowerTen.questDescription",
+    "conditions": {
+      "goal": "taskTowerTen.questGoal",
+      "minCorrect": 15,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
+    "vocabulary": [
+      {
+        "word": "die Milch",
+        "translation-ru": "молоко",
+        "translation-en": "milk",
+        "translation-uk": "молоко",
+        "translation-pl": "mleko",
+        "translation-es": "la leche",
+        "translation-fr": "le lait",
+        "translation-tr": "süt",
+        "translation-ro": "laptele",
+        "translation-uz": "sut",
+        "translation-hi": "दूध",
+        "translation-ar": "الحليب"
+      },
+      {
+        "word": "interessant",
+        "translation-ru": "интересный",
+        "translation-en": "interesting",
+        "translation-uk": "цікавий",
+        "translation-pl": "ciekawy",
+        "translation-es": "interesante",
+        "translation-fr": "intéressant",
+        "translation-tr": "ilginç",
+        "translation-ro": "interesant",
+        "translation-uz": "qiziqarli",
+        "translation-hi": "दिलचस्प",
+        "translation-ar": "مثير للاهتمام"
+      },
+      {
+        "word": "versuchen",
+        "translation-ru": "пробовать / пытаться",
+        "translation-en": "to try / attempt",
+        "translation-uk": "пробувати / намагатися",
+        "translation-pl": "próbować",
+        "translation-es": "intentar / tratar",
+        "translation-fr": "essayer / tenter",
+        "translation-tr": "denemek",
+        "translation-ro": "a încerca",
+        "translation-uz": "urinib ko'rmoq",
+        "translation-hi": "कोशिश करना",
+        "translation-ar": "يحاول"
+      },
+      {
+        "word": "vieles",
+        "translation-ru": "многое",
+        "translation-en": "many things",
+        "translation-uk": "багато що",
+        "translation-pl": "wiele",
+        "translation-es": "muchas cosas",
+        "translation-fr": "beaucoup de choses",
+        "translation-tr": "birçok şey",
+        "translation-ro": "multe",
+        "translation-uz": "ko‘p narsa",
+        "translation-hi": "बहुत कुछ",
+        "translation-ar": "أشياء كثيرة"
+      },
+      {
+        "word": "nachdem",
+        "translation-ru": "после того как",
+        "translation-en": "after (conjunction)",
+        "translation-uk": "після того як",
+        "translation-pl": "po tym, jak",
+        "translation-es": "después de que",
+        "translation-fr": "après que",
+        "translation-tr": "-dıktan sonra",
+        "translation-ro": "după ce",
+        "translation-uz": "…gandan keyin",
+        "translation-hi": "…के बाद",
+        "translation-ar": "بعد أن"
+      }
+    ],
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "taskTowerTen.questTask1",
+        "options": [
+          "Ich habe vergessen, Milch kaufen zu.",
+          "Ich habe vergessen, zu Milch kaufen.",
+          "Ich habe vergessen, Milch zu kaufen."
+        ],
+        "answer": "Ich habe vergessen, Milch zu kaufen.",
+        "tip": "taskTowerTen.questDescription"
+      },
+      {
+        "id": 2,
+        "type": "input",
+        "question": "taskTowerTen.questTask2",
+        "correctAnswer": "werden",
+        "tip": "taskTowerTen.questDescription"
+      },
+      {
+        "id": 3,
+        "type": "input",
+        "question": "taskTowerTen.questTask3",
+        "correctAnswer": "dem",
+        "tip": "taskTowerTen.questDescription"
+      },
+      {
+        "id": 4,
+        "type": "input",
+        "question": "taskTowerTen.questTask4",
+        "correctAnswer": "renovieren",
+        "tip": "taskTowerTen.questDescription"
+      },
+      {
+        "id": 5,
+        "type": "select",
+        "question": "taskTowerTen.questTask5",
+        "options": [
+          "Obwohl war es spät, lernte er noch.",
+          "Obwohl es spät war, er lernte noch.",
+          "Obwohl es spät war, lernte er noch."
+        ],
+        "answer": "Obwohl es spät war, lernte er noch.",
+        "tip": "taskTowerTen.questDescription"
+      },
+      {
+        "id": 6,
+        "type": "input",
+        "question": "taskTowerTen.questTask6",
+        "correctAnswer": "um",
+        "tip": "taskTowerTen.questDescription"
+      },
+      {
+        "id": 7,
+        "type": "readAndAnswer",
+        "question": "taskTowerTen.questTask7",
+        "text": "Herr Koch wollte sein Haus renovieren. Er hatte keine Zeit, das allein zu machen. Deshalb hat er eine Firma angerufen. Die Arbeit wurde in zwei Wochen gemacht.",
+        "options": [
+          "in einem Jahr",
+          "in zwei Wochen",
+          "in zwei Tagen"
+        ],
+        "answer": "in zwei Wochen",
+        "tip": "taskTowerTen.questDescription"
+      },
+      {
+        "id": 8,
+        "type": "input",
+        "question": "taskTowerTen.questTask8",
+        "correctAnswer": "was",
+        "tip": "taskTowerTen.questDescription"
+      },
+      {
+        "id": 9,
+        "type": "reorder",
+        "question": "taskTowerTen.questTask9",
+        "words": [
+          "schlafen",
+          "um",
+          "zu",
+          "wichtig",
+          "ist",
+          "Es",
+          "gut"
+        ],
+        "correctOrder": [
+          "Es",
+          "ist",
+          "wichtig",
+          "gut",
+          "zu",
+          "schlafen"
+        ],
+        "tip": "taskTowerTen.questDescription"
+      },
+      {
+        "id": 10,
+        "type": "input",
+        "question": "taskTowerTen.questTask10",
+        "correctAnswer": "hatte",
+        "tip": "taskTowerTen.questDescription"
+      },
+      {
+        "id": 11,
+        "type": "input",
+        "question": "taskTowerTen.questTask11",
+        "correctAnswer": "interessanteste",
+        "tip": "taskTowerTen.questDescription"
+      },
+      {
+        "id": 12,
+        "type": "select",
+        "question": "taskTowerTen.questTask12",
+        "options": [
+          "Er bezahlte, ohne die Rechnung zu lesen.",
+          "Er bezahlte, ohne zu die Rechnung lesen.",
+          "Er bezahlte, ohne die Rechnung lesen."
+        ],
+        "answer": "Er bezahlte, ohne die Rechnung zu lesen.",
+        "tip": "taskTowerTen.questDescription"
+      },
+      {
+        "id": 13,
+        "type": "readAndAnswer",
+        "question": "taskTowerTen.questTask13",
+        "text": "Sara versucht seit Monaten, eine Wohnung zu finden. Es ist sehr schwer, in München eine billige Wohnung zu bekommen. Endlich hat sie eine gefunden, die einen Balkon hat.",
+        "options": [
+          "Deutsch zu lernen",
+          "eine billige Wohnung zu bekommen",
+          "einen Job zu finden"
+        ],
+        "answer": "eine billige Wohnung zu bekommen",
+        "tip": "taskTowerTen.questDescription"
+      },
+      {
+        "id": 14,
+        "type": "input",
+        "question": "taskTowerTen.questTask14",
+        "correctAnswer": "waren",
+        "tip": "taskTowerTen.questDescription"
+      },
+      {
+        "id": 15,
+        "type": "input",
+        "question": "taskTowerTen.questTask15",
+        "correctAnswer": "wurde",
+        "tip": "taskTowerTen.questDescription"
+      }
+    ]
+  }
+]

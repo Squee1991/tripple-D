@@ -1,0 +1,2816 @@
+[
+  {
+    "questId": "dress-bazaar-one",
+    "title": "dressBazaarOne.questTitle",
+    "progress": "0/15",
+    "description": "dressBazaarOne.questDescription",
+    "conditions": {
+      "goal": "dressBazaarOne.questGoal",
+      "minCorrect": 15,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
+    "vocabulary": [
+      {
+        "word": "die Hose",
+        "translation-ru": "брюки",
+        "translation-en": "trousers",
+        "translation-uk": "штани",
+        "translation-pl": "spodnie",
+        "translation-es": "el pantalón",
+        "translation-fr": "le pantalon",
+        "translation-tr": "pantolon",
+        "translation-ro": "pantalonii",
+        "translation-uz": "shim",
+        "translation-hi": "पतलून",
+        "translation-ar": "البنطال"
+      },
+      {
+        "word": "das Hemd",
+        "translation-ru": "рубашка",
+        "translation-en": "shirt",
+        "translation-uk": "сорочка",
+        "translation-pl": "koszula",
+        "translation-es": "la camisa",
+        "translation-fr": "la chemise",
+        "translation-tr": "gömlek",
+        "translation-ro": "cămașa",
+        "translation-uz": "ko‘ylak",
+        "translation-hi": "क़मीज़",
+        "translation-ar": "القميص"
+      },
+      {
+        "word": "das Kleid",
+        "translation-ru": "платье",
+        "translation-en": "dress",
+        "translation-uk": "сукня",
+        "translation-pl": "sukienka",
+        "translation-es": "el vestido",
+        "translation-fr": "la robe",
+        "translation-tr": "elbise",
+        "translation-ro": "rochia",
+        "translation-uz": "ayollar ko‘ylagi",
+        "translation-hi": "पोशाक",
+        "translation-ar": "الفستان"
+      },
+      {
+        "word": "der Rock",
+        "translation-ru": "юбка",
+        "translation-en": "skirt",
+        "translation-uk": "спідниця",
+        "translation-pl": "spódnica",
+        "translation-es": "la falda",
+        "translation-fr": "la jupe",
+        "translation-tr": "etek",
+        "translation-ro": "fusta",
+        "translation-uz": "yubka",
+        "translation-hi": "स्कर्ट",
+        "translation-ar": "التنورة"
+      },
+      {
+        "word": "der Pullover",
+        "translation-ru": "свитер",
+        "translation-en": "sweater",
+        "translation-uk": "светр",
+        "translation-pl": "sweter",
+        "translation-es": "el jersey",
+        "translation-fr": "le pull",
+        "translation-tr": "kazak",
+        "translation-ro": "puloverul",
+        "translation-uz": "sviter",
+        "translation-hi": "स्वेटर",
+        "translation-ar": "الكنزة"
+      },
+      {
+        "word": "tragen",
+        "translation-ru": "носить (одежду)",
+        "translation-en": "to wear",
+        "translation-uk": "носити (одяг)",
+        "translation-pl": "nosić",
+        "translation-es": "llevar",
+        "translation-fr": "porter",
+        "translation-tr": "giymek",
+        "translation-ro": "a purta",
+        "translation-uz": "kiymoq",
+        "translation-hi": "पहनना",
+        "translation-ar": "يرتدي"
+      },
+      {
+        "word": "die Jeans",
+        "translation-ru": "джинсы",
+        "translation-en": "jeans",
+        "translation-uk": "джинси",
+        "translation-pl": "dżinsy",
+        "translation-es": "los vaqueros",
+        "translation-fr": "le jean",
+        "translation-tr": "kot pantolon",
+        "translation-ro": "blugii",
+        "translation-uz": "jinsi",
+        "translation-hi": "जींस",
+        "translation-ar": "الجينز"
+      }
+    ],
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "dressBazaarOne.questTask1",
+        "options": [
+          "Ich trage ein Rock.",
+          "Ich trägt einen Rock.",
+          "Ich trage einen Rock."
+        ],
+        "answer": "Ich trage einen Rock.",
+        "tip": "dressBazaarOne.questDescription"
+      },
+      {
+        "id": 2,
+        "type": "input",
+        "question": "dressBazaarOne.questTask2",
+        "correctAnswer": "trägt",
+        "tip": "dressBazaarOne.questDescription"
+      },
+      {
+        "id": 3,
+        "type": "input",
+        "question": "dressBazaarOne.questTask3",
+        "correctAnswer": "Trägst",
+        "tip": "dressBazaarOne.questDescription"
+      },
+      {
+        "id": 4,
+        "type": "select",
+        "question": "dressBazaarOne.questTask4",
+        "options": [
+          "Mama trägt ein Kleid.",
+          "Mama tragt ein Kleid.",
+          "Mama trägt einen Kleid."
+        ],
+        "answer": "Mama trägt ein Kleid.",
+        "tip": "dressBazaarOne.questDescription"
+      },
+      {
+        "id": 5,
+        "type": "reorder",
+        "question": "dressBazaarOne.questTask5",
+        "words": [
+          "trägt",
+          "Pullover",
+          "Wir",
+          "einen",
+          "tragen"
+        ],
+        "correctOrder": [
+          "Wir",
+          "tragen",
+          "Pullover"
+        ],
+        "tip": "dressBazaarOne.questDescription"
+      },
+      {
+        "id": 6,
+        "type": "select",
+        "question": "dressBazaarOne.questTask6",
+        "options": [
+          "Im Winter trage ich ein Pullover.",
+          "Im Winter trage ich einen Pullover.",
+          "Im Winter ich trage einen Pullover."
+        ],
+        "answer": "Im Winter trage ich einen Pullover.",
+        "tip": "dressBazaarOne.questDescription"
+      },
+      {
+        "id": 7,
+        "type": "input",
+        "question": "dressBazaarOne.questTask7",
+        "correctAnswer": "Rock",
+        "tip": "dressBazaarOne.questDescription"
+      },
+      {
+        "id": 8,
+        "type": "select",
+        "question": "dressBazaarOne.questTask8",
+        "options": [
+          "Die Kinder tragen Jeans.",
+          "Die Kinder trägst Jeans.",
+          "Die Kinder trägt Jeans."
+        ],
+        "answer": "Die Kinder tragen Jeans.",
+        "tip": "dressBazaarOne.questDescription"
+      },
+      {
+        "id": 9,
+        "type": "readAndAnswer",
+        "question": "dressBazaarOne.questTask9",
+        "text": "Im Büro trägt Anna ein Kleid oder einen Rock. Am Wochenende trägt sie eine Jeans und einen Pullover. Ihr Mann trägt immer ein Hemd.",
+        "options": [
+          "ein Kleid oder einen Rock",
+          "ein Hemd",
+          "eine Jeans"
+        ],
+        "answer": "ein Kleid oder einen Rock",
+        "tip": "dressBazaarOne.questDescription"
+      },
+      {
+        "id": 10,
+        "type": "input",
+        "question": "dressBazaarOne.questTask10",
+        "correctAnswer": "Hemd",
+        "tip": "dressBazaarOne.questDescription"
+      },
+      {
+        "id": 11,
+        "type": "reorder",
+        "question": "dressBazaarOne.questTask11",
+        "words": [
+          "Was",
+          "trage",
+          "trägst",
+          "tragt",
+          "du",
+          "heute"
+        ],
+        "correctOrder": [
+          "Was",
+          "trägst",
+          "du",
+          "heute"
+        ],
+        "tip": "dressBazaarOne.questDescription"
+      },
+      {
+        "id": 12,
+        "type": "input",
+        "question": "dressBazaarOne.questTask12",
+        "correctAnswer": "mag",
+        "tip": "dressBazaarOne.questDescription"
+      },
+      {
+        "id": 13,
+        "type": "select",
+        "question": "dressBazaarOne.questTask13",
+        "options": [
+          "Der Kaffee schmecken sehr gut.",
+          "Der Kaffee schmeckt sehr gut.",
+          "Der Kaffee schmeckst sehr gut."
+        ],
+        "answer": "Der Kaffee schmeckt sehr gut.",
+        "tip": "dressBazaarOne.questDescription"
+      },
+      {
+        "id": 14,
+        "type": "select",
+        "question": "dressBazaarOne.questTask14",
+        "options": [
+          "Er gern isst Gemüse.",
+          "Er isst gern Gemüse.",
+          "Er esst gern Gemüse."
+        ],
+        "answer": "Er isst gern Gemüse.",
+        "tip": "dressBazaarOne.questDescription"
+      },
+      {
+        "id": 15,
+        "type": "reorder",
+        "question": "dressBazaarOne.questTask15",
+        "words": [
+          "warten",
+          "heute",
+          "du",
+          "Musst",
+          "wartest",
+          "muss"
+        ],
+        "correctOrder": [
+          "Musst",
+          "du",
+          "heute",
+          "warten"
+        ],
+        "tip": "dressBazaarOne.questDescription"
+      }
+    ]
+  },
+  {
+    "questId": "dress-bazaar-two",
+    "title": "dressBazaarTwo.questTitle",
+    "progress": "0/15",
+    "description": "dressBazaarTwo.questDescription",
+    "conditions": {
+      "goal": "dressBazaarTwo.questGoal",
+      "minCorrect": 15,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
+    "vocabulary": [
+      {
+        "word": "die Farbe",
+        "translation-ru": "цвет",
+        "translation-en": "colour",
+        "translation-uk": "колір",
+        "translation-pl": "kolor",
+        "translation-es": "el color",
+        "translation-fr": "la couleur",
+        "translation-tr": "renk",
+        "translation-ro": "culoarea",
+        "translation-uz": "rang",
+        "translation-hi": "रंग",
+        "translation-ar": "اللون"
+      },
+      {
+        "word": "rot",
+        "translation-ru": "красный",
+        "translation-en": "red",
+        "translation-uk": "червоний",
+        "translation-pl": "czerwony",
+        "translation-es": "rojo",
+        "translation-fr": "rouge",
+        "translation-tr": "kırmızı",
+        "translation-ro": "roșu",
+        "translation-uz": "qizil",
+        "translation-hi": "लाल",
+        "translation-ar": "أحمر"
+      },
+      {
+        "word": "schwarz",
+        "translation-ru": "чёрный",
+        "translation-en": "black",
+        "translation-uk": "чорний",
+        "translation-pl": "czarny",
+        "translation-es": "negro",
+        "translation-fr": "noir",
+        "translation-tr": "siyah",
+        "translation-ro": "negru",
+        "translation-uz": "qora",
+        "translation-hi": "काला",
+        "translation-ar": "أسود"
+      },
+      {
+        "word": "hellblau",
+        "translation-ru": "светло-голубой",
+        "translation-en": "light blue",
+        "translation-uk": "світло-блакитний",
+        "translation-pl": "jasnoniebieski",
+        "translation-es": "azul claro",
+        "translation-fr": "bleu clair",
+        "translation-tr": "açık mavi",
+        "translation-ro": "albastru deschis",
+        "translation-uz": "och ko‘k",
+        "translation-hi": "हल्का नीला",
+        "translation-ar": "أزرق فاتح"
+      },
+      {
+        "word": "dunkelblau",
+        "translation-ru": "тёмно-синий",
+        "translation-en": "dark blue",
+        "translation-uk": "темно-синій",
+        "translation-pl": "ciemnoniebieski",
+        "translation-es": "azul oscuro",
+        "translation-fr": "bleu foncé",
+        "translation-tr": "koyu mavi",
+        "translation-ro": "albastru închis",
+        "translation-uz": "to‘q ko‘k",
+        "translation-hi": "गहरा नीला",
+        "translation-ar": "أزرق غامق"
+      },
+      {
+        "word": "grau",
+        "translation-ru": "серый",
+        "translation-en": "grey",
+        "translation-uk": "сірий",
+        "translation-pl": "szary",
+        "translation-es": "gris",
+        "translation-fr": "gris",
+        "translation-tr": "gri",
+        "translation-ro": "gri",
+        "translation-uz": "kulrang",
+        "translation-hi": "सलेटी",
+        "translation-ar": "رمادي"
+      },
+      {
+        "word": "das T-Shirt",
+        "translation-ru": "футболка",
+        "translation-en": "T-shirt",
+        "translation-uk": "футболка",
+        "translation-pl": "koszulka",
+        "translation-es": "la camiseta",
+        "translation-fr": "le t-shirt",
+        "translation-tr": "tişört",
+        "translation-ro": "tricoul",
+        "translation-uz": "futbolka",
+        "translation-hi": "टी-शर्ट",
+        "translation-ar": "القميص القطني"
+      }
+    ],
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "dressBazaarTwo.questTask1",
+        "options": [
+          "Die Hose sind blau.",
+          "Die Hose ist blaue.",
+          "Die Hose ist blau."
+        ],
+        "answer": "Die Hose ist blau.",
+        "tip": "dressBazaarTwo.questDescription"
+      },
+      {
+        "id": 2,
+        "type": "input",
+        "question": "dressBazaarTwo.questTask2",
+        "correctAnswer": "Farbe",
+        "tip": "dressBazaarTwo.questDescription"
+      },
+      {
+        "id": 3,
+        "type": "input",
+        "question": "dressBazaarTwo.questTask3",
+        "correctAnswer": "rot",
+        "tip": "dressBazaarTwo.questDescription"
+      },
+      {
+        "id": 4,
+        "type": "select",
+        "question": "dressBazaarTwo.questTask4",
+        "options": [
+          "Die Schuhe sind schwarze.",
+          "Die Schuhe sind schwarz.",
+          "Die Schuhe ist schwarz."
+        ],
+        "answer": "Die Schuhe sind schwarz.",
+        "tip": "dressBazaarTwo.questDescription"
+      },
+      {
+        "id": 5,
+        "type": "reorder",
+        "question": "dressBazaarTwo.questTask5",
+        "words": [
+          "sind",
+          "Hemd",
+          "weiß",
+          "der",
+          "Das",
+          "ist"
+        ],
+        "correctOrder": [
+          "Das",
+          "Hemd",
+          "ist",
+          "weiß"
+        ],
+        "tip": "dressBazaarTwo.questDescription"
+      },
+      {
+        "id": 6,
+        "type": "select",
+        "question": "dressBazaarTwo.questTask6",
+        "options": [
+          "Die Jacke ist dunkelblau.",
+          "Die Jacke sind dunkelblau.",
+          "Die Jacke ist hellblau."
+        ],
+        "answer": "Die Jacke ist dunkelblau.",
+        "tip": "dressBazaarTwo.questDescription"
+      },
+      {
+        "id": 7,
+        "type": "input",
+        "question": "dressBazaarTwo.questTask7",
+        "correctAnswer": "hellblau",
+        "tip": "dressBazaarTwo.questDescription"
+      },
+      {
+        "id": 8,
+        "type": "select",
+        "question": "dressBazaarTwo.questTask8",
+        "options": [
+          "Welche Farbe hat deine Mütze?",
+          "Welche Farbe hat dein Mütze?",
+          "Welche Farbe hast deine Mütze?"
+        ],
+        "answer": "Welche Farbe hat deine Mütze?",
+        "tip": "dressBazaarTwo.questDescription"
+      },
+      {
+        "id": 9,
+        "type": "readAndAnswer",
+        "question": "dressBazaarTwo.questTask9",
+        "text": "Max trägt heute einen Mantel. Der Mantel ist grau. Sein Schal ist rot und seine Schuhe sind braun. Der Hut ist schwarz.",
+        "options": [
+          "braun",
+          "grau",
+          "rot"
+        ],
+        "answer": "grau",
+        "tip": "dressBazaarTwo.questDescription"
+      },
+      {
+        "id": 10,
+        "type": "input",
+        "question": "dressBazaarTwo.questTask10",
+        "correctAnswer": "gelb",
+        "tip": "dressBazaarTwo.questDescription"
+      },
+      {
+        "id": 11,
+        "type": "reorder",
+        "question": "dressBazaarTwo.questTask11",
+        "words": [
+          "dein",
+          "deine",
+          "Farbe",
+          "hast",
+          "hat",
+          "Welche",
+          "Tasche"
+        ],
+        "correctOrder": [
+          "Welche",
+          "Farbe",
+          "hat",
+          "deine",
+          "Tasche"
+        ],
+        "tip": "dressBazaarTwo.questDescription"
+      },
+      {
+        "id": 12,
+        "type": "input",
+        "question": "dressBazaarTwo.questTask12",
+        "correctAnswer": "Trägst",
+        "tip": "dressBazaarTwo.questDescription"
+      },
+      {
+        "id": 13,
+        "type": "select",
+        "question": "dressBazaarTwo.questTask13",
+        "options": [
+          "Meine Schwester trägt einen Rock.",
+          "Meine Schwester trägt ein Rock.",
+          "Meine Schwester tragt einen Rock."
+        ],
+        "answer": "Meine Schwester trägt einen Rock.",
+        "tip": "dressBazaarTwo.questDescription"
+      },
+      {
+        "id": 14,
+        "type": "select",
+        "question": "dressBazaarTwo.questTask14",
+        "options": [
+          "Entschuldigung, wir möchten bezahlen.",
+          "Entschuldigung, wir möchten bezahlt.",
+          "Entschuldigung, wir möchte bezahlen."
+        ],
+        "answer": "Entschuldigung, wir möchten bezahlen.",
+        "tip": "dressBazaarTwo.questDescription"
+      },
+      {
+        "id": 15,
+        "type": "reorder",
+        "question": "dressBazaarTwo.questTask15",
+        "words": [
+          "Pizza",
+          "nehme",
+          "Ich",
+          "Stück",
+          "nimmst",
+          "zwei",
+          "einen"
+        ],
+        "correctOrder": [
+          "Ich",
+          "nehme",
+          "zwei",
+          "Stück",
+          "Pizza"
+        ],
+        "tip": "dressBazaarTwo.questDescription"
+      }
+    ]
+  },
+  {
+    "questId": "dress-bazaar-three",
+    "title": "dressBazaarThree.questTitle",
+    "progress": "0/15",
+    "description": "dressBazaarThree.questDescription",
+    "conditions": {
+      "goal": "dressBazaarThree.questGoal",
+      "minCorrect": 15,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
+    "vocabulary": [
+      {
+        "word": "gefallen",
+        "translation-ru": "нравиться",
+        "translation-en": "to please, to be liked",
+        "translation-uk": "подобатися",
+        "translation-pl": "podobać się",
+        "translation-es": "gustar",
+        "translation-fr": "plaire",
+        "translation-tr": "hoşa gitmek",
+        "translation-ro": "a plăcea",
+        "translation-uz": "yoqmoq",
+        "translation-hi": "पसंद आना",
+        "translation-ar": "يعجب"
+      },
+      {
+        "word": "schön",
+        "translation-ru": "красивый",
+        "translation-en": "beautiful",
+        "translation-uk": "гарний",
+        "translation-pl": "ładny",
+        "translation-es": "bonito",
+        "translation-fr": "beau",
+        "translation-tr": "güzel",
+        "translation-ro": "frumos",
+        "translation-uz": "chiroyli",
+        "translation-hi": "सुंदर",
+        "translation-ar": "جميل"
+      },
+      {
+        "word": "hässlich",
+        "translation-ru": "некрасивый",
+        "translation-en": "ugly",
+        "translation-uk": "негарний",
+        "translation-pl": "brzydki",
+        "translation-es": "feo",
+        "translation-fr": "laid",
+        "translation-tr": "çirkin",
+        "translation-ro": "urât",
+        "translation-uz": "xunuk",
+        "translation-hi": "बदसूरत",
+        "translation-ar": "قبيح"
+      },
+      {
+        "word": "modern",
+        "translation-ru": "современный",
+        "translation-en": "modern",
+        "translation-uk": "сучасний",
+        "translation-pl": "nowoczesny",
+        "translation-es": "moderno",
+        "translation-fr": "moderne",
+        "translation-tr": "modern",
+        "translation-ro": "modern",
+        "translation-uz": "zamonaviy",
+        "translation-hi": "आधुनिक",
+        "translation-ar": "عصري"
+      },
+      {
+        "word": "die Schuhe",
+        "translation-ru": "обувь, туфли",
+        "translation-en": "shoes",
+        "translation-uk": "взуття, туфлі",
+        "translation-pl": "buty",
+        "translation-es": "los zapatos",
+        "translation-fr": "les chaussures",
+        "translation-tr": "ayakkabılar",
+        "translation-ro": "pantofii",
+        "translation-uz": "tufli",
+        "translation-hi": "जूते",
+        "translation-ar": "الأحذية"
+      }
+    ],
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "dressBazaarThree.questTask1",
+        "options": [
+          "Das Kleid gefallen mir.",
+          "Ich gefällt das Kleid.",
+          "Das Kleid gefällt mir."
+        ],
+        "answer": "Das Kleid gefällt mir.",
+        "tip": "dressBazaarThree.questDescription"
+      },
+      {
+        "id": 2,
+        "type": "input",
+        "question": "dressBazaarThree.questTask2",
+        "correctAnswer": "Gefällt",
+        "tip": "dressBazaarThree.questDescription"
+      },
+      {
+        "id": 3,
+        "type": "input",
+        "question": "dressBazaarThree.questTask3",
+        "correctAnswer": "gefallen",
+        "tip": "dressBazaarThree.questDescription"
+      },
+      {
+        "id": 4,
+        "type": "select",
+        "question": "dressBazaarThree.questTask4",
+        "options": [
+          "Der Hut nicht gefällt mir.",
+          "Der Hut gefällt nicht mir.",
+          "Der Hut gefällt mir nicht."
+        ],
+        "answer": "Der Hut gefällt mir nicht.",
+        "tip": "dressBazaarThree.questDescription"
+      },
+      {
+        "id": 5,
+        "type": "reorder",
+        "question": "dressBazaarThree.questTask5",
+        "words": [
+          "die",
+          "Rock",
+          "gefallen",
+          "gefällt",
+          "Wie",
+          "der",
+          "dir"
+        ],
+        "correctOrder": [
+          "Wie",
+          "gefällt",
+          "dir",
+          "der",
+          "Rock"
+        ],
+        "tip": "dressBazaarThree.questDescription"
+      },
+      {
+        "id": 6,
+        "type": "select",
+        "question": "dressBazaarThree.questTask6",
+        "options": [
+          "Die Hose sind hässlich.",
+          "Die Hose ist hässlich.",
+          "Die Hose ist schön."
+        ],
+        "answer": "Die Hose ist hässlich.",
+        "tip": "dressBazaarThree.questDescription"
+      },
+      {
+        "id": 7,
+        "type": "input",
+        "question": "dressBazaarThree.questTask7",
+        "correctAnswer": "modern",
+        "tip": "dressBazaarThree.questDescription"
+      },
+      {
+        "id": 8,
+        "type": "select",
+        "question": "dressBazaarThree.questTask8",
+        "options": [
+          "Gefallen dir mein Schuhe?",
+          "Gefallen dir meine Schuhe?",
+          "Gefällt dir meine Schuhe?"
+        ],
+        "answer": "Gefallen dir meine Schuhe?",
+        "tip": "dressBazaarThree.questDescription"
+      },
+      {
+        "id": 9,
+        "type": "readAndAnswer",
+        "question": "dressBazaarThree.questTask9",
+        "text": "Lena: Wie gefällt dir der Rock? Eva: Er ist schön, aber die Farbe gefällt mir nicht. Lena: Und das Kleid? Eva: Das Kleid ist hässlich. Lena: Mir gefällt das Kleid sehr gut!",
+        "options": [
+          "der Hut",
+          "das Kleid",
+          "die Schuhe"
+        ],
+        "answer": "das Kleid",
+        "tip": "dressBazaarThree.questDescription"
+      },
+      {
+        "id": 10,
+        "type": "input",
+        "question": "dressBazaarThree.questTask10",
+        "correctAnswer": "schön",
+        "tip": "dressBazaarThree.questDescription"
+      },
+      {
+        "id": 11,
+        "type": "reorder",
+        "question": "dressBazaarThree.questTask11",
+        "words": [
+          "gefällt",
+          "Die",
+          "Farbe",
+          "gefallen",
+          "ich",
+          "mir"
+        ],
+        "correctOrder": [
+          "Die",
+          "Farbe",
+          "gefällt",
+          "mir"
+        ],
+        "tip": "dressBazaarThree.questDescription"
+      },
+      {
+        "id": 12,
+        "type": "input",
+        "question": "dressBazaarThree.questTask12",
+        "correctAnswer": "braun",
+        "tip": "dressBazaarThree.questDescription"
+      },
+      {
+        "id": 13,
+        "type": "select",
+        "question": "dressBazaarThree.questTask13",
+        "options": [
+          "Wir trägt Jacken.",
+          "Wir tragen Jacken.",
+          "Wir tragen Jacke."
+        ],
+        "answer": "Wir tragen Jacken.",
+        "tip": "dressBazaarThree.questDescription"
+      },
+      {
+        "id": 14,
+        "type": "select",
+        "question": "dressBazaarThree.questTask14",
+        "options": [
+          "Sie mag keinen Wurst.",
+          "Sie mag keine Wurst.",
+          "Sie mögen keine Wurst."
+        ],
+        "answer": "Sie mag keine Wurst.",
+        "tip": "dressBazaarThree.questDescription"
+      },
+      {
+        "id": 15,
+        "type": "reorder",
+        "question": "dressBazaarThree.questTask15",
+        "words": [
+          "zahlen",
+          "bar",
+          "den",
+          "Wir",
+          "zahlt"
+        ],
+        "correctOrder": [
+          "Wir",
+          "zahlen",
+          "bar"
+        ],
+        "tip": "dressBazaarThree.questDescription"
+      }
+    ]
+  },
+  {
+    "questId": "dress-bazaar-four",
+    "title": "dressBazaarFour.questTitle",
+    "progress": "0/15",
+    "description": "dressBazaarFour.questDescription",
+    "conditions": {
+      "goal": "dressBazaarFour.questGoal",
+      "minCorrect": 15,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
+    "vocabulary": [
+      {
+        "word": "die Größe",
+        "translation-ru": "размер",
+        "translation-en": "size",
+        "translation-uk": "розмір",
+        "translation-pl": "rozmiar",
+        "translation-es": "la talla",
+        "translation-fr": "la taille",
+        "translation-tr": "beden",
+        "translation-ro": "mărimea",
+        "translation-uz": "o‘lcham",
+        "translation-hi": "नाप",
+        "translation-ar": "المقاس"
+      },
+      {
+        "word": "anprobieren",
+        "translation-ru": "примерять",
+        "translation-en": "to try on",
+        "translation-uk": "приміряти",
+        "translation-pl": "przymierzać",
+        "translation-es": "probarse",
+        "translation-fr": "essayer",
+        "translation-tr": "denemek",
+        "translation-ro": "a proba",
+        "translation-uz": "kiyib ko‘rmoq",
+        "translation-hi": "पहनकर देखना",
+        "translation-ar": "يجرب الملابس"
+      },
+      {
+        "word": "die Kabine",
+        "translation-ru": "примерочная",
+        "translation-en": "fitting room",
+        "translation-uk": "примірочна",
+        "translation-pl": "przymierzalnia",
+        "translation-es": "el probador",
+        "translation-fr": "la cabine d’essayage",
+        "translation-tr": "deneme kabini",
+        "translation-ro": "cabina de probă",
+        "translation-uz": "kiyinish xonasi",
+        "translation-hi": "ट्रायल रूम",
+        "translation-ar": "غرفة القياس"
+      },
+      {
+        "word": "der Verkäufer",
+        "translation-ru": "продавец",
+        "translation-en": "shop assistant",
+        "translation-uk": "продавець",
+        "translation-pl": "sprzedawca",
+        "translation-es": "el dependiente",
+        "translation-fr": "le vendeur",
+        "translation-tr": "satıcı",
+        "translation-ro": "vânzătorul",
+        "translation-uz": "sotuvchi",
+        "translation-hi": "दुकानदार",
+        "translation-ar": "البائع"
+      },
+      {
+        "word": "suchen",
+        "translation-ru": "искать",
+        "translation-en": "to look for",
+        "translation-uk": "шукати",
+        "translation-pl": "szukać",
+        "translation-es": "buscar",
+        "translation-fr": "chercher",
+        "translation-tr": "aramak",
+        "translation-ro": "a căuta",
+        "translation-uz": "qidirmoq",
+        "translation-hi": "ढूँढना",
+        "translation-ar": "يبحث"
+      }
+    ],
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "dressBazaarFour.questTask1",
+        "options": [
+          "Ich suchst eine Hose.",
+          "Ich suche einen Hose.",
+          "Ich suche eine Hose."
+        ],
+        "answer": "Ich suche eine Hose.",
+        "tip": "dressBazaarFour.questDescription"
+      },
+      {
+        "id": 2,
+        "type": "input",
+        "question": "dressBazaarFour.questTask2",
+        "correctAnswer": "Größe",
+        "tip": "dressBazaarFour.questDescription"
+      },
+      {
+        "id": 3,
+        "type": "input",
+        "question": "dressBazaarFour.questTask3",
+        "correctAnswer": "anprobieren",
+        "tip": "dressBazaarFour.questDescription"
+      },
+      {
+        "id": 4,
+        "type": "select",
+        "question": "dressBazaarFour.questTask4",
+        "options": [
+          "Ich anprobiere das Kleid.",
+          "Ich probiere an das Kleid.",
+          "Ich probiere das Kleid an."
+        ],
+        "answer": "Ich probiere das Kleid an.",
+        "tip": "dressBazaarFour.questDescription"
+      },
+      {
+        "id": 5,
+        "type": "reorder",
+        "question": "dressBazaarFour.questTask5",
+        "words": [
+          "der",
+          "Wo",
+          "Kabine",
+          "wer",
+          "ist",
+          "die"
+        ],
+        "correctOrder": [
+          "Wo",
+          "ist",
+          "die",
+          "Kabine"
+        ],
+        "tip": "dressBazaarFour.questDescription"
+      },
+      {
+        "id": 6,
+        "type": "select",
+        "question": "dressBazaarFour.questTask6",
+        "options": [
+          "Ich habe der Größe 38.",
+          "Ich habe Größe 38.",
+          "Ich hat Größe 38."
+        ],
+        "answer": "Ich habe Größe 38.",
+        "tip": "dressBazaarFour.questDescription"
+      },
+      {
+        "id": 7,
+        "type": "input",
+        "question": "dressBazaarFour.questTask7",
+        "correctAnswer": "Verkäufer",
+        "tip": "dressBazaarFour.questDescription"
+      },
+      {
+        "id": 8,
+        "type": "select",
+        "question": "dressBazaarFour.questTask8",
+        "options": [
+          "Brauchst du Größe 40?",
+          "Braucht du Größe 40?",
+          "Du brauchst Größe 40?"
+        ],
+        "answer": "Brauchst du Größe 40?",
+        "tip": "dressBazaarFour.questDescription"
+      },
+      {
+        "id": 9,
+        "type": "readAndAnswer",
+        "question": "dressBazaarFour.questTask9",
+        "text": "Verkäufer: Guten Tag! Was suchen Sie? Sara: Ich suche eine Jeans, Größe 40. Verkäufer: Hier, bitte. Sara: Kann ich die Jeans anprobieren? Verkäufer: Ja, die Kabine ist dort.",
+        "options": [
+          "eine Jeans",
+          "ein Kleid",
+          "einen Rock"
+        ],
+        "answer": "eine Jeans",
+        "tip": "dressBazaarFour.questDescription"
+      },
+      {
+        "id": 10,
+        "type": "input",
+        "question": "dressBazaarFour.questTask10",
+        "correctAnswer": "Kabine",
+        "tip": "dressBazaarFour.questDescription"
+      },
+      {
+        "id": 11,
+        "type": "reorder",
+        "question": "dressBazaarFour.questTask11",
+        "words": [
+          "anprobiere",
+          "Schuhe",
+          "der",
+          "Ich",
+          "die",
+          "probiere",
+          "an"
+        ],
+        "correctOrder": [
+          "Ich",
+          "probiere",
+          "die",
+          "Schuhe",
+          "an"
+        ],
+        "tip": "dressBazaarFour.questDescription"
+      },
+      {
+        "id": 12,
+        "type": "input",
+        "question": "dressBazaarFour.questTask12",
+        "correctAnswer": "gefällt",
+        "tip": "dressBazaarFour.questDescription"
+      },
+      {
+        "id": 13,
+        "type": "select",
+        "question": "dressBazaarFour.questTask13",
+        "options": [
+          "Der Schal ist rot und weiß.",
+          "Der Schal sind rot und weiß.",
+          "Der Schal ist rote und weiße."
+        ],
+        "answer": "Der Schal ist rot und weiß.",
+        "tip": "dressBazaarFour.questDescription"
+      },
+      {
+        "id": 14,
+        "type": "select",
+        "question": "dressBazaarFour.questTask14",
+        "options": [
+          "Die Suppe ist sehr scharf.",
+          "Der Suppe ist sehr scharf.",
+          "Die Suppe sind sehr scharf."
+        ],
+        "answer": "Die Suppe ist sehr scharf.",
+        "tip": "dressBazaarFour.questDescription"
+      },
+      {
+        "id": 15,
+        "type": "reorder",
+        "question": "dressBazaarFour.questTask15",
+        "words": [
+          "um",
+          "Wir",
+          "essen",
+          "Uhr",
+          "am",
+          "sieben",
+          "esst"
+        ],
+        "correctOrder": [
+          "Wir",
+          "essen",
+          "um",
+          "sieben",
+          "Uhr"
+        ],
+        "tip": "dressBazaarFour.questDescription"
+      }
+    ]
+  },
+  {
+    "questId": "dress-bazaar-five",
+    "title": "dressBazaarFive.questTitle",
+    "progress": "0/15",
+    "description": "dressBazaarFive.questDescription",
+    "conditions": {
+      "goal": "dressBazaarFive.questGoal",
+      "minCorrect": 15,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
+    "vocabulary": [
+      {
+        "word": "passen",
+        "translation-ru": "подходить (по размеру)",
+        "translation-en": "to fit",
+        "translation-uk": "підходити (за розміром)",
+        "translation-pl": "pasować",
+        "translation-es": "quedar bien",
+        "translation-fr": "aller (taille)",
+        "translation-tr": "uymak",
+        "translation-ro": "a se potrivi",
+        "translation-uz": "to‘g‘ri kelmoq",
+        "translation-hi": "नाप सही होना",
+        "translation-ar": "يناسب"
+      },
+      {
+        "word": "eng",
+        "translation-ru": "тесный, узкий",
+        "translation-en": "tight",
+        "translation-uk": "тісний, вузький",
+        "translation-pl": "ciasny",
+        "translation-es": "estrecho",
+        "translation-fr": "serré",
+        "translation-tr": "dar",
+        "translation-ro": "strâmt",
+        "translation-uz": "tor",
+        "translation-hi": "तंग",
+        "translation-ar": "ضيق"
+      },
+      {
+        "word": "weit",
+        "translation-ru": "широкий, свободный",
+        "translation-en": "loose, wide",
+        "translation-uk": "широкий, вільний",
+        "translation-pl": "luźny",
+        "translation-es": "ancho",
+        "translation-fr": "large",
+        "translation-tr": "bol",
+        "translation-ro": "larg",
+        "translation-uz": "keng",
+        "translation-hi": "ढीला",
+        "translation-ar": "واسع"
+      },
+      {
+        "word": "kurz",
+        "translation-ru": "короткий",
+        "translation-en": "short",
+        "translation-uk": "короткий",
+        "translation-pl": "krótki",
+        "translation-es": "corto",
+        "translation-fr": "court",
+        "translation-tr": "kısa",
+        "translation-ro": "scurt",
+        "translation-uz": "qisqa",
+        "translation-hi": "छोटा",
+        "translation-ar": "قصير"
+      },
+      {
+        "word": "lang",
+        "translation-ru": "длинный",
+        "translation-en": "long",
+        "translation-uk": "довгий",
+        "translation-pl": "długi",
+        "translation-es": "largo",
+        "translation-fr": "long",
+        "translation-tr": "uzun",
+        "translation-ro": "lung",
+        "translation-uz": "uzun",
+        "translation-hi": "लंबा",
+        "translation-ar": "طويل"
+      }
+    ],
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "dressBazaarFive.questTask1",
+        "options": [
+          "Die Hose passt nicht.",
+          "Die Hose passen gut.",
+          "Die Hose passt gut."
+        ],
+        "answer": "Die Hose passt gut.",
+        "tip": "dressBazaarFive.questDescription"
+      },
+      {
+        "id": 2,
+        "type": "input",
+        "question": "dressBazaarFive.questTask2",
+        "correctAnswer": "passen",
+        "tip": "dressBazaarFive.questDescription"
+      },
+      {
+        "id": 3,
+        "type": "input",
+        "question": "dressBazaarFive.questTask3",
+        "correctAnswer": "kurz",
+        "tip": "dressBazaarFive.questDescription"
+      },
+      {
+        "id": 4,
+        "type": "select",
+        "question": "dressBazaarFive.questTask4",
+        "options": [
+          "Die Jeans ist zu weit.",
+          "Die Jeans sind zu engen.",
+          "Die Jeans ist zu eng."
+        ],
+        "answer": "Die Jeans ist zu eng.",
+        "tip": "dressBazaarFive.questDescription"
+      },
+      {
+        "id": 5,
+        "type": "reorder",
+        "question": "dressBazaarFive.questTask5",
+        "words": [
+          "zu",
+          "Das",
+          "sind",
+          "groß",
+          "Hemd",
+          "sehr",
+          "ist"
+        ],
+        "correctOrder": [
+          "Das",
+          "Hemd",
+          "ist",
+          "zu",
+          "groß"
+        ],
+        "tip": "dressBazaarFive.questDescription"
+      },
+      {
+        "id": 6,
+        "type": "select",
+        "question": "dressBazaarFive.questTask6",
+        "options": [
+          "Die Jacke ist zu weit.",
+          "Die Jacke bist zu weit.",
+          "Die Jacke ist zu eng."
+        ],
+        "answer": "Die Jacke ist zu weit.",
+        "tip": "dressBazaarFive.questDescription"
+      },
+      {
+        "id": 7,
+        "type": "input",
+        "question": "dressBazaarFive.questTask7",
+        "correctAnswer": "lang",
+        "tip": "dressBazaarFive.questDescription"
+      },
+      {
+        "id": 8,
+        "type": "select",
+        "question": "dressBazaarFive.questTask8",
+        "options": [
+          "Das Kleid passt? Ja, sehr gut.",
+          "Passt das Kleid? Ja, sehr gut.",
+          "Passen das Kleid? Ja, sehr gut."
+        ],
+        "answer": "Passt das Kleid? Ja, sehr gut.",
+        "tip": "dressBazaarFive.questDescription"
+      },
+      {
+        "id": 9,
+        "type": "readAndAnswer",
+        "question": "dressBazaarFive.questTask9",
+        "text": "Tom probiert eine Hose an. Die Farbe gefällt ihm, aber die Hose ist zu lang. Das Hemd passt gut und ist nicht teuer. Tom nimmt nur das Hemd.",
+        "options": [
+          "Die Farbe ist nicht schön.",
+          "Die Hose ist zu lang.",
+          "Die Hose ist zu teuer."
+        ],
+        "answer": "Die Hose ist zu lang.",
+        "tip": "dressBazaarFive.questDescription"
+      },
+      {
+        "id": 10,
+        "type": "input",
+        "question": "dressBazaarFive.questTask10",
+        "correctAnswer": "klein",
+        "tip": "dressBazaarFive.questDescription"
+      },
+      {
+        "id": 11,
+        "type": "reorder",
+        "question": "dressBazaarFive.questTask11",
+        "words": [
+          "sehr",
+          "die",
+          "Rock",
+          "passt",
+          "Der",
+          "passen",
+          "gut"
+        ],
+        "correctOrder": [
+          "Der",
+          "Rock",
+          "passt",
+          "sehr",
+          "gut"
+        ],
+        "tip": "dressBazaarFive.questDescription"
+      },
+      {
+        "id": 12,
+        "type": "input",
+        "question": "dressBazaarFive.questTask12",
+        "correctAnswer": "Größe",
+        "tip": "dressBazaarFive.questDescription"
+      },
+      {
+        "id": 13,
+        "type": "select",
+        "question": "dressBazaarFive.questTask13",
+        "options": [
+          "Das Hemd gefällt mir nicht.",
+          "Das Hemd gefällt nicht mir.",
+          "Das Hemd gefallen mir nicht."
+        ],
+        "answer": "Das Hemd gefällt mir nicht.",
+        "tip": "dressBazaarFive.questDescription"
+      },
+      {
+        "id": 14,
+        "type": "select",
+        "question": "dressBazaarFive.questTask14",
+        "options": [
+          "Möchtest du einen Flasche Wasser?",
+          "Möchtest du eine Flasche Wasser?",
+          "Möchtest du eine Flasche von Wasser?"
+        ],
+        "answer": "Möchtest du eine Flasche Wasser?",
+        "tip": "dressBazaarFive.questDescription"
+      },
+      {
+        "id": 15,
+        "type": "reorder",
+        "question": "dressBazaarFive.questTask15",
+        "words": [
+          "den",
+          "Pullover",
+          "Ich",
+          "an",
+          "anprobiere",
+          "probiere",
+          "der"
+        ],
+        "correctOrder": [
+          "Ich",
+          "probiere",
+          "den",
+          "Pullover",
+          "an"
+        ],
+        "tip": "dressBazaarFive.questDescription"
+      }
+    ]
+  },
+  {
+    "questId": "dress-bazaar-six",
+    "title": "dressBazaarSix.questTitle",
+    "progress": "0/15",
+    "description": "dressBazaarSix.questDescription",
+    "conditions": {
+      "goal": "dressBazaarSix.questGoal",
+      "minCorrect": 15,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
+    "vocabulary": [
+      {
+        "word": "teuer",
+        "translation-ru": "дорогой",
+        "translation-en": "expensive",
+        "translation-uk": "дорогий",
+        "translation-pl": "drogi",
+        "translation-es": "caro",
+        "translation-fr": "cher",
+        "translation-tr": "pahalı",
+        "translation-ro": "scump",
+        "translation-uz": "qimmat",
+        "translation-hi": "महँगा",
+        "translation-ar": "غالٍ"
+      },
+      {
+        "word": "billig",
+        "translation-ru": "дешёвый",
+        "translation-en": "cheap",
+        "translation-uk": "дешевий",
+        "translation-pl": "tani",
+        "translation-es": "barato",
+        "translation-fr": "bon marché",
+        "translation-tr": "ucuz",
+        "translation-ro": "ieftin",
+        "translation-uz": "arzon",
+        "translation-hi": "सस्ता",
+        "translation-ar": "رخيص"
+      },
+      {
+        "word": "kosten",
+        "translation-ru": "стоить",
+        "translation-en": "to cost",
+        "translation-uk": "коштувати",
+        "translation-pl": "kosztować",
+        "translation-es": "costar",
+        "translation-fr": "coûter",
+        "translation-tr": "fiyatı olmak",
+        "translation-ro": "a costa",
+        "translation-uz": "turmoq (narx)",
+        "translation-hi": "क़ीमत होना",
+        "translation-ar": "يكلف"
+      },
+      {
+        "word": "der Preis",
+        "translation-ru": "цена",
+        "translation-en": "price",
+        "translation-uk": "ціна",
+        "translation-pl": "cena",
+        "translation-es": "el precio",
+        "translation-fr": "le prix",
+        "translation-tr": "fiyat",
+        "translation-ro": "prețul",
+        "translation-uz": "narx",
+        "translation-hi": "क़ीमत",
+        "translation-ar": "السعر"
+      },
+      {
+        "word": "nehmen",
+        "translation-ru": "брать",
+        "translation-en": "to take",
+        "translation-uk": "брати",
+        "translation-pl": "brać",
+        "translation-es": "tomar",
+        "translation-fr": "prendre",
+        "translation-tr": "almak",
+        "translation-ro": "a lua",
+        "translation-uz": "olmoq",
+        "translation-hi": "लेना",
+        "translation-ar": "يأخذ"
+      }
+    ],
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "dressBazaarSix.questTask1",
+        "options": [
+          "Der Pullover ist schön. Ich nehme er.",
+          "Der Pullover ist schön. Ich nehme es.",
+          "Der Pullover ist schön. Ich nehme ihn."
+        ],
+        "answer": "Der Pullover ist schön. Ich nehme ihn.",
+        "tip": "dressBazaarSix.questDescription"
+      },
+      {
+        "id": 2,
+        "type": "input",
+        "question": "dressBazaarSix.questTask2",
+        "correctAnswer": "ihn",
+        "tip": "dressBazaarSix.questDescription"
+      },
+      {
+        "id": 3,
+        "type": "input",
+        "question": "dressBazaarSix.questTask3",
+        "correctAnswer": "sie",
+        "tip": "dressBazaarSix.questDescription"
+      },
+      {
+        "id": 4,
+        "type": "input",
+        "question": "dressBazaarSix.questTask4",
+        "correctAnswer": "es",
+        "tip": "dressBazaarSix.questDescription"
+      },
+      {
+        "id": 5,
+        "type": "reorder",
+        "question": "dressBazaarSix.questTask5",
+        "words": [
+          "es",
+          "Die",
+          "ihn",
+          "Schuhe",
+          "nehme",
+          "sie",
+          "Ich",
+          "passen"
+        ],
+        "correctOrder": [
+          "Die",
+          "Schuhe",
+          "passen",
+          "Ich",
+          "nehme",
+          "sie"
+        ],
+        "tip": "dressBazaarSix.questDescription"
+      },
+      {
+        "id": 6,
+        "type": "select",
+        "question": "dressBazaarSix.questTask6",
+        "options": [
+          "Was kostest das Kleid?",
+          "Was kostet das Kleid?",
+          "Was kosten das Kleid?"
+        ],
+        "answer": "Was kostet das Kleid?",
+        "tip": "dressBazaarSix.questDescription"
+      },
+      {
+        "id": 7,
+        "type": "input",
+        "question": "dressBazaarSix.questTask7",
+        "correctAnswer": "kosten",
+        "tip": "dressBazaarSix.questDescription"
+      },
+      {
+        "id": 8,
+        "type": "select",
+        "question": "dressBazaarSix.questTask8",
+        "options": [
+          "Der Preis ist gut.",
+          "Der Preis sind gut.",
+          "Die Preis ist gut."
+        ],
+        "answer": "Der Preis ist gut.",
+        "tip": "dressBazaarSix.questDescription"
+      },
+      {
+        "id": 9,
+        "type": "readAndAnswer",
+        "question": "dressBazaarSix.questTask9",
+        "text": "Die Jacke kostet 90 Euro, sie ist zu teuer. Der Schal kostet nur 15 Euro und er ist sehr schön. Eva nimmt ihn. Die Mütze kostet 10 Euro, aber sie gefällt ihr nicht.",
+        "options": [
+          "15 Euro",
+          "10 Euro",
+          "90 Euro"
+        ],
+        "answer": "15 Euro",
+        "tip": "dressBazaarSix.questDescription"
+      },
+      {
+        "id": 10,
+        "type": "input",
+        "question": "dressBazaarSix.questTask10",
+        "correctAnswer": "teuer",
+        "tip": "dressBazaarSix.questDescription"
+      },
+      {
+        "id": 11,
+        "type": "reorder",
+        "question": "dressBazaarSix.questTask11",
+        "words": [
+          "zu",
+          "teuer",
+          "nehme",
+          "ihn",
+          "nicht",
+          "sind",
+          "Ich",
+          "er",
+          "Er",
+          "ist"
+        ],
+        "correctOrder": [
+          "Ich",
+          "nehme",
+          "ihn",
+          "nicht",
+          "Er",
+          "ist",
+          "zu",
+          "teuer"
+        ],
+        "tip": "dressBazaarSix.questDescription"
+      },
+      {
+        "id": 12,
+        "type": "input",
+        "question": "dressBazaarSix.questTask12",
+        "correctAnswer": "Passt",
+        "tip": "dressBazaarSix.questDescription"
+      },
+      {
+        "id": 13,
+        "type": "select",
+        "question": "dressBazaarSix.questTask13",
+        "options": [
+          "Kann ich die Jeans anprobiert?",
+          "Kann ich die Jeans anprobieren?",
+          "Kann ich die Jeans probiere an?"
+        ],
+        "answer": "Kann ich die Jeans anprobieren?",
+        "tip": "dressBazaarSix.questDescription"
+      },
+      {
+        "id": 14,
+        "type": "select",
+        "question": "dressBazaarSix.questTask14",
+        "options": [
+          "Das macht dreißig Euro.",
+          "Das machen dreißig Euro.",
+          "Das machst dreißig Euro."
+        ],
+        "answer": "Das macht dreißig Euro.",
+        "tip": "dressBazaarSix.questDescription"
+      },
+      {
+        "id": 15,
+        "type": "reorder",
+        "question": "dressBazaarSix.questTask15",
+        "words": [
+          "Mein",
+          "Mantel",
+          "ist",
+          "weit",
+          "zu",
+          "eng",
+          "Meine"
+        ],
+        "correctOrder": [
+          "Mein",
+          "Mantel",
+          "ist",
+          "zu",
+          "eng"
+        ],
+        "tip": "dressBazaarSix.questDescription"
+      }
+    ]
+  },
+  {
+    "questId": "dress-bazaar-seven",
+    "title": "dressBazaarSeven.questTitle",
+    "progress": "0/15",
+    "description": "dressBazaarSeven.questDescription",
+    "conditions": {
+      "goal": "dressBazaarSeven.questGoal",
+      "minCorrect": 15,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
+    "vocabulary": [
+      {
+        "word": "anziehen",
+        "translation-ru": "надевать",
+        "translation-en": "to put on",
+        "translation-uk": "одягати",
+        "translation-pl": "zakładać",
+        "translation-es": "ponerse",
+        "translation-fr": "mettre",
+        "translation-tr": "giymek",
+        "translation-ro": "a îmbrăca",
+        "translation-uz": "kiymoq",
+        "translation-hi": "पहनना",
+        "translation-ar": "يرتدي"
+      },
+      {
+        "word": "ausziehen",
+        "translation-ru": "снимать",
+        "translation-en": "to take off",
+        "translation-uk": "знімати",
+        "translation-pl": "zdejmować",
+        "translation-es": "quitarse",
+        "translation-fr": "enlever",
+        "translation-tr": "çıkarmak",
+        "translation-ro": "a dezbrăca",
+        "translation-uz": "yechmoq",
+        "translation-hi": "उतारना",
+        "translation-ar": "يخلع"
+      },
+      {
+        "word": "der Mantel",
+        "translation-ru": "пальто",
+        "translation-en": "coat",
+        "translation-uk": "пальто",
+        "translation-pl": "płaszcz",
+        "translation-es": "el abrigo",
+        "translation-fr": "le manteau",
+        "translation-tr": "palto",
+        "translation-ro": "paltonul",
+        "translation-uz": "palto",
+        "translation-hi": "कोट",
+        "translation-ar": "المعطف"
+      },
+      {
+        "word": "die Stiefel",
+        "translation-ru": "сапоги",
+        "translation-en": "boots",
+        "translation-uk": "чоботи",
+        "translation-pl": "kozaki",
+        "translation-es": "las botas",
+        "translation-fr": "les bottes",
+        "translation-tr": "çizme",
+        "translation-ro": "cizmele",
+        "translation-uz": "etik",
+        "translation-hi": "बूट",
+        "translation-ar": "الأحذية الطويلة"
+      },
+      {
+        "word": "die Handschuhe",
+        "translation-ru": "перчатки",
+        "translation-en": "gloves",
+        "translation-uk": "рукавички",
+        "translation-pl": "rękawiczki",
+        "translation-es": "los guantes",
+        "translation-fr": "les gants",
+        "translation-tr": "eldiven",
+        "translation-ro": "mănușile",
+        "translation-uz": "qo‘lqop",
+        "translation-hi": "दस्ताने",
+        "translation-ar": "القفازات"
+      }
+    ],
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "dressBazaarSeven.questTask1",
+        "options": [
+          "Ich ziehe an die Jacke.",
+          "Ich anziehe die Jacke.",
+          "Ich ziehe die Jacke an."
+        ],
+        "answer": "Ich ziehe die Jacke an.",
+        "tip": "dressBazaarSeven.questDescription"
+      },
+      {
+        "id": 2,
+        "type": "input",
+        "question": "dressBazaarSeven.questTask2",
+        "correctAnswer": "aus",
+        "tip": "dressBazaarSeven.questDescription"
+      },
+      {
+        "id": 3,
+        "type": "input",
+        "question": "dressBazaarSeven.questTask3",
+        "correctAnswer": "ziehst",
+        "tip": "dressBazaarSeven.questDescription"
+      },
+      {
+        "id": 4,
+        "type": "select",
+        "question": "dressBazaarSeven.questTask4",
+        "options": [
+          "Es ist kalt. Ich ziehe ein Pullover an.",
+          "Es ist kalt. Ich anziehe einen Pullover.",
+          "Es ist kalt. Ich ziehe einen Pullover an."
+        ],
+        "answer": "Es ist kalt. Ich ziehe einen Pullover an.",
+        "tip": "dressBazaarSeven.questDescription"
+      },
+      {
+        "id": 5,
+        "type": "reorder",
+        "question": "dressBazaarSeven.questTask5",
+        "words": [
+          "ziehst",
+          "Mantel",
+          "an",
+          "anziehen",
+          "musst",
+          "Du",
+          "den"
+        ],
+        "correctOrder": [
+          "Du",
+          "musst",
+          "den",
+          "Mantel",
+          "anziehen"
+        ],
+        "tip": "dressBazaarSeven.questDescription"
+      },
+      {
+        "id": 6,
+        "type": "select",
+        "question": "dressBazaarSeven.questTask6",
+        "options": [
+          "Im Haus ziehen wir die Stiefel aus.",
+          "Im Haus zieht wir die Stiefel aus.",
+          "Im Haus ausziehen wir die Stiefel."
+        ],
+        "answer": "Im Haus ziehen wir die Stiefel aus.",
+        "tip": "dressBazaarSeven.questDescription"
+      },
+      {
+        "id": 7,
+        "type": "input",
+        "question": "dressBazaarSeven.questTask7",
+        "correctAnswer": "Handschuhe",
+        "tip": "dressBazaarSeven.questDescription"
+      },
+      {
+        "id": 8,
+        "type": "select",
+        "question": "dressBazaarSeven.questTask8",
+        "options": [
+          "Die Kinder ziehen die Stiefel an.",
+          "Die Kinder anziehen die Stiefel.",
+          "Die Kinder zieht die Stiefel an."
+        ],
+        "answer": "Die Kinder ziehen die Stiefel an.",
+        "tip": "dressBazaarSeven.questDescription"
+      },
+      {
+        "id": 9,
+        "type": "readAndAnswer",
+        "question": "dressBazaarSeven.questTask9",
+        "text": "Heute schneit es und es ist sehr kalt. Jan zieht einen Mantel und Stiefel an. Er trägt auch eine Mütze. Im Büro zieht er den Mantel aus.",
+        "options": [
+          "eine Sonnenbrille",
+          "einen Mantel und Stiefel",
+          "ein T-Shirt"
+        ],
+        "answer": "einen Mantel und Stiefel",
+        "tip": "dressBazaarSeven.questDescription"
+      },
+      {
+        "id": 10,
+        "type": "input",
+        "question": "dressBazaarSeven.questTask10",
+        "correctAnswer": "Stiefel",
+        "tip": "dressBazaarSeven.questDescription"
+      },
+      {
+        "id": 11,
+        "type": "reorder",
+        "question": "dressBazaarSeven.questTask11",
+        "words": [
+          "aus",
+          "Pullover",
+          "der",
+          "warm",
+          "ausziehe",
+          "Ich",
+          "ziehe",
+          "ist",
+          "Es",
+          "den"
+        ],
+        "correctOrder": [
+          "Es",
+          "ist",
+          "warm",
+          "Ich",
+          "ziehe",
+          "den",
+          "Pullover",
+          "aus"
+        ],
+        "tip": "dressBazaarSeven.questDescription"
+      },
+      {
+        "id": 12,
+        "type": "input",
+        "question": "dressBazaarSeven.questTask12",
+        "correctAnswer": "ihn",
+        "tip": "dressBazaarSeven.questDescription"
+      },
+      {
+        "id": 13,
+        "type": "select",
+        "question": "dressBazaarSeven.questTask13",
+        "options": [
+          "Das Hemd ist zu lang.",
+          "Das Hemd ist zu kurz.",
+          "Das Hemd sind zu lang."
+        ],
+        "answer": "Das Hemd ist zu lang.",
+        "tip": "dressBazaarSeven.questDescription"
+      },
+      {
+        "id": 14,
+        "type": "select",
+        "question": "dressBazaarSeven.questTask14",
+        "options": [
+          "Das Frühstück ist noch nicht fertig.",
+          "Der Frühstück ist noch nicht fertig.",
+          "Das Frühstück sind noch nicht fertig."
+        ],
+        "answer": "Das Frühstück ist noch nicht fertig.",
+        "tip": "dressBazaarSeven.questDescription"
+      },
+      {
+        "id": 15,
+        "type": "reorder",
+        "question": "dressBazaarSeven.questTask15",
+        "words": [
+          "möchtest",
+          "Ich",
+          "Tasse",
+          "Kaffee",
+          "möchte",
+          "eine",
+          "einen"
+        ],
+        "correctOrder": [
+          "Ich",
+          "möchte",
+          "eine",
+          "Tasse",
+          "Kaffee"
+        ],
+        "tip": "dressBazaarSeven.questDescription"
+      }
+    ]
+  },
+  {
+    "questId": "dress-bazaar-eight",
+    "title": "dressBazaarEight.questTitle",
+    "progress": "0/15",
+    "description": "dressBazaarEight.questDescription",
+    "conditions": {
+      "goal": "dressBazaarEight.questGoal",
+      "minCorrect": 15,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
+    "vocabulary": [
+      {
+        "word": "die Jacke",
+        "translation-ru": "куртка",
+        "translation-en": "jacket",
+        "translation-uk": "куртка",
+        "translation-pl": "kurtka",
+        "translation-es": "la chaqueta",
+        "translation-fr": "la veste",
+        "translation-tr": "ceket",
+        "translation-ro": "geaca",
+        "translation-uz": "kurtka",
+        "translation-hi": "जैकेट",
+        "translation-ar": "السترة"
+      },
+      {
+        "word": "der Schal",
+        "translation-ru": "шарф",
+        "translation-en": "scarf",
+        "translation-uk": "шарф",
+        "translation-pl": "szalik",
+        "translation-es": "la bufanda",
+        "translation-fr": "l’écharpe",
+        "translation-tr": "atkı",
+        "translation-ro": "fularul",
+        "translation-uz": "sharf",
+        "translation-hi": "स्कार्फ़",
+        "translation-ar": "الوشاح"
+      },
+      {
+        "word": "die Mütze",
+        "translation-ru": "шапка",
+        "translation-en": "hat, cap",
+        "translation-uk": "шапка",
+        "translation-pl": "czapka",
+        "translation-es": "el gorro",
+        "translation-fr": "le bonnet",
+        "translation-tr": "bere",
+        "translation-ro": "căciula",
+        "translation-uz": "shapka",
+        "translation-hi": "टोपी",
+        "translation-ar": "القبعة"
+      },
+      {
+        "word": "die Jeans",
+        "translation-ru": "джинсы",
+        "translation-en": "jeans",
+        "translation-uk": "джинси",
+        "translation-pl": "dżinsy",
+        "translation-es": "los vaqueros",
+        "translation-fr": "le jean",
+        "translation-tr": "kot pantolon",
+        "translation-ro": "blugii",
+        "translation-uz": "jinsi",
+        "translation-hi": "जींस",
+        "translation-ar": "الجينز"
+      },
+      {
+        "word": "das T-Shirt",
+        "translation-ru": "футболка",
+        "translation-en": "T-shirt",
+        "translation-uk": "футболка",
+        "translation-pl": "koszulka",
+        "translation-es": "la camiseta",
+        "translation-fr": "le t-shirt",
+        "translation-tr": "tişört",
+        "translation-ro": "tricoul",
+        "translation-uz": "futbolka",
+        "translation-hi": "टी-शर्ट",
+        "translation-ar": "القميص القطني"
+      }
+    ],
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "dressBazaarEight.questTask1",
+        "options": [
+          "Kannst ich Ihnen helfen?",
+          "Kann ich Ihnen helfe?",
+          "Kann ich Ihnen helfen?"
+        ],
+        "answer": "Kann ich Ihnen helfen?",
+        "tip": "dressBazaarEight.questDescription"
+      },
+      {
+        "id": 2,
+        "type": "input",
+        "question": "dressBazaarEight.questTask2",
+        "correctAnswer": "ihn",
+        "tip": "dressBazaarEight.questDescription"
+      },
+      {
+        "id": 3,
+        "type": "input",
+        "question": "dressBazaarEight.questTask3",
+        "correctAnswer": "kostet",
+        "tip": "dressBazaarEight.questDescription"
+      },
+      {
+        "id": 4,
+        "type": "select",
+        "question": "dressBazaarEight.questTask4",
+        "options": [
+          "Sie passt gut, aber sie bist zu teuer.",
+          "Sie passen gut, aber sie ist zu teuer.",
+          "Sie passt gut, aber sie ist zu teuer."
+        ],
+        "answer": "Sie passt gut, aber sie ist zu teuer.",
+        "tip": "dressBazaarEight.questDescription"
+      },
+      {
+        "id": 5,
+        "type": "reorder",
+        "question": "dressBazaarEight.questTask5",
+        "words": [
+          "brauchst",
+          "Ich",
+          "brauche",
+          "einen",
+          "T-Shirt",
+          "ein",
+          "noch"
+        ],
+        "correctOrder": [
+          "Ich",
+          "brauche",
+          "noch",
+          "ein",
+          "T-Shirt"
+        ],
+        "tip": "dressBazaarEight.questDescription"
+      },
+      {
+        "id": 6,
+        "type": "select",
+        "question": "dressBazaarEight.questTask6",
+        "options": [
+          "Sie haben den Schal auch in Rot?",
+          "Haben Sie den Schal auch in Rot?",
+          "Haben Sie der Schal auch in Rot?"
+        ],
+        "answer": "Haben Sie den Schal auch in Rot?",
+        "tip": "dressBazaarEight.questDescription"
+      },
+      {
+        "id": 7,
+        "type": "input",
+        "question": "dressBazaarEight.questTask7",
+        "correctAnswer": "Jeans",
+        "tip": "dressBazaarEight.questDescription"
+      },
+      {
+        "id": 8,
+        "type": "select",
+        "question": "dressBazaarEight.questTask8",
+        "options": [
+          "Gefällt dir mein Mütze? Ja, sie ist schön.",
+          "Gefällt dir meine Mütze? Ja, sie ist schön.",
+          "Gefallen dir meine Mütze? Ja, sie ist schön."
+        ],
+        "answer": "Gefällt dir meine Mütze? Ja, sie ist schön.",
+        "tip": "dressBazaarEight.questDescription"
+      },
+      {
+        "id": 9,
+        "type": "readAndAnswer",
+        "question": "dressBazaarEight.questTask9",
+        "text": "Emma sucht eine Jacke. Die Jacke in Größe 38 ist zu eng. Die Jacke in Größe 40 passt gut, aber sie kostet 120 Euro. Das ist zu teuer. Dann probiert Emma einen Mantel an. Er kostet 70 Euro und gefällt ihr. Sie nimmt ihn.",
+        "options": [
+          "einen Mantel",
+          "einen Rock",
+          "eine Jacke"
+        ],
+        "answer": "einen Mantel",
+        "tip": "dressBazaarEight.questDescription"
+      },
+      {
+        "id": 10,
+        "type": "input",
+        "question": "dressBazaarEight.questTask10",
+        "correctAnswer": "T-Shirt",
+        "tip": "dressBazaarEight.questDescription"
+      },
+      {
+        "id": 11,
+        "type": "reorder",
+        "question": "dressBazaarEight.questTask11",
+        "words": [
+          "Mütze",
+          "ist",
+          "klein",
+          "Die",
+          "der",
+          "sind",
+          "zu"
+        ],
+        "correctOrder": [
+          "Die",
+          "Mütze",
+          "ist",
+          "zu",
+          "klein"
+        ],
+        "tip": "dressBazaarEight.questDescription"
+      },
+      {
+        "id": 12,
+        "type": "input",
+        "question": "dressBazaarEight.questTask12",
+        "correctAnswer": "zieht",
+        "tip": "dressBazaarEight.questDescription"
+      },
+      {
+        "id": 13,
+        "type": "select",
+        "question": "dressBazaarEight.questTask13",
+        "options": [
+          "Die Hose ist teuer. Ich kaufe sie kein.",
+          "Die Hose ist teuer. Ich kaufe sie nicht.",
+          "Die Hose ist teuer. Ich kaufe ihn nicht."
+        ],
+        "answer": "Die Hose ist teuer. Ich kaufe sie nicht.",
+        "tip": "dressBazaarEight.questDescription"
+      },
+      {
+        "id": 14,
+        "type": "select",
+        "question": "dressBazaarEight.questTask14",
+        "options": [
+          "Muss ich die Schuhe aus ziehst?",
+          "Muss ich die Schuhe ausziehen?",
+          "Muss ich die Schuhe ziehe aus?"
+        ],
+        "answer": "Muss ich die Schuhe ausziehen?",
+        "tip": "dressBazaarEight.questDescription"
+      },
+      {
+        "id": 15,
+        "type": "reorder",
+        "question": "dressBazaarEight.questTask15",
+        "words": [
+          "einen",
+          "will",
+          "Mutter",
+          "Meine",
+          "Schal",
+          "kauft",
+          "ein",
+          "kaufen"
+        ],
+        "correctOrder": [
+          "Meine",
+          "Mutter",
+          "will",
+          "einen",
+          "Schal",
+          "kaufen"
+        ],
+        "tip": "dressBazaarEight.questDescription"
+      }
+    ]
+  },
+  {
+    "questId": "dress-bazaar-nine",
+    "title": "dressBazaarNine.questTitle",
+    "progress": "0/15",
+    "description": "dressBazaarNine.questDescription",
+    "conditions": {
+      "goal": "dressBazaarNine.questGoal",
+      "minCorrect": 15,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
+    "vocabulary": [
+      {
+        "word": "tragen",
+        "translation-ru": "носить (одежду)",
+        "translation-en": "to wear",
+        "translation-uk": "носити (одяг)",
+        "translation-pl": "nosić",
+        "translation-es": "llevar",
+        "translation-fr": "porter",
+        "translation-tr": "giymek",
+        "translation-ro": "a purta",
+        "translation-uz": "kiymoq",
+        "translation-hi": "पहनना",
+        "translation-ar": "يرتدي"
+      },
+      {
+        "word": "gefallen",
+        "translation-ru": "нравиться",
+        "translation-en": "to please, to be liked",
+        "translation-uk": "подобатися",
+        "translation-pl": "podobać się",
+        "translation-es": "gustar",
+        "translation-fr": "plaire",
+        "translation-tr": "hoşa gitmek",
+        "translation-ro": "a plăcea",
+        "translation-uz": "yoqmoq",
+        "translation-hi": "पसंद आना",
+        "translation-ar": "يعجب"
+      },
+      {
+        "word": "passen",
+        "translation-ru": "подходить (по размеру)",
+        "translation-en": "to fit",
+        "translation-uk": "підходити (за розміром)",
+        "translation-pl": "pasować",
+        "translation-es": "quedar bien",
+        "translation-fr": "aller (taille)",
+        "translation-tr": "uymak",
+        "translation-ro": "a se potrivi",
+        "translation-uz": "to‘g‘ri kelmoq",
+        "translation-hi": "नाप सही होना",
+        "translation-ar": "يناسب"
+      },
+      {
+        "word": "anziehen",
+        "translation-ru": "надевать",
+        "translation-en": "to put on",
+        "translation-uk": "одягати",
+        "translation-pl": "zakładać",
+        "translation-es": "ponerse",
+        "translation-fr": "mettre",
+        "translation-tr": "giymek",
+        "translation-ro": "a îmbrăca",
+        "translation-uz": "kiymoq",
+        "translation-hi": "पहनना",
+        "translation-ar": "يرتدي"
+      },
+      {
+        "word": "die Sonnenbrille",
+        "translation-ru": "солнечные очки",
+        "translation-en": "sunglasses",
+        "translation-uk": "сонцезахисні окуляри",
+        "translation-pl": "okulary przeciwsłoneczne",
+        "translation-es": "las gafas de sol",
+        "translation-fr": "les lunettes de soleil",
+        "translation-tr": "güneş gözlüğü",
+        "translation-ro": "ochelarii de soare",
+        "translation-uz": "quyosh ko‘zoynagi",
+        "translation-hi": "धूप का चश्मा",
+        "translation-ar": "النظارة الشمسية"
+      },
+      {
+        "word": "sonnig",
+        "translation-ru": "солнечный",
+        "translation-en": "sunny",
+        "translation-uk": "сонячний",
+        "translation-pl": "słoneczny",
+        "translation-es": "soleado",
+        "translation-fr": "ensoleillé",
+        "translation-tr": "güneşli",
+        "translation-ro": "însorit",
+        "translation-uz": "quyoshli",
+        "translation-hi": "धूप वाला",
+        "translation-ar": "مشمس"
+      }
+    ],
+    "tasks": [
+      {
+        "id": 1,
+        "type": "input",
+        "question": "dressBazaarNine.questTask1",
+        "correctAnswer": "trägt",
+        "tip": "dressBazaarNine.questDescription"
+      },
+      {
+        "id": 2,
+        "type": "input",
+        "question": "dressBazaarNine.questTask2",
+        "correctAnswer": "gefällt",
+        "tip": "dressBazaarNine.questDescription"
+      },
+      {
+        "id": 3,
+        "type": "input",
+        "question": "dressBazaarNine.questTask3",
+        "correctAnswer": "passen",
+        "tip": "dressBazaarNine.questDescription"
+      },
+      {
+        "id": 4,
+        "type": "input",
+        "question": "dressBazaarNine.questTask4",
+        "correctAnswer": "es",
+        "tip": "dressBazaarNine.questDescription"
+      },
+      {
+        "id": 5,
+        "type": "select",
+        "question": "dressBazaarNine.questTask5",
+        "options": [
+          "Es ist sonnig. Ich trägt eine Sonnenbrille.",
+          "Es ist sonnig. Ich trage einen Sonnenbrille.",
+          "Es ist sonnig. Ich trage eine Sonnenbrille."
+        ],
+        "answer": "Es ist sonnig. Ich trage eine Sonnenbrille.",
+        "tip": "dressBazaarNine.questDescription"
+      },
+      {
+        "id": 6,
+        "type": "select",
+        "question": "dressBazaarNine.questTask6",
+        "options": [
+          "Welche Farbe haben dein Schuhe?",
+          "Welche Farbe haben deine Schuhe?",
+          "Welche Farbe hat deine Schuhe?"
+        ],
+        "answer": "Welche Farbe haben deine Schuhe?",
+        "tip": "dressBazaarNine.questDescription"
+      },
+      {
+        "id": 7,
+        "type": "select",
+        "question": "dressBazaarNine.questTask7",
+        "options": [
+          "Ich nehme die Jacke, sie gefällt mir.",
+          "Ich nehme die Jacke, er gefällt mir.",
+          "Ich nehme die Jacke, sie gefallen mir."
+        ],
+        "answer": "Ich nehme die Jacke, sie gefällt mir.",
+        "tip": "dressBazaarNine.questDescription"
+      },
+      {
+        "id": 8,
+        "type": "reorder",
+        "question": "dressBazaarNine.questTask8",
+        "words": [
+          "Pullover",
+          "Dein",
+          "gefallen",
+          "Deine",
+          "mir",
+          "gefällt"
+        ],
+        "correctOrder": [
+          "Dein",
+          "Pullover",
+          "gefällt",
+          "mir"
+        ],
+        "tip": "dressBazaarNine.questDescription"
+      },
+      {
+        "id": 9,
+        "type": "reorder",
+        "question": "dressBazaarNine.questTask9",
+        "words": [
+          "lang",
+          "Hose",
+          "ist",
+          "Die",
+          "sind",
+          "der",
+          "zu"
+        ],
+        "correctOrder": [
+          "Die",
+          "Hose",
+          "ist",
+          "zu",
+          "lang"
+        ],
+        "tip": "dressBazaarNine.questDescription"
+      },
+      {
+        "id": 10,
+        "type": "input",
+        "question": "dressBazaarNine.questTask10",
+        "correctAnswer": "Sommer",
+        "tip": "dressBazaarNine.questDescription"
+      },
+      {
+        "id": 11,
+        "type": "readAndAnswer",
+        "question": "dressBazaarNine.questTask11",
+        "text": "Nina trägt gern Jeans und ein T-Shirt. Kleider gefallen ihr nicht. Ihre Schwester trägt gern Röcke. Im Winter tragen sie Pullover.",
+        "options": [
+          "Röcke",
+          "Jeans und ein T-Shirt",
+          "Kleider"
+        ],
+        "answer": "Jeans und ein T-Shirt",
+        "tip": "dressBazaarNine.questDescription"
+      },
+      {
+        "id": 12,
+        "type": "input",
+        "question": "dressBazaarNine.questTask12",
+        "correctAnswer": "will",
+        "tip": "dressBazaarNine.questDescription"
+      },
+      {
+        "id": 13,
+        "type": "select",
+        "question": "dressBazaarNine.questTask13",
+        "options": [
+          "Das Abendessen schmeckt sehr gut.",
+          "Der Abendessen schmeckt sehr gut.",
+          "Das Abendessen schmecken sehr gut."
+        ],
+        "answer": "Das Abendessen schmeckt sehr gut.",
+        "tip": "dressBazaarNine.questDescription"
+      },
+      {
+        "id": 14,
+        "type": "select",
+        "question": "dressBazaarNine.questTask14",
+        "options": [
+          "Er liest im Zug ein Buch.",
+          "Er liest im Zug einen Buch.",
+          "Er lest im Zug ein Buch."
+        ],
+        "answer": "Er liest im Zug ein Buch.",
+        "tip": "dressBazaarNine.questDescription"
+      },
+      {
+        "id": 15,
+        "type": "reorder",
+        "question": "dressBazaarNine.questTask15",
+        "words": [
+          "Am",
+          "im",
+          "schläft",
+          "Sonntag",
+          "schlafe",
+          "ich",
+          "lange"
+        ],
+        "correctOrder": [
+          "Am",
+          "Sonntag",
+          "schlafe",
+          "ich",
+          "lange"
+        ],
+        "tip": "dressBazaarNine.questDescription"
+      }
+    ]
+  },
+  {
+    "questId": "dress-bazaar-ten",
+    "title": "dressBazaarTen.questTitle",
+    "progress": "0/15",
+    "description": "dressBazaarTen.questDescription",
+    "conditions": {
+      "goal": "dressBazaarTen.questGoal",
+      "minCorrect": 15,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
+    "vocabulary": [
+      {
+        "word": "der Rock",
+        "translation-ru": "юбка",
+        "translation-en": "skirt",
+        "translation-uk": "спідниця",
+        "translation-pl": "spódnica",
+        "translation-es": "la falda",
+        "translation-fr": "la jupe",
+        "translation-tr": "etek",
+        "translation-ro": "fusta",
+        "translation-uz": "yubka",
+        "translation-hi": "स्कर्ट",
+        "translation-ar": "التنورة"
+      },
+      {
+        "word": "das Hemd",
+        "translation-ru": "рубашка",
+        "translation-en": "shirt",
+        "translation-uk": "сорочка",
+        "translation-pl": "koszula",
+        "translation-es": "la camisa",
+        "translation-fr": "la chemise",
+        "translation-tr": "gömlek",
+        "translation-ro": "cămașa",
+        "translation-uz": "ko‘ylak",
+        "translation-hi": "क़मीज़",
+        "translation-ar": "القميص"
+      },
+      {
+        "word": "die Größe",
+        "translation-ru": "размер",
+        "translation-en": "size",
+        "translation-uk": "розмір",
+        "translation-pl": "rozmiar",
+        "translation-es": "la talla",
+        "translation-fr": "la taille",
+        "translation-tr": "beden",
+        "translation-ro": "mărimea",
+        "translation-uz": "o‘lcham",
+        "translation-hi": "नाप",
+        "translation-ar": "المقاس"
+      },
+      {
+        "word": "grün",
+        "translation-ru": "зелёный",
+        "translation-en": "green",
+        "translation-uk": "зелений",
+        "translation-pl": "zielony",
+        "translation-es": "verde",
+        "translation-fr": "vert",
+        "translation-tr": "yeşil",
+        "translation-ro": "verde",
+        "translation-uz": "yashil",
+        "translation-hi": "हरा",
+        "translation-ar": "أخضر"
+      },
+      {
+        "word": "teuer",
+        "translation-ru": "дорогой",
+        "translation-en": "expensive",
+        "translation-uk": "дорогий",
+        "translation-pl": "drogi",
+        "translation-es": "caro",
+        "translation-fr": "cher",
+        "translation-tr": "pahalı",
+        "translation-ro": "scump",
+        "translation-uz": "qimmat",
+        "translation-hi": "महँगा",
+        "translation-ar": "غالٍ"
+      },
+      {
+        "word": "windig",
+        "translation-ru": "ветреный",
+        "translation-en": "windy",
+        "translation-uk": "вітряний",
+        "translation-pl": "wietrzny",
+        "translation-es": "ventoso",
+        "translation-fr": "venteux",
+        "translation-tr": "rüzgârlı",
+        "translation-ro": "vântos",
+        "translation-uz": "shamolli",
+        "translation-hi": "हवादार",
+        "translation-ar": "عاصف"
+      }
+    ],
+    "tasks": [
+      {
+        "id": 1,
+        "type": "input",
+        "question": "dressBazaarTen.questTask1",
+        "correctAnswer": "Tragt",
+        "tip": "dressBazaarTen.questDescription"
+      },
+      {
+        "id": 2,
+        "type": "input",
+        "question": "dressBazaarTen.questTask2",
+        "correctAnswer": "gefällt",
+        "tip": "dressBazaarTen.questDescription"
+      },
+      {
+        "id": 3,
+        "type": "input",
+        "question": "dressBazaarTen.questTask3",
+        "correctAnswer": "grün",
+        "tip": "dressBazaarTen.questDescription"
+      },
+      {
+        "id": 4,
+        "type": "input",
+        "question": "dressBazaarTen.questTask4",
+        "correctAnswer": "Größe",
+        "tip": "dressBazaarTen.questDescription"
+      },
+      {
+        "id": 5,
+        "type": "select",
+        "question": "dressBazaarTen.questTask5",
+        "options": [
+          "Die Stiefel sind zu weit.",
+          "Die Stiefel ist zu eng.",
+          "Die Stiefel sind zu eng."
+        ],
+        "answer": "Die Stiefel sind zu eng.",
+        "tip": "dressBazaarTen.questDescription"
+      },
+      {
+        "id": 6,
+        "type": "select",
+        "question": "dressBazaarTen.questTask6",
+        "options": [
+          "Das Hemd kosten zwanzig Euro. Ich nehme es.",
+          "Das Hemd kostet zwanzig Euro. Ich nehme ihn.",
+          "Das Hemd kostet zwanzig Euro. Ich nehme es."
+        ],
+        "answer": "Das Hemd kostet zwanzig Euro. Ich nehme es.",
+        "tip": "dressBazaarTen.questDescription"
+      },
+      {
+        "id": 7,
+        "type": "select",
+        "question": "dressBazaarTen.questTask7",
+        "options": [
+          "Ich ziehe der Mantel aus.",
+          "Ich ziehe den Mantel aus.",
+          "Ich ausziehe den Mantel."
+        ],
+        "answer": "Ich ziehe den Mantel aus.",
+        "tip": "dressBazaarTen.questDescription"
+      },
+      {
+        "id": 8,
+        "type": "select",
+        "question": "dressBazaarTen.questTask8",
+        "options": [
+          "Gefallen dir mein Handschuhe?",
+          "Gefallen dir meine Handschuhe?",
+          "Gefällt dir meine Handschuhe?"
+        ],
+        "answer": "Gefallen dir meine Handschuhe?",
+        "tip": "dressBazaarTen.questDescription"
+      },
+      {
+        "id": 9,
+        "type": "reorder",
+        "question": "dressBazaarTen.questTask9",
+        "words": [
+          "der",
+          "probiere",
+          "anprobieren",
+          "den",
+          "ich",
+          "Kann",
+          "Mantel"
+        ],
+        "correctOrder": [
+          "Kann",
+          "ich",
+          "den",
+          "Mantel",
+          "anprobieren"
+        ],
+        "tip": "dressBazaarTen.questDescription"
+      },
+      {
+        "id": 10,
+        "type": "reorder",
+        "question": "dressBazaarTen.questTask10",
+        "words": [
+          "schwarz",
+          "Kleid",
+          "sind",
+          "Ihr",
+          "Ihre",
+          "ist"
+        ],
+        "correctOrder": [
+          "Ihr",
+          "Kleid",
+          "ist",
+          "schwarz"
+        ],
+        "tip": "dressBazaarTen.questDescription"
+      },
+      {
+        "id": 11,
+        "type": "reorder",
+        "question": "dressBazaarTen.questTask11",
+        "words": [
+          "du",
+          "zieht",
+          "ziehst",
+          "Was",
+          "anziehst",
+          "an",
+          "heute"
+        ],
+        "correctOrder": [
+          "Was",
+          "ziehst",
+          "du",
+          "heute",
+          "an"
+        ],
+        "tip": "dressBazaarTen.questDescription"
+      },
+      {
+        "id": 12,
+        "type": "input",
+        "question": "dressBazaarTen.questTask12",
+        "correctAnswer": "ihn",
+        "tip": "dressBazaarTen.questDescription"
+      },
+      {
+        "id": 13,
+        "type": "input",
+        "question": "dressBazaarTen.questTask13",
+        "correctAnswer": "anziehen",
+        "tip": "dressBazaarTen.questDescription"
+      },
+      {
+        "id": 14,
+        "type": "readAndAnswer",
+        "question": "dressBazaarTen.questTask14",
+        "text": "Lisa kauft ein T-Shirt für 15 Euro und eine Hose für 40 Euro. Die Schuhe sind zu teuer, sie kosten 90 Euro. Lisa kauft sie nicht. Sie bezahlt 55 Euro mit Karte.",
+        "options": [
+          "15 Euro",
+          "55 Euro",
+          "90 Euro"
+        ],
+        "answer": "55 Euro",
+        "tip": "dressBazaarTen.questDescription"
+      },
+      {
+        "id": 15,
+        "type": "readAndAnswer",
+        "question": "dressBazaarTen.questTask15",
+        "text": "Am Morgen ist es sonnig und warm. Ben trägt ein T-Shirt. Am Abend ist es windig und kalt. Ben zieht einen Pullover und eine Jacke an.",
+        "options": [
+          "Das T-Shirt ist zu klein.",
+          "Am Abend ist es kalt.",
+          "Der Pullover gefällt ihm."
+        ],
+        "answer": "Am Abend ist es kalt.",
+        "tip": "dressBazaarTen.questDescription"
+      }
+    ]
+  }
+]

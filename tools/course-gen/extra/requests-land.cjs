@@ -1,0 +1,120 @@
+// Город вежливости (requests-land): 2 практических квеста перед «Контрольным»
+// порядок переводов: ru en uk pl es fr tr ro uz hi ar
+module.exports = {
+	file: 'requests-land',
+	ns: 'requestsLandExtra',
+	ids: ['requests-9', 'requests-10'],
+	before: 'requests-8',
+	quests: [
+		{
+			title: ['На уроке', 'In class', 'На уроці', 'Na lekcji', 'En clase', 'En cours', 'Derste', 'La oră', 'Darsda', 'क्लास में', 'في الدرس'],
+			desc: [
+				'Практика без новой грамматики. Просьба: du: глагол без -st и без du (Lies! Hör zu!), ihr: форма ihr без ihr (Lest! Hört zu!), Sie: глагол + Sie (Lesen Sie!). Приставка уходит в конец: Macht das Buch auf! bitte и mal делают просьбу мягче.',
+				'Practice without new grammar. Requests: du: the verb without -st and without du (Lies! Hör zu!), ihr: the ihr form without ihr (Lest! Hört zu!), Sie: verb + Sie (Lesen Sie!). The prefix goes to the end: Macht das Buch auf! bitte and mal make it softer.',
+				'Практика без нової граматики. Прохання: du: дієслово без -st і без du (Lies! Hör zu!), ihr: форма ihr без ihr (Lest! Hört zu!), Sie: дієслово + Sie (Lesen Sie!). Префікс іде в кінець: Macht das Buch auf! bitte і mal роблять прохання м’якшим.',
+				'Ćwiczenie bez nowej gramatyki. Prośba: du: czasownik bez -st i bez du (Lies! Hör zu!), ihr: forma ihr bez ihr (Lest! Hört zu!), Sie: czasownik + Sie (Lesen Sie!). Przedrostek idzie na koniec: Macht das Buch auf! bitte i mal łagodzą prośbę.',
+				'Práctica sin gramática nueva. Peticiones: du: el verbo sin -st y sin du (Lies! Hör zu!), ihr: la forma de ihr sin ihr (Lest! Hört zu!), Sie: verbo + Sie (Lesen Sie!). El prefijo va al final: Macht das Buch auf! bitte y mal suavizan la petición.',
+				'Entraînement sans nouvelle grammaire. Les demandes : du : le verbe sans -st et sans du (Lies! Hör zu!), ihr : la forme de ihr sans ihr (Lest! Hört zu!), Sie : verbe + Sie (Lesen Sie!). La particule va à la fin : Macht das Buch auf! bitte et mal adoucissent la demande.',
+				'Yeni dilbilgisi olmadan pratik. Rica: du: -st ve du olmadan fiil (Lies! Hör zu!), ihr: ihr biçimi, ihr olmadan (Lest! Hört zu!), Sie: fiil + Sie (Lesen Sie!). Ön ek sona gider: Macht das Buch auf! bitte ve mal ricayı yumuşatır.',
+				'Exercițiu fără gramatică nouă. Rugăminți: du: verbul fără -st și fără du (Lies! Hör zu!), ihr: forma ihr fără ihr (Lest! Hört zu!), Sie: verb + Sie (Lesen Sie!). Prefixul merge la final: Macht das Buch auf! bitte și mal fac rugămintea mai blândă.',
+				'Yangi grammatikasiz mashq. Iltimos: du: -st siz va du siz fe’l (Lies! Hör zu!), ihr: ihr shakli, ihr siz (Lest! Hört zu!), Sie: fe’l + Sie (Lesen Sie!). Old qo‘shimcha oxirga ketadi: Macht das Buch auf! bitte va mal iltimosni yumshatadi.',
+				'बिना नए व्याकरण का अभ्यास। अनुरोध: du: बिना -st और बिना du के क्रिया (Lies! Hör zu!), ihr: ihr वाला रूप बिना ihr के (Lest! Hört zu!), Sie: क्रिया + Sie (Lesen Sie!)। उपसर्ग अंत में जाता है: Macht das Buch auf! bitte और mal अनुरोध को नरम बनाते हैं।',
+				'تدريب بلا قواعد جديدة. الطلب: du: الفعل بلا -st وبلا du (Lies! Hör zu!) و ihr: صيغة ihr بلا ihr (Lest! Hört zu!) و Sie: الفعل + Sie (Lesen Sie!). البادئة تذهب إلى الآخر: Macht das Buch auf! كلمتا bitte و mal تجعلان الطلب ألطف.'
+			],
+			vocab: [
+				['die Tafel', 'доска', 'board', 'дошка', 'tablica', 'la pizarra', 'le tableau', 'tahta', 'tabla', 'doska', 'बोर्ड', 'السبورة'],
+				['das Heft', 'тетрадь', 'exercise book', 'зошит', 'zeszyt', 'el cuaderno', 'le cahier', 'defter', 'caietul', 'daftar', 'कॉपी', 'الدفتر'],
+				['der Satz', 'предложение', 'sentence', 'речення', 'zdanie', 'la frase', 'la phrase', 'cümle', 'propoziția', 'gap', 'वाक्य', 'الجملة'],
+				['vorlesen', 'читать вслух', 'to read aloud', 'читати вголос', 'czytać na głos', 'leer en voz alta', 'lire à voix haute', 'yüksek sesle okumak', 'a citi cu voce tare', 'ovoz chiqarib o‘qimoq', 'ज़ोर से पढ़ना', 'يقرأ بصوت عالٍ'],
+				['aufschreiben', 'записывать', 'to write down', 'записувати', 'zapisywać', 'apuntar', 'noter', 'not etmek', 'a nota', 'yozib olmoq', 'लिख लेना', 'يدوّن']
+			],
+			tasks: [
+				['tr', ['Откройте, пожалуйста, книги!', 'Please open your books!', 'Відкрийте, будь ласка, книжки!', 'Otwórzcie, proszę, książki!', '¡Abrid los libros, por favor!', 'Ouvrez vos livres, s’il vous plaît !', 'Lütfen kitaplarınızı açın!', 'Deschideți cărțile, vă rog!', 'Iltimos, kitoblaringizni oching!', 'कृपया अपनी किताबें खोलो!', 'افتحوا الكتب من فضلكم!'],
+					['Macht bitte die Bücher auf!', 'Aufmacht bitte die Bücher!', 'Macht ihr bitte die Bücher auf!'], 'Macht bitte die Bücher auf!'],
+				['gv', ['Прочитай предложение вслух!', 'Read the sentence aloud!', 'Прочитай речення вголос!', 'Przeczytaj zdanie na głos!', '¡Lee la frase en voz alta!', 'Lis la phrase à voix haute !', 'Cümleyi yüksek sesle oku!', 'Citește propoziția cu voce tare!', 'Gapni ovoz chiqarib o‘qi!', 'वाक्य ज़ोर से पढ़ो!', 'اقرأ الجملة بصوت عالٍ!'],
+					'___ den Satz vor!', 'Lies'],
+				['gw', ['Запишите слова в тетрадь!', 'Write the words in your exercise book!', 'Запишіть слова в зошит!', 'Zapiszcie słowa w zeszycie!', '¡Apuntad las palabras en el cuaderno!', 'Notez les mots dans le cahier !', 'Kelimeleri deftere yazın!', 'Notați cuvintele în caiet!', 'So‘zlarni daftarga yozib oling!', 'शब्द कॉपी में लिख लो!', 'دوّنوا الكلمات في الدفتر!'],
+					'Schreibt die Wörter ins Heft ___!', 'auf'],
+				['ro', ['Послушай, пожалуйста!', 'Please listen!', 'Послухай, будь ласка!', 'Posłuchaj, proszę!', '¡Escucha, por favor!', 'Écoute, s’il te plaît !', 'Lütfen dinle!', 'Ascultă, te rog!', 'Iltimos, tingla!', 'कृपया सुनो!', 'استمع من فضلك!'],
+					'Hör bitte zu!', ['Hörst']],
+				['ok', ['Повторите, пожалуйста, ещё раз!', 'Please repeat that again!', 'Повторіть, будь ласка, ще раз!', 'Proszę powtórzyć jeszcze raz!', '¡Repita otra vez, por favor!', 'Répétez encore une fois, s’il vous plaît !', 'Lütfen bir kez daha tekrar edin!', 'Repetați încă o dată, vă rog!', 'Iltimos, yana bir marta takrorlang!', 'कृपया एक बार फिर दोहराइए!', 'كرّر مرة أخرى من فضلك!'],
+					['Wiederholen Sie das bitte noch einmal!', 'Wiederholt Sie das bitte noch einmal!', 'Sie wiederholen das bitte noch einmal!'], 'Wiederholen Sie das bitte noch einmal!'],
+				['gv', ['Дети, будьте тише!', 'Children, be quieter!', 'Діти, будьте тихіше!', 'Dzieci, bądźcie ciszej!', '¡Niños, estad más callados!', 'Les enfants, soyez plus calmes !', 'Çocuklar, daha sessiz olun!', 'Copii, fiți mai liniștiți!', 'Bolalar, sekinroq bo‘linglar!', 'बच्चो, शांत रहो!', 'يا أطفال، كونوا أهدأ!'],
+					'Kinder, ___ bitte leiser!', 'seid'],
+				['rd', ['Что учительница просит сделать дома?', 'What does the teacher ask them to do at home?', 'Що вчителька просить зробити вдома?', 'O co nauczycielka prosi w domu?', '¿Qué pide la profesora que hagan en casa?', 'Que demande la professeure de faire à la maison ?', 'Öğretmen evde ne yapmalarını istiyor?', 'Ce le cere profesoara să facă acasă?', 'O‘qituvchi uyda nima qilishni so‘raydi?', 'टीचर घर पर क्या करने को कहती है?', 'ماذا تطلب المعلمة أن يفعلوا في البيت؟'],
+					'Die Lehrerin sagt: „Macht bitte die Bücher auf und lest den Text. Max, lies bitte den ersten Satz vor! Zu Hause schreibt ihr bitte zehn neue Wörter ins Heft.“', ['zehn Wörter ins Heft schreiben', 'den Text vorlesen', 'die Bücher aufmachen'], 'zehn Wörter ins Heft schreiben'],
+				['gw', ['Можешь мне помочь?', 'Can you help me?', 'Можеш мені допомогти?', 'Możesz mi pomóc?', '¿Puedes ayudarme?', 'Tu peux m’aider ?', 'Bana yardım edebilir misin?', 'Mă poți ajuta?', 'Menga yordam bera olasanmi?', 'क्या तुम मेरी मदद कर सकते हो?', 'هل يمكنك مساعدتي؟'],
+					'Kannst du mir ___?', 'helfen'],
+				['gv', ['Пишите на доске!', 'Write on the board!', 'Пишіть на дошці!', 'Piszcie na tablicy!', '¡Escribid en la pizarra!', 'Écrivez au tableau !', 'Tahtaya yazın!', 'Scrieți pe tablă!', 'Doskaga yozinglar!', 'बोर्ड पर लिखो!', 'اكتبوا على السبورة!'],
+					'___ an die Tafel!', 'Schreibt'],
+				['ro', ['Не могли бы вы включить свет?', 'Could you switch on the light?', 'Чи не могли б ви увімкнути світло?', 'Czy mógłby pan włączyć światło?', '¿Podría encender la luz?', 'Pourriez-vous allumer la lumière ?', 'Işığı açabilir misiniz?', 'Ați putea aprinde lumina?', 'Chiroqni yoqa olasizmi?', 'क्या आप बत्ती जला सकते हैं?', 'هل يمكنك أن تشعل الضوء؟'],
+					'Könnten Sie bitte das Licht anmachen?', ['Können']],
+				['ok', ['Дай мне, пожалуйста, ручку!', 'Give me the pen, please!', 'Дай мені, будь ласка, ручку!', 'Daj mi, proszę, długopis!', '¡Dame el bolígrafo, por favor!', 'Donne-moi le stylo, s’il te plaît !', 'Lütfen bana kalemi ver!', 'Dă-mi pixul, te rog!', 'Iltimos, menga ruchkani ber!', 'मुझे पेन दो, प्लीज़!', 'أعطني القلم من فضلك!'],
+					['Gib mir bitte den Stift!', 'Gibst mir bitte den Stift!', 'Geb mir bitte den Stift!'], 'Gib mir bitte den Stift!'],
+				['gw', ['Встаньте, пожалуйста!', 'Please stand up!', 'Встаньте, будь ласка!', 'Proszę wstać!', '¡Levántense, por favor!', 'Levez-vous, s’il vous plaît !', 'Lütfen ayağa kalkın!', 'Ridicați-vă, vă rog!', 'Iltimos, o‘rningizdan turing!', 'कृपया खड़े हो जाइए!', 'قفوا من فضلكم!'],
+					'Stehen Sie bitte ___!', 'auf'],
+				['gv', ['Закрой, пожалуйста, окно!', 'Please close the window!', 'Зачини, будь ласка, вікно!', 'Zamknij, proszę, okno!', '¡Cierra la ventana, por favor!', 'Ferme la fenêtre, s’il te plaît !', 'Lütfen pencereyi kapat!', 'Închide fereastra, te rog!', 'Iltimos, derazani yop!', 'कृपया खिड़की बंद करो!', 'أغلق النافذة من فضلك!'],
+					'___ bitte das Fenster zu!', 'Mach'],
+				['gw', ['Вчера мы писали тест', 'Yesterday we wrote a test', 'Учора ми писали тест', 'Wczoraj pisaliśmy test', 'Ayer hicimos un examen', 'Hier, nous avons fait un test', 'Dün bir test yazdık', 'Ieri am dat un test', 'Kecha test yozdik', 'कल हमने टेस्ट लिखा', 'أمس كتبنا اختبارًا'],
+					'Gestern haben wir einen Test ___.', 'geschrieben'],
+				['gw', ['Тетрадь лежит под стулом', 'The exercise book is under the chair', 'Зошит лежить під стільцем', 'Zeszyt leży pod krzesłem', 'El cuaderno está debajo de la silla', 'Le cahier est sous la chaise', 'Defter sandalyenin altında', 'Caietul e sub scaun', 'Daftar stul tagida', 'कॉपी कुर्सी के नीचे है', 'الدفتر تحت الكرسي'],
+					'Das Heft liegt unter ___ Stuhl.', 'dem']
+			]
+		},
+		{
+			title: ['В гостинице', 'At the hotel', 'У готелі', 'W hotelu', 'En el hotel', 'À l’hôtel', 'Otelde', 'La hotel', 'Mehmonxonada', 'होटल में', 'في الفندق'],
+			desc: [
+				'Практика без новой грамматики. Вежливо просим: Können Sie …? Könnten Sie …? (не могли бы вы…), второй глагол в конце. Заказываем: Ich möchte … Ich hätte gern … Ещё вежливее с bitte: Könnten Sie mir bitte helfen?',
+				'Practice without new grammar. Asking politely: Können Sie …? Könnten Sie …? (could you…), the second verb at the end. Ordering: Ich möchte … Ich hätte gern … Even more polite with bitte: Könnten Sie mir bitte helfen?',
+				'Практика без нової граматики. Ввічливо просимо: Können Sie …? Könnten Sie …? (чи не могли б ви…), друге дієслово в кінці. Замовляємо: Ich möchte … Ich hätte gern … Ще ввічливіше з bitte: Könnten Sie mir bitte helfen?',
+				'Ćwiczenie bez nowej gramatyki. Grzecznie prosimy: Können Sie …? Könnten Sie …? (czy mógłby pan…), drugi czasownik na końcu. Zamawiamy: Ich möchte … Ich hätte gern … Jeszcze grzeczniej z bitte: Könnten Sie mir bitte helfen?',
+				'Práctica sin gramática nueva. Pedimos con cortesía: Können Sie …? Könnten Sie …? (¿podría…?), el segundo verbo al final. Pedimos algo: Ich möchte … Ich hätte gern … Aún más cortés con bitte: Könnten Sie mir bitte helfen?',
+				'Entraînement sans nouvelle grammaire. On demande poliment : Können Sie …? Könnten Sie …? (pourriez-vous…), le deuxième verbe à la fin. On commande : Ich möchte … Ich hätte gern … Encore plus poli avec bitte : Könnten Sie mir bitte helfen?',
+				'Yeni dilbilgisi olmadan pratik. Kibarca rica: Können Sie …? Könnten Sie …? (… -ebilir misiniz), ikinci fiil sonda. Sipariş: Ich möchte … Ich hätte gern … bitte ile daha da kibar: Könnten Sie mir bitte helfen?',
+				'Exercițiu fără gramatică nouă. Rugăm politicos: Können Sie …? Könnten Sie …? (ați putea…), al doilea verb la final. Comandăm: Ich möchte … Ich hätte gern … Și mai politicos cu bitte: Könnten Sie mir bitte helfen?',
+				'Yangi grammatikasiz mashq. Xushmuomala iltimos: Können Sie …? Könnten Sie …? (…a olasizmi), ikkinchi fe’l oxirida. Buyurtma: Ich möchte … Ich hätte gern … bitte bilan yanada xushmuomala: Könnten Sie mir bitte helfen?',
+				'बिना नए व्याकरण का अभ्यास। विनम्र अनुरोध: Können Sie …? Könnten Sie …? (क्या आप … सकते हैं), दूसरी क्रिया अंत में। ऑर्डर: Ich möchte … Ich hätte gern … bitte के साथ और भी विनम्र: Könnten Sie mir bitte helfen?',
+				'تدريب بلا قواعد جديدة. الطلب بأدب: Können Sie …? Könnten Sie …? (هل يمكنك…)، والفعل الثاني في الآخر. الطلب: Ich möchte … Ich hätte gern … وأكثر أدبًا مع bitte: Könnten Sie mir bitte helfen?'
+			],
+			vocab: [
+				['der Schlüssel', 'ключ', 'key', 'ключ', 'klucz', 'la llave', 'la clé', 'anahtar', 'cheia', 'kalit', 'चाबी', 'المفتاح'],
+				['das Handtuch', 'полотенце', 'towel', 'рушник', 'ręcznik', 'la toalla', 'la serviette', 'havlu', 'prosopul', 'sochiq', 'तौलिया', 'المنشفة'],
+				['das Frühstück', 'завтрак', 'breakfast', 'сніданок', 'śniadanie', 'el desayuno', 'le petit-déjeuner', 'kahvaltı', 'micul dejun', 'nonushta', 'नाश्ता', 'الفطور'],
+				['das Taxi', 'такси', 'taxi', 'таксі', 'taksówka', 'el taxi', 'le taxi', 'taksi', 'taxiul', 'taksi', 'टैक्सी', 'سيارة الأجرة'],
+				['die Rezeption', 'стойка регистрации', 'reception', 'рецепція', 'recepcja', 'la recepción', 'la réception', 'resepsiyon', 'recepția', 'qabulxona', 'रिसेप्शन', 'الاستقبال']
+			],
+			tasks: [
+				['tr', ['Не могли бы вы вызвать мне такси?', 'Could you call me a taxi?', 'Чи не могли б ви викликати мені таксі?', 'Czy mógłby pan zamówić mi taksówkę?', '¿Podría llamarme un taxi?', 'Pourriez-vous m’appeler un taxi ?', 'Bana bir taksi çağırabilir misiniz?', 'Ați putea să-mi chemați un taxi?', 'Menga taksi chaqira olasizmi?', 'क्या आप मेरे लिए टैक्सी बुला सकते हैं?', 'هل يمكنك أن تطلب لي سيارة أجرة؟'],
+					['Könnten Sie mir ein Taxi rufen?', 'Könnten Sie mir ein Taxi rufen zu?', 'Könnten Sie rufen mir ein Taxi?'], 'Könnten Sie mir ein Taxi rufen?'],
+				['gw', ['Мне бы номер на две ночи', 'I would like a room for two nights', 'Мені б номер на дві ночі', 'Poproszę pokój na dwie noce', 'Quisiera una habitación para dos noches', 'J’aimerais une chambre pour deux nuits', 'İki gecelik bir oda istiyorum', 'Aș vrea o cameră pentru două nopți', 'Ikki kechaga xona xohlardim', 'मुझे दो रातों के लिए कमरा चाहिए', 'أودّ غرفة لليلتين'],
+					'Ich ___ gern ein Zimmer für zwei Nächte.', 'hätte'],
+				['gv', ['Можете дать мне ещё одно полотенце?', 'Can you give me another towel?', 'Можете дати мені ще один рушник?', 'Czy może mi pan dać jeszcze jeden ręcznik?', '¿Puede darme otra toalla?', 'Pouvez-vous me donner une autre serviette ?', 'Bana bir havlu daha verebilir misiniz?', 'Îmi puteți da încă un prosop?', 'Menga yana bitta sochiq bera olasizmi?', 'क्या आप मुझे एक और तौलिया दे सकते हैं?', 'هل يمكنك أن تعطيني منشفة أخرى؟'],
+					'Können Sie mir noch ein Handtuch ___?', 'geben'],
+				['ro', ['Я хотел бы позавтракать в номере', 'I would like to have breakfast in my room', 'Я хотів би поснідати в номері', 'Chciałbym zjeść śniadanie w pokoju', 'Me gustaría desayunar en la habitación', 'Je voudrais prendre le petit-déjeuner dans la chambre', 'Kahvaltıyı odada yapmak istiyorum', 'Aș vrea să iau micul dejun în cameră', 'Nonushtani xonada qilmoqchiman', 'मैं कमरे में नाश्ता करना चाहूँगा', 'أودّ تناول الفطور في الغرفة'],
+					'Ich möchte im Zimmer frühstücken', ['möchten']],
+				['ok', ['Не могли бы вы мне помочь с чемоданом?', 'Could you help me with my suitcase?', 'Чи не могли б ви допомогти мені з валізою?', 'Czy mógłby mi pan pomóc z walizką?', '¿Podría ayudarme con la maleta?', 'Pourriez-vous m’aider avec ma valise ?', 'Bavulumla bana yardım edebilir misiniz?', 'M-ați putea ajuta cu valiza?', 'Chamadon bilan menga yordam bera olasizmi?', 'क्या आप सूटकेस में मेरी मदद कर सकते हैं?', 'هل يمكنك مساعدتي في الحقيبة؟'],
+					['Könnten Sie mir bitte mit dem Koffer helfen?', 'Könnten Sie mir bitte mit dem Koffer helfst?', 'Könnten Sie helfen mir bitte mit dem Koffer?'], 'Könnten Sie mir bitte mit dem Koffer helfen?'],
+				['gw', ['Где мой ключ? Он на стойке регистрации', 'Where is my key? It is at reception', 'Де мій ключ? Він на рецепції', 'Gdzie jest mój klucz? Jest w recepcji', '¿Dónde está mi llave? Está en recepción', 'Où est ma clé ? Elle est à la réception', 'Anahtarım nerede? Resepsiyonda', 'Unde e cheia mea? E la recepție', 'Kalitim qayerda? U qabulxonada', 'मेरी चाबी कहाँ है? रिसेप्शन पर है', 'أين مفتاحي؟ إنه في الاستقبال'],
+					'Wo ist mein ___? Er ist an der Rezeption.', 'Schlüssel'],
+				['rd', ['Что просит госпожа Фогель на стойке регистрации?', 'What does Mrs Vogel ask for at reception?', 'Про що просить пані Фогель на рецепції?', 'O co prosi pani Vogel w recepcji?', '¿Qué pide la señora Vogel en recepción?', 'Que demande madame Vogel à la réception ?', 'Bayan Vogel resepsiyonda ne istiyor?', 'Ce cere doamna Vogel la recepție?', 'Fogel xonim qabulxonada nima so‘raydi?', 'श्रीमती फ़ोगेल रिसेप्शन पर क्या माँगती हैं?', 'ماذا تطلب السيدة فوغل في الاستقبال؟'],
+					'Frau Vogel kommt an die Rezeption. Sie sagt: „Guten Abend! Ich hätte gern ein ruhiges Zimmer. Könnten Sie mich morgen um sechs Uhr wecken? Und ich möchte das Frühstück um sieben.“', ['ein ruhiges Zimmer', 'ein Taxi', 'ein Handtuch'], 'ein ruhiges Zimmer'],
+				['gv', ['Не могли бы вы разбудить меня в семь?', 'Could you wake me at seven?', 'Чи не могли б ви розбудити мене о сьомій?', 'Czy mógłby mnie pan obudzić o siódmej?', '¿Podría despertarme a las siete?', 'Pourriez-vous me réveiller à sept heures ?', 'Beni yedide uyandırabilir misiniz?', 'M-ați putea trezi la șapte?', 'Meni yettida uyg‘ota olasizmi?', 'क्या आप मुझे सात बजे जगा सकते हैं?', 'هل يمكنك إيقاظي في السابعة؟'],
+					'___ Sie mich um sieben Uhr wecken?', 'Könnten'],
+				['gw', ['Когда завтрак?', 'When is breakfast?', 'Коли сніданок?', 'Kiedy jest śniadanie?', '¿Cuándo es el desayuno?', 'À quelle heure est le petit-déjeuner ?', 'Kahvaltı ne zaman?', 'Când e micul dejun?', 'Nonushta qachon?', 'नाश्ता कब है?', 'متى الفطور؟'],
+					'Wann gibt es ___?', 'Frühstück'],
+				['ro', ['Можно мне счёт, пожалуйста?', 'Can I have the bill, please?', 'Можна мені рахунок, будь ласка?', 'Czy mogę prosić o rachunek?', '¿Me trae la cuenta, por favor?', 'Je peux avoir l’addition, s’il vous plaît ?', 'Hesabı alabilir miyim, lütfen?', 'Pot primi nota, vă rog?', 'Hisobni olsam bo‘ladimi, iltimos?', 'क्या मुझे बिल मिल सकता है, प्लीज़?', 'هل يمكنني الحصول على الفاتورة من فضلك؟'],
+					'Kann ich bitte die Rechnung haben?', ['Kannst']],
+				['ok', ['Я хотел бы чай с молоком.', 'I would like tea with milk.', 'Я хотів би чай з молоком.', 'Poproszę herbatę z mlekiem.', 'Quisiera un té con leche.', 'Je voudrais un thé au lait.', 'Sütlü çay istiyorum.', 'Aș vrea un ceai cu lapte.', 'Sutli choy xohlayman.', 'मुझे दूध वाली चाय चाहिए।', 'أودّ شايًا بالحليب.'],
+					['Ich möchte einen Tee mit Milch.', 'Ich möchtest einen Tee mit Milch.', 'Ich möchte einen Tee mit Milch trinken zu.'], 'Ich möchte einen Tee mit Milch.'],
+				['gv', ['Можете показать мне дорогу?', 'Can you show me the way?', 'Можете показати мені дорогу?', 'Może mi pan pokazać drogę?', '¿Puede enseñarme el camino?', 'Pouvez-vous m’indiquer le chemin ?', 'Bana yolu gösterebilir misiniz?', 'Îmi puteți arăta drumul?', 'Menga yo‘lni ko‘rsata olasizmi?', 'क्या आप मुझे रास्ता दिखा सकते हैं?', 'هل يمكنك أن تريني الطريق؟'],
+					'Können Sie mir bitte den Weg ___?', 'zeigen'],
+				['gv', ['Принесите нам, пожалуйста, воду', 'Please bring us water', 'Принесіть нам, будь ласка, воду', 'Proszę nam przynieść wodę', 'Tráiganos agua, por favor', 'Apportez-nous de l’eau, s’il vous plaît', 'Lütfen bize su getirin', 'Aduceți-ne apă, vă rog', 'Iltimos, bizga suv olib keling', 'कृपया हमारे लिए पानी लाइए', 'أحضر لنا ماءً من فضلك'],
+					'___ Sie uns bitte Wasser!', 'Bringen'],
+				['gw', ['Вчера мы приехали в отель поздно', 'Yesterday we arrived at the hotel late', 'Учора ми приїхали в готель пізно', 'Wczoraj przyjechaliśmy do hotelu późno', 'Ayer llegamos tarde al hotel', 'Hier, nous sommes arrivés tard à l’hôtel', 'Dün otele geç geldik', 'Ieri am ajuns târziu la hotel', 'Kecha mehmonxonaga kech keldik', 'कल हम होटल देर से पहुँचे', 'أمس وصلنا إلى الفندق متأخرين'],
+					'Gestern sind wir spät im Hotel ___.', 'angekommen'],
+				['gw', ['Отель находится рядом с вокзалом', 'The hotel is next to the station', 'Готель знаходиться біля вокзалу', 'Hotel jest obok dworca', 'El hotel está al lado de la estación', 'L’hôtel est à côté de la gare', 'Otel garın yanında', 'Hotelul e lângă gară', 'Mehmonxona vokzal yonida', 'होटल स्टेशन के पास है', 'الفندق بجانب المحطة'],
+					'Das Hotel ist neben ___ Bahnhof.', 'dem']
+			]
+		}
+	]
+}

@@ -1,5 +1,5 @@
 <script setup>
-import {onMounted, ref} from 'vue'
+import {onBeforeUnmount, onMounted, ref} from 'vue'
 import {userExamStore} from '~/store/examStore.js'
 import {useRouter} from 'vue-router'
 import VConsentModal from "../../src/components/V-consentModal.vue";
@@ -78,9 +78,54 @@ const examLevels = [
   }
 ]
 
+// выбор темы: у каждого уровня несколько тематических вариантов теста
+const showThemePicker = ref(false)
+const loadingThemes = ref(false)
+const selectedLevelId = ref('')
+const availableExamsList = ref([])
+
+// экран выбора на весь экран: системная кнопка «назад» закрывает его, а не уходит со страницы
+const openThemePicker = () => {
+  showThemePicker.value = true
+  window.history.pushState({examThemePicker: true}, '')
+}
+
+const closeThemePicker = () => {
+  if (showThemePicker.value) window.history.back()
+}
+
+const onPopState = () => {
+  showThemePicker.value = false
+}
+
+const onLevelSelect = async (levelId) => {
+  selectedLevelId.value = levelId
+  loadingThemes.value = true
+  openThemePicker()
+  try {
+    const data = await $fetch(`/exams/exam-${levelId.toUpperCase()}.json`)
+    if (Array.isArray(data?.exams) && data.exams.length) {
+      availableExamsList.value = data.exams
+      return
+    }
+    throw new Error('no themes')
+  } catch {
+    showThemePicker.value = false
+    router.replace(`/exams/level/${levelId}`)
+  } finally {
+    loadingThemes.value = false
+  }
+}
+
+const startSpecificExam = (examId) => {
+  showThemePicker.value = false
+  // replace() убирает запись экрана выбора из истории: «назад» из теста ведёт к списку уровней
+  router.replace(`/exams/level/${selectedLevelId.value}?examId=${examId}`)
+}
+
 const attemptToStartExam = (levelId) => {
   if (authStore.voiceConsentGiven) {
-    router.push(`/exams/level/${levelId}`)
+    onLevelSelect(levelId)
   } else {
     showConsentModal.value = true
   }
@@ -93,10 +138,15 @@ const handleConsentGiven = async () => {
 }
 
 onMounted(async () => {
+  window.addEventListener('popstate', onPopState)
   isPageLoaded.value = true
   await authStore.initAuth()
   examStore.loadTopics('/exams/exam-A1.json')
   showConsentModal.value = !authStore.voiceConsentGiven
+})
+
+onBeforeUnmount(() => {
+  window.removeEventListener('popstate', onPopState)
 })
 </script>
 
@@ -113,6 +163,37 @@ onMounted(async () => {
           @consent-given="handleConsentGiven"
           @close="showConsentModal = false"
       />
+      <Transition name="picker-slide">
+        <div v-if="showThemePicker" :class="['theme-picker', `card--${selectedLevelId}`]">
+          <div class="picker-header">
+            <button class="btn-icon-back" :aria-label="t('plExam.chooseTheme')" @click="closeThemePicker">
+              <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none"
+                   stroke="grey" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="19" y1="12" x2="5" y2="12"></line>
+                <polyline points="12 19 5 12 12 5"></polyline>
+              </svg>
+            </button>
+            <div class="picker-title">{{ t('plExam.chooseTheme') }}</div>
+            <span class="picker-level">{{ selectedLevelId.toUpperCase() }}</span>
+          </div>
+          <div class="picker-body">
+            <div v-if="loadingThemes" class="picker-loader">{{ t('plExam.loadingThemes') }}</div>
+            <div v-else class="picker-grid">
+              <button
+                  v-for="(exam, index) in availableExamsList"
+                  :key="exam.exam_id"
+                  class="picker-tile"
+                  :style="{ animationDelay: `${index * 40}ms` }"
+                  :data-track="`exam_theme_${selectedLevelId}_${exam.exam_id}`"
+                  @click="startSpecificExam(exam.exam_id)"
+              >
+                <span class="picker-tile-icon">{{ exam.icon || '📝' }}</span>
+                <span class="picker-tile-theme">{{ exam.theme }}</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </Transition>
       <div class="exam__header">
         <VBackBtn class="custom-back-btn"/>
         <div class="exam__title-badge">{{ t('nav.tests')}}</div>
@@ -416,6 +497,174 @@ onMounted(async () => {
   text-align: center;
   width: 90%;
   max-width: 300px;
+}
+
+/* полноэкранный выбор темы; цвет уровня берётся из card--a1 … card--b2 на корне */
+.theme-picker.card--a1 { --level-color: #4ade80; }
+.theme-picker.card--a2 { --level-color: #60a5fa; }
+.theme-picker.card--b1 { --level-color: #c0962a; }
+.theme-picker.card--b2 { --level-color: #f87171; }
+
+.theme-picker {
+  position: fixed;
+  inset: 0;
+  z-index: 200;
+  display: flex;
+  flex-direction: column;
+  padding-top: env(safe-area-inset-top, 0px);
+  padding-bottom: env(safe-area-inset-bottom, 0px);
+  box-sizing: border-box;
+  background-color: var(--bg);
+  font-family: "Nunito", sans-serif;
+}
+
+.picker-header {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 10px 10px 15px 10px;
+}
+
+.btn-icon-back {
+  background: #f5f5f6;
+  border: 3px solid var(--tabsSlideBorderColor);
+  box-shadow: var(--boxShadowMobile);
+  border-radius: 14px;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: transform 0.1s, box-shadow 0.1s;
+  flex-shrink: 0;
+  padding: 0;
+}
+
+.btn-icon-back:active {
+  transform: translate(2px, 3px);
+  box-shadow: 0px 0px 0px #1e272e;
+}
+
+[dir="rtl"] .btn-icon-back svg {
+  transform: scaleX(-1);
+}
+
+.picker-title {
+  flex: 1;
+  color: var(--title);
+  font-weight: 900;
+  font-size: 22px;
+  line-height: 1.15;
+  text-shadow: 0 1px var(--title);
+}
+
+.picker-level {
+  flex: 0 0 auto;
+  padding: 4px 14px;
+  border-radius: 50px;
+  background: var(--level-color);
+  color: #fff;
+  font-size: 15px;
+  font-weight: 900;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.picker-body {
+  flex: 1;
+  overflow-y: auto;
+  padding: 5px 15px calc(30px + env(safe-area-inset-bottom));
+  -webkit-overflow-scrolling: touch;
+}
+
+.picker-body::-webkit-scrollbar {
+  display: none;
+}
+
+.picker-loader {
+  text-align: center;
+  padding: 40px 20px;
+  font-weight: 700;
+  color: var(--title);
+}
+
+.picker-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+  max-width: 560px;
+  margin: 0 auto;
+}
+
+.picker-tile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  padding: 16px 10px 14px;
+  border: 2px solid var(--tabsSlideBorderColor);
+  border-radius: 20px;
+  background: var(--menuItemsBg);
+  box-shadow: var(--boxShadowMobile);
+  font-family: inherit;
+  cursor: pointer;
+  opacity: 0;
+  animation: picker-tile-in 0.3s ease forwards;
+  transition: transform 0.1s;
+}
+
+.picker-tile:active {
+  transform: translateY(2px);
+}
+
+.picker-tile-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 64px;
+  height: 64px;
+  border-radius: 16px;
+  background: #fff;
+  border: 3px solid var(--level-color);
+  font-size: 34px;
+  line-height: 1;
+}
+
+.picker-tile-theme {
+  font-size: 15px;
+  font-weight: 800;
+  line-height: 1.25;
+  text-align: center;
+  color: var(--titleColor);
+}
+
+@keyframes picker-tile-in {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.picker-slide-enter-active,
+.picker-slide-leave-active {
+  transition: transform 0.28s ease, opacity 0.28s ease;
+}
+
+.picker-slide-enter-from,
+.picker-slide-leave-to {
+  transform: translateY(100%);
+  opacity: 0;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .picker-tile {
+    animation: none;
+    opacity: 1;
+  }
 }
 
 .menu-appear-enter-active {

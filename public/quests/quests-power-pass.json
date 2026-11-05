@@ -1,0 +1,2861 @@
+[
+  {
+    "questId": "power-pass-one",
+    "title": "powerPassOne.questTitle",
+    "progress": "0/15",
+    "description": "powerPassOne.questDescription",
+    "conditions": {
+      "goal": "powerPassOne.questGoal",
+      "minCorrect": 15,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
+    "vocabulary": [
+      {
+        "word": "können",
+        "translation-ru": "уметь, мочь",
+        "translation-en": "can, to be able to",
+        "translation-uk": "вміти, могти",
+        "translation-pl": "umieć, móc",
+        "translation-es": "poder, saber",
+        "translation-fr": "pouvoir, savoir",
+        "translation-tr": "yapabilmek",
+        "translation-ro": "a putea, a ști",
+        "translation-uz": "qila olmoq",
+        "translation-hi": "सकना",
+        "translation-ar": "يستطيع"
+      },
+      {
+        "word": "schwimmen",
+        "translation-ru": "плавать",
+        "translation-en": "to swim",
+        "translation-uk": "плавати",
+        "translation-pl": "pływać",
+        "translation-es": "nadar",
+        "translation-fr": "nager",
+        "translation-tr": "yüzmek",
+        "translation-ro": "a înota",
+        "translation-uz": "suzmoq",
+        "translation-hi": "तैरना",
+        "translation-ar": "يسبح"
+      },
+      {
+        "word": "singen",
+        "translation-ru": "петь",
+        "translation-en": "to sing",
+        "translation-uk": "співати",
+        "translation-pl": "śpiewać",
+        "translation-es": "cantar",
+        "translation-fr": "chanter",
+        "translation-tr": "şarkı söylemek",
+        "translation-ro": "a cânta",
+        "translation-uz": "qo‘shiq aytmoq",
+        "translation-hi": "गाना",
+        "translation-ar": "يغني"
+      },
+      {
+        "word": "tanzen",
+        "translation-ru": "танцевать",
+        "translation-en": "to dance",
+        "translation-uk": "танцювати",
+        "translation-pl": "tańczyć",
+        "translation-es": "bailar",
+        "translation-fr": "danser",
+        "translation-tr": "dans etmek",
+        "translation-ro": "a dansa",
+        "translation-uz": "raqsga tushmoq",
+        "translation-hi": "नाचना",
+        "translation-ar": "يرقص"
+      },
+      {
+        "word": "die Gitarre",
+        "translation-ru": "гитара",
+        "translation-en": "guitar",
+        "translation-uk": "гітара",
+        "translation-pl": "gitara",
+        "translation-es": "la guitarra",
+        "translation-fr": "la guitare",
+        "translation-tr": "gitar",
+        "translation-ro": "chitara",
+        "translation-uz": "gitara",
+        "translation-hi": "गिटार",
+        "translation-ar": "الجيتار"
+      }
+    ],
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "powerPassOne.questTask1",
+        "options": [
+          "Ich kann schwimme.",
+          "Ich schwimmen kann.",
+          "Ich kann schwimmen."
+        ],
+        "answer": "Ich kann schwimmen.",
+        "tip": "powerPassOne.questDescription"
+      },
+      {
+        "id": 2,
+        "type": "input",
+        "question": "powerPassOne.questTask2",
+        "correctAnswer": "kannst",
+        "tip": "powerPassOne.questDescription"
+      },
+      {
+        "id": 3,
+        "type": "input",
+        "question": "powerPassOne.questTask3",
+        "correctAnswer": "kann",
+        "tip": "powerPassOne.questDescription"
+      },
+      {
+        "id": 4,
+        "type": "select",
+        "question": "powerPassOne.questTask4",
+        "options": [
+          "Wir können Gitarre spielen.",
+          "Wir können Gitarre spielt.",
+          "Wir kann Gitarre spielen."
+        ],
+        "answer": "Wir können Gitarre spielen.",
+        "tip": "powerPassOne.questDescription"
+      },
+      {
+        "id": 5,
+        "type": "reorder",
+        "question": "powerPassOne.questTask5",
+        "words": [
+          "kann",
+          "spielt",
+          "spielen",
+          "Anna",
+          "können",
+          "Gitarre"
+        ],
+        "correctOrder": [
+          "Anna",
+          "kann",
+          "Gitarre",
+          "spielen"
+        ],
+        "tip": "powerPassOne.questDescription"
+      },
+      {
+        "id": 6,
+        "type": "select",
+        "question": "powerPassOne.questTask6",
+        "options": [
+          "Ihr könnt heute kommt.",
+          "Ihr könnt heute kommen.",
+          "Ihr können heute kommen."
+        ],
+        "answer": "Ihr könnt heute kommen.",
+        "tip": "powerPassOne.questDescription"
+      },
+      {
+        "id": 7,
+        "type": "input",
+        "question": "powerPassOne.questTask7",
+        "correctAnswer": "arbeiten",
+        "tip": "powerPassOne.questDescription"
+      },
+      {
+        "id": 8,
+        "type": "select",
+        "question": "powerPassOne.questTask8",
+        "options": [
+          "Die Kinder können schwimmen.",
+          "Die Kinder können schwimmt.",
+          "Die Kinder kann schwimmen."
+        ],
+        "answer": "Die Kinder können schwimmen.",
+        "tip": "powerPassOne.questDescription"
+      },
+      {
+        "id": 9,
+        "type": "readAndAnswer",
+        "question": "powerPassOne.questTask9",
+        "text": "Leo kann gut kochen und Gitarre spielen. Seine Schwester Mia kann singen und tanzen. Am Abend machen sie zusammen Musik.",
+        "options": [
+          "singen und tanzen",
+          "Gitarre spielen",
+          "gut kochen"
+        ],
+        "answer": "singen und tanzen",
+        "tip": "powerPassOne.questDescription"
+      },
+      {
+        "id": 10,
+        "type": "input",
+        "question": "powerPassOne.questTask10",
+        "correctAnswer": "Gitarre",
+        "tip": "powerPassOne.questDescription"
+      },
+      {
+        "id": 11,
+        "type": "reorder",
+        "question": "powerPassOne.questTask11",
+        "words": [
+          "Samstag",
+          "Am",
+          "wir",
+          "kann",
+          "tanzt",
+          "können",
+          "tanzen"
+        ],
+        "correctOrder": [
+          "Am",
+          "Samstag",
+          "können",
+          "wir",
+          "tanzen"
+        ],
+        "tip": "powerPassOne.questDescription"
+      },
+      {
+        "id": 12,
+        "type": "input",
+        "question": "powerPassOne.questTask12",
+        "correctAnswer": "ruft",
+        "tip": "powerPassOne.questDescription"
+      },
+      {
+        "id": 13,
+        "type": "select",
+        "question": "powerPassOne.questTask13",
+        "options": [
+          "Der Bus abfährt um zehn Uhr.",
+          "Der Bus fährt um zehn Uhr ab.",
+          "Der Bus fährt am zehn Uhr ab."
+        ],
+        "answer": "Der Bus fährt um zehn Uhr ab.",
+        "tip": "powerPassOne.questDescription"
+      },
+      {
+        "id": 14,
+        "type": "select",
+        "question": "powerPassOne.questTask14",
+        "options": [
+          "Am Mai ist Frühling.",
+          "Im Mai ist Frühling.",
+          "Um Mai ist Frühling."
+        ],
+        "answer": "Im Mai ist Frühling.",
+        "tip": "powerPassOne.questDescription"
+      },
+      {
+        "id": 15,
+        "type": "reorder",
+        "question": "powerPassOne.questTask15",
+        "words": [
+          "wohnen",
+          "Bonn",
+          "in",
+          "Eltern",
+          "Unsere",
+          "wohnt",
+          "Unser"
+        ],
+        "correctOrder": [
+          "Unsere",
+          "Eltern",
+          "wohnen",
+          "in",
+          "Bonn"
+        ],
+        "tip": "powerPassOne.questDescription"
+      }
+    ]
+  },
+  {
+    "questId": "power-pass-two",
+    "title": "powerPassTwo.questTitle",
+    "progress": "0/15",
+    "description": "powerPassTwo.questDescription",
+    "conditions": {
+      "goal": "powerPassTwo.questGoal",
+      "minCorrect": 15,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
+    "vocabulary": [
+      {
+        "word": "wiederholen",
+        "translation-ru": "повторять",
+        "translation-en": "to repeat",
+        "translation-uk": "повторювати",
+        "translation-pl": "powtarzać",
+        "translation-es": "repetir",
+        "translation-fr": "répéter",
+        "translation-tr": "tekrar etmek",
+        "translation-ro": "a repeta",
+        "translation-uz": "takrorlamoq",
+        "translation-hi": "दोहराना",
+        "translation-ar": "يكرر"
+      },
+      {
+        "word": "das Klavier",
+        "translation-ru": "пианино",
+        "translation-en": "piano",
+        "translation-uk": "піаніно",
+        "translation-pl": "pianino",
+        "translation-es": "el piano",
+        "translation-fr": "le piano",
+        "translation-tr": "piyano",
+        "translation-ro": "pianul",
+        "translation-uz": "pianino",
+        "translation-hi": "पियानो",
+        "translation-ar": "البيانو"
+      },
+      {
+        "word": "helfen",
+        "translation-ru": "помогать",
+        "translation-en": "to help",
+        "translation-uk": "допомагати",
+        "translation-pl": "pomagać",
+        "translation-es": "ayudar",
+        "translation-fr": "aider",
+        "translation-tr": "yardım etmek",
+        "translation-ro": "a ajuta",
+        "translation-uz": "yordam bermoq",
+        "translation-hi": "मदद करना",
+        "translation-ar": "يساعد"
+      },
+      {
+        "word": "langsam",
+        "translation-ru": "медленно",
+        "translation-en": "slowly",
+        "translation-uk": "повільно",
+        "translation-pl": "powoli",
+        "translation-es": "despacio",
+        "translation-fr": "lentement",
+        "translation-tr": "yavaş",
+        "translation-ro": "încet",
+        "translation-uz": "sekin",
+        "translation-hi": "धीरे",
+        "translation-ar": "ببطء"
+      },
+      {
+        "word": "leider",
+        "translation-ru": "к сожалению",
+        "translation-en": "unfortunately",
+        "translation-uk": "на жаль",
+        "translation-pl": "niestety",
+        "translation-es": "por desgracia",
+        "translation-fr": "malheureusement",
+        "translation-tr": "maalesef",
+        "translation-ro": "din păcate",
+        "translation-uz": "afsuski",
+        "translation-hi": "दुर्भाग्य से",
+        "translation-ar": "للأسف"
+      },
+      {
+        "word": "verstehen",
+        "translation-ru": "понимать",
+        "translation-en": "to understand",
+        "translation-uk": "розуміти",
+        "translation-pl": "rozumieć",
+        "translation-es": "entender / comprender",
+        "translation-fr": "comprendre",
+        "translation-tr": "anlamak",
+        "translation-ro": "a înțelege",
+        "translation-uz": "tushunmoq",
+        "translation-hi": "समझना",
+        "translation-ar": "يفهم"
+      }
+    ],
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "powerPassTwo.questTask1",
+        "options": [
+          "Kannst du kochst?",
+          "Du kannst kochen?",
+          "Kannst du kochen?"
+        ],
+        "answer": "Kannst du kochen?",
+        "tip": "powerPassTwo.questDescription"
+      },
+      {
+        "id": 2,
+        "type": "input",
+        "question": "powerPassTwo.questTask2",
+        "correctAnswer": "Können",
+        "tip": "powerPassTwo.questDescription"
+      },
+      {
+        "id": 3,
+        "type": "input",
+        "question": "powerPassTwo.questTask3",
+        "correctAnswer": "langsam",
+        "tip": "powerPassTwo.questDescription"
+      },
+      {
+        "id": 4,
+        "type": "select",
+        "question": "powerPassTwo.questTask4",
+        "options": [
+          "Ich nicht kann heute kommen.",
+          "Ich kann heute nicht kommen.",
+          "Ich kann heute kommen nicht."
+        ],
+        "answer": "Ich kann heute nicht kommen.",
+        "tip": "powerPassTwo.questDescription"
+      },
+      {
+        "id": 5,
+        "type": "reorder",
+        "question": "powerPassTwo.questTask5",
+        "words": [
+          "kannst",
+          "kann",
+          "machst",
+          "machen",
+          "gut",
+          "Was",
+          "du"
+        ],
+        "correctOrder": [
+          "Was",
+          "kannst",
+          "du",
+          "gut",
+          "machen"
+        ],
+        "tip": "powerPassTwo.questDescription"
+      },
+      {
+        "id": 6,
+        "type": "select",
+        "question": "powerPassTwo.questTask6",
+        "options": [
+          "Leider kann ich nicht helfen.",
+          "Leider kann ich helfen nicht.",
+          "Leider ich kann nicht helfen."
+        ],
+        "answer": "Leider kann ich nicht helfen.",
+        "tip": "powerPassTwo.questDescription"
+      },
+      {
+        "id": 7,
+        "type": "input",
+        "question": "powerPassTwo.questTask7",
+        "correctAnswer": "Klavier",
+        "tip": "powerPassTwo.questDescription"
+      },
+      {
+        "id": 8,
+        "type": "select",
+        "question": "powerPassTwo.questTask8",
+        "options": [
+          "Könnt ihr helfen?",
+          "Könnt ihr helft?",
+          "Können ihr helfen?"
+        ],
+        "answer": "Könnt ihr helfen?",
+        "tip": "powerPassTwo.questDescription"
+      },
+      {
+        "id": 9,
+        "type": "readAndAnswer",
+        "question": "powerPassTwo.questTask9",
+        "text": "Tom versteht den Lehrer nicht. Der Lehrer spricht sehr schnell. Tom fragt: Können Sie bitte langsam sprechen? Der Lehrer sagt: Ja, natürlich.",
+        "options": [
+          "Tom ist sehr müde.",
+          "Der Lehrer spricht sehr schnell.",
+          "Der Lehrer spricht sehr leise."
+        ],
+        "answer": "Der Lehrer spricht sehr schnell.",
+        "tip": "powerPassTwo.questDescription"
+      },
+      {
+        "id": 10,
+        "type": "input",
+        "question": "powerPassTwo.questTask10",
+        "correctAnswer": "helfen",
+        "tip": "powerPassTwo.questDescription"
+      },
+      {
+        "id": 11,
+        "type": "reorder",
+        "question": "powerPassTwo.questTask11",
+        "words": [
+          "tanze",
+          "nicht",
+          "kein",
+          "kann",
+          "Ich",
+          "tanzen"
+        ],
+        "correctOrder": [
+          "Ich",
+          "kann",
+          "nicht",
+          "tanzen"
+        ],
+        "tip": "powerPassTwo.questDescription"
+      },
+      {
+        "id": 12,
+        "type": "input",
+        "question": "powerPassTwo.questTask12",
+        "correctAnswer": "können",
+        "tip": "powerPassTwo.questDescription"
+      },
+      {
+        "id": 13,
+        "type": "select",
+        "question": "powerPassTwo.questTask13",
+        "options": [
+          "Eva kann schwimmen und tanzen.",
+          "Eva kannst schwimmen und tanzen.",
+          "Eva kann schwimmt und tanzt."
+        ],
+        "answer": "Eva kann schwimmen und tanzen.",
+        "tip": "powerPassTwo.questDescription"
+      },
+      {
+        "id": 14,
+        "type": "select",
+        "question": "powerPassTwo.questTask14",
+        "options": [
+          "Die Bäckerei macht um sieben Uhr auf.",
+          "Die Bäckerei aufmacht um sieben Uhr.",
+          "Die Bäckerei macht auf um sieben Uhr auf."
+        ],
+        "answer": "Die Bäckerei macht um sieben Uhr auf.",
+        "tip": "powerPassTwo.questDescription"
+      },
+      {
+        "id": 15,
+        "type": "reorder",
+        "question": "powerPassTwo.questTask15",
+        "words": [
+          "mit",
+          "an",
+          "Kommst",
+          "mit",
+          "du",
+          "komme",
+          "ich",
+          "Ja",
+          "kommt"
+        ],
+        "correctOrder": [
+          "Kommst",
+          "du",
+          "mit",
+          "Ja",
+          "ich",
+          "komme",
+          "mit"
+        ],
+        "tip": "powerPassTwo.questDescription"
+      }
+    ]
+  },
+  {
+    "questId": "power-pass-three",
+    "title": "powerPassThree.questTitle",
+    "progress": "0/15",
+    "description": "powerPassThree.questDescription",
+    "conditions": {
+      "goal": "powerPassThree.questGoal",
+      "minCorrect": 15,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
+    "vocabulary": [
+      {
+        "word": "müssen",
+        "translation-ru": "быть должным, надо",
+        "translation-en": "must, to have to",
+        "translation-uk": "мусити, треба",
+        "translation-pl": "musieć",
+        "translation-es": "tener que, deber",
+        "translation-fr": "devoir",
+        "translation-tr": "zorunda olmak",
+        "translation-ro": "a trebui",
+        "translation-uz": "kerak, majbur bo‘lmoq",
+        "translation-hi": "करना पड़ना",
+        "translation-ar": "يجب عليه"
+      },
+      {
+        "word": "die Prüfung",
+        "translation-ru": "экзамен",
+        "translation-en": "exam",
+        "translation-uk": "іспит",
+        "translation-pl": "egzamin",
+        "translation-es": "el examen",
+        "translation-fr": "l’examen",
+        "translation-tr": "sınav",
+        "translation-ro": "examenul",
+        "translation-uz": "imtihon",
+        "translation-hi": "परीक्षा",
+        "translation-ar": "الامتحان"
+      },
+      {
+        "word": "warten",
+        "translation-ru": "ждать",
+        "translation-en": "to wait",
+        "translation-uk": "чекати",
+        "translation-pl": "czekać",
+        "translation-es": "esperar",
+        "translation-fr": "attendre",
+        "translation-tr": "beklemek",
+        "translation-ro": "a aștepta",
+        "translation-uz": "kutmoq",
+        "translation-hi": "इंतज़ार करना",
+        "translation-ar": "ينتظر"
+      },
+      {
+        "word": "bezahlen",
+        "translation-ru": "платить",
+        "translation-en": "to pay",
+        "translation-uk": "платити",
+        "translation-pl": "płacić",
+        "translation-es": "pagar",
+        "translation-fr": "payer",
+        "translation-tr": "ödemek",
+        "translation-ro": "a plăti",
+        "translation-uz": "to‘lamoq",
+        "translation-hi": "भुगतान करना",
+        "translation-ar": "يدفع"
+      },
+      {
+        "word": "lernen",
+        "translation-ru": "учить, учиться",
+        "translation-en": "to learn, to study",
+        "translation-uk": "вчити, вчитися",
+        "translation-pl": "uczyć się",
+        "translation-es": "aprender, estudiar",
+        "translation-fr": "apprendre, étudier",
+        "translation-tr": "öğrenmek",
+        "translation-ro": "a învăța",
+        "translation-uz": "o‘rganmoq",
+        "translation-hi": "सीखना",
+        "translation-ar": "يتعلم"
+      }
+    ],
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "powerPassThree.questTask1",
+        "options": [
+          "Heute ich muss arbeiten.",
+          "Heute muss ich arbeite.",
+          "Heute muss ich arbeiten."
+        ],
+        "answer": "Heute muss ich arbeiten.",
+        "tip": "powerPassThree.questDescription"
+      },
+      {
+        "id": 2,
+        "type": "input",
+        "question": "powerPassThree.questTask2",
+        "correctAnswer": "musst",
+        "tip": "powerPassThree.questDescription"
+      },
+      {
+        "id": 3,
+        "type": "input",
+        "question": "powerPassThree.questTask3",
+        "correctAnswer": "muss",
+        "tip": "powerPassThree.questDescription"
+      },
+      {
+        "id": 4,
+        "type": "select",
+        "question": "powerPassThree.questTask4",
+        "options": [
+          "Wir müssen bezahlt.",
+          "Wir muss bezahlen.",
+          "Wir müssen bezahlen."
+        ],
+        "answer": "Wir müssen bezahlen.",
+        "tip": "powerPassThree.questDescription"
+      },
+      {
+        "id": 5,
+        "type": "reorder",
+        "question": "powerPassThree.questTask5",
+        "words": [
+          "Am",
+          "einen",
+          "Lisa",
+          "ist",
+          "Prüfung",
+          "Freitag",
+          "eine",
+          "hat"
+        ],
+        "correctOrder": [
+          "Am",
+          "Freitag",
+          "hat",
+          "Lisa",
+          "eine",
+          "Prüfung"
+        ],
+        "tip": "powerPassThree.questDescription"
+      },
+      {
+        "id": 6,
+        "type": "select",
+        "question": "powerPassThree.questTask6",
+        "options": [
+          "Du kannst nicht kommen.",
+          "Du musst nicht kommen.",
+          "Du musst kommen."
+        ],
+        "answer": "Du musst nicht kommen.",
+        "tip": "powerPassThree.questDescription"
+      },
+      {
+        "id": 7,
+        "type": "input",
+        "question": "powerPassThree.questTask7",
+        "correctAnswer": "nicht",
+        "tip": "powerPassThree.questDescription"
+      },
+      {
+        "id": 8,
+        "type": "select",
+        "question": "powerPassThree.questTask8",
+        "options": [
+          "Ihr müsst die Hausaufgabe macht.",
+          "Ihr müsst die Hausaufgabe machen.",
+          "Ihr müssen die Hausaufgabe machen."
+        ],
+        "answer": "Ihr müsst die Hausaufgabe machen.",
+        "tip": "powerPassThree.questDescription"
+      },
+      {
+        "id": 9,
+        "type": "readAndAnswer",
+        "question": "powerPassThree.questTask9",
+        "text": "Jan hat am Montag eine Prüfung. Heute ist Samstag, aber er hat keine Zeit. Er muss viel lernen. Seine Schwester muss nicht lernen, sie sieht einen Film.",
+        "options": [
+          "Er ist krank.",
+          "Er muss lernen.",
+          "Er muss arbeiten."
+        ],
+        "answer": "Er muss lernen.",
+        "tip": "powerPassThree.questDescription"
+      },
+      {
+        "id": 10,
+        "type": "input",
+        "question": "powerPassThree.questTask10",
+        "correctAnswer": "Prüfung",
+        "tip": "powerPassThree.questDescription"
+      },
+      {
+        "id": 11,
+        "type": "reorder",
+        "question": "powerPassThree.questTask11",
+        "words": [
+          "jetzt",
+          "Sie",
+          "müssen",
+          "muss",
+          "bezahlt",
+          "bezahlen"
+        ],
+        "correctOrder": [
+          "Sie",
+          "müssen",
+          "jetzt",
+          "bezahlen"
+        ],
+        "tip": "powerPassThree.questDescription"
+      },
+      {
+        "id": 12,
+        "type": "input",
+        "question": "powerPassThree.questTask12",
+        "correctAnswer": "Kannst",
+        "tip": "powerPassThree.questDescription"
+      },
+      {
+        "id": 13,
+        "type": "select",
+        "question": "powerPassThree.questTask13",
+        "options": [
+          "Leider wir können nicht kommen.",
+          "Leider können wir nicht kommen.",
+          "Leider können wir kommen nicht."
+        ],
+        "answer": "Leider können wir nicht kommen.",
+        "tip": "powerPassThree.questDescription"
+      },
+      {
+        "id": 14,
+        "type": "select",
+        "question": "powerPassThree.questTask14",
+        "options": [
+          "Im Mittwoch bin ich frei.",
+          "Am Mittwoch bin ich frei.",
+          "Am Mittwoch ich bin frei."
+        ],
+        "answer": "Am Mittwoch bin ich frei.",
+        "tip": "powerPassThree.questDescription"
+      },
+      {
+        "id": 15,
+        "type": "reorder",
+        "question": "powerPassThree.questTask15",
+        "words": [
+          "kochen",
+          "kann",
+          "Bruder",
+          "kocht",
+          "Ihr",
+          "Ihre"
+        ],
+        "correctOrder": [
+          "Ihr",
+          "Bruder",
+          "kann",
+          "kochen"
+        ],
+        "tip": "powerPassThree.questDescription"
+      }
+    ]
+  },
+  {
+    "questId": "power-pass-four",
+    "title": "powerPassFour.questTitle",
+    "progress": "0/15",
+    "description": "powerPassFour.questDescription",
+    "conditions": {
+      "goal": "powerPassFour.questGoal",
+      "minCorrect": 15,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
+    "vocabulary": [
+      {
+        "word": "wollen",
+        "translation-ru": "хотеть",
+        "translation-en": "to want",
+        "translation-uk": "хотіти",
+        "translation-pl": "chcieć",
+        "translation-es": "querer",
+        "translation-fr": "vouloir",
+        "translation-tr": "istemek",
+        "translation-ro": "a vrea",
+        "translation-uz": "xohlamoq",
+        "translation-hi": "चाहना",
+        "translation-ar": "يريد"
+      },
+      {
+        "word": "reisen",
+        "translation-ru": "путешествовать",
+        "translation-en": "to travel",
+        "translation-uk": "подорожувати",
+        "translation-pl": "podróżować",
+        "translation-es": "viajar",
+        "translation-fr": "voyager",
+        "translation-tr": "seyahat etmek",
+        "translation-ro": "a călători",
+        "translation-uz": "sayohat qilmoq",
+        "translation-hi": "यात्रा करना",
+        "translation-ar": "يسافر"
+      },
+      {
+        "word": "bleiben",
+        "translation-ru": "оставаться",
+        "translation-en": "to stay",
+        "translation-uk": "залишатися",
+        "translation-pl": "zostawać",
+        "translation-es": "quedarse",
+        "translation-fr": "rester",
+        "translation-tr": "kalmak",
+        "translation-ro": "a rămâne",
+        "translation-uz": "qolmoq",
+        "translation-hi": "रहना",
+        "translation-ar": "يبقى"
+      },
+      {
+        "word": "der Sport",
+        "translation-ru": "спорт",
+        "translation-en": "sport",
+        "translation-uk": "спорт",
+        "translation-pl": "sport",
+        "translation-es": "el deporte",
+        "translation-fr": "le sport",
+        "translation-tr": "spor",
+        "translation-ro": "sportul",
+        "translation-uz": "sport",
+        "translation-hi": "खेल-कूद",
+        "translation-ar": "الرياضة"
+      },
+      {
+        "word": "die Pause",
+        "translation-ru": "перерыв",
+        "translation-en": "break",
+        "translation-uk": "перерва",
+        "translation-pl": "przerwa",
+        "translation-es": "la pausa",
+        "translation-fr": "la pause",
+        "translation-tr": "mola",
+        "translation-ro": "pauza",
+        "translation-uz": "tanaffus",
+        "translation-hi": "विराम",
+        "translation-ar": "الاستراحة"
+      },
+      {
+        "word": "das Meer",
+        "translation-ru": "море",
+        "translation-en": "sea",
+        "translation-uk": "море",
+        "translation-pl": "morze",
+        "translation-es": "el mar",
+        "translation-fr": "la mer",
+        "translation-tr": "deniz",
+        "translation-ro": "marea",
+        "translation-uz": "dengiz",
+        "translation-hi": "समुद्र",
+        "translation-ar": "البحر"
+      }
+    ],
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "powerPassFour.questTask1",
+        "options": [
+          "Ich will Deutsch lerne.",
+          "Ich wolle Deutsch lernen.",
+          "Ich will Deutsch lernen."
+        ],
+        "answer": "Ich will Deutsch lernen.",
+        "tip": "powerPassFour.questDescription"
+      },
+      {
+        "id": 2,
+        "type": "input",
+        "question": "powerPassFour.questTask2",
+        "correctAnswer": "Willst",
+        "tip": "powerPassFour.questDescription"
+      },
+      {
+        "id": 3,
+        "type": "input",
+        "question": "powerPassFour.questTask3",
+        "correctAnswer": "will",
+        "tip": "powerPassFour.questDescription"
+      },
+      {
+        "id": 4,
+        "type": "select",
+        "question": "powerPassFour.questTask4",
+        "options": [
+          "Wir will zu Hause bleiben.",
+          "Wir wollen zu Hause bleibt.",
+          "Wir wollen zu Hause bleiben."
+        ],
+        "answer": "Wir wollen zu Hause bleiben.",
+        "tip": "powerPassFour.questDescription"
+      },
+      {
+        "id": 5,
+        "type": "reorder",
+        "question": "powerPassFour.questTask5",
+        "words": [
+          "einen",
+          "Will",
+          "Wollen",
+          "machen",
+          "Pause",
+          "wir",
+          "eine"
+        ],
+        "correctOrder": [
+          "Wollen",
+          "wir",
+          "eine",
+          "Pause",
+          "machen"
+        ],
+        "tip": "powerPassFour.questDescription"
+      },
+      {
+        "id": 6,
+        "type": "select",
+        "question": "powerPassFour.questTask6",
+        "options": [
+          "Ich muss einen Kaffee.",
+          "Ich möchte einen Kaffee, bitte.",
+          "Ich will einen Kaffee!"
+        ],
+        "answer": "Ich möchte einen Kaffee, bitte.",
+        "tip": "powerPassFour.questDescription"
+      },
+      {
+        "id": 7,
+        "type": "input",
+        "question": "powerPassFour.questTask7",
+        "correctAnswer": "Sport",
+        "tip": "powerPassFour.questDescription"
+      },
+      {
+        "id": 8,
+        "type": "select",
+        "question": "powerPassFour.questTask8",
+        "options": [
+          "Wollt ihr essen?",
+          "Wollt ihr esst?",
+          "Wollen ihr essen?"
+        ],
+        "answer": "Wollt ihr essen?",
+        "tip": "powerPassFour.questDescription"
+      },
+      {
+        "id": 9,
+        "type": "readAndAnswer",
+        "question": "powerPassFour.questTask9",
+        "text": "Im Sommer hat Sara Urlaub. Sie will nicht zu Hause bleiben. Sie will nach Spanien reisen und im Meer schwimmen. Ihr Bruder will Fußball spielen.",
+        "options": [
+          "Sie will reisen und schwimmen.",
+          "Sie will zu Hause bleiben.",
+          "Sie will Fußball spielen."
+        ],
+        "answer": "Sie will reisen und schwimmen.",
+        "tip": "powerPassFour.questDescription"
+      },
+      {
+        "id": 10,
+        "type": "input",
+        "question": "powerPassFour.questTask10",
+        "correctAnswer": "Pause",
+        "tip": "powerPassFour.questDescription"
+      },
+      {
+        "id": 11,
+        "type": "reorder",
+        "question": "powerPassFour.questTask11",
+        "words": [
+          "spielt",
+          "will",
+          "Die",
+          "wollen",
+          "Kinder",
+          "spielen"
+        ],
+        "correctOrder": [
+          "Die",
+          "Kinder",
+          "wollen",
+          "spielen"
+        ],
+        "tip": "powerPassFour.questDescription"
+      },
+      {
+        "id": 12,
+        "type": "input",
+        "question": "powerPassFour.questTask12",
+        "correctAnswer": "müssen",
+        "tip": "powerPassFour.questDescription"
+      },
+      {
+        "id": 13,
+        "type": "select",
+        "question": "powerPassFour.questTask13",
+        "options": [
+          "Am Sonntag muss sie nicht arbeiten.",
+          "Am Sonntag sie muss nicht arbeiten.",
+          "Am Sonntag muss sie arbeiten nicht."
+        ],
+        "answer": "Am Sonntag muss sie nicht arbeiten.",
+        "tip": "powerPassFour.questDescription"
+      },
+      {
+        "id": 14,
+        "type": "select",
+        "question": "powerPassFour.questTask14",
+        "options": [
+          "Können Sie langsam sprechen?",
+          "Sie können langsam sprechen?",
+          "Können Sie langsam sprecht?"
+        ],
+        "answer": "Können Sie langsam sprechen?",
+        "tip": "powerPassFour.questDescription"
+      },
+      {
+        "id": 15,
+        "type": "reorder",
+        "question": "powerPassFour.questTask15",
+        "words": [
+          "Mutter",
+          "Ist",
+          "deine",
+          "Hause",
+          "bist",
+          "zu",
+          "dein"
+        ],
+        "correctOrder": [
+          "Ist",
+          "deine",
+          "Mutter",
+          "zu",
+          "Hause"
+        ],
+        "tip": "powerPassFour.questDescription"
+      }
+    ]
+  },
+  {
+    "questId": "power-pass-five",
+    "title": "powerPassFive.questTitle",
+    "progress": "0/15",
+    "description": "powerPassFive.questDescription",
+    "conditions": {
+      "goal": "powerPassFive.questGoal",
+      "minCorrect": 15,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
+    "vocabulary": [
+      {
+        "word": "dürfen",
+        "translation-ru": "иметь разрешение, можно",
+        "translation-en": "may, to be allowed to",
+        "translation-uk": "мати дозвіл, можна",
+        "translation-pl": "wolno, mieć pozwolenie",
+        "translation-es": "tener permiso, poder",
+        "translation-fr": "avoir le droit",
+        "translation-tr": "izinli olmak",
+        "translation-ro": "a avea voie",
+        "translation-uz": "ruxsat bor, mumkin",
+        "translation-hi": "अनुमति होना",
+        "translation-ar": "مسموح له"
+      },
+      {
+        "word": "rauchen",
+        "translation-ru": "курить",
+        "translation-en": "to smoke",
+        "translation-uk": "курити",
+        "translation-pl": "palić",
+        "translation-es": "fumar",
+        "translation-fr": "fumer",
+        "translation-tr": "sigara içmek",
+        "translation-ro": "a fuma",
+        "translation-uz": "chekmoq",
+        "translation-hi": "धूम्रपान करना",
+        "translation-ar": "يدخن"
+      },
+      {
+        "word": "parken",
+        "translation-ru": "парковать",
+        "translation-en": "to park",
+        "translation-uk": "паркувати",
+        "translation-pl": "parkować",
+        "translation-es": "aparcar",
+        "translation-fr": "se garer",
+        "translation-tr": "park etmek",
+        "translation-ro": "a parca",
+        "translation-uz": "mashina qo‘ymoq",
+        "translation-hi": "गाड़ी खड़ी करना",
+        "translation-ar": "يركن السيارة"
+      },
+      {
+        "word": "benutzen",
+        "translation-ru": "пользоваться",
+        "translation-en": "to use",
+        "translation-uk": "користуватися",
+        "translation-pl": "używać",
+        "translation-es": "usar",
+        "translation-fr": "utiliser",
+        "translation-tr": "kullanmak",
+        "translation-ro": "a folosi",
+        "translation-uz": "foydalanmoq",
+        "translation-hi": "इस्तेमाल करना",
+        "translation-ar": "يستخدم"
+      },
+      {
+        "word": "der Alkohol",
+        "translation-ru": "алкоголь",
+        "translation-en": "alcohol",
+        "translation-uk": "алкоголь",
+        "translation-pl": "alkohol",
+        "translation-es": "el alcohol",
+        "translation-fr": "l’alcool",
+        "translation-tr": "alkol",
+        "translation-ro": "alcoolul",
+        "translation-uz": "spirtli ichimlik",
+        "translation-hi": "शराब",
+        "translation-ar": "الكحول"
+      },
+      {
+        "word": "gehen",
+        "translation-ru": "идти",
+        "translation-en": "to go, to walk",
+        "translation-uk": "іти",
+        "translation-pl": "iść",
+        "translation-es": "ir",
+        "translation-fr": "aller",
+        "translation-tr": "gitmek",
+        "translation-ro": "a merge",
+        "translation-uz": "bormoq",
+        "translation-hi": "जाना",
+        "translation-ar": "يذهب"
+      },
+      {
+        "word": "das Hotel",
+        "translation-ru": "отель",
+        "translation-en": "hotel",
+        "translation-uk": "готель",
+        "translation-pl": "hotel",
+        "translation-es": "el hotel",
+        "translation-fr": "l’hôtel",
+        "translation-tr": "otel",
+        "translation-ro": "hotelul",
+        "translation-uz": "mehmonxona",
+        "translation-hi": "होटल",
+        "translation-ar": "الفندق"
+      },
+      {
+        "word": "das WLAN",
+        "translation-ru": "вайфай",
+        "translation-en": "WiFi",
+        "translation-uk": "вайфай",
+        "translation-pl": "wi-fi",
+        "translation-es": "el wifi",
+        "translation-fr": "le wifi",
+        "translation-tr": "kablosuz internet",
+        "translation-ro": "wifi-ul",
+        "translation-uz": "Wi-Fi",
+        "translation-hi": "वाई-फ़ाई",
+        "translation-ar": "الواي فاي"
+      }
+    ],
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "powerPassFive.questTask1",
+        "options": [
+          "Ich darf hier parken?",
+          "Darf ich hier parke?",
+          "Darf ich hier parken?"
+        ],
+        "answer": "Darf ich hier parken?",
+        "tip": "powerPassFive.questDescription"
+      },
+      {
+        "id": 2,
+        "type": "input",
+        "question": "powerPassFive.questTask2",
+        "correctAnswer": "darfst",
+        "tip": "powerPassFive.questDescription"
+      },
+      {
+        "id": 3,
+        "type": "input",
+        "question": "powerPassFive.questTask3",
+        "correctAnswer": "darf",
+        "tip": "powerPassFive.questDescription"
+      },
+      {
+        "id": 4,
+        "type": "select",
+        "question": "powerPassFive.questTask4",
+        "options": [
+          "Kinder darf keinen Alkohol trinken.",
+          "Kinder dürfen nicht Alkohol trinkt.",
+          "Kinder dürfen keinen Alkohol trinken."
+        ],
+        "answer": "Kinder dürfen keinen Alkohol trinken.",
+        "tip": "powerPassFive.questDescription"
+      },
+      {
+        "id": 5,
+        "type": "reorder",
+        "question": "powerPassFive.questTask5",
+        "words": [
+          "Foto",
+          "Darf",
+          "einen",
+          "machen",
+          "ich",
+          "darfst",
+          "ein"
+        ],
+        "correctOrder": [
+          "Darf",
+          "ich",
+          "ein",
+          "Foto",
+          "machen"
+        ],
+        "tip": "powerPassFive.questDescription"
+      },
+      {
+        "id": 6,
+        "type": "select",
+        "question": "powerPassFive.questTask6",
+        "options": [
+          "Du darfst nicht kommen.",
+          "Du darfst kommen.",
+          "Du musst nicht kommen."
+        ],
+        "answer": "Du darfst nicht kommen.",
+        "tip": "powerPassFive.questDescription"
+      },
+      {
+        "id": 7,
+        "type": "input",
+        "question": "powerPassFive.questTask7",
+        "correctAnswer": "benutzen",
+        "tip": "powerPassFive.questDescription"
+      },
+      {
+        "id": 8,
+        "type": "select",
+        "question": "powerPassFive.questTask8",
+        "options": [
+          "Ihr dürft jetzt spielt.",
+          "Ihr dürft jetzt spielen.",
+          "Ihr dürfen jetzt spielen."
+        ],
+        "answer": "Ihr dürft jetzt spielen.",
+        "tip": "powerPassFive.questDescription"
+      },
+      {
+        "id": 9,
+        "type": "readAndAnswer",
+        "question": "powerPassFive.questTask9",
+        "text": "Im Hotel: Hier dürfen Sie nicht rauchen. Hier dürfen Sie nicht parken. Sie dürfen das WLAN benutzen. Das Frühstück beginnt um sieben Uhr.",
+        "options": [
+          "frühstücken",
+          "rauchen und parken",
+          "das WLAN benutzen"
+        ],
+        "answer": "rauchen und parken",
+        "tip": "powerPassFive.questDescription"
+      },
+      {
+        "id": 10,
+        "type": "input",
+        "question": "powerPassFive.questTask10",
+        "correctAnswer": "Alkohol",
+        "tip": "powerPassFive.questDescription"
+      },
+      {
+        "id": 11,
+        "type": "reorder",
+        "question": "powerPassFive.questTask11",
+        "words": [
+          "hier",
+          "sitzt",
+          "wir",
+          "Dürfen",
+          "darf",
+          "sitzen"
+        ],
+        "correctOrder": [
+          "Dürfen",
+          "wir",
+          "hier",
+          "sitzen"
+        ],
+        "tip": "powerPassFive.questDescription"
+      },
+      {
+        "id": 12,
+        "type": "input",
+        "question": "powerPassFive.questTask12",
+        "correctAnswer": "wollen",
+        "tip": "powerPassFive.questDescription"
+      },
+      {
+        "id": 13,
+        "type": "select",
+        "question": "powerPassFive.questTask13",
+        "options": [
+          "Musst du jetzt bezahlen?",
+          "Musst du jetzt bezahlst?",
+          "Du musst jetzt bezahlen?"
+        ],
+        "answer": "Musst du jetzt bezahlen?",
+        "tip": "powerPassFive.questDescription"
+      },
+      {
+        "id": 14,
+        "type": "select",
+        "question": "powerPassFive.questTask14",
+        "options": [
+          "Opa lest morgens ein Buch.",
+          "Opa liest morgens ein Buch.",
+          "Opa liest morgens einen Buch."
+        ],
+        "answer": "Opa liest morgens ein Buch.",
+        "tip": "powerPassFive.questDescription"
+      },
+      {
+        "id": 15,
+        "type": "reorder",
+        "question": "powerPassFive.questTask15",
+        "words": [
+          "am",
+          "Samstag",
+          "machst",
+          "Was",
+          "du",
+          "will",
+          "willst",
+          "machen"
+        ],
+        "correctOrder": [
+          "Was",
+          "willst",
+          "du",
+          "am",
+          "Samstag",
+          "machen"
+        ],
+        "tip": "powerPassFive.questDescription"
+      }
+    ]
+  },
+  {
+    "questId": "power-pass-six",
+    "title": "powerPassSix.questTitle",
+    "progress": "0/15",
+    "description": "powerPassSix.questDescription",
+    "conditions": {
+      "goal": "powerPassSix.questGoal",
+      "minCorrect": 15,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
+    "vocabulary": [
+      {
+        "word": "aufstehen",
+        "translation-ru": "вставать",
+        "translation-en": "to get up",
+        "translation-uk": "вставати",
+        "translation-pl": "wstawać",
+        "translation-es": "levantarse",
+        "translation-fr": "se lever",
+        "translation-tr": "kalkmak",
+        "translation-ro": "a se scula",
+        "translation-uz": "turmoq",
+        "translation-hi": "उठना",
+        "translation-ar": "يقوم من النوم"
+      },
+      {
+        "word": "einkaufen",
+        "translation-ru": "делать покупки",
+        "translation-en": "to go shopping",
+        "translation-uk": "робити покупки",
+        "translation-pl": "robić zakupy",
+        "translation-es": "hacer la compra",
+        "translation-fr": "faire les courses",
+        "translation-tr": "alışveriş yapmak",
+        "translation-ro": "a face cumpărături",
+        "translation-uz": "xarid qilmoq",
+        "translation-hi": "ख़रीदारी करना",
+        "translation-ar": "يتسوق"
+      },
+      {
+        "word": "anrufen",
+        "translation-ru": "звонить (по телефону)",
+        "translation-en": "to call (phone)",
+        "translation-uk": "дзвонити (по телефону)",
+        "translation-pl": "dzwonić (telefonicznie)",
+        "translation-es": "llamar (por teléfono)",
+        "translation-fr": "appeler (téléphoner)",
+        "translation-tr": "telefon etmek",
+        "translation-ro": "a suna (la telefon)",
+        "translation-uz": "qo‘ng‘iroq qilmoq",
+        "translation-hi": "फ़ोन करना",
+        "translation-ar": "يتصل هاتفيًا"
+      },
+      {
+        "word": "mitkommen",
+        "translation-ru": "идти вместе",
+        "translation-en": "to come along",
+        "translation-uk": "іти разом",
+        "translation-pl": "iść razem",
+        "translation-es": "venir también",
+        "translation-fr": "venir avec",
+        "translation-tr": "birlikte gelmek",
+        "translation-ro": "a veni cu cineva",
+        "translation-uz": "birga bormoq",
+        "translation-hi": "साथ आना",
+        "translation-ar": "يأتي مع"
+      },
+      {
+        "word": "abholen",
+        "translation-ru": "забирать, встречать",
+        "translation-en": "to pick up",
+        "translation-uk": "забирати, зустрічати",
+        "translation-pl": "odbierać",
+        "translation-es": "recoger",
+        "translation-fr": "aller chercher",
+        "translation-tr": "almaya gelmek",
+        "translation-ro": "a lua (pe cineva)",
+        "translation-uz": "kutib olmoq",
+        "translation-hi": "लेने जाना",
+        "translation-ar": "يصطحب"
+      }
+    ],
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "powerPassSix.questTask1",
+        "options": [
+          "Ich muss früh stehe auf.",
+          "Ich muss stehen früh auf.",
+          "Ich muss früh aufstehen."
+        ],
+        "answer": "Ich muss früh aufstehen.",
+        "tip": "powerPassSix.questDescription"
+      },
+      {
+        "id": 2,
+        "type": "input",
+        "question": "powerPassSix.questTask2",
+        "correctAnswer": "abholen",
+        "tip": "powerPassSix.questDescription"
+      },
+      {
+        "id": 3,
+        "type": "input",
+        "question": "powerPassSix.questTask3",
+        "correctAnswer": "müssen",
+        "tip": "powerPassSix.questDescription"
+      },
+      {
+        "id": 4,
+        "type": "select",
+        "question": "powerPassSix.questTask4",
+        "options": [
+          "Ich will an meinen Vater rufen.",
+          "Ich will meinen Vater rufe an.",
+          "Ich will meinen Vater anrufen."
+        ],
+        "answer": "Ich will meinen Vater anrufen.",
+        "tip": "powerPassSix.questDescription"
+      },
+      {
+        "id": 5,
+        "type": "reorder",
+        "question": "powerPassSix.questTask5",
+        "words": [
+          "kommst",
+          "Kannst",
+          "mit",
+          "mitkommen",
+          "heute",
+          "du"
+        ],
+        "correctOrder": [
+          "Kannst",
+          "du",
+          "heute",
+          "mitkommen"
+        ],
+        "tip": "powerPassSix.questDescription"
+      },
+      {
+        "id": 6,
+        "type": "select",
+        "question": "powerPassSix.questTask6",
+        "options": [
+          "Ich darf heute fernsehen nicht.",
+          "Ich darf heute nicht fernsehen.",
+          "Ich darf heute nicht sehe fern."
+        ],
+        "answer": "Ich darf heute nicht fernsehen.",
+        "tip": "powerPassSix.questDescription"
+      },
+      {
+        "id": 7,
+        "type": "input",
+        "question": "powerPassSix.questTask7",
+        "correctAnswer": "aufräumen",
+        "tip": "powerPassSix.questDescription"
+      },
+      {
+        "id": 8,
+        "type": "select",
+        "question": "powerPassSix.questTask8",
+        "options": [
+          "Wann musst du aufstehen?",
+          "Wann musst du stehst auf?",
+          "Wann du musst aufstehen?"
+        ],
+        "answer": "Wann musst du aufstehen?",
+        "tip": "powerPassSix.questDescription"
+      },
+      {
+        "id": 9,
+        "type": "readAndAnswer",
+        "question": "powerPassSix.questTask9",
+        "text": "Morgen muss Karl um fünf Uhr aufstehen. Sein Zug fährt um sechs Uhr ab. Seine Frau kann nicht mitkommen, sie muss arbeiten.",
+        "options": [
+          "um fünf Uhr",
+          "um acht Uhr",
+          "um sechs Uhr"
+        ],
+        "answer": "um fünf Uhr",
+        "tip": "powerPassSix.questDescription"
+      },
+      {
+        "id": 10,
+        "type": "input",
+        "question": "powerPassSix.questTask10",
+        "correctAnswer": "will",
+        "tip": "powerPassSix.questDescription"
+      },
+      {
+        "id": 11,
+        "type": "reorder",
+        "question": "powerPassSix.questTask11",
+        "words": [
+          "mit",
+          "kann",
+          "Ich",
+          "komme",
+          "nicht",
+          "mitkommen"
+        ],
+        "correctOrder": [
+          "Ich",
+          "kann",
+          "nicht",
+          "mitkommen"
+        ],
+        "tip": "powerPassSix.questDescription"
+      },
+      {
+        "id": 12,
+        "type": "input",
+        "question": "powerPassSix.questTask12",
+        "correctAnswer": "benutzen",
+        "tip": "powerPassSix.questDescription"
+      },
+      {
+        "id": 13,
+        "type": "select",
+        "question": "powerPassSix.questTask13",
+        "options": [
+          "Sie dürfen hier parken nicht.",
+          "Sie dürfen hier nicht parken.",
+          "Sie darf hier nicht parken."
+        ],
+        "answer": "Sie dürfen hier nicht parken.",
+        "tip": "powerPassSix.questDescription"
+      },
+      {
+        "id": 14,
+        "type": "select",
+        "question": "powerPassSix.questTask14",
+        "options": [
+          "Wir wollen Sport machen.",
+          "Wir will Sport machen.",
+          "Wir wollen Sport macht."
+        ],
+        "answer": "Wir wollen Sport machen.",
+        "tip": "powerPassSix.questDescription"
+      },
+      {
+        "id": 15,
+        "type": "reorder",
+        "question": "powerPassSix.questTask15",
+        "words": [
+          "Der",
+          "Kurs",
+          "fängt",
+          "am",
+          "anfängt",
+          "Montag",
+          "um",
+          "an"
+        ],
+        "correctOrder": [
+          "Der",
+          "Kurs",
+          "fängt",
+          "am",
+          "Montag",
+          "an"
+        ],
+        "tip": "powerPassSix.questDescription"
+      }
+    ]
+  },
+  {
+    "questId": "power-pass-seven",
+    "title": "powerPassSeven.questTitle",
+    "progress": "0/15",
+    "description": "powerPassSeven.questDescription",
+    "conditions": {
+      "goal": "powerPassSeven.questGoal",
+      "minCorrect": 15,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
+    "vocabulary": [
+      {
+        "word": "krank",
+        "translation-ru": "больной",
+        "translation-en": "ill, sick",
+        "translation-uk": "хворий",
+        "translation-pl": "chory",
+        "translation-es": "enfermo",
+        "translation-fr": "malade",
+        "translation-tr": "hasta",
+        "translation-ro": "bolnav",
+        "translation-uz": "kasal",
+        "translation-hi": "बीमार",
+        "translation-ar": "مريض"
+      },
+      {
+        "word": "die Zeit",
+        "translation-ru": "время",
+        "translation-en": "time",
+        "translation-uk": "час",
+        "translation-pl": "czas",
+        "translation-es": "el tiempo",
+        "translation-fr": "le temps",
+        "translation-tr": "zaman",
+        "translation-ro": "timpul",
+        "translation-uz": "vaqt",
+        "translation-hi": "समय",
+        "translation-ar": "الوقت"
+      },
+      {
+        "word": "das Geld",
+        "translation-ru": "деньги",
+        "translation-en": "money",
+        "translation-uk": "гроші",
+        "translation-pl": "pieniądze",
+        "translation-es": "el dinero",
+        "translation-fr": "l’argent",
+        "translation-tr": "para",
+        "translation-ro": "banii",
+        "translation-uz": "pul",
+        "translation-hi": "पैसा",
+        "translation-ar": "المال"
+      },
+      {
+        "word": "der Arzt",
+        "translation-ru": "врач",
+        "translation-en": "doctor",
+        "translation-uk": "лікар",
+        "translation-pl": "lekarz",
+        "translation-es": "el médico",
+        "translation-fr": "le médecin",
+        "translation-tr": "doktor",
+        "translation-ro": "medicul",
+        "translation-uz": "shifokor",
+        "translation-hi": "डॉक्टर",
+        "translation-ar": "الطبيب"
+      },
+      {
+        "word": "das Bett",
+        "translation-ru": "кровать",
+        "translation-en": "bed",
+        "translation-uk": "ліжко",
+        "translation-pl": "łóżko",
+        "translation-es": "la cama",
+        "translation-fr": "le lit",
+        "translation-tr": "yatak",
+        "translation-ro": "patul",
+        "translation-uz": "karavot",
+        "translation-hi": "बिस्तर",
+        "translation-ar": "السرير"
+      }
+    ],
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "powerPassSeven.questTask1",
+        "options": [
+          "Ich bin krank. Ich will zu Hause bleiben.",
+          "Ich bin krank. Ich kann zu Hause bleiben.",
+          "Ich bin krank. Ich muss zu Hause bleiben."
+        ],
+        "answer": "Ich bin krank. Ich muss zu Hause bleiben.",
+        "tip": "powerPassSeven.questDescription"
+      },
+      {
+        "id": 2,
+        "type": "input",
+        "question": "powerPassSeven.questTask2",
+        "correctAnswer": "kann",
+        "tip": "powerPassSeven.questDescription"
+      },
+      {
+        "id": 3,
+        "type": "input",
+        "question": "powerPassSeven.questTask3",
+        "correctAnswer": "darfst",
+        "tip": "powerPassSeven.questDescription"
+      },
+      {
+        "id": 4,
+        "type": "input",
+        "question": "powerPassSeven.questTask4",
+        "correctAnswer": "will",
+        "tip": "powerPassSeven.questDescription"
+      },
+      {
+        "id": 5,
+        "type": "select",
+        "question": "powerPassSeven.questTask5",
+        "options": [
+          "Sie muss nicht Auto fahren.",
+          "Sie darf nicht Auto fahren.",
+          "Sie kann nicht Auto fahren."
+        ],
+        "answer": "Sie kann nicht Auto fahren.",
+        "tip": "powerPassSeven.questDescription"
+      },
+      {
+        "id": 6,
+        "type": "select",
+        "question": "powerPassSeven.questTask6",
+        "options": [
+          "Morgen müssen wir nicht früh aufstehen.",
+          "Morgen wollen wir nicht früh aufstehen.",
+          "Morgen dürfen wir nicht früh aufstehen."
+        ],
+        "answer": "Morgen müssen wir nicht früh aufstehen.",
+        "tip": "powerPassSeven.questDescription"
+      },
+      {
+        "id": 7,
+        "type": "reorder",
+        "question": "powerPassSeven.questTask7",
+        "words": [
+          "Sohn",
+          "Mein",
+          "darf",
+          "spielt",
+          "muss",
+          "spielen",
+          "lange",
+          "heute"
+        ],
+        "correctOrder": [
+          "Mein",
+          "Sohn",
+          "darf",
+          "heute",
+          "lange",
+          "spielen"
+        ],
+        "tip": "powerPassSeven.questDescription"
+      },
+      {
+        "id": 8,
+        "type": "select",
+        "question": "powerPassSeven.questTask8",
+        "options": [
+          "Der Zug fährt um acht Uhr ab. Wir müssen schnell gehen.",
+          "Der Zug fährt um acht Uhr ab. Wir müssen schnell gehst.",
+          "Der Zug fährt um acht Uhr ab. Wir dürfen schnell gehen."
+        ],
+        "answer": "Der Zug fährt um acht Uhr ab. Wir müssen schnell gehen.",
+        "tip": "powerPassSeven.questDescription"
+      },
+      {
+        "id": 9,
+        "type": "readAndAnswer",
+        "question": "powerPassSeven.questTask9",
+        "text": "Emma ist krank. Sie muss im Bett bleiben und viel Tee trinken. Sie darf keinen Kaffee trinken. Arbeiten kann sie nicht, aber sie kann ein Buch lesen.",
+        "options": [
+          "arbeiten",
+          "ein Buch lesen",
+          "Kaffee trinken"
+        ],
+        "answer": "ein Buch lesen",
+        "tip": "powerPassSeven.questDescription"
+      },
+      {
+        "id": 10,
+        "type": "input",
+        "question": "powerPassSeven.questTask10",
+        "correctAnswer": "Zeit",
+        "tip": "powerPassSeven.questDescription"
+      },
+      {
+        "id": 11,
+        "type": "reorder",
+        "question": "powerPassSeven.questTask11",
+        "words": [
+          "koche",
+          "kochen",
+          "will",
+          "heute",
+          "kein",
+          "Ich",
+          "nicht"
+        ],
+        "correctOrder": [
+          "Ich",
+          "will",
+          "heute",
+          "nicht",
+          "kochen"
+        ],
+        "tip": "powerPassSeven.questDescription"
+      },
+      {
+        "id": 12,
+        "type": "input",
+        "question": "powerPassSeven.questTask12",
+        "correctAnswer": "anrufen",
+        "tip": "powerPassSeven.questDescription"
+      },
+      {
+        "id": 13,
+        "type": "select",
+        "question": "powerPassSeven.questTask13",
+        "options": [
+          "Musst du heute einkaufen?",
+          "Du musst heute einkaufen?",
+          "Musst du heute kaufst ein?"
+        ],
+        "answer": "Musst du heute einkaufen?",
+        "tip": "powerPassSeven.questDescription"
+      },
+      {
+        "id": 14,
+        "type": "select",
+        "question": "powerPassSeven.questTask14",
+        "options": [
+          "Darf ich das WLAN benutzen?",
+          "Darfst ich das WLAN benutzen?",
+          "Darf ich das WLAN benutze?"
+        ],
+        "answer": "Darf ich das WLAN benutzen?",
+        "tip": "powerPassSeven.questDescription"
+      },
+      {
+        "id": 15,
+        "type": "reorder",
+        "question": "powerPassSeven.questTask15",
+        "words": [
+          "keinen",
+          "Sara",
+          "Fisch",
+          "esst",
+          "isst",
+          "keine"
+        ],
+        "correctOrder": [
+          "Sara",
+          "isst",
+          "keinen",
+          "Fisch"
+        ],
+        "tip": "powerPassSeven.questDescription"
+      }
+    ]
+  },
+  {
+    "questId": "power-pass-eight",
+    "title": "powerPassEight.questTitle",
+    "progress": "0/15",
+    "description": "powerPassEight.questDescription",
+    "conditions": {
+      "goal": "powerPassEight.questGoal",
+      "minCorrect": 15,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
+    "vocabulary": [
+      {
+        "word": "die Party",
+        "translation-ru": "вечеринка",
+        "translation-en": "party",
+        "translation-uk": "вечірка",
+        "translation-pl": "impreza",
+        "translation-es": "la fiesta",
+        "translation-fr": "la fête",
+        "translation-tr": "parti",
+        "translation-ro": "petrecerea",
+        "translation-uz": "ziyofat",
+        "translation-hi": "पार्टी",
+        "translation-ar": "الحفلة"
+      },
+      {
+        "word": "das Konzert",
+        "translation-ru": "концерт",
+        "translation-en": "concert",
+        "translation-uk": "концерт",
+        "translation-pl": "koncert",
+        "translation-es": "el concierto",
+        "translation-fr": "le concert",
+        "translation-tr": "konser",
+        "translation-ro": "concertul",
+        "translation-uz": "konsert",
+        "translation-hi": "संगीत कार्यक्रम",
+        "translation-ar": "الحفل الموسيقي"
+      },
+      {
+        "word": "einladen",
+        "translation-ru": "приглашать",
+        "translation-en": "to invite",
+        "translation-uk": "запрошувати",
+        "translation-pl": "zapraszać",
+        "translation-es": "invitar",
+        "translation-fr": "inviter",
+        "translation-tr": "davet etmek",
+        "translation-ro": "a invita",
+        "translation-uz": "taklif qilmoq",
+        "translation-hi": "बुलाना",
+        "translation-ar": "يدعو"
+      },
+      {
+        "word": "mitbringen",
+        "translation-ru": "приносить с собой",
+        "translation-en": "to bring along",
+        "translation-uk": "приносити з собою",
+        "translation-pl": "przynosić ze sobą",
+        "translation-es": "traer",
+        "translation-fr": "apporter",
+        "translation-tr": "yanında getirmek",
+        "translation-ro": "a aduce cu sine",
+        "translation-uz": "olib kelmoq",
+        "translation-hi": "साथ लाना",
+        "translation-ar": "يحضر معه"
+      },
+      {
+        "word": "der Kuchen",
+        "translation-ru": "пирог, торт",
+        "translation-en": "cake",
+        "translation-uk": "пиріг, торт",
+        "translation-pl": "ciasto",
+        "translation-es": "el pastel",
+        "translation-fr": "le gâteau",
+        "translation-tr": "kek",
+        "translation-ro": "prăjitura",
+        "translation-uz": "pirog",
+        "translation-hi": "केक",
+        "translation-ar": "الكعكة"
+      }
+    ],
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "powerPassEight.questTask1",
+        "options": [
+          "Will wir einen Film sehen?",
+          "Wollen wir einen Film sieht?",
+          "Wollen wir einen Film sehen?"
+        ],
+        "answer": "Wollen wir einen Film sehen?",
+        "tip": "powerPassEight.questDescription"
+      },
+      {
+        "id": 2,
+        "type": "input",
+        "question": "powerPassEight.questTask2",
+        "correctAnswer": "will",
+        "tip": "powerPassEight.questDescription"
+      },
+      {
+        "id": 3,
+        "type": "input",
+        "question": "powerPassEight.questTask3",
+        "correctAnswer": "leider",
+        "tip": "powerPassEight.questDescription"
+      },
+      {
+        "id": 4,
+        "type": "select",
+        "question": "powerPassEight.questTask4",
+        "options": [
+          "Darf ich meine Schwester mitbringst?",
+          "Darf ich meine Schwester bringe mit?",
+          "Darf ich meine Schwester mitbringen?"
+        ],
+        "answer": "Darf ich meine Schwester mitbringen?",
+        "tip": "powerPassEight.questDescription"
+      },
+      {
+        "id": 5,
+        "type": "reorder",
+        "question": "powerPassEight.questTask5",
+        "words": [
+          "mit",
+          "Wer",
+          "kann",
+          "bringt",
+          "mitbringen",
+          "Kuchen",
+          "einen"
+        ],
+        "correctOrder": [
+          "Wer",
+          "kann",
+          "einen",
+          "Kuchen",
+          "mitbringen"
+        ],
+        "tip": "powerPassEight.questDescription"
+      },
+      {
+        "id": 6,
+        "type": "select",
+        "question": "powerPassEight.questTask6",
+        "options": [
+          "Kannst du um acht Uhr kommst?",
+          "Kannst du um acht Uhr kommen?",
+          "Kannst du am acht Uhr kommen?"
+        ],
+        "answer": "Kannst du um acht Uhr kommen?",
+        "tip": "powerPassEight.questDescription"
+      },
+      {
+        "id": 7,
+        "type": "input",
+        "question": "powerPassEight.questTask7",
+        "correctAnswer": "wollen",
+        "tip": "powerPassEight.questDescription"
+      },
+      {
+        "id": 8,
+        "type": "select",
+        "question": "powerPassEight.questTask8",
+        "options": [
+          "Das Konzert ist um acht Uhr. Wir dürfen um sieben Uhr abfahren.",
+          "Das Konzert ist um acht Uhr. Wir müssen um sieben Uhr abfahren.",
+          "Das Konzert ist um acht Uhr. Wir müssen um sieben Uhr fahren ab."
+        ],
+        "answer": "Das Konzert ist um acht Uhr. Wir müssen um sieben Uhr abfahren.",
+        "tip": "powerPassEight.questDescription"
+      },
+      {
+        "id": 9,
+        "type": "readAndAnswer",
+        "question": "powerPassEight.questTask9",
+        "text": "Nina: Hallo Ben! Hast du am Sonntag Zeit? Wollen wir schwimmen? Ben: Am Sonntag kann ich leider nicht. Ich muss meine Großeltern besuchen. Aber am Samstag habe ich Zeit.",
+        "options": [
+          "am Samstag",
+          "am Freitag",
+          "am Sonntag"
+        ],
+        "answer": "am Samstag",
+        "tip": "powerPassEight.questDescription"
+      },
+      {
+        "id": 10,
+        "type": "input",
+        "question": "powerPassEight.questTask10",
+        "correctAnswer": "Konzert",
+        "tip": "powerPassEight.questDescription"
+      },
+      {
+        "id": 11,
+        "type": "reorder",
+        "question": "powerPassEight.questTask11",
+        "words": [
+          "am",
+          "Sonntag",
+          "wir",
+          "kochen",
+          "Wollen",
+          "Willst",
+          "kocht",
+          "zusammen"
+        ],
+        "correctOrder": [
+          "Wollen",
+          "wir",
+          "am",
+          "Sonntag",
+          "zusammen",
+          "kochen"
+        ],
+        "tip": "powerPassEight.questDescription"
+      },
+      {
+        "id": 12,
+        "type": "input",
+        "question": "powerPassEight.questTask12",
+        "correctAnswer": "dürft",
+        "tip": "powerPassEight.questDescription"
+      },
+      {
+        "id": 13,
+        "type": "select",
+        "question": "powerPassEight.questTask13",
+        "options": [
+          "Holt Papa mich ab? Nein, er musst arbeiten.",
+          "Holt Papa mich ab? Nein, er muss arbeiten.",
+          "Abholt Papa mich? Nein, er muss arbeiten."
+        ],
+        "answer": "Holt Papa mich ab? Nein, er muss arbeiten.",
+        "tip": "powerPassEight.questDescription"
+      },
+      {
+        "id": 14,
+        "type": "select",
+        "question": "powerPassEight.questTask14",
+        "options": [
+          "Mein Bruder muss nicht schwimmen.",
+          "Mein Bruder kann nicht schwimmen.",
+          "Mein Bruder darf nicht schwimmen."
+        ],
+        "answer": "Mein Bruder kann nicht schwimmen.",
+        "tip": "powerPassEight.questDescription"
+      },
+      {
+        "id": 15,
+        "type": "reorder",
+        "question": "powerPassEight.questTask15",
+        "words": [
+          "im",
+          "muss",
+          "Vater",
+          "Mein",
+          "Bett",
+          "am",
+          "bleibt",
+          "bleiben"
+        ],
+        "correctOrder": [
+          "Mein",
+          "Vater",
+          "muss",
+          "im",
+          "Bett",
+          "bleiben"
+        ],
+        "tip": "powerPassEight.questDescription"
+      }
+    ]
+  },
+  {
+    "questId": "power-pass-nine",
+    "title": "powerPassNine.questTitle",
+    "progress": "0/15",
+    "description": "powerPassNine.questDescription",
+    "conditions": {
+      "goal": "powerPassNine.questGoal",
+      "minCorrect": 15,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
+    "vocabulary": [
+      {
+        "word": "können",
+        "translation-ru": "уметь, мочь",
+        "translation-en": "can, to be able to",
+        "translation-uk": "вміти, могти",
+        "translation-pl": "umieć, móc",
+        "translation-es": "poder, saber",
+        "translation-fr": "pouvoir, savoir",
+        "translation-tr": "yapabilmek",
+        "translation-ro": "a putea, a ști",
+        "translation-uz": "qila olmoq",
+        "translation-hi": "सकना",
+        "translation-ar": "يستطيع"
+      },
+      {
+        "word": "müssen",
+        "translation-ru": "быть должным, надо",
+        "translation-en": "must, to have to",
+        "translation-uk": "мусити, треба",
+        "translation-pl": "musieć",
+        "translation-es": "tener que, deber",
+        "translation-fr": "devoir",
+        "translation-tr": "zorunda olmak",
+        "translation-ro": "a trebui",
+        "translation-uz": "kerak, majbur bo‘lmoq",
+        "translation-hi": "करना पड़ना",
+        "translation-ar": "يجب عليه"
+      },
+      {
+        "word": "wollen",
+        "translation-ru": "хотеть",
+        "translation-en": "to want",
+        "translation-uk": "хотіти",
+        "translation-pl": "chcieć",
+        "translation-es": "querer",
+        "translation-fr": "vouloir",
+        "translation-tr": "istemek",
+        "translation-ro": "a vrea",
+        "translation-uz": "xohlamoq",
+        "translation-hi": "चाहना",
+        "translation-ar": "يريد"
+      },
+      {
+        "word": "dürfen",
+        "translation-ru": "иметь разрешение, можно",
+        "translation-en": "may, to be allowed to",
+        "translation-uk": "мати дозвіл, можна",
+        "translation-pl": "wolno, mieć pozwolenie",
+        "translation-es": "tener permiso, poder",
+        "translation-fr": "avoir le droit",
+        "translation-tr": "izinli olmak",
+        "translation-ro": "a avea voie",
+        "translation-uz": "ruxsat bor, mumkin",
+        "translation-hi": "अनुमति होना",
+        "translation-ar": "مسموح له"
+      },
+      {
+        "word": "der Urlaub",
+        "translation-ru": "отпуск",
+        "translation-en": "holiday",
+        "translation-uk": "відпустка",
+        "translation-pl": "urlop",
+        "translation-es": "las vacaciones",
+        "translation-fr": "les vacances",
+        "translation-tr": "tatil",
+        "translation-ro": "concediul",
+        "translation-uz": "ta’til",
+        "translation-hi": "छुट्टी",
+        "translation-ar": "الإجازة"
+      },
+      {
+        "word": "das Eis",
+        "translation-ru": "мороженое",
+        "translation-en": "ice cream",
+        "translation-uk": "морозиво",
+        "translation-pl": "lody",
+        "translation-es": "el helado",
+        "translation-fr": "la glace",
+        "translation-tr": "dondurma",
+        "translation-ro": "înghețata",
+        "translation-uz": "muzqaymoq",
+        "translation-hi": "आइसक्रीम",
+        "translation-ar": "المثلجات"
+      },
+      {
+        "word": "schneien",
+        "translation-ru": "идти (о снеге)",
+        "translation-en": "to snow",
+        "translation-uk": "іти (про сніг)",
+        "translation-pl": "padać (śnieg)",
+        "translation-es": "nevar",
+        "translation-fr": "neiger",
+        "translation-tr": "kar yağmak",
+        "translation-ro": "a ninge",
+        "translation-uz": "qor yog‘moq",
+        "translation-hi": "बर्फ़ गिरना",
+        "translation-ar": "تثلج"
+      }
+    ],
+    "tasks": [
+      {
+        "id": 1,
+        "type": "input",
+        "question": "powerPassNine.questTask1",
+        "correctAnswer": "kann",
+        "tip": "powerPassNine.questDescription"
+      },
+      {
+        "id": 2,
+        "type": "input",
+        "question": "powerPassNine.questTask2",
+        "correctAnswer": "muss",
+        "tip": "powerPassNine.questDescription"
+      },
+      {
+        "id": 3,
+        "type": "input",
+        "question": "powerPassNine.questTask3",
+        "correctAnswer": "Willst",
+        "tip": "powerPassNine.questDescription"
+      },
+      {
+        "id": 4,
+        "type": "input",
+        "question": "powerPassNine.questTask4",
+        "correctAnswer": "dürfen",
+        "tip": "powerPassNine.questDescription"
+      },
+      {
+        "id": 5,
+        "type": "select",
+        "question": "powerPassNine.questTask5",
+        "options": [
+          "Wir dürfen nicht bezahlen.",
+          "Wir müssen bezahlen.",
+          "Wir müssen nicht bezahlen."
+        ],
+        "answer": "Wir müssen nicht bezahlen.",
+        "tip": "powerPassNine.questDescription"
+      },
+      {
+        "id": 6,
+        "type": "select",
+        "question": "powerPassNine.questTask6",
+        "options": [
+          "Hier darfst du keine Fotos macht.",
+          "Hier darfst du keine Fotos machen.",
+          "Hier musst du keine Fotos machen."
+        ],
+        "answer": "Hier darfst du keine Fotos machen.",
+        "tip": "powerPassNine.questDescription"
+      },
+      {
+        "id": 7,
+        "type": "select",
+        "question": "powerPassNine.questTask7",
+        "options": [
+          "Im August haben wir Urlaub. Wir wollen nach Wien reisen.",
+          "Am August haben wir Urlaub. Wir will nach Wien reisen.",
+          "Im August haben wir Urlaub. Wir wollen nach Wien reist."
+        ],
+        "answer": "Im August haben wir Urlaub. Wir wollen nach Wien reisen.",
+        "tip": "powerPassNine.questDescription"
+      },
+      {
+        "id": 8,
+        "type": "reorder",
+        "question": "powerPassNine.questTask8",
+        "words": [
+          "kannst",
+          "Wann",
+          "kann",
+          "kommst",
+          "kommen",
+          "du"
+        ],
+        "correctOrder": [
+          "Wann",
+          "kannst",
+          "du",
+          "kommen"
+        ],
+        "tip": "powerPassNine.questDescription"
+      },
+      {
+        "id": 9,
+        "type": "reorder",
+        "question": "powerPassNine.questTask9",
+        "words": [
+          "aufräumen",
+          "muss",
+          "mein",
+          "Ich",
+          "räume",
+          "auf",
+          "Zimmer"
+        ],
+        "correctOrder": [
+          "Ich",
+          "muss",
+          "mein",
+          "Zimmer",
+          "aufräumen"
+        ],
+        "tip": "powerPassNine.questDescription"
+      },
+      {
+        "id": 10,
+        "type": "input",
+        "question": "powerPassNine.questTask10",
+        "correctAnswer": "nicht",
+        "tip": "powerPassNine.questDescription"
+      },
+      {
+        "id": 11,
+        "type": "readAndAnswer",
+        "question": "powerPassNine.questTask11",
+        "text": "Tim will am Nachmittag Fußball spielen. Aber zuerst muss er die Hausaufgabe machen. Seine Mutter sagt: Dann darfst du spielen.",
+        "options": [
+          "seine Mutter anrufen",
+          "die Hausaufgabe machen",
+          "Fußball spielen"
+        ],
+        "answer": "die Hausaufgabe machen",
+        "tip": "powerPassNine.questDescription"
+      },
+      {
+        "id": 12,
+        "type": "input",
+        "question": "powerPassNine.questTask12",
+        "correctAnswer": "Nimmst",
+        "tip": "powerPassNine.questDescription"
+      },
+      {
+        "id": 13,
+        "type": "select",
+        "question": "powerPassNine.questTask13",
+        "options": [
+          "Ihr Vater arbeitet in Berlin.",
+          "Ihr Vater arbeitest in Berlin.",
+          "Ihre Vater arbeitet in Berlin."
+        ],
+        "answer": "Ihr Vater arbeitet in Berlin.",
+        "tip": "powerPassNine.questDescription"
+      },
+      {
+        "id": 14,
+        "type": "select",
+        "question": "powerPassNine.questTask14",
+        "options": [
+          "Am Freitagabend sehen wir fern.",
+          "Im Freitagabend sehen wir fern.",
+          "Am Freitagabend fernsehen wir."
+        ],
+        "answer": "Am Freitagabend sehen wir fern.",
+        "tip": "powerPassNine.questDescription"
+      },
+      {
+        "id": 15,
+        "type": "reorder",
+        "question": "powerPassNine.questTask15",
+        "words": [
+          "Im",
+          "um",
+          "es",
+          "Dezember",
+          "schneit",
+          "am"
+        ],
+        "correctOrder": [
+          "Im",
+          "Dezember",
+          "schneit",
+          "es"
+        ],
+        "tip": "powerPassNine.questDescription"
+      }
+    ]
+  },
+  {
+    "questId": "power-pass-ten",
+    "title": "powerPassTen.questTitle",
+    "progress": "0/15",
+    "description": "powerPassTen.questDescription",
+    "conditions": {
+      "goal": "powerPassTen.questGoal",
+      "minCorrect": 15,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
+    "vocabulary": [
+      {
+        "word": "bleiben",
+        "translation-ru": "оставаться",
+        "translation-en": "to stay",
+        "translation-uk": "залишатися",
+        "translation-pl": "zostawać",
+        "translation-es": "quedarse",
+        "translation-fr": "rester",
+        "translation-tr": "kalmak",
+        "translation-ro": "a rămâne",
+        "translation-uz": "qolmoq",
+        "translation-hi": "रहना",
+        "translation-ar": "يبقى"
+      },
+      {
+        "word": "warten",
+        "translation-ru": "ждать",
+        "translation-en": "to wait",
+        "translation-uk": "чекати",
+        "translation-pl": "czekać",
+        "translation-es": "esperar",
+        "translation-fr": "attendre",
+        "translation-tr": "beklemek",
+        "translation-ro": "a aștepta",
+        "translation-uz": "kutmoq",
+        "translation-hi": "इंतज़ार करना",
+        "translation-ar": "ينتظر"
+      },
+      {
+        "word": "rauchen",
+        "translation-ru": "курить",
+        "translation-en": "to smoke",
+        "translation-uk": "курити",
+        "translation-pl": "palić",
+        "translation-es": "fumar",
+        "translation-fr": "fumer",
+        "translation-tr": "sigara içmek",
+        "translation-ro": "a fuma",
+        "translation-uz": "chekmoq",
+        "translation-hi": "धूम्रपान करना",
+        "translation-ar": "يدخن"
+      },
+      {
+        "word": "mitkommen",
+        "translation-ru": "идти вместе",
+        "translation-en": "to come along",
+        "translation-uk": "іти разом",
+        "translation-pl": "iść razem",
+        "translation-es": "venir también",
+        "translation-fr": "venir avec",
+        "translation-tr": "birlikte gelmek",
+        "translation-ro": "a veni cu cineva",
+        "translation-uz": "birga bormoq",
+        "translation-hi": "साथ आना",
+        "translation-ar": "يأتي مع"
+      },
+      {
+        "word": "helfen",
+        "translation-ru": "помогать",
+        "translation-en": "to help",
+        "translation-uk": "допомагати",
+        "translation-pl": "pomagać",
+        "translation-es": "ayudar",
+        "translation-fr": "aider",
+        "translation-tr": "yardım etmek",
+        "translation-ro": "a ajuta",
+        "translation-uz": "yordam bermoq",
+        "translation-hi": "मदद करना",
+        "translation-ar": "يساعد"
+      },
+      {
+        "word": "bestellen",
+        "translation-ru": "заказывать",
+        "translation-en": "to order",
+        "translation-uk": "замовляти",
+        "translation-pl": "zamawiać",
+        "translation-es": "pedir",
+        "translation-fr": "commander",
+        "translation-tr": "sipariş etmek",
+        "translation-ro": "a comanda",
+        "translation-uz": "buyurtma qilmoq",
+        "translation-hi": "ऑर्डर करना",
+        "translation-ar": "يطلب"
+      },
+      {
+        "word": "draußen",
+        "translation-ru": "на улице, снаружи",
+        "translation-en": "outside",
+        "translation-uk": "надворі",
+        "translation-pl": "na zewnątrz",
+        "translation-es": "fuera",
+        "translation-fr": "dehors",
+        "translation-tr": "dışarıda",
+        "translation-ro": "afară",
+        "translation-uz": "tashqarida",
+        "translation-hi": "बाहर",
+        "translation-ar": "في الخارج"
+      }
+    ],
+    "tasks": [
+      {
+        "id": 1,
+        "type": "input",
+        "question": "powerPassTen.questTask1",
+        "correctAnswer": "Könnt",
+        "tip": "powerPassTen.questDescription"
+      },
+      {
+        "id": 2,
+        "type": "input",
+        "question": "powerPassTen.questTask2",
+        "correctAnswer": "müsst",
+        "tip": "powerPassTen.questDescription"
+      },
+      {
+        "id": 3,
+        "type": "input",
+        "question": "powerPassTen.questTask3",
+        "correctAnswer": "Wollt",
+        "tip": "powerPassTen.questDescription"
+      },
+      {
+        "id": 4,
+        "type": "input",
+        "question": "powerPassTen.questTask4",
+        "correctAnswer": "Dürfen",
+        "tip": "powerPassTen.questDescription"
+      },
+      {
+        "id": 5,
+        "type": "select",
+        "question": "powerPassTen.questTask5",
+        "options": [
+          "Mein Bruder kann heute Abend mitkommen nicht.",
+          "Mein Bruder kann heute Abend nicht kommt mit.",
+          "Mein Bruder kann heute Abend nicht mitkommen."
+        ],
+        "answer": "Mein Bruder kann heute Abend nicht mitkommen.",
+        "tip": "powerPassTen.questDescription"
+      },
+      {
+        "id": 6,
+        "type": "select",
+        "question": "powerPassTen.questTask6",
+        "options": [
+          "Hier dürfen Sie rauchen.",
+          "Hier müssen Sie nicht rauchen.",
+          "Hier dürfen Sie nicht rauchen."
+        ],
+        "answer": "Hier dürfen Sie nicht rauchen.",
+        "tip": "powerPassTen.questDescription"
+      },
+      {
+        "id": 7,
+        "type": "select",
+        "question": "powerPassTen.questTask7",
+        "options": [
+          "Er will heute kocht.",
+          "Er will heute kochen.",
+          "Er willst heute kochen."
+        ],
+        "answer": "Er will heute kochen.",
+        "tip": "powerPassTen.questDescription"
+      },
+      {
+        "id": 8,
+        "type": "select",
+        "question": "powerPassTen.questTask8",
+        "options": [
+          "Kannst du zumachen die Tür?",
+          "Kannst du die Tür zumachen?",
+          "Kannst du die Tür machst zu?"
+        ],
+        "answer": "Kannst du die Tür zumachen?",
+        "tip": "powerPassTen.questDescription"
+      },
+      {
+        "id": 9,
+        "type": "reorder",
+        "question": "powerPassTen.questTask9",
+        "words": [
+          "anfangen",
+          "fange",
+          "früh",
+          "muss",
+          "an",
+          "Montag",
+          "Am",
+          "ich"
+        ],
+        "correctOrder": [
+          "Am",
+          "Montag",
+          "muss",
+          "ich",
+          "früh",
+          "anfangen"
+        ],
+        "tip": "powerPassTen.questDescription"
+      },
+      {
+        "id": 10,
+        "type": "reorder",
+        "question": "powerPassTen.questTask10",
+        "words": [
+          "bestellen",
+          "wollen",
+          "bestellt",
+          "Was",
+          "will",
+          "Sie"
+        ],
+        "correctOrder": [
+          "Was",
+          "wollen",
+          "Sie",
+          "bestellen"
+        ],
+        "tip": "powerPassTen.questDescription"
+      },
+      {
+        "id": 11,
+        "type": "reorder",
+        "question": "powerPassTen.questTask11",
+        "words": [
+          "können",
+          "gern",
+          "Wir",
+          "helft",
+          "kann",
+          "helfen"
+        ],
+        "correctOrder": [
+          "Wir",
+          "können",
+          "gern",
+          "helfen"
+        ],
+        "tip": "powerPassTen.questDescription"
+      },
+      {
+        "id": 12,
+        "type": "input",
+        "question": "powerPassTen.questTask12",
+        "correctAnswer": "kochen",
+        "tip": "powerPassTen.questDescription"
+      },
+      {
+        "id": 13,
+        "type": "input",
+        "question": "powerPassTen.questTask13",
+        "correctAnswer": "einladen",
+        "tip": "powerPassTen.questDescription"
+      },
+      {
+        "id": 14,
+        "type": "readAndAnswer",
+        "question": "powerPassTen.questTask14",
+        "text": "Anna will am Freitag ein Konzert sehen. Leo kann nicht mitkommen, er muss seine Mutter abholen. Dann fragt Anna ihre Schwester. Die Schwester will gern mitkommen.",
+        "options": [
+          "Er darf nicht mitkommen.",
+          "Er muss seine Mutter abholen.",
+          "Er will nicht mitkommen."
+        ],
+        "answer": "Er muss seine Mutter abholen.",
+        "tip": "powerPassTen.questDescription"
+      },
+      {
+        "id": 15,
+        "type": "readAndAnswer",
+        "question": "powerPassTen.questTask15",
+        "text": "Liebe Gäste! Sie dürfen im Hotel nicht rauchen. Draußen dürfen Sie rauchen. Sie müssen um zehn Uhr bezahlen. Das WLAN können Sie immer benutzen.",
+        "options": [
+          "im Zimmer rauchen",
+          "das WLAN immer benutzen",
+          "nicht bezahlen"
+        ],
+        "answer": "das WLAN immer benutzen",
+        "tip": "powerPassTen.questDescription"
+      }
+    ]
+  }
+]

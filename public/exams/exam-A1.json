@@ -1,317 +1,1820 @@
 {
-    "level": "A1",
-    "modules": [
-      {
-        "id": "lesen-1",
-        "title": "Lesen",
-        "type": "multiple-choice",
-        "task": {
-          "text": "Supermarkt Müller\nÖffnungszeiten: von Montag bis Samstag 8–20 Uhr",
-          "question": "Am Sonntag is der Supermarkt geöffnet",
-          "options": ["Richtig", "Falsch"],
-          "answer": "Falsch"
+  "level": "A1",
+  "language": "de",
+  "exams": [
+    {
+      "exam_id": 1,
+      "theme": "Gemischter Test",
+      "icon": "🧩",
+      "modules": [
+        {
+          "id": "lesen-1",
+          "title": "Lesen",
+          "type": "multiple-choice",
+          "task": {
+            "text": "Supermarkt Müller\nÖffnungszeiten: von Montag bis Samstag 8–20 Uhr",
+            "question": "Am Sonntag is der Supermarkt geöffnet",
+            "options": [
+              "Richtig",
+              "Falsch"
+            ],
+            "answer": "Falsch"
+          }
+        },
+        {
+          "id": "lesen-2",
+          "title": "Lesen",
+          "type": "multiple-choice",
+          "task": {
+            "text": "Kino am Park\nDienstag = Kinotag\nAlle Filme: nur 5 €\nNur am Dienstag",
+            "question": "Am Dienstag kostet der Film 5 Euro.",
+            "options": [
+              "Richtig",
+              "Falsch"
+            ],
+            "answer": "Richtig"
+          }
+        },
+        {
+          "id": "lesen-3",
+          "title": "Lesen",
+          "type": "multiple-choice",
+          "task": {
+            "text": "Maria schreibt: Ich bin krank. Ich kann heute nicht zur Schule kommen.",
+            "question": "Maria kommt heute zur Schule.",
+            "options": [
+              "Richtig",
+              "Falsch"
+            ],
+            "answer": "Falsch"
+          }
+        },
+        {
+          "id": "lesen-4",
+          "title": "Lesen",
+          "type": "multiple-choice",
+          "task": {
+            "text": "Restaurant Bella Italia\nHeute: Pizza Margherita nur 6 €",
+            "question": "Heute kostet die Pizza Margherita 6 Euro.",
+            "options": [
+              "Richtig",
+              "Falsch"
+            ],
+            "answer": "Richtig"
+          }
+        },
+        {
+          "id": "lesen-5",
+          "title": "Lesen",
+          "type": "multiple-choice",
+          "task": {
+            "text": "Lena schreibt: Ich bin im Urlaub. Wir sind am Meer und das Wetter ist super.",
+            "question": "Lena ist zu Hause.",
+            "options": [
+              "Richtig",
+              "Falsch"
+            ],
+            "answer": "Falsch"
+          }
+        },
+        {
+          "id": "lesen-6",
+          "title": "Lesen",
+          "type": "multiple-choice",
+          "task": {
+            "text": "Bäckerei Schmidt\nSonntag geschlossen",
+            "question": "Die Bäckerei ist am Sonntag offen.",
+            "options": [
+              "Richtig",
+              "Falsch"
+            ],
+            "answer": "Falsch"
+          }
+        },
+        {
+          "id": "lesen-7",
+          "title": "Lesen",
+          "type": "multiple-choice",
+          "task": {
+            "text": "Tom schreibt: Ich arbeite heute bis 18 Uhr.",
+            "question": "Tom arbeitet heute bis 18 Uhr.",
+            "options": [
+              "Richtig",
+              "Falsch"
+            ],
+            "answer": "Richtig"
+          }
+        },
+        {
+          "id": "lesen-8",
+          "title": "Lesen",
+          "type": "multiple-choice",
+          "task": {
+            "text": "Arztpraxis Dr. Weber\nMontag–Freitag 9–12 Uhr",
+            "question": "Am Samstag ist die Praxis geöffnet.",
+            "options": [
+              "Richtig",
+              "Falsch"
+            ],
+            "answer": "Falsch"
+          }
+        },
+        {
+          "id": "lesen-9",
+          "title": "Lesen",
+          "type": "multiple-choice",
+          "task": {
+            "text": "Heute Regen. Temperatur: 12 Grad.",
+            "question": "Heute ist das Wetter warm und sonnig.",
+            "options": [
+              "Richtig",
+              "Falsch"
+            ],
+            "answer": "Falsch"
+          }
+        },
+        {
+          "id": "lesen-10",
+          "title": "Lesen",
+          "type": "multiple-choice",
+          "task": {
+            "text": "Buslinie 5\nAbfahrt um 7:30 Uhr",
+            "question": "Der Bus fährt um halb acht.",
+            "options": [
+              "Richtig",
+              "Falsch"
+            ],
+            "answer": "Richtig"
+          }
+        },
+        {
+          "id": "hoeren-1",
+          "title": "Hören",
+          "type": "audio-choice",
+          "task": {
+            "text": "Ich komme nicht um acht. Ich komme erst um zehn, okay?",
+            "question": "Wann kommt sie?",
+            "options": [
+              "Um 8 Uhr",
+              "Um 10 Uhr",
+              "Gar nicht"
+            ],
+            "answer": "Um 10 Uhr"
+          }
+        },
+        {
+          "id": "hoeren-2",
+          "title": "Hören",
+          "type": "audio-choice",
+          "task": {
+            "text": "Der Zug nach Berlin fährt heute nicht. Er fällt aus.",
+            "question": "Was ist mit dem Zug?",
+            "options": [
+              "Er kommt später",
+              "Er fällt aus",
+              "Er fährt früher"
+            ],
+            "answer": "Er fällt aus"
+          }
+        },
+        {
+          "id": "hoeren-3",
+          "title": "Hören",
+          "type": "audio-choice",
+          "task": {
+            "text": "Heute ist es sehr warm. Wir gehen ins Schwimmbad.",
+            "question": "Wohin gehen sie?",
+            "options": [
+              "Ins Kino",
+              "Ins Schwimmbad",
+              "In die Schule"
+            ],
+            "answer": "Ins Schwimmbad"
+          }
+        },
+        {
+          "id": "hoeren-4",
+          "title": "Hören",
+          "type": "audio-choice",
+          "task": {
+            "text": "Ich trinke morgens immer Kaffee und esse ein Brötchen.",
+            "question": "Was isst und trinkt die Person morgens?",
+            "options": [
+              "Tee und Toast",
+              "Kaffee und Brötchen",
+              "Saft und Müsli"
+            ],
+            "answer": "Kaffee und Brötchen"
+          }
+        },
+        {
+          "id": "hoeren-5",
+          "title": "Hören",
+          "type": "audio-choice",
+          "task": {
+            "text": "Am Samstag habe ich keine Schule. Ich schlafe lange und frühstücke spät.",
+            "question": "Was macht die Person am Samstag?",
+            "options": [
+              "Geht zur Schule",
+              "Schläft lange",
+              "Arbeitet"
+            ],
+            "answer": "Schläft lange"
+          }
+        },
+        {
+          "id": "hoeren-6",
+          "title": "Hören",
+          "type": "audio-choice",
+          "task": {
+            "text": "Ich gehe heute einkaufen. Ich brauche Brot und Milch.",
+            "question": "Was braucht die Person?",
+            "options": [
+              "Brot und Milch",
+              "Kaffee und Kuchen",
+              "Obst und Gemüse"
+            ],
+            "answer": "Brot und Milch"
+          }
+        },
+        {
+          "id": "hoeren-7",
+          "title": "Hören",
+          "type": "audio-choice",
+          "task": {
+            "text": "Der Termin ist morgen um neun Uhr.",
+            "question": "Wann ist der Termin?",
+            "options": [
+              "Heute um 9 Uhr",
+              "Morgen um 9 Uhr",
+              "Morgen um 19 Uhr"
+            ],
+            "answer": "Morgen um 9 Uhr"
+          }
+        },
+        {
+          "id": "hoeren-8",
+          "title": "Hören",
+          "type": "audio-choice",
+          "task": {
+            "text": "Ich fahre mit dem Bus zur Arbeit.",
+            "question": "Wie fährt die Person zur Arbeit?",
+            "options": [
+              "Mit dem Auto",
+              "Mit dem Bus",
+              "Zu Fuß"
+            ],
+            "answer": "Mit dem Bus"
+          }
+        },
+        {
+          "id": "hoeren-9",
+          "title": "Hören",
+          "type": "audio-choice",
+          "task": {
+            "text": "Heute Abend bleibe ich zu Hause und sehe fern.",
+            "question": "Was macht die Person heute Abend?",
+            "options": [
+              "Sie geht ins Kino",
+              "Sie arbeitet",
+              "Sie bleibt zu Hause"
+            ],
+            "answer": "Sie bleibt zu Hause"
+          }
+        },
+        {
+          "id": "hoeren-10",
+          "title": "Hören",
+          "type": "audio-choice",
+          "task": {
+            "text": "Ich habe morgen frei. Ich habe keine Arbeit.",
+            "question": "Was ist morgen?",
+            "options": [
+              "Ein Arbeitstag",
+              "Ein freier Tag",
+              "Ein Schultag"
+            ],
+            "answer": "Ein freier Tag"
+          }
+        },
+        {
+          "id": "schreiben-1",
+          "title": "Schreiben",
+          "type": "text-input",
+          "task": {
+            "instruction": "Schreib eine Nachricht an einen Freund. Lade ihn ins Kino morgen ein.",
+            "exampleAnswer": "Hallo Max! Morgen gehe ich ins Kino. Willst du mitkommen? Der Film beginnt um 18 Uhr."
+          }
+        },
+        {
+          "id": "schreiben-2",
+          "title": "Schreiben",
+          "type": "text-input",
+          "task": {
+            "instruction": "Schreib deiner Lehrerin oder deinem Lehrer. Du kommst heute nicht. Warum?",
+            "exampleAnswer": "Guten Tag Frau Meier, ich bin heute krank und kann nicht zum Kurs kommen. Viele Grüße, Anna."
+          }
+        },
+        {
+          "id": "schreiben-3",
+          "title": "Schreiben",
+          "type": "text-input",
+          "task": {
+            "instruction": "Gratuliere deinem Freund zum Geburtstag. (2–3 Sätze)",
+            "exampleAnswer": "Alles Gute zum Geburtstag, Lisa! Ich wünsche dir viel Glück und Gesundheit!"
+          }
+        },
+        {
+          "id": "schreiben-4",
+          "title": "Schreiben",
+          "type": "text-input",
+          "task": {
+            "instruction": "Schreib dem Hotel. Gibt es Zimmer? Was kostet ein Zimmer?",
+            "exampleAnswer": "Sehr geehrte Damen und Herren, ich möchte fragen, ob Sie am Wochenende ein freies Zimmer haben. Was kostet es pro Nacht?"
+          }
+        },
+        {
+          "id": "schreiben-5",
+          "title": "Schreiben",
+          "type": "text-input",
+          "task": {
+            "instruction": "Schreib deinem Freund. Du hast eine neue Wohnung. Schreib die Adresse.",
+            "exampleAnswer": "Hallo Paul! Ich bin umgezogen. Meine neue Adresse ist Gartenstraße 12. Komm doch mal vorbei!"
+          }
+        },
+        {
+          "id": "sprechen-1",
+          "title": "Sprechen",
+          "type": "speaking-prompt",
+          "task": {
+            "prompt": "Stell dich bitte vor. Wie heißt du? Woher kommst du? Was machst du gern?",
+            "expectedTopics": [
+              "Name",
+              "Herkunft",
+              "Hobby"
+            ]
+          }
+        },
+        {
+          "id": "sprechen-2",
+          "title": "Sprechen",
+          "type": "speaking-prompt",
+          "task": {
+            "prompt": "Sprich über deinen Tagesablauf. Wann stehst du auf? Was machst du morgens?",
+            "expectedTopics": [
+              "Tagesablauf",
+              "Zeit",
+              "Aktivitäten"
+            ]
+          }
+        },
+        {
+          "id": "sprechen-3",
+          "title": "Sprechen",
+          "type": "speaking-prompt",
+          "task": {
+            "prompt": "Was isst du gern? Was trinkst du zum Frühstück? Sprich über Essen und Trinken.",
+            "expectedTopics": [
+              "Essen",
+              "Trinken",
+              "Frühstück"
+            ]
+          }
+        },
+        {
+          "id": "sprechen-4",
+          "title": "Sprechen",
+          "type": "speaking-prompt",
+          "task": {
+            "prompt": "Erzähle von deiner Familie. Hast du Geschwister? Wie heißen sie?",
+            "expectedTopics": [
+              "Familie",
+              "Geschwister",
+              "Name"
+            ]
+          }
+        },
+        {
+          "id": "sprechen-5",
+          "title": "Sprechen",
+          "type": "speaking-prompt",
+          "task": {
+            "prompt": "Was machst du am Wochenende? Hast du Pläne?",
+            "expectedTopics": [
+              "Wochenende",
+              "Pläne",
+              "Aktivitäten"
+            ]
+          }
         }
-      },
-      {
-        "id": "lesen-2",
-        "title": "Lesen",
-        "type": "multiple-choice",
-        "task": {
-          "text": "Kino am Park\nDienstag = Kinotag\nAlle Filme: nur 5 €\nNur am Dienstag",
-          "question": "Am Dienstag kostet der Film 5 Euro.",
-          "options": ["Richtig", "Falsch"],
-          "answer": "Richtig"
+      ]
+    },
+    {
+      "exam_id": 2,
+      "theme": "Ich und meine Familie",
+      "icon": "👨‍👩‍👧",
+      "modules": [
+        {
+          "id": "lesen-1",
+          "title": "Lesen",
+          "type": "multiple-choice",
+          "task": {
+            "text": "Ich heiße Ana Silva. Ich komme aus Portugal, aber jetzt wohne ich in Köln. Ich bin 24 Jahre alt und studiere Medizin.",
+            "question": "Wo wohnt Ana jetzt?",
+            "options": [
+              "In Portugal",
+              "In Köln",
+              "In Berlin"
+            ],
+            "answer": "In Köln"
+          }
+        },
+        {
+          "id": "lesen-2",
+          "title": "Lesen",
+          "type": "multiple-choice",
+          "task": {
+            "text": "Das ist meine Familie. Ich habe einen Bruder und zwei Schwestern. Ich habe keine Kinder.",
+            "question": "Hat die Person Kinder?",
+            "options": [
+              "Ja",
+              "Nein"
+            ],
+            "answer": "Nein"
+          }
+        },
+        {
+          "id": "lesen-3",
+          "title": "Lesen",
+          "type": "multiple-choice",
+          "task": {
+            "text": "Formular. Vorname: Peter. Nachname: Schmidt. Alter: 35. Beruf: Lehrer. Wohnort: Leipzig.",
+            "question": "Was ist Peter Schmidt von Beruf?",
+            "options": [
+              "Arzt",
+              "Lehrer",
+              "Fahrer"
+            ],
+            "answer": "Lehrer"
+          }
+        },
+        {
+          "id": "lesen-4",
+          "title": "Lesen",
+          "type": "multiple-choice",
+          "task": {
+            "text": "SMS: Hallo Lisa! Ich bin jetzt bei Oma. Ich komme um 18 Uhr nach Hause. Mama",
+            "question": "Wo ist Mama jetzt?",
+            "options": [
+              "Bei Oma",
+              "Im Supermarkt",
+              "Bei der Arbeit"
+            ],
+            "answer": "Bei Oma"
+          }
+        },
+        {
+          "id": "lesen-5",
+          "title": "Lesen",
+          "type": "multiple-choice",
+          "task": {
+            "text": "Meine Schwester heißt Julia. Sie hat lange, blonde Haare und blaue Augen. Sie ist groß.",
+            "question": "Wie sind Julias Haare?",
+            "options": [
+              "Kurz und dunkel",
+              "Lang und blond",
+              "Kurz und blond"
+            ],
+            "answer": "Lang und blond"
+          }
+        },
+        {
+          "id": "hoeren-1",
+          "title": "Hören",
+          "type": "audio-choice",
+          "task": {
+            "text": "Guten Tag! Mein Name ist Markus Weber. Ich bin vierzig Jahre alt. Ich arbeite bei einer Bank.",
+            "question": "Wo arbeitet Markus?",
+            "options": [
+              "Bei einer Bank",
+              "In einem Geschäft",
+              "In einer Schule"
+            ],
+            "answer": "Bei einer Bank"
+          }
+        },
+        {
+          "id": "hoeren-2",
+          "title": "Hören",
+          "type": "audio-choice",
+          "task": {
+            "text": "Ich habe zwei Kinder. Mein Sohn ist acht Jahre alt und meine Tochter ist fünf.",
+            "question": "Wie alt ist die Tochter?",
+            "options": [
+              "Acht Jahre",
+              "Fünf Jahre",
+              "Drei Jahre"
+            ],
+            "answer": "Fünf Jahre"
+          }
+        },
+        {
+          "id": "hoeren-3",
+          "title": "Hören",
+          "type": "audio-choice",
+          "task": {
+            "text": "Entschuldigung, wie heißen Sie? Meier? Gut. Und wie ist Ihre Telefonnummer?",
+            "question": "Was fragt die Person am Ende?",
+            "options": [
+              "Nach der Adresse",
+              "Nach dem Namen",
+              "Nach der Telefonnummer"
+            ],
+            "answer": "Nach der Telefonnummer"
+          }
+        },
+        {
+          "id": "hoeren-4",
+          "title": "Hören",
+          "type": "audio-choice",
+          "task": {
+            "text": "Mein Opa wohnt nicht bei uns. Er wohnt auf dem Land, in einem kleinen Haus mit Garten.",
+            "question": "Wo wohnt der Opa?",
+            "options": [
+              "Auf dem Land",
+              "In der Stadtmitte",
+              "In einer Wohnung"
+            ],
+            "answer": "Auf dem Land"
+          }
+        },
+        {
+          "id": "hoeren-5",
+          "title": "Hören",
+          "type": "audio-choice",
+          "task": {
+            "text": "Hallo! Ich bin Tom. Ich komme aus Österreich, aus Graz. Ich spreche Deutsch und ein bisschen Englisch.",
+            "question": "Woher kommt Tom?",
+            "options": [
+              "Aus Wien",
+              "Aus Graz",
+              "Aus England"
+            ],
+            "answer": "Aus Graz"
+          }
+        },
+        {
+          "id": "schreiben-1",
+          "title": "Schreiben",
+          "type": "text-input",
+          "task": {
+            "instruction": "Schreiben Sie eine kurze E-Mail an einen neuen Kollegen im Sprachkurs. Stellen Sie sich vor: Name, Herkunft, Alter und Wohnort.",
+            "exampleAnswer": "Hallo! Ich heiße Maria. Ich komme aus Spanien, aus Madrid. Ich bin 22 Jahre alt. Jetzt wohne ich in Hamburg. Viele Grüße!"
+          }
+        },
+        {
+          "id": "schreiben-2",
+          "title": "Schreiben",
+          "type": "text-input",
+          "task": {
+            "instruction": "Schreiben Sie 3 oder 4 Sätze über Ihre Familie. Wer ist in Ihrer Familie und wie heißen die Personen?",
+            "exampleAnswer": "Meine Familie ist nicht groß. Ich habe eine Mutter, einen Vater und einen Bruder. Meine Mutter heißt Anna und mein Vater heißt Paul. Mein Bruder heißt Max und ist 15 Jahre alt."
+          }
+        },
+        {
+          "id": "sprechen-1",
+          "title": "Sprechen",
+          "type": "speaking-prompt",
+          "task": {
+            "prompt": "Stellen Sie sich vor. Sagen Sie, wie Sie heißen, woher Sie kommen, wo Sie wohnen und was Sie machen.",
+            "expectedTopics": [
+              "Name",
+              "Herkunft",
+              "Wohnort",
+              "Arbeit oder Studium"
+            ]
+          }
+        },
+        {
+          "id": "sprechen-2",
+          "title": "Sprechen",
+          "type": "speaking-prompt",
+          "task": {
+            "prompt": "Erzählen Sie von einer Person aus Ihrer Familie. Wie heißt sie, wie alt ist sie und wie sieht sie aus?",
+            "expectedTopics": [
+              "Name",
+              "Alter",
+              "Aussehen"
+            ]
+          }
         }
-      },
-      {
-        "id": "lesen-3",
-        "title": "Lesen",
-        "type": "multiple-choice",
-        "task": {
-          "text": "Maria schreibt: Ich bin krank. Ich kann heute nicht zur Schule kommen.",
-          "question": "Maria kommt heute zur Schule.",
-          "options": ["Richtig", "Falsch"],
-          "answer": "Falsch"
+      ]
+    },
+    {
+      "exam_id": 3,
+      "theme": "Wohnen und Alltag",
+      "icon": "🏠",
+      "modules": [
+        {
+          "id": "lesen-1",
+          "title": "Lesen",
+          "type": "multiple-choice",
+          "task": {
+            "text": "Wohnung zu vermieten: 2 Zimmer, Küche, Bad, Balkon. 650 Euro im Monat. Ab 1. Mai frei.",
+            "question": "Wie viele Zimmer hat die Wohnung?",
+            "options": [
+              "Ein Zimmer",
+              "Zwei Zimmer",
+              "Drei Zimmer"
+            ],
+            "answer": "Zwei Zimmer"
+          }
+        },
+        {
+          "id": "lesen-2",
+          "title": "Lesen",
+          "type": "multiple-choice",
+          "task": {
+            "text": "Ich stehe jeden Tag um 6:30 Uhr auf. Dann dusche ich und trinke Kaffee. Um 7:15 Uhr fahre ich zur Arbeit.",
+            "question": "Wann fährt die Person zur Arbeit?",
+            "options": [
+              "Um 6:30 Uhr",
+              "Um 7:15 Uhr",
+              "Um 8:00 Uhr"
+            ],
+            "answer": "Um 7:15 Uhr"
+          }
+        },
+        {
+          "id": "lesen-3",
+          "title": "Lesen",
+          "type": "multiple-choice",
+          "task": {
+            "text": "Notiz an der Tür: Liebe Nachbarn, am Samstag feiere ich Geburtstag. Es wird vielleicht ein bisschen laut. Danke! Jana, 3. Stock",
+            "question": "Warum schreibt Jana die Notiz?",
+            "options": [
+              "Sie zieht um.",
+              "Sie hat eine Party.",
+              "Sie sucht eine Wohnung."
+            ],
+            "answer": "Sie hat eine Party."
+          }
+        },
+        {
+          "id": "lesen-4",
+          "title": "Lesen",
+          "type": "multiple-choice",
+          "task": {
+            "text": "Unser Haus hat einen Garten. Im Sommer essen wir oft draußen. Im Winter sitzen wir im Wohnzimmer.",
+            "question": "Wo isst die Familie im Sommer oft?",
+            "options": [
+              "In der Küche",
+              "Im Garten",
+              "Im Wohnzimmer"
+            ],
+            "answer": "Im Garten"
+          }
+        },
+        {
+          "id": "lesen-5",
+          "title": "Lesen",
+          "type": "multiple-choice",
+          "task": {
+            "text": "Am Wochenende räume ich auf. Am Samstag putze ich das Bad, am Sonntag wasche ich die Wäsche.",
+            "question": "Was macht die Person am Sonntag?",
+            "options": [
+              "Sie putzt das Bad.",
+              "Sie wäscht die Wäsche.",
+              "Sie kocht."
+            ],
+            "answer": "Sie wäscht die Wäsche."
+          }
+        },
+        {
+          "id": "hoeren-1",
+          "title": "Hören",
+          "type": "audio-choice",
+          "task": {
+            "text": "Meine Wohnung ist klein, aber schön. Sie hat ein Zimmer, eine Küche und ein Bad. Leider hat sie keinen Balkon.",
+            "question": "Was hat die Wohnung nicht?",
+            "options": [
+              "Eine Küche",
+              "Einen Balkon",
+              "Ein Bad"
+            ],
+            "answer": "Einen Balkon"
+          }
+        },
+        {
+          "id": "hoeren-2",
+          "title": "Hören",
+          "type": "audio-choice",
+          "task": {
+            "text": "Am Abend koche ich das Essen. Danach sehe ich ein bisschen fern und um 23 Uhr gehe ich ins Bett.",
+            "question": "Wann geht die Person ins Bett?",
+            "options": [
+              "Um 21 Uhr",
+              "Um 22 Uhr",
+              "Um 23 Uhr"
+            ],
+            "answer": "Um 23 Uhr"
+          }
+        },
+        {
+          "id": "hoeren-3",
+          "title": "Hören",
+          "type": "audio-choice",
+          "task": {
+            "text": "Hallo, hier ist Frau Klein, Ihre Vermieterin. Morgen um zehn Uhr kommt der Techniker. Er repariert die Heizung.",
+            "question": "Was repariert der Techniker?",
+            "options": [
+              "Die Heizung",
+              "Das Fenster",
+              "Die Tür"
+            ],
+            "answer": "Die Heizung"
+          }
+        },
+        {
+          "id": "hoeren-4",
+          "title": "Hören",
+          "type": "audio-choice",
+          "task": {
+            "text": "Ich wohne im fünften Stock. Es gibt keinen Aufzug, also gehe ich immer zu Fuß. Das ist gut für die Gesundheit.",
+            "question": "In welchem Stock wohnt die Person?",
+            "options": [
+              "Im dritten Stock",
+              "Im vierten Stock",
+              "Im fünften Stock"
+            ],
+            "answer": "Im fünften Stock"
+          }
+        },
+        {
+          "id": "hoeren-5",
+          "title": "Hören",
+          "type": "audio-choice",
+          "task": {
+            "text": "Mein Mann kauft ein und ich koche. Unsere Kinder decken den Tisch.",
+            "question": "Was machen die Kinder?",
+            "options": [
+              "Sie kochen.",
+              "Sie decken den Tisch.",
+              "Sie kaufen ein."
+            ],
+            "answer": "Sie decken den Tisch."
+          }
+        },
+        {
+          "id": "schreiben-1",
+          "title": "Schreiben",
+          "type": "text-input",
+          "task": {
+            "instruction": "Beschreiben Sie Ihre Wohnung oder Ihr Haus. Wie viele Zimmer gibt es und welches Zimmer gefällt Ihnen am besten?",
+            "exampleAnswer": "Ich wohne in einer Wohnung in der Stadt. Sie hat drei Zimmer, eine Küche und ein Bad. Am besten gefällt mir das Wohnzimmer, weil es groß und hell ist."
+          }
+        },
+        {
+          "id": "schreiben-2",
+          "title": "Schreiben",
+          "type": "text-input",
+          "task": {
+            "instruction": "Schreiben Sie über Ihren Tag. Was machen Sie morgens, mittags und abends?",
+            "exampleAnswer": "Ich stehe um sieben Uhr auf und frühstücke. Dann gehe ich zur Arbeit. Mittags esse ich in der Kantine. Abends koche ich und lese ein Buch."
+          }
+        },
+        {
+          "id": "sprechen-1",
+          "title": "Sprechen",
+          "type": "speaking-prompt",
+          "task": {
+            "prompt": "Erzählen Sie von Ihrem Zimmer. Was steht in Ihrem Zimmer und welche Farbe haben die Wände?",
+            "expectedTopics": [
+              "Möbel",
+              "Farben",
+              "Größe des Zimmers"
+            ]
+          }
+        },
+        {
+          "id": "sprechen-2",
+          "title": "Sprechen",
+          "type": "speaking-prompt",
+          "task": {
+            "prompt": "Was machen Sie am Wochenende zu Hause? Erzählen Sie.",
+            "expectedTopics": [
+              "Aufräumen",
+              "Kochen",
+              "Ausruhen"
+            ]
+          }
         }
-      },
-      {
-        "id": "lesen-4",
-        "title": "Lesen",
-        "type": "multiple-choice",
-        "task": {
-          "text": "Restaurant Bella Italia\nHeute: Pizza Margherita nur 6 €",
-          "question": "Heute kostet die Pizza Margherita 6 Euro.",
-          "options": ["Richtig", "Falsch"],
-          "answer": "Richtig"
+      ]
+    },
+    {
+      "exam_id": 4,
+      "theme": "Essen und Einkaufen",
+      "icon": "🛒",
+      "modules": [
+        {
+          "id": "lesen-1",
+          "title": "Lesen",
+          "type": "multiple-choice",
+          "task": {
+            "text": "Angebot im Supermarkt: 1 kg Äpfel 1,99 €, 1 kg Tomaten 2,49 €, Brot 1,50 €.",
+            "question": "Wie viel kostet ein Kilo Tomaten?",
+            "options": [
+              "1,99 €",
+              "2,49 €",
+              "1,50 €"
+            ],
+            "answer": "2,49 €"
+          }
+        },
+        {
+          "id": "lesen-2",
+          "title": "Lesen",
+          "type": "multiple-choice",
+          "task": {
+            "text": "Einkaufsliste: Milch, sechs Eier, Käse, Butter, Wasser.",
+            "question": "Wie viele Eier braucht die Person?",
+            "options": [
+              "Vier",
+              "Sechs",
+              "Zehn"
+            ],
+            "answer": "Sechs"
+          }
+        },
+        {
+          "id": "lesen-3",
+          "title": "Lesen",
+          "type": "multiple-choice",
+          "task": {
+            "text": "Café Sonne. Frühstück von 8 bis 11 Uhr. Kaffee 2,80 €, Tee 2,20 €, Croissant 1,90 €.",
+            "question": "Bis wann gibt es Frühstück?",
+            "options": [
+              "Bis 8 Uhr",
+              "Bis 10 Uhr",
+              "Bis 11 Uhr"
+            ],
+            "answer": "Bis 11 Uhr"
+          }
+        },
+        {
+          "id": "lesen-4",
+          "title": "Lesen",
+          "type": "multiple-choice",
+          "task": {
+            "text": "Ich esse kein Fleisch. Ich bin Vegetarierin. Ich esse gern Gemüse, Nudeln und Käse.",
+            "question": "Was isst die Person nicht?",
+            "options": [
+              "Fleisch",
+              "Gemüse",
+              "Käse"
+            ],
+            "answer": "Fleisch"
+          }
+        },
+        {
+          "id": "lesen-5",
+          "title": "Lesen",
+          "type": "multiple-choice",
+          "task": {
+            "text": "Bäckerei Krause. Heute frische Brötchen! Montag bis Freitag 6 bis 18 Uhr, Samstag 6 bis 12 Uhr.",
+            "question": "Wann schließt die Bäckerei am Samstag?",
+            "options": [
+              "Um 12 Uhr",
+              "Um 18 Uhr",
+              "Um 6 Uhr"
+            ],
+            "answer": "Um 12 Uhr"
+          }
+        },
+        {
+          "id": "hoeren-1",
+          "title": "Hören",
+          "type": "audio-choice",
+          "task": {
+            "text": "Guten Tag, ich möchte ein Kilo Kartoffeln und zwei Gurken, bitte. Das macht drei Euro fünfzig.",
+            "question": "Wie viel kostet alles?",
+            "options": [
+              "2,50 €",
+              "3,50 €",
+              "5,30 €"
+            ],
+            "answer": "3,50 €"
+          }
+        },
+        {
+          "id": "hoeren-2",
+          "title": "Hören",
+          "type": "audio-choice",
+          "task": {
+            "text": "Zum Frühstück esse ich meistens Müsli mit Joghurt. Ich trinke keinen Kaffee, ich trinke Tee.",
+            "question": "Was trinkt die Person zum Frühstück?",
+            "options": [
+              "Kaffee",
+              "Tee",
+              "Saft"
+            ],
+            "answer": "Tee"
+          }
+        },
+        {
+          "id": "hoeren-3",
+          "title": "Hören",
+          "type": "audio-choice",
+          "task": {
+            "text": "Entschuldigung, wo finde ich die Milch? Die Milch ist hinten links, neben dem Käse.",
+            "question": "Wo ist die Milch?",
+            "options": [
+              "Vorne rechts",
+              "Hinten links",
+              "An der Kasse"
+            ],
+            "answer": "Hinten links"
+          }
+        },
+        {
+          "id": "hoeren-4",
+          "title": "Hören",
+          "type": "audio-choice",
+          "task": {
+            "text": "Heute Abend koche ich Spaghetti mit Tomatensoße. Ich brauche noch Zwiebeln und Knoblauch.",
+            "question": "Was kocht die Person heute?",
+            "options": [
+              "Suppe",
+              "Spaghetti",
+              "Pizza"
+            ],
+            "answer": "Spaghetti"
+          }
+        },
+        {
+          "id": "hoeren-5",
+          "title": "Hören",
+          "type": "audio-choice",
+          "task": {
+            "text": "Möchten Sie eine Tüte? Nein, danke. Ich habe eine Tasche. Zahlen Sie bar oder mit Karte? Mit Karte, bitte.",
+            "question": "Wie bezahlt die Person?",
+            "options": [
+              "Bar",
+              "Mit Karte",
+              "Mit dem Handy"
+            ],
+            "answer": "Mit Karte"
+          }
+        },
+        {
+          "id": "schreiben-1",
+          "title": "Schreiben",
+          "type": "text-input",
+          "task": {
+            "instruction": "Sie machen am Samstag eine Party. Schreiben Sie eine Einkaufsliste und 2 Sätze dazu, was Sie kochen.",
+            "exampleAnswer": "Einkaufsliste: Brot, Käse, Tomaten, Saft, Chips. Ich mache einen großen Salat. Ich backe auch einen Kuchen."
+          }
+        },
+        {
+          "id": "schreiben-2",
+          "title": "Schreiben",
+          "type": "text-input",
+          "task": {
+            "instruction": "Was essen und trinken Sie gern? Was essen Sie nicht gern? Schreiben Sie 3 oder 4 Sätze.",
+            "exampleAnswer": "Ich esse gern Pizza und Obst. Ich trinke gern Wasser und Kaffee. Fisch esse ich nicht gern. Süßigkeiten esse ich nur am Wochenende."
+          }
+        },
+        {
+          "id": "sprechen-1",
+          "title": "Sprechen",
+          "type": "speaking-prompt",
+          "task": {
+            "prompt": "Erzählen Sie, was Sie normalerweise frühstücken und wo Sie einkaufen.",
+            "expectedTopics": [
+              "Frühstück",
+              "Geschäfte",
+              "Lieblingsessen"
+            ]
+          }
+        },
+        {
+          "id": "sprechen-2",
+          "title": "Sprechen",
+          "type": "speaking-prompt",
+          "task": {
+            "prompt": "Sie sind im Supermarkt. Fragen Sie nach einem Produkt und nach dem Preis.",
+            "expectedTopics": [
+              "Produkt",
+              "Frage nach dem Ort",
+              "Preis"
+            ]
+          }
         }
-      },
-      {
-        "id": "lesen-5",
-        "title": "Lesen",
-        "type": "multiple-choice",
-        "task": {
-          "text": "Lena schreibt: Ich bin im Urlaub. Wir sind am Meer und das Wetter ist super.",
-          "question": "Lena ist zu Hause.",
-          "options": ["Richtig", "Falsch"],
-          "answer": "Falsch"
+      ]
+    },
+    {
+      "exam_id": 5,
+      "theme": "Stadt und Verkehr",
+      "icon": "🚌",
+      "modules": [
+        {
+          "id": "lesen-1",
+          "title": "Lesen",
+          "type": "multiple-choice",
+          "task": {
+            "text": "Fahrplan Bus 12: Abfahrt Bahnhof 8:05, 8:35, 9:05. Ankunft Rathaus 15 Minuten später.",
+            "question": "Wann kommt der Bus von 8:35 am Rathaus an?",
+            "options": [
+              "Um 8:50",
+              "Um 9:05",
+              "Um 8:45"
+            ],
+            "answer": "Um 8:50"
+          }
+        },
+        {
+          "id": "lesen-2",
+          "title": "Lesen",
+          "type": "multiple-choice",
+          "task": {
+            "text": "Die Apotheke ist in der Bahnhofstraße, neben der Post und gegenüber vom Supermarkt.",
+            "question": "Was ist neben der Apotheke?",
+            "options": [
+              "Der Supermarkt",
+              "Die Post",
+              "Der Bahnhof"
+            ],
+            "answer": "Die Post"
+          }
+        },
+        {
+          "id": "lesen-3",
+          "title": "Lesen",
+          "type": "multiple-choice",
+          "task": {
+            "text": "Achtung! Die U-Bahn-Linie 3 fährt am Wochenende nicht. Bitte nehmen Sie den Bus 40.",
+            "question": "Was sollen die Fahrgäste am Wochenende nehmen?",
+            "options": [
+              "Die U-Bahn 3",
+              "Den Bus 40",
+              "Ein Taxi"
+            ],
+            "answer": "Den Bus 40"
+          }
+        },
+        {
+          "id": "lesen-4",
+          "title": "Lesen",
+          "type": "multiple-choice",
+          "task": {
+            "text": "Ich fahre jeden Tag mit dem Fahrrad zur Arbeit. Das dauert nur zehn Minuten.",
+            "question": "Wie lange fährt die Person zur Arbeit?",
+            "options": [
+              "Fünf Minuten",
+              "Zehn Minuten",
+              "Zwanzig Minuten"
+            ],
+            "answer": "Zehn Minuten"
+          }
+        },
+        {
+          "id": "lesen-5",
+          "title": "Lesen",
+          "type": "multiple-choice",
+          "task": {
+            "text": "Museum der Stadt: Dienstag bis Sonntag 10 bis 17 Uhr. Montag geschlossen. Eintritt 6 Euro, Kinder frei.",
+            "question": "Wann ist das Museum geschlossen?",
+            "options": [
+              "Am Montag",
+              "Am Sonntag",
+              "Am Dienstag"
+            ],
+            "answer": "Am Montag"
+          }
+        },
+        {
+          "id": "hoeren-1",
+          "title": "Hören",
+          "type": "audio-choice",
+          "task": {
+            "text": "Entschuldigung, wie komme ich zum Bahnhof? Gehen Sie geradeaus und dann die zweite Straße links.",
+            "question": "Wie kommt man zum Bahnhof?",
+            "options": [
+              "Geradeaus, dann die erste rechts",
+              "Geradeaus, dann die zweite links",
+              "Immer rechts"
+            ],
+            "answer": "Geradeaus, dann die zweite links"
+          }
+        },
+        {
+          "id": "hoeren-2",
+          "title": "Hören",
+          "type": "audio-choice",
+          "task": {
+            "text": "Nächster Halt: Marktplatz. Ausstieg in Fahrtrichtung rechts.",
+            "question": "Wie heißt die nächste Haltestelle?",
+            "options": [
+              "Rathaus",
+              "Marktplatz",
+              "Bahnhof"
+            ],
+            "answer": "Marktplatz"
+          }
+        },
+        {
+          "id": "hoeren-3",
+          "title": "Hören",
+          "type": "audio-choice",
+          "task": {
+            "text": "Eine Fahrkarte nach München, bitte. Hin und zurück? Nein, nur hin. Das kostet 45 Euro.",
+            "question": "Was für eine Fahrkarte kauft die Person?",
+            "options": [
+              "Hin und zurück",
+              "Nur hin",
+              "Eine Monatskarte"
+            ],
+            "answer": "Nur hin"
+          }
+        },
+        {
+          "id": "hoeren-4",
+          "title": "Hören",
+          "type": "audio-choice",
+          "task": {
+            "text": "Ich wohne nicht im Zentrum. Ich fahre jeden Morgen zwanzig Minuten mit der Straßenbahn.",
+            "question": "Womit fährt die Person?",
+            "options": [
+              "Mit dem Bus",
+              "Mit der Straßenbahn",
+              "Mit dem Auto"
+            ],
+            "answer": "Mit der Straßenbahn"
+          }
+        },
+        {
+          "id": "hoeren-5",
+          "title": "Hören",
+          "type": "audio-choice",
+          "task": {
+            "text": "Der Zug nach Hamburg hat heute zehn Minuten Verspätung. Er fährt von Gleis 7.",
+            "question": "Von welchem Gleis fährt der Zug?",
+            "options": [
+              "Von Gleis 1",
+              "Von Gleis 7",
+              "Von Gleis 10"
+            ],
+            "answer": "Von Gleis 7"
+          }
+        },
+        {
+          "id": "schreiben-1",
+          "title": "Schreiben",
+          "type": "text-input",
+          "task": {
+            "instruction": "Ein Freund besucht Sie. Schreiben Sie ihm, wie er vom Bahnhof zu Ihrer Wohnung kommt.",
+            "exampleAnswer": "Hallo Ben! Am Bahnhof nimmst du den Bus 5. Du fährst drei Stationen bis zur Haltestelle Parkstraße. Dann gehst du geradeaus. Ich wohne in Hausnummer 12. Bis bald!"
+          }
+        },
+        {
+          "id": "schreiben-2",
+          "title": "Schreiben",
+          "type": "text-input",
+          "task": {
+            "instruction": "Beschreiben Sie Ihre Stadt. Was gibt es dort? Was gefällt Ihnen?",
+            "exampleAnswer": "Meine Stadt ist nicht sehr groß. Es gibt einen schönen Park, ein Kino und viele Cafés. Mir gefällt der Markt am Samstag."
+          }
+        },
+        {
+          "id": "sprechen-1",
+          "title": "Sprechen",
+          "type": "speaking-prompt",
+          "task": {
+            "prompt": "Wie fahren Sie zur Arbeit oder zum Kurs? Wie lange dauert das?",
+            "expectedTopics": [
+              "Verkehrsmittel",
+              "Zeit",
+              "Weg"
+            ]
+          }
+        },
+        {
+          "id": "sprechen-2",
+          "title": "Sprechen",
+          "type": "speaking-prompt",
+          "task": {
+            "prompt": "Sie sind fremd in der Stadt. Fragen Sie nach dem Weg zur Post.",
+            "expectedTopics": [
+              "Höfliche Frage",
+              "Richtung",
+              "Dank"
+            ]
+          }
         }
-      },
-      {
-        "id": "lesen-6",
-        "title": "Lesen",
-        "type": "multiple-choice",
-        "task": {
-          "text": "Bäckerei Schmidt\nSonntag geschlossen",
-          "question": "Die Bäckerei ist am Sonntag offen.",
-          "options": ["Richtig", "Falsch"],
-          "answer": "Falsch"
+      ]
+    },
+    {
+      "exam_id": 6,
+      "theme": "Freizeit und Wetter",
+      "icon": "☀️",
+      "modules": [
+        {
+          "id": "lesen-1",
+          "title": "Lesen",
+          "type": "multiple-choice",
+          "task": {
+            "text": "Wetter morgen: Im Norden Regen, 12 Grad. Im Süden Sonne, 22 Grad.",
+            "question": "Wie ist das Wetter morgen im Süden?",
+            "options": [
+              "Regen",
+              "Sonne",
+              "Schnee"
+            ],
+            "answer": "Sonne"
+          }
+        },
+        {
+          "id": "lesen-2",
+          "title": "Lesen",
+          "type": "multiple-choice",
+          "task": {
+            "text": "Hallo Paul, gehen wir am Samstag ins Kino? Der Film beginnt um 20 Uhr. Gruß, Mia",
+            "question": "Wann beginnt der Film?",
+            "options": [
+              "Um 18 Uhr",
+              "Um 20 Uhr",
+              "Um 22 Uhr"
+            ],
+            "answer": "Um 20 Uhr"
+          }
+        },
+        {
+          "id": "lesen-3",
+          "title": "Lesen",
+          "type": "multiple-choice",
+          "task": {
+            "text": "Schwimmbad Nord. Montag bis Freitag 7 bis 21 Uhr. Erwachsene 4 Euro, Kinder 2 Euro.",
+            "question": "Wie viel kostet der Eintritt für Kinder?",
+            "options": [
+              "2 Euro",
+              "4 Euro",
+              "7 Euro"
+            ],
+            "answer": "2 Euro"
+          }
+        },
+        {
+          "id": "lesen-4",
+          "title": "Lesen",
+          "type": "multiple-choice",
+          "task": {
+            "text": "In meiner Freizeit lese ich gern Bücher. Am Wochenende spiele ich Fußball mit meinen Freunden.",
+            "question": "Was macht die Person am Wochenende?",
+            "options": [
+              "Sie liest.",
+              "Sie spielt Fußball.",
+              "Sie schwimmt."
+            ],
+            "answer": "Sie spielt Fußball."
+          }
+        },
+        {
+          "id": "lesen-5",
+          "title": "Lesen",
+          "type": "multiple-choice",
+          "task": {
+            "text": "Heute ist es sehr kalt und es schneit. Bitte zieht eine Mütze und Handschuhe an!",
+            "question": "Wie ist das Wetter heute?",
+            "options": [
+              "Warm und sonnig",
+              "Kalt mit Schnee",
+              "Windig mit Regen"
+            ],
+            "answer": "Kalt mit Schnee"
+          }
+        },
+        {
+          "id": "hoeren-1",
+          "title": "Hören",
+          "type": "audio-choice",
+          "task": {
+            "text": "Am Sonntag mache ich einen Ausflug in die Berge. Ich wandere gern.",
+            "question": "Was macht die Person am Sonntag?",
+            "options": [
+              "Sie geht schwimmen.",
+              "Sie wandert in den Bergen.",
+              "Sie bleibt zu Hause."
+            ],
+            "answer": "Sie wandert in den Bergen."
+          }
+        },
+        {
+          "id": "hoeren-2",
+          "title": "Hören",
+          "type": "audio-choice",
+          "task": {
+            "text": "Hörst du gern Musik? Ja, sehr gern. Ich spiele auch Gitarre.",
+            "question": "Welches Instrument spielt die Person?",
+            "options": [
+              "Klavier",
+              "Gitarre",
+              "Geige"
+            ],
+            "answer": "Gitarre"
+          }
+        },
+        {
+          "id": "hoeren-3",
+          "title": "Hören",
+          "type": "audio-choice",
+          "task": {
+            "text": "Das Wetter für heute: am Vormittag Wolken, am Nachmittag Regen. Nehmen Sie einen Regenschirm mit!",
+            "question": "Wie ist das Wetter am Nachmittag?",
+            "options": [
+              "Sonnig",
+              "Regnerisch",
+              "Windig"
+            ],
+            "answer": "Regnerisch"
+          }
+        },
+        {
+          "id": "hoeren-4",
+          "title": "Hören",
+          "type": "audio-choice",
+          "task": {
+            "text": "Mein Hobby ist Kochen. Jeden Freitag koche ich für meine Freunde.",
+            "question": "Wann kocht die Person für Freunde?",
+            "options": [
+              "Am Montag",
+              "Am Mittwoch",
+              "Am Freitag"
+            ],
+            "answer": "Am Freitag"
+          }
+        },
+        {
+          "id": "hoeren-5",
+          "title": "Hören",
+          "type": "audio-choice",
+          "task": {
+            "text": "Im Sommer fahren wir ans Meer. Wir schwimmen und liegen am Strand.",
+            "question": "Wohin fährt die Familie im Sommer?",
+            "options": [
+              "In die Berge",
+              "Ans Meer",
+              "In die Stadt"
+            ],
+            "answer": "Ans Meer"
+          }
+        },
+        {
+          "id": "schreiben-1",
+          "title": "Schreiben",
+          "type": "text-input",
+          "task": {
+            "instruction": "Schreiben Sie eine Nachricht an eine Freundin. Laden Sie sie am Wochenende zu einer Aktivität ein.",
+            "exampleAnswer": "Hallo Sara! Hast du am Samstag Zeit? Ich möchte ins Schwimmbad gehen. Kommst du mit? Wir treffen uns um 14 Uhr vor dem Eingang. Liebe Grüße, Eva"
+          }
+        },
+        {
+          "id": "schreiben-2",
+          "title": "Schreiben",
+          "type": "text-input",
+          "task": {
+            "instruction": "Welche Jahreszeit mögen Sie? Wie ist das Wetter dann und was machen Sie?",
+            "exampleAnswer": "Ich mag den Sommer. Dann ist es warm und die Sonne scheint. Ich gehe oft schwimmen und esse Eis."
+          }
+        },
+        {
+          "id": "sprechen-1",
+          "title": "Sprechen",
+          "type": "speaking-prompt",
+          "task": {
+            "prompt": "Erzählen Sie von Ihren Hobbys. Was machen Sie gern in Ihrer Freizeit?",
+            "expectedTopics": [
+              "Hobbys",
+              "Wie oft",
+              "Mit wem"
+            ]
+          }
+        },
+        {
+          "id": "sprechen-2",
+          "title": "Sprechen",
+          "type": "speaking-prompt",
+          "task": {
+            "prompt": "Wie ist das Wetter heute? Was machen Sie bei schönem Wetter und bei Regen?",
+            "expectedTopics": [
+              "Wetter heute",
+              "Aktivitäten bei Sonne",
+              "Aktivitäten bei Regen"
+            ]
+          }
         }
-      },
-      {
-        "id": "lesen-7",
-        "title": "Lesen",
-        "type": "multiple-choice",
-        "task": {
-          "text": "Tom schreibt: Ich arbeite heute bis 18 Uhr.",
-          "question": "Tom arbeitet heute bis 18 Uhr.",
-          "options": ["Richtig", "Falsch"],
-          "answer": "Richtig"
+      ]
+    },
+    {
+      "exam_id": 7,
+      "theme": "Kleidung und Farben",
+      "icon": "👕",
+      "modules": [
+        {
+          "id": "lesen-1",
+          "title": "Lesen",
+          "type": "multiple-choice",
+          "task": {
+            "text": "Sonderangebot! Alle T-Shirts nur 9,99 €. Jeans 29 €. Nur diese Woche.",
+            "question": "Wie viel kostet eine Jeans?",
+            "options": [
+              "9,99 €",
+              "19 €",
+              "29 €"
+            ],
+            "answer": "29 €"
+          }
+        },
+        {
+          "id": "lesen-2",
+          "title": "Lesen",
+          "type": "multiple-choice",
+          "task": {
+            "text": "Lisa trägt heute einen roten Rock, eine weiße Bluse und schwarze Schuhe.",
+            "question": "Welche Farbe hat Lisas Rock?",
+            "options": [
+              "Rot",
+              "Weiß",
+              "Schwarz"
+            ],
+            "answer": "Rot"
+          }
+        },
+        {
+          "id": "lesen-3",
+          "title": "Lesen",
+          "type": "multiple-choice",
+          "task": {
+            "text": "Die Umkleidekabinen sind im ersten Stock. Bitte nehmen Sie maximal drei Teile mit.",
+            "question": "Wie viele Teile darf man mitnehmen?",
+            "options": [
+              "Zwei",
+              "Drei",
+              "Fünf"
+            ],
+            "answer": "Drei"
+          }
+        },
+        {
+          "id": "lesen-4",
+          "title": "Lesen",
+          "type": "multiple-choice",
+          "task": {
+            "text": "Morgen gehe ich zu einer Hochzeit. Ich brauche einen Anzug und eine Krawatte.",
+            "question": "Was braucht die Person?",
+            "options": [
+              "Einen Anzug",
+              "Eine Jacke",
+              "Einen Pullover"
+            ],
+            "answer": "Einen Anzug"
+          }
+        },
+        {
+          "id": "lesen-5",
+          "title": "Lesen",
+          "type": "multiple-choice",
+          "task": {
+            "text": "Mein Lieblingspullover ist blau. Er ist alt, aber sehr warm und bequem.",
+            "question": "Wie ist der Pullover?",
+            "options": [
+              "Neu und teuer",
+              "Alt und bequem",
+              "Klein und kalt"
+            ],
+            "answer": "Alt und bequem"
+          }
+        },
+        {
+          "id": "hoeren-1",
+          "title": "Hören",
+          "type": "audio-choice",
+          "task": {
+            "text": "Kann ich Ihnen helfen? Ja, ich suche eine Jacke in Größe M. Welche Farbe? Grün, bitte.",
+            "question": "Welche Größe sucht die Person?",
+            "options": [
+              "S",
+              "M",
+              "L"
+            ],
+            "answer": "M"
+          }
+        },
+        {
+          "id": "hoeren-2",
+          "title": "Hören",
+          "type": "audio-choice",
+          "task": {
+            "text": "Diese Schuhe sind zu klein. Haben Sie sie in Größe 40? Ja, einen Moment bitte.",
+            "question": "Was ist das Problem?",
+            "options": [
+              "Die Schuhe sind zu groß.",
+              "Die Schuhe sind zu klein.",
+              "Die Schuhe sind zu teuer."
+            ],
+            "answer": "Die Schuhe sind zu klein."
+          }
+        },
+        {
+          "id": "hoeren-3",
+          "title": "Hören",
+          "type": "audio-choice",
+          "task": {
+            "text": "Im Winter trage ich immer einen Mantel, einen Schal und Stiefel.",
+            "question": "Was trägt die Person im Winter an den Füßen?",
+            "options": [
+              "Sandalen",
+              "Stiefel",
+              "Turnschuhe"
+            ],
+            "answer": "Stiefel"
+          }
+        },
+        {
+          "id": "hoeren-4",
+          "title": "Hören",
+          "type": "audio-choice",
+          "task": {
+            "text": "Das Kleid kostet 49 Euro. Das ist mir zu teuer. Haben Sie etwas Billigeres?",
+            "question": "Was denkt die Person über das Kleid?",
+            "options": [
+              "Es ist zu teuer.",
+              "Es ist zu lang.",
+              "Es ist zu hässlich."
+            ],
+            "answer": "Es ist zu teuer."
+          }
+        },
+        {
+          "id": "hoeren-5",
+          "title": "Hören",
+          "type": "audio-choice",
+          "task": {
+            "text": "Meine Lieblingsfarbe ist Gelb. Ich habe ein gelbes Fahrrad und eine gelbe Tasche.",
+            "question": "Was ist die Lieblingsfarbe?",
+            "options": [
+              "Grün",
+              "Gelb",
+              "Blau"
+            ],
+            "answer": "Gelb"
+          }
+        },
+        {
+          "id": "schreiben-1",
+          "title": "Schreiben",
+          "type": "text-input",
+          "task": {
+            "instruction": "Was tragen Sie heute? Beschreiben Sie Ihre Kleidung und die Farben.",
+            "exampleAnswer": "Heute trage ich eine blaue Jeans und einen grauen Pullover. Meine Schuhe sind weiß. Ich habe auch eine schwarze Jacke."
+          }
+        },
+        {
+          "id": "schreiben-2",
+          "title": "Schreiben",
+          "type": "text-input",
+          "task": {
+            "instruction": "Sie haben im Internet eine Jacke gekauft. Sie ist zu groß. Schreiben Sie eine kurze E-Mail an das Geschäft.",
+            "exampleAnswer": "Sehr geehrte Damen und Herren, ich habe bei Ihnen eine Jacke in Größe L gekauft. Sie ist leider zu groß. Kann ich sie gegen Größe M tauschen? Mit freundlichen Grüßen, Anna Kraus"
+          }
+        },
+        {
+          "id": "sprechen-1",
+          "title": "Sprechen",
+          "type": "speaking-prompt",
+          "task": {
+            "prompt": "Was ziehen Sie gern an? Was tragen Sie im Sommer und was im Winter?",
+            "expectedTopics": [
+              "Lieblingskleidung",
+              "Sommer",
+              "Winter"
+            ]
+          }
+        },
+        {
+          "id": "sprechen-2",
+          "title": "Sprechen",
+          "type": "speaking-prompt",
+          "task": {
+            "prompt": "Sie sind in einem Kleidungsgeschäft. Fragen Sie nach einer Hose, der Größe und dem Preis.",
+            "expectedTopics": [
+              "Produkt",
+              "Größe",
+              "Preis"
+            ]
+          }
         }
-      },
-      {
-        "id": "lesen-8",
-        "title": "Lesen",
-        "type": "multiple-choice",
-        "task": {
-          "text": "Arztpraxis Dr. Weber\nMontag–Freitag 9–12 Uhr",
-          "question": "Am Samstag ist die Praxis geöffnet.",
-          "options": ["Richtig", "Falsch"],
-          "answer": "Falsch"
+      ]
+    },
+    {
+      "exam_id": 8,
+      "theme": "Schule und Sprachkurs",
+      "icon": "🎒",
+      "modules": [
+        {
+          "id": "lesen-1",
+          "title": "Lesen",
+          "type": "multiple-choice",
+          "task": {
+            "text": "Deutschkurs A1: Montag und Mittwoch, 18 bis 20 Uhr, Raum 204. Kursleiterin: Frau Berger.",
+            "question": "An welchen Tagen ist der Kurs?",
+            "options": [
+              "Montag und Mittwoch",
+              "Dienstag und Donnerstag",
+              "Nur am Freitag"
+            ],
+            "answer": "Montag und Mittwoch"
+          }
+        },
+        {
+          "id": "lesen-2",
+          "title": "Lesen",
+          "type": "multiple-choice",
+          "task": {
+            "text": "Liebe Kursteilnehmer, morgen fällt der Unterricht aus. Frau Berger ist krank.",
+            "question": "Warum gibt es morgen keinen Unterricht?",
+            "options": [
+              "Es ist Feiertag.",
+              "Die Lehrerin ist krank.",
+              "Der Raum ist besetzt."
+            ],
+            "answer": "Die Lehrerin ist krank."
+          }
+        },
+        {
+          "id": "lesen-3",
+          "title": "Lesen",
+          "type": "multiple-choice",
+          "task": {
+            "text": "Bitte bringen Sie zum Kurs Ihr Buch, ein Heft und einen Kuli mit.",
+            "question": "Was soll man nicht mitbringen?",
+            "options": [
+              "Ein Buch",
+              "Einen Laptop",
+              "Ein Heft"
+            ],
+            "answer": "Einen Laptop"
+          }
+        },
+        {
+          "id": "lesen-4",
+          "title": "Lesen",
+          "type": "multiple-choice",
+          "task": {
+            "text": "Mein Sohn geht in die zweite Klasse. Sein Lieblingsfach ist Mathe. Kunst mag er nicht.",
+            "question": "Was ist das Lieblingsfach des Sohnes?",
+            "options": [
+              "Kunst",
+              "Mathe",
+              "Sport"
+            ],
+            "answer": "Mathe"
+          }
+        },
+        {
+          "id": "lesen-5",
+          "title": "Lesen",
+          "type": "multiple-choice",
+          "task": {
+            "text": "Die Bibliothek ist von Montag bis Freitag von 9 bis 19 Uhr geöffnet. Man kann Bücher drei Wochen ausleihen.",
+            "question": "Wie lange kann man Bücher ausleihen?",
+            "options": [
+              "Eine Woche",
+              "Zwei Wochen",
+              "Drei Wochen"
+            ],
+            "answer": "Drei Wochen"
+          }
+        },
+        {
+          "id": "hoeren-1",
+          "title": "Hören",
+          "type": "audio-choice",
+          "task": {
+            "text": "Öffnen Sie bitte das Buch auf Seite 25 und machen Sie Übung 3.",
+            "question": "Auf welcher Seite ist die Übung?",
+            "options": [
+              "Seite 3",
+              "Seite 25",
+              "Seite 52"
+            ],
+            "answer": "Seite 25"
+          }
+        },
+        {
+          "id": "hoeren-2",
+          "title": "Hören",
+          "type": "audio-choice",
+          "task": {
+            "text": "Ich lerne seit drei Monaten Deutsch. Deutsch ist schwer, aber es macht Spaß.",
+            "question": "Seit wann lernt die Person Deutsch?",
+            "options": [
+              "Seit drei Wochen",
+              "Seit drei Monaten",
+              "Seit drei Jahren"
+            ],
+            "answer": "Seit drei Monaten"
+          }
+        },
+        {
+          "id": "hoeren-3",
+          "title": "Hören",
+          "type": "audio-choice",
+          "task": {
+            "text": "Die Pause dauert fünfzehn Minuten. Danach machen wir einen kleinen Test.",
+            "question": "Was passiert nach der Pause?",
+            "options": [
+              "Ein Test",
+              "Ein Film",
+              "Der Unterricht ist zu Ende"
+            ],
+            "answer": "Ein Test"
+          }
+        },
+        {
+          "id": "hoeren-4",
+          "title": "Hören",
+          "type": "audio-choice",
+          "task": {
+            "text": "Entschuldigung, ich verstehe das Wort nicht. Können Sie es bitte wiederholen?",
+            "question": "Was möchte die Person?",
+            "options": [
+              "Eine Pause",
+              "Eine Wiederholung",
+              "Ein neues Buch"
+            ],
+            "answer": "Eine Wiederholung"
+          }
+        },
+        {
+          "id": "hoeren-5",
+          "title": "Hören",
+          "type": "audio-choice",
+          "task": {
+            "text": "In unserem Kurs sind zwölf Personen. Sie kommen aus acht Ländern.",
+            "question": "Wie viele Personen sind im Kurs?",
+            "options": [
+              "Acht",
+              "Zehn",
+              "Zwölf"
+            ],
+            "answer": "Zwölf"
+          }
+        },
+        {
+          "id": "schreiben-1",
+          "title": "Schreiben",
+          "type": "text-input",
+          "task": {
+            "instruction": "Sie können morgen nicht zum Kurs kommen. Schreiben Sie eine kurze E-Mail an Ihre Lehrerin und sagen Sie warum.",
+            "exampleAnswer": "Liebe Frau Berger, ich kann morgen leider nicht zum Kurs kommen. Ich habe einen Termin beim Arzt. Was sind die Hausaufgaben? Viele Grüße, Ali"
+          }
+        },
+        {
+          "id": "schreiben-2",
+          "title": "Schreiben",
+          "type": "text-input",
+          "task": {
+            "instruction": "Warum lernen Sie Deutsch? Was ist für Sie leicht und was ist schwer?",
+            "exampleAnswer": "Ich lerne Deutsch, weil ich in Deutschland arbeiten möchte. Lesen ist für mich leicht. Sprechen und die Artikel sind schwer."
+          }
+        },
+        {
+          "id": "sprechen-1",
+          "title": "Sprechen",
+          "type": "speaking-prompt",
+          "task": {
+            "prompt": "Erzählen Sie von Ihrem Deutschkurs. Wann ist der Kurs und wer ist in Ihrer Klasse?",
+            "expectedTopics": [
+              "Zeit",
+              "Lehrer",
+              "Kursteilnehmer"
+            ]
+          }
+        },
+        {
+          "id": "sprechen-2",
+          "title": "Sprechen",
+          "type": "speaking-prompt",
+          "task": {
+            "prompt": "Wie lernen Sie zu Hause Deutsch? Was machen Sie jeden Tag?",
+            "expectedTopics": [
+              "Apps oder Bücher",
+              "Wie oft",
+              "Was hilft"
+            ]
+          }
         }
-      },
-      {
-        "id": "lesen-9",
-        "title": "Lesen",
-        "type": "multiple-choice",
-        "task": {
-          "text": "Heute Regen. Temperatur: 12 Grad.",
-          "question": "Heute ist das Wetter warm und sonnig.",
-          "options": ["Richtig", "Falsch"],
-          "answer": "Falsch"
-        }
-      },
-      {
-        "id": "lesen-10",
-        "title": "Lesen",
-        "type": "multiple-choice",
-        "task": {
-          "text": "Buslinie 5\nAbfahrt um 7:30 Uhr",
-          "question": "Der Bus fährt um halb acht.",
-          "options": ["Richtig", "Falsch"],
-          "answer": "Richtig"
-        }
-      },
-      {
-        "id": "hoeren-1",
-        "title": "Hören",
-        "type": "audio-choice",
-        "task": {
-          "text": "Ich komme nicht um acht. Ich komme erst um zehn, okay?",
-          "question": "Wann kommt sie?",
-          "options": ["Um 8 Uhr", "Um 10 Uhr", "Gar nicht"],
-          "answer": "Um 10 Uhr"
-        }
-      },
-      {
-        "id": "hoeren-2",
-        "title": "Hören",
-        "type": "audio-choice",
-        "task": {
-          "text": "Der Zug nach Berlin fährt heute nicht. Er fällt aus.",
-          "question": "Was ist mit dem Zug?",
-          "options": ["Er kommt später", "Er fällt aus", "Er fährt früher"],
-          "answer": "Er fällt aus"
-        }
-      },
-      {
-        "id": "hoeren-3",
-        "title": "Hören",
-        "type": "audio-choice",
-        "task": {
-          "text": "Heute ist es sehr warm. Wir gehen ins Schwimmbad.",
-          "question": "Wohin gehen sie?",
-          "options": ["Ins Kino", "Ins Schwimmbad", "In die Schule"],
-          "answer": "Ins Schwimmbad"
-        }
-      },
-      {
-        "id": "hoeren-4",
-        "title": "Hören",
-        "type": "audio-choice",
-        "task": {
-          "text": "Ich trinke morgens immer Kaffee und esse ein Brötchen.",
-          "question": "Was isst und trinkt die Person morgens?",
-          "options": ["Tee und Toast", "Kaffee und Brötchen", "Saft und Müsli"],
-          "answer": "Kaffee und Brötchen"
-        }
-      },
-      {
-        "id": "hoeren-5",
-        "title": "Hören",
-        "type": "audio-choice",
-        "task": {
-          "text": "Am Samstag habe ich keine Schule. Ich schlafe lange und frühstücke spät.",
-          "question": "Was macht die Person am Samstag?",
-          "options": ["Geht zur Schule", "Schläft lange", "Arbeitet"],
-          "answer": "Schläft lange"
-        }
-      },
-      {
-        "id": "hoeren-6",
-        "title": "Hören",
-        "type": "audio-choice",
-        "task": {
-          "text": "Ich gehe heute einkaufen. Ich brauche Brot und Milch.",
-          "question": "Was braucht die Person?",
-          "options": ["Brot und Milch", "Kaffee und Kuchen", "Obst und Gemüse"],
-          "answer": "Brot und Milch"
-        }
-      },
-      {
-        "id": "hoeren-7",
-        "title": "Hören",
-        "type": "audio-choice",
-        "task": {
-          "text": "Der Termin ist morgen um neun Uhr.",
-          "question": "Wann ist der Termin?",
-          "options": ["Heute um 9 Uhr", "Morgen um 9 Uhr", "Morgen um 19 Uhr"],
-          "answer": "Morgen um 9 Uhr"
-        }
-      },
-      {
-        "id": "hoeren-8",
-        "title": "Hören",
-        "type": "audio-choice",
-        "task": {
-          "text": "Ich fahre mit dem Bus zur Arbeit.",
-          "question": "Wie fährt die Person zur Arbeit?",
-          "options": ["Mit dem Auto", "Mit dem Bus", "Zu Fuß"],
-          "answer": "Mit dem Bus"
-        }
-      },
-      {
-        "id": "hoeren-9",
-        "title": "Hören",
-        "type": "audio-choice",
-        "task": {
-          "text": "Heute Abend bleibe ich zu Hause und sehe fern.",
-          "question": "Was macht die Person heute Abend?",
-          "options": ["Sie geht ins Kino", "Sie arbeitet", "Sie bleibt zu Hause"],
-          "answer": "Sie bleibt zu Hause"
-        }
-      },
-      {
-        "id": "hoeren-10",
-        "title": "Hören",
-        "type": "audio-choice",
-        "task": {
-          "text": "Ich habe morgen frei. Ich habe keine Arbeit.",
-          "question": "Was ist morgen?",
-          "options": ["Ein Arbeitstag", "Ein freier Tag", "Ein Schultag"],
-          "answer": "Ein freier Tag"
-        }
-      },
-      {
-        "id": "schreiben-1",
-        "title": "Schreiben",
-        "type": "text-input",
-        "task": {
-          "instruction": "Schreib eine Nachricht an einen Freund. Lade ihn ins Kino morgen ein.",
-          "exampleAnswer": "Hallo Max! Morgen gehe ich ins Kino. Willst du mitkommen? Der Film beginnt um 18 Uhr."
-        }
-      },
-      {
-        "id": "schreiben-2",
-        "title": "Schreiben",
-        "type": "text-input",
-        "task": {
-          "instruction": "Schreib deiner Lehrerin oder deinem Lehrer. Du kommst heute nicht. Warum?",
-          "exampleAnswer": "Guten Tag Frau Meier, ich bin heute krank und kann nicht zum Kurs kommen. Viele Grüße, Anna."
-        }
-      },
-      {
-        "id": "schreiben-3",
-        "title": "Schreiben",
-        "type": "text-input",
-        "task": {
-          "instruction": "Gratuliere deinem Freund zum Geburtstag. (2–3 Sätze)",
-          "exampleAnswer": "Alles Gute zum Geburtstag, Lisa! Ich wünsche dir viel Glück und Gesundheit!"
-        }
-      },
-      {
-        "id": "schreiben-4",
-        "title": "Schreiben",
-        "type": "text-input",
-        "task": {
-          "instruction": "Schreib dem Hotel. Gibt es Zimmer? Was kostet ein Zimmer?",
-          "exampleAnswer": "Sehr geehrte Damen und Herren, ich möchte fragen, ob Sie am Wochenende ein freies Zimmer haben. Was kostet es pro Nacht?"
-        }
-      },
-      {
-        "id": "schreiben-5",
-        "title": "Schreiben",
-        "type": "text-input",
-        "task": {
-          "instruction": "Schreib deinem Freund. Du hast eine neue Wohnung. Schreib die Adresse.",
-          "exampleAnswer": "Hallo Paul! Ich bin umgezogen. Meine neue Adresse ist Gartenstraße 12. Komm doch mal vorbei!"
-        }
-      },
-
-      {
-        "id": "sprechen-1",
-        "title": "Sprechen",
-        "type": "speaking-prompt",
-        "task": {
-          "prompt": "Stell dich bitte vor. Wie heißt du? Woher kommst du? Was machst du gern?",
-          "expectedTopics": ["Name", "Herkunft", "Hobby"]
-        }
-      },
-      {
-        "id": "sprechen-2",
-        "title": "Sprechen",
-        "type": "speaking-prompt",
-        "task": {
-          "prompt": "Sprich über deinen Tagesablauf. Wann stehst du auf? Was machst du morgens?",
-          "expectedTopics": ["Tagesablauf", "Zeit", "Aktivitäten"]
-        }
-      },
-      {
-        "id": "sprechen-3",
-        "title": "Sprechen",
-        "type": "speaking-prompt",
-        "task": {
-          "prompt": "Was isst du gern? Was trinkst du zum Frühstück? Sprich über Essen und Trinken.",
-          "expectedTopics": ["Essen", "Trinken", "Frühstück"]
-        }
-      },
-      {
-        "id": "sprechen-4",
-        "title": "Sprechen",
-        "type": "speaking-prompt",
-        "task": {
-          "prompt": "Erzähle von deiner Familie. Hast du Geschwister? Wie heißen sie?",
-          "expectedTopics": ["Familie", "Geschwister", "Name"]
-        }
-      },
-      {
-        "id": "sprechen-5",
-        "title": "Sprechen",
-        "type": "speaking-prompt",
-        "task": {
-          "prompt": "Was machst du am Wochenende? Hast du Pläne?",
-          "expectedTopics": ["Wochenende", "Pläne", "Aktivitäten"]
-        }
-      }
-    ]
-  }
-
+      ]
+    }
+  ]
+}

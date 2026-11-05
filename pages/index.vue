@@ -15,6 +15,7 @@ import VStartPage from "~/src/components/V-startPage.vue";
 import VHedgehogGuide from "~/src/components/V-hedgehogGuide.vue";
 import { useUiSettingsStore } from '~/store/uiSettingsStore.js'
 import { SplashScreen } from '@capacitor/splash-screen'
+import VLevelPicker from "~/src/components/V-levelPicker.vue";
 
 const eventStore = useEventSessionStore()
 const authStore = userAuthStore()
@@ -26,6 +27,14 @@ const colorMode = useColorMode()
 // Эффекты Хэллоуина — только на главной после входа:
 // пока идёт его событие (в любой теме) или включена купленная тема
 const isLoggedIn = computed(() => isLocallyLogged.value || !!authStore.uid)
+// Уровень спрашиваем один раз у каждого вошедшего, у кого его ещё нет (и у старых пользователей).
+// Пока не выбрал, модалку ивента не показываем, а за ней ждёт и модалка марафона (app.vue)
+const needsLevel = computed(() => authStore.initialized && !!authStore.uid && !authStore.germanLevel)
+const showLevelPicker = ref(false)
+watch(needsLevel, (need) => {
+  if (need) showLevelPicker.value = true
+}, { immediate: true })
+
 const isHalloweenFx = computed(() =>
     isLoggedIn.value && (colorMode.value === 'orange' || eventStore.isEventActive('pumpkin'))
 )
@@ -72,7 +81,8 @@ watch(() => authStore.uid, (newUid) => {
 </script>
 
 <template>
-  <VEventAvailableModal @close="false" v-if="authStore.initialized"/>
+  <VLevelPicker v-model="showLevelPicker" mode="onboarding"/>
+  <VEventAvailableModal @close="false" v-if="authStore.initialized && !needsLevel"/>
   <VShowFall v-if="eventStore.isSnowEnabled" :image="Snow"/>
   <template v-if="isHalloweenFx">
     <div class="halloween-layer halloween-layer--back" aria-hidden="true">

@@ -69,6 +69,20 @@
         "translation-ro": "Pod",
         "translation-tr": "Köprü",
         "translation-uz": "Ko'prik"
+      },
+      {
+        "word": "groß",
+        "translation-ru": "большой",
+        "translation-en": "big",
+        "translation-uk": "великий",
+        "translation-pl": "duży",
+        "translation-es": "grande",
+        "translation-fr": "grand",
+        "translation-tr": "büyük",
+        "translation-ro": "mare",
+        "translation-uz": "katta",
+        "translation-hi": "बड़ा",
+        "translation-ar": "كبير"
       }
     ],
     "tasks": [
@@ -329,6 +343,20 @@
         "translation-ro": "Bilet",
         "translation-tr": "Bilet",
         "translation-uz": "Chipta"
+      },
+      {
+        "word": "neu",
+        "translation-ru": "новый",
+        "translation-en": "new",
+        "translation-uk": "новий",
+        "translation-pl": "nowy",
+        "translation-es": "nuevo",
+        "translation-fr": "nouveau",
+        "translation-tr": "yeni",
+        "translation-ro": "nou",
+        "translation-uz": "yangi",
+        "translation-hi": "नया",
+        "translation-ar": "جديد"
       }
     ],
     "tasks": [
@@ -589,6 +617,20 @@
         "translation-ro": "Supermarket",
         "translation-tr": "Süpermarket",
         "translation-uz": "Supermarket"
+      },
+      {
+        "word": "klein",
+        "translation-ru": "маленький",
+        "translation-en": "small",
+        "translation-uk": "маленький",
+        "translation-pl": "mały",
+        "translation-es": "pequeño",
+        "translation-fr": "petit",
+        "translation-tr": "küçük",
+        "translation-ro": "mic",
+        "translation-uz": "kichik",
+        "translation-hi": "छोटा",
+        "translation-ar": "صغير"
       }
     ],
     "tasks": [
@@ -849,6 +891,20 @@
         "translation-ro": "Hartă / Card",
         "translation-tr": "Harita / Kart",
         "translation-uz": "Xarita / Karta"
+      },
+      {
+        "word": "der Bus",
+        "translation-ru": "автобус",
+        "translation-en": "bus",
+        "translation-uk": "автобус",
+        "translation-pl": "autobus",
+        "translation-es": "el autobús",
+        "translation-fr": "le bus",
+        "translation-tr": "otobüs",
+        "translation-ro": "autobuzul",
+        "translation-uz": "avtobus",
+        "translation-hi": "बस",
+        "translation-ar": "الحافلة"
       }
     ],
     "tasks": [
@@ -1109,6 +1165,20 @@
         "translation-ro": "Muzeu",
         "translation-tr": "Müze",
         "translation-uz": "Muzey"
+      },
+      {
+        "word": "klein",
+        "translation-ru": "маленький",
+        "translation-en": "small",
+        "translation-uk": "маленький",
+        "translation-pl": "mały",
+        "translation-es": "pequeño",
+        "translation-fr": "petit",
+        "translation-tr": "küçük",
+        "translation-ro": "mic",
+        "translation-uz": "kichik",
+        "translation-hi": "छोटा",
+        "translation-ar": "صغير"
       }
     ],
     "tasks": [
@@ -1421,8 +1491,29 @@
         "id": 2,
         "type": "reorder",
         "question": "questsWindValleySixQuests.questTwo",
-        "words": ["das", "ist", "lang", "der", "und", "Park", "die", "schön", "Straße", "ist"],
-        "correctOrder": ["die", "Straße", "ist", "lang", "und", "der", "Park", "ist", "schön"]
+        "words": [
+          "das",
+          "ist",
+          "lang",
+          "der",
+          "und",
+          "Park",
+          "Die",
+          "schön",
+          "Straße",
+          "ist"
+        ],
+        "correctOrder": [
+          "Die",
+          "Straße",
+          "ist",
+          "lang",
+          "und",
+          "der",
+          "Park",
+          "ist",
+          "schön"
+        ]
       },
       {
         "id": 3,
@@ -1446,8 +1537,24 @@
         "id": 5,
         "type": "reorder",
         "question": "questsWindValleySixQuests.questFive",
-        "words": ["die", "U-Bahn", "und", "hier", "der", "sind", "Bahnhof"],
-        "correctOrder": ["der", "Bahnhof", "und", "die", "U-Bahn", "sind", "hier"]
+        "words": [
+          "die",
+          "U-Bahn",
+          "und",
+          "hier",
+          "Der",
+          "sind",
+          "Bahnhof"
+        ],
+        "correctOrder": [
+          "Der",
+          "Bahnhof",
+          "und",
+          "die",
+          "U-Bahn",
+          "sind",
+          "hier"
+        ]
       },
       {
         "id": 6,
@@ -1471,8 +1578,24 @@
         "id": 8,
         "type": "reorder",
         "question": "questsWindValleySixQuests.questEight",
-        "words": ["die", "und", "geöffnet", "Apotheke", "die", "Bäckerei", "sind"],
-        "correctOrder": ["die", "Bäckerei", "und", "die", "Apotheke", "sind", "geöffnet"]
+        "words": [
+          "Die",
+          "und",
+          "geöffnet",
+          "Apotheke",
+          "die",
+          "Bäckerei",
+          "sind"
+        ],
+        "correctOrder": [
+          "Die",
+          "Bäckerei",
+          "und",
+          "die",
+          "Apotheke",
+          "sind",
+          "geöffnet"
+        ]
       },
       {
         "id": 9,
@@ -1496,8 +1619,28 @@
         "id": 11,
         "type": "reorder",
         "question": "questsWindValleySixQuests.questEleven",
-        "words": ["Museum", "Café", "dort", "das", "hier", "und", "ist", "das", "ist"],
-        "correctOrder": ["hier", "ist", "das", "Café", "und", "dort", "ist", "das", "Museum"]
+        "words": [
+          "Museum",
+          "Café",
+          "dort",
+          "das",
+          "Hier",
+          "und",
+          "ist",
+          "das",
+          "ist"
+        ],
+        "correctOrder": [
+          "Hier",
+          "ist",
+          "das",
+          "Café",
+          "und",
+          "dort",
+          "ist",
+          "das",
+          "Museum"
+        ]
       },
       {
         "id": 12,
@@ -1534,8 +1677,20 @@
         "id": 15,
         "type": "reorder",
         "question": "questsWindValleySixQuests.questFifteen",
-        "words": ["neues", "Ticket", "kaufe", "ein", "ich"],
-        "correctOrder": ["ich", "kaufe", "ein", "neues", "Ticket"]
+        "words": [
+          "neues",
+          "Ticket",
+          "kaufe",
+          "ein",
+          "Ich"
+        ],
+        "correctOrder": [
+          "Ich",
+          "kaufe",
+          "ein",
+          "neues",
+          "Ticket"
+        ]
       }
     ]
   },
@@ -1609,6 +1764,20 @@
         "translation-ro": "Peste drum / Vizavi",
         "translation-tr": "Karşısında / Karşı",
         "translation-uz": "Ro'parasida / Qarshisida"
+      },
+      {
+        "word": "dann",
+        "translation-ru": "Затем / Потом / Тогда",
+        "translation-en": "Then / Afterwards",
+        "translation-uk": "Потім / Тоді",
+        "translation-pl": "Wtedy / Potem",
+        "translation-es": "Entonces / Luego / Después",
+        "translation-fr": "Ensuite / Puis / Alors",
+        "translation-tr": "Sonra / Ondan sonra",
+        "translation-ro": "Apoi / După aceea",
+        "translation-uz": "So'ng / Undan keyin",
+        "translation-hi": "फिर / तब",
+        "translation-ar": "ثم / بعد ذلك"
       }
     ],
     "tasks": [
@@ -1863,6 +2032,20 @@
         "translation-ro": "Între",
         "translation-tr": "Arasında",
         "translation-uz": "Orasida"
+      },
+      {
+        "word": "die Bank",
+        "translation-ru": "скамейка",
+        "translation-en": "bench",
+        "translation-uk": "лавка",
+        "translation-pl": "ławka",
+        "translation-es": "el banco",
+        "translation-fr": "le banc",
+        "translation-tr": "bank",
+        "translation-ro": "banca",
+        "translation-uz": "skameyka",
+        "translation-hi": "बेंच",
+        "translation-ar": "المقعد"
       }
     ],
     "tasks": [
@@ -2775,6 +2958,48 @@
         "translation-ro": "Scuzați-mă / Pardon",
         "translation-tr": "Affedersiniz / Özür dilerim",
         "translation-uz": "Kechirasiz / Uzr"
+      },
+      {
+        "word": "dann",
+        "translation-ru": "Затем / Потом / Тогда",
+        "translation-en": "Then / Afterwards",
+        "translation-uk": "Потім / Тоді",
+        "translation-pl": "Wtedy / Potem",
+        "translation-es": "Entonces / Luego / Después",
+        "translation-fr": "Ensuite / Puis / Alors",
+        "translation-tr": "Sonra / Ondan sonra",
+        "translation-ro": "Apoi / După aceea",
+        "translation-uz": "So'ng / Undan keyin",
+        "translation-hi": "फिर / तब",
+        "translation-ar": "ثم / بعد ذلك"
+      },
+      {
+        "word": "der Bahnhof",
+        "translation-ru": "вокзал",
+        "translation-en": "station",
+        "translation-uk": "вокзал",
+        "translation-pl": "dworzec",
+        "translation-es": "la estación",
+        "translation-fr": "la gare",
+        "translation-tr": "gar",
+        "translation-ro": "gara",
+        "translation-uz": "vokzal",
+        "translation-hi": "स्टेशन",
+        "translation-ar": "المحطة"
+      },
+      {
+        "word": "die Haltestelle",
+        "translation-ru": "остановка",
+        "translation-en": "stop (bus stop)",
+        "translation-uk": "зупинка",
+        "translation-pl": "przystanek",
+        "translation-es": "la parada",
+        "translation-fr": "l’arrêt",
+        "translation-tr": "durak",
+        "translation-ro": "stația",
+        "translation-uz": "bekat",
+        "translation-hi": "बस स्टॉप",
+        "translation-ar": "المحطة"
       }
     ],
     "tasks": [
@@ -3035,6 +3260,20 @@
         "translation-ro": "Lift / Ascensor",
         "translation-tr": "Asansör",
         "translation-uz": "Lift"
+      },
+      {
+        "word": "rechts",
+        "translation-ru": "Справа / Направо",
+        "translation-en": "Right / On the right",
+        "translation-uk": "Праворуч",
+        "translation-pl": "W prawo / Po prawej",
+        "translation-es": "A la derecha",
+        "translation-fr": "À droite",
+        "translation-tr": "Sağda / Sağa",
+        "translation-ro": "La dreapta",
+        "translation-uz": "O'ngda / O'ngga",
+        "translation-hi": "दाएं / दाईं ओर",
+        "translation-ar": "يميناً / على اليمين"
       }
     ],
     "tasks": [
@@ -3295,6 +3534,20 @@
         "translation-ro": "Turn",
         "translation-tr": "Kule",
         "translation-uz": "Minora"
+      },
+      {
+        "word": "neben",
+        "translation-ru": "Рядом с / Около",
+        "translation-en": "Next to / Beside",
+        "translation-uk": "Поруч з / Біля",
+        "translation-pl": "Obok",
+        "translation-es": "Al lado de / Junto a",
+        "translation-fr": "À côté de",
+        "translation-tr": "Yanında",
+        "translation-ro": "Lângă",
+        "translation-uz": "Yonida",
+        "translation-hi": "के पास / के बगल में",
+        "translation-ar": "بجانب"
       }
     ],
     "tasks": [

@@ -1,0 +1,2598 @@
+[
+  {
+    "questId": "decision-workshop-one",
+    "title": "decisionWorkshopOne.questTitle",
+    "progress": "0/15",
+    "description": "decisionWorkshopOne.questDescription",
+    "conditions": {
+      "goal": "decisionWorkshopOne.questGoal",
+      "minCorrect": 15,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
+    "vocabulary": [
+      {
+        "word": "die Entscheidung",
+        "translation-ru": "решение",
+        "translation-en": "decision",
+        "translation-uk": "рішення",
+        "translation-pl": "decyzja",
+        "translation-es": "la decisión",
+        "translation-fr": "la décision",
+        "translation-tr": "karar",
+        "translation-ro": "decizia",
+        "translation-uz": "qaror",
+        "translation-hi": "फ़ैसला",
+        "translation-ar": "القرار"
+      },
+      {
+        "word": "eine Entscheidung treffen",
+        "translation-ru": "принять решение",
+        "translation-en": "to make a decision",
+        "translation-uk": "ухвалити рішення",
+        "translation-pl": "podjąć decyzję",
+        "translation-es": "tomar una decisión",
+        "translation-fr": "prendre une décision",
+        "translation-tr": "karar vermek",
+        "translation-ro": "a lua o decizie",
+        "translation-uz": "qaror qabul qilmoq",
+        "translation-hi": "फ़ैसला करना",
+        "translation-ar": "يتخذ قرارًا"
+      },
+      {
+        "word": "schwierig",
+        "translation-ru": "трудный",
+        "translation-en": "difficult",
+        "translation-uk": "важкий",
+        "translation-pl": "trudny",
+        "translation-es": "difícil",
+        "translation-fr": "difficile",
+        "translation-tr": "zor",
+        "translation-ro": "dificil",
+        "translation-uz": "qiyin",
+        "translation-hi": "मुश्किल",
+        "translation-ar": "صعب"
+      },
+      {
+        "word": "überlegen",
+        "translation-ru": "обдумывать",
+        "translation-en": "to think something over",
+        "translation-uk": "обмірковувати",
+        "translation-pl": "zastanawiać się",
+        "translation-es": "pensarlo",
+        "translation-fr": "réfléchir",
+        "translation-tr": "düşünüp taşınmak",
+        "translation-ro": "a se gândi",
+        "translation-uz": "o‘ylab ko‘rmoq",
+        "translation-hi": "सोच-विचार करना",
+        "translation-ar": "يفكّر مليًّا"
+      },
+      {
+        "word": "die Stelle",
+        "translation-ru": "место работы, должность",
+        "translation-en": "job, position",
+        "translation-uk": "посада, робота",
+        "translation-pl": "posada, praca",
+        "translation-es": "el puesto",
+        "translation-fr": "le poste",
+        "translation-tr": "iş yeri, pozisyon",
+        "translation-ro": "postul",
+        "translation-uz": "ish o‘rni",
+        "translation-hi": "नौकरी, पद",
+        "translation-ar": "الوظيفة"
+      }
+    ],
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "decisionWorkshopOne.questTask1",
+        "options": [
+          "Ich habe endlich eine Entscheidung gemacht.",
+          "Ich habe endlich eine Entscheidung genommen.",
+          "Ich habe endlich eine Entscheidung getroffen."
+        ],
+        "answer": "Ich habe endlich eine Entscheidung getroffen.",
+        "tip": "decisionWorkshopOne.questDescription"
+      },
+      {
+        "id": 2,
+        "type": "input",
+        "question": "decisionWorkshopOne.questTask2",
+        "correctAnswer": "treffen",
+        "tip": "decisionWorkshopOne.questDescription"
+      },
+      {
+        "id": 3,
+        "type": "input",
+        "question": "decisionWorkshopOne.questTask3",
+        "correctAnswer": "Entscheidung",
+        "tip": "decisionWorkshopOne.questDescription"
+      },
+      {
+        "id": 4,
+        "type": "reorder",
+        "question": "decisionWorkshopOne.questTask4",
+        "words": [
+          "macht",
+          "Entscheidung?",
+          "Wer",
+          "die",
+          "trifft"
+        ],
+        "correctOrder": [
+          "Wer",
+          "trifft",
+          "die",
+          "Entscheidung?"
+        ],
+        "tip": "decisionWorkshopOne.questDescription"
+      },
+      {
+        "id": 5,
+        "type": "select",
+        "question": "decisionWorkshopOne.questTask5",
+        "options": [
+          "Sie ist schnell eine Entscheidung getroffen.",
+          "Sie hat schnell eine Entscheidung getroffen.",
+          "Sie hat schnell eine Entscheidung getrafft."
+        ],
+        "answer": "Sie hat schnell eine Entscheidung getroffen.",
+        "tip": "decisionWorkshopOne.questDescription"
+      },
+      {
+        "id": 6,
+        "type": "input",
+        "question": "decisionWorkshopOne.questTask6",
+        "correctAnswer": "trifft",
+        "tip": "decisionWorkshopOne.questDescription"
+      },
+      {
+        "id": 7,
+        "type": "readAndAnswer",
+        "question": "decisionWorkshopOne.questTask7",
+        "text": "Mark hat lange überlegt. Gestern hat er endlich eine Entscheidung getroffen: Er geht nach Hamburg, weil er dort eine neue Stelle bekommt.",
+        "options": [
+          "Er möchte am Meer wohnen.",
+          "Er bekommt dort eine neue Stelle.",
+          "Seine Eltern wohnen dort."
+        ],
+        "answer": "Er bekommt dort eine neue Stelle.",
+        "tip": "decisionWorkshopOne.questDescription"
+      },
+      {
+        "id": 8,
+        "type": "input",
+        "question": "decisionWorkshopOne.questTask8",
+        "correctAnswer": "getroffen",
+        "tip": "decisionWorkshopOne.questDescription"
+      },
+      {
+        "id": 9,
+        "type": "reorder",
+        "question": "decisionWorkshopOne.questTask10",
+        "words": [
+          "treffen",
+          "keine",
+          "kann",
+          "Ich",
+          "machen",
+          "Entscheidung"
+        ],
+        "correctOrder": [
+          "Ich",
+          "kann",
+          "keine",
+          "Entscheidung",
+          "treffen"
+        ],
+        "tip": "decisionWorkshopOne.questDescription"
+      },
+      {
+        "id": 10,
+        "type": "select",
+        "question": "decisionWorkshopOne.questTask11",
+        "options": [
+          "Du trifft deine Entscheidungen zu schnell.",
+          "Du triffst deine Entscheidungen zu schnell.",
+          "Du treffst deine Entscheidungen zu schnell."
+        ],
+        "answer": "Du triffst deine Entscheidungen zu schnell.",
+        "tip": "decisionWorkshopOne.questDescription"
+      },
+      {
+        "id": 11,
+        "type": "input",
+        "question": "taskTowerEight.questTask9",
+        "correctAnswer": "verabschieden",
+        "tip": "taskTowerEight.questDescription",
+        "reviewOf": "task-tower-eight",
+        "reviewLand": "task-tower"
+      },
+      {
+        "id": 12,
+        "type": "input",
+        "question": "taskTowerFive.questTask12",
+        "correctAnswer": "Lässt",
+        "tip": "taskTowerFive.questDescription",
+        "reviewOf": "task-tower-five",
+        "reviewLand": "task-tower"
+      },
+      {
+        "id": 13,
+        "type": "input",
+        "question": "taskTowerTwo.questTask13",
+        "correctAnswer": "spielen",
+        "tip": "taskTowerTwo.questDescription",
+        "reviewOf": "task-tower-two",
+        "reviewLand": "task-tower"
+      },
+      {
+        "id": 14,
+        "type": "input",
+        "question": "decisionWorkshopOne.questTask14",
+        "correctAnswer": "zu",
+        "tip": "decisionWorkshopOne.questDescription"
+      },
+      {
+        "id": 15,
+        "type": "input",
+        "question": "decisionWorkshopOne.questTask15",
+        "correctAnswer": "wird",
+        "tip": "decisionWorkshopOne.questDescription"
+      }
+    ]
+  },
+  {
+    "questId": "decision-workshop-two",
+    "title": "decisionWorkshopTwo.questTitle",
+    "progress": "0/15",
+    "description": "decisionWorkshopTwo.questDescription",
+    "conditions": {
+      "goal": "decisionWorkshopTwo.questGoal",
+      "minCorrect": 15,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
+    "vocabulary": [
+      {
+        "word": "eine Frage stellen",
+        "translation-ru": "задать вопрос",
+        "translation-en": "to ask a question",
+        "translation-uk": "поставити питання",
+        "translation-pl": "zadać pytanie",
+        "translation-es": "hacer una pregunta",
+        "translation-fr": "poser une question",
+        "translation-tr": "soru sormak",
+        "translation-ro": "a pune o întrebare",
+        "translation-uz": "savol bermoq",
+        "translation-hi": "सवाल पूछना",
+        "translation-ar": "يطرح سؤالًا"
+      },
+      {
+        "word": "eine Antwort geben",
+        "translation-ru": "дать ответ",
+        "translation-en": "to give an answer",
+        "translation-uk": "дати відповідь",
+        "translation-pl": "udzielić odpowiedzi",
+        "translation-es": "dar una respuesta",
+        "translation-fr": "donner une réponse",
+        "translation-tr": "cevap vermek",
+        "translation-ro": "a da un răspuns",
+        "translation-uz": "javob bermoq",
+        "translation-hi": "जवाब देना",
+        "translation-ar": "يعطي جوابًا"
+      },
+      {
+        "word": "antworten",
+        "translation-ru": "отвечать",
+        "translation-en": "to answer",
+        "translation-uk": "відповідати",
+        "translation-pl": "odpowiadać",
+        "translation-es": "responder",
+        "translation-fr": "répondre",
+        "translation-tr": "cevap vermek",
+        "translation-ro": "a răspunde",
+        "translation-uz": "javob bermoq",
+        "translation-hi": "जवाब देना",
+        "translation-ar": "يجيب"
+      },
+      {
+        "word": "versuchen",
+        "translation-ru": "пробовать / пытаться",
+        "translation-en": "to try / attempt",
+        "translation-uk": "пробувати / намагатися",
+        "translation-pl": "próbować",
+        "translation-es": "intentar / tratar",
+        "translation-fr": "essayer / tenter",
+        "translation-tr": "denemek",
+        "translation-ro": "a încerca",
+        "translation-uz": "urinib ko'rmoq",
+        "translation-hi": "कोशिश करना",
+        "translation-ar": "يحاول"
+      },
+      {
+        "word": "die Entscheidung",
+        "translation-ru": "решение",
+        "translation-en": "decision",
+        "translation-uk": "рішення",
+        "translation-pl": "decyzja",
+        "translation-es": "la decisión",
+        "translation-fr": "la décision",
+        "translation-tr": "karar",
+        "translation-ro": "decizia",
+        "translation-uz": "qaror",
+        "translation-hi": "फ़ैसला",
+        "translation-ar": "القرار"
+      }
+    ],
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "decisionWorkshopTwo.questTask1",
+        "options": [
+          "Darf ich Ihnen eine Frage fragen?",
+          "Darf ich Ihnen eine Frage machen?",
+          "Darf ich Ihnen eine Frage stellen?"
+        ],
+        "answer": "Darf ich Ihnen eine Frage stellen?",
+        "tip": "decisionWorkshopTwo.questDescription"
+      },
+      {
+        "id": 2,
+        "type": "input",
+        "question": "decisionWorkshopTwo.questTask2",
+        "correctAnswer": "stellen",
+        "tip": "decisionWorkshopTwo.questDescription"
+      },
+      {
+        "id": 3,
+        "type": "input",
+        "question": "decisionWorkshopTwo.questTask3",
+        "correctAnswer": "gestellt",
+        "tip": "decisionWorkshopTwo.questDescription"
+      },
+      {
+        "id": 4,
+        "type": "reorder",
+        "question": "decisionWorkshopTwo.questTask4",
+        "words": [
+          "Er",
+          "gegeben",
+          "keine",
+          "gestellt",
+          "Antwort",
+          "hat",
+          "mir"
+        ],
+        "correctOrder": [
+          "Er",
+          "hat",
+          "mir",
+          "keine",
+          "Antwort",
+          "gegeben"
+        ],
+        "tip": "decisionWorkshopTwo.questDescription"
+      },
+      {
+        "id": 5,
+        "type": "select",
+        "question": "decisionWorkshopTwo.questTask5",
+        "options": [
+          "Ich stelle an dir eine Frage.",
+          "Ich stelle dir eine Frage.",
+          "Ich stelle dich eine Frage."
+        ],
+        "answer": "Ich stelle dir eine Frage.",
+        "tip": "decisionWorkshopTwo.questDescription"
+      },
+      {
+        "id": 6,
+        "type": "input",
+        "question": "decisionWorkshopTwo.questTask6",
+        "correctAnswer": "auf",
+        "tip": "decisionWorkshopTwo.questDescription"
+      },
+      {
+        "id": 7,
+        "type": "readAndAnswer",
+        "question": "decisionWorkshopTwo.questTask7",
+        "text": "In der Pause stellte Lisa dem Lehrer eine Frage: „Wann schreiben wir den Test?“ Der Lehrer gab ihr eine kurze Antwort: „Am Freitag.“",
+        "options": [
+          "am Freitag",
+          "heute",
+          "am Montag"
+        ],
+        "answer": "am Freitag",
+        "tip": "decisionWorkshopTwo.questDescription"
+      },
+      {
+        "id": 8,
+        "type": "input",
+        "question": "decisionWorkshopTwo.questTask8",
+        "correctAnswer": "stellst",
+        "tip": "decisionWorkshopTwo.questDescription"
+      },
+      {
+        "id": 9,
+        "type": "reorder",
+        "question": "decisionWorkshopTwo.questTask10",
+        "words": [
+          "Fragen",
+          "Die",
+          "stellen",
+          "dürfen",
+          "machen",
+          "am",
+          "Schüler",
+          "Ende"
+        ],
+        "correctOrder": [
+          "Die",
+          "Schüler",
+          "dürfen",
+          "am",
+          "Ende",
+          "Fragen",
+          "stellen"
+        ],
+        "tip": "decisionWorkshopTwo.questDescription"
+      },
+      {
+        "id": 10,
+        "type": "select",
+        "question": "decisionWorkshopTwo.questTask11",
+        "options": [
+          "Er ist im Kurs eine Frage gestellt.",
+          "Er hat im Kurs eine Frage gestellt.",
+          "Er hat im Kurs eine Frage gestellen."
+        ],
+        "answer": "Er hat im Kurs eine Frage gestellt.",
+        "tip": "decisionWorkshopTwo.questDescription"
+      },
+      {
+        "id": 11,
+        "type": "input",
+        "question": "decisionWorkshopOne.questTask9",
+        "correctAnswer": "trafen",
+        "tip": "decisionWorkshopOne.questDescription",
+        "reviewOf": "decision-workshop-one",
+        "reviewLand": "decision-workshop"
+      },
+      {
+        "id": 12,
+        "type": "input",
+        "question": "taskTowerSix.questTask12",
+        "correctAnswer": "ohne",
+        "tip": "taskTowerSix.questDescription",
+        "reviewOf": "task-tower-six",
+        "reviewLand": "task-tower"
+      },
+      {
+        "id": 13,
+        "type": "input",
+        "question": "taskTowerThree.questTask13",
+        "correctAnswer": "zu",
+        "tip": "taskTowerThree.questDescription",
+        "reviewOf": "task-tower-three",
+        "reviewLand": "task-tower"
+      },
+      {
+        "id": 14,
+        "type": "input",
+        "question": "decisionWorkshopTwo.questTask14",
+        "correctAnswer": "die",
+        "tip": "decisionWorkshopTwo.questDescription"
+      },
+      {
+        "id": 15,
+        "type": "input",
+        "question": "decisionWorkshopTwo.questTask15",
+        "correctAnswer": "hörte",
+        "tip": "decisionWorkshopTwo.questDescription"
+      }
+    ]
+  },
+  {
+    "questId": "decision-workshop-three",
+    "title": "decisionWorkshopThree.questTitle",
+    "progress": "0/15",
+    "description": "decisionWorkshopThree.questDescription",
+    "conditions": {
+      "goal": "decisionWorkshopThree.questGoal",
+      "minCorrect": 15,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
+    "vocabulary": [
+      {
+        "word": "Bescheid sagen",
+        "translation-ru": "сообщить, дать знать",
+        "translation-en": "to let someone know",
+        "translation-uk": "повідомити, дати знати",
+        "translation-pl": "dać znać",
+        "translation-es": "avisar",
+        "translation-fr": "prévenir",
+        "translation-tr": "haber vermek",
+        "translation-ro": "a anunța",
+        "translation-uz": "xabar bermoq",
+        "translation-hi": "बता देना",
+        "translation-ar": "يُخبر"
+      },
+      {
+        "word": "Bescheid geben",
+        "translation-ru": "сообщить, дать знать",
+        "translation-en": "to let someone know",
+        "translation-uk": "повідомити, дати знати",
+        "translation-pl": "dać znać",
+        "translation-es": "avisar",
+        "translation-fr": "prévenir",
+        "translation-tr": "haber vermek",
+        "translation-ro": "a da de știre",
+        "translation-uz": "xabar bermoq",
+        "translation-hi": "ख़बर देना",
+        "translation-ar": "يُعلم"
+      },
+      {
+        "word": "Bescheid wissen",
+        "translation-ru": "быть в курсе",
+        "translation-en": "to know about it",
+        "translation-uk": "бути в курсі",
+        "translation-pl": "wiedzieć, być na bieżąco",
+        "translation-es": "estar al tanto",
+        "translation-fr": "être au courant",
+        "translation-tr": "haberdar olmak",
+        "translation-ro": "a fi la curent",
+        "translation-uz": "xabardor bo‘lmoq",
+        "translation-hi": "जानकारी में होना",
+        "translation-ar": "يعلم بالأمر"
+      },
+      {
+        "word": "verreisen",
+        "translation-ru": "уезжать в путешествие",
+        "translation-en": "to go on a trip",
+        "translation-uk": "їхати в подорож",
+        "translation-pl": "wyjeżdżać",
+        "translation-es": "irse de viaje",
+        "translation-fr": "partir en voyage",
+        "translation-tr": "seyahate çıkmak",
+        "translation-ro": "a pleca în călătorie",
+        "translation-uz": "safarga chiqmoq",
+        "translation-hi": "यात्रा पर जाना",
+        "translation-ar": "يسافر"
+      },
+      {
+        "word": "die Hausaufgabe",
+        "translation-ru": "домашнее задание",
+        "translation-en": "homework",
+        "translation-uk": "домашнє завдання",
+        "translation-pl": "praca domowa",
+        "translation-es": "los deberes",
+        "translation-fr": "les devoirs",
+        "translation-tr": "ev ödevi",
+        "translation-ro": "tema",
+        "translation-uz": "uy vazifasi",
+        "translation-hi": "होमवर्क",
+        "translation-ar": "الواجب المنزلي"
+      }
+    ],
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "decisionWorkshopThree.questTask1",
+        "options": [
+          "Sag mir einen Bescheid, wenn du ankommst.",
+          "Sag mich Bescheid, wenn du ankommst.",
+          "Sag mir Bescheid, wenn du ankommst."
+        ],
+        "answer": "Sag mir Bescheid, wenn du ankommst.",
+        "tip": "decisionWorkshopThree.questDescription"
+      },
+      {
+        "id": 2,
+        "type": "input",
+        "question": "decisionWorkshopThree.questTask2",
+        "correctAnswer": "Bescheid",
+        "tip": "decisionWorkshopThree.questDescription"
+      },
+      {
+        "id": 3,
+        "type": "input",
+        "question": "decisionWorkshopThree.questTask3",
+        "correctAnswer": "weißt",
+        "tip": "decisionWorkshopThree.questDescription"
+      },
+      {
+        "id": 4,
+        "type": "reorder",
+        "question": "decisionWorkshopThree.questTask4",
+        "words": [
+          "Ihnen",
+          "Wir",
+          "einen",
+          "Bescheid",
+          "geben"
+        ],
+        "correctOrder": [
+          "Wir",
+          "geben",
+          "Ihnen",
+          "Bescheid"
+        ],
+        "tip": "decisionWorkshopThree.questDescription"
+      },
+      {
+        "id": 5,
+        "type": "select",
+        "question": "decisionWorkshopThree.questTask5",
+        "options": [
+          "Sie weiß Bescheid.",
+          "Sie weiß einen Bescheid.",
+          "Sie kennt Bescheid."
+        ],
+        "answer": "Sie weiß Bescheid.",
+        "tip": "decisionWorkshopThree.questDescription"
+      },
+      {
+        "id": 6,
+        "type": "input",
+        "question": "decisionWorkshopThree.questTask6",
+        "correctAnswer": "Bescheid",
+        "tip": "decisionWorkshopThree.questDescription"
+      },
+      {
+        "id": 7,
+        "type": "readAndAnswer",
+        "question": "decisionWorkshopThree.questTask7",
+        "text": "Die Mutter sagt zu Tim: „Ich weiß noch nicht, wann ich nach Hause komme. Ich sage dir Bescheid. Gib mir bitte auch Bescheid, wenn du mit den Hausaufgaben fertig bist.“",
+        "options": [
+          "wann er schlafen geht",
+          "wenn er mit den Hausaufgaben fertig ist",
+          "wann er nach Hause kommt"
+        ],
+        "answer": "wenn er mit den Hausaufgaben fertig ist",
+        "tip": "decisionWorkshopThree.questDescription"
+      },
+      {
+        "id": 8,
+        "type": "input",
+        "question": "decisionWorkshopThree.questTask8",
+        "correctAnswer": "wissen",
+        "tip": "decisionWorkshopThree.questDescription"
+      },
+      {
+        "id": 9,
+        "type": "reorder",
+        "question": "decisionWorkshopThree.questTask10",
+        "words": [
+          "Bescheid",
+          "wenn",
+          "bist",
+          "einen",
+          "Sag",
+          "bitte",
+          "mir",
+          "fertig",
+          "du"
+        ],
+        "correctOrder": [
+          "Sag",
+          "mir",
+          "bitte",
+          "Bescheid",
+          "wenn",
+          "du",
+          "fertig",
+          "bist"
+        ],
+        "tip": "decisionWorkshopThree.questDescription"
+      },
+      {
+        "id": 10,
+        "type": "select",
+        "question": "decisionWorkshopThree.questTask11",
+        "options": [
+          "Niemand wusste Bescheid.",
+          "Niemand wusste den Bescheid.",
+          "Niemand wisste Bescheid."
+        ],
+        "answer": "Niemand wusste Bescheid.",
+        "tip": "decisionWorkshopThree.questDescription"
+      },
+      {
+        "id": 11,
+        "type": "input",
+        "question": "decisionWorkshopTwo.questTask9",
+        "correctAnswer": "gab",
+        "tip": "decisionWorkshopTwo.questDescription",
+        "reviewOf": "decision-workshop-two",
+        "reviewLand": "decision-workshop"
+      },
+      {
+        "id": 12,
+        "type": "input",
+        "question": "taskTowerSeven.questTask12",
+        "correctAnswer": "zu",
+        "tip": "taskTowerSeven.questDescription",
+        "reviewOf": "task-tower-seven",
+        "reviewLand": "task-tower"
+      },
+      {
+        "id": 13,
+        "type": "input",
+        "question": "taskTowerFour.questTask13",
+        "correctAnswer": "frühstücken",
+        "tip": "taskTowerFour.questDescription",
+        "reviewOf": "task-tower-four",
+        "reviewLand": "task-tower"
+      },
+      {
+        "id": 14,
+        "type": "input",
+        "question": "decisionWorkshopThree.questTask14",
+        "correctAnswer": "lasse",
+        "tip": "decisionWorkshopThree.questDescription"
+      },
+      {
+        "id": 15,
+        "type": "input",
+        "question": "decisionWorkshopThree.questTask15",
+        "correctAnswer": "damit",
+        "tip": "decisionWorkshopThree.questDescription"
+      }
+    ]
+  },
+  {
+    "questId": "decision-workshop-four",
+    "title": "decisionWorkshopFour.questTitle",
+    "progress": "0/15",
+    "description": "decisionWorkshopFour.questDescription",
+    "conditions": {
+      "goal": "decisionWorkshopFour.questGoal",
+      "minCorrect": 15,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
+    "vocabulary": [
+      {
+        "word": "die Rücksicht",
+        "translation-ru": "внимание к другим, уважение",
+        "translation-en": "consideration",
+        "translation-uk": "увага до інших",
+        "translation-pl": "wzgląd",
+        "translation-es": "la consideración",
+        "translation-fr": "les égards",
+        "translation-tr": "saygı, düşünceli olma",
+        "translation-ro": "considerația",
+        "translation-uz": "hurmat, e’tibor",
+        "translation-hi": "लिहाज़",
+        "translation-ar": "المراعاة"
+      },
+      {
+        "word": "Rücksicht nehmen auf",
+        "translation-ru": "считаться с кем-то",
+        "translation-en": "to be considerate of",
+        "translation-uk": "зважати на",
+        "translation-pl": "liczyć się z",
+        "translation-es": "tener en cuenta a",
+        "translation-fr": "avoir des égards pour",
+        "translation-tr": "-i düşünmek",
+        "translation-ro": "a ține cont de",
+        "translation-uz": "…ni hisobga olmoq",
+        "translation-hi": "का ख़याल रखना",
+        "translation-ar": "يراعي"
+      },
+      {
+        "word": "Platz nehmen",
+        "translation-ru": "сесть, присесть",
+        "translation-en": "to take a seat",
+        "translation-uk": "сісти",
+        "translation-pl": "usiąść",
+        "translation-es": "tomar asiento",
+        "translation-fr": "prendre place",
+        "translation-tr": "oturmak",
+        "translation-ro": "a lua loc",
+        "translation-uz": "o‘tirmoq",
+        "translation-hi": "बैठना",
+        "translation-ar": "يجلس"
+      },
+      {
+        "word": "der Gast",
+        "translation-ru": "гость",
+        "translation-en": "guest",
+        "translation-uk": "гість",
+        "translation-pl": "gość",
+        "translation-es": "el invitado",
+        "translation-fr": "l’invité",
+        "translation-tr": "misafir",
+        "translation-ro": "oaspetele",
+        "translation-uz": "mehmon",
+        "translation-hi": "मेहमान",
+        "translation-ar": "الضيف"
+      },
+      {
+        "word": "andere",
+        "translation-ru": "другой",
+        "translation-en": "other",
+        "translation-uk": "інший",
+        "translation-pl": "inny",
+        "translation-es": "otro",
+        "translation-fr": "autre",
+        "translation-tr": "diğer",
+        "translation-ro": "alt",
+        "translation-uz": "boshqa",
+        "translation-hi": "दूसरा",
+        "translation-ar": "آخر"
+      }
+    ],
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "decisionWorkshopFour.questTask1",
+        "options": [
+          "Setzen Sie bitte Platz.",
+          "Machen Sie bitte Platz.",
+          "Nehmen Sie bitte Platz."
+        ],
+        "answer": "Nehmen Sie bitte Platz.",
+        "tip": "decisionWorkshopFour.questDescription"
+      },
+      {
+        "id": 2,
+        "type": "input",
+        "question": "decisionWorkshopFour.questTask2",
+        "correctAnswer": "auf",
+        "tip": "decisionWorkshopFour.questDescription"
+      },
+      {
+        "id": 3,
+        "type": "input",
+        "question": "decisionWorkshopFour.questTask3",
+        "correctAnswer": "nimmt",
+        "tip": "decisionWorkshopFour.questDescription"
+      },
+      {
+        "id": 4,
+        "type": "reorder",
+        "question": "decisionWorkshopFour.questTask4",
+        "words": [
+          "nehmen",
+          "die",
+          "müssen",
+          "Wir",
+          "auf",
+          "Kinder",
+          "an",
+          "Rücksicht"
+        ],
+        "correctOrder": [
+          "Wir",
+          "müssen",
+          "Rücksicht",
+          "auf",
+          "die",
+          "Kinder",
+          "nehmen"
+        ],
+        "tip": "decisionWorkshopFour.questDescription"
+      },
+      {
+        "id": 5,
+        "type": "select",
+        "question": "decisionWorkshopFour.questTask5",
+        "options": [
+          "Sie nahm am Fenster einen Platz genommen.",
+          "Sie nahm am Fenster Platz.",
+          "Sie nehmte am Fenster Platz."
+        ],
+        "answer": "Sie nahm am Fenster Platz.",
+        "tip": "decisionWorkshopFour.questDescription"
+      },
+      {
+        "id": 6,
+        "type": "input",
+        "question": "decisionWorkshopFour.questTask6",
+        "correctAnswer": "Platz",
+        "tip": "decisionWorkshopFour.questDescription"
+      },
+      {
+        "id": 7,
+        "type": "readAndAnswer",
+        "question": "decisionWorkshopFour.questTask7",
+        "text": "Lars hört gern laute Musik. Aber seine Nachbarin hat ein kleines Baby. Er nimmt Rücksicht auf sie und macht die Musik am Abend leise.",
+        "options": [
+          "Die Nachbarin hat ein Baby.",
+          "Die Musik ist schlecht.",
+          "Er ist müde."
+        ],
+        "answer": "Die Nachbarin hat ein Baby.",
+        "tip": "decisionWorkshopFour.questDescription"
+      },
+      {
+        "id": 8,
+        "type": "input",
+        "question": "decisionWorkshopFour.questTask8",
+        "correctAnswer": "nimmst",
+        "tip": "decisionWorkshopFour.questDescription"
+      },
+      {
+        "id": 9,
+        "type": "reorder",
+        "question": "decisionWorkshopFour.questTask10",
+        "words": [
+          "Gast",
+          "Der",
+          "Platz",
+          "mir",
+          "setzte",
+          "nahm",
+          "neben"
+        ],
+        "correctOrder": [
+          "Der",
+          "Gast",
+          "nahm",
+          "neben",
+          "mir",
+          "Platz"
+        ],
+        "tip": "decisionWorkshopFour.questDescription"
+      },
+      {
+        "id": 10,
+        "type": "select",
+        "question": "decisionWorkshopFour.questTask11",
+        "options": [
+          "Wir nehmen Rücksicht von Oma.",
+          "Wir nehmen Rücksicht auf Oma.",
+          "Wir nehmen Rücksicht an Oma."
+        ],
+        "answer": "Wir nehmen Rücksicht auf Oma.",
+        "tip": "decisionWorkshopFour.questDescription"
+      },
+      {
+        "id": 11,
+        "type": "input",
+        "question": "decisionWorkshopThree.questTask9",
+        "correctAnswer": "Bescheid",
+        "tip": "decisionWorkshopThree.questDescription",
+        "reviewOf": "decision-workshop-three",
+        "reviewLand": "decision-workshop"
+      },
+      {
+        "id": 12,
+        "type": "input",
+        "question": "taskTowerEight.questTask12",
+        "correctAnswer": "ohne",
+        "tip": "taskTowerEight.questDescription",
+        "reviewOf": "task-tower-eight",
+        "reviewLand": "task-tower"
+      },
+      {
+        "id": 13,
+        "type": "input",
+        "question": "taskTowerFive.questTask13",
+        "correctAnswer": "putzen",
+        "tip": "taskTowerFive.questDescription",
+        "reviewOf": "task-tower-five",
+        "reviewLand": "task-tower"
+      },
+      {
+        "id": 14,
+        "type": "input",
+        "question": "decisionWorkshopFour.questTask14",
+        "correctAnswer": "zu",
+        "tip": "decisionWorkshopFour.questDescription"
+      },
+      {
+        "id": 15,
+        "type": "input",
+        "question": "decisionWorkshopFour.questTask15",
+        "correctAnswer": "konnte",
+        "tip": "decisionWorkshopFour.questDescription"
+      }
+    ]
+  },
+  {
+    "questId": "decision-workshop-five",
+    "title": "decisionWorkshopFive.questTitle",
+    "progress": "0/15",
+    "description": "decisionWorkshopFive.questDescription",
+    "conditions": {
+      "goal": "decisionWorkshopFive.questGoal",
+      "minCorrect": 15,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
+    "vocabulary": [
+      {
+        "word": "der Vorschlag",
+        "translation-ru": "предложение (идея)",
+        "translation-en": "suggestion",
+        "translation-uk": "пропозиція",
+        "translation-pl": "propozycja",
+        "translation-es": "la propuesta",
+        "translation-fr": "la proposition",
+        "translation-tr": "öneri",
+        "translation-ro": "propunerea",
+        "translation-uz": "taklif",
+        "translation-hi": "सुझाव",
+        "translation-ar": "الاقتراح"
+      },
+      {
+        "word": "einen Vorschlag machen",
+        "translation-ru": "предложить, сделать предложение",
+        "translation-en": "to make a suggestion",
+        "translation-uk": "запропонувати",
+        "translation-pl": "zaproponować",
+        "translation-es": "hacer una propuesta",
+        "translation-fr": "faire une proposition",
+        "translation-tr": "öneride bulunmak",
+        "translation-ro": "a face o propunere",
+        "translation-uz": "taklif qilmoq",
+        "translation-hi": "सुझाव देना",
+        "translation-ar": "يقدّم اقتراحًا"
+      },
+      {
+        "word": "das Gespräch",
+        "translation-ru": "разговор",
+        "translation-en": "conversation",
+        "translation-uk": "розмова",
+        "translation-pl": "rozmowa",
+        "translation-es": "la conversación",
+        "translation-fr": "la discussion",
+        "translation-tr": "konuşma",
+        "translation-ro": "discuția",
+        "translation-uz": "suhbat",
+        "translation-hi": "बातचीत",
+        "translation-ar": "الحديث"
+      },
+      {
+        "word": "ein Gespräch führen",
+        "translation-ru": "вести разговор",
+        "translation-en": "to have a conversation",
+        "translation-uk": "вести розмову",
+        "translation-pl": "prowadzić rozmowę",
+        "translation-es": "mantener una conversación",
+        "translation-fr": "avoir une discussion",
+        "translation-tr": "konuşma yapmak",
+        "translation-ro": "a purta o discuție",
+        "translation-uz": "suhbat qilmoq",
+        "translation-hi": "बातचीत करना",
+        "translation-ar": "يُجري حديثًا"
+      },
+      {
+        "word": "die Idee",
+        "translation-ru": "идея",
+        "translation-en": "idea",
+        "translation-uk": "ідея",
+        "translation-pl": "pomysł",
+        "translation-es": "la idea",
+        "translation-fr": "l’idée",
+        "translation-tr": "fikir",
+        "translation-ro": "ideea",
+        "translation-uz": "g‘oya",
+        "translation-hi": "विचार",
+        "translation-ar": "الفكرة"
+      }
+    ],
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "decisionWorkshopFive.questTask1",
+        "options": [
+          "Darf ich einen Vorschlag treffen?",
+          "Darf ich einen Vorschlag stellen?",
+          "Darf ich einen Vorschlag machen?"
+        ],
+        "answer": "Darf ich einen Vorschlag machen?",
+        "tip": "decisionWorkshopFive.questDescription"
+      },
+      {
+        "id": 2,
+        "type": "input",
+        "question": "decisionWorkshopFive.questTask2",
+        "correctAnswer": "Vorschlag",
+        "tip": "decisionWorkshopFive.questDescription"
+      },
+      {
+        "id": 3,
+        "type": "input",
+        "question": "decisionWorkshopFive.questTask3",
+        "correctAnswer": "geführt",
+        "tip": "decisionWorkshopFive.questDescription"
+      },
+      {
+        "id": 4,
+        "type": "reorder",
+        "question": "decisionWorkshopFive.questTask4",
+        "words": [
+          "machte",
+          "gab",
+          "Meer",
+          "ans",
+          "zu",
+          "fahren",
+          "Vorschlag",
+          "Sie",
+          "den"
+        ],
+        "correctOrder": [
+          "Sie",
+          "machte",
+          "den",
+          "Vorschlag",
+          "ans",
+          "Meer",
+          "zu",
+          "fahren"
+        ],
+        "tip": "decisionWorkshopFive.questDescription"
+      },
+      {
+        "id": 5,
+        "type": "select",
+        "question": "decisionWorkshopFive.questTask5",
+        "options": [
+          "Wir haben ein langes Gespräch geführt.",
+          "Wir haben ein langes Gespräch geführen.",
+          "Wir haben ein langes Gespräch gemacht."
+        ],
+        "answer": "Wir haben ein langes Gespräch geführt.",
+        "tip": "decisionWorkshopFive.questDescription"
+      },
+      {
+        "id": 6,
+        "type": "input",
+        "question": "decisionWorkshopFive.questTask6",
+        "correctAnswer": "gemacht",
+        "tip": "decisionWorkshopFive.questDescription"
+      },
+      {
+        "id": 7,
+        "type": "readAndAnswer",
+        "question": "decisionWorkshopFive.questTask7",
+        "text": "Am Freitag führten die Kollegen ein langes Gespräch über die Party. Jonas machte den Vorschlag, in ein italienisches Restaurant zu gehen. Alle fanden die Idee gut.",
+        "options": [
+          "in ein Restaurant zu gehen",
+          "ins Kino zu gehen",
+          "zu Hause zu feiern"
+        ],
+        "answer": "in ein Restaurant zu gehen",
+        "tip": "decisionWorkshopFive.questDescription"
+      },
+      {
+        "id": 8,
+        "type": "input",
+        "question": "decisionWorkshopFive.questTask8",
+        "correctAnswer": "führt",
+        "tip": "decisionWorkshopFive.questDescription"
+      },
+      {
+        "id": 9,
+        "type": "reorder",
+        "question": "decisionWorkshopFive.questTask10",
+        "words": [
+          "ein",
+          "Gespräch",
+          "Vorschlag",
+          "war",
+          "Das",
+          "gutes"
+        ],
+        "correctOrder": [
+          "Das",
+          "war",
+          "ein",
+          "gutes",
+          "Gespräch"
+        ],
+        "tip": "decisionWorkshopFive.questDescription"
+      },
+      {
+        "id": 10,
+        "type": "select",
+        "question": "decisionWorkshopFive.questTask11",
+        "options": [
+          "Ich mache den Vorschlag, früher anzufangen.",
+          "Ich mache den Vorschlag, früher anfangen.",
+          "Ich mache den Vorschlag, früher zu anfangen."
+        ],
+        "answer": "Ich mache den Vorschlag, früher anzufangen.",
+        "tip": "decisionWorkshopFive.questDescription"
+      },
+      {
+        "id": 11,
+        "type": "input",
+        "question": "decisionWorkshopFour.questTask9",
+        "correctAnswer": "nahm",
+        "tip": "decisionWorkshopFour.questDescription",
+        "reviewOf": "decision-workshop-four",
+        "reviewLand": "decision-workshop"
+      },
+      {
+        "id": 12,
+        "type": "input",
+        "question": "decisionWorkshopOne.questTask12",
+        "correctAnswer": "Entscheidung",
+        "tip": "decisionWorkshopOne.questDescription",
+        "reviewOf": "decision-workshop-one",
+        "reviewLand": "decision-workshop"
+      },
+      {
+        "id": 13,
+        "type": "input",
+        "question": "taskTowerSix.questTask13",
+        "correctAnswer": "bringen",
+        "tip": "taskTowerSix.questDescription",
+        "reviewOf": "task-tower-six",
+        "reviewLand": "task-tower"
+      },
+      {
+        "id": 14,
+        "type": "input",
+        "question": "decisionWorkshopFive.questTask14",
+        "correctAnswer": "das",
+        "tip": "decisionWorkshopFive.questDescription"
+      },
+      {
+        "id": 15,
+        "type": "input",
+        "question": "decisionWorkshopFive.questTask15",
+        "correctAnswer": "werden",
+        "tip": "decisionWorkshopFive.questDescription"
+      }
+    ]
+  },
+  {
+    "questId": "decision-workshop-six",
+    "title": "decisionWorkshopSix.questTitle",
+    "progress": "0/15",
+    "description": "decisionWorkshopSix.questDescription",
+    "conditions": {
+      "goal": "decisionWorkshopSix.questGoal",
+      "minCorrect": 15,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
+    "vocabulary": [
+      {
+        "word": "die Besprechung",
+        "translation-ru": "совещание",
+        "translation-en": "meeting",
+        "translation-uk": "нарада",
+        "translation-pl": "zebranie",
+        "translation-es": "la reunión",
+        "translation-fr": "la réunion",
+        "translation-tr": "toplantı",
+        "translation-ro": "ședința",
+        "translation-uz": "yig‘ilish",
+        "translation-hi": "मीटिंग",
+        "translation-ar": "الاجتماع"
+      },
+      {
+        "word": "ernst",
+        "translation-ru": "серьёзный",
+        "translation-en": "serious",
+        "translation-uk": "серйозний",
+        "translation-pl": "poważny",
+        "translation-es": "serio",
+        "translation-fr": "sérieux",
+        "translation-tr": "ciddi",
+        "translation-ro": "serios",
+        "translation-uz": "jiddiy",
+        "translation-hi": "गंभीर",
+        "translation-ar": "جاد"
+      },
+      {
+        "word": "das Team",
+        "translation-ru": "команда",
+        "translation-en": "team",
+        "translation-uk": "команда",
+        "translation-pl": "zespół",
+        "translation-es": "el equipo",
+        "translation-fr": "l’équipe",
+        "translation-tr": "ekip",
+        "translation-ro": "echipa",
+        "translation-uz": "jamoa",
+        "translation-hi": "टीम",
+        "translation-ar": "الفريق"
+      },
+      {
+        "word": "der Plan",
+        "translation-ru": "план",
+        "translation-en": "plan",
+        "translation-uk": "план",
+        "translation-pl": "plan",
+        "translation-es": "el plan",
+        "translation-fr": "le plan",
+        "translation-tr": "plan",
+        "translation-ro": "planul",
+        "translation-uz": "reja",
+        "translation-hi": "योजना",
+        "translation-ar": "الخطة"
+      },
+      {
+        "word": "der Vorschlag",
+        "translation-ru": "предложение",
+        "translation-en": "suggestion",
+        "translation-uk": "пропозиція",
+        "translation-pl": "propozycja",
+        "translation-es": "la propuesta",
+        "translation-fr": "la proposition",
+        "translation-tr": "öneri",
+        "translation-ro": "propunerea",
+        "translation-uz": "taklif",
+        "translation-hi": "सुझाव",
+        "translation-ar": "الاقتراح"
+      }
+    ],
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "decisionWorkshopSix.questTask1",
+        "options": [
+          "In der Besprechung haben wir eine wichtige Entscheidung gemacht.",
+          "In der Besprechung haben wir eine wichtige Entscheidung gestellt.",
+          "In der Besprechung haben wir eine wichtige Entscheidung getroffen."
+        ],
+        "answer": "In der Besprechung haben wir eine wichtige Entscheidung getroffen.",
+        "tip": "decisionWorkshopSix.questDescription"
+      },
+      {
+        "id": 2,
+        "type": "input",
+        "question": "decisionWorkshopSix.questTask2",
+        "correctAnswer": "Bescheid",
+        "tip": "decisionWorkshopSix.questDescription"
+      },
+      {
+        "id": 3,
+        "type": "input",
+        "question": "decisionWorkshopSix.questTask3",
+        "correctAnswer": "stellen",
+        "tip": "decisionWorkshopSix.questDescription"
+      },
+      {
+        "id": 4,
+        "type": "reorder",
+        "question": "decisionWorkshopSix.questTask4",
+        "words": [
+          "gemacht",
+          "Vorschlag",
+          "hat",
+          "gestellt",
+          "Anna",
+          "neuen",
+          "einen"
+        ],
+        "correctOrder": [
+          "Anna",
+          "hat",
+          "einen",
+          "neuen",
+          "Vorschlag",
+          "gemacht"
+        ],
+        "tip": "decisionWorkshopSix.questDescription"
+      },
+      {
+        "id": 5,
+        "type": "select",
+        "question": "decisionWorkshopSix.questTask5",
+        "options": [
+          "Wir müssen Rücksicht auf die neuen Kollegen machen.",
+          "Wir müssen Rücksicht für die neuen Kollegen nehmen.",
+          "Wir müssen Rücksicht auf die neuen Kollegen nehmen."
+        ],
+        "answer": "Wir müssen Rücksicht auf die neuen Kollegen nehmen.",
+        "tip": "decisionWorkshopSix.questDescription"
+      },
+      {
+        "id": 6,
+        "type": "input",
+        "question": "decisionWorkshopSix.questTask6",
+        "correctAnswer": "traf",
+        "tip": "decisionWorkshopSix.questDescription"
+      },
+      {
+        "id": 7,
+        "type": "readAndAnswer",
+        "question": "decisionWorkshopSix.questTask7",
+        "text": "Am Montag gab es eine lange Besprechung im Team. Frau Wolf stellte viele Fragen. Herr Braun machte einen Vorschlag: Das Team arbeitet am Freitag von zu Hause. Die Chefin hat noch keine Entscheidung getroffen. Sie gibt nächste Woche Bescheid.",
+        "options": [
+          "heute",
+          "nächste Woche",
+          "am Freitag"
+        ],
+        "answer": "nächste Woche",
+        "tip": "decisionWorkshopSix.questDescription"
+      },
+      {
+        "id": 8,
+        "type": "input",
+        "question": "decisionWorkshopSix.questTask8",
+        "correctAnswer": "Platz",
+        "tip": "decisionWorkshopSix.questDescription"
+      },
+      {
+        "id": 9,
+        "type": "reorder",
+        "question": "decisionWorkshopSix.questTask10",
+        "words": [
+          "ernstes",
+          "möchte",
+          "führen",
+          "ein",
+          "Ich",
+          "dir",
+          "mit",
+          "machen",
+          "Gespräch"
+        ],
+        "correctOrder": [
+          "Ich",
+          "möchte",
+          "ein",
+          "ernstes",
+          "Gespräch",
+          "mit",
+          "dir",
+          "führen"
+        ],
+        "tip": "decisionWorkshopSix.questDescription"
+      },
+      {
+        "id": 10,
+        "type": "select",
+        "question": "decisionWorkshopSix.questTask11",
+        "options": [
+          "Er stellte auf alle Fragen eine Antwort.",
+          "Er gab auf alle Fragen eine Antwort.",
+          "Er gab an alle Fragen eine Antwort."
+        ],
+        "answer": "Er gab auf alle Fragen eine Antwort.",
+        "tip": "decisionWorkshopSix.questDescription"
+      },
+      {
+        "id": 11,
+        "type": "input",
+        "question": "decisionWorkshopFive.questTask9",
+        "correctAnswer": "macht",
+        "tip": "decisionWorkshopFive.questDescription",
+        "reviewOf": "decision-workshop-five",
+        "reviewLand": "decision-workshop"
+      },
+      {
+        "id": 12,
+        "type": "input",
+        "question": "decisionWorkshopTwo.questTask12",
+        "correctAnswer": "Antwort",
+        "tip": "decisionWorkshopTwo.questDescription",
+        "reviewOf": "decision-workshop-two",
+        "reviewLand": "decision-workshop"
+      },
+      {
+        "id": 13,
+        "type": "input",
+        "question": "taskTowerSeven.questTask13",
+        "correctAnswer": "lernen",
+        "tip": "taskTowerSeven.questDescription",
+        "reviewOf": "task-tower-seven",
+        "reviewLand": "task-tower"
+      },
+      {
+        "id": 14,
+        "type": "input",
+        "question": "decisionWorkshopSix.questTask14",
+        "correctAnswer": "waren",
+        "tip": "decisionWorkshopSix.questDescription"
+      },
+      {
+        "id": 15,
+        "type": "input",
+        "question": "decisionWorkshopSix.questTask15",
+        "correctAnswer": "dem",
+        "tip": "decisionWorkshopSix.questDescription"
+      }
+    ]
+  },
+  {
+    "questId": "decision-workshop-seven",
+    "title": "decisionWorkshopSeven.questTitle",
+    "progress": "0/15",
+    "description": "decisionWorkshopSeven.questDescription",
+    "conditions": {
+      "goal": "decisionWorkshopSeven.questGoal",
+      "minCorrect": 15,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
+    "vocabulary": [
+      {
+        "word": "die Eltern",
+        "translation-ru": "родители",
+        "translation-en": "parents",
+        "translation-uk": "батьки",
+        "translation-pl": "rodzice",
+        "translation-es": "los padres",
+        "translation-fr": "les parents",
+        "translation-tr": "anne baba",
+        "translation-ro": "părinții",
+        "translation-uz": "ota-ona",
+        "translation-hi": "माता-पिता",
+        "translation-ar": "الوالدان"
+      },
+      {
+        "word": "die Note",
+        "translation-ru": "оценка",
+        "translation-en": "mark, grade",
+        "translation-uk": "оцінка",
+        "translation-pl": "ocena",
+        "translation-es": "la nota",
+        "translation-fr": "la note",
+        "translation-tr": "not",
+        "translation-ro": "nota",
+        "translation-uz": "baho",
+        "translation-hi": "अंक",
+        "translation-ar": "الدرجة"
+      },
+      {
+        "word": "der Ausflug",
+        "translation-ru": "экскурсия, поездка",
+        "translation-en": "trip, outing",
+        "translation-uk": "екскурсія",
+        "translation-pl": "wycieczka",
+        "translation-es": "la excursión",
+        "translation-fr": "l’excursion",
+        "translation-tr": "gezi",
+        "translation-ro": "excursia",
+        "translation-uz": "sayohat",
+        "translation-hi": "सैर",
+        "translation-ar": "الرحلة"
+      },
+      {
+        "word": "die Klasse",
+        "translation-ru": "класс",
+        "translation-en": "class",
+        "translation-uk": "клас",
+        "translation-pl": "klasa",
+        "translation-es": "la clase",
+        "translation-fr": "la classe",
+        "translation-tr": "sınıf",
+        "translation-ro": "clasa",
+        "translation-uz": "sinf",
+        "translation-hi": "कक्षा",
+        "translation-ar": "الصف"
+      },
+      {
+        "word": "der Schüler",
+        "translation-ru": "ученик",
+        "translation-en": "pupil",
+        "translation-uk": "учень",
+        "translation-pl": "uczeń",
+        "translation-es": "el alumno",
+        "translation-fr": "l’élève",
+        "translation-tr": "öğrenci",
+        "translation-ro": "elevul",
+        "translation-uz": "o‘quvchi",
+        "translation-hi": "छात्र",
+        "translation-ar": "التلميذ"
+      },
+      {
+        "word": "der Elternabend",
+        "translation-ru": "родительское собрание",
+        "translation-en": "parents’ evening",
+        "translation-uk": "батьківські збори",
+        "translation-pl": "zebranie rodziców",
+        "translation-es": "la reunión de padres",
+        "translation-fr": "la réunion de parents",
+        "translation-tr": "veli toplantısı",
+        "translation-ro": "ședința cu părinții",
+        "translation-uz": "ota-onalar yig‘ilishi",
+        "translation-hi": "अभिभावक बैठक",
+        "translation-ar": "اجتماع أولياء الأمور"
+      },
+      {
+        "word": "streng",
+        "translation-ru": "строгий",
+        "translation-en": "strict",
+        "translation-uk": "суворий",
+        "translation-pl": "surowy",
+        "translation-es": "estricto",
+        "translation-fr": "strict",
+        "translation-tr": "sert",
+        "translation-ro": "strict",
+        "translation-uz": "qattiqqo‘l",
+        "translation-hi": "सख़्त",
+        "translation-ar": "صارم"
+      }
+    ],
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "decisionWorkshopSeven.questTask1",
+        "options": [
+          "Die Eltern haben die Lehrerin viele Fragen gestellt.",
+          "Die Eltern haben der Lehrerin viele Fragen gemacht.",
+          "Die Eltern haben der Lehrerin viele Fragen gestellt."
+        ],
+        "answer": "Die Eltern haben der Lehrerin viele Fragen gestellt.",
+        "tip": "decisionWorkshopSeven.questDescription"
+      },
+      {
+        "id": 2,
+        "type": "input",
+        "question": "decisionWorkshopSeven.questTask2",
+        "correctAnswer": "führte",
+        "tip": "decisionWorkshopSeven.questDescription"
+      },
+      {
+        "id": 3,
+        "type": "input",
+        "question": "decisionWorkshopSeven.questTask3",
+        "correctAnswer": "Entscheidung",
+        "tip": "decisionWorkshopSeven.questDescription"
+      },
+      {
+        "id": 4,
+        "type": "reorder",
+        "question": "decisionWorkshopSeven.questTask4",
+        "words": [
+          "den",
+          "Bescheid",
+          "Eltern",
+          "Der",
+          "gibt",
+          "einen",
+          "Lehrer"
+        ],
+        "correctOrder": [
+          "Der",
+          "Lehrer",
+          "gibt",
+          "den",
+          "Eltern",
+          "Bescheid"
+        ],
+        "tip": "decisionWorkshopSeven.questDescription"
+      },
+      {
+        "id": 5,
+        "type": "select",
+        "question": "decisionWorkshopSeven.questTask5",
+        "options": [
+          "Leos Mutter wusste über alles den Bescheid.",
+          "Leos Mutter kannte über alles Bescheid.",
+          "Leos Mutter wusste über alles Bescheid."
+        ],
+        "answer": "Leos Mutter wusste über alles Bescheid.",
+        "tip": "decisionWorkshopSeven.questDescription"
+      },
+      {
+        "id": 6,
+        "type": "input",
+        "question": "decisionWorkshopSeven.questTask6",
+        "correctAnswer": "Antwort",
+        "tip": "decisionWorkshopSeven.questDescription"
+      },
+      {
+        "id": 7,
+        "type": "readAndAnswer",
+        "question": "decisionWorkshopSeven.questTask7",
+        "text": "Am Dienstag war ein Elternabend. Die Eltern stellten viele Fragen über die Noten und den Ausflug. Die Lehrerin führte mit jeder Familie ein kurzes Gespräch. Über den Ausflug trifft die Schule nächste Woche eine Entscheidung und gibt allen Bescheid.",
+        "options": [
+          "nächste Woche",
+          "im Sommer",
+          "am Dienstag"
+        ],
+        "answer": "nächste Woche",
+        "tip": "decisionWorkshopSeven.questDescription"
+      },
+      {
+        "id": 8,
+        "type": "input",
+        "question": "decisionWorkshopSeven.questTask8",
+        "correctAnswer": "stellen",
+        "tip": "decisionWorkshopSeven.questDescription"
+      },
+      {
+        "id": 9,
+        "type": "reorder",
+        "question": "decisionWorkshopSeven.questTask10",
+        "words": [
+          "Mutter",
+          "machte",
+          "mit",
+          "Die",
+          "langes",
+          "ein",
+          "der",
+          "führte",
+          "Lehrerin",
+          "Gespräch"
+        ],
+        "correctOrder": [
+          "Die",
+          "Lehrerin",
+          "führte",
+          "ein",
+          "langes",
+          "Gespräch",
+          "mit",
+          "der",
+          "Mutter"
+        ],
+        "tip": "decisionWorkshopSeven.questDescription"
+      },
+      {
+        "id": 10,
+        "type": "select",
+        "question": "decisionWorkshopSeven.questTask11",
+        "options": [
+          "Wer trefft die Entscheidung über die Noten?",
+          "Wer trifft die Entscheidung über die Noten?",
+          "Wer macht die Entscheidung über die Noten?"
+        ],
+        "answer": "Wer trifft die Entscheidung über die Noten?",
+        "tip": "decisionWorkshopSeven.questDescription"
+      },
+      {
+        "id": 11,
+        "type": "input",
+        "question": "decisionWorkshopSix.questTask9",
+        "correctAnswer": "weiß",
+        "tip": "decisionWorkshopSix.questDescription",
+        "reviewOf": "decision-workshop-six",
+        "reviewLand": "decision-workshop"
+      },
+      {
+        "id": 12,
+        "type": "input",
+        "question": "decisionWorkshopThree.questTask12",
+        "correctAnswer": "weiß",
+        "tip": "decisionWorkshopThree.questDescription",
+        "reviewOf": "decision-workshop-three",
+        "reviewLand": "decision-workshop"
+      },
+      {
+        "id": 13,
+        "type": "input",
+        "question": "taskTowerEight.questTask13",
+        "correctAnswer": "lasse",
+        "tip": "taskTowerEight.questDescription",
+        "reviewOf": "task-tower-eight",
+        "reviewLand": "task-tower"
+      },
+      {
+        "id": 14,
+        "type": "input",
+        "question": "decisionWorkshopSeven.questTask14",
+        "correctAnswer": "würde",
+        "tip": "decisionWorkshopSeven.questDescription"
+      },
+      {
+        "id": 15,
+        "type": "input",
+        "question": "decisionWorkshopSeven.questTask15",
+        "correctAnswer": "der",
+        "tip": "decisionWorkshopSeven.questDescription"
+      }
+    ]
+  },
+  {
+    "questId": "decision-workshop-eight",
+    "title": "decisionWorkshopEight.questTitle",
+    "progress": "0/15",
+    "description": "decisionWorkshopEight.questDescription",
+    "conditions": {
+      "goal": "decisionWorkshopEight.questGoal",
+      "minCorrect": 15,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
+    "vocabulary": [
+      {
+        "word": "das Sofa",
+        "translation-ru": "диван",
+        "translation-en": "sofa",
+        "translation-uk": "диван",
+        "translation-pl": "kanapa",
+        "translation-es": "el sofá",
+        "translation-fr": "le canapé",
+        "translation-tr": "kanepe",
+        "translation-ro": "canapeaua",
+        "translation-uz": "divan",
+        "translation-hi": "सोफ़ा",
+        "translation-ar": "الأريكة"
+      },
+      {
+        "word": "der Gastgeber",
+        "translation-ru": "хозяин (принимающий гостей)",
+        "translation-en": "host",
+        "translation-uk": "господар",
+        "translation-pl": "gospodarz",
+        "translation-es": "el anfitrión",
+        "translation-fr": "l’hôte",
+        "translation-tr": "ev sahibi",
+        "translation-ro": "gazda",
+        "translation-uz": "mezbon",
+        "translation-hi": "मेज़बान",
+        "translation-ar": "المضيف"
+      },
+      {
+        "word": "spazieren gehen",
+        "translation-ru": "гулять",
+        "translation-en": "to go for a walk",
+        "translation-uk": "гуляти",
+        "translation-pl": "iść na spacer",
+        "translation-es": "ir a pasear",
+        "translation-fr": "se promener",
+        "translation-tr": "yürüyüşe çıkmak",
+        "translation-ro": "a se plimba",
+        "translation-uz": "sayr qilmoq",
+        "translation-hi": "टहलना",
+        "translation-ar": "يتمشى"
+      },
+      {
+        "word": "spielen",
+        "translation-ru": "играть",
+        "translation-en": "to play",
+        "translation-uk": "грати",
+        "translation-pl": "grać",
+        "translation-es": "jugar",
+        "translation-fr": "jouer",
+        "translation-tr": "oynamak",
+        "translation-ro": "a juca",
+        "translation-uz": "o‘ynamoq",
+        "translation-hi": "खेलना",
+        "translation-ar": "يلعب"
+      },
+      {
+        "word": "leise",
+        "translation-ru": "тихо",
+        "translation-en": "quietly",
+        "translation-uk": "тихо",
+        "translation-pl": "cicho",
+        "translation-es": "en voz baja",
+        "translation-fr": "doucement",
+        "translation-tr": "sessizce",
+        "translation-ro": "încet",
+        "translation-uz": "sekin",
+        "translation-hi": "धीरे",
+        "translation-ar": "بهدوء"
+      },
+      {
+        "word": "vorschlagen",
+        "translation-ru": "предлагать",
+        "translation-en": "to suggest",
+        "translation-uk": "пропонувати",
+        "translation-pl": "proponować",
+        "translation-es": "proponer",
+        "translation-fr": "proposer",
+        "translation-tr": "önermek",
+        "translation-ro": "a propune",
+        "translation-uz": "taklif qilmoq",
+        "translation-hi": "सुझाव देना",
+        "translation-ar": "يقترح"
+      },
+      {
+        "word": "die Freude",
+        "translation-ru": "радость",
+        "translation-en": "joy",
+        "translation-uk": "радість",
+        "translation-pl": "radość",
+        "translation-es": "alegría",
+        "translation-fr": "joie",
+        "translation-tr": "sevinç",
+        "translation-ro": "bucurie",
+        "translation-uz": "shodlik",
+        "translation-hi": "खुशी",
+        "translation-ar": "فرح"
+      }
+    ],
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "decisionWorkshopEight.questTask1",
+        "options": [
+          "Die Gäste nahmen auf dem Sofa einen Platz.",
+          "Die Gäste nehmten auf dem Sofa Platz.",
+          "Die Gäste nahmen auf dem Sofa Platz."
+        ],
+        "answer": "Die Gäste nahmen auf dem Sofa Platz.",
+        "tip": "decisionWorkshopEight.questDescription"
+      },
+      {
+        "id": 2,
+        "type": "input",
+        "question": "decisionWorkshopEight.questTask2",
+        "correctAnswer": "auf",
+        "tip": "decisionWorkshopEight.questDescription"
+      },
+      {
+        "id": 3,
+        "type": "input",
+        "question": "decisionWorkshopEight.questTask3",
+        "correctAnswer": "machte",
+        "tip": "decisionWorkshopEight.questDescription"
+      },
+      {
+        "id": 4,
+        "type": "reorder",
+        "question": "decisionWorkshopEight.questTask4",
+        "words": [
+          "Platz",
+          "am",
+          "einen",
+          "Sie",
+          "Bitte",
+          "Tisch",
+          "nehmen"
+        ],
+        "correctOrder": [
+          "Bitte",
+          "nehmen",
+          "Sie",
+          "am",
+          "Tisch",
+          "Platz"
+        ],
+        "tip": "decisionWorkshopEight.questDescription"
+      },
+      {
+        "id": 5,
+        "type": "select",
+        "question": "decisionWorkshopEight.questTask5",
+        "options": [
+          "Ich treffe einen Vorschlag: Wir spielen ein Spiel.",
+          "Ich stelle einen Vorschlag: Wir spielen ein Spiel.",
+          "Ich mache einen Vorschlag: Wir spielen ein Spiel."
+        ],
+        "answer": "Ich mache einen Vorschlag: Wir spielen ein Spiel.",
+        "tip": "decisionWorkshopEight.questDescription"
+      },
+      {
+        "id": 6,
+        "type": "input",
+        "question": "decisionWorkshopEight.questTask6",
+        "correctAnswer": "nimmt",
+        "tip": "decisionWorkshopEight.questDescription"
+      },
+      {
+        "id": 7,
+        "type": "readAndAnswer",
+        "question": "decisionWorkshopEight.questTask7",
+        "text": "Am Samstag waren wir bei Karin. Zuerst nahmen alle im Wohnzimmer Platz. Nach dem Essen machte Karin den Vorschlag, ein Spiel zu spielen. Wir spielten leise, denn wir nahmen Rücksicht auf ihr Baby.",
+        "options": [
+          "einen Film zu sehen",
+          "ein Spiel zu spielen",
+          "spazieren zu gehen"
+        ],
+        "answer": "ein Spiel zu spielen",
+        "tip": "decisionWorkshopEight.questDescription"
+      },
+      {
+        "id": 8,
+        "type": "input",
+        "question": "decisionWorkshopEight.questTask8",
+        "correctAnswer": "Vorschlag",
+        "tip": "decisionWorkshopEight.questDescription"
+      },
+      {
+        "id": 9,
+        "type": "reorder",
+        "question": "decisionWorkshopEight.questTask10",
+        "words": [
+          "nimmt",
+          "keine",
+          "Mein",
+          "Bruder",
+          "an",
+          "mich",
+          "auf",
+          "Rücksicht"
+        ],
+        "correctOrder": [
+          "Mein",
+          "Bruder",
+          "nimmt",
+          "keine",
+          "Rücksicht",
+          "auf",
+          "mich"
+        ],
+        "tip": "decisionWorkshopEight.questDescription"
+      },
+      {
+        "id": 10,
+        "type": "select",
+        "question": "decisionWorkshopEight.questTask11",
+        "options": [
+          "Wer hat vorgeschlagen, spazieren zu gehen?",
+          "Wer hat vorgeschlagen, zu spazieren gehen?",
+          "Wer hat vorgeschlagen, spazieren gehen zu?"
+        ],
+        "answer": "Wer hat vorgeschlagen, spazieren zu gehen?",
+        "tip": "decisionWorkshopEight.questDescription"
+      },
+      {
+        "id": 11,
+        "type": "input",
+        "question": "decisionWorkshopSeven.questTask9",
+        "correctAnswer": "Bescheid",
+        "tip": "decisionWorkshopSeven.questDescription",
+        "reviewOf": "decision-workshop-seven",
+        "reviewLand": "decision-workshop"
+      },
+      {
+        "id": 12,
+        "type": "input",
+        "question": "decisionWorkshopFour.questTask12",
+        "correctAnswer": "nehmen",
+        "tip": "decisionWorkshopFour.questDescription",
+        "reviewOf": "decision-workshop-four",
+        "reviewLand": "decision-workshop"
+      },
+      {
+        "id": 13,
+        "type": "input",
+        "question": "decisionWorkshopOne.questTask13",
+        "correctAnswer": "treffe",
+        "tip": "decisionWorkshopOne.questDescription",
+        "reviewOf": "decision-workshop-one",
+        "reviewLand": "decision-workshop"
+      },
+      {
+        "id": 14,
+        "type": "input",
+        "question": "decisionWorkshopEight.questTask14",
+        "correctAnswer": "um",
+        "tip": "decisionWorkshopEight.questDescription"
+      },
+      {
+        "id": 15,
+        "type": "input",
+        "question": "decisionWorkshopEight.questTask15",
+        "correctAnswer": "blieben",
+        "tip": "decisionWorkshopEight.questDescription"
+      }
+    ]
+  },
+  {
+    "questId": "decision-workshop-nine",
+    "title": "decisionWorkshopNine.questTitle",
+    "progress": "0/15",
+    "description": "decisionWorkshopNine.questDescription",
+    "conditions": {
+      "goal": "decisionWorkshopNine.questGoal",
+      "minCorrect": 15,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
+    "vocabulary": [
+      {
+        "word": "grillen",
+        "translation-ru": "жарить на гриле",
+        "translation-en": "to have a barbecue",
+        "translation-uk": "смажити на грилі",
+        "translation-pl": "grillować",
+        "translation-es": "hacer una barbacoa",
+        "translation-fr": "faire un barbecue",
+        "translation-tr": "mangal yapmak",
+        "translation-ro": "a face grătar",
+        "translation-uz": "mangal qilmoq",
+        "translation-hi": "ग्रिल करना",
+        "translation-ar": "يشوي"
+      },
+      {
+        "word": "beide",
+        "translation-ru": "оба",
+        "translation-en": "both",
+        "translation-uk": "обидва",
+        "translation-pl": "oba",
+        "translation-es": "ambos",
+        "translation-fr": "les deux",
+        "translation-tr": "her ikisi",
+        "translation-ro": "amândoi",
+        "translation-uz": "ikkalasi",
+        "translation-hi": "दोनों",
+        "translation-ar": "كلاهما"
+      },
+      {
+        "word": "der Vorschlag",
+        "translation-ru": "предложение",
+        "translation-en": "suggestion",
+        "translation-uk": "пропозиція",
+        "translation-pl": "propozycja",
+        "translation-es": "la propuesta",
+        "translation-fr": "la proposition",
+        "translation-tr": "öneri",
+        "translation-ro": "propunerea",
+        "translation-uz": "taklif",
+        "translation-hi": "सुझाव",
+        "translation-ar": "الاقتراح"
+      },
+      {
+        "word": "das Gespräch",
+        "translation-ru": "разговор",
+        "translation-en": "conversation",
+        "translation-uk": "розмова",
+        "translation-pl": "rozmowa",
+        "translation-es": "la conversación",
+        "translation-fr": "la discussion",
+        "translation-tr": "konuşma",
+        "translation-ro": "discuția",
+        "translation-uz": "suhbat",
+        "translation-hi": "बातचीत",
+        "translation-ar": "الحديث"
+      },
+      {
+        "word": "die Rücksicht",
+        "translation-ru": "внимание к другим, уважение",
+        "translation-en": "consideration",
+        "translation-uk": "увага до інших",
+        "translation-pl": "wzgląd",
+        "translation-es": "la consideración",
+        "translation-fr": "les égards",
+        "translation-tr": "saygı, düşünceli olma",
+        "translation-ro": "considerația",
+        "translation-uz": "hurmat, e’tibor",
+        "translation-hi": "लिहाज़",
+        "translation-ar": "المراعاة"
+      }
+    ],
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "decisionWorkshopNine.questTask1",
+        "options": [
+          "Wann trefft du deine Entscheidung?",
+          "Wann machst du deine Entscheidung?",
+          "Wann triffst du deine Entscheidung?"
+        ],
+        "answer": "Wann triffst du deine Entscheidung?",
+        "tip": "decisionWorkshopNine.questDescription"
+      },
+      {
+        "id": 2,
+        "type": "input",
+        "question": "decisionWorkshopNine.questTask2",
+        "correctAnswer": "Frage",
+        "tip": "decisionWorkshopNine.questDescription"
+      },
+      {
+        "id": 3,
+        "type": "input",
+        "question": "decisionWorkshopNine.questTask3",
+        "correctAnswer": "Bescheid",
+        "tip": "decisionWorkshopNine.questDescription"
+      },
+      {
+        "id": 4,
+        "type": "reorder",
+        "question": "decisionWorkshopNine.questTask4",
+        "words": [
+          "Eltern",
+          "nimmt",
+          "Rücksicht",
+          "seine",
+          "Er",
+          "auf",
+          "an",
+          "immer"
+        ],
+        "correctOrder": [
+          "Er",
+          "nimmt",
+          "immer",
+          "Rücksicht",
+          "auf",
+          "seine",
+          "Eltern"
+        ],
+        "tip": "decisionWorkshopNine.questDescription"
+      },
+      {
+        "id": 5,
+        "type": "select",
+        "question": "decisionWorkshopNine.questTask5",
+        "options": [
+          "Wer hat den Vorschlag gestellt, heute zu grillen?",
+          "Wer hat den Vorschlag gemacht, heute grillen zu?",
+          "Wer hat den Vorschlag gemacht, heute zu grillen?"
+        ],
+        "answer": "Wer hat den Vorschlag gemacht, heute zu grillen?",
+        "tip": "decisionWorkshopNine.questDescription"
+      },
+      {
+        "id": 6,
+        "type": "input",
+        "question": "decisionWorkshopNine.questTask6",
+        "correctAnswer": "führte",
+        "tip": "decisionWorkshopNine.questDescription"
+      },
+      {
+        "id": 7,
+        "type": "readAndAnswer",
+        "question": "decisionWorkshopNine.questTask7",
+        "text": "Sophie muss eine Entscheidung treffen: Sie kann in Köln oder in München studieren. Sie führt ein langes Gespräch mit ihren Eltern. Ihr Vater macht den Vorschlag, beide Städte zu besuchen. Am Sonntag sagt Sophie ihren Eltern Bescheid.",
+        "options": [
+          "beide Städte zu besuchen",
+          "nicht zu studieren",
+          "in Köln zu bleiben"
+        ],
+        "answer": "beide Städte zu besuchen",
+        "tip": "decisionWorkshopNine.questDescription"
+      },
+      {
+        "id": 8,
+        "type": "input",
+        "question": "decisionWorkshopNine.questTask8",
+        "correctAnswer": "Rücksicht",
+        "tip": "decisionWorkshopNine.questDescription"
+      },
+      {
+        "id": 9,
+        "type": "input",
+        "question": "decisionWorkshopNine.questTask9",
+        "correctAnswer": "nahmen",
+        "tip": "decisionWorkshopNine.questDescription"
+      },
+      {
+        "id": 10,
+        "type": "reorder",
+        "question": "decisionWorkshopNine.questTask10",
+        "words": [
+          "Wir",
+          "einen",
+          "nicht",
+          "Bescheid",
+          "wissen",
+          "noch"
+        ],
+        "correctOrder": [
+          "Wir",
+          "wissen",
+          "noch",
+          "nicht",
+          "Bescheid"
+        ],
+        "tip": "decisionWorkshopNine.questDescription"
+      },
+      {
+        "id": 11,
+        "type": "select",
+        "question": "decisionWorkshopNine.questTask11",
+        "options": [
+          "Warum hast du mich keine Antwort gegeben?",
+          "Warum hast du mir keine Antwort gegeben?",
+          "Warum hast du mir keine Antwort gestellt?"
+        ],
+        "answer": "Warum hast du mir keine Antwort gegeben?",
+        "tip": "decisionWorkshopNine.questDescription"
+      },
+      {
+        "id": 12,
+        "type": "input",
+        "question": "decisionWorkshopNine.questTask12",
+        "correctAnswer": "getroffen",
+        "tip": "decisionWorkshopNine.questDescription"
+      },
+      {
+        "id": 13,
+        "type": "input",
+        "question": "decisionWorkshopNine.questTask13",
+        "correctAnswer": "Gespräch",
+        "tip": "decisionWorkshopNine.questDescription"
+      },
+      {
+        "id": 14,
+        "type": "input",
+        "question": "decisionWorkshopNine.questTask14",
+        "correctAnswer": "stellt",
+        "tip": "decisionWorkshopNine.questDescription"
+      },
+      {
+        "id": 15,
+        "type": "input",
+        "question": "decisionWorkshopNine.questTask15",
+        "correctAnswer": "Vorschlag",
+        "tip": "decisionWorkshopNine.questDescription"
+      }
+    ]
+  },
+  {
+    "questId": "decision-workshop-ten",
+    "title": "decisionWorkshopTen.questTitle",
+    "progress": "0/15",
+    "description": "decisionWorkshopTen.questDescription",
+    "conditions": {
+      "goal": "decisionWorkshopTen.questGoal",
+      "minCorrect": 15,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
+    "vocabulary": [
+      {
+        "word": "der Vermieter",
+        "translation-ru": "арендодатель",
+        "translation-en": "landlord",
+        "translation-uk": "орендодавець",
+        "translation-pl": "wynajmujący",
+        "translation-es": "el casero",
+        "translation-fr": "le propriétaire",
+        "translation-tr": "ev sahibi",
+        "translation-ro": "proprietarul",
+        "translation-uz": "ijaraga beruvchi",
+        "translation-hi": "मकान मालिक",
+        "translation-ar": "المؤجر"
+      },
+      {
+        "word": "umziehen",
+        "translation-ru": "переезжать",
+        "translation-en": "to move house",
+        "translation-uk": "переїжджати",
+        "translation-pl": "przeprowadzać się",
+        "translation-es": "mudarse",
+        "translation-fr": "déménager",
+        "translation-tr": "taşınmak",
+        "translation-ro": "a se muta",
+        "translation-uz": "ko‘chmoq",
+        "translation-hi": "घर बदलना",
+        "translation-ar": "ينتقل إلى بيت جديد"
+      },
+      {
+        "word": "das Gespräch",
+        "translation-ru": "разговор",
+        "translation-en": "conversation",
+        "translation-uk": "розмова",
+        "translation-pl": "rozmowa",
+        "translation-es": "la conversación",
+        "translation-fr": "la discussion",
+        "translation-tr": "konuşma",
+        "translation-ro": "discuția",
+        "translation-uz": "suhbat",
+        "translation-hi": "बातचीत",
+        "translation-ar": "الحديث"
+      },
+      {
+        "word": "die Rücksicht",
+        "translation-ru": "внимание к другим, уважение",
+        "translation-en": "consideration",
+        "translation-uk": "увага до інших",
+        "translation-pl": "wzgląd",
+        "translation-es": "la consideración",
+        "translation-fr": "les égards",
+        "translation-tr": "saygı, düşünceli olma",
+        "translation-ro": "considerația",
+        "translation-uz": "hurmat, e’tibor",
+        "translation-hi": "लिहाज़",
+        "translation-ar": "المراعاة"
+      },
+      {
+        "word": "sodass",
+        "translation-ru": "так что",
+        "translation-en": "so, as a result",
+        "translation-uk": "тож, так що",
+        "translation-pl": "więc, tak że",
+        "translation-es": "así que",
+        "translation-fr": "si bien que",
+        "translation-tr": "bu yüzden",
+        "translation-ro": "așa că",
+        "translation-uz": "shuning uchun",
+        "translation-hi": "इसलिए",
+        "translation-ar": "لذلك"
+      }
+    ],
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "decisionWorkshopTen.questTask1",
+        "options": [
+          "Sie machten die Entscheidung, zu Hause zu bleiben.",
+          "Sie trafen die Entscheidung, zu Hause bleiben zu.",
+          "Sie trafen die Entscheidung, zu Hause zu bleiben."
+        ],
+        "answer": "Sie trafen die Entscheidung, zu Hause zu bleiben.",
+        "tip": "decisionWorkshopTen.questDescription"
+      },
+      {
+        "id": 2,
+        "type": "input",
+        "question": "decisionWorkshopTen.questTask2",
+        "correctAnswer": "sodass",
+        "tip": "decisionWorkshopTen.questDescription"
+      },
+      {
+        "id": 3,
+        "type": "input",
+        "question": "decisionWorkshopTen.questTask3",
+        "correctAnswer": "lässt",
+        "tip": "decisionWorkshopTen.questDescription"
+      },
+      {
+        "id": 4,
+        "type": "reorder",
+        "question": "decisionWorkshopTen.questTask4",
+        "words": [
+          "Gib",
+          "Bescheid",
+          "Film",
+          "der",
+          "wenn",
+          "einen",
+          "beginnt",
+          "mir"
+        ],
+        "correctOrder": [
+          "Gib",
+          "mir",
+          "Bescheid",
+          "wenn",
+          "der",
+          "Film",
+          "beginnt"
+        ],
+        "tip": "decisionWorkshopTen.questDescription"
+      },
+      {
+        "id": 5,
+        "type": "select",
+        "question": "decisionWorkshopTen.questTask5",
+        "options": [
+          "Das ist der Kollege, mit den ich arbeite.",
+          "Das ist der Kollege, mit der ich arbeite.",
+          "Das ist der Kollege, mit dem ich arbeite."
+        ],
+        "answer": "Das ist der Kollege, mit dem ich arbeite.",
+        "tip": "decisionWorkshopTen.questDescription"
+      },
+      {
+        "id": 6,
+        "type": "input",
+        "question": "decisionWorkshopTen.questTask6",
+        "correctAnswer": "wurde",
+        "tip": "decisionWorkshopTen.questDescription"
+      },
+      {
+        "id": 7,
+        "type": "readAndAnswer",
+        "question": "decisionWorkshopTen.questTask7",
+        "text": "Familie Berg will umziehen. Die Kinder stellen viele Fragen: „Wo ist die neue Schule?“ Die Eltern führen ein Gespräch mit dem Vermieter. Am Ende treffen sie eine Entscheidung: Sie nehmen die Wohnung, weil sie einen großen Garten hat.",
+        "options": [
+          "Sie ist neben der Schule.",
+          "Sie hat einen großen Garten.",
+          "Sie ist billig."
+        ],
+        "answer": "Sie hat einen großen Garten.",
+        "tip": "decisionWorkshopTen.questDescription"
+      },
+      {
+        "id": 8,
+        "type": "input",
+        "question": "decisionWorkshopTen.questTask8",
+        "correctAnswer": "Rücksicht",
+        "tip": "decisionWorkshopTen.questDescription"
+      },
+      {
+        "id": 9,
+        "type": "input",
+        "question": "decisionWorkshopTen.questTask9",
+        "correctAnswer": "führte",
+        "tip": "decisionWorkshopTen.questDescription"
+      },
+      {
+        "id": 10,
+        "type": "reorder",
+        "question": "decisionWorkshopTen.questTask10",
+        "words": [
+          "zeige",
+          "Weg",
+          "suchen",
+          "dir",
+          "du",
+          "sodass",
+          "den",
+          "nicht",
+          "Ich",
+          "musst",
+          "damit"
+        ],
+        "correctOrder": [
+          "Ich",
+          "zeige",
+          "dir",
+          "den",
+          "Weg",
+          "damit",
+          "du",
+          "nicht",
+          "suchen",
+          "musst"
+        ],
+        "tip": "decisionWorkshopTen.questDescription"
+      },
+      {
+        "id": 11,
+        "type": "select",
+        "question": "decisionWorkshopTen.questTask11",
+        "options": [
+          "Als der Arzt kam, war das Kind schon eingeschlafen.",
+          "Als der Arzt kam, war das Kind schon einschlafen.",
+          "Als der Arzt kam, hatte das Kind schon eingeschlafen."
+        ],
+        "answer": "Als der Arzt kam, war das Kind schon eingeschlafen.",
+        "tip": "decisionWorkshopTen.questDescription"
+      },
+      {
+        "id": 12,
+        "type": "input",
+        "question": "decisionWorkshopTen.questTask12",
+        "correctAnswer": "um",
+        "tip": "decisionWorkshopTen.questDescription"
+      },
+      {
+        "id": 13,
+        "type": "input",
+        "question": "decisionWorkshopTen.questTask13",
+        "correctAnswer": "stellte",
+        "tip": "decisionWorkshopTen.questDescription"
+      },
+      {
+        "id": 14,
+        "type": "input",
+        "question": "decisionWorkshopTen.questTask14",
+        "correctAnswer": "wichtigste",
+        "tip": "decisionWorkshopTen.questDescription"
+      },
+      {
+        "id": 15,
+        "type": "input",
+        "question": "decisionWorkshopTen.questTask15",
+        "correctAnswer": "meinem",
+        "tip": "decisionWorkshopTen.questDescription"
+      }
+    ]
+  }
+]

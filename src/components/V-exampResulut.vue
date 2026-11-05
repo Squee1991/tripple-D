@@ -153,6 +153,7 @@ onMounted(() => {
                 </span>
               </div>
               <div class="ec__meta">
+                <span v-if="a.theme" class="ec__theme">{{ a.theme }}</span>
                 <span>{{ t('examResult.start') }} {{ toDateFlexible(a.startedAt)?.toLocaleString?.() || '—' }}</span>
                 <span v-if="a.status === 'finished'" class="ec__score">
                   {{ t('examResult.middle') }} <b>{{ a.averageScore }}</b> / 10
@@ -262,6 +263,11 @@ onMounted(() => {
 .ec__lvl {
   font-weight: 800;
   font-size: 1.1rem;
+  color: var(--titleColor);
+}
+
+.ec__theme {
+  font-weight: 800;
   color: var(--titleColor);
 }
 

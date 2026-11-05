@@ -1,0 +1,2557 @@
+[
+  {
+    "questId": "owner-castle-one",
+    "title": "ownerCastleOne.questTitle",
+    "progress": "0/15",
+    "description": "ownerCastleOne.questDescription",
+    "conditions": {
+      "goal": "ownerCastleOne.questGoal",
+      "minCorrect": 15,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
+    "vocabulary": [
+      {
+        "word": "die Farbe",
+        "translation-ru": "цвет",
+        "translation-en": "colour",
+        "translation-uk": "колір",
+        "translation-pl": "kolor",
+        "translation-es": "el color",
+        "translation-fr": "la couleur",
+        "translation-tr": "renk",
+        "translation-ro": "culoarea",
+        "translation-uz": "rang",
+        "translation-hi": "रंग",
+        "translation-ar": "اللون"
+      },
+      {
+        "word": "der Anfang",
+        "translation-ru": "начало",
+        "translation-en": "beginning",
+        "translation-uk": "початок",
+        "translation-pl": "początek",
+        "translation-es": "el comienzo",
+        "translation-fr": "le début",
+        "translation-tr": "başlangıç",
+        "translation-ro": "începutul",
+        "translation-uz": "boshlanish",
+        "translation-hi": "शुरुआत",
+        "translation-ar": "البداية"
+      },
+      {
+        "word": "das Dach",
+        "translation-ru": "крыша",
+        "translation-en": "roof",
+        "translation-uk": "дах",
+        "translation-pl": "dach",
+        "translation-es": "el tejado",
+        "translation-fr": "le toit",
+        "translation-tr": "çatı",
+        "translation-ro": "acoperișul",
+        "translation-uz": "tom",
+        "translation-hi": "छत",
+        "translation-ar": "السقف"
+      },
+      {
+        "word": "nebenan",
+        "translation-ru": "по соседству, рядом",
+        "translation-en": "next door",
+        "translation-uk": "по сусідству",
+        "translation-pl": "obok",
+        "translation-es": "al lado",
+        "translation-fr": "à côté",
+        "translation-tr": "yan tarafta",
+        "translation-ro": "alături",
+        "translation-uz": "qo‘shnida",
+        "translation-hi": "बगल में",
+        "translation-ar": "في الجوار"
+      },
+      {
+        "word": "das Ende",
+        "translation-ru": "конец",
+        "translation-en": "end",
+        "translation-uk": "кінець",
+        "translation-pl": "koniec",
+        "translation-es": "el final",
+        "translation-fr": "la fin",
+        "translation-tr": "son",
+        "translation-ro": "sfârșitul",
+        "translation-uz": "oxir",
+        "translation-hi": "अंत",
+        "translation-ar": "النهاية"
+      }
+    ],
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "ownerCastleOne.questTask1",
+        "options": [
+          "Das Auto der Vater ist neu.",
+          "Das Auto des Vater ist neu.",
+          "Das Auto des Vaters ist neu."
+        ],
+        "answer": "Das Auto des Vaters ist neu.",
+        "tip": "ownerCastleOne.questDescription"
+      },
+      {
+        "id": 2,
+        "type": "input",
+        "question": "ownerCastleOne.questTask2",
+        "correctAnswer": "des",
+        "tip": "ownerCastleOne.questDescription"
+      },
+      {
+        "id": 3,
+        "type": "input",
+        "question": "ownerCastleOne.questTask3",
+        "correctAnswer": "des",
+        "tip": "ownerCastleOne.questDescription"
+      },
+      {
+        "id": 4,
+        "type": "reorder",
+        "question": "ownerCastleOne.questTask4",
+        "words": [
+          "der",
+          "war",
+          "traurig",
+          "Das",
+          "Ende",
+          "Films",
+          "des"
+        ],
+        "correctOrder": [
+          "Das",
+          "Ende",
+          "des",
+          "Films",
+          "war",
+          "traurig"
+        ],
+        "tip": "ownerCastleOne.questDescription"
+      },
+      {
+        "id": 5,
+        "type": "select",
+        "question": "ownerCastleOne.questTask5",
+        "options": [
+          "Die Fenster des Haus sind groß.",
+          "Die Fenster des Hauses sind groß.",
+          "Die Fenster der Hauses sind groß."
+        ],
+        "answer": "Die Fenster des Hauses sind groß.",
+        "tip": "ownerCastleOne.questDescription"
+      },
+      {
+        "id": 6,
+        "type": "input",
+        "question": "ownerCastleOne.questTask6",
+        "correctAnswer": "des",
+        "tip": "ownerCastleOne.questDescription"
+      },
+      {
+        "id": 7,
+        "type": "readAndAnswer",
+        "question": "ownerCastleOne.questTask7",
+        "text": "Das Haus des Lehrers ist sehr alt. Die Farbe des Hauses ist gelb, und das Dach ist rot.",
+        "options": [
+          "weiß",
+          "gelb",
+          "rot"
+        ],
+        "answer": "gelb",
+        "tip": "ownerCastleOne.questDescription"
+      },
+      {
+        "id": 8,
+        "type": "input",
+        "question": "ownerCastleOne.questTask8",
+        "correctAnswer": "des",
+        "tip": "ownerCastleOne.questDescription"
+      },
+      {
+        "id": 9,
+        "type": "reorder",
+        "question": "ownerCastleOne.questTask10",
+        "words": [
+          "nebenan",
+          "der",
+          "des",
+          "Wohnung",
+          "Die",
+          "Lehrers",
+          "ist"
+        ],
+        "correctOrder": [
+          "Die",
+          "Wohnung",
+          "des",
+          "Lehrers",
+          "ist",
+          "nebenan"
+        ],
+        "tip": "ownerCastleOne.questDescription"
+      },
+      {
+        "id": 10,
+        "type": "select",
+        "question": "ownerCastleOne.questTask11",
+        "options": [
+          "Das Ende des Tag war ruhig.",
+          "Das Ende des Tages war ruhig.",
+          "Das Ende der Tages war ruhig."
+        ],
+        "answer": "Das Ende des Tages war ruhig.",
+        "tip": "ownerCastleOne.questDescription"
+      },
+      {
+        "id": 11,
+        "type": "input",
+        "question": "regretRiverEight.questTask9",
+        "correctAnswer": "gestellt",
+        "tip": "regretRiverEight.questDescription",
+        "reviewOf": "regret-river-eight",
+        "reviewLand": "regret-river"
+      },
+      {
+        "id": 12,
+        "type": "input",
+        "question": "regretRiverFive.questTask12",
+        "correctAnswer": "wäre",
+        "tip": "regretRiverFive.questDescription",
+        "reviewOf": "regret-river-five",
+        "reviewLand": "regret-river"
+      },
+      {
+        "id": 13,
+        "type": "input",
+        "question": "regretRiverTwo.questTask13",
+        "correctAnswer": "wäre",
+        "tip": "regretRiverTwo.questDescription",
+        "reviewOf": "regret-river-two",
+        "reviewLand": "regret-river"
+      },
+      {
+        "id": 14,
+        "type": "input",
+        "question": "ownerCastleOne.questTask14",
+        "correctAnswer": "hätten",
+        "tip": "ownerCastleOne.questDescription"
+      },
+      {
+        "id": 15,
+        "type": "input",
+        "question": "ownerCastleOne.questTask15",
+        "correctAnswer": "hätten",
+        "tip": "ownerCastleOne.questDescription"
+      }
+    ]
+  },
+  {
+    "questId": "owner-castle-two",
+    "title": "ownerCastleTwo.questTitle",
+    "progress": "0/15",
+    "description": "ownerCastleTwo.questDescription",
+    "conditions": {
+      "goal": "ownerCastleTwo.questGoal",
+      "minCorrect": 15,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
+    "vocabulary": [
+      {
+        "word": "die Großmutter",
+        "translation-ru": "бабушка",
+        "translation-en": "grandmother",
+        "translation-uk": "бабуся",
+        "translation-pl": "babcia",
+        "translation-es": "la abuela",
+        "translation-fr": "la grand-mère",
+        "translation-tr": "büyükanne",
+        "translation-ro": "bunica",
+        "translation-uz": "buvi",
+        "translation-hi": "दादी",
+        "translation-ar": "الجدة"
+      },
+      {
+        "word": "der Preis",
+        "translation-ru": "цена",
+        "translation-en": "price",
+        "translation-uk": "ціна",
+        "translation-pl": "cena",
+        "translation-es": "el precio",
+        "translation-fr": "le prix",
+        "translation-tr": "fiyat",
+        "translation-ro": "prețul",
+        "translation-uz": "narx",
+        "translation-hi": "कीमत",
+        "translation-ar": "السعر"
+      },
+      {
+        "word": "das Ende",
+        "translation-ru": "конец",
+        "translation-en": "end",
+        "translation-uk": "кінець",
+        "translation-pl": "koniec",
+        "translation-es": "el final",
+        "translation-fr": "la fin",
+        "translation-tr": "son",
+        "translation-ro": "sfârșitul",
+        "translation-uz": "oxir",
+        "translation-hi": "अंत",
+        "translation-ar": "النهاية"
+      },
+      {
+        "word": "spät",
+        "translation-ru": "поздно",
+        "translation-en": "late",
+        "translation-uk": "пізно",
+        "translation-pl": "późno",
+        "translation-es": "tarde",
+        "translation-fr": "tard",
+        "translation-tr": "geç",
+        "translation-ro": "târziu",
+        "translation-uz": "kech",
+        "translation-hi": "देर",
+        "translation-ar": "متأخر"
+      },
+      {
+        "word": "früher",
+        "translation-ru": "раньше",
+        "translation-en": "in the past, earlier",
+        "translation-uk": "раніше",
+        "translation-pl": "dawniej",
+        "translation-es": "antes",
+        "translation-fr": "autrefois",
+        "translation-tr": "eskiden",
+        "translation-ro": "înainte",
+        "translation-uz": "ilgari",
+        "translation-hi": "पहले",
+        "translation-ar": "في الماضي"
+      }
+    ],
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "ownerCastleTwo.questTask1",
+        "options": [
+          "Die Tasche die Frau liegt auf dem Tisch.",
+          "Die Tasche des Frau liegt auf dem Tisch.",
+          "Die Tasche der Frau liegt auf dem Tisch."
+        ],
+        "answer": "Die Tasche der Frau liegt auf dem Tisch.",
+        "tip": "ownerCastleTwo.questDescription"
+      },
+      {
+        "id": 2,
+        "type": "input",
+        "question": "ownerCastleTwo.questTask2",
+        "correctAnswer": "der",
+        "tip": "ownerCastleTwo.questDescription"
+      },
+      {
+        "id": 3,
+        "type": "input",
+        "question": "ownerCastleTwo.questTask3",
+        "correctAnswer": "der",
+        "tip": "ownerCastleTwo.questDescription"
+      },
+      {
+        "id": 4,
+        "type": "reorder",
+        "question": "ownerCastleTwo.questTask4",
+        "words": [
+          "Das",
+          "alt",
+          "Eltern",
+          "des",
+          "ist",
+          "Auto",
+          "der"
+        ],
+        "correctOrder": [
+          "Das",
+          "Auto",
+          "der",
+          "Eltern",
+          "ist",
+          "alt"
+        ],
+        "tip": "ownerCastleTwo.questDescription"
+      },
+      {
+        "id": 5,
+        "type": "select",
+        "question": "ownerCastleTwo.questTask5",
+        "options": [
+          "Das Ende die Woche war schwer.",
+          "Das Ende der Woche war schwer.",
+          "Das Ende des Woche war schwer."
+        ],
+        "answer": "Das Ende der Woche war schwer.",
+        "tip": "ownerCastleTwo.questDescription"
+      },
+      {
+        "id": 6,
+        "type": "input",
+        "question": "ownerCastleTwo.questTask6",
+        "correctAnswer": "der",
+        "tip": "ownerCastleTwo.questDescription"
+      },
+      {
+        "id": 7,
+        "type": "readAndAnswer",
+        "question": "ownerCastleTwo.questTask7",
+        "text": "Die Wohnung der Familie Schmidt ist groß. Die Zimmer der Kinder sind hell, und das Zimmer der Eltern hat einen Balkon.",
+        "options": [
+          "das Zimmer der Eltern",
+          "die Küche",
+          "das Zimmer der Kinder"
+        ],
+        "answer": "das Zimmer der Eltern",
+        "tip": "ownerCastleTwo.questDescription"
+      },
+      {
+        "id": 8,
+        "type": "input",
+        "question": "ownerCastleTwo.questTask8",
+        "correctAnswer": "der",
+        "tip": "ownerCastleTwo.questDescription"
+      },
+      {
+        "id": 9,
+        "type": "reorder",
+        "question": "ownerCastleTwo.questTask10",
+        "words": [
+          "der",
+          "Die",
+          "offen",
+          "des",
+          "Wohnung",
+          "Tür",
+          "ist"
+        ],
+        "correctOrder": [
+          "Die",
+          "Tür",
+          "der",
+          "Wohnung",
+          "ist",
+          "offen"
+        ],
+        "tip": "ownerCastleTwo.questDescription"
+      },
+      {
+        "id": 10,
+        "type": "select",
+        "question": "ownerCastleTwo.questTask11",
+        "options": [
+          "Der Lehrer die Kinder ist sehr freundlich.",
+          "Der Lehrer der Kinder ist sehr freundlich.",
+          "Der Lehrer des Kinder ist sehr freundlich."
+        ],
+        "answer": "Der Lehrer der Kinder ist sehr freundlich.",
+        "tip": "ownerCastleTwo.questDescription"
+      },
+      {
+        "id": 11,
+        "type": "input",
+        "question": "ownerCastleOne.questTask9",
+        "correctAnswer": "des",
+        "tip": "ownerCastleOne.questDescription",
+        "reviewOf": "owner-castle-one",
+        "reviewLand": "owner-castle"
+      },
+      {
+        "id": 12,
+        "type": "input",
+        "question": "regretRiverSix.questTask12",
+        "correctAnswer": "wäre",
+        "tip": "regretRiverSix.questDescription",
+        "reviewOf": "regret-river-six",
+        "reviewLand": "regret-river"
+      },
+      {
+        "id": 13,
+        "type": "input",
+        "question": "regretRiverThree.questTask13",
+        "correctAnswer": "gesehen",
+        "tip": "regretRiverThree.questDescription",
+        "reviewOf": "regret-river-three",
+        "reviewLand": "regret-river"
+      },
+      {
+        "id": 14,
+        "type": "input",
+        "question": "ownerCastleTwo.questTask14",
+        "correctAnswer": "wären",
+        "tip": "ownerCastleTwo.questDescription"
+      },
+      {
+        "id": 15,
+        "type": "input",
+        "question": "ownerCastleTwo.questTask15",
+        "correctAnswer": "der",
+        "tip": "ownerCastleTwo.questDescription"
+      }
+    ]
+  },
+  {
+    "questId": "owner-castle-three",
+    "title": "ownerCastleThree.questTitle",
+    "progress": "0/15",
+    "description": "ownerCastleThree.questDescription",
+    "conditions": {
+      "goal": "ownerCastleThree.questGoal",
+      "minCorrect": 15,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
+    "vocabulary": [
+      {
+        "word": "die Tante",
+        "translation-ru": "тётя",
+        "translation-en": "aunt",
+        "translation-uk": "тітка",
+        "translation-pl": "ciocia",
+        "translation-es": "la tía",
+        "translation-fr": "la tante",
+        "translation-tr": "teyze, hala",
+        "translation-ro": "mătușa",
+        "translation-uz": "xola, amma",
+        "translation-hi": "चाची, मौसी",
+        "translation-ar": "العمّة، الخالة"
+      },
+      {
+        "word": "der Onkel",
+        "translation-ru": "дядя",
+        "translation-en": "uncle",
+        "translation-uk": "дядько",
+        "translation-pl": "wujek",
+        "translation-es": "el tío",
+        "translation-fr": "l’oncle",
+        "translation-tr": "amca, dayı",
+        "translation-ro": "unchiul",
+        "translation-uz": "amaki, tog‘a",
+        "translation-hi": "चाचा",
+        "translation-ar": "العمّ"
+      },
+      {
+        "word": "das Foto",
+        "translation-ru": "фотография",
+        "translation-en": "photo",
+        "translation-uk": "фотографія",
+        "translation-pl": "zdjęcie",
+        "translation-es": "la foto",
+        "translation-fr": "la photo",
+        "translation-tr": "fotoğraf",
+        "translation-ro": "fotografia",
+        "translation-uz": "surat",
+        "translation-hi": "फ़ोटो",
+        "translation-ar": "الصورة"
+      },
+      {
+        "word": "versuchen",
+        "translation-ru": "пробовать / пытаться",
+        "translation-en": "to try / attempt",
+        "translation-uk": "пробувати / намагатися",
+        "translation-pl": "próbować",
+        "translation-es": "intentar / tratar",
+        "translation-fr": "essayer / tenter",
+        "translation-tr": "denemek",
+        "translation-ro": "a încerca",
+        "translation-uz": "urinib ko'rmoq",
+        "translation-hi": "कोशिश करना",
+        "translation-ar": "يحاول"
+      },
+      {
+        "word": "öffnen",
+        "translation-ru": "открывать",
+        "translation-en": "to open",
+        "translation-uk": "відчиняти",
+        "translation-pl": "otwierać",
+        "translation-es": "abrir",
+        "translation-fr": "ouvrir",
+        "translation-tr": "açmak",
+        "translation-ro": "a deschide",
+        "translation-uz": "ochmoq",
+        "translation-hi": "खोलना",
+        "translation-ar": "يفتح"
+      }
+    ],
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "ownerCastleThree.questTask1",
+        "options": [
+          "Das ist das Auto meiner Bruders.",
+          "Das ist das Auto meines Bruder.",
+          "Das ist das Auto meines Bruders."
+        ],
+        "answer": "Das ist das Auto meines Bruders.",
+        "tip": "ownerCastleThree.questDescription"
+      },
+      {
+        "id": 2,
+        "type": "input",
+        "question": "ownerCastleThree.questTask2",
+        "correctAnswer": "meiner",
+        "tip": "ownerCastleThree.questDescription"
+      },
+      {
+        "id": 3,
+        "type": "input",
+        "question": "ownerCastleThree.questTask3",
+        "correctAnswer": "meiner",
+        "tip": "ownerCastleThree.questDescription"
+      },
+      {
+        "id": 4,
+        "type": "reorder",
+        "question": "ownerCastleThree.questTask4",
+        "words": [
+          "meines",
+          "Tasche",
+          "Freundin",
+          "Das",
+          "ist",
+          "meiner",
+          "die"
+        ],
+        "correctOrder": [
+          "Das",
+          "ist",
+          "die",
+          "Tasche",
+          "meiner",
+          "Freundin"
+        ],
+        "tip": "ownerCastleThree.questDescription"
+      },
+      {
+        "id": 5,
+        "type": "select",
+        "question": "ownerCastleThree.questTask5",
+        "options": [
+          "Der Hund meines Freundes ist sehr groß.",
+          "Der Hund mein Freundes ist sehr groß.",
+          "Der Hund meiner Freundes ist sehr groß."
+        ],
+        "answer": "Der Hund meines Freundes ist sehr groß.",
+        "tip": "ownerCastleThree.questDescription"
+      },
+      {
+        "id": 6,
+        "type": "input",
+        "question": "ownerCastleThree.questTask6",
+        "correctAnswer": "deines",
+        "tip": "ownerCastleThree.questDescription"
+      },
+      {
+        "id": 7,
+        "type": "readAndAnswer",
+        "question": "ownerCastleThree.questTask7",
+        "text": "Am Wochenende war ich bei meiner Tante. Das Haus meiner Tante ist groß und hat einen schönen Garten. Der Hund meines Onkels hat den ganzen Tag im Garten gespielt.",
+        "options": [
+          "der Hund der Nachbarin",
+          "der Hund des Onkels",
+          "der Hund der Tante"
+        ],
+        "answer": "der Hund des Onkels",
+        "tip": "ownerCastleThree.questDescription"
+      },
+      {
+        "id": 8,
+        "type": "input",
+        "question": "ownerCastleThree.questTask8",
+        "correctAnswer": "eines",
+        "tip": "ownerCastleThree.questDescription"
+      },
+      {
+        "id": 9,
+        "type": "reorder",
+        "question": "ownerCastleThree.questTask10",
+        "words": [
+          "meines",
+          "der",
+          "in",
+          "Tante",
+          "wohne",
+          "Ich",
+          "meiner",
+          "Wohnung"
+        ],
+        "correctOrder": [
+          "Ich",
+          "wohne",
+          "in",
+          "der",
+          "Wohnung",
+          "meiner",
+          "Tante"
+        ],
+        "tip": "ownerCastleThree.questDescription"
+      },
+      {
+        "id": 10,
+        "type": "select",
+        "question": "ownerCastleThree.questTask11",
+        "options": [
+          "Das ist das Buch meines Lehrers.",
+          "Das ist das Buch meines Lehrer.",
+          "Das ist das Buch meiner Lehrers."
+        ],
+        "answer": "Das ist das Buch meines Lehrers.",
+        "tip": "ownerCastleThree.questDescription"
+      },
+      {
+        "id": 11,
+        "type": "input",
+        "question": "ownerCastleTwo.questTask9",
+        "correctAnswer": "der",
+        "tip": "ownerCastleTwo.questDescription",
+        "reviewOf": "owner-castle-two",
+        "reviewLand": "owner-castle"
+      },
+      {
+        "id": 12,
+        "type": "input",
+        "question": "regretRiverSeven.questTask12",
+        "correctAnswer": "hätte",
+        "tip": "regretRiverSeven.questDescription",
+        "reviewOf": "regret-river-seven",
+        "reviewLand": "regret-river"
+      },
+      {
+        "id": 13,
+        "type": "input",
+        "question": "regretRiverFour.questTask13",
+        "correctAnswer": "gefahren",
+        "tip": "regretRiverFour.questDescription",
+        "reviewOf": "regret-river-four",
+        "reviewLand": "regret-river"
+      },
+      {
+        "id": 14,
+        "type": "input",
+        "question": "ownerCastleThree.questTask14",
+        "correctAnswer": "wäre",
+        "tip": "ownerCastleThree.questDescription"
+      },
+      {
+        "id": 15,
+        "type": "input",
+        "question": "ownerCastleThree.questTask15",
+        "correctAnswer": "zu",
+        "tip": "ownerCastleThree.questDescription"
+      }
+    ]
+  },
+  {
+    "questId": "owner-castle-four",
+    "title": "ownerCastleFour.questTitle",
+    "progress": "0/15",
+    "description": "ownerCastleFour.questDescription",
+    "conditions": {
+      "goal": "ownerCastleFour.questGoal",
+      "minCorrect": 15,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
+    "vocabulary": [
+      {
+        "word": "die Brille",
+        "translation-ru": "очки",
+        "translation-en": "glasses",
+        "translation-uk": "окуляри",
+        "translation-pl": "okulary",
+        "translation-es": "las gafas",
+        "translation-fr": "les lunettes",
+        "translation-tr": "gözlük",
+        "translation-ro": "ochelarii",
+        "translation-uz": "ko‘zoynak",
+        "translation-hi": "चश्मा",
+        "translation-ar": "النظارة"
+      },
+      {
+        "word": "schneller",
+        "translation-ru": "быстрее",
+        "translation-en": "faster",
+        "translation-uk": "швидше",
+        "translation-pl": "szybciej",
+        "translation-es": "más rápido",
+        "translation-fr": "plus vite",
+        "translation-tr": "daha hızlı",
+        "translation-ro": "mai repede",
+        "translation-uz": "tezroq",
+        "translation-hi": "ज़्यादा जल्दी",
+        "translation-ar": "أسرع"
+      },
+      {
+        "word": "das Telefon",
+        "translation-ru": "телефон",
+        "translation-en": "phone",
+        "translation-uk": "телефон",
+        "translation-pl": "telefon",
+        "translation-es": "el teléfono",
+        "translation-fr": "le téléphone",
+        "translation-tr": "telefon",
+        "translation-ro": "telefonul",
+        "translation-uz": "telefon",
+        "translation-hi": "फ़ोन",
+        "translation-ar": "الهاتف"
+      },
+      {
+        "word": "unser",
+        "translation-ru": "наш",
+        "translation-en": "our",
+        "translation-uk": "наш",
+        "translation-pl": "nasz",
+        "translation-es": "nuestro",
+        "translation-fr": "notre",
+        "translation-tr": "bizim",
+        "translation-ro": "nostru",
+        "translation-uz": "bizning",
+        "translation-hi": "हमारा",
+        "translation-ar": "لنا"
+      },
+      {
+        "word": "gestern",
+        "translation-ru": "вчера",
+        "translation-en": "yesterday",
+        "translation-uk": "вчора",
+        "translation-pl": "wczoraj",
+        "translation-es": "ayer",
+        "translation-fr": "hier",
+        "translation-tr": "dün",
+        "translation-ro": "ieri",
+        "translation-uz": "kecha",
+        "translation-hi": "कल",
+        "translation-ar": "أمس"
+      }
+    ],
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "ownerCastleFour.questTask1",
+        "options": [
+          "Annas das Auto ist rot.",
+          "Der Anna Auto ist rot.",
+          "Annas Auto ist rot."
+        ],
+        "answer": "Annas Auto ist rot.",
+        "tip": "ownerCastleFour.questDescription"
+      },
+      {
+        "id": 2,
+        "type": "input",
+        "question": "ownerCastleFour.questTask2",
+        "correctAnswer": "Pauls",
+        "tip": "ownerCastleFour.questDescription"
+      },
+      {
+        "id": 3,
+        "type": "input",
+        "question": "ownerCastleFour.questTask3",
+        "correctAnswer": "meinem",
+        "tip": "ownerCastleFour.questDescription"
+      },
+      {
+        "id": 4,
+        "type": "reorder",
+        "question": "ownerCastleFour.questTask4",
+        "words": [
+          "Das",
+          "Brille",
+          "Lisas",
+          "die",
+          "ist"
+        ],
+        "correctOrder": [
+          "Das",
+          "ist",
+          "Lisas",
+          "Brille"
+        ],
+        "tip": "ownerCastleFour.questDescription"
+      },
+      {
+        "id": 5,
+        "type": "select",
+        "question": "ownerCastleFour.questTask5",
+        "options": [
+          "Das ist der Schlüssel von mein Bruder.",
+          "Das ist der Schlüssel von meinem Bruder.",
+          "Das ist der Schlüssel von meines Bruders."
+        ],
+        "answer": "Das ist der Schlüssel von meinem Bruder.",
+        "tip": "ownerCastleFour.questDescription"
+      },
+      {
+        "id": 6,
+        "type": "input",
+        "question": "ownerCastleFour.questTask6",
+        "correctAnswer": "Marias",
+        "tip": "ownerCastleFour.questDescription"
+      },
+      {
+        "id": 7,
+        "type": "readAndAnswer",
+        "question": "ownerCastleFour.questTask7",
+        "text": "Lisas Bruder heißt Ben. Bens Freundin kommt aus Spanien. Am Samstag feiern sie zusammen Lisas Geburtstag.",
+        "options": [
+          "Lisas Geburtstag",
+          "der Geburtstag der Freundin",
+          "Bens Geburtstag"
+        ],
+        "answer": "Lisas Geburtstag",
+        "tip": "ownerCastleFour.questDescription"
+      },
+      {
+        "id": 8,
+        "type": "input",
+        "question": "ownerCastleFour.questTask8",
+        "correctAnswer": "meiner",
+        "tip": "ownerCastleFour.questDescription"
+      },
+      {
+        "id": 9,
+        "type": "reorder",
+        "question": "ownerCastleFour.questTask10",
+        "words": [
+          "ist",
+          "das",
+          "Das",
+          "Mutter",
+          "meiner",
+          "meines",
+          "Telefon",
+          "von"
+        ],
+        "correctOrder": [
+          "Das",
+          "ist",
+          "das",
+          "Telefon",
+          "von",
+          "meiner",
+          "Mutter"
+        ],
+        "tip": "ownerCastleFour.questDescription"
+      },
+      {
+        "id": 10,
+        "type": "select",
+        "question": "ownerCastleFour.questTask11",
+        "options": [
+          "Peter Auto ist schneller.",
+          "Peters Auto ist schneller.",
+          "Der Peter Auto ist schneller."
+        ],
+        "answer": "Peters Auto ist schneller.",
+        "tip": "ownerCastleFour.questDescription"
+      },
+      {
+        "id": 11,
+        "type": "input",
+        "question": "ownerCastleThree.questTask9",
+        "correctAnswer": "unserer",
+        "tip": "ownerCastleThree.questDescription",
+        "reviewOf": "owner-castle-three",
+        "reviewLand": "owner-castle"
+      },
+      {
+        "id": 12,
+        "type": "input",
+        "question": "regretRiverEight.questTask12",
+        "correctAnswer": "hättest",
+        "tip": "regretRiverEight.questDescription",
+        "reviewOf": "regret-river-eight",
+        "reviewLand": "regret-river"
+      },
+      {
+        "id": 13,
+        "type": "input",
+        "question": "regretRiverFive.questTask13",
+        "correctAnswer": "wärst",
+        "tip": "regretRiverFive.questDescription",
+        "reviewOf": "regret-river-five",
+        "reviewLand": "regret-river"
+      },
+      {
+        "id": 14,
+        "type": "input",
+        "question": "ownerCastleFour.questTask14",
+        "correctAnswer": "dem",
+        "tip": "ownerCastleFour.questDescription"
+      },
+      {
+        "id": 15,
+        "type": "input",
+        "question": "ownerCastleFour.questTask15",
+        "correctAnswer": "werden",
+        "tip": "ownerCastleFour.questDescription"
+      }
+    ]
+  },
+  {
+    "questId": "owner-castle-five",
+    "title": "ownerCastleFive.questTitle",
+    "progress": "0/15",
+    "description": "ownerCastleFive.questDescription",
+    "conditions": {
+      "goal": "ownerCastleFive.questGoal",
+      "minCorrect": 15,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
+    "vocabulary": [
+      {
+        "word": "wegen",
+        "translation-ru": "из-за",
+        "translation-en": "because of",
+        "translation-uk": "через",
+        "translation-pl": "z powodu",
+        "translation-es": "por, a causa de",
+        "translation-fr": "à cause de",
+        "translation-tr": "yüzünden",
+        "translation-ro": "din cauza",
+        "translation-uz": "sababli",
+        "translation-hi": "की वजह से",
+        "translation-ar": "بسبب"
+      },
+      {
+        "word": "die Krankheit",
+        "translation-ru": "болезнь",
+        "translation-en": "illness",
+        "translation-uk": "хвороба",
+        "translation-pl": "choroba",
+        "translation-es": "la enfermedad",
+        "translation-fr": "la maladie",
+        "translation-tr": "hastalık",
+        "translation-ro": "boala",
+        "translation-uz": "kasallik",
+        "translation-hi": "बीमारी",
+        "translation-ar": "المرض"
+      },
+      {
+        "word": "gewusst",
+        "translation-ru": "знал (Partizip от wissen)",
+        "translation-en": "known (participle of wissen)",
+        "translation-uk": "знав (Partizip від wissen)",
+        "translation-pl": "wiedział (Partizip od wissen)",
+        "translation-es": "sabido (participio de wissen)",
+        "translation-fr": "su (participe de wissen)",
+        "translation-tr": "bilmiş (wissen’in Partizip’i)",
+        "translation-ro": "știut (participiul lui wissen)",
+        "translation-uz": "bilgan (wissen dan Partizip)",
+        "translation-hi": "जाना (wissen का Partizip)",
+        "translation-ar": "عَلِم (اسم مفعول wissen)"
+      },
+      {
+        "word": "die Erkältung",
+        "translation-ru": "простуда",
+        "translation-en": "cold (illness)",
+        "translation-uk": "застуда",
+        "translation-pl": "przeziębienie",
+        "translation-es": "el resfriado",
+        "translation-fr": "le rhume",
+        "translation-tr": "soğuk algınlığı",
+        "translation-ro": "răceala",
+        "translation-uz": "shamollash",
+        "translation-hi": "ज़ुकाम",
+        "translation-ar": "الزكام"
+      },
+      {
+        "word": "während",
+        "translation-ru": "пока, в то время как",
+        "translation-en": "while",
+        "translation-uk": "поки, у той час як",
+        "translation-pl": "podczas gdy",
+        "translation-es": "mientras",
+        "translation-fr": "pendant que",
+        "translation-tr": "-iken",
+        "translation-ro": "în timp ce",
+        "translation-uz": "…ayotganda",
+        "translation-hi": "जबकि, जब तक",
+        "translation-ar": "بينما"
+      }
+    ],
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "ownerCastleFive.questTask1",
+        "options": [
+          "Wegen des Regens wir sind zu Hause geblieben.",
+          "Wegen der Regen sind wir zu Hause geblieben.",
+          "Wegen des Regens sind wir zu Hause geblieben."
+        ],
+        "answer": "Wegen des Regens sind wir zu Hause geblieben.",
+        "tip": "ownerCastleFive.questDescription"
+      },
+      {
+        "id": 2,
+        "type": "input",
+        "question": "ownerCastleFive.questTask2",
+        "correctAnswer": "Wegen",
+        "tip": "ownerCastleFive.questDescription"
+      },
+      {
+        "id": 3,
+        "type": "input",
+        "question": "ownerCastleFive.questTask3",
+        "correctAnswer": "des",
+        "tip": "ownerCastleFive.questDescription"
+      },
+      {
+        "id": 4,
+        "type": "reorder",
+        "question": "ownerCastleFive.questTask4",
+        "words": [
+          "kam",
+          "der",
+          "sie",
+          "nicht",
+          "des",
+          "Wegen",
+          "Krankheit"
+        ],
+        "correctOrder": [
+          "Wegen",
+          "der",
+          "Krankheit",
+          "kam",
+          "sie",
+          "nicht"
+        ],
+        "tip": "ownerCastleFive.questDescription"
+      },
+      {
+        "id": 5,
+        "type": "select",
+        "question": "ownerCastleFive.questTask5",
+        "options": [
+          "Wegen des Lärms kann ich nicht schlafen.",
+          "Wegen des Lärms ich kann nicht schlafen.",
+          "Wegen der Lärm kann ich nicht schlafen."
+        ],
+        "answer": "Wegen des Lärms kann ich nicht schlafen.",
+        "tip": "ownerCastleFive.questDescription"
+      },
+      {
+        "id": 6,
+        "type": "input",
+        "question": "ownerCastleFive.questTask6",
+        "correctAnswer": "des",
+        "tip": "ownerCastleFive.questDescription"
+      },
+      {
+        "id": 7,
+        "type": "readAndAnswer",
+        "question": "ownerCastleFive.questTask7",
+        "text": "Heute ist Paul nicht zur Arbeit gekommen. Wegen einer Erkältung bleibt er zu Hause. Seine Kollegen machen die Arbeit für ihn.",
+        "options": [
+          "wegen einer Erkältung",
+          "wegen der Arbeit",
+          "wegen des Wetters"
+        ],
+        "answer": "wegen einer Erkältung",
+        "tip": "ownerCastleFive.questDescription"
+      },
+      {
+        "id": 8,
+        "type": "input",
+        "question": "ownerCastleFive.questTask8",
+        "correctAnswer": "der",
+        "tip": "ownerCastleFive.questDescription"
+      },
+      {
+        "id": 9,
+        "type": "reorder",
+        "question": "ownerCastleFive.questTask10",
+        "words": [
+          "der",
+          "abgesagt",
+          "wurde",
+          "Party",
+          "Regens",
+          "des",
+          "Wegen",
+          "die"
+        ],
+        "correctOrder": [
+          "Wegen",
+          "des",
+          "Regens",
+          "wurde",
+          "die",
+          "Party",
+          "abgesagt"
+        ],
+        "tip": "ownerCastleFive.questDescription"
+      },
+      {
+        "id": 10,
+        "type": "select",
+        "question": "ownerCastleFive.questTask11",
+        "options": [
+          "Wegen meines Bruders müssen wir warten.",
+          "Wegen mein Bruder müssen wir warten.",
+          "Wegen meiner Bruders müssen wir warten."
+        ],
+        "answer": "Wegen meines Bruders müssen wir warten.",
+        "tip": "ownerCastleFive.questDescription"
+      },
+      {
+        "id": 11,
+        "type": "input",
+        "question": "ownerCastleFour.questTask9",
+        "correctAnswer": "Tims",
+        "tip": "ownerCastleFour.questDescription",
+        "reviewOf": "owner-castle-four",
+        "reviewLand": "owner-castle"
+      },
+      {
+        "id": 12,
+        "type": "input",
+        "question": "ownerCastleOne.questTask12",
+        "correctAnswer": "des",
+        "tip": "ownerCastleOne.questDescription",
+        "reviewOf": "owner-castle-one",
+        "reviewLand": "owner-castle"
+      },
+      {
+        "id": 13,
+        "type": "input",
+        "question": "regretRiverSix.questTask13",
+        "correctAnswer": "gesagt",
+        "tip": "regretRiverSix.questDescription",
+        "reviewOf": "regret-river-six",
+        "reviewLand": "regret-river"
+      },
+      {
+        "id": 14,
+        "type": "input",
+        "question": "ownerCastleFive.questTask14",
+        "correctAnswer": "hätte",
+        "tip": "ownerCastleFive.questDescription"
+      },
+      {
+        "id": 15,
+        "type": "input",
+        "question": "ownerCastleFive.questTask15",
+        "correctAnswer": "kochte",
+        "tip": "ownerCastleFive.questDescription"
+      }
+    ]
+  },
+  {
+    "questId": "owner-castle-six",
+    "title": "ownerCastleSix.questTitle",
+    "progress": "0/15",
+    "description": "ownerCastleSix.questDescription",
+    "conditions": {
+      "goal": "ownerCastleSix.questGoal",
+      "minCorrect": 15,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
+    "vocabulary": [
+      {
+        "word": "trotz",
+        "translation-ru": "несмотря на",
+        "translation-en": "despite",
+        "translation-uk": "попри",
+        "translation-pl": "mimo",
+        "translation-es": "a pesar de",
+        "translation-fr": "malgré",
+        "translation-tr": "rağmen",
+        "translation-ro": "în ciuda",
+        "translation-uz": "qaramay",
+        "translation-hi": "के बावजूद",
+        "translation-ar": "رغم"
+      },
+      {
+        "word": "der Unterricht",
+        "translation-ru": "урок, занятия",
+        "translation-en": "lessons, class",
+        "translation-uk": "урок, заняття",
+        "translation-pl": "lekcje, zajęcia",
+        "translation-es": "la clase",
+        "translation-fr": "le cours",
+        "translation-tr": "ders",
+        "translation-ro": "ora, cursul",
+        "translation-uz": "dars",
+        "translation-hi": "कक्षा",
+        "translation-ar": "الدرس"
+      },
+      {
+        "word": "die Pause",
+        "translation-ru": "перерыв",
+        "translation-en": "break",
+        "translation-uk": "перерва",
+        "translation-pl": "przerwa",
+        "translation-es": "el descanso",
+        "translation-fr": "la pause",
+        "translation-tr": "mola",
+        "translation-ro": "pauza",
+        "translation-uz": "tanaffus",
+        "translation-hi": "ब्रेक",
+        "translation-ar": "الاستراحة"
+      },
+      {
+        "word": "die Ecke",
+        "translation-ru": "угол",
+        "translation-en": "corner",
+        "translation-uk": "кут",
+        "translation-pl": "róg",
+        "translation-es": "la esquina",
+        "translation-fr": "le coin",
+        "translation-tr": "köşe",
+        "translation-ro": "colțul",
+        "translation-uz": "burchak",
+        "translation-hi": "कोना",
+        "translation-ar": "الزاوية"
+      },
+      {
+        "word": "wegen",
+        "translation-ru": "из-за",
+        "translation-en": "because of",
+        "translation-uk": "через",
+        "translation-pl": "z powodu",
+        "translation-es": "por, a causa de",
+        "translation-fr": "à cause de",
+        "translation-tr": "yüzünden",
+        "translation-ro": "din cauza",
+        "translation-uz": "sababli",
+        "translation-hi": "की वजह से",
+        "translation-ar": "بسبب"
+      }
+    ],
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "ownerCastleSix.questTask1",
+        "options": [
+          "Trotz der Regen sind wir spazieren gegangen.",
+          "Trotz des Regens wir sind spazieren gegangen.",
+          "Trotz des Regens sind wir spazieren gegangen."
+        ],
+        "answer": "Trotz des Regens sind wir spazieren gegangen.",
+        "tip": "ownerCastleSix.questDescription"
+      },
+      {
+        "id": 2,
+        "type": "input",
+        "question": "ownerCastleSix.questTask2",
+        "correctAnswer": "Während",
+        "tip": "ownerCastleSix.questDescription"
+      },
+      {
+        "id": 3,
+        "type": "input",
+        "question": "ownerCastleSix.questTask3",
+        "correctAnswer": "des",
+        "tip": "ownerCastleSix.questDescription"
+      },
+      {
+        "id": 4,
+        "type": "reorder",
+        "question": "ownerCastleSix.questTask4",
+        "words": [
+          "der",
+          "essen",
+          "nicht",
+          "des",
+          "darf",
+          "Während",
+          "man",
+          "Unterrichts"
+        ],
+        "correctOrder": [
+          "Während",
+          "des",
+          "Unterrichts",
+          "darf",
+          "man",
+          "nicht",
+          "essen"
+        ],
+        "tip": "ownerCastleSix.questDescription"
+      },
+      {
+        "id": 5,
+        "type": "select",
+        "question": "ownerCastleSix.questTask5",
+        "options": [
+          "Trotz des Stau sind wir pünktlich angekommen.",
+          "Trotz des Staus wir sind pünktlich angekommen.",
+          "Trotz des Staus sind wir pünktlich angekommen."
+        ],
+        "answer": "Trotz des Staus sind wir pünktlich angekommen.",
+        "tip": "ownerCastleSix.questDescription"
+      },
+      {
+        "id": 6,
+        "type": "input",
+        "question": "ownerCastleSix.questTask6",
+        "correctAnswer": "der",
+        "tip": "ownerCastleSix.questDescription"
+      },
+      {
+        "id": 7,
+        "type": "readAndAnswer",
+        "question": "ownerCastleSix.questTask7",
+        "text": "Trotz des Regens ist Lena am Sonntag in den Park gegangen. Während des Spaziergangs hat sie ihre Freundin angerufen.",
+        "options": [
+          "Sie hat gegessen.",
+          "Sie hat ihre Freundin angerufen.",
+          "Sie ist nach Hause gegangen."
+        ],
+        "answer": "Sie hat ihre Freundin angerufen.",
+        "tip": "ownerCastleSix.questDescription"
+      },
+      {
+        "id": 8,
+        "type": "input",
+        "question": "ownerCastleSix.questTask8",
+        "correctAnswer": "des",
+        "tip": "ownerCastleSix.questDescription"
+      },
+      {
+        "id": 9,
+        "type": "reorder",
+        "question": "ownerCastleSix.questTask10",
+        "words": [
+          "Reise",
+          "haben",
+          "der",
+          "Während",
+          "viel",
+          "gesehen",
+          "des",
+          "wir"
+        ],
+        "correctOrder": [
+          "Während",
+          "der",
+          "Reise",
+          "haben",
+          "wir",
+          "viel",
+          "gesehen"
+        ],
+        "tip": "ownerCastleSix.questDescription"
+      },
+      {
+        "id": 10,
+        "type": "select",
+        "question": "ownerCastleSix.questTask11",
+        "options": [
+          "Trotz der Prüfung er ist zur Party gegangen.",
+          "Trotz der Prüfung ist er zur Party gegangen.",
+          "Trotz des Prüfung ist er zur Party gegangen."
+        ],
+        "answer": "Trotz der Prüfung ist er zur Party gegangen.",
+        "tip": "ownerCastleSix.questDescription"
+      },
+      {
+        "id": 11,
+        "type": "input",
+        "question": "ownerCastleFive.questTask9",
+        "correctAnswer": "des",
+        "tip": "ownerCastleFive.questDescription",
+        "reviewOf": "owner-castle-five",
+        "reviewLand": "owner-castle"
+      },
+      {
+        "id": 12,
+        "type": "input",
+        "question": "ownerCastleTwo.questTask12",
+        "correctAnswer": "der",
+        "tip": "ownerCastleTwo.questDescription",
+        "reviewOf": "owner-castle-two",
+        "reviewLand": "owner-castle"
+      },
+      {
+        "id": 13,
+        "type": "input",
+        "question": "regretRiverSeven.questTask13",
+        "correctAnswer": "getroffen",
+        "tip": "regretRiverSeven.questDescription",
+        "reviewOf": "regret-river-seven",
+        "reviewLand": "regret-river"
+      },
+      {
+        "id": 14,
+        "type": "input",
+        "question": "ownerCastleSix.questTask14",
+        "correctAnswer": "Könntest",
+        "tip": "ownerCastleSix.questDescription"
+      },
+      {
+        "id": 15,
+        "type": "input",
+        "question": "ownerCastleSix.questTask15",
+        "correctAnswer": "was",
+        "tip": "ownerCastleSix.questDescription"
+      }
+    ]
+  },
+  {
+    "questId": "owner-castle-seven",
+    "title": "ownerCastleSeven.questTitle",
+    "progress": "0/15",
+    "description": "ownerCastleSeven.questDescription",
+    "conditions": {
+      "goal": "ownerCastleSeven.questGoal",
+      "minCorrect": 15,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
+    "vocabulary": [
+      {
+        "word": "das Bild",
+        "translation-ru": "картина",
+        "translation-en": "picture",
+        "translation-uk": "картина",
+        "translation-pl": "obraz",
+        "translation-es": "el cuadro",
+        "translation-fr": "le tableau",
+        "translation-tr": "resim",
+        "translation-ro": "tabloul",
+        "translation-uz": "rasm",
+        "translation-hi": "चित्र",
+        "translation-ar": "اللوحة"
+      },
+      {
+        "word": "der Maler",
+        "translation-ru": "художник",
+        "translation-en": "painter",
+        "translation-uk": "художник",
+        "translation-pl": "malarz",
+        "translation-es": "el pintor",
+        "translation-fr": "le peintre",
+        "translation-tr": "ressam",
+        "translation-ro": "pictorul",
+        "translation-uz": "rassom",
+        "translation-hi": "चित्रकार",
+        "translation-ar": "الرسام"
+      },
+      {
+        "word": "die Geschichte",
+        "translation-ru": "история",
+        "translation-en": "history, story",
+        "translation-uk": "історія",
+        "translation-pl": "historia",
+        "translation-es": "la historia",
+        "translation-fr": "l’histoire",
+        "translation-tr": "tarih",
+        "translation-ro": "istoria",
+        "translation-uz": "tarix",
+        "translation-hi": "इतिहास",
+        "translation-ar": "التاريخ"
+      },
+      {
+        "word": "der Eingang",
+        "translation-ru": "вход",
+        "translation-en": "entrance",
+        "translation-uk": "вхід",
+        "translation-pl": "wejście",
+        "translation-es": "la entrada",
+        "translation-fr": "l’entrée",
+        "translation-tr": "giriş",
+        "translation-ro": "intrarea",
+        "translation-uz": "kirish",
+        "translation-hi": "प्रवेश द्वार",
+        "translation-ar": "المدخل"
+      },
+      {
+        "word": "die Ausstellung",
+        "translation-ru": "выставка",
+        "translation-en": "exhibition",
+        "translation-uk": "виставка",
+        "translation-pl": "wystawa",
+        "translation-es": "la exposición",
+        "translation-fr": "l’exposition",
+        "translation-tr": "sergi",
+        "translation-ro": "expoziția",
+        "translation-uz": "ko‘rgazma",
+        "translation-hi": "प्रदर्शनी",
+        "translation-ar": "المعرض"
+      }
+    ],
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "ownerCastleSeven.questTask1",
+        "options": [
+          "Das ist das bekannteste Bild des Maler.",
+          "Das ist das bekannteste Bild der Maler.",
+          "Das ist das bekannteste Bild des Malers."
+        ],
+        "answer": "Das ist das bekannteste Bild des Malers.",
+        "tip": "ownerCastleSeven.questDescription"
+      },
+      {
+        "id": 2,
+        "type": "input",
+        "question": "ownerCastleSeven.questTask2",
+        "correctAnswer": "der",
+        "tip": "ownerCastleSeven.questDescription"
+      },
+      {
+        "id": 3,
+        "type": "input",
+        "question": "ownerCastleSeven.questTask3",
+        "correctAnswer": "Museums",
+        "tip": "ownerCastleSeven.questDescription"
+      },
+      {
+        "id": 4,
+        "type": "reorder",
+        "question": "ownerCastleSeven.questTask4",
+        "words": [
+          "Bild",
+          "Großmutter",
+          "meiner",
+          "Das",
+          "das",
+          "meines",
+          "ist"
+        ],
+        "correctOrder": [
+          "Das",
+          "ist",
+          "das",
+          "Bild",
+          "meiner",
+          "Großmutter"
+        ],
+        "tip": "ownerCastleSeven.questDescription"
+      },
+      {
+        "id": 5,
+        "type": "select",
+        "question": "ownerCastleSeven.questTask5",
+        "options": [
+          "Das ist Paul’s Fahrrad.",
+          "Das ist das Fahrrad Paul.",
+          "Das ist Pauls Fahrrad."
+        ],
+        "answer": "Das ist Pauls Fahrrad.",
+        "tip": "ownerCastleSeven.questDescription"
+      },
+      {
+        "id": 6,
+        "type": "input",
+        "question": "ownerCastleSeven.questTask6",
+        "correctAnswer": "Bildes",
+        "tip": "ownerCastleSeven.questDescription"
+      },
+      {
+        "id": 7,
+        "type": "readAndAnswer",
+        "question": "ownerCastleSeven.questTask7",
+        "text": "Im Museum der Stadt gibt es eine neue Ausstellung. Am Eingang hängt ein Bild des Bürgermeisters. Im ersten Raum sieht man die Geschichte der Stadt. Das schönste Bild ist von einer jungen Malerin.",
+        "options": [
+          "ein Bild des Bürgermeisters",
+          "ein Bild des Museums",
+          "ein Bild der Malerin"
+        ],
+        "answer": "ein Bild des Bürgermeisters",
+        "tip": "ownerCastleSeven.questDescription"
+      },
+      {
+        "id": 8,
+        "type": "input",
+        "question": "ownerCastleSeven.questTask8",
+        "correctAnswer": "meines",
+        "tip": "ownerCastleSeven.questDescription"
+      },
+      {
+        "id": 9,
+        "type": "reorder",
+        "question": "ownerCastleSeven.questTask10",
+        "words": [
+          "Ich",
+          "das",
+          "der",
+          "des",
+          "Malers",
+          "sehe",
+          "Haus"
+        ],
+        "correctOrder": [
+          "Ich",
+          "sehe",
+          "das",
+          "Haus",
+          "des",
+          "Malers"
+        ],
+        "tip": "ownerCastleSeven.questDescription"
+      },
+      {
+        "id": 10,
+        "type": "select",
+        "question": "ownerCastleSeven.questTask11",
+        "options": [
+          "Das ist das Buch meine Freundin.",
+          "Das ist das Buch meiner Freundin.",
+          "Das ist das Buch meines Freundin."
+        ],
+        "answer": "Das ist das Buch meiner Freundin.",
+        "tip": "ownerCastleSeven.questDescription"
+      },
+      {
+        "id": 11,
+        "type": "input",
+        "question": "ownerCastleSix.questTask9",
+        "correctAnswer": "der",
+        "tip": "ownerCastleSix.questDescription",
+        "reviewOf": "owner-castle-six",
+        "reviewLand": "owner-castle"
+      },
+      {
+        "id": 12,
+        "type": "input",
+        "question": "ownerCastleThree.questTask12",
+        "correctAnswer": "deiner",
+        "tip": "ownerCastleThree.questDescription",
+        "reviewOf": "owner-castle-three",
+        "reviewLand": "owner-castle"
+      },
+      {
+        "id": 13,
+        "type": "input",
+        "question": "regretRiverEight.questTask13",
+        "correctAnswer": "bestanden",
+        "tip": "regretRiverEight.questDescription",
+        "reviewOf": "regret-river-eight",
+        "reviewLand": "regret-river"
+      },
+      {
+        "id": 14,
+        "type": "input",
+        "question": "ownerCastleSeven.questTask14",
+        "correctAnswer": "wäre",
+        "tip": "ownerCastleSeven.questDescription"
+      },
+      {
+        "id": 15,
+        "type": "input",
+        "question": "ownerCastleSeven.questTask15",
+        "correctAnswer": "gegangen",
+        "tip": "ownerCastleSeven.questDescription"
+      }
+    ]
+  },
+  {
+    "questId": "owner-castle-eight",
+    "title": "ownerCastleEight.questTitle",
+    "progress": "0/15",
+    "description": "ownerCastleEight.questDescription",
+    "conditions": {
+      "goal": "ownerCastleEight.questGoal",
+      "minCorrect": 15,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
+    "vocabulary": [
+      {
+        "word": "das Schloss",
+        "translation-ru": "замок, дворец",
+        "translation-en": "castle",
+        "translation-uk": "замок, палац",
+        "translation-pl": "zamek",
+        "translation-es": "el castillo",
+        "translation-fr": "le château",
+        "translation-tr": "şato",
+        "translation-ro": "castelul",
+        "translation-uz": "qasr",
+        "translation-hi": "महल",
+        "translation-ar": "القلعة"
+      },
+      {
+        "word": "die Führung",
+        "translation-ru": "экскурсия (с гидом)",
+        "translation-en": "guided tour",
+        "translation-uk": "екскурсія",
+        "translation-pl": "zwiedzanie z przewodnikiem",
+        "translation-es": "la visita guiada",
+        "translation-fr": "la visite guidée",
+        "translation-tr": "rehberli tur",
+        "translation-ro": "turul ghidat",
+        "translation-uz": "ekskursiya",
+        "translation-hi": "गाइडेड टूर",
+        "translation-ar": "الجولة المرشدة"
+      },
+      {
+        "word": "die Fahrt",
+        "translation-ru": "поездка, дорога",
+        "translation-en": "journey, ride",
+        "translation-uk": "поїздка",
+        "translation-pl": "jazda, podróż",
+        "translation-es": "el viaje, el trayecto",
+        "translation-fr": "le trajet",
+        "translation-tr": "yolculuk",
+        "translation-ro": "drumul",
+        "translation-uz": "yo‘l",
+        "translation-hi": "सफ़र",
+        "translation-ar": "الرحلة"
+      },
+      {
+        "word": "der Nebel",
+        "translation-ru": "туман",
+        "translation-en": "fog",
+        "translation-uk": "туман",
+        "translation-pl": "mgła",
+        "translation-es": "la niebla",
+        "translation-fr": "le brouillard",
+        "translation-tr": "sis",
+        "translation-ro": "ceața",
+        "translation-uz": "tuman",
+        "translation-hi": "कोहरा",
+        "translation-ar": "الضباب"
+      },
+      {
+        "word": "der Garten",
+        "translation-ru": "сад",
+        "translation-en": "garden",
+        "translation-uk": "сад",
+        "translation-pl": "ogród",
+        "translation-es": "el jardín",
+        "translation-fr": "le jardin",
+        "translation-tr": "bahçe",
+        "translation-ro": "grădina",
+        "translation-uz": "bog‘",
+        "translation-hi": "बगीचा",
+        "translation-ar": "الحديقة"
+      },
+      {
+        "word": "die Jacke",
+        "translation-ru": "куртка",
+        "translation-en": "jacket",
+        "translation-uk": "куртка",
+        "translation-pl": "kurtka",
+        "translation-es": "la chaqueta",
+        "translation-fr": "la veste",
+        "translation-tr": "ceket",
+        "translation-ro": "geaca",
+        "translation-uz": "kurtka",
+        "translation-hi": "जैकेट",
+        "translation-ar": "السترة"
+      },
+      {
+        "word": "besichtigen",
+        "translation-ru": "осматривать",
+        "translation-en": "to visit / sightsee",
+        "translation-uk": "оглядати",
+        "translation-pl": "zwiedzać",
+        "translation-es": "visitar / examinar",
+        "translation-fr": "visiter / examiner",
+        "translation-tr": "gezmek / incelemek",
+        "translation-ro": "a vizita / a inspecta",
+        "translation-uz": "tomosha qilmoq / ko'zdan kechirmoq",
+        "translation-hi": "मुआयना करना",
+        "translation-ar": "يعاين / يزور"
+      }
+    ],
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "ownerCastleEight.questTask1",
+        "options": [
+          "Wegen dem Nebels fuhren wir langsam.",
+          "Wegen des Nebel fuhren wir langsam.",
+          "Wegen des Nebels fuhren wir langsam."
+        ],
+        "answer": "Wegen des Nebels fuhren wir langsam.",
+        "tip": "ownerCastleEight.questDescription"
+      },
+      {
+        "id": 2,
+        "type": "input",
+        "question": "ownerCastleEight.questTask2",
+        "correctAnswer": "Während",
+        "tip": "ownerCastleEight.questDescription"
+      },
+      {
+        "id": 3,
+        "type": "input",
+        "question": "ownerCastleEight.questTask3",
+        "correctAnswer": "der",
+        "tip": "ownerCastleEight.questDescription"
+      },
+      {
+        "id": 4,
+        "type": "reorder",
+        "question": "ownerCastleEight.questTask4",
+        "words": [
+          "Kinder",
+          "schliefen",
+          "des",
+          "Fahrt",
+          "Während",
+          "die",
+          "der"
+        ],
+        "correctOrder": [
+          "Während",
+          "der",
+          "Fahrt",
+          "schliefen",
+          "die",
+          "Kinder"
+        ],
+        "tip": "ownerCastleEight.questDescription"
+      },
+      {
+        "id": 5,
+        "type": "select",
+        "question": "ownerCastleEight.questTask5",
+        "options": [
+          "Wegen des schlechten Wetter fiel die Führung aus.",
+          "Wegen das schlechte Wetter fiel die Führung aus.",
+          "Wegen des schlechten Wetters fiel die Führung aus."
+        ],
+        "answer": "Wegen des schlechten Wetters fiel die Führung aus.",
+        "tip": "ownerCastleEight.questDescription"
+      },
+      {
+        "id": 6,
+        "type": "input",
+        "question": "ownerCastleEight.questTask6",
+        "correctAnswer": "Schlosses",
+        "tip": "ownerCastleEight.questDescription"
+      },
+      {
+        "id": 7,
+        "type": "readAndAnswer",
+        "question": "ownerCastleEight.questTask7",
+        "text": "Am Sonntag fuhr Familie Braun zu einem alten Schloss. Wegen des Nebels kamen sie zu spät, deshalb begann die Führung eine halbe Stunde später. Trotz des schlechten Wetters war der Tag schön. Während der Führung hörten die Kinder viele Geschichten.",
+        "options": [
+          "trotz des Wetters",
+          "wegen des Nebels",
+          "wegen der Kinder"
+        ],
+        "answer": "wegen des Nebels",
+        "tip": "ownerCastleEight.questDescription"
+      },
+      {
+        "id": 8,
+        "type": "input",
+        "question": "ownerCastleEight.questTask8",
+        "correctAnswer": "Staus",
+        "tip": "ownerCastleEight.questDescription"
+      },
+      {
+        "id": 9,
+        "type": "reorder",
+        "question": "ownerCastleEight.questTask10",
+        "words": [
+          "Regens",
+          "besichtigten",
+          "Trotz",
+          "des",
+          "dem",
+          "Schloss",
+          "das",
+          "wir"
+        ],
+        "correctOrder": [
+          "Trotz",
+          "des",
+          "Regens",
+          "besichtigten",
+          "wir",
+          "das",
+          "Schloss"
+        ],
+        "tip": "ownerCastleEight.questDescription"
+      },
+      {
+        "id": 10,
+        "type": "select",
+        "question": "ownerCastleEight.questTask11",
+        "options": [
+          "Während des Urlaubs habe ich viel fotografiert.",
+          "Während des Urlaub habe ich viel fotografiert.",
+          "Während dem Urlaubs habe ich viel fotografiert."
+        ],
+        "answer": "Während des Urlaubs habe ich viel fotografiert.",
+        "tip": "ownerCastleEight.questDescription"
+      },
+      {
+        "id": 11,
+        "type": "input",
+        "question": "ownerCastleSeven.questTask9",
+        "correctAnswer": "der",
+        "tip": "ownerCastleSeven.questDescription",
+        "reviewOf": "owner-castle-seven",
+        "reviewLand": "owner-castle"
+      },
+      {
+        "id": 12,
+        "type": "input",
+        "question": "ownerCastleFour.questTask12",
+        "correctAnswer": "meinem",
+        "tip": "ownerCastleFour.questDescription",
+        "reviewOf": "owner-castle-four",
+        "reviewLand": "owner-castle"
+      },
+      {
+        "id": 13,
+        "type": "input",
+        "question": "ownerCastleOne.questTask13",
+        "correctAnswer": "des",
+        "tip": "ownerCastleOne.questDescription",
+        "reviewOf": "owner-castle-one",
+        "reviewLand": "owner-castle"
+      },
+      {
+        "id": 14,
+        "type": "input",
+        "question": "ownerCastleEight.questTask14",
+        "correctAnswer": "das",
+        "tip": "ownerCastleEight.questDescription"
+      },
+      {
+        "id": 15,
+        "type": "input",
+        "question": "ownerCastleEight.questTask15",
+        "correctAnswer": "würden",
+        "tip": "ownerCastleEight.questDescription"
+      }
+    ]
+  },
+  {
+    "questId": "owner-castle-nine",
+    "title": "ownerCastleNine.questTitle",
+    "progress": "0/15",
+    "description": "ownerCastleNine.questDescription",
+    "conditions": {
+      "goal": "ownerCastleNine.questGoal",
+      "minCorrect": 15,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
+    "vocabulary": [
+      {
+        "word": "das Kleid",
+        "translation-ru": "платье",
+        "translation-en": "dress",
+        "translation-uk": "сукня",
+        "translation-pl": "sukienka",
+        "translation-es": "el vestido",
+        "translation-fr": "la robe",
+        "translation-tr": "elbise",
+        "translation-ro": "rochia",
+        "translation-uz": "ko‘ylak",
+        "translation-hi": "पोशाक",
+        "translation-ar": "الفستان"
+      },
+      {
+        "word": "die Reise",
+        "translation-ru": "поездка",
+        "translation-en": "trip",
+        "translation-uk": "поїздка",
+        "translation-pl": "podróż",
+        "translation-es": "el viaje",
+        "translation-fr": "le voyage",
+        "translation-tr": "yolculuk",
+        "translation-ro": "călătoria",
+        "translation-uz": "sayohat",
+        "translation-hi": "यात्रा",
+        "translation-ar": "الرحلة"
+      },
+      {
+        "word": "trotz",
+        "translation-ru": "несмотря на",
+        "translation-en": "despite",
+        "translation-uk": "попри",
+        "translation-pl": "mimo",
+        "translation-es": "a pesar de",
+        "translation-fr": "malgré",
+        "translation-tr": "rağmen",
+        "translation-ro": "în ciuda",
+        "translation-uz": "qaramay",
+        "translation-hi": "के बावजूद",
+        "translation-ar": "رغم"
+      },
+      {
+        "word": "wegen",
+        "translation-ru": "из-за",
+        "translation-en": "because of",
+        "translation-uk": "через",
+        "translation-pl": "z powodu",
+        "translation-es": "por, a causa de",
+        "translation-fr": "à cause de",
+        "translation-tr": "yüzünden",
+        "translation-ro": "din cauza",
+        "translation-uz": "sababli",
+        "translation-hi": "की वजह से",
+        "translation-ar": "بسبب"
+      },
+      {
+        "word": "die Krankheit",
+        "translation-ru": "болезнь",
+        "translation-en": "illness",
+        "translation-uk": "хвороба",
+        "translation-pl": "choroba",
+        "translation-es": "la enfermedad",
+        "translation-fr": "la maladie",
+        "translation-tr": "hastalık",
+        "translation-ro": "boala",
+        "translation-uz": "kasallik",
+        "translation-hi": "बीमारी",
+        "translation-ar": "المرض"
+      }
+    ],
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "ownerCastleNine.questTask1",
+        "options": [
+          "Das Auto meines Vater steht vor dem Haus.",
+          "Das Auto meiner Vaters steht vor dem Haus.",
+          "Das Auto meines Vaters steht vor dem Haus."
+        ],
+        "answer": "Das Auto meines Vaters steht vor dem Haus.",
+        "tip": "ownerCastleNine.questDescription"
+      },
+      {
+        "id": 2,
+        "type": "input",
+        "question": "ownerCastleNine.questTask2",
+        "correctAnswer": "des",
+        "tip": "ownerCastleNine.questDescription"
+      },
+      {
+        "id": 3,
+        "type": "input",
+        "question": "ownerCastleNine.questTask3",
+        "correctAnswer": "meiner",
+        "tip": "ownerCastleNine.questDescription"
+      },
+      {
+        "id": 4,
+        "type": "reorder",
+        "question": "ownerCastleNine.questTask4",
+        "words": [
+          "der",
+          "gearbeitet",
+          "wir",
+          "Trotz",
+          "haben",
+          "Lärms",
+          "des"
+        ],
+        "correctOrder": [
+          "Trotz",
+          "des",
+          "Lärms",
+          "haben",
+          "wir",
+          "gearbeitet"
+        ],
+        "tip": "ownerCastleNine.questDescription"
+      },
+      {
+        "id": 5,
+        "type": "select",
+        "question": "ownerCastleNine.questTask5",
+        "options": [
+          "Während der Urlaub waren wir in Italien.",
+          "Während des Urlaubs wir waren in Italien.",
+          "Während des Urlaubs waren wir in Italien."
+        ],
+        "answer": "Während des Urlaubs waren wir in Italien.",
+        "tip": "ownerCastleNine.questDescription"
+      },
+      {
+        "id": 6,
+        "type": "input",
+        "question": "ownerCastleNine.questTask6",
+        "correctAnswer": "Annas",
+        "tip": "ownerCastleNine.questDescription"
+      },
+      {
+        "id": 7,
+        "type": "readAndAnswer",
+        "question": "ownerCastleNine.questTask7",
+        "text": "Die Freundin meines Bruders heißt Julia. Wegen ihrer Arbeit wohnt sie in Wien, aber sie besucht uns jeden Monat.",
+        "options": [
+          "wegen ihrer Arbeit",
+          "wegen des Wetters",
+          "wegen ihrer Familie"
+        ],
+        "answer": "wegen ihrer Arbeit",
+        "tip": "ownerCastleNine.questDescription"
+      },
+      {
+        "id": 8,
+        "type": "input",
+        "question": "ownerCastleNine.questTask8",
+        "correctAnswer": "der",
+        "tip": "ownerCastleNine.questDescription"
+      },
+      {
+        "id": 9,
+        "type": "select",
+        "question": "ownerCastleNine.questTask9",
+        "options": [
+          "Die Farbe ihres Kleides ist blau.",
+          "Die Farbe ihres Kleid ist blau.",
+          "Die Farbe ihrer Kleides ist blau."
+        ],
+        "answer": "Die Farbe ihres Kleides ist blau.",
+        "tip": "ownerCastleNine.questDescription"
+      },
+      {
+        "id": 10,
+        "type": "input",
+        "question": "ownerCastleNine.questTask10",
+        "correctAnswer": "des",
+        "tip": "ownerCastleNine.questDescription"
+      },
+      {
+        "id": 11,
+        "type": "reorder",
+        "question": "ownerCastleNine.questTask11",
+        "words": [
+          "Das",
+          "meiner",
+          "meines",
+          "das",
+          "Eltern",
+          "ist",
+          "Haus"
+        ],
+        "correctOrder": [
+          "Das",
+          "ist",
+          "das",
+          "Haus",
+          "meiner",
+          "Eltern"
+        ],
+        "tip": "ownerCastleNine.questDescription"
+      },
+      {
+        "id": 12,
+        "type": "select",
+        "question": "ownerCastleNine.questTask12",
+        "options": [
+          "Wegen die Krankheit des Lehrers gab es keinen Unterricht.",
+          "Wegen der Krankheit des Lehrers gab es keinen Unterricht.",
+          "Wegen der Krankheit der Lehrers gab es keinen Unterricht."
+        ],
+        "answer": "Wegen der Krankheit des Lehrers gab es keinen Unterricht.",
+        "tip": "ownerCastleNine.questDescription"
+      },
+      {
+        "id": 13,
+        "type": "readAndAnswer",
+        "question": "ownerCastleNine.questTask13",
+        "text": "Das Konzert war gestern Abend. Trotz des Regens sind viele Leute gekommen. Während des Konzerts hat es aufgehört zu regnen.",
+        "options": [
+          "während des Konzerts",
+          "nach dem Konzert",
+          "vor dem Konzert"
+        ],
+        "answer": "während des Konzerts",
+        "tip": "ownerCastleNine.questDescription"
+      },
+      {
+        "id": 14,
+        "type": "input",
+        "question": "ownerCastleNine.questTask14",
+        "correctAnswer": "meinem",
+        "tip": "ownerCastleNine.questDescription"
+      },
+      {
+        "id": 15,
+        "type": "input",
+        "question": "ownerCastleNine.questTask15",
+        "correctAnswer": "der",
+        "tip": "ownerCastleNine.questDescription"
+      }
+    ]
+  },
+  {
+    "questId": "owner-castle-ten",
+    "title": "ownerCastleTen.questTitle",
+    "progress": "0/15",
+    "description": "ownerCastleTen.questDescription",
+    "conditions": {
+      "goal": "ownerCastleTen.questGoal",
+      "minCorrect": 15,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
+    "vocabulary": [
+      {
+        "word": "der Chef",
+        "translation-ru": "начальник",
+        "translation-en": "boss",
+        "translation-uk": "начальник",
+        "translation-pl": "szef",
+        "translation-es": "el jefe",
+        "translation-fr": "le chef",
+        "translation-tr": "patron",
+        "translation-ro": "șeful",
+        "translation-uz": "boshliq",
+        "translation-hi": "बॉस",
+        "translation-ar": "المدير"
+      },
+      {
+        "word": "die Adresse",
+        "translation-ru": "адрес",
+        "translation-en": "address",
+        "translation-uk": "адреса",
+        "translation-pl": "adres",
+        "translation-es": "la dirección",
+        "translation-fr": "l’adresse",
+        "translation-tr": "adres",
+        "translation-ro": "adresa",
+        "translation-uz": "manzil",
+        "translation-hi": "पता",
+        "translation-ar": "العنوان"
+      },
+      {
+        "word": "trotz",
+        "translation-ru": "несмотря на",
+        "translation-en": "despite",
+        "translation-uk": "попри",
+        "translation-pl": "mimo",
+        "translation-es": "a pesar de",
+        "translation-fr": "malgré",
+        "translation-tr": "rağmen",
+        "translation-ro": "în ciuda",
+        "translation-uz": "qaramay",
+        "translation-hi": "के बावजूद",
+        "translation-ar": "رغم"
+      },
+      {
+        "word": "wegen",
+        "translation-ru": "из-за",
+        "translation-en": "because of",
+        "translation-uk": "через",
+        "translation-pl": "z powodu",
+        "translation-es": "por, a causa de",
+        "translation-fr": "à cause de",
+        "translation-tr": "yüzünden",
+        "translation-ro": "din cauza",
+        "translation-uz": "sababli",
+        "translation-hi": "की वजह से",
+        "translation-ar": "بسبب"
+      },
+      {
+        "word": "das Dach",
+        "translation-ru": "крыша",
+        "translation-en": "roof",
+        "translation-uk": "дах",
+        "translation-pl": "dach",
+        "translation-es": "el tejado",
+        "translation-fr": "le toit",
+        "translation-tr": "çatı",
+        "translation-ro": "acoperișul",
+        "translation-uz": "tom",
+        "translation-hi": "छत",
+        "translation-ar": "السقف"
+      }
+    ],
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "ownerCastleTen.questTask1",
+        "options": [
+          "Wenn ich die Adresse deines Eltern gewusst hätte, hätte ich sie besucht.",
+          "Wenn ich die Adresse deiner Eltern gewusst hätte, wäre ich sie besucht.",
+          "Wenn ich die Adresse deiner Eltern gewusst hätte, hätte ich sie besucht."
+        ],
+        "answer": "Wenn ich die Adresse deiner Eltern gewusst hätte, hätte ich sie besucht.",
+        "tip": "ownerCastleTen.questDescription"
+      },
+      {
+        "id": 2,
+        "type": "input",
+        "question": "ownerCastleTen.questTask2",
+        "correctAnswer": "der",
+        "tip": "ownerCastleTen.questDescription"
+      },
+      {
+        "id": 3,
+        "type": "input",
+        "question": "ownerCastleTen.questTask3",
+        "correctAnswer": "war",
+        "tip": "ownerCastleTen.questDescription"
+      },
+      {
+        "id": 4,
+        "type": "input",
+        "question": "ownerCastleTen.questTask4",
+        "correctAnswer": "meines",
+        "tip": "ownerCastleTen.questDescription"
+      },
+      {
+        "id": 5,
+        "type": "select",
+        "question": "ownerCastleTen.questTask5",
+        "options": [
+          "Ich würde gekommen, aber ich hatte keine Zeit.",
+          "Ich hätte gekommen, aber ich hatte keine Zeit.",
+          "Ich wäre gekommen, aber ich hatte keine Zeit."
+        ],
+        "answer": "Ich wäre gekommen, aber ich hatte keine Zeit.",
+        "tip": "ownerCastleTen.questDescription"
+      },
+      {
+        "id": 6,
+        "type": "input",
+        "question": "ownerCastleTen.questTask6",
+        "correctAnswer": "dem",
+        "tip": "ownerCastleTen.questDescription"
+      },
+      {
+        "id": 7,
+        "type": "readAndAnswer",
+        "question": "ownerCastleTen.questTask7",
+        "text": "Herr Fischer ist der Chef einer Firma in Köln. Wegen der Arbeit hat er wenig Zeit für seine Familie. Trotzdem fährt er jedes Jahr mit seinen Kindern ans Meer.",
+        "options": [
+          "zu seinen Eltern",
+          "ans Meer",
+          "nach Berlin"
+        ],
+        "answer": "ans Meer",
+        "tip": "ownerCastleTen.questDescription"
+      },
+      {
+        "id": 8,
+        "type": "input",
+        "question": "ownerCastleTen.questTask8",
+        "correctAnswer": "repariert",
+        "tip": "ownerCastleTen.questDescription"
+      },
+      {
+        "id": 9,
+        "type": "reorder",
+        "question": "ownerCastleTen.questTask9",
+        "words": [
+          "Deutsch",
+          "der",
+          "wir",
+          "Unterrichts",
+          "des",
+          "Während",
+          "sprechen"
+        ],
+        "correctOrder": [
+          "Während",
+          "des",
+          "Unterrichts",
+          "sprechen",
+          "wir",
+          "Deutsch"
+        ],
+        "tip": "ownerCastleTen.questDescription"
+      },
+      {
+        "id": 10,
+        "type": "input",
+        "question": "ownerCastleTen.questTask10",
+        "correctAnswer": "um",
+        "tip": "ownerCastleTen.questDescription"
+      },
+      {
+        "id": 11,
+        "type": "input",
+        "question": "ownerCastleTen.questTask11",
+        "correctAnswer": "älteste",
+        "tip": "ownerCastleTen.questDescription"
+      },
+      {
+        "id": 12,
+        "type": "select",
+        "question": "ownerCastleTen.questTask12",
+        "options": [
+          "Trotz des Regens sind wir ins Konzert gegangen.",
+          "Trotz des Regen sind wir ins Konzert gegangen.",
+          "Trotz der Regen sind wir ins Konzert gegangen."
+        ],
+        "answer": "Trotz des Regens sind wir ins Konzert gegangen.",
+        "tip": "ownerCastleTen.questDescription"
+      },
+      {
+        "id": 13,
+        "type": "readAndAnswer",
+        "question": "ownerCastleTen.questTask13",
+        "text": "Lisa hat gestern die Brille ihrer Mutter gefunden. Sie war in der Küche neben dem Fenster.",
+        "options": [
+          "die Brille des Vaters",
+          "die Brille der Mutter",
+          "die Brille der Schwester"
+        ],
+        "answer": "die Brille der Mutter",
+        "tip": "ownerCastleTen.questDescription"
+      },
+      {
+        "id": 14,
+        "type": "input",
+        "question": "ownerCastleTen.questTask14",
+        "correctAnswer": "wäre",
+        "tip": "ownerCastleTen.questDescription"
+      },
+      {
+        "id": 15,
+        "type": "input",
+        "question": "ownerCastleTen.questTask15",
+        "correctAnswer": "was",
+        "tip": "ownerCastleTen.questDescription"
+      }
+    ]
+  }
+]

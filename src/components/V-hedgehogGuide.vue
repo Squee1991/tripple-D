@@ -82,9 +82,13 @@
                   <img class="guide__row-avatar" :src="HedgehogIcon" alt="">
                   <div class="guide__bubble guide__bubble--bot">{{ t('hedgehogGuide.here') }}</div>
                 </div>
-                <!-- две группы: страницы учебника и задания на карте -->
+                <!-- страницы учебника, затем земли: по уровням (A1 / A2 / B1) или, на карте, по разделам -->
                 <template v-for="group in groupsOf(node)" :key="group.kind">
-                <p v-if="group.caption" class="guide__caption">{{ group.caption }}</p>
+                <p v-if="group.heading" class="guide__heading">{{ group.heading }}</p>
+                <p v-if="group.caption" class="guide__caption">
+                  <span v-if="group.level" class="guide__level-chip" :style="{ background: LEVEL_COLORS[group.level] }">{{ group.level }}</span>
+                  {{ group.caption }}
+                </p>
                 <div class="guide__list">
                   <button
                       v-for="link in group.links"
@@ -95,7 +99,7 @@
                       :data-track="trackName(link.locked ? 'guide_locked_' : 'guide_go_', link.id)"
                       @click="goTo(link)"
                   >
-                    <span class="guide__item-icon" :style="{ background: link.locked ? '#9e9e9e' : group.color }">
+                    <span class="guide__item-icon" :style="{ background: link.locked ? '#9e9e9e' : (link.color || group.color) }">
                       {{ link.locked ? '🔒' : group.icon }}
                     </span>
                     <span class="guide__item-text">
@@ -161,9 +165,10 @@ import { ref, computed, nextTick } from 'vue'
 import { useRouter } from 'vue-router'
 import HedgehogIcon from '~/assets/images/AssistantIcon.png'
 import VArrowNav from '~/src/components/V-arrowNav.vue'
-import { guideMenu } from '~/utils/guideMenu.js'
+import { guideMenu, LEVEL_COLORS } from '~/utils/guideMenu.js'
 import { guideCatalog } from '~/utils/guideCatalog.js'
 import { regions } from '~/utils/regions.js'
+import { isRegionVisible, requiredLandLevel, levelOfCategory } from '~/utils/germanLevel.js'
 import { userAuthStore } from '~/store/authStore.js'
 import { userlangStore } from '~/store/learningStore.js'
 import { useEventSessionStore } from '~/store/eventsStore.js'
@@ -185,14 +190,21 @@ const regionById = Object.fromEntries(Object.values(regions).flat().map(r => [r.
 
 const options = computed(() => {
   const last = path.value[path.value.length - 1]
-  if (!last) return guideMenu
-  return last.children || []
+  const list = last ? (last.children || []) : guideMenu
+  // пункт, в котором были только скрытые земли (например «Карта: начальный» у A2), не показываем
+  return list.filter(node => node.children || node.links?.length || !node.lands?.length
+      || node.lands.some(id => !isLandHidden(id)))
 })
 
 function landLevel(item) {
   if (!item.id.startsWith('land-')) return null
   const region = regionById[item.id.slice(5)]
-  return region ? region.level : null
+  return region ? requiredLandLevel(region, authStore.germanLevel) : null
+}
+
+// земли ниже выбранного уровня немецкого скрыты, как и на карте
+function isLandHidden(id) {
+  return id.startsWith('land-') && !isRegionVisible(id.slice(5), authStore.germanLevel)
 }
 
 function isLocked(level) {
@@ -203,8 +215,17 @@ function isLocked(level) {
 const LAND_ICON = '🗺️'
 const LAND_COLOR = '#00897b'
 
+const catalogIndex = Object.fromEntries(guideCatalog.map((item, i) => [item.id, i]))
+
 function labelOf(node) {
+  if (node.level) return `${node.level} · ${t(`locationsMenu.level${node.level}`)}`
   return t(node.labelKey || `hedgehogGuide.menu.${node.id}`)
+}
+
+// уровень земли (A1 / A2 / B1) по её разделу на карте
+function levelOfLand(id) {
+  const group = catalogById[id]?.group
+  return group ? levelOfCategory(group) : null
 }
 
 function groupsOf(node) {
@@ -217,17 +238,36 @@ function groupsOf(node) {
       caption: lands.length ? t('hedgehogGuide.inStudy') : ''
     })
   }
-  if (lands.length) {
-    groups.push({ kind: 'lands', links: lands, icon: LAND_ICON, color: LAND_COLOR, caption: t('hedgehogGuide.onMap') })
+  if (!lands.length) return groups
+  // земли по порядку карты, затем делим: на карте по разделам, в остальных пунктах по уровням
+  const sorted = [...lands].sort((a, b) => catalogIndex[a.id] - catalogIndex[b.id])
+  const buckets = new Map()
+  for (const link of sorted) {
+    const key = node.byCategory ? catalogById[link.id].group : (levelOfLand(link.id) || 'other')
+    if (!buckets.has(key)) buckets.set(key, [])
+    buckets.get(key).push(link)
+  }
+  let first = true
+  for (const [key, links] of buckets) {
+    const level = !node.byCategory && LEVEL_COLORS[key] ? key : null
+    groups.push({
+      kind: 'lands-' + key, links, icon: LAND_ICON, color: LAND_COLOR, level,
+      // над первой группой земель «Задания на карте», если выше есть страницы учебника
+      heading: first && study.length ? t('hedgehogGuide.onMap') : '',
+      caption: node.byCategory ? t(`categories.${key}`) : (level ? t(`locationsMenu.level${level}`) : '')
+    })
+    first = false
   }
   return groups
 }
 
 function linksOf(ids) {
-  return (ids || []).map(id => catalogById[id]).filter(Boolean).map(item => {
+  return (ids || []).filter(id => !isLandHidden(id)).map(id => catalogById[id]).filter(Boolean).map(item => {
     const level = landLevel(item)
+    const cefr = levelOfLand(item.id)
     return {
       id: item.id,
+      color: cefr ? LEVEL_COLORS[cefr] : '',
       route: item.route,
       label: t(item.labelKey),
       hint: item.hintKey ? t(item.hintKey) : '',
@@ -508,7 +548,7 @@ function goTo(link) {
   flex-direction: column;
   align-items: flex-start;
   justify-content: space-between;
-  min-height: 100px;
+  min-height: 87px;
   padding: 12px;
   gap: 4px;
   overflow: hidden;
@@ -547,8 +587,8 @@ function goTo(link) {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 42px;
-  height: 42px;
+  width: 39px;
+  height: 39px;
   border-radius: 14px;
   background: linear-gradient(145deg, color-mix(in srgb, var(--accent) 80%, #fff), var(--accent));
   box-shadow:
@@ -600,6 +640,37 @@ function goTo(link) {
   letter-spacing: 0.4px;
   text-transform: uppercase;
   opacity: 0.6;
+}
+
+.guide__heading {
+  margin: 8px 0 -2px 6px;
+  font-size: 0.95rem;
+  font-weight: 900;
+}
+
+.guide__sheet--rtl .guide__heading {
+  margin: 8px 6px -2px 0;
+}
+
+.guide__caption {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.guide__level-chip {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 28px;
+  height: 20px;
+  padding: 0 6px;
+  border-radius: 7px;
+  border-bottom: 2px solid rgba(0, 0, 0, 0.25);
+  color: #fff;
+  font-size: 0.75rem;
+  font-weight: 900;
+  letter-spacing: 0;
 }
 
 .guide__sheet--rtl .guide__caption {

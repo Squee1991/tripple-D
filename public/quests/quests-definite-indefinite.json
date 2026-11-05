@@ -1,7 +1,7 @@
 [
   {
     "questId": "one-def",
-    "title": "Битва за окончания",
+    "title": "definiteIndefiniteQuestOne.title",
     "progress": "0/15",
     "description": "definiteIndefiniteQuestOne.description",
     "conditions": {
@@ -56,16 +56,46 @@
         "id": 5,
         "type": "reorder",
         "question": "definiteIndefiniteQuestOne.questFive",
-        "words": ["Eine", "kleine", "Katze", "sitzt", "im", "Garten", "kleiner"],
-        "correctOrder": ["Eine", "kleine", "Katze", "sitzt", "im", "Garten"],
+        "words": [
+          "Eine",
+          "kleine",
+          "Katze",
+          "sitzt",
+          "im",
+          "Garten",
+          "kleiner"
+        ],
+        "correctOrder": [
+          "Eine",
+          "kleine",
+          "Katze",
+          "sitzt",
+          "im",
+          "Garten"
+        ],
         "tip": "definiteIndefiniteQuestOne.questFiveTip"
       },
       {
         "id": 6,
         "type": "reorder",
         "question": "definiteIndefiniteQuestOne.questSix",
-        "words": ["Die", "kleine", "Katze", "ist", "sehr", "süß", "kleines"],
-        "correctOrder": ["Die", "kleine", "Katze", "ist", "sehr", "süß"],
+        "words": [
+          "Die",
+          "kleine",
+          "Katze",
+          "ist",
+          "sehr",
+          "süß",
+          "kleines"
+        ],
+        "correctOrder": [
+          "Die",
+          "kleine",
+          "Katze",
+          "ist",
+          "sehr",
+          "süß"
+        ],
         "tip": "definiteIndefiniteQuestOne.questSixTip"
       },
       {
@@ -108,26 +138,44 @@
       },
       {
         "id": 11,
-        "type": "reorder",
-        "question": "definiteIndefiniteQuestOne.questEleven",
-        "words": ["neuen", "Laptop", "einen", "Ich", "kaufe", "neuer"],
-        "correctOrder": ["Ich", "kaufe", "einen", "neuen", "Laptop"],
-        "tip": "definiteIndefiniteQuestOne.questElevenTip"
+        "type": "input",
+        "question": "secretLandsQuestFourteen.questOne",
+        "answer": "neuen",
+        "tip": "secretLandsQuestFourteen.questOneTip",
+        "reviewOf": "secret-fourteen",
+        "reviewLand": "secret-lands"
       },
       {
         "id": 12,
         "type": "reorder",
-        "question": "definiteIndefiniteQuestOne.questTwelve",
-        "words": ["Nachbarn", "den", "Ich", "habe", "alten", "getroffen", "alte"],
-        "correctOrder": ["Ich", "habe", "den", "alten", "Nachbarn", "getroffen"],
-        "tip": "definiteIndefiniteQuestOne.questTwelveTip"
+        "question": "secretLandsQuestTwelve.questThree",
+        "words": [
+          "Das",
+          "ist",
+          "eine",
+          "neue",
+          "Wohnung",
+          "neuen"
+        ],
+        "correctOrder": [
+          "Das",
+          "ist",
+          "eine",
+          "neue",
+          "Wohnung"
+        ],
+        "tip": "secretLandsQuestTwelve.questThreeTip",
+        "reviewOf": "secret-twelve",
+        "reviewLand": "secret-lands"
       },
       {
         "id": 13,
         "type": "input",
-        "question": "definiteIndefiniteQuestOne.questThirteen",
-        "answer": "neuer",
-        "tip": "definiteIndefiniteQuestOne.questThirteenTip"
+        "question": "secretLandsQuestSeven.questFour",
+        "answer": "netten",
+        "tip": "secretLandsQuestSeven.questFourTip",
+        "reviewOf": "secret-seven",
+        "reviewLand": "secret-lands"
       },
       {
         "id": 14,
@@ -148,6 +196,78 @@
         "answer": "Mutter hat eine blaue Tasse gekauft.",
         "tip": "definiteIndefiniteQuestOne.questFifteenTip"
       }
+    ],
+    "vocabulary": [
+      {
+        "word": "nett",
+        "translation-ru": "милый, приятный",
+        "translation-en": "nice",
+        "translation-uk": "милий",
+        "translation-pl": "miły",
+        "translation-es": "simpático",
+        "translation-fr": "gentil",
+        "translation-tr": "kibar, hoş",
+        "translation-ro": "drăguț",
+        "translation-uz": "yoqimli",
+        "translation-hi": "अच्छा, प्यारा",
+        "translation-ar": "لطيف"
+      },
+      {
+        "word": "der Computer",
+        "translation-ru": "компьютер",
+        "translation-en": "computer",
+        "translation-uk": "комп'ютер",
+        "translation-pl": "komputer",
+        "translation-es": "ordenador",
+        "translation-fr": "ordinateur",
+        "translation-tr": "bilgisayar",
+        "translation-ro": "calculator",
+        "translation-uz": "kompyuter",
+        "translation-hi": "कंप्यूटर",
+        "translation-ar": "كمبيوتر"
+      },
+      {
+        "word": "essen",
+        "translation-ru": "есть / кушать",
+        "translation-en": "to eat",
+        "translation-uk": "їсти",
+        "translation-pl": "jeść",
+        "translation-es": "comer",
+        "translation-fr": "manger",
+        "translation-tr": "yemek yemek",
+        "translation-ro": "a mânca",
+        "translation-uz": "yemoq",
+        "translation-hi": "खाना",
+        "translation-ar": "يأكل"
+      },
+      {
+        "word": "lecker",
+        "translation-ru": "вкусный",
+        "translation-en": "tasty",
+        "translation-uk": "смачний",
+        "translation-pl": "smaczny",
+        "translation-es": "rico",
+        "translation-fr": "délicieux",
+        "translation-tr": "lezzetli",
+        "translation-ro": "gustos",
+        "translation-uz": "mazali",
+        "translation-hi": "स्वादिष्ट",
+        "translation-ar": "لذيذ"
+      },
+      {
+        "word": "der Freund",
+        "translation-ru": "друг",
+        "translation-en": "friend",
+        "translation-uk": "друг",
+        "translation-pl": "przyjaciel",
+        "translation-es": "el amigo",
+        "translation-fr": "l’ami",
+        "translation-tr": "arkadaş",
+        "translation-ro": "prietenul",
+        "translation-uz": "do‘st",
+        "translation-hi": "दोस्त",
+        "translation-ar": "الصديق"
+      }
     ]
   },
   {
@@ -160,7 +280,10 @@
       "minCorrect": 15,
       "requiredTasks": 15
     },
-    "rewards": { "points": 10, "xp": 10  },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
     "tasks": [
       {
         "id": 1,
@@ -180,7 +303,11 @@
         "id": 3,
         "type": "select",
         "question": "definiteIndefiniteQuestTwo.questThree",
-        "options": ["Ein neue Schrank steht im Zimmer.", "Ein neuer Schrank steht im Zimmer.", "Ein neues Schrank steht im Zimmer."],
+        "options": [
+          "Ein neue Schrank steht im Zimmer.",
+          "Ein neuer Schrank steht im Zimmer.",
+          "Ein neues Schrank steht im Zimmer."
+        ],
         "answer": "Ein neuer Schrank steht im Zimmer.",
         "tip": "definiteIndefiniteQuestTwo.questThreeTip"
       },
@@ -188,7 +315,11 @@
         "id": 4,
         "type": "select",
         "question": "definiteIndefiniteQuestTwo.questFour",
-        "options": ["Der neue Schrank ist sehr groß.", "Der neuer Schrank ist sehr groß.", "Der neuen Schrank ist sehr groß."],
+        "options": [
+          "Der neue Schrank ist sehr groß.",
+          "Der neuer Schrank ist sehr groß.",
+          "Der neuen Schrank ist sehr groß."
+        ],
         "answer": "Der neue Schrank ist sehr groß.",
         "tip": "definiteIndefiniteQuestTwo.questFourTip"
       },
@@ -196,16 +327,46 @@
         "id": 5,
         "type": "reorder",
         "question": "definiteIndefiniteQuestTwo.questFive",
-        "words": ["Mutter", "eine", "gekauft", "leckere", "Pizza", "leckeren", "hat"],
-        "correctOrder": ["Mutter", "hat", "eine", "leckere", "Pizza", "gekauft"],
+        "words": [
+          "Mutter",
+          "eine",
+          "gekauft",
+          "leckere",
+          "Pizza",
+          "leckeren",
+          "hat"
+        ],
+        "correctOrder": [
+          "Mutter",
+          "hat",
+          "eine",
+          "leckere",
+          "Pizza",
+          "gekauft"
+        ],
         "tip": "definiteIndefiniteQuestTwo.questFiveTip"
       },
       {
         "id": 6,
         "type": "reorder",
         "question": "definiteIndefiniteQuestTwo.questSix",
-        "words": ["Die", "leckere", "Pizza", "ist", "noch", "heiß", "leckerer"],
-        "correctOrder": ["Die", "leckere", "Pizza", "ist", "noch", "heiß"],
+        "words": [
+          "Die",
+          "leckere",
+          "Pizza",
+          "ist",
+          "noch",
+          "heiß",
+          "leckerer"
+        ],
+        "correctOrder": [
+          "Die",
+          "leckere",
+          "Pizza",
+          "ist",
+          "noch",
+          "heiß"
+        ],
         "tip": "definiteIndefiniteQuestTwo.questSixTip"
       },
       {
@@ -226,7 +387,11 @@
         "id": 9,
         "type": "select",
         "question": "definiteIndefiniteQuestTwo.questNine",
-        "options": ["Ich werde einen neuen Laptop kaufen.", "Ich werde einen neuer Laptop kaufen.", "Ich werde einen neue Laptop kaufen."],
+        "options": [
+          "Ich werde einen neuen Laptop kaufen.",
+          "Ich werde einen neuer Laptop kaufen.",
+          "Ich werde einen neue Laptop kaufen."
+        ],
         "answer": "Ich werde einen neuen Laptop kaufen.",
         "tip": "definiteIndefiniteQuestTwo.questNineTip"
       },
@@ -234,7 +399,11 @@
         "id": 10,
         "type": "select",
         "question": "definiteIndefiniteQuestTwo.questTen",
-        "options": ["Ich werde den neuen Laptop reparieren.", "Ich werde den neue Laptop reparieren.", "Ich werde den neuer Laptop reparieren."],
+        "options": [
+          "Ich werde den neuen Laptop reparieren.",
+          "Ich werde den neue Laptop reparieren.",
+          "Ich werde den neuer Laptop reparieren."
+        ],
         "answer": "Ich werde den neuen Laptop reparieren.",
         "tip": "definiteIndefiniteQuestTwo.questTenTip"
       },
@@ -256,25 +425,124 @@
         "id": 13,
         "type": "reorder",
         "question": "definiteIndefiniteQuestTwo.questThirteen",
-        "words": ["Ein", "kleines", "Kind", "lacht", "kleine", "kleinen"],
-        "correctOrder": ["Ein", "kleines", "Kind", "lacht"],
+        "words": [
+          "Ein",
+          "kleines",
+          "Kind",
+          "lacht",
+          "kleine",
+          "kleinen"
+        ],
+        "correctOrder": [
+          "Ein",
+          "kleines",
+          "Kind",
+          "lacht"
+        ],
         "tip": "definiteIndefiniteQuestTwo.questThirteenTip"
       },
       {
         "id": 14,
         "type": "reorder",
         "question": "definiteIndefiniteQuestTwo.questFourteen",
-        "words": ["Das", "kleine", "Kind", "lacht", "kleines"],
-        "correctOrder": ["Das", "kleine", "Kind", "lacht"],
+        "words": [
+          "Das",
+          "kleine",
+          "Kind",
+          "lacht",
+          "kleines"
+        ],
+        "correctOrder": [
+          "Das",
+          "kleine",
+          "Kind",
+          "lacht"
+        ],
         "tip": "definiteIndefiniteQuestTwo.questFourteenTip"
       },
       {
         "id": 15,
         "type": "select",
         "question": "definiteIndefiniteQuestTwo.questFifteen",
-        "options": ["Er hat ein schnelles Auto.", "Er hat ein schnelle Auto.", "Er hat ein schnellen Auto."],
+        "options": [
+          "Er hat ein schnelles Auto.",
+          "Er hat ein schnelle Auto.",
+          "Er hat ein schnellen Auto."
+        ],
         "answer": "Er hat ein schnelles Auto.",
         "tip": "definiteIndefiniteQuestTwo.questFifteenTip"
+      }
+    ],
+    "vocabulary": [
+      {
+        "word": "reparieren",
+        "translation-ru": "ремонтировать",
+        "translation-en": "to repair",
+        "translation-uk": "ремонтувати",
+        "translation-pl": "naprawiać",
+        "translation-es": "reparar",
+        "translation-fr": "réparer",
+        "translation-tr": "tamir etmek",
+        "translation-ro": "a repara",
+        "translation-uz": "tuzatmoq",
+        "translation-hi": "ठीक करना",
+        "translation-ar": "يُصلح"
+      },
+      {
+        "word": "teuer",
+        "translation-ru": "дорогой",
+        "translation-en": "expensive",
+        "translation-uk": "дорогий",
+        "translation-pl": "drogi",
+        "translation-es": "caro",
+        "translation-fr": "cher",
+        "translation-tr": "pahalı",
+        "translation-ro": "scump",
+        "translation-uz": "qimmat",
+        "translation-hi": "महँगा",
+        "translation-ar": "غالٍ"
+      },
+      {
+        "word": "der Laptop",
+        "translation-ru": "ноутбук",
+        "translation-en": "laptop",
+        "translation-uk": "ноутбук",
+        "translation-pl": "laptop",
+        "translation-es": "portátil",
+        "translation-fr": "ordinateur portable",
+        "translation-tr": "dizüstü bilgisayar",
+        "translation-ro": "laptop",
+        "translation-uz": "noutbuk",
+        "translation-hi": "लैपटॉप",
+        "translation-ar": "حاسوب محمول"
+      },
+      {
+        "word": "das Kind",
+        "translation-ru": "ребёнок",
+        "translation-en": "child",
+        "translation-uk": "дитина",
+        "translation-pl": "dziecko",
+        "translation-es": "el niño",
+        "translation-fr": "l’enfant",
+        "translation-tr": "çocuk",
+        "translation-ro": "copilul",
+        "translation-uz": "bola",
+        "translation-hi": "बच्चा",
+        "translation-ar": "الطفل"
+      },
+      {
+        "word": "lachen",
+        "translation-ru": "смеяться",
+        "translation-en": "to laugh",
+        "translation-uk": "сміятися",
+        "translation-pl": "śmiać się",
+        "translation-es": "reír",
+        "translation-fr": "rire",
+        "translation-tr": "gülmek",
+        "translation-ro": "a râde",
+        "translation-uz": "kulmoq",
+        "translation-hi": "हँसना",
+        "translation-ar": "يضحك"
       }
     ]
   },
@@ -288,7 +556,10 @@
       "minCorrect": 15,
       "requiredTasks": 15
     },
-    "rewards": { "points": 10, "xp": 10 },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
     "tasks": [
       {
         "id": 1,
@@ -308,7 +579,11 @@
         "id": 3,
         "type": "select",
         "question": "definiteIndefiniteQuestThree.questThree",
-        "options": ["Ein großer Baum wächst im Garten.", "Ein große Baum wächst im Garten.", "Ein großen Baum wächst im Garten."],
+        "options": [
+          "Ein großer Baum wächst im Garten.",
+          "Ein große Baum wächst im Garten.",
+          "Ein großen Baum wächst im Garten."
+        ],
         "answer": "Ein großer Baum wächst im Garten.",
         "tip": "definiteIndefiniteQuestThree.questThreeTip"
       },
@@ -316,7 +591,11 @@
         "id": 4,
         "type": "select",
         "question": "definiteIndefiniteQuestThree.questFour",
-        "options": ["Der große Baum ist sehr alt.", "Der großer Baum ist sehr alt.", "Der großen Baum ist sehr alt."],
+        "options": [
+          "Der große Baum ist sehr alt.",
+          "Der großer Baum ist sehr alt.",
+          "Der großen Baum ist sehr alt."
+        ],
         "answer": "Der große Baum ist sehr alt.",
         "tip": "definiteIndefiniteQuestThree.questFourTip"
       },
@@ -324,16 +603,44 @@
         "id": 5,
         "type": "reorder",
         "question": "definiteIndefiniteQuestThree.questFive",
-        "words": ["Sie", "hat", "eine", "neue", "Tasche", "neuen"],
-        "correctOrder": ["Sie", "hat", "eine", "neue", "Tasche"],
+        "words": [
+          "Sie",
+          "hat",
+          "eine",
+          "neue",
+          "Tasche",
+          "neuen"
+        ],
+        "correctOrder": [
+          "Sie",
+          "hat",
+          "eine",
+          "neue",
+          "Tasche"
+        ],
         "tip": "definiteIndefiniteQuestThree.questFiveTip"
       },
       {
         "id": 6,
         "type": "reorder",
         "question": "definiteIndefiniteQuestThree.questSix",
-        "words": ["Die", "neue", "Tasche", "ist", "sehr", "teuer", "neuer"],
-        "correctOrder": ["Die", "neue", "Tasche", "ist", "sehr", "teuer"],
+        "words": [
+          "Die",
+          "neue",
+          "Tasche",
+          "ist",
+          "sehr",
+          "teuer",
+          "neuer"
+        ],
+        "correctOrder": [
+          "Die",
+          "neue",
+          "Tasche",
+          "ist",
+          "sehr",
+          "teuer"
+        ],
         "tip": "definiteIndefiniteQuestThree.questSixTip"
       },
       {
@@ -354,7 +661,11 @@
         "id": 9,
         "type": "select",
         "question": "definiteIndefiniteQuestThree.questNine",
-        "options": ["Ich werde einen neuen Fernseher kaufen.", "Ich werde einen neuer Fernseher kaufen.", "Ich werde einen neue Fernseher kaufen."],
+        "options": [
+          "Ich werde einen neuen Fernseher kaufen.",
+          "Ich werde einen neuer Fernseher kaufen.",
+          "Ich werde einen neue Fernseher kaufen."
+        ],
         "answer": "Ich werde einen neuen Fernseher kaufen.",
         "tip": "definiteIndefiniteQuestThree.questNineTip"
       },
@@ -362,32 +673,58 @@
         "id": 10,
         "type": "select",
         "question": "definiteIndefiniteQuestThree.questTen",
-        "options": ["Ich mache den neuen Fernseher an.", "Ich mache den neue Fernseher an.", "Ich mache den neuer Fernseher an."],
+        "options": [
+          "Ich mache den neuen Fernseher an.",
+          "Ich mache den neue Fernseher an.",
+          "Ich mache den neuer Fernseher an."
+        ],
         "answer": "Ich mache den neuen Fernseher an.",
         "tip": "definiteIndefiniteQuestThree.questTenTip"
       },
       {
         "id": 11,
-        "type": "reorder",
-        "question": "definiteIndefiniteQuestThree.questEleven",
-        "words": ["Wir", "warten", "auf", "einen", "alten", "Freund", "alter"],
-        "correctOrder": ["Wir", "warten", "auf", "einen", "alten", "Freund"],
-        "tip": "definiteIndefiniteQuestThree.questElevenTip"
+        "type": "input",
+        "question": "definiteIndefiniteQuestOne.questOne",
+        "answer": "altes",
+        "tip": "definiteIndefiniteQuestOne.questOneTip",
+        "reviewOf": "one-def",
+        "reviewLand": "definite-indefinite"
       },
       {
         "id": 12,
         "type": "reorder",
-        "question": "definiteIndefiniteQuestThree.questTwelve",
-        "words": ["Wir", "warten", "auf", "den", "alten", "Freund", "alte"],
-        "correctOrder": ["Wir", "warten", "auf", "den", "alten", "Freund"],
-        "tip": "definiteIndefiniteQuestThree.questTwelveTip"
+        "question": "secretLandsQuestThirteen.questThree",
+        "words": [
+          "Wir",
+          "haben",
+          "in",
+          "einer",
+          "schönen",
+          "Stadt",
+          "gewohnt",
+          "schöne"
+        ],
+        "correctOrder": [
+          "Wir",
+          "haben",
+          "in",
+          "einer",
+          "schönen",
+          "Stadt",
+          "gewohnt"
+        ],
+        "tip": "secretLandsQuestThirteen.questThreeTip",
+        "reviewOf": "secret-thirteen",
+        "reviewLand": "secret-lands"
       },
       {
         "id": 13,
         "type": "input",
-        "question": "definiteIndefiniteQuestThree.questThirteen",
-        "answer": "guter",
-        "tip": "definiteIndefiniteQuestThree.questThirteenTip"
+        "question": "secretLandsQuestEight.questFour",
+        "answer": "kalten",
+        "tip": "secretLandsQuestEight.questFourTip",
+        "reviewOf": "secret-eight",
+        "reviewLand": "secret-lands"
       },
       {
         "id": 14,
@@ -400,9 +737,85 @@
         "id": 15,
         "type": "select",
         "question": "definiteIndefiniteQuestThree.questFifteen",
-        "options": ["Er hat einen bequemen Stuhl gefunden.", "Er hat einen bequemer Stuhl gefunden.", "Er hat einen bequeme Stuhl gefunden."],
+        "options": [
+          "Er hat einen bequemen Stuhl gefunden.",
+          "Er hat einen bequemer Stuhl gefunden.",
+          "Er hat einen bequeme Stuhl gefunden."
+        ],
         "answer": "Er hat einen bequemen Stuhl gefunden.",
         "tip": "definiteIndefiniteQuestThree.questFifteenTip"
+      }
+    ],
+    "vocabulary": [
+      {
+        "word": "teuer",
+        "translation-ru": "дорогой",
+        "translation-en": "expensive",
+        "translation-uk": "дорогий",
+        "translation-pl": "drogi",
+        "translation-es": "caro",
+        "translation-fr": "cher",
+        "translation-tr": "pahalı",
+        "translation-ro": "scump",
+        "translation-uz": "qimmat",
+        "translation-hi": "महँगा",
+        "translation-ar": "غالٍ"
+      },
+      {
+        "word": "bequem",
+        "translation-ru": "удобный",
+        "translation-en": "comfortable",
+        "translation-uk": "зручний",
+        "translation-pl": "wygodny",
+        "translation-es": "cómodo",
+        "translation-fr": "confortable",
+        "translation-tr": "rahat",
+        "translation-ro": "comod",
+        "translation-uz": "qulay",
+        "translation-hi": "आरामदायक",
+        "translation-ar": "مريح"
+      },
+      {
+        "word": "das Bier",
+        "translation-ru": "пиво",
+        "translation-en": "beer",
+        "translation-uk": "пиво",
+        "translation-pl": "piwo",
+        "translation-es": "cerveza",
+        "translation-fr": "bière",
+        "translation-tr": "bira",
+        "translation-ro": "bere",
+        "translation-uz": "pivo",
+        "translation-hi": "बीयर",
+        "translation-ar": "بيرة"
+      },
+      {
+        "word": "schmecken",
+        "translation-ru": "быть вкусным / пробовать на вкус",
+        "translation-en": "to taste",
+        "translation-uk": "смакувати",
+        "translation-pl": "smakować",
+        "translation-es": "saber / gustar",
+        "translation-fr": "goûter / avoir bon goût",
+        "translation-tr": "tadına bakmak / lezzetli olmak",
+        "translation-ro": "a avea gust",
+        "translation-uz": "mazasi bo'lmoq",
+        "translation-hi": "चखना / स्वादिष्ट होना",
+        "translation-ar": "يتذوق"
+      },
+      {
+        "word": "lecker",
+        "translation-ru": "вкусный",
+        "translation-en": "tasty",
+        "translation-uk": "смачний",
+        "translation-pl": "smaczny",
+        "translation-es": "rico",
+        "translation-fr": "délicieux",
+        "translation-tr": "lezzetli",
+        "translation-ro": "gustos",
+        "translation-uz": "mazali",
+        "translation-hi": "स्वादिष्ट",
+        "translation-ar": "لذيذ"
       }
     ]
   },
@@ -416,7 +829,10 @@
       "minCorrect": 15,
       "requiredTasks": 15
     },
-    "rewards": { "points": 10, "xp": 10 },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
     "tasks": [
       {
         "id": 1,
@@ -436,7 +852,11 @@
         "id": 3,
         "type": "select",
         "question": "definiteIndefiniteQuestFour.questThree",
-        "options": ["Wir haben einen neuen Computer gekauft.", "Wir haben einen neuer Computer gekauft.", "Wir haben einen neue Computer gekauft."],
+        "options": [
+          "Wir haben einen neuen Computer gekauft.",
+          "Wir haben einen neuer Computer gekauft.",
+          "Wir haben einen neue Computer gekauft."
+        ],
         "answer": "Wir haben einen neuen Computer gekauft.",
         "tip": "definiteIndefiniteQuestFour.questThreeTip"
       },
@@ -444,7 +864,11 @@
         "id": 4,
         "type": "select",
         "question": "definiteIndefiniteQuestFour.questFour",
-        "options": ["Der neue Computer steht auf dem Tisch.", "Der neuer Computer steht auf dem Tisch.", "Der neuen Computer steht auf dem Tisch."],
+        "options": [
+          "Der neue Computer steht auf dem Tisch.",
+          "Der neuer Computer steht auf dem Tisch.",
+          "Der neuen Computer steht auf dem Tisch."
+        ],
         "answer": "Der neue Computer steht auf dem Tisch.",
         "tip": "definiteIndefiniteQuestFour.questFourTip"
       },
@@ -452,16 +876,42 @@
         "id": 5,
         "type": "reorder",
         "question": "definiteIndefiniteQuestFour.questFive",
-        "words": ["Ein", "kleines", "Fenster", "ist", "offen", "kleine"],
-        "correctOrder": ["Ein", "kleines", "Fenster", "ist", "offen"],
+        "words": [
+          "Ein",
+          "kleines",
+          "Fenster",
+          "ist",
+          "offen",
+          "kleine"
+        ],
+        "correctOrder": [
+          "Ein",
+          "kleines",
+          "Fenster",
+          "ist",
+          "offen"
+        ],
         "tip": "definiteIndefiniteQuestFour.questFiveTip"
       },
       {
         "id": 6,
         "type": "reorder",
         "question": "definiteIndefiniteQuestFour.questSix",
-        "words": ["Das", "kleine", "Fenster", "ist", "offen", "kleines"],
-        "correctOrder": ["Das", "kleine", "Fenster", "ist", "offen"],
+        "words": [
+          "Das",
+          "kleine",
+          "Fenster",
+          "ist",
+          "offen",
+          "kleines"
+        ],
+        "correctOrder": [
+          "Das",
+          "kleine",
+          "Fenster",
+          "ist",
+          "offen"
+        ],
         "tip": "definiteIndefiniteQuestFour.questSixTip"
       },
       {
@@ -482,7 +932,11 @@
         "id": 9,
         "type": "select",
         "question": "definiteIndefiniteQuestFour.questNine",
-        "options": ["Er hat einen guten Job gefunden.", "Er hat einen guter Job gefunden.", "Er hat einen gute Job gefunden."],
+        "options": [
+          "Er hat einen guten Job gefunden.",
+          "Er hat einen guter Job gefunden.",
+          "Er hat einen gute Job gefunden."
+        ],
         "answer": "Er hat einen guten Job gefunden.",
         "tip": "definiteIndefiniteQuestFour.questNineTip"
       },
@@ -490,7 +944,11 @@
         "id": 10,
         "type": "select",
         "question": "definiteIndefiniteQuestFour.questTen",
-        "options": ["Er hat den guten Job bekommen.", "Er hat den gute Job bekommen.", "Er hat den guter Job bekommen."],
+        "options": [
+          "Er hat den guten Job bekommen.",
+          "Er hat den gute Job bekommen.",
+          "Er hat den guter Job bekommen."
+        ],
         "answer": "Er hat den guten Job bekommen.",
         "tip": "definiteIndefiniteQuestFour.questTenTip"
       },
@@ -498,16 +956,44 @@
         "id": 11,
         "type": "reorder",
         "question": "definiteIndefiniteQuestFour.questEleven",
-        "words": ["Er", "hat", "ein", "modernes", "Tablet", "modernen"],
-        "correctOrder": ["Er", "hat", "ein", "modernes", "Tablet"],
+        "words": [
+          "Er",
+          "hat",
+          "ein",
+          "modernes",
+          "Tablet",
+          "modernen"
+        ],
+        "correctOrder": [
+          "Er",
+          "hat",
+          "ein",
+          "modernes",
+          "Tablet"
+        ],
         "tip": "definiteIndefiniteQuestFour.questElevenTip"
       },
       {
         "id": 12,
         "type": "reorder",
         "question": "definiteIndefiniteQuestFour.questTwelve",
-        "words": ["Das", "moderne", "Tablet", "ist", "sehr", "schnell", "modernes"],
-        "correctOrder": ["Das", "moderne", "Tablet", "ist", "sehr", "schnell"],
+        "words": [
+          "Das",
+          "moderne",
+          "Tablet",
+          "ist",
+          "sehr",
+          "schnell",
+          "modernes"
+        ],
+        "correctOrder": [
+          "Das",
+          "moderne",
+          "Tablet",
+          "ist",
+          "sehr",
+          "schnell"
+        ],
         "tip": "definiteIndefiniteQuestFour.questTwelveTip"
       },
       {
@@ -528,9 +1014,85 @@
         "id": 15,
         "type": "select",
         "question": "definiteIndefiniteQuestFour.questFifteen",
-        "options": ["Ich trinke einen heißen Tee.", "Ich trinke einen heißer Tee.", "Ich trinke einen heiße Tee."],
+        "options": [
+          "Ich trinke einen heißen Tee.",
+          "Ich trinke einen heißer Tee.",
+          "Ich trinke einen heiße Tee."
+        ],
         "answer": "Ich trinke einen heißen Tee.",
         "tip": "definiteIndefiniteQuestFour.questFifteenTip"
+      }
+    ],
+    "vocabulary": [
+      {
+        "word": "heißen",
+        "translation-ru": "называться",
+        "translation-en": "to be called / mean",
+        "translation-uk": "називатися",
+        "translation-pl": "nazywać się",
+        "translation-es": "llamarse",
+        "translation-fr": "s'appeler",
+        "translation-tr": "adı olmak",
+        "translation-ro": "a se numi",
+        "translation-uz": "nomlanmoq",
+        "translation-hi": "कहलाना",
+        "translation-ar": "يُسمى"
+      },
+      {
+        "word": "nett",
+        "translation-ru": "милый, приятный",
+        "translation-en": "nice",
+        "translation-uk": "милий",
+        "translation-pl": "miły",
+        "translation-es": "simpático",
+        "translation-fr": "gentil",
+        "translation-tr": "kibar, hoş",
+        "translation-ro": "drăguț",
+        "translation-uz": "yoqimli",
+        "translation-hi": "अच्छा, प्यारा",
+        "translation-ar": "لطيف"
+      },
+      {
+        "word": "das Tablet",
+        "translation-ru": "планшет",
+        "translation-en": "tablet",
+        "translation-uk": "планшет",
+        "translation-pl": "tablet",
+        "translation-es": "tableta",
+        "translation-fr": "tablette",
+        "translation-tr": "tablet",
+        "translation-ro": "tabletă",
+        "translation-uz": "planshet",
+        "translation-hi": "टैबलेट",
+        "translation-ar": "جهاز لوحي"
+      },
+      {
+        "word": "der Computer",
+        "translation-ru": "компьютер",
+        "translation-en": "computer",
+        "translation-uk": "комп'ютер",
+        "translation-pl": "komputer",
+        "translation-es": "ordenador",
+        "translation-fr": "ordinateur",
+        "translation-tr": "bilgisayar",
+        "translation-ro": "calculator",
+        "translation-uz": "kompyuter",
+        "translation-hi": "कंप्यूटर",
+        "translation-ar": "كمبيوتر"
+      },
+      {
+        "word": "offen",
+        "translation-ru": "открытый",
+        "translation-en": "open",
+        "translation-uk": "відчинений",
+        "translation-pl": "otwarty",
+        "translation-es": "abierto",
+        "translation-fr": "ouvert",
+        "translation-tr": "açık",
+        "translation-ro": "deschis",
+        "translation-uz": "ochiq",
+        "translation-hi": "खुला",
+        "translation-ar": "مفتوح"
       }
     ]
   },
@@ -544,7 +1106,10 @@
       "minCorrect": 15,
       "requiredTasks": 15
     },
-    "rewards": { "points": 10, "xp": 10 },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
     "tasks": [
       {
         "id": 1,
@@ -564,7 +1129,11 @@
         "id": 3,
         "type": "select",
         "question": "definiteIndefiniteQuestFive.questThree",
-        "options": ["Ich sehe ein neues Kleid.", "Ich sehe ein neue Kleid.", "Ich sehe ein neuen Kleid."],
+        "options": [
+          "Ich sehe ein neues Kleid.",
+          "Ich sehe ein neue Kleid.",
+          "Ich sehe ein neuen Kleid."
+        ],
         "answer": "Ich sehe ein neues Kleid.",
         "tip": "definiteIndefiniteQuestFive.questThreeTip"
       },
@@ -572,7 +1141,11 @@
         "id": 4,
         "type": "select",
         "question": "definiteIndefiniteQuestFive.questFour",
-        "options": ["Das neue Kleid ist sehr schön.", "Das neues Kleid ist sehr schön.", "Das neuen Kleid ist sehr schön."],
+        "options": [
+          "Das neue Kleid ist sehr schön.",
+          "Das neues Kleid ist sehr schön.",
+          "Das neuen Kleid ist sehr schön."
+        ],
         "answer": "Das neue Kleid ist sehr schön.",
         "tip": "definiteIndefiniteQuestFive.questFourTip"
       },
@@ -580,16 +1153,42 @@
         "id": 5,
         "type": "reorder",
         "question": "definiteIndefiniteQuestFive.questFive",
-        "words": ["Eine", "kleine", "Tasche", "liegt", "hier", "kleiner"],
-        "correctOrder": ["Eine", "kleine", "Tasche", "liegt", "hier"],
+        "words": [
+          "Eine",
+          "kleine",
+          "Tasche",
+          "liegt",
+          "hier",
+          "kleiner"
+        ],
+        "correctOrder": [
+          "Eine",
+          "kleine",
+          "Tasche",
+          "liegt",
+          "hier"
+        ],
         "tip": "definiteIndefiniteQuestFive.questFiveTip"
       },
       {
         "id": 6,
         "type": "reorder",
         "question": "definiteIndefiniteQuestFive.questSix",
-        "words": ["Die", "kleine", "Tasche", "gehört", "mir", "kleines"],
-        "correctOrder": ["Die", "kleine", "Tasche", "gehört", "mir"],
+        "words": [
+          "Die",
+          "kleine",
+          "Tasche",
+          "gehört",
+          "mir",
+          "kleines"
+        ],
+        "correctOrder": [
+          "Die",
+          "kleine",
+          "Tasche",
+          "gehört",
+          "mir"
+        ],
         "tip": "definiteIndefiniteQuestFive.questSixTip"
       },
       {
@@ -610,7 +1209,11 @@
         "id": 9,
         "type": "select",
         "question": "definiteIndefiniteQuestFive.questNine",
-        "options": ["Wir wohnen in einem kleinen Haus.", "Wir wohnen in einem kleines Haus.", "Wir wohnen in einem kleiner Haus."],
+        "options": [
+          "Wir wohnen in einem kleinen Haus.",
+          "Wir wohnen in einem kleines Haus.",
+          "Wir wohnen in einem kleiner Haus."
+        ],
         "answer": "Wir wohnen in einem kleinen Haus.",
         "tip": "definiteIndefiniteQuestFive.questNineTip"
       },
@@ -618,32 +1221,56 @@
         "id": 10,
         "type": "select",
         "question": "definiteIndefiniteQuestFive.questTen",
-        "options": ["In dem kleinen Haus ist es warm.", "In dem kleine Haus ist es warm.", "In dem kleines Haus ist es warm."],
+        "options": [
+          "In dem kleinen Haus ist es warm.",
+          "In dem kleine Haus ist es warm.",
+          "In dem kleines Haus ist es warm."
+        ],
         "answer": "In dem kleinen Haus ist es warm.",
         "tip": "definiteIndefiniteQuestFive.questTenTip"
       },
       {
         "id": 11,
-        "type": "reorder",
-        "question": "definiteIndefiniteQuestFive.questEleven",
-        "words": ["Dort", "ist", "ein", "schöner", "Park", "schöne"],
-        "correctOrder": ["Dort", "ist", "ein", "schöner", "Park"],
-        "tip": "definiteIndefiniteQuestFive.questElevenTip"
+        "type": "input",
+        "question": "definiteIndefiniteQuestThree.questOne",
+        "answer": "leckeres",
+        "tip": "definiteIndefiniteQuestThree.questOneTip",
+        "reviewOf": "three-def",
+        "reviewLand": "definite-indefinite"
       },
       {
         "id": 12,
         "type": "reorder",
-        "question": "definiteIndefiniteQuestFive.questTwelve",
-        "words": ["Der", "schöne", "Park", "ist", "sehr", "groß", "schöner"],
-        "correctOrder": ["Der", "schöne", "Park", "ist", "sehr", "groß"],
-        "tip": "definiteIndefiniteQuestFive.questTwelveTip"
+        "question": "secretLandsQuestFourteen.questThree",
+        "words": [
+          "Wir",
+          "haben",
+          "ein",
+          "altes",
+          "Auto",
+          "gekauft",
+          "alten"
+        ],
+        "correctOrder": [
+          "Wir",
+          "haben",
+          "ein",
+          "altes",
+          "Auto",
+          "gekauft"
+        ],
+        "tip": "secretLandsQuestFourteen.questThreeTip",
+        "reviewOf": "secret-fourteen",
+        "reviewLand": "secret-lands"
       },
       {
         "id": 13,
         "type": "input",
-        "question": "definiteIndefiniteQuestFive.questThirteen",
-        "answer": "kaltes",
-        "tip": "definiteIndefiniteQuestFive.questThirteenTip"
+        "question": "secretLandsQuestTen.questFour",
+        "answer": "bequemen",
+        "tip": "secretLandsQuestTen.questFourTip",
+        "reviewOf": "secret-ten",
+        "reviewLand": "secret-lands"
       },
       {
         "id": 14,
@@ -656,9 +1283,85 @@
         "id": 15,
         "type": "select",
         "question": "definiteIndefiniteQuestFive.questFifteen",
-        "options": ["Ein starker Wind weht.", "Ein starke Wind weht.", "Ein starken Wind weht."],
+        "options": [
+          "Ein starker Wind weht.",
+          "Ein starke Wind weht.",
+          "Ein starken Wind weht."
+        ],
         "answer": "Ein starker Wind weht.",
         "tip": "definiteIndefiniteQuestFive.questFifteenTip"
+      }
+    ],
+    "vocabulary": [
+      {
+        "word": "der Rock",
+        "translation-ru": "юбка",
+        "translation-en": "skirt",
+        "translation-uk": "спідниця",
+        "translation-pl": "spódnica",
+        "translation-es": "la falda",
+        "translation-fr": "la jupe",
+        "translation-tr": "etek",
+        "translation-ro": "fusta",
+        "translation-uz": "yubka",
+        "translation-hi": "स्कर्ट",
+        "translation-ar": "التنورة"
+      },
+      {
+        "word": "bequem",
+        "translation-ru": "удобный",
+        "translation-en": "comfortable",
+        "translation-uk": "зручний",
+        "translation-pl": "wygodny",
+        "translation-es": "cómodo",
+        "translation-fr": "confortable",
+        "translation-tr": "rahat",
+        "translation-ro": "comod",
+        "translation-uz": "qulay",
+        "translation-hi": "आरामदायक",
+        "translation-ar": "مريح"
+      },
+      {
+        "word": "gehören",
+        "translation-ru": "принадлежать",
+        "translation-en": "to belong to",
+        "translation-uk": "належати",
+        "translation-pl": "należeć do",
+        "translation-es": "pertenecer",
+        "translation-fr": "appartenir à",
+        "translation-tr": "ait olmak",
+        "translation-ro": "a aparține",
+        "translation-uz": "tegishli bo'lmoq",
+        "translation-hi": "का होना",
+        "translation-ar": "يخص / ينتمي إلى"
+      },
+      {
+        "word": "das Kleid",
+        "translation-ru": "платье",
+        "translation-en": "dress",
+        "translation-uk": "сукня",
+        "translation-pl": "sukienka",
+        "translation-es": "el vestido",
+        "translation-fr": "la robe",
+        "translation-tr": "elbise",
+        "translation-ro": "rochia",
+        "translation-uz": "ko‘ylak",
+        "translation-hi": "ड्रेस",
+        "translation-ar": "الفستان"
+      },
+      {
+        "word": "lecker",
+        "translation-ru": "вкусный",
+        "translation-en": "tasty",
+        "translation-uk": "смачний",
+        "translation-pl": "smaczny",
+        "translation-es": "rico",
+        "translation-fr": "délicieux",
+        "translation-tr": "lezzetli",
+        "translation-ro": "gustos",
+        "translation-uz": "mazali",
+        "translation-hi": "स्वादिष्ट",
+        "translation-ar": "لذيذ"
       }
     ]
   },
@@ -672,7 +1375,10 @@
       "minCorrect": 15,
       "requiredTasks": 15
     },
-    "rewards": { "points": 10, "xp": 10 },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
     "tasks": [
       {
         "id": 1,
@@ -692,7 +1398,11 @@
         "id": 3,
         "type": "select",
         "question": "definiteIndefiniteQuestSix.questThree",
-        "options": ["Ich sehe ein neuen Fenster.", "Ich sehe ein neue Fenster.", "Ich sehe ein neues Fenster."],
+        "options": [
+          "Ich sehe ein neuen Fenster.",
+          "Ich sehe ein neue Fenster.",
+          "Ich sehe ein neues Fenster."
+        ],
         "answer": "Ich sehe ein neues Fenster.",
         "tip": "definiteIndefiniteQuestSix.questThreeTip"
       },
@@ -700,7 +1410,11 @@
         "id": 4,
         "type": "select",
         "question": "definiteIndefiniteQuestSix.questFour",
-        "options": ["Das neue Fenster ist sauber.", "Das neues Fenster ist sauber.", "Das neuen Fenster ist sauber."],
+        "options": [
+          "Das neue Fenster ist sauber.",
+          "Das neues Fenster ist sauber.",
+          "Das neuen Fenster ist sauber."
+        ],
         "answer": "Das neue Fenster ist sauber.",
         "tip": "definiteIndefiniteQuestSix.questFourTip"
       },
@@ -708,16 +1422,47 @@
         "id": 5,
         "type": "reorder",
         "question": "definiteIndefiniteQuestSix.questFive",
-        "words": ["Garten", "im", "Hund", "kleiner", "läuft", "Ein", "kleiner", "kleine"],
-        "correctOrder": ["Ein", "kleiner", "Hund", "läuft", "im", "Garten"],
+        "words": [
+          "Park",
+          "im",
+          "Hund",
+          "kleiner",
+          "läuft",
+          "Ein",
+          "kleiner",
+          "kleine"
+        ],
+        "correctOrder": [
+          "Ein",
+          "kleiner",
+          "Hund",
+          "läuft",
+          "im",
+          "Park"
+        ],
         "tip": "definiteIndefiniteQuestSix.questFiveTip"
       },
       {
         "id": 6,
         "type": "reorder",
         "question": "definiteIndefiniteQuestSix.questSix",
-        "words": ["ist", "Der", "Hund", "kleine", "sehr", "schnell", "kleiner"],
-        "correctOrder": ["Der", "kleine", "Hund", "ist", "sehr", "schnell"],
+        "words": [
+          "ist",
+          "Der",
+          "Hund",
+          "kleine",
+          "sehr",
+          "schnell",
+          "kleiner"
+        ],
+        "correctOrder": [
+          "Der",
+          "kleine",
+          "Hund",
+          "ist",
+          "sehr",
+          "schnell"
+        ],
         "tip": "definiteIndefiniteQuestSix.questSixTip"
       },
       {
@@ -738,7 +1483,11 @@
         "id": 9,
         "type": "select",
         "question": "definiteIndefiniteQuestSix.questNine",
-        "options": ["Wir wohnen in einem alten Haus.", "Wir wohnen in einem alte Haus.", "Wir wohnen in einem alter Haus."],
+        "options": [
+          "Wir wohnen in einem alten Haus.",
+          "Wir wohnen in einem alte Haus.",
+          "Wir wohnen in einem alter Haus."
+        ],
         "answer": "Wir wohnen in einem alten Haus.",
         "tip": "definiteIndefiniteQuestSix.questNineTip"
       },
@@ -746,38 +1495,50 @@
         "id": 10,
         "type": "select",
         "question": "definiteIndefiniteQuestSix.questTen",
-        "options": ["In dem alten Haus ist es warm.", "In dem alte Haus ist es warm.", "In dem alter Haus ist es warm."],
+        "options": [
+          "In dem alten Haus ist es warm.",
+          "In dem alte Haus ist es warm.",
+          "In dem alter Haus ist es warm."
+        ],
         "answer": "In dem alten Haus ist es warm.",
         "tip": "definiteIndefiniteQuestSix.questTenTip"
       },
       {
         "id": 11,
-        "type": "reorder",
-        "question": "definiteIndefiniteQuestSix.questEleven",
-        "words": ["Fernseher", "einen", "wird", "neuen", "kaufen", "Er", "neuer"],
-        "correctOrder": ["Er", "wird", "einen", "neuen", "Fernseher", "kaufen"],
-        "tip": "definiteIndefiniteQuestSix.questElevenTip"
+        "type": "input",
+        "question": "definiteIndefiniteQuestFive.questOne",
+        "answer": "alter",
+        "tip": "definiteIndefiniteQuestFive.questOneTip",
+        "reviewOf": "five-def",
+        "reviewLand": "definite-indefinite"
       },
       {
         "id": 12,
-        "type": "reorder",
-        "question": "definiteIndefiniteQuestSix.questTwelve",
-        "words": ["den", "macht", "neuen", "aus", "Fernseher", "Er", "neue"],
-        "correctOrder": ["Er", "macht", "den", "neuen", "Fernseher", "aus"],
-        "tip": "definiteIndefiniteQuestSix.questTwelveTip"
+        "type": "input",
+        "question": "definiteIndefiniteQuestOne.questTwo",
+        "answer": "alte",
+        "tip": "definiteIndefiniteQuestOne.questTwoTip",
+        "reviewOf": "one-def",
+        "reviewLand": "definite-indefinite"
       },
       {
         "id": 13,
         "type": "input",
-        "question": "definiteIndefiniteQuestSix.questThirteen",
-        "answer": "kaltes",
-        "tip": "definiteIndefiniteQuestSix.questThirteenTip"
+        "question": "secretLandsQuestEleven.questFour",
+        "answer": "großen",
+        "tip": "secretLandsQuestEleven.questFourTip",
+        "reviewOf": "secret-eleven",
+        "reviewLand": "secret-lands"
       },
       {
         "id": 14,
         "type": "select",
         "question": "definiteIndefiniteQuestSix.questFourteen",
-        "options": ["Ein starker Wind weht.", "Ein starke Wind weht.", "Ein starken Wind weht."],
+        "options": [
+          "Ein starker Wind weht.",
+          "Ein starke Wind weht.",
+          "Ein starken Wind weht."
+        ],
         "answer": "Ein starker Wind weht.",
         "tip": "definiteIndefiniteQuestSix.questFourteenTip"
       },
@@ -785,9 +1546,96 @@
         "id": 15,
         "type": "reorder",
         "question": "definiteIndefiniteQuestSix.questFifteen",
-        "words": ["Mädchen", "ein", "habe", "getroffen", "nettes", "Ich", "netten"],
-        "correctOrder": ["Ich", "habe", "ein", "nettes", "Mädchen", "getroffen"],
+        "words": [
+          "Mädchen",
+          "ein",
+          "habe",
+          "getroffen",
+          "nettes",
+          "Ich",
+          "netten"
+        ],
+        "correctOrder": [
+          "Ich",
+          "habe",
+          "ein",
+          "nettes",
+          "Mädchen",
+          "getroffen"
+        ],
         "tip": "definiteIndefiniteQuestSix.questFifteenTip"
+      }
+    ],
+    "vocabulary": [
+      {
+        "word": "joggen",
+        "translation-ru": "бегать трусцой",
+        "translation-en": "to jog",
+        "translation-uk": "бігати підтюпцем",
+        "translation-pl": "biegać",
+        "translation-es": "hacer footing",
+        "translation-fr": "faire du jogging",
+        "translation-tr": "koşu yapmak",
+        "translation-ro": "a alerga",
+        "translation-uz": "yugurmoq",
+        "translation-hi": "जॉगिंग करना",
+        "translation-ar": "يهرول"
+      },
+      {
+        "word": "das Mädchen",
+        "translation-ru": "девочка",
+        "translation-en": "girl",
+        "translation-uk": "дівчинка",
+        "translation-pl": "dziewczynka",
+        "translation-es": "la niña",
+        "translation-fr": "la fille",
+        "translation-tr": "kız",
+        "translation-ro": "fetița",
+        "translation-uz": "qiz",
+        "translation-hi": "लड़की",
+        "translation-ar": "البنت"
+      },
+      {
+        "word": "nett",
+        "translation-ru": "милый, приятный",
+        "translation-en": "nice",
+        "translation-uk": "милий",
+        "translation-pl": "miły",
+        "translation-es": "simpático",
+        "translation-fr": "gentil",
+        "translation-tr": "kibar, hoş",
+        "translation-ro": "drăguț",
+        "translation-uz": "yoqimli",
+        "translation-hi": "अच्छा, प्यारा",
+        "translation-ar": "لطيف"
+      },
+      {
+        "word": "der Hund",
+        "translation-ru": "собака",
+        "translation-en": "dog",
+        "translation-uk": "собака",
+        "translation-pl": "pies",
+        "translation-es": "el perro",
+        "translation-fr": "le chien",
+        "translation-tr": "köpek",
+        "translation-ro": "câinele",
+        "translation-uz": "it",
+        "translation-hi": "कुत्ता",
+        "translation-ar": "الكلب"
+      },
+      {
+        "word": "sehen",
+        "translation-ru": "видеть",
+        "translation-en": "to see",
+        "translation-uk": "бачити",
+        "translation-pl": "widzieć",
+        "translation-es": "ver",
+        "translation-fr": "voir",
+        "translation-tr": "görmek",
+        "translation-ro": "a vedea",
+        "translation-uz": "ko'rmoq",
+        "translation-hi": "देखना",
+        "translation-ar": "يرى"
       }
     ]
   },
@@ -801,7 +1649,10 @@
       "minCorrect": 15,
       "requiredTasks": 15
     },
-    "rewards": { "points": 10, "xp": 10 },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
     "tasks": [
       {
         "id": 1,
@@ -821,7 +1672,11 @@
         "id": 3,
         "type": "select",
         "question": "definiteIndefiniteQuestSeven.questThree",
-        "options": ["Er trinkt einen kalten Saft.", "Er trinkt einen kalter Saft.", "Er trinkt einen kalte Saft."],
+        "options": [
+          "Er trinkt einen kalten Saft.",
+          "Er trinkt einen kalter Saft.",
+          "Er trinkt einen kalte Saft."
+        ],
         "answer": "Er trinkt einen kalten Saft.",
         "tip": "definiteIndefiniteQuestSeven.questThreeTip"
       },
@@ -829,7 +1684,11 @@
         "id": 4,
         "type": "select",
         "question": "definiteIndefiniteQuestSeven.questFour",
-        "options": ["Er hat den kalten Saft ausgetrunken.", "Er hat den kalte Saft ausgetrunken.", "Er hat den kalter Saft ausgetrunken."],
+        "options": [
+          "Er hat den kalten Saft ausgetrunken.",
+          "Er hat den kalte Saft ausgetrunken.",
+          "Er hat den kalter Saft ausgetrunken."
+        ],
         "answer": "Er hat den kalten Saft ausgetrunken.",
         "tip": "definiteIndefiniteQuestSeven.questFourTip"
       },
@@ -837,16 +1696,44 @@
         "id": 5,
         "type": "reorder",
         "question": "definiteIndefiniteQuestSeven.questFive",
-        "words": ["wartet", "junge", "Eine", "hier", "Frau", "jungen", "junger"],
-        "correctOrder": ["Eine", "junge", "Frau", "wartet", "hier"],
+        "words": [
+          "wartet",
+          "junge",
+          "Eine",
+          "hier",
+          "Frau",
+          "jungen",
+          "junger"
+        ],
+        "correctOrder": [
+          "Eine",
+          "junge",
+          "Frau",
+          "wartet",
+          "hier"
+        ],
         "tip": "definiteIndefiniteQuestSeven.questFiveTip"
       },
       {
         "id": 6,
         "type": "reorder",
         "question": "definiteIndefiniteQuestSeven.questSix",
-        "words": ["Die", "junge", "Frau", "ist", "Ärztin", "jungen", "junges"],
-        "correctOrder": ["Die", "junge", "Frau", "ist", "Ärztin"],
+        "words": [
+          "Die",
+          "junge",
+          "Frau",
+          "ist",
+          "Ärztin",
+          "jungen",
+          "junges"
+        ],
+        "correctOrder": [
+          "Die",
+          "junge",
+          "Frau",
+          "ist",
+          "Ärztin"
+        ],
         "tip": "definiteIndefiniteQuestSeven.questSixTip"
       },
       {
@@ -867,7 +1754,11 @@
         "id": 9,
         "type": "select",
         "question": "definiteIndefiniteQuestSeven.questNine",
-        "options": ["Mutter sieht ein kleines Kind.", "Mutter sieht ein kleine Kind.", "Mutter sieht ein kleinen Kind."],
+        "options": [
+          "Mutter sieht ein kleines Kind.",
+          "Mutter sieht ein kleine Kind.",
+          "Mutter sieht ein kleinen Kind."
+        ],
         "answer": "Mutter sieht ein kleines Kind.",
         "tip": "definiteIndefiniteQuestSeven.questNineTip"
       },
@@ -875,7 +1766,11 @@
         "id": 10,
         "type": "select",
         "question": "definiteIndefiniteQuestSeven.questTen",
-        "options": ["Mutter ruft das kleine Kind.", "Mutter ruft das kleines Kind.", "Mutter ruft das kleinen Kind."],
+        "options": [
+          "Mutter ruft das kleine Kind.",
+          "Mutter ruft das kleines Kind.",
+          "Mutter ruft das kleinen Kind."
+        ],
         "answer": "Mutter ruft das kleine Kind.",
         "tip": "definiteIndefiniteQuestSeven.questTenTip"
       },
@@ -883,16 +1778,46 @@
         "id": 11,
         "type": "reorder",
         "question": "definiteIndefiniteQuestSeven.questEleven",
-        "words": ["mit", "Arzt", "Wir", "einem", "alten", "sprechen", "alter"],
-        "correctOrder": ["Wir", "sprechen", "mit", "einem", "alten", "Arzt"],
+        "words": [
+          "mit",
+          "Arzt",
+          "Wir",
+          "einem",
+          "alten",
+          "sprechen",
+          "alter"
+        ],
+        "correctOrder": [
+          "Wir",
+          "sprechen",
+          "mit",
+          "einem",
+          "alten",
+          "Arzt"
+        ],
         "tip": "definiteIndefiniteQuestSeven.questElevenTip"
       },
       {
         "id": 12,
         "type": "reorder",
         "question": "definiteIndefiniteQuestSeven.questTwelve",
-        "words": ["mit", "Wir", "dem", "alten", "Arzt", "sprechen", "alte"],
-        "correctOrder": ["Wir", "sprechen", "mit", "dem", "alten", "Arzt"],
+        "words": [
+          "mit",
+          "Wir",
+          "dem",
+          "alten",
+          "Arzt",
+          "sprechen",
+          "alte"
+        ],
+        "correctOrder": [
+          "Wir",
+          "sprechen",
+          "mit",
+          "dem",
+          "alten",
+          "Arzt"
+        ],
         "tip": "definiteIndefiniteQuestSeven.questTwelveTip"
       },
       {
@@ -913,9 +1838,99 @@
         "id": 15,
         "type": "select",
         "question": "definiteIndefiniteQuestSeven.questFifteen",
-        "options": ["Er kauft einen schwarzen Mantel.", "Er kauft einen schwarzer Mantel.", "Er kauft einen schwarze Mantel."],
+        "options": [
+          "Er kauft einen schwarzen Mantel.",
+          "Er kauft einen schwarzer Mantel.",
+          "Er kauft einen schwarze Mantel."
+        ],
         "answer": "Er kauft einen schwarzen Mantel.",
         "tip": "definiteIndefiniteQuestSeven.questFifteenTip"
+      }
+    ],
+    "vocabulary": [
+      {
+        "word": "die Ärztin",
+        "translation-ru": "врач (женщина)",
+        "translation-en": "doctor (female)",
+        "translation-uk": "лікарка",
+        "translation-pl": "lekarka",
+        "translation-es": "la médica",
+        "translation-fr": "la médecin",
+        "translation-tr": "kadın doktor",
+        "translation-ro": "doctorița",
+        "translation-uz": "shifokor ayol",
+        "translation-hi": "डॉक्टर (महिला)",
+        "translation-ar": "الطبيبة"
+      },
+      {
+        "word": "der Junge",
+        "translation-ru": "мальчик",
+        "translation-en": "boy",
+        "translation-uk": "хлопчик",
+        "translation-pl": "chłopiec",
+        "translation-es": "el niño, el chico",
+        "translation-fr": "le garçon",
+        "translation-tr": "oğlan",
+        "translation-ro": "băiatul",
+        "translation-uz": "o‘g‘il bola",
+        "translation-hi": "लड़का",
+        "translation-ar": "الولد"
+      },
+      {
+        "word": "das Kind",
+        "translation-ru": "ребёнок",
+        "translation-en": "child",
+        "translation-uk": "дитина",
+        "translation-pl": "dziecko",
+        "translation-es": "el niño",
+        "translation-fr": "l’enfant",
+        "translation-tr": "çocuk",
+        "translation-ro": "copilul",
+        "translation-uz": "bola",
+        "translation-hi": "बच्चा",
+        "translation-ar": "الطفل"
+      },
+      {
+        "word": "interessant",
+        "translation-ru": "интересный",
+        "translation-en": "interesting",
+        "translation-uk": "цікавий",
+        "translation-pl": "ciekawy",
+        "translation-es": "interesante",
+        "translation-fr": "intéressant",
+        "translation-tr": "ilginç",
+        "translation-ro": "interesant",
+        "translation-uz": "qiziqarli",
+        "translation-hi": "दिलचस्प",
+        "translation-ar": "مثير للاهتمام"
+      },
+      {
+        "word": "rufen",
+        "translation-ru": "звать / кричать",
+        "translation-en": "to call / shout",
+        "translation-uk": "кликати / звати",
+        "translation-pl": "wołać / dzwonić",
+        "translation-es": "llamar / gritar",
+        "translation-fr": "appeler / crier",
+        "translation-tr": "çağırmak / seslenmek",
+        "translation-ro": "a chema / a striga",
+        "translation-uz": "chaqirmoq",
+        "translation-hi": "बुलाना",
+        "translation-ar": "ينادي"
+      },
+      {
+        "word": "austrinken",
+        "translation-ru": "выпивать до конца",
+        "translation-en": "to drink up",
+        "translation-uk": "випивати",
+        "translation-pl": "wypić",
+        "translation-es": "beberse",
+        "translation-fr": "finir de boire",
+        "translation-tr": "içip bitirmek",
+        "translation-ro": "a bea tot",
+        "translation-uz": "ichib tugatmoq",
+        "translation-hi": "पूरा पीना",
+        "translation-ar": "يشرب كله"
       }
     ]
   },
@@ -929,7 +1944,10 @@
       "minCorrect": 15,
       "requiredTasks": 15
     },
-    "rewards": { "points": 10, "xp": 10 },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
     "tasks": [
       {
         "id": 1,
@@ -949,7 +1967,11 @@
         "id": 3,
         "type": "select",
         "question": "definiteIndefiniteQuestEight.questThree",
-        "options": ["Ich werde einen neuen Tisch kaufen.", "Ich werde einen neuer Tisch kaufen.", "Ich werde einen neue Tisch kaufen."],
+        "options": [
+          "Ich werde einen neuen Tisch kaufen.",
+          "Ich werde einen neuer Tisch kaufen.",
+          "Ich werde einen neue Tisch kaufen."
+        ],
         "answer": "Ich werde einen neuen Tisch kaufen.",
         "tip": "definiteIndefiniteQuestEight.questThreeTip"
       },
@@ -957,7 +1979,11 @@
         "id": 4,
         "type": "select",
         "question": "definiteIndefiniteQuestEight.questFour",
-        "options": ["Ich nehme den neuen Tisch.", "Ich nehme den neue Tisch.", "Ich nehme den neuer Tisch."],
+        "options": [
+          "Ich nehme den neuen Tisch.",
+          "Ich nehme den neue Tisch.",
+          "Ich nehme den neuer Tisch."
+        ],
         "answer": "Ich nehme den neuen Tisch.",
         "tip": "definiteIndefiniteQuestEight.questFourTip"
       },
@@ -965,16 +1991,42 @@
         "id": 5,
         "type": "reorder",
         "question": "definiteIndefiniteQuestEight.questFive",
-        "words": ["dort", "kleines", "Haus", "Ein", "steht", "kleine"],
-        "correctOrder": ["Ein", "kleines", "Haus", "steht", "dort"],
+        "words": [
+          "dort",
+          "kleines",
+          "Haus",
+          "Ein",
+          "steht",
+          "kleine"
+        ],
+        "correctOrder": [
+          "Ein",
+          "kleines",
+          "Haus",
+          "steht",
+          "dort"
+        ],
         "tip": "definiteIndefiniteQuestEight.questFiveTip"
       },
       {
         "id": 6,
         "type": "reorder",
         "question": "definiteIndefiniteQuestEight.questSix",
-        "words": ["ist", "Haus", "kleine", "Das", "alt", "kleines"],
-        "correctOrder": ["Das", "kleine", "Haus", "ist", "alt"],
+        "words": [
+          "ist",
+          "Haus",
+          "kleine",
+          "Das",
+          "alt",
+          "kleines"
+        ],
+        "correctOrder": [
+          "Das",
+          "kleine",
+          "Haus",
+          "ist",
+          "alt"
+        ],
         "tip": "definiteIndefiniteQuestEight.questSixTip"
       },
       {
@@ -995,7 +2047,11 @@
         "id": 9,
         "type": "select",
         "question": "definiteIndefiniteQuestEight.questNine",
-        "options": ["Wir lesen einen guten Brief.", "Wir lesen einen guter Brief.", "Wir lesen einen gute Brief."],
+        "options": [
+          "Wir lesen einen guten Brief.",
+          "Wir lesen einen guter Brief.",
+          "Wir lesen einen gute Brief."
+        ],
         "answer": "Wir lesen einen guten Brief.",
         "tip": "definiteIndefiniteQuestEight.questNineTip"
       },
@@ -1003,7 +2059,11 @@
         "id": 10,
         "type": "select",
         "question": "definiteIndefiniteQuestEight.questTen",
-        "options": ["Wir lesen den guten Brief.", "Wir lesen den gute Brief.", "Wir lesen den guter Brief."],
+        "options": [
+          "Wir lesen den guten Brief.",
+          "Wir lesen den gute Brief.",
+          "Wir lesen den guter Brief."
+        ],
         "answer": "Wir lesen den guten Brief.",
         "tip": "definiteIndefiniteQuestEight.questTenTip"
       },
@@ -1011,16 +2071,42 @@
         "id": 11,
         "type": "reorder",
         "question": "definiteIndefiniteQuestEight.questEleven",
-        "words": ["starken", "Kaffee", "einen", "trinke", "Ich", "starker"],
-        "correctOrder": ["Ich", "trinke", "einen", "starken", "Kaffee"],
+        "words": [
+          "starken",
+          "Kaffee",
+          "einen",
+          "trinke",
+          "Ich",
+          "starker"
+        ],
+        "correctOrder": [
+          "Ich",
+          "trinke",
+          "einen",
+          "starken",
+          "Kaffee"
+        ],
         "tip": "definiteIndefiniteQuestEight.questElevenTip"
       },
       {
         "id": 12,
         "type": "reorder",
         "question": "definiteIndefiniteQuestEight.questTwelve",
-        "words": ["Ich", "trinke", "den", "starken", "Kaffee", "starke"],
-        "correctOrder": ["Ich", "trinke", "den", "starken", "Kaffee"],
+        "words": [
+          "Ich",
+          "trinke",
+          "den",
+          "starken",
+          "Kaffee",
+          "starke"
+        ],
+        "correctOrder": [
+          "Ich",
+          "trinke",
+          "den",
+          "starken",
+          "Kaffee"
+        ],
         "tip": "definiteIndefiniteQuestEight.questTwelveTip"
       },
       {
@@ -1041,9 +2127,85 @@
         "id": 15,
         "type": "select",
         "question": "definiteIndefiniteQuestEight.questFifteen",
-        "options": ["Er kauft ein modernes Handy.", "Er kauft ein moderne Handy.", "Er kauft ein modernen Handy."],
+        "options": [
+          "Er kauft ein modernes Handy.",
+          "Er kauft ein moderne Handy.",
+          "Er kauft ein modernen Handy."
+        ],
         "answer": "Er kauft ein modernes Handy.",
         "tip": "definiteIndefiniteQuestEight.questFifteenTip"
+      }
+    ],
+    "vocabulary": [
+      {
+        "word": "das Handy",
+        "translation-ru": "мобильный телефон",
+        "translation-en": "mobile phone",
+        "translation-uk": "мобільний телефон",
+        "translation-pl": "komórka",
+        "translation-es": "el móvil",
+        "translation-fr": "le portable",
+        "translation-tr": "cep telefonu",
+        "translation-ro": "mobilul",
+        "translation-uz": "mobil telefon",
+        "translation-hi": "मोबाइल",
+        "translation-ar": "الهاتف المحمول"
+      },
+      {
+        "word": "lesen",
+        "translation-ru": "читать",
+        "translation-en": "to read",
+        "translation-uk": "читати",
+        "translation-pl": "czytać",
+        "translation-es": "leer",
+        "translation-fr": "lire",
+        "translation-tr": "okumak",
+        "translation-ro": "a citi",
+        "translation-uz": "o'qimoq",
+        "translation-hi": "पढ़ना",
+        "translation-ar": "يقرأ"
+      },
+      {
+        "word": "die Suppe",
+        "translation-ru": "суп",
+        "translation-en": "soup",
+        "translation-uk": "суп",
+        "translation-pl": "zupa",
+        "translation-es": "la sopa",
+        "translation-fr": "la soupe",
+        "translation-tr": "çorba",
+        "translation-ro": "supa",
+        "translation-uz": "sho‘rva",
+        "translation-hi": "सूप",
+        "translation-ar": "الحساء"
+      },
+      {
+        "word": "schmecken",
+        "translation-ru": "быть вкусным / пробовать на вкус",
+        "translation-en": "to taste",
+        "translation-uk": "смакувати",
+        "translation-pl": "smakować",
+        "translation-es": "saber / gustar",
+        "translation-fr": "goûter / avoir bon goût",
+        "translation-tr": "tadına bakmak / lezzetli olmak",
+        "translation-ro": "a avea gust",
+        "translation-uz": "mazasi bo'lmoq",
+        "translation-hi": "चखना / स्वादिष्ट होना",
+        "translation-ar": "يتذوق"
+      },
+      {
+        "word": "lecker",
+        "translation-ru": "вкусный",
+        "translation-en": "tasty",
+        "translation-uk": "смачний",
+        "translation-pl": "smaczny",
+        "translation-es": "rico",
+        "translation-fr": "délicieux",
+        "translation-tr": "lezzetli",
+        "translation-ro": "gustos",
+        "translation-uz": "mazali",
+        "translation-hi": "स्वादिष्ट",
+        "translation-ar": "لذيذ"
       }
     ]
   },
@@ -1057,7 +2219,10 @@
       "minCorrect": 15,
       "requiredTasks": 15
     },
-    "rewards": { "points": 10, "xp": 10 },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
     "tasks": [
       {
         "id": 1,
@@ -1077,7 +2242,11 @@
         "id": 3,
         "type": "select",
         "question": "definiteIndefiniteQuestNine.questThree",
-        "options": ["Ich werde ein kalten Bier trinken.", "Ich werde ein kalte Bier trinken.", "Ich werde ein kaltes Bier trinken."],
+        "options": [
+          "Ich werde ein kalten Bier trinken.",
+          "Ich werde ein kalte Bier trinken.",
+          "Ich werde ein kaltes Bier trinken."
+        ],
         "answer": "Ich werde ein kaltes Bier trinken.",
         "tip": "definiteIndefiniteQuestNine.questThreeTip"
       },
@@ -1085,7 +2254,11 @@
         "id": 4,
         "type": "select",
         "question": "definiteIndefiniteQuestNine.questFour",
-        "options": ["Er wird das kalte Bier austrinken.", "Er wird das kaltes Bier austrinken.", "Er wird das kalten Bier austrinken."],
+        "options": [
+          "Er wird das kalte Bier austrinken.",
+          "Er wird das kaltes Bier austrinken.",
+          "Er wird das kalten Bier austrinken."
+        ],
         "answer": "Er wird das kalte Bier austrinken.",
         "tip": "definiteIndefiniteQuestNine.questFourTip"
       },
@@ -1093,16 +2266,44 @@
         "id": 5,
         "type": "reorder",
         "question": "definiteIndefiniteQuestNine.questFive",
-        "words": ["wartet", "hier", "Frau", "Eine", "junge", "jungen", "junger"],
-        "correctOrder": ["Eine", "junge", "Frau", "wartet", "hier"],
+        "words": [
+          "wartet",
+          "hier",
+          "Frau",
+          "Eine",
+          "junge",
+          "jungen",
+          "junger"
+        ],
+        "correctOrder": [
+          "Eine",
+          "junge",
+          "Frau",
+          "wartet",
+          "hier"
+        ],
         "tip": "definiteIndefiniteQuestNine.questFiveTip"
       },
       {
         "id": 6,
         "type": "reorder",
         "question": "definiteIndefiniteQuestNine.questSix",
-        "words": ["ist", "junge", "Die", "Frau", "Ärztin", "junges", "jungen"],
-        "correctOrder": ["Die", "junge", "Frau", "ist", "Ärztin"],
+        "words": [
+          "ist",
+          "junge",
+          "Die",
+          "Frau",
+          "Ärztin",
+          "junges",
+          "jungen"
+        ],
+        "correctOrder": [
+          "Die",
+          "junge",
+          "Frau",
+          "ist",
+          "Ärztin"
+        ],
         "tip": "definiteIndefiniteQuestNine.questSixTip"
       },
       {
@@ -1123,7 +2324,11 @@
         "id": 9,
         "type": "select",
         "question": "definiteIndefiniteQuestNine.questNine",
-        "options": ["Ein kleines Kind lacht.", "Ein kleine Kind lacht.", "Ein kleinen Kind lacht."],
+        "options": [
+          "Ein kleines Kind lacht.",
+          "Ein kleine Kind lacht.",
+          "Ein kleinen Kind lacht."
+        ],
         "answer": "Ein kleines Kind lacht.",
         "tip": "definiteIndefiniteQuestNine.questNineTip"
       },
@@ -1131,7 +2336,11 @@
         "id": 10,
         "type": "select",
         "question": "definiteIndefiniteQuestNine.questTen",
-        "options": ["Das kleine Kind weint.", "Das kleines Kind weint.", "Das kleinen Kind weint."],
+        "options": [
+          "Das kleine Kind weint.",
+          "Das kleines Kind weint.",
+          "Das kleinen Kind weint."
+        ],
         "answer": "Das kleine Kind weint.",
         "tip": "definiteIndefiniteQuestNine.questTenTip"
       },
@@ -1139,16 +2348,46 @@
         "id": 11,
         "type": "reorder",
         "question": "definiteIndefiniteQuestNine.questEleven",
-        "words": ["mit", "netten", "einem", "Mann", "gehe", "Ich", "netter"],
-        "correctOrder": ["Ich", "gehe", "mit", "einem", "netten", "Mann"],
+        "words": [
+          "mit",
+          "netten",
+          "einem",
+          "Mann",
+          "gehe",
+          "Ich",
+          "netter"
+        ],
+        "correctOrder": [
+          "Ich",
+          "gehe",
+          "mit",
+          "einem",
+          "netten",
+          "Mann"
+        ],
         "tip": "definiteIndefiniteQuestNine.questElevenTip"
       },
       {
         "id": 12,
         "type": "reorder",
         "question": "definiteIndefiniteQuestNine.questTwelve",
-        "words": ["Ich", "Mann", "dem", "gehe", "mit", "netten", "nette"],
-        "correctOrder": ["Ich", "gehe", "mit", "dem", "netten", "Mann"],
+        "words": [
+          "Ich",
+          "Mann",
+          "dem",
+          "gehe",
+          "mit",
+          "netten",
+          "nette"
+        ],
+        "correctOrder": [
+          "Ich",
+          "gehe",
+          "mit",
+          "dem",
+          "netten",
+          "Mann"
+        ],
         "tip": "definiteIndefiniteQuestNine.questTwelveTip"
       },
       {
@@ -1169,9 +2408,99 @@
         "id": 15,
         "type": "select",
         "question": "definiteIndefiniteQuestNine.questFifteen",
-        "options": ["Er trinkt einen starken Kaffee.", "Er trinkt einen starker Kaffee.", "Er trinkt einen starke Kaffee."],
+        "options": [
+          "Er trinkt einen starken Kaffee.",
+          "Er trinkt einen starker Kaffee.",
+          "Er trinkt einen starke Kaffee."
+        ],
         "answer": "Er trinkt einen starken Kaffee.",
         "tip": "definiteIndefiniteQuestNine.questFifteenTip"
+      }
+    ],
+    "vocabulary": [
+      {
+        "word": "das Holz",
+        "translation-ru": "древесина",
+        "translation-en": "wood",
+        "translation-uk": "деревина",
+        "translation-pl": "drewno",
+        "translation-es": "madera",
+        "translation-fr": "bois",
+        "translation-tr": "ahşap",
+        "translation-ro": "lemn",
+        "translation-uz": "yog'och",
+        "translation-hi": "लकड़ी",
+        "translation-ar": "خشب"
+      },
+      {
+        "word": "weinen",
+        "translation-ru": "плакать",
+        "translation-en": "to cry / weep",
+        "translation-uk": "плакати",
+        "translation-pl": "płakać",
+        "translation-es": "llorar",
+        "translation-fr": "pleurer",
+        "translation-tr": "ağlamak",
+        "translation-ro": "a plânge",
+        "translation-uz": "yig'lamoq",
+        "translation-hi": "रोना",
+        "translation-ar": "يبكي"
+      },
+      {
+        "word": "die Ärztin",
+        "translation-ru": "врач (женщина)",
+        "translation-en": "doctor (female)",
+        "translation-uk": "лікарка",
+        "translation-pl": "lekarka",
+        "translation-es": "la médica",
+        "translation-fr": "la médecin",
+        "translation-tr": "kadın doktor",
+        "translation-ro": "doctorița",
+        "translation-uz": "shifokor ayol",
+        "translation-hi": "डॉक्टर (महिला)",
+        "translation-ar": "الطبيبة"
+      },
+      {
+        "word": "reparieren",
+        "translation-ru": "ремонтировать",
+        "translation-en": "to repair",
+        "translation-uk": "ремонтувати",
+        "translation-pl": "naprawiać",
+        "translation-es": "reparar",
+        "translation-fr": "réparer",
+        "translation-tr": "tamir etmek",
+        "translation-ro": "a repara",
+        "translation-uz": "tuzatmoq",
+        "translation-hi": "मरम्मत करना",
+        "translation-ar": "يصلح"
+      },
+      {
+        "word": "teuer",
+        "translation-ru": "дорогой",
+        "translation-en": "expensive",
+        "translation-uk": "дорогий",
+        "translation-pl": "drogi",
+        "translation-es": "caro",
+        "translation-fr": "cher",
+        "translation-tr": "pahalı",
+        "translation-ro": "scump",
+        "translation-uz": "qimmat",
+        "translation-hi": "महँगा",
+        "translation-ar": "غالٍ"
+      },
+      {
+        "word": "austrinken",
+        "translation-ru": "выпивать до конца",
+        "translation-en": "to drink up",
+        "translation-uk": "випивати",
+        "translation-pl": "wypić",
+        "translation-es": "beberse",
+        "translation-fr": "finir de boire",
+        "translation-tr": "içip bitirmek",
+        "translation-ro": "a bea tot",
+        "translation-uz": "ichib tugatmoq",
+        "translation-hi": "पूरा पीना",
+        "translation-ar": "يشرب كله"
       }
     ]
   },
@@ -1185,7 +2514,10 @@
       "minCorrect": 15,
       "requiredTasks": 15
     },
-    "rewards": { "points": 10, "xp": 10 },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
     "tasks": [
       {
         "id": 1,
@@ -1205,7 +2537,11 @@
         "id": 3,
         "type": "select",
         "question": "definiteIndefiniteQuestTen.questThree",
-        "options": ["Ich kaufe einen neuen Laptop.", "Ich kaufe einen neuer Laptop.", "Ich kaufe einen neue Laptop."],
+        "options": [
+          "Ich kaufe einen neuen Laptop.",
+          "Ich kaufe einen neuer Laptop.",
+          "Ich kaufe einen neue Laptop."
+        ],
         "answer": "Ich kaufe einen neuen Laptop.",
         "tip": "definiteIndefiniteQuestTen.questThreeTip"
       },
@@ -1213,7 +2549,11 @@
         "id": 4,
         "type": "select",
         "question": "definiteIndefiniteQuestTen.questFour",
-        "options": ["Ich habe den neuen Laptop.", "Ich habe den neue Laptop.", "Ich habe den neuer Laptop."],
+        "options": [
+          "Ich habe den neuen Laptop.",
+          "Ich habe den neue Laptop.",
+          "Ich habe den neuer Laptop."
+        ],
         "answer": "Ich habe den neuen Laptop.",
         "tip": "definiteIndefiniteQuestTen.questFourTip"
       },
@@ -1221,16 +2561,44 @@
         "id": 5,
         "type": "reorder",
         "question": "definiteIndefiniteQuestTen.questFive",
-        "words": ["gekauft", "Mutter", "schöne", "eine", "Vase", "hat", "schönen"],
-        "correctOrder": ["Mutter", "hat", "eine", "schöne", "Vase", "gekauft"],
+        "words": [
+          "gekauft",
+          "Mutter",
+          "schöne",
+          "eine",
+          "Vase",
+          "hat",
+          "schönen"
+        ],
+        "correctOrder": [
+          "Mutter",
+          "hat",
+          "eine",
+          "schöne",
+          "Vase",
+          "gekauft"
+        ],
         "tip": "definiteIndefiniteQuestTen.questFiveTip"
       },
       {
         "id": 6,
         "type": "reorder",
         "question": "definiteIndefiniteQuestTen.questSix",
-        "words": ["Die", "Vase", "schöne", "hier", "steht", "schönes"],
-        "correctOrder": ["Die", "schöne", "Vase", "steht", "hier"],
+        "words": [
+          "Die",
+          "Vase",
+          "schöne",
+          "hier",
+          "steht",
+          "schönes"
+        ],
+        "correctOrder": [
+          "Die",
+          "schöne",
+          "Vase",
+          "steht",
+          "hier"
+        ],
         "tip": "definiteIndefiniteQuestTen.questSixTip"
       },
       {
@@ -1251,7 +2619,11 @@
         "id": 9,
         "type": "select",
         "question": "definiteIndefiniteQuestTen.questNine",
-        "options": ["Ein kleines Kind spielt.", "Ein kleine Kind spielt.", "Ein kleinen Kind spielt."],
+        "options": [
+          "Ein kleines Kind spielt.",
+          "Ein kleine Kind spielt.",
+          "Ein kleinen Kind spielt."
+        ],
         "answer": "Ein kleines Kind spielt.",
         "tip": "definiteIndefiniteQuestTen.questNineTip"
       },
@@ -1259,7 +2631,11 @@
         "id": 10,
         "type": "select",
         "question": "definiteIndefiniteQuestTen.questTen",
-        "options": ["Das kleine Kind spielt.", "Das kleines Kind spielt.", "Das kleinen Kind spielt."],
+        "options": [
+          "Das kleine Kind spielt.",
+          "Das kleines Kind spielt.",
+          "Das kleinen Kind spielt."
+        ],
         "answer": "Das kleine Kind spielt.",
         "tip": "definiteIndefiniteQuestTen.questTenTip"
       },
@@ -1267,16 +2643,50 @@
         "id": 11,
         "type": "reorder",
         "question": "definiteIndefiniteQuestTen.questEleven",
-        "words": ["Nachbarn", "mit", "neuen", "einem", "gearbeitet", "habe", "Ich", "neuer"],
-        "correctOrder": ["Ich", "habe", "mit", "einem", "neuen", "Nachbarn", "gearbeitet"],
+        "words": [
+          "Nachbarn",
+          "mit",
+          "neuen",
+          "einem",
+          "gearbeitet",
+          "habe",
+          "Ich",
+          "neuer"
+        ],
+        "correctOrder": [
+          "Ich",
+          "habe",
+          "mit",
+          "einem",
+          "neuen",
+          "Nachbarn",
+          "gearbeitet"
+        ],
         "tip": "definiteIndefiniteQuestTen.questElevenTip"
       },
       {
         "id": 12,
         "type": "reorder",
         "question": "definiteIndefiniteQuestTen.questTwelve",
-        "words": ["mit", "Ich", "Nachbarn", "dem", "gearbeitet", "habe", "neuen", "neue"],
-        "correctOrder": ["Ich", "habe", "mit", "dem", "neuen", "Nachbarn", "gearbeitet"],
+        "words": [
+          "mit",
+          "Ich",
+          "Nachbarn",
+          "dem",
+          "gearbeitet",
+          "habe",
+          "neuen",
+          "neue"
+        ],
+        "correctOrder": [
+          "Ich",
+          "habe",
+          "mit",
+          "dem",
+          "neuen",
+          "Nachbarn",
+          "gearbeitet"
+        ],
         "tip": "definiteIndefiniteQuestTen.questTwelveTip"
       },
       {
@@ -1297,9 +2707,85 @@
         "id": 15,
         "type": "select",
         "question": "definiteIndefiniteQuestTen.questFifteen",
-        "options": ["Ich trinke einen starken Kaffee.", "Ich trinke einen starker Kaffee.", "Ich trinke einen starke Kaffee."],
+        "options": [
+          "Ich trinke einen starken Kaffee.",
+          "Ich trinke einen starker Kaffee.",
+          "Ich trinke einen starke Kaffee."
+        ],
         "answer": "Ich trinke einen starken Kaffee.",
         "tip": "definiteIndefiniteQuestTen.questFifteenTip"
+      }
+    ],
+    "vocabulary": [
+      {
+        "word": "berühmt",
+        "translation-ru": "знаменитый",
+        "translation-en": "famous",
+        "translation-uk": "відомий",
+        "translation-pl": "sławny",
+        "translation-es": "famoso",
+        "translation-fr": "célèbre",
+        "translation-tr": "ünlü",
+        "translation-ro": "celebru",
+        "translation-uz": "mashhur",
+        "translation-hi": "प्रसिद्ध",
+        "translation-ar": "مشهور"
+      },
+      {
+        "word": "das Schloss",
+        "translation-ru": "замок",
+        "translation-en": "castle",
+        "translation-uk": "замок",
+        "translation-pl": "zamek",
+        "translation-es": "el castillo",
+        "translation-fr": "le château",
+        "translation-tr": "şato",
+        "translation-ro": "castelul",
+        "translation-uz": "qasr",
+        "translation-hi": "महल",
+        "translation-ar": "القصر"
+      },
+      {
+        "word": "der Laptop",
+        "translation-ru": "ноутбук",
+        "translation-en": "laptop",
+        "translation-uk": "ноутбук",
+        "translation-pl": "laptop",
+        "translation-es": "portátil",
+        "translation-fr": "ordinateur portable",
+        "translation-tr": "dizüstü bilgisayar",
+        "translation-ro": "laptop",
+        "translation-uz": "noutbuk",
+        "translation-hi": "लैपटॉप",
+        "translation-ar": "حاسوب محمول"
+      },
+      {
+        "word": "das Kind",
+        "translation-ru": "ребёнок",
+        "translation-en": "child",
+        "translation-uk": "дитина",
+        "translation-pl": "dziecko",
+        "translation-es": "el niño",
+        "translation-fr": "l’enfant",
+        "translation-tr": "çocuk",
+        "translation-ro": "copilul",
+        "translation-uz": "bola",
+        "translation-hi": "बच्चा",
+        "translation-ar": "الطفل"
+      },
+      {
+        "word": "essen",
+        "translation-ru": "есть / кушать",
+        "translation-en": "to eat",
+        "translation-uk": "їсти",
+        "translation-pl": "jeść",
+        "translation-es": "comer",
+        "translation-fr": "manger",
+        "translation-tr": "yemek yemek",
+        "translation-ro": "a mânca",
+        "translation-uz": "yemoq",
+        "translation-hi": "खाना",
+        "translation-ar": "يأكل"
       }
     ]
   },
@@ -1313,7 +2799,10 @@
       "minCorrect": 15,
       "requiredTasks": 15
     },
-    "rewards": { "points": 10, "xp": 10 },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
     "tasks": [
       {
         "id": 1,
@@ -1333,7 +2822,11 @@
         "id": 3,
         "type": "select",
         "question": "definiteIndefiniteQuestEleven.questThree",
-        "options": ["Ich werde ein neues Auto kaufen.", "Ich werde ein neue Auto kaufen.", "Ich werde ein neuen Auto kaufen."],
+        "options": [
+          "Ich werde ein neues Auto kaufen.",
+          "Ich werde ein neue Auto kaufen.",
+          "Ich werde ein neuen Auto kaufen."
+        ],
         "answer": "Ich werde ein neues Auto kaufen.",
         "tip": "definiteIndefiniteQuestEleven.questThreeTip"
       },
@@ -1341,7 +2834,11 @@
         "id": 4,
         "type": "select",
         "question": "definiteIndefiniteQuestEleven.questFour",
-        "options": ["Das neue Auto ist sehr schnell.", "Das neues Auto ist sehr schnell.", "Das neuen Auto ist sehr schnell."],
+        "options": [
+          "Das neue Auto ist sehr schnell.",
+          "Das neues Auto ist sehr schnell.",
+          "Das neuen Auto ist sehr schnell."
+        ],
         "answer": "Das neue Auto ist sehr schnell.",
         "tip": "definiteIndefiniteQuestEleven.questFourTip"
       },
@@ -1349,16 +2846,46 @@
         "id": 5,
         "type": "reorder",
         "question": "definiteIndefiniteQuestEleven.questFive",
-        "words": ["hat", "Kuchen", "einen", "Mutter", "gebacken", "leckeren", "leckerer"],
-        "correctOrder": ["Mutter", "hat", "einen", "leckeren", "Kuchen", "gebacken"],
+        "words": [
+          "hat",
+          "Kuchen",
+          "einen",
+          "Mutter",
+          "gebacken",
+          "leckeren",
+          "leckerer"
+        ],
+        "correctOrder": [
+          "Mutter",
+          "hat",
+          "einen",
+          "leckeren",
+          "Kuchen",
+          "gebacken"
+        ],
         "tip": "definiteIndefiniteQuestEleven.questFiveTip"
       },
       {
         "id": 6,
         "type": "reorder",
         "question": "definiteIndefiniteQuestEleven.questSix",
-        "words": ["Der", "ist", "Kuchen", "leckere", "noch", "warm", "leckeren"],
-        "correctOrder": ["Der", "leckere", "Kuchen", "ist", "noch", "warm"],
+        "words": [
+          "Der",
+          "ist",
+          "Kuchen",
+          "leckere",
+          "noch",
+          "warm",
+          "leckeren"
+        ],
+        "correctOrder": [
+          "Der",
+          "leckere",
+          "Kuchen",
+          "ist",
+          "noch",
+          "warm"
+        ],
         "tip": "definiteIndefiniteQuestEleven.questSixTip"
       },
       {
@@ -1379,7 +2906,11 @@
         "id": 9,
         "type": "select",
         "question": "definiteIndefiniteQuestEleven.questNine",
-        "options": ["Ein kleines Haus steht dort.", "Ein kleine Haus steht dort.", "Ein kleinen Haus steht dort."],
+        "options": [
+          "Ein kleines Haus steht dort.",
+          "Ein kleine Haus steht dort.",
+          "Ein kleinen Haus steht dort."
+        ],
         "answer": "Ein kleines Haus steht dort.",
         "tip": "definiteIndefiniteQuestEleven.questNineTip"
       },
@@ -1387,7 +2918,11 @@
         "id": 10,
         "type": "select",
         "question": "definiteIndefiniteQuestEleven.questTen",
-        "options": ["Das kleine Haus ist alt.", "Das kleines Haus ist alt.", "Das kleinen Haus ist alt."],
+        "options": [
+          "Das kleine Haus ist alt.",
+          "Das kleines Haus ist alt.",
+          "Das kleinen Haus ist alt."
+        ],
         "answer": "Das kleine Haus ist alt.",
         "tip": "definiteIndefiniteQuestEleven.questTenTip"
       },
@@ -1395,16 +2930,46 @@
         "id": 11,
         "type": "reorder",
         "question": "definiteIndefiniteQuestEleven.questEleven",
-        "words": ["mit", "netten", "Wir", "einem", "Mann", "gehen", "netter"],
-        "correctOrder": ["Wir", "gehen", "mit", "einem", "netten", "Mann"],
+        "words": [
+          "mit",
+          "netten",
+          "Wir",
+          "einem",
+          "Mann",
+          "gehen",
+          "netter"
+        ],
+        "correctOrder": [
+          "Wir",
+          "gehen",
+          "mit",
+          "einem",
+          "netten",
+          "Mann"
+        ],
         "tip": "definiteIndefiniteQuestEleven.questElevenTip"
       },
       {
         "id": 12,
         "type": "reorder",
         "question": "definiteIndefiniteQuestEleven.questTwelve",
-        "words": ["mit", "dem", "Wir", "gehen", "netten", "Mann", "nette"],
-        "correctOrder": ["Wir", "gehen", "mit", "dem", "netten", "Mann"],
+        "words": [
+          "mit",
+          "dem",
+          "Wir",
+          "gehen",
+          "netten",
+          "Mann",
+          "nette"
+        ],
+        "correctOrder": [
+          "Wir",
+          "gehen",
+          "mit",
+          "dem",
+          "netten",
+          "Mann"
+        ],
         "tip": "definiteIndefiniteQuestEleven.questTwelveTip"
       },
       {
@@ -1425,9 +2990,85 @@
         "id": 15,
         "type": "select",
         "question": "definiteIndefiniteQuestEleven.questFifteen",
-        "options": ["Ein starker Wind weht.", "Ein starke Wind weht.", "Ein starken Wind weht."],
+        "options": [
+          "Ein starker Wind weht.",
+          "Ein starke Wind weht.",
+          "Ein starken Wind weht."
+        ],
         "answer": "Ein starker Wind weht.",
         "tip": "definiteIndefiniteQuestEleven.questFifteenTip"
+      }
+    ],
+    "vocabulary": [
+      {
+        "word": "das Holz",
+        "translation-ru": "древесина",
+        "translation-en": "wood",
+        "translation-uk": "деревина",
+        "translation-pl": "drewno",
+        "translation-es": "madera",
+        "translation-fr": "bois",
+        "translation-tr": "ahşap",
+        "translation-ro": "lemn",
+        "translation-uz": "yog'och",
+        "translation-hi": "लकड़ी",
+        "translation-ar": "خشب"
+      },
+      {
+        "word": "nett",
+        "translation-ru": "милый, приятный",
+        "translation-en": "nice",
+        "translation-uk": "милий",
+        "translation-pl": "miły",
+        "translation-es": "simpático",
+        "translation-fr": "gentil",
+        "translation-tr": "kibar, hoş",
+        "translation-ro": "drăguț",
+        "translation-uz": "yoqimli",
+        "translation-hi": "अच्छा, प्यारा",
+        "translation-ar": "لطيف"
+      },
+      {
+        "word": "lecker",
+        "translation-ru": "вкусный",
+        "translation-en": "tasty",
+        "translation-uk": "смачний",
+        "translation-pl": "smaczny",
+        "translation-es": "rico",
+        "translation-fr": "délicieux",
+        "translation-tr": "lezzetli",
+        "translation-ro": "gustos",
+        "translation-uz": "mazali",
+        "translation-hi": "स्वादिष्ट",
+        "translation-ar": "لذيذ"
+      },
+      {
+        "word": "backen",
+        "translation-ru": "печь",
+        "translation-en": "to bake",
+        "translation-uk": "пекти",
+        "translation-pl": "piec",
+        "translation-es": "hornear",
+        "translation-fr": "cuire",
+        "translation-tr": "fırınlamak / pişirmek",
+        "translation-ro": "a coace",
+        "translation-uz": "pishirmoq",
+        "translation-hi": "पकाना",
+        "translation-ar": "يخبز"
+      },
+      {
+        "word": "das Auto",
+        "translation-ru": "машина",
+        "translation-en": "car",
+        "translation-uk": "машина",
+        "translation-pl": "samochód",
+        "translation-es": "coche",
+        "translation-fr": "voiture",
+        "translation-tr": "araba",
+        "translation-ro": "mașină",
+        "translation-uz": "mashina",
+        "translation-hi": "गाड़ी",
+        "translation-ar": "سيارة"
       }
     ]
   },
@@ -1441,7 +3082,10 @@
       "minCorrect": 15,
       "requiredTasks": 15
     },
-    "rewards": { "points": 10, "xp": 10 },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
     "tasks": [
       {
         "id": 1,
@@ -1461,7 +3105,11 @@
         "id": 3,
         "type": "select",
         "question": "definiteIndefiniteQuestTwelve.questThree",
-        "options": ["Ich werde ein neues Kleid kaufen.", "Ich werde ein neue Kleid kaufen.", "Ich werde ein neuen Auto kaufen."],
+        "options": [
+          "Ich werde ein neues Kleid kaufen.",
+          "Ich werde ein neue Kleid kaufen.",
+          "Ich werde ein neuen Kleid kaufen."
+        ],
         "answer": "Ich werde ein neues Kleid kaufen.",
         "tip": "definiteIndefiniteQuestTwelve.questThreeTip"
       },
@@ -1469,7 +3117,11 @@
         "id": 4,
         "type": "select",
         "question": "definiteIndefiniteQuestTwelve.questFour",
-        "options": ["Das neue Kleid gefällt mir.", "Das neues Kleid gefällt mir.", "Das neuen Kleid gefällt mir."],
+        "options": [
+          "Das neue Kleid gefällt mir.",
+          "Das neues Kleid gefällt mir.",
+          "Das neuen Kleid gefällt mir."
+        ],
         "answer": "Das neue Kleid gefällt mir.",
         "tip": "definiteIndefiniteQuestTwelve.questFourTip"
       },
@@ -1477,16 +3129,42 @@
         "id": 5,
         "type": "reorder",
         "question": "definiteIndefiniteQuestTwelve.questFive",
-        "words": ["Katze", "Eine", "kleine", "hier", "sitzt", "kleiner", "kleinen"],
-        "correctOrder": ["Eine", "kleine", "Katze", "sitzt", "hier"],
+        "words": [
+          "Katze",
+          "Eine",
+          "kleine",
+          "hier",
+          "sitzt",
+          "kleiner",
+          "kleinen"
+        ],
+        "correctOrder": [
+          "Eine",
+          "kleine",
+          "Katze",
+          "sitzt",
+          "hier"
+        ],
         "tip": "definiteIndefiniteQuestTwelve.questFiveTip"
       },
       {
         "id": 6,
         "type": "reorder",
         "question": "definiteIndefiniteQuestTwelve.questSix",
-        "words": ["Die", "kleine", "schläft", "Katze", "kleines", "kleiner"],
-        "correctOrder": ["Die", "kleine", "Katze", "schläft"],
+        "words": [
+          "Die",
+          "kleine",
+          "schläft",
+          "Katze",
+          "kleines",
+          "kleiner"
+        ],
+        "correctOrder": [
+          "Die",
+          "kleine",
+          "Katze",
+          "schläft"
+        ],
         "tip": "definiteIndefiniteQuestTwelve.questSixTip"
       },
       {
@@ -1507,7 +3185,11 @@
         "id": 9,
         "type": "select",
         "question": "definiteIndefiniteQuestTwelve.questNine",
-        "options": ["Ein kleines Fenster ist dort.", "Ein kleine Fenster ist dort.", "Ein kleinen Fenster ist dort."],
+        "options": [
+          "Ein kleines Fenster ist dort.",
+          "Ein kleine Fenster ist dort.",
+          "Ein kleinen Fenster ist dort."
+        ],
         "answer": "Ein kleines Fenster ist dort.",
         "tip": "definiteIndefiniteQuestTwelve.questNineTip"
       },
@@ -1515,7 +3197,11 @@
         "id": 10,
         "type": "select",
         "question": "definiteIndefiniteQuestTwelve.questTen",
-        "options": ["Das kleine Fenster ist offen.", "Das kleines Fenster ist offen.", "Das kleinen Fenster ist offen."],
+        "options": [
+          "Das kleine Fenster ist offen.",
+          "Das kleines Fenster ist offen.",
+          "Das kleinen Fenster ist offen."
+        ],
         "answer": "Das kleine Fenster ist offen.",
         "tip": "definiteIndefiniteQuestTwelve.questTenTip"
       },
@@ -1523,16 +3209,46 @@
         "id": 11,
         "type": "reorder",
         "question": "definiteIndefiniteQuestTwelve.questEleven",
-        "words": ["mit", "neuen", "Wir", "einem", "Kollegen", "gehen", "neuer"],
-        "correctOrder": ["Wir", "gehen", "mit", "einem", "neuen", "Kollegen"],
+        "words": [
+          "mit",
+          "neuen",
+          "Wir",
+          "einem",
+          "Kollegen",
+          "gehen",
+          "neuer"
+        ],
+        "correctOrder": [
+          "Wir",
+          "gehen",
+          "mit",
+          "einem",
+          "neuen",
+          "Kollegen"
+        ],
         "tip": "definiteIndefiniteQuestTwelve.questElevenTip"
       },
       {
         "id": 12,
         "type": "reorder",
         "question": "definiteIndefiniteQuestTwelve.questTwelve",
-        "words": ["mit", "dem", "Wir", "gehen", "neuen", "Kollegen", "neue"],
-        "correctOrder": ["Wir", "gehen", "mit", "dem", "neuen", "Kollegen"],
+        "words": [
+          "mit",
+          "dem",
+          "Wir",
+          "gehen",
+          "neuen",
+          "Kollegen",
+          "neue"
+        ],
+        "correctOrder": [
+          "Wir",
+          "gehen",
+          "mit",
+          "dem",
+          "neuen",
+          "Kollegen"
+        ],
         "tip": "definiteIndefiniteQuestTwelve.questTwelveTip"
       },
       {
@@ -1553,9 +3269,85 @@
         "id": 15,
         "type": "select",
         "question": "definiteIndefiniteQuestTwelve.questFifteen",
-        "options": ["Ein guter Freund hilft immer.", "Ein gute Freund hilft immer.", "Ein guten Freund hilft immer."],
+        "options": [
+          "Ein guter Freund hilft immer.",
+          "Ein gute Freund hilft immer.",
+          "Ein guten Freund hilft immer."
+        ],
         "answer": "Ein guter Freund hilft immer.",
         "tip": "definiteIndefiniteQuestTwelve.questFifteenTip"
+      }
+    ],
+    "vocabulary": [
+      {
+        "word": "reparieren",
+        "translation-ru": "ремонтировать",
+        "translation-en": "to repair",
+        "translation-uk": "ремонтувати",
+        "translation-pl": "naprawiać",
+        "translation-es": "reparar",
+        "translation-fr": "réparer",
+        "translation-tr": "tamir etmek",
+        "translation-ro": "a repara",
+        "translation-uz": "tuzatmoq",
+        "translation-hi": "मरम्मत करना",
+        "translation-ar": "يصلح"
+      },
+      {
+        "word": "teuer",
+        "translation-ru": "дорогой",
+        "translation-en": "expensive",
+        "translation-uk": "дорогий",
+        "translation-pl": "drogi",
+        "translation-es": "caro",
+        "translation-fr": "cher",
+        "translation-tr": "pahalı",
+        "translation-ro": "scump",
+        "translation-uz": "qimmat",
+        "translation-hi": "महँगा",
+        "translation-ar": "غالٍ"
+      },
+      {
+        "word": "gefallen",
+        "translation-ru": "нравиться",
+        "translation-en": "to please / like",
+        "translation-uk": "подобатися",
+        "translation-pl": "podobać się",
+        "translation-es": "gustar",
+        "translation-fr": "plaire",
+        "translation-tr": "hoşuna gitmek",
+        "translation-ro": "a plăcea",
+        "translation-uz": "yoqmoq",
+        "translation-hi": "पसंद आना",
+        "translation-ar": "يعجب"
+      },
+      {
+        "word": "der Computer",
+        "translation-ru": "компьютер",
+        "translation-en": "computer",
+        "translation-uk": "комп'ютер",
+        "translation-pl": "komputer",
+        "translation-es": "ordenador",
+        "translation-fr": "ordinateur",
+        "translation-tr": "bilgisayar",
+        "translation-ro": "calculator",
+        "translation-uz": "kompyuter",
+        "translation-hi": "कंप्यूटर",
+        "translation-ar": "كمبيوتر"
+      },
+      {
+        "word": "essen",
+        "translation-ru": "есть / кушать",
+        "translation-en": "to eat",
+        "translation-uk": "їсти",
+        "translation-pl": "jeść",
+        "translation-es": "comer",
+        "translation-fr": "manger",
+        "translation-tr": "yemek yemek",
+        "translation-ro": "a mânca",
+        "translation-uz": "yemoq",
+        "translation-hi": "खाना",
+        "translation-ar": "يأكل"
       }
     ]
   },
@@ -1569,7 +3361,10 @@
       "minCorrect": 15,
       "requiredTasks": 15
     },
-    "rewards": { "points": 10, "xp": 10 },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
     "tasks": [
       {
         "id": 1,
@@ -1589,7 +3384,11 @@
         "id": 3,
         "type": "select",
         "question": "definiteIndefiniteQuestThirteen.questThree",
-        "options": ["Ich sehe einen neuen Tisch.", "Ich sehe einen neuer Tisch.", "Ich sehe einen neue Tisch."],
+        "options": [
+          "Ich sehe einen neuen Tisch.",
+          "Ich sehe einen neuer Tisch.",
+          "Ich sehe einen neue Tisch."
+        ],
         "answer": "Ich sehe einen neuen Tisch.",
         "tip": "definiteIndefiniteQuestThirteen.questThreeTip"
       },
@@ -1597,7 +3396,11 @@
         "id": 4,
         "type": "select",
         "question": "definiteIndefiniteQuestThirteen.questFour",
-        "options": ["Ich putze den neuen Tisch.", "Ich putze den neue Tisch.", "Ich putze den neuer Tisch."],
+        "options": [
+          "Ich putze den neuen Tisch.",
+          "Ich putze den neue Tisch.",
+          "Ich putze den neuer Tisch."
+        ],
         "answer": "Ich putze den neuen Tisch.",
         "tip": "definiteIndefiniteQuestThirteen.questFourTip"
       },
@@ -1605,16 +3408,46 @@
         "id": 5,
         "type": "reorder",
         "question": "definiteIndefiniteQuestThirteen.questFive",
-        "words": ["Tasche", "Tisch", "auf", "Eine", "dem", "schöne", "liegt", "schönen"],
-        "correctOrder": ["Eine", "schöne", "Tasche", "liegt", "auf", "dem", "Tisch"],
+        "words": [
+          "Tasche",
+          "Tisch",
+          "auf",
+          "Eine",
+          "dem",
+          "schöne",
+          "liegt",
+          "schönen"
+        ],
+        "correctOrder": [
+          "Eine",
+          "schöne",
+          "Tasche",
+          "liegt",
+          "auf",
+          "dem",
+          "Tisch"
+        ],
         "tip": "definiteIndefiniteQuestThirteen.questFiveTip"
       },
       {
         "id": 6,
         "type": "reorder",
         "question": "definiteIndefiniteQuestThirteen.questSix",
-        "words": ["gehört", "schöne", "Die", "Tasche", "mir", "schönes"],
-        "correctOrder": ["Die", "schöne", "Tasche", "gehört", "mir"],
+        "words": [
+          "gehört",
+          "schöne",
+          "Die",
+          "Tasche",
+          "mir",
+          "schönes"
+        ],
+        "correctOrder": [
+          "Die",
+          "schöne",
+          "Tasche",
+          "gehört",
+          "mir"
+        ],
         "tip": "definiteIndefiniteQuestThirteen.questSixTip"
       },
       {
@@ -1635,7 +3468,11 @@
         "id": 9,
         "type": "select",
         "question": "definiteIndefiniteQuestThirteen.questNine",
-        "options": ["Ich trinke ein kalte Wasser.", "Ich trinke ein kaltes Wasser.", "Ich trinke ein kalten Wasser."],
+        "options": [
+          "Ich trinke ein kalte Wasser.",
+          "Ich trinke ein kaltes Wasser.",
+          "Ich trinke ein kalten Wasser."
+        ],
         "answer": "Ich trinke ein kaltes Wasser.",
         "tip": "definiteIndefiniteQuestThirteen.questNineTip"
       },
@@ -1643,7 +3480,11 @@
         "id": 10,
         "type": "select",
         "question": "definiteIndefiniteQuestThirteen.questTen",
-        "options": ["Das kalte Wasser ist sauber.", "Das kaltes Wasser ist sauber.", "Das kalten Wasser ist sauber."],
+        "options": [
+          "Das kalte Wasser ist sauber.",
+          "Das kaltes Wasser ist sauber.",
+          "Das kalten Wasser ist sauber."
+        ],
         "answer": "Das kalte Wasser ist sauber.",
         "tip": "definiteIndefiniteQuestThirteen.questTenTip"
       },
@@ -1651,16 +3492,47 @@
         "id": 11,
         "type": "reorder",
         "question": "definiteIndefiniteQuestThirteen.questEleven",
-        "words": ["haben", "netter", "Nachbarn", "Wir", "mit", "netten", "begrüßt", "einen"],
-        "correctOrder": ["Wir", "haben", "einen", "netten", "Nachbarn", "begrüßt"],
+        "words": [
+          "haben",
+          "netter",
+          "Nachbarn",
+          "Wir",
+          "mit",
+          "netten",
+          "begrüßt",
+          "einen"
+        ],
+        "correctOrder": [
+          "Wir",
+          "haben",
+          "einen",
+          "netten",
+          "Nachbarn",
+          "begrüßt"
+        ],
         "tip": "definiteIndefiniteQuestThirteen.questElevenTip"
       },
       {
         "id": 12,
         "type": "reorder",
         "question": "definiteIndefiniteQuestThirteen.questTwelve",
-        "words": ["Laptop", "dem", "arbeite", "Ich", "neuen", "mit", "neue"],
-        "correctOrder": ["Ich", "arbeite", "mit", "dem", "neuen", "Laptop"],
+        "words": [
+          "Laptop",
+          "dem",
+          "arbeite",
+          "Ich",
+          "neuen",
+          "mit",
+          "neue"
+        ],
+        "correctOrder": [
+          "Ich",
+          "arbeite",
+          "mit",
+          "dem",
+          "neuen",
+          "Laptop"
+        ],
         "tip": "definiteIndefiniteQuestThirteen.questTwelveTip"
       },
       {
@@ -1681,9 +3553,113 @@
         "id": 15,
         "type": "select",
         "question": "definiteIndefiniteQuestThirteen.questFifteen",
-        "options": ["Das ist ein guter Weg.", "Das ist ein gute Weg.", "Das ist ein guten Weg."],
+        "options": [
+          "Das ist ein guter Weg.",
+          "Das ist ein gute Weg.",
+          "Das ist ein guten Weg."
+        ],
         "answer": "Das ist ein guter Weg.",
         "tip": "definiteIndefiniteQuestThirteen.questFifteenTip"
+      }
+    ],
+    "vocabulary": [
+      {
+        "word": "nett",
+        "translation-ru": "милый, приятный",
+        "translation-en": "nice",
+        "translation-uk": "милий",
+        "translation-pl": "miły",
+        "translation-es": "simpático",
+        "translation-fr": "gentil",
+        "translation-tr": "kibar, hoş",
+        "translation-ro": "drăguț",
+        "translation-uz": "yoqimli",
+        "translation-hi": "अच्छा, प्यारा",
+        "translation-ar": "لطيف"
+      },
+      {
+        "word": "der Laptop",
+        "translation-ru": "ноутбук",
+        "translation-en": "laptop",
+        "translation-uk": "ноутбук",
+        "translation-pl": "laptop",
+        "translation-es": "portátil",
+        "translation-fr": "ordinateur portable",
+        "translation-tr": "dizüstü bilgisayar",
+        "translation-ro": "laptop",
+        "translation-uz": "noutbuk",
+        "translation-hi": "लैपटॉप",
+        "translation-ar": "حاسوب محمول"
+      },
+      {
+        "word": "putzen",
+        "translation-ru": "чистить / мыть",
+        "translation-en": "to clean / polish",
+        "translation-uk": "чистити",
+        "translation-pl": "czyścić",
+        "translation-es": "limpiar",
+        "translation-fr": "nettoyer",
+        "translation-tr": "temizlemek",
+        "translation-ro": "a curăța",
+        "translation-uz": "tozalamoq",
+        "translation-hi": "साफ करना",
+        "translation-ar": "ينظف"
+      },
+      {
+        "word": "rufen",
+        "translation-ru": "звать / кричать",
+        "translation-en": "to call / shout",
+        "translation-uk": "кликати / звати",
+        "translation-pl": "wołać / dzwonić",
+        "translation-es": "llamar / gritar",
+        "translation-fr": "appeler / crier",
+        "translation-tr": "çağırmak / seslenmek",
+        "translation-ro": "a chema / a striga",
+        "translation-uz": "chaqirmoq",
+        "translation-hi": "बुलाना",
+        "translation-ar": "ينادي"
+      },
+      {
+        "word": "die Suppe",
+        "translation-ru": "суп",
+        "translation-en": "soup",
+        "translation-uk": "суп",
+        "translation-pl": "zupa",
+        "translation-es": "la sopa",
+        "translation-fr": "la soupe",
+        "translation-tr": "çorba",
+        "translation-ro": "supa",
+        "translation-uz": "sho‘rva",
+        "translation-hi": "सूप",
+        "translation-ar": "الحساء"
+      },
+      {
+        "word": "unbequem",
+        "translation-ru": "неудобный",
+        "translation-en": "uncomfortable",
+        "translation-uk": "незручний",
+        "translation-pl": "niewygodny",
+        "translation-es": "incómodo",
+        "translation-fr": "inconfortable",
+        "translation-tr": "rahatsız",
+        "translation-ro": "incomod",
+        "translation-uz": "noqulay",
+        "translation-hi": "असुविधाजनक",
+        "translation-ar": "غير مريح"
+      },
+      {
+        "word": "begrüßen",
+        "translation-ru": "приветствовать",
+        "translation-en": "to greet",
+        "translation-uk": "вітати",
+        "translation-pl": "witać",
+        "translation-es": "saludar",
+        "translation-fr": "saluer",
+        "translation-tr": "selamlamak",
+        "translation-ro": "a saluta",
+        "translation-uz": "salomlashmoq",
+        "translation-hi": "स्वागत करना",
+        "translation-ar": "يرحب"
       }
     ]
   },
@@ -1697,7 +3673,10 @@
       "minCorrect": 15,
       "requiredTasks": 15
     },
-    "rewards": { "points": 10, "xp": 10 },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
     "tasks": [
       {
         "id": 1,
@@ -1717,7 +3696,11 @@
         "id": 3,
         "type": "select",
         "question": "definiteIndefiniteQuestFourteen.questThree",
-        "options": ["Ich werde ein altes Auto kaufen.", "Ich werde ein alte Auto kaufen.", "Ich werde ein alten Auto kaufen."],
+        "options": [
+          "Ich werde ein altes Auto kaufen.",
+          "Ich werde ein alte Auto kaufen.",
+          "Ich werde ein alten Auto kaufen."
+        ],
         "answer": "Ich werde ein altes Auto kaufen.",
         "tip": "definiteIndefiniteQuestFourteen.questThreeTip"
       },
@@ -1725,7 +3708,11 @@
         "id": 4,
         "type": "select",
         "question": "definiteIndefiniteQuestFourteen.questFour",
-        "options": ["Ich verkaufe das alte Auto.", "Ich verkaufe das altes Auto.", "Ich verkaufe das alten Auto."],
+        "options": [
+          "Ich verkaufe das alte Auto.",
+          "Ich verkaufe das altes Auto.",
+          "Ich verkaufe das alten Auto."
+        ],
         "answer": "Ich verkaufe das alte Auto.",
         "tip": "definiteIndefiniteQuestFourteen.questFourTip"
       },
@@ -1733,16 +3720,46 @@
         "id": 5,
         "type": "reorder",
         "question": "definiteIndefiniteQuestFourteen.questFive",
-        "words": ["spielt", "Garten", "im", "kleine", "Eine", "Katze", "kleinen"],
-        "correctOrder": ["Eine", "kleine", "Katze", "spielt", "im", "Garten"],
+        "words": [
+          "spielt",
+          "Garten",
+          "im",
+          "kleine",
+          "Eine",
+          "Katze",
+          "kleinen"
+        ],
+        "correctOrder": [
+          "Eine",
+          "kleine",
+          "Katze",
+          "spielt",
+          "im",
+          "Garten"
+        ],
         "tip": "definiteIndefiniteQuestFourteen.questFiveTip"
       },
       {
         "id": 6,
         "type": "reorder",
         "question": "definiteIndefiniteQuestFourteen.questSix",
-        "words": ["ist", "Die", "Katze", "süß", "kleine", "sehr", "kleines"],
-        "correctOrder": ["Die", "kleine", "Katze", "ist", "sehr", "süß"],
+        "words": [
+          "ist",
+          "Die",
+          "Katze",
+          "süß",
+          "kleine",
+          "sehr",
+          "kleines"
+        ],
+        "correctOrder": [
+          "Die",
+          "kleine",
+          "Katze",
+          "ist",
+          "sehr",
+          "süß"
+        ],
         "tip": "definiteIndefiniteQuestFourteen.questSixTip"
       },
       {
@@ -1763,7 +3780,11 @@
         "id": 9,
         "type": "select",
         "question": "definiteIndefiniteQuestFourteen.questNine",
-        "options": ["Ein schönes Foto hängt dort.", "Ein schöne Foto hängt dort.", "Ein schönen Foto hängt dort."],
+        "options": [
+          "Ein schönes Foto hängt dort.",
+          "Ein schöne Foto hängt dort.",
+          "Ein schönen Foto hängt dort."
+        ],
         "answer": "Ein schönes Foto hängt dort.",
         "tip": "definiteIndefiniteQuestFourteen.questNineTip"
       },
@@ -1771,7 +3792,11 @@
         "id": 10,
         "type": "select",
         "question": "definiteIndefiniteQuestFourteen.questTen",
-        "options": ["Das schöne Foto gefällt mir.", "Das schönes Foto gefällt mir.", "Das schönen Foto gefällt mir."],
+        "options": [
+          "Das schöne Foto gefällt mir.",
+          "Das schönes Foto gefällt mir.",
+          "Das schönen Foto gefällt mir."
+        ],
         "answer": "Das schöne Foto gefällt mir.",
         "tip": "definiteIndefiniteQuestFourteen.questTenTip"
       },
@@ -1779,16 +3804,46 @@
         "id": 11,
         "type": "reorder",
         "question": "definiteIndefiniteQuestFourteen.questEleven",
-        "words": ["mit", "Lehrer", "Wir", "einem", "alten", "gehen", "alter"],
-        "correctOrder": ["Wir", "gehen", "mit", "einem", "alten", "Lehrer"],
+        "words": [
+          "mit",
+          "Lehrer",
+          "Wir",
+          "einem",
+          "alten",
+          "gehen",
+          "alter"
+        ],
+        "correctOrder": [
+          "Wir",
+          "gehen",
+          "mit",
+          "einem",
+          "alten",
+          "Lehrer"
+        ],
         "tip": "definiteIndefiniteQuestFourteen.questElevenTip"
       },
       {
         "id": 12,
         "type": "reorder",
         "question": "definiteIndefiniteQuestFourteen.questTwelve",
-        "words": ["mit", "dem", "Wir", "gehen", "alten", "Lehrer", "alte"],
-        "correctOrder": ["Wir", "gehen", "mit", "dem", "alten", "Lehrer"],
+        "words": [
+          "mit",
+          "dem",
+          "Wir",
+          "gehen",
+          "alten",
+          "Lehrer",
+          "alte"
+        ],
+        "correctOrder": [
+          "Wir",
+          "gehen",
+          "mit",
+          "dem",
+          "alten",
+          "Lehrer"
+        ],
         "tip": "definiteIndefiniteQuestFourteen.questTwelveTip"
       },
       {
@@ -1809,9 +3864,85 @@
         "id": 15,
         "type": "select",
         "question": "definiteIndefiniteQuestFourteen.questFifteen",
-        "options": ["Ein starker Frost stört.", "Ein starke Frost stört.", "Ein starken Frost stört."],
+        "options": [
+          "Ein starker Frost stört.",
+          "Ein starke Frost stört.",
+          "Ein starken Frost stört."
+        ],
         "answer": "Ein starker Frost stört.",
         "tip": "definiteIndefiniteQuestFourteen.questFifteenTip"
+      }
+    ],
+    "vocabulary": [
+      {
+        "word": "die Birne",
+        "translation-ru": "груша",
+        "translation-en": "pear",
+        "translation-uk": "груша",
+        "translation-pl": "gruszka",
+        "translation-es": "pera",
+        "translation-fr": "poire",
+        "translation-tr": "armut",
+        "translation-ro": "pară",
+        "translation-uz": "nok",
+        "translation-hi": "नाशपाती",
+        "translation-ar": "كمثرى"
+      },
+      {
+        "word": "der Frost",
+        "translation-ru": "мороз",
+        "translation-en": "frost",
+        "translation-uk": "мороз",
+        "translation-pl": "mróz",
+        "translation-es": "helada",
+        "translation-fr": "gel",
+        "translation-tr": "don",
+        "translation-ro": "îngheț",
+        "translation-uz": "sovuq",
+        "translation-hi": "पाला",
+        "translation-ar": "صقيع"
+      },
+      {
+        "word": "das Foto",
+        "translation-ru": "фотография",
+        "translation-en": "photo",
+        "translation-uk": "фотографія",
+        "translation-pl": "zdjęcie",
+        "translation-es": "la foto",
+        "translation-fr": "la photo",
+        "translation-tr": "fotoğraf",
+        "translation-ro": "fotografia",
+        "translation-uz": "surat",
+        "translation-hi": "फ़ोटो",
+        "translation-ar": "الصورة"
+      },
+      {
+        "word": "hängen",
+        "translation-ru": "висеть",
+        "translation-en": "to hang",
+        "translation-uk": "висіти",
+        "translation-pl": "wisieć",
+        "translation-es": "colgar",
+        "translation-fr": "être suspendu",
+        "translation-tr": "asılı olmak",
+        "translation-ro": "a atârna",
+        "translation-uz": "osilib turmoq",
+        "translation-hi": "लटकना",
+        "translation-ar": "يعلق"
+      },
+      {
+        "word": "gefallen",
+        "translation-ru": "нравиться",
+        "translation-en": "to please / like",
+        "translation-uk": "подобатися",
+        "translation-pl": "podobać się",
+        "translation-es": "gustar",
+        "translation-fr": "plaire",
+        "translation-tr": "hoşuna gitmek",
+        "translation-ro": "a plăcea",
+        "translation-uz": "yoqmoq",
+        "translation-hi": "पसंद आना",
+        "translation-ar": "يعجب"
       }
     ]
   },
@@ -1825,7 +3956,10 @@
       "minCorrect": 15,
       "requiredTasks": 15
     },
-    "rewards": { "points": 10, "xp": 10 },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
     "tasks": [
       {
         "id": 1,
@@ -1845,7 +3979,11 @@
         "id": 3,
         "type": "select",
         "question": "definiteIndefiniteQuestFifteen.questThree",
-        "options": ["Ich werde ein neue Handy kaufen.", "Ich werde ein neues Handy kaufen.", "Ich werde ein neuen Handy kaufen."],
+        "options": [
+          "Ich werde ein neue Handy kaufen.",
+          "Ich werde ein neues Handy kaufen.",
+          "Ich werde ein neuen Handy kaufen."
+        ],
         "answer": "Ich werde ein neues Handy kaufen.",
         "tip": "definiteIndefiniteQuestFifteen.questThreeTip"
       },
@@ -1853,7 +3991,11 @@
         "id": 4,
         "type": "select",
         "question": "definiteIndefiniteQuestFifteen.questFour",
-        "options": ["Das neue Handy gefällt mir.", "Das neues Handy gefällt mir.", "Das neuen Handy gefällt mir."],
+        "options": [
+          "Das neue Handy gefällt mir.",
+          "Das neues Handy gefällt mir.",
+          "Das neuen Handy gefällt mir."
+        ],
         "answer": "Das neue Handy gefällt mir.",
         "tip": "definiteIndefiniteQuestFifteen.questFourTip"
       },
@@ -1861,16 +4003,41 @@
         "id": 5,
         "type": "reorder",
         "question": "definiteIndefiniteQuestFifteen.questFive",
-        "words": ["Frau", "Eine", "junge", "lacht", "jungen", "junger"],
-        "correctOrder": ["Eine", "junge", "Frau", "lacht"],
+        "words": [
+          "Frau",
+          "Eine",
+          "junge",
+          "lacht",
+          "jungen",
+          "junger"
+        ],
+        "correctOrder": [
+          "Eine",
+          "junge",
+          "Frau",
+          "lacht"
+        ],
         "tip": "definiteIndefiniteQuestFifteen.questFiveTip"
       },
       {
         "id": 6,
         "type": "reorder",
         "question": "definiteIndefiniteQuestFifteen.questSix",
-        "words": ["ist", "junge", "Die", "Ärztin", "Frau", "junges"],
-        "correctOrder": ["Die", "junge", "Frau", "ist", "Ärztin"],
+        "words": [
+          "ist",
+          "junge",
+          "Die",
+          "Ärztin",
+          "Frau",
+          "junges"
+        ],
+        "correctOrder": [
+          "Die",
+          "junge",
+          "Frau",
+          "ist",
+          "Ärztin"
+        ],
         "tip": "definiteIndefiniteQuestFifteen.questSixTip"
       },
       {
@@ -1891,7 +4058,11 @@
         "id": 9,
         "type": "select",
         "question": "definiteIndefiniteQuestFifteen.questNine",
-        "options": ["Ein kleines Kind schläft.", "Ein kleine Kind schläft.", "Ein kleinen Kind schläft."],
+        "options": [
+          "Ein kleines Kind schläft.",
+          "Ein kleine Kind schläft.",
+          "Ein kleinen Kind schläft."
+        ],
         "answer": "Ein kleines Kind schläft.",
         "tip": "definiteIndefiniteQuestFifteen.questNineTip"
       },
@@ -1899,7 +4070,11 @@
         "id": 10,
         "type": "select",
         "question": "definiteIndefiniteQuestFifteen.questTen",
-        "options": ["Das kleine Kind ist wach.", "Das kleines Kind ist wach.", "Das kleinen Kind ist wach."],
+        "options": [
+          "Das kleine Kind ist wach.",
+          "Das kleines Kind ist wach.",
+          "Das kleinen Kind ist wach."
+        ],
         "answer": "Das kleine Kind ist wach.",
         "tip": "definiteIndefiniteQuestFifteen.questTenTip"
       },
@@ -1907,16 +4082,50 @@
         "id": 11,
         "type": "reorder",
         "question": "definiteIndefiniteQuestFifteen.questEleven",
-        "words": ["mit", "Freund", "Wir", "einem", "alten", "haben", "gesprochen", "alter"],
-        "correctOrder": ["Wir", "haben", "mit", "einem", "alten", "Freund", "gesprochen"],
+        "words": [
+          "mit",
+          "Freund",
+          "Wir",
+          "einem",
+          "alten",
+          "haben",
+          "gesprochen",
+          "alter"
+        ],
+        "correctOrder": [
+          "Wir",
+          "haben",
+          "mit",
+          "einem",
+          "alten",
+          "Freund",
+          "gesprochen"
+        ],
         "tip": "definiteIndefiniteQuestFifteen.questElevenTip"
       },
       {
         "id": 12,
         "type": "reorder",
         "question": "definiteIndefiniteQuestFifteen.questTwelve",
-        "words": ["mit", "dem", "Wir", "haben", "alten", "Freund", "gesprochen", "alte"],
-        "correctOrder": ["Wir", "haben", "mit", "dem", "alten", "Freund", "gesprochen"],
+        "words": [
+          "mit",
+          "dem",
+          "Wir",
+          "haben",
+          "alten",
+          "Freund",
+          "gesprochen",
+          "alte"
+        ],
+        "correctOrder": [
+          "Wir",
+          "haben",
+          "mit",
+          "dem",
+          "alten",
+          "Freund",
+          "gesprochen"
+        ],
         "tip": "definiteIndefiniteQuestFifteen.questTwelveTip"
       },
       {
@@ -1937,9 +4146,85 @@
         "id": 15,
         "type": "select",
         "question": "definiteIndefiniteQuestFifteen.questFifteen",
-        "options": ["Das war ein schöner Tag.", "Das war ein schöne Tag.", "Das war ein schönen Tag."],
+        "options": [
+          "Das war ein schöner Tag.",
+          "Das war ein schöne Tag.",
+          "Das war ein schönen Tag."
+        ],
         "answer": "Das war ein schöner Tag.",
         "tip": "definiteIndefiniteQuestFifteen.questFifteenTip"
+      }
+    ],
+    "vocabulary": [
+      {
+        "word": "die Ärztin",
+        "translation-ru": "врач (женщина)",
+        "translation-en": "doctor (female)",
+        "translation-uk": "лікарка",
+        "translation-pl": "lekarka",
+        "translation-es": "la médica",
+        "translation-fr": "la médecin",
+        "translation-tr": "kadın doktor",
+        "translation-ro": "doctorița",
+        "translation-uz": "shifokor ayol",
+        "translation-hi": "डॉक्टर (महिला)",
+        "translation-ar": "الطبيبة"
+      },
+      {
+        "word": "der Junge",
+        "translation-ru": "мальчик",
+        "translation-en": "boy",
+        "translation-uk": "хлопчик",
+        "translation-pl": "chłopiec",
+        "translation-es": "el niño, el chico",
+        "translation-fr": "le garçon",
+        "translation-tr": "oğlan",
+        "translation-ro": "băiatul",
+        "translation-uz": "o‘g‘il bola",
+        "translation-hi": "लड़का",
+        "translation-ar": "الولد"
+      },
+      {
+        "word": "das Handy",
+        "translation-ru": "мобильный телефон",
+        "translation-en": "mobile phone",
+        "translation-uk": "мобільний телефон",
+        "translation-pl": "komórka",
+        "translation-es": "el móvil",
+        "translation-fr": "le portable",
+        "translation-tr": "cep telefonu",
+        "translation-ro": "mobilul",
+        "translation-uz": "mobil telefon",
+        "translation-hi": "मोबाइल",
+        "translation-ar": "الهاتف المحمول"
+      },
+      {
+        "word": "das Kind",
+        "translation-ru": "ребёнок",
+        "translation-en": "child",
+        "translation-uk": "дитина",
+        "translation-pl": "dziecko",
+        "translation-es": "el niño",
+        "translation-fr": "l’enfant",
+        "translation-tr": "çocuk",
+        "translation-ro": "copilul",
+        "translation-uz": "bola",
+        "translation-hi": "बच्चा",
+        "translation-ar": "الطفل"
+      },
+      {
+        "word": "gefallen",
+        "translation-ru": "нравиться",
+        "translation-en": "to please / like",
+        "translation-uk": "подобатися",
+        "translation-pl": "podobać się",
+        "translation-es": "gustar",
+        "translation-fr": "plaire",
+        "translation-tr": "hoşuna gitmek",
+        "translation-ro": "a plăcea",
+        "translation-uz": "yoqmoq",
+        "translation-hi": "पसंद आना",
+        "translation-ar": "يعجب"
       }
     ]
   }

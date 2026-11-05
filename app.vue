@@ -36,6 +36,7 @@ import { Capacitor } from '@capacitor/core'
 import VNetwork from "./src/components/V-network.vue";
 import { initAdmob } from "./utils/admob.js";
 import { scheduleReminders, updateReviewReminders } from "./utils/reminders.js";
+import { saveUserLocale } from "./utils/saveUserLocale.js";
 import { getReviewForecast } from '~/utils/wordReview.js';
 import VMarathonModal from "~/src/components/overlays/V-marathonModal.vue";
 const chainStore = userChainStore()
@@ -72,7 +73,7 @@ const route = useRoute()
 const user = useCurrentUser()
 const daily = dailyStore()
 const colorMode = useColorMode();
-const { $track } = useNuxtApp()
+const { $track, $setUserProps } = useNuxtApp()
 const showHedgehogModal = ref(false)
 
 
@@ -146,12 +147,15 @@ onUnmounted(() => {
 })
 
 // Сменили язык приложения — пересоздаём напоминания с текстами на новом языке
-watch(locale, () => {
+watch(locale, (code) => {
   scheduleReminders(t)
+  // язык нужен и облачным пуш-напоминаниям
+  saveUserLocale(code)
 })
 
 watch(() => authStore.initialized, (isReady) => {
   if (isReady) {
+    saveUserLocale(locale.value)
     learningStore.loadFromFirebase()
       // Напоминания зовут повторять слова в те дни, когда подходит срок
       .then(() => updateReviewReminders(getReviewForecast(learningStore.words), t))
@@ -161,8 +165,14 @@ watch(() => authStore.initialized, (isReady) => {
   }
 }, { immediate: true });
 
+// Уровень немецкого как свойство пользователя в аналитике: так в отчётах делим аудиторию по A1/A2/B1
+watch(() => authStore.germanLevel, (level) => {
+  if (level) $setUserProps?.({ german_level: level })
+}, { immediate: true })
+
 watch(() => authStore.uid, (newUid) => {
   if (newUid) {
+    saveUserLocale(locale.value);
     billingStore.initialize();
     questStore.loadDailyProgress();
     statsStore.loadLocalStats();

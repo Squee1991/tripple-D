@@ -52,10 +52,16 @@
           </div>
         </div>
         <div class="quest__section">
+          <div v-if="reviewLandName" class="quest__review-badge">{{ t('questReviewBadge') }} · {{ reviewLandName }}</div>
           <div v-if="hasTip" class="quest__tip-container">
             <button class="quest__tip-btn" data-track="quest_hint_rule_opened" @click="showTipModal = true">💡</button>
           </div>
-          <div class="quest__question">
+          <div v-if="questionParts" class="quest__question quest__question--split">
+            <div class="quest__q-instr">{{ questionParts.instruction }}</div>
+            <div class="quest__q-meaning">{{ questionParts.meaning }}</div>
+            <div v-if="questionParts.sentence" class="quest__q-sentence" v-html="questionParts.sentenceHtml"></div>
+          </div>
+          <div v-else class="quest__question">
             <template v-if="questStore.task.type === 'input' && questStore.showResult">
               <span v-html="highlightedQuestion"></span>
             </template>
@@ -73,7 +79,7 @@
                 }}
               </div>
               <ul class="quest__options" :class="{ 'quest__options--locked': questStore.showResult }">
-                <li v-for="option in questStore.task.options" :key="option">
+                <li v-for="option in shuffledOptions" :key="option">
                   <button class="quest__option-btn"
                           :class="optionClass(option, questStore)"
                           @click="handleOptionClick(option)"
@@ -277,6 +283,7 @@ import {onQuestSuccessForReview} from '~/utils/appReview.js'
 import {shouldAskForReminders, postponeReminderPrompt, enableReminders, markLessonDoneToday} from '~/utils/reminders.js'
 import { dailyStore } from '~/store/dailyStore.js'
 import hedgehogLeaveSession from 'assets/animation/hedgehog_leave_session.json'
+import {regions} from '~/utils/regions.js'
 useSeoMeta({robots: 'noindex, nofollow'})
 const {getDotClass, optionClass} = useClasses()
 const {t} = useI18n()
@@ -444,6 +451,23 @@ function goNextQuest() {
   })
 }
 
+// В JSON многих земель правильный вариант стоит первым, поэтому перемешиваем при показе.
+// Порядок запоминаем на объект задания, чтобы варианты не прыгали при перерисовке
+const optionOrder = new WeakMap()
+const shuffledOptions = computed(() => {
+  const task = questStore.task
+  if (!task?.options) return []
+  if (!optionOrder.has(task)) {
+    const list = [...task.options]
+    for (let i = list.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1))
+      ;[list[i], list[j]] = [list[j], list[i]]
+    }
+    optionOrder.set(task, list)
+  }
+  return optionOrder.get(task)
+})
+
 const hasTip = computed(() => !!(questStore.task && questStore.task.tip))
 const currentTip = computed(() => questStore.task?.tip || '')
 
@@ -537,6 +561,50 @@ const highlightedQuestion = computed(() => {
 
   const cls = questStore.isCorrect ? 'filled-answer-correct' : 'filled-answer-wrong'
   return t(questStore.task.question).replace('___', `<strong class="${cls}">${questStore.correctAnswer}</strong>`)
+})
+
+// Повтор из прошлого квеста или земли: показываем метку «Повторение · название земли»,
+// чтобы ученик видел, откуда тема (generator пишет reviewLand в задание-повтор)
+const regionNameKey = Object.fromEntries(Object.values(regions).flat().map(r => [r.id, r.name]))
+const reviewLandName = computed(() => {
+  const id = questStore.task?.reviewLand
+  return id && regionNameKey[id] ? t(regionNameKey[id]) : ''
+})
+
+// Текст вопроса делим на части: инструкция, перевод в кавычках, немецкое предложение с пропуском.
+// «Вставьте глагол. «Перевод»: Deutsch ___ Satz.» → три строки. Без кавычек возвращаем null (показ как раньше).
+const QUOTE_PAIRS = { '«': ['»'], '“': ['”'], '„': ['”', '“'], '"': ['"'] }
+const escapeHtml = (s) => String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;')
+
+const questionParts = computed(() => {
+  const key = questStore.task?.question
+  if (!key) return null
+  const text = String(t(key))
+  let open = -1
+  for (let i = 0; i < text.length; i++) {
+    if (QUOTE_PAIRS[text[i]]) { open = i; break }
+  }
+  if (open <= 0) return null
+  const closers = QUOTE_PAIRS[text[open]]
+  let close = -1
+  for (let i = open + 1; i < text.length; i++) {
+    if (closers.includes(text[i])) { close = i; break }
+  }
+  if (close === -1) return null
+  const instruction = text.slice(0, open).trim().replace(/[:：]\s*$/, '').trim()
+  const meaning = text.slice(open + 1, close).trim()
+  const sentence = text.slice(close + 1).trim().replace(/^[:：]\s*/, '').trim()
+  if (!instruction || !meaning) return null
+
+  let sentenceHtml = escapeHtml(sentence)
+  if (sentence.includes('___')) {
+    const filled = questStore.task.type === 'input' && questStore.showResult
+    const gap = filled
+      ? `<strong class="${questStore.isCorrect ? 'filled-answer-correct' : 'filled-answer-wrong'}">${escapeHtml(questStore.correctAnswer)}</strong>`
+      : '<span class="quest__gap"></span>'
+    sentenceHtml = sentenceHtml.replace('___', gap)
+  }
+  return { instruction, meaning, sentence, sentenceHtml }
 })
 
 function goThemes() {
@@ -849,6 +917,77 @@ watchEffect(() => {
   padding: 1rem 1.25rem;
   color: var(--titleColor);
   font-weight: 600;
+}
+
+.quest__review-badge {
+  display: table;
+  margin: 0 auto 8px;
+  padding: 4px 12px;
+  border-radius: 999px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: #3b82f6;
+  background: rgba(59, 130, 246, 0.14);
+  border: 1px solid rgba(59, 130, 246, 0.35);
+}
+
+.quest__question--split {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.55em;
+  max-width: 900px;
+}
+
+.quest__q-instr {
+  font-size: 0.68em;
+  font-weight: 600;
+  opacity: 0.7;
+}
+
+.quest__q-meaning {
+  font-size: 0.82em;
+  font-style: italic;
+  font-weight: 600;
+  padding: 0.45em 0.9em;
+  border-radius: 14px;
+  background: var(--settingsSectionBg);
+  border: 1px solid var(--tabsSlideBorderColor);
+}
+
+.quest__q-sentence {
+  font-size: 1em;
+  font-weight: 800;
+  line-height: 1.45;
+}
+
+/* пропуск и ответ вставляются через v-html, поэтому scoped-стили нужно пробрасывать через :deep */
+.quest__q-sentence :deep(.quest__gap) {
+  display: inline-block;
+  min-width: 3.5em;
+  height: 1.15em;
+  margin: 0 0.2em;
+  vertical-align: -0.2em;
+  border-radius: 6px;
+  background: rgba(59, 130, 246, 0.18);
+  border-bottom: 3px solid #3b82f6;
+}
+
+.quest__question :deep(.filled-answer-correct),
+.quest__question :deep(.filled-answer-wrong) {
+  padding: 0 0.25em;
+  border-radius: 6px;
+}
+
+.quest__question :deep(.filled-answer-correct) {
+  color: #22c55e;
+  background: rgba(34, 197, 94, 0.15);
+}
+
+/* при ошибке в пропуске стоит правильный ответ, поэтому не красный, а жёлтый «вот как надо» */
+.quest__question :deep(.filled-answer-wrong) {
+  color: #f59e0b;
+  background: rgba(245, 158, 11, 0.15);
 }
 
 .quest__body {

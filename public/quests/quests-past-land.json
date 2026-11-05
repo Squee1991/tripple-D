@@ -20,8 +20,19 @@
         "id": 1,
         "type": "reorder",
         "question": "pastValleyQuestOne.questOne",
-        "words": ["gespielt", "Fußball", "habe", "Ich"],
-        "correctOrder": ["Ich", "habe", "Fußball", "gespielt"]
+        "words": [
+          "gespielt",
+          "Fußball",
+          "habe",
+          "Ich"
+        ],
+        "correctOrder": [
+          "Ich",
+          "habe",
+          "Fußball",
+          "gespielt"
+        ],
+        "tip": "a2Course.tipPerfekt"
       },
       {
         "id": 2,
@@ -32,21 +43,35 @@
           "Wir haben Musik gehört",
           "Du hast Musik gehört"
         ],
-        "answer": "Du hast Musik gehört"
+        "answer": "Du hast Musik gehört",
+        "tip": "a2Course.tipPerfekt"
       },
       {
         "id": 3,
         "type": "speechToText",
         "question": "pastValleyQuestOne.questThree",
         "text": "Wir haben Deutsch gelernt",
-        "answer": "Wir haben Deutsch gelernt"
+        "answer": "Wir haben Deutsch gelernt",
+        "tip": "a2Course.tipPerfekt"
       },
       {
         "id": 4,
         "type": "reorder",
         "question": "pastValleyQuestOne.questFour",
-        "words": ["gekauft", "ist", "Brot", "hat", "Er"],
-        "correctOrder": ["Er", "hat", "Brot", "gekauft"]
+        "words": [
+          "gekauft",
+          "ist",
+          "Brot",
+          "hat",
+          "Er"
+        ],
+        "correctOrder": [
+          "Er",
+          "hat",
+          "Brot",
+          "gekauft"
+        ],
+        "tip": "a2Course.tipPerfekt"
       },
       {
         "id": 5,
@@ -57,21 +82,38 @@
           "Wir haben Pizza gegesst",
           "Wir haben Pizza essen"
         ],
-        "answer": "Wir haben Pizza gegessen"
+        "answer": "Wir haben Pizza gegessen",
+        "tip": "a2Course.tipPerfekt"
       },
       {
         "id": 6,
         "type": "reorder",
         "question": "pastValleyQuestOne.questSix",
-        "words": ["sehr", "gemacht", "das", "habe", "Ich", "schnell"],
-        "correctOrder": ["Ich", "habe", "das", "sehr", "schnell", "gemacht"]
+        "words": [
+          "sehr",
+          "gemacht",
+          "das",
+          "habe",
+          "Ich",
+          "schnell"
+        ],
+        "correctOrder": [
+          "Ich",
+          "habe",
+          "das",
+          "sehr",
+          "schnell",
+          "gemacht"
+        ],
+        "tip": "a2Course.tipPerfekt"
       },
       {
         "id": 7,
         "type": "speechToText",
         "question": "pastValleyQuestOne.questSeven",
         "text": "Sie haben getanzt",
-        "answer": "Sie haben getanzt"
+        "answer": "Sie haben getanzt",
+        "tip": "a2Course.tipPerfekt"
       },
       {
         "id": 8,
@@ -89,8 +131,16 @@
         "id": 9,
         "type": "reorder",
         "question": "pastValleyQuestOne.questNine",
-        "words": ["geschlafen", "du", "Hast"],
-        "correctOrder": ["Hast", "du", "geschlafen"],
+        "words": [
+          "geschlafen",
+          "du",
+          "Hast"
+        ],
+        "correctOrder": [
+          "Hast",
+          "du",
+          "geschlafen"
+        ],
         "tip": "pastValleyQuestOne.questNineTip"
       },
       {
@@ -98,40 +148,97 @@
         "type": "speechToText",
         "question": "pastValleyQuestOne.questTen",
         "text": "Ich habe gelacht",
-        "answer": "Ich habe gelacht"
+        "answer": "Ich habe gelacht",
+        "tip": "a2Course.tipPerfekt"
       },
       {
         "id": 11,
         "type": "reorder",
-        "question": "pastValleyQuestOne.questEleven",
-        "words": ["gewohnt", "Berlin", "in", "Wir", "haben"],
-        "correctOrder": ["Wir", "haben", "in", "Berlin", "gewohnt"],
-        "tip": "pastValleyQuestOne.questElevenTip"
+        "question": "a2Course.t22",
+        "words": [
+          "waren",
+          "ist",
+          "Gestern",
+          "das",
+          "war",
+          "schlecht",
+          "Wetter"
+        ],
+        "correctOrder": [
+          "Gestern",
+          "war",
+          "das",
+          "Wetter",
+          "schlecht"
+        ],
+        "reviewOf": "past-simple-1",
+        "reviewLand": "past-simple",
+        "tip": "pastSimple.questDescription"
       },
       {
         "id": 12,
-        "type": "select",
-        "question": "pastValleyQuestOne.questTwelve",
-        "options": [
-          "Ich bin nach Hause gegangen",
-          "Ich habe nach Hause gegangen",
-          "Ich ist nach Hause gegangen"
+        "type": "reorder",
+        "question": "a2Course.t23",
+        "words": [
+          "Letzte",
+          "hatte",
+          "Zeit",
+          "ich",
+          "Woche",
+          "war",
+          "keine",
+          "hat"
         ],
-        "answer": "Ich bin nach Hause gegangen"
+        "correctOrder": [
+          "Letzte",
+          "Woche",
+          "hatte",
+          "ich",
+          "keine",
+          "Zeit"
+        ],
+        "reviewOf": "past-simple-3",
+        "reviewLand": "past-simple",
+        "tip": "pastSimpleThree.questDescription"
       },
       {
         "id": 13,
-        "type": "speechToText",
-        "question": "pastValleyQuestOne.questThirteen",
-        "text": "Er hat gar nichts gesagt",
-        "answer": "Er hat gar nichts gesagt"
+        "type": "reorder",
+        "question": "a2Course.t24",
+        "words": [
+          "wartet",
+          "warten",
+          "musste",
+          "mussten",
+          "lange",
+          "Wir"
+        ],
+        "correctOrder": [
+          "Wir",
+          "mussten",
+          "lange",
+          "warten"
+        ],
+        "reviewOf": "past-simple-4",
+        "reviewLand": "past-simple",
+        "tip": "pastSimpleFour.questDescription"
       },
       {
         "id": 14,
         "type": "reorder",
         "question": "pastValleyQuestOne.questFourteen",
-        "words": ["gearbeitet", "heute", "Sie", "hat"],
-        "correctOrder": ["Sie", "hat", "heute", "gearbeitet"],
+        "words": [
+          "gearbeitet",
+          "heute",
+          "Sie",
+          "hat"
+        ],
+        "correctOrder": [
+          "Sie",
+          "hat",
+          "heute",
+          "gearbeitet"
+        ],
         "tip": "pastValleyQuestOne.questFourteenTip"
       },
       {
@@ -143,7 +250,80 @@
           "Die Kinder hat gespielt",
           "Die Kinder hast gespielt"
         ],
-        "answer": "Die Kinder haben gespielt"
+        "answer": "Die Kinder haben gespielt",
+        "tip": "a2Course.tipPerfekt"
+      }
+    ],
+    "vocabulary": [
+      {
+        "word": "gehören",
+        "translation-ru": "принадлежать",
+        "translation-en": "to belong to",
+        "translation-uk": "належати",
+        "translation-pl": "należeć do",
+        "translation-es": "pertenecer",
+        "translation-fr": "appartenir à",
+        "translation-tr": "ait olmak",
+        "translation-ro": "a aparține",
+        "translation-uz": "tegishli bo'lmoq",
+        "translation-hi": "का होना",
+        "translation-ar": "يخص / ينتمي إلى"
+      },
+      {
+        "word": "essen",
+        "translation-ru": "есть / кушать",
+        "translation-en": "to eat",
+        "translation-uk": "їсти",
+        "translation-pl": "jeść",
+        "translation-es": "comer",
+        "translation-fr": "manger",
+        "translation-tr": "yemek yemek",
+        "translation-ro": "a mânca",
+        "translation-uz": "yemoq",
+        "translation-hi": "खाना",
+        "translation-ar": "يأكل"
+      },
+      {
+        "word": "alles",
+        "translation-ru": "всё",
+        "translation-en": "everything",
+        "translation-uk": "усе",
+        "translation-pl": "wszystko",
+        "translation-es": "todo",
+        "translation-fr": "tout",
+        "translation-tr": "her şey",
+        "translation-ro": "totul",
+        "translation-uz": "hammasi",
+        "translation-hi": "सब कुछ",
+        "translation-ar": "كل شيء"
+      },
+      {
+        "word": "lachen",
+        "translation-ru": "смеяться",
+        "translation-en": "to laugh",
+        "translation-uk": "сміятися",
+        "translation-pl": "śmiać się",
+        "translation-es": "reír",
+        "translation-fr": "rire",
+        "translation-tr": "gülmek",
+        "translation-ro": "a râde",
+        "translation-uz": "kulmoq",
+        "translation-hi": "हँसना",
+        "translation-ar": "يضحك"
+      },
+      {
+        "word": "der Fußball",
+        "translation-ru": "футбол",
+        "translation-en": "football",
+        "translation-uk": "футбол",
+        "translation-pl": "piłka nożna",
+        "translation-es": "fútbol",
+        "translation-fr": "football",
+        "translation-tr": "futbol",
+        "translation-ro": "fotbal",
+        "translation-uz": "futbol",
+        "translation-hi": "फ़ुटबॉल",
+        "translation-ar": "كرة القدم"
       }
     ]
   },
@@ -169,8 +349,22 @@
         "id": 1,
         "type": "reorder",
         "question": "pastValleyQuestTwo.questOne",
-        "words": ["gegangen", "habe", "ins", "bin", "Ich", "Kino"],
-        "correctOrder": ["Ich", "bin", "ins", "Kino", "gegangen"]
+        "words": [
+          "gegangen",
+          "habe",
+          "ins",
+          "bin",
+          "Ich",
+          "Kino"
+        ],
+        "correctOrder": [
+          "Ich",
+          "bin",
+          "ins",
+          "Kino",
+          "gegangen"
+        ],
+        "tip": "a2Course.tipPerfekt"
       },
       {
         "id": 2,
@@ -178,7 +372,7 @@
         "question": "pastValleyQuestTwo.questTwo",
         "options": [
           "Wir haben in Berlin gekommen",
-          "Wir sind in Berlin gekommen",
+          "Wir sind in Berlin ankommen",
           "Wir sind in Berlin angekommen"
         ],
         "answer": "Wir sind in Berlin angekommen",
@@ -189,14 +383,28 @@
         "type": "speechToText",
         "question": "pastValleyQuestTwo.questThree",
         "text": "Er ist nach Hause gelaufen",
-        "answer": "Er ist nach Hause gelaufen"
+        "answer": "Er ist nach Hause gelaufen",
+        "tip": "a2Course.tipPerfekt"
       },
       {
         "id": 4,
         "type": "reorder",
         "question": "pastValleyQuestTwo.questFour",
-        "words": ["ans", "Sie", "Meer", "sind", "gefahren", "haben"],
-        "correctOrder": ["Sie", "sind", "ans", "Meer", "gefahren"],
+        "words": [
+          "ans",
+          "Sie",
+          "Meer",
+          "sind",
+          "gefahren",
+          "haben"
+        ],
+        "correctOrder": [
+          "Sie",
+          "sind",
+          "ans",
+          "Meer",
+          "gefahren"
+        ],
         "tip": "pastValleyQuestTwo.questFourTip"
       },
       {
@@ -215,8 +423,20 @@
         "id": 6,
         "type": "reorder",
         "question": "pastValleyQuestTwo.questSix",
-        "words": ["sind", "schnell", "Die Kinder", "gewachsen", "haben"],
-        "correctOrder": ["Die Kinder", "sind", "schnell", "gewachsen"]
+        "words": [
+          "sind",
+          "schnell",
+          "Die Kinder",
+          "gewachsen",
+          "haben"
+        ],
+        "correctOrder": [
+          "Die Kinder",
+          "sind",
+          "schnell",
+          "gewachsen"
+        ],
+        "tip": "a2Course.tipPerfekt"
       },
       {
         "id": 7,
@@ -227,7 +447,8 @@
         "accept": [
           "Ich bin zwei Stunden später gekommen",
           "Ich bin 2 Stunden später gekommen"
-        ]
+        ],
+        "tip": "a2Course.tipPerfekt"
       },
       {
         "id": 8,
@@ -238,14 +459,27 @@
           "Ihr sind schnell gefahren",
           "Ihr habt schnell gefahren"
         ],
-        "answer": "Ihr seid schnell gefahren"
+        "answer": "Ihr seid schnell gefahren",
+        "tip": "a2Course.tipPerfekt"
       },
       {
         "id": 9,
         "type": "reorder",
         "question": "pastValleyQuestTwo.questNine",
-        "words": ["ist", "Sie", "nach", "München", "gefahren"],
-        "correctOrder": ["Sie", "ist", "nach", "München", "gefahren"],
+        "words": [
+          "ist",
+          "Sie",
+          "nach",
+          "München",
+          "gefahren"
+        ],
+        "correctOrder": [
+          "Sie",
+          "ist",
+          "nach",
+          "München",
+          "gefahren"
+        ],
         "tip": "pastValleyQuestTwo.questNineTip"
       },
       {
@@ -253,42 +487,99 @@
         "type": "speechToText",
         "question": "pastValleyQuestTwo.questTen",
         "text": "Was ist passiert?",
-        "answer": "Was ist passiert?"
+        "answer": "Was ist passiert?",
+        "tip": "a2Course.tipPerfekt"
       },
       {
         "id": 11,
         "type": "reorder",
-        "question": "pastValleyQuestTwo.questEleven",
-        "words": ["bin", "Ich", "eingeschlafen", "habe"],
-        "correctOrder": ["Ich", "bin", "eingeschlafen"],
-        "tip": "pastValleyQuestTwo.questElevenTip"
+        "question": "pastValleyQuestOne.questOne",
+        "words": [
+          "gespielt",
+          "Fußball",
+          "habe",
+          "Ich"
+        ],
+        "correctOrder": [
+          "Ich",
+          "habe",
+          "Fußball",
+          "gespielt"
+        ],
+        "reviewOf": "past-one",
+        "reviewLand": "past-land",
+        "tip": "a2Course.tipPerfekt"
       },
       {
         "id": 12,
-        "type": "select",
-        "question": "pastValleyQuestTwo.questTwelve",
-        "options": [
-          "Wir sind im See geschwommen",
-          "Wir haben im See geschwommen",
-          "Wir sind im See geschwimmen"
+        "type": "reorder",
+        "question": "a2Course.t25",
+        "words": [
+          "du",
+          "konnte",
+          "nicht",
+          "Konntest",
+          "kommen",
+          "kommst",
+          "gestern"
         ],
-        "answer": "Wir sind im See geschwommen",
-        "tip": "pastValleyQuestTwo.questTwelveTip"
+        "correctOrder": [
+          "Konntest",
+          "du",
+          "gestern",
+          "nicht",
+          "kommen"
+        ],
+        "reviewOf": "past-simple-4",
+        "reviewLand": "past-simple",
+        "tip": "pastSimpleFour.questDescription"
       },
       {
         "id": 13,
-        "type": "speechToText",
-        "question": "pastValleyQuestTwo.questThirteen",
-        "text": "Bist du schon angekommen?",
-        "answer": "Bist du schon angekommen?",
-        "tip": "pastValleyQuestTwo.questThirteenTip"
+        "type": "reorder",
+        "question": "a2Course.t26",
+        "words": [
+          "Mein",
+          "wollten",
+          "wollte",
+          "Wien",
+          "wohnt",
+          "in",
+          "Bruder",
+          "wohnen"
+        ],
+        "correctOrder": [
+          "Mein",
+          "Bruder",
+          "wollte",
+          "in",
+          "Wien",
+          "wohnen"
+        ],
+        "reviewOf": "past-simple-5",
+        "reviewLand": "past-simple",
+        "tip": "pastSimpleFive.questDescription"
       },
       {
         "id": 14,
         "type": "reorder",
         "question": "pastValleyQuestTwo.questFourteen",
-        "words": ["nach", "Alle", "sind", "Hause", "gegangen", "haben", "zu"],
-        "correctOrder": ["Alle", "sind", "nach", "Hause", "gegangen"],
+        "words": [
+          "nach",
+          "Alle",
+          "sind",
+          "Hause",
+          "gegangen",
+          "haben",
+          "zu"
+        ],
+        "correctOrder": [
+          "Alle",
+          "sind",
+          "nach",
+          "Hause",
+          "gegangen"
+        ],
         "tip": "pastValleyQuestTwo.questFourteenTip"
       },
       {
@@ -303,11 +594,85 @@
         "answer": "Er ist spät gekommen",
         "tip": "pastValleyQuestTwo.questFifteenTip"
       }
+    ],
+    "vocabulary": [
+      {
+        "word": "passieren",
+        "translation-ru": "происходить / случаться",
+        "translation-en": "to happen",
+        "translation-uk": "ставатися / відбуватися",
+        "translation-pl": "wydarzyć się",
+        "translation-es": "pasar / ocurrir",
+        "translation-fr": "se passer / arriver",
+        "translation-tr": "olmak / vuku bulmak",
+        "translation-ro": "a se întâmpla",
+        "translation-uz": "sodir bo'lmoq",
+        "translation-hi": "होना / घटना",
+        "translation-ar": "يحدث"
+      },
+      {
+        "word": "der Fußball",
+        "translation-ru": "футбол",
+        "translation-en": "football",
+        "translation-uk": "футбол",
+        "translation-pl": "piłka nożna",
+        "translation-es": "fútbol",
+        "translation-fr": "football",
+        "translation-tr": "futbol",
+        "translation-ro": "fotbal",
+        "translation-uz": "futbol",
+        "translation-hi": "फ़ुटबॉल",
+        "translation-ar": "كرة القدم"
+      },
+      {
+        "word": "alle",
+        "translation-ru": "все",
+        "translation-en": "all",
+        "translation-uk": "усі",
+        "translation-pl": "wszyscy",
+        "translation-es": "todos",
+        "translation-fr": "tous",
+        "translation-tr": "hepsi",
+        "translation-ro": "toți",
+        "translation-uz": "hamma",
+        "translation-hi": "सब",
+        "translation-ar": "الجميع"
+      },
+      {
+        "word": "wir",
+        "translation-ru": "мы",
+        "translation-en": "we",
+        "translation-uk": "ми",
+        "translation-pl": "my",
+        "translation-es": "nosotros",
+        "translation-fr": "nous",
+        "translation-tr": "biz",
+        "translation-ro": "noi",
+        "translation-uz": "biz",
+        "translation-hi": "हम",
+        "translation-ar": "نحن"
+      },
+      {
+        "word": "er",
+        "translation-ru": "он",
+        "translation-en": "he",
+        "translation-uk": "він",
+        "translation-pl": "on",
+        "translation-es": "él",
+        "translation-fr": "il",
+        "translation-tr": "o (eril)",
+        "translation-ro": "el",
+        "translation-uz": "u (erkak)",
+        "translation-hi": "वह (पुरुष)",
+        "translation-ar": "هو"
+      }
     ]
   },
   {
     "questId": "past-three",
-    "aliases": ["perfekt-my-day"],
+    "aliases": [
+      "perfekt-my-day"
+    ],
     "title": "pastValleyQuestThree.title",
     "progress": "0/15",
     "description": "pastValleyQuestThree.description",
@@ -325,8 +690,19 @@
         "id": 1,
         "type": "reorder",
         "question": "pastValleyQuestThree.questOne",
-        "words": ["habe", "aufgewacht", "früh", "Ich", "bin"],
-        "correctOrder": ["Ich", "bin", "früh", "aufgewacht"],
+        "words": [
+          "habe",
+          "aufgewacht",
+          "früh",
+          "Ich",
+          "bin"
+        ],
+        "correctOrder": [
+          "Ich",
+          "bin",
+          "früh",
+          "aufgewacht"
+        ],
         "tip": "pastValleyQuestThree.questOneTip"
       },
       {
@@ -346,14 +722,28 @@
         "type": "speechToText",
         "question": "pastValleyQuestThree.questThree",
         "text": "Ich habe gefrühstückt",
-        "answer": "Ich habe gefrühstückt"
+        "answer": "Ich habe gefrühstückt",
+        "tip": "a2Course.tipPerfekt"
       },
       {
         "id": 4,
         "type": "reorder",
         "question": "pastValleyQuestThree.questFour",
-        "words": ["hat", "gegangen", "zur", "Er", "Arbeit", "ist"],
-        "correctOrder": ["Er", "ist", "zur", "Arbeit", "gegangen"],
+        "words": [
+          "hat",
+          "gegangen",
+          "zur",
+          "Er",
+          "Arbeit",
+          "ist"
+        ],
+        "correctOrder": [
+          "Er",
+          "ist",
+          "zur",
+          "Arbeit",
+          "gegangen"
+        ],
         "tip": "pastValleyQuestThree.questFourTip"
       },
       {
@@ -365,14 +755,28 @@
           "Ich bin viel gearbeitet",
           "Ich habe viel gearbeiten"
         ],
-        "answer": "Ich habe viel gearbeitet"
+        "answer": "Ich habe viel gearbeitet",
+        "tip": "a2Course.tipPerfekt"
       },
       {
         "id": 6,
         "type": "reorder",
         "question": "pastValleyQuestThree.questSix",
-        "words": ["zu", "Wir", "Mittag", "gegessen", "haben", "sind"],
-        "correctOrder": ["Wir", "haben", "zu", "Mittag", "gegessen"],
+        "words": [
+          "zu",
+          "Wir",
+          "Mittag",
+          "gegessen",
+          "haben",
+          "sind"
+        ],
+        "correctOrder": [
+          "Wir",
+          "haben",
+          "zu",
+          "Mittag",
+          "gegessen"
+        ],
         "tip": "pastValleyQuestThree.questSixTip"
       },
       {
@@ -380,7 +784,8 @@
         "type": "speechToText",
         "question": "pastValleyQuestThree.questSeven",
         "text": "Ich habe einen Freund getroffen",
-        "answer": "Ich habe einen Freund getroffen"
+        "answer": "Ich habe einen Freund getroffen",
+        "tip": "a2Course.tipPerfekt"
       },
       {
         "id": 8,
@@ -391,14 +796,29 @@
           "Bist du Lebensmittel eingekauft?",
           "Hast du Lebensmittel geinkauft?"
         ],
-        "answer": "Hast du Lebensmittel eingekauft?"
+        "answer": "Hast du Lebensmittel eingekauft?",
+        "tip": "a2Course.tipPerfekt"
       },
       {
         "id": 9,
         "type": "reorder",
         "question": "pastValleyQuestThree.questNine",
-        "words": ["ist", "gekocht", "Abendessen", "hat", "Sie", "das"],
-        "correctOrder": ["Sie", "hat", "das", "Abendessen", "gekocht"]
+        "words": [
+          "ist",
+          "gekocht",
+          "Abendessen",
+          "hat",
+          "Sie",
+          "das"
+        ],
+        "correctOrder": [
+          "Sie",
+          "hat",
+          "das",
+          "Abendessen",
+          "gekocht"
+        ],
+        "tip": "a2Course.tipPerfekt"
       },
       {
         "id": 10,
@@ -409,41 +829,104 @@
         "accept": [
           "Ich bin eine Stunde zu spät gekommen",
           "Ich bin 1 Stunde zu spät gekommen"
-        ]
+        ],
+        "tip": "a2Course.tipPerfekt"
       },
       {
         "id": 11,
         "type": "reorder",
-        "question": "pastValleyQuestThree.questEleven",
-        "words": ["sind", "einen", "Film", "haben", "Wir", "gesehen"],
-        "correctOrder": ["Wir", "haben", "einen", "Film", "gesehen"],
-        "tip": "pastValleyQuestThree.questElevenTip"
+        "question": "pastValleyQuestTwo.questOne",
+        "words": [
+          "gegangen",
+          "habe",
+          "ins",
+          "bin",
+          "Ich",
+          "Kino"
+        ],
+        "correctOrder": [
+          "Ich",
+          "bin",
+          "ins",
+          "Kino",
+          "gegangen"
+        ],
+        "reviewOf": "past-two",
+        "reviewLand": "past-land",
+        "tip": "a2Course.tipPerfekt"
       },
       {
         "id": 12,
-        "type": "select",
-        "question": "pastValleyQuestThree.questTwelve",
-        "options": [
-          "Ich bin schnell eingeschlafen",
-          "Ich habe schnell eingeschlafen",
-          "Ich bin schnell einschlafen"
+        "type": "reorder",
+        "question": "a2Course.t27",
+        "words": [
+          "durften",
+          "lange",
+          "Kinder",
+          "spielen",
+          "durfte",
+          "Die",
+          "spielten"
         ],
-        "answer": "Ich bin schnell eingeschlafen",
-        "tip": "pastValleyQuestThree.questTwelveTip"
+        "correctOrder": [
+          "Die",
+          "Kinder",
+          "durften",
+          "lange",
+          "spielen"
+        ],
+        "reviewOf": "past-simple-5",
+        "reviewLand": "past-simple",
+        "tip": "pastSimpleFive.questDescription"
       },
       {
         "id": 13,
-        "type": "speechToText",
-        "question": "pastValleyQuestThree.questThirteen",
-        "text": "Was hast du heute gemacht?",
-        "answer": "Was hast du heute gemacht?"
+        "type": "reorder",
+        "question": "a2Course.t28",
+        "words": [
+          "Kino",
+          "bist",
+          "Warst",
+          "gestern",
+          "im",
+          "war",
+          "du"
+        ],
+        "correctOrder": [
+          "Warst",
+          "du",
+          "gestern",
+          "im",
+          "Kino"
+        ],
+        "reviewOf": "past-simple-1",
+        "reviewLand": "past-simple",
+        "tip": "pastSimple.questDescription"
       },
       {
         "id": 14,
         "type": "reorder",
         "question": "pastValleyQuestThree.questFourteen",
-        "words": ["Deutsch", "gelernt", "habe", "Ich", "ganzen", "Tag", "lernen", "den"],
-        "correctOrder": ["Ich", "habe", "den", "ganzen", "Tag", "Deutsch", "gelernt"]
+        "words": [
+          "Deutsch",
+          "gelernt",
+          "habe",
+          "Ich",
+          "ganzen",
+          "Tag",
+          "lernen",
+          "den"
+        ],
+        "correctOrder": [
+          "Ich",
+          "habe",
+          "den",
+          "ganzen",
+          "Tag",
+          "Deutsch",
+          "gelernt"
+        ],
+        "tip": "a2Course.tipPerfekt"
       },
       {
         "id": 15,
@@ -457,11 +940,99 @@
         "answer": "Ich bin um 23 Uhr schlafen gegangen",
         "tip": "pastValleyQuestThree.questFifteenTip"
       }
+    ],
+    "vocabulary": [
+      {
+        "word": "aufwachen",
+        "translation-ru": "просыпаться",
+        "translation-en": "to wake up",
+        "translation-uk": "прокидатися",
+        "translation-pl": "obudzić się",
+        "translation-es": "despertarse",
+        "translation-fr": "se réveiller",
+        "translation-tr": "uyanmak",
+        "translation-ro": "a se trezi",
+        "translation-uz": "uyg'onmoq",
+        "translation-hi": "जागना",
+        "translation-ar": "يستيقظ"
+      },
+      {
+        "word": "der Mittag",
+        "translation-ru": "полдень",
+        "translation-en": "midday",
+        "translation-uk": "полудень",
+        "translation-pl": "południe",
+        "translation-es": "el mediodía",
+        "translation-fr": "le midi",
+        "translation-tr": "öğle",
+        "translation-ro": "prânzul",
+        "translation-uz": "tush",
+        "translation-hi": "दोपहर",
+        "translation-ar": "الظهر"
+      },
+      {
+        "word": "essen",
+        "translation-ru": "есть / кушать",
+        "translation-en": "to eat",
+        "translation-uk": "їсти",
+        "translation-pl": "jeść",
+        "translation-es": "comer",
+        "translation-fr": "manger",
+        "translation-tr": "yemek yemek",
+        "translation-ro": "a mânca",
+        "translation-uz": "yemoq",
+        "translation-hi": "खाना",
+        "translation-ar": "يأكل"
+      },
+      {
+        "word": "viel",
+        "translation-ru": "много",
+        "translation-en": "much, a lot",
+        "translation-uk": "багато",
+        "translation-pl": "dużo",
+        "translation-es": "mucho",
+        "translation-fr": "beaucoup",
+        "translation-tr": "çok",
+        "translation-ro": "mult",
+        "translation-uz": "ko‘p",
+        "translation-hi": "बहुत",
+        "translation-ar": "كثير"
+      },
+      {
+        "word": "kochen",
+        "translation-ru": "готовить / варить",
+        "translation-en": "to cook",
+        "translation-uk": "готувати / варити",
+        "translation-pl": "gotować",
+        "translation-es": "cocinar",
+        "translation-fr": "cuisiner",
+        "translation-tr": "yemek pişirmek",
+        "translation-ro": "a găti",
+        "translation-uz": "ovqat pishirmoq",
+        "translation-hi": "पकाना",
+        "translation-ar": "يطبخ"
+      },
+      {
+        "word": "die Lebensmittel",
+        "translation-ru": "продукты",
+        "translation-en": "groceries",
+        "translation-uk": "продукти",
+        "translation-pl": "artykuły spożywcze",
+        "translation-es": "los alimentos",
+        "translation-fr": "les aliments",
+        "translation-tr": "gıda",
+        "translation-ro": "alimentele",
+        "translation-uz": "oziq-ovqat",
+        "translation-hi": "खाद्य सामग्री",
+        "translation-ar": "المواد الغذائية"
+      }
     ]
   },
   {
     "questId": "past-four",
-    "aliases": ["perfekt-no-ge"],
+    "aliases": [
+      "perfekt-no-ge"
+    ],
     "title": "pastValleyQuestFour.title",
     "progress": "0/15",
     "description": "pastValleyQuestFour.description",
@@ -479,8 +1050,21 @@
         "id": 1,
         "type": "reorder",
         "question": "pastValleyQuestFour.questOne",
-        "words": ["besucht", "meine", "Oma", "habe", "Ich"],
-        "correctOrder": ["Ich", "habe", "meine", "Oma", "besucht"]
+        "words": [
+          "besucht",
+          "meine",
+          "Oma",
+          "habe",
+          "Ich"
+        ],
+        "correctOrder": [
+          "Ich",
+          "habe",
+          "meine",
+          "Oma",
+          "besucht"
+        ],
+        "tip": "a2Course.tipPerfekt"
       },
       {
         "id": 2,
@@ -499,14 +1083,29 @@
         "type": "speechToText",
         "question": "pastValleyQuestFour.questThree",
         "text": "Er hat die Schlüssel vergessen",
-        "answer": "Er hat die Schlüssel vergessen"
+        "answer": "Er hat die Schlüssel vergessen",
+        "tip": "a2Course.tipPerfekt"
       },
       {
         "id": 4,
         "type": "reorder",
         "question": "pastValleyQuestFour.questFour",
-        "words": ["verloren", "Geld", "haben", "Wir", "das", "sind"],
-        "correctOrder": ["Wir", "haben", "das", "Geld", "verloren"]
+        "words": [
+          "verloren",
+          "Geld",
+          "haben",
+          "Wir",
+          "das",
+          "sind"
+        ],
+        "correctOrder": [
+          "Wir",
+          "haben",
+          "das",
+          "Geld",
+          "verloren"
+        ],
+        "tip": "a2Course.tipPerfekt"
       },
       {
         "id": 5,
@@ -524,15 +1123,27 @@
         "id": 6,
         "type": "reorder",
         "question": "pastValleyQuestFour.questSix",
-        "words": ["gehört", "mir", "hat", "Das"],
-        "correctOrder": ["Das", "hat", "mir", "gehört"]
+        "words": [
+          "gehört",
+          "mir",
+          "hat",
+          "Das"
+        ],
+        "correctOrder": [
+          "Das",
+          "hat",
+          "mir",
+          "gehört"
+        ],
+        "tip": "a2Course.tipPerfekt"
       },
       {
         "id": 7,
         "type": "speechToText",
         "question": "pastValleyQuestFour.questSeven",
         "text": "Haben Sie den Brief bekommen?",
-        "answer": "Haben Sie den Brief bekommen?"
+        "answer": "Haben Sie den Brief bekommen?",
+        "tip": "a2Course.tipPerfekt"
       },
       {
         "id": 8,
@@ -550,8 +1161,20 @@
         "id": 9,
         "type": "reorder",
         "question": "pastValleyQuestFour.questNine",
-        "words": ["verkauft", "das", "hat", "Er", "Auto"],
-        "correctOrder": ["Er", "hat", "das", "Auto", "verkauft"],
+        "words": [
+          "verkauft",
+          "das",
+          "hat",
+          "Er",
+          "Auto"
+        ],
+        "correctOrder": [
+          "Er",
+          "hat",
+          "das",
+          "Auto",
+          "verkauft"
+        ],
         "tip": "pastValleyQuestFour.questNineTip"
       },
       {
@@ -559,41 +1182,93 @@
         "type": "speechToText",
         "question": "pastValleyQuestFour.questTen",
         "text": "Wir haben das erlebt",
-        "answer": "Wir haben das erlebt"
+        "answer": "Wir haben das erlebt",
+        "tip": "a2Course.tipPerfekt"
       },
       {
         "id": 11,
         "type": "reorder",
-        "question": "pastValleyQuestFour.questEleven",
-        "words": ["das", "versprochen", "hast", "Du"],
-        "correctOrder": ["Du", "hast", "das", "versprochen"]
+        "question": "pastValleyQuestThree.questOne",
+        "words": [
+          "habe",
+          "aufgewacht",
+          "früh",
+          "Ich",
+          "bin"
+        ],
+        "correctOrder": [
+          "Ich",
+          "bin",
+          "früh",
+          "aufgewacht"
+        ],
+        "tip": "pastValleyQuestThree.questOneTip",
+        "reviewOf": "past-three",
+        "reviewLand": "past-land"
       },
       {
         "id": 12,
-        "type": "select",
-        "question": "pastValleyQuestFour.questTwelve",
-        "options": [
-          "Sie hat Pizza bestellt",
-          "Sie hat Pizza gebestellt",
-          "Sie hat Pizza bestellen"
+        "type": "reorder",
+        "question": "pastValleyQuestOne.questFour",
+        "words": [
+          "gekauft",
+          "ist",
+          "Brot",
+          "hat",
+          "Er"
         ],
-        "answer": "Sie hat Pizza bestellt",
-        "tip": "pastValleyQuestFour.questTwelveTip"
+        "correctOrder": [
+          "Er",
+          "hat",
+          "Brot",
+          "gekauft"
+        ],
+        "reviewOf": "past-one",
+        "reviewLand": "past-land",
+        "tip": "a2Course.tipPerfekt"
       },
       {
         "id": 13,
-        "type": "speechToText",
-        "question": "pastValleyQuestFour.questThirteen",
-        "text": "Was ist passiert?",
-        "answer": "Was ist passiert?",
-        "tip": "pastValleyQuestFour.questThirteenTip"
+        "type": "reorder",
+        "question": "a2Course.t29",
+        "words": [
+          "hatten",
+          "habt",
+          "am",
+          "Hattet",
+          "ihr",
+          "Gäste",
+          "Samstag"
+        ],
+        "correctOrder": [
+          "Hattet",
+          "ihr",
+          "am",
+          "Samstag",
+          "Gäste"
+        ],
+        "reviewOf": "past-simple-2",
+        "reviewLand": "past-simple",
+        "tip": "pastSimpleTwo.questDescription"
       },
       {
         "id": 14,
         "type": "reorder",
         "question": "pastValleyQuestFour.questFourteen",
-        "words": ["erkannt", "den", "habe", "Ich", "Freund"],
-        "correctOrder": ["Ich", "habe", "den", "Freund", "erkannt"],
+        "words": [
+          "erkannt",
+          "den",
+          "habe",
+          "Ich",
+          "Freund"
+        ],
+        "correctOrder": [
+          "Ich",
+          "habe",
+          "den",
+          "Freund",
+          "erkannt"
+        ],
         "tip": "pastValleyQuestFour.questFourteenTip"
       },
       {
@@ -608,11 +1283,113 @@
         "answer": "Wir haben uns verspätet",
         "tip": "pastValleyQuestFour.questFifteenTip"
       }
+    ],
+    "vocabulary": [
+      {
+        "word": "verlieren",
+        "translation-ru": "терять / проигрывать",
+        "translation-en": "to lose",
+        "translation-uk": "втрачати / програвати",
+        "translation-pl": "tracić / przegrywać",
+        "translation-es": "perder",
+        "translation-fr": "perdre",
+        "translation-tr": "kaybetmek",
+        "translation-ro": "a pierde",
+        "translation-uz": "yo'qotmoq",
+        "translation-hi": "खोना",
+        "translation-ar": "يخسر / يفقد"
+      },
+      {
+        "word": "die Geschichte",
+        "translation-ru": "история, рассказ",
+        "translation-en": "story",
+        "translation-uk": "історія",
+        "translation-pl": "historia",
+        "translation-es": "la historia",
+        "translation-fr": "l’histoire",
+        "translation-tr": "hikâye",
+        "translation-ro": "povestea",
+        "translation-uz": "hikoya",
+        "translation-hi": "कहानी",
+        "translation-ar": "القصة"
+      },
+      {
+        "word": "erzähln",
+        "translation-ru": "рассказывать",
+        "translation-en": "to tell / narrate",
+        "translation-uk": "розповідати",
+        "translation-pl": "opowiadać",
+        "translation-es": "contar / narrar",
+        "translation-fr": "raconter",
+        "translation-tr": "anlatmak",
+        "translation-ro": "a povesti",
+        "translation-uz": "hikoya qilmoq",
+        "translation-hi": "बताना",
+        "translation-ar": "يحكي"
+      },
+      {
+        "word": "erleben",
+        "translation-ru": "переживать / испытывать",
+        "translation-en": "to experience",
+        "translation-uk": "переживати",
+        "translation-pl": "przeżywać / doświadczać",
+        "translation-es": "experimentar / vivir",
+        "translation-fr": "vivre / faire l'expérience de",
+        "translation-tr": "deneyimlemek / yaşamak",
+        "translation-ro": "a trăi / a experimenta",
+        "translation-uz": "boshdan kechirmoq",
+        "translation-hi": "अनुभव करना",
+        "translation-ar": "يعيش"
+      },
+      {
+        "word": "erkennen",
+        "translation-ru": "узнавать / распознавать",
+        "translation-en": "to recognize",
+        "translation-uk": "впізнавати",
+        "translation-pl": "rozpoznawać",
+        "translation-es": "reconocer",
+        "translation-fr": "reconnaître",
+        "translation-tr": "tanımak / fark etmek",
+        "translation-ro": "a recunoaște",
+        "translation-uz": "tanimoq",
+        "translation-hi": "पहचानना",
+        "translation-ar": "يتعرف على"
+      },
+      {
+        "word": "vergessen",
+        "translation-ru": "забывать",
+        "translation-en": "to forget",
+        "translation-uk": "забувати",
+        "translation-pl": "zapominać",
+        "translation-es": "olvidar",
+        "translation-fr": "oublier",
+        "translation-tr": "unutmak",
+        "translation-ro": "a uita",
+        "translation-uz": "unutmoq",
+        "translation-hi": "भूलना",
+        "translation-ar": "ينسى"
+      },
+      {
+        "word": "sich verspäten",
+        "translation-ru": "опаздывать",
+        "translation-en": "to be late",
+        "translation-uk": "запізнюватися",
+        "translation-pl": "spóźniać się",
+        "translation-es": "retrasarse",
+        "translation-fr": "être en retard",
+        "translation-tr": "gecikmek",
+        "translation-ro": "a întârzia",
+        "translation-uz": "kechikmoq",
+        "translation-hi": "देर होना",
+        "translation-ar": "يتأخر"
+      }
     ]
   },
   {
     "questId": "past-five",
-    "aliases": ["perfekt-dinner"],
+    "aliases": [
+      "perfekt-dinner"
+    ],
     "title": "pastValleyQuestFive.title",
     "progress": "0/15",
     "description": "pastValleyQuestFive.description",
@@ -630,8 +1407,21 @@
         "id": 1,
         "type": "reorder",
         "question": "pastValleyQuestFive.questOne",
-        "words": ["bestellt", "eine", "Wir", "Pizza", "haben", "bestellen"],
-        "correctOrder": ["Wir", "haben", "eine", "Pizza", "bestellt"],
+        "words": [
+          "bestellt",
+          "eine",
+          "Wir",
+          "Pizza",
+          "haben",
+          "bestellen"
+        ],
+        "correctOrder": [
+          "Wir",
+          "haben",
+          "eine",
+          "Pizza",
+          "bestellt"
+        ],
         "tip": "pastValleyQuestFive.questOneTip"
       },
       {
@@ -662,8 +1452,20 @@
         "id": 4,
         "type": "reorder",
         "question": "pastValleyQuestFive.questFour",
-        "words": ["schon", "gegessen", "Habt", "ihr", "sind"],
-        "correctOrder": ["Habt", "ihr", "schon", "gegessen"]
+        "words": [
+          "schon",
+          "gegessen",
+          "Habt",
+          "ihr",
+          "sind"
+        ],
+        "correctOrder": [
+          "Habt",
+          "ihr",
+          "schon",
+          "gegessen"
+        ],
+        "tip": "a2Course.tipPerfekt"
       },
       {
         "id": 5,
@@ -681,8 +1483,20 @@
         "id": 6,
         "type": "reorder",
         "question": "pastValleyQuestFive.questSix",
-        "words": ["Salat", "einen", "genommen", "Ich", "habe"],
-        "correctOrder": ["Ich", "habe", "einen", "Salat", "genommen"],
+        "words": [
+          "Salat",
+          "einen",
+          "genommen",
+          "Ich",
+          "habe"
+        ],
+        "correctOrder": [
+          "Ich",
+          "habe",
+          "einen",
+          "Salat",
+          "genommen"
+        ],
         "tip": "pastValleyQuestFive.questSixTip"
       },
       {
@@ -690,7 +1504,8 @@
         "type": "speechToText",
         "question": "pastValleyQuestFive.questSeven",
         "text": "Wir haben bar bezahlt",
-        "answer": "Wir haben bar bezahlt"
+        "answer": "Wir haben bar bezahlt",
+        "tip": "a2Course.tipPerfekt"
       },
       {
         "id": 8,
@@ -701,14 +1516,28 @@
           "Sie ist eine Suppe gekocht",
           "Sie hat eine Suppe gekochen"
         ],
-        "answer": "Sie hat eine Suppe gekocht"
+        "answer": "Sie hat eine Suppe gekocht",
+        "tip": "a2Course.tipPerfekt"
       },
       {
         "id": 9,
         "type": "reorder",
         "question": "pastValleyQuestFive.questNine",
-        "words": ["gegangen", "ins", "Wir", "sind", "Restaurant", "zu"],
-        "correctOrder": ["Wir", "sind", "ins", "Restaurant", "gegangen"],
+        "words": [
+          "gegangen",
+          "ins",
+          "Wir",
+          "sind",
+          "Restaurant",
+          "zu"
+        ],
+        "correctOrder": [
+          "Wir",
+          "sind",
+          "ins",
+          "Restaurant",
+          "gegangen"
+        ],
         "tip": "pastValleyQuestFive.questNineTip"
       },
       {
@@ -722,40 +1551,89 @@
       {
         "id": 11,
         "type": "reorder",
-        "question": "pastValleyQuestFive.questEleven",
-        "words": ["Rechnung", "gebracht", "hat", "Er", "die"],
-        "correctOrder": ["Er", "hat", "die", "Rechnung", "gebracht"],
-        "tip": "pastValleyQuestFive.questElevenTip"
+        "question": "pastValleyQuestFour.questOne",
+        "words": [
+          "besucht",
+          "meine",
+          "Oma",
+          "habe",
+          "Ich"
+        ],
+        "correctOrder": [
+          "Ich",
+          "habe",
+          "meine",
+          "Oma",
+          "besucht"
+        ],
+        "reviewOf": "past-four",
+        "reviewLand": "past-land",
+        "tip": "a2Course.tipPerfekt"
       },
       {
         "id": 12,
-        "type": "select",
-        "question": "pastValleyQuestFive.questTwelve",
-        "options": [
-          "Ich habe mein Portemonnaie vergessen",
-          "Ich habe mein Portemonnaie gevergessen",
-          "Ich bin mein Portemonnaie vergessen"
+        "type": "reorder",
+        "question": "pastValleyQuestTwo.questFour",
+        "words": [
+          "ans",
+          "Sie",
+          "Meer",
+          "sind",
+          "gefahren",
+          "haben"
         ],
-        "answer": "Ich habe mein Portemonnaie vergessen",
-        "tip": "pastValleyQuestFive.questTwelveTip"
+        "correctOrder": [
+          "Sie",
+          "sind",
+          "ans",
+          "Meer",
+          "gefahren"
+        ],
+        "tip": "pastValleyQuestTwo.questFourTip",
+        "reviewOf": "past-two",
+        "reviewLand": "past-land"
       },
       {
         "id": 13,
-        "type": "speechToText",
-        "question": "pastValleyQuestFive.questThirteen",
-        "text": "Das Mittagessen hat 40 Euro gekostet",
-        "answer": "Das Mittagessen hat 40 Euro gekostet",
-        "accept": [
-          "Das Mittagessen hat 40 Euro gekostet",
-          "Das Mittagessen hat vierzig Euro gekostet"
-        ]
+        "type": "reorder",
+        "question": "a2Course.t30",
+        "words": [
+          "den",
+          "sollte",
+          "Ich",
+          "anrufen",
+          "rufe",
+          "Chef",
+          "der"
+        ],
+        "correctOrder": [
+          "Ich",
+          "sollte",
+          "den",
+          "Chef",
+          "anrufen"
+        ],
+        "reviewOf": "past-simple-5",
+        "reviewLand": "past-simple",
+        "tip": "pastSimpleFive.questDescription"
       },
       {
         "id": 14,
         "type": "reorder",
         "question": "pastValleyQuestFive.questFourteen",
-        "words": ["bist", "eingeladen", "Freunde", "Hast", "du"],
-        "correctOrder": ["Hast", "du", "Freunde", "eingeladen"],
+        "words": [
+          "bist",
+          "eingeladen",
+          "Freunde",
+          "Hast",
+          "du"
+        ],
+        "correctOrder": [
+          "Hast",
+          "du",
+          "Freunde",
+          "eingeladen"
+        ],
         "tip": "pastValleyQuestFive.questFourteenTip"
       },
       {
@@ -766,11 +1644,85 @@
         "answer": "Wir haben das Restaurant im Internet gefunden",
         "tip": "pastValleyQuestFive.questFifteenTip"
       }
+    ],
+    "vocabulary": [
+      {
+        "word": "die Suppe",
+        "translation-ru": "суп",
+        "translation-en": "soup",
+        "translation-uk": "суп",
+        "translation-pl": "zupa",
+        "translation-es": "la sopa",
+        "translation-fr": "la soupe",
+        "translation-tr": "çorba",
+        "translation-ro": "supa",
+        "translation-uz": "sho‘rva",
+        "translation-hi": "सूप",
+        "translation-ar": "الحساء"
+      },
+      {
+        "word": "essen",
+        "translation-ru": "есть / кушать",
+        "translation-en": "to eat",
+        "translation-uk": "їсти",
+        "translation-pl": "jeść",
+        "translation-es": "comer",
+        "translation-fr": "manger",
+        "translation-tr": "yemek yemek",
+        "translation-ro": "a mânca",
+        "translation-uz": "yemoq",
+        "translation-hi": "खाना",
+        "translation-ar": "يأكل"
+      },
+      {
+        "word": "schmecken",
+        "translation-ru": "быть вкусным / пробовать на вкус",
+        "translation-en": "to taste",
+        "translation-uk": "смакувати",
+        "translation-pl": "smakować",
+        "translation-es": "saber / gustar",
+        "translation-fr": "goûter / avoir bon goût",
+        "translation-tr": "tadına bakmak / lezzetli olmak",
+        "translation-ro": "a avea gust",
+        "translation-uz": "mazasi bo'lmoq",
+        "translation-hi": "चखना / स्वादिष्ट होना",
+        "translation-ar": "يتذوق"
+      },
+      {
+        "word": "kochen",
+        "translation-ru": "готовить / варить",
+        "translation-en": "to cook",
+        "translation-uk": "готувати / варити",
+        "translation-pl": "gotować",
+        "translation-es": "cocinar",
+        "translation-fr": "cuisiner",
+        "translation-tr": "yemek pişirmek",
+        "translation-ro": "a găti",
+        "translation-uz": "ovqat pishirmoq",
+        "translation-hi": "पकाना",
+        "translation-ar": "يطبخ"
+      },
+      {
+        "word": "meinen",
+        "translation-ru": "считать / иметь в виду",
+        "translation-en": "to mean / think",
+        "translation-uk": "вважати / мати на увазі",
+        "translation-pl": "uważać / mieć na myśli",
+        "translation-es": "pensar / querer decir",
+        "translation-fr": "penser / vouloir dire",
+        "translation-tr": "düşünmek / demek istemek",
+        "translation-ro": "a crede / a vrea să spună",
+        "translation-uz": "o'ylamoq / nazarda tutmoq",
+        "translation-hi": "सोचना / मतलब होना",
+        "translation-ar": "يعتقد / يعني"
+      }
     ]
   },
   {
     "questId": "past-six",
-    "aliases": ["perfekt-travel"],
+    "aliases": [
+      "perfekt-travel"
+    ],
     "title": "pastValleyQuestSix.title",
     "progress": "0/15",
     "description": "pastValleyQuestSix.description",
@@ -788,8 +1740,21 @@
         "id": 1,
         "type": "reorder",
         "question": "pastValleyQuestSix.questOne",
-        "words": ["gepackt", "Koffer", "den", "habe", "Ich"],
-        "correctOrder": ["Ich", "habe", "den", "Koffer", "gepackt"]
+        "words": [
+          "gepackt",
+          "Koffer",
+          "den",
+          "habe",
+          "Ich"
+        ],
+        "correctOrder": [
+          "Ich",
+          "habe",
+          "den",
+          "Koffer",
+          "gepackt"
+        ],
+        "tip": "a2Course.tipPerfekt"
       },
       {
         "id": 2,
@@ -800,7 +1765,8 @@
           "Wir sind die Tickets online gekauft",
           "Wir haben die Tickets online gekaufen"
         ],
-        "answer": "Wir haben die Tickets online gekauft"
+        "answer": "Wir haben die Tickets online gekauft",
+        "tip": "a2Course.tipPerfekt"
       },
       {
         "id": 3,
@@ -814,8 +1780,18 @@
         "id": 4,
         "type": "reorder",
         "question": "pastValleyQuestSix.questFour",
-        "words": ["pünktlich", "ist", "abgeflogen", "Das Flugzeug"],
-        "correctOrder": ["Das Flugzeug", "ist", "pünktlich", "abgeflogen"],
+        "words": [
+          "pünktlich",
+          "ist",
+          "abgeflogen",
+          "Das Flugzeug"
+        ],
+        "correctOrder": [
+          "Das Flugzeug",
+          "ist",
+          "pünktlich",
+          "abgeflogen"
+        ],
         "tip": "pastValleyQuestSix.questFourTip"
       },
       {
@@ -834,8 +1810,21 @@
         "id": 6,
         "type": "reorder",
         "question": "pastValleyQuestSix.questSix",
-        "words": ["Hotel", "das", "habe", "Ich", "gebucht"],
-        "correctOrder": ["Ich", "habe", "das", "Hotel", "gebucht"]
+        "words": [
+          "Hotel",
+          "das",
+          "habe",
+          "Ich",
+          "gebucht"
+        ],
+        "correctOrder": [
+          "Ich",
+          "habe",
+          "das",
+          "Hotel",
+          "gebucht"
+        ],
+        "tip": "a2Course.tipPerfekt"
       },
       {
         "id": 7,
@@ -861,48 +1850,121 @@
         "id": 9,
         "type": "reorder",
         "question": "pastValleyQuestSix.questNine",
-        "words": ["viele", "Fotos", "hat", "Er", "gemacht"],
-        "correctOrder": ["Er", "hat", "viele", "Fotos", "gemacht"]
+        "words": [
+          "viele",
+          "Fotos",
+          "hat",
+          "Er",
+          "gemacht"
+        ],
+        "correctOrder": [
+          "Er",
+          "hat",
+          "viele",
+          "Fotos",
+          "gemacht"
+        ],
+        "tip": "a2Course.tipPerfekt"
       },
       {
         "id": 10,
         "type": "speechToText",
         "question": "pastValleyQuestSix.questTen",
         "text": "Wir haben ein Auto gemietet",
-        "answer": "Wir haben ein Auto gemietet"
+        "answer": "Wir haben ein Auto gemietet",
+        "tip": "a2Course.tipPerfekt"
       },
       {
         "id": 11,
         "type": "reorder",
-        "question": "pastValleyQuestSix.questEleven",
-        "words": ["die", "Bergen", "den", "in", "gewandert", "bin", "Ich"],
-        "correctOrder": ["Ich", "bin", "in", "den", "Bergen", "gewandert"]
+        "question": "pastValleyQuestFive.questOne",
+        "words": [
+          "bestellt",
+          "eine",
+          "Wir",
+          "Pizza",
+          "haben",
+          "bestellen"
+        ],
+        "correctOrder": [
+          "Wir",
+          "haben",
+          "eine",
+          "Pizza",
+          "bestellt"
+        ],
+        "tip": "pastValleyQuestFive.questOneTip",
+        "reviewOf": "past-five",
+        "reviewLand": "past-land"
       },
       {
         "id": 12,
-        "type": "select",
-        "question": "pastValleyQuestSix.questTwelve",
-        "options": [
-          "Sie ist sich am Strand gesonnt",
-          "Sie hat sich am Strand gesonnt",
-          "Sie hat sich am Strand gesonnen"
+        "type": "reorder",
+        "question": "pastValleyQuestThree.questFour",
+        "words": [
+          "hat",
+          "gegangen",
+          "zur",
+          "Er",
+          "Arbeit",
+          "ist"
         ],
-        "answer": "Sie hat sich am Strand gesonnt",
-        "tip": "pastValleyQuestSix.questTwelveTip"
+        "correctOrder": [
+          "Er",
+          "ist",
+          "zur",
+          "Arbeit",
+          "gegangen"
+        ],
+        "tip": "pastValleyQuestThree.questFourTip",
+        "reviewOf": "past-three",
+        "reviewLand": "past-land"
       },
       {
         "id": 13,
-        "type": "speechToText",
-        "question": "pastValleyQuestSix.questThirteen",
-        "text": "Ich habe Souvenirs gekauft",
-        "answer": "Ich habe Souvenirs gekauft"
+        "type": "reorder",
+        "question": "a2Course.t31",
+        "words": [
+          "nicht",
+          "arbeiten",
+          "arbeite",
+          "kann",
+          "Montag",
+          "konnte",
+          "ich",
+          "Am"
+        ],
+        "correctOrder": [
+          "Am",
+          "Montag",
+          "konnte",
+          "ich",
+          "nicht",
+          "arbeiten"
+        ],
+        "reviewOf": "past-simple-6",
+        "reviewLand": "past-simple",
+        "tip": "pastSimpleSix.questDescription"
       },
       {
         "id": 14,
         "type": "reorder",
         "question": "pastValleyQuestSix.questFourteen",
-        "words": ["hat", "Spaß", "gemacht", "Der Urlaub", "viel"],
-        "correctOrder": ["Der Urlaub", "hat", "viel", "Spaß", "gemacht"]
+        "words": [
+          "hat",
+          "Spaß",
+          "gemacht",
+          "Der Urlaub",
+          "viel"
+        ],
+        "correctOrder": [
+          "Der Urlaub",
+          "hat",
+          "viel",
+          "Spaß",
+          "gemacht"
+        ],
+        "tip": "a2Course.tipPerfekt"
       },
       {
         "id": 15,
@@ -916,11 +1978,141 @@
         "answer": "Hast du dich gut erholt?",
         "tip": "pastValleyQuestSix.questFifteenTip"
       }
+    ],
+    "vocabulary": [
+      {
+        "word": "buchen",
+        "translation-ru": "бронировать",
+        "translation-en": "to book / reserve",
+        "translation-uk": "бронювати",
+        "translation-pl": "rezerwować",
+        "translation-es": "reservar",
+        "translation-fr": "réserver",
+        "translation-tr": "rezervasyon yapmak",
+        "translation-ro": "a rezerva",
+        "translation-uz": "band qilmoq",
+        "translation-hi": "आरक्षित करना",
+        "translation-ar": "يحجز"
+      },
+      {
+        "word": "mieten",
+        "translation-ru": "арендовать",
+        "translation-en": "to rent / hire",
+        "translation-uk": "орендувати",
+        "translation-pl": "wynajmować",
+        "translation-es": "alquilar",
+        "translation-fr": "louer",
+        "translation-tr": "kiralamak",
+        "translation-ro": "a închiria",
+        "translation-uz": "ijaraga olmoq",
+        "translation-hi": "किराये पर लेना",
+        "translation-ar": "يستأجر"
+      },
+      {
+        "word": "dauern",
+        "translation-ru": "длиться",
+        "translation-en": "to last / take time",
+        "translation-uk": "тривати",
+        "translation-pl": "trwać",
+        "translation-es": "durar",
+        "translation-fr": "durer",
+        "translation-tr": "sürmek",
+        "translation-ro": "a dura",
+        "translation-uz": "davom etmoq",
+        "translation-hi": "समय लगना",
+        "translation-ar": "يستغرق"
+      },
+      {
+        "word": "viel",
+        "translation-ru": "много",
+        "translation-en": "much, a lot",
+        "translation-uk": "багато",
+        "translation-pl": "dużo",
+        "translation-es": "mucho",
+        "translation-fr": "beaucoup",
+        "translation-tr": "çok",
+        "translation-ro": "mult",
+        "translation-uz": "ko‘p",
+        "translation-hi": "बहुत",
+        "translation-ar": "كثير"
+      },
+      {
+        "word": "packen",
+        "translation-ru": "упаковывать",
+        "translation-en": "to pack / grab",
+        "translation-uk": "пакувати",
+        "translation-pl": "pakować",
+        "translation-es": "empacar",
+        "translation-fr": "emballer / faire sa valise",
+        "translation-tr": "paketlemek / bavul toplamak",
+        "translation-ro": "a împacheta",
+        "translation-uz": "qadoqlamoq",
+        "translation-hi": "पैक करना",
+        "translation-ar": "يحزم / يعبئ"
+      },
+      {
+        "word": "online",
+        "translation-ru": "онлайн",
+        "translation-en": "online",
+        "translation-uk": "онлайн",
+        "translation-pl": "online",
+        "translation-es": "en línea",
+        "translation-fr": "en ligne",
+        "translation-tr": "çevrimiçi",
+        "translation-ro": "online",
+        "translation-uz": "onlayn",
+        "translation-hi": "ऑनलाइन",
+        "translation-ar": "عبر الإنترنت"
+      },
+      {
+        "word": "das Flugzeug",
+        "translation-ru": "самолёт",
+        "translation-en": "plane",
+        "translation-uk": "літак",
+        "translation-pl": "samolot",
+        "translation-es": "el avión",
+        "translation-fr": "l’avion",
+        "translation-tr": "uçak",
+        "translation-ro": "avionul",
+        "translation-uz": "samolyot",
+        "translation-hi": "हवाई जहाज़",
+        "translation-ar": "الطائرة"
+      },
+      {
+        "word": "abfliegen",
+        "translation-ru": "вылетать",
+        "translation-en": "to take off",
+        "translation-uk": "вилітати",
+        "translation-pl": "odlatywać",
+        "translation-es": "despegar",
+        "translation-fr": "décoller",
+        "translation-tr": "uçakla kalkmak",
+        "translation-ro": "a decola",
+        "translation-uz": "uchib ketmoq",
+        "translation-hi": "उड़ान भरना",
+        "translation-ar": "يقلع"
+      },
+      {
+        "word": "sich erholen",
+        "translation-ru": "отдыхать",
+        "translation-en": "to recover, to rest",
+        "translation-uk": "відпочивати",
+        "translation-pl": "odpoczywać",
+        "translation-es": "descansar",
+        "translation-fr": "se reposer",
+        "translation-tr": "dinlenmek",
+        "translation-ro": "a se odihni",
+        "translation-uz": "dam olmoq",
+        "translation-hi": "आराम करना",
+        "translation-ar": "يستريح"
+      }
     ]
   },
   {
     "questId": "past-seven",
-    "aliases": ["perfekt-job"],
+    "aliases": [
+      "perfekt-job"
+    ],
     "title": "pastValleyQuestSeven.title",
     "progress": "0/15",
     "description": "pastValleyQuestSeven.description",
@@ -938,8 +2130,20 @@
         "id": 1,
         "type": "reorder",
         "question": "pastValleyQuestSeven.questOne",
-        "words": ["geschrieben", "E-Mail", "eine", "habe", "Ich"],
-        "correctOrder": ["Ich", "habe", "eine", "E-Mail", "geschrieben"],
+        "words": [
+          "geschrieben",
+          "E-Mail",
+          "eine",
+          "habe",
+          "Ich"
+        ],
+        "correctOrder": [
+          "Ich",
+          "habe",
+          "eine",
+          "E-Mail",
+          "geschrieben"
+        ],
         "tip": "pastValleyQuestSeven.questOneTip"
       },
       {
@@ -951,21 +2155,35 @@
           "Er ist den Chef angerufen",
           "Er hat den Chef geanrufen"
         ],
-        "answer": "Er hat den Chef angerufen"
+        "answer": "Er hat den Chef angerufen",
+        "tip": "a2Course.tipPerfekt"
       },
       {
         "id": 3,
         "type": "speechToText",
         "question": "pastValleyQuestSeven.questThree",
         "text": "Wir haben viel gearbeitet",
-        "answer": "Wir haben viel gearbeitet"
+        "answer": "Wir haben viel gearbeitet",
+        "tip": "a2Course.tipPerfekt"
       },
       {
         "id": 4,
         "type": "reorder",
         "question": "pastValleyQuestSeven.questFour",
-        "words": ["das", "Dokument", "Hast", "gefunden", "du"],
-        "correctOrder": ["Hast", "du", "das", "Dokument", "gefunden"],
+        "words": [
+          "das",
+          "Dokument",
+          "Hast",
+          "gefunden",
+          "du"
+        ],
+        "correctOrder": [
+          "Hast",
+          "du",
+          "das",
+          "Dokument",
+          "gefunden"
+        ],
         "tip": "pastValleyQuestSeven.questFourTip"
       },
       {
@@ -977,14 +2195,27 @@
           "Der Arbeitstag ist um 8 Uhr angefangen",
           "Der Arbeitstag hat um 8 Uhr geanfangen"
         ],
-        "answer": "Der Arbeitstag hat um 8 Uhr angefangen"
+        "answer": "Der Arbeitstag hat um 8 Uhr angefangen",
+        "tip": "a2Course.tipPerfekt"
       },
       {
         "id": 6,
         "type": "reorder",
         "question": "pastValleyQuestSeven.questSix",
-        "words": ["ausgedruckt", "Dokument", "das", "hat", "Er"],
-        "correctOrder": ["Er", "hat", "das", "Dokument", "ausgedruckt"],
+        "words": [
+          "ausgedruckt",
+          "Dokument",
+          "das",
+          "hat",
+          "Er"
+        ],
+        "correctOrder": [
+          "Er",
+          "hat",
+          "das",
+          "Dokument",
+          "ausgedruckt"
+        ],
         "tip": "pastValleyQuestSeven.questSixTip"
       },
       {
@@ -992,7 +2223,8 @@
         "type": "speechToText",
         "question": "pastValleyQuestSeven.questSeven",
         "text": "Ich habe das Passwort vergessen",
-        "answer": "Ich habe das Passwort vergessen"
+        "answer": "Ich habe das Passwort vergessen",
+        "tip": "a2Course.tipPerfekt"
       },
       {
         "id": 8,
@@ -1003,14 +2235,28 @@
           "Er ist den Computer ausgemacht",
           "Er hat den Computer geausmacht"
         ],
-        "answer": "Er hat den Computer ausgemacht"
+        "answer": "Er hat den Computer ausgemacht",
+        "tip": "a2Course.tipPerfekt"
       },
       {
         "id": 9,
         "type": "reorder",
         "question": "pastValleyQuestSeven.questNine",
-        "words": ["Pause", "eine", "gemacht", "Wir", "haben"],
-        "correctOrder": ["Wir", "haben", "eine", "Pause", "gemacht"]
+        "words": [
+          "Pause",
+          "eine",
+          "gemacht",
+          "Wir",
+          "haben"
+        ],
+        "correctOrder": [
+          "Wir",
+          "haben",
+          "eine",
+          "Pause",
+          "gemacht"
+        ],
+        "tip": "a2Course.tipPerfekt"
       },
       {
         "id": 10,
@@ -1023,37 +2269,95 @@
       {
         "id": 11,
         "type": "reorder",
-        "question": "pastValleyQuestSeven.questEleven",
-        "words": ["verstanden", "nicht", "das", "habe", "Ich"],
-        "correctOrder": ["Ich", "habe", "das", "nicht", "verstanden"],
-        "tip": "pastValleyQuestSeven.questElevenTip"
+        "question": "pastValleyQuestSix.questOne",
+        "words": [
+          "gepackt",
+          "Koffer",
+          "den",
+          "habe",
+          "Ich"
+        ],
+        "correctOrder": [
+          "Ich",
+          "habe",
+          "den",
+          "Koffer",
+          "gepackt"
+        ],
+        "reviewOf": "past-six",
+        "reviewLand": "past-land",
+        "tip": "a2Course.tipPerfekt"
       },
       {
         "id": 12,
-        "type": "select",
-        "question": "pastValleyQuestSeven.questTwelve",
-        "options": [
-          "Sie haben miteinander gesprochen",
-          "Sie sind miteinander gesprochen",
-          "Sie haben miteinander gesprechen"
+        "type": "reorder",
+        "question": "pastValleyQuestFour.questFour",
+        "words": [
+          "verloren",
+          "Geld",
+          "haben",
+          "Wir",
+          "das",
+          "sind"
         ],
-        "answer": "Sie haben miteinander gesprochen",
-        "tip": "pastValleyQuestSeven.questTwelveTip"
+        "correctOrder": [
+          "Wir",
+          "haben",
+          "das",
+          "Geld",
+          "verloren"
+        ],
+        "reviewOf": "past-four",
+        "reviewLand": "past-land",
+        "tip": "a2Course.tipPerfekt"
       },
       {
         "id": 13,
-        "type": "speechToText",
-        "question": "pastValleyQuestSeven.questThirteen",
-        "text": "Ich habe die Präsentation vorbereitet",
-        "answer": "Ich habe die Präsentation vorbereitet",
-        "tip": "pastValleyQuestSeven.questThirteenTip"
+        "type": "reorder",
+        "question": "a2Course.t32",
+        "words": [
+          "in",
+          "Im",
+          "Sommer",
+          "war",
+          "wir",
+          "Italien",
+          "am",
+          "waren"
+        ],
+        "correctOrder": [
+          "Im",
+          "Sommer",
+          "waren",
+          "wir",
+          "in",
+          "Italien"
+        ],
+        "reviewOf": "past-simple-1",
+        "reviewLand": "past-simple",
+        "tip": "pastSimple.questDescription"
       },
       {
         "id": 14,
         "type": "reorder",
         "question": "pastValleyQuestSeven.questFourteen",
-        "words": ["beendet", "Wann", "das", "hast", "Projekt", "du"],
-        "correctOrder": ["Wann", "hast", "du", "das", "Projekt", "beendet"]
+        "words": [
+          "beendet",
+          "Wann",
+          "das",
+          "hast",
+          "Projekt",
+          "du"
+        ],
+        "correctOrder": [
+          "Wann",
+          "hast",
+          "du",
+          "das",
+          "Projekt",
+          "beendet"
+        ],
+        "tip": "a2Course.tipPerfekt"
       },
       {
         "id": 15,
@@ -1067,11 +2371,141 @@
         "answer": "Alles hat gut funktioniert",
         "tip": "pastValleyQuestSeven.questFifteenTip"
       }
+    ],
+    "vocabulary": [
+      {
+        "word": "die E-Mail",
+        "translation-ru": "электронное письмо",
+        "translation-en": "email",
+        "translation-uk": "електронний лист",
+        "translation-pl": "e-mail",
+        "translation-es": "el correo electrónico",
+        "translation-fr": "l’e-mail",
+        "translation-tr": "e-posta",
+        "translation-ro": "e-mailul",
+        "translation-uz": "elektron xat",
+        "translation-hi": "ईमेल",
+        "translation-ar": "البريد الإلكتروني"
+      },
+      {
+        "word": "schreiben",
+        "translation-ru": "писать",
+        "translation-en": "to write",
+        "translation-uk": "писати",
+        "translation-pl": "pisać",
+        "translation-es": "escribir",
+        "translation-fr": "écrire",
+        "translation-tr": "yazmak",
+        "translation-ro": "a scrie",
+        "translation-uz": "yozmoq",
+        "translation-hi": "लिखना",
+        "translation-ar": "يكتب"
+      },
+      {
+        "word": "das Dokument",
+        "translation-ru": "документ",
+        "translation-en": "document",
+        "translation-uk": "документ",
+        "translation-pl": "dokument",
+        "translation-es": "documento",
+        "translation-fr": "document",
+        "translation-tr": "belge",
+        "translation-ro": "document",
+        "translation-uz": "hujjat",
+        "translation-hi": "दस्तावेज़",
+        "translation-ar": "وثيقة"
+      },
+      {
+        "word": "der Computer",
+        "translation-ru": "компьютер",
+        "translation-en": "computer",
+        "translation-uk": "комп'ютер",
+        "translation-pl": "komputer",
+        "translation-es": "ordenador",
+        "translation-fr": "ordinateur",
+        "translation-tr": "bilgisayar",
+        "translation-ro": "calculator",
+        "translation-uz": "kompyuter",
+        "translation-hi": "कंप्यूटर",
+        "translation-ar": "كمبيوتر"
+      },
+      {
+        "word": "ausmachen",
+        "translation-ru": "выключать",
+        "translation-en": "to turn off",
+        "translation-uk": "вимикати",
+        "translation-pl": "wyłączać",
+        "translation-es": "apagar",
+        "translation-fr": "éteindre",
+        "translation-tr": "kapatmak",
+        "translation-ro": "a stinge",
+        "translation-uz": "o'chirmoq",
+        "translation-hi": "बंद करना",
+        "translation-ar": "يطفئ"
+      },
+      {
+        "word": "das Projekt",
+        "translation-ru": "проект",
+        "translation-en": "project",
+        "translation-uk": "проєкт",
+        "translation-pl": "projekt",
+        "translation-es": "el proyecto",
+        "translation-fr": "le projet",
+        "translation-tr": "proje",
+        "translation-ro": "proiectul",
+        "translation-uz": "loyiha",
+        "translation-hi": "परियोजना",
+        "translation-ar": "المشروع"
+      },
+      {
+        "word": "der Arbeitstag",
+        "translation-ru": "рабочий день",
+        "translation-en": "working day",
+        "translation-uk": "робочий день",
+        "translation-pl": "dzień pracy",
+        "translation-es": "el día laborable",
+        "translation-fr": "la journée de travail",
+        "translation-tr": "iş günü",
+        "translation-ro": "ziua de lucru",
+        "translation-uz": "ish kuni",
+        "translation-hi": "कार्य दिवस",
+        "translation-ar": "يوم العمل"
+      },
+      {
+        "word": "ausdrucken",
+        "translation-ru": "распечатывать",
+        "translation-en": "to print out",
+        "translation-uk": "роздруковувати",
+        "translation-pl": "drukować",
+        "translation-es": "imprimir",
+        "translation-fr": "imprimer",
+        "translation-tr": "yazdırmak",
+        "translation-ro": "a printa",
+        "translation-uz": "chop etmoq",
+        "translation-hi": "प्रिंट करना",
+        "translation-ar": "يطبع"
+      },
+      {
+        "word": "beenden",
+        "translation-ru": "заканчивать",
+        "translation-en": "to finish / end",
+        "translation-uk": "завершувати",
+        "translation-pl": "kończyć",
+        "translation-es": "terminar",
+        "translation-fr": "finir",
+        "translation-tr": "bitirmek",
+        "translation-ro": "a termina",
+        "translation-uz": "tugatmoq",
+        "translation-hi": "समाप्त करना",
+        "translation-ar": "ينهي"
+      }
     ]
   },
   {
     "questId": "past-eight",
-    "aliases": ["perfekt-student"],
+    "aliases": [
+      "perfekt-student"
+    ],
     "title": "pastValleyQuestEight.title",
     "progress": "0/15",
     "description": "pastValleyQuestEight.description",
@@ -1089,8 +2523,21 @@
         "id": 1,
         "type": "reorder",
         "question": "pastValleyQuestEight.questOne",
-        "words": ["gelernt", "Wörter", "viele", "habe", "Ich"],
-        "correctOrder": ["Ich", "habe", "viele", "Wörter", "gelernt"]
+        "words": [
+          "gelernt",
+          "Wörter",
+          "viele",
+          "habe",
+          "Ich"
+        ],
+        "correctOrder": [
+          "Ich",
+          "habe",
+          "viele",
+          "Wörter",
+          "gelernt"
+        ],
+        "tip": "a2Course.tipPerfekt"
       },
       {
         "id": 2,
@@ -1109,14 +2556,28 @@
         "type": "speechToText",
         "question": "pastValleyQuestEight.questThree",
         "text": "Ich habe das Buch gelesen",
-        "answer": "Ich habe das Buch gelesen"
+        "answer": "Ich habe das Buch gelesen",
+        "tip": "a2Course.tipPerfekt"
       },
       {
         "id": 4,
         "type": "reorder",
         "question": "pastValleyQuestEight.questFour",
-        "words": ["Deutsch", "gesprochen", "viel", "haben", "Wir", "sind"],
-        "correctOrder": ["Wir", "haben", "viel", "Deutsch", "gesprochen"],
+        "words": [
+          "Deutsch",
+          "gesprochen",
+          "viel",
+          "haben",
+          "Wir",
+          "sind"
+        ],
+        "correctOrder": [
+          "Wir",
+          "haben",
+          "viel",
+          "Deutsch",
+          "gesprochen"
+        ],
         "tip": "pastValleyQuestEight.questFourTip"
       },
       {
@@ -1128,14 +2589,28 @@
           "Der Kurs ist am Montag angefangen",
           "Der Kurs hat am Montag geanfangen"
         ],
-        "answer": "Der Kurs hat am Montag angefangen"
+        "answer": "Der Kurs hat am Montag angefangen",
+        "tip": "a2Course.tipPerfekt"
       },
       {
         "id": 6,
         "type": "reorder",
         "question": "pastValleyQuestEight.questSix",
-        "words": ["aufgeschrieben", "Wort", "das", "hat", "Er", "den"],
-        "correctOrder": ["Er", "hat", "das", "Wort", "aufgeschrieben"],
+        "words": [
+          "aufgeschrieben",
+          "Wort",
+          "das",
+          "hat",
+          "Er",
+          "den"
+        ],
+        "correctOrder": [
+          "Er",
+          "hat",
+          "das",
+          "Wort",
+          "aufgeschrieben"
+        ],
         "tip": "pastValleyQuestEight.questSixTip"
       },
       {
@@ -1162,50 +2637,116 @@
         "id": 9,
         "type": "reorder",
         "question": "pastValleyQuestEight.questNine",
-        "words": ["Lehrer", "den", "gefragt", "habe", "Ich", "die"],
-        "correctOrder": ["Ich", "habe", "den", "Lehrer", "gefragt"]
+        "words": [
+          "Lehrer",
+          "den",
+          "gefragt",
+          "habe",
+          "Ich",
+          "die"
+        ],
+        "correctOrder": [
+          "Ich",
+          "habe",
+          "den",
+          "Lehrer",
+          "gefragt"
+        ],
+        "tip": "a2Course.tipPerfekt"
       },
       {
         "id": 10,
         "type": "speechToText",
         "question": "pastValleyQuestEight.questTen",
         "text": "Wir haben die Übung gemacht",
-        "answer": "Wir haben die Übung gemacht"
+        "answer": "Wir haben die Übung gemacht",
+        "tip": "a2Course.tipPerfekt"
       },
       {
         "id": 11,
         "type": "reorder",
-        "question": "pastValleyQuestEight.questEleven",
-        "words": ["Fehler", "den", "korrigiert", "hast", "Du"],
-        "correctOrder": ["Du", "hast", "den", "Fehler", "korrigiert"],
-        "tip": "pastValleyQuestEight.questElevenTip"
+        "question": "pastValleyQuestSeven.questOne",
+        "words": [
+          "geschrieben",
+          "E-Mail",
+          "eine",
+          "habe",
+          "Ich"
+        ],
+        "correctOrder": [
+          "Ich",
+          "habe",
+          "eine",
+          "E-Mail",
+          "geschrieben"
+        ],
+        "tip": "pastValleyQuestSeven.questOneTip",
+        "reviewOf": "past-seven",
+        "reviewLand": "past-land"
       },
       {
         "id": 12,
-        "type": "select",
-        "question": "pastValleyQuestEight.questTwelve",
-        "options": [
-          "Ich habe das Wort nachgeschlagen",
-          "Ich habe das Wort nachgeschlagt",
-          "Ich bin das Wort nachgeschlagen"
+        "type": "reorder",
+        "question": "pastValleyQuestFive.questFour",
+        "words": [
+          "schon",
+          "gegessen",
+          "Habt",
+          "ihr",
+          "sind"
         ],
-        "answer": "Ich habe das Wort nachgeschlagen",
-        "tip": "pastValleyQuestEight.questTwelveTip"
+        "correctOrder": [
+          "Habt",
+          "ihr",
+          "schon",
+          "gegessen"
+        ],
+        "reviewOf": "past-five",
+        "reviewLand": "past-land",
+        "tip": "a2Course.tipPerfekt"
       },
       {
         "id": 13,
-        "type": "speechToText",
-        "question": "pastValleyQuestEight.questThirteen",
-        "text": "Er hat eine Antwort gegeben",
-        "answer": "Er hat eine Antwort gegeben",
-        "tip": "pastValleyQuestEight.questThirteenTip"
+        "type": "reorder",
+        "question": "pastValleyQuestOne.questSix",
+        "words": [
+          "sehr",
+          "gemacht",
+          "das",
+          "habe",
+          "Ich",
+          "schnell"
+        ],
+        "correctOrder": [
+          "Ich",
+          "habe",
+          "das",
+          "sehr",
+          "schnell",
+          "gemacht"
+        ],
+        "reviewOf": "past-one",
+        "reviewLand": "past-land",
+        "tip": "a2Course.tipPerfekt"
       },
       {
         "id": 14,
         "type": "reorder",
         "question": "pastValleyQuestEight.questFourteen",
-        "words": ["Text", "den", "übersetzt", "haben", "Wir"],
-        "correctOrder": ["Wir", "haben", "den", "Text", "übersetzt"],
+        "words": [
+          "Text",
+          "den",
+          "übersetzt",
+          "haben",
+          "Wir"
+        ],
+        "correctOrder": [
+          "Wir",
+          "haben",
+          "den",
+          "Text",
+          "übersetzt"
+        ],
         "tip": "pastValleyQuestEight.questFourteenTip"
       },
       {
@@ -1220,11 +2761,197 @@
         "answer": "Ich habe den Test bestanden",
         "tip": "pastValleyQuestEight.questFifteenTip"
       }
+    ],
+    "vocabulary": [
+      {
+        "word": "lesen",
+        "translation-ru": "читать",
+        "translation-en": "to read",
+        "translation-uk": "читати",
+        "translation-pl": "czytać",
+        "translation-es": "leer",
+        "translation-fr": "lire",
+        "translation-tr": "okumak",
+        "translation-ro": "a citi",
+        "translation-uz": "o'qimoq",
+        "translation-hi": "पढ़ना",
+        "translation-ar": "يقرأ"
+      },
+      {
+        "word": "das Wort",
+        "translation-ru": "слово",
+        "translation-en": "word",
+        "translation-uk": "слово",
+        "translation-pl": "słowo",
+        "translation-es": "la palabra",
+        "translation-fr": "le mot",
+        "translation-tr": "kelime",
+        "translation-ro": "cuvântul",
+        "translation-uz": "so‘z",
+        "translation-hi": "शब्द",
+        "translation-ar": "الكلمة"
+      },
+      {
+        "word": "der Lehrer",
+        "translation-ru": "учитель",
+        "translation-en": "teacher",
+        "translation-uk": "учитель",
+        "translation-pl": "nauczyciel",
+        "translation-es": "profesor",
+        "translation-fr": "enseignant",
+        "translation-tr": "öğretmen",
+        "translation-ro": "profesor",
+        "translation-uz": "o‘qituvchi",
+        "translation-hi": "शिक्षक",
+        "translation-ar": "معلّم"
+      },
+      {
+        "word": "die Übung",
+        "translation-ru": "упражнение",
+        "translation-en": "exercise",
+        "translation-uk": "вправа",
+        "translation-pl": "ćwiczenie",
+        "translation-es": "el ejercicio",
+        "translation-fr": "l’exercice",
+        "translation-tr": "alıştırma",
+        "translation-ro": "exercițiul",
+        "translation-uz": "mashq",
+        "translation-hi": "अभ्यास",
+        "translation-ar": "التمرين"
+      },
+      {
+        "word": "die E-Mail",
+        "translation-ru": "электронное письмо",
+        "translation-en": "email",
+        "translation-uk": "електронний лист",
+        "translation-pl": "e-mail",
+        "translation-es": "el correo electrónico",
+        "translation-fr": "l’e-mail",
+        "translation-tr": "e-posta",
+        "translation-ro": "e-mailul",
+        "translation-uz": "elektron xat",
+        "translation-hi": "ईमेल",
+        "translation-ar": "البريد الإلكتروني"
+      },
+      {
+        "word": "die Regel",
+        "translation-ru": "правило",
+        "translation-en": "rule",
+        "translation-uk": "правило",
+        "translation-pl": "zasada",
+        "translation-es": "la regla",
+        "translation-fr": "la règle",
+        "translation-tr": "kural",
+        "translation-ro": "regula",
+        "translation-uz": "qoida",
+        "translation-hi": "नियम",
+        "translation-ar": "القاعدة"
+      },
+      {
+        "word": "aufschreiben",
+        "translation-ru": "записывать",
+        "translation-en": "to write down",
+        "translation-uk": "записувати",
+        "translation-pl": "zapisywać",
+        "translation-es": "apuntar",
+        "translation-fr": "noter",
+        "translation-tr": "not etmek",
+        "translation-ro": "a nota",
+        "translation-uz": "yozib olmoq",
+        "translation-hi": "लिख लेना",
+        "translation-ar": "يدوّن"
+      },
+      {
+        "word": "der Satz",
+        "translation-ru": "предложение",
+        "translation-en": "sentence",
+        "translation-uk": "речення",
+        "translation-pl": "zdanie",
+        "translation-es": "la frase",
+        "translation-fr": "la phrase",
+        "translation-tr": "cümle",
+        "translation-ro": "propoziția",
+        "translation-uz": "gap",
+        "translation-hi": "वाक्य",
+        "translation-ar": "الجملة"
+      },
+      {
+        "word": "die Grammatik",
+        "translation-ru": "грамматика",
+        "translation-en": "grammar",
+        "translation-uk": "граматика",
+        "translation-pl": "gramatyka",
+        "translation-es": "la gramática",
+        "translation-fr": "la grammaire",
+        "translation-tr": "dil bilgisi",
+        "translation-ro": "gramatica",
+        "translation-uz": "grammatika",
+        "translation-hi": "व्याकरण",
+        "translation-ar": "القواعد"
+      },
+      {
+        "word": "der Text",
+        "translation-ru": "текст",
+        "translation-en": "text",
+        "translation-uk": "текст",
+        "translation-pl": "tekst",
+        "translation-es": "el texto",
+        "translation-fr": "le texte",
+        "translation-tr": "metin",
+        "translation-ro": "textul",
+        "translation-uz": "matn",
+        "translation-hi": "पाठ",
+        "translation-ar": "النص"
+      },
+      {
+        "word": "übersetzen",
+        "translation-ru": "переводить",
+        "translation-en": "to translate",
+        "translation-uk": "перекладати",
+        "translation-pl": "tłumaczyć",
+        "translation-es": "traducir",
+        "translation-fr": "traduire",
+        "translation-tr": "çevirmek",
+        "translation-ro": "a traduce",
+        "translation-uz": "tarjima qilmoq",
+        "translation-hi": "अनुवाद करना",
+        "translation-ar": "يترجم"
+      },
+      {
+        "word": "der Test",
+        "translation-ru": "тест",
+        "translation-en": "test",
+        "translation-uk": "тест",
+        "translation-pl": "test",
+        "translation-es": "el examen",
+        "translation-fr": "le test",
+        "translation-tr": "test",
+        "translation-ro": "testul",
+        "translation-uz": "test",
+        "translation-hi": "परीक्षा",
+        "translation-ar": "الاختبار"
+      },
+      {
+        "word": "bestehen",
+        "translation-ru": "выдержать / существовать",
+        "translation-en": "to pass / exist",
+        "translation-uk": "скласти / існувати",
+        "translation-pl": "zdać / istnieć",
+        "translation-es": "aprobar / existir",
+        "translation-fr": "réussir / exister",
+        "translation-tr": "başarmak / var olmak",
+        "translation-ro": "a promova / a exista",
+        "translation-uz": "o'tmoq / mavjud bo'lmoq",
+        "translation-hi": "पास करना / अस्तित्व में होना",
+        "translation-ar": "يجتاز / يوجد"
+      }
     ]
   },
   {
     "questId": "past-nine",
-    "aliases": ["perfekt-social"],
+    "aliases": [
+      "perfekt-social"
+    ],
     "title": "pastValleyQuestNine.title",
     "progress": "0/15",
     "description": "pastValleyQuestNine.description",
@@ -1242,8 +2969,20 @@
         "id": 1,
         "type": "reorder",
         "question": "pastValleyQuestNine.questOne",
-        "words": ["gefeiert", "Geburtstag", "meinen", "habe", "Ich"],
-        "correctOrder": ["Ich", "habe", "meinen", "Geburtstag", "gefeiert"],
+        "words": [
+          "gefeiert",
+          "Geburtstag",
+          "meinen",
+          "habe",
+          "Ich"
+        ],
+        "correctOrder": [
+          "Ich",
+          "habe",
+          "meinen",
+          "Geburtstag",
+          "gefeiert"
+        ],
         "tip": "pastValleyQuestNine.questOneTip"
       },
       {
@@ -1255,7 +2994,8 @@
           "Bist du deine Freunde eingeladen?",
           "Hast du deine Freunde ge-einladen?"
         ],
-        "answer": "Hast du deine Freunde eingeladen?"
+        "answer": "Hast du deine Freunde eingeladen?",
+        "tip": "a2Course.tipPerfekt"
       },
       {
         "id": 3,
@@ -1269,8 +3009,23 @@
         "id": 4,
         "type": "reorder",
         "question": "pastValleyQuestNine.questFour",
-        "words": ["Nacht", "ganze", "die", "getanzt", "habe", "Ich"],
-        "correctOrder": ["Ich", "habe", "die", "ganze", "Nacht", "getanzt"]
+        "words": [
+          "Nacht",
+          "ganze",
+          "die",
+          "getanzt",
+          "habe",
+          "Ich"
+        ],
+        "correctOrder": [
+          "Ich",
+          "habe",
+          "die",
+          "ganze",
+          "Nacht",
+          "getanzt"
+        ],
+        "tip": "a2Course.tipPerfekt"
       },
       {
         "id": 5,
@@ -1288,15 +3043,27 @@
         "id": 6,
         "type": "reorder",
         "question": "pastValleyQuestNine.questSix",
-        "words": ["gelacht", "Wir", "viel", "haben"],
-        "correctOrder": ["Wir", "haben", "viel", "gelacht"]
+        "words": [
+          "gelacht",
+          "Wir",
+          "viel",
+          "haben"
+        ],
+        "correctOrder": [
+          "Wir",
+          "haben",
+          "viel",
+          "gelacht"
+        ],
+        "tip": "a2Course.tipPerfekt"
       },
       {
         "id": 7,
         "type": "speechToText",
         "question": "pastValleyQuestNine.questSeven",
         "text": "Wir haben viel Spaß gehabt",
-        "answer": "Wir haben viel Spaß gehabt"
+        "answer": "Wir haben viel Spaß gehabt",
+        "tip": "a2Course.tipPerfekt"
       },
       {
         "id": 8,
@@ -1314,8 +3081,20 @@
         "id": 9,
         "type": "reorder",
         "question": "pastValleyQuestNine.questNine",
-        "words": ["Mitternacht", "um", "gekommen", "ist", "Sie"],
-        "correctOrder": ["Sie", "ist", "um", "Mitternacht", "gekommen"],
+        "words": [
+          "Mitternacht",
+          "um",
+          "gekommen",
+          "ist",
+          "Sie"
+        ],
+        "correctOrder": [
+          "Sie",
+          "ist",
+          "um",
+          "Mitternacht",
+          "gekommen"
+        ],
         "tip": "pastValleyQuestNine.questNineTip"
       },
       {
@@ -1327,41 +3106,95 @@
         "accept": [
           "Wir haben drei Stunden geredet",
           "Wir haben 3 Stunden geredet"
-        ]
+        ],
+        "tip": "a2Course.tipPerfekt"
       },
       {
         "id": 11,
         "type": "reorder",
-        "question": "pastValleyQuestNine.questEleven",
-        "words": ["bis", "geblieben", "ihr", "Seid", "Ende", "zum", "sind"],
-        "correctOrder": ["Seid", "ihr", "bis", "zum", "Ende", "geblieben"],
-        "tip": "pastValleyQuestNine.questElevenTip"
+        "question": "pastValleyQuestEight.questOne",
+        "words": [
+          "gelernt",
+          "Wörter",
+          "viele",
+          "habe",
+          "Ich"
+        ],
+        "correctOrder": [
+          "Ich",
+          "habe",
+          "viele",
+          "Wörter",
+          "gelernt"
+        ],
+        "reviewOf": "past-eight",
+        "reviewLand": "past-land",
+        "tip": "a2Course.tipPerfekt"
       },
       {
         "id": 12,
-        "type": "select",
-        "question": "pastValleyQuestNine.questTwelve",
-        "options": [
-          "Ich habe mein Handy verloren",
-          "Ich bin mein Handy verloren",
-          "Ich habe mein Handy verliert"
+        "type": "reorder",
+        "question": "pastValleyQuestSix.questFour",
+        "words": [
+          "pünktlich",
+          "ist",
+          "abgeflogen",
+          "Das Flugzeug"
         ],
-        "answer": "Ich habe mein Handy verloren"
+        "correctOrder": [
+          "Das Flugzeug",
+          "ist",
+          "pünktlich",
+          "abgeflogen"
+        ],
+        "tip": "pastValleyQuestSix.questFourTip",
+        "reviewOf": "past-six",
+        "reviewLand": "past-land"
       },
       {
         "id": 13,
-        "type": "speechToText",
-        "question": "pastValleyQuestNine.questThirteen",
-        "text": "Ich habe einen alten Freund getroffen",
-        "answer": "Ich habe einen alten Freund getroffen",
-        "tip": "pastValleyQuestNine.questThirteenTip"
+        "type": "reorder",
+        "question": "pastValleyQuestTwo.questSix",
+        "words": [
+          "sind",
+          "schnell",
+          "Die Kinder",
+          "gewachsen",
+          "haben"
+        ],
+        "correctOrder": [
+          "Die Kinder",
+          "sind",
+          "schnell",
+          "gewachsen"
+        ],
+        "reviewOf": "past-two",
+        "reviewLand": "past-land",
+        "tip": "a2Course.tipPerfekt"
       },
       {
         "id": 14,
         "type": "reorder",
-        "question": "pastValleyQuestNine.questFourteen",
-        "words": ["Bus", "dem", "mit", "Hause", "nach", "gefahren", "bin", "Ich"],
-        "correctOrder": ["Ich", "bin", "mit", "dem", "Bus", "nach", "Hause", "gefahren"]
+        "question": "a2Course.t33",
+        "words": [
+          "nach",
+          "gefahrt",
+          "gefahren",
+          "Ich",
+          "habe",
+          "spät",
+          "bin",
+          "Hause"
+        ],
+        "correctOrder": [
+          "Ich",
+          "bin",
+          "spät",
+          "nach",
+          "Hause",
+          "gefahren"
+        ],
+        "tip": "pastValleyQuestNine.description"
       },
       {
         "id": 15,
@@ -1375,11 +3208,99 @@
         "answer": "Die Party hat spät aufgehört",
         "tip": "pastValleyQuestNine.questFifteenTip"
       }
+    ],
+    "vocabulary": [
+      {
+        "word": "das Bier",
+        "translation-ru": "пиво",
+        "translation-en": "beer",
+        "translation-uk": "пиво",
+        "translation-pl": "piwo",
+        "translation-es": "cerveza",
+        "translation-fr": "bière",
+        "translation-tr": "bira",
+        "translation-ro": "bere",
+        "translation-uz": "pivo",
+        "translation-hi": "बीयर",
+        "translation-ar": "بيرة"
+      },
+      {
+        "word": "die Leute",
+        "translation-ru": "люди",
+        "translation-en": "people",
+        "translation-uk": "люди",
+        "translation-pl": "ludzie",
+        "translation-es": "la gente",
+        "translation-fr": "les gens",
+        "translation-tr": "insanlar",
+        "translation-ro": "oamenii",
+        "translation-uz": "odamlar",
+        "translation-hi": "लोग",
+        "translation-ar": "الناس"
+      },
+      {
+        "word": "kennenlernen",
+        "translation-ru": "знакомиться",
+        "translation-en": "to get to know / meet",
+        "translation-uk": "знайомитися",
+        "translation-pl": "poznawać",
+        "translation-es": "conocer a alguien",
+        "translation-fr": "faire la connaissance de",
+        "translation-tr": "tanışmak",
+        "translation-ro": "a face cunoștință",
+        "translation-uz": "tanishmoq",
+        "translation-hi": "जान-पहचान करना",
+        "translation-ar": "يتعرف على"
+      },
+      {
+        "word": "rufen",
+        "translation-ru": "звать / кричать",
+        "translation-en": "to call / shout",
+        "translation-uk": "кликати / звати",
+        "translation-pl": "wołać / dzwonić",
+        "translation-es": "llamar / gritar",
+        "translation-fr": "appeler / crier",
+        "translation-tr": "çağırmak / seslenmek",
+        "translation-ro": "a chema / a striga",
+        "translation-uz": "chaqirmoq",
+        "translation-hi": "बुलाना",
+        "translation-ar": "ينادي"
+      },
+      {
+        "word": "aufhören",
+        "translation-ru": "прекращать",
+        "translation-en": "to stop / cease",
+        "translation-uk": "припиняти",
+        "translation-pl": "przestawać / kończyć",
+        "translation-es": "dejar de / terminar",
+        "translation-fr": "arrêter / cesser",
+        "translation-tr": "bırakmak / durmak",
+        "translation-ro": "a înceta",
+        "translation-uz": "to'xtatmoq",
+        "translation-hi": "रुकना / बंद करना",
+        "translation-ar": "يتوقف"
+      },
+      {
+        "word": "reden",
+        "translation-ru": "разговаривать",
+        "translation-en": "to talk / speak",
+        "translation-uk": "розмовляти",
+        "translation-pl": "rozmawiać",
+        "translation-es": "hablar",
+        "translation-fr": "parler",
+        "translation-tr": "konuşmak",
+        "translation-ro": "a vorbi",
+        "translation-uz": "gaplashmoq",
+        "translation-hi": "बात करना",
+        "translation-ar": "يتحدث"
+      }
     ]
   },
   {
     "questId": "past-ten",
-    "aliases": ["perfekt-city"],
+    "aliases": [
+      "perfekt-city"
+    ],
     "title": "pastValleyQuestTen.title",
     "progress": "0/15",
     "description": "pastValleyQuestTen.description",
@@ -1397,8 +3318,21 @@
         "id": 1,
         "type": "reorder",
         "question": "pastValleyQuestTen.questOne",
-        "words": ["verpasst", "Bus", "den", "habe", "Ich", "verpassen"],
-        "correctOrder": ["Ich", "habe", "den", "Bus", "verpasst"],
+        "words": [
+          "verpasst",
+          "Bus",
+          "den",
+          "habe",
+          "Ich",
+          "verpassen"
+        ],
+        "correctOrder": [
+          "Ich",
+          "habe",
+          "den",
+          "Bus",
+          "verpasst"
+        ],
         "tip": "pastValleyQuestTen.questOneTip"
       },
       {
@@ -1418,14 +3352,25 @@
         "type": "speechToText",
         "question": "pastValleyQuestTen.questThree",
         "text": "Ich habe eine Fahrkarte gekauft",
-        "answer": "Ich habe eine Fahrkarte gekauft"
+        "answer": "Ich habe eine Fahrkarte gekauft",
+        "tip": "a2Course.tipPerfekt"
       },
       {
         "id": 4,
         "type": "reorder",
         "question": "pastValleyQuestTen.questFour",
-        "words": ["spät", "ist", "angekommen", "Der Zug"],
-        "correctOrder": ["Der Zug", "ist", "spät", "angekommen"],
+        "words": [
+          "spät",
+          "ist",
+          "angekommen",
+          "Der Zug"
+        ],
+        "correctOrder": [
+          "Der Zug",
+          "ist",
+          "spät",
+          "angekommen"
+        ],
         "tip": "pastValleyQuestTen.questFourTip"
       },
       {
@@ -1444,8 +3389,23 @@
         "id": 6,
         "type": "reorder",
         "question": "pastValleyQuestTen.questSix",
-        "words": ["U-Bahn", "die", "in", "bin", "Ich", "umgestiegen", "habe"],
-        "correctOrder": ["Ich", "bin", "in", "die", "U-Bahn", "umgestiegen"],
+        "words": [
+          "U-Bahn",
+          "die",
+          "in",
+          "bin",
+          "Ich",
+          "umgestiegen",
+          "habe"
+        ],
+        "correctOrder": [
+          "Ich",
+          "bin",
+          "in",
+          "die",
+          "U-Bahn",
+          "umgestiegen"
+        ],
         "tip": "pastValleyQuestTen.questSixTip"
       },
       {
@@ -1453,7 +3413,8 @@
         "type": "speechToText",
         "question": "pastValleyQuestTen.questSeven",
         "text": "Wir sind durch den Park gelaufen",
-        "answer": "Wir sind durch den Park gelaufen"
+        "answer": "Wir sind durch den Park gelaufen",
+        "tip": "a2Course.tipPerfekt"
       },
       {
         "id": 8,
@@ -1464,14 +3425,27 @@
           "Er hat ins Zentrum gefahren",
           "Er ist ins Zentrum gefahrt"
         ],
-        "answer": "Er ist ins Zentrum gefahren"
+        "answer": "Er ist ins Zentrum gefahren",
+        "tip": "a2Course.tipPerfekt"
       },
       {
         "id": 9,
         "type": "reorder",
         "question": "pastValleyQuestTen.questNine",
-        "words": ["vergessen", "Ticket", "mein", "habe", "Ich"],
-        "correctOrder": ["Ich", "habe", "mein", "Ticket", "vergessen"],
+        "words": [
+          "vergessen",
+          "Ticket",
+          "mein",
+          "habe",
+          "Ich"
+        ],
+        "correctOrder": [
+          "Ich",
+          "habe",
+          "mein",
+          "Ticket",
+          "vergessen"
+        ],
         "tip": "pastValleyQuestTen.questNineTip"
       },
       {
@@ -1479,40 +3453,98 @@
         "type": "speechToText",
         "question": "pastValleyQuestTen.questTen",
         "text": "Das Taxi hat 20 Euro gekostet",
-        "answer": "Das Taxi hat 20 Euro gekostet"
+        "answer": "Das Taxi hat 20 Euro gekostet",
+        "tip": "a2Course.tipPerfekt"
       },
       {
         "id": 11,
         "type": "reorder",
-        "question": "pastValleyQuestTen.questEleven",
-        "words": ["Weg", "den", "haben", "Wir", "lange", "gesucht"],
-        "correctOrder": ["Wir", "haben", "lange", "den", "Weg", "gesucht"]
+        "question": "pastValleyQuestNine.questOne",
+        "words": [
+          "gefeiert",
+          "Geburtstag",
+          "meinen",
+          "habe",
+          "Ich"
+        ],
+        "correctOrder": [
+          "Ich",
+          "habe",
+          "meinen",
+          "Geburtstag",
+          "gefeiert"
+        ],
+        "tip": "pastValleyQuestNine.questOneTip",
+        "reviewOf": "past-nine",
+        "reviewLand": "past-land"
       },
       {
         "id": 12,
-        "type": "select",
-        "question": "pastValleyQuestTen.questTwelve",
-        "options": [
-          "Ich habe das Auto geparkt",
-          "Ich bin das Auto geparkt",
-          "Ich habe das Auto geparken"
+        "type": "reorder",
+        "question": "pastValleyQuestSeven.questFour",
+        "words": [
+          "das",
+          "Dokument",
+          "Hast",
+          "gefunden",
+          "du"
         ],
-        "answer": "Ich habe das Auto geparkt"
+        "correctOrder": [
+          "Hast",
+          "du",
+          "das",
+          "Dokument",
+          "gefunden"
+        ],
+        "tip": "pastValleyQuestSeven.questFourTip",
+        "reviewOf": "past-seven",
+        "reviewLand": "past-land"
       },
       {
         "id": 13,
-        "type": "speechToText",
-        "question": "pastValleyQuestTen.questThirteen",
-        "text": "Hast du den Dom gesehen?",
-        "answer": "Hast du den Dom gesehen?",
-        "tip": "pastValleyQuestTen.questThirteenTip"
+        "type": "reorder",
+        "question": "pastValleyQuestThree.questSix",
+        "words": [
+          "zu",
+          "Wir",
+          "Mittag",
+          "gegessen",
+          "haben",
+          "sind"
+        ],
+        "correctOrder": [
+          "Wir",
+          "haben",
+          "zu",
+          "Mittag",
+          "gegessen"
+        ],
+        "tip": "pastValleyQuestThree.questSixTip",
+        "reviewOf": "past-three",
+        "reviewLand": "past-land"
       },
       {
         "id": 14,
         "type": "reorder",
         "question": "pastValleyQuestTen.questFourteen",
-        "words": ["verirrt", "Stadt", "der", "in", "mich", "habe", "Ich"],
-        "correctOrder": ["Ich", "habe", "mich", "in", "der", "Stadt", "verirrt"],
+        "words": [
+          "verirrt",
+          "Stadt",
+          "der",
+          "in",
+          "mich",
+          "habe",
+          "Ich"
+        ],
+        "correctOrder": [
+          "Ich",
+          "habe",
+          "mich",
+          "in",
+          "der",
+          "Stadt",
+          "verirrt"
+        ],
         "tip": "pastValleyQuestTen.questFourteenTip"
       },
       {
@@ -1521,17 +3553,147 @@
         "question": "pastValleyQuestTen.questFifteen",
         "options": [
           "Wir haben an der Haltestelle gestanden",
-          "Wir sind an der Haltestelle gestanden",
+          "Wir haben an der Haltestelle stehen",
           "Wir haben an der Haltestelle gestanden sein"
         ],
         "answer": "Wir haben an der Haltestelle gestanden",
         "tip": "pastValleyQuestTen.questFifteenTip"
       }
+    ],
+    "vocabulary": [
+      {
+        "word": "das Dokument",
+        "translation-ru": "документ",
+        "translation-en": "document",
+        "translation-uk": "документ",
+        "translation-pl": "dokument",
+        "translation-es": "documento",
+        "translation-fr": "document",
+        "translation-tr": "belge",
+        "translation-ro": "document",
+        "translation-uz": "hujjat",
+        "translation-hi": "दस्तावेज़",
+        "translation-ar": "وثيقة"
+      },
+      {
+        "word": "der Mittag",
+        "translation-ru": "полдень",
+        "translation-en": "midday",
+        "translation-uk": "полудень",
+        "translation-pl": "południe",
+        "translation-es": "el mediodía",
+        "translation-fr": "le midi",
+        "translation-tr": "öğle",
+        "translation-ro": "prânzul",
+        "translation-uz": "tush",
+        "translation-hi": "दोपहर",
+        "translation-ar": "الظهر"
+      },
+      {
+        "word": "essen",
+        "translation-ru": "есть / кушать",
+        "translation-en": "to eat",
+        "translation-uk": "їсти",
+        "translation-pl": "jeść",
+        "translation-es": "comer",
+        "translation-fr": "manger",
+        "translation-tr": "yemek yemek",
+        "translation-ro": "a mânca",
+        "translation-uz": "yemoq",
+        "translation-hi": "खाना",
+        "translation-ar": "يأكل"
+      },
+      {
+        "word": "meinen",
+        "translation-ru": "считать, иметь в виду",
+        "translation-en": "to think, mean",
+        "translation-uk": "вважати, мати на увазі",
+        "translation-pl": "uważać, mieć na myśli",
+        "translation-es": "opinar, querer decir",
+        "translation-fr": "penser, vouloir dire",
+        "translation-tr": "düşünmek, kastetmek",
+        "translation-ro": "a crede, a vrea să spui",
+        "translation-uz": "fikrda bo‘lmoq",
+        "translation-hi": "सोचना, मतलब होना",
+        "translation-ar": "يقصد"
+      },
+      {
+        "word": "vergessen",
+        "translation-ru": "забывать",
+        "translation-en": "to forget",
+        "translation-uk": "забувати",
+        "translation-pl": "zapominać",
+        "translation-es": "olvidar",
+        "translation-fr": "oublier",
+        "translation-tr": "unutmak",
+        "translation-ro": "a uita",
+        "translation-uz": "unutmoq",
+        "translation-hi": "भूलना",
+        "translation-ar": "ينسى"
+      },
+      {
+        "word": "verpassen",
+        "translation-ru": "пропускать, опаздывать на",
+        "translation-en": "to miss",
+        "translation-uk": "пропускати",
+        "translation-pl": "spóźnić się na",
+        "translation-es": "perder",
+        "translation-fr": "rater",
+        "translation-tr": "kaçırmak",
+        "translation-ro": "a pierde",
+        "translation-uz": "kechikib qolmoq",
+        "translation-hi": "छूट जाना",
+        "translation-ar": "يفوّت"
+      },
+      {
+        "word": "die Fahrkarte",
+        "translation-ru": "билет",
+        "translation-en": "ticket",
+        "translation-uk": "квиток",
+        "translation-pl": "bilet",
+        "translation-es": "el billete",
+        "translation-fr": "le billet",
+        "translation-tr": "bilet",
+        "translation-ro": "biletul",
+        "translation-uz": "chipta",
+        "translation-hi": "टिकट",
+        "translation-ar": "التذكرة"
+      },
+      {
+        "word": "sich verirren",
+        "translation-ru": "заблудиться",
+        "translation-en": "to get lost",
+        "translation-uk": "заблукати",
+        "translation-pl": "zgubić się",
+        "translation-es": "perderse",
+        "translation-fr": "se perdre",
+        "translation-tr": "kaybolmak",
+        "translation-ro": "a se rătăci",
+        "translation-uz": "adashmoq",
+        "translation-hi": "रास्ता भटकना",
+        "translation-ar": "يضل الطريق"
+      },
+      {
+        "word": "aussteigen",
+        "translation-ru": "выходить (из транспорта)",
+        "translation-en": "to get off",
+        "translation-uk": "виходити (з транспорту)",
+        "translation-pl": "wysiadać",
+        "translation-es": "bajarse",
+        "translation-fr": "descendre",
+        "translation-tr": "inmek",
+        "translation-ro": "a coborî",
+        "translation-uz": "tushmoq",
+        "translation-hi": "उतरना",
+        "translation-ar": "ينزل"
+      }
     ]
   },
   {
     "questId": "past-eleven",
-    "aliases": ["perfekt-family"],
+    "aliases": [
+      "perfekt-family"
+    ],
     "title": "pastValleyQuestEleven.title",
     "progress": "0/15",
     "description": "pastValleyQuestEleven.description",
@@ -1549,8 +3711,20 @@
         "id": 1,
         "type": "reorder",
         "question": "pastValleyQuestEleven.questOne",
-        "words": ["besucht", "meine", "Eltern", "habe", "Ich"],
-        "correctOrder": ["Ich", "habe", "meine", "Eltern", "besucht"],
+        "words": [
+          "besucht",
+          "meine",
+          "Eltern",
+          "habe",
+          "Ich"
+        ],
+        "correctOrder": [
+          "Ich",
+          "habe",
+          "meine",
+          "Eltern",
+          "besucht"
+        ],
         "tip": "pastValleyQuestEleven.questOneTip"
       },
       {
@@ -1562,7 +3736,8 @@
           "Wir sind alte Fotos gesehen",
           "Wir haben alte Fotos geseht"
         ],
-        "answer": "Wir haben alte Fotos gesehen"
+        "answer": "Wir haben alte Fotos gesehen",
+        "tip": "a2Course.tipPerfekt"
       },
       {
         "id": 3,
@@ -1576,8 +3751,22 @@
         "id": 4,
         "type": "reorder",
         "question": "pastValleyQuestEleven.questFour",
-        "words": ["Buch", "ein", "mir", "hat", "Er", "geschenkt"],
-        "correctOrder": ["Er", "hat", "mir", "ein", "Buch", "geschenkt"],
+        "words": [
+          "Buch",
+          "ein",
+          "mir",
+          "hat",
+          "Er",
+          "geschenkt"
+        ],
+        "correctOrder": [
+          "Er",
+          "hat",
+          "mir",
+          "ein",
+          "Buch",
+          "geschenkt"
+        ],
         "tip": "pastValleyQuestEleven.questFourTip"
       },
       {
@@ -1596,8 +3785,21 @@
         "id": 6,
         "type": "reorder",
         "question": "pastValleyQuestEleven.questSix",
-        "words": ["den", "Bruder", "dem", "geholfen", "Hast", "du"],
-        "correctOrder": ["Hast", "du", "dem", "Bruder", "geholfen"],
+        "words": [
+          "den",
+          "Bruder",
+          "deinem",
+          "geholfen",
+          "Hast",
+          "du"
+        ],
+        "correctOrder": [
+          "Hast",
+          "du",
+          "deinem",
+          "Bruder",
+          "geholfen"
+        ],
         "tip": "pastValleyQuestEleven.questSixTip"
       },
       {
@@ -1617,14 +3819,27 @@
           "Wir haben spazieren gegangen",
           "Wir sind spazieren gehen"
         ],
-        "answer": "Wir sind spazieren gegangen"
+        "answer": "Wir sind spazieren gegangen",
+        "tip": "a2Course.tipPerfekt"
       },
       {
         "id": 9,
         "type": "reorder",
         "question": "pastValleyQuestEleven.questNine",
-        "words": ["Brief", "einen", "bekommen", "habe", "Ich"],
-        "correctOrder": ["Ich", "habe", "einen", "Brief", "bekommen"],
+        "words": [
+          "Brief",
+          "einen",
+          "bekommen",
+          "habe",
+          "Ich"
+        ],
+        "correctOrder": [
+          "Ich",
+          "habe",
+          "einen",
+          "Brief",
+          "bekommen"
+        ],
         "tip": "pastValleyQuestEleven.questNineTip"
       },
       {
@@ -1638,36 +3853,87 @@
       {
         "id": 11,
         "type": "reorder",
-        "question": "pastValleyQuestEleven.questEleven",
-        "words": ["Opa", "meinen", "angerufen", "habe", "Ich"],
-        "correctOrder": ["Ich", "habe", "meinen", "Opa", "angerufen"]
+        "question": "pastValleyQuestTen.questOne",
+        "words": [
+          "verpasst",
+          "Bus",
+          "den",
+          "habe",
+          "Ich",
+          "verpassen"
+        ],
+        "correctOrder": [
+          "Ich",
+          "habe",
+          "den",
+          "Bus",
+          "verpasst"
+        ],
+        "tip": "pastValleyQuestTen.questOneTip",
+        "reviewOf": "past-ten",
+        "reviewLand": "past-land"
       },
       {
         "id": 12,
-        "type": "select",
-        "question": "pastValleyQuestEleven.questTwelve",
-        "options": [
-          "Es hat uns alles gefallen",
-          "Es ist uns alles gefallen",
-          "Es hat uns alles gefallt"
+        "type": "reorder",
+        "question": "pastValleyQuestEight.questFour",
+        "words": [
+          "Deutsch",
+          "gesprochen",
+          "viel",
+          "haben",
+          "Wir",
+          "sind"
         ],
-        "answer": "Es hat uns alles gefallen",
-        "tip": "pastValleyQuestEleven.questTwelveTip"
+        "correctOrder": [
+          "Wir",
+          "haben",
+          "viel",
+          "Deutsch",
+          "gesprochen"
+        ],
+        "tip": "pastValleyQuestEight.questFourTip",
+        "reviewOf": "past-eight",
+        "reviewLand": "past-land"
       },
       {
         "id": 13,
-        "type": "speechToText",
-        "question": "pastValleyQuestEleven.questThirteen",
-        "text": "Ich habe mich bedankt",
-        "answer": "Ich habe mich bedankt",
-        "tip": "pastValleyQuestEleven.questThirteenTip"
+        "type": "reorder",
+        "question": "pastValleyQuestFour.questSix",
+        "words": [
+          "gehört",
+          "mir",
+          "hat",
+          "Das"
+        ],
+        "correctOrder": [
+          "Das",
+          "hat",
+          "mir",
+          "gehört"
+        ],
+        "reviewOf": "past-four",
+        "reviewLand": "past-land",
+        "tip": "a2Course.tipPerfekt"
       },
       {
         "id": 14,
         "type": "reorder",
         "question": "pastValleyQuestEleven.questFourteen",
-        "words": ["Tante", "die", "getroffen", "haben", "Wir"],
-        "correctOrder": ["Wir", "haben", "die", "Tante", "getroffen"],
+        "words": [
+          "Tante",
+          "unsere",
+          "getroffen",
+          "haben",
+          "Wir"
+        ],
+        "correctOrder": [
+          "Wir",
+          "haben",
+          "unsere",
+          "Tante",
+          "getroffen"
+        ],
         "tip": "pastValleyQuestEleven.questFourteenTip"
       },
       {
@@ -1682,11 +3948,113 @@
         "answer": "Er ist zu Hause geblieben",
         "tip": "pastValleyQuestEleven.questFifteenTip"
       }
+    ],
+    "vocabulary": [
+      {
+        "word": "die Geschichte",
+        "translation-ru": "история, рассказ",
+        "translation-en": "story",
+        "translation-uk": "історія",
+        "translation-pl": "historia",
+        "translation-es": "la historia",
+        "translation-fr": "l’histoire",
+        "translation-tr": "hikâye",
+        "translation-ro": "povestea",
+        "translation-uz": "hikoya",
+        "translation-hi": "कहानी",
+        "translation-ar": "القصة"
+      },
+      {
+        "word": "erzähln",
+        "translation-ru": "рассказывать",
+        "translation-en": "to tell / narrate",
+        "translation-uk": "розповідати",
+        "translation-pl": "opowiadać",
+        "translation-es": "contar / narrar",
+        "translation-fr": "raconter",
+        "translation-tr": "anlatmak",
+        "translation-ro": "a povesti",
+        "translation-uz": "hikoya qilmoq",
+        "translation-hi": "बताना",
+        "translation-ar": "يحكي"
+      },
+      {
+        "word": "gehören",
+        "translation-ru": "принадлежать",
+        "translation-en": "to belong to",
+        "translation-uk": "належати",
+        "translation-pl": "należeć do",
+        "translation-es": "pertenecer",
+        "translation-fr": "appartenir à",
+        "translation-tr": "ait olmak",
+        "translation-ro": "a aparține",
+        "translation-uz": "tegishli bo'lmoq",
+        "translation-hi": "का होना",
+        "translation-ar": "يخص / ينتمي إلى"
+      },
+      {
+        "word": "viel",
+        "translation-ru": "много",
+        "translation-en": "much, a lot",
+        "translation-uk": "багато",
+        "translation-pl": "dużo",
+        "translation-es": "mucho",
+        "translation-fr": "beaucoup",
+        "translation-tr": "çok",
+        "translation-ro": "mult",
+        "translation-uz": "ko‘p",
+        "translation-hi": "बहुत",
+        "translation-ar": "كثير"
+      },
+      {
+        "word": "meinen",
+        "translation-ru": "считать / иметь в виду",
+        "translation-en": "to mean / think",
+        "translation-uk": "вважати / мати на увазі",
+        "translation-pl": "uważać / mieć na myśli",
+        "translation-es": "pensar / querer decir",
+        "translation-fr": "penser / vouloir dire",
+        "translation-tr": "düşünmek / demek istemek",
+        "translation-ro": "a crede / a vrea să spună",
+        "translation-uz": "o'ylamoq / nazarda tutmoq",
+        "translation-hi": "सोचना / मतलब होना",
+        "translation-ar": "يعتقد / يعني"
+      },
+      {
+        "word": "spazieren",
+        "translation-ru": "гулять",
+        "translation-en": "to go for a walk",
+        "translation-uk": "гуляти",
+        "translation-pl": "spacerować",
+        "translation-es": "pasear",
+        "translation-fr": "se promener",
+        "translation-tr": "gezmek",
+        "translation-ro": "a se plimba",
+        "translation-uz": "sayr qilmoq",
+        "translation-hi": "टहलना",
+        "translation-ar": "يتنزه"
+      },
+      {
+        "word": "vorbeikommen",
+        "translation-ru": "заходить, заглядывать",
+        "translation-en": "to drop by",
+        "translation-uk": "заходити",
+        "translation-pl": "wpadać, zajrzeć",
+        "translation-es": "pasarse",
+        "translation-fr": "passer",
+        "translation-tr": "uğramak",
+        "translation-ro": "a trece pe la",
+        "translation-uz": "kirib o‘tmoq",
+        "translation-hi": "आना, मिलने आना",
+        "translation-ar": "يمرّ على"
+      }
     ]
   },
   {
     "questId": "past-twelve",
-    "aliases": ["perfekt-relax"],
+    "aliases": [
+      "perfekt-relax"
+    ],
     "title": "pastValleyQuestTwelve.title",
     "progress": "0/15",
     "description": "pastValleyQuestTwelve.description",
@@ -1703,9 +4071,26 @@
       {
         "id": 1,
         "type": "reorder",
-        "question": "pastValleyQuestTwelve.questOne",
-        "words": ["einen", "tollen", "Film", "habe", "Ich", "gesehen"],
-        "correctOrder": ["Ich", "habe", "einen", "tollen", "Film", "gesehen"]
+        "question": "a2Course.t34",
+        "words": [
+          "gestern",
+          "gesehen",
+          "habe",
+          "Film",
+          "einen",
+          "Ich",
+          "gesieht",
+          "bin"
+        ],
+        "correctOrder": [
+          "Ich",
+          "habe",
+          "gestern",
+          "einen",
+          "Film",
+          "gesehen"
+        ],
+        "tip": "pastValleyQuestTwelve.description"
       },
       {
         "id": 2,
@@ -1724,14 +4109,26 @@
         "type": "speechToText",
         "question": "pastValleyQuestTwelve.questThree",
         "text": "Ich habe ein interessantes Buch gelesen",
-        "answer": "Ich habe ein interessantes Buch gelesen"
+        "answer": "Ich habe ein interessantes Buch gelesen",
+        "tip": "a2Course.tipPerfekt"
       },
       {
         "id": 4,
         "type": "reorder",
         "question": "pastValleyQuestTwelve.questFour",
-        "words": ["Gitarre", "gespielt", "hat", "Er"],
-        "correctOrder": ["Er", "hat", "Gitarre", "gespielt"]
+        "words": [
+          "Gitarre",
+          "gespielt",
+          "hat",
+          "Er"
+        ],
+        "correctOrder": [
+          "Er",
+          "hat",
+          "Gitarre",
+          "gespielt"
+        ],
+        "tip": "a2Course.tipPerfekt"
       },
       {
         "id": 5,
@@ -1742,14 +4139,31 @@
           "Bist du Musik gehört?",
           "Hast du Musik gehort?"
         ],
-        "answer": "Hast du Musik gehört?"
+        "answer": "Hast du Musik gehört?",
+        "tip": "a2Course.tipPerfekt"
       },
       {
         "id": 6,
         "type": "reorder",
         "question": "pastValleyQuestTwelve.questSix",
-        "words": ["leckeres", "haben", "Wir", "gekocht", "Abendessen", "ein", "hat"],
-        "correctOrder": ["Wir", "haben", "ein", "leckeres", "Abendessen", "gekocht"]
+        "words": [
+          "leckeres",
+          "haben",
+          "Wir",
+          "gekocht",
+          "Abendessen",
+          "ein",
+          "hat"
+        ],
+        "correctOrder": [
+          "Wir",
+          "haben",
+          "ein",
+          "leckeres",
+          "Abendessen",
+          "gekocht"
+        ],
+        "tip": "a2Course.tipPerfekt"
       },
       {
         "id": 7,
@@ -1768,54 +4182,123 @@
           "Ich bin viele Fotos gemacht",
           "Ich habe viele Fotos gemachen"
         ],
-        "answer": "Ich habe viele Fotos gemacht"
+        "answer": "Ich habe viele Fotos gemacht",
+        "tip": "a2Course.tipPerfekt"
       },
       {
         "id": 9,
         "type": "reorder",
         "question": "pastValleyQuestTwelve.questNine",
-        "words": ["Fahrrad", "sind", "gefahren", "Wir", "haben"],
-        "correctOrder": ["Wir", "sind", "Fahrrad", "gefahren"]
+        "words": [
+          "Fahrrad",
+          "sind",
+          "gefahren",
+          "Wir",
+          "haben"
+        ],
+        "correctOrder": [
+          "Wir",
+          "sind",
+          "Fahrrad",
+          "gefahren"
+        ],
+        "tip": "a2Course.tipPerfekt"
       },
       {
         "id": 10,
         "type": "speechToText",
         "question": "pastValleyQuestTwelve.questTen",
         "text": "Ich habe gut geschlafen",
-        "answer": "Ich habe gut geschlafen"
+        "answer": "Ich habe gut geschlafen",
+        "tip": "a2Course.tipPerfekt"
       },
       {
         "id": 11,
         "type": "reorder",
-        "question": "pastValleyQuestTwelve.questEleven",
-        "words": ["Museum", "ein", "besucht", "haben", "Wir"],
-        "correctOrder": ["Wir", "haben", "ein", "Museum", "besucht"],
-        "tip": "pastValleyQuestTwelve.questElevenTip"
+        "question": "pastValleyQuestEleven.questOne",
+        "words": [
+          "besucht",
+          "meine",
+          "Eltern",
+          "habe",
+          "Ich"
+        ],
+        "correctOrder": [
+          "Ich",
+          "habe",
+          "meine",
+          "Eltern",
+          "besucht"
+        ],
+        "tip": "pastValleyQuestEleven.questOneTip",
+        "reviewOf": "past-eleven",
+        "reviewLand": "past-land"
       },
       {
         "id": 12,
-        "type": "select",
-        "question": "pastValleyQuestTwelve.questTwelve",
-        "options": [
-          "Hast du ein Bild gemalt?",
-          "Bist du ein Bild gemalt?",
-          "Hast du ein Bild gemalen?"
+        "type": "reorder",
+        "question": "pastValleyQuestNine.questFour",
+        "words": [
+          "Nacht",
+          "ganze",
+          "die",
+          "getanzt",
+          "habe",
+          "Ich"
         ],
-        "answer": "Hast du ein Bild gemalt?"
+        "correctOrder": [
+          "Ich",
+          "habe",
+          "die",
+          "ganze",
+          "Nacht",
+          "getanzt"
+        ],
+        "reviewOf": "past-nine",
+        "reviewLand": "past-land",
+        "tip": "a2Course.tipPerfekt"
       },
       {
         "id": 13,
-        "type": "speechToText",
-        "question": "pastValleyQuestTwelve.questThirteen",
-        "text": "Ich bin im Wald spazieren gegangen",
-        "answer": "Ich bin im Wald spazieren gegangen"
+        "type": "reorder",
+        "question": "pastValleyQuestFive.questSix",
+        "words": [
+          "Salat",
+          "einen",
+          "genommen",
+          "Ich",
+          "habe"
+        ],
+        "correctOrder": [
+          "Ich",
+          "habe",
+          "einen",
+          "Salat",
+          "genommen"
+        ],
+        "tip": "pastValleyQuestFive.questSixTip",
+        "reviewOf": "past-five",
+        "reviewLand": "past-land"
       },
       {
         "id": 14,
         "type": "reorder",
         "question": "pastValleyQuestTwelve.questFourteen",
-        "words": ["Lied", "ein", "gesungen", "hat", "Er", "ist"],
-        "correctOrder": ["Er", "hat", "ein", "Lied", "gesungen"],
+        "words": [
+          "Lied",
+          "ein",
+          "gesungen",
+          "hat",
+          "Er",
+          "ist"
+        ],
+        "correctOrder": [
+          "Er",
+          "hat",
+          "ein",
+          "Lied",
+          "gesungen"
+        ],
         "tip": "pastValleyQuestTwelve.questFourteenTip"
       },
       {
@@ -1827,7 +4310,80 @@
           "Ich bin Sport gemacht",
           "Ich habe Sport gemachen"
         ],
-        "answer": "Ich habe Sport gemacht"
+        "answer": "Ich habe Sport gemacht",
+        "tip": "a2Course.tipPerfekt"
+      }
+    ],
+    "vocabulary": [
+      {
+        "word": "interessant",
+        "translation-ru": "интересный",
+        "translation-en": "interesting",
+        "translation-uk": "цікавий",
+        "translation-pl": "ciekawy",
+        "translation-es": "interesante",
+        "translation-fr": "intéressant",
+        "translation-tr": "ilginç",
+        "translation-ro": "interesant",
+        "translation-uz": "qiziqarli",
+        "translation-hi": "दिलचस्प",
+        "translation-ar": "مثير للاهتمام"
+      },
+      {
+        "word": "die Gitarre",
+        "translation-ru": "гитара",
+        "translation-en": "guitar",
+        "translation-uk": "гітара",
+        "translation-pl": "gitara",
+        "translation-es": "guitarra",
+        "translation-fr": "guitare",
+        "translation-tr": "gitar",
+        "translation-ro": "chitară",
+        "translation-uz": "gitara",
+        "translation-hi": "गिटार",
+        "translation-ar": "غيتار"
+      },
+      {
+        "word": "das Lied",
+        "translation-ru": "песня",
+        "translation-en": "song",
+        "translation-uk": "пісня",
+        "translation-pl": "piosenka",
+        "translation-es": "canción",
+        "translation-fr": "chanson",
+        "translation-tr": "şarkı",
+        "translation-ro": "cântec",
+        "translation-uz": "qo‘shiq",
+        "translation-hi": "गाना",
+        "translation-ar": "أغنية"
+      },
+      {
+        "word": "der Sport",
+        "translation-ru": "спорт",
+        "translation-en": "sport",
+        "translation-uk": "спорт",
+        "translation-pl": "sport",
+        "translation-es": "el deporte",
+        "translation-fr": "le sport",
+        "translation-tr": "spor",
+        "translation-ro": "sportul",
+        "translation-uz": "sport",
+        "translation-hi": "खेल",
+        "translation-ar": "الرياضة"
+      },
+      {
+        "word": "lesen",
+        "translation-ru": "читать",
+        "translation-en": "to read",
+        "translation-uk": "читати",
+        "translation-pl": "czytać",
+        "translation-es": "leer",
+        "translation-fr": "lire",
+        "translation-tr": "okumak",
+        "translation-ro": "a citi",
+        "translation-uz": "o'qimoq",
+        "translation-hi": "पढ़ना",
+        "translation-ar": "يقرأ"
       }
     ]
   }

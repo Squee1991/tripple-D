@@ -1,0 +1,2593 @@
+[
+  {
+    "questId": "taste-market-one",
+    "title": "tasteMarketOne.questTitle",
+    "progress": "0/15",
+    "description": "tasteMarketOne.questDescription",
+    "conditions": {
+      "goal": "tasteMarketOne.questGoal",
+      "minCorrect": 15,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
+    "vocabulary": [
+      {
+        "word": "frisch",
+        "translation-ru": "свежий",
+        "translation-en": "fresh",
+        "translation-uk": "свіжий",
+        "translation-pl": "świeży",
+        "translation-es": "fresco",
+        "translation-fr": "frais",
+        "translation-tr": "taze",
+        "translation-ro": "proaspăt",
+        "translation-uz": "yangi, toza",
+        "translation-hi": "ताज़ा",
+        "translation-ar": "طازج"
+      },
+      {
+        "word": "das Brötchen",
+        "translation-ru": "булочка",
+        "translation-en": "bread roll",
+        "translation-uk": "булочка",
+        "translation-pl": "bułka",
+        "translation-es": "el panecillo",
+        "translation-fr": "le petit pain",
+        "translation-tr": "küçük ekmek",
+        "translation-ro": "chifla",
+        "translation-uz": "bulochka",
+        "translation-hi": "बन",
+        "translation-ar": "الخبز الصغير"
+      },
+      {
+        "word": "der Wein",
+        "translation-ru": "вино",
+        "translation-en": "wine",
+        "translation-uk": "вино",
+        "translation-pl": "wino",
+        "translation-es": "el vino",
+        "translation-fr": "le vin",
+        "translation-tr": "şarap",
+        "translation-ro": "vinul",
+        "translation-uz": "vino",
+        "translation-hi": "वाइन",
+        "translation-ar": "النبيذ"
+      },
+      {
+        "word": "schmecken",
+        "translation-ru": "быть на вкус",
+        "translation-en": "to taste",
+        "translation-uk": "смакувати",
+        "translation-pl": "smakować",
+        "translation-es": "saber",
+        "translation-fr": "avoir bon goût",
+        "translation-tr": "tadı olmak",
+        "translation-ro": "a avea gust",
+        "translation-uz": "ta’mi bo‘lmoq",
+        "translation-hi": "स्वाद होना",
+        "translation-ar": "يكون طعمه"
+      },
+      {
+        "word": "die Großmutter",
+        "translation-ru": "бабушка",
+        "translation-en": "grandmother",
+        "translation-uk": "бабуся",
+        "translation-pl": "babcia",
+        "translation-es": "la abuela",
+        "translation-fr": "la grand-mère",
+        "translation-tr": "büyükanne",
+        "translation-ro": "bunica",
+        "translation-uz": "buvi",
+        "translation-hi": "दादी",
+        "translation-ar": "الجدة"
+      }
+    ],
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "tasteMarketOne.questTask1",
+        "options": [
+          "Heißen Kaffee schmeckt gut.",
+          "Heißes Kaffee schmeckt gut.",
+          "Heißer Kaffee schmeckt gut."
+        ],
+        "answer": "Heißer Kaffee schmeckt gut.",
+        "tip": "tasteMarketOne.questDescription"
+      },
+      {
+        "id": 2,
+        "type": "input",
+        "question": "tasteMarketOne.questTask2",
+        "correctAnswer": "Frische",
+        "tip": "tasteMarketOne.questDescription"
+      },
+      {
+        "id": 3,
+        "type": "input",
+        "question": "tasteMarketOne.questTask3",
+        "correctAnswer": "Kaltes",
+        "tip": "tasteMarketOne.questDescription"
+      },
+      {
+        "id": 4,
+        "type": "reorder",
+        "question": "tasteMarketOne.questTask4",
+        "words": [
+          "Frischer",
+          "lecker",
+          "Frische",
+          "sind",
+          "Brötchen"
+        ],
+        "correctOrder": [
+          "Frische",
+          "Brötchen",
+          "sind",
+          "lecker"
+        ],
+        "tip": "tasteMarketOne.questDescription"
+      },
+      {
+        "id": 5,
+        "type": "select",
+        "question": "tasteMarketOne.questTask5",
+        "options": [
+          "Rote Wein schmeckt gut.",
+          "Roter Wein schmeckt gut.",
+          "Rotes Wein schmeckt gut."
+        ],
+        "answer": "Roter Wein schmeckt gut.",
+        "tip": "tasteMarketOne.questDescription"
+      },
+      {
+        "id": 6,
+        "type": "input",
+        "question": "tasteMarketOne.questTask6",
+        "correctAnswer": "Schlechtes",
+        "tip": "tasteMarketOne.questDescription"
+      },
+      {
+        "id": 7,
+        "type": "readAndAnswer",
+        "question": "tasteMarketOne.questTask7",
+        "text": "Auf dem Markt am Samstag gibt es viel. Frisches Brot kostet zwei Euro, frische Milch kostet einen Euro, und heißer Kaffee kostet drei Euro.",
+        "options": [
+          "einen Euro",
+          "drei Euro",
+          "zwei Euro"
+        ],
+        "answer": "drei Euro",
+        "tip": "tasteMarketOne.questDescription"
+      },
+      {
+        "id": 8,
+        "type": "input",
+        "question": "tasteMarketOne.questTask8",
+        "correctAnswer": "Frisches",
+        "tip": "tasteMarketOne.questDescription"
+      },
+      {
+        "id": 9,
+        "type": "reorder",
+        "question": "tasteMarketOne.questTask10",
+        "words": [
+          "Musik",
+          "wichtig",
+          "Gute",
+          "Guter",
+          "ist"
+        ],
+        "correctOrder": [
+          "Gute",
+          "Musik",
+          "ist",
+          "wichtig"
+        ],
+        "tip": "tasteMarketOne.questDescription"
+      },
+      {
+        "id": 10,
+        "type": "select",
+        "question": "tasteMarketOne.questTask11",
+        "options": [
+          "Altes Freunde sind die besten.",
+          "Alte Freunde sind die besten.",
+          "Alter Freunde sind die besten."
+        ],
+        "answer": "Alte Freunde sind die besten.",
+        "tip": "tasteMarketOne.questDescription"
+      },
+      {
+        "id": 11,
+        "type": "input",
+        "question": "heroSquareEight.questTask9",
+        "correctAnswer": "Bären",
+        "tip": "heroSquareEight.questDescription",
+        "reviewOf": "hero-square-eight",
+        "reviewLand": "hero-square"
+      },
+      {
+        "id": 12,
+        "type": "input",
+        "question": "heroSquareFive.questTask12",
+        "correctAnswer": "Kunde",
+        "tip": "heroSquareFive.questDescription",
+        "reviewOf": "hero-square-five",
+        "reviewLand": "hero-square"
+      },
+      {
+        "id": 13,
+        "type": "input",
+        "question": "heroSquareTwo.questTask13",
+        "correctAnswer": "Menschen",
+        "tip": "heroSquareTwo.questDescription",
+        "reviewOf": "hero-square-two",
+        "reviewLand": "hero-square"
+      },
+      {
+        "id": 14,
+        "type": "input",
+        "question": "tasteMarketOne.questTask14",
+        "correctAnswer": "der",
+        "tip": "tasteMarketOne.questDescription"
+      },
+      {
+        "id": 15,
+        "type": "input",
+        "question": "tasteMarketOne.questTask15",
+        "correctAnswer": "hätte",
+        "tip": "tasteMarketOne.questDescription"
+      }
+    ]
+  },
+  {
+    "questId": "taste-market-two",
+    "title": "tasteMarketTwo.questTitle",
+    "progress": "0/15",
+    "description": "tasteMarketTwo.questDescription",
+    "conditions": {
+      "goal": "tasteMarketTwo.questGoal",
+      "minCorrect": 15,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
+    "vocabulary": [
+      {
+        "word": "das Fleisch",
+        "translation-ru": "мясо",
+        "translation-en": "meat",
+        "translation-uk": "м’ясо",
+        "translation-pl": "mięso",
+        "translation-es": "la carne",
+        "translation-fr": "la viande",
+        "translation-tr": "et",
+        "translation-ro": "carnea",
+        "translation-uz": "go‘sht",
+        "translation-hi": "मांस",
+        "translation-ar": "اللحم"
+      },
+      {
+        "word": "die Suppe",
+        "translation-ru": "суп",
+        "translation-en": "soup",
+        "translation-uk": "суп",
+        "translation-pl": "zupa",
+        "translation-es": "la sopa",
+        "translation-fr": "la soupe",
+        "translation-tr": "çorba",
+        "translation-ro": "supa",
+        "translation-uz": "sho‘rva",
+        "translation-hi": "सूप",
+        "translation-ar": "الحساء"
+      },
+      {
+        "word": "bestellen",
+        "translation-ru": "заказывать",
+        "translation-en": "to order",
+        "translation-uk": "замовляти",
+        "translation-pl": "zamawiać",
+        "translation-es": "pedir",
+        "translation-fr": "commander",
+        "translation-tr": "sipariş etmek",
+        "translation-ro": "a comanda",
+        "translation-uz": "buyurtma bermoq",
+        "translation-hi": "ऑर्डर करना",
+        "translation-ar": "يطلب"
+      },
+      {
+        "word": "der Fisch",
+        "translation-ru": "рыба",
+        "translation-en": "fish",
+        "translation-uk": "риба",
+        "translation-pl": "ryba",
+        "translation-es": "el pescado",
+        "translation-fr": "le poisson",
+        "translation-tr": "balık",
+        "translation-ro": "peștele",
+        "translation-uz": "baliq",
+        "translation-hi": "मछली",
+        "translation-ar": "السمك"
+      },
+      {
+        "word": "der Löwe",
+        "translation-ru": "лев",
+        "translation-en": "lion",
+        "translation-uk": "лев",
+        "translation-pl": "lew",
+        "translation-es": "el león",
+        "translation-fr": "le lion",
+        "translation-tr": "aslan",
+        "translation-ro": "leul",
+        "translation-uz": "sher",
+        "translation-hi": "शेर",
+        "translation-ar": "الأسد"
+      }
+    ],
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "tasteMarketTwo.questTask1",
+        "options": [
+          "Ich trinke heißes Tee.",
+          "Ich trinke heißer Tee.",
+          "Ich trinke heißen Tee."
+        ],
+        "answer": "Ich trinke heißen Tee.",
+        "tip": "tasteMarketTwo.questDescription"
+      },
+      {
+        "id": 2,
+        "type": "input",
+        "question": "tasteMarketTwo.questTask2",
+        "correctAnswer": "frisches",
+        "tip": "tasteMarketTwo.questDescription"
+      },
+      {
+        "id": 3,
+        "type": "input",
+        "question": "tasteMarketTwo.questTask3",
+        "correctAnswer": "guten",
+        "tip": "tasteMarketTwo.questDescription"
+      },
+      {
+        "id": 4,
+        "type": "reorder",
+        "question": "tasteMarketTwo.questTask4",
+        "words": [
+          "Fisch",
+          "frischer",
+          "frischen",
+          "Sie",
+          "isst"
+        ],
+        "correctOrder": [
+          "Sie",
+          "isst",
+          "frischen",
+          "Fisch"
+        ],
+        "tip": "tasteMarketTwo.questDescription"
+      },
+      {
+        "id": 5,
+        "type": "select",
+        "question": "tasteMarketTwo.questTask5",
+        "options": [
+          "Wir haben kalten Wasser.",
+          "Wir haben kaltes Wasser.",
+          "Wir haben kalter Wasser."
+        ],
+        "answer": "Wir haben kaltes Wasser.",
+        "tip": "tasteMarketTwo.questDescription"
+      },
+      {
+        "id": 6,
+        "type": "input",
+        "question": "tasteMarketTwo.questTask6",
+        "correctAnswer": "heiße",
+        "tip": "tasteMarketTwo.questDescription"
+      },
+      {
+        "id": 7,
+        "type": "readAndAnswer",
+        "question": "tasteMarketTwo.questTask7",
+        "text": "Im Restaurant bestellt Tom roten Wein und frischen Fisch. Seine Frau isst kein Fleisch. Sie nimmt eine warme Suppe.",
+        "options": [
+          "eine warme Suppe",
+          "roten Wein",
+          "frischen Fisch"
+        ],
+        "answer": "eine warme Suppe",
+        "tip": "tasteMarketTwo.questDescription"
+      },
+      {
+        "id": 8,
+        "type": "input",
+        "question": "tasteMarketTwo.questTask8",
+        "correctAnswer": "frische",
+        "tip": "tasteMarketTwo.questDescription"
+      },
+      {
+        "id": 9,
+        "type": "reorder",
+        "question": "tasteMarketTwo.questTask10",
+        "words": [
+          "Wir",
+          "kalter",
+          "Kaffee",
+          "trinken",
+          "kalten"
+        ],
+        "correctOrder": [
+          "Wir",
+          "trinken",
+          "kalten",
+          "Kaffee"
+        ],
+        "tip": "tasteMarketTwo.questDescription"
+      },
+      {
+        "id": 10,
+        "type": "select",
+        "question": "tasteMarketTwo.questTask11",
+        "options": [
+          "Ich suche billiger Tickets.",
+          "Ich suche billige Tickets.",
+          "Ich suche billigen Tickets."
+        ],
+        "answer": "Ich suche billige Tickets.",
+        "tip": "tasteMarketTwo.questDescription"
+      },
+      {
+        "id": 11,
+        "type": "input",
+        "question": "tasteMarketOne.questTask9",
+        "correctAnswer": "Kalter",
+        "tip": "tasteMarketOne.questDescription",
+        "reviewOf": "taste-market-one",
+        "reviewLand": "taste-market"
+      },
+      {
+        "id": 12,
+        "type": "input",
+        "question": "heroSquareSix.questTask12",
+        "correctAnswer": "Löwen",
+        "tip": "heroSquareSix.questDescription",
+        "reviewOf": "hero-square-six",
+        "reviewLand": "hero-square"
+      },
+      {
+        "id": 13,
+        "type": "input",
+        "question": "heroSquareThree.questTask13",
+        "correctAnswer": "Studenten",
+        "tip": "heroSquareThree.questDescription",
+        "reviewOf": "hero-square-three",
+        "reviewLand": "hero-square"
+      },
+      {
+        "id": 14,
+        "type": "input",
+        "question": "tasteMarketTwo.questTask14",
+        "correctAnswer": "der",
+        "tip": "tasteMarketTwo.questDescription"
+      },
+      {
+        "id": 15,
+        "type": "input",
+        "question": "tasteMarketTwo.questTask15",
+        "correctAnswer": "hätte",
+        "tip": "tasteMarketTwo.questDescription"
+      }
+    ]
+  },
+  {
+    "questId": "taste-market-three",
+    "title": "tasteMarketThree.questTitle",
+    "progress": "0/15",
+    "description": "tasteMarketThree.questDescription",
+    "conditions": {
+      "goal": "tasteMarketThree.questGoal",
+      "minCorrect": 15,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
+    "vocabulary": [
+      {
+        "word": "der Zucker",
+        "translation-ru": "сахар",
+        "translation-en": "sugar",
+        "translation-uk": "цукор",
+        "translation-pl": "cukier",
+        "translation-es": "el azúcar",
+        "translation-fr": "le sucre",
+        "translation-tr": "şeker",
+        "translation-ro": "zahărul",
+        "translation-uz": "shakar",
+        "translation-hi": "चीनी",
+        "translation-ar": "السكر"
+      },
+      {
+        "word": "die Butter",
+        "translation-ru": "сливочное масло",
+        "translation-en": "butter",
+        "translation-uk": "вершкове масло",
+        "translation-pl": "masło",
+        "translation-es": "la mantequilla",
+        "translation-fr": "le beurre",
+        "translation-tr": "tereyağı",
+        "translation-ro": "untul",
+        "translation-uz": "sariyog‘",
+        "translation-hi": "मक्खन",
+        "translation-ar": "الزبدة"
+      },
+      {
+        "word": "der Grund",
+        "translation-ru": "причина",
+        "translation-en": "reason",
+        "translation-uk": "причина",
+        "translation-pl": "powód",
+        "translation-es": "la razón",
+        "translation-fr": "la raison",
+        "translation-tr": "sebep",
+        "translation-ro": "motivul",
+        "translation-uz": "sabab",
+        "translation-hi": "कारण",
+        "translation-ar": "السبب"
+      },
+      {
+        "word": "der Anfang",
+        "translation-ru": "начало",
+        "translation-en": "beginning",
+        "translation-uk": "початок",
+        "translation-pl": "początek",
+        "translation-es": "el principio",
+        "translation-fr": "le début",
+        "translation-tr": "başlangıç",
+        "translation-ro": "începutul",
+        "translation-uz": "boshlanish",
+        "translation-hi": "शुरुआत",
+        "translation-ar": "البداية"
+      },
+      {
+        "word": "grün",
+        "translation-ru": "зелёный",
+        "translation-en": "green",
+        "translation-uk": "зелений",
+        "translation-pl": "zielony",
+        "translation-es": "verde",
+        "translation-fr": "vert",
+        "translation-tr": "yeşil",
+        "translation-ro": "verde",
+        "translation-uz": "yashil",
+        "translation-hi": "हरा",
+        "translation-ar": "أخضر"
+      }
+    ],
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "tasteMarketThree.questTask1",
+        "options": [
+          "Ich trinke Kaffee mit heißem Milch.",
+          "Ich trinke Kaffee mit heiße Milch.",
+          "Ich trinke Kaffee mit heißer Milch."
+        ],
+        "answer": "Ich trinke Kaffee mit heißer Milch.",
+        "tip": "tasteMarketThree.questDescription"
+      },
+      {
+        "id": 2,
+        "type": "input",
+        "question": "tasteMarketThree.questTask2",
+        "correctAnswer": "heißem",
+        "tip": "tasteMarketThree.questDescription"
+      },
+      {
+        "id": 3,
+        "type": "input",
+        "question": "tasteMarketThree.questTask3",
+        "correctAnswer": "guten",
+        "tip": "tasteMarketThree.questDescription"
+      },
+      {
+        "id": 4,
+        "type": "reorder",
+        "question": "tasteMarketThree.questTask4",
+        "words": [
+          "frischem",
+          "mit",
+          "Butter",
+          "Ich",
+          "esse",
+          "frischer",
+          "Brot"
+        ],
+        "correctOrder": [
+          "Ich",
+          "esse",
+          "Brot",
+          "mit",
+          "frischer",
+          "Butter"
+        ],
+        "tip": "tasteMarketThree.questDescription"
+      },
+      {
+        "id": 5,
+        "type": "select",
+        "question": "tasteMarketThree.questTask5",
+        "options": [
+          "Wir essen Fisch mit frischem Salat.",
+          "Wir essen Fisch mit frischen Salat.",
+          "Wir essen Fisch mit frischer Salat."
+        ],
+        "answer": "Wir essen Fisch mit frischem Salat.",
+        "tip": "tasteMarketThree.questDescription"
+      },
+      {
+        "id": 6,
+        "type": "input",
+        "question": "tasteMarketThree.questTask6",
+        "correctAnswer": "guter",
+        "tip": "tasteMarketThree.questDescription"
+      },
+      {
+        "id": 7,
+        "type": "readAndAnswer",
+        "question": "tasteMarketThree.questTask7",
+        "text": "Mein Opa trinkt jeden Morgen Kaffee mit warmer Milch und viel Zucker. Meine Oma trinkt lieber grünen Tee ohne Zucker.",
+        "options": [
+          "kaltes Wasser",
+          "Kaffee mit warmer Milch",
+          "grünen Tee"
+        ],
+        "answer": "Kaffee mit warmer Milch",
+        "tip": "tasteMarketThree.questDescription"
+      },
+      {
+        "id": 8,
+        "type": "input",
+        "question": "tasteMarketThree.questTask8",
+        "correctAnswer": "großem",
+        "tip": "tasteMarketThree.questDescription"
+      },
+      {
+        "id": 9,
+        "type": "reorder",
+        "question": "tasteMarketThree.questTask10",
+        "words": [
+          "mit",
+          "junge",
+          "arbeitet",
+          "Er",
+          "Leuten",
+          "jungen"
+        ],
+        "correctOrder": [
+          "Er",
+          "arbeitet",
+          "mit",
+          "jungen",
+          "Leuten"
+        ],
+        "tip": "tasteMarketThree.questDescription"
+      },
+      {
+        "id": 10,
+        "type": "select",
+        "question": "tasteMarketThree.questTask11",
+        "options": [
+          "Heute gibt es Suppe mit frischem Brot.",
+          "Heute gibt es Suppe mit frischer Brot.",
+          "Heute gibt es Suppe mit frisches Brot."
+        ],
+        "answer": "Heute gibt es Suppe mit frischem Brot.",
+        "tip": "tasteMarketThree.questDescription"
+      },
+      {
+        "id": 11,
+        "type": "input",
+        "question": "tasteMarketTwo.questTask9",
+        "correctAnswer": "frisches",
+        "tip": "tasteMarketTwo.questDescription",
+        "reviewOf": "taste-market-two",
+        "reviewLand": "taste-market"
+      },
+      {
+        "id": 12,
+        "type": "input",
+        "question": "heroSquareSeven.questTask12",
+        "correctAnswer": "Patienten",
+        "tip": "heroSquareSeven.questDescription",
+        "reviewOf": "hero-square-seven",
+        "reviewLand": "hero-square"
+      },
+      {
+        "id": 13,
+        "type": "input",
+        "question": "heroSquareFour.questTask13",
+        "correctAnswer": "Namens",
+        "tip": "heroSquareFour.questDescription",
+        "reviewOf": "hero-square-four",
+        "reviewLand": "hero-square"
+      },
+      {
+        "id": 14,
+        "type": "input",
+        "question": "tasteMarketThree.questTask14",
+        "correctAnswer": "wäre",
+        "tip": "tasteMarketThree.questDescription"
+      },
+      {
+        "id": 15,
+        "type": "input",
+        "question": "tasteMarketThree.questTask15",
+        "correctAnswer": "dem",
+        "tip": "tasteMarketThree.questDescription"
+      }
+    ]
+  },
+  {
+    "questId": "taste-market-four",
+    "title": "tasteMarketFour.questTitle",
+    "progress": "0/15",
+    "description": "tasteMarketFour.questDescription",
+    "conditions": {
+      "goal": "tasteMarketFour.questGoal",
+      "minCorrect": 15,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
+    "vocabulary": [
+      {
+        "word": "einige",
+        "translation-ru": "несколько",
+        "translation-en": "some, a few",
+        "translation-uk": "кілька",
+        "translation-pl": "kilka",
+        "translation-es": "algunos",
+        "translation-fr": "quelques",
+        "translation-tr": "birkaç",
+        "translation-ro": "câțiva",
+        "translation-uz": "bir nechta",
+        "translation-hi": "कुछ",
+        "translation-ar": "بعض"
+      },
+      {
+        "word": "wenige",
+        "translation-ru": "мало, немногие",
+        "translation-en": "few",
+        "translation-uk": "мало, небагато",
+        "translation-pl": "nieliczni",
+        "translation-es": "pocos",
+        "translation-fr": "peu de",
+        "translation-tr": "az",
+        "translation-ro": "puțini",
+        "translation-uz": "kam, oz",
+        "translation-hi": "थोड़े",
+        "translation-ar": "قليل"
+      },
+      {
+        "word": "der Affe",
+        "translation-ru": "обезьяна",
+        "translation-en": "monkey",
+        "translation-uk": "мавпа",
+        "translation-pl": "małpa",
+        "translation-es": "el mono",
+        "translation-fr": "le singe",
+        "translation-tr": "maymun",
+        "translation-ro": "maimuța",
+        "translation-uz": "maymun",
+        "translation-hi": "बंदर",
+        "translation-ar": "القرد"
+      },
+      {
+        "word": "der Polizist",
+        "translation-ru": "полицейский",
+        "translation-en": "police officer",
+        "translation-uk": "поліцейський",
+        "translation-pl": "policjant",
+        "translation-es": "el policía",
+        "translation-fr": "le policier",
+        "translation-tr": "polis memuru",
+        "translation-ro": "polițistul",
+        "translation-uz": "politsiyachi",
+        "translation-hi": "पुलिसवाला",
+        "translation-ar": "الشرطي"
+      },
+      {
+        "word": "trotz",
+        "translation-ru": "несмотря на",
+        "translation-en": "despite",
+        "translation-uk": "попри",
+        "translation-pl": "mimo",
+        "translation-es": "a pesar de",
+        "translation-fr": "malgré",
+        "translation-tr": "rağmen",
+        "translation-ro": "în ciuda",
+        "translation-uz": "qaramay",
+        "translation-hi": "के बावजूद",
+        "translation-ar": "رغم"
+      }
+    ],
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "tasteMarketFour.questTask1",
+        "options": [
+          "In der Stadt gibt es viele junger Leute.",
+          "In der Stadt gibt es viele jungen Leute.",
+          "In der Stadt gibt es viele junge Leute."
+        ],
+        "answer": "In der Stadt gibt es viele junge Leute.",
+        "tip": "tasteMarketFour.questDescription"
+      },
+      {
+        "id": 2,
+        "type": "input",
+        "question": "tasteMarketFour.questTask2",
+        "correctAnswer": "kleine",
+        "tip": "tasteMarketFour.questDescription"
+      },
+      {
+        "id": 3,
+        "type": "input",
+        "question": "tasteMarketFour.questTask3",
+        "correctAnswer": "neue",
+        "tip": "tasteMarketFour.questDescription"
+      },
+      {
+        "id": 4,
+        "type": "reorder",
+        "question": "tasteMarketFour.questTask4",
+        "words": [
+          "viele",
+          "gibt",
+          "Dort",
+          "Häuser",
+          "alte",
+          "alten",
+          "es"
+        ],
+        "correctOrder": [
+          "Dort",
+          "gibt",
+          "es",
+          "viele",
+          "alte",
+          "Häuser"
+        ],
+        "tip": "tasteMarketFour.questDescription"
+      },
+      {
+        "id": 5,
+        "type": "select",
+        "question": "tasteMarketFour.questTask5",
+        "options": [
+          "Ich habe mit einige neuen Kollegen gesprochen.",
+          "Ich habe mit einigen neuen Kollegen gesprochen.",
+          "Ich habe mit einigen neue Kollegen gesprochen."
+        ],
+        "answer": "Ich habe mit einigen neuen Kollegen gesprochen.",
+        "tip": "tasteMarketFour.questDescription"
+      },
+      {
+        "id": 6,
+        "type": "input",
+        "question": "tasteMarketFour.questTask6",
+        "correctAnswer": "alte",
+        "tip": "tasteMarketFour.questDescription"
+      },
+      {
+        "id": 7,
+        "type": "readAndAnswer",
+        "question": "tasteMarketFour.questTask7",
+        "text": "In unserem Kurs sind zwölf Leute. Es gibt viele junge Leute und einige ältere Leute. Wir lernen jeden Tag viele neue Wörter.",
+        "options": [
+          "viele neue Wörter",
+          "Englisch",
+          "nur Grammatik"
+        ],
+        "answer": "viele neue Wörter",
+        "tip": "tasteMarketFour.questDescription"
+      },
+      {
+        "id": 8,
+        "type": "input",
+        "question": "tasteMarketFour.questTask8",
+        "correctAnswer": "gute",
+        "tip": "tasteMarketFour.questDescription"
+      },
+      {
+        "id": 9,
+        "type": "reorder",
+        "question": "tasteMarketFour.questTask10",
+        "words": [
+          "haben",
+          "Wir",
+          "eingeladen",
+          "Freunde",
+          "guten",
+          "einige",
+          "gute"
+        ],
+        "correctOrder": [
+          "Wir",
+          "haben",
+          "einige",
+          "gute",
+          "Freunde",
+          "eingeladen"
+        ],
+        "tip": "tasteMarketFour.questDescription"
+      },
+      {
+        "id": 10,
+        "type": "select",
+        "question": "tasteMarketFour.questTask11",
+        "options": [
+          "In dieser Stadt gibt es viele schöner Straßen.",
+          "In dieser Stadt gibt es viele schöne Straßen.",
+          "In dieser Stadt gibt es viele schönen Straßen."
+        ],
+        "answer": "In dieser Stadt gibt es viele schöne Straßen.",
+        "tip": "tasteMarketFour.questDescription"
+      },
+      {
+        "id": 11,
+        "type": "input",
+        "question": "tasteMarketThree.questTask9",
+        "correctAnswer": "kleiner",
+        "tip": "tasteMarketThree.questDescription",
+        "reviewOf": "taste-market-three",
+        "reviewLand": "taste-market"
+      },
+      {
+        "id": 12,
+        "type": "input",
+        "question": "heroSquareEight.questTask12",
+        "correctAnswer": "Affen",
+        "tip": "heroSquareEight.questDescription",
+        "reviewOf": "hero-square-eight",
+        "reviewLand": "hero-square"
+      },
+      {
+        "id": 13,
+        "type": "input",
+        "question": "heroSquareFive.questTask13",
+        "correctAnswer": "Polizist",
+        "tip": "heroSquareFive.questDescription",
+        "reviewOf": "hero-square-five",
+        "reviewLand": "hero-square"
+      },
+      {
+        "id": 14,
+        "type": "input",
+        "question": "tasteMarketFour.questTask14",
+        "correctAnswer": "des",
+        "tip": "tasteMarketFour.questDescription"
+      },
+      {
+        "id": 15,
+        "type": "input",
+        "question": "tasteMarketFour.questTask15",
+        "correctAnswer": "reparieren",
+        "tip": "tasteMarketFour.questDescription"
+      }
+    ]
+  },
+  {
+    "questId": "taste-market-five",
+    "title": "tasteMarketFive.questTitle",
+    "progress": "0/15",
+    "description": "tasteMarketFive.questDescription",
+    "conditions": {
+      "goal": "tasteMarketFive.questGoal",
+      "minCorrect": 15,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
+    "vocabulary": [
+      {
+        "word": "stark",
+        "translation-ru": "сильный",
+        "translation-en": "strong, heavy",
+        "translation-uk": "сильний",
+        "translation-pl": "silny",
+        "translation-es": "fuerte",
+        "translation-fr": "fort",
+        "translation-tr": "güçlü, şiddetli",
+        "translation-ro": "puternic",
+        "translation-uz": "kuchli",
+        "translation-hi": "तेज़, मज़बूत",
+        "translation-ar": "قوي"
+      },
+      {
+        "word": "der Wind",
+        "translation-ru": "ветер",
+        "translation-en": "wind",
+        "translation-uk": "вітер",
+        "translation-pl": "wiatr",
+        "translation-es": "el viento",
+        "translation-fr": "le vent",
+        "translation-tr": "rüzgâr",
+        "translation-ro": "vântul",
+        "translation-uz": "shamol",
+        "translation-hi": "हवा",
+        "translation-ar": "الريح"
+      },
+      {
+        "word": "der Verkehr",
+        "translation-ru": "движение (транспорта)",
+        "translation-en": "traffic",
+        "translation-uk": "рух (транспорту)",
+        "translation-pl": "ruch (uliczny)",
+        "translation-es": "el tráfico",
+        "translation-fr": "la circulation",
+        "translation-tr": "trafik",
+        "translation-ro": "traficul",
+        "translation-uz": "transport harakati",
+        "translation-hi": "यातायात",
+        "translation-ar": "حركة المرور"
+      },
+      {
+        "word": "die Nachricht",
+        "translation-ru": "сообщение",
+        "translation-en": "message",
+        "translation-uk": "повідомлення",
+        "translation-pl": "wiadomość",
+        "translation-es": "el mensaje",
+        "translation-fr": "le message",
+        "translation-tr": "mesaj",
+        "translation-ro": "mesajul",
+        "translation-uz": "xabar",
+        "translation-hi": "संदेश",
+        "translation-ar": "الرسالة"
+      },
+      {
+        "word": "trotz",
+        "translation-ru": "несмотря на",
+        "translation-en": "despite",
+        "translation-uk": "попри",
+        "translation-pl": "mimo",
+        "translation-es": "a pesar de",
+        "translation-fr": "malgré",
+        "translation-tr": "rağmen",
+        "translation-ro": "în ciuda",
+        "translation-uz": "qaramay",
+        "translation-hi": "के बावजूद",
+        "translation-ar": "رغم"
+      }
+    ],
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "tasteMarketFive.questTask1",
+        "options": [
+          "Wegen schlechtem Wetters kam der Zug zu spät.",
+          "Wegen schlechtes Wetters kam der Zug zu spät.",
+          "Wegen schlechten Wetters kam der Zug zu spät."
+        ],
+        "answer": "Wegen schlechten Wetters kam der Zug zu spät.",
+        "tip": "tasteMarketFive.questDescription"
+      },
+      {
+        "id": 2,
+        "type": "input",
+        "question": "tasteMarketFive.questTask2",
+        "correctAnswer": "starken",
+        "tip": "tasteMarketFive.questDescription"
+      },
+      {
+        "id": 3,
+        "type": "input",
+        "question": "tasteMarketFive.questTask3",
+        "correctAnswer": "starken",
+        "tip": "tasteMarketFive.questDescription"
+      },
+      {
+        "id": 4,
+        "type": "reorder",
+        "question": "tasteMarketFive.questTask4",
+        "words": [
+          "kamen",
+          "schlechten",
+          "viele",
+          "Gäste",
+          "schlechtes",
+          "Trotz",
+          "Wetters"
+        ],
+        "correctOrder": [
+          "Trotz",
+          "schlechten",
+          "Wetters",
+          "kamen",
+          "viele",
+          "Gäste"
+        ],
+        "tip": "tasteMarketFive.questDescription"
+      },
+      {
+        "id": 5,
+        "type": "select",
+        "question": "tasteMarketFive.questTask5",
+        "options": [
+          "Trotz starken Lärms hat er gearbeitet.",
+          "Trotz starkes Lärms hat er gearbeitet.",
+          "Trotz starker Lärms hat er gearbeitet."
+        ],
+        "answer": "Trotz starken Lärms hat er gearbeitet.",
+        "tip": "tasteMarketFive.questDescription"
+      },
+      {
+        "id": 6,
+        "type": "input",
+        "question": "tasteMarketFive.questTask6",
+        "correctAnswer": "starken",
+        "tip": "tasteMarketFive.questDescription"
+      },
+      {
+        "id": 7,
+        "type": "readAndAnswer",
+        "question": "tasteMarketFive.questTask7",
+        "text": "Information: Wegen starken Regens fahren heute keine Busse. Bitte nehmen Sie die U-Bahn.",
+        "options": [
+          "wegen starken Regens",
+          "wegen der Arbeit",
+          "wegen eines Staus"
+        ],
+        "answer": "wegen starken Regens",
+        "tip": "tasteMarketFive.questDescription"
+      },
+      {
+        "id": 8,
+        "type": "input",
+        "question": "tasteMarketFive.questTask8",
+        "correctAnswer": "schlechten",
+        "tip": "tasteMarketFive.questDescription"
+      },
+      {
+        "id": 9,
+        "type": "reorder",
+        "question": "tasteMarketFive.questTask10",
+        "words": [
+          "schlechtem",
+          "Meer",
+          "fuhren",
+          "ans",
+          "Wetters",
+          "schlechten",
+          "Trotz",
+          "wir"
+        ],
+        "correctOrder": [
+          "Trotz",
+          "schlechten",
+          "Wetters",
+          "fuhren",
+          "wir",
+          "ans",
+          "Meer"
+        ],
+        "tip": "tasteMarketFive.questDescription"
+      },
+      {
+        "id": 10,
+        "type": "select",
+        "question": "tasteMarketFive.questTask11",
+        "options": [
+          "Trotz kalten Windes spielten die Kinder im Garten.",
+          "Trotz kaltes Windes spielten die Kinder im Garten.",
+          "Trotz kalter Windes spielten die Kinder im Garten."
+        ],
+        "answer": "Trotz kalten Windes spielten die Kinder im Garten.",
+        "tip": "tasteMarketFive.questDescription"
+      },
+      {
+        "id": 11,
+        "type": "input",
+        "question": "tasteMarketFour.questTask9",
+        "correctAnswer": "neue",
+        "tip": "tasteMarketFour.questDescription",
+        "reviewOf": "taste-market-four",
+        "reviewLand": "taste-market"
+      },
+      {
+        "id": 12,
+        "type": "input",
+        "question": "tasteMarketOne.questTask12",
+        "correctAnswer": "Frischer",
+        "tip": "tasteMarketOne.questDescription",
+        "reviewOf": "taste-market-one",
+        "reviewLand": "taste-market"
+      },
+      {
+        "id": 13,
+        "type": "input",
+        "question": "heroSquareSix.questTask13",
+        "correctAnswer": "Praktikanten",
+        "tip": "heroSquareSix.questDescription",
+        "reviewOf": "hero-square-six",
+        "reviewLand": "hero-square"
+      },
+      {
+        "id": 14,
+        "type": "input",
+        "question": "tasteMarketFive.questTask14",
+        "correctAnswer": "des",
+        "tip": "tasteMarketFive.questDescription"
+      },
+      {
+        "id": 15,
+        "type": "input",
+        "question": "tasteMarketFive.questTask15",
+        "correctAnswer": "den",
+        "tip": "tasteMarketFive.questDescription"
+      }
+    ]
+  },
+  {
+    "questId": "taste-market-six",
+    "title": "tasteMarketSix.questTitle",
+    "progress": "0/15",
+    "description": "tasteMarketSix.questDescription",
+    "conditions": {
+      "goal": "tasteMarketSix.questGoal",
+      "minCorrect": 15,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
+    "vocabulary": [
+      {
+        "word": "günstig",
+        "translation-ru": "недорогой, выгодный",
+        "translation-en": "cheap, good value",
+        "translation-uk": "недорогий, вигідний",
+        "translation-pl": "tani, korzystny",
+        "translation-es": "económico",
+        "translation-fr": "bon marché",
+        "translation-tr": "uygun fiyatlı",
+        "translation-ro": "avantajos, ieftin",
+        "translation-uz": "arzon, qulay",
+        "translation-hi": "सस्ता, किफ़ायती",
+        "translation-ar": "بسعر مناسب"
+      },
+      {
+        "word": "die Anzeige",
+        "translation-ru": "объявление",
+        "translation-en": "advert",
+        "translation-uk": "оголошення",
+        "translation-pl": "ogłoszenie",
+        "translation-es": "el anuncio",
+        "translation-fr": "l’annonce",
+        "translation-tr": "ilan",
+        "translation-ro": "anunțul",
+        "translation-uz": "e’lon",
+        "translation-hi": "विज्ञापन",
+        "translation-ar": "الإعلان"
+      },
+      {
+        "word": "verkaufen",
+        "translation-ru": "продавать",
+        "translation-en": "to sell",
+        "translation-uk": "продавати",
+        "translation-pl": "sprzedawać",
+        "translation-es": "vender",
+        "translation-fr": "vendre",
+        "translation-tr": "satmak",
+        "translation-ro": "a vinde",
+        "translation-uz": "sotmoq",
+        "translation-hi": "बेचना",
+        "translation-ar": "يبيع"
+      },
+      {
+        "word": "wegen",
+        "translation-ru": "из-за",
+        "translation-en": "because of",
+        "translation-uk": "через",
+        "translation-pl": "z powodu",
+        "translation-es": "por, a causa de",
+        "translation-fr": "à cause de",
+        "translation-tr": "yüzünden",
+        "translation-ro": "din cauza",
+        "translation-uz": "sababli",
+        "translation-hi": "की वजह से",
+        "translation-ar": "بسبب"
+      },
+      {
+        "word": "das Telefon",
+        "translation-ru": "телефон",
+        "translation-en": "phone",
+        "translation-uk": "телефон",
+        "translation-pl": "telefon",
+        "translation-es": "el teléfono",
+        "translation-fr": "le téléphone",
+        "translation-tr": "telefon",
+        "translation-ro": "telefonul",
+        "translation-uz": "telefon",
+        "translation-hi": "फ़ोन",
+        "translation-ar": "الهاتف"
+      }
+    ],
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "tasteMarketSix.questTask1",
+        "options": [
+          "Verkaufe alten Fahrrad.",
+          "Verkaufe alter Fahrrad.",
+          "Verkaufe altes Fahrrad."
+        ],
+        "answer": "Verkaufe altes Fahrrad.",
+        "tip": "tasteMarketSix.questDescription"
+      },
+      {
+        "id": 2,
+        "type": "input",
+        "question": "tasteMarketSix.questTask2",
+        "correctAnswer": "große",
+        "tip": "tasteMarketSix.questDescription"
+      },
+      {
+        "id": 3,
+        "type": "input",
+        "question": "tasteMarketSix.questTask3",
+        "correctAnswer": "frischer",
+        "tip": "tasteMarketSix.questDescription"
+      },
+      {
+        "id": 4,
+        "type": "reorder",
+        "question": "tasteMarketSix.questTask4",
+        "words": [
+          "Auto",
+          "Suche",
+          "günstigen",
+          "günstiges"
+        ],
+        "correctOrder": [
+          "Suche",
+          "günstiges",
+          "Auto"
+        ],
+        "tip": "tasteMarketSix.questDescription"
+      },
+      {
+        "id": 5,
+        "type": "select",
+        "question": "tasteMarketSix.questTask5",
+        "options": [
+          "Verkaufe neuen Telefon.",
+          "Verkaufe neuer Telefon.",
+          "Verkaufe neues Telefon."
+        ],
+        "answer": "Verkaufe neues Telefon.",
+        "tip": "tasteMarketSix.questDescription"
+      },
+      {
+        "id": 6,
+        "type": "input",
+        "question": "tasteMarketSix.questTask6",
+        "correctAnswer": "großem",
+        "tip": "tasteMarketSix.questDescription"
+      },
+      {
+        "id": 7,
+        "type": "readAndAnswer",
+        "question": "tasteMarketSix.questTask7",
+        "text": "Anzeige: Verkaufe altes, aber gutes Fahrrad. Preis: 50 Euro. Bitte anrufen: 0151 123456.",
+        "options": [
+          "150 Euro",
+          "50 Euro",
+          "15 Euro"
+        ],
+        "answer": "50 Euro",
+        "tip": "tasteMarketSix.questDescription"
+      },
+      {
+        "id": 8,
+        "type": "input",
+        "question": "tasteMarketSix.questTask8",
+        "correctAnswer": "heiße",
+        "tip": "tasteMarketSix.questDescription"
+      },
+      {
+        "id": 9,
+        "type": "reorder",
+        "question": "tasteMarketSix.questTask10",
+        "words": [
+          "Verkaufe",
+          "schönen",
+          "schönes",
+          "Kleid"
+        ],
+        "correctOrder": [
+          "Verkaufe",
+          "schönes",
+          "Kleid"
+        ],
+        "tip": "tasteMarketSix.questDescription"
+      },
+      {
+        "id": 10,
+        "type": "select",
+        "question": "tasteMarketSix.questTask11",
+        "options": [
+          "Bei uns gibt es jeden Morgen frischen Brot.",
+          "Bei uns gibt es jeden Morgen frisches Brot.",
+          "Bei uns gibt es jeden Morgen frischer Brot."
+        ],
+        "answer": "Bei uns gibt es jeden Morgen frisches Brot.",
+        "tip": "tasteMarketSix.questDescription"
+      },
+      {
+        "id": 11,
+        "type": "input",
+        "question": "tasteMarketFive.questTask9",
+        "correctAnswer": "starken",
+        "tip": "tasteMarketFive.questDescription",
+        "reviewOf": "taste-market-five",
+        "reviewLand": "taste-market"
+      },
+      {
+        "id": 12,
+        "type": "input",
+        "question": "tasteMarketTwo.questTask12",
+        "correctAnswer": "grünen",
+        "tip": "tasteMarketTwo.questDescription",
+        "reviewOf": "taste-market-two",
+        "reviewLand": "taste-market"
+      },
+      {
+        "id": 13,
+        "type": "input",
+        "question": "heroSquareSeven.questTask13",
+        "correctAnswer": "Mensch",
+        "tip": "heroSquareSeven.questDescription",
+        "reviewOf": "hero-square-seven",
+        "reviewLand": "hero-square"
+      },
+      {
+        "id": 14,
+        "type": "input",
+        "question": "tasteMarketSix.questTask14",
+        "correctAnswer": "wäre",
+        "tip": "tasteMarketSix.questDescription"
+      },
+      {
+        "id": 15,
+        "type": "input",
+        "question": "tasteMarketSix.questTask15",
+        "correctAnswer": "des",
+        "tip": "tasteMarketSix.questDescription"
+      }
+    ]
+  },
+  {
+    "questId": "taste-market-seven",
+    "title": "tasteMarketSeven.questTitle",
+    "progress": "0/15",
+    "description": "tasteMarketSeven.questDescription",
+    "conditions": {
+      "goal": "tasteMarketSeven.questGoal",
+      "minCorrect": 15,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
+    "vocabulary": [
+      {
+        "word": "die Butter",
+        "translation-ru": "масло (сливочное)",
+        "translation-en": "butter",
+        "translation-uk": "вершкове масло",
+        "translation-pl": "masło",
+        "translation-es": "la mantequilla",
+        "translation-fr": "le beurre",
+        "translation-tr": "tereyağı",
+        "translation-ro": "untul",
+        "translation-uz": "sariyog‘",
+        "translation-hi": "मक्खन",
+        "translation-ar": "الزبدة"
+      },
+      {
+        "word": "das Ei",
+        "translation-ru": "яйцо",
+        "translation-en": "egg",
+        "translation-uk": "яйце",
+        "translation-pl": "jajko",
+        "translation-es": "el huevo",
+        "translation-fr": "l’œuf",
+        "translation-tr": "yumurta",
+        "translation-ro": "oul",
+        "translation-uz": "tuxum",
+        "translation-hi": "अंडा",
+        "translation-ar": "البيضة"
+      },
+      {
+        "word": "der Zucker",
+        "translation-ru": "сахар",
+        "translation-en": "sugar",
+        "translation-uk": "цукор",
+        "translation-pl": "cukier",
+        "translation-es": "el azúcar",
+        "translation-fr": "le sucre",
+        "translation-tr": "şeker",
+        "translation-ro": "zahărul",
+        "translation-uz": "shakar",
+        "translation-hi": "चीनी",
+        "translation-ar": "السكر"
+      },
+      {
+        "word": "das Rezept",
+        "translation-ru": "рецепт",
+        "translation-en": "recipe",
+        "translation-uk": "рецепт",
+        "translation-pl": "przepis",
+        "translation-es": "la receta",
+        "translation-fr": "la recette",
+        "translation-tr": "tarif",
+        "translation-ro": "rețeta",
+        "translation-uz": "retsept",
+        "translation-hi": "रेसिपी",
+        "translation-ar": "الوصفة"
+      },
+      {
+        "word": "braun",
+        "translation-ru": "коричневый",
+        "translation-en": "brown",
+        "translation-uk": "коричневий",
+        "translation-pl": "brązowy",
+        "translation-es": "marrón",
+        "translation-fr": "brun",
+        "translation-tr": "kahverengi",
+        "translation-ro": "maro",
+        "translation-uz": "jigarrang",
+        "translation-hi": "भूरा",
+        "translation-ar": "بني"
+      },
+      {
+        "word": "das Gramm",
+        "translation-ru": "грамм",
+        "translation-en": "gram",
+        "translation-uk": "грам",
+        "translation-pl": "gram",
+        "translation-es": "el gramo",
+        "translation-fr": "le gramme",
+        "translation-tr": "gram",
+        "translation-ro": "gramul",
+        "translation-uz": "gramm",
+        "translation-hi": "ग्राम",
+        "translation-ar": "الغرام"
+      },
+      {
+        "word": "der Pfannkuchen",
+        "translation-ru": "блин",
+        "translation-en": "pancake",
+        "translation-uk": "млинець",
+        "translation-pl": "naleśnik",
+        "translation-es": "la tortita",
+        "translation-fr": "la crêpe",
+        "translation-tr": "krep",
+        "translation-ro": "clătita",
+        "translation-uz": "quymoq",
+        "translation-hi": "पैनकेक",
+        "translation-ar": "الفطيرة"
+      },
+      {
+        "word": "braten",
+        "translation-ru": "жарить",
+        "translation-en": "to roast / fry",
+        "translation-uk": "смажити",
+        "translation-pl": "piec / smażyć",
+        "translation-es": "asar / freír",
+        "translation-fr": "rôtir / frire",
+        "translation-tr": "kızartmak",
+        "translation-ro": "a prăji",
+        "translation-uz": "qovurmoq",
+        "translation-hi": "भूनना",
+        "translation-ar": "يشوي / يقلي"
+      },
+      {
+        "word": "riechen",
+        "translation-ru": "пахнуть / нюхать",
+        "translation-en": "to smell",
+        "translation-uk": "пахнути / нюхати",
+        "translation-pl": "wąchać / pachnieć",
+        "translation-es": "oler",
+        "translation-fr": "sentir / flairer",
+        "translation-tr": "koklamak / kokmak",
+        "translation-ro": "a mirosi",
+        "translation-uz": "hidlamoq / hid taratmoq",
+        "translation-hi": "सूँघना / महकना",
+        "translation-ar": "يشم / يفوح"
+      }
+    ],
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "tasteMarketSeven.questTask1",
+        "options": [
+          "Für den Kuchen braucht man frisches Eier.",
+          "Für den Kuchen braucht man frischen Eier.",
+          "Für den Kuchen braucht man frische Eier."
+        ],
+        "answer": "Für den Kuchen braucht man frische Eier.",
+        "tip": "tasteMarketSeven.questDescription"
+      },
+      {
+        "id": 2,
+        "type": "input",
+        "question": "tasteMarketSeven.questTask2",
+        "correctAnswer": "warmer",
+        "tip": "tasteMarketSeven.questDescription"
+      },
+      {
+        "id": 3,
+        "type": "input",
+        "question": "tasteMarketSeven.questTask3",
+        "correctAnswer": "braunen",
+        "tip": "tasteMarketSeven.questDescription"
+      },
+      {
+        "id": 4,
+        "type": "reorder",
+        "question": "tasteMarketSeven.questTask4",
+        "words": [
+          "den",
+          "lecker",
+          "Kuchen",
+          "Frische",
+          "macht",
+          "Frischer",
+          "Butter"
+        ],
+        "correctOrder": [
+          "Frische",
+          "Butter",
+          "macht",
+          "den",
+          "Kuchen",
+          "lecker"
+        ],
+        "tip": "tasteMarketSeven.questDescription"
+      },
+      {
+        "id": 5,
+        "type": "select",
+        "question": "tasteMarketSeven.questTask5",
+        "options": [
+          "Ich trinke Tee mit kalte Milch.",
+          "Ich trinke Tee mit kaltem Milch.",
+          "Ich trinke Tee mit kalter Milch."
+        ],
+        "answer": "Ich trinke Tee mit kalter Milch.",
+        "tip": "tasteMarketSeven.questDescription"
+      },
+      {
+        "id": 6,
+        "type": "input",
+        "question": "tasteMarketSeven.questTask6",
+        "correctAnswer": "weißes",
+        "tip": "tasteMarketSeven.questDescription"
+      },
+      {
+        "id": 7,
+        "type": "readAndAnswer",
+        "question": "tasteMarketSeven.questTask7",
+        "text": "Omas Rezept für Pfannkuchen: Man nimmt frische Eier, kalte Milch und weißes Mehl. Alles wird mit einem Löffel gemischt. Dann brät man die Pfannkuchen in heißer Butter.",
+        "options": [
+          "Eier, Milch und Mehl",
+          "Zucker und Salz",
+          "Käse und Brot"
+        ],
+        "answer": "Eier, Milch und Mehl",
+        "tip": "tasteMarketSeven.questDescription"
+      },
+      {
+        "id": 8,
+        "type": "input",
+        "question": "tasteMarketSeven.questTask8",
+        "correctAnswer": "heißer",
+        "tip": "tasteMarketSeven.questDescription"
+      },
+      {
+        "id": 9,
+        "type": "reorder",
+        "question": "tasteMarketSeven.questTask10",
+        "words": [
+          "Guter",
+          "teuer",
+          "Butter",
+          "Gute",
+          "ist"
+        ],
+        "correctOrder": [
+          "Gute",
+          "Butter",
+          "ist",
+          "teuer"
+        ],
+        "tip": "tasteMarketSeven.questDescription"
+      },
+      {
+        "id": 10,
+        "type": "select",
+        "question": "tasteMarketSeven.questTask11",
+        "options": [
+          "Frische Brot riecht sehr gut.",
+          "Frisches Brot riecht sehr gut.",
+          "Frischer Brot riecht sehr gut."
+        ],
+        "answer": "Frisches Brot riecht sehr gut.",
+        "tip": "tasteMarketSeven.questDescription"
+      },
+      {
+        "id": 11,
+        "type": "input",
+        "question": "tasteMarketSix.questTask9",
+        "correctAnswer": "günstiges",
+        "tip": "tasteMarketSix.questDescription",
+        "reviewOf": "taste-market-six",
+        "reviewLand": "taste-market"
+      },
+      {
+        "id": 12,
+        "type": "input",
+        "question": "tasteMarketThree.questTask12",
+        "correctAnswer": "neuen",
+        "tip": "tasteMarketThree.questDescription",
+        "reviewOf": "taste-market-three",
+        "reviewLand": "taste-market"
+      },
+      {
+        "id": 13,
+        "type": "input",
+        "question": "heroSquareEight.questTask13",
+        "correctAnswer": "Bären",
+        "tip": "heroSquareEight.questDescription",
+        "reviewOf": "hero-square-eight",
+        "reviewLand": "hero-square"
+      },
+      {
+        "id": 14,
+        "type": "input",
+        "question": "tasteMarketSeven.questTask14",
+        "correctAnswer": "Bären",
+        "tip": "tasteMarketSeven.questDescription"
+      },
+      {
+        "id": 15,
+        "type": "input",
+        "question": "tasteMarketSeven.questTask15",
+        "correctAnswer": "des",
+        "tip": "tasteMarketSeven.questDescription"
+      }
+    ]
+  },
+  {
+    "questId": "taste-market-eight",
+    "title": "tasteMarketEight.questTitle",
+    "progress": "0/15",
+    "description": "tasteMarketEight.questDescription",
+    "conditions": {
+      "goal": "tasteMarketEight.questGoal",
+      "minCorrect": 15,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
+    "vocabulary": [
+      {
+        "word": "die Bedienung",
+        "translation-ru": "обслуживание, официант(ка)",
+        "translation-en": "service, waiter",
+        "translation-uk": "обслуговування",
+        "translation-pl": "obsługa",
+        "translation-es": "el servicio",
+        "translation-fr": "le service",
+        "translation-tr": "servis",
+        "translation-ro": "servirea",
+        "translation-uz": "xizmat",
+        "translation-hi": "सेवा",
+        "translation-ar": "الخدمة"
+      },
+      {
+        "word": "gemütlich",
+        "translation-ru": "уютный",
+        "translation-en": "cosy",
+        "translation-uk": "затишний",
+        "translation-pl": "przytulny",
+        "translation-es": "acogedor",
+        "translation-fr": "confortable, douillet",
+        "translation-tr": "rahat, sıcak",
+        "translation-ro": "confortabil",
+        "translation-uz": "shinam",
+        "translation-hi": "आरामदायक",
+        "translation-ar": "مريح"
+      },
+      {
+        "word": "der Stern",
+        "translation-ru": "звезда",
+        "translation-en": "star",
+        "translation-uk": "зірка",
+        "translation-pl": "gwiazdka",
+        "translation-es": "la estrella",
+        "translation-fr": "l’étoile",
+        "translation-tr": "yıldız",
+        "translation-ro": "steaua",
+        "translation-uz": "yulduz",
+        "translation-hi": "तारा",
+        "translation-ar": "النجمة"
+      },
+      {
+        "word": "empfehlen",
+        "translation-ru": "рекомендовать",
+        "translation-en": "to recommend",
+        "translation-uk": "рекомендувати",
+        "translation-pl": "polecać",
+        "translation-es": "recomendar",
+        "translation-fr": "recommander",
+        "translation-tr": "tavsiye etmek",
+        "translation-ro": "a recomanda",
+        "translation-uz": "tavsiya qilmoq",
+        "translation-hi": "सिफ़ारिश करना",
+        "translation-ar": "يوصي"
+      },
+      {
+        "word": "der Gast",
+        "translation-ru": "гость, посетитель",
+        "translation-en": "guest",
+        "translation-uk": "гість",
+        "translation-pl": "gość",
+        "translation-es": "el cliente, el invitado",
+        "translation-fr": "le client, l’invité",
+        "translation-tr": "misafir, müşteri",
+        "translation-ro": "oaspetele",
+        "translation-uz": "mehmon",
+        "translation-hi": "मेहमान",
+        "translation-ar": "الضيف"
+      },
+      {
+        "word": "die Idee",
+        "translation-ru": "идея",
+        "translation-en": "idea",
+        "translation-uk": "ідея",
+        "translation-pl": "pomysł",
+        "translation-es": "la idea",
+        "translation-fr": "l’idée",
+        "translation-tr": "fikir",
+        "translation-ro": "ideea",
+        "translation-uz": "g‘oya",
+        "translation-hi": "विचार",
+        "translation-ar": "الفكرة"
+      },
+      {
+        "word": "die Atmosphäre",
+        "translation-ru": "атмосфера",
+        "translation-en": "atmosphere",
+        "translation-uk": "атмосфера",
+        "translation-pl": "atmosfera",
+        "translation-es": "atmósfera",
+        "translation-fr": "atmosphère",
+        "translation-tr": "atmosfer",
+        "translation-ro": "atmosferă",
+        "translation-uz": "atmosfera",
+        "translation-hi": "वायुमंडल",
+        "translation-ar": "غلاف جوي"
+      },
+      {
+        "word": "servieren",
+        "translation-ru": "подавать на стол",
+        "translation-en": "to serve",
+        "translation-uk": "подавати",
+        "translation-pl": "podawać",
+        "translation-es": "servir",
+        "translation-fr": "servir",
+        "translation-tr": "servis etmek",
+        "translation-ro": "a servi",
+        "translation-uz": "tortmoq",
+        "translation-hi": "परोसना",
+        "translation-ar": "يقدّم"
+      },
+      {
+        "word": "wiederkommen",
+        "translation-ru": "приходить снова",
+        "translation-en": "to come back",
+        "translation-uk": "приходити знову",
+        "translation-pl": "wracać",
+        "translation-es": "volver",
+        "translation-fr": "revenir",
+        "translation-tr": "tekrar gelmek",
+        "translation-ro": "a reveni",
+        "translation-uz": "yana kelmoq",
+        "translation-hi": "फिर आना",
+        "translation-ar": "يعود"
+      }
+    ],
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "tasteMarketEight.questTask1",
+        "options": [
+          "Im Café waren viele jungen Gäste.",
+          "Im Café waren viele junger Gäste.",
+          "Im Café waren viele junge Gäste."
+        ],
+        "answer": "Im Café waren viele junge Gäste.",
+        "tip": "tasteMarketEight.questDescription"
+      },
+      {
+        "id": 2,
+        "type": "input",
+        "question": "tasteMarketEight.questTask2",
+        "correctAnswer": "große",
+        "tip": "tasteMarketEight.questDescription"
+      },
+      {
+        "id": 3,
+        "type": "input",
+        "question": "tasteMarketEight.questTask3",
+        "correctAnswer": "nette",
+        "tip": "tasteMarketEight.questDescription"
+      },
+      {
+        "id": 4,
+        "type": "reorder",
+        "question": "tasteMarketEight.questTask4",
+        "words": [
+          "Atmosphäre",
+          "mit",
+          "gemütliche",
+          "Ein",
+          "gemütlicher",
+          "Café"
+        ],
+        "correctOrder": [
+          "Ein",
+          "Café",
+          "mit",
+          "gemütlicher",
+          "Atmosphäre"
+        ],
+        "tip": "tasteMarketEight.questDescription"
+      },
+      {
+        "id": 5,
+        "type": "select",
+        "question": "tasteMarketEight.questTask5",
+        "options": [
+          "Trotz schlechtem Wetters war das Café voll.",
+          "Trotz schlechtes Wetter war das Café voll.",
+          "Trotz schlechten Wetters war das Café voll."
+        ],
+        "answer": "Trotz schlechten Wetters war das Café voll.",
+        "tip": "tasteMarketEight.questDescription"
+      },
+      {
+        "id": 6,
+        "type": "input",
+        "question": "tasteMarketEight.questTask6",
+        "correctAnswer": "tollem",
+        "tip": "tasteMarketEight.questDescription"
+      },
+      {
+        "id": 7,
+        "type": "readAndAnswer",
+        "question": "tasteMarketEight.questTask7",
+        "text": "Julia schreibt: „Gemütliches Café mit freundlicher Bedienung! Es gibt frischen Kuchen und heißen Kaffee. Nur die Musik war zu laut. Ich gebe vier Sterne.“",
+        "options": [
+          "zwei Sterne",
+          "vier Sterne",
+          "fünf Sterne"
+        ],
+        "answer": "vier Sterne",
+        "tip": "tasteMarketEight.questDescription"
+      },
+      {
+        "id": 8,
+        "type": "input",
+        "question": "tasteMarketEight.questTask8",
+        "correctAnswer": "heiße",
+        "tip": "tasteMarketEight.questDescription"
+      },
+      {
+        "id": 9,
+        "type": "reorder",
+        "question": "tasteMarketEight.questTask10",
+        "words": [
+          "Gäste",
+          "Viele",
+          "lobten",
+          "Essen",
+          "Vieler",
+          "das"
+        ],
+        "correctOrder": [
+          "Viele",
+          "Gäste",
+          "lobten",
+          "das",
+          "Essen"
+        ],
+        "tip": "tasteMarketEight.questDescription"
+      },
+      {
+        "id": 10,
+        "type": "select",
+        "question": "tasteMarketEight.questTask11",
+        "options": [
+          "Dort gibt es leckere Suppe mit Brot.",
+          "Dort gibt es leckeres Suppe mit Brot.",
+          "Dort gibt es leckerer Suppe mit Brot."
+        ],
+        "answer": "Dort gibt es leckere Suppe mit Brot.",
+        "tip": "tasteMarketEight.questDescription"
+      },
+      {
+        "id": 11,
+        "type": "input",
+        "question": "tasteMarketSeven.questTask9",
+        "correctAnswer": "frischem",
+        "tip": "tasteMarketSeven.questDescription",
+        "reviewOf": "taste-market-seven",
+        "reviewLand": "taste-market"
+      },
+      {
+        "id": 12,
+        "type": "input",
+        "question": "tasteMarketFour.questTask12",
+        "correctAnswer": "gute",
+        "tip": "tasteMarketFour.questDescription",
+        "reviewOf": "taste-market-four",
+        "reviewLand": "taste-market"
+      },
+      {
+        "id": 13,
+        "type": "input",
+        "question": "tasteMarketOne.questTask13",
+        "correctAnswer": "Guter",
+        "tip": "tasteMarketOne.questDescription",
+        "reviewOf": "taste-market-one",
+        "reviewLand": "taste-market"
+      },
+      {
+        "id": 14,
+        "type": "input",
+        "question": "tasteMarketEight.questTask14",
+        "correctAnswer": "wäre",
+        "tip": "tasteMarketEight.questDescription"
+      },
+      {
+        "id": 15,
+        "type": "input",
+        "question": "tasteMarketEight.questTask15",
+        "correctAnswer": "der",
+        "tip": "tasteMarketEight.questDescription"
+      }
+    ]
+  },
+  {
+    "questId": "taste-market-nine",
+    "title": "tasteMarketNine.questTitle",
+    "progress": "0/15",
+    "description": "tasteMarketNine.questDescription",
+    "conditions": {
+      "goal": "tasteMarketNine.questGoal",
+      "minCorrect": 15,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
+    "vocabulary": [
+      {
+        "word": "schwarz",
+        "translation-ru": "чёрный",
+        "translation-en": "black",
+        "translation-uk": "чорний",
+        "translation-pl": "czarny",
+        "translation-es": "negro",
+        "translation-fr": "noir",
+        "translation-tr": "siyah",
+        "translation-ro": "negru",
+        "translation-uz": "qora",
+        "translation-hi": "काला",
+        "translation-ar": "أسود"
+      },
+      {
+        "word": "das Gemüse",
+        "translation-ru": "овощи",
+        "translation-en": "vegetables",
+        "translation-uk": "овочі",
+        "translation-pl": "warzywa",
+        "translation-es": "la verdura",
+        "translation-fr": "les légumes",
+        "translation-tr": "sebze",
+        "translation-ro": "legumele",
+        "translation-uz": "sabzavot",
+        "translation-hi": "सब्ज़ियाँ",
+        "translation-ar": "الخضروات"
+      },
+      {
+        "word": "trotz",
+        "translation-ru": "несмотря на",
+        "translation-en": "despite",
+        "translation-uk": "попри",
+        "translation-pl": "mimo",
+        "translation-es": "a pesar de",
+        "translation-fr": "malgré",
+        "translation-tr": "rağmen",
+        "translation-ro": "în ciuda",
+        "translation-uz": "qaramay",
+        "translation-hi": "के बावजूद",
+        "translation-ar": "رغم"
+      },
+      {
+        "word": "wegen",
+        "translation-ru": "из-за",
+        "translation-en": "because of",
+        "translation-uk": "через",
+        "translation-pl": "z powodu",
+        "translation-es": "por, a causa de",
+        "translation-fr": "à cause de",
+        "translation-tr": "yüzünden",
+        "translation-ro": "din cauza",
+        "translation-uz": "sababli",
+        "translation-hi": "की वजह से",
+        "translation-ar": "بسبب"
+      },
+      {
+        "word": "die Anzeige",
+        "translation-ru": "объявление",
+        "translation-en": "advert",
+        "translation-uk": "оголошення",
+        "translation-pl": "ogłoszenie",
+        "translation-es": "el anuncio",
+        "translation-fr": "l’annonce",
+        "translation-tr": "ilan",
+        "translation-ro": "anunțul",
+        "translation-uz": "e’lon",
+        "translation-hi": "विज्ञापन",
+        "translation-ar": "الإعلان"
+      }
+    ],
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "tasteMarketNine.questTask1",
+        "options": [
+          "Frischen Brot ist sehr lecker.",
+          "Frischer Brot ist sehr lecker.",
+          "Frisches Brot ist sehr lecker."
+        ],
+        "answer": "Frisches Brot ist sehr lecker.",
+        "tip": "tasteMarketNine.questDescription"
+      },
+      {
+        "id": 2,
+        "type": "input",
+        "question": "tasteMarketNine.questTask2",
+        "correctAnswer": "schwarzen",
+        "tip": "tasteMarketNine.questDescription"
+      },
+      {
+        "id": 3,
+        "type": "input",
+        "question": "tasteMarketNine.questTask3",
+        "correctAnswer": "heißer",
+        "tip": "tasteMarketNine.questDescription"
+      },
+      {
+        "id": 4,
+        "type": "reorder",
+        "question": "tasteMarketNine.questTask4",
+        "words": [
+          "neuen",
+          "Häuser",
+          "neue",
+          "Hier",
+          "viele",
+          "es",
+          "gibt"
+        ],
+        "correctOrder": [
+          "Hier",
+          "gibt",
+          "es",
+          "viele",
+          "neue",
+          "Häuser"
+        ],
+        "tip": "tasteMarketNine.questDescription"
+      },
+      {
+        "id": 5,
+        "type": "select",
+        "question": "tasteMarketNine.questTask5",
+        "options": [
+          "Wegen schlechtes Wetters sind wir zu Hause geblieben.",
+          "Wegen schlechtem Wetters sind wir zu Hause geblieben.",
+          "Wegen schlechten Wetters sind wir zu Hause geblieben."
+        ],
+        "answer": "Wegen schlechten Wetters sind wir zu Hause geblieben.",
+        "tip": "tasteMarketNine.questDescription"
+      },
+      {
+        "id": 6,
+        "type": "input",
+        "question": "tasteMarketNine.questTask6",
+        "correctAnswer": "Frisches",
+        "tip": "tasteMarketNine.questDescription"
+      },
+      {
+        "id": 7,
+        "type": "readAndAnswer",
+        "question": "tasteMarketNine.questTask7",
+        "text": "Im Café „Sonne“ gibt es heute heiße Suppe für 4 Euro, frischen Salat für 5 Euro und warmen Kuchen für 3 Euro.",
+        "options": [
+          "5 Euro",
+          "3 Euro",
+          "4 Euro"
+        ],
+        "answer": "5 Euro",
+        "tip": "tasteMarketNine.questDescription"
+      },
+      {
+        "id": 8,
+        "type": "input",
+        "question": "tasteMarketNine.questTask8",
+        "correctAnswer": "alten",
+        "tip": "tasteMarketNine.questDescription"
+      },
+      {
+        "id": 9,
+        "type": "select",
+        "question": "tasteMarketNine.questTask9",
+        "options": [
+          "Er trinkt nur kalte Milch.",
+          "Er trinkt nur kaltes Milch.",
+          "Er trinkt nur kalten Milch."
+        ],
+        "answer": "Er trinkt nur kalte Milch.",
+        "tip": "tasteMarketNine.questDescription"
+      },
+      {
+        "id": 10,
+        "type": "input",
+        "question": "tasteMarketNine.questTask10",
+        "correctAnswer": "starken",
+        "tip": "tasteMarketNine.questDescription"
+      },
+      {
+        "id": 11,
+        "type": "reorder",
+        "question": "tasteMarketNine.questTask11",
+        "words": [
+          "altes",
+          "alten",
+          "Verkaufe",
+          "Auto"
+        ],
+        "correctOrder": [
+          "Verkaufe",
+          "altes",
+          "Auto"
+        ],
+        "tip": "tasteMarketNine.questDescription"
+      },
+      {
+        "id": 12,
+        "type": "select",
+        "question": "tasteMarketNine.questTask12",
+        "options": [
+          "Wir fahren mit guter Freunden in den Urlaub.",
+          "Wir fahren mit guten Freunden in den Urlaub.",
+          "Wir fahren mit gute Freunden in den Urlaub."
+        ],
+        "answer": "Wir fahren mit guten Freunden in den Urlaub.",
+        "tip": "tasteMarketNine.questDescription"
+      },
+      {
+        "id": 13,
+        "type": "readAndAnswer",
+        "question": "tasteMarketNine.questTask13",
+        "text": "Anzeige: Suche große, helle Wohnung mit Balkon in München. Ich bin 30 Jahre alt und arbeite als Lehrerin.",
+        "options": [
+          "eine große, helle Wohnung mit Balkon",
+          "ein Haus mit Garten",
+          "eine kleine Wohnung"
+        ],
+        "answer": "eine große, helle Wohnung mit Balkon",
+        "tip": "tasteMarketNine.questDescription"
+      },
+      {
+        "id": 14,
+        "type": "input",
+        "question": "tasteMarketNine.questTask14",
+        "correctAnswer": "guten",
+        "tip": "tasteMarketNine.questDescription"
+      },
+      {
+        "id": 15,
+        "type": "input",
+        "question": "tasteMarketNine.questTask15",
+        "correctAnswer": "neue",
+        "tip": "tasteMarketNine.questDescription"
+      }
+    ]
+  },
+  {
+    "questId": "taste-market-ten",
+    "title": "tasteMarketTen.questTitle",
+    "progress": "0/15",
+    "description": "tasteMarketTen.questDescription",
+    "conditions": {
+      "goal": "tasteMarketTen.questGoal",
+      "minCorrect": 15,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
+    "vocabulary": [
+      {
+        "word": "die Schokolade",
+        "translation-ru": "шоколад",
+        "translation-en": "chocolate",
+        "translation-uk": "шоколад",
+        "translation-pl": "czekolada",
+        "translation-es": "el chocolate",
+        "translation-fr": "le chocolat",
+        "translation-tr": "çikolata",
+        "translation-ro": "ciocolata",
+        "translation-uz": "shokolad",
+        "translation-hi": "चॉकलेट",
+        "translation-ar": "الشوكولاتة"
+      },
+      {
+        "word": "die Bäckerei",
+        "translation-ru": "пекарня",
+        "translation-en": "bakery",
+        "translation-uk": "пекарня",
+        "translation-pl": "piekarnia",
+        "translation-es": "la panadería",
+        "translation-fr": "la boulangerie",
+        "translation-tr": "fırın",
+        "translation-ro": "brutăria",
+        "translation-uz": "novvoyxona",
+        "translation-hi": "बेकरी",
+        "translation-ar": "المخبز"
+      },
+      {
+        "word": "grüßen",
+        "translation-ru": "приветствовать",
+        "translation-en": "to greet",
+        "translation-uk": "вітати",
+        "translation-pl": "pozdrawiać / witać",
+        "translation-es": "saludar",
+        "translation-fr": "saluer",
+        "translation-tr": "selamlamak",
+        "translation-ro": "a saluta",
+        "translation-uz": "salomlashmoq",
+        "translation-hi": "नमस्ते करना",
+        "translation-ar": "يسلم على / يحيي"
+      },
+      {
+        "word": "trotz",
+        "translation-ru": "несмотря на",
+        "translation-en": "despite",
+        "translation-uk": "попри",
+        "translation-pl": "mimo",
+        "translation-es": "a pesar de",
+        "translation-fr": "malgré",
+        "translation-tr": "rağmen",
+        "translation-ro": "în ciuda",
+        "translation-uz": "qaramay",
+        "translation-hi": "के बावजूद",
+        "translation-ar": "رغم"
+      },
+      {
+        "word": "gewusst",
+        "translation-ru": "знал (Partizip от wissen)",
+        "translation-en": "known (participle of wissen)",
+        "translation-uk": "знав (Partizip від wissen)",
+        "translation-pl": "wiedział (Partizip od wissen)",
+        "translation-es": "sabido (participio de wissen)",
+        "translation-fr": "su (participe de wissen)",
+        "translation-tr": "bilmiş (wissen’in Partizip’i)",
+        "translation-ro": "știut (participiul lui wissen)",
+        "translation-uz": "bilgan (wissen dan Partizip)",
+        "translation-hi": "जाना (wissen का Partizip)",
+        "translation-ar": "عَلِم (اسم مفعول wissen)"
+      }
+    ],
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "tasteMarketTen.questTask1",
+        "options": [
+          "Wenn ich Zeit hätte, würde ich frischen Brot backen.",
+          "Wenn ich Zeit hätte, würde ich frischer Brot backen.",
+          "Wenn ich Zeit hätte, würde ich frisches Brot backen."
+        ],
+        "answer": "Wenn ich Zeit hätte, würde ich frisches Brot backen.",
+        "tip": "tasteMarketTen.questDescription"
+      },
+      {
+        "id": 2,
+        "type": "input",
+        "question": "tasteMarketTen.questTask2",
+        "correctAnswer": "heiße",
+        "tip": "tasteMarketTen.questDescription"
+      },
+      {
+        "id": 3,
+        "type": "input",
+        "question": "tasteMarketTen.questTask3",
+        "correctAnswer": "meiner",
+        "tip": "tasteMarketTen.questDescription"
+      },
+      {
+        "id": 4,
+        "type": "input",
+        "question": "tasteMarketTen.questTask4",
+        "correctAnswer": "starkem",
+        "tip": "tasteMarketTen.questDescription"
+      },
+      {
+        "id": 5,
+        "type": "select",
+        "question": "tasteMarketTen.questTask5",
+        "options": [
+          "Hier wird frischen Gemüse verkauft.",
+          "Hier wird frischer Gemüse verkauft.",
+          "Hier wird frisches Gemüse verkauft."
+        ],
+        "answer": "Hier wird frisches Gemüse verkauft.",
+        "tip": "tasteMarketTen.questDescription"
+      },
+      {
+        "id": 6,
+        "type": "input",
+        "question": "tasteMarketTen.questTask6",
+        "correctAnswer": "der",
+        "tip": "tasteMarketTen.questDescription"
+      },
+      {
+        "id": 7,
+        "type": "readAndAnswer",
+        "question": "tasteMarketTen.questTask7",
+        "text": "Liebe Anna, wir sind gestern in Italien angekommen. Trotz schlechten Wetters sind wir jeden Tag am Strand. Das Essen ist toll: frischer Fisch, gutes Brot und kalter Wein. Viele Grüße, Lena",
+        "options": [
+          "heiß",
+          "schlecht",
+          "sehr schön"
+        ],
+        "answer": "schlecht",
+        "tip": "tasteMarketTen.questDescription"
+      },
+      {
+        "id": 8,
+        "type": "input",
+        "question": "tasteMarketTen.questTask8",
+        "correctAnswer": "hätte",
+        "tip": "tasteMarketTen.questDescription"
+      },
+      {
+        "id": 9,
+        "type": "reorder",
+        "question": "tasteMarketTen.questTask9",
+        "words": [
+          "Freunden",
+          "zusammen",
+          "guten",
+          "mit",
+          "gute",
+          "wohnt",
+          "Er",
+          "zwei"
+        ],
+        "correctOrder": [
+          "Er",
+          "wohnt",
+          "mit",
+          "zwei",
+          "guten",
+          "Freunden",
+          "zusammen"
+        ],
+        "tip": "tasteMarketTen.questDescription"
+      },
+      {
+        "id": 10,
+        "type": "input",
+        "question": "tasteMarketTen.questTask10",
+        "correctAnswer": "der",
+        "tip": "tasteMarketTen.questDescription"
+      },
+      {
+        "id": 11,
+        "type": "input",
+        "question": "tasteMarketTen.questTask11",
+        "correctAnswer": "leckerste",
+        "tip": "tasteMarketTen.questDescription"
+      },
+      {
+        "id": 12,
+        "type": "select",
+        "question": "tasteMarketTen.questTask12",
+        "options": [
+          "Heute gibt es heiße Suppe.",
+          "Heute gibt es heißen Suppe.",
+          "Heute gibt es heißer Suppe."
+        ],
+        "answer": "Heute gibt es heiße Suppe.",
+        "tip": "tasteMarketTen.questDescription"
+      },
+      {
+        "id": 13,
+        "type": "readAndAnswer",
+        "question": "tasteMarketTen.questTask13",
+        "text": "Bei schönem Wetter frühstückt Familie Wagner im Garten. Es gibt frische Brötchen, warme Milch und starken Kaffee.",
+        "options": [
+          "im Café",
+          "im Garten",
+          "in der Küche"
+        ],
+        "answer": "im Garten",
+        "tip": "tasteMarketTen.questDescription"
+      },
+      {
+        "id": 14,
+        "type": "input",
+        "question": "tasteMarketTen.questTask14",
+        "correctAnswer": "wären",
+        "tip": "tasteMarketTen.questDescription"
+      },
+      {
+        "id": 15,
+        "type": "input",
+        "question": "tasteMarketTen.questTask15",
+        "correctAnswer": "was",
+        "tip": "tasteMarketTen.questDescription"
+      }
+    ]
+  }
+]

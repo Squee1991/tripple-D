@@ -10,7 +10,7 @@ A gamified German language learning web app. Users practice articles, verbs, adj
 - **State:** Pinia (`store/` directory, 27 stores)
 - **Backend:** Firebase (Auth, Firestore) via `nuxt-vuefire`, Firebase Admin SDK on server
 - **Payments:** Stripe (checkout, confirm, cancel endpoints)
-- **AI:** Groq API (homework checking, vision), Whisper (speech-to-text)
+- **AI:** Google Gemini (`gemini-3.5-flash-lite`) via Firebase Cloud Functions in `functions/index.js`: `hedgehogAssistant` (assistant), `checkExamAnswer` (answer checking, called from `composables/useGroqCheck.js` despite the name), `transcribeSpeech` (speech-to-text). Secret: `GEMINI_API_KEY` (Firebase secret). The Groq/Whisper routes in `server/api/` are legacy
 - **Realtime:** Socket.io (battles, duels)
 - **Animations:** GSAP, Lottie (`assets/animation/`), Three.js, Phaser (mini-games)
 - **i18n:** 11 locales — EN, PL, HI, TR, RO, ES, FR, RU, UK, UZ, AR
@@ -92,7 +92,7 @@ Follow existing patterns per store when importing.
 Configured in `.env.development` (gitignored). Key variables:
 - `FIREBASE_*` — Firebase config
 - `STRIPE_SECRET_KEY`, `STRIPE_WEBHOOK_SECRET`
-- `GROQ_API_KEY`
+- `GROQ_API_KEY` (legacy `server/api/` routes only; AI runs on Gemini in Cloud Functions)
 - `ADMIN_UID1`, `ADMIN_UID2`
 - Accessed via `runtimeConfig` in `nuxt.config.js`
 

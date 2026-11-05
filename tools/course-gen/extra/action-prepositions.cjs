@@ -1,0 +1,120 @@
+// Долина действий (action-prepositions): 2 практических квеста перед «Повторением»
+// порядок переводов: ru en uk pl es fr tr ro uz hi ar
+module.exports = {
+	file: 'action-prepositions',
+	ns: 'actionPrepositionsExtra',
+	ids: ['prep-action-9', 'prep-action-10'],
+	before: 'prep-action-7',
+	quests: [
+		{
+			title: ['Прогулка с собакой', 'Walking the dog', 'Прогулянка із собакою', 'Spacer z psem', 'Paseo con el perro', 'Promenade avec le chien', 'Köpekle yürüyüş', 'Plimbare cu câinele', 'It bilan sayr', 'कुत्ते के साथ सैर', 'نزهة مع الكلب'],
+			desc: [
+				'Практика без новой грамматики. С Akkusativ: für (для), ohne (без), durch (через, сквозь), um (вокруг): durch den Park, um den See, ohne den Hund. С Dativ: gegenüber von (напротив), an … vorbei (мимо): gegenüber vom Café, am Bahnhof vorbei.',
+				'Practice without new grammar. With the accusative: für (for), ohne (without), durch (through), um (around): durch den Park, um den See, ohne den Hund. With the dative: gegenüber von (opposite), an … vorbei (past): gegenüber vom Café, am Bahnhof vorbei.',
+				'Практика без нової граматики. З Akkusativ: für (для), ohne (без), durch (через, крізь), um (навколо): durch den Park, um den See, ohne den Hund. З Dativ: gegenüber von (навпроти), an … vorbei (повз): gegenüber vom Café, am Bahnhof vorbei.',
+				'Ćwiczenie bez nowej gramatyki. Z biernikiem: für (dla), ohne (bez), durch (przez), um (wokół): durch den Park, um den See, ohne den Hund. Z celownikiem: gegenüber von (naprzeciwko), an … vorbei (obok, mimo): gegenüber vom Café, am Bahnhof vorbei.',
+				'Práctica sin gramática nueva. Con acusativo: für (para), ohne (sin), durch (a través de), um (alrededor de): durch den Park, um den See, ohne den Hund. Con dativo: gegenüber von (enfrente de), an … vorbei (por delante de): gegenüber vom Café, am Bahnhof vorbei.',
+				'Entraînement sans nouvelle grammaire. Avec l’accusatif : für (pour), ohne (sans), durch (à travers), um (autour de) : durch den Park, um den See, ohne den Hund. Avec le datif : gegenüber von (en face de), an … vorbei (devant, en passant) : gegenüber vom Café, am Bahnhof vorbei.',
+				'Yeni dilbilgisi olmadan pratik. Akkusativ ile: für (için), ohne (-sız), durch (içinden), um (etrafında): durch den Park, um den See, ohne den Hund. Dativ ile: gegenüber von (karşısında), an … vorbei (yanından geçerek): gegenüber vom Café, am Bahnhof vorbei.',
+				'Exercițiu fără gramatică nouă. Cu acuzativ: für (pentru), ohne (fără), durch (prin), um (în jurul): durch den Park, um den See, ohne den Hund. Cu dativ: gegenüber von (vizavi de), an … vorbei (pe lângă): gegenüber vom Café, am Bahnhof vorbei.',
+				'Yangi grammatikasiz mashq. Akkusativ bilan: für (uchun), ohne (…siz), durch (orqali), um (atrofida): durch den Park, um den See, ohne den Hund. Dativ bilan: gegenüber von (qarshisida), an … vorbei (yonidan o‘tib): gegenüber vom Café, am Bahnhof vorbei.',
+				'बिना नए व्याकरण का अभ्यास। Akkusativ के साथ: für (के लिए), ohne (बिना), durch (से होकर), um (के चारों ओर): durch den Park, um den See, ohne den Hund. Dativ के साथ: gegenüber von (सामने), an … vorbei (के पास से): gegenüber vom Café, am Bahnhof vorbei.',
+				'تدريب بلا قواعد جديدة. مع Akkusativ: für (لـ) و ohne (بدون) و durch (عبر) و um (حول): durch den Park و um den See و ohne den Hund. مع Dativ: gegenüber von (مقابل) و an … vorbei (مرورًا بـ): gegenüber vom Café و am Bahnhof vorbei.'
+			],
+			vocab: [
+				['der Hund', 'собака', 'dog', 'собака', 'pies', 'el perro', 'le chien', 'köpek', 'câinele', 'it', 'कुत्ता', 'الكلب'],
+				['die Leine', 'поводок', 'lead', 'повідець', 'smycz', 'la correa', 'la laisse', 'tasma', 'lesa', 'bog‘ich', 'पट्टा', 'المقود'],
+				['der Spielplatz', 'детская площадка', 'playground', 'дитячий майданчик', 'plac zabaw', 'el parque infantil', 'l’aire de jeux', 'oyun parkı', 'locul de joacă', 'bolalar maydonchasi', 'खेल का मैदान', 'ملعب الأطفال'],
+				['laufen', 'бегать, идти пешком', 'to run, to walk', 'бігати, йти пішки', 'biegać, chodzić', 'correr, andar', 'courir, marcher', 'koşmak, yürümek', 'a alerga, a merge', 'yugurmoq, yurmoq', 'दौड़ना, चलना', 'يجري، يمشي'],
+				['der Ball', 'мяч', 'ball', 'м’яч', 'piłka', 'la pelota', 'le ballon', 'top', 'mingea', 'to‘p', 'गेंद', 'الكرة']
+			],
+			tasks: [
+				['tr', ['Мы идём через парк.', 'We are walking through the park.', 'Ми йдемо через парк.', 'Idziemy przez park.', 'Caminamos por el parque.', 'Nous traversons le parc.', 'Parkın içinden yürüyoruz.', 'Mergem prin parc.', 'Biz park orqali ketyapmiz.', 'हम पार्क से होकर जा रहे हैं।', 'نمشي عبر الحديقة.'],
+					['Wir laufen durch den Park.', 'Wir laufen durch dem Park.', 'Wir laufen durch der Park.'], 'Wir laufen durch den Park.'],
+				['gw', ['Собака бегает вокруг дерева', 'The dog runs around the tree', 'Собака бігає навколо дерева', 'Pies biega wokół drzewa', 'El perro corre alrededor del árbol', 'Le chien court autour de l’arbre', 'Köpek ağacın etrafında koşuyor', 'Câinele aleargă în jurul copacului', 'It daraxt atrofida yuguradi', 'कुत्ता पेड़ के चारों ओर दौड़ता है', 'يجري الكلب حول الشجرة'],
+					'Der Hund läuft ___ den Baum.', 'um'],
+				['gw', ['Без поводка нельзя', 'It’s not allowed without a lead', 'Без повідця не можна', 'Bez smyczy nie wolno', 'Sin correa no está permitido', 'Sans laisse, c’est interdit', 'Tasma olmadan olmaz', 'Fără lesă nu e voie', 'Bog‘ichsiz mumkin emas', 'पट्टे के बिना मना है', 'بدون مقود ممنوع'],
+					'___ die Leine geht es nicht.', 'Ohne'],
+				['ro', ['Мяч для собаки', 'The ball is for the dog', "М’яч для собаки", 'Piłka jest dla psa', 'La pelota es para el perro', 'Le ballon est pour le chien', 'Top köpek için', 'Mingea e pentru câine', 'To‘p it uchun', 'गेंद कुत्ते के लिए है', 'الكرة للكلب'],
+					'Der Ball ist für den Hund', ['dem']],
+				['ok', ['Детская площадка напротив школы.', 'The playground is opposite the school.', 'Дитячий майданчик навпроти школи.', 'Plac zabaw jest naprzeciwko szkoły.', 'El parque infantil está enfrente de la escuela.', 'L’aire de jeux est en face de l’école.', 'Oyun parkı okulun karşısında.', 'Locul de joacă e vizavi de școală.', 'Bolalar maydonchasi maktab qarshisida.', 'खेल का मैदान स्कूल के सामने है।', 'ملعب الأطفال مقابل المدرسة.'],
+					['Der Spielplatz ist gegenüber von der Schule.', 'Der Spielplatz ist gegenüber von die Schule.', 'Der Spielplatz ist gegenüber die Schule.'], 'Der Spielplatz ist gegenüber von der Schule.'],
+				['gw', ['Мы проходим мимо пекарни', 'We walk past the bakery', 'Ми проходимо повз пекарню', 'Przechodzimy obok piekarni', 'Pasamos por delante de la panadería', 'Nous passons devant la boulangerie', 'Fırının önünden geçiyoruz', 'Trecem pe lângă brutărie', 'Novvoyxona yonidan o‘tamiz', 'हम बेकरी के पास से गुज़रते हैं', 'نمرّ بجانب المخبز'],
+					'Wir gehen an der Bäckerei ___.', 'vorbei'],
+				['rd', ['Куда Пауль идёт с собакой?', 'Where does Paul go with the dog?', 'Куди Пауль іде із собакою?', 'Dokąd Paul idzie z psem?', '¿Adónde va Paul con el perro?', 'Où Paul va-t-il avec le chien ?', 'Paul köpekle nereye gidiyor?', 'Unde merge Paul cu câinele?', 'Paul it bilan qayerga boradi?', 'पॉल कुत्ते के साथ कहाँ जाता है?', 'إلى أين يذهب باول مع الكلب؟'],
+					'Jeden Morgen geht Paul mit seinem Hund spazieren. Sie gehen am Café vorbei und dann durch den Park. Im Park läuft der Hund ohne Leine um den See.', ['durch den Park', 'in die Schule', 'zum Bahnhof'], 'durch den Park'],
+				['gw', ['Я покупаю корм для собаки', 'I buy food for the dog', 'Я купую корм для собаки', 'Kupuję karmę dla psa', 'Compro comida para el perro', 'J’achète de la nourriture pour le chien', 'Köpek için mama alıyorum', 'Cumpăr mâncare pentru câine', 'It uchun yem sotib olaman', 'मैं कुत्ते के लिए खाना ख़रीदता हूँ', 'أشتري طعامًا للكلب'],
+					'Ich kaufe Futter für ___ Hund.', 'den'],
+				['gw', ['Мы идём вокруг озера', 'We walk around the lake', 'Ми йдемо навколо озера', 'Idziemy wokół jeziora', 'Caminamos alrededor del lago', 'Nous faisons le tour du lac', 'Gölün etrafında yürüyoruz', 'Mergem în jurul lacului', 'Biz ko‘l atrofida yuramiz', 'हम झील के चारों ओर चलते हैं', 'نمشي حول البحيرة'],
+					'Wir gehen um ___ See.', 'den'],
+				['ro', ['Собака бежит через улицу', 'The dog runs across the street', 'Собака біжить через вулицю', 'Pies biegnie przez ulicę', 'El perro cruza la calle corriendo', 'Le chien traverse la rue en courant', 'Köpek caddenin karşısına koşuyor', 'Câinele aleargă peste stradă', 'It ko‘chadan yugurib o‘tadi', 'कुत्ता सड़क पार दौड़ता है', 'يجري الكلب عبر الشارع'],
+					'Der Hund läuft über die Straße', ['der']],
+				['ok', ['Я не выхожу из дома без собаки.', 'I don’t leave the house without the dog.', 'Я не виходжу з дому без собаки.', 'Nie wychodzę z domu bez psa.', 'No salgo de casa sin el perro.', 'Je ne sors pas sans le chien.', 'Köpeksiz evden çıkmam.', 'Nu ies din casă fără câine.', 'Uydan itsiz chiqmayman.', 'मैं कुत्ते के बिना घर से नहीं निकलता।', 'لا أخرج من البيت بدون الكلب.'],
+					['Ich gehe nie ohne den Hund aus dem Haus.', 'Ich gehe nie ohne dem Hund aus dem Haus.', 'Ich gehe nie ohne der Hund aus dem Haus.'], 'Ich gehe nie ohne den Hund aus dem Haus.'],
+				['gw', ['Напротив вокзала есть кафе', 'Opposite the station there is a café', 'Навпроти вокзалу є кафе', 'Naprzeciwko dworca jest kawiarnia', 'Enfrente de la estación hay un café', 'En face de la gare, il y a un café', 'Garın karşısında bir kafe var', 'Vizavi de gară e o cafenea', 'Vokzal qarshisida kafe bor', 'स्टेशन के सामने एक कैफ़े है', 'مقابل المحطة يوجد مقهى'],
+					'Gegenüber ___ Bahnhof gibt es ein Café.', 'vom'],
+				['gw', ['Дети играют мячом', 'The children play with the ball', 'Діти граються м’ячем', 'Dzieci bawią się piłką', 'Los niños juegan con la pelota', 'Les enfants jouent avec le ballon', 'Çocuklar topla oynuyor', 'Copiii se joacă cu mingea', 'Bolalar to‘p bilan o‘ynashadi', 'बच्चे गेंद से खेलते हैं', 'يلعب الأطفال بالكرة'],
+					'Die Kinder spielen mit dem ___.', 'Ball'],
+				['gw', ['Собака лежит под столом', 'The dog is lying under the table', 'Собака лежить під столом', 'Pies leży pod stołem', 'El perro está tumbado debajo de la mesa', 'Le chien est couché sous la table', 'Köpek masanın altında yatıyor', 'Câinele stă sub masă', 'It stol tagida yotibdi', 'कुत्ता मेज़ के नीचे लेटा है', 'الكلب مستلقٍ تحت الطاولة'],
+					'Der Hund liegt unter ___ Tisch.', 'dem'],
+				['gw', ['Я иду к врачу с собакой', 'I go to the vet with the dog', 'Я йду до ветеринара із собакою', 'Idę z psem do weterynarza', 'Voy al veterinario con el perro', 'Je vais chez le vétérinaire avec le chien', 'Köpekle veterinere gidiyorum', 'Merg cu câinele la veterinar', 'It bilan veterinarga boraman', 'मैं कुत्ते को लेकर डॉक्टर के पास जाता हूँ', 'أذهب مع الكلب إلى البيطري'],
+					'Ich gehe mit dem Hund ___ Tierarzt.', 'zum']
+			]
+		},
+		{
+			title: ['Моё расписание', 'My timetable', 'Мій розклад', 'Mój plan', 'Mi horario', 'Mon emploi du temps', 'Programım', 'Programul meu', 'Mening jadvalim', 'मेरा टाइमटेबल', 'جدولي'],
+			desc: [
+				'Практика без новой грамматики. Время: am + день или часть дня (am Montag, am Abend), um + время (um acht Uhr), im + месяц или сезон (im Mai, im Winter). von … bis (с … до), ab (с, начиная с), seit (уже, с тех пор), vor (назад), nach (после): seit einem Jahr, vor zwei Tagen.',
+				'Practice without new grammar. Time: am + day or part of the day (am Montag, am Abend), um + clock time (um acht Uhr), im + month or season (im Mai, im Winter). von … bis (from … to), ab (from, starting), seit (for, since), vor (ago), nach (after): seit einem Jahr, vor zwei Tagen.',
+				'Практика без нової граматики. Час: am + день чи частина дня (am Montag, am Abend), um + час (um acht Uhr), im + місяць чи сезон (im Mai, im Winter). von … bis (з … до), ab (з, починаючи з), seit (уже, відтоді), vor (тому), nach (після): seit einem Jahr, vor zwei Tagen.',
+				'Ćwiczenie bez nowej gramatyki. Czas: am + dzień lub pora dnia (am Montag, am Abend), um + godzina (um acht Uhr), im + miesiąc lub pora roku (im Mai, im Winter). von … bis (od … do), ab (od), seit (od, już), vor (temu), nach (po): seit einem Jahr, vor zwei Tagen.',
+				'Práctica sin gramática nueva. Tiempo: am + día o parte del día (am Montag, am Abend), um + hora (um acht Uhr), im + mes o estación (im Mai, im Winter). von … bis (de … a), ab (a partir de), seit (desde hace), vor (hace), nach (después de): seit einem Jahr, vor zwei Tagen.',
+				'Entraînement sans nouvelle grammaire. Le temps : am + jour ou moment de la journée (am Montag, am Abend), um + heure (um acht Uhr), im + mois ou saison (im Mai, im Winter). von … bis (de … à), ab (à partir de), seit (depuis), vor (il y a), nach (après) : seit einem Jahr, vor zwei Tagen.',
+				'Yeni dilbilgisi olmadan pratik. Zaman: am + gün ya da günün bölümü (am Montag, am Abend), um + saat (um acht Uhr), im + ay ya da mevsim (im Mai, im Winter). von … bis (-den -e kadar), ab (-den itibaren), seit (-den beri), vor (önce), nach (sonra): seit einem Jahr, vor zwei Tagen.',
+				'Exercițiu fără gramatică nouă. Timpul: am + zi sau parte a zilei (am Montag, am Abend), um + oră (um acht Uhr), im + lună sau anotimp (im Mai, im Winter). von … bis (de la … până la), ab (începând cu), seit (de), vor (acum … în urmă), nach (după): seit einem Jahr, vor zwei Tagen.',
+				'Yangi grammatikasiz mashq. Vaqt: am + kun yoki kun qismi (am Montag, am Abend), um + soat (um acht Uhr), im + oy yoki fasl (im Mai, im Winter). von … bis (…dan …gacha), ab (…dan boshlab), seit (…dan beri), vor (…oldin), nach (…dan keyin): seit einem Jahr, vor zwei Tagen.',
+				'बिना नए व्याकरण का अभ्यास। समय: am + दिन या दिन का हिस्सा (am Montag, am Abend), um + घड़ी का समय (um acht Uhr), im + महीना या मौसम (im Mai, im Winter)। von … bis (से … तक), ab (से शुरू), seit (से), vor (पहले), nach (बाद): seit einem Jahr, vor zwei Tagen.',
+				'تدريب بلا قواعد جديدة. الوقت: am + يوم أو جزء من اليوم (am Montag و am Abend) و um + الساعة (um acht Uhr) و im + شهر أو فصل (im Mai و im Winter). ‏von … bis (من … إلى) و ab (ابتداءً من) و seit (منذ) و vor (قبل) و nach (بعد): seit einem Jahr و vor zwei Tagen.'
+			],
+			vocab: [
+				['der Dienstag', 'вторник', 'Tuesday', 'вівторок', 'wtorek', 'el martes', 'mardi', 'salı', 'marțea', 'seshanba', 'मंगलवार', 'الثلاثاء'],
+				['der Morgen', 'утро', 'morning', 'ранок', 'ranek', 'la mañana', 'le matin', 'sabah', 'dimineața', 'tong', 'सुबह', 'الصباح'],
+				['der Kurs', 'курс', 'course', 'курс', 'kurs', 'el curso', 'le cours', 'kurs', 'cursul', 'kurs', 'कोर्स', 'الدورة'],
+				['der Monat', 'месяц', 'month', 'місяць', 'miesiąc', 'el mes', 'le mois', 'ay', 'luna', 'oy', 'महीना', 'الشهر'],
+				['der Feierabend', 'конец рабочего дня', 'end of the working day', 'кінець робочого дня', 'koniec pracy', 'el fin de la jornada', 'la fin de la journée de travail', 'mesai bitimi', 'sfârșitul programului', 'ish kuni tugashi', 'काम ख़त्म होने का समय', 'نهاية الدوام']
+			],
+			tasks: [
+				['tr', ['Во вторник у меня курс немецкого.', 'On Tuesday I have a German course.', 'У вівторок у мене курс німецької.', 'We wtorek mam kurs niemieckiego.', 'El martes tengo curso de alemán.', 'Mardi, j’ai un cours d’allemand.', 'Salı günü Almanca kursum var.', 'Marțea am curs de germană.', 'Seshanba kuni nemis tili kursim bor.', 'मंगलवार को मेरा जर्मन कोर्स है।', 'يوم الثلاثاء عندي دورة ألمانية.'],
+					['Am Dienstag habe ich einen Deutschkurs.', 'Im Dienstag habe ich einen Deutschkurs.', 'Um Dienstag habe ich einen Deutschkurs.'], 'Am Dienstag habe ich einen Deutschkurs.'],
+				['gw', ['Курс начинается в шесть часов', 'The course starts at six o’clock', 'Курс починається о шостій', 'Kurs zaczyna się o szóstej', 'El curso empieza a las seis', 'Le cours commence à six heures', 'Kurs saat altıda başlıyor', 'Cursul începe la ora șase', 'Kurs soat oltida boshlanadi', 'कोर्स छह बजे शुरू होता है', 'تبدأ الدورة في الساعة السادسة'],
+					'Der Kurs beginnt ___ sechs Uhr.', 'um'],
+				['gw', ['В мае у нас экзамен', 'In May we have an exam', 'У травні в нас іспит', 'W maju mamy egzamin', 'En mayo tenemos examen', 'En mai, nous avons un examen', 'Mayısta sınavımız var', 'În mai avem examen', 'Mayda imtihonimiz bor', 'मई में हमारी परीक्षा है', 'في مايو عندنا امتحان'],
+					'___ Mai haben wir eine Prüfung.', 'Im'],
+				['ro', ['Я работаю с восьми до пяти', 'I work from eight to five', 'Я працюю з восьмої до п’ятої', 'Pracuję od ósmej do piątej', 'Trabajo de ocho a cinco', 'Je travaille de huit heures à cinq heures', 'Sekizden beşe kadar çalışıyorum', 'Lucrez de la opt până la cinci', 'Sakkizdan beshgacha ishlayman', 'मैं आठ से पाँच बजे तक काम करता हूँ', 'أعمل من الثامنة إلى الخامسة'],
+					'Ich arbeite von acht bis fünf Uhr', ['ab']],
+				['ok', ['Я учу немецкий уже год.', 'I have been learning German for a year.', 'Я вчу німецьку вже рік.', 'Uczę się niemieckiego od roku.', 'Aprendo alemán desde hace un año.', 'J’apprends l’allemand depuis un an.', 'Bir yıldır Almanca öğreniyorum.', 'Învăț germana de un an.', 'Bir yildan beri nemis tilini o‘rganaman.', 'मैं एक साल से जर्मन सीख रहा हूँ।', 'أتعلم الألمانية منذ سنة.'],
+					['Ich lerne seit einem Jahr Deutsch.', 'Ich lerne seit ein Jahr Deutsch.', 'Ich lerne vor einem Jahr Deutsch.'], 'Ich lerne seit einem Jahr Deutsch.'],
+				['gw', ['Начиная с понедельника я работаю в другом месте', 'From Monday I work somewhere else', 'З понеділка я працюю в іншому місці', 'Od poniedziałku pracuję gdzie indziej', 'A partir del lunes trabajo en otro sitio', 'À partir de lundi, je travaille ailleurs', 'Pazartesiden itibaren başka yerde çalışıyorum', 'De luni lucrez în alt loc', 'Dushanbadan boshlab boshqa joyda ishlayman', 'सोमवार से मैं दूसरी जगह काम करता हूँ', 'ابتداءً من الاثنين أعمل في مكان آخر'],
+					'___ Montag arbeite ich woanders.', 'Ab'],
+				['rd', ['Когда у Лизы конец рабочего дня?', 'When does Lisa finish work?', 'Коли в Лізи кінець робочого дня?', 'Kiedy Lisa kończy pracę?', '¿Cuándo termina Lisa de trabajar?', 'Quand Lisa finit-elle le travail ?', 'Lisa’nın mesaisi ne zaman bitiyor?', 'Când termină Lisa programul?', 'Lizaning ish kuni qachon tugaydi?', 'लीसा का काम कब ख़त्म होता है?', 'متى ينتهي دوام ليزا؟'],
+					'Lisa arbeitet von Montag bis Freitag. Sie beginnt um acht Uhr und hat um vier Uhr Feierabend. Am Dienstag geht sie nach der Arbeit zum Kurs. Seit einem Monat lernt sie Spanisch.', ['um vier Uhr', 'um acht Uhr', 'am Dienstag'], 'um vier Uhr'],
+				['gw', ['Два дня назад я был у врача', 'Two days ago I was at the doctor’s', 'Два дні тому я був у лікаря', 'Dwa dni temu byłem u lekarza', 'Hace dos días estuve en el médico', 'Il y a deux jours, j’étais chez le médecin', 'İki gün önce doktordaydım', 'Acum două zile am fost la doctor', 'Ikki kun oldin shifokorda edim', 'दो दिन पहले मैं डॉक्टर के पास था', 'قبل يومين كنت عند الطبيب'],
+					'___ zwei Tagen war ich beim Arzt.', 'Vor'],
+				['gw', ['После обеда я иду гулять', 'After lunch I go for a walk', 'Після обіду я йду гуляти', 'Po obiedzie idę na spacer', 'Después de comer salgo a pasear', 'Après le déjeuner, je vais me promener', 'Öğle yemeğinden sonra yürüyüşe çıkıyorum', 'După prânz ies la plimbare', 'Tushlikdan keyin sayrga chiqaman', 'दोपहर के खाने के बाद मैं टहलने जाता हूँ', 'بعد الغداء أخرج أتمشى'],
+					'___ dem Mittagessen gehe ich spazieren.', 'Nach'],
+				['ro', ['Зимой я катаюсь на лыжах', 'In winter I go skiing', 'Узимку я катаюся на лижах', 'Zimą jeżdżę na nartach', 'En invierno esquío', 'En hiver, je fais du ski', 'Kışın kayak yapıyorum', 'Iarna schiez', 'Qishda chang‘ida uchaman', 'सर्दियों में मैं स्की करता हूँ', 'في الشتاء أتزلج'],
+					'Im Winter fahre ich Ski', ['Am']],
+				['ok', ['Утром я пью кофе.', 'In the morning I drink coffee.', 'Уранці я п’ю каву.', 'Rano piję kawę.', 'Por la mañana tomo café.', 'Le matin, je bois du café.', 'Sabah kahve içiyorum.', 'Dimineața beau cafea.', 'Ertalab qahva ichaman.', 'सुबह मैं कॉफ़ी पीता हूँ।', 'في الصباح أشرب القهوة.'],
+					['Am Morgen trinke ich Kaffee.', 'Im Morgen trinke ich Kaffee.', 'Am Morgen ich trinke Kaffee.'], 'Am Morgen trinke ich Kaffee.'],
+				['gw', ['Магазин открыт с девяти до шести', 'The shop is open from nine to six', 'Магазин відкритий з дев’ятої до шостої', 'Sklep jest otwarty od dziewiątej do szóstej', 'La tienda abre de nueve a seis', 'Le magasin est ouvert de neuf heures à six heures', 'Dükkân dokuzdan altıya kadar açık', 'Magazinul e deschis de la nouă până la șase', 'Do‘kon to‘qqizdan oltigacha ochiq', 'दुकान नौ से छह बजे तक खुली है', 'المتجر مفتوح من التاسعة إلى السادسة'],
+					'Der Laden ist von neun ___ sechs Uhr offen.', 'bis'],
+				['gw', ['Мы живём здесь уже пять лет', 'We have been living here for five years', 'Ми живемо тут уже п’ять років', 'Mieszkamy tu od pięciu lat', 'Vivimos aquí desde hace cinco años', 'Nous habitons ici depuis cinq ans', 'Beş yıldır burada yaşıyoruz', 'Locuim aici de cinci ani', 'Biz bu yerda besh yildan beri yashaymiz', 'हम पाँच साल से यहाँ रहते हैं', 'نعيش هنا منذ خمس سنوات'],
+					'Wir wohnen ___ fünf Jahren hier.', 'seit'],
+				['gv', ['Вчера я долго спал', 'Yesterday I slept for a long time', 'Учора я довго спав', 'Wczoraj długo spałem', 'Ayer dormí mucho', 'Hier, j’ai dormi longtemps', 'Dün uzun süre uyudum', 'Ieri am dormit mult', 'Kecha uzoq uxladim', 'कल मैं देर तक सोया', 'أمس نمت طويلًا'],
+					'Gestern habe ich lange ___.', 'geschlafen'],
+				['gw', ['Я иду через парк к реке', 'I walk through the park to the river', 'Я йду через парк до річки', 'Idę przez park nad rzekę', 'Camino por el parque hasta el río', 'Je traverse le parc jusqu’à la rivière', 'Parkın içinden nehre yürüyorum', 'Merg prin parc până la râu', 'Park orqali daryoga boraman', 'मैं पार्क से होकर नदी तक जाता हूँ', 'أمشي عبر الحديقة إلى النهر'],
+					'Ich gehe ___ den Park zum Fluss.', 'durch']
+			]
+		}
+	]
+}

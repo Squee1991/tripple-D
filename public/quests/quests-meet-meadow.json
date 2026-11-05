@@ -1,0 +1,2765 @@
+[
+  {
+    "questId": "meet-meadow-one",
+    "title": "meetMeadowOne.questTitle",
+    "progress": "0/15",
+    "description": "meetMeadowOne.questDescription",
+    "conditions": {
+      "goal": "meetMeadowOne.questGoal",
+      "minCorrect": 15,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
+    "vocabulary": [
+      {
+        "word": "ich",
+        "translation-ru": "я",
+        "translation-en": "I",
+        "translation-uk": "я",
+        "translation-pl": "ja",
+        "translation-es": "yo",
+        "translation-fr": "je",
+        "translation-tr": "ben",
+        "translation-ro": "eu",
+        "translation-uz": "men",
+        "translation-hi": "मैं",
+        "translation-ar": "أنا"
+      },
+      {
+        "word": "du",
+        "translation-ru": "ты",
+        "translation-en": "you",
+        "translation-uk": "ти",
+        "translation-pl": "ty",
+        "translation-es": "tú",
+        "translation-fr": "tu",
+        "translation-tr": "sen",
+        "translation-ro": "tu",
+        "translation-uz": "sen",
+        "translation-hi": "तुम",
+        "translation-ar": "أنت"
+      },
+      {
+        "word": "Sie",
+        "translation-ru": "Вы (вежливо)",
+        "translation-en": "you (formal)",
+        "translation-uk": "Ви (ввічливо)",
+        "translation-pl": "Pan/Pani",
+        "translation-es": "usted",
+        "translation-fr": "vous (poli)",
+        "translation-tr": "siz (resmî)",
+        "translation-ro": "dumneavoastră",
+        "translation-uz": "Siz (hurmat bilan)",
+        "translation-hi": "आप",
+        "translation-ar": "حضرتك"
+      },
+      {
+        "word": "sein",
+        "translation-ru": "быть",
+        "translation-en": "to be",
+        "translation-uk": "бути",
+        "translation-pl": "być",
+        "translation-es": "ser, estar",
+        "translation-fr": "être",
+        "translation-tr": "olmak",
+        "translation-ro": "a fi",
+        "translation-uz": "bo‘lmoq",
+        "translation-hi": "होना",
+        "translation-ar": "يكون"
+      },
+      {
+        "word": "der Herr",
+        "translation-ru": "господин",
+        "translation-en": "Mr, gentleman",
+        "translation-uk": "пан",
+        "translation-pl": "pan",
+        "translation-es": "el señor",
+        "translation-fr": "monsieur",
+        "translation-tr": "bay",
+        "translation-ro": "domnul",
+        "translation-uz": "janob",
+        "translation-hi": "श्रीमान",
+        "translation-ar": "السيد"
+      },
+      {
+        "word": "der Student",
+        "translation-ru": "студент",
+        "translation-en": "student",
+        "translation-uk": "студент",
+        "translation-pl": "student",
+        "translation-es": "el estudiante",
+        "translation-fr": "l’étudiant",
+        "translation-tr": "öğrenci",
+        "translation-ro": "studentul",
+        "translation-uz": "talaba",
+        "translation-hi": "छात्र",
+        "translation-ar": "الطالب"
+      },
+      {
+        "word": "nett",
+        "translation-ru": "милый, приятный",
+        "translation-en": "nice",
+        "translation-uk": "милий",
+        "translation-pl": "miły",
+        "translation-es": "amable",
+        "translation-fr": "gentil",
+        "translation-tr": "nazik",
+        "translation-ro": "drăguț",
+        "translation-uz": "yoqimli",
+        "translation-hi": "अच्छा, प्यारा",
+        "translation-ar": "لطيف"
+      }
+    ],
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "meetMeadowOne.questTask1",
+        "options": [
+          "Ich ist Anna.",
+          "Ich bist Anna.",
+          "Ich bin Anna."
+        ],
+        "answer": "Ich bin Anna.",
+        "tip": "meetMeadowOne.questDescription"
+      },
+      {
+        "id": 2,
+        "type": "input",
+        "question": "meetMeadowOne.questTask2",
+        "correctAnswer": "Bist",
+        "tip": "meetMeadowOne.questDescription"
+      },
+      {
+        "id": 3,
+        "type": "input",
+        "question": "meetMeadowOne.questTask3",
+        "correctAnswer": "Sind",
+        "tip": "meetMeadowOne.questDescription"
+      },
+      {
+        "id": 4,
+        "type": "select",
+        "question": "meetMeadowOne.questTask4",
+        "options": [
+          "Ich bin Lehrerin.",
+          "Ich bist Lehrerin.",
+          "Ich Lehrerin."
+        ],
+        "answer": "Ich bin Lehrerin.",
+        "tip": "meetMeadowOne.questDescription"
+      },
+      {
+        "id": 5,
+        "type": "reorder",
+        "question": "meetMeadowOne.questTask5",
+        "words": [
+          "bin",
+          "Studentin",
+          "Bist",
+          "ist",
+          "du"
+        ],
+        "correctOrder": [
+          "Bist",
+          "du",
+          "Studentin"
+        ],
+        "tip": "meetMeadowOne.questDescription"
+      },
+      {
+        "id": 6,
+        "type": "input",
+        "question": "meetMeadowOne.questTask6",
+        "correctAnswer": "bin",
+        "tip": "meetMeadowOne.questDescription"
+      },
+      {
+        "id": 7,
+        "type": "select",
+        "question": "meetMeadowOne.questTask7",
+        "options": [
+          "Seid Sie aus Österreich?",
+          "Sind Sie aus Österreich?",
+          "Bist Sie aus Österreich?"
+        ],
+        "answer": "Sind Sie aus Österreich?",
+        "tip": "meetMeadowOne.questDescription"
+      },
+      {
+        "id": 8,
+        "type": "input",
+        "question": "meetMeadowOne.questTask8",
+        "correctAnswer": "du",
+        "tip": "meetMeadowOne.questDescription"
+      },
+      {
+        "id": 9,
+        "type": "readAndAnswer",
+        "question": "meetMeadowOne.questTask9",
+        "text": "Guten Tag! Ich bin Herr Schmidt. Ich bin Arzt. Und Sie? Sind Sie auch Arzt? Nein, ich bin Koch.",
+        "options": [
+          "Arzt",
+          "Lehrer",
+          "Koch"
+        ],
+        "answer": "Arzt",
+        "tip": "meetMeadowOne.questDescription"
+      },
+      {
+        "id": 10,
+        "type": "select",
+        "question": "meetMeadowOne.questTask10",
+        "options": [
+          "Du bist sehr nett.",
+          "Du sind sehr nett.",
+          "Du bin sehr nett."
+        ],
+        "answer": "Du bist sehr nett.",
+        "tip": "meetMeadowOne.questDescription"
+      },
+      {
+        "id": 11,
+        "type": "reorder",
+        "question": "meetMeadowOne.questTask11",
+        "words": [
+          "heiße",
+          "Paul",
+          "Ich",
+          "bin",
+          "bist",
+          "heißt",
+          "und",
+          "Kellner"
+        ],
+        "correctOrder": [
+          "Ich",
+          "heiße",
+          "Paul",
+          "und",
+          "bin",
+          "Kellner"
+        ],
+        "tip": "meetMeadowOne.questDescription"
+      },
+      {
+        "id": 12,
+        "type": "select",
+        "question": "meetMeadowOne.questTask12",
+        "options": [
+          "Gute Nacht, Herr Müller!",
+          "Guten Abend, Herr Müller!",
+          "Guten Morgen, Herr Müller!"
+        ],
+        "answer": "Guten Abend, Herr Müller!",
+        "tip": "meetMeadowOne.questDescription"
+      },
+      {
+        "id": 13,
+        "type": "input",
+        "question": "meetMeadowOne.questTask13",
+        "correctAnswer": "Woher",
+        "tip": "meetMeadowOne.questDescription"
+      },
+      {
+        "id": 14,
+        "type": "select",
+        "question": "meetMeadowOne.questTask14",
+        "options": [
+          "Auf Wiedersehen, Herr Becker!",
+          "Auf Wiedersehen, Frau Becker!",
+          "Bis Wiedersehen, Frau Becker!"
+        ],
+        "answer": "Auf Wiedersehen, Frau Becker!",
+        "tip": "meetMeadowOne.questDescription"
+      },
+      {
+        "id": 15,
+        "type": "reorder",
+        "question": "meetMeadowOne.questTask15",
+        "words": [
+          "einen",
+          "kostet",
+          "Wasser",
+          "Kaffee",
+          "und",
+          "Ein",
+          "bitte",
+          "danke"
+        ],
+        "correctOrder": [
+          "Ein",
+          "Wasser",
+          "und",
+          "einen",
+          "Kaffee",
+          "bitte"
+        ],
+        "tip": "meetMeadowOne.questDescription"
+      }
+    ]
+  },
+  {
+    "questId": "meet-meadow-two",
+    "title": "meetMeadowTwo.questTitle",
+    "progress": "0/15",
+    "description": "meetMeadowTwo.questDescription",
+    "conditions": {
+      "goal": "meetMeadowTwo.questGoal",
+      "minCorrect": 15,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
+    "vocabulary": [
+      {
+        "word": "er",
+        "translation-ru": "он",
+        "translation-en": "he",
+        "translation-uk": "він",
+        "translation-pl": "on",
+        "translation-es": "él",
+        "translation-fr": "il",
+        "translation-tr": "o (eril)",
+        "translation-ro": "el",
+        "translation-uz": "u (erkak)",
+        "translation-hi": "वह (पुरुष)",
+        "translation-ar": "هو"
+      },
+      {
+        "word": "sie",
+        "translation-ru": "она",
+        "translation-en": "she",
+        "translation-uk": "вона",
+        "translation-pl": "ona",
+        "translation-es": "ella",
+        "translation-fr": "elle",
+        "translation-tr": "o (dişil)",
+        "translation-ro": "ea",
+        "translation-uz": "u (ayol)",
+        "translation-hi": "वह (स्त्री)",
+        "translation-ar": "هي"
+      },
+      {
+        "word": "das Kind",
+        "translation-ru": "ребёнок",
+        "translation-en": "child",
+        "translation-uk": "дитина",
+        "translation-pl": "dziecko",
+        "translation-es": "el niño",
+        "translation-fr": "l’enfant",
+        "translation-tr": "çocuk",
+        "translation-ro": "copilul",
+        "translation-uz": "bola",
+        "translation-hi": "बच्चा",
+        "translation-ar": "الطفل"
+      },
+      {
+        "word": "heiß",
+        "translation-ru": "горячий",
+        "translation-en": "hot",
+        "translation-uk": "гарячий",
+        "translation-pl": "gorący",
+        "translation-es": "caliente",
+        "translation-fr": "chaud",
+        "translation-tr": "sıcak",
+        "translation-ro": "fierbinte",
+        "translation-uz": "issiq",
+        "translation-hi": "गरम",
+        "translation-ar": "ساخن"
+      },
+      {
+        "word": "nett",
+        "translation-ru": "милый, приятный",
+        "translation-en": "nice",
+        "translation-uk": "милий",
+        "translation-pl": "miły",
+        "translation-es": "amable",
+        "translation-fr": "gentil",
+        "translation-tr": "nazik",
+        "translation-ro": "drăguț",
+        "translation-uz": "yoqimli",
+        "translation-hi": "अच्छा, प्यारा",
+        "translation-ar": "لطيف"
+      }
+    ],
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "meetMeadowTwo.questTask1",
+        "options": [
+          "Er sind Arzt.",
+          "Er bist Arzt.",
+          "Er ist Arzt."
+        ],
+        "answer": "Er ist Arzt.",
+        "tip": "meetMeadowTwo.questDescription"
+      },
+      {
+        "id": 2,
+        "type": "input",
+        "question": "meetMeadowTwo.questTask2",
+        "correctAnswer": "Sie",
+        "tip": "meetMeadowTwo.questDescription"
+      },
+      {
+        "id": 3,
+        "type": "input",
+        "question": "meetMeadowTwo.questTask3",
+        "correctAnswer": "Es",
+        "tip": "meetMeadowTwo.questDescription"
+      },
+      {
+        "id": 4,
+        "type": "input",
+        "question": "meetMeadowTwo.questTask4",
+        "correctAnswer": "ist",
+        "tip": "meetMeadowTwo.questDescription"
+      },
+      {
+        "id": 5,
+        "type": "select",
+        "question": "meetMeadowTwo.questTask5",
+        "options": [
+          "Der Kaffee ist heiß. Er sind gut.",
+          "Der Kaffee ist heiß. Er ist gut.",
+          "Der Kaffee ist heiß. Sie ist gut."
+        ],
+        "answer": "Der Kaffee ist heiß. Er ist gut.",
+        "tip": "meetMeadowTwo.questDescription"
+      },
+      {
+        "id": 6,
+        "type": "reorder",
+        "question": "meetMeadowTwo.questTask6",
+        "words": [
+          "Studentin",
+          "sie",
+          "ist",
+          "ist",
+          "bist",
+          "Das",
+          "Nina",
+          "er",
+          "und"
+        ],
+        "correctOrder": [
+          "Das",
+          "ist",
+          "Nina",
+          "und",
+          "sie",
+          "ist",
+          "Studentin"
+        ],
+        "tip": "meetMeadowTwo.questDescription"
+      },
+      {
+        "id": 7,
+        "type": "select",
+        "question": "meetMeadowTwo.questTask7",
+        "options": [
+          "Der Tee ist heiß.",
+          "Der Tee sind heiß.",
+          "Der Tee bist heiß."
+        ],
+        "answer": "Der Tee ist heiß.",
+        "tip": "meetMeadowTwo.questDescription"
+      },
+      {
+        "id": 8,
+        "type": "input",
+        "question": "meetMeadowTwo.questTask8",
+        "correctAnswer": "Es",
+        "tip": "meetMeadowTwo.questDescription"
+      },
+      {
+        "id": 9,
+        "type": "readAndAnswer",
+        "question": "meetMeadowTwo.questTask9",
+        "text": "Das ist meine Familie. Das ist mein Vater, er ist Koch. Das ist Lukas, er ist mein Bruder. Er ist Student.",
+        "options": [
+          "ein Koch",
+          "sein Bruder",
+          "sein Vater"
+        ],
+        "answer": "sein Bruder",
+        "tip": "meetMeadowTwo.questDescription"
+      },
+      {
+        "id": 10,
+        "type": "select",
+        "question": "meetMeadowTwo.questTask10",
+        "options": [
+          "Das Wasser ist heiß. Sie ist nicht gut.",
+          "Das Wasser ist heiß. Es ist nicht gut.",
+          "Das Wasser ist heiß. Er ist nicht gut."
+        ],
+        "answer": "Das Wasser ist heiß. Es ist nicht gut.",
+        "tip": "meetMeadowTwo.questDescription"
+      },
+      {
+        "id": 11,
+        "type": "input",
+        "question": "meetMeadowTwo.questTask11",
+        "correctAnswer": "ist",
+        "tip": "meetMeadowTwo.questDescription"
+      },
+      {
+        "id": 12,
+        "type": "input",
+        "question": "meetMeadowTwo.questTask12",
+        "correctAnswer": "bin",
+        "tip": "meetMeadowTwo.questDescription"
+      },
+      {
+        "id": 13,
+        "type": "select",
+        "question": "meetMeadowTwo.questTask13",
+        "options": [
+          "Sind Sie Herr Koch?",
+          "Bist Sie Herr Koch?",
+          "Ist Sie Herr Koch?"
+        ],
+        "answer": "Sind Sie Herr Koch?",
+        "tip": "meetMeadowTwo.questDescription"
+      },
+      {
+        "id": 14,
+        "type": "reorder",
+        "question": "meetMeadowTwo.questTask14",
+        "words": [
+          "einen",
+          "möchte",
+          "Ich",
+          "bitte",
+          "ist",
+          "Tee",
+          "kostet"
+        ],
+        "correctOrder": [
+          "Ich",
+          "möchte",
+          "einen",
+          "Tee",
+          "bitte"
+        ],
+        "tip": "meetMeadowTwo.questDescription"
+      },
+      {
+        "id": 15,
+        "type": "input",
+        "question": "meetMeadowTwo.questTask15",
+        "correctAnswer": "kostet",
+        "tip": "meetMeadowTwo.questDescription"
+      }
+    ]
+  },
+  {
+    "questId": "meet-meadow-three",
+    "title": "meetMeadowThree.questTitle",
+    "progress": "0/15",
+    "description": "meetMeadowThree.questDescription",
+    "conditions": {
+      "goal": "meetMeadowThree.questGoal",
+      "minCorrect": 15,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
+    "vocabulary": [
+      {
+        "word": "wir",
+        "translation-ru": "мы",
+        "translation-en": "we",
+        "translation-uk": "ми",
+        "translation-pl": "my",
+        "translation-es": "nosotros",
+        "translation-fr": "nous",
+        "translation-tr": "biz",
+        "translation-ro": "noi",
+        "translation-uz": "biz",
+        "translation-hi": "हम",
+        "translation-ar": "نحن"
+      },
+      {
+        "word": "ihr",
+        "translation-ru": "вы (вы все)",
+        "translation-en": "you (plural)",
+        "translation-uk": "ви (усі)",
+        "translation-pl": "wy",
+        "translation-es": "vosotros",
+        "translation-fr": "vous (pluriel)",
+        "translation-tr": "siz (çoğul)",
+        "translation-ro": "voi",
+        "translation-uz": "sizlar",
+        "translation-hi": "तुम सब",
+        "translation-ar": "أنتم"
+      },
+      {
+        "word": "die Freunde",
+        "translation-ru": "друзья",
+        "translation-en": "friends",
+        "translation-uk": "друзі",
+        "translation-pl": "przyjaciele",
+        "translation-es": "los amigos",
+        "translation-fr": "les amis",
+        "translation-tr": "arkadaşlar",
+        "translation-ro": "prietenii",
+        "translation-uz": "do‘stlar",
+        "translation-hi": "दोस्त",
+        "translation-ar": "الأصدقاء"
+      },
+      {
+        "word": "die Eltern",
+        "translation-ru": "родители",
+        "translation-en": "parents",
+        "translation-uk": "батьки",
+        "translation-pl": "rodzice",
+        "translation-es": "los padres",
+        "translation-fr": "les parents",
+        "translation-tr": "anne baba",
+        "translation-ro": "părinții",
+        "translation-uz": "ota-ona",
+        "translation-hi": "माता-पिता",
+        "translation-ar": "الوالدان"
+      },
+      {
+        "word": "müde",
+        "translation-ru": "усталый",
+        "translation-en": "tired",
+        "translation-uk": "втомлений",
+        "translation-pl": "zmęczony",
+        "translation-es": "cansado",
+        "translation-fr": "fatigué",
+        "translation-tr": "yorgun",
+        "translation-ro": "obosit",
+        "translation-uz": "charchagan",
+        "translation-hi": "थका हुआ",
+        "translation-ar": "متعب"
+      }
+    ],
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "meetMeadowThree.questTask1",
+        "options": [
+          "Wir seid Freunde.",
+          "Wir ist Freunde.",
+          "Wir sind Freunde."
+        ],
+        "answer": "Wir sind Freunde.",
+        "tip": "meetMeadowThree.questDescription"
+      },
+      {
+        "id": 2,
+        "type": "input",
+        "question": "meetMeadowThree.questTask2",
+        "correctAnswer": "Seid",
+        "tip": "meetMeadowThree.questDescription"
+      },
+      {
+        "id": 3,
+        "type": "input",
+        "question": "meetMeadowThree.questTask3",
+        "correctAnswer": "sind",
+        "tip": "meetMeadowThree.questDescription"
+      },
+      {
+        "id": 4,
+        "type": "select",
+        "question": "meetMeadowThree.questTask4",
+        "options": [
+          "Sie ist nicht in Berlin.",
+          "Sie seid nicht in Berlin.",
+          "Sie sind nicht in Berlin."
+        ],
+        "answer": "Sie sind nicht in Berlin.",
+        "tip": "meetMeadowThree.questDescription"
+      },
+      {
+        "id": 5,
+        "type": "reorder",
+        "question": "meetMeadowThree.questTask5",
+        "words": [
+          "sind",
+          "bin",
+          "seid",
+          "Wir",
+          "müde",
+          "sehr"
+        ],
+        "correctOrder": [
+          "Wir",
+          "sind",
+          "sehr",
+          "müde"
+        ],
+        "tip": "meetMeadowThree.questDescription"
+      },
+      {
+        "id": 6,
+        "type": "input",
+        "question": "meetMeadowThree.questTask6",
+        "correctAnswer": "ihr",
+        "tip": "meetMeadowThree.questDescription"
+      },
+      {
+        "id": 7,
+        "type": "select",
+        "question": "meetMeadowThree.questTask7",
+        "options": [
+          "Anna und Tim seid aus Köln.",
+          "Anna und Tim sind aus Köln.",
+          "Anna und Tim ist aus Köln."
+        ],
+        "answer": "Anna und Tim sind aus Köln.",
+        "tip": "meetMeadowThree.questDescription"
+      },
+      {
+        "id": 8,
+        "type": "input",
+        "question": "meetMeadowThree.questTask8",
+        "correctAnswer": "sind",
+        "tip": "meetMeadowThree.questDescription"
+      },
+      {
+        "id": 9,
+        "type": "readAndAnswer",
+        "question": "meetMeadowThree.questTask9",
+        "text": "Ich bin Maria. Ich bin aus Spanien. Meine Freunde Paul und Lea sind aus Österreich. Wir sind jetzt in Berlin.",
+        "options": [
+          "aus Berlin",
+          "aus Österreich",
+          "aus Spanien"
+        ],
+        "answer": "aus Österreich",
+        "tip": "meetMeadowThree.questDescription"
+      },
+      {
+        "id": 10,
+        "type": "select",
+        "question": "meetMeadowThree.questTask10",
+        "options": [
+          "Ihr seid meine Freunde!",
+          "Ihr bist meine Freunde!",
+          "Ihr sind meine Freunde!"
+        ],
+        "answer": "Ihr seid meine Freunde!",
+        "tip": "meetMeadowThree.questDescription"
+      },
+      {
+        "id": 11,
+        "type": "reorder",
+        "question": "meetMeadowThree.questTask11",
+        "words": [
+          "sind",
+          "Meine",
+          "Eltern",
+          "ist",
+          "seid",
+          "Lehrer"
+        ],
+        "correctOrder": [
+          "Meine",
+          "Eltern",
+          "sind",
+          "Lehrer"
+        ],
+        "tip": "meetMeadowThree.questDescription"
+      },
+      {
+        "id": 12,
+        "type": "input",
+        "question": "meetMeadowThree.questTask12",
+        "correctAnswer": "Er",
+        "tip": "meetMeadowThree.questDescription"
+      },
+      {
+        "id": 13,
+        "type": "input",
+        "question": "meetMeadowThree.questTask13",
+        "correctAnswer": "Bist",
+        "tip": "meetMeadowThree.questDescription"
+      },
+      {
+        "id": 14,
+        "type": "select",
+        "question": "meetMeadowThree.questTask14",
+        "options": [
+          "Das kosten dreißig Euro.",
+          "Das kostet dreißig Euro.",
+          "Das kostet dreizehn Euro."
+        ],
+        "answer": "Das kostet dreißig Euro.",
+        "tip": "meetMeadowThree.questDescription"
+      },
+      {
+        "id": 15,
+        "type": "reorder",
+        "question": "meetMeadowThree.questTask15",
+        "words": [
+          "gute",
+          "Nacht",
+          "seid",
+          "Tschüss",
+          "Guten"
+        ],
+        "correctOrder": [
+          "Tschüss",
+          "gute",
+          "Nacht"
+        ],
+        "tip": "meetMeadowThree.questDescription"
+      }
+    ]
+  },
+  {
+    "questId": "meet-meadow-four",
+    "title": "meetMeadowFour.questTitle",
+    "progress": "0/15",
+    "description": "meetMeadowFour.questDescription",
+    "conditions": {
+      "goal": "meetMeadowFour.questGoal",
+      "minCorrect": 15,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
+    "vocabulary": [
+      {
+        "word": "haben",
+        "translation-ru": "иметь",
+        "translation-en": "to have",
+        "translation-uk": "мати",
+        "translation-pl": "mieć",
+        "translation-es": "tener",
+        "translation-fr": "avoir",
+        "translation-tr": "sahip olmak",
+        "translation-ro": "a avea",
+        "translation-uz": "ega bo‘lmoq",
+        "translation-hi": "रखना, होना",
+        "translation-ar": "يملك"
+      },
+      {
+        "word": "der Hunger",
+        "translation-ru": "голод",
+        "translation-en": "hunger",
+        "translation-uk": "голод",
+        "translation-pl": "głód",
+        "translation-es": "el hambre",
+        "translation-fr": "la faim",
+        "translation-tr": "açlık",
+        "translation-ro": "foamea",
+        "translation-uz": "ochlik",
+        "translation-hi": "भूख",
+        "translation-ar": "الجوع"
+      },
+      {
+        "word": "der Durst",
+        "translation-ru": "жажда",
+        "translation-en": "thirst",
+        "translation-uk": "спрага",
+        "translation-pl": "pragnienie",
+        "translation-es": "la sed",
+        "translation-fr": "la soif",
+        "translation-tr": "susuzluk",
+        "translation-ro": "setea",
+        "translation-uz": "chanqoq",
+        "translation-hi": "प्यास",
+        "translation-ar": "العطش"
+      },
+      {
+        "word": "die Zeit",
+        "translation-ru": "время",
+        "translation-en": "time",
+        "translation-uk": "час",
+        "translation-pl": "czas",
+        "translation-es": "el tiempo",
+        "translation-fr": "le temps",
+        "translation-tr": "zaman",
+        "translation-ro": "timpul",
+        "translation-uz": "vaqt",
+        "translation-hi": "समय",
+        "translation-ar": "الوقت"
+      },
+      {
+        "word": "der Hund",
+        "translation-ru": "собака",
+        "translation-en": "dog",
+        "translation-uk": "собака",
+        "translation-pl": "pies",
+        "translation-es": "el perro",
+        "translation-fr": "le chien",
+        "translation-tr": "köpek",
+        "translation-ro": "câinele",
+        "translation-uz": "it",
+        "translation-hi": "कुत्ता",
+        "translation-ar": "الكلب"
+      },
+      {
+        "word": "heute",
+        "translation-ru": "сегодня",
+        "translation-en": "today",
+        "translation-uk": "сьогодні",
+        "translation-pl": "dzisiaj",
+        "translation-es": "hoy",
+        "translation-fr": "aujourd’hui",
+        "translation-tr": "bugün",
+        "translation-ro": "azi",
+        "translation-uz": "bugun",
+        "translation-hi": "आज",
+        "translation-ar": "اليوم"
+      }
+    ],
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "meetMeadowFour.questTask1",
+        "options": [
+          "Ich hat Hunger.",
+          "Ich bin Hunger.",
+          "Ich habe Hunger."
+        ],
+        "answer": "Ich habe Hunger.",
+        "tip": "meetMeadowFour.questDescription"
+      },
+      {
+        "id": 2,
+        "type": "input",
+        "question": "meetMeadowFour.questTask2",
+        "correctAnswer": "Hast",
+        "tip": "meetMeadowFour.questDescription"
+      },
+      {
+        "id": 3,
+        "type": "input",
+        "question": "meetMeadowFour.questTask3",
+        "correctAnswer": "hat",
+        "tip": "meetMeadowFour.questDescription"
+      },
+      {
+        "id": 4,
+        "type": "select",
+        "question": "meetMeadowFour.questTask4",
+        "options": [
+          "Heute hat wir Zeit.",
+          "Heute habt wir Zeit.",
+          "Heute haben wir Zeit."
+        ],
+        "answer": "Heute haben wir Zeit.",
+        "tip": "meetMeadowFour.questDescription"
+      },
+      {
+        "id": 5,
+        "type": "reorder",
+        "question": "meetMeadowFour.questTask5",
+        "words": [
+          "Habt",
+          "hat",
+          "Zeit",
+          "seid",
+          "ihr"
+        ],
+        "correctOrder": [
+          "Habt",
+          "ihr",
+          "Zeit"
+        ],
+        "tip": "meetMeadowFour.questDescription"
+      },
+      {
+        "id": 6,
+        "type": "input",
+        "question": "meetMeadowFour.questTask6",
+        "correctAnswer": "habe",
+        "tip": "meetMeadowFour.questDescription"
+      },
+      {
+        "id": 7,
+        "type": "select",
+        "question": "meetMeadowFour.questTask7",
+        "options": [
+          "Sie hat Durst.",
+          "Sie habt Durst.",
+          "Sie ist Durst."
+        ],
+        "answer": "Sie hat Durst.",
+        "tip": "meetMeadowFour.questDescription"
+      },
+      {
+        "id": 8,
+        "type": "input",
+        "question": "meetMeadowFour.questTask8",
+        "correctAnswer": "Hunger",
+        "tip": "meetMeadowFour.questDescription"
+      },
+      {
+        "id": 9,
+        "type": "readAndAnswer",
+        "question": "meetMeadowFour.questTask9",
+        "text": "Lea hat Hunger. Sie möchte einen Kaffee mit Milch. Paul hat Durst. Er möchte ein Wasser.",
+        "options": [
+          "Wasser",
+          "Tee",
+          "Kaffee"
+        ],
+        "answer": "Wasser",
+        "tip": "meetMeadowFour.questDescription"
+      },
+      {
+        "id": 10,
+        "type": "select",
+        "question": "meetMeadowFour.questTask10",
+        "options": [
+          "Hast Sie einen Hund?",
+          "Haben Sie einen Hund?",
+          "Hat Sie einen Hund?"
+        ],
+        "answer": "Haben Sie einen Hund?",
+        "tip": "meetMeadowFour.questDescription"
+      },
+      {
+        "id": 11,
+        "type": "reorder",
+        "question": "meetMeadowFour.questTask11",
+        "words": [
+          "hat",
+          "einen",
+          "sind",
+          "Meine",
+          "haben",
+          "Eltern",
+          "Hund"
+        ],
+        "correctOrder": [
+          "Meine",
+          "Eltern",
+          "haben",
+          "einen",
+          "Hund"
+        ],
+        "tip": "meetMeadowFour.questDescription"
+      },
+      {
+        "id": 12,
+        "type": "input",
+        "question": "meetMeadowFour.questTask12",
+        "correctAnswer": "sind",
+        "tip": "meetMeadowFour.questDescription"
+      },
+      {
+        "id": 13,
+        "type": "input",
+        "question": "meetMeadowFour.questTask13",
+        "correctAnswer": "Sie",
+        "tip": "meetMeadowFour.questDescription"
+      },
+      {
+        "id": 14,
+        "type": "select",
+        "question": "meetMeadowFour.questTask14",
+        "options": [
+          "Einen Tee und ein Wasser, bitte.",
+          "Ein Tee und einen Wasser, bitte.",
+          "Einen Tee und ein Wasser, danke bitte."
+        ],
+        "answer": "Einen Tee und ein Wasser, bitte.",
+        "tip": "meetMeadowFour.questDescription"
+      },
+      {
+        "id": 15,
+        "type": "input",
+        "question": "meetMeadowFour.questTask15",
+        "correctAnswer": "Was",
+        "tip": "meetMeadowFour.questDescription"
+      }
+    ]
+  },
+  {
+    "questId": "meet-meadow-five",
+    "title": "meetMeadowFive.questTitle",
+    "progress": "0/15",
+    "description": "meetMeadowFive.questDescription",
+    "conditions": {
+      "goal": "meetMeadowFive.questGoal",
+      "minCorrect": 15,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
+    "vocabulary": [
+      {
+        "word": "wohnen",
+        "translation-ru": "жить (где-то)",
+        "translation-en": "to live (somewhere)",
+        "translation-uk": "жити (десь)",
+        "translation-pl": "mieszkać",
+        "translation-es": "vivir (en un lugar)",
+        "translation-fr": "habiter",
+        "translation-tr": "oturmak, yaşamak",
+        "translation-ro": "a locui",
+        "translation-uz": "yashamoq",
+        "translation-hi": "रहना",
+        "translation-ar": "يسكن"
+      },
+      {
+        "word": "kommen",
+        "translation-ru": "приходить, быть родом",
+        "translation-en": "to come",
+        "translation-uk": "приходити, бути родом",
+        "translation-pl": "przychodzić, pochodzić",
+        "translation-es": "venir",
+        "translation-fr": "venir",
+        "translation-tr": "gelmek",
+        "translation-ro": "a veni",
+        "translation-uz": "kelmoq",
+        "translation-hi": "आना",
+        "translation-ar": "يأتي"
+      },
+      {
+        "word": "lernen",
+        "translation-ru": "учить",
+        "translation-en": "to learn",
+        "translation-uk": "вчити",
+        "translation-pl": "uczyć się",
+        "translation-es": "aprender",
+        "translation-fr": "apprendre",
+        "translation-tr": "öğrenmek",
+        "translation-ro": "a învăța",
+        "translation-uz": "o‘rganmoq",
+        "translation-hi": "सीखना",
+        "translation-ar": "يتعلم"
+      },
+      {
+        "word": "Deutsch",
+        "translation-ru": "немецкий язык",
+        "translation-en": "German",
+        "translation-uk": "німецька мова",
+        "translation-pl": "niemiecki",
+        "translation-es": "el alemán",
+        "translation-fr": "l’allemand",
+        "translation-tr": "Almanca",
+        "translation-ro": "germana",
+        "translation-uz": "nemis tili",
+        "translation-hi": "जर्मन भाषा",
+        "translation-ar": "الألمانية"
+      },
+      {
+        "word": "was",
+        "translation-ru": "что",
+        "translation-en": "what",
+        "translation-uk": "що",
+        "translation-pl": "co",
+        "translation-es": "qué",
+        "translation-fr": "quoi",
+        "translation-tr": "ne",
+        "translation-ro": "ce",
+        "translation-uz": "nima",
+        "translation-hi": "क्या",
+        "translation-ar": "ماذا"
+      },
+      {
+        "word": "trinken",
+        "translation-ru": "пить",
+        "translation-en": "to drink",
+        "translation-uk": "пити",
+        "translation-pl": "pić",
+        "translation-es": "beber",
+        "translation-fr": "boire",
+        "translation-tr": "içmek",
+        "translation-ro": "a bea",
+        "translation-uz": "ichmoq",
+        "translation-hi": "पीना",
+        "translation-ar": "شرب"
+      }
+    ],
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "meetMeadowFive.questTask1",
+        "options": [
+          "Ich wohnt in Dresden.",
+          "Ich wohnst in Dresden.",
+          "Ich wohne in Dresden."
+        ],
+        "answer": "Ich wohne in Dresden.",
+        "tip": "meetMeadowFive.questDescription"
+      },
+      {
+        "id": 2,
+        "type": "input",
+        "question": "meetMeadowFive.questTask2",
+        "correctAnswer": "wohnst",
+        "tip": "meetMeadowFive.questDescription"
+      },
+      {
+        "id": 3,
+        "type": "input",
+        "question": "meetMeadowFive.questTask3",
+        "correctAnswer": "lernt",
+        "tip": "meetMeadowFive.questDescription"
+      },
+      {
+        "id": 4,
+        "type": "select",
+        "question": "meetMeadowFive.questTask4",
+        "options": [
+          "Er kommst aus Spanien.",
+          "Er komme aus Spanien.",
+          "Er kommt aus Spanien."
+        ],
+        "answer": "Er kommt aus Spanien.",
+        "tip": "meetMeadowFive.questDescription"
+      },
+      {
+        "id": 5,
+        "type": "reorder",
+        "question": "meetMeadowFive.questTask5",
+        "words": [
+          "in",
+          "Ich",
+          "bin",
+          "Wien",
+          "lerne",
+          "lernst",
+          "Deutsch"
+        ],
+        "correctOrder": [
+          "Ich",
+          "lerne",
+          "Deutsch",
+          "in",
+          "Wien"
+        ],
+        "tip": "meetMeadowFive.questDescription"
+      },
+      {
+        "id": 6,
+        "type": "input",
+        "question": "meetMeadowFive.questTask6",
+        "correctAnswer": "trinkst",
+        "tip": "meetMeadowFive.questDescription"
+      },
+      {
+        "id": 7,
+        "type": "select",
+        "question": "meetMeadowFive.questTask7",
+        "options": [
+          "Mein Vater wohnt in Hamburg.",
+          "Mein Vater wohnst in Hamburg.",
+          "Mein Vater wohne in Hamburg."
+        ],
+        "answer": "Mein Vater wohnt in Hamburg.",
+        "tip": "meetMeadowFive.questDescription"
+      },
+      {
+        "id": 8,
+        "type": "input",
+        "question": "meetMeadowFive.questTask8",
+        "correctAnswer": "kommen",
+        "tip": "meetMeadowFive.questDescription"
+      },
+      {
+        "id": 9,
+        "type": "readAndAnswer",
+        "question": "meetMeadowFive.questTask9",
+        "text": "Ana kommt aus Spanien. Sie wohnt jetzt in München. Sie lernt Deutsch und trinkt Kaffee.",
+        "options": [
+          "Sie arbeitet als Koch.",
+          "Sie lernt Deutsch.",
+          "Sie wohnt in Spanien."
+        ],
+        "answer": "Sie lernt Deutsch.",
+        "tip": "meetMeadowFive.questDescription"
+      },
+      {
+        "id": 10,
+        "type": "select",
+        "question": "meetMeadowFive.questTask10",
+        "options": [
+          "Lerne du auch Deutsch?",
+          "Lernst du auch Deutsch?",
+          "Lernt du auch Deutsch?"
+        ],
+        "answer": "Lernst du auch Deutsch?",
+        "tip": "meetMeadowFive.questDescription"
+      },
+      {
+        "id": 11,
+        "type": "reorder",
+        "question": "meetMeadowFive.questTask11",
+        "words": [
+          "trinkt",
+          "ist",
+          "Schwester",
+          "Meine",
+          "trinke",
+          "Tee"
+        ],
+        "correctOrder": [
+          "Meine",
+          "Schwester",
+          "trinkt",
+          "Tee"
+        ],
+        "tip": "meetMeadowFive.questDescription"
+      },
+      {
+        "id": 12,
+        "type": "input",
+        "question": "meetMeadowFive.questTask12",
+        "correctAnswer": "Hast",
+        "tip": "meetMeadowFive.questDescription"
+      },
+      {
+        "id": 13,
+        "type": "select",
+        "question": "meetMeadowFive.questTask13",
+        "options": [
+          "Seid ihr aus Köln?",
+          "Bist ihr aus Köln?",
+          "Sind ihr aus Köln?"
+        ],
+        "answer": "Seid ihr aus Köln?",
+        "tip": "meetMeadowFive.questDescription"
+      },
+      {
+        "id": 14,
+        "type": "reorder",
+        "question": "meetMeadowFive.questTask14",
+        "words": [
+          "ist",
+          "einen",
+          "Die",
+          "Milch",
+          "kostest",
+          "kostet",
+          "Euro"
+        ],
+        "correctOrder": [
+          "Die",
+          "Milch",
+          "kostet",
+          "einen",
+          "Euro"
+        ],
+        "tip": "meetMeadowFive.questDescription"
+      },
+      {
+        "id": 15,
+        "type": "input",
+        "question": "meetMeadowFive.questTask15",
+        "correctAnswer": "Kaffee",
+        "tip": "meetMeadowFive.questDescription"
+      }
+    ]
+  },
+  {
+    "questId": "meet-meadow-six",
+    "title": "meetMeadowSix.questTitle",
+    "progress": "0/15",
+    "description": "meetMeadowSix.questDescription",
+    "conditions": {
+      "goal": "meetMeadowSix.questGoal",
+      "minCorrect": 15,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
+    "vocabulary": [
+      {
+        "word": "arbeiten",
+        "translation-ru": "работать",
+        "translation-en": "to work",
+        "translation-uk": "працювати",
+        "translation-pl": "pracować",
+        "translation-es": "trabajar",
+        "translation-fr": "travailler",
+        "translation-tr": "çalışmak",
+        "translation-ro": "a lucra",
+        "translation-uz": "ishlamoq",
+        "translation-hi": "काम करना",
+        "translation-ar": "يعمل"
+      },
+      {
+        "word": "spielen",
+        "translation-ru": "играть",
+        "translation-en": "to play",
+        "translation-uk": "грати",
+        "translation-pl": "grać",
+        "translation-es": "jugar",
+        "translation-fr": "jouer",
+        "translation-tr": "oynamak",
+        "translation-ro": "a juca",
+        "translation-uz": "o‘ynamoq",
+        "translation-hi": "खेलना",
+        "translation-ar": "يلعب"
+      },
+      {
+        "word": "tanzen",
+        "translation-ru": "танцевать",
+        "translation-en": "to dance",
+        "translation-uk": "танцювати",
+        "translation-pl": "tańczyć",
+        "translation-es": "bailar",
+        "translation-fr": "danser",
+        "translation-tr": "dans etmek",
+        "translation-ro": "a dansa",
+        "translation-uz": "raqsga tushmoq",
+        "translation-hi": "नाचना",
+        "translation-ar": "يرقص"
+      },
+      {
+        "word": "der Fußball",
+        "translation-ru": "футбол",
+        "translation-en": "football",
+        "translation-uk": "футбол",
+        "translation-pl": "piłka nożna",
+        "translation-es": "el fútbol",
+        "translation-fr": "le football",
+        "translation-tr": "futbol",
+        "translation-ro": "fotbalul",
+        "translation-uz": "futbol",
+        "translation-hi": "फ़ुटबॉल",
+        "translation-ar": "كرة القدم"
+      },
+      {
+        "word": "heute",
+        "translation-ru": "сегодня",
+        "translation-en": "today",
+        "translation-uk": "сьогодні",
+        "translation-pl": "dzisiaj",
+        "translation-es": "hoy",
+        "translation-fr": "aujourd’hui",
+        "translation-tr": "bugün",
+        "translation-ro": "azi",
+        "translation-uz": "bugun",
+        "translation-hi": "आज",
+        "translation-ar": "اليوم"
+      }
+    ],
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "meetMeadowSix.questTask1",
+        "options": [
+          "Wir wohnt in Hamburg.",
+          "Wir wohnst in Hamburg.",
+          "Wir wohnen in Hamburg."
+        ],
+        "answer": "Wir wohnen in Hamburg.",
+        "tip": "meetMeadowSix.questDescription"
+      },
+      {
+        "id": 2,
+        "type": "input",
+        "question": "meetMeadowSix.questTask2",
+        "correctAnswer": "Arbeitet",
+        "tip": "meetMeadowSix.questDescription"
+      },
+      {
+        "id": 3,
+        "type": "input",
+        "question": "meetMeadowSix.questTask3",
+        "correctAnswer": "Arbeitest",
+        "tip": "meetMeadowSix.questDescription"
+      },
+      {
+        "id": 4,
+        "type": "select",
+        "question": "meetMeadowSix.questTask4",
+        "options": [
+          "Heißen du Lena?",
+          "Heißst du Lena?",
+          "Heißt du Lena?"
+        ],
+        "answer": "Heißt du Lena?",
+        "tip": "meetMeadowSix.questDescription"
+      },
+      {
+        "id": 5,
+        "type": "reorder",
+        "question": "meetMeadowSix.questTask5",
+        "words": [
+          "sind",
+          "Die",
+          "spielt",
+          "Fußball",
+          "spielen",
+          "Kinder"
+        ],
+        "correctOrder": [
+          "Die",
+          "Kinder",
+          "spielen",
+          "Fußball"
+        ],
+        "tip": "meetMeadowSix.questDescription"
+      },
+      {
+        "id": 6,
+        "type": "input",
+        "question": "meetMeadowSix.questTask6",
+        "correctAnswer": "arbeitet",
+        "tip": "meetMeadowSix.questDescription"
+      },
+      {
+        "id": 7,
+        "type": "select",
+        "question": "meetMeadowSix.questTask7",
+        "options": [
+          "Du tanzen gut!",
+          "Du tanzt gut!",
+          "Du tanzst gut!"
+        ],
+        "answer": "Du tanzt gut!",
+        "tip": "meetMeadowSix.questDescription"
+      },
+      {
+        "id": 8,
+        "type": "input",
+        "question": "meetMeadowSix.questTask8",
+        "correctAnswer": "spielen",
+        "tip": "meetMeadowSix.questDescription"
+      },
+      {
+        "id": 9,
+        "type": "readAndAnswer",
+        "question": "meetMeadowSix.questTask9",
+        "text": "Das sind Lisa und Ben. Sie wohnen in Köln. Sie arbeiten im Café. Heute spielen sie Fußball.",
+        "options": [
+          "im Café",
+          "in Berlin",
+          "in Köln"
+        ],
+        "answer": "im Café",
+        "tip": "meetMeadowSix.questDescription"
+      },
+      {
+        "id": 10,
+        "type": "select",
+        "question": "meetMeadowSix.questTask10",
+        "options": [
+          "Tanzen Sie?",
+          "Tanzest Sie?",
+          "Tanzt Sie?"
+        ],
+        "answer": "Tanzen Sie?",
+        "tip": "meetMeadowSix.questDescription"
+      },
+      {
+        "id": 11,
+        "type": "reorder",
+        "question": "meetMeadowSix.questTask11",
+        "words": [
+          "seid",
+          "arbeitet",
+          "Ihr",
+          "arbeitest",
+          "in",
+          "Berlin"
+        ],
+        "correctOrder": [
+          "Ihr",
+          "arbeitet",
+          "in",
+          "Berlin"
+        ],
+        "tip": "meetMeadowSix.questDescription"
+      },
+      {
+        "id": 12,
+        "type": "input",
+        "question": "meetMeadowSix.questTask12",
+        "correctAnswer": "wohnt",
+        "tip": "meetMeadowSix.questDescription"
+      },
+      {
+        "id": 13,
+        "type": "select",
+        "question": "meetMeadowSix.questTask13",
+        "options": [
+          "Das Kind ist einen Hund.",
+          "Das Kind hat einen Hund.",
+          "Das Kind habt einen Hund."
+        ],
+        "answer": "Das Kind hat einen Hund.",
+        "tip": "meetMeadowSix.questDescription"
+      },
+      {
+        "id": 14,
+        "type": "reorder",
+        "question": "meetMeadowSix.questTask14",
+        "words": [
+          "Tee",
+          "Vater",
+          "trinkt",
+          "Mein",
+          "Milch",
+          "trinke"
+        ],
+        "correctOrder": [
+          "Mein",
+          "Vater",
+          "trinkt",
+          "Tee"
+        ],
+        "tip": "meetMeadowSix.questDescription"
+      },
+      {
+        "id": 15,
+        "type": "input",
+        "question": "meetMeadowSix.questTask15",
+        "correctAnswer": "trinken",
+        "tip": "meetMeadowSix.questDescription"
+      }
+    ]
+  },
+  {
+    "questId": "meet-meadow-seven",
+    "title": "meetMeadowSeven.questTitle",
+    "progress": "0/15",
+    "description": "meetMeadowSeven.questDescription",
+    "conditions": {
+      "goal": "meetMeadowSeven.questGoal",
+      "minCorrect": 15,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
+    "vocabulary": [
+      {
+        "word": "der Nachbar",
+        "translation-ru": "сосед",
+        "translation-en": "neighbour",
+        "translation-uk": "сусід",
+        "translation-pl": "sąsiad",
+        "translation-es": "el vecino",
+        "translation-fr": "le voisin",
+        "translation-tr": "komşu",
+        "translation-ro": "vecinul",
+        "translation-uz": "qo‘shni",
+        "translation-hi": "पड़ोसी",
+        "translation-ar": "الجار"
+      },
+      {
+        "word": "neu",
+        "translation-ru": "новый",
+        "translation-en": "new",
+        "translation-uk": "новий",
+        "translation-pl": "nowy",
+        "translation-es": "nuevo",
+        "translation-fr": "nouveau",
+        "translation-tr": "yeni",
+        "translation-ro": "nou",
+        "translation-uz": "yangi",
+        "translation-hi": "नया",
+        "translation-ar": "جديد"
+      },
+      {
+        "word": "hier",
+        "translation-ru": "здесь",
+        "translation-en": "here",
+        "translation-uk": "тут",
+        "translation-pl": "tutaj",
+        "translation-es": "aquí",
+        "translation-fr": "ici",
+        "translation-tr": "burada",
+        "translation-ro": "aici",
+        "translation-uz": "bu yerda",
+        "translation-hi": "यहाँ",
+        "translation-ar": "هنا"
+      },
+      {
+        "word": "auch",
+        "translation-ru": "тоже",
+        "translation-en": "also, too",
+        "translation-uk": "теж",
+        "translation-pl": "też",
+        "translation-es": "también",
+        "translation-fr": "aussi",
+        "translation-tr": "de, da",
+        "translation-ro": "și, de asemenea",
+        "translation-uz": "ham",
+        "translation-hi": "भी",
+        "translation-ar": "أيضًا"
+      },
+      {
+        "word": "gern",
+        "translation-ru": "охотно, с удовольствием",
+        "translation-en": "gladly, like to",
+        "translation-uk": "охоче",
+        "translation-pl": "chętnie",
+        "translation-es": "con gusto",
+        "translation-fr": "volontiers",
+        "translation-tr": "severek",
+        "translation-ro": "cu plăcere",
+        "translation-uz": "jon deb",
+        "translation-hi": "ख़ुशी से",
+        "translation-ar": "بكل سرور"
+      },
+      {
+        "word": "machen",
+        "translation-ru": "делать",
+        "translation-en": "to do / make",
+        "translation-uk": "робити",
+        "translation-pl": "robić",
+        "translation-es": "hacer",
+        "translation-fr": "faire",
+        "translation-tr": "yapmak",
+        "translation-ro": "a face",
+        "translation-uz": "qilmoq",
+        "translation-hi": "करना",
+        "translation-ar": "يفعل / يصنع"
+      },
+      {
+        "word": "der Mann",
+        "translation-ru": "мужчина; муж",
+        "translation-en": "man; husband",
+        "translation-uk": "чоловік",
+        "translation-pl": "mężczyzna; mąż",
+        "translation-es": "el hombre; el marido",
+        "translation-fr": "l’homme; le mari",
+        "translation-tr": "adam; koca",
+        "translation-ro": "bărbatul; soțul",
+        "translation-uz": "erkak; er",
+        "translation-hi": "आदमी; पति",
+        "translation-ar": "الرجل؛ الزوج"
+      }
+    ],
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "meetMeadowSeven.questTask1",
+        "options": [
+          "Hallo! Ich ist der neue Nachbar.",
+          "Hallo! Ich bist der neue Nachbar.",
+          "Hallo! Ich bin der neue Nachbar."
+        ],
+        "answer": "Hallo! Ich bin der neue Nachbar.",
+        "tip": "meetMeadowSeven.questDescription"
+      },
+      {
+        "id": 2,
+        "type": "input",
+        "question": "meetMeadowSeven.questTask2",
+        "correctAnswer": "Wohnst",
+        "tip": "meetMeadowSeven.questDescription"
+      },
+      {
+        "id": 3,
+        "type": "input",
+        "question": "meetMeadowSeven.questTask3",
+        "correctAnswer": "gern",
+        "tip": "meetMeadowSeven.questDescription"
+      },
+      {
+        "id": 4,
+        "type": "select",
+        "question": "meetMeadowSeven.questTask4",
+        "options": [
+          "Mein Nachbar kommst aus Polen.",
+          "Mein Nachbar kommen aus Polen.",
+          "Mein Nachbar kommt aus Polen."
+        ],
+        "answer": "Mein Nachbar kommt aus Polen.",
+        "tip": "meetMeadowSeven.questDescription"
+      },
+      {
+        "id": 5,
+        "type": "reorder",
+        "question": "meetMeadowSeven.questTask5",
+        "words": [
+          "habt",
+          "einen",
+          "sind",
+          "Hund",
+          "haben",
+          "Wir",
+          "auch"
+        ],
+        "correctOrder": [
+          "Wir",
+          "haben",
+          "auch",
+          "einen",
+          "Hund"
+        ],
+        "tip": "meetMeadowSeven.questDescription"
+      },
+      {
+        "id": 6,
+        "type": "input",
+        "question": "meetMeadowSeven.questTask6",
+        "correctAnswer": "arbeite",
+        "tip": "meetMeadowSeven.questDescription"
+      },
+      {
+        "id": 7,
+        "type": "select",
+        "question": "meetMeadowSeven.questTask7",
+        "options": [
+          "Seid ihr neu hier?",
+          "Seid ihr neue hier?",
+          "Sind ihr neu hier?"
+        ],
+        "answer": "Seid ihr neu hier?",
+        "tip": "meetMeadowSeven.questDescription"
+      },
+      {
+        "id": 8,
+        "type": "input",
+        "question": "meetMeadowSeven.questTask8",
+        "correctAnswer": "auch",
+        "tip": "meetMeadowSeven.questDescription"
+      },
+      {
+        "id": 9,
+        "type": "readAndAnswer",
+        "question": "meetMeadowSeven.questTask9",
+        "text": "Hallo, ich bin Julia, die neue Nachbarin. Ich komme aus Wien. Ich bin Ärztin. Mein Mann ist Koch. Wir haben zwei Kinder.",
+        "options": [
+          "Lehrerin",
+          "Ärztin",
+          "Köchin"
+        ],
+        "answer": "Ärztin",
+        "tip": "meetMeadowSeven.questDescription"
+      },
+      {
+        "id": 10,
+        "type": "select",
+        "question": "meetMeadowSeven.questTask10",
+        "options": [
+          "Tanzen du gern?",
+          "Tanzt du gern?",
+          "Tanzt du gernt?"
+        ],
+        "answer": "Tanzt du gern?",
+        "tip": "meetMeadowSeven.questDescription"
+      },
+      {
+        "id": 11,
+        "type": "reorder",
+        "question": "meetMeadowSeven.questTask11",
+        "words": [
+          "sind",
+          "meine",
+          "wohnen",
+          "wohnt",
+          "Hier",
+          "Eltern"
+        ],
+        "correctOrder": [
+          "Hier",
+          "wohnen",
+          "meine",
+          "Eltern"
+        ],
+        "tip": "meetMeadowSeven.questDescription"
+      },
+      {
+        "id": 12,
+        "type": "input",
+        "question": "meetMeadowSeven.questTask12",
+        "correctAnswer": "heißt",
+        "tip": "meetMeadowSeven.questDescription"
+      },
+      {
+        "id": 13,
+        "type": "select",
+        "question": "meetMeadowSeven.questTask13",
+        "options": [
+          "Wir lernen Deutsch.",
+          "Wir lerne Deutsch.",
+          "Wir lernt Deutsch."
+        ],
+        "answer": "Wir lernen Deutsch.",
+        "tip": "meetMeadowSeven.questDescription"
+      },
+      {
+        "id": 14,
+        "type": "reorder",
+        "question": "meetMeadowSeven.questTask14",
+        "words": [
+          "kostet",
+          "Ich",
+          "trinkst",
+          "trinke",
+          "Wasser",
+          "und",
+          "Tee"
+        ],
+        "correctOrder": [
+          "Ich",
+          "trinke",
+          "Wasser",
+          "und",
+          "Tee"
+        ],
+        "tip": "meetMeadowSeven.questDescription"
+      },
+      {
+        "id": 15,
+        "type": "input",
+        "question": "meetMeadowSeven.questTask15",
+        "correctAnswer": "Wiedersehen",
+        "tip": "meetMeadowSeven.questDescription"
+      }
+    ]
+  },
+  {
+    "questId": "meet-meadow-eight",
+    "title": "meetMeadowEight.questTitle",
+    "progress": "0/15",
+    "description": "meetMeadowEight.questDescription",
+    "conditions": {
+      "goal": "meetMeadowEight.questGoal",
+      "minCorrect": 15,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
+    "vocabulary": [
+      {
+        "word": "der Kurs",
+        "translation-ru": "курс",
+        "translation-en": "course",
+        "translation-uk": "курс",
+        "translation-pl": "kurs",
+        "translation-es": "el curso",
+        "translation-fr": "le cours",
+        "translation-tr": "kurs",
+        "translation-ro": "cursul",
+        "translation-uz": "kurs",
+        "translation-hi": "कोर्स",
+        "translation-ar": "الدورة"
+      },
+      {
+        "word": "alt",
+        "translation-ru": "старый; … лет",
+        "translation-en": "old",
+        "translation-uk": "старий; … років",
+        "translation-pl": "stary; … lat",
+        "translation-es": "viejo; … años",
+        "translation-fr": "vieux; … ans",
+        "translation-tr": "yaşlı; … yaşında",
+        "translation-ro": "bătrân; … ani",
+        "translation-uz": "qari; … yosh",
+        "translation-hi": "पुराना; … साल का",
+        "translation-ar": "كبير؛ عمره …"
+      },
+      {
+        "word": "das Jahr",
+        "translation-ru": "год",
+        "translation-en": "year",
+        "translation-uk": "рік",
+        "translation-pl": "rok",
+        "translation-es": "el año",
+        "translation-fr": "l’an, l’année",
+        "translation-tr": "yıl",
+        "translation-ro": "anul",
+        "translation-uz": "yil",
+        "translation-hi": "साल",
+        "translation-ar": "السنة"
+      },
+      {
+        "word": "Englisch",
+        "translation-ru": "английский язык",
+        "translation-en": "English",
+        "translation-uk": "англійська мова",
+        "translation-pl": "angielski",
+        "translation-es": "el inglés",
+        "translation-fr": "l’anglais",
+        "translation-tr": "İngilizce",
+        "translation-ro": "engleza",
+        "translation-uz": "ingliz tili",
+        "translation-hi": "अंग्रेज़ी",
+        "translation-ar": "الإنجليزية"
+      },
+      {
+        "word": "auch",
+        "translation-ru": "тоже",
+        "translation-en": "also, too",
+        "translation-uk": "теж",
+        "translation-pl": "też",
+        "translation-es": "también",
+        "translation-fr": "aussi",
+        "translation-tr": "de, da",
+        "translation-ro": "și, de asemenea",
+        "translation-uz": "ham",
+        "translation-hi": "भी",
+        "translation-ar": "أيضًا"
+      }
+    ],
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "meetMeadowEight.questTask1",
+        "options": [
+          "Wie alt hast du?",
+          "Wie alt ist du?",
+          "Wie alt bist du?"
+        ],
+        "answer": "Wie alt bist du?",
+        "tip": "meetMeadowEight.questDescription"
+      },
+      {
+        "id": 2,
+        "type": "input",
+        "question": "meetMeadowEight.questTask2",
+        "correctAnswer": "bin",
+        "tip": "meetMeadowEight.questDescription"
+      },
+      {
+        "id": 3,
+        "type": "input",
+        "question": "meetMeadowEight.questTask3",
+        "correctAnswer": "Kurs",
+        "tip": "meetMeadowEight.questDescription"
+      },
+      {
+        "id": 4,
+        "type": "select",
+        "question": "meetMeadowEight.questTask4",
+        "options": [
+          "Sind der Kurs gut?",
+          "Bist der Kurs gut?",
+          "Ist der Kurs gut?"
+        ],
+        "answer": "Ist der Kurs gut?",
+        "tip": "meetMeadowEight.questDescription"
+      },
+      {
+        "id": 5,
+        "type": "reorder",
+        "question": "meetMeadowEight.questTask5",
+        "words": [
+          "Sprache",
+          "Ich",
+          "lerne",
+          "lernst",
+          "Deutsch",
+          "und",
+          "Englisch"
+        ],
+        "correctOrder": [
+          "Ich",
+          "lerne",
+          "Englisch",
+          "und",
+          "Deutsch"
+        ],
+        "tip": "meetMeadowEight.questDescription"
+      },
+      {
+        "id": 6,
+        "type": "input",
+        "question": "meetMeadowEight.questTask6",
+        "correctAnswer": "ist",
+        "tip": "meetMeadowEight.questDescription"
+      },
+      {
+        "id": 7,
+        "type": "select",
+        "question": "meetMeadowEight.questTask7",
+        "options": [
+          "Wir haben ein Jahr im Kurs.",
+          "Wir sind ein Jahr im Kurs.",
+          "Wir seid ein Jahr im Kurs."
+        ],
+        "answer": "Wir sind ein Jahr im Kurs.",
+        "tip": "meetMeadowEight.questDescription"
+      },
+      {
+        "id": 8,
+        "type": "input",
+        "question": "meetMeadowEight.questTask8",
+        "correctAnswer": "Englisch",
+        "tip": "meetMeadowEight.questDescription"
+      },
+      {
+        "id": 9,
+        "type": "readAndAnswer",
+        "question": "meetMeadowEight.questTask9",
+        "text": "Hallo, ich heiße Carlos. Ich komme aus Spanien und bin dreißig Jahre alt. Ich wohne in Hamburg und arbeite als Koch. Ich lerne jetzt Deutsch im Kurs.",
+        "options": [
+          "dreißig",
+          "zwanzig",
+          "dreizehn"
+        ],
+        "answer": "dreißig",
+        "tip": "meetMeadowEight.questDescription"
+      },
+      {
+        "id": 10,
+        "type": "select",
+        "question": "meetMeadowEight.questTask10",
+        "options": [
+          "Lernen die Kinder auch Deutsch?",
+          "Lernst die Kinder auch Deutsch?",
+          "Lernt die Kinder auch Deutsch?"
+        ],
+        "answer": "Lernen die Kinder auch Deutsch?",
+        "tip": "meetMeadowEight.questDescription"
+      },
+      {
+        "id": 11,
+        "type": "reorder",
+        "question": "meetMeadowEight.questTask11",
+        "words": [
+          "ist",
+          "sechzehn",
+          "Bruder",
+          "alt",
+          "Mein",
+          "hat",
+          "bist",
+          "Jahre"
+        ],
+        "correctOrder": [
+          "Mein",
+          "Bruder",
+          "ist",
+          "sechzehn",
+          "Jahre",
+          "alt"
+        ],
+        "tip": "meetMeadowEight.questDescription"
+      },
+      {
+        "id": 12,
+        "type": "input",
+        "question": "meetMeadowEight.questTask12",
+        "correctAnswer": "Arbeitest",
+        "tip": "meetMeadowEight.questDescription"
+      },
+      {
+        "id": 13,
+        "type": "select",
+        "question": "meetMeadowEight.questTask13",
+        "options": [
+          "Der Nachbar bist auch neu.",
+          "Der Nachbar ist auch neu.",
+          "Der Nachbar sind auch neu."
+        ],
+        "answer": "Der Nachbar ist auch neu.",
+        "tip": "meetMeadowEight.questDescription"
+      },
+      {
+        "id": 14,
+        "type": "reorder",
+        "question": "meetMeadowEight.questTask14",
+        "words": [
+          "Mutter",
+          "Arzt",
+          "ist",
+          "bist",
+          "Meine",
+          "Ärztin"
+        ],
+        "correctOrder": [
+          "Meine",
+          "Mutter",
+          "ist",
+          "Ärztin"
+        ],
+        "tip": "meetMeadowEight.questDescription"
+      },
+      {
+        "id": 15,
+        "type": "input",
+        "question": "meetMeadowEight.questTask15",
+        "correctAnswer": "bitte",
+        "tip": "meetMeadowEight.questDescription"
+      }
+    ]
+  },
+  {
+    "questId": "meet-meadow-nine",
+    "title": "meetMeadowNine.questTitle",
+    "progress": "0/15",
+    "description": "meetMeadowNine.questDescription",
+    "conditions": {
+      "goal": "meetMeadowNine.questGoal",
+      "minCorrect": 15,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
+    "vocabulary": [
+      {
+        "word": "die Frau",
+        "translation-ru": "женщина; жена; госпожа",
+        "translation-en": "woman; wife; Mrs",
+        "translation-uk": "жінка; дружина; пані",
+        "translation-pl": "kobieta; żona; pani",
+        "translation-es": "la mujer; la señora",
+        "translation-fr": "la femme; madame",
+        "translation-tr": "kadın; eş; bayan",
+        "translation-ro": "femeia; soția; doamna",
+        "translation-uz": "ayol; xotin; xonim",
+        "translation-hi": "महिला; पत्नी; श्रीमती",
+        "translation-ar": "المرأة؛ الزوجة؛ السيدة"
+      },
+      {
+        "word": "der Mann",
+        "translation-ru": "мужчина; муж",
+        "translation-en": "man; husband",
+        "translation-uk": "чоловік",
+        "translation-pl": "mężczyzna; mąż",
+        "translation-es": "el hombre; el marido",
+        "translation-fr": "l’homme; le mari",
+        "translation-tr": "adam; koca",
+        "translation-ro": "bărbatul; soțul",
+        "translation-uz": "erkak; er",
+        "translation-hi": "आदमी; पति",
+        "translation-ar": "الرجل؛ الزوج"
+      },
+      {
+        "word": "jetzt",
+        "translation-ru": "сейчас",
+        "translation-en": "now",
+        "translation-uk": "зараз",
+        "translation-pl": "teraz",
+        "translation-es": "ahora",
+        "translation-fr": "maintenant",
+        "translation-tr": "şimdi",
+        "translation-ro": "acum",
+        "translation-uz": "hozir",
+        "translation-hi": "अब",
+        "translation-ar": "الآن"
+      },
+      {
+        "word": "zusammen",
+        "translation-ru": "вместе",
+        "translation-en": "together",
+        "translation-uk": "разом",
+        "translation-pl": "razem",
+        "translation-es": "juntos",
+        "translation-fr": "ensemble",
+        "translation-tr": "birlikte",
+        "translation-ro": "împreună",
+        "translation-uz": "birga",
+        "translation-hi": "साथ में",
+        "translation-ar": "معًا"
+      },
+      {
+        "word": "viel",
+        "translation-ru": "много",
+        "translation-en": "a lot, much",
+        "translation-uk": "багато",
+        "translation-pl": "dużo",
+        "translation-es": "mucho",
+        "translation-fr": "beaucoup",
+        "translation-tr": "çok",
+        "translation-ro": "mult",
+        "translation-uz": "ko‘p",
+        "translation-hi": "बहुत",
+        "translation-ar": "كثيرًا"
+      },
+      {
+        "word": "die Sprache",
+        "translation-ru": "язык",
+        "translation-en": "language",
+        "translation-uk": "мова",
+        "translation-pl": "język",
+        "translation-es": "el idioma",
+        "translation-fr": "la langue",
+        "translation-tr": "dil",
+        "translation-ro": "limba",
+        "translation-uz": "til",
+        "translation-hi": "भाषा",
+        "translation-ar": "اللغة"
+      },
+      {
+        "word": "das Brot",
+        "translation-ru": "хлеб",
+        "translation-en": "bread",
+        "translation-uk": "хліб",
+        "translation-pl": "chleb",
+        "translation-es": "el pan",
+        "translation-fr": "le pain",
+        "translation-tr": "ekmek",
+        "translation-ro": "pâinea",
+        "translation-uz": "non",
+        "translation-hi": "ब्रेड",
+        "translation-ar": "الخبز"
+      }
+    ],
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "meetMeadowNine.questTask1",
+        "options": [
+          "Wir wohnst jetzt zusammen.",
+          "Wir wohnt jetzt zusammen.",
+          "Wir wohnen jetzt zusammen."
+        ],
+        "answer": "Wir wohnen jetzt zusammen.",
+        "tip": "meetMeadowNine.questDescription"
+      },
+      {
+        "id": 2,
+        "type": "input",
+        "question": "meetMeadowNine.questTask2",
+        "correctAnswer": "arbeitet",
+        "tip": "meetMeadowNine.questDescription"
+      },
+      {
+        "id": 3,
+        "type": "input",
+        "question": "meetMeadowNine.questTask3",
+        "correctAnswer": "Seid",
+        "tip": "meetMeadowNine.questDescription"
+      },
+      {
+        "id": 4,
+        "type": "select",
+        "question": "meetMeadowNine.questTask4",
+        "options": [
+          "Frau Lang, hat Sie Zeit?",
+          "Frau Lang, hast Sie Zeit?",
+          "Frau Lang, haben Sie Zeit?"
+        ],
+        "answer": "Frau Lang, haben Sie Zeit?",
+        "tip": "meetMeadowNine.questDescription"
+      },
+      {
+        "id": 5,
+        "type": "reorder",
+        "question": "meetMeadowNine.questTask5",
+        "words": [
+          "Deutsch",
+          "Wir",
+          "lernt",
+          "zusammen",
+          "sind",
+          "lernen"
+        ],
+        "correctOrder": [
+          "Wir",
+          "lernen",
+          "zusammen",
+          "Deutsch"
+        ],
+        "tip": "meetMeadowNine.questDescription"
+      },
+      {
+        "id": 6,
+        "type": "input",
+        "question": "meetMeadowNine.questTask6",
+        "correctAnswer": "viel",
+        "tip": "meetMeadowNine.questDescription"
+      },
+      {
+        "id": 7,
+        "type": "select",
+        "question": "meetMeadowNine.questTask7",
+        "options": [
+          "Hast du jetzt Hunger?",
+          "Hat du jetzt Hunger?",
+          "Bist du jetzt Hunger?"
+        ],
+        "answer": "Hast du jetzt Hunger?",
+        "tip": "meetMeadowNine.questDescription"
+      },
+      {
+        "id": 8,
+        "type": "input",
+        "question": "meetMeadowNine.questTask8",
+        "correctAnswer": "tanzen",
+        "tip": "meetMeadowNine.questDescription"
+      },
+      {
+        "id": 9,
+        "type": "readAndAnswer",
+        "question": "meetMeadowNine.questTask9",
+        "text": "Das ist Familie Nowak. Herr und Frau Nowak kommen aus Polen. Jetzt wohnen sie zusammen in Leipzig. Er ist Arzt, sie ist Lehrerin.",
+        "options": [
+          "in Leipzig",
+          "in Wien",
+          "in Polen"
+        ],
+        "answer": "in Leipzig",
+        "tip": "meetMeadowNine.questDescription"
+      },
+      {
+        "id": 10,
+        "type": "select",
+        "question": "meetMeadowNine.questTask10",
+        "options": [
+          "Er kommt aus der Türkei und wohnen jetzt hier.",
+          "Er kommt aus der Türkei und wohnt jetzt hier.",
+          "Er kommst aus der Türkei und wohnt jetzt hier."
+        ],
+        "answer": "Er kommt aus der Türkei und wohnt jetzt hier.",
+        "tip": "meetMeadowNine.questDescription"
+      },
+      {
+        "id": 11,
+        "type": "reorder",
+        "question": "meetMeadowNine.questTask11",
+        "words": [
+          "Sie",
+          "sehr",
+          "sind",
+          "arbeitet",
+          "arbeiten",
+          "viel"
+        ],
+        "correctOrder": [
+          "Sie",
+          "arbeiten",
+          "sehr",
+          "viel"
+        ],
+        "tip": "meetMeadowNine.questDescription"
+      },
+      {
+        "id": 12,
+        "type": "input",
+        "question": "meetMeadowNine.questTask12",
+        "correctAnswer": "ist",
+        "tip": "meetMeadowNine.questDescription"
+      },
+      {
+        "id": 13,
+        "type": "select",
+        "question": "meetMeadowNine.questTask13",
+        "options": [
+          "Ich lerne gern Sprachen.",
+          "Ich lerne gernt Sprachen.",
+          "Ich lernst gern Sprachen."
+        ],
+        "answer": "Ich lerne gern Sprachen.",
+        "tip": "meetMeadowNine.questDescription"
+      },
+      {
+        "id": 14,
+        "type": "reorder",
+        "question": "meetMeadowNine.questTask14",
+        "words": [
+          "Mein",
+          "arbeitest",
+          "arbeitet",
+          "Vater",
+          "als",
+          "ist",
+          "Koch"
+        ],
+        "correctOrder": [
+          "Mein",
+          "Vater",
+          "arbeitet",
+          "als",
+          "Koch"
+        ],
+        "tip": "meetMeadowNine.questDescription"
+      },
+      {
+        "id": 15,
+        "type": "input",
+        "question": "meetMeadowNine.questTask15",
+        "correctAnswer": "kostet",
+        "tip": "meetMeadowNine.questDescription"
+      }
+    ]
+  },
+  {
+    "questId": "meet-meadow-ten",
+    "title": "meetMeadowTen.questTitle",
+    "progress": "0/15",
+    "description": "meetMeadowTen.questDescription",
+    "conditions": {
+      "goal": "meetMeadowTen.questGoal",
+      "minCorrect": 15,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
+    "vocabulary": [
+      {
+        "word": "das Foto",
+        "translation-ru": "фото",
+        "translation-en": "photo",
+        "translation-uk": "фото",
+        "translation-pl": "zdjęcie",
+        "translation-es": "la foto",
+        "translation-fr": "la photo",
+        "translation-tr": "fotoğraf",
+        "translation-ro": "fotografia",
+        "translation-uz": "surat",
+        "translation-hi": "फ़ोटो",
+        "translation-ar": "الصورة"
+      },
+      {
+        "word": "wer",
+        "translation-ru": "кто",
+        "translation-en": "who",
+        "translation-uk": "хто",
+        "translation-pl": "kto",
+        "translation-es": "quién",
+        "translation-fr": "qui",
+        "translation-tr": "kim",
+        "translation-ro": "cine",
+        "translation-uz": "kim",
+        "translation-hi": "कौन",
+        "translation-ar": "من"
+      },
+      {
+        "word": "krank",
+        "translation-ru": "больной",
+        "translation-en": "ill, sick",
+        "translation-uk": "хворий",
+        "translation-pl": "chory",
+        "translation-es": "enfermo",
+        "translation-fr": "malade",
+        "translation-tr": "hasta",
+        "translation-ro": "bolnav",
+        "translation-uz": "kasal",
+        "translation-hi": "बीमार",
+        "translation-ar": "مريض"
+      },
+      {
+        "word": "glücklich",
+        "translation-ru": "счастливый",
+        "translation-en": "happy",
+        "translation-uk": "щасливий",
+        "translation-pl": "szczęśliwy",
+        "translation-es": "feliz",
+        "translation-fr": "heureux",
+        "translation-tr": "mutlu",
+        "translation-ro": "fericit",
+        "translation-uz": "baxtli",
+        "translation-hi": "ख़ुश",
+        "translation-ar": "سعيد"
+      },
+      {
+        "word": "die Katze",
+        "translation-ru": "кошка",
+        "translation-en": "cat",
+        "translation-uk": "кішка",
+        "translation-pl": "kot",
+        "translation-es": "el gato",
+        "translation-fr": "le chat",
+        "translation-tr": "kedi",
+        "translation-ro": "pisica",
+        "translation-uz": "mushuk",
+        "translation-hi": "बिल्ली",
+        "translation-ar": "القطة"
+      }
+    ],
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "meetMeadowTen.questTask1",
+        "options": [
+          "Wer sind das auf dem Foto?",
+          "Wer bist das auf dem Foto?",
+          "Wer ist das auf dem Foto?"
+        ],
+        "answer": "Wer ist das auf dem Foto?",
+        "tip": "meetMeadowTen.questDescription"
+      },
+      {
+        "id": 2,
+        "type": "input",
+        "question": "meetMeadowTen.questTask2",
+        "correctAnswer": "Bist",
+        "tip": "meetMeadowTen.questDescription"
+      },
+      {
+        "id": 3,
+        "type": "input",
+        "question": "meetMeadowTen.questTask3",
+        "correctAnswer": "haben",
+        "tip": "meetMeadowTen.questDescription"
+      },
+      {
+        "id": 4,
+        "type": "select",
+        "question": "meetMeadowTen.questTask4",
+        "options": [
+          "Arbeitet du in München?",
+          "Arbeitst du in München?",
+          "Arbeitest du in München?"
+        ],
+        "answer": "Arbeitest du in München?",
+        "tip": "meetMeadowTen.questDescription"
+      },
+      {
+        "id": 5,
+        "type": "reorder",
+        "question": "meetMeadowTen.questTask5",
+        "words": [
+          "ist",
+          "haben",
+          "sind",
+          "sehr",
+          "Meine",
+          "glücklich",
+          "Eltern"
+        ],
+        "correctOrder": [
+          "Meine",
+          "Eltern",
+          "sind",
+          "sehr",
+          "glücklich"
+        ],
+        "tip": "meetMeadowTen.questDescription"
+      },
+      {
+        "id": 6,
+        "type": "input",
+        "question": "meetMeadowTen.questTask6",
+        "correctAnswer": "Sie",
+        "tip": "meetMeadowTen.questDescription"
+      },
+      {
+        "id": 7,
+        "type": "select",
+        "question": "meetMeadowTen.questTask7",
+        "options": [
+          "Wie heißt ihr? Wir seid Jan und Eva.",
+          "Wie heißt ihr? Wir sind Jan und Eva.",
+          "Wie heißen ihr? Wir sind Jan und Eva."
+        ],
+        "answer": "Wie heißt ihr? Wir sind Jan und Eva.",
+        "tip": "meetMeadowTen.questDescription"
+      },
+      {
+        "id": 8,
+        "type": "input",
+        "question": "meetMeadowTen.questTask8",
+        "correctAnswer": "arbeitet",
+        "tip": "meetMeadowTen.questDescription"
+      },
+      {
+        "id": 9,
+        "type": "readAndAnswer",
+        "question": "meetMeadowTen.questTask9",
+        "text": "Max ist zwölf Jahre alt. Er wohnt in Bremen. Heute ist er sehr glücklich: Er hat jetzt eine Katze! Sie heißt Mimi.",
+        "options": [
+          "Er wohnt jetzt in Bremen.",
+          "Er hat jetzt eine Katze.",
+          "Er ist heute krank."
+        ],
+        "answer": "Er hat jetzt eine Katze.",
+        "tip": "meetMeadowTen.questDescription"
+      },
+      {
+        "id": 10,
+        "type": "select",
+        "question": "meetMeadowTen.questTask10",
+        "options": [
+          "Seid ihr aus Spanien? Nein, wir sind aus Italien.",
+          "Seid ihr aus Spanien? Nein, wir seid aus Italien.",
+          "Sind ihr aus Spanien? Nein, wir sind aus Italien."
+        ],
+        "answer": "Seid ihr aus Spanien? Nein, wir sind aus Italien.",
+        "tip": "meetMeadowTen.questDescription"
+      },
+      {
+        "id": 11,
+        "type": "reorder",
+        "question": "meetMeadowTen.questTask11",
+        "words": [
+          "wohnt",
+          "Wer",
+          "ist",
+          "wohnst",
+          "hier"
+        ],
+        "correctOrder": [
+          "Wer",
+          "wohnt",
+          "hier"
+        ],
+        "tip": "meetMeadowTen.questDescription"
+      },
+      {
+        "id": 12,
+        "type": "input",
+        "question": "meetMeadowTen.questTask12",
+        "correctAnswer": "Haben",
+        "tip": "meetMeadowTen.questDescription"
+      },
+      {
+        "id": 13,
+        "type": "select",
+        "question": "meetMeadowTen.questTask13",
+        "options": [
+          "Wir tanzst gern zusammen.",
+          "Wir tanzen gern zusammen.",
+          "Wir tanzt gern zusammen."
+        ],
+        "answer": "Wir tanzen gern zusammen.",
+        "tip": "meetMeadowTen.questDescription"
+      },
+      {
+        "id": 14,
+        "type": "reorder",
+        "question": "meetMeadowTen.questTask14",
+        "words": [
+          "wohnst",
+          "in",
+          "Meine",
+          "aus",
+          "jetzt",
+          "Schwester",
+          "wohnt",
+          "Wien"
+        ],
+        "correctOrder": [
+          "Meine",
+          "Schwester",
+          "wohnt",
+          "jetzt",
+          "in",
+          "Wien"
+        ],
+        "tip": "meetMeadowTen.questDescription"
+      },
+      {
+        "id": 15,
+        "type": "input",
+        "question": "meetMeadowTen.questTask15",
+        "correctAnswer": "Tag",
+        "tip": "meetMeadowTen.questDescription"
+      }
+    ]
+  }
+]

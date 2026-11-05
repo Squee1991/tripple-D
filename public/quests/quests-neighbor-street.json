@@ -1,0 +1,2649 @@
+[
+  {
+    "questId": "neighbor-street-one",
+    "title": "neighborStreetOne.questTitle",
+    "progress": "0/15",
+    "description": "neighborStreetOne.questDescription",
+    "conditions": {
+      "goal": "neighborStreetOne.questGoal",
+      "minCorrect": 15,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
+    "vocabulary": [
+      {
+        "word": "der Nachbar",
+        "translation-ru": "сосед",
+        "translation-en": "neighbour",
+        "translation-uk": "сусід",
+        "translation-pl": "sąsiad",
+        "translation-es": "el vecino",
+        "translation-fr": "le voisin",
+        "translation-tr": "komşu",
+        "translation-ro": "vecinul",
+        "translation-uz": "qo‘shni",
+        "translation-hi": "पड़ोसी",
+        "translation-ar": "الجار"
+      },
+      {
+        "word": "die Nachbarin",
+        "translation-ru": "соседка",
+        "translation-en": "neighbour (female)",
+        "translation-uk": "сусідка",
+        "translation-pl": "sąsiadka",
+        "translation-es": "la vecina",
+        "translation-fr": "la voisine",
+        "translation-tr": "kadın komşu",
+        "translation-ro": "vecina",
+        "translation-uz": "qo‘shni ayol",
+        "translation-hi": "पड़ोसन",
+        "translation-ar": "الجارة"
+      },
+      {
+        "word": "nebenan",
+        "translation-ru": "по соседству, рядом",
+        "translation-en": "next door",
+        "translation-uk": "по сусідству",
+        "translation-pl": "obok",
+        "translation-es": "al lado",
+        "translation-fr": "à côté",
+        "translation-tr": "yan tarafta",
+        "translation-ro": "alături",
+        "translation-uz": "qo‘shnida",
+        "translation-hi": "बगल में",
+        "translation-ar": "في الجوار"
+      },
+      {
+        "word": "der Kollege",
+        "translation-ru": "коллега",
+        "translation-en": "colleague",
+        "translation-uk": "колега",
+        "translation-pl": "kolega",
+        "translation-es": "el compañero de trabajo",
+        "translation-fr": "le collègue",
+        "translation-tr": "iş arkadaşı",
+        "translation-ro": "colegul",
+        "translation-uz": "hamkasb",
+        "translation-hi": "सहकर्मी",
+        "translation-ar": "الزميل"
+      },
+      {
+        "word": "freundlich",
+        "translation-ru": "дружелюбный",
+        "translation-en": "friendly",
+        "translation-uk": "привітний",
+        "translation-pl": "życzliwy",
+        "translation-es": "amable",
+        "translation-fr": "aimable",
+        "translation-tr": "güler yüzlü",
+        "translation-ro": "prietenos",
+        "translation-uz": "xushmuomala",
+        "translation-hi": "मिलनसार",
+        "translation-ar": "لطيف"
+      },
+      {
+        "word": "die Sorge",
+        "translation-ru": "забота, тревога",
+        "translation-en": "worry",
+        "translation-uk": "турбота",
+        "translation-pl": "troska",
+        "translation-es": "la preocupación",
+        "translation-fr": "le souci",
+        "translation-tr": "endişe",
+        "translation-ro": "grija",
+        "translation-uz": "tashvish",
+        "translation-hi": "चिंता",
+        "translation-ar": "القلق"
+      }
+    ],
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "neighborStreetOne.questTask1",
+        "options": [
+          "Der Mann, der steht dort, ist mein Nachbar.",
+          "Der Mann, die dort steht, ist mein Nachbar.",
+          "Der Mann, der dort steht, ist mein Nachbar."
+        ],
+        "answer": "Der Mann, der dort steht, ist mein Nachbar.",
+        "tip": "neighborStreetOne.questDescription"
+      },
+      {
+        "id": 2,
+        "type": "input",
+        "question": "neighborStreetOne.questTask2",
+        "correctAnswer": "die",
+        "tip": "neighborStreetOne.questDescription"
+      },
+      {
+        "id": 3,
+        "type": "input",
+        "question": "neighborStreetOne.questTask3",
+        "correctAnswer": "das",
+        "tip": "neighborStreetOne.questDescription"
+      },
+      {
+        "id": 4,
+        "type": "reorder",
+        "question": "neighborStreetOne.questTask4",
+        "words": [
+          "die",
+          "Mann",
+          "dort",
+          "arbeitet",
+          "Ich",
+          "kenne",
+          "der",
+          "den"
+        ],
+        "correctOrder": [
+          "Ich",
+          "kenne",
+          "den",
+          "Mann",
+          "der",
+          "dort",
+          "arbeitet"
+        ],
+        "tip": "neighborStreetOne.questDescription"
+      },
+      {
+        "id": 5,
+        "type": "select",
+        "question": "neighborStreetOne.questTask5",
+        "options": [
+          "Die Kinder, die spielen dort, sind laut.",
+          "Die Kinder, die dort spielen, sind laut.",
+          "Die Kinder, der dort spielen, sind laut."
+        ],
+        "answer": "Die Kinder, die dort spielen, sind laut.",
+        "tip": "neighborStreetOne.questDescription"
+      },
+      {
+        "id": 6,
+        "type": "input",
+        "question": "neighborStreetOne.questTask6",
+        "correctAnswer": "hilft",
+        "tip": "neighborStreetOne.questDescription"
+      },
+      {
+        "id": 7,
+        "type": "readAndAnswer",
+        "question": "neighborStreetOne.questTask7",
+        "text": "In unserem Haus wohnt eine Frau, die jeden Morgen laut singt. Der Mann, der neben ihr wohnt, findet das nicht so schön.",
+        "options": [
+          "Sie schläft lange.",
+          "Sie singt.",
+          "Sie kocht."
+        ],
+        "answer": "Sie singt.",
+        "tip": "neighborStreetOne.questDescription"
+      },
+      {
+        "id": 8,
+        "type": "input",
+        "question": "neighborStreetOne.questTask8",
+        "correctAnswer": "der",
+        "tip": "neighborStreetOne.questDescription"
+      },
+      {
+        "id": 9,
+        "type": "reorder",
+        "question": "neighborStreetOne.questTask10",
+        "words": [
+          "Frau",
+          "hat",
+          "ist",
+          "geholfen",
+          "die",
+          "die",
+          "Das",
+          "der",
+          "mir"
+        ],
+        "correctOrder": [
+          "Das",
+          "ist",
+          "die",
+          "Frau",
+          "die",
+          "mir",
+          "geholfen",
+          "hat"
+        ],
+        "tip": "neighborStreetOne.questDescription"
+      },
+      {
+        "id": 10,
+        "type": "select",
+        "question": "neighborStreetOne.questTask11",
+        "options": [
+          "Das Buch, das liegt auf dem Tisch, gehört mir.",
+          "Das Buch, das auf dem Tisch liegt, gehört mir.",
+          "Das Buch, der auf dem Tisch liegt, gehört mir."
+        ],
+        "answer": "Das Buch, das auf dem Tisch liegt, gehört mir.",
+        "tip": "neighborStreetOne.questDescription"
+      },
+      {
+        "id": 11,
+        "type": "input",
+        "question": "consequenceForkEight.questTask9",
+        "correctAnswer": "damit",
+        "tip": "consequenceForkEight.questDescription",
+        "reviewOf": "consequence-fork-eight",
+        "reviewLand": "consequence-fork"
+      },
+      {
+        "id": 12,
+        "type": "input",
+        "question": "consequenceForkFive.questTask12",
+        "correctAnswer": "läuft",
+        "tip": "consequenceForkFive.questDescription",
+        "reviewOf": "consequence-fork-five",
+        "reviewLand": "consequence-fork"
+      },
+      {
+        "id": 13,
+        "type": "input",
+        "question": "consequenceForkTwo.questTask13",
+        "correctAnswer": "dass",
+        "tip": "consequenceForkTwo.questDescription",
+        "reviewOf": "consequence-fork-two",
+        "reviewLand": "consequence-fork"
+      },
+      {
+        "id": 14,
+        "type": "input",
+        "question": "neighborStreetOne.questTask14",
+        "correctAnswer": "um",
+        "tip": "neighborStreetOne.questDescription"
+      },
+      {
+        "id": 15,
+        "type": "input",
+        "question": "neighborStreetOne.questTask15",
+        "correctAnswer": "Obwohl",
+        "tip": "neighborStreetOne.questDescription"
+      }
+    ]
+  },
+  {
+    "questId": "neighbor-street-two",
+    "title": "neighborStreetTwo.questTitle",
+    "progress": "0/15",
+    "description": "neighborStreetTwo.questDescription",
+    "conditions": {
+      "goal": "neighborStreetTwo.questGoal",
+      "minCorrect": 15,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
+    "vocabulary": [
+      {
+        "word": "empfehlen",
+        "translation-ru": "рекомендовать",
+        "translation-en": "to recommend",
+        "translation-uk": "рекомендувати",
+        "translation-pl": "polecać",
+        "translation-es": "recomendar",
+        "translation-fr": "recommander",
+        "translation-tr": "tavsiye etmek",
+        "translation-ro": "a recomanda",
+        "translation-uz": "tavsiya qilmoq",
+        "translation-hi": "सिफ़ारिश करना",
+        "translation-ar": "يوصي بـ"
+      },
+      {
+        "word": "der Pullover",
+        "translation-ru": "свитер",
+        "translation-en": "jumper",
+        "translation-uk": "светр",
+        "translation-pl": "sweter",
+        "translation-es": "el jersey",
+        "translation-fr": "le pull",
+        "translation-tr": "kazak",
+        "translation-ro": "puloverul",
+        "translation-uz": "sviter",
+        "translation-hi": "स्वेटर",
+        "translation-ar": "الكنزة"
+      },
+      {
+        "word": "backen",
+        "translation-ru": "печь",
+        "translation-en": "to bake",
+        "translation-uk": "пекти",
+        "translation-pl": "piec",
+        "translation-es": "hornear",
+        "translation-fr": "faire cuire au four",
+        "translation-tr": "pişirmek (fırında)",
+        "translation-ro": "a coace",
+        "translation-uz": "pishirmoq (pechda)",
+        "translation-hi": "बेक करना",
+        "translation-ar": "يخبز"
+      },
+      {
+        "word": "toll",
+        "translation-ru": "классный, отличный",
+        "translation-en": "great",
+        "translation-uk": "чудовий",
+        "translation-pl": "świetny",
+        "translation-es": "genial",
+        "translation-fr": "génial",
+        "translation-tr": "harika",
+        "translation-ro": "grozav",
+        "translation-uz": "ajoyib",
+        "translation-hi": "शानदार",
+        "translation-ar": "رائع"
+      },
+      {
+        "word": "die Brille",
+        "translation-ru": "очки",
+        "translation-en": "glasses",
+        "translation-uk": "окуляри",
+        "translation-pl": "okulary",
+        "translation-es": "las gafas",
+        "translation-fr": "les lunettes",
+        "translation-tr": "gözlük",
+        "translation-ro": "ochelarii",
+        "translation-uz": "ko‘zoynak",
+        "translation-hi": "चश्मा",
+        "translation-ar": "النظارة"
+      }
+    ],
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "neighborStreetTwo.questTask1",
+        "options": [
+          "Der Film, den ich habe gestern gesehen, war toll.",
+          "Der Film, der ich gestern gesehen habe, war toll.",
+          "Der Film, den ich gestern gesehen habe, war toll."
+        ],
+        "answer": "Der Film, den ich gestern gesehen habe, war toll.",
+        "tip": "neighborStreetTwo.questDescription"
+      },
+      {
+        "id": 2,
+        "type": "input",
+        "question": "neighborStreetTwo.questTask2",
+        "correctAnswer": "den",
+        "tip": "neighborStreetTwo.questDescription"
+      },
+      {
+        "id": 3,
+        "type": "input",
+        "question": "neighborStreetTwo.questTask3",
+        "correctAnswer": "den",
+        "tip": "neighborStreetTwo.questDescription"
+      },
+      {
+        "id": 4,
+        "type": "reorder",
+        "question": "neighborStreetTwo.questTask4",
+        "words": [
+          "das",
+          "empfehle",
+          "Das",
+          "dir",
+          "das",
+          "den",
+          "ich",
+          "ist",
+          "Buch"
+        ],
+        "correctOrder": [
+          "Das",
+          "ist",
+          "das",
+          "Buch",
+          "das",
+          "ich",
+          "dir",
+          "empfehle"
+        ],
+        "tip": "neighborStreetTwo.questDescription"
+      },
+      {
+        "id": 5,
+        "type": "select",
+        "question": "neighborStreetTwo.questTask5",
+        "options": [
+          "Die Frau, die ich habe gesehen, ist meine Lehrerin.",
+          "Die Frau, die ich gesehen habe, ist meine Lehrerin.",
+          "Die Frau, den ich gesehen habe, ist meine Lehrerin."
+        ],
+        "answer": "Die Frau, die ich gesehen habe, ist meine Lehrerin.",
+        "tip": "neighborStreetTwo.questDescription"
+      },
+      {
+        "id": 6,
+        "type": "input",
+        "question": "neighborStreetTwo.questTask6",
+        "correctAnswer": "den",
+        "tip": "neighborStreetTwo.questDescription"
+      },
+      {
+        "id": 7,
+        "type": "readAndAnswer",
+        "question": "neighborStreetTwo.questTask7",
+        "text": "Tom hat sich einen Pullover gekauft. Aber der Pullover, den er gekauft hat, ist zu klein. Deshalb will er einen neuen kaufen.",
+        "options": [
+          "Er ist zu klein.",
+          "Er ist zu groß.",
+          "Er ist zu teuer."
+        ],
+        "answer": "Er ist zu klein.",
+        "tip": "neighborStreetTwo.questDescription"
+      },
+      {
+        "id": 8,
+        "type": "input",
+        "question": "neighborStreetTwo.questTask8",
+        "correctAnswer": "will",
+        "tip": "neighborStreetTwo.questDescription"
+      },
+      {
+        "id": 9,
+        "type": "reorder",
+        "question": "neighborStreetTwo.questTask10",
+        "words": [
+          "Wo",
+          "gekauft",
+          "Tasche",
+          "ist",
+          "hast",
+          "den",
+          "die",
+          "die",
+          "du"
+        ],
+        "correctOrder": [
+          "Wo",
+          "ist",
+          "die",
+          "Tasche",
+          "die",
+          "du",
+          "gekauft",
+          "hast"
+        ],
+        "tip": "neighborStreetTwo.questDescription"
+      },
+      {
+        "id": 10,
+        "type": "select",
+        "question": "neighborStreetTwo.questTask11",
+        "options": [
+          "Das ist der Mann, den liebe ich.",
+          "Das ist der Mann, den ich liebe.",
+          "Das ist der Mann, der ich liebe."
+        ],
+        "answer": "Das ist der Mann, den ich liebe.",
+        "tip": "neighborStreetTwo.questDescription"
+      },
+      {
+        "id": 11,
+        "type": "input",
+        "question": "neighborStreetOne.questTask9",
+        "correctAnswer": "die",
+        "tip": "neighborStreetOne.questDescription",
+        "reviewOf": "neighbor-street-one",
+        "reviewLand": "neighbor-street"
+      },
+      {
+        "id": 12,
+        "type": "input",
+        "question": "consequenceForkSix.questTask12",
+        "correctAnswer": "sodass",
+        "tip": "consequenceForkSix.questDescription",
+        "reviewOf": "consequence-fork-six",
+        "reviewLand": "consequence-fork"
+      },
+      {
+        "id": 13,
+        "type": "input",
+        "question": "consequenceForkThree.questTask13",
+        "correctAnswer": "sodass",
+        "tip": "consequenceForkThree.questDescription",
+        "reviewOf": "consequence-fork-three",
+        "reviewLand": "consequence-fork"
+      },
+      {
+        "id": 14,
+        "type": "input",
+        "question": "neighborStreetTwo.questTask14",
+        "correctAnswer": "damit",
+        "tip": "neighborStreetTwo.questDescription"
+      },
+      {
+        "id": 15,
+        "type": "input",
+        "question": "neighborStreetTwo.questTask15",
+        "correctAnswer": "hatte",
+        "tip": "neighborStreetTwo.questDescription"
+      }
+    ]
+  },
+  {
+    "questId": "neighbor-street-three",
+    "title": "neighborStreetThree.questTitle",
+    "progress": "0/15",
+    "description": "neighborStreetThree.questDescription",
+    "conditions": {
+      "goal": "neighborStreetThree.questGoal",
+      "minCorrect": 15,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
+    "vocabulary": [
+      {
+        "word": "danken",
+        "translation-ru": "благодарить",
+        "translation-en": "to thank",
+        "translation-uk": "дякувати",
+        "translation-pl": "dziękować",
+        "translation-es": "agradecer",
+        "translation-fr": "remercier",
+        "translation-tr": "teşekkür etmek",
+        "translation-ro": "a mulțumi",
+        "translation-uz": "rahmat aytmoq",
+        "translation-hi": "धन्यवाद देना",
+        "translation-ar": "يشكر"
+      },
+      {
+        "word": "gehören",
+        "translation-ru": "принадлежать",
+        "translation-en": "to belong",
+        "translation-uk": "належати",
+        "translation-pl": "należeć",
+        "translation-es": "pertenecer",
+        "translation-fr": "appartenir",
+        "translation-tr": "ait olmak",
+        "translation-ro": "a aparține",
+        "translation-uz": "tegishli bo‘lmoq",
+        "translation-hi": "का होना",
+        "translation-ar": "ينتمي"
+      },
+      {
+        "word": "vertrauen",
+        "translation-ru": "доверять",
+        "translation-en": "to trust",
+        "translation-uk": "довіряти",
+        "translation-pl": "ufać",
+        "translation-es": "confiar",
+        "translation-fr": "faire confiance",
+        "translation-tr": "güvenmek",
+        "translation-ro": "a avea încredere",
+        "translation-uz": "ishonmoq",
+        "translation-hi": "भरोसा करना",
+        "translation-ar": "يثق"
+      },
+      {
+        "word": "schenken",
+        "translation-ru": "дарить",
+        "translation-en": "to give (as a present)",
+        "translation-uk": "дарувати",
+        "translation-pl": "dawać w prezencie",
+        "translation-es": "regalar",
+        "translation-fr": "offrir",
+        "translation-tr": "hediye etmek",
+        "translation-ro": "a dărui",
+        "translation-uz": "sovg‘a qilmoq",
+        "translation-hi": "तोहफ़े में देना",
+        "translation-ar": "يُهدي"
+      },
+      {
+        "word": "fast",
+        "translation-ru": "почти",
+        "translation-en": "almost",
+        "translation-uk": "майже",
+        "translation-pl": "prawie",
+        "translation-es": "casi",
+        "translation-fr": "presque",
+        "translation-tr": "neredeyse",
+        "translation-ro": "aproape",
+        "translation-uz": "deyarli",
+        "translation-hi": "लगभग",
+        "translation-ar": "تقريبًا"
+      }
+    ],
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "neighborStreetThree.questTask1",
+        "options": [
+          "Die Frau, die ich helfe, ist meine Nachbarin.",
+          "Die Frau, der ich helfe, meine Nachbarin ist.",
+          "Die Frau, der ich helfe, ist meine Nachbarin."
+        ],
+        "answer": "Die Frau, der ich helfe, ist meine Nachbarin.",
+        "tip": "neighborStreetThree.questDescription"
+      },
+      {
+        "id": 2,
+        "type": "input",
+        "question": "neighborStreetThree.questTask2",
+        "correctAnswer": "dem",
+        "tip": "neighborStreetThree.questDescription"
+      },
+      {
+        "id": 3,
+        "type": "input",
+        "question": "neighborStreetThree.questTask3",
+        "correctAnswer": "denen",
+        "tip": "neighborStreetThree.questDescription"
+      },
+      {
+        "id": 4,
+        "type": "reorder",
+        "question": "neighborStreetThree.questTask4",
+        "words": [
+          "Freund",
+          "vertraue",
+          "dem",
+          "ist",
+          "Das",
+          "den",
+          "ich",
+          "der"
+        ],
+        "correctOrder": [
+          "Das",
+          "ist",
+          "der",
+          "Freund",
+          "dem",
+          "ich",
+          "vertraue"
+        ],
+        "tip": "neighborStreetThree.questDescription"
+      },
+      {
+        "id": 5,
+        "type": "select",
+        "question": "neighborStreetThree.questTask5",
+        "options": [
+          "Das ist das Mädchen, dem ich ein Buch geschenkt habe.",
+          "Das ist das Mädchen, der ich ein Buch geschenkt habe.",
+          "Das ist das Mädchen, das ich ein Buch geschenkt habe."
+        ],
+        "answer": "Das ist das Mädchen, dem ich ein Buch geschenkt habe.",
+        "tip": "neighborStreetThree.questDescription"
+      },
+      {
+        "id": 6,
+        "type": "input",
+        "question": "neighborStreetThree.questTask6",
+        "correctAnswer": "danke",
+        "tip": "neighborStreetThree.questDescription"
+      },
+      {
+        "id": 7,
+        "type": "readAndAnswer",
+        "question": "neighborStreetThree.questTask7",
+        "text": "Herr Meier ist ein alter Mann, dem ich oft helfe. Ich kaufe für ihn ein, und er erzählt mir viel von früher.",
+        "options": [
+          "Er kocht für ihn.",
+          "Er kauft für ihn ein.",
+          "Er erzählt ihm von früher."
+        ],
+        "answer": "Er kauft für ihn ein.",
+        "tip": "neighborStreetThree.questDescription"
+      },
+      {
+        "id": 8,
+        "type": "input",
+        "question": "neighborStreetThree.questTask8",
+        "correctAnswer": "denen",
+        "tip": "neighborStreetThree.questDescription"
+      },
+      {
+        "id": 9,
+        "type": "reorder",
+        "question": "neighborStreetThree.questTask10",
+        "words": [
+          "Lehrer",
+          "dem",
+          "habe",
+          "den",
+          "Das",
+          "der",
+          "ist",
+          "geschrieben",
+          "ich"
+        ],
+        "correctOrder": [
+          "Das",
+          "ist",
+          "der",
+          "Lehrer",
+          "dem",
+          "ich",
+          "geschrieben",
+          "habe"
+        ],
+        "tip": "neighborStreetThree.questDescription"
+      },
+      {
+        "id": 10,
+        "type": "select",
+        "question": "neighborStreetThree.questTask11",
+        "options": [
+          "Die Kinder, denen wir geholfen haben, waren glücklich.",
+          "Die Kinder, dem wir geholfen haben, waren glücklich.",
+          "Die Kinder, die wir geholfen haben, waren glücklich."
+        ],
+        "answer": "Die Kinder, denen wir geholfen haben, waren glücklich.",
+        "tip": "neighborStreetThree.questDescription"
+      },
+      {
+        "id": 11,
+        "type": "input",
+        "question": "neighborStreetTwo.questTask9",
+        "correctAnswer": "den",
+        "tip": "neighborStreetTwo.questDescription",
+        "reviewOf": "neighbor-street-two",
+        "reviewLand": "neighbor-street"
+      },
+      {
+        "id": 12,
+        "type": "input",
+        "question": "consequenceForkSeven.questTask12",
+        "correctAnswer": "so",
+        "tip": "consequenceForkSeven.questDescription",
+        "reviewOf": "consequence-fork-seven",
+        "reviewLand": "consequence-fork"
+      },
+      {
+        "id": 13,
+        "type": "input",
+        "question": "consequenceForkFour.questTask13",
+        "correctAnswer": "kommst",
+        "tip": "consequenceForkFour.questDescription",
+        "reviewOf": "consequence-fork-four",
+        "reviewLand": "consequence-fork"
+      },
+      {
+        "id": 14,
+        "type": "input",
+        "question": "neighborStreetThree.questTask14",
+        "correctAnswer": "zu",
+        "tip": "neighborStreetThree.questDescription"
+      },
+      {
+        "id": 15,
+        "type": "input",
+        "question": "neighborStreetThree.questTask15",
+        "correctAnswer": "größer",
+        "tip": "neighborStreetThree.questDescription"
+      }
+    ]
+  },
+  {
+    "questId": "neighbor-street-four",
+    "title": "neighborStreetFour.questTitle",
+    "progress": "0/15",
+    "description": "neighborStreetFour.questDescription",
+    "conditions": {
+      "goal": "neighborStreetFour.questGoal",
+      "minCorrect": 15,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
+    "vocabulary": [
+      {
+        "word": "die Firma",
+        "translation-ru": "фирма",
+        "translation-en": "company",
+        "translation-uk": "фірма",
+        "translation-pl": "firma",
+        "translation-es": "la empresa",
+        "translation-fr": "l’entreprise",
+        "translation-tr": "şirket",
+        "translation-ro": "firma",
+        "translation-uz": "firma",
+        "translation-hi": "कंपनी",
+        "translation-ar": "الشركة"
+      },
+      {
+        "word": "das Thema",
+        "translation-ru": "тема",
+        "translation-en": "topic",
+        "translation-uk": "тема",
+        "translation-pl": "temat",
+        "translation-es": "el tema",
+        "translation-fr": "le sujet",
+        "translation-tr": "konu",
+        "translation-ro": "tema",
+        "translation-uz": "mavzu",
+        "translation-hi": "विषय",
+        "translation-ar": "الموضوع"
+      },
+      {
+        "word": "geboren",
+        "translation-ru": "родившийся",
+        "translation-en": "born",
+        "translation-uk": "народжений",
+        "translation-pl": "urodzony",
+        "translation-es": "nacido",
+        "translation-fr": "né",
+        "translation-tr": "doğmuş",
+        "translation-ro": "născut",
+        "translation-uz": "tug‘ilgan",
+        "translation-hi": "पैदा हुआ",
+        "translation-ar": "مولود"
+      },
+      {
+        "word": "das Schwimmbad",
+        "translation-ru": "бассейн",
+        "translation-en": "swimming pool",
+        "translation-uk": "басейн",
+        "translation-pl": "basen",
+        "translation-es": "la piscina",
+        "translation-fr": "la piscine",
+        "translation-tr": "yüzme havuzu",
+        "translation-ro": "piscina",
+        "translation-uz": "basseyn",
+        "translation-hi": "स्विमिंग पूल",
+        "translation-ar": "المسبح"
+      },
+      {
+        "word": "die Matte",
+        "translation-ru": "коврик",
+        "translation-en": "mat",
+        "translation-uk": "килимок",
+        "translation-pl": "mata",
+        "translation-es": "la colchoneta",
+        "translation-fr": "le tapis",
+        "translation-tr": "mat",
+        "translation-ro": "salteaua",
+        "translation-uz": "gilamcha",
+        "translation-hi": "चटाई",
+        "translation-ar": "الحصيرة"
+      }
+    ],
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "neighborStreetFour.questTask1",
+        "options": [
+          "Das Haus, in dem wohne ich, ist alt.",
+          "Das Haus, in das ich wohne, ist alt.",
+          "Das Haus, in dem ich wohne, ist alt."
+        ],
+        "answer": "Das Haus, in dem ich wohne, ist alt.",
+        "tip": "neighborStreetFour.questDescription"
+      },
+      {
+        "id": 2,
+        "type": "input",
+        "question": "neighborStreetFour.questTask2",
+        "correctAnswer": "dem",
+        "tip": "neighborStreetFour.questDescription"
+      },
+      {
+        "id": 3,
+        "type": "input",
+        "question": "neighborStreetFour.questTask3",
+        "correctAnswer": "der",
+        "tip": "neighborStreetFour.questDescription"
+      },
+      {
+        "id": 4,
+        "type": "reorder",
+        "question": "neighborStreetFour.questTask4",
+        "words": [
+          "ist",
+          "den",
+          "auf",
+          "dem",
+          "Das",
+          "warte",
+          "ich",
+          "Bus",
+          "der"
+        ],
+        "correctOrder": [
+          "Das",
+          "ist",
+          "der",
+          "Bus",
+          "auf",
+          "den",
+          "ich",
+          "warte"
+        ],
+        "tip": "neighborStreetFour.questDescription"
+      },
+      {
+        "id": 5,
+        "type": "select",
+        "question": "neighborStreetFour.questTask5",
+        "options": [
+          "Die Stadt, in der ich bin geboren, ist klein.",
+          "Die Stadt, in der ich geboren bin, ist klein.",
+          "Die Stadt, in die ich geboren bin, ist klein."
+        ],
+        "answer": "Die Stadt, in der ich geboren bin, ist klein.",
+        "tip": "neighborStreetFour.questDescription"
+      },
+      {
+        "id": 6,
+        "type": "input",
+        "question": "neighborStreetFour.questTask6",
+        "correctAnswer": "denen",
+        "tip": "neighborStreetFour.questDescription"
+      },
+      {
+        "id": 7,
+        "type": "readAndAnswer",
+        "question": "neighborStreetFour.questTask7",
+        "text": "Das ist Maria. Sie ist die Freundin, mit der ich jeden Sonntag schwimmen gehe. Das Schwimmbad, in dem wir schwimmen, ist ganz neu.",
+        "options": [
+          "das Schwimmbad",
+          "das Café",
+          "Marias Wohnung"
+        ],
+        "answer": "das Schwimmbad",
+        "tip": "neighborStreetFour.questDescription"
+      },
+      {
+        "id": 8,
+        "type": "input",
+        "question": "neighborStreetFour.questTask8",
+        "correctAnswer": "das",
+        "tip": "neighborStreetFour.questDescription"
+      },
+      {
+        "id": 9,
+        "type": "reorder",
+        "question": "neighborStreetFour.questTask10",
+        "words": [
+          "liegt",
+          "der",
+          "Buch",
+          "ist",
+          "Das",
+          "auf",
+          "das",
+          "den",
+          "Tisch",
+          "dem"
+        ],
+        "correctOrder": [
+          "Das",
+          "ist",
+          "der",
+          "Tisch",
+          "auf",
+          "dem",
+          "das",
+          "Buch",
+          "liegt"
+        ],
+        "tip": "neighborStreetFour.questDescription"
+      },
+      {
+        "id": 10,
+        "type": "select",
+        "question": "neighborStreetFour.questTask11",
+        "options": [
+          "Das ist die Freundin, von der ich habe dir erzählt.",
+          "Das ist die Freundin, von der ich dir erzählt habe.",
+          "Das ist die Freundin, von die ich dir erzählt habe."
+        ],
+        "answer": "Das ist die Freundin, von der ich dir erzählt habe.",
+        "tip": "neighborStreetFour.questDescription"
+      },
+      {
+        "id": 11,
+        "type": "input",
+        "question": "neighborStreetThree.questTask9",
+        "correctAnswer": "der",
+        "tip": "neighborStreetThree.questDescription",
+        "reviewOf": "neighbor-street-three",
+        "reviewLand": "neighbor-street"
+      },
+      {
+        "id": 12,
+        "type": "input",
+        "question": "consequenceForkEight.questTask12",
+        "correctAnswer": "kommst",
+        "tip": "consequenceForkEight.questDescription",
+        "reviewOf": "consequence-fork-eight",
+        "reviewLand": "consequence-fork"
+      },
+      {
+        "id": 13,
+        "type": "reorder",
+        "question": "consequenceForkFive.questTask13",
+        "words": [
+          "damit",
+          "Arbeit",
+          "ich",
+          "bin",
+          "Solange",
+          "glücklich",
+          "habe",
+          "ich"
+        ],
+        "correctOrder": [
+          "Solange",
+          "ich",
+          "Arbeit",
+          "habe",
+          "bin",
+          "ich",
+          "glücklich"
+        ],
+        "tip": "consequenceForkFive.questDescription",
+        "reviewOf": "consequence-fork-five",
+        "reviewLand": "consequence-fork"
+      },
+      {
+        "id": 14,
+        "type": "input",
+        "question": "neighborStreetFour.questTask14",
+        "correctAnswer": "kaufen",
+        "tip": "neighborStreetFour.questDescription"
+      },
+      {
+        "id": 15,
+        "type": "input",
+        "question": "neighborStreetFour.questTask15",
+        "correctAnswer": "war",
+        "tip": "neighborStreetFour.questDescription"
+      }
+    ]
+  },
+  {
+    "questId": "neighbor-street-five",
+    "title": "neighborStreetFive.questTitle",
+    "progress": "0/15",
+    "description": "neighborStreetFive.questDescription",
+    "conditions": {
+      "goal": "neighborStreetFive.questGoal",
+      "minCorrect": 15,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
+    "vocabulary": [
+      {
+        "word": "wahr",
+        "translation-ru": "правдивый, правда",
+        "translation-en": "true",
+        "translation-uk": "правдивий, правда",
+        "translation-pl": "prawdziwy",
+        "translation-es": "verdadero",
+        "translation-fr": "vrai",
+        "translation-tr": "doğru",
+        "translation-ro": "adevărat",
+        "translation-uz": "to‘g‘ri, rost",
+        "translation-hi": "सच",
+        "translation-ar": "صحيح"
+      },
+      {
+        "word": "vieles",
+        "translation-ru": "многое",
+        "translation-en": "many things",
+        "translation-uk": "багато що",
+        "translation-pl": "wiele",
+        "translation-es": "muchas cosas",
+        "translation-fr": "beaucoup de choses",
+        "translation-tr": "birçok şey",
+        "translation-ro": "multe",
+        "translation-uz": "ko‘p narsa",
+        "translation-hi": "बहुत कुछ",
+        "translation-ar": "أشياء كثيرة"
+      },
+      {
+        "word": "passieren",
+        "translation-ru": "случаться",
+        "translation-en": "to happen",
+        "translation-uk": "траплятися",
+        "translation-pl": "zdarzać się",
+        "translation-es": "pasar",
+        "translation-fr": "se passer",
+        "translation-tr": "olmak, yaşanmak",
+        "translation-ro": "a se întâmpla",
+        "translation-uz": "sodir bo‘lmoq",
+        "translation-hi": "होना, घटना",
+        "translation-ar": "يحدث"
+      },
+      {
+        "word": "etwas",
+        "translation-ru": "что-то",
+        "translation-en": "something",
+        "translation-uk": "щось",
+        "translation-pl": "coś",
+        "translation-es": "algo",
+        "translation-fr": "quelque chose",
+        "translation-tr": "bir şey",
+        "translation-ro": "ceva",
+        "translation-uz": "nimadir",
+        "translation-hi": "कुछ",
+        "translation-ar": "شيء ما"
+      },
+      {
+        "word": "die Tochter",
+        "translation-ru": "дочь",
+        "translation-en": "daughter",
+        "translation-uk": "донька",
+        "translation-pl": "córka",
+        "translation-es": "la hija",
+        "translation-fr": "la fille",
+        "translation-tr": "kız evlat",
+        "translation-ro": "fiica",
+        "translation-uz": "qiz",
+        "translation-hi": "बेटी",
+        "translation-ar": "الابنة"
+      }
+    ],
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "neighborStreetFive.questTask1",
+        "options": [
+          "Das ist alles, was weiß ich.",
+          "Das ist alles, das ich weiß.",
+          "Das ist alles, was ich weiß."
+        ],
+        "answer": "Das ist alles, was ich weiß.",
+        "tip": "neighborStreetFive.questDescription"
+      },
+      {
+        "id": 2,
+        "type": "input",
+        "question": "neighborStreetFive.questTask2",
+        "correctAnswer": "was",
+        "tip": "neighborStreetFive.questDescription"
+      },
+      {
+        "id": 3,
+        "type": "input",
+        "question": "neighborStreetFive.questTask3",
+        "correctAnswer": "was",
+        "tip": "neighborStreetFive.questDescription"
+      },
+      {
+        "id": 4,
+        "type": "reorder",
+        "question": "neighborStreetFive.questTask4",
+        "words": [
+          "was",
+          "mir",
+          "passiert",
+          "ist",
+          "das",
+          "Erzähl",
+          "alles"
+        ],
+        "correctOrder": [
+          "Erzähl",
+          "mir",
+          "alles",
+          "was",
+          "passiert",
+          "ist"
+        ],
+        "tip": "neighborStreetFive.questDescription"
+      },
+      {
+        "id": 5,
+        "type": "select",
+        "question": "neighborStreetFive.questTask5",
+        "options": [
+          "Das ist das, was mir gefällt.",
+          "Das ist das, was gefällt mir.",
+          "Das ist das, das mir gefällt."
+        ],
+        "answer": "Das ist das, was mir gefällt.",
+        "tip": "neighborStreetFive.questDescription"
+      },
+      {
+        "id": 6,
+        "type": "input",
+        "question": "neighborStreetFive.questTask6",
+        "correctAnswer": "ist",
+        "tip": "neighborStreetFive.questDescription"
+      },
+      {
+        "id": 7,
+        "type": "readAndAnswer",
+        "question": "neighborStreetFive.questTask7",
+        "text": "Opa erzählt gern von früher. Alles, was er erzählt, ist interessant. Aber vieles, was er sagt, hat er schon oft erzählt.",
+        "options": [
+          "interessant",
+          "traurig",
+          "langweilig"
+        ],
+        "answer": "interessant",
+        "tip": "neighborStreetFive.questDescription"
+      },
+      {
+        "id": 8,
+        "type": "input",
+        "question": "neighborStreetFive.questTask8",
+        "correctAnswer": "was",
+        "tip": "neighborStreetFive.questDescription"
+      },
+      {
+        "id": 9,
+        "type": "reorder",
+        "question": "neighborStreetFive.questTask10",
+        "words": [
+          "das",
+          "konnte",
+          "gemacht",
+          "ich",
+          "alles",
+          "habe",
+          "Ich",
+          "was"
+        ],
+        "correctOrder": [
+          "Ich",
+          "habe",
+          "alles",
+          "gemacht",
+          "was",
+          "ich",
+          "konnte"
+        ],
+        "tip": "neighborStreetFive.questDescription"
+      },
+      {
+        "id": 10,
+        "type": "select",
+        "question": "neighborStreetFive.questTask11",
+        "options": [
+          "Es gibt vieles, was ich noch nicht weiß.",
+          "Es gibt vieles, wer ich noch nicht weiß.",
+          "Es gibt vieles, was ich weiß noch nicht."
+        ],
+        "answer": "Es gibt vieles, was ich noch nicht weiß.",
+        "tip": "neighborStreetFive.questDescription"
+      },
+      {
+        "id": 11,
+        "type": "input",
+        "question": "neighborStreetFour.questTask9",
+        "correctAnswer": "dem",
+        "tip": "neighborStreetFour.questDescription",
+        "reviewOf": "neighbor-street-four",
+        "reviewLand": "neighbor-street"
+      },
+      {
+        "id": 12,
+        "type": "input",
+        "question": "neighborStreetOne.questTask12",
+        "correctAnswer": "das",
+        "tip": "neighborStreetOne.questDescription",
+        "reviewOf": "neighbor-street-one",
+        "reviewLand": "neighbor-street"
+      },
+      {
+        "id": 13,
+        "type": "input",
+        "question": "consequenceForkSix.questTask13",
+        "correctAnswer": "konnten",
+        "tip": "consequenceForkSix.questDescription",
+        "reviewOf": "consequence-fork-six",
+        "reviewLand": "consequence-fork"
+      },
+      {
+        "id": 14,
+        "type": "input",
+        "question": "neighborStreetFive.questTask14",
+        "correctAnswer": "zu",
+        "tip": "neighborStreetFive.questDescription"
+      },
+      {
+        "id": 15,
+        "type": "input",
+        "question": "neighborStreetFive.questTask15",
+        "correctAnswer": "gehen",
+        "tip": "neighborStreetFive.questDescription"
+      }
+    ]
+  },
+  {
+    "questId": "neighbor-street-six",
+    "title": "neighborStreetSix.questTitle",
+    "progress": "0/15",
+    "description": "neighborStreetSix.questDescription",
+    "conditions": {
+      "goal": "neighborStreetSix.questGoal",
+      "minCorrect": 15,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
+    "vocabulary": [
+      {
+        "word": "der Balkon",
+        "translation-ru": "балкон",
+        "translation-en": "balcony",
+        "translation-uk": "балкон",
+        "translation-pl": "balkon",
+        "translation-es": "el balcón",
+        "translation-fr": "le balcon",
+        "translation-tr": "balkon",
+        "translation-ro": "balconul",
+        "translation-uz": "balkon",
+        "translation-hi": "बालकनी",
+        "translation-ar": "الشرفة"
+      },
+      {
+        "word": "der Vermieter",
+        "translation-ru": "арендодатель",
+        "translation-en": "landlord",
+        "translation-uk": "орендодавець",
+        "translation-pl": "wynajmujący",
+        "translation-es": "el casero",
+        "translation-fr": "le propriétaire",
+        "translation-tr": "ev sahibi",
+        "translation-ro": "proprietarul",
+        "translation-uz": "ijaraga beruvchi",
+        "translation-hi": "मकान मालिक",
+        "translation-ar": "المؤجّر"
+      },
+      {
+        "word": "die Anzeige",
+        "translation-ru": "объявление",
+        "translation-en": "advert",
+        "translation-uk": "оголошення",
+        "translation-pl": "ogłoszenie",
+        "translation-es": "el anuncio",
+        "translation-fr": "l’annonce",
+        "translation-tr": "ilan",
+        "translation-ro": "anunțul",
+        "translation-uz": "e’lon",
+        "translation-hi": "विज्ञापन",
+        "translation-ar": "الإعلان"
+      },
+      {
+        "word": "die Straße",
+        "translation-ru": "улица",
+        "translation-en": "street",
+        "translation-uk": "вулиця",
+        "translation-pl": "ulica",
+        "translation-es": "la calle",
+        "translation-fr": "la rue",
+        "translation-tr": "sokak",
+        "translation-ro": "strada",
+        "translation-uz": "ko‘cha",
+        "translation-hi": "सड़क, गली",
+        "translation-ar": "الشارع"
+      },
+      {
+        "word": "der Fahrer",
+        "translation-ru": "водитель",
+        "translation-en": "driver",
+        "translation-uk": "водій",
+        "translation-pl": "kierowca",
+        "translation-es": "conductor",
+        "translation-fr": "chauffeur",
+        "translation-tr": "şoför",
+        "translation-ro": "șofer",
+        "translation-uz": "haydovchi",
+        "translation-hi": "चालक",
+        "translation-ar": "سائق"
+      }
+    ],
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "neighborStreetSix.questTask1",
+        "options": [
+          "Ich suche eine Wohnung, der einen Balkon hat.",
+          "Ich suche eine Wohnung, die hat einen Balkon.",
+          "Ich suche eine Wohnung, die einen Balkon hat."
+        ],
+        "answer": "Ich suche eine Wohnung, die einen Balkon hat.",
+        "tip": "neighborStreetSix.questDescription"
+      },
+      {
+        "id": 2,
+        "type": "input",
+        "question": "neighborStreetSix.questTask2",
+        "correctAnswer": "dem",
+        "tip": "neighborStreetSix.questDescription"
+      },
+      {
+        "id": 3,
+        "type": "input",
+        "question": "neighborStreetSix.questTask3",
+        "correctAnswer": "die",
+        "tip": "neighborStreetSix.questDescription"
+      },
+      {
+        "id": 4,
+        "type": "reorder",
+        "question": "neighborStreetSix.questTask4",
+        "words": [
+          "war",
+          "habe",
+          "der",
+          "interessant",
+          "Anzeige",
+          "ich",
+          "Die",
+          "gelesen",
+          "die"
+        ],
+        "correctOrder": [
+          "Die",
+          "Anzeige",
+          "die",
+          "ich",
+          "gelesen",
+          "habe",
+          "war",
+          "interessant"
+        ],
+        "tip": "neighborStreetSix.questDescription"
+      },
+      {
+        "id": 5,
+        "type": "select",
+        "question": "neighborStreetSix.questTask5",
+        "options": [
+          "Das ist der Nachbar, den ich helfe.",
+          "Das ist der Nachbar, der ich helfe.",
+          "Das ist der Nachbar, dem ich helfe."
+        ],
+        "answer": "Das ist der Nachbar, dem ich helfe.",
+        "tip": "neighborStreetSix.questDescription"
+      },
+      {
+        "id": 6,
+        "type": "input",
+        "question": "neighborStreetSix.questTask6",
+        "correctAnswer": "gefällt",
+        "tip": "neighborStreetSix.questDescription"
+      },
+      {
+        "id": 7,
+        "type": "readAndAnswer",
+        "question": "neighborStreetSix.questTask7",
+        "text": "Familie Schulz sucht eine neue Wohnung. Die Wohnung, in der sie jetzt wohnen, ist zu klein. Sie möchten eine Wohnung, die drei Zimmer und einen Balkon hat.",
+        "options": [
+          "eine Wohnung ohne Balkon",
+          "mit drei Zimmern und Balkon",
+          "eine kleine Wohnung"
+        ],
+        "answer": "mit drei Zimmern und Balkon",
+        "tip": "neighborStreetSix.questDescription"
+      },
+      {
+        "id": 8,
+        "type": "input",
+        "question": "neighborStreetSix.questTask8",
+        "correctAnswer": "der",
+        "tip": "neighborStreetSix.questDescription"
+      },
+      {
+        "id": 9,
+        "type": "reorder",
+        "question": "neighborStreetSix.questTask10",
+        "words": [
+          "alles",
+          "ist",
+          "Das",
+          "haben",
+          "wir",
+          "das",
+          "was"
+        ],
+        "correctOrder": [
+          "Das",
+          "ist",
+          "alles",
+          "was",
+          "wir",
+          "haben"
+        ],
+        "tip": "neighborStreetSix.questDescription"
+      },
+      {
+        "id": 10,
+        "type": "select",
+        "question": "neighborStreetSix.questTask11",
+        "options": [
+          "Die Leute, die wohnen über uns, sind sehr leise.",
+          "Die Leute, die über uns wohnen, sind sehr leise.",
+          "Die Leute, denen über uns wohnen, sind sehr leise."
+        ],
+        "answer": "Die Leute, die über uns wohnen, sind sehr leise.",
+        "tip": "neighborStreetSix.questDescription"
+      },
+      {
+        "id": 11,
+        "type": "input",
+        "question": "neighborStreetFive.questTask9",
+        "correctAnswer": "was",
+        "tip": "neighborStreetFive.questDescription",
+        "reviewOf": "neighbor-street-five",
+        "reviewLand": "neighbor-street"
+      },
+      {
+        "id": 12,
+        "type": "input",
+        "question": "neighborStreetTwo.questTask12",
+        "correctAnswer": "den",
+        "tip": "neighborStreetTwo.questDescription",
+        "reviewOf": "neighbor-street-two",
+        "reviewLand": "neighbor-street"
+      },
+      {
+        "id": 13,
+        "type": "input",
+        "question": "consequenceForkSeven.questTask13",
+        "correctAnswer": "ausruhte",
+        "tip": "consequenceForkSeven.questDescription",
+        "reviewOf": "consequence-fork-seven",
+        "reviewLand": "consequence-fork"
+      },
+      {
+        "id": 14,
+        "type": "input",
+        "question": "neighborStreetSix.questTask14",
+        "correctAnswer": "Nachdem",
+        "tip": "neighborStreetSix.questDescription"
+      },
+      {
+        "id": 15,
+        "type": "input",
+        "question": "neighborStreetSix.questTask15",
+        "correctAnswer": "damit",
+        "tip": "neighborStreetSix.questDescription"
+      }
+    ]
+  },
+  {
+    "questId": "neighbor-street-seven",
+    "title": "neighborStreetSeven.questTitle",
+    "progress": "0/15",
+    "description": "neighborStreetSeven.questDescription",
+    "conditions": {
+      "goal": "neighborStreetSeven.questGoal",
+      "minCorrect": 15,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
+    "vocabulary": [
+      {
+        "word": "das Rathaus",
+        "translation-ru": "ратуша",
+        "translation-en": "town hall",
+        "translation-uk": "ратуша",
+        "translation-pl": "ratusz",
+        "translation-es": "el ayuntamiento",
+        "translation-fr": "la mairie",
+        "translation-tr": "belediye binası",
+        "translation-ro": "primăria",
+        "translation-uz": "shahar hokimiyati",
+        "translation-hi": "टाउन हॉल",
+        "translation-ar": "مبنى البلدية"
+      },
+      {
+        "word": "die Kirche",
+        "translation-ru": "церковь",
+        "translation-en": "church",
+        "translation-uk": "церква",
+        "translation-pl": "kościół",
+        "translation-es": "la iglesia",
+        "translation-fr": "l’église",
+        "translation-tr": "kilise",
+        "translation-ro": "biserica",
+        "translation-uz": "cherkov",
+        "translation-hi": "चर्च",
+        "translation-ar": "الكنيسة"
+      },
+      {
+        "word": "der Brunnen",
+        "translation-ru": "фонтан",
+        "translation-en": "fountain",
+        "translation-uk": "фонтан",
+        "translation-pl": "fontanna",
+        "translation-es": "la fuente",
+        "translation-fr": "la fontaine",
+        "translation-tr": "çeşme",
+        "translation-ro": "fântâna",
+        "translation-uz": "favvora",
+        "translation-hi": "फव्वारा",
+        "translation-ar": "النافورة"
+      },
+      {
+        "word": "bekannt",
+        "translation-ru": "известный",
+        "translation-en": "well-known",
+        "translation-uk": "відомий",
+        "translation-pl": "znany",
+        "translation-es": "conocido",
+        "translation-fr": "connu",
+        "translation-tr": "tanınmış",
+        "translation-ro": "cunoscut",
+        "translation-uz": "mashhur",
+        "translation-hi": "मशहूर",
+        "translation-ar": "معروف"
+      },
+      {
+        "word": "alt",
+        "translation-ru": "старый",
+        "translation-en": "old",
+        "translation-uk": "старий",
+        "translation-pl": "stary",
+        "translation-es": "viejo",
+        "translation-fr": "vieux",
+        "translation-tr": "eski",
+        "translation-ro": "vechi",
+        "translation-uz": "eski",
+        "translation-hi": "पुराना",
+        "translation-ar": "قديم"
+      },
+      {
+        "word": "der Führer",
+        "translation-ru": "гид",
+        "translation-en": "guide",
+        "translation-uk": "гід",
+        "translation-pl": "przewodnik",
+        "translation-es": "el guía",
+        "translation-fr": "le guide",
+        "translation-tr": "rehber",
+        "translation-ro": "ghidul",
+        "translation-uz": "yo‘lboshchi",
+        "translation-hi": "गाइड",
+        "translation-ar": "الدليل"
+      }
+    ],
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "neighborStreetSeven.questTask1",
+        "options": [
+          "Das ist das Rathaus, das ist fünfhundert Jahre alt.",
+          "Das ist das Rathaus, der fünfhundert Jahre alt ist.",
+          "Das ist das Rathaus, das fünfhundert Jahre alt ist."
+        ],
+        "answer": "Das ist das Rathaus, das fünfhundert Jahre alt ist.",
+        "tip": "neighborStreetSeven.questDescription"
+      },
+      {
+        "id": 2,
+        "type": "input",
+        "question": "neighborStreetSeven.questTask2",
+        "correctAnswer": "die",
+        "tip": "neighborStreetSeven.questDescription"
+      },
+      {
+        "id": 3,
+        "type": "input",
+        "question": "neighborStreetSeven.questTask3",
+        "correctAnswer": "dem",
+        "tip": "neighborStreetSeven.questDescription"
+      },
+      {
+        "id": 4,
+        "type": "reorder",
+        "question": "neighborStreetSeven.questTask4",
+        "words": [
+          "zeigt",
+          "die",
+          "den",
+          "Stadt",
+          "Führer",
+          "uns",
+          "Das",
+          "der",
+          "ist",
+          "der"
+        ],
+        "correctOrder": [
+          "Das",
+          "ist",
+          "der",
+          "Führer",
+          "der",
+          "uns",
+          "die",
+          "Stadt",
+          "zeigt"
+        ],
+        "tip": "neighborStreetSeven.questDescription"
+      },
+      {
+        "id": 5,
+        "type": "select",
+        "question": "neighborStreetSeven.questTask5",
+        "options": [
+          "Das ist die Brücke, über der wir gestern gegangen sind.",
+          "Das ist die Brücke, über die wir sind gestern gegangen.",
+          "Das ist die Brücke, über die wir gestern gegangen sind."
+        ],
+        "answer": "Das ist die Brücke, über die wir gestern gegangen sind.",
+        "tip": "neighborStreetSeven.questDescription"
+      },
+      {
+        "id": 6,
+        "type": "input",
+        "question": "neighborStreetSeven.questTask6",
+        "correctAnswer": "denen",
+        "tip": "neighborStreetSeven.questDescription"
+      },
+      {
+        "id": 7,
+        "type": "readAndAnswer",
+        "question": "neighborStreetSeven.questTask7",
+        "text": "Olga zeigt ihrer Freundin die Stadt, in der sie seit zwei Jahren wohnt. Zuerst sehen sie das Rathaus, das sehr alt ist. Dann gehen sie zu einem kleinen Café, das Olga am meisten liebt. Dort gibt es den besten Kuchen der Stadt.",
+        "options": [
+          "ein kleines Café",
+          "die Kirche",
+          "das Rathaus"
+        ],
+        "answer": "ein kleines Café",
+        "tip": "neighborStreetSeven.questDescription"
+      },
+      {
+        "id": 8,
+        "type": "input",
+        "question": "neighborStreetSeven.questTask8",
+        "correctAnswer": "dem",
+        "tip": "neighborStreetSeven.questDescription"
+      },
+      {
+        "id": 9,
+        "type": "reorder",
+        "question": "neighborStreetSeven.questTask10",
+        "words": [
+          "groß",
+          "den",
+          "gehen",
+          "Der",
+          "wir",
+          "dem",
+          "ist",
+          "in",
+          "Park",
+          "spazieren"
+        ],
+        "correctOrder": [
+          "Der",
+          "Park",
+          "in",
+          "dem",
+          "wir",
+          "spazieren",
+          "gehen",
+          "ist",
+          "groß"
+        ],
+        "tip": "neighborStreetSeven.questDescription"
+      },
+      {
+        "id": 10,
+        "type": "select",
+        "question": "neighborStreetSeven.questTask11",
+        "options": [
+          "Das ist alles, was weiß ich über die Stadt.",
+          "Das ist alles, was ich über die Stadt weiß.",
+          "Das ist alles, das ich über die Stadt weiß."
+        ],
+        "answer": "Das ist alles, was ich über die Stadt weiß.",
+        "tip": "neighborStreetSeven.questDescription"
+      },
+      {
+        "id": 11,
+        "type": "input",
+        "question": "neighborStreetSix.questTask9",
+        "correctAnswer": "dem",
+        "tip": "neighborStreetSix.questDescription",
+        "reviewOf": "neighbor-street-six",
+        "reviewLand": "neighbor-street"
+      },
+      {
+        "id": 12,
+        "type": "input",
+        "question": "neighborStreetThree.questTask12",
+        "correctAnswer": "denen",
+        "tip": "neighborStreetThree.questDescription",
+        "reviewOf": "neighbor-street-three",
+        "reviewLand": "neighbor-street"
+      },
+      {
+        "id": 13,
+        "type": "input",
+        "question": "consequenceForkEight.questTask13",
+        "correctAnswer": "so",
+        "tip": "consequenceForkEight.questDescription",
+        "reviewOf": "consequence-fork-eight",
+        "reviewLand": "consequence-fork"
+      },
+      {
+        "id": 14,
+        "type": "input",
+        "question": "neighborStreetSeven.questTask14",
+        "correctAnswer": "um",
+        "tip": "neighborStreetSeven.questDescription"
+      },
+      {
+        "id": 15,
+        "type": "input",
+        "question": "neighborStreetSeven.questTask15",
+        "correctAnswer": "dass",
+        "tip": "neighborStreetSeven.questDescription"
+      }
+    ]
+  },
+  {
+    "questId": "neighbor-street-eight",
+    "title": "neighborStreetEight.questTitle",
+    "progress": "0/15",
+    "description": "neighborStreetEight.questDescription",
+    "conditions": {
+      "goal": "neighborStreetEight.questGoal",
+      "minCorrect": 15,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
+    "vocabulary": [
+      {
+        "word": "die Abteilung",
+        "translation-ru": "отдел",
+        "translation-en": "department",
+        "translation-uk": "відділ",
+        "translation-pl": "dział",
+        "translation-es": "el departamento",
+        "translation-fr": "le service",
+        "translation-tr": "bölüm",
+        "translation-ro": "departamentul",
+        "translation-uz": "bo‘lim",
+        "translation-hi": "विभाग",
+        "translation-ar": "القسم"
+      },
+      {
+        "word": "der Chef",
+        "translation-ru": "начальник",
+        "translation-en": "boss",
+        "translation-uk": "начальник",
+        "translation-pl": "szef",
+        "translation-es": "el jefe",
+        "translation-fr": "le chef",
+        "translation-tr": "şef",
+        "translation-ro": "șeful",
+        "translation-uz": "boshliq",
+        "translation-hi": "बॉस",
+        "translation-ar": "المدير"
+      },
+      {
+        "word": "erklären",
+        "translation-ru": "объяснять",
+        "translation-en": "to explain",
+        "translation-uk": "пояснювати",
+        "translation-pl": "wyjaśniać",
+        "translation-es": "explicar",
+        "translation-fr": "expliquer",
+        "translation-tr": "açıklamak",
+        "translation-ro": "a explica",
+        "translation-uz": "tushuntirmoq",
+        "translation-hi": "समझाना",
+        "translation-ar": "يشرح"
+      },
+      {
+        "word": "der Drucker",
+        "translation-ru": "принтер",
+        "translation-en": "printer",
+        "translation-uk": "принтер",
+        "translation-pl": "drukarka",
+        "translation-es": "la impresora",
+        "translation-fr": "l’imprimante",
+        "translation-tr": "yazıcı",
+        "translation-ro": "imprimanta",
+        "translation-uz": "printer",
+        "translation-hi": "प्रिंटर",
+        "translation-ar": "الطابعة"
+      },
+      {
+        "word": "nett",
+        "translation-ru": "милый, приятный",
+        "translation-en": "nice",
+        "translation-uk": "милий",
+        "translation-pl": "miły",
+        "translation-es": "simpático",
+        "translation-fr": "gentil",
+        "translation-tr": "kibar, hoş",
+        "translation-ro": "drăguț",
+        "translation-uz": "yoqimli",
+        "translation-hi": "अच्छा, प्यारा",
+        "translation-ar": "لطيف"
+      },
+      {
+        "word": "der Bericht",
+        "translation-ru": "отчёт",
+        "translation-en": "report",
+        "translation-uk": "звіт",
+        "translation-pl": "raport",
+        "translation-es": "el informe",
+        "translation-fr": "le rapport",
+        "translation-tr": "rapor",
+        "translation-ro": "raportul",
+        "translation-uz": "hisobot",
+        "translation-hi": "रिपोर्ट",
+        "translation-ar": "التقرير"
+      }
+    ],
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "neighborStreetEight.questTask1",
+        "options": [
+          "Das ist der Kollege, den in meiner Abteilung arbeitet.",
+          "Das ist der Kollege, der arbeitet in meiner Abteilung.",
+          "Das ist der Kollege, der in meiner Abteilung arbeitet."
+        ],
+        "answer": "Das ist der Kollege, der in meiner Abteilung arbeitet.",
+        "tip": "neighborStreetEight.questDescription"
+      },
+      {
+        "id": 2,
+        "type": "input",
+        "question": "neighborStreetEight.questTask2",
+        "correctAnswer": "den",
+        "tip": "neighborStreetEight.questDescription"
+      },
+      {
+        "id": 3,
+        "type": "input",
+        "question": "neighborStreetEight.questTask3",
+        "correctAnswer": "der",
+        "tip": "neighborStreetEight.questDescription"
+      },
+      {
+        "id": 4,
+        "type": "reorder",
+        "question": "neighborStreetEight.questTask4",
+        "words": [
+          "kaputt",
+          "Der",
+          "den",
+          "Flur",
+          "steht",
+          "im",
+          "Drucker",
+          "ist",
+          "der"
+        ],
+        "correctOrder": [
+          "Der",
+          "Drucker",
+          "der",
+          "im",
+          "Flur",
+          "steht",
+          "ist",
+          "kaputt"
+        ],
+        "tip": "neighborStreetEight.questDescription"
+      },
+      {
+        "id": 5,
+        "type": "select",
+        "question": "neighborStreetEight.questTask5",
+        "options": [
+          "Das sind die Kunden, mit denen telefoniere ich.",
+          "Das sind die Kunden, mit die ich telefoniere.",
+          "Das sind die Kunden, mit denen ich telefoniere."
+        ],
+        "answer": "Das sind die Kunden, mit denen ich telefoniere.",
+        "tip": "neighborStreetEight.questDescription"
+      },
+      {
+        "id": 6,
+        "type": "input",
+        "question": "neighborStreetEight.questTask6",
+        "correctAnswer": "die",
+        "tip": "neighborStreetEight.questDescription"
+      },
+      {
+        "id": 7,
+        "type": "readAndAnswer",
+        "question": "neighborStreetEight.questTask7",
+        "text": "Thomas ist neu in der Firma. Der Kollege, der neben ihm sitzt, heißt Ali. Ali ist der Mann, den alle fragen, wenn der Drucker kaputt ist. Die Chefin, mit der Thomas am ersten Tag gesprochen hat, ist sehr freundlich.",
+        "options": [
+          "niemand",
+          "Ali",
+          "die Chefin"
+        ],
+        "answer": "Ali",
+        "tip": "neighborStreetEight.questDescription"
+      },
+      {
+        "id": 8,
+        "type": "input",
+        "question": "neighborStreetEight.questTask8",
+        "correctAnswer": "denen",
+        "tip": "neighborStreetEight.questDescription"
+      },
+      {
+        "id": 9,
+        "type": "reorder",
+        "question": "neighborStreetEight.questTask10",
+        "words": [
+          "die",
+          "mir",
+          "Die",
+          "neben",
+          "denen",
+          "Kollegen",
+          "sind",
+          "lustig",
+          "sehr",
+          "sitzen"
+        ],
+        "correctOrder": [
+          "Die",
+          "Kollegen",
+          "die",
+          "neben",
+          "mir",
+          "sitzen",
+          "sind",
+          "sehr",
+          "lustig"
+        ],
+        "tip": "neighborStreetEight.questDescription"
+      },
+      {
+        "id": 10,
+        "type": "select",
+        "question": "neighborStreetEight.questTask11",
+        "options": [
+          "Das ist die Chefin, der ich den Bericht geschickt habe.",
+          "Das ist die Chefin, der ich habe den Bericht geschickt.",
+          "Das ist die Chefin, die ich den Bericht geschickt habe."
+        ],
+        "answer": "Das ist die Chefin, der ich den Bericht geschickt habe.",
+        "tip": "neighborStreetEight.questDescription"
+      },
+      {
+        "id": 11,
+        "type": "input",
+        "question": "neighborStreetSeven.questTask9",
+        "correctAnswer": "das",
+        "tip": "neighborStreetSeven.questDescription",
+        "reviewOf": "neighbor-street-seven",
+        "reviewLand": "neighbor-street"
+      },
+      {
+        "id": 12,
+        "type": "input",
+        "question": "neighborStreetFour.questTask12",
+        "correctAnswer": "der",
+        "tip": "neighborStreetFour.questDescription",
+        "reviewOf": "neighbor-street-four",
+        "reviewLand": "neighbor-street"
+      },
+      {
+        "id": 13,
+        "type": "input",
+        "question": "neighborStreetOne.questTask13",
+        "correctAnswer": "die",
+        "tip": "neighborStreetOne.questDescription",
+        "reviewOf": "neighbor-street-one",
+        "reviewLand": "neighbor-street"
+      },
+      {
+        "id": 14,
+        "type": "input",
+        "question": "neighborStreetEight.questTask14",
+        "correctAnswer": "deshalb",
+        "tip": "neighborStreetEight.questDescription"
+      },
+      {
+        "id": 15,
+        "type": "input",
+        "question": "neighborStreetEight.questTask15",
+        "correctAnswer": "ging",
+        "tip": "neighborStreetEight.questDescription"
+      }
+    ]
+  },
+  {
+    "questId": "neighbor-street-nine",
+    "title": "neighborStreetNine.questTitle",
+    "progress": "0/15",
+    "description": "neighborStreetNine.questDescription",
+    "conditions": {
+      "goal": "neighborStreetNine.questGoal",
+      "minCorrect": 15,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
+    "vocabulary": [
+      {
+        "word": "singen",
+        "translation-ru": "петь",
+        "translation-en": "to sing",
+        "translation-uk": "співати",
+        "translation-pl": "śpiewać",
+        "translation-es": "cantar",
+        "translation-fr": "chanter",
+        "translation-tr": "şarkı söylemek",
+        "translation-ro": "a cânta",
+        "translation-uz": "qo‘shiq aytmoq",
+        "translation-hi": "गाना",
+        "translation-ar": "يغنّي"
+      },
+      {
+        "word": "das Mädchen",
+        "translation-ru": "девочка",
+        "translation-en": "girl",
+        "translation-uk": "дівчинка",
+        "translation-pl": "dziewczynka",
+        "translation-es": "la niña",
+        "translation-fr": "la fille",
+        "translation-tr": "kız",
+        "translation-ro": "fetița",
+        "translation-uz": "qiz",
+        "translation-hi": "लड़की",
+        "translation-ar": "البنت"
+      },
+      {
+        "word": "das Thema",
+        "translation-ru": "тема",
+        "translation-en": "topic",
+        "translation-uk": "тема",
+        "translation-pl": "temat",
+        "translation-es": "el tema",
+        "translation-fr": "le sujet",
+        "translation-tr": "konu",
+        "translation-ro": "tema",
+        "translation-uz": "mavzu",
+        "translation-hi": "विषय",
+        "translation-ar": "الموضوع"
+      },
+      {
+        "word": "vertrauen",
+        "translation-ru": "доверять",
+        "translation-en": "to trust / rely on",
+        "translation-uk": "довіряти",
+        "translation-pl": "ufać",
+        "translation-es": "confiar",
+        "translation-fr": "faire confiance à",
+        "translation-tr": "güvenmek",
+        "translation-ro": "a avea încredere",
+        "translation-uz": "ishonmoq",
+        "translation-hi": "भरोसा करना",
+        "translation-ar": "يثق"
+      },
+      {
+        "word": "nebenan",
+        "translation-ru": "по соседству, рядом",
+        "translation-en": "next door",
+        "translation-uk": "по сусідству",
+        "translation-pl": "obok",
+        "translation-es": "al lado",
+        "translation-fr": "à côté",
+        "translation-tr": "yan tarafta",
+        "translation-ro": "alături",
+        "translation-uz": "qo‘shnida",
+        "translation-hi": "बगल में",
+        "translation-ar": "في الجوار"
+      }
+    ],
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "neighborStreetNine.questTask1",
+        "options": [
+          "Der Mann, der wohnt nebenan, arbeitet im Krankenhaus.",
+          "Der Mann, den nebenan wohnt, arbeitet im Krankenhaus.",
+          "Der Mann, der nebenan wohnt, arbeitet im Krankenhaus."
+        ],
+        "answer": "Der Mann, der nebenan wohnt, arbeitet im Krankenhaus.",
+        "tip": "neighborStreetNine.questDescription"
+      },
+      {
+        "id": 2,
+        "type": "input",
+        "question": "neighborStreetNine.questTask2",
+        "correctAnswer": "das",
+        "tip": "neighborStreetNine.questDescription"
+      },
+      {
+        "id": 3,
+        "type": "input",
+        "question": "neighborStreetNine.questTask3",
+        "correctAnswer": "der",
+        "tip": "neighborStreetNine.questDescription"
+      },
+      {
+        "id": 4,
+        "type": "reorder",
+        "question": "neighborStreetNine.questTask4",
+        "words": [
+          "in",
+          "lerne",
+          "ich",
+          "die",
+          "Deutsch",
+          "ist",
+          "Das",
+          "der",
+          "Schule",
+          "die"
+        ],
+        "correctOrder": [
+          "Das",
+          "ist",
+          "die",
+          "Schule",
+          "in",
+          "der",
+          "ich",
+          "Deutsch",
+          "lerne"
+        ],
+        "tip": "neighborStreetNine.questDescription"
+      },
+      {
+        "id": 5,
+        "type": "select",
+        "question": "neighborStreetNine.questTask5",
+        "options": [
+          "Er glaubt alles, das er im Internet liest.",
+          "Er glaubt alles, was liest er im Internet.",
+          "Er glaubt alles, was er im Internet liest."
+        ],
+        "answer": "Er glaubt alles, was er im Internet liest.",
+        "tip": "neighborStreetNine.questDescription"
+      },
+      {
+        "id": 6,
+        "type": "input",
+        "question": "neighborStreetNine.questTask6",
+        "correctAnswer": "den",
+        "tip": "neighborStreetNine.questDescription"
+      },
+      {
+        "id": 7,
+        "type": "readAndAnswer",
+        "question": "neighborStreetNine.questTask7",
+        "text": "Im Café arbeitet ein junger Mann, der aus Italien kommt. Der Kaffee, den er macht, ist der beste in der Stadt.",
+        "options": [
+          "aus Italien",
+          "aus Berlin",
+          "aus Spanien"
+        ],
+        "answer": "aus Italien",
+        "tip": "neighborStreetNine.questDescription"
+      },
+      {
+        "id": 8,
+        "type": "input",
+        "question": "neighborStreetNine.questTask8",
+        "correctAnswer": "denen",
+        "tip": "neighborStreetNine.questDescription"
+      },
+      {
+        "id": 9,
+        "type": "select",
+        "question": "neighborStreetNine.questTask9",
+        "options": [
+          "Das ist die Kollegin, der ich vertraue.",
+          "Das ist die Kollegin, der vertraue ich.",
+          "Das ist die Kollegin, die ich vertraue."
+        ],
+        "answer": "Das ist die Kollegin, der ich vertraue.",
+        "tip": "neighborStreetNine.questDescription"
+      },
+      {
+        "id": 10,
+        "type": "input",
+        "question": "neighborStreetNine.questTask10",
+        "correctAnswer": "singt",
+        "tip": "neighborStreetNine.questDescription"
+      },
+      {
+        "id": 11,
+        "type": "reorder",
+        "question": "neighborStreetNine.questTask11",
+        "words": [
+          "einen",
+          "Wir",
+          "Balkon",
+          "eine",
+          "der",
+          "Wohnung",
+          "hat",
+          "suchen",
+          "die"
+        ],
+        "correctOrder": [
+          "Wir",
+          "suchen",
+          "eine",
+          "Wohnung",
+          "die",
+          "einen",
+          "Balkon",
+          "hat"
+        ],
+        "tip": "neighborStreetNine.questDescription"
+      },
+      {
+        "id": 12,
+        "type": "select",
+        "question": "neighborStreetNine.questTask12",
+        "options": [
+          "Das Thema, über das wir haben gesprochen, war schwer.",
+          "Das Thema, über das wir gesprochen haben, war schwer.",
+          "Das Thema, über dem wir gesprochen haben, war schwer."
+        ],
+        "answer": "Das Thema, über das wir gesprochen haben, war schwer.",
+        "tip": "neighborStreetNine.questDescription"
+      },
+      {
+        "id": 13,
+        "type": "readAndAnswer",
+        "question": "neighborStreetNine.questTask13",
+        "text": "Mein Bruder, der in Hamburg wohnt, besucht mich oft. Meine Schwester, die in München studiert, kommt nur im Sommer.",
+        "options": [
+          "die Schwester",
+          "die Mutter",
+          "der Bruder"
+        ],
+        "answer": "die Schwester",
+        "tip": "neighborStreetNine.questDescription"
+      },
+      {
+        "id": 14,
+        "type": "input",
+        "question": "neighborStreetNine.questTask14",
+        "correctAnswer": "was",
+        "tip": "neighborStreetNine.questDescription"
+      },
+      {
+        "id": 15,
+        "type": "input",
+        "question": "neighborStreetNine.questTask15",
+        "correctAnswer": "dem",
+        "tip": "neighborStreetNine.questDescription"
+      }
+    ]
+  },
+  {
+    "questId": "neighbor-street-ten",
+    "title": "neighborStreetTen.questTitle",
+    "progress": "0/15",
+    "description": "neighborStreetTen.questDescription",
+    "conditions": {
+      "goal": "neighborStreetTen.questGoal",
+      "minCorrect": 15,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
+    "vocabulary": [
+      {
+        "word": "die Bäckerei",
+        "translation-ru": "пекарня",
+        "translation-en": "bakery",
+        "translation-uk": "пекарня",
+        "translation-pl": "piekarnia",
+        "translation-es": "la panadería",
+        "translation-fr": "la boulangerie",
+        "translation-tr": "fırın",
+        "translation-ro": "brutăria",
+        "translation-uz": "novvoyxona",
+        "translation-hi": "बेकरी",
+        "translation-ar": "المخبز"
+      },
+      {
+        "word": "hundert",
+        "translation-ru": "сто",
+        "translation-en": "hundred",
+        "translation-uk": "сто",
+        "translation-pl": "sto",
+        "translation-es": "cien",
+        "translation-fr": "cent",
+        "translation-tr": "yüz",
+        "translation-ro": "o sută",
+        "translation-uz": "yuz",
+        "translation-hi": "सौ",
+        "translation-ar": "مئة"
+      },
+      {
+        "word": "die Nachbarin",
+        "translation-ru": "соседка",
+        "translation-en": "neighbour (female)",
+        "translation-uk": "сусідка",
+        "translation-pl": "sąsiadka",
+        "translation-es": "la vecina",
+        "translation-fr": "la voisine",
+        "translation-tr": "kadın komşu",
+        "translation-ro": "vecina",
+        "translation-uz": "qo‘shni ayol",
+        "translation-hi": "पड़ोसन",
+        "translation-ar": "الجارة"
+      },
+      {
+        "word": "nachdem",
+        "translation-ru": "после того как",
+        "translation-en": "after (conjunction)",
+        "translation-uk": "після того як",
+        "translation-pl": "po tym, jak",
+        "translation-es": "después de que",
+        "translation-fr": "après que",
+        "translation-tr": "-dıktan sonra",
+        "translation-ro": "după ce",
+        "translation-uz": "…gandan keyin",
+        "translation-hi": "…के बाद",
+        "translation-ar": "بعد أن"
+      },
+      {
+        "word": "denn",
+        "translation-ru": "потому что, ведь",
+        "translation-en": "because",
+        "translation-uk": "бо",
+        "translation-pl": "bo",
+        "translation-es": "porque",
+        "translation-fr": "car",
+        "translation-tr": "çünkü",
+        "translation-ro": "căci",
+        "translation-uz": "chunki",
+        "translation-hi": "क्योंकि",
+        "translation-ar": "لأنّ"
+      }
+    ],
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "neighborStreetTen.questTask1",
+        "options": [
+          "Die Frau, der ich gestern gesehen habe, ist meine Nachbarin.",
+          "Die Frau, die ich habe gestern gesehen, ist meine Nachbarin.",
+          "Die Frau, die ich gestern gesehen habe, ist meine Nachbarin."
+        ],
+        "answer": "Die Frau, die ich gestern gesehen habe, ist meine Nachbarin.",
+        "tip": "neighborStreetTen.questDescription"
+      },
+      {
+        "id": 2,
+        "type": "input",
+        "question": "neighborStreetTen.questTask2",
+        "correctAnswer": "um",
+        "tip": "neighborStreetTen.questDescription"
+      },
+      {
+        "id": 3,
+        "type": "input",
+        "question": "neighborStreetTen.questTask3",
+        "correctAnswer": "dem",
+        "tip": "neighborStreetTen.questDescription"
+      },
+      {
+        "id": 4,
+        "type": "input",
+        "question": "neighborStreetTen.questTask4",
+        "correctAnswer": "waren",
+        "tip": "neighborStreetTen.questDescription"
+      },
+      {
+        "id": 5,
+        "type": "select",
+        "question": "neighborStreetTen.questTask5",
+        "options": [
+          "Obwohl war es spät, arbeiteten wir noch.",
+          "Obwohl es spät war, wir arbeiteten noch.",
+          "Obwohl es spät war, arbeiteten wir noch."
+        ],
+        "answer": "Obwohl es spät war, arbeiteten wir noch.",
+        "tip": "neighborStreetTen.questDescription"
+      },
+      {
+        "id": 6,
+        "type": "input",
+        "question": "neighborStreetTen.questTask6",
+        "correctAnswer": "was",
+        "tip": "neighborStreetTen.questDescription"
+      },
+      {
+        "id": 7,
+        "type": "readAndAnswer",
+        "question": "neighborStreetTen.questTask7",
+        "text": "Herr Lang hat eine kleine Bäckerei, in der er Brot und Kuchen backt. Die Leute, die bei ihm kaufen, sind zufrieden, denn alles ist sehr lecker.",
+        "options": [
+          "Herr Lang ist jung.",
+          "Alles ist sehr lecker.",
+          "Alles ist billig."
+        ],
+        "answer": "Alles ist sehr lecker.",
+        "tip": "neighborStreetTen.questDescription"
+      },
+      {
+        "id": 8,
+        "type": "input",
+        "question": "neighborStreetTen.questTask8",
+        "correctAnswer": "denen",
+        "tip": "neighborStreetTen.questDescription"
+      },
+      {
+        "id": 9,
+        "type": "reorder",
+        "question": "neighborStreetTen.questTask9",
+        "words": [
+          "hören",
+          "um",
+          "dich",
+          "damit",
+          "lauter",
+          "Sprich",
+          "alle"
+        ],
+        "correctOrder": [
+          "Sprich",
+          "lauter",
+          "damit",
+          "alle",
+          "dich",
+          "hören"
+        ],
+        "tip": "neighborStreetTen.questDescription"
+      },
+      {
+        "id": 10,
+        "type": "input",
+        "question": "neighborStreetTen.questTask10",
+        "correctAnswer": "ging",
+        "tip": "neighborStreetTen.questDescription"
+      },
+      {
+        "id": 11,
+        "type": "input",
+        "question": "neighborStreetTen.questTask11",
+        "correctAnswer": "schönste",
+        "tip": "neighborStreetTen.questDescription"
+      },
+      {
+        "id": 12,
+        "type": "select",
+        "question": "neighborStreetTen.questTask12",
+        "options": [
+          "Der Film, den wir gesehen haben, war langweilig.",
+          "Der Film, den wir haben gesehen, war langweilig.",
+          "Der Film, der wir gesehen haben, war langweilig."
+        ],
+        "answer": "Der Film, den wir gesehen haben, war langweilig.",
+        "tip": "neighborStreetTen.questDescription"
+      },
+      {
+        "id": 13,
+        "type": "readAndAnswer",
+        "question": "neighborStreetTen.questTask13",
+        "text": "Gestern war ich bei einem Freund, der in einem alten Haus wohnt. Das Haus, in dem er wohnt, ist über hundert Jahre alt.",
+        "options": [
+          "zwei Jahre",
+          "über hundert Jahre",
+          "zehn Jahre"
+        ],
+        "answer": "über hundert Jahre",
+        "tip": "neighborStreetTen.questDescription"
+      },
+      {
+        "id": 14,
+        "type": "input",
+        "question": "neighborStreetTen.questTask14",
+        "correctAnswer": "fuhren",
+        "tip": "neighborStreetTen.questDescription"
+      },
+      {
+        "id": 15,
+        "type": "input",
+        "question": "neighborStreetTen.questTask15",
+        "correctAnswer": "sollten",
+        "tip": "neighborStreetTen.questDescription"
+      }
+    ]
+  }
+]

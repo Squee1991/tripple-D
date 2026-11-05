@@ -1,0 +1,2531 @@
+[
+  {
+    "questId": "wisdom-summit-one",
+    "title": "wisdomSummitOne.questTitle",
+    "progress": "0/15",
+    "description": "wisdomSummitOne.questDescription",
+    "conditions": {
+      "goal": "wisdomSummitOne.questGoal",
+      "minCorrect": 15,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
+    "vocabulary": [
+      {
+        "word": "die Entscheidung",
+        "translation-ru": "решение",
+        "translation-en": "decision",
+        "translation-uk": "рішення",
+        "translation-pl": "decyzja",
+        "translation-es": "la decisión",
+        "translation-fr": "la décision",
+        "translation-tr": "karar",
+        "translation-ro": "decizia",
+        "translation-uz": "qaror",
+        "translation-hi": "फ़ैसला",
+        "translation-ar": "القرار"
+      },
+      {
+        "word": "die Reise",
+        "translation-ru": "поездка",
+        "translation-en": "trip, journey",
+        "translation-uk": "подорож",
+        "translation-pl": "podróż",
+        "translation-es": "el viaje",
+        "translation-fr": "le voyage",
+        "translation-tr": "yolculuk",
+        "translation-ro": "călătoria",
+        "translation-uz": "sayohat",
+        "translation-hi": "यात्रा",
+        "translation-ar": "الرحلة"
+      },
+      {
+        "word": "sprechen",
+        "translation-ru": "говорить",
+        "translation-en": "to speak",
+        "translation-uk": "говорити",
+        "translation-pl": "mówić",
+        "translation-es": "hablar",
+        "translation-fr": "parler",
+        "translation-tr": "konuşmak",
+        "translation-ro": "a vorbi",
+        "translation-uz": "gapirmoq",
+        "translation-hi": "बोलना",
+        "translation-ar": "يتكلم"
+      },
+      {
+        "word": "die Freunde",
+        "translation-ru": "друзья",
+        "translation-en": "friends",
+        "translation-uk": "друзі",
+        "translation-pl": "przyjaciele",
+        "translation-es": "los amigos",
+        "translation-fr": "les amis",
+        "translation-tr": "arkadaşlar",
+        "translation-ro": "prietenii",
+        "translation-uz": "do‘stlar",
+        "translation-hi": "दोस्त",
+        "translation-ar": "الأصدقاء"
+      },
+      {
+        "word": "abholen",
+        "translation-ru": "забирать / заходить за кем-то",
+        "translation-en": "to pick up / fetch",
+        "translation-uk": "забирати",
+        "translation-pl": "odebrać / przyjść po",
+        "translation-es": "recoger / ir a buscar",
+        "translation-fr": "aller chercher / récupérer",
+        "translation-tr": "gidip almak / karşılamak",
+        "translation-ro": "a ridica / a lua",
+        "translation-uz": "olib ketmoq",
+        "translation-hi": "लेने जाना",
+        "translation-ar": "يجلب / يستلم"
+      }
+    ],
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "wisdomSummitOne.questTask1",
+        "options": [
+          "Wenn ich mehr Zeit hätte, ich würde jeden Tag schwimmen gehen.",
+          "Wenn ich mehr Zeit habe, würde ich jeden Tag schwimmen gehen.",
+          "Wenn ich mehr Zeit hätte, würde ich jeden Tag schwimmen gehen."
+        ],
+        "answer": "Wenn ich mehr Zeit hätte, würde ich jeden Tag schwimmen gehen.",
+        "tip": "wisdomSummitOne.questDescription"
+      },
+      {
+        "id": 2,
+        "type": "input",
+        "question": "wisdomSummitOne.questTask2",
+        "correctAnswer": "würde",
+        "tip": "wisdomSummitOne.questDescription"
+      },
+      {
+        "id": 3,
+        "type": "input",
+        "question": "wisdomSummitOne.questTask3",
+        "correctAnswer": "Könntest",
+        "tip": "wisdomSummitOne.questDescription"
+      },
+      {
+        "id": 4,
+        "type": "reorder",
+        "question": "wisdomSummitOne.questTask4",
+        "words": [
+          "kaputt",
+          "hätten",
+          "das",
+          "gefahren",
+          "war",
+          "Wir",
+          "wären",
+          "Auto",
+          "aber"
+        ],
+        "correctOrder": [
+          "Wir",
+          "wären",
+          "gefahren",
+          "aber",
+          "das",
+          "Auto",
+          "war",
+          "kaputt"
+        ],
+        "tip": "wisdomSummitOne.questDescription"
+      },
+      {
+        "id": 5,
+        "type": "select",
+        "question": "wisdomSummitOne.questTask5",
+        "options": [
+          "Wenn du mich angerufen hättest, hätte ich dich abholen.",
+          "Wenn du mich angerufen hättest, hätte ich dich abgeholt.",
+          "Wenn du mich angerufen hättest, wäre ich dich abgeholt."
+        ],
+        "answer": "Wenn du mich angerufen hättest, hätte ich dich abgeholt.",
+        "tip": "wisdomSummitOne.questDescription"
+      },
+      {
+        "id": 6,
+        "type": "input",
+        "question": "wisdomSummitOne.questTask6",
+        "correctAnswer": "hätte",
+        "tip": "wisdomSummitOne.questDescription"
+      },
+      {
+        "id": 7,
+        "type": "readAndAnswer",
+        "question": "wisdomSummitOne.questTask7",
+        "text": "Letztes Jahr konnte Sara in Wien oder in Berlin arbeiten. Sie hat Berlin gewählt. Heute sagt sie: „Ich bin froh über meine Entscheidung. In Wien wäre ich sehr allein gewesen.“",
+        "options": [
+          "Sie möchte nach Wien.",
+          "Sie ist froh.",
+          "Sie ist traurig."
+        ],
+        "answer": "Sie ist froh.",
+        "tip": "wisdomSummitOne.questDescription"
+      },
+      {
+        "id": 8,
+        "type": "input",
+        "question": "wisdomSummitOne.questTask8",
+        "correctAnswer": "wäre",
+        "tip": "wisdomSummitOne.questDescription"
+      },
+      {
+        "id": 9,
+        "type": "input",
+        "question": "wisdomSummitOne.questTask9",
+        "correctAnswer": "hätte",
+        "tip": "wisdomSummitOne.questDescription"
+      },
+      {
+        "id": 10,
+        "type": "reorder",
+        "question": "wisdomSummitOne.questTask10",
+        "words": [
+          "gekommen",
+          "du",
+          "wünschte",
+          "Ich",
+          "hättest",
+          "wärst"
+        ],
+        "correctOrder": [
+          "Ich",
+          "wünschte",
+          "du",
+          "wärst",
+          "gekommen"
+        ],
+        "tip": "wisdomSummitOne.questDescription"
+      },
+      {
+        "id": 11,
+        "type": "select",
+        "question": "wisdomSummitOne.questTask11",
+        "options": [
+          "An deiner Stelle würde ich das nicht gekauft.",
+          "An deiner Stelle würde ich das nicht kaufen.",
+          "An deiner Stelle ich würde das nicht kaufen."
+        ],
+        "answer": "An deiner Stelle würde ich das nicht kaufen.",
+        "tip": "wisdomSummitOne.questDescription"
+      },
+      {
+        "id": 12,
+        "type": "input",
+        "question": "wisdomSummitOne.questTask12",
+        "correctAnswer": "wäre",
+        "tip": "wisdomSummitOne.questDescription"
+      },
+      {
+        "id": 13,
+        "type": "input",
+        "question": "wisdomSummitOne.questTask13",
+        "correctAnswer": "hätte",
+        "tip": "wisdomSummitOne.questDescription"
+      },
+      {
+        "id": 14,
+        "type": "input",
+        "question": "wisdomSummitOne.questTask14",
+        "correctAnswer": "wichtige",
+        "tip": "wisdomSummitOne.questDescription"
+      },
+      {
+        "id": 15,
+        "type": "input",
+        "question": "wisdomSummitOne.questTask15",
+        "correctAnswer": "wäre",
+        "tip": "wisdomSummitOne.questDescription"
+      }
+    ]
+  },
+  {
+    "questId": "wisdom-summit-two",
+    "title": "wisdomSummitTwo.questTitle",
+    "progress": "0/15",
+    "description": "wisdomSummitTwo.questDescription",
+    "conditions": {
+      "goal": "wisdomSummitTwo.questGoal",
+      "minCorrect": 15,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
+    "vocabulary": [
+      {
+        "word": "die Hälfte",
+        "translation-ru": "половина",
+        "translation-en": "half",
+        "translation-uk": "половина",
+        "translation-pl": "połowa",
+        "translation-es": "la mitad",
+        "translation-fr": "la moitié",
+        "translation-tr": "yarı",
+        "translation-ro": "jumătatea",
+        "translation-uz": "yarmi",
+        "translation-hi": "आधा",
+        "translation-ar": "النصف"
+      },
+      {
+        "word": "das Wetter",
+        "translation-ru": "погода",
+        "translation-en": "weather",
+        "translation-uk": "погода",
+        "translation-pl": "pogoda",
+        "translation-es": "el tiempo",
+        "translation-fr": "le temps",
+        "translation-tr": "hava",
+        "translation-ro": "vremea",
+        "translation-uz": "ob-havo",
+        "translation-hi": "मौसम",
+        "translation-ar": "الطقس"
+      },
+      {
+        "word": "trotz",
+        "translation-ru": "несмотря на",
+        "translation-en": "despite",
+        "translation-uk": "попри",
+        "translation-pl": "mimo",
+        "translation-es": "a pesar de",
+        "translation-fr": "malgré",
+        "translation-tr": "rağmen",
+        "translation-ro": "în ciuda",
+        "translation-uz": "qaramay",
+        "translation-hi": "के बावजूद",
+        "translation-ar": "رغم"
+      },
+      {
+        "word": "wegen",
+        "translation-ru": "из-за",
+        "translation-en": "because of",
+        "translation-uk": "через",
+        "translation-pl": "z powodu",
+        "translation-es": "por, a causa de",
+        "translation-fr": "à cause de",
+        "translation-tr": "yüzünden",
+        "translation-ro": "din cauza",
+        "translation-uz": "sababli",
+        "translation-hi": "की वजह से",
+        "translation-ar": "بسبب"
+      },
+      {
+        "word": "die Krankheit",
+        "translation-ru": "болезнь",
+        "translation-en": "illness",
+        "translation-uk": "хвороба",
+        "translation-pl": "choroba",
+        "translation-es": "la enfermedad",
+        "translation-fr": "la maladie",
+        "translation-tr": "hastalık",
+        "translation-ro": "boala",
+        "translation-uz": "kasallik",
+        "translation-hi": "बीमारी",
+        "translation-ar": "المرض"
+      }
+    ],
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "wisdomSummitTwo.questTask1",
+        "options": [
+          "Wegen der Krankheit meine Schwester sind wir zu Hause geblieben.",
+          "Wegen der Krankheit meines Schwester sind wir zu Hause geblieben.",
+          "Wegen der Krankheit meiner Schwester sind wir zu Hause geblieben."
+        ],
+        "answer": "Wegen der Krankheit meiner Schwester sind wir zu Hause geblieben.",
+        "tip": "wisdomSummitTwo.questDescription"
+      },
+      {
+        "id": 2,
+        "type": "input",
+        "question": "wisdomSummitTwo.questTask2",
+        "correctAnswer": "der",
+        "tip": "wisdomSummitTwo.questDescription"
+      },
+      {
+        "id": 3,
+        "type": "input",
+        "question": "wisdomSummitTwo.questTask3",
+        "correctAnswer": "des",
+        "tip": "wisdomSummitTwo.questDescription"
+      },
+      {
+        "id": 4,
+        "type": "reorder",
+        "question": "wisdomSummitTwo.questTask4",
+        "words": [
+          "Das",
+          "Tochter",
+          "Fahrrad",
+          "unseres",
+          "unserer",
+          "ist",
+          "das"
+        ],
+        "correctOrder": [
+          "Das",
+          "ist",
+          "das",
+          "Fahrrad",
+          "unserer",
+          "Tochter"
+        ],
+        "tip": "wisdomSummitTwo.questDescription"
+      },
+      {
+        "id": 5,
+        "type": "select",
+        "question": "wisdomSummitTwo.questTask5",
+        "options": [
+          "Trotz der kalten Wetters haben die Kinder draußen gespielt.",
+          "Trotz des kalten Wetters haben die Kinder draußen gespielt.",
+          "Trotz des kalten Wetter haben die Kinder draußen gespielt."
+        ],
+        "answer": "Trotz des kalten Wetters haben die Kinder draußen gespielt.",
+        "tip": "wisdomSummitTwo.questDescription"
+      },
+      {
+        "id": 6,
+        "type": "input",
+        "question": "wisdomSummitTwo.questTask6",
+        "correctAnswer": "Bens",
+        "tip": "wisdomSummitTwo.questDescription"
+      },
+      {
+        "id": 7,
+        "type": "readAndAnswer",
+        "question": "wisdomSummitTwo.questTask7",
+        "text": "Am Anfang des Jahres hat Familie Klein ein Haus gekauft. Wegen der vielen Arbeit im Haus hatten sie im Sommer keinen Urlaub. Während der Ferien haben die Kinder im Garten geholfen.",
+        "options": [
+          "wegen der Arbeit im Haus",
+          "wegen der Schule",
+          "wegen des Wetters"
+        ],
+        "answer": "wegen der Arbeit im Haus",
+        "tip": "wisdomSummitTwo.questDescription"
+      },
+      {
+        "id": 8,
+        "type": "input",
+        "question": "wisdomSummitTwo.questTask8",
+        "correctAnswer": "des",
+        "tip": "wisdomSummitTwo.questDescription"
+      },
+      {
+        "id": 9,
+        "type": "input",
+        "question": "wisdomSummitTwo.questTask9",
+        "correctAnswer": "meinem",
+        "tip": "wisdomSummitTwo.questDescription"
+      },
+      {
+        "id": 10,
+        "type": "reorder",
+        "question": "wisdomSummitTwo.questTask10",
+        "words": [
+          "schon",
+          "Die",
+          "vorbei",
+          "des",
+          "der",
+          "Tages",
+          "Hälfte",
+          "ist"
+        ],
+        "correctOrder": [
+          "Die",
+          "Hälfte",
+          "des",
+          "Tages",
+          "ist",
+          "schon",
+          "vorbei"
+        ],
+        "tip": "wisdomSummitTwo.questDescription"
+      },
+      {
+        "id": 11,
+        "type": "select",
+        "question": "wisdomSummitTwo.questTask11",
+        "options": [
+          "Während die Reise haben wir viele Fotos gemacht.",
+          "Während der Reise haben wir viele Fotos gemacht.",
+          "Während des Reise haben wir viele Fotos gemacht."
+        ],
+        "answer": "Während der Reise haben wir viele Fotos gemacht.",
+        "tip": "wisdomSummitTwo.questDescription"
+      },
+      {
+        "id": 12,
+        "type": "input",
+        "question": "wisdomSummitTwo.questTask12",
+        "correctAnswer": "seines",
+        "tip": "wisdomSummitTwo.questDescription"
+      },
+      {
+        "id": 13,
+        "type": "input",
+        "question": "wisdomSummitTwo.questTask13",
+        "correctAnswer": "des",
+        "tip": "wisdomSummitTwo.questDescription"
+      },
+      {
+        "id": 14,
+        "type": "input",
+        "question": "wisdomSummitTwo.questTask14",
+        "correctAnswer": "der",
+        "tip": "wisdomSummitTwo.questDescription"
+      },
+      {
+        "id": 15,
+        "type": "input",
+        "question": "wisdomSummitTwo.questTask15",
+        "correctAnswer": "meiner",
+        "tip": "wisdomSummitTwo.questDescription"
+      }
+    ]
+  },
+  {
+    "questId": "wisdom-summit-three",
+    "title": "wisdomSummitThree.questTitle",
+    "progress": "0/15",
+    "description": "wisdomSummitThree.questDescription",
+    "conditions": {
+      "goal": "wisdomSummitThree.questGoal",
+      "minCorrect": 15,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
+    "vocabulary": [
+      {
+        "word": "der Affe",
+        "translation-ru": "обезьяна",
+        "translation-en": "monkey",
+        "translation-uk": "мавпа",
+        "translation-pl": "małpa",
+        "translation-es": "el mono",
+        "translation-fr": "le singe",
+        "translation-tr": "maymun",
+        "translation-ro": "maimuța",
+        "translation-uz": "maymun",
+        "translation-hi": "बंदर",
+        "translation-ar": "القرد"
+      },
+      {
+        "word": "der Experte",
+        "translation-ru": "эксперт",
+        "translation-en": "expert",
+        "translation-uk": "експерт",
+        "translation-pl": "ekspert",
+        "translation-es": "el experto",
+        "translation-fr": "l’expert",
+        "translation-tr": "uzman",
+        "translation-ro": "expertul",
+        "translation-uz": "mutaxassis",
+        "translation-hi": "विशेषज्ञ",
+        "translation-ar": "الخبير"
+      },
+      {
+        "word": "der Präsident",
+        "translation-ru": "президент",
+        "translation-en": "president",
+        "translation-uk": "президент",
+        "translation-pl": "prezydent",
+        "translation-es": "el presidente",
+        "translation-fr": "le président",
+        "translation-tr": "cumhurbaşkanı, başkan",
+        "translation-ro": "președintele",
+        "translation-uz": "prezident",
+        "translation-hi": "राष्ट्रपति",
+        "translation-ar": "الرئيس"
+      },
+      {
+        "word": "zurückgeben",
+        "translation-ru": "возвращать (отдавать назад)",
+        "translation-en": "to give back",
+        "translation-uk": "повертати",
+        "translation-pl": "oddawać",
+        "translation-es": "devolver",
+        "translation-fr": "rendre",
+        "translation-tr": "geri vermek",
+        "translation-ro": "a da înapoi",
+        "translation-uz": "qaytarib bermoq",
+        "translation-hi": "लौटाना",
+        "translation-ar": "يُعيد"
+      },
+      {
+        "word": "anders",
+        "translation-ru": "другой, иначе",
+        "translation-en": "different",
+        "translation-uk": "інший, інакше",
+        "translation-pl": "inny, inaczej",
+        "translation-es": "diferente",
+        "translation-fr": "différent",
+        "translation-tr": "farklı",
+        "translation-ro": "altfel",
+        "translation-uz": "boshqacha",
+        "translation-hi": "अलग",
+        "translation-ar": "مختلف"
+      },
+      {
+        "word": "lösen",
+        "translation-ru": "решать / освобождать",
+        "translation-en": "to solve / loosen",
+        "translation-uk": "вирішувати",
+        "translation-pl": "rozwiązywać",
+        "translation-es": "resolver / soltar",
+        "translation-fr": "résoudre",
+        "translation-tr": "çözmek",
+        "translation-ro": "a rezolva",
+        "translation-uz": "yechmoq",
+        "translation-hi": "हल करना",
+        "translation-ar": "يحل"
+      }
+    ],
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "wisdomSummitThree.questTask1",
+        "options": [
+          "Wir haben den Student gefragt.",
+          "Wir haben dem Studenten gefragt.",
+          "Wir haben den Studenten gefragt."
+        ],
+        "answer": "Wir haben den Studenten gefragt.",
+        "tip": "wisdomSummitThree.questDescription"
+      },
+      {
+        "id": 2,
+        "type": "input",
+        "question": "wisdomSummitThree.questTask2",
+        "correctAnswer": "Kollegen",
+        "tip": "wisdomSummitThree.questDescription"
+      },
+      {
+        "id": 3,
+        "type": "input",
+        "question": "wisdomSummitThree.questTask3",
+        "correctAnswer": "Präsidenten",
+        "tip": "wisdomSummitThree.questDescription"
+      },
+      {
+        "id": 4,
+        "type": "reorder",
+        "question": "wisdomSummitThree.questTask4",
+        "words": [
+          "Bären",
+          "gesehen",
+          "im",
+          "haben",
+          "Wir",
+          "Bär",
+          "Zoo",
+          "den"
+        ],
+        "correctOrder": [
+          "Wir",
+          "haben",
+          "den",
+          "Bären",
+          "im",
+          "Zoo",
+          "gesehen"
+        ],
+        "tip": "wisdomSummitThree.questDescription"
+      },
+      {
+        "id": 5,
+        "type": "select",
+        "question": "wisdomSummitThree.questTask5",
+        "options": [
+          "Herr Lang ist unser Nachbar.",
+          "Herr Lang ist unseren Nachbarn.",
+          "Herrn Lang ist unser Nachbar."
+        ],
+        "answer": "Herr Lang ist unser Nachbar.",
+        "tip": "wisdomSummitThree.questDescription"
+      },
+      {
+        "id": 6,
+        "type": "input",
+        "question": "wisdomSummitThree.questTask6",
+        "correctAnswer": "Affen",
+        "tip": "wisdomSummitThree.questDescription"
+      },
+      {
+        "id": 7,
+        "type": "readAndAnswer",
+        "question": "wisdomSummitThree.questTask7",
+        "text": "Herr Kurz ist Polizist. Gestern half er einem Touristen aus Japan. Der Tourist hatte seinen Ausweis verloren. Herr Kurz fand den Ausweis im Bus und gab ihn dem Touristen zurück.",
+        "options": [
+          "im Park",
+          "im Bus",
+          "im Hotel"
+        ],
+        "answer": "im Bus",
+        "tip": "wisdomSummitThree.questDescription"
+      },
+      {
+        "id": 8,
+        "type": "input",
+        "question": "wisdomSummitThree.questTask8",
+        "correctAnswer": "Mensch",
+        "tip": "wisdomSummitThree.questDescription"
+      },
+      {
+        "id": 9,
+        "type": "select",
+        "question": "wisdomSummitThree.questTask9",
+        "options": [
+          "Das ist die Idee meinen Kollegen.",
+          "Das ist die Idee meines Kollegen.",
+          "Das ist die Idee meines Kollege."
+        ],
+        "answer": "Das ist die Idee meines Kollegen.",
+        "tip": "wisdomSummitThree.questDescription"
+      },
+      {
+        "id": 10,
+        "type": "input",
+        "question": "wisdomSummitThree.questTask10",
+        "correctAnswer": "Namen",
+        "tip": "wisdomSummitThree.questDescription"
+      },
+      {
+        "id": 11,
+        "type": "select",
+        "question": "wisdomSummitThree.questTask11",
+        "options": [
+          "Die Jungen spielen Fußball.",
+          "Den Jungen spielen Fußball.",
+          "Die Junge spielen Fußball."
+        ],
+        "answer": "Die Jungen spielen Fußball.",
+        "tip": "wisdomSummitThree.questDescription"
+      },
+      {
+        "id": 12,
+        "type": "reorder",
+        "question": "wisdomSummitThree.questTask12",
+        "words": [
+          "hilft",
+          "Becker",
+          "Herr",
+          "Praktikant",
+          "Praktikanten",
+          "dem",
+          "neuen"
+        ],
+        "correctOrder": [
+          "Herr",
+          "Becker",
+          "hilft",
+          "dem",
+          "neuen",
+          "Praktikanten"
+        ],
+        "tip": "wisdomSummitThree.questDescription"
+      },
+      {
+        "id": 13,
+        "type": "input",
+        "question": "wisdomSummitThree.questTask13",
+        "correctAnswer": "Experte",
+        "tip": "wisdomSummitThree.questDescription"
+      },
+      {
+        "id": 14,
+        "type": "input",
+        "question": "wisdomSummitThree.questTask14",
+        "correctAnswer": "Präsidenten",
+        "tip": "wisdomSummitThree.questDescription"
+      },
+      {
+        "id": 15,
+        "type": "input",
+        "question": "wisdomSummitThree.questTask15",
+        "correctAnswer": "Herrn",
+        "tip": "wisdomSummitThree.questDescription"
+      }
+    ]
+  },
+  {
+    "questId": "wisdom-summit-four",
+    "title": "wisdomSummitFour.questTitle",
+    "progress": "0/15",
+    "description": "wisdomSummitFour.questDescription",
+    "conditions": {
+      "goal": "wisdomSummitFour.questGoal",
+      "minCorrect": 15,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
+    "vocabulary": [
+      {
+        "word": "die Erfahrung",
+        "translation-ru": "опыт",
+        "translation-en": "experience",
+        "translation-uk": "досвід",
+        "translation-pl": "doświadczenie",
+        "translation-es": "la experiencia",
+        "translation-fr": "l’expérience",
+        "translation-tr": "deneyim",
+        "translation-ro": "experiența",
+        "translation-uz": "tajriba",
+        "translation-hi": "अनुभव",
+        "translation-ar": "الخبرة"
+      },
+      {
+        "word": "der Apfelkuchen",
+        "translation-ru": "яблочный пирог",
+        "translation-en": "apple cake",
+        "translation-uk": "яблучний пиріг",
+        "translation-pl": "szarlotka",
+        "translation-es": "la tarta de manzana",
+        "translation-fr": "le gâteau aux pommes",
+        "translation-tr": "elmalı kek",
+        "translation-ro": "prăjitura cu mere",
+        "translation-uz": "olmali pirog",
+        "translation-hi": "सेब का केक",
+        "translation-ar": "كعكة التفاح"
+      },
+      {
+        "word": "die Person",
+        "translation-ru": "человек (лицо)",
+        "translation-en": "person",
+        "translation-uk": "особа",
+        "translation-pl": "osoba",
+        "translation-es": "la persona",
+        "translation-fr": "la personne",
+        "translation-tr": "kişi",
+        "translation-ro": "persoana",
+        "translation-uz": "shaxs",
+        "translation-hi": "व्यक्ति",
+        "translation-ar": "الشخص"
+      },
+      {
+        "word": "trotz",
+        "translation-ru": "несмотря на",
+        "translation-en": "despite",
+        "translation-uk": "попри",
+        "translation-pl": "mimo",
+        "translation-es": "a pesar de",
+        "translation-fr": "malgré",
+        "translation-tr": "rağmen",
+        "translation-ro": "în ciuda",
+        "translation-uz": "qaramay",
+        "translation-hi": "के बावजूद",
+        "translation-ar": "رغم"
+      },
+      {
+        "word": "wegen",
+        "translation-ru": "из-за",
+        "translation-en": "because of",
+        "translation-uk": "через",
+        "translation-pl": "z powodu",
+        "translation-es": "por, a causa de",
+        "translation-fr": "à cause de",
+        "translation-tr": "yüzünden",
+        "translation-ro": "din cauza",
+        "translation-uz": "sababli",
+        "translation-hi": "की वजह से",
+        "translation-ar": "بسبب"
+      }
+    ],
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "wisdomSummitFour.questTask1",
+        "options": [
+          "Wir suchen eine Person mit große Erfahrung.",
+          "Wir suchen eine Person mit großen Erfahrung.",
+          "Wir suchen eine Person mit großer Erfahrung."
+        ],
+        "answer": "Wir suchen eine Person mit großer Erfahrung.",
+        "tip": "wisdomSummitFour.questDescription"
+      },
+      {
+        "id": 2,
+        "type": "input",
+        "question": "wisdomSummitFour.questTask2",
+        "correctAnswer": "kalter",
+        "tip": "wisdomSummitFour.questDescription"
+      },
+      {
+        "id": 3,
+        "type": "input",
+        "question": "wisdomSummitFour.questTask3",
+        "correctAnswer": "alte",
+        "tip": "wisdomSummitFour.questDescription"
+      },
+      {
+        "id": 4,
+        "type": "reorder",
+        "question": "wisdomSummitFour.questTask4",
+        "words": [
+          "Verkaufe",
+          "Bett",
+          "alten",
+          "altes"
+        ],
+        "correctOrder": [
+          "Verkaufe",
+          "altes",
+          "Bett"
+        ],
+        "tip": "wisdomSummitFour.questDescription"
+      },
+      {
+        "id": 5,
+        "type": "select",
+        "question": "wisdomSummitFour.questTask5",
+        "options": [
+          "Wegen starkes Windes stand der Zug.",
+          "Wegen starken Windes stand der Zug.",
+          "Wegen starkem Windes stand der Zug."
+        ],
+        "answer": "Wegen starken Windes stand der Zug.",
+        "tip": "wisdomSummitFour.questDescription"
+      },
+      {
+        "id": 6,
+        "type": "input",
+        "question": "wisdomSummitFour.questTask6",
+        "correctAnswer": "Guter",
+        "tip": "wisdomSummitFour.questDescription"
+      },
+      {
+        "id": 7,
+        "type": "readAndAnswer",
+        "question": "wisdomSummitFour.questTask7",
+        "text": "Restaurant Sonne. Heute: frische Suppe, frischer Fisch mit grünem Salat und warmer Apfelkuchen. Jeden Tag von 12 bis 15 Uhr.",
+        "options": [
+          "grüner Salat",
+          "Apfelkuchen",
+          "warme Suppe"
+        ],
+        "answer": "grüner Salat",
+        "tip": "wisdomSummitFour.questDescription"
+      },
+      {
+        "id": 8,
+        "type": "input",
+        "question": "wisdomSummitFour.questTask8",
+        "correctAnswer": "guten",
+        "tip": "wisdomSummitFour.questDescription"
+      },
+      {
+        "id": 9,
+        "type": "input",
+        "question": "wisdomSummitFour.questTask9",
+        "correctAnswer": "kleine",
+        "tip": "wisdomSummitFour.questDescription"
+      },
+      {
+        "id": 10,
+        "type": "reorder",
+        "question": "wisdomSummitFour.questTask10",
+        "words": [
+          "Suche",
+          "helles",
+          "hellen",
+          "Balkon",
+          "Zimmer",
+          "mit"
+        ],
+        "correctOrder": [
+          "Suche",
+          "helles",
+          "Zimmer",
+          "mit",
+          "Balkon"
+        ],
+        "tip": "wisdomSummitFour.questDescription"
+      },
+      {
+        "id": 11,
+        "type": "select",
+        "question": "wisdomSummitFour.questTask11",
+        "options": [
+          "Ich mag heißes Tee mit Zucker.",
+          "Ich mag heißen Tee mit Zucker.",
+          "Ich mag heißer Tee mit Zucker."
+        ],
+        "answer": "Ich mag heißen Tee mit Zucker.",
+        "tip": "wisdomSummitFour.questDescription"
+      },
+      {
+        "id": 12,
+        "type": "input",
+        "question": "wisdomSummitFour.questTask12",
+        "correctAnswer": "schlechten",
+        "tip": "wisdomSummitFour.questDescription"
+      },
+      {
+        "id": 13,
+        "type": "input",
+        "question": "wisdomSummitFour.questTask13",
+        "correctAnswer": "große",
+        "tip": "wisdomSummitFour.questDescription"
+      },
+      {
+        "id": 14,
+        "type": "input",
+        "question": "wisdomSummitFour.questTask14",
+        "correctAnswer": "frisches",
+        "tip": "wisdomSummitFour.questDescription"
+      },
+      {
+        "id": 15,
+        "type": "input",
+        "question": "wisdomSummitFour.questTask15",
+        "correctAnswer": "alten",
+        "tip": "wisdomSummitFour.questDescription"
+      }
+    ]
+  },
+  {
+    "questId": "wisdom-summit-five",
+    "title": "wisdomSummitFive.questTitle",
+    "progress": "0/15",
+    "description": "wisdomSummitFive.questDescription",
+    "conditions": {
+      "goal": "wisdomSummitFive.questGoal",
+      "minCorrect": 15,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
+    "vocabulary": [
+      {
+        "word": "die Lösung",
+        "translation-ru": "решение (задачи)",
+        "translation-en": "solution",
+        "translation-uk": "розв’язання",
+        "translation-pl": "rozwiązanie",
+        "translation-es": "la solución",
+        "translation-fr": "la solution",
+        "translation-tr": "çözüm",
+        "translation-ro": "soluția",
+        "translation-uz": "yechim",
+        "translation-hi": "हल",
+        "translation-ar": "الحل"
+      },
+      {
+        "word": "bestimmt",
+        "translation-ru": "наверняка, точно",
+        "translation-en": "surely, certainly",
+        "translation-uk": "напевно, точно",
+        "translation-pl": "na pewno",
+        "translation-es": "sin duda",
+        "translation-fr": "sûrement",
+        "translation-tr": "kesinlikle",
+        "translation-ro": "cu siguranță",
+        "translation-uz": "albatta",
+        "translation-hi": "ज़रूर",
+        "translation-ar": "بالتأكيد"
+      },
+      {
+        "word": "nachdenken",
+        "translation-ru": "думать, обдумывать",
+        "translation-en": "to think about",
+        "translation-uk": "обмірковувати",
+        "translation-pl": "zastanawiać się",
+        "translation-es": "pensar, reflexionar",
+        "translation-fr": "réfléchir",
+        "translation-tr": "düşünmek",
+        "translation-ro": "a se gândi",
+        "translation-uz": "o‘ylab ko‘rmoq",
+        "translation-hi": "सोचना",
+        "translation-ar": "يفكّر"
+      },
+      {
+        "word": "endlich",
+        "translation-ru": "наконец",
+        "translation-en": "finally",
+        "translation-uk": "нарешті",
+        "translation-pl": "wreszcie",
+        "translation-es": "por fin",
+        "translation-fr": "enfin",
+        "translation-tr": "sonunda",
+        "translation-ro": "în sfârșit",
+        "translation-uz": "nihoyat",
+        "translation-hi": "आख़िरकार",
+        "translation-ar": "أخيرًا"
+      },
+      {
+        "word": "die Kindheit",
+        "translation-ru": "детство",
+        "translation-en": "childhood",
+        "translation-uk": "дитинство",
+        "translation-pl": "dzieciństwo",
+        "translation-es": "la infancia",
+        "translation-fr": "l’enfance",
+        "translation-tr": "çocukluk",
+        "translation-ro": "copilăria",
+        "translation-uz": "bolalik",
+        "translation-hi": "बचपन",
+        "translation-ar": "الطفولة"
+      }
+    ],
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "wisdomSummitFive.questTask1",
+        "options": [
+          "Ich warte auf deiner Antwort.",
+          "Ich warte für deine Antwort.",
+          "Ich warte auf deine Antwort."
+        ],
+        "answer": "Ich warte auf deine Antwort.",
+        "tip": "wisdomSummitFive.questDescription"
+      },
+      {
+        "id": 2,
+        "type": "input",
+        "question": "wisdomSummitFive.questTask2",
+        "correctAnswer": "Wofür",
+        "tip": "wisdomSummitFive.questDescription"
+      },
+      {
+        "id": 3,
+        "type": "input",
+        "question": "wisdomSummitFive.questTask3",
+        "correctAnswer": "wem",
+        "tip": "wisdomSummitFive.questDescription"
+      },
+      {
+        "id": 4,
+        "type": "reorder",
+        "question": "wisdomSummitFive.questTask4",
+        "words": [
+          "haben",
+          "an",
+          "das",
+          "für",
+          "Problem",
+          "gefunden",
+          "Lösung",
+          "Wir",
+          "eine"
+        ],
+        "correctOrder": [
+          "Wir",
+          "haben",
+          "eine",
+          "Lösung",
+          "für",
+          "das",
+          "Problem",
+          "gefunden"
+        ],
+        "tip": "wisdomSummitFive.questDescription"
+      },
+      {
+        "id": 5,
+        "type": "select",
+        "question": "wisdomSummitFive.questTask5",
+        "options": [
+          "Sprichst du oft über die Arbeit? Ja, ich spreche oft darüber.",
+          "Sprichst du oft über die Arbeit? Ja, ich spreche oft damit.",
+          "Sprichst du oft über die Arbeit? Ja, ich spreche oft daran."
+        ],
+        "answer": "Sprichst du oft über die Arbeit? Ja, ich spreche oft darüber.",
+        "tip": "wisdomSummitFive.questDescription"
+      },
+      {
+        "id": 6,
+        "type": "input",
+        "question": "wisdomSummitFive.questTask6",
+        "correctAnswer": "darüber",
+        "tip": "wisdomSummitFive.questDescription"
+      },
+      {
+        "id": 7,
+        "type": "readAndAnswer",
+        "question": "wisdomSummitFive.questTask7",
+        "text": "Paul hat lange eine Wohnung gesucht. Jetzt hat er endlich eine gefunden, und er freut sich sehr darüber. Aber er ärgert sich über den Preis: Die Wohnung ist sehr teuer.",
+        "options": [
+          "über den Preis",
+          "über die Suche",
+          "über die Wohnung"
+        ],
+        "answer": "über den Preis",
+        "tip": "wisdomSummitFive.questDescription"
+      },
+      {
+        "id": 8,
+        "type": "input",
+        "question": "wisdomSummitFive.questTask8",
+        "correctAnswer": "daran",
+        "tip": "wisdomSummitFive.questDescription"
+      },
+      {
+        "id": 9,
+        "type": "input",
+        "question": "wisdomSummitFive.questTask9",
+        "correctAnswer": "daran",
+        "tip": "wisdomSummitFive.questDescription"
+      },
+      {
+        "id": 10,
+        "type": "reorder",
+        "question": "wisdomSummitFive.questTask10",
+        "words": [
+          "hast",
+          "telefoniert",
+          "wen",
+          "wem",
+          "Mit",
+          "du"
+        ],
+        "correctOrder": [
+          "Mit",
+          "wem",
+          "hast",
+          "du",
+          "telefoniert"
+        ],
+        "tip": "wisdomSummitFive.questDescription"
+      },
+      {
+        "id": 11,
+        "type": "select",
+        "question": "wisdomSummitFive.questTask11",
+        "options": [
+          "Worauf freust du dich am meisten?",
+          "Wofür freust du dich am meisten?",
+          "Woran freust du dich am meisten?"
+        ],
+        "answer": "Worauf freust du dich am meisten?",
+        "tip": "wisdomSummitFive.questDescription"
+      },
+      {
+        "id": 12,
+        "type": "input",
+        "question": "wisdomSummitFive.questTask12",
+        "correctAnswer": "an",
+        "tip": "wisdomSummitFive.questDescription"
+      },
+      {
+        "id": 13,
+        "type": "input",
+        "question": "wisdomSummitFive.questTask13",
+        "correctAnswer": "darüber",
+        "tip": "wisdomSummitFive.questDescription"
+      },
+      {
+        "id": 14,
+        "type": "input",
+        "question": "wisdomSummitFive.questTask14",
+        "correctAnswer": "dem",
+        "tip": "wisdomSummitFive.questDescription"
+      },
+      {
+        "id": 15,
+        "type": "input",
+        "question": "wisdomSummitFive.questTask15",
+        "correctAnswer": "wen",
+        "tip": "wisdomSummitFive.questDescription"
+      }
+    ]
+  },
+  {
+    "questId": "wisdom-summit-six",
+    "title": "wisdomSummitSix.questTitle",
+    "progress": "0/15",
+    "description": "wisdomSummitSix.questDescription",
+    "conditions": {
+      "goal": "wisdomSummitSix.questGoal",
+      "minCorrect": 15,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
+    "vocabulary": [
+      {
+        "word": "der Unterschied",
+        "translation-ru": "разница",
+        "translation-en": "difference",
+        "translation-uk": "різниця",
+        "translation-pl": "różnica",
+        "translation-es": "la diferencia",
+        "translation-fr": "la différence",
+        "translation-tr": "fark",
+        "translation-ro": "diferența",
+        "translation-uz": "farq",
+        "translation-hi": "फ़र्क़",
+        "translation-ar": "الفرق"
+      },
+      {
+        "word": "seitdem",
+        "translation-ru": "с тех пор как",
+        "translation-en": "since",
+        "translation-uk": "відтоді як",
+        "translation-pl": "odkąd",
+        "translation-es": "desde que",
+        "translation-fr": "depuis que",
+        "translation-tr": "…den beri",
+        "translation-ro": "de când",
+        "translation-uz": "…dan beri",
+        "translation-hi": "जब से",
+        "translation-ar": "منذ أن"
+      },
+      {
+        "word": "sondern",
+        "translation-ru": "а (не то, а это)",
+        "translation-en": "but (rather)",
+        "translation-uk": "а (не те, а це)",
+        "translation-pl": "lecz, tylko",
+        "translation-es": "sino",
+        "translation-fr": "mais (plutôt)",
+        "translation-tr": "bilakis",
+        "translation-ro": "ci",
+        "translation-uz": "balki",
+        "translation-hi": "बल्कि",
+        "translation-ar": "بل"
+      },
+      {
+        "word": "lieber",
+        "translation-ru": "охотнее, больше нравится",
+        "translation-en": "rather, prefer",
+        "translation-uk": "охочіше, більше подобається",
+        "translation-pl": "chętniej, wolę",
+        "translation-es": "preferir, con más gusto",
+        "translation-fr": "plutôt, préférer",
+        "translation-tr": "tercihen, daha çok sevmek",
+        "translation-ro": "mai degrabă, prefer",
+        "translation-uz": "afzal ko‘rib",
+        "translation-hi": "ज़्यादा पसंद से",
+        "translation-ar": "يفضّل"
+      },
+      {
+        "word": "kennen",
+        "translation-ru": "знать",
+        "translation-en": "to know",
+        "translation-uk": "знати",
+        "translation-pl": "znać",
+        "translation-es": "conocer",
+        "translation-fr": "connaître",
+        "translation-tr": "tanımak / bilmek",
+        "translation-ro": "a cunoaște",
+        "translation-uz": "tanimoq",
+        "translation-hi": "जानना",
+        "translation-ar": "يعرف"
+      }
+    ],
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "wisdomSummitSix.questTask1",
+        "options": [
+          "Er kocht nicht nur gut, sondern auch backt Kuchen.",
+          "Er kocht nicht nur gut, oder backt auch Kuchen.",
+          "Er kocht nicht nur gut, sondern backt auch Kuchen."
+        ],
+        "answer": "Er kocht nicht nur gut, sondern backt auch Kuchen.",
+        "tip": "wisdomSummitSix.questDescription"
+      },
+      {
+        "id": 2,
+        "type": "input",
+        "question": "wisdomSummitSix.questTask2",
+        "correctAnswer": "noch",
+        "tip": "wisdomSummitSix.questDescription"
+      },
+      {
+        "id": 3,
+        "type": "input",
+        "question": "wisdomSummitSix.questTask3",
+        "correctAnswer": "desto",
+        "tip": "wisdomSummitSix.questDescription"
+      },
+      {
+        "id": 4,
+        "type": "reorder",
+        "question": "wisdomSummitSix.questTask4",
+        "words": [
+          "dem",
+          "mit",
+          "ohne",
+          "Taxi",
+          "zu",
+          "fahren",
+          "Statt",
+          "wir",
+          "warten"
+        ],
+        "correctOrder": [
+          "Statt",
+          "zu",
+          "warten",
+          "fahren",
+          "wir",
+          "mit",
+          "dem",
+          "Taxi"
+        ],
+        "tip": "wisdomSummitSix.questDescription"
+      },
+      {
+        "id": 5,
+        "type": "select",
+        "question": "wisdomSummitSix.questTask5",
+        "options": [
+          "Seitdem ich habe eine neue Arbeit, habe ich wenig Zeit für meine Familie.",
+          "Seitdem ich eine neue Arbeit habe, ich habe wenig Zeit für meine Familie.",
+          "Seitdem ich eine neue Arbeit habe, habe ich wenig Zeit für meine Familie."
+        ],
+        "answer": "Seitdem ich eine neue Arbeit habe, habe ich wenig Zeit für meine Familie.",
+        "tip": "wisdomSummitSix.questDescription"
+      },
+      {
+        "id": 6,
+        "type": "input",
+        "question": "wisdomSummitSix.questTask6",
+        "correctAnswer": "entweder",
+        "tip": "wisdomSummitSix.questDescription"
+      },
+      {
+        "id": 7,
+        "type": "readAndAnswer",
+        "question": "wisdomSummitSix.questTask7",
+        "text": "Der Unterschied zwischen Lisa und ihrer Schwester ist groß. Lisa liest nicht nur gern, sondern schreibt auch lange Briefe. Ihre Schwester liest weder Bücher noch Zeitungen. Sie macht lieber Sport.",
+        "options": [
+          "Zeitungen",
+          "Sport",
+          "Bücher"
+        ],
+        "answer": "Sport",
+        "tip": "wisdomSummitSix.questDescription"
+      },
+      {
+        "id": 8,
+        "type": "input",
+        "question": "wisdomSummitSix.questTask8",
+        "correctAnswer": "bis",
+        "tip": "wisdomSummitSix.questDescription"
+      },
+      {
+        "id": 9,
+        "type": "input",
+        "question": "wisdomSummitSix.questTask9",
+        "correctAnswer": "sage",
+        "tip": "wisdomSummitSix.questDescription"
+      },
+      {
+        "id": 10,
+        "type": "reorder",
+        "question": "wisdomSummitSix.questTask10",
+        "words": [
+          "ist",
+          "Unterschied",
+          "Der",
+          "groß",
+          "sehr",
+          "Die",
+          "nicht"
+        ],
+        "correctOrder": [
+          "Der",
+          "Unterschied",
+          "ist",
+          "nicht",
+          "sehr",
+          "groß"
+        ],
+        "tip": "wisdomSummitSix.questDescription"
+      },
+      {
+        "id": 11,
+        "type": "select",
+        "question": "wisdomSummitSix.questTask11",
+        "options": [
+          "Er ist gegangen, ohne zu ein Wort sagen.",
+          "Er ist gegangen, ohne ein Wort zu sagen.",
+          "Er ist gegangen, ohne ein Wort sagen."
+        ],
+        "answer": "Er ist gegangen, ohne ein Wort zu sagen.",
+        "tip": "wisdomSummitSix.questDescription"
+      },
+      {
+        "id": 12,
+        "type": "input",
+        "question": "wisdomSummitSix.questTask12",
+        "correctAnswer": "sondern",
+        "tip": "wisdomSummitSix.questDescription"
+      },
+      {
+        "id": 13,
+        "type": "input",
+        "question": "wisdomSummitSix.questTask13",
+        "correctAnswer": "desto",
+        "tip": "wisdomSummitSix.questDescription"
+      },
+      {
+        "id": 14,
+        "type": "input",
+        "question": "wisdomSummitSix.questTask14",
+        "correctAnswer": "zu",
+        "tip": "wisdomSummitSix.questDescription"
+      },
+      {
+        "id": 15,
+        "type": "input",
+        "question": "wisdomSummitSix.questTask15",
+        "correctAnswer": "Seitdem",
+        "tip": "wisdomSummitSix.questDescription"
+      }
+    ]
+  },
+  {
+    "questId": "wisdom-summit-seven",
+    "title": "wisdomSummitSeven.questTitle",
+    "progress": "0/15",
+    "description": "wisdomSummitSeven.questDescription",
+    "conditions": {
+      "goal": "wisdomSummitSeven.questGoal",
+      "minCorrect": 15,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
+    "vocabulary": [
+      {
+        "word": "der Kurs",
+        "translation-ru": "курс",
+        "translation-en": "course",
+        "translation-uk": "курс",
+        "translation-pl": "kurs",
+        "translation-es": "el curso",
+        "translation-fr": "le cours",
+        "translation-tr": "kurs",
+        "translation-ro": "cursul",
+        "translation-uz": "kurs",
+        "translation-hi": "कोर्स",
+        "translation-ar": "الدورة"
+      },
+      {
+        "word": "die Rechnung",
+        "translation-ru": "счёт",
+        "translation-en": "bill",
+        "translation-uk": "рахунок",
+        "translation-pl": "rachunek",
+        "translation-es": "la cuenta",
+        "translation-fr": "l’addition",
+        "translation-tr": "hesap",
+        "translation-ro": "nota de plată",
+        "translation-uz": "hisob",
+        "translation-hi": "बिल",
+        "translation-ar": "الفاتورة"
+      },
+      {
+        "word": "falsch",
+        "translation-ru": "неправильный",
+        "translation-en": "wrong",
+        "translation-uk": "неправильний",
+        "translation-pl": "błędny",
+        "translation-es": "equivocado",
+        "translation-fr": "faux",
+        "translation-tr": "yanlış",
+        "translation-ro": "greșit",
+        "translation-uz": "noto‘g‘ri",
+        "translation-hi": "ग़लत",
+        "translation-ar": "خاطئ"
+      },
+      {
+        "word": "das Leben",
+        "translation-ru": "жизнь",
+        "translation-en": "life",
+        "translation-uk": "життя",
+        "translation-pl": "życie",
+        "translation-es": "la vida",
+        "translation-fr": "la vie",
+        "translation-tr": "hayat",
+        "translation-ro": "viața",
+        "translation-uz": "hayot",
+        "translation-hi": "ज़िंदगी",
+        "translation-ar": "الحياة"
+      },
+      {
+        "word": "die Hilfe",
+        "translation-ru": "помощь",
+        "translation-en": "help",
+        "translation-uk": "допомога",
+        "translation-pl": "pomoc",
+        "translation-es": "la ayuda",
+        "translation-fr": "l’aide",
+        "translation-tr": "yardım",
+        "translation-ro": "ajutorul",
+        "translation-uz": "yordam",
+        "translation-hi": "मदद",
+        "translation-ar": "المساعدة"
+      }
+    ],
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "wisdomSummitSeven.questTask1",
+        "options": [
+          "Danke für Ihre Hilfe und Freundlichung.",
+          "Danke für Ihre Hilfe und Freundlichheit.",
+          "Danke für Ihre Hilfe und Freundlichkeit."
+        ],
+        "answer": "Danke für Ihre Hilfe und Freundlichkeit.",
+        "tip": "wisdomSummitSeven.questDescription"
+      },
+      {
+        "id": 2,
+        "type": "input",
+        "question": "wisdomSummitSeven.questTask2",
+        "correctAnswer": "Einladung",
+        "tip": "wisdomSummitSeven.questDescription"
+      },
+      {
+        "id": 3,
+        "type": "input",
+        "question": "wisdomSummitSeven.questTask3",
+        "correctAnswer": "machbar",
+        "tip": "wisdomSummitSeven.questDescription"
+      },
+      {
+        "id": 4,
+        "type": "reorder",
+        "question": "wisdomSummitSeven.questTask4",
+        "words": [
+          "sind",
+          "essig",
+          "essbar",
+          "nicht",
+          "Viele",
+          "Wald",
+          "Pilze",
+          "im"
+        ],
+        "correctOrder": [
+          "Viele",
+          "Pilze",
+          "im",
+          "Wald",
+          "sind",
+          "nicht",
+          "essbar"
+        ],
+        "tip": "wisdomSummitSeven.questDescription"
+      },
+      {
+        "id": 5,
+        "type": "select",
+        "question": "wisdomSummitSeven.questTask5",
+        "options": [
+          "Er geht taglich zu Fuß.",
+          "Er geht tägig zu Fuß.",
+          "Er geht täglich zu Fuß."
+        ],
+        "answer": "Er geht täglich zu Fuß.",
+        "tip": "wisdomSummitSeven.questDescription"
+      },
+      {
+        "id": 6,
+        "type": "input",
+        "question": "wisdomSummitSeven.questTask6",
+        "correctAnswer": "Erklärung",
+        "tip": "wisdomSummitSeven.questDescription"
+      },
+      {
+        "id": 7,
+        "type": "readAndAnswer",
+        "question": "wisdomSummitSeven.questTask7",
+        "text": "Im Restaurant war alles schlecht. Der Kellner war unfreundlich und unpünktlich. Die Suppe war zu salzig. Am Ende war die Rechnung falsch. Wir waren sehr unzufrieden.",
+        "options": [
+          "zu salzig",
+          "kalt",
+          "zu süß"
+        ],
+        "answer": "zu salzig",
+        "tip": "wisdomSummitSeven.questDescription"
+      },
+      {
+        "id": 8,
+        "type": "input",
+        "question": "wisdomSummitSeven.questTask8",
+        "correctAnswer": "unmöglich",
+        "tip": "wisdomSummitSeven.questDescription"
+      },
+      {
+        "id": 9,
+        "type": "select",
+        "question": "wisdomSummitSeven.questTask9",
+        "options": [
+          "Das ist unwichtigkeit.",
+          "Das ist unwichtig.",
+          "Das ist nichtwichtig."
+        ],
+        "answer": "Das ist unwichtig.",
+        "tip": "wisdomSummitSeven.questDescription"
+      },
+      {
+        "id": 10,
+        "type": "input",
+        "question": "wisdomSummitSeven.questTask10",
+        "correctAnswer": "monatlich",
+        "tip": "wisdomSummitSeven.questDescription"
+      },
+      {
+        "id": 11,
+        "type": "select",
+        "question": "wisdomSummitSeven.questTask11",
+        "options": [
+          "Das Krankheit war nicht gefährlich.",
+          "Die Krankheit war nicht gefährlich.",
+          "Die Krankkeit war nicht gefährlich."
+        ],
+        "answer": "Die Krankheit war nicht gefährlich.",
+        "tip": "wisdomSummitSeven.questDescription"
+      },
+      {
+        "id": 12,
+        "type": "reorder",
+        "question": "wisdomSummitSeven.questTask12",
+        "words": [
+          "war",
+          "Das",
+          "Wetter",
+          "windig",
+          "windlich",
+          "kalt",
+          "und"
+        ],
+        "correctOrder": [
+          "Das",
+          "Wetter",
+          "war",
+          "windig",
+          "und",
+          "kalt"
+        ],
+        "tip": "wisdomSummitSeven.questDescription"
+      },
+      {
+        "id": 13,
+        "type": "input",
+        "question": "wisdomSummitSeven.questTask13",
+        "correctAnswer": "Lösung",
+        "tip": "wisdomSummitSeven.questDescription"
+      },
+      {
+        "id": 14,
+        "type": "input",
+        "question": "wisdomSummitSeven.questTask14",
+        "correctAnswer": "Gesundheit",
+        "tip": "wisdomSummitSeven.questDescription"
+      },
+      {
+        "id": 15,
+        "type": "input",
+        "question": "wisdomSummitSeven.questTask15",
+        "correctAnswer": "erreichbar",
+        "tip": "wisdomSummitSeven.questDescription"
+      }
+    ]
+  },
+  {
+    "questId": "wisdom-summit-eight",
+    "title": "wisdomSummitEight.questTitle",
+    "progress": "0/15",
+    "description": "wisdomSummitEight.questDescription",
+    "conditions": {
+      "goal": "wisdomSummitEight.questGoal",
+      "minCorrect": 15,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
+    "vocabulary": [
+      {
+        "word": "ehrlich gesagt",
+        "translation-ru": "честно говоря",
+        "translation-en": "to be honest",
+        "translation-uk": "чесно кажучи",
+        "translation-pl": "szczerze mówiąc",
+        "translation-es": "sinceramente",
+        "translation-fr": "honnêtement",
+        "translation-tr": "açıkçası",
+        "translation-ro": "sincer să fiu",
+        "translation-uz": "rostini aytsam",
+        "translation-hi": "सच कहूँ तो",
+        "translation-ar": "بصراحة"
+      },
+      {
+        "word": "der Vorteil",
+        "translation-ru": "преимущество, плюс",
+        "translation-en": "advantage",
+        "translation-uk": "перевага",
+        "translation-pl": "zaleta",
+        "translation-es": "la ventaja",
+        "translation-fr": "l’avantage",
+        "translation-tr": "avantaj",
+        "translation-ro": "avantajul",
+        "translation-uz": "afzallik",
+        "translation-hi": "फ़ायदा",
+        "translation-ar": "الميزة"
+      },
+      {
+        "word": "der Nachteil",
+        "translation-ru": "недостаток, минус",
+        "translation-en": "disadvantage",
+        "translation-uk": "недолік",
+        "translation-pl": "wada",
+        "translation-es": "la desventaja",
+        "translation-fr": "l’inconvénient",
+        "translation-tr": "dezavantaj",
+        "translation-ro": "dezavantajul",
+        "translation-uz": "kamchilik",
+        "translation-hi": "नुक़सान",
+        "translation-ar": "العيب"
+      },
+      {
+        "word": "wahrscheinlich",
+        "translation-ru": "вероятно",
+        "translation-en": "probably",
+        "translation-uk": "ймовірно",
+        "translation-pl": "prawdopodobnie",
+        "translation-es": "probablemente",
+        "translation-fr": "probablement",
+        "translation-tr": "muhtemelen",
+        "translation-ro": "probabil",
+        "translation-uz": "ehtimol",
+        "translation-hi": "संभवतः",
+        "translation-ar": "على الأرجح"
+      },
+      {
+        "word": "bestimmt",
+        "translation-ru": "наверняка, точно",
+        "translation-en": "surely, certainly",
+        "translation-uk": "напевно, точно",
+        "translation-pl": "na pewno",
+        "translation-es": "sin duda",
+        "translation-fr": "sûrement",
+        "translation-tr": "kesinlikle",
+        "translation-ro": "cu siguranță",
+        "translation-uz": "albatta",
+        "translation-hi": "ज़रूर",
+        "translation-ar": "بالتأكيد"
+      }
+    ],
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "wisdomSummitEight.questTask1",
+        "options": [
+          "Ehrlich gesagt ich finde, dass der Film langweilig war.",
+          "Ehrlich gesagt finde ich, dass der Film war langweilig.",
+          "Ehrlich gesagt finde ich, dass der Film langweilig war."
+        ],
+        "answer": "Ehrlich gesagt finde ich, dass der Film langweilig war.",
+        "tip": "wisdomSummitEight.questDescription"
+      },
+      {
+        "id": 2,
+        "type": "input",
+        "question": "wisdomSummitEight.questTask2",
+        "correctAnswer": "nach",
+        "tip": "wisdomSummitEight.questDescription"
+      },
+      {
+        "id": 3,
+        "type": "input",
+        "question": "wisdomSummitEight.questTask3",
+        "correctAnswer": "hast",
+        "tip": "wisdomSummitEight.questDescription"
+      },
+      {
+        "id": 4,
+        "type": "reorder",
+        "question": "wisdomSummitEight.questTask4",
+        "words": [
+          "sein",
+          "Kinder",
+          "im",
+          "wird",
+          "wohl",
+          "Die",
+          "Garten",
+          "werden"
+        ],
+        "correctOrder": [
+          "Die",
+          "Kinder",
+          "werden",
+          "wohl",
+          "im",
+          "Garten",
+          "sein"
+        ],
+        "tip": "wisdomSummitEight.questDescription"
+      },
+      {
+        "id": 5,
+        "type": "select",
+        "question": "wisdomSummitEight.questTask5",
+        "options": [
+          "Ich weiß nicht, wenn der Laden heute offen ist.",
+          "Ich weiß nicht, ob ist der Laden heute offen.",
+          "Ich weiß nicht, ob der Laden heute offen ist."
+        ],
+        "answer": "Ich weiß nicht, ob der Laden heute offen ist.",
+        "tip": "wisdomSummitEight.questDescription"
+      },
+      {
+        "id": 6,
+        "type": "input",
+        "question": "wisdomSummitEight.questTask6",
+        "correctAnswer": "andererseits",
+        "tip": "wisdomSummitEight.questDescription"
+      },
+      {
+        "id": 7,
+        "type": "readAndAnswer",
+        "question": "wisdomSummitEight.questTask7",
+        "text": "Forum: Sollen Kinder ein Handy haben? Jonas: „Meiner Meinung nach brauchen Kinder unter zwölf Jahren kein Handy. Ein Vorteil ist, dass die Eltern sie immer anrufen können. Aber ein großer Nachteil ist, dass die Kinder dann weniger draußen spielen.“",
+        "options": [
+          "Handys sind zu teuer.",
+          "Die Kinder spielen weniger draußen.",
+          "Die Eltern können anrufen."
+        ],
+        "answer": "Die Kinder spielen weniger draußen.",
+        "tip": "wisdomSummitEight.questDescription"
+      },
+      {
+        "id": 8,
+        "type": "input",
+        "question": "wisdomSummitEight.questTask8",
+        "correctAnswer": "wahrscheinlich",
+        "tip": "wisdomSummitEight.questDescription"
+      },
+      {
+        "id": 9,
+        "type": "input",
+        "question": "wisdomSummitEight.questTask9",
+        "correctAnswer": "Meinung",
+        "tip": "wisdomSummitEight.questDescription"
+      },
+      {
+        "id": 10,
+        "type": "reorder",
+        "question": "wisdomSummitEight.questTask10",
+        "words": [
+          "gesagt",
+          "habe",
+          "Ehrlich",
+          "bin",
+          "Zeit",
+          "keine",
+          "ich"
+        ],
+        "correctOrder": [
+          "Ehrlich",
+          "gesagt",
+          "habe",
+          "ich",
+          "keine",
+          "Zeit"
+        ],
+        "tip": "wisdomSummitEight.questDescription"
+      },
+      {
+        "id": 11,
+        "type": "select",
+        "question": "wisdomSummitEight.questTask11",
+        "options": [
+          "Ja, aber ich finde, dass es zu spät ist.",
+          "Ja, aber ich finde, dass zu spät es ist.",
+          "Ja, aber ich finde, dass es ist zu spät."
+        ],
+        "answer": "Ja, aber ich finde, dass es zu spät ist.",
+        "tip": "wisdomSummitEight.questDescription"
+      },
+      {
+        "id": 12,
+        "type": "input",
+        "question": "wisdomSummitEight.questTask12",
+        "correctAnswer": "Nachteil",
+        "tip": "wisdomSummitEight.questDescription"
+      },
+      {
+        "id": 13,
+        "type": "input",
+        "question": "wisdomSummitEight.questTask13",
+        "correctAnswer": "bestimmt",
+        "tip": "wisdomSummitEight.questDescription"
+      },
+      {
+        "id": 14,
+        "type": "input",
+        "question": "wisdomSummitEight.questTask14",
+        "correctAnswer": "haben",
+        "tip": "wisdomSummitEight.questDescription"
+      },
+      {
+        "id": 15,
+        "type": "input",
+        "question": "wisdomSummitEight.questTask15",
+        "correctAnswer": "findest",
+        "tip": "wisdomSummitEight.questDescription"
+      }
+    ]
+  },
+  {
+    "questId": "wisdom-summit-nine",
+    "title": "wisdomSummitNine.questTitle",
+    "progress": "0/15",
+    "description": "wisdomSummitNine.questDescription",
+    "conditions": {
+      "goal": "wisdomSummitNine.questGoal",
+      "minCorrect": 15,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
+    "vocabulary": [
+      {
+        "word": "das Ziel",
+        "translation-ru": "цель",
+        "translation-en": "goal",
+        "translation-uk": "мета",
+        "translation-pl": "cel",
+        "translation-es": "el objetivo",
+        "translation-fr": "le but",
+        "translation-tr": "hedef",
+        "translation-ro": "scopul",
+        "translation-uz": "maqsad",
+        "translation-hi": "लक्ष्य",
+        "translation-ar": "الهدف"
+      },
+      {
+        "word": "seitdem",
+        "translation-ru": "с тех пор как",
+        "translation-en": "since",
+        "translation-uk": "відтоді як",
+        "translation-pl": "odkąd",
+        "translation-es": "desde que",
+        "translation-fr": "depuis que",
+        "translation-tr": "…den beri",
+        "translation-ro": "de când",
+        "translation-uz": "…dan beri",
+        "translation-hi": "जब से",
+        "translation-ar": "منذ أن"
+      },
+      {
+        "word": "wegen",
+        "translation-ru": "из-за",
+        "translation-en": "because of",
+        "translation-uk": "через",
+        "translation-pl": "z powodu",
+        "translation-es": "por, a causa de",
+        "translation-fr": "à cause de",
+        "translation-tr": "yüzünden",
+        "translation-ro": "din cauza",
+        "translation-uz": "sababli",
+        "translation-hi": "की वजह से",
+        "translation-ar": "بسبب"
+      },
+      {
+        "word": "prüfen",
+        "translation-ru": "проверять",
+        "translation-en": "to check",
+        "translation-uk": "перевіряти",
+        "translation-pl": "sprawdzać",
+        "translation-es": "revisar",
+        "translation-fr": "vérifier",
+        "translation-tr": "kontrol etmek",
+        "translation-ro": "a verifica",
+        "translation-uz": "tekshirmoq",
+        "translation-hi": "जाँचना",
+        "translation-ar": "يفحص، يتحقّق"
+      },
+      {
+        "word": "lieber",
+        "translation-ru": "охотнее, больше нравится",
+        "translation-en": "rather, prefer",
+        "translation-uk": "охочіше, більше подобається",
+        "translation-pl": "chętniej, wolę",
+        "translation-es": "preferir, con más gusto",
+        "translation-fr": "plutôt, préférer",
+        "translation-tr": "tercihen, daha çok sevmek",
+        "translation-ro": "mai degrabă, prefer",
+        "translation-uz": "afzal ko‘rib",
+        "translation-hi": "ज़्यादा पसंद से",
+        "translation-ar": "يفضّل"
+      }
+    ],
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "wisdomSummitNine.questTask1",
+        "options": [
+          "Wenn ich den Zug nicht verpasst wäre, wäre ich pünktlich gekommen.",
+          "Wenn ich den Zug nicht verpasst hätte, hätte ich pünktlich gekommen.",
+          "Wenn ich den Zug nicht verpasst hätte, wäre ich pünktlich gekommen."
+        ],
+        "answer": "Wenn ich den Zug nicht verpasst hätte, wäre ich pünktlich gekommen.",
+        "tip": "wisdomSummitNine.questDescription"
+      },
+      {
+        "id": 2,
+        "type": "input",
+        "question": "wisdomSummitNine.questTask2",
+        "correctAnswer": "zu",
+        "tip": "wisdomSummitNine.questDescription"
+      },
+      {
+        "id": 3,
+        "type": "input",
+        "question": "wisdomSummitNine.questTask3",
+        "correctAnswer": "schönem",
+        "tip": "wisdomSummitNine.questDescription"
+      },
+      {
+        "id": 4,
+        "type": "reorder",
+        "question": "wisdomSummitNine.questTask4",
+        "words": [
+          "oder",
+          "Lust",
+          "noch",
+          "Wir",
+          "Zeit",
+          "weder",
+          "haben"
+        ],
+        "correctOrder": [
+          "Wir",
+          "haben",
+          "weder",
+          "Zeit",
+          "noch",
+          "Lust"
+        ],
+        "tip": "wisdomSummitNine.questDescription"
+      },
+      {
+        "id": 5,
+        "type": "select",
+        "question": "wisdomSummitNine.questTask5",
+        "options": [
+          "Wegen des Stau sind wir zu spät zum Konzert gekommen.",
+          "Wegen der Staus sind wir zu spät zum Konzert gekommen.",
+          "Wegen des Staus sind wir zu spät zum Konzert gekommen."
+        ],
+        "answer": "Wegen des Staus sind wir zu spät zum Konzert gekommen.",
+        "tip": "wisdomSummitNine.questDescription"
+      },
+      {
+        "id": 6,
+        "type": "input",
+        "question": "wisdomSummitNine.questTask6",
+        "correctAnswer": "wen",
+        "tip": "wisdomSummitNine.questDescription"
+      },
+      {
+        "id": 7,
+        "type": "readAndAnswer",
+        "question": "wisdomSummitNine.questTask7",
+        "text": "Lieber Max, seitdem ich in München arbeite, habe ich leider wenig Zeit. Je mehr ich arbeite, desto müder bin ich am Abend. Aber mein Ziel ist klar: In zwei Jahren möchte ich ein kleines Café haben. Deine Anna",
+        "options": [
+          "ein kleines Café haben",
+          "weniger arbeiten",
+          "nach Berlin ziehen"
+        ],
+        "answer": "ein kleines Café haben",
+        "tip": "wisdomSummitNine.questDescription"
+      },
+      {
+        "id": 8,
+        "type": "input",
+        "question": "wisdomSummitNine.questTask8",
+        "correctAnswer": "renoviert",
+        "tip": "wisdomSummitNine.questDescription"
+      },
+      {
+        "id": 9,
+        "type": "select",
+        "question": "wisdomSummitNine.questTask9",
+        "options": [
+          "Das ist die Frau, mit der ich arbeite.",
+          "Das ist die Frau, mit der arbeite ich.",
+          "Das ist die Frau, mit die ich arbeite."
+        ],
+        "answer": "Das ist die Frau, mit der ich arbeite.",
+        "tip": "wisdomSummitNine.questDescription"
+      },
+      {
+        "id": 10,
+        "type": "input",
+        "question": "wisdomSummitNine.questTask10",
+        "correctAnswer": "um",
+        "tip": "wisdomSummitNine.questDescription"
+      },
+      {
+        "id": 11,
+        "type": "reorder",
+        "question": "wisdomSummitNine.questTask11",
+        "words": [
+          "zu",
+          "Ich",
+          "keine",
+          "um",
+          "Lust",
+          "kochen",
+          "habe",
+          "heute"
+        ],
+        "correctOrder": [
+          "Ich",
+          "habe",
+          "keine",
+          "Lust",
+          "heute",
+          "zu",
+          "kochen"
+        ],
+        "tip": "wisdomSummitNine.questDescription"
+      },
+      {
+        "id": 12,
+        "type": "select",
+        "question": "wisdomSummitNine.questTask12",
+        "options": [
+          "Sie lässt ihr Fahrrad zu prüfen.",
+          "Sie lässt ihr Fahrrad prüfen.",
+          "Sie lässt ihr Fahrrad geprüft."
+        ],
+        "answer": "Sie lässt ihr Fahrrad prüfen.",
+        "tip": "wisdomSummitNine.questDescription"
+      },
+      {
+        "id": 13,
+        "type": "readAndAnswer",
+        "question": "wisdomSummitNine.questTask13",
+        "text": "Herr Wagner war gestern beim Arzt. Der Arzt hat gesagt: „Sie arbeiten zu viel. Sie sollten mehr schlafen und Sport machen.“ Jetzt geht Herr Wagner jeden Abend spazieren.",
+        "options": [
+          "mehr schlafen und Sport machen",
+          "weniger essen",
+          "mehr arbeiten"
+        ],
+        "answer": "mehr schlafen und Sport machen",
+        "tip": "wisdomSummitNine.questDescription"
+      },
+      {
+        "id": 14,
+        "type": "input",
+        "question": "wisdomSummitNine.questTask14",
+        "correctAnswer": "hatte",
+        "tip": "wisdomSummitNine.questDescription"
+      },
+      {
+        "id": 15,
+        "type": "input",
+        "question": "wisdomSummitNine.questTask15",
+        "correctAnswer": "Obwohl",
+        "tip": "wisdomSummitNine.questDescription"
+      }
+    ]
+  },
+  {
+    "questId": "wisdom-summit-ten",
+    "title": "wisdomSummitTen.questTitle",
+    "progress": "0/15",
+    "description": "wisdomSummitTen.questDescription",
+    "conditions": {
+      "goal": "wisdomSummitTen.questGoal",
+      "minCorrect": 15,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
+    "vocabulary": [
+      {
+        "word": "die Bewerbung",
+        "translation-ru": "заявление на работу",
+        "translation-en": "job application",
+        "translation-uk": "заява на роботу",
+        "translation-pl": "podanie o pracę",
+        "translation-es": "la solicitud de empleo",
+        "translation-fr": "la candidature",
+        "translation-tr": "iş başvurusu",
+        "translation-ro": "candidatura",
+        "translation-uz": "ishga ariza",
+        "translation-hi": "नौकरी का आवेदन",
+        "translation-ar": "طلب التوظيف"
+      },
+      {
+        "word": "Sehr geehrte Frau…",
+        "translation-ru": "Уважаемая госпожа…",
+        "translation-en": "Dear Ms…",
+        "translation-uk": "Шановна пані…",
+        "translation-pl": "Szanowna Pani…",
+        "translation-es": "Estimada señora…",
+        "translation-fr": "Madame…",
+        "translation-tr": "Sayın … Hanım",
+        "translation-ro": "Stimată doamnă…",
+        "translation-uz": "Hurmatli … xonim",
+        "translation-hi": "आदरणीय श्रीमती…",
+        "translation-ar": "السيدة المحترمة…"
+      },
+      {
+        "word": "sondern",
+        "translation-ru": "а (не то, а это)",
+        "translation-en": "but (rather)",
+        "translation-uk": "а (не те, а це)",
+        "translation-pl": "lecz, tylko",
+        "translation-es": "sino",
+        "translation-fr": "mais (plutôt)",
+        "translation-tr": "bilakis",
+        "translation-ro": "ci",
+        "translation-uz": "balki",
+        "translation-hi": "बल्कि",
+        "translation-ar": "بل"
+      },
+      {
+        "word": "grüßen",
+        "translation-ru": "приветствовать",
+        "translation-en": "to greet",
+        "translation-uk": "вітати",
+        "translation-pl": "pozdrawiać / witać",
+        "translation-es": "saludar",
+        "translation-fr": "saluer",
+        "translation-tr": "selamlamak",
+        "translation-ro": "a saluta",
+        "translation-uz": "salomlashmoq",
+        "translation-hi": "नमस्ते करना",
+        "translation-ar": "يسلم على / يحيي"
+      },
+      {
+        "word": "geehrt",
+        "translation-ru": "уважаемый",
+        "translation-en": "dear (formal)",
+        "translation-uk": "шановний",
+        "translation-pl": "szanowny",
+        "translation-es": "estimado",
+        "translation-fr": "cher",
+        "translation-tr": "sayın",
+        "translation-ro": "stimat",
+        "translation-uz": "hurmatli",
+        "translation-hi": "आदरणीय",
+        "translation-ar": "المحترم"
+      }
+    ],
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "wisdomSummitTen.questTask1",
+        "options": [
+          "Ich möchte wissen, wann beginnt der Kurs.",
+          "Ich möchte wissen, wenn der Kurs beginnt.",
+          "Ich möchte wissen, wann der Kurs beginnt."
+        ],
+        "answer": "Ich möchte wissen, wann der Kurs beginnt.",
+        "tip": "wisdomSummitTen.questDescription"
+      },
+      {
+        "id": 2,
+        "type": "input",
+        "question": "wisdomSummitTen.questTask2",
+        "correctAnswer": "für",
+        "tip": "wisdomSummitTen.questDescription"
+      },
+      {
+        "id": 3,
+        "type": "input",
+        "question": "wisdomSummitTen.questTask3",
+        "correctAnswer": "wohnt",
+        "tip": "wisdomSummitTen.questDescription"
+      },
+      {
+        "id": 4,
+        "type": "reorder",
+        "question": "wisdomSummitTen.questTask4",
+        "words": [
+          "weil",
+          "Ich",
+          "schreibe",
+          "Anzeige",
+          "gelesen",
+          "Ihre",
+          "ich",
+          "denn",
+          "habe",
+          "Ihnen"
+        ],
+        "correctOrder": [
+          "Ich",
+          "schreibe",
+          "Ihnen",
+          "weil",
+          "ich",
+          "Ihre",
+          "Anzeige",
+          "gelesen",
+          "habe"
+        ],
+        "tip": "wisdomSummitTen.questDescription"
+      },
+      {
+        "id": 5,
+        "type": "select",
+        "question": "wisdomSummitTen.questTask5",
+        "options": [
+          "Ich bin meine Bewerbung letzte Woche geschickt.",
+          "Ich habe meine Bewerbung letzte Woche schicken.",
+          "Ich habe meine Bewerbung letzte Woche geschickt."
+        ],
+        "answer": "Ich habe meine Bewerbung letzte Woche geschickt.",
+        "tip": "wisdomSummitTen.questDescription"
+      },
+      {
+        "id": 6,
+        "type": "input",
+        "question": "wisdomSummitTen.questTask6",
+        "correctAnswer": "Leider",
+        "tip": "wisdomSummitTen.questDescription"
+      },
+      {
+        "id": 7,
+        "type": "readAndAnswer",
+        "question": "wisdomSummitTen.questTask7",
+        "text": "Sehr geehrte Frau Schulz, ich habe Ihre Anzeige gelesen und interessiere mich sehr für die Stelle im Hotel. Ich habe schon zwei Jahre in einem Restaurant gearbeitet. Ich spreche nicht nur Deutsch, sondern auch Englisch und Spanisch. Ich könnte ab März anfangen. Mit freundlichen Grüßen, Ana Lopez",
+        "options": [
+          "ab Januar",
+          "ab März",
+          "ab Mai"
+        ],
+        "answer": "ab März",
+        "tip": "wisdomSummitTen.questDescription"
+      },
+      {
+        "id": 8,
+        "type": "input",
+        "question": "wisdomSummitTen.questTask8",
+        "correctAnswer": "könnte",
+        "tip": "wisdomSummitTen.questDescription"
+      },
+      {
+        "id": 9,
+        "type": "input",
+        "question": "wisdomSummitTen.questTask9",
+        "correctAnswer": "den",
+        "tip": "wisdomSummitTen.questDescription"
+      },
+      {
+        "id": 10,
+        "type": "reorder",
+        "question": "wisdomSummitTen.questTask10",
+        "words": [
+          "zu",
+          "würden",
+          "werden",
+          "uns",
+          "Sie",
+          "Wir",
+          "sehen",
+          "freuen"
+        ],
+        "correctOrder": [
+          "Wir",
+          "würden",
+          "uns",
+          "freuen",
+          "Sie",
+          "zu",
+          "sehen"
+        ],
+        "tip": "wisdomSummitTen.questDescription"
+      },
+      {
+        "id": 11,
+        "type": "select",
+        "question": "wisdomSummitTen.questTask11",
+        "options": [
+          "Trotz des schlechten Wetters haben wir einen Ausflug gemacht.",
+          "Trotz des schlechten Wetters haben wir ein Ausflug gemacht.",
+          "Trotz das schlechte Wetter haben wir einen Ausflug gemacht."
+        ],
+        "answer": "Trotz des schlechten Wetters haben wir einen Ausflug gemacht.",
+        "tip": "wisdomSummitTen.questDescription"
+      },
+      {
+        "id": 12,
+        "type": "input",
+        "question": "wisdomSummitTen.questTask12",
+        "correctAnswer": "auf",
+        "tip": "wisdomSummitTen.questDescription"
+      },
+      {
+        "id": 13,
+        "type": "readAndAnswer",
+        "question": "wisdomSummitTen.questTask13",
+        "text": "Liebe Gäste, ab Montag kann man leider nicht schwimmen, weil das Schwimmbad repariert wird. Das Frühstück gibt es wie immer von 7 bis 10 Uhr.",
+        "options": [
+          "weil es zu viele Gäste gibt",
+          "weil das Schwimmbad repariert wird",
+          "weil es zu kalt ist"
+        ],
+        "answer": "weil das Schwimmbad repariert wird",
+        "tip": "wisdomSummitTen.questDescription"
+      },
+      {
+        "id": 14,
+        "type": "input",
+        "question": "wisdomSummitTen.questTask14",
+        "correctAnswer": "geschickt",
+        "tip": "wisdomSummitTen.questDescription"
+      },
+      {
+        "id": 15,
+        "type": "input",
+        "question": "wisdomSummitTen.questTask15",
+        "correctAnswer": "zu",
+        "tip": "wisdomSummitTen.questDescription"
+      }
+    ]
+  }
+]
