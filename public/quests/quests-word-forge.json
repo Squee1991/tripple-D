@@ -226,29 +226,43 @@
       {
         "id": 11,
         "type": "input",
-        "question": "linkHarborEight.questTask9",
-        "correctAnswer": "rief",
-        "tip": "linkHarborEight.questDescription",
-        "reviewOf": "link-harbor-eight",
-        "reviewLand": "link-harbor"
+        "question": "nuanceBridgeEight.questTask9",
+        "correctAnswer": "irgendwo",
+        "tip": "nuanceBridgeEight.questDescription",
+        "reviewOf": "nuance-bridge-eight",
+        "reviewLand": "nuance-bridge"
       },
       {
         "id": 12,
-        "type": "input",
-        "question": "linkHarborFive.questTask12",
-        "correctAnswer": "anzurufen",
-        "tip": "linkHarborFive.questDescription",
-        "reviewOf": "link-harbor-five",
-        "reviewLand": "link-harbor"
+        "type": "reorder",
+        "question": "nuanceBridgeFive.questTask12",
+        "words": [
+          "Briefe",
+          "Die",
+          "sind",
+          "worden",
+          "geworden",
+          "geschrieben"
+        ],
+        "correctOrder": [
+          "Die",
+          "Briefe",
+          "sind",
+          "geschrieben",
+          "worden"
+        ],
+        "tip": "nuanceBridgeFive.questDescription",
+        "reviewOf": "nuance-bridge-five",
+        "reviewLand": "nuance-bridge"
       },
       {
         "id": 13,
         "type": "input",
-        "question": "linkHarborTwo.questTask13",
-        "correctAnswer": "oder",
-        "tip": "linkHarborTwo.questDescription",
-        "reviewOf": "link-harbor-two",
-        "reviewLand": "link-harbor"
+        "question": "nuanceBridgeTwo.questTask13",
+        "correctAnswer": "auch",
+        "tip": "nuanceBridgeTwo.questDescription",
+        "reviewOf": "nuance-bridge-two",
+        "reviewLand": "nuance-bridge"
       },
       {
         "id": 14,
@@ -501,21 +515,35 @@
       },
       {
         "id": 12,
-        "type": "input",
-        "question": "linkHarborSix.questTask12",
-        "correctAnswer": "bis",
-        "tip": "linkHarborSix.questDescription",
-        "reviewOf": "link-harbor-six",
-        "reviewLand": "link-harbor"
+        "type": "reorder",
+        "question": "nuanceBridgeSix.questTask12",
+        "words": [
+          "Das",
+          "Fenster",
+          "geöffnet",
+          "mich",
+          "geöffnete",
+          "stört"
+        ],
+        "correctOrder": [
+          "Das",
+          "geöffnete",
+          "Fenster",
+          "stört",
+          "mich"
+        ],
+        "tip": "nuanceBridgeSix.questDescription",
+        "reviewOf": "nuance-bridge-six",
+        "reviewLand": "nuance-bridge"
       },
       {
         "id": 13,
         "type": "input",
-        "question": "linkHarborThree.questTask13",
-        "correctAnswer": "weder",
-        "tip": "linkHarborThree.questDescription",
-        "reviewOf": "link-harbor-three",
-        "reviewLand": "link-harbor"
+        "question": "nuanceBridgeThree.questTask13",
+        "correctAnswer": "machst",
+        "tip": "nuanceBridgeThree.questDescription",
+        "reviewOf": "nuance-bridge-three",
+        "reviewLand": "nuance-bridge"
       },
       {
         "id": 14,
@@ -768,21 +796,37 @@
       },
       {
         "id": 12,
-        "type": "input",
-        "question": "linkHarborSeven.questTask12",
-        "correctAnswer": "weder",
-        "tip": "linkHarborSeven.questDescription",
-        "reviewOf": "link-harbor-seven",
-        "reviewLand": "link-harbor"
+        "type": "reorder",
+        "question": "nuanceBridgeSeven.questTask12",
+        "words": [
+          "uns",
+          "Wir",
+          "brauchen",
+          "nicht",
+          "müssen",
+          "beeilen",
+          "zu"
+        ],
+        "correctOrder": [
+          "Wir",
+          "brauchen",
+          "uns",
+          "nicht",
+          "zu",
+          "beeilen"
+        ],
+        "tip": "nuanceBridgeSeven.questDescription",
+        "reviewOf": "nuance-bridge-seven",
+        "reviewLand": "nuance-bridge"
       },
       {
         "id": 13,
         "type": "input",
-        "question": "linkHarborFour.questTask13",
-        "correctAnswer": "interessanter",
-        "tip": "linkHarborFour.questDescription",
-        "reviewOf": "link-harbor-four",
-        "reviewLand": "link-harbor"
+        "question": "nuanceBridgeFour.questTask13",
+        "correctAnswer": "essen",
+        "tip": "nuanceBridgeFour.questDescription",
+        "reviewOf": "nuance-bridge-four",
+        "reviewLand": "nuance-bridge"
       },
       {
         "id": 14,
@@ -1087,21 +1131,33 @@
       },
       {
         "id": 12,
-        "type": "input",
-        "question": "linkHarborEight.questTask12",
-        "correctAnswer": "bis",
-        "tip": "linkHarborEight.questDescription",
-        "reviewOf": "link-harbor-eight",
-        "reviewLand": "link-harbor"
+        "type": "reorder",
+        "question": "nuanceBridgeEight.questTask12",
+        "words": [
+          "irgendwo",
+          "Kann",
+          "helfen",
+          "mir",
+          "irgendjemand"
+        ],
+        "correctOrder": [
+          "Kann",
+          "mir",
+          "irgendjemand",
+          "helfen"
+        ],
+        "tip": "nuanceBridgeEight.questDescription",
+        "reviewOf": "nuance-bridge-eight",
+        "reviewLand": "nuance-bridge"
       },
       {
         "id": 13,
         "type": "input",
-        "question": "linkHarborFive.questTask13",
-        "correctAnswer": "arbeiten",
-        "tip": "linkHarborFive.questDescription",
-        "reviewOf": "link-harbor-five",
-        "reviewLand": "link-harbor"
+        "question": "nuanceBridgeFive.questTask13",
+        "correctAnswer": "ist",
+        "tip": "nuanceBridgeFive.questDescription",
+        "reviewOf": "nuance-bridge-five",
+        "reviewLand": "nuance-bridge"
       },
       {
         "id": 14,
@@ -1388,11 +1444,11 @@
       {
         "id": 13,
         "type": "input",
-        "question": "linkHarborSix.questTask13",
-        "correctAnswer": "Sobald",
-        "tip": "linkHarborSix.questDescription",
-        "reviewOf": "link-harbor-six",
-        "reviewLand": "link-harbor"
+        "question": "nuanceBridgeSix.questTask13",
+        "correctAnswer": "gekochte",
+        "tip": "nuanceBridgeSix.questDescription",
+        "reviewOf": "nuance-bridge-six",
+        "reviewLand": "nuance-bridge"
       },
       {
         "id": 14,
@@ -1675,11 +1731,11 @@
       {
         "id": 13,
         "type": "input",
-        "question": "linkHarborSeven.questTask13",
-        "correctAnswer": "Je",
-        "tip": "linkHarborSeven.questDescription",
-        "reviewOf": "link-harbor-seven",
-        "reviewLand": "link-harbor"
+        "question": "nuanceBridgeSeven.questTask13",
+        "correctAnswer": "zu",
+        "tip": "nuanceBridgeSeven.questDescription",
+        "reviewOf": "nuance-bridge-seven",
+        "reviewLand": "nuance-bridge"
       },
       {
         "id": 14,
@@ -1902,11 +1958,11 @@
         "question": "wordForgeSeven.questTask7",
         "text": "Marta hat im Internet ein Kleid bestellt. Die Lieferung kam schnell, und die Bezahlung war einfach. Aber die Größe war falsch. Marta war unzufrieden und hat das Kleid zurückgeschickt.",
         "options": [
-          "Die Größe war falsch.",
-          "Das Kleid war zu teuer.",
-          "Die Lieferung kam zu spät."
+          "Das Kleid passte ihr nicht.",
+          "Die Lieferung dauerte zu lange.",
+          "Das Kleid war zu teuer."
         ],
-        "answer": "Die Größe war falsch.",
+        "answer": "Das Kleid passte ihr nicht.",
         "tip": "wordForgeSeven.questDescription"
       },
       {
@@ -1970,11 +2026,11 @@
       {
         "id": 13,
         "type": "input",
-        "question": "linkHarborEight.questTask13",
-        "correctAnswer": "gewöhnt",
-        "tip": "linkHarborEight.questDescription",
-        "reviewOf": "link-harbor-eight",
-        "reviewLand": "link-harbor"
+        "question": "nuanceBridgeEight.questTask13",
+        "correctAnswer": "soll",
+        "tip": "nuanceBridgeEight.questDescription",
+        "reviewOf": "nuance-bridge-eight",
+        "reviewLand": "nuance-bridge"
       },
       {
         "id": 14,
@@ -2662,10 +2718,10 @@
         "text": "Die Firma sucht eine neue Kollegin. In der Anzeige steht: „Wichtig sind Pünktlichkeit und Freundlichkeit. Sie sollten täglich erreichbar sein.“ Nina schreibt sofort eine Bewerbung.",
         "options": [
           "ein eigenes Auto",
-          "Pünktlichkeit und Freundlichkeit",
+          "pünktlich und freundlich sein",
           "Geld und Zeit"
         ],
-        "answer": "Pünktlichkeit und Freundlichkeit",
+        "answer": "pünktlich und freundlich sein",
         "tip": "wordForgeTen.questDescription"
       },
       {

@@ -2,7 +2,9 @@
   <Transition name="menu-appear" appear>
     <div class="map__wrapper" :dir="locale === 'ar' ? 'rtl' : 'ltr'">
       <h1 id="regions" class="map__title">
-        <span class="map__title-text">{{ t('locationsMenu.title') }}</span>
+        <span class="map__title-ribbon">
+          <span class="map__title-text">{{ t('locationsMenu.title') }}</span>
+        </span>
       </h1>
       <div class="map-layout">
         <transition name="fade">
@@ -56,6 +58,7 @@
           </div>
         </transition>
         <div class="map-right-container">
+          <!-- пагинация разделов пока скрыта, раздел виден по прокрутке карты
           <div class="map-pagination-arrows">
             <button
                 class="arrow-btn"
@@ -75,6 +78,7 @@
               <img class="arrow__btn-icon" src="../../assets/images/next.svg" alt="">
             </button>
           </div>
+          -->
           <!-- все разделы одной лентой, прокрутка внутри; раздел и уровень сверху переключаются сами -->
           <div
               ref="mapScroll"
@@ -95,6 +99,9 @@
                   :theme="(levelOfCategory(key) || 'A1').toLowerCase()"
                   :is-last="index === categoryKeys.length - 1"
                   :level-progress="levelProgress(key)"
+                  :test-level="testLevelOf(key, index)"
+                  :test-open="isTestOpen(testLevelOf(key, index))"
+                  @test="openTest"
                   :prev-theme="index ? (levelOfCategory(categoryKeys[index - 1]) || 'A1').toLowerCase() : ''"
                   :is-locked="isRegionLocked"
                   :need-level="needLevel"
@@ -113,6 +120,7 @@
       </div>
     </div>
   </Transition>
+  <VTestLockedModal v-model="showTestLocked" :level="lockedLevel" :summit="LEVEL_SUMMITS[lockedLevel] || ''"/>
 </template>
 
 <script setup>
@@ -122,13 +130,17 @@ import { useI18n } from 'vue-i18n'
 import {regions} from '@/utils/regions.js'
 import {userlangStore} from '../../store/learningStore.js'
 import {userAuthStore} from "~/store/authStore.js";
-import {visibleRegionCategories, requiredLandLevel, levelOfCategory} from "~/utils/germanLevel.js";
+import {visibleRegionCategories, requiredLandLevel, levelOfCategory, LEVEL_SUMMITS, isLevelFinished} from "~/utils/germanLevel.js";
 import VLandsMap from "~/src/components/V-landsMap.vue";
+import VTestLockedModal from "~/src/components/V-testLockedModal.vue";
+import {userChainStore} from "~/store/chainStore.js";
+import {landsWithProgress} from "~/utils/landProgress.js";
 
 const authStore = userAuthStore()
 const {t, locale} = useI18n()
 const langStore = userlangStore()
 const router = useRouter()
+const chainStore = userChainStore()
 // разделы ниже выбранного уровня немецкого скрыты (A2 не видит земли A1)
 const categoryKeys = computed(() => visibleRegionCategories(authStore.germanLevel))
 const activeCategory = ref(categoryKeys.value[0] || 'beginner')
@@ -206,6 +218,24 @@ function prevCategory() {
   if (!isFirstCategory.value) scrollToCategory(categoryKeys.value[currentCategoryIndex.value - 1])
 }
 
+// итоговый тест стоит в конце последнего раздела уровня и открывается после экзамена на вершине
+const showTestLocked = ref(false)
+const lockedLevel = ref('')
+
+function testLevelOf(category, index) {
+  const level = levelOfCategory(category)
+  const next = categoryKeys.value[index + 1]
+  return level && (!next || levelOfCategory(next) !== level) ? level : ''
+}
+
+const isTestOpen = (level) => isLevelFinished(chainStore.questProgress, level)
+
+function openTest(level) {
+  if (isTestOpen(level)) return router.push(`/locations-test/${level}`)
+  lockedLevel.value = level
+  showTestLocked.value = true
+}
+
 // кольцо на медали уровня: все земли этого уровня (A2 = оба его раздела)
 function levelProgress(category) {
   const level = levelOfCategory(category)
@@ -220,7 +250,9 @@ const activeRegionLevel = computed(() => {
 })
 
 // земля закрыта, пока уровень аккаунта ниже нужного (премиум открывает всё)
-const isRegionLocked = (region) => !authStore.isPremium && clampedLevel.value < needLevel(region)
+// земля закрыта, только если не хватает уровня и в ней ещё нет прогресса
+const openedLands = computed(() => landsWithProgress(chainStore.questProgress))
+const isRegionLocked = (region) => !authStore.isPremium && !openedLands.value.has(region.id) && clampedLevel.value < needLevel(region)
 
 const filteredRegions = computed(() => {
   return regions[activeCategory.value] || []
@@ -251,8 +283,7 @@ const clampedLevel = computed(() => Math.max(langStore.isLeveling, 0))
 
 const isUnlocked = computed(() => {
   if (!active.value) return false
-  if (authStore.isPremium) return true
-  return clampedLevel.value >= needLevel(active.value)
+  return !isRegionLocked(active.value)
 })
 
 function themeOf(obj) {
@@ -280,9 +311,7 @@ const handlePopState = () => {
 }
 
 function go(region) {
-  if (authStore.isPremium || clampedLevel.value >= needLevel(region)) {
-    router.push(`/location/${region.pathTo}`)
-  }
+  if (!isRegionLocked(region)) router.push(`/location/${region.pathTo}`)
 }
 
 watch([isPanelOpen, windowWidth], ([newIsOpen, newWidth]) => {
@@ -342,50 +371,71 @@ onBeforeUnmount(() => {
   margin: 0 auto;
 }
 
-/* заголовок карты над переключателем разделов: золотой текст и линии по бокам, как у медали уровня */
+/* заголовок карты: лента в цвет приложения на всю ширину, максимум 768px */
 .map__title {
-  --map-title-from: #e08a00;
-  --map-title-to: #b45f06;
+  --map-ribbon-top: #7d70cf;
+  --map-ribbon-bottom: #5d50a8;
+  --map-ribbon-edge: #483d8f;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  padding: 2px 22px 0;
+}
+
+html.orange .map__title {
+  --map-ribbon-top: #ff9a4a;
+  --map-ribbon-bottom: #e8782c;
+  --map-ribbon-edge: #b5581a;
+}
+
+.map__title-ribbon {
+  position: relative;
+  z-index: 0;
   display: flex;
   align-items: center;
-  gap: 10px;
+  justify-content: center;
   width: 100%;
+  max-width: 768px;
+  min-height: 42px;
+  padding: 6px 18px;
+  border: 2px solid var(--map-ribbon-edge);
+  border-radius: 12px;
+  background: linear-gradient(180deg, var(--map-ribbon-top), var(--map-ribbon-bottom));
+  box-shadow: 0 4px 0 var(--map-ribbon-edge), 0 8px 14px rgba(0, 0, 0, 0.3);
+  color: #fff;
 }
 
-html.dark .map__title,
-html.orange .map__title {
-  --map-title-from: #ffe08a;
-  --map-title-to: #ffb100;
-}
-
-.map__title::before,
-.map__title::after {
+/* хвосты ленты */
+.map__title-ribbon::before,
+.map__title-ribbon::after {
   content: "";
-  flex: 1;
-  min-width: 12px;
-  height: 2px;
-  border-radius: 2px;
+  position: absolute;
+  top: 9px;
+  z-index: -1;
+  width: 22px;
+  height: 32px;
+  background: var(--map-ribbon-bottom);
+  border: 2px solid var(--map-ribbon-edge);
 }
 
-.map__title::before {
-  background: linear-gradient(90deg, transparent, var(--map-title-to));
+.map__title-ribbon::before {
+  left: -17px;
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%, 45% 50%);
 }
 
-.map__title::after {
-  background: linear-gradient(270deg, transparent, var(--map-title-to));
+.map__title-ribbon::after {
+  right: -17px;
+  clip-path: polygon(0 0, 100% 0, 55% 50%, 100% 100%, 0 100%);
 }
 
 .map__title-text {
   font-family: "Fredoka", "Nunito", sans-serif;
-  font-size: 19px;
+  font-size: 18px;
   font-weight: 600;
-  line-height: 1.2;
-  letter-spacing: .3px;
+  line-height: 1.15;
+  letter-spacing: .2px;
   text-align: center;
-  background: linear-gradient(180deg, var(--map-title-from), var(--map-title-to));
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
 }
 
 .arrow__btn-icon {

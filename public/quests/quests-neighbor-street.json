@@ -1234,11 +1234,11 @@
         "question": "neighborStreetFive.questTask7",
         "text": "Opa erzählt gern von früher. Alles, was er erzählt, ist interessant. Aber vieles, was er sagt, hat er schon oft erzählt.",
         "options": [
-          "interessant",
-          "traurig",
-          "langweilig"
+          "interessante, aber alte",
+          "traurige",
+          "immer neue"
         ],
-        "answer": "interessant",
+        "answer": "interessante, aber alte",
         "tip": "neighborStreetFive.questDescription"
       },
       {
@@ -2044,10 +2044,10 @@
         "text": "Thomas ist neu in der Firma. Der Kollege, der neben ihm sitzt, heißt Ali. Ali ist der Mann, den alle fragen, wenn der Drucker kaputt ist. Die Chefin, mit der Thomas am ersten Tag gesprochen hat, ist sehr freundlich.",
         "options": [
           "niemand",
-          "Ali",
+          "der Kollege neben ihm",
           "die Chefin"
         ],
-        "answer": "Ali",
+        "answer": "der Kollege neben ihm",
         "tip": "neighborStreetEight.questDescription"
       },
       {
@@ -2555,10 +2555,10 @@
         "text": "Herr Lang hat eine kleine Bäckerei, in der er Brot und Kuchen backt. Die Leute, die bei ihm kaufen, sind zufrieden, denn alles ist sehr lecker.",
         "options": [
           "Herr Lang ist jung.",
-          "Alles ist sehr lecker.",
+          "Das Essen schmeckt sehr gut.",
           "Alles ist billig."
         ],
-        "answer": "Alles ist sehr lecker.",
+        "answer": "Das Essen schmeckt sehr gut.",
         "tip": "neighborStreetTen.questDescription"
       },
       {

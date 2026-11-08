@@ -1894,20 +1894,6 @@
         "translation-uz": "tanishmoq",
         "translation-hi": "जान-पहचान करना",
         "translation-ar": "يتعرّف"
-      },
-      {
-        "word": "bewegen",
-        "translation-ru": "двигать / перемещать",
-        "translation-en": "to move",
-        "translation-uk": "рухати",
-        "translation-pl": "ruszać / poruszać",
-        "translation-es": "mover",
-        "translation-fr": "bouger",
-        "translation-tr": "hareket ettirmek",
-        "translation-ro": "a mișca",
-        "translation-uz": "qimirlatmoq",
-        "translation-hi": "हिलाना",
-        "translation-ar": "يحرك"
       }
     ],
     "tasks": [

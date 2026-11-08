@@ -575,6 +575,20 @@
         "translation-ar": "يكون صحيحًا"
       },
       {
+        "word": "der Bote",
+        "translation-ru": "курьер",
+        "translation-en": "messenger",
+        "translation-uk": "кур’єр",
+        "translation-pl": "posłaniec",
+        "translation-es": "el mensajero",
+        "translation-fr": "le messager",
+        "translation-tr": "kurye",
+        "translation-ro": "curierul",
+        "translation-uz": "kuryer",
+        "translation-hi": "संदेशवाहक",
+        "translation-ar": "الساعي"
+      },
+      {
         "word": "die Meinung",
         "translation-ru": "мнение",
         "translation-en": "opinion",
@@ -601,34 +615,6 @@
         "translation-uz": "qo‘pol, xushmuomala emas",
         "translation-hi": "रूखा",
         "translation-ar": "غير ودود"
-      },
-      {
-        "word": "machbar",
-        "translation-ru": "выполнимый",
-        "translation-en": "doable",
-        "translation-uk": "здійсненний",
-        "translation-pl": "wykonalny",
-        "translation-es": "factible",
-        "translation-fr": "faisable",
-        "translation-tr": "yapılabilir",
-        "translation-ro": "realizabil",
-        "translation-uz": "bajarsa bo‘ladigan",
-        "translation-hi": "मुमकिन",
-        "translation-ar": "ممكن التنفيذ"
-      },
-      {
-        "word": "der Bote",
-        "translation-ru": "курьер",
-        "translation-en": "messenger",
-        "translation-uk": "кур’єр",
-        "translation-pl": "posłaniec",
-        "translation-es": "el mensajero",
-        "translation-fr": "le messager",
-        "translation-tr": "kurye",
-        "translation-ro": "curierul",
-        "translation-uz": "kuryer",
-        "translation-hi": "संदेशवाहक",
-        "translation-ar": "الساعي"
       }
     ],
     "tasks": [
@@ -2505,10 +2491,10 @@
         "text": "Forum: Sollte man in einer großen Stadt wohnen? Maria: „Einerseits gibt es in der Stadt viele Kinos und Restaurants, andererseits ist das Leben dort teuer. Ich wohne lieber auf dem Land, weil es dort ruhig ist.“",
         "options": [
           "am Meer",
-          "auf dem Land",
+          "nicht in der Stadt",
           "in der Stadt"
         ],
-        "answer": "auf dem Land",
+        "answer": "nicht in der Stadt",
         "tip": "opinionTowerTen.questDescription"
       },
       {

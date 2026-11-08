@@ -70,7 +70,7 @@ export const guideMenu = [
             {
                 // weil/obwohl, um … zu, относительные придаточные, двойные союзы, мнение
                 id: 'gSentences', icon: '🔗', color: '#00897b',
-                lands: lands('question-gorge', 'reason-bridge', 'purpose-path', 'consequence-fork', 'neighbor-street', 'link-harbor', 'word-forge', 'opinion-tower')
+                lands: lands('question-gorge', 'reason-bridge', 'purpose-path', 'consequence-fork', 'neighbor-street', 'link-harbor', 'nuance-bridge', 'word-forge', 'opinion-tower')
             },
             {
                 id: 'gIdioms', labelKey: 'sub.idioms', icon: '💬', color: '#8e24aa',

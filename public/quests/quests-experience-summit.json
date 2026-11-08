@@ -430,11 +430,11 @@
         "question": "experienceSummitTwo.questTask7",
         "text": "Mia wollte ans Meer fahren. Aber das Hotel war zu teuer. Deshalb blieb sie zu Hause. Trotzdem hatte sie einen schönen Urlaub, denn ihre Freunde besuchten sie.",
         "options": [
-          "Ihre Freunde besuchten sie.",
+          "Ihre Freunde kamen zu ihr.",
           "Sie fuhr ans Meer.",
           "Das Hotel war billig."
         ],
-        "answer": "Ihre Freunde besuchten sie.",
+        "answer": "Ihre Freunde kamen zu ihr.",
         "tip": "experienceSummitTwo.questDescription"
       },
       {
@@ -508,11 +508,11 @@
         "question": "experienceSummitTwo.questTask13",
         "text": "Herr Wolf fährt jeden Tag mit dem Fahrrad zur Arbeit, obwohl er ein Auto hat. Er sagt: „Ich fahre Fahrrad, denn das ist gesund und billig.“",
         "options": [
-          "Das ist gesund und billig.",
+          "Es kostet wenig.",
           "Er hat kein Auto.",
           "Sein Auto ist kaputt."
         ],
-        "answer": "Das ist gesund und billig.",
+        "answer": "Es kostet wenig.",
         "tip": "experienceSummitTwo.questDescription"
       },
       {
@@ -775,10 +775,10 @@
         "text": "Am Samstag steht Lukas früh auf, um auf den Markt zu gehen. Er kauft frisches Gemüse, damit seine Familie gesund isst.",
         "options": [
           "um früh aufzustehen",
-          "damit seine Familie gesund isst",
+          "für gesundes Essen",
           "weil er Koch ist"
         ],
-        "answer": "damit seine Familie gesund isst",
+        "answer": "für gesundes Essen",
         "tip": "experienceSummitThree.questDescription"
       },
       {

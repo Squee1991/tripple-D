@@ -531,6 +531,13 @@ export const guideCatalog = [
     group: "wisdom"
   },
   {
+    id: "land-nuance-bridge",
+    route: "/location/nuance-bridge",
+    labelKey: "locationNames.nuance-bridge",
+    hintKey: "landIntro.nuance-bridge.p1",
+    group: "wisdom"
+  },
+  {
     id: "land-word-forge",
     route: "/location/word-forge",
     labelKey: "locationNames.word-forge",

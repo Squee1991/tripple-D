@@ -42,6 +42,7 @@ module.exports = [
 	'b1/taste-market.cjs',
 	'b1/question-bridge.cjs',
 	'b1/link-harbor.cjs',
+	'b1/nuance-bridge.cjs',
 	'b1/word-forge.cjs',
 	'b1/opinion-tower.cjs',
 	'b1/wisdom-summit.cjs'

@@ -166,11 +166,11 @@
         "question": "purposePathOne.questTask7",
         "text": "Max spart jeden Monat Geld. Im Sommer will er nach Spanien fahren. Er spart, um eine Reise zu machen.",
         "options": [
-          "um ein Haus zu kaufen",
-          "um eine Reise zu machen",
-          "um ein Auto zu kaufen"
+          "für ein neues Auto",
+          "für seinen Urlaub",
+          "für eine Wohnung"
         ],
-        "answer": "um eine Reise zu machen",
+        "answer": "für seinen Urlaub",
         "tip": "purposePathOne.questDescription"
       },
       {
@@ -452,11 +452,11 @@
         "question": "purposePathTwo.questTask7",
         "text": "Am Samstag fuhr Lena in die Stadt, um einzukaufen. Danach holte sie ihren Bruder vom Bahnhof ab.",
         "options": [
-          "um einzukaufen",
-          "um ihre Freundin zu besuchen",
-          "um zu arbeiten"
+          "wegen der Einkäufe",
+          "um zu arbeiten",
+          "um den Bruder zu besuchen"
         ],
-        "answer": "um einzukaufen",
+        "answer": "wegen der Einkäufe",
         "tip": "purposePathTwo.questDescription"
       },
       {
@@ -530,11 +530,11 @@
         "question": "reasonBridgeThree.questTask13",
         "text": "Das Hotel war klein und alt. Trotzdem war Max zufrieden, denn das Hotel war am Meer.",
         "options": [
-          "Das Hotel war groß.",
-          "Das Hotel war am Meer.",
-          "Das Hotel war neu."
+          "Das Hotel war groß und neu.",
+          "Das Meer war ganz nah.",
+          "Das Zimmer war billig."
         ],
-        "answer": "Das Hotel war am Meer.",
+        "answer": "Das Meer war ganz nah.",
         "tip": "reasonBridgeThree.questDescription",
         "reviewOf": "reason-bridge-three",
         "reviewLand": "reason-bridge"
@@ -716,11 +716,11 @@
         "question": "purposePathThree.questTask7",
         "text": "Herr Braun spricht im Kurs immer langsam und deutlich, damit alle ihn verstehen. Seine Schüler sind sehr zufrieden.",
         "options": [
-          "weil er krank ist",
-          "damit alle ihn verstehen",
-          "weil er müde ist"
+          "Er kann wenig Deutsch.",
+          "Das hilft seinen Schülern.",
+          "Er ist müde."
         ],
-        "answer": "damit alle ihn verstehen",
+        "answer": "Das hilft seinen Schülern.",
         "tip": "purposePathThree.questDescription"
       },
       {
@@ -981,11 +981,11 @@
         "question": "purposePathFour.questTask7",
         "text": "Anna lernt jeden Abend mit ihrem Bruder. Sie erklärt ihm alles, damit er die Prüfung besteht. Anna lernt Englisch, um in London zu arbeiten.",
         "options": [
-          "um in London zu arbeiten",
-          "um ihrem Bruder alles zu erklären",
-          "damit ihr Bruder die Prüfung besteht"
+          "für eine Arbeit in London",
+          "für die Prüfung ihres Bruders",
+          "für eine Reise nach London"
         ],
-        "answer": "um in London zu arbeiten",
+        "answer": "für eine Arbeit in London",
         "tip": "purposePathFour.questDescription"
       },
       {
@@ -1541,11 +1541,11 @@
         "question": "purposePathSix.questTask7",
         "text": "Marco wohnt seit einem Jahr in Deutschland. Er macht einen Kurs am Abend, um besser Deutsch zu sprechen. Seine Frau hilft ihm, damit er schneller lernt.",
         "options": [
-          "um eine Wohnung zu finden",
-          "um besser Deutsch zu sprechen",
-          "damit seine Frau Deutsch lernt"
+          "für seine Frau",
+          "für besseres Deutsch",
+          "für eine neue Wohnung"
         ],
-        "answer": "um besser Deutsch zu sprechen",
+        "answer": "für besseres Deutsch",
         "tip": "purposePathSix.questDescription"
       },
       {
@@ -1864,11 +1864,11 @@
         "question": "purposePathSeven.questTask7",
         "text": "Ahmed wohnt seit drei Monaten in Köln. Er geht jeden Abend in einen Deutschkurs, um später als Arzt zu arbeiten. Seine Frau hilft ihm, damit er schneller lernt.",
         "options": [
-          "um später als Arzt zu arbeiten",
-          "um in Urlaub zu fahren",
-          "um Freunde zu finden"
+          "für seinen Beruf",
+          "für den Urlaub",
+          "für neue Freunde"
         ],
-        "answer": "um später als Arzt zu arbeiten",
+        "answer": "für seinen Beruf",
         "tip": "purposePathSeven.questDescription"
       },
       {
@@ -2137,11 +2137,11 @@
         "question": "purposePathEight.questTask7",
         "text": "Paula hat am Samstag Geburtstag. Sie räumt die Wohnung auf, um Platz für alle zu haben. Sie kauft neue Lautsprecher, damit die Musik laut genug ist. Ihr Bruder backt einen Kuchen.",
         "options": [
-          "um einen Kuchen zu backen",
-          "damit die Musik laut genug ist",
-          "um Platz zu haben"
+          "für mehr Platz",
+          "für laute Musik",
+          "für ihren Bruder"
         ],
-        "answer": "damit die Musik laut genug ist",
+        "answer": "für laute Musik",
         "tip": "purposePathEight.questDescription"
       },
       {
@@ -2396,11 +2396,11 @@
         "question": "purposePathNine.questTask7",
         "text": "Tim steht jeden Tag um sechs Uhr auf, um den ersten Zug zu erreichen. Seine Mutter ruft ihn an, damit er pünktlich ist.",
         "options": [
-          "um den ersten Zug zu erreichen",
-          "um Sport zu machen",
-          "damit seine Mutter anruft"
+          "Er fährt sehr früh los.",
+          "Er macht morgens Sport.",
+          "Seine Mutter arbeitet früh."
         ],
-        "answer": "um den ersten Zug zu erreichen",
+        "answer": "Er fährt sehr früh los.",
         "tip": "purposePathNine.questDescription"
       },
       {
@@ -2712,10 +2712,10 @@
         "text": "Herr Wolf ging zum Arzt, weil er krank war. Der Arzt sagte: „Sie sollten mehr schlafen.“",
         "options": [
           "mehr Kaffee trinken",
-          "mehr schlafen",
+          "länger im Bett bleiben",
           "mehr arbeiten"
         ],
-        "answer": "mehr schlafen",
+        "answer": "länger im Bett bleiben",
         "tip": "purposePathTen.questDescription"
       },
       {

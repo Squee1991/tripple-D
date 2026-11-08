@@ -161,10 +161,10 @@
         "text": "Am Sonntag hat Tom keine Lust, früh aufzustehen. Er hat auch keine Zeit, Sport zu machen, denn er besucht seine Eltern.",
         "options": [
           "Er ist krank.",
-          "Er besucht seine Eltern.",
+          "Er ist bei seiner Familie.",
           "Er schläft lange."
         ],
-        "answer": "Er besucht seine Eltern.",
+        "answer": "Er ist bei seiner Familie.",
         "tip": "taskTowerOne.questDescription"
       },
       {
@@ -417,11 +417,11 @@
         "question": "taskTowerTwo.questTask7",
         "text": "Anna lernt seit einem Jahr Deutsch. Sie sagt: „Es ist nicht leicht, alle Wörter zu lernen. Aber es macht Spaß, mit Leuten auf Deutsch zu sprechen.“",
         "options": [
-          "auf Deutsch zu sprechen",
-          "Englisch zu lernen",
-          "alle Wörter zu lernen"
+          "Gespräche auf Deutsch",
+          "alle neuen Wörter",
+          "der Deutschkurs"
         ],
-        "answer": "auf Deutsch zu sprechen",
+        "answer": "Gespräche auf Deutsch",
         "tip": "taskTowerTwo.questDescription"
       },
       {
@@ -666,11 +666,11 @@
         "question": "taskTowerThree.questTask7",
         "text": "Paul hat letztes Jahr aufgehört zu rauchen. Jetzt versucht er, jeden Tag Sport zu machen. Er hat auch angefangen, gesünder zu essen.",
         "options": [
-          "essen",
-          "rauchen",
-          "Sport machen"
+          "Er macht keinen Sport mehr.",
+          "Er raucht nicht mehr.",
+          "Er isst nicht mehr gesund."
         ],
-        "answer": "rauchen",
+        "answer": "Er raucht nicht mehr.",
         "tip": "taskTowerThree.questDescription"
       },
       {
@@ -1435,11 +1435,11 @@
         "question": "taskTowerSix.questTask7",
         "text": "Lena hat am Samstag viel vor. Sie lässt ihr Fahrrad reparieren, sie geht einkaufen, und sie versucht, ihre Wohnung aufzuräumen. Aber sie hat keine Lust zu kochen. Deshalb geht sie am Abend ins Restaurant.",
         "options": [
-          "Sie hat Geburtstag.",
-          "Sie hat keine Lust zu kochen.",
-          "Ihr Fahrrad ist kaputt."
+          "Ihr Fahrrad ist kaputt.",
+          "Sie will nicht kochen.",
+          "Sie hat nichts zu Hause."
         ],
-        "answer": "Sie hat keine Lust zu kochen.",
+        "answer": "Sie will nicht kochen.",
         "tip": "taskTowerSix.questDescription"
       },
       {
@@ -2308,11 +2308,11 @@
         "question": "taskTowerNine.questTask13",
         "text": "Im Deutschkurs sagt die Lehrerin: „Es ist wichtig, jeden Tag ein bisschen zu lernen. Vergesst nicht, die neuen Wörter zu wiederholen!“",
         "options": [
-          "jeden Tag ein bisschen zu lernen",
-          "nur am Wochenende zu lernen",
-          "viel zu schlafen"
+          "oft ein wenig lernen",
+          "nur am Wochenende lernen",
+          "viel schlafen"
         ],
-        "answer": "jeden Tag ein bisschen zu lernen",
+        "answer": "oft ein wenig lernen",
         "tip": "taskTowerNine.questDescription"
       },
       {
@@ -2545,11 +2545,11 @@
         "question": "taskTowerTen.questTask13",
         "text": "Sara versucht seit Monaten, eine Wohnung zu finden. Es ist sehr schwer, in München eine billige Wohnung zu bekommen. Endlich hat sie eine gefunden, die einen Balkon hat.",
         "options": [
-          "Deutsch zu lernen",
-          "eine billige Wohnung zu bekommen",
-          "einen Job zu finden"
+          "einen Job finden",
+          "billig wohnen",
+          "Deutsch lernen"
         ],
-        "answer": "eine billige Wohnung zu bekommen",
+        "answer": "billig wohnen",
         "tip": "taskTowerTen.questDescription"
       },
       {

@@ -581,20 +581,6 @@
         "translation-uz": "boshqacha",
         "translation-hi": "अलग",
         "translation-ar": "مختلف"
-      },
-      {
-        "word": "lösen",
-        "translation-ru": "решать / освобождать",
-        "translation-en": "to solve / loosen",
-        "translation-uk": "вирішувати",
-        "translation-pl": "rozwiązywać",
-        "translation-es": "resolver / soltar",
-        "translation-fr": "résoudre",
-        "translation-tr": "çözmek",
-        "translation-ro": "a rezolva",
-        "translation-uz": "yechmoq",
-        "translation-hi": "हल करना",
-        "translation-ar": "يحل"
       }
     ],
     "tasks": [
@@ -1169,11 +1155,11 @@
         "question": "wisdomSummitFive.questTask7",
         "text": "Paul hat lange eine Wohnung gesucht. Jetzt hat er endlich eine gefunden, und er freut sich sehr darüber. Aber er ärgert sich über den Preis: Die Wohnung ist sehr teuer.",
         "options": [
-          "über den Preis",
-          "über die Suche",
-          "über die Wohnung"
+          "Die Wohnung kostet zu viel.",
+          "Er hat lange gesucht.",
+          "Die Wohnung ist zu klein."
         ],
-        "answer": "über den Preis",
+        "answer": "Die Wohnung kostet zu viel.",
         "tip": "wisdomSummitFive.questDescription"
       },
       {
@@ -1283,6 +1269,48 @@
         "translation-ar": "الفرق"
       },
       {
+        "word": "worden",
+        "translation-ru": "было сделано (форма пассива)",
+        "translation-en": "been (passive form)",
+        "translation-uk": "було зроблено (форма пасиву)",
+        "translation-pl": "zostało zrobione (forma strony biernej)",
+        "translation-es": "sido (forma pasiva)",
+        "translation-fr": "été (forme passive)",
+        "translation-tr": "yapıldı (edilgen biçim)",
+        "translation-ro": "a fost (formă pasivă)",
+        "translation-uz": "qilingan (majhul shakl)",
+        "translation-hi": "किया गया (कर्मवाच्य रूप)",
+        "translation-ar": "تم (صيغة المبني للمجهول)"
+      },
+      {
+        "word": "indem",
+        "translation-ru": "тем, что",
+        "translation-en": "by (doing)",
+        "translation-uk": "тим, що",
+        "translation-pl": "przez to, że",
+        "translation-es": "haciendo, mediante",
+        "translation-fr": "en faisant",
+        "translation-tr": "…arak",
+        "translation-ro": "prin faptul că",
+        "translation-uz": "…ib, orqali",
+        "translation-hi": "करके",
+        "translation-ar": "عن طريق"
+      },
+      {
+        "word": "zwar",
+        "translation-ru": "хоть и, правда",
+        "translation-en": "true, admittedly",
+        "translation-uk": "хоч і, щоправда",
+        "translation-pl": "wprawdzie",
+        "translation-es": "es cierto que",
+        "translation-fr": "certes",
+        "translation-tr": "gerçi",
+        "translation-ro": "ce-i drept",
+        "translation-uz": "to‘g‘ri",
+        "translation-hi": "हालाँकि",
+        "translation-ar": "صحيح أن"
+      },
+      {
         "word": "seitdem",
         "translation-ru": "с тех пор как",
         "translation-en": "since",
@@ -1295,48 +1323,6 @@
         "translation-uz": "…dan beri",
         "translation-hi": "जब से",
         "translation-ar": "منذ أن"
-      },
-      {
-        "word": "sondern",
-        "translation-ru": "а (не то, а это)",
-        "translation-en": "but (rather)",
-        "translation-uk": "а (не те, а це)",
-        "translation-pl": "lecz, tylko",
-        "translation-es": "sino",
-        "translation-fr": "mais (plutôt)",
-        "translation-tr": "bilakis",
-        "translation-ro": "ci",
-        "translation-uz": "balki",
-        "translation-hi": "बल्कि",
-        "translation-ar": "بل"
-      },
-      {
-        "word": "lieber",
-        "translation-ru": "охотнее, больше нравится",
-        "translation-en": "rather, prefer",
-        "translation-uk": "охочіше, більше подобається",
-        "translation-pl": "chętniej, wolę",
-        "translation-es": "preferir, con más gusto",
-        "translation-fr": "plutôt, préférer",
-        "translation-tr": "tercihen, daha çok sevmek",
-        "translation-ro": "mai degrabă, prefer",
-        "translation-uz": "afzal ko‘rib",
-        "translation-hi": "ज़्यादा पसंद से",
-        "translation-ar": "يفضّل"
-      },
-      {
-        "word": "kennen",
-        "translation-ru": "знать",
-        "translation-en": "to know",
-        "translation-uk": "знати",
-        "translation-pl": "znać",
-        "translation-es": "conocer",
-        "translation-fr": "connaître",
-        "translation-tr": "tanımak / bilmek",
-        "translation-ro": "a cunoaște",
-        "translation-uz": "tanimoq",
-        "translation-hi": "जानना",
-        "translation-ar": "يعرف"
       }
     ],
     "tasks": [
@@ -1429,7 +1415,7 @@
         "id": 8,
         "type": "input",
         "question": "wisdomSummitSix.questTask8",
-        "correctAnswer": "bis",
+        "correctAnswer": "aber",
         "tip": "wisdomSummitSix.questDescription"
       },
       {
@@ -1445,20 +1431,20 @@
         "question": "wisdomSummitSix.questTask10",
         "words": [
           "ist",
-          "Unterschied",
-          "Der",
-          "groß",
-          "sehr",
+          "Tür",
           "Die",
-          "nicht"
+          "worden",
+          "repariert",
+          "geworden",
+          "schon"
         ],
         "correctOrder": [
-          "Der",
-          "Unterschied",
+          "Die",
+          "Tür",
           "ist",
-          "nicht",
-          "sehr",
-          "groß"
+          "schon",
+          "repariert",
+          "worden"
         ],
         "tip": "wisdomSummitSix.questDescription"
       },
@@ -1485,14 +1471,14 @@
         "id": 13,
         "type": "input",
         "question": "wisdomSummitSix.questTask13",
-        "correctAnswer": "desto",
+        "correctAnswer": "auch",
         "tip": "wisdomSummitSix.questDescription"
       },
       {
         "id": 14,
         "type": "input",
         "question": "wisdomSummitSix.questTask14",
-        "correctAnswer": "zu",
+        "correctAnswer": "indem",
         "tip": "wisdomSummitSix.questDescription"
       },
       {
@@ -1588,6 +1574,20 @@
         "translation-uz": "yordam",
         "translation-hi": "मदद",
         "translation-ar": "المساعدة"
+      },
+      {
+        "word": "das Salz",
+        "translation-ru": "соль",
+        "translation-en": "salt",
+        "translation-uk": "сіль",
+        "translation-pl": "sól",
+        "translation-es": "sal",
+        "translation-fr": "sel",
+        "translation-tr": "tuz",
+        "translation-ro": "sare",
+        "translation-uz": "tuz",
+        "translation-hi": "नमक",
+        "translation-ar": "ملح"
       }
     ],
     "tasks": [
@@ -1667,11 +1667,11 @@
         "question": "wisdomSummitSeven.questTask7",
         "text": "Im Restaurant war alles schlecht. Der Kellner war unfreundlich und unpünktlich. Die Suppe war zu salzig. Am Ende war die Rechnung falsch. Wir waren sehr unzufrieden.",
         "options": [
-          "zu salzig",
-          "kalt",
-          "zu süß"
+          "Sie hatte zu viel Salz.",
+          "Sie war kalt.",
+          "Sie war zu süß."
         ],
-        "answer": "zu salzig",
+        "answer": "Sie hatte zu viel Salz.",
         "tip": "wisdomSummitSeven.questDescription"
       },
       {
@@ -2065,6 +2065,20 @@
         "translation-ar": "بسبب"
       },
       {
+        "word": "eröffnen",
+        "translation-ru": "открывать (впервые)",
+        "translation-en": "to open (officially)",
+        "translation-uk": "відкривати",
+        "translation-pl": "otwierać",
+        "translation-es": "inaugurar",
+        "translation-fr": "inaugurer",
+        "translation-tr": "açılışını yapmak",
+        "translation-ro": "a inaugura",
+        "translation-uz": "ochmoq",
+        "translation-hi": "उद्घाटन करना",
+        "translation-ar": "يفتتح"
+      },
+      {
         "word": "prüfen",
         "translation-ru": "проверять",
         "translation-en": "to check",
@@ -2077,20 +2091,6 @@
         "translation-uz": "tekshirmoq",
         "translation-hi": "जाँचना",
         "translation-ar": "يفحص، يتحقّق"
-      },
-      {
-        "word": "lieber",
-        "translation-ru": "охотнее, больше нравится",
-        "translation-en": "rather, prefer",
-        "translation-uk": "охочіше, більше подобається",
-        "translation-pl": "chętniej, wolę",
-        "translation-es": "preferir, con más gusto",
-        "translation-fr": "plutôt, préférer",
-        "translation-tr": "tercihen, daha çok sevmek",
-        "translation-ro": "mai degrabă, prefer",
-        "translation-uz": "afzal ko‘rib",
-        "translation-hi": "ज़्यादा पसंद से",
-        "translation-ar": "يفضّل"
       }
     ],
     "tasks": [
@@ -2168,11 +2168,11 @@
         "question": "wisdomSummitNine.questTask7",
         "text": "Lieber Max, seitdem ich in München arbeite, habe ich leider wenig Zeit. Je mehr ich arbeite, desto müder bin ich am Abend. Aber mein Ziel ist klar: In zwei Jahren möchte ich ein kleines Café haben. Deine Anna",
         "options": [
-          "ein kleines Café haben",
+          "ihr eigenes Café eröffnen",
           "weniger arbeiten",
           "nach Berlin ziehen"
         ],
-        "answer": "ein kleines Café haben",
+        "answer": "ihr eigenes Café eröffnen",
         "tip": "wisdomSummitNine.questDescription"
       },
       {
@@ -2244,11 +2244,11 @@
         "question": "wisdomSummitNine.questTask13",
         "text": "Herr Wagner war gestern beim Arzt. Der Arzt hat gesagt: „Sie arbeiten zu viel. Sie sollten mehr schlafen und Sport machen.“ Jetzt geht Herr Wagner jeden Abend spazieren.",
         "options": [
-          "mehr schlafen und Sport machen",
+          "mehr Ruhe und mehr Sport",
           "weniger essen",
           "mehr arbeiten"
         ],
-        "answer": "mehr schlafen und Sport machen",
+        "answer": "mehr Ruhe und mehr Sport",
         "tip": "wisdomSummitNine.questDescription"
       },
       {
@@ -2506,10 +2506,10 @@
         "text": "Liebe Gäste, ab Montag kann man leider nicht schwimmen, weil das Schwimmbad repariert wird. Das Frühstück gibt es wie immer von 7 bis 10 Uhr.",
         "options": [
           "weil es zu viele Gäste gibt",
-          "weil das Schwimmbad repariert wird",
+          "wegen der Arbeiten am Schwimmbad",
           "weil es zu kalt ist"
         ],
-        "answer": "weil das Schwimmbad repariert wird",
+        "answer": "wegen der Arbeiten am Schwimmbad",
         "tip": "wisdomSummitTen.questDescription"
       },
       {

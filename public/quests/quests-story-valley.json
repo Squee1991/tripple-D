@@ -1227,11 +1227,11 @@
         "question": "storyValleyFive.questTask7",
         "text": "Als Anna zwölf war, ging ihre Familie nach Berlin. Anna war traurig, denn ihre Freunde blieben in München.",
         "options": [
-          "Ihre Freunde blieben in München.",
-          "Sie hatte keine Ferien.",
-          "Sie war krank."
+          "Ihre Freunde waren weit weg.",
+          "Sie mochte Berlin nicht.",
+          "Ihre Familie blieb dort."
         ],
-        "answer": "Ihre Freunde blieben in München.",
+        "answer": "Ihre Freunde waren weit weg.",
         "tip": "storyValleyFive.questDescription"
       },
       {

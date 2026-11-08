@@ -170,6 +170,8 @@ import { guideCatalog } from '~/utils/guideCatalog.js'
 import { regions } from '~/utils/regions.js'
 import { isRegionVisible, requiredLandLevel, levelOfCategory } from '~/utils/germanLevel.js'
 import { userAuthStore } from '~/store/authStore.js'
+import { userChainStore } from '~/store/chainStore.js'
+import { landsWithProgress } from '~/utils/landProgress.js'
 import { userlangStore } from '~/store/learningStore.js'
 import { useEventSessionStore } from '~/store/eventsStore.js'
 import { vibrateTap, vibrateError } from '~/utils/haptics.js'
@@ -196,13 +198,17 @@ const options = computed(() => {
       || node.lands.some(id => !isLandHidden(id)))
 })
 
+// земля с прогрессом открыта всегда, как и на карте
 function landLevel(item) {
   if (!item.id.startsWith('land-')) return null
   const region = regionById[item.id.slice(5)]
-  return region ? requiredLandLevel(region, authStore.germanLevel) : null
+  if (!region || landsWithProgress(chainStore.questProgress).has(region.id)) return null
+  return requiredLandLevel(region, authStore.germanLevel)
 }
 
 // земли ниже выбранного уровня немецкого скрыты, как и на карте
+const chainStore = userChainStore()
+
 function isLandHidden(id) {
   return id.startsWith('land-') && !isRegionVisible(id.slice(5), authStore.germanLevel)
 }
@@ -369,6 +375,21 @@ function goTo(link) {
 </script>
 
 <style scoped>
+/* акцент как у вкладок и кнопок приложения */
+.guide-fab,
+.guide__sheet {
+  --guide-accent: #8b7cf6;
+  --guide-accent-top: #a79cf8;
+  --guide-accent-edge: #6358ac;
+}
+
+html.orange .guide-fab,
+html.orange .guide__sheet {
+  --guide-accent: #ff7a1a;
+  --guide-accent-top: #ff9a4a;
+  --guide-accent-edge: #b5581a;
+}
+
 .guide-fab {
   position: fixed;
   right: 16px;
@@ -378,9 +399,9 @@ function goTo(link) {
   height: 52px;
   padding: 0;
   border-radius: 50%;
-  border: 3px solid #ffb100;
-  background: #3b2d54;
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.35), 0 0 0 0 rgba(255, 177, 0, 0.5);
+  border: 3px solid var(--guide-accent);
+  background: var(--tabBg);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.35), 0 0 0 0 color-mix(in srgb, var(--guide-accent) 50%, transparent);
   cursor: pointer;
   animation: guide-fab-pulse 2.8s ease-out infinite;
   -webkit-tap-highlight-color: transparent;
@@ -413,7 +434,7 @@ function goTo(link) {
   width: 100%;
   max-height: calc(100dvh - 100px);
   padding: 18px max(16px, calc((100% - 480px) / 2)) calc(14px + env(safe-area-inset-bottom));
-  border-top: 3px solid #ffb100;
+  border-top: 3px solid var(--guide-accent);
   border-radius: 28px 28px 0 0;
   background: var(--bg);
   color: var(--titleColor);
@@ -440,7 +461,7 @@ function goTo(link) {
   height: 42px;
   border-radius: 50%;
   object-fit: cover;
-  box-shadow: 0 0 0 2px #ffb100;
+  box-shadow: 0 0 0 2px var(--guide-accent);
 }
 
 .guide__online {
@@ -794,10 +815,10 @@ function goTo(link) {
   justify-content: center;
   gap: 6px;
   padding: 12px;
-  border: 2px solid #ffb100;
+  border: 2px solid var(--guide-accent);
   border-radius: 50px;
   background: transparent;
-  color: #ffb100;
+  color: var(--guide-accent);
   font-size: 0.92rem;
   font-weight: 800;
   cursor: pointer;
@@ -807,9 +828,9 @@ function goTo(link) {
 
 .guide__nav-btn--accent {
   border-color: transparent;
-  background: linear-gradient(180deg, #ffc93c, #ffa000);
-  color: #3b2d54;
-  box-shadow: 0 4px 0 #c77c00;
+  background: linear-gradient(180deg, var(--guide-accent-top), var(--guide-accent));
+  color: #fff;
+  box-shadow: 0 4px 0 var(--guide-accent-edge);
 }
 
 .guide__nav-btn:active {
@@ -818,7 +839,7 @@ function goTo(link) {
 
 .guide__nav-btn--accent:active {
   transform: translateY(3px);
-  box-shadow: 0 1px 0 #c77c00;
+  box-shadow: 0 1px 0 var(--guide-accent-edge);
 }
 
 .guide__sheet--rtl .guide__nav-btn svg {
@@ -861,10 +882,10 @@ function goTo(link) {
 
 @keyframes guide-fab-pulse {
   0% {
-    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.35), 0 0 0 0 rgba(255, 177, 0, 0.5);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.35), 0 0 0 0 color-mix(in srgb, var(--guide-accent) 50%, transparent);
   }
   70%, 100% {
-    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.35), 0 0 0 14px rgba(255, 177, 0, 0);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.35), 0 0 0 14px color-mix(in srgb, var(--guide-accent) 0%, transparent);
   }
 }
 

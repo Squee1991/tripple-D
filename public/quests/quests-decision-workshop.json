@@ -1998,10 +1998,10 @@
         "text": "Am Samstag waren wir bei Karin. Zuerst nahmen alle im Wohnzimmer Platz. Nach dem Essen machte Karin den Vorschlag, ein Spiel zu spielen. Wir spielten leise, denn wir nahmen Rücksicht auf ihr Baby.",
         "options": [
           "einen Film zu sehen",
-          "ein Spiel zu spielen",
+          "zusammen etwas zu spielen",
           "spazieren zu gehen"
         ],
-        "answer": "ein Spiel zu spielen",
+        "answer": "zusammen etwas zu spielen",
         "tip": "decisionWorkshopEight.questDescription"
       },
       {
@@ -2254,11 +2254,11 @@
         "question": "decisionWorkshopNine.questTask7",
         "text": "Sophie muss eine Entscheidung treffen: Sie kann in Köln oder in München studieren. Sie führt ein langes Gespräch mit ihren Eltern. Ihr Vater macht den Vorschlag, beide Städte zu besuchen. Am Sonntag sagt Sophie ihren Eltern Bescheid.",
         "options": [
-          "beide Städte zu besuchen",
-          "nicht zu studieren",
-          "in Köln zu bleiben"
+          "in beide Städte zu fahren",
+          "in Köln zu bleiben",
+          "nicht zu studieren"
         ],
-        "answer": "beide Städte zu besuchen",
+        "answer": "in beide Städte zu fahren",
         "tip": "decisionWorkshopNine.questDescription"
       },
       {

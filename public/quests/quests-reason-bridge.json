@@ -966,11 +966,11 @@
         "question": "reasonBridgeFour.questTask7",
         "text": "Ben arbeitet viel, obwohl das Gehalt nicht sehr gut ist. Er liebt seinen Beruf.",
         "options": [
-          "Er liebt seinen Beruf.",
-          "Er hat keine Freunde.",
-          "Das Gehalt ist sehr gut."
+          "Die Arbeit macht ihm Spaß.",
+          "Er bekommt viel Geld.",
+          "Er muss mehr Stunden arbeiten."
         ],
-        "answer": "Er liebt seinen Beruf.",
+        "answer": "Die Arbeit macht ihm Spaß.",
         "tip": "reasonBridgeFour.questDescription"
       },
       {
@@ -1313,11 +1313,11 @@
         "question": "memoryLakeSix.questTask13",
         "text": "Mia war sehr glücklich. Sie hatte die Prüfung bestanden und ihre Familie hatte eine Feier für sie gemacht.",
         "options": [
-          "Sie hatte ein Auto gekauft.",
-          "Sie hatte die Prüfung bestanden.",
-          "Sie hatte Geburtstag."
+          "Sie hatte Geburtstag.",
+          "Die Prüfung lief gut.",
+          "Sie bekam ein Geschenk."
         ],
-        "answer": "Sie hatte die Prüfung bestanden.",
+        "answer": "Die Prüfung lief gut.",
         "tip": "memoryLakeSix.questDescription",
         "reviewOf": "memory-lake-six",
         "reviewLand": "memory-lake"
@@ -1504,10 +1504,10 @@
         "text": "Paul hatte zwei Angebote. Das erste war besser bezahlt, das zweite war näher an seiner Wohnung. Er wählte das zweite, denn er wollte nicht so lange fahren.",
         "options": [
           "Er kannte den Chef.",
-          "Er wollte nicht so lange fahren.",
-          "Es war besser bezahlt."
+          "Der Weg war kürzer.",
+          "Er verdiente dort mehr."
         ],
-        "answer": "Er wollte nicht so lange fahren.",
+        "answer": "Der Weg war kürzer.",
         "tip": "reasonBridgeSix.questDescription"
       },
       {
@@ -1797,11 +1797,11 @@
         "question": "reasonBridgeSeven.questTask7",
         "text": "Lena war eine Woche am Meer. Das Wetter war schön, aber sie schwamm nicht, denn das Wasser war sehr kalt. Deshalb lag sie am Strand und las Bücher. Obwohl sie nicht schwamm, war der Urlaub schön.",
         "options": [
-          "Das Wasser war sehr kalt.",
+          "Das Meer war ihr zu kalt.",
           "Sie war krank.",
           "Das Wetter war schlecht."
         ],
-        "answer": "Das Wasser war sehr kalt.",
+        "answer": "Das Meer war ihr zu kalt.",
         "tip": "reasonBridgeSeven.questDescription"
       },
       {
@@ -2356,11 +2356,11 @@
         "question": "reasonBridgeNine.questTask7",
         "text": "Sara wollte ins Kino gehen. Aber sie hatte kein Geld, deshalb blieb sie zu Hause und las ein Buch.",
         "options": [
-          "Sie hatte kein Geld.",
-          "Das Kino war zu teuer.",
-          "Sie war krank."
+          "Ihr fehlte das Geld.",
+          "Sie wollte lieber lesen.",
+          "Das Kino war geschlossen."
         ],
-        "answer": "Sie hatte kein Geld.",
+        "answer": "Ihr fehlte das Geld.",
         "tip": "reasonBridgeNine.questDescription"
       },
       {
@@ -2678,10 +2678,10 @@
         "text": "Tim hatte keine Lust auf Sport. Trotzdem ging er ins Fitnessstudio, denn er wollte gesund bleiben.",
         "options": [
           "Sein Freund wartete dort.",
-          "Er wollte gesund bleiben.",
+          "Sport ist gesund.",
           "Er hatte große Lust."
         ],
-        "answer": "Er wollte gesund bleiben.",
+        "answer": "Sport ist gesund.",
         "tip": "reasonBridgeTen.questDescription"
       },
       {

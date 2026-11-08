@@ -72,17 +72,17 @@
       },
       {
         "word": "die Hausaufgaben",
-        "translation-ru": "домашнее задание",
+        "translation-ru": "домашние задания",
         "translation-en": "homework",
-        "translation-uk": "домашнє завдання",
-        "translation-pl": "praca domowa",
+        "translation-uk": "домашні завдання",
+        "translation-pl": "zadania domowe",
         "translation-es": "los deberes",
         "translation-fr": "les devoirs",
-        "translation-tr": "ev ödevi",
+        "translation-tr": "ödevler",
         "translation-ro": "temele",
-        "translation-uz": "uy vazifasi",
-        "translation-hi": "होमवर्क",
-        "translation-ar": "الواجب المنزلي"
+        "translation-uz": "uy vazifalari",
+        "translation-hi": "गृहकार्य",
+        "translation-ar": "الواجبات المنزلية"
       }
     ],
     "tasks": [
@@ -160,11 +160,11 @@
         "question": "memoryLakeOne.questTask7",
         "text": "Als Lisa am Bahnhof ankam, war der Zug schon weg. Sie hatte zu lange geschlafen.",
         "options": [
-          "Sie war krank.",
-          "Sie hatte zu lange geschlafen.",
-          "Sie hatte kein Ticket."
+          "Sie nahm den falschen Zug.",
+          "Sie stand zu spät auf.",
+          "Der Zug hatte Verspätung."
         ],
-        "answer": "Sie hatte zu lange geschlafen.",
+        "answer": "Sie stand zu spät auf.",
         "tip": "memoryLakeOne.questDescription"
       },
       {
@@ -233,11 +233,11 @@
         "question": "storyValleyTwo.questTask13",
         "text": "Am Sonntag blieb Tim zu Hause. Es war kalt und dunkel. Er spielte Karten.",
         "options": [
-          "Es war kalt.",
-          "Er war krank.",
-          "Er hatte Besuch."
+          "Das Wetter war schlecht.",
+          "Er hatte Besuch.",
+          "Er musste Karten kaufen."
         ],
-        "answer": "Es war kalt.",
+        "answer": "Das Wetter war schlecht.",
         "tip": "storyValleyTwo.questDescription",
         "reviewOf": "story-valley-two",
         "reviewLand": "story-valley"
@@ -2087,11 +2087,11 @@
         "question": "memoryLakeEight.questTask7",
         "text": "Gestern war ein schlechter Tag für Ben. Er hatte verschlafen, und als er zur Haltestelle kam, war der Bus schon weg. Im Büro sah er, dass er sein Handy zu Hause gelassen hatte. Am Abend lachte er aber darüber.",
         "options": [
-          "Er war krank.",
-          "Er hatte verschlafen.",
-          "Der Bus kam zu früh."
+          "Der Bus kam zu früh.",
+          "Er ist zu spät aufgewacht.",
+          "Er vergaß sein Handy."
         ],
-        "answer": "Er hatte verschlafen.",
+        "answer": "Er ist zu spät aufgewacht.",
         "tip": "memoryLakeEight.questDescription"
       },
       {

@@ -2525,11 +2525,11 @@
         "question": "heroSquareTen.questTask7",
         "text": "Gestern war Lisa im Museum. Ein Tourist fragte sie nach dem Weg zum Bahnhof. Lisa erklärte dem Touristen den Weg. Wegen des Regens nahm der Tourist dann ein Taxi.",
         "options": [
-          "weil der Weg weit war",
-          "wegen des Regens",
-          "weil er müde war"
+          "Der Weg war weit.",
+          "Das Wetter war schlecht.",
+          "Er war müde."
         ],
-        "answer": "wegen des Regens",
+        "answer": "Das Wetter war schlecht.",
         "tip": "heroSquareTen.questDescription"
       },
       {

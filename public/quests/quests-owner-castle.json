@@ -1172,11 +1172,11 @@
         "question": "ownerCastleFive.questTask7",
         "text": "Heute ist Paul nicht zur Arbeit gekommen. Wegen einer Erkältung bleibt er zu Hause. Seine Kollegen machen die Arbeit für ihn.",
         "options": [
-          "wegen einer Erkältung",
-          "wegen der Arbeit",
-          "wegen des Wetters"
+          "Er ist krank.",
+          "Er hat zu viel Arbeit.",
+          "Das Wetter ist schlecht."
         ],
-        "answer": "wegen einer Erkältung",
+        "answer": "Er ist krank.",
         "tip": "ownerCastleFive.questDescription"
       },
       {
@@ -2220,11 +2220,11 @@
         "question": "ownerCastleNine.questTask7",
         "text": "Die Freundin meines Bruders heißt Julia. Wegen ihrer Arbeit wohnt sie in Wien, aber sie besucht uns jeden Monat.",
         "options": [
-          "wegen ihrer Arbeit",
-          "wegen des Wetters",
-          "wegen ihrer Familie"
+          "Sie arbeitet dort.",
+          "Ihre Familie wohnt dort.",
+          "Das Wetter ist dort schön."
         ],
-        "answer": "wegen ihrer Arbeit",
+        "answer": "Sie arbeitet dort.",
         "tip": "ownerCastleNine.questDescription"
       },
       {

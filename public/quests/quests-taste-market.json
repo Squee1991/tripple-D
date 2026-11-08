@@ -1154,11 +1154,11 @@
         "question": "tasteMarketFive.questTask7",
         "text": "Information: Wegen starken Regens fahren heute keine Busse. Bitte nehmen Sie die U-Bahn.",
         "options": [
-          "wegen starken Regens",
-          "wegen der Arbeit",
-          "wegen eines Staus"
+          "Das Wetter ist zu schlecht.",
+          "Die Fahrer arbeiten nicht.",
+          "Es gibt einen Stau."
         ],
-        "answer": "wegen starken Regens",
+        "answer": "Das Wetter ist zu schlecht.",
         "tip": "tasteMarketFive.questDescription"
       },
       {
@@ -2497,10 +2497,10 @@
         "text": "Liebe Anna, wir sind gestern in Italien angekommen. Trotz schlechten Wetters sind wir jeden Tag am Strand. Das Essen ist toll: frischer Fisch, gutes Brot und kalter Wein. Viele Grüße, Lena",
         "options": [
           "heiß",
-          "schlecht",
+          "nicht gut",
           "sehr schön"
         ],
-        "answer": "schlecht",
+        "answer": "nicht gut",
         "tip": "tasteMarketTen.questDescription"
       },
       {

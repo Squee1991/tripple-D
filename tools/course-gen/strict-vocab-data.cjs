@@ -1,5 +1,11 @@
 // Переводы слов, которых не было в словарях курса. Ключ: форма в задании. Значение: [слово для словаря, ru en uk pl es fr tr ro uz hi ar]
 module.exports = {
+	radio: ['das Radio', 'радио', 'radio', 'радіо', 'radio', 'la radio', 'la radio', 'radyo', 'radioul', 'radio', 'रेडियो', 'الراديو'],
+	übt: ['üben', 'упражняться', 'to practise', 'вправлятися', 'ćwiczyć', 'practicar', 's’exercer', 'alıştırma yapmak', 'a exersa', 'mashq qilmoq', 'अभ्यास करना', 'يتدرب'],
+	lachende: ['lachend', 'смеющийся', 'laughing', 'усміхнений', 'śmiejący się', 'que ríe', 'qui rit', 'gülen', 'care râde', 'kulayotgan', 'हँसता हुआ', 'ضاحك'],
+	schlafende: ['schlafend', 'спящий', 'sleeping', 'сплячий', 'śpiący', 'que duerme', 'qui dort', 'uyuyan', 'care doarme', 'uxlayotgan', 'सोता हुआ', 'نائم'],
+	singende: ['singend', 'поющий', 'singing', 'співаючий', 'śpiewający', 'que canta', 'qui chante', 'şarkı söyleyen', 'care cântă', 'kuylayotgan', 'गाता हुआ', 'مغنٍ'],
+	dick: ['dick', 'толстый', 'thick', 'товстий', 'gruby', 'grueso', 'épais', 'kalın', 'gros', 'qalin', 'मोटा', 'سميك'],
 	ausgestiegen: ['aussteigen', 'выходить (из транспорта)', 'to get off', 'виходити (з транспорту)', 'wysiadać', 'bajarse', 'descendre', 'inmek', 'a coborî', 'tushmoq', 'उतरना', 'ينزل'],
 	krankenkasse: ['die Krankenkasse', 'медицинская страховка', 'health insurance', 'медичне страхування', 'kasa chorych', 'el seguro médico', 'la caisse maladie', 'sağlık sigortası', 'casa de asigurări', 'tibbiy sug‘urta', 'स्वास्थ्य बीमा', 'التأمين الصحي'],
 	burger: ['der Burger', 'бургер', 'burger', 'бургер', 'burger', 'la hamburguesa', 'le burger', 'burger', 'burgerul', 'burger', 'बर्गर', 'البرغر'],

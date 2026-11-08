@@ -46,6 +46,14 @@ export function landLevelOffset(userLevel) {
 
 export const UNLOCK_ALL_LANDS = false
 
+// вершина каждого уровня: итоговый тест открывается после её экзамена
+export const LEVEL_SUMMITS = { A1: 'a1-summit', A2: 'a2-summit', B1: 'wisdom-summit' }
+
+export function isLevelFinished(questProgress, level) {
+	const summit = LEVEL_SUMMITS[level]
+	return !!summit && !!questProgress?.[`${summit}-ten`]?.success
+}
+
 export function requiredLandLevel(region, userLevel) {
 	if (!region || UNLOCK_ALL_LANDS) return 0
 	return Math.max((region.level || 0) - landLevelOffset(userLevel), 0)

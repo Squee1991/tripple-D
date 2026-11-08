@@ -9,7 +9,6 @@
         </clipPath>
       </defs>
       <path :d="fullPath" class="road road--shadow" transform="translate(0 5)"/>
-      <path v-for="seg in segments" :key="'g' + seg.key" v-show="seg.open" :d="seg.d" class="road road--glow"/>
       <path :d="fullPath" class="road road--edge"/>
       <path
           v-for="seg in segments"
@@ -35,9 +34,8 @@
       </g>
     </svg>
 
-    <!-- рубеж нового уровня: черта через карту и медаль на дороге; кольцо вокруг медали показывает, сколько земель уровня открыто -->
+    <!-- рубеж нового уровня: медаль на дороге; кольцо вокруг неё показывает, сколько земель уровня открыто -->
     <div v-if="isNewLevel" class="level-gate" :style="{ top: GATE_Y + 'px' }">
-      <span class="level-gate__line level-gate__line--left" aria-hidden="true"></span>
       <span class="level-gate__medal">
         <span class="level-gate__code">
           {{ theme.toUpperCase() }}
@@ -57,7 +55,6 @@
           {{ t(`locationsMenu.level${theme.toUpperCase()}`) }}<template v-if="levelProgress.total"> · {{ levelProgress.open }}/{{ levelProgress.total }}</template>
         </span>
       </span>
-      <span class="level-gate__line level-gate__line--right" aria-hidden="true"></span>
     </div>
 
     <!-- земли -->
@@ -81,6 +78,29 @@
       <span v-if="isLocked(node.region)" class="land-node__lock">🔒 {{ needLevel(node.region) }}</span>
       <span class="land-node__label" :class="'land-node__label--' + node.side">{{ t(node.region.name) }}</span>
     </button>
+
+    <!-- итоговый тест уровня: стоит на дороге сразу за вершиной -->
+    <button
+        v-if="testLevel"
+        type="button"
+        class="test-node"
+        :class="{ 'test-node--open': testOpen }"
+        :style="{ top: testY + 'px' }"
+        :data-track="'map_location_test_' + testLevel"
+        @click="$emit('test', testLevel)"
+    >
+      <span class="test-node__base" aria-hidden="true"></span>
+      <span class="test-node__scroll">
+        <span class="test-node__title">{{ t('locationTest.title', { level: testLevel }) }}</span>
+        <span class="test-node__sub">{{ t('locationTest.mapHint') }}</span>
+        <span class="test-node__seal" aria-hidden="true">
+          <template v-if="testOpen">
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="#fff" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="5 13 10 18 19 7"></polyline></svg>
+          </template>
+          <template v-else>🔒</template>
+        </span>
+      </span>
+    </button>
   </div>
 </template>
 
@@ -99,10 +119,13 @@ const props = defineProps({
   isLast: { type: Boolean, default: false },
   // сколько земель уровня открыто: кольцо вокруг медали
   levelProgress: { type: Object, default: () => ({ open: 0, total: 0 }) },
+  // итоговый тест в конце этого раздела: уровень или пусто; testOpen = уровень пройден
+  testLevel: { type: String, default: '' },
+  testOpen: { type: Boolean, default: false },
   isLocked: { type: Function, default: () => false },
   needLevel: { type: Function, default: () => 0 }
 })
-defineEmits(['select'])
+defineEmits(['select', 'test'])
 
 const { t } = useI18n()
 
@@ -131,7 +154,10 @@ const nodes = computed(() => props.regions.map((region, i) => ({
 })))
 
 // под последней землёй последнего раздела оставляем место только для подписи
-const mapHeight = computed(() => top.value + Math.max(props.regions.length - 1, 0) * ROW + (props.isLast ? 70 : BOTTOM + 40))
+const TEST_ROW = 126
+const testY = computed(() => top.value + Math.max(props.regions.length - 1, 0) * ROW + TEST_ROW)
+const lastY = computed(() => props.testLevel ? testY.value + 40 : top.value + Math.max(props.regions.length - 1, 0) * ROW)
+const mapHeight = computed(() => lastY.value + (props.isLast ? 70 : BOTTOM + 40))
 
 // реальная ширина карты в пикселях: дорога рисуется без растяжения, изгибы ровные
 const root = ref(null)
@@ -158,7 +184,8 @@ const roadPoints = computed(() => {
   // в первом разделе дорога начинается от медали уровня
   const start = props.prevTheme ? 0 : GATE_Y
   const points = [{ x: px(50), y: start, open: list[0].open }, ...list]
-  if (!props.isLast) points.push({ x: px(50), y: mapHeight.value, open: list[list.length - 1].open })
+  if (props.testLevel) points.push({ x: px(50), y: testY.value, open: props.testOpen })
+  if (!props.isLast) points.push({ x: px(50), y: mapHeight.value, open: points[points.length - 1].open })
   return points
 })
 
@@ -212,24 +239,24 @@ const handover = computed(() => {
   --road-edge: #15803d;
   --road-surface: #4ade80;
   --road-shine: #dcfce7;
-  --road-locked: #2f7d52;
-  --road-locked-shine: #5aa97e;
+  --road-locked: #1f5a3c;
+  --road-locked-shine: #3d7d5c;
 }
 
 .road-theme--a2 {
   --road-edge: #1d4ed8;
   --road-surface: #60a5fa;
   --road-shine: #dbeafe;
-  --road-locked: #3467b3;
-  --road-locked-shine: #6892d4;
+  --road-locked: #274a82;
+  --road-locked-shine: #4a6ea6;
 }
 
 .road-theme--b1 {
   --road-edge: #6d28d9;
   --road-surface: #a78bfa;
   --road-shine: #ede9fe;
-  --road-locked: #6547b8;
-  --road-locked-shine: #9478dc;
+  --road-locked: #4a348a;
+  --road-locked-shine: #6c55ad;
 }
 
 .lands-map--a2 {
@@ -266,13 +293,6 @@ const handover = computed(() => {
   stroke-width: 28px;
 }
 
-/* мягкое свечение цвета уровня вокруг открытого пути */
-.road--glow {
-  stroke: var(--accent);
-  stroke-width: 40px;
-  opacity: 0.22;
-}
-
 .road--edge {
   stroke: var(--road-edge);
   stroke-width: 28px;
@@ -297,11 +317,10 @@ const handover = computed(() => {
   opacity: 0.45;
 }
 
-/* на открытом пути разметка бежит вперёд к следующей земле */
+/* на открытом пути разметка светлая и неподвижная */
 .road--dash-open {
   stroke: var(--road-dash);
   opacity: 0.9;
-  animation: road-run 1.6s linear infinite;
 }
 
 .road--surface.road--locked {
@@ -319,39 +338,16 @@ const handover = computed(() => {
   opacity: 1;
 }
 
-@keyframes road-run {
-  to { stroke-dashoffset: -36; }
-}
-
-/* рубеж нового уровня: черта через всю карту и медаль на дороге */
+/* рубеж нового уровня: медаль на дороге */
 .level-gate {
   position: absolute;
   left: 0;
   right: 0;
   z-index: 3;
   display: flex;
-  align-items: flex-start;
+  justify-content: center;
   transform: translateY(-50%);
   pointer-events: none;
-}
-
-.level-gate__line {
-  flex: 1;
-  height: 2px;
-  /* по центру медали, а не медали с лентой */
-  margin-top: 26px;
-  border-radius: 2px;
-  opacity: 0.6;
-}
-
-.level-gate__line--left {
-  margin-right: 16px;
-  background: linear-gradient(90deg, transparent, var(--accent));
-}
-
-.level-gate__line--right {
-  margin-left: 16px;
-  background: linear-gradient(270deg, transparent, var(--accent));
 }
 
 .level-gate__medal {
@@ -423,6 +419,114 @@ const handover = computed(() => {
   font-weight: 900;
   white-space: nowrap;
   box-shadow: 0 3px 0 rgba(0, 0, 0, 0.2);
+}
+
+/* итоговый тест на дороге: свиток на подставке, как у земель, с сургучной печатью */
+.test-node {
+  position: absolute;
+  left: 50%;
+  z-index: 2;
+  width: 214px;
+  max-width: calc(100% - 24px);
+  padding: 0;
+  border: none;
+  background: none;
+  font-family: "Nunito", sans-serif;
+  transform: translate(-50%, -50%);
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.test-node__base {
+  position: absolute;
+  left: 50%;
+  bottom: -14px;
+  width: 170px;
+  height: 30px;
+  transform: translateX(-50%);
+  border-radius: 50%;
+  background: linear-gradient(180deg, #8b5a2b, #5e3b1a);
+  box-shadow: 0 10px 14px rgba(0, 0, 0, 0.3);
+}
+
+.test-node__scroll {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1px;
+  margin: 8px 8px 6px;
+  padding: 12px 12px 12px;
+  border-left: 3px solid #b98a4f;
+  border-right: 3px solid #b98a4f;
+  background: linear-gradient(180deg, #fbeecf 0%, #f0dbaf 100%);
+  color: #4a2a00;
+  text-align: center;
+  transition: transform 0.1s ease;
+}
+
+.test-node:active .test-node__scroll {
+  transform: translateY(3px);
+}
+
+/* скрученные края свитка */
+.test-node__scroll::before,
+.test-node__scroll::after {
+  content: "";
+  position: absolute;
+  left: -9px;
+  right: -9px;
+  height: 14px;
+  border-radius: 7px;
+  background: linear-gradient(180deg, #e6c78e 0%, #c1924f 100%);
+  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.3);
+}
+
+.test-node__scroll::before {
+  top: -7px;
+}
+
+.test-node__scroll::after {
+  bottom: -7px;
+}
+
+.test-node__title {
+  font-size: 15px;
+  font-weight: 900;
+  line-height: 1.15;
+}
+
+.test-node__sub {
+  font-size: 12px;
+  font-weight: 800;
+  line-height: 1.15;
+  opacity: 0.75;
+}
+
+/* сургучная печать: галочка, когда тест открыт, замок, пока закрыт */
+.test-node__seal {
+  position: absolute;
+  right: -14px;
+  bottom: -14px;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 35% 30%, #e0524a, #a81f1a);
+  box-shadow: 0 3px 0 #7c1512, 0 4px 8px rgba(0, 0, 0, 0.35);
+  font-size: 15px;
+}
+
+.test-node:not(.test-node--open) .test-node__scroll {
+  filter: saturate(0.55) brightness(0.72);
+}
+
+.test-node:not(.test-node--open) .test-node__seal {
+  background: radial-gradient(circle at 35% 30%, #7d70cf, #4b4190);
+  box-shadow: 0 3px 0 #352c6e, 0 4px 8px rgba(0, 0, 0, 0.35);
 }
 
 /* земля-островок */
@@ -549,8 +653,7 @@ const handover = computed(() => {
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .land-node__island,
-  .road--dash-open {
+  .land-node__island {
     animation: none;
   }
 }

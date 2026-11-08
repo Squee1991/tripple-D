@@ -71,18 +71,18 @@
         "translation-ar": "الزبون"
       },
       {
-        "word": "der Vorschlag",
-        "translation-ru": "предложение",
-        "translation-en": "suggestion",
-        "translation-uk": "пропозиція",
-        "translation-pl": "propozycja",
-        "translation-es": "la propuesta",
-        "translation-fr": "la proposition",
-        "translation-tr": "öneri",
-        "translation-ro": "propunerea",
-        "translation-uz": "taklif",
-        "translation-hi": "सुझाव",
-        "translation-ar": "الاقتراح"
+        "word": "bewegen",
+        "translation-ru": "двигать / перемещать",
+        "translation-en": "to move",
+        "translation-uk": "рухати",
+        "translation-pl": "ruszać / poruszać",
+        "translation-es": "mover",
+        "translation-fr": "bouger",
+        "translation-tr": "hareket ettirmek",
+        "translation-ro": "a mișca",
+        "translation-uz": "qimirlatmoq",
+        "translation-hi": "हिलाना",
+        "translation-ar": "يحرك"
       }
     ],
     "tasks": [
@@ -171,10 +171,10 @@
         "text": "Tom arbeitet jeden Tag zehn Stunden. Er sagt: „Wenn ich mehr Zeit hätte, würde ich Sport machen und meine Eltern besuchen.“",
         "options": [
           "fernsehen",
-          "Sport machen",
+          "sich mehr bewegen",
           "mehr arbeiten"
         ],
-        "answer": "Sport machen",
+        "answer": "sich mehr bewegen",
         "tip": "wishIslandOne.questDescription"
       },
       {

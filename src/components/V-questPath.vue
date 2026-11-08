@@ -142,6 +142,15 @@
           {{ t('questPath.chestOpen') }}
         </button>
       </div>
+      <!-- вершина уровня пройдена: открывается итоговый тест, он ничего не блокирует -->
+      <NuxtLink
+          v-if="locationTestLevel"
+          class="land-test"
+          :to="`/locations-test/${locationTestLevel}`"
+          data-track="location_test_opened"
+      >
+        {{ t('locationTest.title', { level: locationTestLevel }) }}
+      </NuxtLink>
       </div>
     </div>
     <Teleport to="body">
@@ -296,6 +305,13 @@ const landComplete = computed(() =>
 const openedNode = computed(() => nodes.value[openedIndex.value] || { state: 'todo' })
 
 // сундук: locked — земля не пройдена, ready — можно открыть, claimed — награда уже получена
+// итоговый тест уровня: кнопка на вершине после её последнего квеста
+const TEST_BY_SUMMIT = { 'a1-summit': 'A1', 'a2-summit': 'A2', 'wisdom-summit': 'B1' }
+const locationTestLevel = computed(() => {
+  const level = TEST_BY_SUMMIT[props.region?.id]
+  return level && props.quests[props.quests.length - 1]?.isSuccess ? level : ''
+})
+
 const chestState = computed(() => {
   if (props.chestClaimed) return 'claimed'
   return landComplete.value ? 'ready' : 'locked'
@@ -434,6 +450,20 @@ onBeforeUnmount(() => {
 </script>
 
 <style scoped>
+.land-test {
+  display: block;
+  margin: 16px 12px 8px;
+  padding: 13px;
+  border-radius: 50px;
+  background: #6358ac;
+  box-shadow: 0 5px 0 #4b4190;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 900;
+  text-align: center;
+  text-decoration: none;
+}
+
 .passport {
   --ink: #4a2a12;
   --ink-soft: #a67c4e;
@@ -716,9 +746,10 @@ onBeforeUnmount(() => {
   background-image: radial-gradient(circle, #8fd17f 4px, transparent 4.5px);
 }
 
+/* подсказка под блоком письма: сверху её обрезает край прокрутки у первого квеста */
 .passport__hint {
   position: absolute;
-  top: -48px;
+  top: calc(100% + 8px);
   inset-inline-end: 0;
   z-index: 5;
   width: max-content;

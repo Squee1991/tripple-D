@@ -490,6 +490,14 @@ export const wordAchievementsGroup = [
 				targetProgress: 10
 			},
 			{
+				id: 'nuance-bridge',
+				name: 'locationNames.nuance-bridge',
+				description: 'locationAchievementsCategory.landDescription',
+				icon: '🌈',
+				currentProgress: 0,
+				targetProgress: 10
+			},
+			{
 				id: 'word-forge',
 				name: 'locationNames.word-forge',
 				description: 'locationAchievementsCategory.landDescription',

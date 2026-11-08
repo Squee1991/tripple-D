@@ -731,10 +731,10 @@
         "text": "Tom wollte pünktlich sein. Er fuhr früh los, damit er nicht zu spät kam. Aber es gab einen Unfall, sodass er doch eine Stunde warten musste.",
         "options": [
           "Er hatte kein Auto.",
-          "Es gab einen Unfall.",
+          "Alle Autos standen still.",
           "Er fuhr zu spät los."
         ],
-        "answer": "Es gab einen Unfall.",
+        "answer": "Alle Autos standen still.",
         "tip": "consequenceForkThree.questDescription"
       },
       {
@@ -1005,11 +1005,11 @@
         "question": "consequenceForkFour.questTask7",
         "text": "Morgen machen wir einen Ausflug in die Berge. Lisa nimmt eine warme Jacke mit, falls es kalt wird. Falls es regnet, fahren wir ins Museum.",
         "options": [
-          "eine warme Jacke",
-          "ein Buch",
-          "einen Regenschirm"
+          "etwas gegen die Kälte",
+          "etwas gegen den Regen",
+          "etwas zum Lesen"
         ],
-        "answer": "eine warme Jacke",
+        "answer": "etwas gegen die Kälte",
         "tip": "consequenceForkFour.questDescription"
       },
       {
@@ -1266,11 +1266,11 @@
         "question": "consequenceForkFive.questTask7",
         "text": "Max hat Ferien. Solange er Ferien hat, arbeitet er in einem Café. Danach studiert er wieder.",
         "options": [
-          "solange er Ferien hat",
+          "bis die Ferien zu Ende sind",
           "nur am Wochenende",
           "das ganze Jahr"
         ],
-        "answer": "solange er Ferien hat",
+        "answer": "bis die Ferien zu Ende sind",
         "tip": "consequenceForkFive.questDescription"
       },
       {
@@ -1543,11 +1543,11 @@
         "question": "consequenceForkSix.questTask7",
         "text": "Mia wollte um acht Uhr bei der Party sein. Aber der Bus kam nicht, sodass sie zu Fuß gehen musste. Sie war so müde, dass sie gleich nach Hause wollte.",
         "options": [
-          "Sie war krank.",
-          "Der Bus kam nicht.",
+          "Sie wollte zu Fuß gehen.",
+          "Es gab keinen Bus.",
           "Sie hatte keine Zeit."
         ],
-        "answer": "Der Bus kam nicht.",
+        "answer": "Es gab keinen Bus.",
         "tip": "consequenceForkSix.questDescription"
       },
       {
@@ -2711,10 +2711,10 @@
         "text": "Julia wollte im August nach Italien fliegen. Aber sie wurde krank, sodass sie zu Hause bleiben musste. Falls sie im Oktober Zeit hat, fliegt sie dann.",
         "options": [
           "Der Flug fiel aus.",
-          "Sie wurde krank.",
+          "Sie war nicht gesund.",
           "Sie hatte kein Geld."
         ],
-        "answer": "Sie wurde krank.",
+        "answer": "Sie war nicht gesund.",
         "tip": "consequenceForkTen.questDescription"
       },
       {

@@ -32,6 +32,30 @@ import CraftValley from 'assets/images/locations-images/craftValley.jpg'
 import TaskTower from 'assets/images/locations-images/taskTower.jpg'
 import DecisionWorkshop from 'assets/images/locations-images/decisionWorkshop.jpg'
 import ExperienceSummit from 'assets/images/locations-images/experienceSummit.jpg'
+import WisdomSummit from 'assets/images/locations-images/wisdomSummit.jpg'
+import OpinionTower from 'assets/images/locations-images/opinionTower.jpg'
+import WordForge from 'assets/images/locations-images/wordForge.jpg'
+import NuanceBridge from 'assets/images/locations-images/NuanceBridge.jpg'
+import LinkHarbor from 'assets/images/locations-images/linkHarbor.jpg'
+import QuestionBridge from 'assets/images/locations-images/QuestionBridge.jpg'
+import TasteMarket from 'assets/images/locations-images/TasteMarket.jpg'
+import HeroSquare from 'assets/images/locations-images/HeroSquare.jpg'
+import OwnerCastle from 'assets/images/locations-images/OwnerCastle.jpg'
+import RegretRiver from 'assets/images/locations-images/RegretRiver.jpg'
+import WishIsland from 'assets/images/locations-images/WishIsland.jpg'
+import TimeRoad from 'assets/images/locations-images/TimeRoad.jpg'
+import CalendarValley from 'assets/images/locations-images/CalendarValley.jpg'
+import QuestionGorge from 'assets/images/locations-images/QuestionGorge.jpg'
+import ChangeRiver from 'assets/images/locations-images/ChangeRiver.jpg'
+import RoutineMill from 'assets/images/locations-images/RoutineMill.jpg'
+import PowerPass from 'assets/images/locations-images/PowerPass.jpg'
+import HeartyInn from 'assets/images/locations-images/HeartyInn.jpg'
+import DressBazaar from 'assets/images/locations-images/DressBazaar.jpg'
+import HealerHut from 'assets/images/locations-images/HealerHut.jpg'
+import FamilyTree from 'assets/images/locations-images/FamilyTree.jpg'
+import NobodyVillage from 'assets/images/locations-images/NobodyVillage.jpg'
+import ChoiceCrossing from 'assets/images/locations-images/ChoiceCrossing.jpg'
+import RequestsLand from 'assets/images/locations-images/RequestsLand.jpg'
 
 export const regions = {
 		beginner: [
@@ -69,7 +93,7 @@ export const regions = {
 				name: "locationNames.question-gorge",
 				level: 3,
 				desc: "regions.descriptionQuestionGorge",
-				icon: StoneReach
+				icon: QuestionGorge
 			},
 			{
 				id: "market-square",
@@ -87,7 +111,7 @@ export const regions = {
 				name: "locationNames.change-river",
 				level: 5,
 				desc: "regions.descriptionChangeRiver",
-				icon: Ways
+				icon: ChangeRiver
 			},
 			{
 				id: "family-tree",
@@ -96,7 +120,7 @@ export const regions = {
 				name: "locationNames.family-tree",
 				level: 6,
 				desc: "regions.descriptionFamilyTree",
-				icon: Ways
+				icon: FamilyTree
 			},
 			{
 				id: "clock-tower",
@@ -114,7 +138,7 @@ export const regions = {
 				name: "locationNames.routine-mill",
 				level: 8,
 				desc: "regions.descriptionRoutineMill",
-				icon: Ways
+				icon: RoutineMill
 			},
 			{
 				id: "power-pass",
@@ -123,7 +147,7 @@ export const regions = {
 				name: "locationNames.power-pass",
 				level: 9,
 				desc: "regions.descriptionPowerPass",
-				icon: Ways
+				icon: PowerPass
 			}
 		],
 		pathfinder: [
@@ -134,7 +158,7 @@ export const regions = {
 				name: "locationNames.hearty-inn",
 				level: 10,
 				desc: "regions.descriptionHeartyInn",
-				icon: Ways
+				icon: HeartyInn
 			},
 			{
 				id: "dress-bazaar",
@@ -143,7 +167,7 @@ export const regions = {
 				name: "locationNames.dress-bazaar",
 				level: 11,
 				desc: "regions.descriptionDressBazaar",
-				icon: Ways
+				icon: DressBazaar
 			},
 			{
 				id: "wind-valley",
@@ -206,7 +230,7 @@ export const regions = {
 				name: "locationNames.healer-hut",
 				level: 18,
 				desc: "regions.descriptionHealerHut",
-				icon: Ways
+				icon: HealerHut
 			},
 			{
 				id: "a1-summit",
@@ -280,7 +304,7 @@ export const regions = {
 				name: "locationNames.requests-land",
 				level: 26,
 				desc: "regions.descriptionRequestsLand",
-				icon: PoliteCity
+				icon: RequestsLand
 			},
 			{
 				id: "order-valley",
@@ -298,7 +322,7 @@ export const regions = {
 				name: "locationNames.calendar-valley",
 				level: 28,
 				desc: "regions.descriptionCalendarValley",
-				icon: Watch
+				icon: CalendarValley
 			},
 			{
 				id: "time-road",
@@ -307,7 +331,7 @@ export const regions = {
 				name: "locationNames.time-road",
 				level: 29,
 				desc: "regions.descriptionTimeRoad",
-				icon: Ways
+				icon: TimeRoad
 			}
 		],
 		intermediate: [
@@ -336,7 +360,7 @@ export const regions = {
 				name: "locationNames.choice-crossing",
 				level: 32,
 				desc: "regions.descriptionChoiceCrossing",
-				icon: Bridge
+				icon: ChoiceCrossing
 			},
 			{
 				id: "nobody-village",
@@ -345,7 +369,7 @@ export const regions = {
 				name: "locationNames.nobody-village",
 				level: 33,
 				desc: "regions.descriptionNobodyVillage",
-				icon: Landmark
+				icon: NobodyVillage
 			},
 			{
 				id: "future-land",
@@ -502,7 +526,7 @@ export const regions = {
 				name: "locationNames.wish-island",
 				level: 50,
 				desc: "regions.descriptionWishIsland",
-				icon: SecretLands
+				icon: WishIsland
 			},
 			{
 				id: "regret-river",
@@ -511,7 +535,7 @@ export const regions = {
 				name: "locationNames.regret-river",
 				level: 51,
 				desc: "regions.descriptionRegretRiver",
-				icon: Future
+				icon: RegretRiver
 			},
 			{
 				id: "owner-castle",
@@ -520,7 +544,7 @@ export const regions = {
 				name: "locationNames.owner-castle",
 				level: 52,
 				desc: "regions.descriptionOwnerCastle",
-				icon: Landmark
+				icon: OwnerCastle
 			},
 			{
 				id: "hero-square",
@@ -529,7 +553,7 @@ export const regions = {
 				name: "locationNames.hero-square",
 				level: 53,
 				desc: "regions.descriptionHeroSquare",
-				icon: Landmark
+				icon: HeroSquare
 			},
 			{
 				id: "taste-market",
@@ -538,7 +562,7 @@ export const regions = {
 				name: "locationNames.taste-market",
 				level: 54,
 				desc: "regions.descriptionTasteMarket",
-				icon: WildLand
+				icon: TasteMarket
 			},
 			{
 				id: "question-bridge",
@@ -547,7 +571,7 @@ export const regions = {
 				name: "locationNames.question-bridge",
 				level: 55,
 				desc: "regions.descriptionQuestionBridge",
-				icon: Ways
+				icon: QuestionBridge
 			},
 			{
 				id: "link-harbor",
@@ -556,34 +580,43 @@ export const regions = {
 				name: "locationNames.link-harbor",
 				level: 56,
 				desc: "regions.descriptionLinkHarbor",
-				icon: StormCoast
+				icon: LinkHarbor
+			},
+			{
+				id: "nuance-bridge",
+				pathTo: "nuance-bridge",
+				theme: "link",
+				name: "locationNames.nuance-bridge",
+				level: 57,
+				desc: "regions.descriptionNuanceBridge",
+				icon: NuanceBridge
 			},
 			{
 				id: "word-forge",
 				pathTo: "word-forge",
 				theme: "forge",
 				name: "locationNames.word-forge",
-				level: 57,
+				level: 58,
 				desc: "regions.descriptionWordForge",
-				icon: Archive
+				icon: WordForge
 			},
 			{
 				id: "opinion-tower",
 				pathTo: "opinion-tower",
 				theme: "opinion",
 				name: "locationNames.opinion-tower",
-				level: 58,
+				level: 59,
 				desc: "regions.descriptionOpinionTower",
-				icon: Watch
+				icon: OpinionTower
 			},
 			{
 				id: "wisdom-summit",
 				pathTo: "wisdom-summit",
 				theme: "wisdom-summit",
 				name: "locationNames.wisdom-summit",
-				level: 59,
+				level: 60,
 				desc: "regions.descriptionWisdomSummit",
-				icon: MasterLands
+				icon: WisdomSummit
 			}
 		]
 	};

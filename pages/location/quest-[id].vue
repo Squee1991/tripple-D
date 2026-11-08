@@ -78,7 +78,7 @@
                   t(questStore.task.text)
                 }}
               </div>
-              <ul class="quest__options" :class="{ 'quest__options--locked': questStore.showResult }">
+              <ul class="quest__options" :class="{ 'quest__options--locked': questStore.showResult, 'quest__options--stack': questStore.task.type === 'readAndAnswer' }">
                 <li v-for="option in shuffledOptions" :key="option">
                   <button class="quest__option-btn"
                           :class="optionClass(option, questStore)"
@@ -1015,6 +1015,26 @@ watchEffect(() => {
   gap: 8px;
   flex-wrap: wrap;
   margin-top: .25rem;
+}
+
+/* ответы к тексту бывают длинными: столбиком, текст переносится */
+.quest__options--stack {
+  flex-direction: column;
+  flex-wrap: nowrap;
+}
+
+.quest__options--stack li {
+  width: 100%;
+}
+
+.quest__options--stack .quest__option-btn {
+  width: 100%;
+  height: auto;
+  min-height: 52px;
+  padding: 10px 14px;
+  font-size: 15px;
+  line-height: 1.25;
+  white-space: normal;
 }
 
 .quest__options--locked {
