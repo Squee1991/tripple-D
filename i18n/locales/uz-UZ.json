@@ -13375,7 +13375,6 @@
   },
   "examIndexPage": {
     "notAllowedTitle": "Testlar faqat obuna bo‘lgan akkauntlar uchun mavjud",
-    "hint": "Biz avtomatik nutqni tanish tizimidan foydalanamiz. Mikrofon yonida aniq gapiring.",
     "toMain": "Bosh sahifaga",
     "choice": "Darajani tanlang va barcha modullarni mashq qilishni boshlang:",
     "to": "O‘tish",
@@ -13660,18 +13659,6 @@
     "sent": "Test yuborildi",
     "sended": "Siz allaqachon ushbu testni yuborgansiz",
     "error": "Imtihonni ulashib bo‘lmadi"
-  },
-  "consentModal": {
-    "title": "Muhim xabarnoma",
-    "textPartOne": "Moduldagi topshiriqlarni bajarish uchun",
-    "textPartTwo": "sizning talaffuzingiz",
-    "textPartThree": "yozib olinadi va saqlanadi",
-    "textTwoPartOne": "Ushbu audioyozuvlar faqat javoblarni tekshirish uchun ishlatiladi. Biz",
-    "textTwoPartTwo": "ma’lumotlaringizni",
-    "textTwoPartThree": "uchinchi shaxslarga bermaymiz. Topshiriq bajarilgandan so‘ng, o‘z yozuvingizni eshitishingiz va xohlasangiz,",
-    "textTwoPartFour": "ulashishingiz mumkin",
-    "agree": "Men shartlarni o‘qidim va roziman",
-    "accept": "Qabul qilish"
   },
   "adjectiveTheory": {
     "title": "Nemis tilidagi sifatlar: oddiy va tushunarli",

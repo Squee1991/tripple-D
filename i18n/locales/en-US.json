@@ -13375,7 +13375,6 @@
   },
   "examIndexPage": {
     "notAllowedTitle": "Tests are available only for Subscription accounts",
-    "hint": "We use an automatic speech recognition system. Speak clearly near the microphone.",
     "toMain": "Home",
     "choice": "Choose a level and start practicing all modules:",
     "to": "Go to",
@@ -13663,18 +13662,6 @@
     "sent": "Test submitted",
     "sended": "You have already submitted this test",
     "error": "Failed to share the exam"
-  },
-  "consentModal": {
-    "title": "Important Notice",
-    "textPartOne": "To complete tasks in the",
-    "textPartTwo": "module, your pronunciation will be",
-    "textPartThree": "recorded and stored",
-    "textTwoPartOne": "These audio recordings are used solely for answer verification. We",
-    "textTwoPartTwo": "do not share",
-    "textTwoPartThree": "your data with third parties. After completing the task, you will have the opportunity to listen to your recording and, if you wish,",
-    "textTwoPartFour": "share it",
-    "agree": "I have read and agree to the terms",
-    "accept": "Accept"
   },
   "adjectiveTheory": {
     "title": "Adjectives in German: simple and clear",

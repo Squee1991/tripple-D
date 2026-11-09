@@ -13383,7 +13383,6 @@
   },
   "examIndexPage": {
     "notAllowedTitle": "Testler yalnızca abonelik hesaplarına açıktır",
-    "hint": "Otomatik konuşma tanıma sistemi kullanıyoruz. Mikrofonun yanında net konuşun.",
     "toMain": "Ana sayfa",
     "choice": "Bir seviye seçin ve tüm modülleri pratik yapmaya başlayın:",
     "to": "Git",
@@ -13671,18 +13670,6 @@
     "sent": "Test gönderildi",
     "sended": "Bu testi zaten gönderdiniz",
     "error": "Sınav paylaşılamadı"
-  },
-  "consentModal": {
-    "title": "Önemli Bilgilendirme",
-    "textPartOne": "Görevleri",
-    "textPartTwo": "modülünde tamamlamak için telaffuzunuz",
-    "textPartThree": "kaydedilecek ve saklanacaktır",
-    "textTwoPartOne": "Bu ses kayıtları yalnızca cevapların kontrolü için kullanılmaktadır. Biz",
-    "textTwoPartTwo": "üçüncü taraflarla",
-    "textTwoPartThree": "verilerinizi paylaşmıyoruz. Görevi tamamladıktan sonra kaydınızı dinleme ve isterseniz",
-    "textTwoPartFour": "paylaşma",
-    "agree": "Şartları okudum ve kabul ediyorum",
-    "accept": "Kabul Et"
   },
   "adjectiveTheory": {
     "title": "Almanca'da Sıfatlar: basit ve anlaşılır",

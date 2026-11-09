@@ -13368,7 +13368,6 @@
   },
   "examIndexPage": {
     "notAllowedTitle": "Testy są dostępne tylko dla kont z subskrypcją",
-    "hint": "Używamy automatycznego systemu rozpoznawania mowy. Mów wyraźnie blisko mikrofonu.",
     "toMain": "Strona główna",
     "choice": "Wybierz poziom i zacznij ćwiczyć wszystkie moduły:",
     "to": "Przejdź do",
@@ -13656,18 +13655,6 @@
     "sent": "Test wysłany",
     "sended": "Już wysłałeś ten test",
     "error": "Nie udało się udostępnić egzaminu"
-  },
-  "consentModal": {
-    "title": "Ważna informacja",
-    "textPartOne": "Aby wykonać zadania w module",
-    "textPartTwo": "twoja wymowa będzie",
-    "textPartThree": "nagrana i zapisana",
-    "textTwoPartOne": "Nagrania audio są używane wyłącznie do sprawdzania odpowiedzi. My",
-    "textTwoPartTwo": "nie przekazujemy",
-    "textTwoPartThree": "twoich danych osobom trzecim. Po ukończeniu zadania będziesz mieć możliwość odsłuchania swojego nagrania i, jeśli chcesz,",
-    "textTwoPartFour": "udostępnić je",
-    "agree": "Przeczytałem(am) i zgadzam się z warunkami",
-    "accept": "Akceptuj"
   },
   "adjectiveTheory": {
     "title": "Przymiotniki w języku niemieckim: prosto i jasno",

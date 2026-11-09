@@ -58,7 +58,6 @@ export const userAuthStore = defineStore('auth', () => {
     const registeredAt = ref(null);
     const providerId = ref('');
     const avatar = ref(null);
-    const voiceConsentGiven = ref(false);
     const hasSeenOnboarding = ref(false);
     // уровень немецкого: 'A1' | 'A2' | 'B1', null — ещё не выбирал (тогда на главной спрашиваем)
     const germanLevel = ref(null);
@@ -189,7 +188,6 @@ export const userAuthStore = defineStore('auth', () => {
         providerId.value = data.providerId || '';
         ownedAvatars.value = data.ownedAvatars || ['1.png', '2.png'];
         achievements.value = data.achievements || null;
-        voiceConsentGiven.value = data.voiceConsentGiven === true;
         hasSeenOnboarding.value = data.hasSeenOnboarding === true;
         germanLevel.value = GERMAN_LEVELS.includes(data.germanLevel) ? data.germanLevel : null;
         totalHats.value = data.totalHats || 0;
@@ -464,7 +462,6 @@ export const userAuthStore = defineStore('auth', () => {
                     subscriptionEndsAt: null,
                     subscriptionCancelled: false,
                     gotPremiumBonus: false,
-                    voiceConsentGiven: false,
                     hasSeenOnboarding: false,
                     isPremium: false,
                     totalHats: 0,
@@ -546,7 +543,6 @@ export const userAuthStore = defineStore('auth', () => {
                     subscriptionEndsAt: null,
                     subscriptionCancelled: false,
                     gotPremiumBonus: false,
-                    voiceConsentGiven: false,
                     hasSeenOnboarding: false,
                     isPremium: false,
                     totalHats: 0,
@@ -603,7 +599,6 @@ export const userAuthStore = defineStore('auth', () => {
             isPremium: false,
             subscriptionEndsAt: null,
             gotPremiumBonus: false,
-            voiceConsentGiven: false,
             hasSeenOnboarding: false,
             totalHats: 0,
             streakCount: 0,
@@ -768,13 +763,6 @@ export const userAuthStore = defineStore('auth', () => {
         }
     };
 
-    const setVoiceConsent = async (value = true) => {
-        const user = auth.currentUser;
-        if (!user) return;
-        await updateDoc(doc(db, 'users', user.uid), { voiceConsentGiven: !!value });
-        voiceConsentGiven.value = !!value;
-    };
-
     const deleteAccount = async (password = null) => {
         const user = auth.currentUser;
         if (!user) throw { code: 'auth/no-current-user' };
@@ -875,10 +863,8 @@ export const userAuthStore = defineStore('auth', () => {
         initialized,
         isGoogleUser,
         notEnoughArticle,
-        voiceConsentGiven,
         totalHats,
         streakCount,
-        setVoiceConsent,
         clearNotEnoughArticle,
         achievements,
         incrementHats,

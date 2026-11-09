@@ -13368,7 +13368,6 @@
   },
   "examIndexPage": {
     "notAllowedTitle": "Las pruebas están disponibles solo para cuentas con suscripción",
-    "hint": "Usamos un sistema automático de reconocimiento de voz. Habla claramente cerca del micrófono.",
     "toMain": "A la página principal",
     "choice": "Elige un nivel y comienza a practicar todos los módulos:",
     "to": "Ir a",
@@ -13656,18 +13655,6 @@
     "sent": "Examen enviado",
     "sended": "Ya has enviado este examen",
     "error": "No se pudo compartir el examen"
-  },
-  "consentModal": {
-    "title": "Aviso importante",
-    "textPartOne": "Para completar las tareas del módulo",
-    "textPartTwo": "tu pronunciación será",
-    "textPartThree": "grabada y guardada",
-    "textTwoPartOne": "Estas grabaciones de audio se utilizan únicamente para verificar tus respuestas. Nosotros",
-    "textTwoPartTwo": "no compartimos",
-    "textTwoPartThree": "tus datos con terceros. Después de completar la tarea tendrás la posibilidad de escuchar tu grabación y, si lo deseas,",
-    "textTwoPartFour": "compartirla",
-    "agree": "He leído y acepto las condiciones",
-    "accept": "Aceptar"
   },
   "adjectiveTheory": {
     "title": "Los adjetivos en alemán: claro y sencillo",

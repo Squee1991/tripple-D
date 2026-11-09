@@ -2,7 +2,6 @@
 import {onBeforeUnmount, onMounted, ref} from 'vue'
 import {userExamStore} from '~/store/examStore.js'
 import {useRouter} from 'vue-router'
-import VConsentModal from "../../src/components/V-consentModal.vue";
 import {userAuthStore} from "../../store/authStore.js";
 import {useHead, useSeoMeta} from '#imports'
 import VBackBtn from "~/src/components/V-back-btn.vue";
@@ -14,12 +13,9 @@ useSeoMeta({
 })
 
 const authStore = userAuthStore()
-const showConsentModal = ref(false)
-const consentGiven = ref(false)
 const isPageLoaded = ref(false)
 const router = useRouter()
 const examStore = userExamStore()
-const showHint = ref(false)
 const notAllowed = ref({
   title: t('examIndexPage.notAllowedTitle'),
   btns: [
@@ -123,26 +119,12 @@ const startSpecificExam = (examId) => {
   router.replace(`/exams/level/${selectedLevelId.value}?examId=${examId}`)
 }
 
-const attemptToStartExam = (levelId) => {
-  if (authStore.voiceConsentGiven) {
-    onLevelSelect(levelId)
-  } else {
-    showConsentModal.value = true
-  }
-}
-const handleConsentGiven = async () => {
-  await authStore.setVoiceConsent(true)
-  showConsentModal.value = false
-  showHint.value = true
-  setTimeout(() => showHint.value = false, 10000)
-}
 
 onMounted(async () => {
   window.addEventListener('popstate', onPopState)
   isPageLoaded.value = true
   await authStore.initAuth()
   examStore.loadTopics('/exams/exam-A1.json')
-  showConsentModal.value = !authStore.voiceConsentGiven
 })
 
 onBeforeUnmount(() => {
@@ -153,16 +135,6 @@ onBeforeUnmount(() => {
 <template>
   <div class="exam-app-theme">
     <div class="exam">
-      <transition name="fade">
-        <div v-if="showHint" class="exam-hint">
-          ℹ️ {{ t('examIndexPage.hint') }}
-        </div>
-      </transition>
-      <VConsentModal
-          v-if="showConsentModal"
-          @consent-given="handleConsentGiven"
-          @close="showConsentModal = false"
-      />
       <Transition name="picker-slide">
         <div v-if="showThemePicker" :class="['theme-picker', `card--${selectedLevelId}`]">
           <div class="picker-header">
@@ -235,7 +207,7 @@ onBeforeUnmount(() => {
                 </ul>
                 <button
                     class="exam-card__button"
-                    @click="attemptToStartExam(level.id)"
+                    @click="onLevelSelect(level.id)"
                 >
                   {{ t('examIndexPage.to') }} {{ level.id.toUpperCase() }}
                 </button>
@@ -479,24 +451,6 @@ onBeforeUnmount(() => {
 .card--b2 .exam-card__button {
   background-color: #f87171;
   box-shadow: 0 5px 0 #c54d4d;
-}
-
-.exam-hint {
-  position: fixed;
-  top: 100px;
-  left: 50%;
-  transform: translateX(-50%);
-  background: #fff;
-  color: #000;
-  border: 3px solid #000;
-  border-radius: 16px;
-  padding: 12px 20px;
-  z-index: 100;
-  font-weight: 800;
-  box-shadow: 0 4px 0 #000;
-  text-align: center;
-  width: 90%;
-  max-width: 300px;
 }
 
 /* полноэкранный выбор темы; цвет уровня берётся из card--a1 … card--b2 на корне */

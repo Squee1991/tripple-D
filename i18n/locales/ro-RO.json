@@ -13368,7 +13368,6 @@
   },
   "examIndexPage": {
     "notAllowedTitle": "Testele sunt disponibile doar pentru conturile cu Abonament",
-    "hint": "Folosim un sistem automat de recunoaștere a vorbirii. Vorbiți clar lângă microfon.",
     "toMain": "Spre pagina principală",
     "choice": "Alege un nivel și începe practica tuturor modulelor:",
     "to": "Mergi la",
@@ -13656,18 +13655,6 @@
     "sent": "Test trimis",
     "sended": "Ai trimis deja acest test",
     "error": "Trimiterea examenului a eșuat"
-  },
-  "consentModal": {
-    "title": "Notificare importantă",
-    "textPartOne": "Pentru a finaliza sarcinile din modulul",
-    "textPartTwo": "pronunția dumneavoastră va fi",
-    "textPartThree": "înregistrată și salvată",
-    "textTwoPartOne": "Aceste înregistrări audio sunt folosite exclusiv pentru verificarea răspunsurilor. Noi",
-    "textTwoPartTwo": "nu transmitem",
-    "textTwoPartThree": "datele dumneavoastră către terți. După finalizarea sarcinii, veți avea posibilitatea să vă ascultați înregistrarea și, dacă doriți,",
-    "textTwoPartFour": "să o trimiteți altora",
-    "agree": "Am citit și sunt de acord cu termenii",
-    "accept": "Acceptă"
   },
   "adjectiveTheory": {
     "title": "Adjectivele în germană: simplu și clar",

@@ -668,7 +668,6 @@ export const useAchievementStore = defineStore('achievementStore', () => {
 			})
 		}, { immediate: true, deep: true })
 
-		watch(() => authStore.voiceConsentGiven, isGiven => { if (isGiven) updateProgress('voiceActivated', 1) }, { immediate: true })
 		watch(() => authStore.isPremium, (hasPremium) => {
 			if (hasPremium) {
 				updateProgress('wasPlusUser', 1)
