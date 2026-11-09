@@ -1,0 +1,3088 @@
+[
+  {
+    "questId": "clock-tower-one",
+    "title": "clockTowerOne.questTitle",
+    "progress": "0/15",
+    "description": "clockTowerOne.questDescription",
+    "conditions": {
+      "goal": "clockTowerOne.questGoal",
+      "minCorrect": 15,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
+    "vocabulary": [
+      {
+        "word": "der Montag",
+        "translation-ru": "понедельник",
+        "translation-en": "Monday",
+        "translation-uk": "понеділок",
+        "translation-pl": "poniedziałek",
+        "translation-es": "el lunes",
+        "translation-fr": "le lundi",
+        "translation-tr": "pazartesi",
+        "translation-ro": "lunea",
+        "translation-uz": "dushanba",
+        "translation-hi": "सोमवार",
+        "translation-ar": "الاثنين"
+      },
+      {
+        "word": "der Mittwoch",
+        "translation-ru": "среда",
+        "translation-en": "Wednesday",
+        "translation-uk": "середа",
+        "translation-pl": "środa",
+        "translation-es": "el miércoles",
+        "translation-fr": "le mercredi",
+        "translation-tr": "çarşamba",
+        "translation-ro": "miercurea",
+        "translation-uz": "chorshanba",
+        "translation-hi": "बुधवार",
+        "translation-ar": "الأربعاء"
+      },
+      {
+        "word": "der Freitag",
+        "translation-ru": "пятница",
+        "translation-en": "Friday",
+        "translation-uk": "п’ятниця",
+        "translation-pl": "piątek",
+        "translation-es": "el viernes",
+        "translation-fr": "le vendredi",
+        "translation-tr": "cuma",
+        "translation-ro": "vinerea",
+        "translation-uz": "juma",
+        "translation-hi": "शुक्रवार",
+        "translation-ar": "الجمعة"
+      },
+      {
+        "word": "der Sonntag",
+        "translation-ru": "воскресенье",
+        "translation-en": "Sunday",
+        "translation-uk": "неділя",
+        "translation-pl": "niedziela",
+        "translation-es": "el domingo",
+        "translation-fr": "le dimanche",
+        "translation-tr": "pazar",
+        "translation-ro": "duminica",
+        "translation-uz": "yakshanba",
+        "translation-hi": "रविवार",
+        "translation-ar": "الأحد"
+      },
+      {
+        "word": "der Tag",
+        "translation-ru": "день",
+        "translation-en": "day",
+        "translation-uk": "день",
+        "translation-pl": "dzień",
+        "translation-es": "el día",
+        "translation-fr": "le jour",
+        "translation-tr": "gün",
+        "translation-ro": "ziua",
+        "translation-uz": "kun",
+        "translation-hi": "दिन",
+        "translation-ar": "اليوم"
+      },
+      {
+        "word": "die Woche",
+        "translation-ru": "неделя",
+        "translation-en": "week",
+        "translation-uk": "тиждень",
+        "translation-pl": "tydzień",
+        "translation-es": "la semana",
+        "translation-fr": "la semaine",
+        "translation-tr": "hafta",
+        "translation-ro": "săptămâna",
+        "translation-uz": "hafta",
+        "translation-hi": "सप्ताह",
+        "translation-ar": "الأسبوع"
+      },
+      {
+        "word": "der Dienstag",
+        "translation-ru": "вторник",
+        "translation-en": "Tuesday",
+        "translation-uk": "вівторок",
+        "translation-pl": "wtorek",
+        "translation-es": "el martes",
+        "translation-fr": "le mardi",
+        "translation-tr": "salı",
+        "translation-ro": "marțea",
+        "translation-uz": "seshanba",
+        "translation-hi": "मंगलवार",
+        "translation-ar": "الثلاثاء"
+      },
+      {
+        "word": "der Samstag",
+        "translation-ru": "суббота",
+        "translation-en": "Saturday",
+        "translation-uk": "субота",
+        "translation-pl": "sobota",
+        "translation-es": "el sábado",
+        "translation-fr": "le samedi",
+        "translation-tr": "cumartesi",
+        "translation-ro": "sâmbăta",
+        "translation-uz": "shanba",
+        "translation-hi": "शनिवार",
+        "translation-ar": "السبت"
+      },
+      {
+        "word": "der Donnerstag",
+        "translation-ru": "четверг",
+        "translation-en": "Thursday",
+        "translation-uk": "четвер",
+        "translation-pl": "czwartek",
+        "translation-es": "el jueves",
+        "translation-fr": "le jeudi",
+        "translation-tr": "perşembe",
+        "translation-ro": "joia",
+        "translation-uz": "payshanba",
+        "translation-hi": "गुरुवार",
+        "translation-ar": "الخميس"
+      },
+      {
+        "word": "beginnen",
+        "translation-ru": "начинать",
+        "translation-en": "to begin / start",
+        "translation-uk": "починати",
+        "translation-pl": "zaczynać",
+        "translation-es": "empezar / comenzar",
+        "translation-fr": "commencer",
+        "translation-tr": "başlamak",
+        "translation-ro": "a începe",
+        "translation-uz": "boshlamoq",
+        "translation-hi": "शुरू करना",
+        "translation-ar": "يبدأ"
+      }
+    ],
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "clockTowerOne.questTask1",
+        "options": [
+          "Heute sind Montag.",
+          "Heute bist Montag.",
+          "Heute ist Montag."
+        ],
+        "answer": "Heute ist Montag.",
+        "tip": "clockTowerOne.questDescription"
+      },
+      {
+        "id": 2,
+        "type": "input",
+        "question": "clockTowerOne.questTask2",
+        "correctAnswer": "Tag",
+        "tip": "clockTowerOne.questDescription"
+      },
+      {
+        "id": 3,
+        "type": "input",
+        "question": "clockTowerOne.questTask3",
+        "correctAnswer": "Mittwoch",
+        "tip": "clockTowerOne.questDescription"
+      },
+      {
+        "id": 4,
+        "type": "select",
+        "question": "clockTowerOne.questTask4",
+        "options": [
+          "Heute ist Freitag!",
+          "Heute ist die Freitag!",
+          "Heute ist Freitags!"
+        ],
+        "answer": "Heute ist Freitag!",
+        "tip": "clockTowerOne.questDescription"
+      },
+      {
+        "id": 5,
+        "type": "reorder",
+        "question": "clockTowerOne.questTask5",
+        "words": [
+          "ist",
+          "das",
+          "Sonntag",
+          "Wochenende",
+          "und",
+          "Samstag",
+          "Tag",
+          "sind"
+        ],
+        "correctOrder": [
+          "Samstag",
+          "und",
+          "Sonntag",
+          "sind",
+          "das",
+          "Wochenende"
+        ],
+        "tip": "clockTowerOne.questDescription"
+      },
+      {
+        "id": 6,
+        "type": "select",
+        "question": "clockTowerOne.questTask6",
+        "options": [
+          "Mittwoch, dann Donnerstags.",
+          "Mittwoch, dann Donnerstag.",
+          "Mittwoch, dann Dienstag."
+        ],
+        "answer": "Mittwoch, dann Donnerstag.",
+        "tip": "clockTowerOne.questDescription"
+      },
+      {
+        "id": 7,
+        "type": "input",
+        "question": "clockTowerOne.questTask7",
+        "correctAnswer": "Sonntag",
+        "tip": "clockTowerOne.questDescription"
+      },
+      {
+        "id": 8,
+        "type": "select",
+        "question": "clockTowerOne.questTask8",
+        "options": [
+          "Eine Woche hat sieben Tage.",
+          "Ein Woche hat sieben Tage.",
+          "Eine Woche hat sieben Tag."
+        ],
+        "answer": "Eine Woche hat sieben Tage.",
+        "tip": "clockTowerOne.questDescription"
+      },
+      {
+        "id": 9,
+        "type": "readAndAnswer",
+        "question": "clockTowerOne.questTask9",
+        "text": "Tom: Ist heute Donnerstag? Lisa: Nein, Donnerstag ist morgen. Heute ist Mittwoch. Tom: Und morgen ist kein Kurs? Lisa: Doch, morgen haben wir Kurs.",
+        "options": [
+          "Mittwoch",
+          "Freitag",
+          "Donnerstag"
+        ],
+        "answer": "Mittwoch",
+        "tip": "clockTowerOne.questDescription"
+      },
+      {
+        "id": 10,
+        "type": "input",
+        "question": "clockTowerOne.questTask10",
+        "correctAnswer": "Woche",
+        "tip": "clockTowerOne.questDescription"
+      },
+      {
+        "id": 11,
+        "type": "reorder",
+        "question": "clockTowerOne.questTask11",
+        "words": [
+          "ist",
+          "Heute",
+          "nicht",
+          "kein",
+          "Tag",
+          "Samstag",
+          "Sonntag"
+        ],
+        "correctOrder": [
+          "Heute",
+          "ist",
+          "Samstag",
+          "nicht",
+          "Sonntag"
+        ],
+        "tip": "clockTowerOne.questDescription"
+      },
+      {
+        "id": 12,
+        "type": "input",
+        "question": "clockTowerOne.questTask12",
+        "correctAnswer": "Ihre",
+        "tip": "clockTowerOne.questDescription"
+      },
+      {
+        "id": 13,
+        "type": "select",
+        "question": "clockTowerOne.questTask13",
+        "options": [
+          "Er seht seinen Bruder.",
+          "Er sieht seinen Bruder.",
+          "Er sieht sein Bruder."
+        ],
+        "answer": "Er sieht seinen Bruder.",
+        "tip": "clockTowerOne.questDescription"
+      },
+      {
+        "id": 14,
+        "type": "select",
+        "question": "clockTowerOne.questTask14",
+        "options": [
+          "Nehmst du heute den Bus?",
+          "Nimmst du heute den Bus?",
+          "Nimmst du heute der Bus?"
+        ],
+        "answer": "Nimmst du heute den Bus?",
+        "tip": "clockTowerOne.questDescription"
+      },
+      {
+        "id": 15,
+        "type": "reorder",
+        "question": "clockTowerOne.questTask15",
+        "words": [
+          "Kinder",
+          "schlafen",
+          "Unsere",
+          "schläft",
+          "unser"
+        ],
+        "correctOrder": [
+          "Unsere",
+          "Kinder",
+          "schlafen"
+        ],
+        "tip": "clockTowerOne.questDescription"
+      }
+    ]
+  },
+  {
+    "questId": "clock-tower-two",
+    "title": "clockTowerTwo.questTitle",
+    "progress": "0/15",
+    "description": "clockTowerTwo.questDescription",
+    "conditions": {
+      "goal": "clockTowerTwo.questGoal",
+      "minCorrect": 15,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
+    "vocabulary": [
+      {
+        "word": "wann",
+        "translation-ru": "когда",
+        "translation-en": "when",
+        "translation-uk": "коли",
+        "translation-pl": "kiedy",
+        "translation-es": "cuándo",
+        "translation-fr": "quand",
+        "translation-tr": "ne zaman",
+        "translation-ro": "când",
+        "translation-uz": "qachon",
+        "translation-hi": "कब",
+        "translation-ar": "متى"
+      },
+      {
+        "word": "der Dienstag",
+        "translation-ru": "вторник",
+        "translation-en": "Tuesday",
+        "translation-uk": "вівторок",
+        "translation-pl": "wtorek",
+        "translation-es": "el martes",
+        "translation-fr": "le mardi",
+        "translation-tr": "salı",
+        "translation-ro": "marțea",
+        "translation-uz": "seshanba",
+        "translation-hi": "मंगलवार",
+        "translation-ar": "الثلاثاء"
+      },
+      {
+        "word": "der Donnerstag",
+        "translation-ru": "четверг",
+        "translation-en": "Thursday",
+        "translation-uk": "четвер",
+        "translation-pl": "czwartek",
+        "translation-es": "el jueves",
+        "translation-fr": "le jeudi",
+        "translation-tr": "perşembe",
+        "translation-ro": "joia",
+        "translation-uz": "payshanba",
+        "translation-hi": "गुरुवार",
+        "translation-ar": "الخميس"
+      },
+      {
+        "word": "der Samstag",
+        "translation-ru": "суббота",
+        "translation-en": "Saturday",
+        "translation-uk": "субота",
+        "translation-pl": "sobota",
+        "translation-es": "el sábado",
+        "translation-fr": "le samedi",
+        "translation-tr": "cumartesi",
+        "translation-ro": "sâmbăta",
+        "translation-uz": "shanba",
+        "translation-hi": "शनिवार",
+        "translation-ar": "السبت"
+      },
+      {
+        "word": "das Kino",
+        "translation-ru": "кино, кинотеатр",
+        "translation-en": "cinema",
+        "translation-uk": "кіно",
+        "translation-pl": "kino",
+        "translation-es": "el cine",
+        "translation-fr": "le cinéma",
+        "translation-tr": "sinema",
+        "translation-ro": "cinematograful",
+        "translation-uz": "kinoteatr",
+        "translation-hi": "सिनेमा",
+        "translation-ar": "السينما"
+      }
+    ],
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "clockTowerTwo.questTask1",
+        "options": [
+          "Im Montag arbeite ich.",
+          "Am Montag ich arbeite.",
+          "Am Montag arbeite ich."
+        ],
+        "answer": "Am Montag arbeite ich.",
+        "tip": "clockTowerTwo.questDescription"
+      },
+      {
+        "id": 2,
+        "type": "input",
+        "question": "clockTowerTwo.questTask2",
+        "correctAnswer": "Wann",
+        "tip": "clockTowerTwo.questDescription"
+      },
+      {
+        "id": 3,
+        "type": "input",
+        "question": "clockTowerTwo.questTask3",
+        "correctAnswer": "Am",
+        "tip": "clockTowerTwo.questDescription"
+      },
+      {
+        "id": 4,
+        "type": "select",
+        "question": "clockTowerTwo.questTask4",
+        "options": [
+          "Am Dienstag habe ich ein Kurs.",
+          "Am Dienstag habe ich einen Kurs.",
+          "Am Dienstag ich habe einen Kurs."
+        ],
+        "answer": "Am Dienstag habe ich einen Kurs.",
+        "tip": "clockTowerTwo.questDescription"
+      },
+      {
+        "id": 5,
+        "type": "reorder",
+        "question": "clockTowerTwo.questTask5",
+        "words": [
+          "wo",
+          "besuchst",
+          "du",
+          "im",
+          "am",
+          "Donnerstag",
+          "Oma",
+          "Wann",
+          "die"
+        ],
+        "correctOrder": [
+          "Wann",
+          "besuchst",
+          "du",
+          "die",
+          "Oma",
+          "am",
+          "Donnerstag"
+        ],
+        "tip": "clockTowerTwo.questDescription"
+      },
+      {
+        "id": 6,
+        "type": "select",
+        "question": "clockTowerTwo.questTask6",
+        "options": [
+          "Am Wochenende schlafen wir lange.",
+          "Am Wochenende schläft wir lange.",
+          "Am Wochenende wir schlafen lange."
+        ],
+        "answer": "Am Wochenende schlafen wir lange.",
+        "tip": "clockTowerTwo.questDescription"
+      },
+      {
+        "id": 7,
+        "type": "input",
+        "question": "clockTowerTwo.questTask7",
+        "correctAnswer": "arbeitet",
+        "tip": "clockTowerTwo.questDescription"
+      },
+      {
+        "id": 8,
+        "type": "select",
+        "question": "clockTowerTwo.questTask8",
+        "options": [
+          "Wann siehst du den Film?",
+          "Wo siehst du den Film?",
+          "Wann du siehst den Film?"
+        ],
+        "answer": "Wann siehst du den Film?",
+        "tip": "clockTowerTwo.questDescription"
+      },
+      {
+        "id": 9,
+        "type": "readAndAnswer",
+        "question": "clockTowerTwo.questTask9",
+        "text": "Anna hat am Montag und am Dienstag Kurs. Am Mittwoch arbeitet sie. Am Donnerstag hat sie Zeit, sie sieht einen Film im Kino. Am Wochenende besucht sie ihre Eltern.",
+        "options": [
+          "am Wochenende",
+          "am Donnerstag",
+          "am Montag"
+        ],
+        "answer": "am Donnerstag",
+        "tip": "clockTowerTwo.questDescription"
+      },
+      {
+        "id": 10,
+        "type": "input",
+        "question": "clockTowerTwo.questTask10",
+        "correctAnswer": "Kino",
+        "tip": "clockTowerTwo.questDescription"
+      },
+      {
+        "id": 11,
+        "type": "reorder",
+        "question": "clockTowerTwo.questTask11",
+        "words": [
+          "kein",
+          "ich",
+          "Sonntag",
+          "im",
+          "arbeite",
+          "Am",
+          "nicht"
+        ],
+        "correctOrder": [
+          "Am",
+          "Sonntag",
+          "arbeite",
+          "ich",
+          "nicht"
+        ],
+        "tip": "clockTowerTwo.questDescription"
+      },
+      {
+        "id": 12,
+        "type": "input",
+        "question": "clockTowerTwo.questTask12",
+        "correctAnswer": "Mittwoch",
+        "tip": "clockTowerTwo.questDescription"
+      },
+      {
+        "id": 13,
+        "type": "select",
+        "question": "clockTowerTwo.questTask13",
+        "options": [
+          "Ihr besucht eure Großeltern.",
+          "Ihr besucht euren Großeltern.",
+          "Ihr besuchst eure Großeltern."
+        ],
+        "answer": "Ihr besucht eure Großeltern.",
+        "tip": "clockTowerTwo.questDescription"
+      },
+      {
+        "id": 14,
+        "type": "select",
+        "question": "clockTowerTwo.questTask14",
+        "options": [
+          "Ist das dein Regenschirm?",
+          "Ist das deine Regenschirm?",
+          "Ist das deinen Regenschirm?"
+        ],
+        "answer": "Ist das dein Regenschirm?",
+        "tip": "clockTowerTwo.questDescription"
+      },
+      {
+        "id": 15,
+        "type": "reorder",
+        "question": "clockTowerTwo.questTask15",
+        "words": [
+          "Schwester",
+          "Seine",
+          "Englisch",
+          "sprecht",
+          "spricht",
+          "sein"
+        ],
+        "correctOrder": [
+          "Seine",
+          "Schwester",
+          "spricht",
+          "Englisch"
+        ],
+        "tip": "clockTowerTwo.questDescription"
+      }
+    ]
+  },
+  {
+    "questId": "clock-tower-three",
+    "title": "clockTowerThree.questTitle",
+    "progress": "0/15",
+    "description": "clockTowerThree.questDescription",
+    "conditions": {
+      "goal": "clockTowerThree.questGoal",
+      "minCorrect": 15,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
+    "vocabulary": [
+      {
+        "word": "der Morgen",
+        "translation-ru": "утро",
+        "translation-en": "morning",
+        "translation-uk": "ранок",
+        "translation-pl": "rano",
+        "translation-es": "la mañana",
+        "translation-fr": "le matin",
+        "translation-tr": "sabah",
+        "translation-ro": "dimineața",
+        "translation-uz": "ertalab",
+        "translation-hi": "सुबह",
+        "translation-ar": "الصباح"
+      },
+      {
+        "word": "der Nachmittag",
+        "translation-ru": "время после обеда",
+        "translation-en": "afternoon",
+        "translation-uk": "час після обіду",
+        "translation-pl": "popołudnie",
+        "translation-es": "la tarde",
+        "translation-fr": "l’après-midi",
+        "translation-tr": "öğleden sonra",
+        "translation-ro": "după-amiaza",
+        "translation-uz": "tushdan keyin",
+        "translation-hi": "दोपहर बाद",
+        "translation-ar": "بعد الظهر"
+      },
+      {
+        "word": "der Abend",
+        "translation-ru": "вечер",
+        "translation-en": "evening",
+        "translation-uk": "вечір",
+        "translation-pl": "wieczór",
+        "translation-es": "la noche (temprano)",
+        "translation-fr": "le soir",
+        "translation-tr": "akşam",
+        "translation-ro": "seara",
+        "translation-uz": "kechqurun",
+        "translation-hi": "शाम",
+        "translation-ar": "المساء"
+      },
+      {
+        "word": "die Nacht",
+        "translation-ru": "ночь",
+        "translation-en": "night",
+        "translation-uk": "ніч",
+        "translation-pl": "noc",
+        "translation-es": "la noche",
+        "translation-fr": "la nuit",
+        "translation-tr": "gece",
+        "translation-ro": "noaptea",
+        "translation-uz": "tun",
+        "translation-hi": "रात",
+        "translation-ar": "الليل"
+      },
+      {
+        "word": "morgens",
+        "translation-ru": "по утрам",
+        "translation-en": "in the mornings",
+        "translation-uk": "зранку",
+        "translation-pl": "rano",
+        "translation-es": "por las mañanas",
+        "translation-fr": "le matin",
+        "translation-tr": "sabahları",
+        "translation-ro": "dimineața",
+        "translation-uz": "ertalablari",
+        "translation-hi": "सुबह-सुबह",
+        "translation-ar": "صباحًا"
+      }
+    ],
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "clockTowerThree.questTask1",
+        "options": [
+          "Morgens ich trinke Kaffee.",
+          "Am Morgens trinke ich Kaffee.",
+          "Morgens trinke ich Kaffee."
+        ],
+        "answer": "Morgens trinke ich Kaffee.",
+        "tip": "clockTowerThree.questDescription"
+      },
+      {
+        "id": 2,
+        "type": "input",
+        "question": "clockTowerThree.questTask2",
+        "correctAnswer": "Abend",
+        "tip": "clockTowerThree.questDescription"
+      },
+      {
+        "id": 3,
+        "type": "input",
+        "question": "clockTowerThree.questTask3",
+        "correctAnswer": "Nacht",
+        "tip": "clockTowerThree.questDescription"
+      },
+      {
+        "id": 4,
+        "type": "select",
+        "question": "clockTowerThree.questTask4",
+        "options": [
+          "Am Nachmittag ich habe Zeit.",
+          "In der Nachmittag habe ich Zeit.",
+          "Am Nachmittag habe ich Zeit."
+        ],
+        "answer": "Am Nachmittag habe ich Zeit.",
+        "tip": "clockTowerThree.questDescription"
+      },
+      {
+        "id": 5,
+        "type": "reorder",
+        "question": "clockTowerThree.questTask5",
+        "words": [
+          "Am",
+          "im",
+          "Mama",
+          "lest",
+          "Zeitung",
+          "Morgen",
+          "die",
+          "liest"
+        ],
+        "correctOrder": [
+          "Am",
+          "Morgen",
+          "liest",
+          "Mama",
+          "die",
+          "Zeitung"
+        ],
+        "tip": "clockTowerThree.questDescription"
+      },
+      {
+        "id": 6,
+        "type": "select",
+        "question": "clockTowerThree.questTask6",
+        "options": [
+          "Am Abends spielt er Fußball.",
+          "Abends spielt er Fußball.",
+          "Abends er spielt Fußball."
+        ],
+        "answer": "Abends spielt er Fußball.",
+        "tip": "clockTowerThree.questDescription"
+      },
+      {
+        "id": 7,
+        "type": "input",
+        "question": "clockTowerThree.questTask7",
+        "correctAnswer": "Abend",
+        "tip": "clockTowerThree.questDescription"
+      },
+      {
+        "id": 8,
+        "type": "select",
+        "question": "clockTowerThree.questTask8",
+        "options": [
+          "In der Nacht ich arbeite nicht.",
+          "In der Nacht arbeite ich nicht.",
+          "Am Nacht arbeite ich nicht."
+        ],
+        "answer": "In der Nacht arbeite ich nicht.",
+        "tip": "clockTowerThree.questDescription"
+      },
+      {
+        "id": 9,
+        "type": "readAndAnswer",
+        "question": "clockTowerThree.questTask9",
+        "text": "Max ist Student. Am Morgen hat er Kurs. Am Nachmittag arbeitet er im Café. Abends spielt er Fußball. In der Nacht schläft er nicht viel.",
+        "options": [
+          "am Nachmittag",
+          "abends",
+          "am Morgen"
+        ],
+        "answer": "abends",
+        "tip": "clockTowerThree.questDescription"
+      },
+      {
+        "id": 10,
+        "type": "input",
+        "question": "clockTowerThree.questTask10",
+        "correctAnswer": "Nacht",
+        "tip": "clockTowerThree.questDescription"
+      },
+      {
+        "id": 11,
+        "type": "reorder",
+        "question": "clockTowerThree.questTask11",
+        "words": [
+          "im",
+          "läuft",
+          "Morgens",
+          "sie",
+          "lauft",
+          "am",
+          "Park"
+        ],
+        "correctOrder": [
+          "Morgens",
+          "läuft",
+          "sie",
+          "im",
+          "Park"
+        ],
+        "tip": "clockTowerThree.questDescription"
+      },
+      {
+        "id": 12,
+        "type": "input",
+        "question": "clockTowerThree.questTask12",
+        "correctAnswer": "Donnerstag",
+        "tip": "clockTowerThree.questDescription"
+      },
+      {
+        "id": 13,
+        "type": "select",
+        "question": "clockTowerThree.questTask13",
+        "options": [
+          "Am Samstag wir besuchen unsere Freunde.",
+          "Am Samstag besuchen wir unsere Freunde.",
+          "Im Samstag besuchen wir unsere Freunde."
+        ],
+        "answer": "Am Samstag besuchen wir unsere Freunde.",
+        "tip": "clockTowerThree.questDescription"
+      },
+      {
+        "id": 14,
+        "type": "select",
+        "question": "clockTowerThree.questTask14",
+        "options": [
+          "Heute ist kein Montag, heute ist Dienstags.",
+          "Heute ist nicht Montag, heute ist Dienstag.",
+          "Heute nicht ist Montag, heute ist Dienstag."
+        ],
+        "answer": "Heute ist nicht Montag, heute ist Dienstag.",
+        "tip": "clockTowerThree.questDescription"
+      },
+      {
+        "id": 15,
+        "type": "reorder",
+        "question": "clockTowerThree.questTask15",
+        "words": [
+          "Wochenende",
+          "Zeit",
+          "keine",
+          "ich",
+          "habe",
+          "im",
+          "Am",
+          "nicht"
+        ],
+        "correctOrder": [
+          "Am",
+          "Wochenende",
+          "habe",
+          "ich",
+          "keine",
+          "Zeit"
+        ],
+        "tip": "clockTowerThree.questDescription"
+      }
+    ]
+  },
+  {
+    "questId": "clock-tower-four",
+    "title": "clockTowerFour.questTitle",
+    "progress": "0/15",
+    "description": "clockTowerFour.questDescription",
+    "conditions": {
+      "goal": "clockTowerFour.questGoal",
+      "minCorrect": 15,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
+    "vocabulary": [
+      {
+        "word": "die Uhr",
+        "translation-ru": "часы; час (время)",
+        "translation-en": "clock, watch; o’clock",
+        "translation-uk": "годинник; година",
+        "translation-pl": "zegar; godzina",
+        "translation-es": "el reloj; la hora",
+        "translation-fr": "la montre, l’horloge; heure",
+        "translation-tr": "saat",
+        "translation-ro": "ceasul; ora",
+        "translation-uz": "soat",
+        "translation-hi": "घड़ी; बजे",
+        "translation-ar": "الساعة"
+      },
+      {
+        "word": "spät",
+        "translation-ru": "поздно",
+        "translation-en": "late",
+        "translation-uk": "пізно",
+        "translation-pl": "późno",
+        "translation-es": "tarde",
+        "translation-fr": "tard",
+        "translation-tr": "geç",
+        "translation-ro": "târziu",
+        "translation-uz": "kech",
+        "translation-hi": "देर",
+        "translation-ar": "متأخر"
+      },
+      {
+        "word": "früh",
+        "translation-ru": "рано",
+        "translation-en": "early",
+        "translation-uk": "рано",
+        "translation-pl": "wcześnie",
+        "translation-es": "temprano",
+        "translation-fr": "tôt",
+        "translation-tr": "erken",
+        "translation-ro": "devreme",
+        "translation-uz": "erta",
+        "translation-hi": "जल्दी",
+        "translation-ar": "مبكر"
+      },
+      {
+        "word": "die Stunde",
+        "translation-ru": "час (60 минут)",
+        "translation-en": "hour",
+        "translation-uk": "година (60 хвилин)",
+        "translation-pl": "godzina (60 minut)",
+        "translation-es": "la hora (60 minutos)",
+        "translation-fr": "l’heure (60 minutes)",
+        "translation-tr": "saat (60 dakika)",
+        "translation-ro": "ora (60 de minute)",
+        "translation-uz": "soat (60 daqiqa)",
+        "translation-hi": "घंटा",
+        "translation-ar": "الساعة (ستون دقيقة)"
+      },
+      {
+        "word": "jetzt",
+        "translation-ru": "сейчас",
+        "translation-en": "now",
+        "translation-uk": "зараз",
+        "translation-pl": "teraz",
+        "translation-es": "ahora",
+        "translation-fr": "maintenant",
+        "translation-tr": "şimdi",
+        "translation-ro": "acum",
+        "translation-uz": "hozir",
+        "translation-hi": "अब",
+        "translation-ar": "الآن"
+      },
+      {
+        "word": "dauern",
+        "translation-ru": "длиться",
+        "translation-en": "to last / take time",
+        "translation-uk": "тривати",
+        "translation-pl": "trwać",
+        "translation-es": "durar",
+        "translation-fr": "durer",
+        "translation-tr": "sürmek",
+        "translation-ro": "a dura",
+        "translation-uz": "davom etmoq",
+        "translation-hi": "समय लगना",
+        "translation-ar": "يستغرق"
+      },
+      {
+        "word": "sagen",
+        "translation-ru": "сказать",
+        "translation-en": "to say / tell",
+        "translation-uk": "сказати",
+        "translation-pl": "mówić",
+        "translation-es": "decir",
+        "translation-fr": "dire",
+        "translation-tr": "söylemek",
+        "translation-ro": "a spune",
+        "translation-uz": "aytmoq",
+        "translation-hi": "कहना",
+        "translation-ar": "يقول"
+      }
+    ],
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "clockTowerFour.questTask1",
+        "options": [
+          "Wie spät ist es? Es hat acht Uhr.",
+          "Wie spät ist es? Es ist acht Uhren.",
+          "Wie spät ist es? Es ist acht Uhr."
+        ],
+        "answer": "Wie spät ist es? Es ist acht Uhr.",
+        "tip": "clockTowerFour.questDescription"
+      },
+      {
+        "id": 2,
+        "type": "input",
+        "question": "clockTowerFour.questTask2",
+        "correctAnswer": "Uhr",
+        "tip": "clockTowerFour.questDescription"
+      },
+      {
+        "id": 3,
+        "type": "input",
+        "question": "clockTowerFour.questTask3",
+        "correctAnswer": "spät",
+        "tip": "clockTowerFour.questDescription"
+      },
+      {
+        "id": 4,
+        "type": "select",
+        "question": "clockTowerFour.questTask4",
+        "options": [
+          "Es ist eins Uhr.",
+          "Es ist eine Uhr.",
+          "Es ist ein Uhr."
+        ],
+        "answer": "Es ist ein Uhr.",
+        "tip": "clockTowerFour.questDescription"
+      },
+      {
+        "id": 5,
+        "type": "reorder",
+        "question": "clockTowerFour.questTask5",
+        "words": [
+          "spät",
+          "Es",
+          "Uhr",
+          "Uhren",
+          "ist",
+          "drei"
+        ],
+        "correctOrder": [
+          "Es",
+          "ist",
+          "drei",
+          "Uhr"
+        ],
+        "tip": "clockTowerFour.questDescription"
+      },
+      {
+        "id": 6,
+        "type": "select",
+        "question": "clockTowerFour.questTask6",
+        "options": [
+          "Es ist noch früh, sechs Uhren.",
+          "Es ist noch früh, sechs Uhr.",
+          "Es ist noch spät, sechs Uhr."
+        ],
+        "answer": "Es ist noch früh, sechs Uhr.",
+        "tip": "clockTowerFour.questDescription"
+      },
+      {
+        "id": 7,
+        "type": "input",
+        "question": "clockTowerFour.questTask7",
+        "correctAnswer": "Stunde",
+        "tip": "clockTowerFour.questDescription"
+      },
+      {
+        "id": 8,
+        "type": "select",
+        "question": "clockTowerFour.questTask8",
+        "options": [
+          "Meine Uhr ist neu.",
+          "Meine Uhr sind neu.",
+          "Mein Uhr ist neu."
+        ],
+        "answer": "Meine Uhr ist neu.",
+        "tip": "clockTowerFour.questDescription"
+      },
+      {
+        "id": 9,
+        "type": "readAndAnswer",
+        "question": "clockTowerFour.questTask9",
+        "text": "Lena: Wie spät ist es, Tom? Tom: Meine Uhr sagt elf Uhr. Lena: Elf? Das ist spät! Ich schlafe jetzt. Gute Nacht!",
+        "options": [
+          "elf Uhr",
+          "zwölf Uhr",
+          "acht Uhr"
+        ],
+        "answer": "elf Uhr",
+        "tip": "clockTowerFour.questDescription"
+      },
+      {
+        "id": 10,
+        "type": "input",
+        "question": "clockTowerFour.questTask10",
+        "correctAnswer": "früh",
+        "tip": "clockTowerFour.questDescription"
+      },
+      {
+        "id": 11,
+        "type": "reorder",
+        "question": "clockTowerFour.questTask11",
+        "words": [
+          "ist",
+          "kein",
+          "sieben",
+          "Uhren",
+          "Uhr",
+          "acht",
+          "es",
+          "Es",
+          "Uhr",
+          "nicht",
+          "ist"
+        ],
+        "correctOrder": [
+          "Es",
+          "ist",
+          "nicht",
+          "sieben",
+          "Uhr",
+          "es",
+          "ist",
+          "acht",
+          "Uhr"
+        ],
+        "tip": "clockTowerFour.questDescription"
+      },
+      {
+        "id": 12,
+        "type": "input",
+        "question": "clockTowerFour.questTask12",
+        "correctAnswer": "Abends",
+        "tip": "clockTowerFour.questDescription"
+      },
+      {
+        "id": 13,
+        "type": "select",
+        "question": "clockTowerFour.questTask13",
+        "options": [
+          "Am Freitag haben wir keinen Kurs.",
+          "Am Freitag wir haben keinen Kurs.",
+          "Am Freitag haben wir kein Kurs."
+        ],
+        "answer": "Am Freitag haben wir keinen Kurs.",
+        "tip": "clockTowerFour.questDescription"
+      },
+      {
+        "id": 14,
+        "type": "select",
+        "question": "clockTowerFour.questTask14",
+        "options": [
+          "Am Nachmittag schläft er.",
+          "Am Nachmittag schlaft er.",
+          "Am Nachmittag er schläft."
+        ],
+        "answer": "Am Nachmittag schläft er.",
+        "tip": "clockTowerFour.questDescription"
+      },
+      {
+        "id": 15,
+        "type": "reorder",
+        "question": "clockTowerFour.questTask15",
+        "words": [
+          "Wann",
+          "arbeitest",
+          "am",
+          "du",
+          "morgens",
+          "wo"
+        ],
+        "correctOrder": [
+          "Wann",
+          "arbeitest",
+          "du",
+          "morgens"
+        ],
+        "tip": "clockTowerFour.questDescription"
+      }
+    ]
+  },
+  {
+    "questId": "clock-tower-five",
+    "title": "clockTowerFive.questTitle",
+    "progress": "0/15",
+    "description": "clockTowerFive.questDescription",
+    "conditions": {
+      "goal": "clockTowerFive.questGoal",
+      "minCorrect": 15,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
+    "vocabulary": [
+      {
+        "word": "beginnen",
+        "translation-ru": "начинаться",
+        "translation-en": "to begin",
+        "translation-uk": "починатися",
+        "translation-pl": "zaczynać się",
+        "translation-es": "empezar",
+        "translation-fr": "commencer",
+        "translation-tr": "başlamak",
+        "translation-ro": "a începe",
+        "translation-uz": "boshlanmoq",
+        "translation-hi": "शुरू होना",
+        "translation-ar": "يبدأ"
+      },
+      {
+        "word": "frühstücken",
+        "translation-ru": "завтракать",
+        "translation-en": "to have breakfast",
+        "translation-uk": "снідати",
+        "translation-pl": "jeść śniadanie",
+        "translation-es": "desayunar",
+        "translation-fr": "prendre le petit-déjeuner",
+        "translation-tr": "kahvaltı etmek",
+        "translation-ro": "a lua micul dejun",
+        "translation-uz": "nonushta qilmoq",
+        "translation-hi": "नाश्ता करना",
+        "translation-ar": "يفطر"
+      },
+      {
+        "word": "der Unterricht",
+        "translation-ru": "урок, занятия",
+        "translation-en": "lesson, class",
+        "translation-uk": "урок, заняття",
+        "translation-pl": "lekcja, zajęcia",
+        "translation-es": "la clase",
+        "translation-fr": "le cours",
+        "translation-tr": "ders",
+        "translation-ro": "ora, lecția",
+        "translation-uz": "dars",
+        "translation-hi": "कक्षा",
+        "translation-ar": "الدرس"
+      },
+      {
+        "word": "der Termin",
+        "translation-ru": "встреча, приём",
+        "translation-en": "appointment",
+        "translation-uk": "зустріч, прийом",
+        "translation-pl": "termin, wizyta",
+        "translation-es": "la cita",
+        "translation-fr": "le rendez-vous",
+        "translation-tr": "randevu",
+        "translation-ro": "programarea",
+        "translation-uz": "uchrashuv",
+        "translation-hi": "मुलाक़ात का समय",
+        "translation-ar": "الموعد"
+      },
+      {
+        "word": "dauern",
+        "translation-ru": "длиться",
+        "translation-en": "to last",
+        "translation-uk": "тривати",
+        "translation-pl": "trwać",
+        "translation-es": "durar",
+        "translation-fr": "durer",
+        "translation-tr": "sürmek",
+        "translation-ro": "a dura",
+        "translation-uz": "davom etmoq",
+        "translation-hi": "चलना (समय)",
+        "translation-ar": "يستغرق"
+      },
+      {
+        "word": "der Deutschkurs",
+        "translation-ru": "курс немецкого",
+        "translation-en": "German course",
+        "translation-uk": "курс німецької",
+        "translation-pl": "kurs niemieckiego",
+        "translation-es": "el curso de alemán",
+        "translation-fr": "le cours d’allemand",
+        "translation-tr": "Almanca kursu",
+        "translation-ro": "cursul de germană",
+        "translation-uz": "nemis tili kursi",
+        "translation-hi": "जर्मन कोर्स",
+        "translation-ar": "دورة اللغة الألمانية"
+      }
+    ],
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "clockTowerFive.questTask1",
+        "options": [
+          "Wie viel Uhr beginnt um der Unterricht?",
+          "Um wie viel Uhr der Unterricht beginnt?",
+          "Um wie viel Uhr beginnt der Unterricht?"
+        ],
+        "answer": "Um wie viel Uhr beginnt der Unterricht?",
+        "tip": "clockTowerFive.questDescription"
+      },
+      {
+        "id": 2,
+        "type": "input",
+        "question": "clockTowerFive.questTask2",
+        "correctAnswer": "um",
+        "tip": "clockTowerFive.questDescription"
+      },
+      {
+        "id": 3,
+        "type": "input",
+        "question": "clockTowerFive.questTask3",
+        "correctAnswer": "frühstücke",
+        "tip": "clockTowerFive.questDescription"
+      },
+      {
+        "id": 4,
+        "type": "select",
+        "question": "clockTowerFive.questTask4",
+        "options": [
+          "Ich habe um Montag am zehn Uhr einen Termin.",
+          "Ich habe am Montag um zehn Uhr ein Termin.",
+          "Ich habe am Montag um zehn Uhr einen Termin."
+        ],
+        "answer": "Ich habe am Montag um zehn Uhr einen Termin.",
+        "tip": "clockTowerFive.questDescription"
+      },
+      {
+        "id": 5,
+        "type": "reorder",
+        "question": "clockTowerFive.questTask5",
+        "words": [
+          "zwei",
+          "Der",
+          "Stunde",
+          "Stunden",
+          "Film",
+          "dauern",
+          "dauert"
+        ],
+        "correctOrder": [
+          "Der",
+          "Film",
+          "dauert",
+          "zwei",
+          "Stunden"
+        ],
+        "tip": "clockTowerFive.questDescription"
+      },
+      {
+        "id": 6,
+        "type": "select",
+        "question": "clockTowerFive.questTask6",
+        "options": [
+          "Um wie viel Uhr frühstückst du?",
+          "Am wie viel Uhr frühstückst du?",
+          "Um wie viel Uhr du frühstückst?"
+        ],
+        "answer": "Um wie viel Uhr frühstückst du?",
+        "tip": "clockTowerFive.questDescription"
+      },
+      {
+        "id": 7,
+        "type": "input",
+        "question": "clockTowerFive.questTask7",
+        "correctAnswer": "Termin",
+        "tip": "clockTowerFive.questDescription"
+      },
+      {
+        "id": 8,
+        "type": "select",
+        "question": "clockTowerFive.questTask8",
+        "options": [
+          "Der Unterricht dauern eine Stunde.",
+          "Der Unterricht dauert eine Stunde.",
+          "Der Unterricht dauert ein Stunde."
+        ],
+        "answer": "Der Unterricht dauert eine Stunde.",
+        "tip": "clockTowerFive.questDescription"
+      },
+      {
+        "id": 9,
+        "type": "readAndAnswer",
+        "question": "clockTowerFive.questTask9",
+        "text": "Unser Deutschkurs: Am Montag beginnt der Unterricht um neun Uhr, am Mittwoch um zehn Uhr. Er dauert zwei Stunden. Am Freitag haben wir keinen Unterricht.",
+        "options": [
+          "um zwei Uhr",
+          "um zehn Uhr",
+          "um neun Uhr"
+        ],
+        "answer": "um zehn Uhr",
+        "tip": "clockTowerFive.questDescription"
+      },
+      {
+        "id": 10,
+        "type": "input",
+        "question": "clockTowerFive.questTask10",
+        "correctAnswer": "beginnt",
+        "tip": "clockTowerFive.questDescription"
+      },
+      {
+        "id": 11,
+        "type": "reorder",
+        "question": "clockTowerFive.questTask11",
+        "words": [
+          "frühstückt",
+          "im",
+          "um",
+          "Uhr",
+          "Samstag",
+          "elf",
+          "Am",
+          "wir",
+          "frühstücken"
+        ],
+        "correctOrder": [
+          "Am",
+          "Samstag",
+          "um",
+          "elf",
+          "Uhr",
+          "frühstücken",
+          "wir"
+        ],
+        "tip": "clockTowerFive.questDescription"
+      },
+      {
+        "id": 12,
+        "type": "input",
+        "question": "clockTowerFive.questTask12",
+        "correctAnswer": "Uhr",
+        "tip": "clockTowerFive.questDescription"
+      },
+      {
+        "id": 13,
+        "type": "select",
+        "question": "clockTowerFive.questTask13",
+        "options": [
+          "Nachts schlafe ich.",
+          "Am Nachts schlafe ich.",
+          "Nachts ich schlafe."
+        ],
+        "answer": "Nachts schlafe ich.",
+        "tip": "clockTowerFive.questDescription"
+      },
+      {
+        "id": 14,
+        "type": "select",
+        "question": "clockTowerFive.questTask14",
+        "options": [
+          "Es ist schon früh!",
+          "Es ist schon spät!",
+          "Es hat schon spät!"
+        ],
+        "answer": "Es ist schon spät!",
+        "tip": "clockTowerFive.questDescription"
+      },
+      {
+        "id": 15,
+        "type": "reorder",
+        "question": "clockTowerFive.questTask15",
+        "words": [
+          "trinken",
+          "wir",
+          "Am",
+          "Kaffee",
+          "trinkt",
+          "Morgen",
+          "im"
+        ],
+        "correctOrder": [
+          "Am",
+          "Morgen",
+          "trinken",
+          "wir",
+          "Kaffee"
+        ],
+        "tip": "clockTowerFive.questDescription"
+      }
+    ]
+  },
+  {
+    "questId": "clock-tower-six",
+    "title": "clockTowerSix.questTitle",
+    "progress": "0/15",
+    "description": "clockTowerSix.questDescription",
+    "conditions": {
+      "goal": "clockTowerSix.questGoal",
+      "minCorrect": 15,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
+    "vocabulary": [
+      {
+        "word": "der Monat",
+        "translation-ru": "месяц",
+        "translation-en": "month",
+        "translation-uk": "місяць",
+        "translation-pl": "miesiąc",
+        "translation-es": "el mes",
+        "translation-fr": "le mois",
+        "translation-tr": "ay",
+        "translation-ro": "luna",
+        "translation-uz": "oy",
+        "translation-hi": "महीना",
+        "translation-ar": "الشهر"
+      },
+      {
+        "word": "der Sommer",
+        "translation-ru": "лето",
+        "translation-en": "summer",
+        "translation-uk": "літо",
+        "translation-pl": "lato",
+        "translation-es": "el verano",
+        "translation-fr": "l’été",
+        "translation-tr": "yaz",
+        "translation-ro": "vara",
+        "translation-uz": "yoz",
+        "translation-hi": "गर्मी",
+        "translation-ar": "الصيف"
+      },
+      {
+        "word": "der Winter",
+        "translation-ru": "зима",
+        "translation-en": "winter",
+        "translation-uk": "зима",
+        "translation-pl": "zima",
+        "translation-es": "el invierno",
+        "translation-fr": "l’hiver",
+        "translation-tr": "kış",
+        "translation-ro": "iarna",
+        "translation-uz": "qish",
+        "translation-hi": "सर्दी",
+        "translation-ar": "الشتاء"
+      },
+      {
+        "word": "der Frühling",
+        "translation-ru": "весна",
+        "translation-en": "spring",
+        "translation-uk": "весна",
+        "translation-pl": "wiosna",
+        "translation-es": "la primavera",
+        "translation-fr": "le printemps",
+        "translation-tr": "ilkbahar",
+        "translation-ro": "primăvara",
+        "translation-uz": "bahor",
+        "translation-hi": "वसंत",
+        "translation-ar": "الربيع"
+      },
+      {
+        "word": "der Herbst",
+        "translation-ru": "осень",
+        "translation-en": "autumn",
+        "translation-uk": "осінь",
+        "translation-pl": "jesień",
+        "translation-es": "el otoño",
+        "translation-fr": "l’automne",
+        "translation-tr": "sonbahar",
+        "translation-ro": "toamna",
+        "translation-uz": "kuz",
+        "translation-hi": "पतझड़",
+        "translation-ar": "الخريف"
+      },
+      {
+        "word": "regnen",
+        "translation-ru": "идти (о дожде)",
+        "translation-en": "to rain",
+        "translation-uk": "дощити",
+        "translation-pl": "padać (deszcz)",
+        "translation-es": "llover",
+        "translation-fr": "pleuvoir",
+        "translation-tr": "yağmur yağmak",
+        "translation-ro": "a ploua",
+        "translation-uz": "yomg‘ir yog‘moq",
+        "translation-hi": "बारिश होना",
+        "translation-ar": "تمطر"
+      },
+      {
+        "word": "der Schnee",
+        "translation-ru": "снег",
+        "translation-en": "snow",
+        "translation-uk": "сніг",
+        "translation-pl": "śnieg",
+        "translation-es": "la nieve",
+        "translation-fr": "la neige",
+        "translation-tr": "kar",
+        "translation-ro": "zăpada",
+        "translation-uz": "qor",
+        "translation-hi": "बर्फ़",
+        "translation-ar": "الثلج"
+      },
+      {
+        "word": "der Juli",
+        "translation-ru": "июль",
+        "translation-en": "July",
+        "translation-uk": "липень",
+        "translation-pl": "lipiec",
+        "translation-es": "julio",
+        "translation-fr": "juillet",
+        "translation-tr": "temmuz",
+        "translation-ro": "iulie",
+        "translation-uz": "iyul",
+        "translation-hi": "जुलाई",
+        "translation-ar": "يوليو"
+      },
+      {
+        "word": "der März",
+        "translation-ru": "март",
+        "translation-en": "march",
+        "translation-uk": "березень",
+        "translation-pl": "marzec",
+        "translation-es": "marzo",
+        "translation-fr": "mars",
+        "translation-tr": "mart",
+        "translation-ro": "martie",
+        "translation-uz": "mart",
+        "translation-hi": "मार्च",
+        "translation-ar": "مارس"
+      },
+      {
+        "word": "der Januar",
+        "translation-ru": "январь",
+        "translation-en": "January",
+        "translation-uk": "січень",
+        "translation-pl": "styczeń",
+        "translation-es": "enero",
+        "translation-fr": "janvier",
+        "translation-tr": "ocak",
+        "translation-ro": "ianuarie",
+        "translation-uz": "yanvar",
+        "translation-hi": "जनवरी",
+        "translation-ar": "يناير"
+      },
+      {
+        "word": "der Februar",
+        "translation-ru": "февраль",
+        "translation-en": "february",
+        "translation-uk": "лютий",
+        "translation-pl": "luty",
+        "translation-es": "febrero",
+        "translation-fr": "février",
+        "translation-tr": "şubat",
+        "translation-ro": "februarie",
+        "translation-uz": "fevral",
+        "translation-hi": "फ़रवरी",
+        "translation-ar": "فبراير"
+      },
+      {
+        "word": "der April",
+        "translation-ru": "Апрель",
+        "translation-en": "April",
+        "translation-uk": "Квітень",
+        "translation-pl": "Kwiecień",
+        "translation-es": "Abril",
+        "translation-fr": "Avril",
+        "translation-tr": "Nisan",
+        "translation-ro": "Aprilie",
+        "translation-uz": "Aprel",
+        "translation-hi": "अप्रैल",
+        "translation-ar": "أبريل / نيسان"
+      },
+      {
+        "word": "der Mai",
+        "translation-ru": "май",
+        "translation-en": "may",
+        "translation-uk": "травень",
+        "translation-pl": "maj",
+        "translation-es": "mayo",
+        "translation-fr": "mai",
+        "translation-tr": "mayıs",
+        "translation-ro": "mai",
+        "translation-uz": "may",
+        "translation-hi": "मई",
+        "translation-ar": "مايو"
+      },
+      {
+        "word": "der Dezember",
+        "translation-ru": "декабрь",
+        "translation-en": "December",
+        "translation-uk": "грудень",
+        "translation-pl": "grudzień",
+        "translation-es": "diciembre",
+        "translation-fr": "décembre",
+        "translation-tr": "aralık",
+        "translation-ro": "decembrie",
+        "translation-uz": "dekabr",
+        "translation-hi": "दिसंबर",
+        "translation-ar": "ديسمبر"
+      },
+      {
+        "word": "der Oktober",
+        "translation-ru": "октябрь",
+        "translation-en": "october",
+        "translation-uk": "жовтень",
+        "translation-pl": "październik",
+        "translation-es": "octubre",
+        "translation-fr": "octobre",
+        "translation-tr": "ekim",
+        "translation-ro": "octombrie",
+        "translation-uz": "oktabr",
+        "translation-hi": "अक्टूबर",
+        "translation-ar": "أكتوبر"
+      }
+    ],
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "clockTowerSix.questTask1",
+        "options": [
+          "Mein Geburtstag ist am Juli.",
+          "Mein Geburtstag ist um Juli.",
+          "Mein Geburtstag ist im Juli."
+        ],
+        "answer": "Mein Geburtstag ist im Juli.",
+        "tip": "clockTowerSix.questDescription"
+      },
+      {
+        "id": 2,
+        "type": "input",
+        "question": "clockTowerSix.questTask2",
+        "correctAnswer": "Sommer",
+        "tip": "clockTowerSix.questDescription"
+      },
+      {
+        "id": 3,
+        "type": "input",
+        "question": "clockTowerSix.questTask3",
+        "correctAnswer": "Im",
+        "tip": "clockTowerSix.questDescription"
+      },
+      {
+        "id": 4,
+        "type": "select",
+        "question": "clockTowerSix.questTask4",
+        "options": [
+          "Ein Jahr hat zwölf Monaten.",
+          "Ein Jahr hat zwölf Monat.",
+          "Ein Jahr hat zwölf Monate."
+        ],
+        "answer": "Ein Jahr hat zwölf Monate.",
+        "tip": "clockTowerSix.questDescription"
+      },
+      {
+        "id": 5,
+        "type": "reorder",
+        "question": "clockTowerSix.questTask5",
+        "words": [
+          "läuft",
+          "Im",
+          "am",
+          "Park",
+          "Frühling",
+          "viel",
+          "im",
+          "wir",
+          "laufen"
+        ],
+        "correctOrder": [
+          "Im",
+          "Frühling",
+          "laufen",
+          "wir",
+          "viel",
+          "im",
+          "Park"
+        ],
+        "tip": "clockTowerSix.questDescription"
+      },
+      {
+        "id": 6,
+        "type": "select",
+        "question": "clockTowerSix.questTask6",
+        "options": [
+          "Im Herbst es regnet.",
+          "Im Herbst regnet es.",
+          "Am Herbst regnet es."
+        ],
+        "answer": "Im Herbst regnet es.",
+        "tip": "clockTowerSix.questDescription"
+      },
+      {
+        "id": 7,
+        "type": "input",
+        "question": "clockTowerSix.questTask7",
+        "correctAnswer": "März",
+        "tip": "clockTowerSix.questDescription"
+      },
+      {
+        "id": 8,
+        "type": "select",
+        "question": "clockTowerSix.questTask8",
+        "options": [
+          "Ich liebe den Sommer.",
+          "Ich liebe das Sommer.",
+          "Ich liebe der Sommer."
+        ],
+        "answer": "Ich liebe den Sommer.",
+        "tip": "clockTowerSix.questDescription"
+      },
+      {
+        "id": 9,
+        "type": "readAndAnswer",
+        "question": "clockTowerSix.questTask9",
+        "text": "Lisa hat im Mai Geburtstag, im Frühling. Tim hat im Dezember Geburtstag, im Winter. Er liebt den Schnee. Lisa liebt den Sommer.",
+        "options": [
+          "im Dezember",
+          "im Sommer",
+          "im Mai"
+        ],
+        "answer": "im Dezember",
+        "tip": "clockTowerSix.questDescription"
+      },
+      {
+        "id": 10,
+        "type": "input",
+        "question": "clockTowerSix.questTask10",
+        "correctAnswer": "Oktober",
+        "tip": "clockTowerSix.questDescription"
+      },
+      {
+        "id": 11,
+        "type": "reorder",
+        "question": "clockTowerSix.questTask11",
+        "words": [
+          "kein",
+          "Sommer",
+          "haben",
+          "Kurs",
+          "Im",
+          "am",
+          "wir",
+          "keinen"
+        ],
+        "correctOrder": [
+          "Im",
+          "Sommer",
+          "haben",
+          "wir",
+          "keinen",
+          "Kurs"
+        ],
+        "tip": "clockTowerSix.questDescription"
+      },
+      {
+        "id": 12,
+        "type": "input",
+        "question": "clockTowerSix.questTask12",
+        "correctAnswer": "acht",
+        "tip": "clockTowerSix.questDescription"
+      },
+      {
+        "id": 13,
+        "type": "select",
+        "question": "clockTowerSix.questTask13",
+        "options": [
+          "Es hat noch früh!",
+          "Es ist noch früh!",
+          "Es ist noch spät!"
+        ],
+        "answer": "Es ist noch früh!",
+        "tip": "clockTowerSix.questDescription"
+      },
+      {
+        "id": 14,
+        "type": "select",
+        "question": "clockTowerSix.questTask14",
+        "options": [
+          "Hast du am Mittwoch einen Termin?",
+          "Hast du um Mittwoch einen Termin?",
+          "Hast du am Mittwoch ein Termin?"
+        ],
+        "answer": "Hast du am Mittwoch einen Termin?",
+        "tip": "clockTowerSix.questDescription"
+      },
+      {
+        "id": 15,
+        "type": "reorder",
+        "question": "clockTowerSix.questTask15",
+        "words": [
+          "wie",
+          "Um",
+          "viel",
+          "isst",
+          "Uhr",
+          "am",
+          "du",
+          "esst",
+          "Mittagessen"
+        ],
+        "correctOrder": [
+          "Um",
+          "wie",
+          "viel",
+          "Uhr",
+          "isst",
+          "du",
+          "Mittagessen"
+        ],
+        "tip": "clockTowerSix.questDescription"
+      }
+    ]
+  },
+  {
+    "questId": "clock-tower-seven",
+    "title": "clockTowerSeven.questTitle",
+    "progress": "0/15",
+    "description": "clockTowerSeven.questDescription",
+    "conditions": {
+      "goal": "clockTowerSeven.questGoal",
+      "minCorrect": 15,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
+    "vocabulary": [
+      {
+        "word": "die Woche",
+        "translation-ru": "неделя",
+        "translation-en": "week",
+        "translation-uk": "тиждень",
+        "translation-pl": "tydzień",
+        "translation-es": "la semana",
+        "translation-fr": "la semaine",
+        "translation-tr": "hafta",
+        "translation-ro": "săptămâna",
+        "translation-uz": "hafta",
+        "translation-hi": "हफ़्ता",
+        "translation-ar": "الأسبوع"
+      },
+      {
+        "word": "mittwochs",
+        "translation-ru": "по средам",
+        "translation-en": "on Wednesdays",
+        "translation-uk": "по середах",
+        "translation-pl": "w środy",
+        "translation-es": "los miércoles",
+        "translation-fr": "le mercredi",
+        "translation-tr": "çarşambaları",
+        "translation-ro": "miercurea",
+        "translation-uz": "chorshanba kunlari",
+        "translation-hi": "बुधवार को",
+        "translation-ar": "أيام الأربعاء"
+      },
+      {
+        "word": "das Training",
+        "translation-ru": "тренировка",
+        "translation-en": "training",
+        "translation-uk": "тренування",
+        "translation-pl": "trening",
+        "translation-es": "el entrenamiento",
+        "translation-fr": "l’entraînement",
+        "translation-tr": "antrenman",
+        "translation-ro": "antrenamentul",
+        "translation-uz": "mashg‘ulot",
+        "translation-hi": "प्रशिक्षण",
+        "translation-ar": "التدريب"
+      },
+      {
+        "word": "frei",
+        "translation-ru": "свободный",
+        "translation-en": "free",
+        "translation-uk": "вільний",
+        "translation-pl": "wolny",
+        "translation-es": "libre",
+        "translation-fr": "libre",
+        "translation-tr": "boş",
+        "translation-ro": "liber",
+        "translation-uz": "bo‘sh",
+        "translation-hi": "खाली",
+        "translation-ar": "فارغ"
+      },
+      {
+        "word": "der Plan",
+        "translation-ru": "план",
+        "translation-en": "plan",
+        "translation-uk": "план",
+        "translation-pl": "plan",
+        "translation-es": "el plan",
+        "translation-fr": "le plan",
+        "translation-tr": "plan",
+        "translation-ro": "planul",
+        "translation-uz": "reja",
+        "translation-hi": "योजना",
+        "translation-ar": "الخطة"
+      }
+    ],
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "clockTowerSeven.questTask1",
+        "options": [
+          "Am Mittwochs schwimme ich.",
+          "Mittwochs ich schwimme.",
+          "Mittwochs schwimme ich."
+        ],
+        "answer": "Mittwochs schwimme ich.",
+        "tip": "clockTowerSeven.questDescription"
+      },
+      {
+        "id": 2,
+        "type": "input",
+        "question": "clockTowerSeven.questTask2",
+        "correctAnswer": "Plan",
+        "tip": "clockTowerSeven.questDescription"
+      },
+      {
+        "id": 3,
+        "type": "input",
+        "question": "clockTowerSeven.questTask3",
+        "correctAnswer": "frei",
+        "tip": "clockTowerSeven.questDescription"
+      },
+      {
+        "id": 4,
+        "type": "select",
+        "question": "clockTowerSeven.questTask4",
+        "options": [
+          "Am Dienstag um sechs Uhr ich habe Training.",
+          "Um Dienstag am sechs Uhr habe ich Training.",
+          "Am Dienstag um sechs Uhr habe ich Training."
+        ],
+        "answer": "Am Dienstag um sechs Uhr habe ich Training.",
+        "tip": "clockTowerSeven.questDescription"
+      },
+      {
+        "id": 5,
+        "type": "reorder",
+        "question": "clockTowerSeven.questTask5",
+        "words": [
+          "meine",
+          "meinen",
+          "Eltern",
+          "ich",
+          "Wochenende",
+          "im",
+          "Am",
+          "besuche"
+        ],
+        "correctOrder": [
+          "Am",
+          "Wochenende",
+          "besuche",
+          "ich",
+          "meine",
+          "Eltern"
+        ],
+        "tip": "clockTowerSeven.questDescription"
+      },
+      {
+        "id": 6,
+        "type": "select",
+        "question": "clockTowerSeven.questTask6",
+        "options": [
+          "Die Woche ist sehr lang!",
+          "Die Woche sind sehr lang!",
+          "Der Woche ist sehr lang!"
+        ],
+        "answer": "Die Woche ist sehr lang!",
+        "tip": "clockTowerSeven.questDescription"
+      },
+      {
+        "id": 7,
+        "type": "input",
+        "question": "clockTowerSeven.questTask7",
+        "correctAnswer": "arbeite",
+        "tip": "clockTowerSeven.questDescription"
+      },
+      {
+        "id": 8,
+        "type": "select",
+        "question": "clockTowerSeven.questTask8",
+        "options": [
+          "Am Donnerstag ist mein Abend frei.",
+          "Am Donnerstag ist meine Abend frei.",
+          "Am Donnerstag mein Abend ist frei."
+        ],
+        "answer": "Am Donnerstag ist mein Abend frei.",
+        "tip": "clockTowerSeven.questDescription"
+      },
+      {
+        "id": 9,
+        "type": "readAndAnswer",
+        "question": "clockTowerSeven.questTask9",
+        "text": "Lisas Woche: Am Montag und am Mittwoch arbeitet sie viel. Dienstags hat sie Training um sieben Uhr. Am Donnerstag ist sie frei. Am Freitag besucht sie ihre Oma.",
+        "options": [
+          "am Freitag",
+          "am Donnerstag",
+          "am Montag"
+        ],
+        "answer": "am Donnerstag",
+        "tip": "clockTowerSeven.questDescription"
+      },
+      {
+        "id": 10,
+        "type": "input",
+        "question": "clockTowerSeven.questTask10",
+        "correctAnswer": "Training",
+        "tip": "clockTowerSeven.questDescription"
+      },
+      {
+        "id": 11,
+        "type": "reorder",
+        "question": "clockTowerSeven.questTask11",
+        "words": [
+          "im",
+          "lange",
+          "Samstagmorgen",
+          "schlafe",
+          "schläfst",
+          "Am",
+          "ich"
+        ],
+        "correctOrder": [
+          "Am",
+          "Samstagmorgen",
+          "schlafe",
+          "ich",
+          "lange"
+        ],
+        "tip": "clockTowerSeven.questDescription"
+      },
+      {
+        "id": 12,
+        "type": "input",
+        "question": "clockTowerSeven.questTask12",
+        "correctAnswer": "Sommer",
+        "tip": "clockTowerSeven.questDescription"
+      },
+      {
+        "id": 13,
+        "type": "select",
+        "question": "clockTowerSeven.questTask13",
+        "options": [
+          "Der Kurs dauert drei Stunden.",
+          "Der Kurs dauern drei Stunden.",
+          "Der Kurs dauert drei Stunde."
+        ],
+        "answer": "Der Kurs dauert drei Stunden.",
+        "tip": "clockTowerSeven.questDescription"
+      },
+      {
+        "id": 14,
+        "type": "select",
+        "question": "clockTowerSeven.questTask14",
+        "options": [
+          "Mein Bruder frühstückt um acht Uhr.",
+          "Mein Bruder frühstückt am acht Uhr.",
+          "Mein Bruder frühstücken um acht Uhr."
+        ],
+        "answer": "Mein Bruder frühstückt um acht Uhr.",
+        "tip": "clockTowerSeven.questDescription"
+      },
+      {
+        "id": 15,
+        "type": "reorder",
+        "question": "clockTowerSeven.questTask15",
+        "words": [
+          "um",
+          "Ihr",
+          "im",
+          "April",
+          "Geburtstag",
+          "ist",
+          "am"
+        ],
+        "correctOrder": [
+          "Ihr",
+          "Geburtstag",
+          "ist",
+          "im",
+          "April"
+        ],
+        "tip": "clockTowerSeven.questDescription"
+      }
+    ]
+  },
+  {
+    "questId": "clock-tower-eight",
+    "title": "clockTowerEight.questTitle",
+    "progress": "0/15",
+    "description": "clockTowerEight.questDescription",
+    "conditions": {
+      "goal": "clockTowerEight.questGoal",
+      "minCorrect": 15,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
+    "vocabulary": [
+      {
+        "word": "leider",
+        "translation-ru": "к сожалению",
+        "translation-en": "unfortunately",
+        "translation-uk": "на жаль",
+        "translation-pl": "niestety",
+        "translation-es": "por desgracia",
+        "translation-fr": "malheureusement",
+        "translation-tr": "maalesef",
+        "translation-ro": "din păcate",
+        "translation-uz": "afsuski",
+        "translation-hi": "दुर्भाग्य से",
+        "translation-ar": "للأسف"
+      },
+      {
+        "word": "gern",
+        "translation-ru": "охотно, с удовольствием",
+        "translation-en": "gladly",
+        "translation-uk": "охоче",
+        "translation-pl": "chętnie",
+        "translation-es": "con gusto",
+        "translation-fr": "volontiers",
+        "translation-tr": "memnuniyetle",
+        "translation-ro": "cu plăcere",
+        "translation-uz": "jon deb",
+        "translation-hi": "ख़ुशी से",
+        "translation-ar": "بكل سرور"
+      },
+      {
+        "word": "morgen",
+        "translation-ru": "завтра",
+        "translation-en": "tomorrow",
+        "translation-uk": "завтра",
+        "translation-pl": "jutro",
+        "translation-es": "mañana",
+        "translation-fr": "demain",
+        "translation-tr": "yarın",
+        "translation-ro": "mâine",
+        "translation-uz": "ertaga",
+        "translation-hi": "कल (आने वाला)",
+        "translation-ar": "غدًا"
+      },
+      {
+        "word": "vielleicht",
+        "translation-ru": "может быть",
+        "translation-en": "maybe",
+        "translation-uk": "можливо",
+        "translation-pl": "może",
+        "translation-es": "quizás",
+        "translation-fr": "peut-être",
+        "translation-tr": "belki",
+        "translation-ro": "poate",
+        "translation-uz": "balki",
+        "translation-hi": "शायद",
+        "translation-ar": "ربما"
+      },
+      {
+        "word": "das Konzert",
+        "translation-ru": "концерт",
+        "translation-en": "concert",
+        "translation-uk": "концерт",
+        "translation-pl": "koncert",
+        "translation-es": "el concierto",
+        "translation-fr": "le concert",
+        "translation-tr": "konser",
+        "translation-ro": "concertul",
+        "translation-uz": "konsert",
+        "translation-hi": "संगीत समारोह",
+        "translation-ar": "الحفلة الموسيقية"
+      }
+    ],
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "clockTowerEight.questTask1",
+        "options": [
+          "Hast du um Freitag Zeit?",
+          "Du hast am Freitag Zeit?",
+          "Hast du am Freitag Zeit?"
+        ],
+        "answer": "Hast du am Freitag Zeit?",
+        "tip": "clockTowerEight.questDescription"
+      },
+      {
+        "id": 2,
+        "type": "input",
+        "question": "clockTowerEight.questTask2",
+        "correctAnswer": "leider",
+        "tip": "clockTowerEight.questDescription"
+      },
+      {
+        "id": 3,
+        "type": "input",
+        "question": "clockTowerEight.questTask3",
+        "correctAnswer": "gern",
+        "tip": "clockTowerEight.questDescription"
+      },
+      {
+        "id": 4,
+        "type": "select",
+        "question": "clockTowerEight.questTask4",
+        "options": [
+          "Morgen um acht Uhr ein Konzert ist.",
+          "Morgen am acht Uhr ist ein Konzert.",
+          "Morgen um acht Uhr ist ein Konzert."
+        ],
+        "answer": "Morgen um acht Uhr ist ein Konzert.",
+        "tip": "clockTowerEight.questDescription"
+      },
+      {
+        "id": 5,
+        "type": "reorder",
+        "question": "clockTowerEight.questTask5",
+        "words": [
+          "Vielleicht",
+          "um",
+          "im",
+          "Samstag",
+          "am"
+        ],
+        "correctOrder": [
+          "Vielleicht",
+          "am",
+          "Samstag"
+        ],
+        "tip": "clockTowerEight.questDescription"
+      },
+      {
+        "id": 6,
+        "type": "select",
+        "question": "clockTowerEight.questTask6",
+        "options": [
+          "Am wie viel Uhr beginnt das Konzert?",
+          "Um wie viel Uhr beginnt das Konzert?",
+          "Um wie viel Uhr das Konzert beginnt?"
+        ],
+        "answer": "Um wie viel Uhr beginnt das Konzert?",
+        "tip": "clockTowerEight.questDescription"
+      },
+      {
+        "id": 7,
+        "type": "input",
+        "question": "clockTowerEight.questTask7",
+        "correctAnswer": "Morgen",
+        "tip": "clockTowerEight.questDescription"
+      },
+      {
+        "id": 8,
+        "type": "select",
+        "question": "clockTowerEight.questTask8",
+        "options": [
+          "Ja, das gehen!",
+          "Ja, das geht!",
+          "Ja, das gehst!"
+        ],
+        "answer": "Ja, das geht!",
+        "tip": "clockTowerEight.questDescription"
+      },
+      {
+        "id": 9,
+        "type": "readAndAnswer",
+        "question": "clockTowerEight.questTask9",
+        "text": "Paul: Hast du am Freitag Zeit? Lena: Leider nicht, am Freitag habe ich Training. Paul: Und am Samstag? Das Konzert beginnt um acht Uhr. Lena: Ja, das geht! Gern!",
+        "options": [
+          "am Samstag",
+          "morgen",
+          "am Freitag"
+        ],
+        "answer": "am Samstag",
+        "tip": "clockTowerEight.questDescription"
+      },
+      {
+        "id": 10,
+        "type": "input",
+        "question": "clockTowerEight.questTask10",
+        "correctAnswer": "Konzert",
+        "tip": "clockTowerEight.questDescription"
+      },
+      {
+        "id": 11,
+        "type": "reorder",
+        "question": "clockTowerEight.questTask11",
+        "words": [
+          "um",
+          "gern",
+          "sieben",
+          "leider",
+          "Samstag",
+          "Am",
+          "im",
+          "ja",
+          "Uhr"
+        ],
+        "correctOrder": [
+          "Am",
+          "Samstag",
+          "um",
+          "sieben",
+          "Uhr",
+          "ja",
+          "gern"
+        ],
+        "tip": "clockTowerEight.questDescription"
+      },
+      {
+        "id": 12,
+        "type": "input",
+        "question": "clockTowerEight.questTask12",
+        "correctAnswer": "frei",
+        "tip": "clockTowerEight.questDescription"
+      },
+      {
+        "id": 13,
+        "type": "select",
+        "question": "clockTowerEight.questTask13",
+        "options": [
+          "Im Herbst ich lese viel.",
+          "Im Herbst lese ich viel.",
+          "Am Herbst lese ich viel."
+        ],
+        "answer": "Im Herbst lese ich viel.",
+        "tip": "clockTowerEight.questDescription"
+      },
+      {
+        "id": 14,
+        "type": "select",
+        "question": "clockTowerEight.questTask14",
+        "options": [
+          "Mittwochs hat sie ein Training haben.",
+          "Mittwochs hat sie Training.",
+          "Mittwochs sie hat Training."
+        ],
+        "answer": "Mittwochs hat sie Training.",
+        "tip": "clockTowerEight.questDescription"
+      },
+      {
+        "id": 15,
+        "type": "reorder",
+        "question": "clockTowerEight.questTask15",
+        "words": [
+          "Dezember",
+          "Im",
+          "ist",
+          "Winter",
+          "um",
+          "am"
+        ],
+        "correctOrder": [
+          "Im",
+          "Dezember",
+          "ist",
+          "Winter"
+        ],
+        "tip": "clockTowerEight.questDescription"
+      }
+    ]
+  },
+  {
+    "questId": "clock-tower-nine",
+    "title": "clockTowerNine.questTitle",
+    "progress": "0/15",
+    "description": "clockTowerNine.questDescription",
+    "conditions": {
+      "goal": "clockTowerNine.questGoal",
+      "minCorrect": 15,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
+    "vocabulary": [
+      {
+        "word": "der Urlaub",
+        "translation-ru": "отпуск",
+        "translation-en": "holiday, vacation",
+        "translation-uk": "відпустка",
+        "translation-pl": "urlop",
+        "translation-es": "las vacaciones",
+        "translation-fr": "les vacances",
+        "translation-tr": "tatil",
+        "translation-ro": "concediul",
+        "translation-uz": "ta’til",
+        "translation-hi": "छुट्टी",
+        "translation-ar": "الإجازة"
+      },
+      {
+        "word": "der August",
+        "translation-ru": "август",
+        "translation-en": "August",
+        "translation-uk": "серпень",
+        "translation-pl": "sierpień",
+        "translation-es": "agosto",
+        "translation-fr": "août",
+        "translation-tr": "ağustos",
+        "translation-ro": "august",
+        "translation-uz": "avgust",
+        "translation-hi": "अगस्त",
+        "translation-ar": "أغسطس"
+      },
+      {
+        "word": "das Jahr",
+        "translation-ru": "год",
+        "translation-en": "year",
+        "translation-uk": "рік",
+        "translation-pl": "rok",
+        "translation-es": "el año",
+        "translation-fr": "l’année",
+        "translation-tr": "yıl",
+        "translation-ro": "anul",
+        "translation-uz": "yil",
+        "translation-hi": "साल",
+        "translation-ar": "السنة"
+      },
+      {
+        "word": "abends",
+        "translation-ru": "по вечерам",
+        "translation-en": "in the evenings",
+        "translation-uk": "увечері",
+        "translation-pl": "wieczorami",
+        "translation-es": "por las noches",
+        "translation-fr": "le soir",
+        "translation-tr": "akşamları",
+        "translation-ro": "seara",
+        "translation-uz": "kechqurunlari",
+        "translation-hi": "शाम को",
+        "translation-ar": "مساءً"
+      },
+      {
+        "word": "oft",
+        "translation-ru": "часто",
+        "translation-en": "often",
+        "translation-uk": "часто",
+        "translation-pl": "często",
+        "translation-es": "a menudo",
+        "translation-fr": "souvent",
+        "translation-tr": "sık sık",
+        "translation-ro": "des",
+        "translation-uz": "tez-tez",
+        "translation-hi": "अक्सर",
+        "translation-ar": "غالبًا"
+      },
+      {
+        "word": "einfach",
+        "translation-ru": "простой",
+        "translation-en": "simple",
+        "translation-uk": "простий",
+        "translation-pl": "prosty",
+        "translation-es": "sencillo",
+        "translation-fr": "simple",
+        "translation-tr": "basit",
+        "translation-ro": "simplu",
+        "translation-uz": "oddiy",
+        "translation-hi": "आसान",
+        "translation-ar": "بسيط"
+      }
+    ],
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "clockTowerNine.questTask1",
+        "options": [
+          "Im August wir haben Urlaub.",
+          "Am August haben wir Urlaub.",
+          "Im August haben wir Urlaub."
+        ],
+        "answer": "Im August haben wir Urlaub.",
+        "tip": "clockTowerNine.questDescription"
+      },
+      {
+        "id": 2,
+        "type": "input",
+        "question": "clockTowerNine.questTask2",
+        "correctAnswer": "oft",
+        "tip": "clockTowerNine.questDescription"
+      },
+      {
+        "id": 3,
+        "type": "input",
+        "question": "clockTowerNine.questTask3",
+        "correctAnswer": "frühstückst",
+        "tip": "clockTowerNine.questDescription"
+      },
+      {
+        "id": 4,
+        "type": "select",
+        "question": "clockTowerNine.questTask4",
+        "options": [
+          "Ein Jahr dauern zwölf Monate.",
+          "Ein Jahr dauert zwölf Monat.",
+          "Ein Jahr dauert zwölf Monate."
+        ],
+        "answer": "Ein Jahr dauert zwölf Monate.",
+        "tip": "clockTowerNine.questDescription"
+      },
+      {
+        "id": 5,
+        "type": "reorder",
+        "question": "clockTowerNine.questTask5",
+        "words": [
+          "ich",
+          "schlafe",
+          "arbeite",
+          "In",
+          "nicht",
+          "am",
+          "kein",
+          "ich",
+          "der",
+          "Nacht"
+        ],
+        "correctOrder": [
+          "In",
+          "der",
+          "Nacht",
+          "arbeite",
+          "ich",
+          "nicht",
+          "ich",
+          "schlafe"
+        ],
+        "tip": "clockTowerNine.questDescription"
+      },
+      {
+        "id": 6,
+        "type": "select",
+        "question": "clockTowerNine.questTask6",
+        "options": [
+          "Im Frühling sie hat Geburtstag.",
+          "Im Frühling hat sie Geburtstag.",
+          "Am Frühling hat sie Geburtstag."
+        ],
+        "answer": "Im Frühling hat sie Geburtstag.",
+        "tip": "clockTowerNine.questDescription"
+      },
+      {
+        "id": 7,
+        "type": "input",
+        "question": "clockTowerNine.questTask7",
+        "correctAnswer": "Urlaub",
+        "tip": "clockTowerNine.questDescription"
+      },
+      {
+        "id": 8,
+        "type": "select",
+        "question": "clockTowerNine.questTask8",
+        "options": [
+          "Jetzt ist es spät, elf Uhr.",
+          "Jetzt ist es früh, elf Uhren.",
+          "Jetzt es ist spät, elf Uhr."
+        ],
+        "answer": "Jetzt ist es spät, elf Uhr.",
+        "tip": "clockTowerNine.questDescription"
+      },
+      {
+        "id": 9,
+        "type": "readAndAnswer",
+        "question": "clockTowerNine.questTask9",
+        "text": "Carlos arbeitet viel. Morgens beginnt er um acht Uhr. Im Sommer hat er Urlaub, im August. Dann besucht er seine Familie in Spanien.",
+        "options": [
+          "im August",
+          "am Montag",
+          "im Winter"
+        ],
+        "answer": "im August",
+        "tip": "clockTowerNine.questDescription"
+      },
+      {
+        "id": 10,
+        "type": "input",
+        "question": "clockTowerNine.questTask10",
+        "correctAnswer": "Jahr",
+        "tip": "clockTowerNine.questDescription"
+      },
+      {
+        "id": 11,
+        "type": "reorder",
+        "question": "clockTowerNine.questTask11",
+        "words": [
+          "Am",
+          "Kurs",
+          "um",
+          "habe",
+          "im",
+          "Dienstagabend",
+          "ich"
+        ],
+        "correctOrder": [
+          "Am",
+          "Dienstagabend",
+          "habe",
+          "ich",
+          "Kurs"
+        ],
+        "tip": "clockTowerNine.questDescription"
+      },
+      {
+        "id": 12,
+        "type": "input",
+        "question": "clockTowerNine.questTask12",
+        "correctAnswer": "Hast",
+        "tip": "clockTowerNine.questDescription"
+      },
+      {
+        "id": 13,
+        "type": "select",
+        "question": "clockTowerNine.questTask13",
+        "options": [
+          "Am Freitag habe ich leider keine Zeit.",
+          "Am Freitag habe ich leider nicht Zeit.",
+          "Am Freitag ich habe leider keine Zeit."
+        ],
+        "answer": "Am Freitag habe ich leider keine Zeit.",
+        "tip": "clockTowerNine.questDescription"
+      },
+      {
+        "id": 14,
+        "type": "select",
+        "question": "clockTowerNine.questTask14",
+        "options": [
+          "Mein Plan für die Woche ist sehr einfach.",
+          "Mein Plan für die Woche sind sehr einfach.",
+          "Meine Plan für die Woche ist sehr einfach."
+        ],
+        "answer": "Mein Plan für die Woche ist sehr einfach.",
+        "tip": "clockTowerNine.questDescription"
+      },
+      {
+        "id": 15,
+        "type": "reorder",
+        "question": "clockTowerNine.questTask15",
+        "words": [
+          "Konzert",
+          "Das",
+          "am",
+          "neun",
+          "beginnen",
+          "beginnt",
+          "um",
+          "Uhr"
+        ],
+        "correctOrder": [
+          "Das",
+          "Konzert",
+          "beginnt",
+          "um",
+          "neun",
+          "Uhr"
+        ],
+        "tip": "clockTowerNine.questDescription"
+      }
+    ]
+  },
+  {
+    "questId": "clock-tower-ten",
+    "title": "clockTowerTen.questTitle",
+    "progress": "0/15",
+    "description": "clockTowerTen.questDescription",
+    "conditions": {
+      "goal": "clockTowerTen.questGoal",
+      "minCorrect": 15,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
+    "vocabulary": [
+      {
+        "word": "der Juni",
+        "translation-ru": "июнь",
+        "translation-en": "June",
+        "translation-uk": "червень",
+        "translation-pl": "czerwiec",
+        "translation-es": "junio",
+        "translation-fr": "juin",
+        "translation-tr": "haziran",
+        "translation-ro": "iunie",
+        "translation-uz": "iyun",
+        "translation-hi": "जून",
+        "translation-ar": "يونيو"
+      },
+      {
+        "word": "der Mittag",
+        "translation-ru": "полдень",
+        "translation-en": "noon, midday",
+        "translation-uk": "полудень",
+        "translation-pl": "południe",
+        "translation-es": "el mediodía",
+        "translation-fr": "midi",
+        "translation-tr": "öğle",
+        "translation-ro": "amiaza",
+        "translation-uz": "tush",
+        "translation-hi": "दोपहर",
+        "translation-ar": "الظهر"
+      },
+      {
+        "word": "der Feiertag",
+        "translation-ru": "праздник (выходной)",
+        "translation-en": "public holiday",
+        "translation-uk": "свято (вихідний)",
+        "translation-pl": "święto",
+        "translation-es": "el día festivo",
+        "translation-fr": "le jour férié",
+        "translation-tr": "resmî tatil",
+        "translation-ro": "sărbătoarea legală",
+        "translation-uz": "bayram kuni",
+        "translation-hi": "छुट्टी का दिन",
+        "translation-ar": "العطلة الرسمية"
+      },
+      {
+        "word": "bald",
+        "translation-ru": "скоро",
+        "translation-en": "soon",
+        "translation-uk": "скоро",
+        "translation-pl": "wkrótce",
+        "translation-es": "pronto",
+        "translation-fr": "bientôt",
+        "translation-tr": "yakında",
+        "translation-ro": "curând",
+        "translation-uz": "tez orada",
+        "translation-hi": "जल्दी ही",
+        "translation-ar": "قريبًا"
+      },
+      {
+        "word": "wieder",
+        "translation-ru": "снова",
+        "translation-en": "again",
+        "translation-uk": "знову",
+        "translation-pl": "znowu",
+        "translation-es": "otra vez",
+        "translation-fr": "de nouveau",
+        "translation-tr": "yine",
+        "translation-ro": "din nou",
+        "translation-uz": "yana",
+        "translation-hi": "फिर से",
+        "translation-ar": "مرة أخرى"
+      },
+      {
+        "word": "die Arbeit",
+        "translation-ru": "работа",
+        "translation-en": "work",
+        "translation-uk": "робота",
+        "translation-pl": "praca",
+        "translation-es": "el trabajo",
+        "translation-fr": "le travail",
+        "translation-tr": "iş",
+        "translation-ro": "munca",
+        "translation-uz": "ish",
+        "translation-hi": "काम",
+        "translation-ar": "العمل"
+      },
+      {
+        "word": "der November",
+        "translation-ru": "ноябрь",
+        "translation-en": "november",
+        "translation-uk": "листопад",
+        "translation-pl": "listopad",
+        "translation-es": "noviembre",
+        "translation-fr": "novembre",
+        "translation-tr": "kasım",
+        "translation-ro": "noiembrie",
+        "translation-uz": "noyabr",
+        "translation-hi": "नवंबर",
+        "translation-ar": "نوفمبر"
+      }
+    ],
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "clockTowerTen.questTask1",
+        "options": [
+          "Am Juni haben wir wieder Urlaub.",
+          "Im Juni wir haben wieder Urlaub.",
+          "Im Juni haben wir wieder Urlaub."
+        ],
+        "answer": "Im Juni haben wir wieder Urlaub.",
+        "tip": "clockTowerTen.questDescription"
+      },
+      {
+        "id": 2,
+        "type": "input",
+        "question": "clockTowerTen.questTask2",
+        "correctAnswer": "Mittag",
+        "tip": "clockTowerTen.questDescription"
+      },
+      {
+        "id": 3,
+        "type": "input",
+        "question": "clockTowerTen.questTask3",
+        "correctAnswer": "Uhr",
+        "tip": "clockTowerTen.questDescription"
+      },
+      {
+        "id": 4,
+        "type": "select",
+        "question": "clockTowerTen.questTask4",
+        "options": [
+          "Im Abend sehe ich fern.",
+          "Am Abend ich sehe fern.",
+          "Am Abend sehe ich fern."
+        ],
+        "answer": "Am Abend sehe ich fern.",
+        "tip": "clockTowerTen.questDescription"
+      },
+      {
+        "id": 5,
+        "type": "reorder",
+        "question": "clockTowerTen.questTask5",
+        "words": [
+          "am",
+          "kein",
+          "wieder",
+          "ein",
+          "Bald",
+          "Feiertag",
+          "ist"
+        ],
+        "correctOrder": [
+          "Bald",
+          "ist",
+          "wieder",
+          "ein",
+          "Feiertag"
+        ],
+        "tip": "clockTowerTen.questDescription"
+      },
+      {
+        "id": 6,
+        "type": "select",
+        "question": "clockTowerTen.questTask6",
+        "options": [
+          "Am Montag um neun Uhr ich habe einen Termin.",
+          "Um Montag am neun Uhr habe ich einen Termin.",
+          "Am Montag um neun Uhr habe ich einen Termin."
+        ],
+        "answer": "Am Montag um neun Uhr habe ich einen Termin.",
+        "tip": "clockTowerTen.questDescription"
+      },
+      {
+        "id": 7,
+        "type": "input",
+        "question": "clockTowerTen.questTask7",
+        "correctAnswer": "arbeiten",
+        "tip": "clockTowerTen.questDescription"
+      },
+      {
+        "id": 8,
+        "type": "select",
+        "question": "clockTowerTen.questTask8",
+        "options": [
+          "Im Winter es ist kalt und im Sommer es ist heiß.",
+          "Im Winter ist es kalt und im Sommer ist es heiß.",
+          "Am Winter ist es kalt und am Sommer ist es heiß."
+        ],
+        "answer": "Im Winter ist es kalt und im Sommer ist es heiß.",
+        "tip": "clockTowerTen.questDescription"
+      },
+      {
+        "id": 9,
+        "type": "readAndAnswer",
+        "question": "clockTowerTen.questTask9",
+        "text": "Anna frühstückt um sieben Uhr. Um acht Uhr beginnt ihre Arbeit. Am Mittag isst sie im Café. Abends sieht sie fern. Am Wochenende arbeitet sie nicht.",
+        "options": [
+          "am Mittag",
+          "um acht Uhr",
+          "um sieben Uhr"
+        ],
+        "answer": "um acht Uhr",
+        "tip": "clockTowerTen.questDescription"
+      },
+      {
+        "id": 10,
+        "type": "input",
+        "question": "clockTowerTen.questTask10",
+        "correctAnswer": "bald",
+        "tip": "clockTowerTen.questDescription"
+      },
+      {
+        "id": 11,
+        "type": "reorder",
+        "question": "clockTowerTen.questTask11",
+        "words": [
+          "Januar",
+          "ist",
+          "um",
+          "und",
+          "am",
+          "Im",
+          "Herbst",
+          "November",
+          "ist",
+          "Winter",
+          "im"
+        ],
+        "correctOrder": [
+          "Im",
+          "November",
+          "ist",
+          "Herbst",
+          "und",
+          "im",
+          "Januar",
+          "ist",
+          "Winter"
+        ],
+        "tip": "clockTowerTen.questDescription"
+      },
+      {
+        "id": 12,
+        "type": "input",
+        "question": "clockTowerTen.questTask12",
+        "correctAnswer": "beginnt",
+        "tip": "clockTowerTen.questDescription"
+      },
+      {
+        "id": 13,
+        "type": "select",
+        "question": "clockTowerTen.questTask13",
+        "options": [
+          "Ihre Bruder kommt am Wochenende.",
+          "Ihr Bruder kommt am Wochenende.",
+          "Ihr Bruder kommt im Wochenende."
+        ],
+        "answer": "Ihr Bruder kommt am Wochenende.",
+        "tip": "clockTowerTen.questDescription"
+      },
+      {
+        "id": 14,
+        "type": "select",
+        "question": "clockTowerTen.questTask14",
+        "options": [
+          "Liest du morgens der Zeitung?",
+          "Liest du morgens die Zeitung?",
+          "Lest du morgens die Zeitung?"
+        ],
+        "answer": "Liest du morgens die Zeitung?",
+        "tip": "clockTowerTen.questDescription"
+      },
+      {
+        "id": 15,
+        "type": "reorder",
+        "question": "clockTowerTen.questTask15",
+        "words": [
+          "seine",
+          "eine",
+          "Torte",
+          "für",
+          "einen",
+          "seinen",
+          "Wir",
+          "kaufen",
+          "Geburtstag"
+        ],
+        "correctOrder": [
+          "Wir",
+          "kaufen",
+          "eine",
+          "Torte",
+          "für",
+          "seinen",
+          "Geburtstag"
+        ],
+        "tip": "clockTowerTen.questDescription"
+      }
+    ]
+  }
+]

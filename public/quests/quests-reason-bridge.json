@@ -1,0 +1,2703 @@
+[
+  {
+    "questId": "reason-bridge-one",
+    "title": "reasonBridgeOne.questTitle",
+    "progress": "0/15",
+    "description": "reasonBridgeOne.questDescription",
+    "conditions": {
+      "goal": "reasonBridgeOne.questGoal",
+      "minCorrect": 15,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
+    "vocabulary": [
+      {
+        "word": "deshalb",
+        "translation-ru": "поэтому",
+        "translation-en": "that’s why",
+        "translation-uk": "тому",
+        "translation-pl": "dlatego",
+        "translation-es": "por eso",
+        "translation-fr": "c’est pourquoi",
+        "translation-tr": "bu yüzden",
+        "translation-ro": "de aceea",
+        "translation-uz": "shuning uchun",
+        "translation-hi": "इसलिए",
+        "translation-ar": "لذلك"
+      },
+      {
+        "word": "deswegen",
+        "translation-ru": "поэтому",
+        "translation-en": "that’s why",
+        "translation-uk": "тому",
+        "translation-pl": "dlatego",
+        "translation-es": "por eso",
+        "translation-fr": "c’est pourquoi",
+        "translation-tr": "bu nedenle",
+        "translation-ro": "din acest motiv",
+        "translation-uz": "shu sababli",
+        "translation-hi": "इसी वजह से",
+        "translation-ar": "لهذا السبب"
+      },
+      {
+        "word": "die Erkältung",
+        "translation-ru": "простуда",
+        "translation-en": "cold (illness)",
+        "translation-uk": "застуда",
+        "translation-pl": "przeziębienie",
+        "translation-es": "el resfriado",
+        "translation-fr": "le rhume",
+        "translation-tr": "soğuk algınlığı",
+        "translation-ro": "răceala",
+        "translation-uz": "shamollash",
+        "translation-hi": "ज़ुकाम",
+        "translation-ar": "الزكام"
+      },
+      {
+        "word": "absagen",
+        "translation-ru": "отменять",
+        "translation-en": "to cancel",
+        "translation-uk": "скасовувати",
+        "translation-pl": "odwoływać",
+        "translation-es": "cancelar",
+        "translation-fr": "annuler",
+        "translation-tr": "iptal etmek",
+        "translation-ro": "a anula",
+        "translation-uz": "bekor qilmoq",
+        "translation-hi": "रद्द करना",
+        "translation-ar": "يلغي"
+      },
+      {
+        "word": "der Stau",
+        "translation-ru": "пробка",
+        "translation-en": "traffic jam",
+        "translation-uk": "затор",
+        "translation-pl": "korek",
+        "translation-es": "el atasco",
+        "translation-fr": "l’embouteillage",
+        "translation-tr": "trafik sıkışıklığı",
+        "translation-ro": "ambuteiajul",
+        "translation-uz": "tirbandlik",
+        "translation-hi": "जाम",
+        "translation-ar": "الازدحام المروري"
+      }
+    ],
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "reasonBridgeOne.questTask1",
+        "options": [
+          "Ich bin müde, deshalb ich gehe ins Bett.",
+          "Ich bin müde, deshalb gehe ich ins Kino.",
+          "Ich bin müde, deshalb gehe ich ins Bett."
+        ],
+        "answer": "Ich bin müde, deshalb gehe ich ins Bett.",
+        "tip": "reasonBridgeOne.questDescription"
+      },
+      {
+        "id": 2,
+        "type": "input",
+        "question": "reasonBridgeOne.questTask2",
+        "correctAnswer": "bleibe",
+        "tip": "reasonBridgeOne.questDescription"
+      },
+      {
+        "id": 3,
+        "type": "input",
+        "question": "reasonBridgeOne.questTask3",
+        "correctAnswer": "kamen",
+        "tip": "reasonBridgeOne.questDescription"
+      },
+      {
+        "id": 4,
+        "type": "reorder",
+        "question": "reasonBridgeOne.questTask4",
+        "words": [
+          "den",
+          "Termin",
+          "sagt",
+          "ab",
+          "absagt",
+          "ist",
+          "Er",
+          "krank",
+          "er",
+          "deshalb"
+        ],
+        "correctOrder": [
+          "Er",
+          "ist",
+          "krank",
+          "deshalb",
+          "sagt",
+          "er",
+          "den",
+          "Termin",
+          "ab"
+        ],
+        "tip": "reasonBridgeOne.questDescription"
+      },
+      {
+        "id": 5,
+        "type": "select",
+        "question": "reasonBridgeOne.questTask5",
+        "options": [
+          "Der Bus kam nicht, deshalb nehme ich ein Taxi.",
+          "Der Bus kam nicht, deshalb nahm ich ein Taxi.",
+          "Der Bus kam nicht, deshalb ich nahm ein Taxi."
+        ],
+        "answer": "Der Bus kam nicht, deshalb nahm ich ein Taxi.",
+        "tip": "reasonBridgeOne.questDescription"
+      },
+      {
+        "id": 6,
+        "type": "input",
+        "question": "reasonBridgeOne.questTask6",
+        "correctAnswer": "suchen",
+        "tip": "reasonBridgeOne.questDescription"
+      },
+      {
+        "id": 7,
+        "type": "readAndAnswer",
+        "question": "reasonBridgeOne.questTask7",
+        "text": "Lisa hatte gestern eine Erkältung. Deshalb sagte sie den Termin beim Friseur ab und blieb im Bett.",
+        "options": [
+          "Der Friseur war krank.",
+          "Sie hatte eine Erkältung.",
+          "Sie hatte keine Zeit."
+        ],
+        "answer": "Sie hatte eine Erkältung.",
+        "tip": "reasonBridgeOne.questDescription"
+      },
+      {
+        "id": 8,
+        "type": "input",
+        "question": "reasonBridgeOne.questTask8",
+        "correctAnswer": "lerne",
+        "tip": "reasonBridgeOne.questDescription"
+      },
+      {
+        "id": 9,
+        "type": "input",
+        "question": "reasonBridgeOne.questTask10",
+        "correctAnswer": "gehe",
+        "tip": "reasonBridgeOne.questDescription"
+      },
+      {
+        "id": 10,
+        "type": "reorder",
+        "question": "reasonBridgeOne.questTask11",
+        "words": [
+          "kalt",
+          "war",
+          "zu",
+          "Es",
+          "blieben",
+          "Hause",
+          "bleiben",
+          "deshalb",
+          "wir"
+        ],
+        "correctOrder": [
+          "Es",
+          "war",
+          "kalt",
+          "deshalb",
+          "blieben",
+          "wir",
+          "zu",
+          "Hause"
+        ],
+        "tip": "reasonBridgeOne.questDescription"
+      },
+      {
+        "id": 11,
+        "type": "input",
+        "question": "memoryLakeEight.questTask9",
+        "correctAnswer": "bevor",
+        "tip": "memoryLakeEight.questDescription",
+        "reviewOf": "memory-lake-eight",
+        "reviewLand": "memory-lake"
+      },
+      {
+        "id": 12,
+        "type": "select",
+        "question": "memoryLakeFive.questTask12",
+        "options": [
+          "Während ich in Berlin war, las ich viel.",
+          "Während ich in Berlin bin, las ich viel.",
+          "Während ich in Berlin war, ich las viel."
+        ],
+        "answer": "Während ich in Berlin war, las ich viel.",
+        "tip": "memoryLakeFive.questDescription",
+        "reviewOf": "memory-lake-five",
+        "reviewLand": "memory-lake"
+      },
+      {
+        "id": 13,
+        "type": "readAndAnswer",
+        "question": "memoryLakeTwo.questTask13",
+        "text": "Anna war am Wochenende zu ihren Eltern gefahren. Am Montag kam sie müde zur Arbeit.",
+        "options": [
+          "bei ihren Eltern",
+          "im Urlaub",
+          "im Büro"
+        ],
+        "answer": "bei ihren Eltern",
+        "tip": "memoryLakeTwo.questDescription",
+        "reviewOf": "memory-lake-two",
+        "reviewLand": "memory-lake"
+      },
+      {
+        "id": 14,
+        "type": "input",
+        "question": "reasonBridgeOne.questTask14",
+        "correctAnswer": "waren",
+        "tip": "reasonBridgeOne.questDescription"
+      },
+      {
+        "id": 15,
+        "type": "input",
+        "question": "reasonBridgeOne.questTask15",
+        "correctAnswer": "kälter",
+        "tip": "reasonBridgeOne.questDescription"
+      }
+    ]
+  },
+  {
+    "questId": "reason-bridge-two",
+    "title": "reasonBridgeTwo.questTitle",
+    "progress": "0/15",
+    "description": "reasonBridgeTwo.questDescription",
+    "conditions": {
+      "goal": "reasonBridgeTwo.questGoal",
+      "minCorrect": 15,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
+    "vocabulary": [
+      {
+        "word": "darum",
+        "translation-ru": "поэтому",
+        "translation-en": "that’s why",
+        "translation-uk": "тому",
+        "translation-pl": "dlatego",
+        "translation-es": "por eso",
+        "translation-fr": "c’est pour ça",
+        "translation-tr": "o yüzden",
+        "translation-ro": "de asta",
+        "translation-uz": "shuning uchun",
+        "translation-hi": "इसलिए",
+        "translation-ar": "لذلك"
+      },
+      {
+        "word": "die Miete",
+        "translation-ru": "арендная плата",
+        "translation-en": "rent",
+        "translation-uk": "орендна плата",
+        "translation-pl": "czynsz",
+        "translation-es": "el alquiler",
+        "translation-fr": "le loyer",
+        "translation-tr": "kira",
+        "translation-ro": "chiria",
+        "translation-uz": "ijara haqi",
+        "translation-hi": "किराया",
+        "translation-ar": "الإيجار"
+      },
+      {
+        "word": "sparen",
+        "translation-ru": "экономить, копить",
+        "translation-en": "to save (money)",
+        "translation-uk": "заощаджувати",
+        "translation-pl": "oszczędzać",
+        "translation-es": "ahorrar",
+        "translation-fr": "économiser",
+        "translation-tr": "biriktirmek",
+        "translation-ro": "a economisi",
+        "translation-uz": "tejamoq",
+        "translation-hi": "बचत करना",
+        "translation-ar": "يوفّر"
+      },
+      {
+        "word": "billig",
+        "translation-ru": "дешёвый",
+        "translation-en": "cheap",
+        "translation-uk": "дешевий",
+        "translation-pl": "tani",
+        "translation-es": "barato",
+        "translation-fr": "bon marché",
+        "translation-tr": "ucuz",
+        "translation-ro": "ieftin",
+        "translation-uz": "arzon",
+        "translation-hi": "सस्ता",
+        "translation-ar": "رخيص"
+      },
+      {
+        "word": "bevor",
+        "translation-ru": "прежде чем",
+        "translation-en": "before (conjunction)",
+        "translation-uk": "перш ніж",
+        "translation-pl": "zanim",
+        "translation-es": "antes de que",
+        "translation-fr": "avant que",
+        "translation-tr": "-madan önce",
+        "translation-ro": "înainte să",
+        "translation-uz": "…dan oldin",
+        "translation-hi": "…से पहले",
+        "translation-ar": "قبل أن"
+      }
+    ],
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "reasonBridgeTwo.questTask1",
+        "options": [
+          "Ich bleibe zu Hause, deshalb bin ich krank.",
+          "Ich bleibe zu Hause, denn ich krank bin.",
+          "Ich bleibe zu Hause, denn ich bin krank."
+        ],
+        "answer": "Ich bleibe zu Hause, denn ich bin krank.",
+        "tip": "reasonBridgeTwo.questDescription"
+      },
+      {
+        "id": 2,
+        "type": "input",
+        "question": "reasonBridgeTwo.questTask2",
+        "correctAnswer": "ist",
+        "tip": "reasonBridgeTwo.questDescription"
+      },
+      {
+        "id": 3,
+        "type": "input",
+        "question": "reasonBridgeTwo.questTask3",
+        "correctAnswer": "spare",
+        "tip": "reasonBridgeTwo.questDescription"
+      },
+      {
+        "id": 4,
+        "type": "reorder",
+        "question": "reasonBridgeTwo.questTask4",
+        "words": [
+          "müde",
+          "Ich",
+          "weil",
+          "ich",
+          "denn",
+          "bin",
+          "trinke",
+          "Kaffee"
+        ],
+        "correctOrder": [
+          "Ich",
+          "trinke",
+          "Kaffee",
+          "denn",
+          "ich",
+          "bin",
+          "müde"
+        ],
+        "tip": "reasonBridgeTwo.questDescription"
+      },
+      {
+        "id": 5,
+        "type": "select",
+        "question": "reasonBridgeTwo.questTask5",
+        "options": [
+          "Er kam nicht, deshalb hatte er keine Zeit.",
+          "Er kam nicht, weil er keine Zeit hatte.",
+          "Er kam nicht, weil er hatte keine Zeit."
+        ],
+        "answer": "Er kam nicht, weil er keine Zeit hatte.",
+        "tip": "reasonBridgeTwo.questDescription"
+      },
+      {
+        "id": 6,
+        "type": "input",
+        "question": "reasonBridgeTwo.questTask6",
+        "correctAnswer": "ist",
+        "tip": "reasonBridgeTwo.questDescription"
+      },
+      {
+        "id": 7,
+        "type": "readAndAnswer",
+        "question": "reasonBridgeTwo.questTask7",
+        "text": "Tom fährt jeden Tag mit dem Fahrrad zur Arbeit. Er will Geld sparen, denn die Miete ist sehr teuer.",
+        "options": [
+          "Die Miete ist teuer.",
+          "Er fährt gern Fahrrad.",
+          "Er hat kein Auto."
+        ],
+        "answer": "Die Miete ist teuer.",
+        "tip": "reasonBridgeTwo.questDescription"
+      },
+      {
+        "id": 8,
+        "type": "input",
+        "question": "reasonBridgeTwo.questTask8",
+        "correctAnswer": "ging",
+        "tip": "reasonBridgeTwo.questDescription"
+      },
+      {
+        "id": 9,
+        "type": "input",
+        "question": "reasonBridgeTwo.questTask10",
+        "correctAnswer": "war",
+        "tip": "reasonBridgeTwo.questDescription"
+      },
+      {
+        "id": 10,
+        "type": "reorder",
+        "question": "reasonBridgeTwo.questTask11",
+        "words": [
+          "habe",
+          "zu",
+          "darum",
+          "bleiben",
+          "bleibe",
+          "kein",
+          "Hause",
+          "Geld",
+          "Ich",
+          "ich"
+        ],
+        "correctOrder": [
+          "Ich",
+          "habe",
+          "kein",
+          "Geld",
+          "darum",
+          "bleibe",
+          "ich",
+          "zu",
+          "Hause"
+        ],
+        "tip": "reasonBridgeTwo.questDescription"
+      },
+      {
+        "id": 11,
+        "type": "select",
+        "question": "reasonBridgeOne.questTask9",
+        "options": [
+          "Es regnete, deshalb blieben wir zu Hause.",
+          "Es regnet, deshalb bleiben wir zu Hause.",
+          "Es regnete, deshalb wir blieben zu Hause."
+        ],
+        "answer": "Es regnete, deshalb blieben wir zu Hause.",
+        "tip": "reasonBridgeOne.questDescription",
+        "reviewOf": "reason-bridge-one",
+        "reviewLand": "reason-bridge"
+      },
+      {
+        "id": 12,
+        "type": "select",
+        "question": "memoryLakeSix.questTask12",
+        "options": [
+          "Nachdem wir nach Hause gefahren waren, kauften wir Geschenke.",
+          "Bevor wir nach Hause fuhren, kauften wir Geschenke.",
+          "Bevor wir nach Hause fuhren, wir kauften Geschenke."
+        ],
+        "answer": "Bevor wir nach Hause fuhren, kauften wir Geschenke.",
+        "tip": "memoryLakeSix.questDescription",
+        "reviewOf": "memory-lake-six",
+        "reviewLand": "memory-lake"
+      },
+      {
+        "id": 13,
+        "type": "readAndAnswer",
+        "question": "memoryLakeThree.questTask13",
+        "text": "Nachdem Tim gearbeitet hatte, machte er einen Spaziergang im Park.",
+        "options": [
+          "einen Kuchen",
+          "einen Spaziergang",
+          "eine Pause im Büro"
+        ],
+        "answer": "einen Spaziergang",
+        "tip": "memoryLakeThree.questDescription",
+        "reviewOf": "memory-lake-three",
+        "reviewLand": "memory-lake"
+      },
+      {
+        "id": 14,
+        "type": "input",
+        "question": "reasonBridgeTwo.questTask14",
+        "correctAnswer": "warteten",
+        "tip": "reasonBridgeTwo.questDescription"
+      },
+      {
+        "id": 15,
+        "type": "input",
+        "question": "reasonBridgeTwo.questTask15",
+        "correctAnswer": "Nachdem",
+        "tip": "reasonBridgeTwo.questDescription"
+      }
+    ]
+  },
+  {
+    "questId": "reason-bridge-three",
+    "title": "reasonBridgeThree.questTitle",
+    "progress": "0/15",
+    "description": "reasonBridgeThree.questDescription",
+    "conditions": {
+      "goal": "reasonBridgeThree.questGoal",
+      "minCorrect": 15,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
+    "vocabulary": [
+      {
+        "word": "trotzdem",
+        "translation-ru": "всё равно, несмотря на это",
+        "translation-en": "anyway, nevertheless",
+        "translation-uk": "усе одно, попри це",
+        "translation-pl": "mimo to",
+        "translation-es": "aun así",
+        "translation-fr": "quand même",
+        "translation-tr": "yine de",
+        "translation-ro": "totuși",
+        "translation-uz": "baribir",
+        "translation-hi": "फिर भी",
+        "translation-ar": "ومع ذلك"
+      },
+      {
+        "word": "nass",
+        "translation-ru": "мокрый",
+        "translation-en": "wet",
+        "translation-uk": "мокрий",
+        "translation-pl": "mokry",
+        "translation-es": "mojado",
+        "translation-fr": "mouillé",
+        "translation-tr": "ıslak",
+        "translation-ro": "ud",
+        "translation-uz": "ho‘l",
+        "translation-hi": "गीला",
+        "translation-ar": "مبلّل"
+      },
+      {
+        "word": "langweilig",
+        "translation-ru": "скучный",
+        "translation-en": "boring",
+        "translation-uk": "нудний",
+        "translation-pl": "nudny",
+        "translation-es": "aburrido",
+        "translation-fr": "ennuyeux",
+        "translation-tr": "sıkıcı",
+        "translation-ro": "plictisitor",
+        "translation-uz": "zerikarli",
+        "translation-hi": "उबाऊ",
+        "translation-ar": "مملّ"
+      },
+      {
+        "word": "das Ende",
+        "translation-ru": "конец",
+        "translation-en": "end",
+        "translation-uk": "кінець",
+        "translation-pl": "koniec",
+        "translation-es": "el final",
+        "translation-fr": "la fin",
+        "translation-tr": "son",
+        "translation-ro": "sfârșitul",
+        "translation-uz": "oxir",
+        "translation-hi": "अंत",
+        "translation-ar": "النهاية"
+      },
+      {
+        "word": "während",
+        "translation-ru": "пока, в то время как",
+        "translation-en": "while",
+        "translation-uk": "поки, у той час як",
+        "translation-pl": "podczas gdy",
+        "translation-es": "mientras",
+        "translation-fr": "pendant que",
+        "translation-tr": "-iken",
+        "translation-ro": "în timp ce",
+        "translation-uz": "…ayotganda",
+        "translation-hi": "जबकि, जब तक",
+        "translation-ar": "بينما"
+      }
+    ],
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "reasonBridgeThree.questTask1",
+        "options": [
+          "Es regnete, trotzdem wir gingen spazieren.",
+          "Es regnete, deshalb gingen wir spazieren.",
+          "Es regnete, trotzdem gingen wir spazieren."
+        ],
+        "answer": "Es regnete, trotzdem gingen wir spazieren.",
+        "tip": "reasonBridgeThree.questDescription"
+      },
+      {
+        "id": 2,
+        "type": "input",
+        "question": "reasonBridgeThree.questTask2",
+        "correctAnswer": "trotzdem",
+        "tip": "reasonBridgeThree.questDescription"
+      },
+      {
+        "id": 3,
+        "type": "input",
+        "question": "reasonBridgeThree.questTask3",
+        "correctAnswer": "arbeitete",
+        "tip": "reasonBridgeThree.questDescription"
+      },
+      {
+        "id": 4,
+        "type": "reorder",
+        "question": "reasonBridgeThree.questTask4",
+        "words": [
+          "trotzdem",
+          "Deutsch",
+          "lerne",
+          "bin",
+          "Ich",
+          "lernen",
+          "ich",
+          "müde"
+        ],
+        "correctOrder": [
+          "Ich",
+          "bin",
+          "müde",
+          "trotzdem",
+          "lerne",
+          "ich",
+          "Deutsch"
+        ],
+        "tip": "reasonBridgeThree.questDescription"
+      },
+      {
+        "id": 5,
+        "type": "select",
+        "question": "reasonBridgeThree.questTask5",
+        "options": [
+          "Das Essen war teuer, trotzdem waren wir zufrieden.",
+          "Das Essen war teuer, deshalb waren wir zufrieden.",
+          "Das Essen war teuer, trotzdem wir waren zufrieden."
+        ],
+        "answer": "Das Essen war teuer, trotzdem waren wir zufrieden.",
+        "tip": "reasonBridgeThree.questDescription"
+      },
+      {
+        "id": 6,
+        "type": "input",
+        "question": "reasonBridgeThree.questTask6",
+        "correctAnswer": "waren",
+        "tip": "reasonBridgeThree.questDescription"
+      },
+      {
+        "id": 7,
+        "type": "readAndAnswer",
+        "question": "reasonBridgeThree.questTask7",
+        "text": "Gestern war das Wetter sehr schlecht. Es war kalt und nass. Trotzdem machte Anna einen langen Spaziergang.",
+        "options": [
+          "Sie las ein Buch.",
+          "Sie machte einen Spaziergang.",
+          "Sie blieb zu Hause."
+        ],
+        "answer": "Sie machte einen Spaziergang.",
+        "tip": "reasonBridgeThree.questDescription"
+      },
+      {
+        "id": 8,
+        "type": "input",
+        "question": "reasonBridgeThree.questTask8",
+        "correctAnswer": "arbeitet",
+        "tip": "reasonBridgeThree.questDescription"
+      },
+      {
+        "id": 9,
+        "type": "input",
+        "question": "reasonBridgeThree.questTask10",
+        "correctAnswer": "trotzdem",
+        "tip": "reasonBridgeThree.questDescription"
+      },
+      {
+        "id": 10,
+        "type": "reorder",
+        "question": "reasonBridgeThree.questTask11",
+        "words": [
+          "gingen",
+          "war",
+          "Kino",
+          "spät",
+          "Es",
+          "trotzdem",
+          "ins",
+          "deshalb",
+          "wir"
+        ],
+        "correctOrder": [
+          "Es",
+          "war",
+          "spät",
+          "trotzdem",
+          "gingen",
+          "wir",
+          "ins",
+          "Kino"
+        ],
+        "tip": "reasonBridgeThree.questDescription"
+      },
+      {
+        "id": 11,
+        "type": "select",
+        "question": "reasonBridgeTwo.questTask9",
+        "options": [
+          "Wir blieben zu Hause, weil regnete es.",
+          "Wir blieben zu Hause, weil es regnete.",
+          "Wir blieben zu Hause, weil es regnete nicht."
+        ],
+        "answer": "Wir blieben zu Hause, weil es regnete.",
+        "tip": "reasonBridgeTwo.questDescription",
+        "reviewOf": "reason-bridge-two",
+        "reviewLand": "reason-bridge"
+      },
+      {
+        "id": 12,
+        "type": "input",
+        "question": "memoryLakeSeven.questTask12",
+        "correctAnswer": "bevor",
+        "tip": "memoryLakeSeven.questDescription",
+        "reviewOf": "memory-lake-seven",
+        "reviewLand": "memory-lake"
+      },
+      {
+        "id": 13,
+        "type": "readAndAnswer",
+        "question": "memoryLakeFour.questTask13",
+        "text": "Bevor Lena ins Bett geht, liest sie immer ein bisschen.",
+        "options": [
+          "Sie liest.",
+          "Sie kocht.",
+          "Sie telefoniert."
+        ],
+        "answer": "Sie liest.",
+        "tip": "memoryLakeFour.questDescription",
+        "reviewOf": "memory-lake-four",
+        "reviewLand": "memory-lake"
+      },
+      {
+        "id": 14,
+        "type": "input",
+        "question": "reasonBridgeThree.questTask14",
+        "correctAnswer": "solltest",
+        "tip": "reasonBridgeThree.questDescription"
+      },
+      {
+        "id": 15,
+        "type": "input",
+        "question": "reasonBridgeThree.questTask15",
+        "correctAnswer": "Während",
+        "tip": "reasonBridgeThree.questDescription"
+      }
+    ]
+  },
+  {
+    "questId": "reason-bridge-four",
+    "title": "reasonBridgeFour.questTitle",
+    "progress": "0/15",
+    "description": "reasonBridgeFour.questDescription",
+    "conditions": {
+      "goal": "reasonBridgeFour.questGoal",
+      "minCorrect": 15,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
+    "vocabulary": [
+      {
+        "word": "obwohl",
+        "translation-ru": "хотя",
+        "translation-en": "although",
+        "translation-uk": "хоча",
+        "translation-pl": "chociaż",
+        "translation-es": "aunque",
+        "translation-fr": "bien que",
+        "translation-tr": "-e rağmen",
+        "translation-ro": "deși",
+        "translation-uz": "garchi",
+        "translation-hi": "हालाँकि",
+        "translation-ar": "رغم أن"
+      },
+      {
+        "word": "anstrengend",
+        "translation-ru": "утомительный",
+        "translation-en": "tiring",
+        "translation-uk": "виснажливий",
+        "translation-pl": "męczący",
+        "translation-es": "agotador",
+        "translation-fr": "fatigant",
+        "translation-tr": "yorucu",
+        "translation-ro": "obositor",
+        "translation-uz": "charchatadigan",
+        "translation-hi": "थकाने वाला",
+        "translation-ar": "مُتعب"
+      },
+      {
+        "word": "das Gehalt",
+        "translation-ru": "зарплата",
+        "translation-en": "salary",
+        "translation-uk": "зарплата",
+        "translation-pl": "pensja",
+        "translation-es": "el sueldo",
+        "translation-fr": "le salaire",
+        "translation-tr": "maaş",
+        "translation-ro": "salariul",
+        "translation-uz": "maosh",
+        "translation-hi": "वेतन",
+        "translation-ar": "الراتب"
+      },
+      {
+        "word": "wenig",
+        "translation-ru": "мало",
+        "translation-en": "little",
+        "translation-uk": "мало",
+        "translation-pl": "mało",
+        "translation-es": "poco",
+        "translation-fr": "peu",
+        "translation-tr": "az",
+        "translation-ro": "puțin",
+        "translation-uz": "kam",
+        "translation-hi": "कम",
+        "translation-ar": "قليل"
+      },
+      {
+        "word": "der Beruf",
+        "translation-ru": "профессия",
+        "translation-en": "profession",
+        "translation-uk": "професія",
+        "translation-pl": "zawód",
+        "translation-es": "la profesión",
+        "translation-fr": "le métier",
+        "translation-tr": "meslek",
+        "translation-ro": "meseria",
+        "translation-uz": "kasb",
+        "translation-hi": "पेशा",
+        "translation-ar": "المهنة"
+      }
+    ],
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "reasonBridgeFour.questTask1",
+        "options": [
+          "Obwohl regnete es, gingen wir spazieren.",
+          "Obwohl es regnete, wir gingen spazieren.",
+          "Obwohl es regnete, gingen wir spazieren."
+        ],
+        "answer": "Obwohl es regnete, gingen wir spazieren.",
+        "tip": "reasonBridgeFour.questDescription"
+      },
+      {
+        "id": 2,
+        "type": "input",
+        "question": "reasonBridgeFour.questTask2",
+        "correctAnswer": "Obwohl",
+        "tip": "reasonBridgeFour.questDescription"
+      },
+      {
+        "id": 3,
+        "type": "input",
+        "question": "reasonBridgeFour.questTask3",
+        "correctAnswer": "ist",
+        "tip": "reasonBridgeFour.questDescription"
+      },
+      {
+        "id": 4,
+        "type": "reorder",
+        "question": "reasonBridgeFour.questTask4",
+        "words": [
+          "er",
+          "kam",
+          "Er",
+          "war",
+          "krank",
+          "weil",
+          "obwohl"
+        ],
+        "correctOrder": [
+          "Er",
+          "kam",
+          "obwohl",
+          "er",
+          "krank",
+          "war"
+        ],
+        "tip": "reasonBridgeFour.questDescription"
+      },
+      {
+        "id": 5,
+        "type": "select",
+        "question": "reasonBridgeFour.questTask5",
+        "options": [
+          "Obwohl das Gehalt ist klein, ist sie zufrieden.",
+          "Obwohl das Gehalt klein ist, ist sie zufrieden.",
+          "Obwohl das Gehalt klein ist, sie ist zufrieden."
+        ],
+        "answer": "Obwohl das Gehalt klein ist, ist sie zufrieden.",
+        "tip": "reasonBridgeFour.questDescription"
+      },
+      {
+        "id": 6,
+        "type": "input",
+        "question": "reasonBridgeFour.questTask6",
+        "correctAnswer": "hatten",
+        "tip": "reasonBridgeFour.questDescription"
+      },
+      {
+        "id": 7,
+        "type": "readAndAnswer",
+        "question": "reasonBridgeFour.questTask7",
+        "text": "Ben arbeitet viel, obwohl das Gehalt nicht sehr gut ist. Er liebt seinen Beruf.",
+        "options": [
+          "Die Arbeit macht ihm Spaß.",
+          "Er bekommt viel Geld.",
+          "Er muss mehr Stunden arbeiten."
+        ],
+        "answer": "Die Arbeit macht ihm Spaß.",
+        "tip": "reasonBridgeFour.questDescription"
+      },
+      {
+        "id": 8,
+        "type": "input",
+        "question": "reasonBridgeFour.questTask8",
+        "correctAnswer": "obwohl",
+        "tip": "reasonBridgeFour.questDescription"
+      },
+      {
+        "id": 9,
+        "type": "input",
+        "question": "reasonBridgeFour.questTask10",
+        "correctAnswer": "hatte",
+        "tip": "reasonBridgeFour.questDescription"
+      },
+      {
+        "id": 10,
+        "type": "reorder",
+        "question": "reasonBridgeFour.questTask11",
+        "words": [
+          "wir",
+          "spazieren",
+          "trotzdem",
+          "kalt",
+          "Obwohl",
+          "war",
+          "es",
+          "gingen"
+        ],
+        "correctOrder": [
+          "Obwohl",
+          "es",
+          "kalt",
+          "war",
+          "gingen",
+          "wir",
+          "spazieren"
+        ],
+        "tip": "reasonBridgeFour.questDescription"
+      },
+      {
+        "id": 11,
+        "type": "select",
+        "question": "reasonBridgeThree.questTask9",
+        "options": [
+          "Ich war krank, deshalb ging ich zur Schule.",
+          "Ich war krank, trotzdem ging ich zur Schule.",
+          "Ich war krank, trotzdem ich ging zur Schule."
+        ],
+        "answer": "Ich war krank, trotzdem ging ich zur Schule.",
+        "tip": "reasonBridgeThree.questDescription",
+        "reviewOf": "reason-bridge-three",
+        "reviewLand": "reason-bridge"
+      },
+      {
+        "id": 12,
+        "type": "input",
+        "question": "memoryLakeEight.questTask12",
+        "correctAnswer": "ging",
+        "tip": "memoryLakeEight.questDescription",
+        "reviewOf": "memory-lake-eight",
+        "reviewLand": "memory-lake"
+      },
+      {
+        "id": 13,
+        "type": "readAndAnswer",
+        "question": "memoryLakeFive.questTask13",
+        "text": "Am Sonntag war Bens Frau müde. Während sie im Bett blieb, machte Ben das Frühstück.",
+        "options": [
+          "Er machte das Frühstück.",
+          "Er ging spazieren.",
+          "Er sah fern."
+        ],
+        "answer": "Er machte das Frühstück.",
+        "tip": "memoryLakeFive.questDescription",
+        "reviewOf": "memory-lake-five",
+        "reviewLand": "memory-lake"
+      },
+      {
+        "id": 14,
+        "type": "input",
+        "question": "reasonBridgeFour.questTask14",
+        "correctAnswer": "hatte",
+        "tip": "reasonBridgeFour.questDescription"
+      },
+      {
+        "id": 15,
+        "type": "input",
+        "question": "reasonBridgeFour.questTask15",
+        "correctAnswer": "war",
+        "tip": "reasonBridgeFour.questDescription"
+      }
+    ]
+  },
+  {
+    "questId": "reason-bridge-five",
+    "title": "reasonBridgeFive.questTitle",
+    "progress": "0/15",
+    "description": "reasonBridgeFive.questDescription",
+    "conditions": {
+      "goal": "reasonBridgeFive.questGoal",
+      "minCorrect": 15,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
+    "vocabulary": [
+      {
+        "word": "der Lärm",
+        "translation-ru": "шум",
+        "translation-en": "noise",
+        "translation-uk": "шум",
+        "translation-pl": "hałas",
+        "translation-es": "el ruido",
+        "translation-fr": "le bruit",
+        "translation-tr": "gürültü",
+        "translation-ro": "zgomotul",
+        "translation-uz": "shovqin",
+        "translation-hi": "शोर",
+        "translation-ar": "الضجيج"
+      },
+      {
+        "word": "sich konzentrieren",
+        "translation-ru": "сосредоточиться",
+        "translation-en": "to concentrate",
+        "translation-uk": "зосередитися",
+        "translation-pl": "skupić się",
+        "translation-es": "concentrarse",
+        "translation-fr": "se concentrer",
+        "translation-tr": "konsantre olmak",
+        "translation-ro": "a se concentra",
+        "translation-uz": "diqqatni jamlamoq",
+        "translation-hi": "ध्यान लगाना",
+        "translation-ar": "يركّز"
+      },
+      {
+        "word": "ehrlich",
+        "translation-ru": "честный",
+        "translation-en": "honest",
+        "translation-uk": "чесний",
+        "translation-pl": "uczciwy",
+        "translation-es": "honesto",
+        "translation-fr": "honnête",
+        "translation-tr": "dürüst",
+        "translation-ro": "cinstit",
+        "translation-uz": "halol",
+        "translation-hi": "ईमानदार",
+        "translation-ar": "صادق"
+      },
+      {
+        "word": "erklären",
+        "translation-ru": "объяснять",
+        "translation-en": "to explain",
+        "translation-uk": "пояснювати",
+        "translation-pl": "wyjaśniać",
+        "translation-es": "explicar",
+        "translation-fr": "expliquer",
+        "translation-tr": "açıklamak",
+        "translation-ro": "a explica",
+        "translation-uz": "tushuntirmoq",
+        "translation-hi": "समझाना",
+        "translation-ar": "يشرح"
+      },
+      {
+        "word": "trotzdem",
+        "translation-ru": "всё равно, несмотря на это",
+        "translation-en": "anyway, nevertheless",
+        "translation-uk": "усе одно, попри це",
+        "translation-pl": "mimo to",
+        "translation-es": "aun así",
+        "translation-fr": "quand même",
+        "translation-tr": "yine de",
+        "translation-ro": "totuși",
+        "translation-uz": "baribir",
+        "translation-hi": "फिर भी",
+        "translation-ar": "ومع ذلك"
+      }
+    ],
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "reasonBridgeFive.questTask1",
+        "options": [
+          "Weil es laut war, konnte ich mich konzentrieren.",
+          "Obwohl es laut war, ich konnte mich konzentrieren.",
+          "Obwohl es laut war, konnte ich mich konzentrieren."
+        ],
+        "answer": "Obwohl es laut war, konnte ich mich konzentrieren.",
+        "tip": "reasonBridgeFive.questDescription"
+      },
+      {
+        "id": 2,
+        "type": "input",
+        "question": "reasonBridgeFive.questTask2",
+        "correctAnswer": "trotzdem",
+        "tip": "reasonBridgeFive.questDescription"
+      },
+      {
+        "id": 3,
+        "type": "input",
+        "question": "reasonBridgeFive.questTask3",
+        "correctAnswer": "Obwohl",
+        "tip": "reasonBridgeFive.questDescription"
+      },
+      {
+        "id": 4,
+        "type": "reorder",
+        "question": "reasonBridgeFive.questTask4",
+        "words": [
+          "mache",
+          "obwohl",
+          "esse",
+          "trotzdem",
+          "ich",
+          "Kuchen",
+          "Diät",
+          "Ich",
+          "eine"
+        ],
+        "correctOrder": [
+          "Ich",
+          "mache",
+          "eine",
+          "Diät",
+          "trotzdem",
+          "esse",
+          "ich",
+          "Kuchen"
+        ],
+        "tip": "reasonBridgeFive.questDescription"
+      },
+      {
+        "id": 5,
+        "type": "select",
+        "question": "reasonBridgeFive.questTask5",
+        "options": [
+          "Obwohl ich eine Diät mache, esse ich Kuchen.",
+          "Obwohl ich mache eine Diät, esse ich Kuchen.",
+          "Obwohl ich eine Diät mache, ich esse Kuchen."
+        ],
+        "answer": "Obwohl ich eine Diät mache, esse ich Kuchen.",
+        "tip": "reasonBridgeFive.questDescription"
+      },
+      {
+        "id": 6,
+        "type": "input",
+        "question": "reasonBridgeFive.questTask6",
+        "correctAnswer": "blieben",
+        "tip": "reasonBridgeFive.questDescription"
+      },
+      {
+        "id": 7,
+        "type": "readAndAnswer",
+        "question": "reasonBridgeFive.questTask7",
+        "text": "Mia hat viel gelernt. Trotzdem hat sie die Prüfung nicht bestanden. Sie war sehr traurig.",
+        "options": [
+          "Nein, sie hat sie nicht bestanden.",
+          "Sie hat nicht gelernt.",
+          "Ja, sie hat sie bestanden."
+        ],
+        "answer": "Nein, sie hat sie nicht bestanden.",
+        "tip": "reasonBridgeFive.questDescription"
+      },
+      {
+        "id": 8,
+        "type": "input",
+        "question": "reasonBridgeFive.questTask8",
+        "correctAnswer": "hatte",
+        "tip": "reasonBridgeFive.questDescription"
+      },
+      {
+        "id": 9,
+        "type": "input",
+        "question": "reasonBridgeFive.questTask10",
+        "correctAnswer": "trotzdem",
+        "tip": "reasonBridgeFive.questDescription"
+      },
+      {
+        "id": 10,
+        "type": "reorder",
+        "question": "reasonBridgeFive.questTask11",
+        "words": [
+          "trotzdem",
+          "Arbeit",
+          "krank",
+          "kam",
+          "er",
+          "war",
+          "Obwohl",
+          "zur",
+          "er"
+        ],
+        "correctOrder": [
+          "Obwohl",
+          "er",
+          "krank",
+          "war",
+          "kam",
+          "er",
+          "zur",
+          "Arbeit"
+        ],
+        "tip": "reasonBridgeFive.questDescription"
+      },
+      {
+        "id": 11,
+        "type": "select",
+        "question": "reasonBridgeFour.questTask9",
+        "options": [
+          "Obwohl er reich ist, ist er nicht glücklich.",
+          "Obwohl er ist reich, ist er nicht glücklich.",
+          "Obwohl er reich ist, er ist nicht glücklich."
+        ],
+        "answer": "Obwohl er reich ist, ist er nicht glücklich.",
+        "tip": "reasonBridgeFour.questDescription",
+        "reviewOf": "reason-bridge-four",
+        "reviewLand": "reason-bridge"
+      },
+      {
+        "id": 12,
+        "type": "select",
+        "question": "reasonBridgeOne.questTask12",
+        "options": [
+          "Ich habe keine Zeit, deshalb ich gehe nicht.",
+          "Ich habe keine Zeit, deshalb gehe ich nicht.",
+          "Ich habe Zeit, deshalb gehe ich nicht."
+        ],
+        "answer": "Ich habe keine Zeit, deshalb gehe ich nicht.",
+        "tip": "reasonBridgeOne.questDescription",
+        "reviewOf": "reason-bridge-one",
+        "reviewLand": "reason-bridge"
+      },
+      {
+        "id": 13,
+        "type": "readAndAnswer",
+        "question": "memoryLakeSix.questTask13",
+        "text": "Mia war sehr glücklich. Sie hatte die Prüfung bestanden und ihre Familie hatte eine Feier für sie gemacht.",
+        "options": [
+          "Sie hatte Geburtstag.",
+          "Die Prüfung lief gut.",
+          "Sie bekam ein Geschenk."
+        ],
+        "answer": "Die Prüfung lief gut.",
+        "tip": "memoryLakeSix.questDescription",
+        "reviewOf": "memory-lake-six",
+        "reviewLand": "memory-lake"
+      },
+      {
+        "id": 14,
+        "type": "input",
+        "question": "reasonBridgeFive.questTask14",
+        "correctAnswer": "las",
+        "tip": "reasonBridgeFive.questDescription"
+      },
+      {
+        "id": 15,
+        "type": "input",
+        "question": "reasonBridgeFive.questTask15",
+        "correctAnswer": "meinem",
+        "tip": "reasonBridgeFive.questDescription"
+      }
+    ]
+  },
+  {
+    "questId": "reason-bridge-six",
+    "title": "reasonBridgeSix.questTitle",
+    "progress": "0/15",
+    "description": "reasonBridgeSix.questDescription",
+    "conditions": {
+      "goal": "reasonBridgeSix.questGoal",
+      "minCorrect": 15,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
+    "vocabulary": [
+      {
+        "word": "die Erfahrung",
+        "translation-ru": "опыт",
+        "translation-en": "experience",
+        "translation-uk": "досвід",
+        "translation-pl": "doświadczenie",
+        "translation-es": "la experiencia",
+        "translation-fr": "l’expérience",
+        "translation-tr": "deneyim",
+        "translation-ro": "experiența",
+        "translation-uz": "tajriba",
+        "translation-hi": "अनुभव",
+        "translation-ar": "الخبرة"
+      },
+      {
+        "word": "die Entscheidung",
+        "translation-ru": "решение",
+        "translation-en": "decision",
+        "translation-uk": "рішення",
+        "translation-pl": "decyzja",
+        "translation-es": "la decisión",
+        "translation-fr": "la décision",
+        "translation-tr": "karar",
+        "translation-ro": "decizia",
+        "translation-uz": "qaror",
+        "translation-hi": "फ़ैसला",
+        "translation-ar": "القرار"
+      },
+      {
+        "word": "sich entscheiden",
+        "translation-ru": "решать, принимать решение",
+        "translation-en": "to decide",
+        "translation-uk": "вирішувати",
+        "translation-pl": "decydować się",
+        "translation-es": "decidirse",
+        "translation-fr": "se décider",
+        "translation-tr": "karar vermek",
+        "translation-ro": "a se decide",
+        "translation-uz": "qaror qilmoq",
+        "translation-hi": "फ़ैसला करना",
+        "translation-ar": "يقرّر"
+      },
+      {
+        "word": "das Angebot",
+        "translation-ru": "предложение",
+        "translation-en": "offer",
+        "translation-uk": "пропозиція",
+        "translation-pl": "oferta",
+        "translation-es": "la oferta",
+        "translation-fr": "l’offre",
+        "translation-tr": "teklif",
+        "translation-ro": "oferta",
+        "translation-uz": "taklif",
+        "translation-hi": "प्रस्ताव",
+        "translation-ar": "العرض"
+      },
+      {
+        "word": "wählen",
+        "translation-ru": "выбирать",
+        "translation-en": "to choose",
+        "translation-uk": "обирати",
+        "translation-pl": "wybierać",
+        "translation-es": "elegir",
+        "translation-fr": "choisir",
+        "translation-tr": "seçmek",
+        "translation-ro": "a alege",
+        "translation-uz": "tanlamoq",
+        "translation-hi": "चुनना",
+        "translation-ar": "يختار"
+      }
+    ],
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "reasonBridgeSix.questTask1",
+        "options": [
+          "Ich habe wenig Erfahrung, trotzdem ich bewerbe mich.",
+          "Ich habe wenig Erfahrung, deshalb bewerbe ich mich nicht.",
+          "Ich habe wenig Erfahrung, trotzdem bewerbe ich mich."
+        ],
+        "answer": "Ich habe wenig Erfahrung, trotzdem bewerbe ich mich.",
+        "tip": "reasonBridgeSix.questDescription"
+      },
+      {
+        "id": 2,
+        "type": "input",
+        "question": "reasonBridgeSix.questTask2",
+        "correctAnswer": "nehme",
+        "tip": "reasonBridgeSix.questDescription"
+      },
+      {
+        "id": 3,
+        "type": "input",
+        "question": "reasonBridgeSix.questTask3",
+        "correctAnswer": "obwohl",
+        "tip": "reasonBridgeSix.questDescription"
+      },
+      {
+        "id": 4,
+        "type": "reorder",
+        "question": "reasonBridgeSix.questTask4",
+        "words": [
+          "interessant",
+          "er",
+          "denn",
+          "ist",
+          "nehme",
+          "Job",
+          "Ich",
+          "weil",
+          "diesen"
+        ],
+        "correctOrder": [
+          "Ich",
+          "nehme",
+          "diesen",
+          "Job",
+          "weil",
+          "er",
+          "interessant",
+          "ist"
+        ],
+        "tip": "reasonBridgeSix.questDescription"
+      },
+      {
+        "id": 5,
+        "type": "select",
+        "question": "reasonBridgeSix.questTask5",
+        "options": [
+          "Obwohl das Angebot gut ist, ich habe mich noch nicht entschieden.",
+          "Weil das Angebot gut ist, habe ich mich noch nicht entschieden.",
+          "Obwohl das Angebot gut ist, habe ich mich noch nicht entschieden."
+        ],
+        "answer": "Obwohl das Angebot gut ist, habe ich mich noch nicht entschieden.",
+        "tip": "reasonBridgeSix.questDescription"
+      },
+      {
+        "id": 6,
+        "type": "input",
+        "question": "reasonBridgeSix.questTask6",
+        "correctAnswer": "war",
+        "tip": "reasonBridgeSix.questDescription"
+      },
+      {
+        "id": 7,
+        "type": "readAndAnswer",
+        "question": "reasonBridgeSix.questTask7",
+        "text": "Paul hatte zwei Angebote. Das erste war besser bezahlt, das zweite war näher an seiner Wohnung. Er wählte das zweite, denn er wollte nicht so lange fahren.",
+        "options": [
+          "Er kannte den Chef.",
+          "Der Weg war kürzer.",
+          "Er verdiente dort mehr."
+        ],
+        "answer": "Der Weg war kürzer.",
+        "tip": "reasonBridgeSix.questDescription"
+      },
+      {
+        "id": 8,
+        "type": "input",
+        "question": "reasonBridgeSix.questTask8",
+        "correctAnswer": "fand",
+        "tip": "reasonBridgeSix.questDescription"
+      },
+      {
+        "id": 9,
+        "type": "input",
+        "question": "reasonBridgeSix.questTask10",
+        "correctAnswer": "weil",
+        "tip": "reasonBridgeSix.questDescription"
+      },
+      {
+        "id": 10,
+        "type": "reorder",
+        "question": "reasonBridgeSix.questTask11",
+        "words": [
+          "obwohl",
+          "Arbeit",
+          "war",
+          "blieb",
+          "Die",
+          "ich",
+          "anstrengend",
+          "trotzdem"
+        ],
+        "correctOrder": [
+          "Die",
+          "Arbeit",
+          "war",
+          "anstrengend",
+          "trotzdem",
+          "blieb",
+          "ich"
+        ],
+        "tip": "reasonBridgeSix.questDescription"
+      },
+      {
+        "id": 11,
+        "type": "select",
+        "question": "reasonBridgeFive.questTask9",
+        "options": [
+          "Obwohl ich habe wenig Geld, reise ich.",
+          "Obwohl ich wenig Geld habe, reise ich.",
+          "Obwohl ich wenig Geld habe, ich reise."
+        ],
+        "answer": "Obwohl ich wenig Geld habe, reise ich.",
+        "tip": "reasonBridgeFive.questDescription",
+        "reviewOf": "reason-bridge-five",
+        "reviewLand": "reason-bridge"
+      },
+      {
+        "id": 12,
+        "type": "select",
+        "question": "reasonBridgeTwo.questTask12",
+        "options": [
+          "Ich esse wenig, denn ich habe keinen Hunger.",
+          "Ich esse viel, denn ich habe keinen Hunger.",
+          "Ich esse wenig, denn ich keinen Hunger habe."
+        ],
+        "answer": "Ich esse wenig, denn ich habe keinen Hunger.",
+        "tip": "reasonBridgeTwo.questDescription",
+        "reviewOf": "reason-bridge-two",
+        "reviewLand": "reason-bridge"
+      },
+      {
+        "id": 13,
+        "type": "input",
+        "question": "memoryLakeSeven.questTask13",
+        "correctAnswer": "hatte",
+        "tip": "memoryLakeSeven.questDescription",
+        "reviewOf": "memory-lake-seven",
+        "reviewLand": "memory-lake"
+      },
+      {
+        "id": 14,
+        "type": "input",
+        "question": "reasonBridgeSix.questTask14",
+        "correctAnswer": "Bevor",
+        "tip": "reasonBridgeSix.questDescription"
+      },
+      {
+        "id": 15,
+        "type": "input",
+        "question": "reasonBridgeSix.questTask15",
+        "correctAnswer": "beste",
+        "tip": "reasonBridgeSix.questDescription"
+      }
+    ]
+  },
+  {
+    "questId": "reason-bridge-seven",
+    "title": "reasonBridgeSeven.questTitle",
+    "progress": "0/15",
+    "description": "reasonBridgeSeven.questDescription",
+    "conditions": {
+      "goal": "reasonBridgeSeven.questGoal",
+      "minCorrect": 15,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
+    "vocabulary": [
+      {
+        "word": "der Strand",
+        "translation-ru": "пляж",
+        "translation-en": "beach",
+        "translation-uk": "пляж",
+        "translation-pl": "plaża",
+        "translation-es": "la playa",
+        "translation-fr": "la plage",
+        "translation-tr": "plaj",
+        "translation-ro": "plaja",
+        "translation-uz": "plyaj",
+        "translation-hi": "समुद्र तट",
+        "translation-ar": "الشاطئ"
+      },
+      {
+        "word": "das Zimmer",
+        "translation-ru": "номер, комната",
+        "translation-en": "room",
+        "translation-uk": "номер, кімната",
+        "translation-pl": "pokój",
+        "translation-es": "la habitación",
+        "translation-fr": "la chambre",
+        "translation-tr": "oda",
+        "translation-ro": "camera",
+        "translation-uz": "xona",
+        "translation-hi": "कमरा",
+        "translation-ar": "الغرفة"
+      },
+      {
+        "word": "die Sonne",
+        "translation-ru": "солнце",
+        "translation-en": "sun",
+        "translation-uk": "сонце",
+        "translation-pl": "słońce",
+        "translation-es": "el sol",
+        "translation-fr": "le soleil",
+        "translation-tr": "güneş",
+        "translation-ro": "soarele",
+        "translation-uz": "quyosh",
+        "translation-hi": "सूरज",
+        "translation-ar": "الشمس"
+      },
+      {
+        "word": "das Eis",
+        "translation-ru": "мороженое",
+        "translation-en": "ice cream",
+        "translation-uk": "морозиво",
+        "translation-pl": "lody",
+        "translation-es": "el helado",
+        "translation-fr": "la glace",
+        "translation-tr": "dondurma",
+        "translation-ro": "înghețata",
+        "translation-uz": "muzqaymoq",
+        "translation-hi": "आइसक्रीम",
+        "translation-ar": "المثلجات"
+      },
+      {
+        "word": "laut",
+        "translation-ru": "громкий, шумный",
+        "translation-en": "loud, noisy",
+        "translation-uk": "гучний, галасливий",
+        "translation-pl": "głośny",
+        "translation-es": "ruidoso",
+        "translation-fr": "bruyant",
+        "translation-tr": "gürültülü",
+        "translation-ro": "zgomotos",
+        "translation-uz": "shovqinli",
+        "translation-hi": "शोरगुल वाला",
+        "translation-ar": "صاخب"
+      },
+      {
+        "word": "wechseln",
+        "translation-ru": "менять",
+        "translation-en": "to change",
+        "translation-uk": "змінювати",
+        "translation-pl": "zmieniać",
+        "translation-es": "cambiar",
+        "translation-fr": "changer",
+        "translation-tr": "değiştirmek",
+        "translation-ro": "a schimba",
+        "translation-uz": "almashtirmoq",
+        "translation-hi": "बदलना",
+        "translation-ar": "يغيّر"
+      },
+      {
+        "word": "auspacken",
+        "translation-ru": "распаковывать",
+        "translation-en": "to unpack",
+        "translation-uk": "розпаковувати",
+        "translation-pl": "rozpakowywać",
+        "translation-es": "deshacer",
+        "translation-fr": "déballer",
+        "translation-tr": "açmak (bavul)",
+        "translation-ro": "a despacheta",
+        "translation-uz": "ochmoq (yuk)",
+        "translation-hi": "सामान खोलना",
+        "translation-ar": "يفرغ"
+      }
+    ],
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "reasonBridgeSeven.questTask1",
+        "options": [
+          "Es war heiß, obwohl lagen wir den ganzen Tag am Strand.",
+          "Es war heiß, deshalb wir lagen den ganzen Tag am Strand.",
+          "Es war heiß, deshalb lagen wir den ganzen Tag am Strand."
+        ],
+        "answer": "Es war heiß, deshalb lagen wir den ganzen Tag am Strand.",
+        "tip": "reasonBridgeSeven.questDescription"
+      },
+      {
+        "id": 2,
+        "type": "input",
+        "question": "reasonBridgeSeven.questTask2",
+        "correctAnswer": "weil",
+        "tip": "reasonBridgeSeven.questDescription"
+      },
+      {
+        "id": 3,
+        "type": "input",
+        "question": "reasonBridgeSeven.questTask3",
+        "correctAnswer": "gingen",
+        "tip": "reasonBridgeSeven.questDescription"
+      },
+      {
+        "id": 4,
+        "type": "reorder",
+        "question": "reasonBridgeSeven.questTask4",
+        "words": [
+          "Eis",
+          "bekamen",
+          "weil",
+          "ein",
+          "froh",
+          "sie",
+          "Die",
+          "denn",
+          "Kinder",
+          "waren"
+        ],
+        "correctOrder": [
+          "Die",
+          "Kinder",
+          "waren",
+          "froh",
+          "denn",
+          "sie",
+          "bekamen",
+          "ein",
+          "Eis"
+        ],
+        "tip": "reasonBridgeSeven.questDescription"
+      },
+      {
+        "id": 5,
+        "type": "select",
+        "question": "reasonBridgeSeven.questTask5",
+        "options": [
+          "Wir gingen nicht zum Strand, weil regnete es.",
+          "Wir gingen nicht zum Strand, deshalb regnete es.",
+          "Wir gingen nicht zum Strand, weil es regnete."
+        ],
+        "answer": "Wir gingen nicht zum Strand, weil es regnete.",
+        "tip": "reasonBridgeSeven.questDescription"
+      },
+      {
+        "id": 6,
+        "type": "input",
+        "question": "reasonBridgeSeven.questTask6",
+        "correctAnswer": "blieben",
+        "tip": "reasonBridgeSeven.questDescription"
+      },
+      {
+        "id": 7,
+        "type": "readAndAnswer",
+        "question": "reasonBridgeSeven.questTask7",
+        "text": "Lena war eine Woche am Meer. Das Wetter war schön, aber sie schwamm nicht, denn das Wasser war sehr kalt. Deshalb lag sie am Strand und las Bücher. Obwohl sie nicht schwamm, war der Urlaub schön.",
+        "options": [
+          "Das Meer war ihr zu kalt.",
+          "Sie war krank.",
+          "Das Wetter war schlecht."
+        ],
+        "answer": "Das Meer war ihr zu kalt.",
+        "tip": "reasonBridgeSeven.questDescription"
+      },
+      {
+        "id": 8,
+        "type": "input",
+        "question": "reasonBridgeSeven.questTask8",
+        "correctAnswer": "denn",
+        "tip": "reasonBridgeSeven.questDescription"
+      },
+      {
+        "id": 9,
+        "type": "reorder",
+        "question": "reasonBridgeSeven.questTask10",
+        "words": [
+          "wir",
+          "Strand",
+          "Obwohl",
+          "trotzdem",
+          "gab",
+          "zum",
+          "Wind",
+          "es",
+          "gingen"
+        ],
+        "correctOrder": [
+          "Obwohl",
+          "es",
+          "Wind",
+          "gab",
+          "gingen",
+          "wir",
+          "zum",
+          "Strand"
+        ],
+        "tip": "reasonBridgeSeven.questDescription"
+      },
+      {
+        "id": 10,
+        "type": "select",
+        "question": "reasonBridgeSeven.questTask11",
+        "options": [
+          "Ich bin braun, deshalb ich war den ganzen Tag in der Sonne.",
+          "Ich bin braun, denn ich war den ganzen Tag in der Sonne.",
+          "Ich bin braun, denn ich den ganzen Tag in der Sonne war."
+        ],
+        "answer": "Ich bin braun, denn ich war den ganzen Tag in der Sonne.",
+        "tip": "reasonBridgeSeven.questDescription"
+      },
+      {
+        "id": 11,
+        "type": "select",
+        "question": "reasonBridgeSix.questTask9",
+        "options": [
+          "Obwohl die Arbeit weit weg ist, habe ich sie gewählt.",
+          "Obwohl die Arbeit ist weit weg, habe ich sie gewählt.",
+          "Obwohl die Arbeit weit weg ist, ich habe sie gewählt."
+        ],
+        "answer": "Obwohl die Arbeit weit weg ist, habe ich sie gewählt.",
+        "tip": "reasonBridgeSix.questDescription",
+        "reviewOf": "reason-bridge-six",
+        "reviewLand": "reason-bridge"
+      },
+      {
+        "id": 12,
+        "type": "select",
+        "question": "reasonBridgeThree.questTask12",
+        "options": [
+          "Der Test war schwer, trotzdem habe ich ihn bestanden.",
+          "Der Test war leicht, trotzdem habe ich ihn bestanden.",
+          "Der Test war schwer, trotzdem ich habe ihn bestanden."
+        ],
+        "answer": "Der Test war schwer, trotzdem habe ich ihn bestanden.",
+        "tip": "reasonBridgeThree.questDescription",
+        "reviewOf": "reason-bridge-three",
+        "reviewLand": "reason-bridge"
+      },
+      {
+        "id": 13,
+        "type": "input",
+        "question": "memoryLakeEight.questTask13",
+        "correctAnswer": "weil",
+        "tip": "memoryLakeEight.questDescription",
+        "reviewOf": "memory-lake-eight",
+        "reviewLand": "memory-lake"
+      },
+      {
+        "id": 14,
+        "type": "input",
+        "question": "reasonBridgeSeven.questTask14",
+        "correctAnswer": "hatten",
+        "tip": "reasonBridgeSeven.questDescription"
+      },
+      {
+        "id": 15,
+        "type": "input",
+        "question": "reasonBridgeSeven.questTask15",
+        "correctAnswer": "Als",
+        "tip": "reasonBridgeSeven.questDescription"
+      }
+    ]
+  },
+  {
+    "questId": "reason-bridge-eight",
+    "title": "reasonBridgeEight.questTitle",
+    "progress": "0/15",
+    "description": "reasonBridgeEight.questDescription",
+    "conditions": {
+      "goal": "reasonBridgeEight.questGoal",
+      "minCorrect": 15,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
+    "vocabulary": [
+      {
+        "word": "laufen",
+        "translation-ru": "бегать",
+        "translation-en": "to run",
+        "translation-uk": "бігати",
+        "translation-pl": "biegać",
+        "translation-es": "correr",
+        "translation-fr": "courir",
+        "translation-tr": "koşmak",
+        "translation-ro": "a alerga",
+        "translation-uz": "yugurmoq",
+        "translation-hi": "दौड़ना",
+        "translation-ar": "يجري"
+      },
+      {
+        "word": "das Training",
+        "translation-ru": "тренировка",
+        "translation-en": "training",
+        "translation-uk": "тренування",
+        "translation-pl": "trening",
+        "translation-es": "el entrenamiento",
+        "translation-fr": "l’entraînement",
+        "translation-tr": "antrenman",
+        "translation-ro": "antrenamentul",
+        "translation-uz": "mashg‘ulot",
+        "translation-hi": "ट्रेनिंग",
+        "translation-ar": "التدريب"
+      },
+      {
+        "word": "das Bein",
+        "translation-ru": "нога",
+        "translation-en": "leg",
+        "translation-uk": "нога",
+        "translation-pl": "noga",
+        "translation-es": "la pierna",
+        "translation-fr": "la jambe",
+        "translation-tr": "bacak",
+        "translation-ro": "piciorul",
+        "translation-uz": "oyoq",
+        "translation-hi": "टाँग",
+        "translation-ar": "الساق"
+      },
+      {
+        "word": "gewinnen",
+        "translation-ru": "выигрывать",
+        "translation-en": "to win",
+        "translation-uk": "вигравати",
+        "translation-pl": "wygrywać",
+        "translation-es": "ganar",
+        "translation-fr": "gagner",
+        "translation-tr": "kazanmak",
+        "translation-ro": "a câștiga",
+        "translation-uz": "yutmoq",
+        "translation-hi": "जीतना",
+        "translation-ar": "يفوز"
+      },
+      {
+        "word": "das Spiel",
+        "translation-ru": "игра, матч",
+        "translation-en": "game, match",
+        "translation-uk": "гра, матч",
+        "translation-pl": "mecz, gra",
+        "translation-es": "el partido",
+        "translation-fr": "le match",
+        "translation-tr": "maç",
+        "translation-ro": "meciul",
+        "translation-uz": "o‘yin",
+        "translation-hi": "मैच",
+        "translation-ar": "المباراة"
+      },
+      {
+        "word": "wehtun",
+        "translation-ru": "болеть",
+        "translation-en": "to hurt",
+        "translation-uk": "боліти",
+        "translation-pl": "boleć",
+        "translation-es": "doler",
+        "translation-fr": "faire mal",
+        "translation-tr": "ağrımak",
+        "translation-ro": "a durea",
+        "translation-uz": "og‘rimoq",
+        "translation-hi": "दर्द होना",
+        "translation-ar": "يؤلم"
+      }
+    ],
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "reasonBridgeEight.questTask1",
+        "options": [
+          "Obwohl mein Bein tat weh, ging ich zum Training.",
+          "Obwohl mein Bein wehtat, ich ging zum Training.",
+          "Obwohl mein Bein wehtat, ging ich zum Training."
+        ],
+        "answer": "Obwohl mein Bein wehtat, ging ich zum Training.",
+        "tip": "reasonBridgeEight.questDescription"
+      },
+      {
+        "id": 2,
+        "type": "input",
+        "question": "reasonBridgeEight.questTask2",
+        "correctAnswer": "trotzdem",
+        "tip": "reasonBridgeEight.questDescription"
+      },
+      {
+        "id": 3,
+        "type": "input",
+        "question": "reasonBridgeEight.questTask3",
+        "correctAnswer": "gewann",
+        "tip": "reasonBridgeEight.questDescription"
+      },
+      {
+        "id": 4,
+        "type": "reorder",
+        "question": "reasonBridgeEight.questTask4",
+        "words": [
+          "ist",
+          "Ich",
+          "denn",
+          "weil",
+          "es",
+          "Morgen",
+          "laufe",
+          "gesund",
+          "jeden"
+        ],
+        "correctOrder": [
+          "Ich",
+          "laufe",
+          "jeden",
+          "Morgen",
+          "weil",
+          "es",
+          "gesund",
+          "ist"
+        ],
+        "tip": "reasonBridgeEight.questDescription"
+      },
+      {
+        "id": 5,
+        "type": "select",
+        "question": "reasonBridgeEight.questTask5",
+        "options": [
+          "Er war krank, obwohl kam er zum Spiel.",
+          "Er war krank, trotzdem er kam zum Spiel.",
+          "Er war krank, trotzdem kam er zum Spiel."
+        ],
+        "answer": "Er war krank, trotzdem kam er zum Spiel.",
+        "tip": "reasonBridgeEight.questDescription"
+      },
+      {
+        "id": 6,
+        "type": "input",
+        "question": "reasonBridgeEight.questTask6",
+        "correctAnswer": "weil",
+        "tip": "reasonBridgeEight.questDescription"
+      },
+      {
+        "id": 7,
+        "type": "readAndAnswer",
+        "question": "reasonBridgeEight.questTask7",
+        "text": "Max war am Freitag sehr müde, denn er hatte viel gearbeitet. Trotzdem ging er zum Training, weil am Samstag ein wichtiges Spiel war. Obwohl er müde war, spielte er gut.",
+        "options": [
+          "Er hatte frei.",
+          "Am Samstag war ein wichtiges Spiel.",
+          "Er war nicht müde."
+        ],
+        "answer": "Am Samstag war ein wichtiges Spiel.",
+        "tip": "reasonBridgeEight.questDescription"
+      },
+      {
+        "id": 8,
+        "type": "input",
+        "question": "reasonBridgeEight.questTask8",
+        "correctAnswer": "laufe",
+        "tip": "reasonBridgeEight.questDescription"
+      },
+      {
+        "id": 9,
+        "type": "reorder",
+        "question": "reasonBridgeEight.questTask10",
+        "words": [
+          "zufrieden",
+          "Der",
+          "war",
+          "denn",
+          "Trainer",
+          "wir",
+          "liefen",
+          "gut",
+          "weil"
+        ],
+        "correctOrder": [
+          "Der",
+          "Trainer",
+          "war",
+          "zufrieden",
+          "weil",
+          "wir",
+          "gut",
+          "liefen"
+        ],
+        "tip": "reasonBridgeEight.questDescription"
+      },
+      {
+        "id": 10,
+        "type": "select",
+        "question": "reasonBridgeEight.questTask11",
+        "options": [
+          "Obwohl ich müde war, lief ich noch fünf Kilometer.",
+          "Obwohl ich müde war, ich lief noch fünf Kilometer.",
+          "Obwohl ich war müde, lief ich noch fünf Kilometer."
+        ],
+        "answer": "Obwohl ich müde war, lief ich noch fünf Kilometer.",
+        "tip": "reasonBridgeEight.questDescription"
+      },
+      {
+        "id": 11,
+        "type": "input",
+        "question": "reasonBridgeSeven.questTask9",
+        "correctAnswer": "waren",
+        "tip": "reasonBridgeSeven.questDescription",
+        "reviewOf": "reason-bridge-seven",
+        "reviewLand": "reason-bridge"
+      },
+      {
+        "id": 12,
+        "type": "select",
+        "question": "reasonBridgeFour.questTask12",
+        "options": [
+          "Ich kam, weil ich keine Zeit hatte.",
+          "Ich kam, obwohl ich keine Zeit hatte.",
+          "Ich kam, obwohl ich hatte keine Zeit."
+        ],
+        "answer": "Ich kam, obwohl ich keine Zeit hatte.",
+        "tip": "reasonBridgeFour.questDescription",
+        "reviewOf": "reason-bridge-four",
+        "reviewLand": "reason-bridge"
+      },
+      {
+        "id": 13,
+        "type": "readAndAnswer",
+        "question": "reasonBridgeOne.questTask13",
+        "text": "Auf der Straße gab es einen langen Stau. Deshalb kam Ben eine Stunde zu spät zur Arbeit.",
+        "options": [
+          "Er war krank.",
+          "Es gab einen Stau.",
+          "Er hatte keine Lust."
+        ],
+        "answer": "Es gab einen Stau.",
+        "tip": "reasonBridgeOne.questDescription",
+        "reviewOf": "reason-bridge-one",
+        "reviewLand": "reason-bridge"
+      },
+      {
+        "id": 14,
+        "type": "input",
+        "question": "reasonBridgeEight.questTask14",
+        "correctAnswer": "hatte",
+        "tip": "reasonBridgeEight.questDescription"
+      },
+      {
+        "id": 15,
+        "type": "input",
+        "question": "reasonBridgeEight.questTask15",
+        "correctAnswer": "gingen",
+        "tip": "reasonBridgeEight.questDescription"
+      }
+    ]
+  },
+  {
+    "questId": "reason-bridge-nine",
+    "title": "reasonBridgeNine.questTitle",
+    "progress": "0/15",
+    "description": "reasonBridgeNine.questDescription",
+    "conditions": {
+      "goal": "reasonBridgeNine.questGoal",
+      "minCorrect": 15,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
+    "vocabulary": [
+      {
+        "word": "mitnehmen",
+        "translation-ru": "брать с собой",
+        "translation-en": "to take along",
+        "translation-uk": "брати з собою",
+        "translation-pl": "zabierać ze sobą",
+        "translation-es": "llevarse",
+        "translation-fr": "emporter",
+        "translation-tr": "yanına almak",
+        "translation-ro": "a lua cu sine",
+        "translation-uz": "o‘zi bilan olmoq",
+        "translation-hi": "साथ ले जाना",
+        "translation-ar": "يأخذ معه"
+      },
+      {
+        "word": "das Krankenhaus",
+        "translation-ru": "больница",
+        "translation-en": "hospital",
+        "translation-uk": "лікарня",
+        "translation-pl": "szpital",
+        "translation-es": "el hospital",
+        "translation-fr": "l’hôpital",
+        "translation-tr": "hastane",
+        "translation-ro": "spitalul",
+        "translation-uz": "kasalxona",
+        "translation-hi": "अस्पताल",
+        "translation-ar": "المستشفى"
+      },
+      {
+        "word": "die Erfahrung",
+        "translation-ru": "опыт",
+        "translation-en": "experience",
+        "translation-uk": "досвід",
+        "translation-pl": "doświadczenie",
+        "translation-es": "la experiencia",
+        "translation-fr": "l’expérience",
+        "translation-tr": "deneyim",
+        "translation-ro": "experiența",
+        "translation-uz": "tajriba",
+        "translation-hi": "अनुभव",
+        "translation-ar": "الخبرة"
+      },
+      {
+        "word": "trotzdem",
+        "translation-ru": "всё равно, несмотря на это",
+        "translation-en": "anyway, nevertheless",
+        "translation-uk": "усе одно, попри це",
+        "translation-pl": "mimo to",
+        "translation-es": "aun así",
+        "translation-fr": "quand même",
+        "translation-tr": "yine de",
+        "translation-ro": "totuși",
+        "translation-uz": "baribir",
+        "translation-hi": "फिर भी",
+        "translation-ar": "ومع ذلك"
+      },
+      {
+        "word": "die Erkältung",
+        "translation-ru": "простуда",
+        "translation-en": "cold (illness)",
+        "translation-uk": "застуда",
+        "translation-pl": "przeziębienie",
+        "translation-es": "el resfriado",
+        "translation-fr": "le rhume",
+        "translation-tr": "soğuk algınlığı",
+        "translation-ro": "răceala",
+        "translation-uz": "shamollash",
+        "translation-hi": "ज़ुकाम",
+        "translation-ar": "الزكام"
+      }
+    ],
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "reasonBridgeNine.questTask1",
+        "options": [
+          "Weil ich müde war, ging ich zur Arbeit.",
+          "Obwohl ich müde war, ich ging zur Arbeit.",
+          "Obwohl ich müde war, ging ich zur Arbeit."
+        ],
+        "answer": "Obwohl ich müde war, ging ich zur Arbeit.",
+        "tip": "reasonBridgeNine.questDescription"
+      },
+      {
+        "id": 2,
+        "type": "input",
+        "question": "reasonBridgeNine.questTask2",
+        "correctAnswer": "nahm",
+        "tip": "reasonBridgeNine.questDescription"
+      },
+      {
+        "id": 3,
+        "type": "input",
+        "question": "reasonBridgeNine.questTask3",
+        "correctAnswer": "trotzdem",
+        "tip": "reasonBridgeNine.questDescription"
+      },
+      {
+        "id": 4,
+        "type": "reorder",
+        "question": "reasonBridgeNine.questTask4",
+        "words": [
+          "denn",
+          "Erkältung",
+          "habe",
+          "weil",
+          "eine",
+          "bleibe",
+          "Ich",
+          "ich",
+          "Hause",
+          "zu"
+        ],
+        "correctOrder": [
+          "Ich",
+          "bleibe",
+          "zu",
+          "Hause",
+          "denn",
+          "ich",
+          "habe",
+          "eine",
+          "Erkältung"
+        ],
+        "tip": "reasonBridgeNine.questDescription"
+      },
+      {
+        "id": 5,
+        "type": "select",
+        "question": "reasonBridgeNine.questTask5",
+        "options": [
+          "Die Wohnung ist klein, deshalb wir suchen eine neue.",
+          "Die Wohnung ist klein, trotzdem suchen wir eine neue.",
+          "Die Wohnung ist klein, deshalb suchen wir eine neue."
+        ],
+        "answer": "Die Wohnung ist klein, deshalb suchen wir eine neue.",
+        "tip": "reasonBridgeNine.questDescription"
+      },
+      {
+        "id": 6,
+        "type": "input",
+        "question": "reasonBridgeNine.questTask6",
+        "correctAnswer": "Obwohl",
+        "tip": "reasonBridgeNine.questDescription"
+      },
+      {
+        "id": 7,
+        "type": "readAndAnswer",
+        "question": "reasonBridgeNine.questTask7",
+        "text": "Sara wollte ins Kino gehen. Aber sie hatte kein Geld, deshalb blieb sie zu Hause und las ein Buch.",
+        "options": [
+          "Ihr fehlte das Geld.",
+          "Sie wollte lieber lesen.",
+          "Das Kino war geschlossen."
+        ],
+        "answer": "Ihr fehlte das Geld.",
+        "tip": "reasonBridgeNine.questDescription"
+      },
+      {
+        "id": 8,
+        "type": "input",
+        "question": "reasonBridgeNine.questTask8",
+        "correctAnswer": "will",
+        "tip": "reasonBridgeNine.questDescription"
+      },
+      {
+        "id": 9,
+        "type": "select",
+        "question": "reasonBridgeNine.questTask9",
+        "options": [
+          "Der Weg war lang, trotzdem gingen wir zu Fuß.",
+          "Der Weg war lang, deshalb gingen wir nicht zu Fuß.",
+          "Der Weg war lang, trotzdem wir gingen zu Fuß."
+        ],
+        "answer": "Der Weg war lang, trotzdem gingen wir zu Fuß.",
+        "tip": "reasonBridgeNine.questDescription"
+      },
+      {
+        "id": 10,
+        "type": "input",
+        "question": "reasonBridgeNine.questTask10",
+        "correctAnswer": "spart",
+        "tip": "reasonBridgeNine.questDescription"
+      },
+      {
+        "id": 11,
+        "type": "reorder",
+        "question": "reasonBridgeNine.questTask11",
+        "words": [
+          "bewerbe",
+          "Obwohl",
+          "ich",
+          "wenig",
+          "trotzdem",
+          "Erfahrung",
+          "mich",
+          "ich",
+          "habe"
+        ],
+        "correctOrder": [
+          "Obwohl",
+          "ich",
+          "wenig",
+          "Erfahrung",
+          "habe",
+          "bewerbe",
+          "ich",
+          "mich"
+        ],
+        "tip": "reasonBridgeNine.questDescription"
+      },
+      {
+        "id": 12,
+        "type": "select",
+        "question": "reasonBridgeNine.questTask12",
+        "options": [
+          "Ich kam zu spät, deshalb gab es einen Stau.",
+          "Ich kam zu spät, weil es einen Stau gab.",
+          "Ich kam zu spät, weil es gab einen Stau."
+        ],
+        "answer": "Ich kam zu spät, weil es einen Stau gab.",
+        "tip": "reasonBridgeNine.questDescription"
+      },
+      {
+        "id": 13,
+        "type": "readAndAnswer",
+        "question": "reasonBridgeNine.questTask13",
+        "text": "Obwohl Max wenig Zeit hatte, besuchte er seine Oma im Krankenhaus.",
+        "options": [
+          "Er besuchte seine Oma.",
+          "Er arbeitete länger.",
+          "Er ging ins Kino."
+        ],
+        "answer": "Er besuchte seine Oma.",
+        "tip": "reasonBridgeNine.questDescription"
+      },
+      {
+        "id": 14,
+        "type": "input",
+        "question": "reasonBridgeNine.questTask14",
+        "correctAnswer": "trotzdem",
+        "tip": "reasonBridgeNine.questDescription"
+      },
+      {
+        "id": 15,
+        "type": "input",
+        "question": "reasonBridgeNine.questTask15",
+        "correctAnswer": "bin",
+        "tip": "reasonBridgeNine.questDescription"
+      }
+    ]
+  },
+  {
+    "questId": "reason-bridge-ten",
+    "title": "reasonBridgeTen.questTitle",
+    "progress": "0/15",
+    "description": "reasonBridgeTen.questDescription",
+    "conditions": {
+      "goal": "reasonBridgeTen.questGoal",
+      "minCorrect": 15,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
+    "vocabulary": [
+      {
+        "word": "das Studium",
+        "translation-ru": "учёба в вузе",
+        "translation-en": "university studies",
+        "translation-uk": "навчання в університеті",
+        "translation-pl": "studia",
+        "translation-es": "los estudios",
+        "translation-fr": "les études",
+        "translation-tr": "üniversite eğitimi",
+        "translation-ro": "studiile",
+        "translation-uz": "oliy o‘qish",
+        "translation-hi": "पढ़ाई (विश्वविद्यालय)",
+        "translation-ar": "الدراسة الجامعية"
+      },
+      {
+        "word": "die Ärztin",
+        "translation-ru": "врач (женщина)",
+        "translation-en": "doctor (female)",
+        "translation-uk": "лікарка",
+        "translation-pl": "lekarka",
+        "translation-es": "la médica",
+        "translation-fr": "la médecin",
+        "translation-tr": "kadın doktor",
+        "translation-ro": "doctorița",
+        "translation-uz": "shifokor ayol",
+        "translation-hi": "डॉक्टर (महिला)",
+        "translation-ar": "الطبيبة"
+      },
+      {
+        "word": "trotzdem",
+        "translation-ru": "всё равно, несмотря на это",
+        "translation-en": "anyway, nevertheless",
+        "translation-uk": "усе одно, попри це",
+        "translation-pl": "mimo to",
+        "translation-es": "aun así",
+        "translation-fr": "quand même",
+        "translation-tr": "yine de",
+        "translation-ro": "totuși",
+        "translation-uz": "baribir",
+        "translation-hi": "फिर भी",
+        "translation-ar": "ومع ذلك"
+      },
+      {
+        "word": "während",
+        "translation-ru": "пока, в то время как",
+        "translation-en": "while",
+        "translation-uk": "поки, у той час як",
+        "translation-pl": "podczas gdy",
+        "translation-es": "mientras",
+        "translation-fr": "pendant que",
+        "translation-tr": "-iken",
+        "translation-ro": "în timp ce",
+        "translation-uz": "…ayotganda",
+        "translation-hi": "जबकि, जब तक",
+        "translation-ar": "بينما"
+      },
+      {
+        "word": "bevor",
+        "translation-ru": "прежде чем",
+        "translation-en": "before (conjunction)",
+        "translation-uk": "перш ніж",
+        "translation-pl": "zanim",
+        "translation-es": "antes de que",
+        "translation-fr": "avant que",
+        "translation-tr": "-madan önce",
+        "translation-ro": "înainte să",
+        "translation-uz": "…dan oldin",
+        "translation-hi": "…से पहले",
+        "translation-ar": "قبل أن"
+      }
+    ],
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "reasonBridgeTen.questTask1",
+        "options": [
+          "Obwohl er wenig Geld hatte, er kaufte ein Geschenk.",
+          "Weil er wenig Geld hatte, kaufte er ein Geschenk.",
+          "Obwohl er wenig Geld hatte, kaufte er ein Geschenk."
+        ],
+        "answer": "Obwohl er wenig Geld hatte, kaufte er ein Geschenk.",
+        "tip": "reasonBridgeTen.questDescription"
+      },
+      {
+        "id": 2,
+        "type": "input",
+        "question": "reasonBridgeTen.questTask2",
+        "correctAnswer": "war",
+        "tip": "reasonBridgeTen.questDescription"
+      },
+      {
+        "id": 3,
+        "type": "input",
+        "question": "reasonBridgeTen.questTask3",
+        "correctAnswer": "gingen",
+        "tip": "reasonBridgeTen.questDescription"
+      },
+      {
+        "id": 4,
+        "type": "input",
+        "question": "reasonBridgeTen.questTask4",
+        "correctAnswer": "trotzdem",
+        "tip": "reasonBridgeTen.questDescription"
+      },
+      {
+        "id": 5,
+        "type": "select",
+        "question": "reasonBridgeTen.questTask5",
+        "options": [
+          "Der Zug war voll, trotzdem standen wir die ganze Zeit.",
+          "Der Zug war voll, deshalb wir standen die ganze Zeit.",
+          "Der Zug war voll, deshalb standen wir die ganze Zeit."
+        ],
+        "answer": "Der Zug war voll, deshalb standen wir die ganze Zeit.",
+        "tip": "reasonBridgeTen.questDescription"
+      },
+      {
+        "id": 6,
+        "type": "input",
+        "question": "reasonBridgeTen.questTask6",
+        "correctAnswer": "Nachdem",
+        "tip": "reasonBridgeTen.questDescription"
+      },
+      {
+        "id": 7,
+        "type": "readAndAnswer",
+        "question": "reasonBridgeTen.questTask7",
+        "text": "Lena wollte Ärztin werden. Obwohl das Studium sehr schwer war, lernte sie jeden Tag. Heute arbeitet sie in einem Krankenhaus.",
+        "options": [
+          "in einem Büro",
+          "in einem Krankenhaus",
+          "in einer Schule"
+        ],
+        "answer": "in einem Krankenhaus",
+        "tip": "reasonBridgeTen.questDescription"
+      },
+      {
+        "id": 8,
+        "type": "input",
+        "question": "reasonBridgeTen.questTask8",
+        "correctAnswer": "meinem",
+        "tip": "reasonBridgeTen.questDescription"
+      },
+      {
+        "id": 9,
+        "type": "reorder",
+        "question": "reasonBridgeTen.questTask9",
+        "words": [
+          "kaputt",
+          "mein",
+          "den",
+          "Ich",
+          "Auto",
+          "Bus",
+          "denn",
+          "ist",
+          "nehme",
+          "weil"
+        ],
+        "correctOrder": [
+          "Ich",
+          "nehme",
+          "den",
+          "Bus",
+          "weil",
+          "mein",
+          "Auto",
+          "kaputt",
+          "ist"
+        ],
+        "tip": "reasonBridgeTen.questDescription"
+      },
+      {
+        "id": 10,
+        "type": "input",
+        "question": "reasonBridgeTen.questTask10",
+        "correctAnswer": "ist",
+        "tip": "reasonBridgeTen.questDescription"
+      },
+      {
+        "id": 11,
+        "type": "input",
+        "question": "reasonBridgeTen.questTask11",
+        "correctAnswer": "schöner",
+        "tip": "reasonBridgeTen.questDescription"
+      },
+      {
+        "id": 12,
+        "type": "select",
+        "question": "reasonBridgeTen.questTask12",
+        "options": [
+          "Während der Lehrer sprach, schrieben wir.",
+          "Während der Lehrer spricht, schrieben wir.",
+          "Während der Lehrer sprach, wir schrieben."
+        ],
+        "answer": "Während der Lehrer sprach, schrieben wir.",
+        "tip": "reasonBridgeTen.questDescription"
+      },
+      {
+        "id": 13,
+        "type": "readAndAnswer",
+        "question": "reasonBridgeTen.questTask13",
+        "text": "Tim hatte keine Lust auf Sport. Trotzdem ging er ins Fitnessstudio, denn er wollte gesund bleiben.",
+        "options": [
+          "Sein Freund wartete dort.",
+          "Sport ist gesund.",
+          "Er hatte große Lust."
+        ],
+        "answer": "Sport ist gesund.",
+        "tip": "reasonBridgeTen.questDescription"
+      },
+      {
+        "id": 14,
+        "type": "input",
+        "question": "reasonBridgeTen.questTask14",
+        "correctAnswer": "solltest",
+        "tip": "reasonBridgeTen.questDescription"
+      },
+      {
+        "id": 15,
+        "type": "input",
+        "question": "reasonBridgeTen.questTask15",
+        "correctAnswer": "bevor",
+        "tip": "reasonBridgeTen.questDescription"
+      }
+    ]
+  }
+]

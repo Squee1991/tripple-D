@@ -57,20 +57,6 @@
         "translation-uz": "tanaffus"
       },
       {
-        "word": "die Torte",
-        "translation-ru": "торт",
-        "translation-en": "cake",
-        "translation-uk": "торт",
-        "translation-pl": "tort",
-        "translation-es": "la tarta",
-        "translation-fr": "le gâteau",
-        "translation-ar": "الكعكة",
-        "translation-hi": "केक",
-        "translation-ro": "tortul",
-        "translation-tr": "pasta",
-        "translation-uz": "tort"
-      },
-      {
         "word": "die Tickets",
         "translation-ru": "билеты",
         "translation-en": "tickets",
@@ -83,6 +69,20 @@
         "translation-ro": "biletele",
         "translation-tr": "biletler",
         "translation-uz": "chiptalar"
+      },
+      {
+        "word": "meinen",
+        "translation-ru": "считать / иметь в виду",
+        "translation-en": "to mean / think",
+        "translation-uk": "вважати / мати на увазі",
+        "translation-pl": "uważać / mieć na myśli",
+        "translation-es": "pensar / querer decir",
+        "translation-fr": "penser / vouloir dire",
+        "translation-tr": "düşünmek / demek istemek",
+        "translation-ro": "a crede / a vrea să spună",
+        "translation-uz": "o'ylamoq / nazarda tutmoq",
+        "translation-hi": "सोचना / मतलब होना",
+        "translation-ar": "يعتقد / يعني"
       }
     ],
     "tasks": [
@@ -95,7 +95,8 @@
           "für dir",
           "ohne dich"
         ],
-        "answer": "für dich"
+        "answer": "für dich",
+        "tip": "actionPrepositions.questDescription"
       },
       {
         "id": 2,
@@ -117,19 +118,22 @@
           "Geschenk",
           "für",
           "Mama"
-        ]
+        ],
+        "tip": "actionPrepositions.questDescription"
       },
       {
         "id": 3,
         "type": "input",
         "question": "actionPrepositions.questTask3",
-        "correctAnswer": "ohne"
+        "correctAnswer": "ohne",
+        "tip": "actionPrepositions.questDescription"
       },
       {
         "id": 4,
         "type": "input",
         "question": "actionPrepositions.questTask4",
-        "correctAnswer": "für"
+        "correctAnswer": "für",
+        "tip": "actionPrepositions.questDescription"
       },
       {
         "id": 5,
@@ -140,13 +144,15 @@
           "Er geht ohne dem Regenschirm.",
           "Er geht für Regenschirm."
         ],
-        "answer": "Er geht ohne Regenschirm."
+        "answer": "Er geht ohne Regenschirm.",
+        "tip": "actionPrepositions.questDescription"
       },
       {
         "id": 6,
         "type": "input",
         "question": "actionPrepositions.questTask6",
-        "correctAnswer": "en"
+        "correctAnswer": "en",
+        "tip": "actionPrepositions.questDescription"
       },
       {
         "id": 7,
@@ -158,7 +164,8 @@
           "mit Zucker",
           "mit Honig"
         ],
-        "answer": "ohne Zucker"
+        "answer": "ohne Zucker",
+        "tip": "actionPrepositions.questDescription"
       },
       {
         "id": 8,
@@ -169,7 +176,8 @@
           "ohne dir",
           "für dir"
         ],
-        "answer": "ohne dich"
+        "answer": "ohne dich",
+        "tip": "actionPrepositions.questDescription"
       },
       {
         "id": 9,
@@ -187,7 +195,8 @@
           "arbeiten",
           "ohne",
           "Pause"
-        ]
+        ],
+        "tip": "actionPrepositions.questDescription"
       },
       {
         "id": 10,
@@ -198,43 +207,49 @@
           "Die Tickets sind für wir.",
           "Die Tickets sind für unser."
         ],
-        "answer": "Die Tickets sind für uns."
+        "answer": "Die Tickets sind für uns.",
+        "tip": "actionPrepositions.questDescription"
       },
       {
         "id": 11,
         "type": "input",
-        "question": "actionPrepositions.questTask11",
-        "correctAnswer": "e"
+        "question": "directionPrepositionsSeven.questTask4",
+        "correctAnswer": "nach",
+        "reviewOf": "direction-prep-7",
+        "reviewLand": "direction-prepositions",
+        "tip": "directionPrepositionsSeven.questDescription"
       },
       {
         "id": 12,
-        "type": "readAndAnswer",
-        "question": "actionPrepositions.questTask12",
-        "text": "Lena kauft eine Torte für ihre Oma.",
-        "options": [
-          "für ihre Oma",
-          "für ihre Mutter",
-          "für ihren Bruder"
-        ],
-        "answer": "für ihre Oma"
+        "type": "input",
+        "question": "directionPrepositionsFive.questTask3",
+        "correctAnswer": "vom",
+        "reviewOf": "direction-prep-5",
+        "reviewLand": "direction-prepositions",
+        "tip": "directionPrepositionsFive.questDescription"
       },
       {
         "id": 13,
         "type": "input",
-        "question": "actionPrepositions.questTask13",
-        "correctAnswer": "ohne"
+        "question": "directionPrepositions.questTask4",
+        "correctAnswer": "zum",
+        "reviewOf": "direction-prep-1",
+        "reviewLand": "direction-prepositions",
+        "tip": "directionPrepositions.questDescription"
       },
       {
         "id": 14,
         "type": "input",
         "question": "actionPrepositions.questTask14",
-        "correctAnswer": "zum"
+        "correctAnswer": "zum",
+        "tip": "actionPrepositions.questDescription"
       },
       {
         "id": 15,
         "type": "input",
         "question": "actionPrepositions.questTask15",
-        "correctAnswer": "in"
+        "correctAnswer": "in",
+        "tip": "actionPrepositions.questDescription"
       }
     ]
   },
@@ -334,7 +349,8 @@
           "durch dem Park",
           "um dem Park"
         ],
-        "answer": "durch den Park"
+        "answer": "durch den Park",
+        "tip": "actionPrepositionsTwo.questDescription"
       },
       {
         "id": 2,
@@ -354,19 +370,22 @@
           "durch",
           "den",
           "Wald"
-        ]
+        ],
+        "tip": "actionPrepositionsTwo.questDescription"
       },
       {
         "id": 3,
         "type": "input",
         "question": "actionPrepositionsTwo.questTask3",
-        "correctAnswer": "um"
+        "correctAnswer": "um",
+        "tip": "actionPrepositionsTwo.questDescription"
       },
       {
         "id": 4,
         "type": "input",
         "question": "actionPrepositionsTwo.questTask4",
-        "correctAnswer": "durch"
+        "correctAnswer": "durch",
+        "tip": "actionPrepositionsTwo.questDescription"
       },
       {
         "id": 5,
@@ -377,13 +396,15 @@
           "Die Apotheke ist um der Ecke.",
           "Die Apotheke ist durch die Ecke."
         ],
-        "answer": "Die Apotheke ist um die Ecke."
+        "answer": "Die Apotheke ist um die Ecke.",
+        "tip": "actionPrepositionsTwo.questDescription"
       },
       {
         "id": 6,
         "type": "input",
         "question": "actionPrepositionsTwo.questTask6",
-        "correctAnswer": "die"
+        "correctAnswer": "die",
+        "tip": "actionPrepositionsTwo.questDescription"
       },
       {
         "id": 7,
@@ -395,7 +416,8 @@
           "unter dem Tisch",
           "neben dem Tisch"
         ],
-        "answer": "um den Tisch"
+        "answer": "um den Tisch",
+        "tip": "actionPrepositionsTwo.questDescription"
       },
       {
         "id": 8,
@@ -406,7 +428,8 @@
           "um dem See",
           "durch dem See"
         ],
-        "answer": "um den See"
+        "answer": "um den See",
+        "tip": "actionPrepositionsTwo.questDescription"
       },
       {
         "id": 9,
@@ -428,7 +451,8 @@
           "durch",
           "den",
           "Tunnel"
-        ]
+        ],
+        "tip": "actionPrepositionsTwo.questDescription"
       },
       {
         "id": 10,
@@ -439,37 +463,58 @@
           "Wir spazieren um dem See.",
           "Wir spazieren durch den See."
         ],
-        "answer": "Wir spazieren um den See."
+        "answer": "Wir spazieren um den See.",
+        "tip": "actionPrepositionsTwo.questDescription"
       },
       {
         "id": 11,
-        "type": "input",
-        "question": "actionPrepositionsTwo.questTask11",
-        "correctAnswer": "das"
+        "type": "reorder",
+        "question": "actionPrepositions.questTask2",
+        "words": [
+          "ist",
+          "Geschenk",
+          "Das",
+          "für",
+          "ein",
+          "Mama",
+          "mit"
+        ],
+        "correctOrder": [
+          "Das",
+          "ist",
+          "ein",
+          "Geschenk",
+          "für",
+          "Mama"
+        ],
+        "reviewOf": "prep-action-1",
+        "reviewLand": "action-prepositions",
+        "tip": "actionPrepositions.questDescription"
       },
       {
         "id": 12,
-        "type": "readAndAnswer",
-        "question": "actionPrepositionsTwo.questTask12",
-        "text": "Der Bus fährt durch die Stadt bis zum Bahnhof.",
-        "options": [
-          "durch die Stadt",
-          "durch den Park",
-          "durch den Wald"
-        ],
-        "answer": "durch die Stadt"
+        "type": "input",
+        "question": "directionPrepositionsSix.questTask3",
+        "correctAnswer": "dem",
+        "reviewOf": "direction-prep-6",
+        "reviewLand": "direction-prepositions",
+        "tip": "directionPrepositionsSix.questDescription"
       },
       {
         "id": 13,
         "type": "input",
-        "question": "actionPrepositionsTwo.questTask13",
-        "correctAnswer": "ohne"
+        "question": "directionPrepositionsTwo.questTask4",
+        "correctAnswer": "nach",
+        "reviewOf": "direction-prep-2",
+        "reviewLand": "direction-prepositions",
+        "tip": "directionPrepositionsTwo.questDescription"
       },
       {
         "id": 14,
         "type": "input",
         "question": "actionPrepositionsTwo.questTask14",
-        "correctAnswer": "nach"
+        "correctAnswer": "nach",
+        "tip": "actionPrepositionsTwo.questDescription"
       },
       {
         "id": 15,
@@ -480,7 +525,8 @@
           "für den Kindern",
           "ohne die Kinder"
         ],
-        "answer": "für die Kinder"
+        "answer": "für die Kinder",
+        "tip": "actionPrepositionsTwo.questDescription"
       }
     ]
   },
@@ -580,7 +626,8 @@
           "gegenüber den Bahnhof",
           "am Bahnhof vorbei"
         ],
-        "answer": "gegenüber vom Bahnhof"
+        "answer": "gegenüber vom Bahnhof",
+        "tip": "actionPrepositionsThree.questDescription"
       },
       {
         "id": 2,
@@ -604,19 +651,22 @@
           "von",
           "der",
           "Post"
-        ]
+        ],
+        "tip": "actionPrepositionsThree.questDescription"
       },
       {
         "id": 3,
         "type": "input",
         "question": "actionPrepositionsThree.questTask3",
-        "correctAnswer": "vorbei"
+        "correctAnswer": "vorbei",
+        "tip": "actionPrepositionsThree.questDescription"
       },
       {
         "id": 4,
         "type": "input",
         "question": "actionPrepositionsThree.questTask4",
-        "correctAnswer": "am"
+        "correctAnswer": "am",
+        "tip": "actionPrepositionsThree.questDescription"
       },
       {
         "id": 5,
@@ -627,13 +677,15 @@
           "Das Café ist gegenüber das Museum.",
           "Das Café ist am Museum vorbei."
         ],
-        "answer": "Das Café ist gegenüber vom Museum."
+        "answer": "Das Café ist gegenüber vom Museum.",
+        "tip": "actionPrepositionsThree.questDescription"
       },
       {
         "id": 6,
         "type": "input",
         "question": "actionPrepositionsThree.questTask6",
-        "correctAnswer": "gegenüber"
+        "correctAnswer": "gegenüber",
+        "tip": "actionPrepositionsThree.questDescription"
       },
       {
         "id": 7,
@@ -645,7 +697,8 @@
           "gegenüber vom Rathaus",
           "neben dem Park"
         ],
-        "answer": "gegenüber vom Park"
+        "answer": "gegenüber vom Park",
+        "tip": "actionPrepositionsThree.questDescription"
       },
       {
         "id": 8,
@@ -656,7 +709,8 @@
           "am Supermarkt durch",
           "den Supermarkt vorbei"
         ],
-        "answer": "am Supermarkt vorbei"
+        "answer": "am Supermarkt vorbei",
+        "tip": "actionPrepositionsThree.questDescription"
       },
       {
         "id": 9,
@@ -680,7 +734,8 @@
           "der",
           "Bank",
           "vorbei"
-        ]
+        ],
+        "tip": "actionPrepositionsThree.questDescription"
       },
       {
         "id": 10,
@@ -691,37 +746,56 @@
           "Anna sitzt gegenüber von mich.",
           "Anna sitzt an mir vorbei."
         ],
-        "answer": "Anna sitzt gegenüber von mir."
+        "answer": "Anna sitzt gegenüber von mir.",
+        "tip": "actionPrepositionsThree.questDescription"
       },
       {
         "id": 11,
-        "type": "input",
-        "question": "actionPrepositionsThree.questTask11",
-        "correctAnswer": "vorbei"
+        "type": "reorder",
+        "question": "actionPrepositionsTwo.questTask2",
+        "words": [
+          "gehen",
+          "Wald",
+          "Wir",
+          "den",
+          "durch",
+          "dem"
+        ],
+        "correctOrder": [
+          "Wir",
+          "gehen",
+          "durch",
+          "den",
+          "Wald"
+        ],
+        "reviewOf": "prep-action-2",
+        "reviewLand": "action-prepositions",
+        "tip": "actionPrepositionsTwo.questDescription"
       },
       {
         "id": 12,
-        "type": "readAndAnswer",
-        "question": "actionPrepositionsThree.questTask12",
-        "text": "Ich wohne gegenüber vom Supermarkt. Jeden Morgen fahre ich am Park vorbei zur Arbeit.",
-        "options": [
-          "gegenüber vom Supermarkt",
-          "gegenüber vom Park",
-          "neben dem Supermarkt"
-        ],
-        "answer": "gegenüber vom Supermarkt"
+        "type": "input",
+        "question": "directionPrepositionsSeven.questTask5",
+        "correctAnswer": "zu",
+        "reviewOf": "direction-prep-7",
+        "reviewLand": "direction-prepositions",
+        "tip": "directionPrepositionsSeven.questDescription"
       },
       {
         "id": 13,
         "type": "input",
-        "question": "actionPrepositionsThree.questTask13",
-        "correctAnswer": "durch"
+        "question": "directionPrepositionsThree.questTask4",
+        "correctAnswer": "bei",
+        "reviewOf": "direction-prep-3",
+        "reviewLand": "direction-prepositions",
+        "tip": "directionPrepositionsThree.questDescription"
       },
       {
         "id": 14,
         "type": "input",
         "question": "actionPrepositionsThree.questTask14",
-        "correctAnswer": "e"
+        "correctAnswer": "e",
+        "tip": "actionPrepositionsThree.questDescription"
       },
       {
         "id": 15,
@@ -732,7 +806,8 @@
           "neben die Bank",
           "zwischen der Bank"
         ],
-        "answer": "neben der Bank"
+        "answer": "neben der Bank",
+        "tip": "actionPrepositionsThree.questDescription"
       }
     ]
   },
@@ -832,7 +907,8 @@
           "im Montag",
           "um Montag"
         ],
-        "answer": "am Montag"
+        "answer": "am Montag",
+        "tip": "actionPrepositionsFour.questDescription"
       },
       {
         "id": 2,
@@ -854,25 +930,29 @@
           "um",
           "acht",
           "Uhr"
-        ]
+        ],
+        "tip": "actionPrepositionsFour.questDescription"
       },
       {
         "id": 3,
         "type": "input",
         "question": "actionPrepositionsFour.questTask3",
-        "correctAnswer": "am"
+        "correctAnswer": "am",
+        "tip": "actionPrepositionsFour.questDescription"
       },
       {
         "id": 4,
         "type": "input",
         "question": "actionPrepositionsFour.questTask4",
-        "correctAnswer": "um"
+        "correctAnswer": "um",
+        "tip": "actionPrepositionsFour.questDescription"
       },
       {
         "id": 5,
         "type": "input",
         "question": "actionPrepositionsFour.questTask5",
-        "correctAnswer": "im"
+        "correctAnswer": "im",
+        "tip": "actionPrepositionsFour.questDescription"
       },
       {
         "id": 6,
@@ -883,7 +963,8 @@
           "Am Sommer fahren wir ans Meer.",
           "Um Sommer fahren wir ans Meer."
         ],
-        "answer": "Im Sommer fahren wir ans Meer."
+        "answer": "Im Sommer fahren wir ans Meer.",
+        "tip": "actionPrepositionsFour.questDescription"
       },
       {
         "id": 7,
@@ -895,7 +976,8 @@
           "am Montag um zehn Uhr",
           "am Dienstag um elf Uhr"
         ],
-        "answer": "am Dienstag um zehn Uhr"
+        "answer": "am Dienstag um zehn Uhr",
+        "tip": "actionPrepositionsFour.questDescription"
       },
       {
         "id": 8,
@@ -906,7 +988,8 @@
           "im Wochenende",
           "um Wochenende"
         ],
-        "answer": "am Wochenende"
+        "answer": "am Wochenende",
+        "tip": "actionPrepositionsFour.questDescription"
       },
       {
         "id": 9,
@@ -928,48 +1011,67 @@
           "es",
           "hier",
           "kalt"
-        ]
+        ],
+        "tip": "actionPrepositionsFour.questDescription"
       },
       {
         "id": 10,
         "type": "input",
         "question": "actionPrepositionsFour.questTask10",
-        "correctAnswer": "am"
+        "correctAnswer": "Am",
+        "tip": "actionPrepositionsFour.questDescription"
       },
       {
         "id": 11,
-        "type": "select",
-        "question": "actionPrepositionsFour.questTask11",
-        "options": [
-          "Um wie viel Uhr?",
-          "Am wie viel Uhr?",
-          "Im wie viel Uhr?"
+        "type": "reorder",
+        "question": "actionPrepositionsThree.questTask2",
+        "words": [
+          "ist",
+          "Post",
+          "Die",
+          "von",
+          "gegenüber",
+          "der",
+          "Bank",
+          "den"
         ],
-        "answer": "Um wie viel Uhr?"
+        "correctOrder": [
+          "Die",
+          "Bank",
+          "ist",
+          "gegenüber",
+          "von",
+          "der",
+          "Post"
+        ],
+        "reviewOf": "prep-action-3",
+        "reviewLand": "action-prepositions",
+        "tip": "actionPrepositionsThree.questDescription"
       },
       {
         "id": 12,
-        "type": "readAndAnswer",
-        "question": "actionPrepositionsFour.questTask12",
-        "text": "Ich habe im Juli Urlaub. Am Samstag fliege ich nach Spanien.",
-        "options": [
-          "im Juli",
-          "im Juni",
-          "im August"
-        ],
-        "answer": "im Juli"
+        "type": "input",
+        "question": "actionPrepositions.questTask3",
+        "correctAnswer": "ohne",
+        "reviewOf": "prep-action-1",
+        "reviewLand": "action-prepositions",
+        "tip": "actionPrepositions.questDescription"
       },
       {
         "id": 13,
         "type": "input",
-        "question": "actionPrepositionsFour.questTask13",
-        "correctAnswer": "um"
+        "question": "directionPrepositionsFour.questTask4",
+        "correctAnswer": "aus",
+        "reviewOf": "direction-prep-4",
+        "reviewLand": "direction-prepositions",
+        "tip": "directionPrepositionsFour.questDescription"
       },
       {
         "id": 14,
         "type": "input",
         "question": "actionPrepositionsFour.questTask14",
-        "correctAnswer": "am"
+        "correctAnswer": "am",
+        "tip": "actionPrepositionsFour.questDescription"
       },
       {
         "id": 15,
@@ -980,7 +1082,8 @@
           "um dem Haus",
           "durch dem Haus"
         ],
-        "answer": "um das Haus"
+        "answer": "um das Haus",
+        "tip": "actionPrepositionsFour.questDescription"
       }
     ]
   },
@@ -1080,7 +1183,8 @@
           "von Montag zu Freitag",
           "seit Montag bis Freitag"
         ],
-        "answer": "von Montag bis Freitag"
+        "answer": "von Montag bis Freitag",
+        "tip": "actionPrepositionsFive.questDescription"
       },
       {
         "id": 2,
@@ -1102,19 +1206,22 @@
           "neun",
           "bis",
           "fünf"
-        ]
+        ],
+        "tip": "actionPrepositionsFive.questDescription"
       },
       {
         "id": 3,
         "type": "input",
         "question": "actionPrepositionsFive.questTask3",
-        "correctAnswer": "bis"
+        "correctAnswer": "bis",
+        "tip": "actionPrepositionsFive.questDescription"
       },
       {
         "id": 4,
         "type": "input",
         "question": "actionPrepositionsFive.questTask4",
-        "correctAnswer": "ab"
+        "correctAnswer": "Ab",
+        "tip": "actionPrepositionsFive.questDescription"
       },
       {
         "id": 5,
@@ -1125,13 +1232,15 @@
           "Die Bank ist von 16 Uhr offen.",
           "Die Bank ist seit 16 Uhr offen."
         ],
-        "answer": "Die Bank ist bis 16 Uhr offen."
+        "answer": "Die Bank ist bis 16 Uhr offen.",
+        "tip": "actionPrepositionsFive.questDescription"
       },
       {
         "id": 6,
         "type": "input",
         "question": "actionPrepositionsFive.questTask6",
-        "correctAnswer": "von"
+        "correctAnswer": "von",
+        "tip": "actionPrepositionsFive.questDescription"
       },
       {
         "id": 7,
@@ -1143,7 +1252,8 @@
           "von Montag bis Samstag",
           "am Wochenende"
         ],
-        "answer": "von Montag bis Freitag"
+        "answer": "von Montag bis Freitag",
+        "tip": "actionPrepositionsFive.questDescription"
       },
       {
         "id": 8,
@@ -1154,7 +1264,8 @@
           "ab morgen",
           "von morgen"
         ],
-        "answer": "bis morgen"
+        "answer": "bis morgen",
+        "tip": "actionPrepositionsFive.questDescription"
       },
       {
         "id": 9,
@@ -1176,54 +1287,72 @@
           "ich",
           "eine",
           "Diät"
-        ]
+        ],
+        "tip": "actionPrepositionsFive.questDescription"
       },
       {
         "id": 10,
         "type": "input",
         "question": "actionPrepositionsFive.questTask10",
-        "correctAnswer": "bis"
+        "correctAnswer": "bis",
+        "tip": "actionPrepositionsFive.questDescription"
       },
       {
         "id": 11,
-        "type": "select",
-        "question": "actionPrepositionsFive.questTask11",
-        "options": [
-          "Ab Juli habe ich eine neue Arbeit.",
-          "Bis Juli habe ich eine neue Arbeit.",
-          "Von Juli habe ich eine neue Arbeit."
+        "type": "reorder",
+        "question": "actionPrepositionsFour.questTask2",
+        "words": [
+          "beginnt",
+          "acht",
+          "Der",
+          "um",
+          "Uhr",
+          "Kurs",
+          "am"
         ],
-        "answer": "Ab Juli habe ich eine neue Arbeit."
+        "correctOrder": [
+          "Der",
+          "Kurs",
+          "beginnt",
+          "um",
+          "acht",
+          "Uhr"
+        ],
+        "reviewOf": "prep-action-4",
+        "reviewLand": "action-prepositions",
+        "tip": "actionPrepositionsFour.questDescription"
       },
       {
         "id": 12,
-        "type": "readAndAnswer",
-        "question": "actionPrepositionsFive.questTask12",
-        "text": "Ich bin von heute bis Sonntag in Berlin.",
-        "options": [
-          "bis Sonntag",
-          "bis Samstag",
-          "bis Montag"
-        ],
-        "answer": "bis Sonntag"
+        "type": "input",
+        "question": "actionPrepositionsTwo.questTask3",
+        "correctAnswer": "um",
+        "reviewOf": "prep-action-2",
+        "reviewLand": "action-prepositions",
+        "tip": "actionPrepositionsTwo.questDescription"
       },
       {
         "id": 13,
         "type": "input",
-        "question": "actionPrepositionsFive.questTask13",
-        "correctAnswer": "am"
+        "question": "directionPrepositionsFive.questTask4",
+        "correctAnswer": "von",
+        "reviewOf": "direction-prep-5",
+        "reviewLand": "direction-prepositions",
+        "tip": "directionPrepositionsFive.questDescription"
       },
       {
         "id": 14,
         "type": "input",
         "question": "actionPrepositionsFive.questTask14",
-        "correctAnswer": "um"
+        "correctAnswer": "um",
+        "tip": "actionPrepositionsFive.questDescription"
       },
       {
         "id": 15,
         "type": "input",
         "question": "actionPrepositionsFive.questTask15",
-        "correctAnswer": "vorbei"
+        "correctAnswer": "vorbei",
+        "tip": "actionPrepositionsFive.questDescription"
       }
     ]
   },
@@ -1311,6 +1440,20 @@
         "translation-ro": "bolnav",
         "translation-tr": "hasta",
         "translation-uz": "kasal"
+      },
+      {
+        "word": "vorher",
+        "translation-ru": "до этого, заранее",
+        "translation-en": "before, beforehand",
+        "translation-uk": "до цього, заздалегідь",
+        "translation-pl": "wcześniej",
+        "translation-es": "antes",
+        "translation-fr": "avant",
+        "translation-tr": "önceden",
+        "translation-ro": "înainte",
+        "translation-uz": "oldindan",
+        "translation-hi": "पहले से",
+        "translation-ar": "من قبل"
       }
     ],
     "tasks": [
@@ -1323,7 +1466,8 @@
           "seit zwei Jahren",
           "nach zwei Jahren"
         ],
-        "answer": "vor zwei Jahren"
+        "answer": "vor zwei Jahren",
+        "tip": "actionPrepositionsSix.questDescription"
       },
       {
         "id": 2,
@@ -1345,25 +1489,29 @@
           "drei",
           "Tagen",
           "krank"
-        ]
+        ],
+        "tip": "actionPrepositionsSix.questDescription"
       },
       {
         "id": 3,
         "type": "input",
         "question": "actionPrepositionsSix.questTask3",
-        "correctAnswer": "seit"
+        "correctAnswer": "seit",
+        "tip": "actionPrepositionsSix.questDescription"
       },
       {
         "id": 4,
         "type": "input",
         "question": "actionPrepositionsSix.questTask4",
-        "correctAnswer": "vor"
+        "correctAnswer": "Vor",
+        "tip": "actionPrepositionsSix.questDescription"
       },
       {
         "id": 5,
         "type": "input",
         "question": "actionPrepositionsSix.questTask5",
-        "correctAnswer": "nach"
+        "correctAnswer": "Nach",
+        "tip": "actionPrepositionsSix.questDescription"
       },
       {
         "id": 6,
@@ -1374,7 +1522,8 @@
           "Ich warte vor einer Stunde.",
           "Ich warte nach einer Stunde."
         ],
-        "answer": "Ich warte seit einer Stunde."
+        "answer": "Ich warte seit einer Stunde.",
+        "tip": "actionPrepositionsSix.questDescription"
       },
       {
         "id": 7,
@@ -1386,13 +1535,15 @@
           "seit zwei Jahren",
           "seit vier Jahren"
         ],
-        "answer": "seit drei Jahren"
+        "answer": "seit drei Jahren",
+        "tip": "actionPrepositionsSix.questDescription"
       },
       {
         "id": 8,
         "type": "input",
         "question": "actionPrepositionsSix.questTask8",
-        "correctAnswer": "dem"
+        "correctAnswer": "dem",
+        "tip": "actionPrepositionsSix.questDescription"
       },
       {
         "id": 9,
@@ -1414,7 +1565,8 @@
           "dem",
           "Essen",
           "spazieren"
-        ]
+        ],
+        "tip": "actionPrepositionsSix.questDescription"
       },
       {
         "id": 10,
@@ -1425,48 +1577,601 @@
           "seit der Arbeit",
           "vor der Arbeit"
         ],
-        "answer": "nach der Arbeit"
+        "answer": "nach der Arbeit",
+        "tip": "actionPrepositionsSix.questDescription"
       },
       {
         "id": 11,
-        "type": "select",
-        "question": "actionPrepositionsSix.questTask11",
-        "options": [
-          "Vor einer Stunde hat er angerufen.",
-          "Seit einer Stunde hat er angerufen.",
-          "Nach einer Stunde hat er angerufen."
+        "type": "reorder",
+        "question": "actionPrepositionsFive.questTask2",
+        "words": [
+          "arbeite",
+          "neun",
+          "Ich",
+          "von",
+          "bis",
+          "fünf",
+          "um"
         ],
-        "answer": "Vor einer Stunde hat er angerufen."
+        "correctOrder": [
+          "Ich",
+          "arbeite",
+          "von",
+          "neun",
+          "bis",
+          "fünf"
+        ],
+        "reviewOf": "prep-action-5",
+        "reviewLand": "action-prepositions",
+        "tip": "actionPrepositionsFive.questDescription"
       },
       {
         "id": 12,
-        "type": "readAndAnswer",
-        "question": "actionPrepositionsSix.questTask12",
-        "text": "Ich gehe nach dem Deutschkurs mit Tom ins Kino.",
-        "options": [
-          "nach dem Deutschkurs",
-          "vor dem Deutschkurs",
-          "seit dem Deutschkurs"
-        ],
-        "answer": "nach dem Deutschkurs"
+        "type": "input",
+        "question": "actionPrepositionsThree.questTask3",
+        "correctAnswer": "vorbei",
+        "reviewOf": "prep-action-3",
+        "reviewLand": "action-prepositions",
+        "tip": "actionPrepositionsThree.questDescription"
       },
       {
         "id": 13,
         "type": "input",
-        "question": "actionPrepositionsSix.questTask13",
-        "correctAnswer": "bis"
+        "question": "directionPrepositionsSix.questTask4",
+        "correctAnswer": "mit",
+        "reviewOf": "direction-prep-6",
+        "reviewLand": "direction-prepositions",
+        "tip": "directionPrepositionsSix.questDescription"
       },
       {
         "id": 14,
         "type": "input",
         "question": "actionPrepositionsSix.questTask14",
-        "correctAnswer": "im"
+        "correctAnswer": "im",
+        "tip": "actionPrepositionsSix.questDescription"
       },
       {
         "id": 15,
         "type": "input",
         "question": "actionPrepositionsSix.questTask15",
-        "correctAnswer": "für"
+        "correctAnswer": "für",
+        "tip": "actionPrepositionsSix.questDescription"
+      }
+    ]
+  },
+  {
+    "questId": "prep-action-9",
+    "title": "actionPrepositionsExtraOne.questTitle",
+    "progress": "0/15",
+    "description": "actionPrepositionsExtraOne.questDescription",
+    "conditions": {
+      "goal": "actionPrepositionsExtraOne.questGoal",
+      "minCorrect": 15,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
+    "vocabulary": [
+      {
+        "word": "der Hund",
+        "translation-ru": "собака",
+        "translation-en": "dog",
+        "translation-uk": "собака",
+        "translation-pl": "pies",
+        "translation-es": "el perro",
+        "translation-fr": "le chien",
+        "translation-tr": "köpek",
+        "translation-ro": "câinele",
+        "translation-uz": "it",
+        "translation-hi": "कुत्ता",
+        "translation-ar": "الكلب"
+      },
+      {
+        "word": "die Leine",
+        "translation-ru": "поводок",
+        "translation-en": "lead",
+        "translation-uk": "повідець",
+        "translation-pl": "smycz",
+        "translation-es": "la correa",
+        "translation-fr": "la laisse",
+        "translation-tr": "tasma",
+        "translation-ro": "lesa",
+        "translation-uz": "bog‘ich",
+        "translation-hi": "पट्टा",
+        "translation-ar": "المقود"
+      },
+      {
+        "word": "der Spielplatz",
+        "translation-ru": "детская площадка",
+        "translation-en": "playground",
+        "translation-uk": "дитячий майданчик",
+        "translation-pl": "plac zabaw",
+        "translation-es": "el parque infantil",
+        "translation-fr": "l’aire de jeux",
+        "translation-tr": "oyun parkı",
+        "translation-ro": "locul de joacă",
+        "translation-uz": "bolalar maydonchasi",
+        "translation-hi": "खेल का मैदान",
+        "translation-ar": "ملعب الأطفال"
+      },
+      {
+        "word": "laufen",
+        "translation-ru": "бегать, идти пешком",
+        "translation-en": "to run, to walk",
+        "translation-uk": "бігати, йти пішки",
+        "translation-pl": "biegać, chodzić",
+        "translation-es": "correr, andar",
+        "translation-fr": "courir, marcher",
+        "translation-tr": "koşmak, yürümek",
+        "translation-ro": "a alerga, a merge",
+        "translation-uz": "yugurmoq, yurmoq",
+        "translation-hi": "दौड़ना, चलना",
+        "translation-ar": "يجري، يمشي"
+      },
+      {
+        "word": "der Ball",
+        "translation-ru": "мяч",
+        "translation-en": "ball",
+        "translation-uk": "м’яч",
+        "translation-pl": "piłka",
+        "translation-es": "la pelota",
+        "translation-fr": "le ballon",
+        "translation-tr": "top",
+        "translation-ro": "mingea",
+        "translation-uz": "to‘p",
+        "translation-hi": "गेंद",
+        "translation-ar": "الكرة"
+      },
+      {
+        "word": "das Futter",
+        "translation-ru": "корм",
+        "translation-en": "animal food",
+        "translation-uk": "корм",
+        "translation-pl": "karma",
+        "translation-es": "el pienso",
+        "translation-fr": "la nourriture pour animaux",
+        "translation-tr": "yem",
+        "translation-ro": "hrana pentru animale",
+        "translation-uz": "yem",
+        "translation-hi": "चारा",
+        "translation-ar": "علف"
+      },
+      {
+        "word": "der Tierarzt",
+        "translation-ru": "ветеринар",
+        "translation-en": "vet",
+        "translation-uk": "ветеринар",
+        "translation-pl": "weterynarz",
+        "translation-es": "veterinario",
+        "translation-fr": "vétérinaire",
+        "translation-tr": "veteriner",
+        "translation-ro": "veterinar",
+        "translation-uz": "veterinar",
+        "translation-hi": "पशु चिकित्सक",
+        "translation-ar": "طبيب بيطري"
+      }
+    ],
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "actionPrepositionsExtraOne.questTask1",
+        "options": [
+          "Wir laufen durch den Park.",
+          "Wir laufen durch dem Park.",
+          "Wir laufen durch der Park."
+        ],
+        "answer": "Wir laufen durch den Park.",
+        "tip": "actionPrepositionsExtraOne.questDescription"
+      },
+      {
+        "id": 2,
+        "type": "input",
+        "question": "actionPrepositionsExtraOne.questTask2",
+        "correctAnswer": "um",
+        "tip": "actionPrepositionsExtraOne.questDescription"
+      },
+      {
+        "id": 3,
+        "type": "input",
+        "question": "actionPrepositionsExtraOne.questTask3",
+        "correctAnswer": "Ohne",
+        "tip": "actionPrepositionsExtraOne.questDescription"
+      },
+      {
+        "id": 4,
+        "type": "reorder",
+        "question": "actionPrepositionsExtraOne.questTask4",
+        "words": [
+          "den",
+          "für",
+          "Hund",
+          "dem",
+          "Ball",
+          "ist",
+          "Der"
+        ],
+        "correctOrder": [
+          "Der",
+          "Ball",
+          "ist",
+          "für",
+          "den",
+          "Hund"
+        ],
+        "tip": "actionPrepositionsExtraOne.questDescription"
+      },
+      {
+        "id": 5,
+        "type": "select",
+        "question": "actionPrepositionsExtraOne.questTask5",
+        "options": [
+          "Der Spielplatz ist gegenüber von die Schule.",
+          "Der Spielplatz ist gegenüber die Schule.",
+          "Der Spielplatz ist gegenüber von der Schule."
+        ],
+        "answer": "Der Spielplatz ist gegenüber von der Schule.",
+        "tip": "actionPrepositionsExtraOne.questDescription"
+      },
+      {
+        "id": 6,
+        "type": "input",
+        "question": "actionPrepositionsExtraOne.questTask6",
+        "correctAnswer": "vorbei",
+        "tip": "actionPrepositionsExtraOne.questDescription"
+      },
+      {
+        "id": 7,
+        "type": "readAndAnswer",
+        "question": "actionPrepositionsExtraOne.questTask7",
+        "text": "Jeden Morgen geht Paul mit seinem Hund spazieren. Sie gehen am Café vorbei und dann durch den Park. Im Park läuft der Hund ohne Leine um den See.",
+        "options": [
+          "zum Bahnhof",
+          "in die Schule",
+          "durch den Park"
+        ],
+        "answer": "durch den Park",
+        "tip": "actionPrepositionsExtraOne.questDescription"
+      },
+      {
+        "id": 8,
+        "type": "input",
+        "question": "actionPrepositionsExtraOne.questTask8",
+        "correctAnswer": "den",
+        "tip": "actionPrepositionsExtraOne.questDescription"
+      },
+      {
+        "id": 9,
+        "type": "input",
+        "question": "actionPrepositionsExtraOne.questTask9",
+        "correctAnswer": "den",
+        "tip": "actionPrepositionsExtraOne.questDescription"
+      },
+      {
+        "id": 10,
+        "type": "reorder",
+        "question": "actionPrepositionsExtraOne.questTask10",
+        "words": [
+          "die",
+          "Straße",
+          "über",
+          "Hund",
+          "Der",
+          "der",
+          "läuft"
+        ],
+        "correctOrder": [
+          "Der",
+          "Hund",
+          "läuft",
+          "über",
+          "die",
+          "Straße"
+        ],
+        "tip": "actionPrepositionsExtraOne.questDescription"
+      },
+      {
+        "id": 11,
+        "type": "select",
+        "question": "actionPrepositionsExtraOne.questTask11",
+        "options": [
+          "Ich gehe nie ohne der Hund aus dem Haus.",
+          "Ich gehe nie ohne den Hund aus dem Haus.",
+          "Ich gehe nie ohne dem Hund aus dem Haus."
+        ],
+        "answer": "Ich gehe nie ohne den Hund aus dem Haus.",
+        "tip": "actionPrepositionsExtraOne.questDescription"
+      },
+      {
+        "id": 12,
+        "type": "input",
+        "question": "actionPrepositionsExtraOne.questTask12",
+        "correctAnswer": "vom",
+        "tip": "actionPrepositionsExtraOne.questDescription"
+      },
+      {
+        "id": 13,
+        "type": "input",
+        "question": "actionPrepositionsExtraOne.questTask13",
+        "correctAnswer": "Ball",
+        "tip": "actionPrepositionsExtraOne.questDescription"
+      },
+      {
+        "id": 14,
+        "type": "input",
+        "question": "actionPrepositionsExtraOne.questTask14",
+        "correctAnswer": "dem",
+        "tip": "actionPrepositionsExtraOne.questDescription"
+      },
+      {
+        "id": 15,
+        "type": "input",
+        "question": "actionPrepositionsExtraOne.questTask15",
+        "correctAnswer": "zum",
+        "tip": "actionPrepositionsExtraOne.questDescription"
+      }
+    ]
+  },
+  {
+    "questId": "prep-action-10",
+    "title": "actionPrepositionsExtraTwo.questTitle",
+    "progress": "0/15",
+    "description": "actionPrepositionsExtraTwo.questDescription",
+    "conditions": {
+      "goal": "actionPrepositionsExtraTwo.questGoal",
+      "minCorrect": 15,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
+    "vocabulary": [
+      {
+        "word": "der Dienstag",
+        "translation-ru": "вторник",
+        "translation-en": "Tuesday",
+        "translation-uk": "вівторок",
+        "translation-pl": "wtorek",
+        "translation-es": "el martes",
+        "translation-fr": "mardi",
+        "translation-tr": "salı",
+        "translation-ro": "marțea",
+        "translation-uz": "seshanba",
+        "translation-hi": "मंगलवार",
+        "translation-ar": "الثلاثاء"
+      },
+      {
+        "word": "der Morgen",
+        "translation-ru": "утро",
+        "translation-en": "morning",
+        "translation-uk": "ранок",
+        "translation-pl": "ranek",
+        "translation-es": "la mañana",
+        "translation-fr": "le matin",
+        "translation-tr": "sabah",
+        "translation-ro": "dimineața",
+        "translation-uz": "tong",
+        "translation-hi": "सुबह",
+        "translation-ar": "الصباح"
+      },
+      {
+        "word": "der Kurs",
+        "translation-ru": "курс",
+        "translation-en": "course",
+        "translation-uk": "курс",
+        "translation-pl": "kurs",
+        "translation-es": "el curso",
+        "translation-fr": "le cours",
+        "translation-tr": "kurs",
+        "translation-ro": "cursul",
+        "translation-uz": "kurs",
+        "translation-hi": "कोर्स",
+        "translation-ar": "الدورة"
+      },
+      {
+        "word": "der Monat",
+        "translation-ru": "месяц",
+        "translation-en": "month",
+        "translation-uk": "місяць",
+        "translation-pl": "miesiąc",
+        "translation-es": "el mes",
+        "translation-fr": "le mois",
+        "translation-tr": "ay",
+        "translation-ro": "luna",
+        "translation-uz": "oy",
+        "translation-hi": "महीना",
+        "translation-ar": "الشهر"
+      },
+      {
+        "word": "der Feierabend",
+        "translation-ru": "конец рабочего дня",
+        "translation-en": "end of the working day",
+        "translation-uk": "кінець робочого дня",
+        "translation-pl": "koniec pracy",
+        "translation-es": "el fin de la jornada",
+        "translation-fr": "la fin de la journée de travail",
+        "translation-tr": "mesai bitimi",
+        "translation-ro": "sfârșitul programului",
+        "translation-uz": "ish kuni tugashi",
+        "translation-hi": "काम ख़त्म होने का समय",
+        "translation-ar": "نهاية الدوام"
+      },
+      {
+        "word": "der Ski",
+        "translation-ru": "лыжи",
+        "translation-en": "ski",
+        "translation-uk": "лижі",
+        "translation-pl": "narty",
+        "translation-es": "el esquí",
+        "translation-fr": "le ski",
+        "translation-tr": "kayak",
+        "translation-ro": "schiurile",
+        "translation-uz": "chang‘i",
+        "translation-hi": "स्की",
+        "translation-ar": "التزلج"
+      }
+    ],
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "actionPrepositionsExtraTwo.questTask1",
+        "options": [
+          "Am Dienstag habe ich einen Deutschkurs.",
+          "Im Dienstag habe ich einen Deutschkurs.",
+          "Um Dienstag habe ich einen Deutschkurs."
+        ],
+        "answer": "Am Dienstag habe ich einen Deutschkurs.",
+        "tip": "actionPrepositionsExtraTwo.questDescription"
+      },
+      {
+        "id": 2,
+        "type": "input",
+        "question": "actionPrepositionsExtraTwo.questTask2",
+        "correctAnswer": "um",
+        "tip": "actionPrepositionsExtraTwo.questDescription"
+      },
+      {
+        "id": 3,
+        "type": "input",
+        "question": "actionPrepositionsExtraTwo.questTask3",
+        "correctAnswer": "Im",
+        "tip": "actionPrepositionsExtraTwo.questDescription"
+      },
+      {
+        "id": 4,
+        "type": "reorder",
+        "question": "actionPrepositionsExtraTwo.questTask4",
+        "words": [
+          "von",
+          "Uhr",
+          "bis",
+          "arbeite",
+          "acht",
+          "fünf",
+          "ab",
+          "Ich"
+        ],
+        "correctOrder": [
+          "Ich",
+          "arbeite",
+          "von",
+          "acht",
+          "bis",
+          "fünf",
+          "Uhr"
+        ],
+        "tip": "actionPrepositionsExtraTwo.questDescription"
+      },
+      {
+        "id": 5,
+        "type": "select",
+        "question": "actionPrepositionsExtraTwo.questTask5",
+        "options": [
+          "Ich lerne vor einem Jahr Deutsch.",
+          "Ich lerne seit ein Jahr Deutsch.",
+          "Ich lerne seit einem Jahr Deutsch."
+        ],
+        "answer": "Ich lerne seit einem Jahr Deutsch.",
+        "tip": "actionPrepositionsExtraTwo.questDescription"
+      },
+      {
+        "id": 6,
+        "type": "input",
+        "question": "actionPrepositionsExtraTwo.questTask6",
+        "correctAnswer": "Ab",
+        "tip": "actionPrepositionsExtraTwo.questDescription"
+      },
+      {
+        "id": 7,
+        "type": "readAndAnswer",
+        "question": "actionPrepositionsExtraTwo.questTask7",
+        "text": "Lisa arbeitet von Montag bis Freitag. Sie beginnt um acht Uhr und hat um vier Uhr Feierabend. Am Dienstag geht sie nach der Arbeit zum Kurs. Seit einem Monat lernt sie Spanisch.",
+        "options": [
+          "am Dienstag",
+          "um acht Uhr",
+          "um vier Uhr"
+        ],
+        "answer": "um vier Uhr",
+        "tip": "actionPrepositionsExtraTwo.questDescription"
+      },
+      {
+        "id": 8,
+        "type": "input",
+        "question": "actionPrepositionsExtraTwo.questTask8",
+        "correctAnswer": "Vor",
+        "tip": "actionPrepositionsExtraTwo.questDescription"
+      },
+      {
+        "id": 9,
+        "type": "input",
+        "question": "actionPrepositionsExtraTwo.questTask9",
+        "correctAnswer": "Nach",
+        "tip": "actionPrepositionsExtraTwo.questDescription"
+      },
+      {
+        "id": 10,
+        "type": "reorder",
+        "question": "actionPrepositionsExtraTwo.questTask10",
+        "words": [
+          "Am",
+          "Ski",
+          "ich",
+          "fahre",
+          "Im",
+          "Winter"
+        ],
+        "correctOrder": [
+          "Im",
+          "Winter",
+          "fahre",
+          "ich",
+          "Ski"
+        ],
+        "tip": "actionPrepositionsExtraTwo.questDescription"
+      },
+      {
+        "id": 11,
+        "type": "select",
+        "question": "actionPrepositionsExtraTwo.questTask11",
+        "options": [
+          "Am Morgen trinke ich Kaffee.",
+          "Am Morgen ich trinke Kaffee.",
+          "Im Morgen trinke ich Kaffee."
+        ],
+        "answer": "Am Morgen trinke ich Kaffee.",
+        "tip": "actionPrepositionsExtraTwo.questDescription"
+      },
+      {
+        "id": 12,
+        "type": "input",
+        "question": "actionPrepositionsExtraTwo.questTask12",
+        "correctAnswer": "bis",
+        "tip": "actionPrepositionsExtraTwo.questDescription"
+      },
+      {
+        "id": 13,
+        "type": "input",
+        "question": "actionPrepositionsExtraTwo.questTask13",
+        "correctAnswer": "seit",
+        "tip": "actionPrepositionsExtraTwo.questDescription"
+      },
+      {
+        "id": 14,
+        "type": "input",
+        "question": "actionPrepositionsExtraTwo.questTask14",
+        "correctAnswer": "geschlafen",
+        "tip": "actionPrepositionsExtraTwo.questDescription"
+      },
+      {
+        "id": 15,
+        "type": "input",
+        "question": "actionPrepositionsExtraTwo.questTask15",
+        "correctAnswer": "durch",
+        "tip": "actionPrepositionsExtraTwo.questDescription"
       }
     ]
   },
@@ -1566,7 +2271,8 @@
           "Wir treffen uns am sechs Uhr vor dem Kino.",
           "Wir treffen uns um sechs Uhr vor das Kino."
         ],
-        "answer": "Wir treffen uns um sechs Uhr vor dem Kino."
+        "answer": "Wir treffen uns um sechs Uhr vor dem Kino.",
+        "tip": "actionPrepositionsSeven.questDescription"
       },
       {
         "id": 2,
@@ -1586,25 +2292,29 @@
           "gehe",
           "ich",
           "nicht"
-        ]
+        ],
+        "tip": "actionPrepositionsSeven.questDescription"
       },
       {
         "id": 3,
         "type": "input",
         "question": "actionPrepositionsSeven.questTask3",
-        "correctAnswer": "von"
+        "correctAnswer": "von",
+        "tip": "actionPrepositionsSeven.questDescription"
       },
       {
         "id": 4,
         "type": "input",
         "question": "actionPrepositionsSeven.questTask4",
-        "correctAnswer": "am"
+        "correctAnswer": "Am",
+        "tip": "actionPrepositionsSeven.questDescription"
       },
       {
         "id": 5,
         "type": "input",
         "question": "actionPrepositionsSeven.questTask5",
-        "correctAnswer": "durch"
+        "correctAnswer": "durch",
+        "tip": "actionPrepositionsSeven.questDescription"
       },
       {
         "id": 6,
@@ -1615,7 +2325,8 @@
           "gegenüber die Bank",
           "an der Bank vorbei"
         ],
-        "answer": "gegenüber von der Bank"
+        "answer": "gegenüber von der Bank",
+        "tip": "actionPrepositionsSeven.questDescription"
       },
       {
         "id": 7,
@@ -1627,13 +2338,15 @@
           "von Montag bis Freitag",
           "am Montag"
         ],
-        "answer": "von Dienstag bis Freitag"
+        "answer": "von Dienstag bis Freitag",
+        "tip": "actionPrepositionsSeven.questDescription"
       },
       {
         "id": 8,
         "type": "input",
         "question": "actionPrepositionsSeven.questTask8",
-        "correctAnswer": "vor"
+        "correctAnswer": "Vor",
+        "tip": "actionPrepositionsSeven.questDescription"
       },
       {
         "id": 9,
@@ -1644,7 +2357,8 @@
           "ein Geschenk für deinem Bruder",
           "ein Geschenk für dein Bruder"
         ],
-        "answer": "ein Geschenk für deinen Bruder"
+        "answer": "ein Geschenk für deinen Bruder",
+        "tip": "actionPrepositionsSeven.questDescription"
       },
       {
         "id": 10,
@@ -1664,19 +2378,22 @@
           "um",
           "den",
           "See"
-        ]
+        ],
+        "tip": "actionPrepositionsSeven.questDescription"
       },
       {
         "id": 11,
         "type": "input",
         "question": "actionPrepositionsSeven.questTask11",
-        "correctAnswer": "vorbei"
+        "correctAnswer": "vorbei",
+        "tip": "actionPrepositionsSeven.questDescription"
       },
       {
         "id": 12,
         "type": "input",
         "question": "actionPrepositionsSeven.questTask12",
-        "correctAnswer": "im"
+        "correctAnswer": "Im",
+        "tip": "actionPrepositionsSeven.questDescription"
       },
       {
         "id": 13,
@@ -1688,19 +2405,22 @@
           "seit Dienstag",
           "seit Sonntag"
         ],
-        "answer": "seit Montag"
+        "answer": "seit Montag",
+        "tip": "actionPrepositionsSeven.questDescription"
       },
       {
         "id": 14,
         "type": "input",
         "question": "actionPrepositionsSeven.questTask14",
-        "correctAnswer": "e"
+        "correctAnswer": "e",
+        "tip": "actionPrepositionsSeven.questDescription"
       },
       {
         "id": 15,
         "type": "input",
         "question": "actionPrepositionsSeven.questTask15",
-        "correctAnswer": "am"
+        "correctAnswer": "am",
+        "tip": "actionPrepositionsSeven.questDescription"
       }
     ]
   },
@@ -1800,7 +2520,8 @@
           "im Mittwoch",
           "um Mittwoch"
         ],
-        "answer": "am Mittwoch"
+        "answer": "am Mittwoch",
+        "tip": "actionPrepositionsEight.questDescription"
       },
       {
         "id": 2,
@@ -1818,25 +2539,29 @@
           "ist",
           "für",
           "dich"
-        ]
+        ],
+        "tip": "actionPrepositionsEight.questDescription"
       },
       {
         "id": 3,
         "type": "input",
         "question": "actionPrepositionsEight.questTask3",
-        "correctAnswer": "um"
+        "correctAnswer": "um",
+        "tip": "actionPrepositionsEight.questDescription"
       },
       {
         "id": 4,
         "type": "input",
         "question": "actionPrepositionsEight.questTask4",
-        "correctAnswer": "durch"
+        "correctAnswer": "durch",
+        "tip": "actionPrepositionsEight.questDescription"
       },
       {
         "id": 5,
         "type": "input",
         "question": "actionPrepositionsEight.questTask5",
-        "correctAnswer": "bis"
+        "correctAnswer": "bis",
+        "tip": "actionPrepositionsEight.questDescription"
       },
       {
         "id": 6,
@@ -1847,7 +2572,8 @@
           "Ich wohne vor 2020 hier.",
           "Ich wohne nach 2020 hier."
         ],
-        "answer": "Ich wohne seit 2020 hier."
+        "answer": "Ich wohne seit 2020 hier.",
+        "tip": "actionPrepositionsEight.questDescription"
       },
       {
         "id": 7,
@@ -1859,19 +2585,22 @@
           "neben dem Bahnhof",
           "hinter dem Bahnhof"
         ],
-        "answer": "gegenüber vom Bahnhof"
+        "answer": "gegenüber vom Bahnhof",
+        "tip": "actionPrepositionsEight.questDescription"
       },
       {
         "id": 8,
         "type": "input",
         "question": "actionPrepositionsEight.questTask8",
-        "correctAnswer": "en"
+        "correctAnswer": "en",
+        "tip": "actionPrepositionsEight.questDescription"
       },
       {
         "id": 9,
         "type": "input",
         "question": "actionPrepositionsEight.questTask9",
-        "correctAnswer": "über"
+        "correctAnswer": "über",
+        "tip": "actionPrepositionsEight.questDescription"
       },
       {
         "id": 10,
@@ -1882,13 +2611,15 @@
           "neben die Tür",
           "zwischen der Tür"
         ],
-        "answer": "neben der Tür"
+        "answer": "neben der Tür",
+        "tip": "actionPrepositionsEight.questDescription"
       },
       {
         "id": 11,
         "type": "input",
         "question": "actionPrepositionsEight.questTask11",
-        "correctAnswer": "vom"
+        "correctAnswer": "vom",
+        "tip": "actionPrepositionsEight.questDescription"
       },
       {
         "id": 12,
@@ -1899,7 +2630,8 @@
           "Wir fahren mit den Zug.",
           "Wir fahren mit der Zug."
         ],
-        "answer": "Wir fahren mit dem Zug."
+        "answer": "Wir fahren mit dem Zug.",
+        "tip": "actionPrepositionsEight.questDescription"
       },
       {
         "id": 13,
@@ -1911,13 +2643,15 @@
           "mit dem Bus",
           "mit dem Auto"
         ],
-        "answer": "mit dem Fahrrad"
+        "answer": "mit dem Fahrrad",
+        "tip": "actionPrepositionsEight.questDescription"
       },
       {
         "id": 14,
         "type": "input",
         "question": "actionPrepositionsEight.questTask14",
-        "correctAnswer": "vor"
+        "correctAnswer": "Vor",
+        "tip": "actionPrepositionsEight.questDescription"
       },
       {
         "id": 15,
@@ -1939,7 +2673,8 @@
           "um",
           "die",
           "Ecke"
-        ]
+        ],
+        "tip": "actionPrepositionsEight.questDescription"
       }
     ]
   }

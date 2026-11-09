@@ -27,8 +27,9 @@
               :text="t('bannerTitles.textTask')"
               :icon="TextBooks"
           />
-          <nav class="mobile-nav" role="tablist">
-            <div class="sliding-bg" :style="{ transform: `translateX(${getTransformX(activeIndex)}%)` }"></div>
+          <nav v-if="levels.length > 1" class="mobile-nav" role="tablist">
+            <div class="sliding-bg"
+                 :style="{ width: `calc(${100 / levels.length}% - 4px)`, transform: `translateX(${getTransformX(activeIndex)}%)` }"></div>
             <button
                 v-for="level in levels"
                 :key="level.id"
@@ -94,6 +95,7 @@ import {ref, computed, onMounted, watch} from 'vue'
 import {useRouter} from 'vue-router'
 import {useTextTasksStore} from '/store/textTasksStore.js'
 import {userAuthStore} from '../../store/authStore.js'
+import {visibleLevels} from '~/utils/germanLevel.js'
 import VBanner from "~/src/components/V-banner.vue"
 import TextBooks from "../../assets/images/TextBook.svg"
 import VTransition from "~/src/components/V-transition.vue"
@@ -112,25 +114,30 @@ const {t, locale} = useI18n()
 
 const { $track } = useNuxtApp()
 
-const levels = [
+const ALL_LEVELS = [
   {id: 'low-level', label: 'A1'},
   {id: 'middle-level', label: 'A2'},
   {id: 'high-level', label: 'B1'}
 ]
+// уровни ниже выбранного уровня немецкого скрыты
+const levels = computed(() => visibleLevels(ALL_LEVELS, authStore.germanLevel, l => l.label))
 
 const getTransformX = (index) => {
   if (index === -1) return 0;
   if (locale.value === 'ar') {
-    return (levels.length - 1 - index) * 100;
+    return (levels.value.length - 1 - index) * 100;
   }
   return index * 100;
 };
 
-const currentLevel = ref('low-level')
+const currentLevel = ref(levels.value[0]?.id || 'low-level')
+watch(levels, (list) => {
+  if (!list.some(l => l.id === currentLevel.value)) currentLevel.value = list[0]?.id || 'low-level'
+})
 const isLoading = ref(false)
 const themesStats = ref({})
 
-const activeIndex = computed(() => levels.findIndex(level => level.id === currentLevel.value))
+const activeIndex = computed(() => levels.value.findIndex(level => level.id === currentLevel.value))
 
 const overlayData = {
   title: t('textTasksTip.title'),

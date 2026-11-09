@@ -1,0 +1,2819 @@
+[
+  {
+    "questId": "healer-hut-one",
+    "title": "healerHutOne.questTitle",
+    "progress": "0/15",
+    "description": "healerHutOne.questDescription",
+    "conditions": {
+      "goal": "healerHutOne.questGoal",
+      "minCorrect": 15,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
+    "vocabulary": [
+      {
+        "word": "der Kopf",
+        "translation-ru": "голова",
+        "translation-en": "head",
+        "translation-uk": "голова",
+        "translation-pl": "głowa",
+        "translation-es": "la cabeza",
+        "translation-fr": "la tête",
+        "translation-tr": "baş",
+        "translation-ro": "capul",
+        "translation-uz": "bosh",
+        "translation-hi": "सिर",
+        "translation-ar": "الرأس"
+      },
+      {
+        "word": "der Bauch",
+        "translation-ru": "живот",
+        "translation-en": "stomach",
+        "translation-uk": "живіт",
+        "translation-pl": "brzuch",
+        "translation-es": "la barriga",
+        "translation-fr": "le ventre",
+        "translation-tr": "karın",
+        "translation-ro": "burta",
+        "translation-uz": "qorin",
+        "translation-hi": "पेट",
+        "translation-ar": "البطن"
+      },
+      {
+        "word": "der Rücken",
+        "translation-ru": "спина",
+        "translation-en": "back",
+        "translation-uk": "спина",
+        "translation-pl": "plecy",
+        "translation-es": "la espalda",
+        "translation-fr": "le dos",
+        "translation-tr": "sırt",
+        "translation-ro": "spatele",
+        "translation-uz": "orqa",
+        "translation-hi": "पीठ",
+        "translation-ar": "الظهر"
+      },
+      {
+        "word": "der Arm",
+        "translation-ru": "рука",
+        "translation-en": "arm",
+        "translation-uk": "рука",
+        "translation-pl": "ręka",
+        "translation-es": "el brazo",
+        "translation-fr": "le bras",
+        "translation-tr": "kol",
+        "translation-ro": "brațul",
+        "translation-uz": "qo‘l",
+        "translation-hi": "बाँह",
+        "translation-ar": "الذراع"
+      },
+      {
+        "word": "das Bein",
+        "translation-ru": "нога",
+        "translation-en": "leg",
+        "translation-uk": "нога",
+        "translation-pl": "noga",
+        "translation-es": "la pierna",
+        "translation-fr": "la jambe",
+        "translation-tr": "bacak",
+        "translation-ro": "piciorul",
+        "translation-uz": "oyoq",
+        "translation-hi": "टाँग",
+        "translation-ar": "الساق"
+      },
+      {
+        "word": "der Mensch",
+        "translation-ru": "человек",
+        "translation-en": "person",
+        "translation-uk": "людина",
+        "translation-pl": "człowiek",
+        "translation-es": "la persona",
+        "translation-fr": "l’être humain",
+        "translation-tr": "insan",
+        "translation-ro": "omul",
+        "translation-uz": "odam",
+        "translation-hi": "इंसान",
+        "translation-ar": "الإنسان"
+      },
+      {
+        "word": "gesund",
+        "translation-ru": "здоровый",
+        "translation-en": "healthy",
+        "translation-uk": "здоровий",
+        "translation-pl": "zdrowy",
+        "translation-es": "sano",
+        "translation-fr": "en bonne santé",
+        "translation-tr": "sağlıklı",
+        "translation-ro": "sănătos",
+        "translation-uz": "sog‘lom",
+        "translation-hi": "स्वस्थ",
+        "translation-ar": "سليم"
+      }
+    ],
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "healerHutOne.questTask1",
+        "options": [
+          "Das ist die Kopf.",
+          "Das ist das Kopf.",
+          "Das ist der Kopf."
+        ],
+        "answer": "Das ist der Kopf.",
+        "tip": "healerHutOne.questDescription"
+      },
+      {
+        "id": 2,
+        "type": "input",
+        "question": "healerHutOne.questTask2",
+        "correctAnswer": "Beine",
+        "tip": "healerHutOne.questDescription"
+      },
+      {
+        "id": 3,
+        "type": "input",
+        "question": "healerHutOne.questTask3",
+        "correctAnswer": "Rücken",
+        "tip": "healerHutOne.questDescription"
+      },
+      {
+        "id": 4,
+        "type": "select",
+        "question": "healerHutOne.questTask4",
+        "options": [
+          "Der Bauch ist voll.",
+          "Der Bauch sind voll.",
+          "Das Bauch ist voll."
+        ],
+        "answer": "Der Bauch ist voll.",
+        "tip": "healerHutOne.questDescription"
+      },
+      {
+        "id": 5,
+        "type": "reorder",
+        "question": "healerHutOne.questTask5",
+        "words": [
+          "habe",
+          "Arm",
+          "Arme",
+          "Ich",
+          "hat",
+          "zwei"
+        ],
+        "correctOrder": [
+          "Ich",
+          "habe",
+          "zwei",
+          "Arme"
+        ],
+        "tip": "healerHutOne.questDescription"
+      },
+      {
+        "id": 6,
+        "type": "select",
+        "question": "healerHutOne.questTask6",
+        "options": [
+          "Mein Bein sind lang.",
+          "Meine Beine sind lang.",
+          "Meine Beine ist lang."
+        ],
+        "answer": "Meine Beine sind lang.",
+        "tip": "healerHutOne.questDescription"
+      },
+      {
+        "id": 7,
+        "type": "input",
+        "question": "healerHutOne.questTask7",
+        "correctAnswer": "Kopf",
+        "tip": "healerHutOne.questDescription"
+      },
+      {
+        "id": 8,
+        "type": "select",
+        "question": "healerHutOne.questTask8",
+        "options": [
+          "Der Mensch ist gesund.",
+          "Die Mensch ist gesund.",
+          "Der Mensch sind gesund."
+        ],
+        "answer": "Der Mensch ist gesund.",
+        "tip": "healerHutOne.questDescription"
+      },
+      {
+        "id": 9,
+        "type": "readAndAnswer",
+        "question": "healerHutOne.questTask9",
+        "text": "Ein Mensch hat zwei Arme und zwei Beine. Eine Katze hat vier Beine und keine Arme. Ein Vogel hat zwei Beine.",
+        "options": [
+          "vier",
+          "drei",
+          "zwei"
+        ],
+        "answer": "vier",
+        "tip": "healerHutOne.questDescription"
+      },
+      {
+        "id": 10,
+        "type": "input",
+        "question": "healerHutOne.questTask10",
+        "correctAnswer": "Arm",
+        "tip": "healerHutOne.questDescription"
+      },
+      {
+        "id": 11,
+        "type": "reorder",
+        "question": "healerHutOne.questTask11",
+        "words": [
+          "heißt",
+          "Wie",
+          "auf",
+          "heiße",
+          "Was",
+          "das",
+          "Deutsch"
+        ],
+        "correctOrder": [
+          "Wie",
+          "heißt",
+          "das",
+          "auf",
+          "Deutsch"
+        ],
+        "tip": "healerHutOne.questDescription"
+      },
+      {
+        "id": 12,
+        "type": "input",
+        "question": "healerHutOne.questTask12",
+        "correctAnswer": "fünfundvierzig",
+        "tip": "healerHutOne.questDescription"
+      },
+      {
+        "id": 13,
+        "type": "select",
+        "question": "healerHutOne.questTask13",
+        "options": [
+          "Brauche ich ein Stuhl? Nein, ich habe ein Stuhl.",
+          "Brauche ich einen Stuhl? Nein, ich habe einen Stuhl.",
+          "Brauche ich einen Stuhl? Nein, ich habe einer Stuhl."
+        ],
+        "answer": "Brauche ich einen Stuhl? Nein, ich habe einen Stuhl.",
+        "tip": "healerHutOne.questDescription"
+      },
+      {
+        "id": 14,
+        "type": "select",
+        "question": "healerHutOne.questTask14",
+        "options": [
+          "Ich muss keinen Kaffee trinken.",
+          "Ich darf keinen Kaffee trinken.",
+          "Ich darf keinen Kaffee trinke."
+        ],
+        "answer": "Ich darf keinen Kaffee trinken.",
+        "tip": "healerHutOne.questDescription"
+      },
+      {
+        "id": 15,
+        "type": "reorder",
+        "question": "healerHutOne.questTask15",
+        "words": [
+          "bin",
+          "frei",
+          "ich",
+          "Mittwochabend",
+          "Am",
+          "ist",
+          "im"
+        ],
+        "correctOrder": [
+          "Am",
+          "Mittwochabend",
+          "bin",
+          "ich",
+          "frei"
+        ],
+        "tip": "healerHutOne.questDescription"
+      }
+    ]
+  },
+  {
+    "questId": "healer-hut-two",
+    "title": "healerHutTwo.questTitle",
+    "progress": "0/15",
+    "description": "healerHutTwo.questDescription",
+    "conditions": {
+      "goal": "healerHutTwo.questGoal",
+      "minCorrect": 15,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
+    "vocabulary": [
+      {
+        "word": "das Gesicht",
+        "translation-ru": "лицо",
+        "translation-en": "face",
+        "translation-uk": "обличчя",
+        "translation-pl": "twarz",
+        "translation-es": "la cara",
+        "translation-fr": "le visage",
+        "translation-tr": "yüz",
+        "translation-ro": "fața",
+        "translation-uz": "yuz",
+        "translation-hi": "चेहरा",
+        "translation-ar": "الوجه"
+      },
+      {
+        "word": "das Auge",
+        "translation-ru": "глаз",
+        "translation-en": "eye",
+        "translation-uk": "око",
+        "translation-pl": "oko",
+        "translation-es": "el ojo",
+        "translation-fr": "l’œil",
+        "translation-tr": "göz",
+        "translation-ro": "ochiul",
+        "translation-uz": "ko‘z",
+        "translation-hi": "आँख",
+        "translation-ar": "العين"
+      },
+      {
+        "word": "das Ohr",
+        "translation-ru": "ухо",
+        "translation-en": "ear",
+        "translation-uk": "вухо",
+        "translation-pl": "ucho",
+        "translation-es": "la oreja",
+        "translation-fr": "l’oreille",
+        "translation-tr": "kulak",
+        "translation-ro": "urechea",
+        "translation-uz": "quloq",
+        "translation-hi": "कान",
+        "translation-ar": "الأذن"
+      },
+      {
+        "word": "die Nase",
+        "translation-ru": "нос",
+        "translation-en": "nose",
+        "translation-uk": "ніс",
+        "translation-pl": "nos",
+        "translation-es": "la nariz",
+        "translation-fr": "le nez",
+        "translation-tr": "burun",
+        "translation-ro": "nasul",
+        "translation-uz": "burun",
+        "translation-hi": "नाक",
+        "translation-ar": "الأنف"
+      },
+      {
+        "word": "der Mund",
+        "translation-ru": "рот",
+        "translation-en": "mouth",
+        "translation-uk": "рот",
+        "translation-pl": "usta",
+        "translation-es": "la boca",
+        "translation-fr": "la bouche",
+        "translation-tr": "ağız",
+        "translation-ro": "gura",
+        "translation-uz": "og‘iz",
+        "translation-hi": "मुँह",
+        "translation-ar": "الفم"
+      },
+      {
+        "word": "der Zahn",
+        "translation-ru": "зуб",
+        "translation-en": "tooth",
+        "translation-uk": "зуб",
+        "translation-pl": "ząb",
+        "translation-es": "el diente",
+        "translation-fr": "la dent",
+        "translation-tr": "diş",
+        "translation-ro": "dintele",
+        "translation-uz": "tish",
+        "translation-hi": "दाँत",
+        "translation-ar": "السن"
+      }
+    ],
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "healerHutTwo.questTask1",
+        "options": [
+          "Ich hat zwei Augen.",
+          "Ich habe zwei Auge.",
+          "Ich habe zwei Augen."
+        ],
+        "answer": "Ich habe zwei Augen.",
+        "tip": "healerHutTwo.questDescription"
+      },
+      {
+        "id": 2,
+        "type": "input",
+        "question": "healerHutTwo.questTask2",
+        "correctAnswer": "Nase",
+        "tip": "healerHutTwo.questDescription"
+      },
+      {
+        "id": 3,
+        "type": "input",
+        "question": "healerHutTwo.questTask3",
+        "correctAnswer": "Augen",
+        "tip": "healerHutTwo.questDescription"
+      },
+      {
+        "id": 4,
+        "type": "select",
+        "question": "healerHutTwo.questTask4",
+        "options": [
+          "Das Kind hast viele Zähne.",
+          "Das Kind hat viele Zähne.",
+          "Das Kind hat viele Zahn."
+        ],
+        "answer": "Das Kind hat viele Zähne.",
+        "tip": "healerHutTwo.questDescription"
+      },
+      {
+        "id": 5,
+        "type": "reorder",
+        "question": "healerHutTwo.questTask5",
+        "words": [
+          "Die",
+          "Mund",
+          "groß",
+          "sind",
+          "Der",
+          "ist"
+        ],
+        "correctOrder": [
+          "Der",
+          "Mund",
+          "ist",
+          "groß"
+        ],
+        "tip": "healerHutTwo.questDescription"
+      },
+      {
+        "id": 6,
+        "type": "select",
+        "question": "healerHutTwo.questTask6",
+        "options": [
+          "Deine Ohren sind groß.",
+          "Deine Ohren ist groß.",
+          "Deine Ohr sind groß."
+        ],
+        "answer": "Deine Ohren sind groß.",
+        "tip": "healerHutTwo.questDescription"
+      },
+      {
+        "id": 7,
+        "type": "input",
+        "question": "healerHutTwo.questTask7",
+        "correctAnswer": "Gesicht",
+        "tip": "healerHutTwo.questDescription"
+      },
+      {
+        "id": 8,
+        "type": "select",
+        "question": "healerHutTwo.questTask8",
+        "options": [
+          "Welche Farbe haben deine Augen?",
+          "Welche Farbe haben dein Augen?",
+          "Welche Farbe hat deine Augen?"
+        ],
+        "answer": "Welche Farbe haben deine Augen?",
+        "tip": "healerHutTwo.questDescription"
+      },
+      {
+        "id": 9,
+        "type": "readAndAnswer",
+        "question": "healerHutTwo.questTask9",
+        "text": "Olga ist meine Freundin. Ihre Augen sind grün und ihre Nase ist klein. Sie ist sehr nett.",
+        "options": [
+          "braun",
+          "grün",
+          "blau"
+        ],
+        "answer": "grün",
+        "tip": "healerHutTwo.questDescription"
+      },
+      {
+        "id": 10,
+        "type": "input",
+        "question": "healerHutTwo.questTask10",
+        "correctAnswer": "Zähne",
+        "tip": "healerHutTwo.questDescription"
+      },
+      {
+        "id": 11,
+        "type": "reorder",
+        "question": "healerHutTwo.questTask11",
+        "words": [
+          "ist",
+          "sind",
+          "Ihr",
+          "Augen",
+          "Ihre",
+          "braun"
+        ],
+        "correctOrder": [
+          "Ihre",
+          "Augen",
+          "sind",
+          "braun"
+        ],
+        "tip": "healerHutTwo.questDescription"
+      },
+      {
+        "id": 12,
+        "type": "input",
+        "question": "healerHutTwo.questTask12",
+        "correctAnswer": "Arme",
+        "tip": "healerHutTwo.questDescription"
+      },
+      {
+        "id": 13,
+        "type": "select",
+        "question": "healerHutTwo.questTask13",
+        "options": [
+          "Das ist nicht der Bauch, das ist der Rücken.",
+          "Das ist kein der Bauch, das ist der Rücken.",
+          "Das ist nicht der Bauch, das bist der Rücken."
+        ],
+        "answer": "Das ist nicht der Bauch, das ist der Rücken.",
+        "tip": "healerHutTwo.questDescription"
+      },
+      {
+        "id": 14,
+        "type": "select",
+        "question": "healerHutTwo.questTask14",
+        "options": [
+          "Unsere Oma wohnt allein.",
+          "Unser Oma wohnt allein.",
+          "Unsere Oma wohnst allein."
+        ],
+        "answer": "Unsere Oma wohnt allein.",
+        "tip": "healerHutTwo.questDescription"
+      },
+      {
+        "id": 15,
+        "type": "reorder",
+        "question": "healerHutTwo.questTask15",
+        "words": [
+          "Apotheke",
+          "ist",
+          "Wo",
+          "die",
+          "der",
+          "hier",
+          "wer"
+        ],
+        "correctOrder": [
+          "Wo",
+          "ist",
+          "hier",
+          "die",
+          "Apotheke"
+        ],
+        "tip": "healerHutTwo.questDescription"
+      }
+    ]
+  },
+  {
+    "questId": "healer-hut-three",
+    "title": "healerHutThree.questTitle",
+    "progress": "0/15",
+    "description": "healerHutThree.questDescription",
+    "conditions": {
+      "goal": "healerHutThree.questGoal",
+      "minCorrect": 15,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
+    "vocabulary": [
+      {
+        "word": "das Fieber",
+        "translation-ru": "температура, жар",
+        "translation-en": "fever",
+        "translation-uk": "температура, жар",
+        "translation-pl": "gorączka",
+        "translation-es": "la fiebre",
+        "translation-fr": "la fièvre",
+        "translation-tr": "ateş",
+        "translation-ro": "febra",
+        "translation-uz": "isitma",
+        "translation-hi": "बुख़ार",
+        "translation-ar": "الحمى"
+      },
+      {
+        "word": "der Husten",
+        "translation-ru": "кашель",
+        "translation-en": "cough",
+        "translation-uk": "кашель",
+        "translation-pl": "kaszel",
+        "translation-es": "la tos",
+        "translation-fr": "la toux",
+        "translation-tr": "öksürük",
+        "translation-ro": "tusea",
+        "translation-uz": "yo‘tal",
+        "translation-hi": "खाँसी",
+        "translation-ar": "السعال"
+      },
+      {
+        "word": "der Schnupfen",
+        "translation-ru": "насморк",
+        "translation-en": "cold, runny nose",
+        "translation-uk": "нежить",
+        "translation-pl": "katar",
+        "translation-es": "el resfriado",
+        "translation-fr": "le rhume",
+        "translation-tr": "nezle",
+        "translation-ro": "guturaiul",
+        "translation-uz": "tumov",
+        "translation-hi": "ज़ुकाम",
+        "translation-ar": "الزكام"
+      },
+      {
+        "word": "die Kopfschmerzen",
+        "translation-ru": "головная боль",
+        "translation-en": "headache",
+        "translation-uk": "головний біль",
+        "translation-pl": "ból głowy",
+        "translation-es": "el dolor de cabeza",
+        "translation-fr": "le mal de tête",
+        "translation-tr": "baş ağrısı",
+        "translation-ro": "durerea de cap",
+        "translation-uz": "bosh og‘rig‘i",
+        "translation-hi": "सिरदर्द",
+        "translation-ar": "الصداع"
+      },
+      {
+        "word": "die Bauchschmerzen",
+        "translation-ru": "боль в животе",
+        "translation-en": "stomach ache",
+        "translation-uk": "біль у животі",
+        "translation-pl": "ból brzucha",
+        "translation-es": "el dolor de barriga",
+        "translation-fr": "le mal de ventre",
+        "translation-tr": "karın ağrısı",
+        "translation-ro": "durerea de burtă",
+        "translation-uz": "qorin og‘rig‘i",
+        "translation-hi": "पेट दर्द",
+        "translation-ar": "ألم البطن"
+      },
+      {
+        "word": "die Zahnschmerzen",
+        "translation-ru": "зубная боль",
+        "translation-en": "toothache",
+        "translation-uk": "зубний біль",
+        "translation-pl": "ból zęba",
+        "translation-es": "el dolor de muelas",
+        "translation-fr": "le mal de dents",
+        "translation-tr": "diş ağrısı",
+        "translation-ro": "durerea de dinți",
+        "translation-uz": "tish og‘rig‘i",
+        "translation-hi": "दाँत का दर्द",
+        "translation-ar": "ألم الأسنان"
+      }
+    ],
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "healerHutThree.questTask1",
+        "options": [
+          "Ich bin Fieber.",
+          "Ich habe ein Fieber haben.",
+          "Ich habe Fieber."
+        ],
+        "answer": "Ich habe Fieber.",
+        "tip": "healerHutThree.questDescription"
+      },
+      {
+        "id": 2,
+        "type": "input",
+        "question": "healerHutThree.questTask2",
+        "correctAnswer": "hat",
+        "tip": "healerHutThree.questDescription"
+      },
+      {
+        "id": 3,
+        "type": "input",
+        "question": "healerHutThree.questTask3",
+        "correctAnswer": "Schnupfen",
+        "tip": "healerHutThree.questDescription"
+      },
+      {
+        "id": 4,
+        "type": "select",
+        "question": "healerHutThree.questTask4",
+        "options": [
+          "Ich bin Kopfschmerzen.",
+          "Ich habe Kopf.",
+          "Ich habe Kopfschmerzen."
+        ],
+        "answer": "Ich habe Kopfschmerzen.",
+        "tip": "healerHutThree.questDescription"
+      },
+      {
+        "id": 5,
+        "type": "reorder",
+        "question": "healerHutThree.questTask5",
+        "words": [
+          "Kind",
+          "ist",
+          "haben",
+          "Das",
+          "Bauchschmerzen",
+          "hat"
+        ],
+        "correctOrder": [
+          "Das",
+          "Kind",
+          "hat",
+          "Bauchschmerzen"
+        ],
+        "tip": "healerHutThree.questDescription"
+      },
+      {
+        "id": 6,
+        "type": "select",
+        "question": "healerHutThree.questTask6",
+        "options": [
+          "Hat du Zahnschmerzen?",
+          "Hast du Zahnschmerzen?",
+          "Bist du Zahnschmerzen?"
+        ],
+        "answer": "Hast du Zahnschmerzen?",
+        "tip": "healerHutThree.questDescription"
+      },
+      {
+        "id": 7,
+        "type": "input",
+        "question": "healerHutThree.questTask7",
+        "correctAnswer": "Husten",
+        "tip": "healerHutThree.questDescription"
+      },
+      {
+        "id": 8,
+        "type": "select",
+        "question": "healerHutThree.questTask8",
+        "options": [
+          "Ich habe keine Fieber haben.",
+          "Ich habe kein Fieber.",
+          "Ich habe nicht Fieber."
+        ],
+        "answer": "Ich habe kein Fieber.",
+        "tip": "healerHutThree.questDescription"
+      },
+      {
+        "id": 9,
+        "type": "readAndAnswer",
+        "question": "healerHutThree.questTask9",
+        "text": "Ben ist heute nicht im Büro. Er hat Schnupfen und Kopfschmerzen, aber kein Fieber. Seine Frau hat auch Husten. Sie bleiben im Bett.",
+        "options": [
+          "Er hat Zahnschmerzen.",
+          "Er hat Schnupfen und Kopfschmerzen.",
+          "Er hat Fieber."
+        ],
+        "answer": "Er hat Schnupfen und Kopfschmerzen.",
+        "tip": "healerHutThree.questDescription"
+      },
+      {
+        "id": 10,
+        "type": "input",
+        "question": "healerHutThree.questTask10",
+        "correctAnswer": "Bauchschmerzen",
+        "tip": "healerHutThree.questDescription"
+      },
+      {
+        "id": 11,
+        "type": "reorder",
+        "question": "healerHutThree.questTask11",
+        "words": [
+          "keinen",
+          "Wir",
+          "haben",
+          "nicht",
+          "hat",
+          "Schnupfen"
+        ],
+        "correctOrder": [
+          "Wir",
+          "haben",
+          "keinen",
+          "Schnupfen"
+        ],
+        "tip": "healerHutThree.questDescription"
+      },
+      {
+        "id": 12,
+        "type": "input",
+        "question": "healerHutThree.questTask12",
+        "correctAnswer": "Zähne",
+        "tip": "healerHutThree.questDescription"
+      },
+      {
+        "id": 13,
+        "type": "select",
+        "question": "healerHutThree.questTask13",
+        "options": [
+          "Draußen ist es kalt und es regnen.",
+          "Draußen ist es kalt und es regnet.",
+          "Draußen es ist kalt und es regnet."
+        ],
+        "answer": "Draußen ist es kalt und es regnet.",
+        "tip": "healerHutThree.questDescription"
+      },
+      {
+        "id": 14,
+        "type": "select",
+        "question": "healerHutThree.questTask14",
+        "options": [
+          "Schlafst du viel?",
+          "Schläfst du viel?",
+          "Du schläfst viel?"
+        ],
+        "answer": "Schläfst du viel?",
+        "tip": "healerHutThree.questDescription"
+      },
+      {
+        "id": 15,
+        "type": "reorder",
+        "question": "healerHutThree.questTask15",
+        "words": [
+          "Brille",
+          "meine",
+          "suche",
+          "suchst",
+          "Ich",
+          "meinen"
+        ],
+        "correctOrder": [
+          "Ich",
+          "suche",
+          "meine",
+          "Brille"
+        ],
+        "tip": "healerHutThree.questDescription"
+      }
+    ]
+  },
+  {
+    "questId": "healer-hut-four",
+    "title": "healerHutFour.questTitle",
+    "progress": "0/15",
+    "description": "healerHutFour.questDescription",
+    "conditions": {
+      "goal": "healerHutFour.questGoal",
+      "minCorrect": 15,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
+    "vocabulary": [
+      {
+        "word": "gesund",
+        "translation-ru": "здоровый",
+        "translation-en": "healthy",
+        "translation-uk": "здоровий",
+        "translation-pl": "zdrowy",
+        "translation-es": "sano",
+        "translation-fr": "en bonne santé",
+        "translation-tr": "sağlıklı",
+        "translation-ro": "sănătos",
+        "translation-uz": "sog‘lom",
+        "translation-hi": "स्वस्थ",
+        "translation-ar": "سليم"
+      },
+      {
+        "word": "krank",
+        "translation-ru": "больной",
+        "translation-en": "ill, sick",
+        "translation-uk": "хворий",
+        "translation-pl": "chory",
+        "translation-es": "enfermo",
+        "translation-fr": "malade",
+        "translation-tr": "hasta",
+        "translation-ro": "bolnav",
+        "translation-uz": "kasal",
+        "translation-hi": "बीमार",
+        "translation-ar": "مريض"
+      },
+      {
+        "word": "Gute Besserung!",
+        "translation-ru": "Выздоравливай!",
+        "translation-en": "Get well soon!",
+        "translation-uk": "Одужуй!",
+        "translation-pl": "Wracaj do zdrowia!",
+        "translation-es": "¡Que te mejores!",
+        "translation-fr": "Bon rétablissement !",
+        "translation-tr": "Geçmiş olsun!",
+        "translation-ro": "Însănătoșire grabnică!",
+        "translation-uz": "Tezroq tuzal!",
+        "translation-hi": "जल्दी ठीक हो जाओ!",
+        "translation-ar": "شفاك الله!"
+      },
+      {
+        "word": "schlecht",
+        "translation-ru": "плохо",
+        "translation-en": "bad, badly",
+        "translation-uk": "погано",
+        "translation-pl": "źle",
+        "translation-es": "mal",
+        "translation-fr": "mal",
+        "translation-tr": "kötü",
+        "translation-ro": "rău",
+        "translation-uz": "yomon",
+        "translation-hi": "बुरा",
+        "translation-ar": "سيئ"
+      },
+      {
+        "word": "heute",
+        "translation-ru": "сегодня",
+        "translation-en": "today",
+        "translation-uk": "сьогодні",
+        "translation-pl": "dzisiaj",
+        "translation-es": "hoy",
+        "translation-fr": "aujourd’hui",
+        "translation-tr": "bugün",
+        "translation-ro": "azi",
+        "translation-uz": "bugun",
+        "translation-hi": "आज",
+        "translation-ar": "اليوم"
+      }
+    ],
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "healerHutFour.questTask1",
+        "options": [
+          "Wie gehst es dir heute?",
+          "Wie geht du heute?",
+          "Wie geht es dir heute?"
+        ],
+        "answer": "Wie geht es dir heute?",
+        "tip": "healerHutFour.questDescription"
+      },
+      {
+        "id": 2,
+        "type": "input",
+        "question": "healerHutFour.questTask2",
+        "correctAnswer": "schlecht",
+        "tip": "healerHutFour.questDescription"
+      },
+      {
+        "id": 3,
+        "type": "input",
+        "question": "healerHutFour.questTask3",
+        "correctAnswer": "gesund",
+        "tip": "healerHutFour.questDescription"
+      },
+      {
+        "id": 4,
+        "type": "select",
+        "question": "healerHutFour.questTask4",
+        "options": [
+          "Wie geht es dir, Frau Schulz?",
+          "Wie gehen Sie, Frau Schulz?",
+          "Wie geht es Ihnen, Frau Schulz?"
+        ],
+        "answer": "Wie geht es Ihnen, Frau Schulz?",
+        "tip": "healerHutFour.questDescription"
+      },
+      {
+        "id": 5,
+        "type": "reorder",
+        "question": "healerHutFour.questTask5",
+        "words": [
+          "Gute",
+          "Guten",
+          "Lena",
+          "Gut",
+          "Besserung"
+        ],
+        "correctOrder": [
+          "Gute",
+          "Besserung",
+          "Lena"
+        ],
+        "tip": "healerHutFour.questDescription"
+      },
+      {
+        "id": 6,
+        "type": "select",
+        "question": "healerHutFour.questTask6",
+        "options": [
+          "Heute bist ich wieder gesund.",
+          "Heute bin ich wieder gesund.",
+          "Heute ich bin wieder gesund."
+        ],
+        "answer": "Heute bin ich wieder gesund.",
+        "tip": "healerHutFour.questDescription"
+      },
+      {
+        "id": 7,
+        "type": "input",
+        "question": "healerHutFour.questTask7",
+        "correctAnswer": "krank",
+        "tip": "healerHutFour.questDescription"
+      },
+      {
+        "id": 8,
+        "type": "select",
+        "question": "healerHutFour.questTask8",
+        "options": [
+          "Danke, es geht mir gut.",
+          "Danke, ich gehe gut.",
+          "Danke, es gehe mir gut."
+        ],
+        "answer": "Danke, es geht mir gut.",
+        "tip": "healerHutFour.questDescription"
+      },
+      {
+        "id": 9,
+        "type": "readAndAnswer",
+        "question": "healerHutFour.questTask9",
+        "text": "Lisa: Hallo Tim! Wie geht es dir? Tim: Es geht mir schlecht. Ich habe Fieber und bin zu Hause. Lisa: Oh, gute Besserung!",
+        "options": [
+          "Er ist krank.",
+          "Er ist müde.",
+          "Er hat Urlaub."
+        ],
+        "answer": "Er ist krank.",
+        "tip": "healerHutFour.questDescription"
+      },
+      {
+        "id": 10,
+        "type": "input",
+        "question": "healerHutFour.questTask10",
+        "correctAnswer": "gesund",
+        "tip": "healerHutFour.questDescription"
+      },
+      {
+        "id": 11,
+        "type": "reorder",
+        "question": "healerHutFour.questTask11",
+        "words": [
+          "gut",
+          "kein",
+          "gehe",
+          "mir",
+          "Es",
+          "heute",
+          "geht",
+          "nicht"
+        ],
+        "correctOrder": [
+          "Es",
+          "geht",
+          "mir",
+          "heute",
+          "nicht",
+          "gut"
+        ],
+        "tip": "healerHutFour.questDescription"
+      },
+      {
+        "id": 12,
+        "type": "input",
+        "question": "healerHutFour.questTask12",
+        "correctAnswer": "Kopfschmerzen",
+        "tip": "healerHutFour.questDescription"
+      },
+      {
+        "id": 13,
+        "type": "select",
+        "question": "healerHutFour.questTask13",
+        "options": [
+          "Die Suppe mit Gemüse schmeckt gut.",
+          "Die Suppe mit Gemüse schmecken gut.",
+          "Der Suppe mit Gemüse schmeckt gut."
+        ],
+        "answer": "Die Suppe mit Gemüse schmeckt gut.",
+        "tip": "healerHutFour.questDescription"
+      },
+      {
+        "id": 14,
+        "type": "select",
+        "question": "healerHutFour.questTask14",
+        "options": [
+          "Wie spät ist es? Es ist zehn Uhr.",
+          "Wie spät bist es? Es ist zehn Uhr.",
+          "Wie spät ist es? Es sind zehn Uhr."
+        ],
+        "answer": "Wie spät ist es? Es ist zehn Uhr.",
+        "tip": "healerHutFour.questDescription"
+      },
+      {
+        "id": 15,
+        "type": "reorder",
+        "question": "healerHutFour.questTask15",
+        "words": [
+          "wir",
+          "Samstag",
+          "Am",
+          "stehen",
+          "auf",
+          "steht",
+          "spät",
+          "aufstehen"
+        ],
+        "correctOrder": [
+          "Am",
+          "Samstag",
+          "stehen",
+          "wir",
+          "spät",
+          "auf"
+        ],
+        "tip": "healerHutFour.questDescription"
+      }
+    ]
+  },
+  {
+    "questId": "healer-hut-five",
+    "title": "healerHutFive.questTitle",
+    "progress": "0/15",
+    "description": "healerHutFive.questDescription",
+    "conditions": {
+      "goal": "healerHutFive.questGoal",
+      "minCorrect": 15,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
+    "vocabulary": [
+      {
+        "word": "der Termin",
+        "translation-ru": "запись, встреча",
+        "translation-en": "appointment",
+        "translation-uk": "запис, зустріч",
+        "translation-pl": "wizyta, termin",
+        "translation-es": "la cita",
+        "translation-fr": "le rendez-vous",
+        "translation-tr": "randevu",
+        "translation-ro": "programarea",
+        "translation-uz": "qabul vaqti",
+        "translation-hi": "अपॉइंटमेंट",
+        "translation-ar": "الموعد"
+      },
+      {
+        "word": "die Praxis",
+        "translation-ru": "кабинет врача",
+        "translation-en": "doctor’s surgery",
+        "translation-uk": "кабінет лікаря",
+        "translation-pl": "gabinet lekarski",
+        "translation-es": "la consulta",
+        "translation-fr": "le cabinet médical",
+        "translation-tr": "muayenehane",
+        "translation-ro": "cabinetul medical",
+        "translation-uz": "shifokor xonasi",
+        "translation-hi": "क्लिनिक",
+        "translation-ar": "العيادة"
+      },
+      {
+        "word": "das Wartezimmer",
+        "translation-ru": "приёмная",
+        "translation-en": "waiting room",
+        "translation-uk": "приймальня",
+        "translation-pl": "poczekalnia",
+        "translation-es": "la sala de espera",
+        "translation-fr": "la salle d’attente",
+        "translation-tr": "bekleme odası",
+        "translation-ro": "sala de așteptare",
+        "translation-uz": "kutish xonasi",
+        "translation-hi": "प्रतीक्षा कक्ष",
+        "translation-ar": "غرفة الانتظار"
+      },
+      {
+        "word": "die Ärztin",
+        "translation-ru": "врач (женщина)",
+        "translation-en": "doctor (female)",
+        "translation-uk": "лікарка",
+        "translation-pl": "lekarka",
+        "translation-es": "la médica",
+        "translation-fr": "la médecin",
+        "translation-tr": "kadın doktor",
+        "translation-ro": "doctorița",
+        "translation-uz": "ayol shifokor",
+        "translation-hi": "महिला डॉक्टर",
+        "translation-ar": "الطبيبة"
+      },
+      {
+        "word": "das geht",
+        "translation-ru": "так можно, подходит",
+        "translation-en": "that works",
+        "translation-uk": "так можна, підходить",
+        "translation-pl": "to pasuje",
+        "translation-es": "eso va bien",
+        "translation-fr": "ça va",
+        "translation-tr": "olur",
+        "translation-ro": "merge",
+        "translation-uz": "bo‘ladi",
+        "translation-hi": "यह ठीक है",
+        "translation-ar": "هذا مناسب"
+      },
+      {
+        "word": "der Doktor",
+        "translation-ru": "доктор",
+        "translation-en": "doctor",
+        "translation-uk": "доктор",
+        "translation-pl": "doktor",
+        "translation-es": "el doctor",
+        "translation-fr": "le docteur",
+        "translation-tr": "doktor",
+        "translation-ro": "doctorul",
+        "translation-uz": "doktor",
+        "translation-hi": "डॉक्टर",
+        "translation-ar": "الدكتور"
+      }
+    ],
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "healerHutFive.questTask1",
+        "options": [
+          "Ich möchten einen Termin.",
+          "Ich möchte ein Termin.",
+          "Ich möchte einen Termin."
+        ],
+        "answer": "Ich möchte einen Termin.",
+        "tip": "healerHutFive.questDescription"
+      },
+      {
+        "id": 2,
+        "type": "input",
+        "question": "healerHutFive.questTask2",
+        "correctAnswer": "Praxis",
+        "tip": "healerHutFive.questDescription"
+      },
+      {
+        "id": 3,
+        "type": "input",
+        "question": "healerHutFive.questTask3",
+        "correctAnswer": "Können",
+        "tip": "healerHutFive.questDescription"
+      },
+      {
+        "id": 4,
+        "type": "select",
+        "question": "healerHutFive.questTask4",
+        "options": [
+          "Ja, das gehen.",
+          "Ja, das gehst.",
+          "Ja, das geht."
+        ],
+        "answer": "Ja, das geht.",
+        "tip": "healerHutFive.questDescription"
+      },
+      {
+        "id": 5,
+        "type": "reorder",
+        "question": "healerHutFive.questTask5",
+        "words": [
+          "Anna",
+          "Mein",
+          "bin",
+          "Schulz",
+          "Name",
+          "Meine",
+          "ist"
+        ],
+        "correctOrder": [
+          "Mein",
+          "Name",
+          "ist",
+          "Anna",
+          "Schulz"
+        ],
+        "tip": "healerHutFive.questDescription"
+      },
+      {
+        "id": 6,
+        "type": "select",
+        "question": "healerHutFive.questTask6",
+        "options": [
+          "Haben Sie am Montag Zeit?",
+          "Hat Sie am Montag Zeit?",
+          "Haben Sie im Montag Zeit?"
+        ],
+        "answer": "Haben Sie am Montag Zeit?",
+        "tip": "healerHutFive.questDescription"
+      },
+      {
+        "id": 7,
+        "type": "input",
+        "question": "healerHutFive.questTask7",
+        "correctAnswer": "Wartezimmer",
+        "tip": "healerHutFive.questDescription"
+      },
+      {
+        "id": 8,
+        "type": "select",
+        "question": "healerHutFive.questTask8",
+        "options": [
+          "Der Ärztin kommt um zehn Uhr.",
+          "Die Ärztin kommt um zehn Uhr.",
+          "Die Ärztin kommen um zehn Uhr."
+        ],
+        "answer": "Die Ärztin kommt um zehn Uhr.",
+        "tip": "healerHutFive.questDescription"
+      },
+      {
+        "id": 9,
+        "type": "readAndAnswer",
+        "question": "healerHutFive.questTask9",
+        "text": "Praxis: Praxis Doktor Weber, guten Tag! Nina: Guten Tag, ich möchte einen Termin. Praxis: Können Sie am Dienstag um zehn Uhr kommen? Nina: Am Dienstag kann ich leider nicht. Praxis: Und am Mittwoch? Nina: Ja, das geht.",
+        "options": [
+          "am Montag",
+          "am Mittwoch",
+          "am Dienstag"
+        ],
+        "answer": "am Mittwoch",
+        "tip": "healerHutFive.questDescription"
+      },
+      {
+        "id": 10,
+        "type": "input",
+        "question": "healerHutFive.questTask10",
+        "correctAnswer": "Termin",
+        "tip": "healerHutFive.questDescription"
+      },
+      {
+        "id": 11,
+        "type": "reorder",
+        "question": "healerHutFive.questTask11",
+        "words": [
+          "nicht",
+          "kann",
+          "kein",
+          "Dienstag",
+          "ich",
+          "Am",
+          "bin",
+          "leider"
+        ],
+        "correctOrder": [
+          "Am",
+          "Dienstag",
+          "kann",
+          "ich",
+          "leider",
+          "nicht"
+        ],
+        "tip": "healerHutFive.questDescription"
+      },
+      {
+        "id": 12,
+        "type": "input",
+        "question": "healerHutFive.questTask12",
+        "correctAnswer": "Besserung",
+        "tip": "healerHutFive.questDescription"
+      },
+      {
+        "id": 13,
+        "type": "select",
+        "question": "healerHutFive.questTask13",
+        "options": [
+          "Ich möchte gern ein Zimmer für zwei Nächte.",
+          "Ich möchten gern ein Zimmer für zwei Nächte.",
+          "Ich möchte gern einen Zimmer für zwei Nächte."
+        ],
+        "answer": "Ich möchte gern ein Zimmer für zwei Nächte.",
+        "tip": "healerHutFive.questDescription"
+      },
+      {
+        "id": 14,
+        "type": "select",
+        "question": "healerHutFive.questTask14",
+        "options": [
+          "Unsere Wohnung hat ein Balkon.",
+          "Unsere Wohnung hat einen Balkon.",
+          "Unser Wohnung hat einen Balkon."
+        ],
+        "answer": "Unsere Wohnung hat einen Balkon.",
+        "tip": "healerHutFive.questDescription"
+      },
+      {
+        "id": 15,
+        "type": "reorder",
+        "question": "healerHutFive.questTask15",
+        "words": [
+          "die",
+          "Tomaten",
+          "der",
+          "Was",
+          "kosten",
+          "kostet"
+        ],
+        "correctOrder": [
+          "Was",
+          "kosten",
+          "die",
+          "Tomaten"
+        ],
+        "tip": "healerHutFive.questDescription"
+      }
+    ]
+  },
+  {
+    "questId": "healer-hut-six",
+    "title": "healerHutSix.questTitle",
+    "progress": "0/15",
+    "description": "healerHutSix.questDescription",
+    "conditions": {
+      "goal": "healerHutSix.questGoal",
+      "minCorrect": 15,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
+    "vocabulary": [
+      {
+        "word": "der Hals",
+        "translation-ru": "горло, шея",
+        "translation-en": "throat, neck",
+        "translation-uk": "горло, шия",
+        "translation-pl": "gardło, szyja",
+        "translation-es": "la garganta",
+        "translation-fr": "la gorge",
+        "translation-tr": "boğaz",
+        "translation-ro": "gâtul",
+        "translation-uz": "tomoq",
+        "translation-hi": "गला",
+        "translation-ar": "الحلق"
+      },
+      {
+        "word": "der Fuß",
+        "translation-ru": "стопа",
+        "translation-en": "foot",
+        "translation-uk": "стопа",
+        "translation-pl": "stopa",
+        "translation-es": "el pie",
+        "translation-fr": "le pied",
+        "translation-tr": "ayak",
+        "translation-ro": "laba piciorului",
+        "translation-uz": "oyoq panjasi",
+        "translation-hi": "पैर",
+        "translation-ar": "القدم"
+      },
+      {
+        "word": "die Hand",
+        "translation-ru": "кисть руки",
+        "translation-en": "hand",
+        "translation-uk": "кисть руки",
+        "translation-pl": "dłoń",
+        "translation-es": "la mano",
+        "translation-fr": "la main",
+        "translation-tr": "el",
+        "translation-ro": "mâna",
+        "translation-uz": "qo‘l kafti",
+        "translation-hi": "हाथ",
+        "translation-ar": "اليد"
+      },
+      {
+        "word": "fehlen",
+        "translation-ru": "недоставать, беспокоить",
+        "translation-en": "to be wrong, to be missing",
+        "translation-uk": "бракувати, турбувати",
+        "translation-pl": "brakować, dolegać",
+        "translation-es": "faltar",
+        "translation-fr": "manquer",
+        "translation-tr": "eksik olmak",
+        "translation-ro": "a lipsi",
+        "translation-uz": "yetishmaslik",
+        "translation-hi": "कमी होना",
+        "translation-ar": "ينقص"
+      },
+      {
+        "word": "tun",
+        "translation-ru": "делать",
+        "translation-en": "to do",
+        "translation-uk": "робити",
+        "translation-pl": "robić / czynić",
+        "translation-es": "hacer",
+        "translation-fr": "faire",
+        "translation-tr": "yapmak",
+        "translation-ro": "a face",
+        "translation-uz": "qilmoq",
+        "translation-hi": "करना",
+        "translation-ar": "يفعل"
+      },
+      {
+        "word": "wehtun",
+        "translation-ru": "болеть",
+        "translation-en": "to hurt",
+        "translation-uk": "боліти",
+        "translation-pl": "boleć",
+        "translation-es": "doler",
+        "translation-fr": "faire mal",
+        "translation-tr": "ağrımak",
+        "translation-ro": "a durea",
+        "translation-uz": "og‘rimoq",
+        "translation-hi": "दर्द होना",
+        "translation-ar": "يؤلم"
+      }
+    ],
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "healerHutSix.questTask1",
+        "options": [
+          "Meine Hals tut weh.",
+          "Mein Hals tun weh.",
+          "Mein Hals tut weh."
+        ],
+        "answer": "Mein Hals tut weh.",
+        "tip": "healerHutSix.questDescription"
+      },
+      {
+        "id": 2,
+        "type": "input",
+        "question": "healerHutSix.questTask2",
+        "correctAnswer": "tun",
+        "tip": "healerHutSix.questDescription"
+      },
+      {
+        "id": 3,
+        "type": "input",
+        "question": "healerHutSix.questTask3",
+        "correctAnswer": "tut",
+        "tip": "healerHutSix.questDescription"
+      },
+      {
+        "id": 4,
+        "type": "select",
+        "question": "healerHutSix.questTask4",
+        "options": [
+          "Was fehlt Sie?",
+          "Was fehlen Ihnen?",
+          "Was fehlt Ihnen?"
+        ],
+        "answer": "Was fehlt Ihnen?",
+        "tip": "healerHutSix.questDescription"
+      },
+      {
+        "id": 5,
+        "type": "reorder",
+        "question": "healerHutSix.questTask5",
+        "words": [
+          "müssen",
+          "muss",
+          "Sie",
+          "Bett",
+          "bleiben",
+          "bleibt",
+          "im"
+        ],
+        "correctOrder": [
+          "Sie",
+          "müssen",
+          "im",
+          "Bett",
+          "bleiben"
+        ],
+        "tip": "healerHutSix.questDescription"
+      },
+      {
+        "id": 6,
+        "type": "select",
+        "question": "healerHutSix.questTask6",
+        "options": [
+          "Meine Hand tun weh.",
+          "Meine Hand tut weh.",
+          "Mein Hand tut weh."
+        ],
+        "answer": "Meine Hand tut weh.",
+        "tip": "healerHutSix.questDescription"
+      },
+      {
+        "id": 7,
+        "type": "input",
+        "question": "healerHutSix.questTask7",
+        "correctAnswer": "trinken",
+        "tip": "healerHutSix.questDescription"
+      },
+      {
+        "id": 8,
+        "type": "select",
+        "question": "healerHutSix.questTask8",
+        "options": [
+          "Sie dürfen nicht arbeiten.",
+          "Sie dürfen arbeiten nicht.",
+          "Sie müssen nicht arbeiten."
+        ],
+        "answer": "Sie dürfen nicht arbeiten.",
+        "tip": "healerHutSix.questDescription"
+      },
+      {
+        "id": 9,
+        "type": "readAndAnswer",
+        "question": "healerHutSix.questTask9",
+        "text": "Ärztin: Guten Tag, Herr Müller! Was fehlt Ihnen? Max: Mein Hals tut weh und ich habe Fieber. Ärztin: Sie müssen im Bett bleiben und viel trinken. Sie dürfen drei Tage nicht arbeiten.",
+        "options": [
+          "im Bett bleiben und viel trinken",
+          "viel Sport machen",
+          "drei Tage arbeiten"
+        ],
+        "answer": "im Bett bleiben und viel trinken",
+        "tip": "healerHutSix.questDescription"
+      },
+      {
+        "id": 10,
+        "type": "input",
+        "question": "healerHutSix.questTask10",
+        "correctAnswer": "Hand",
+        "tip": "healerHutSix.questDescription"
+      },
+      {
+        "id": 11,
+        "type": "reorder",
+        "question": "healerHutSix.questTask11",
+        "words": [
+          "wo",
+          "Was",
+          "tun",
+          "tut",
+          "weh"
+        ],
+        "correctOrder": [
+          "Was",
+          "tut",
+          "weh"
+        ],
+        "tip": "healerHutSix.questDescription"
+      },
+      {
+        "id": 12,
+        "type": "input",
+        "question": "healerHutSix.questTask12",
+        "correctAnswer": "Termin",
+        "tip": "healerHutSix.questDescription"
+      },
+      {
+        "id": 13,
+        "type": "select",
+        "question": "healerHutSix.questTask13",
+        "options": [
+          "Woher kommst Sie, Frau Weber?",
+          "Woher kommen Sie, Frau Weber?",
+          "Wohin kommen Sie, Frau Weber?"
+        ],
+        "answer": "Woher kommen Sie, Frau Weber?",
+        "tip": "healerHutSix.questDescription"
+      },
+      {
+        "id": 14,
+        "type": "select",
+        "question": "healerHutSix.questTask14",
+        "options": [
+          "Herzlichen Glückwunsch zum Geburtstag!",
+          "Herzlicher Glückwunsch zum Geburtstag!",
+          "Herzlichen Glückwunsch zu Geburtstag!"
+        ],
+        "answer": "Herzlichen Glückwunsch zum Geburtstag!",
+        "tip": "healerHutSix.questDescription"
+      },
+      {
+        "id": 15,
+        "type": "reorder",
+        "question": "healerHutSix.questTask15",
+        "words": [
+          "Wie",
+          "viele",
+          "Stunden",
+          "Wer",
+          "arbeitest",
+          "du",
+          "arbeitet"
+        ],
+        "correctOrder": [
+          "Wie",
+          "viele",
+          "Stunden",
+          "arbeitest",
+          "du"
+        ],
+        "tip": "healerHutSix.questDescription"
+      }
+    ]
+  },
+  {
+    "questId": "healer-hut-seven",
+    "title": "healerHutSeven.questTitle",
+    "progress": "0/15",
+    "description": "healerHutSeven.questDescription",
+    "conditions": {
+      "goal": "healerHutSeven.questGoal",
+      "minCorrect": 15,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
+    "vocabulary": [
+      {
+        "word": "die Tablette",
+        "translation-ru": "таблетка",
+        "translation-en": "tablet",
+        "translation-uk": "таблетка",
+        "translation-pl": "tabletka",
+        "translation-es": "la pastilla",
+        "translation-fr": "le comprimé",
+        "translation-tr": "tablet, hap",
+        "translation-ro": "tableta",
+        "translation-uz": "tabletka",
+        "translation-hi": "गोली",
+        "translation-ar": "القرص"
+      },
+      {
+        "word": "das Medikament",
+        "translation-ru": "лекарство",
+        "translation-en": "medicine",
+        "translation-uk": "ліки",
+        "translation-pl": "lek",
+        "translation-es": "el medicamento",
+        "translation-fr": "le médicament",
+        "translation-tr": "ilaç",
+        "translation-ro": "medicamentul",
+        "translation-uz": "dori",
+        "translation-hi": "दवा",
+        "translation-ar": "الدواء"
+      },
+      {
+        "word": "das Pflaster",
+        "translation-ru": "пластырь",
+        "translation-en": "plaster",
+        "translation-uk": "пластир",
+        "translation-pl": "plaster",
+        "translation-es": "la tirita",
+        "translation-fr": "le pansement",
+        "translation-tr": "yara bandı",
+        "translation-ro": "plasturele",
+        "translation-uz": "plastir",
+        "translation-hi": "पट्टी",
+        "translation-ar": "اللاصق الطبي"
+      },
+      {
+        "word": "die Apotheke",
+        "translation-ru": "аптека",
+        "translation-en": "pharmacy",
+        "translation-uk": "аптека",
+        "translation-pl": "apteka",
+        "translation-es": "la farmacia",
+        "translation-fr": "la pharmacie",
+        "translation-tr": "eczane",
+        "translation-ro": "farmacia",
+        "translation-uz": "dorixona",
+        "translation-hi": "दवा की दुकान",
+        "translation-ar": "الصيدلية"
+      },
+      {
+        "word": "dreimal",
+        "translation-ru": "три раза",
+        "translation-en": "three times",
+        "translation-uk": "тричі",
+        "translation-pl": "trzy razy",
+        "translation-es": "tres veces",
+        "translation-fr": "trois fois",
+        "translation-tr": "üç kez",
+        "translation-ro": "de trei ori",
+        "translation-uz": "uch marta",
+        "translation-hi": "तीन बार",
+        "translation-ar": "ثلاث مرات"
+      }
+    ],
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "healerHutSeven.questTask1",
+        "options": [
+          "Ich brauchst ein Medikament.",
+          "Ich brauche einen Medikament.",
+          "Ich brauche ein Medikament."
+        ],
+        "answer": "Ich brauche ein Medikament.",
+        "tip": "healerHutSeven.questDescription"
+      },
+      {
+        "id": 2,
+        "type": "input",
+        "question": "healerHutSeven.questTask2",
+        "correctAnswer": "Tabletten",
+        "tip": "healerHutSeven.questDescription"
+      },
+      {
+        "id": 3,
+        "type": "input",
+        "question": "healerHutSeven.questTask3",
+        "correctAnswer": "dreimal",
+        "tip": "healerHutSeven.questDescription"
+      },
+      {
+        "id": 4,
+        "type": "select",
+        "question": "healerHutSeven.questTask4",
+        "options": [
+          "Ich habe einen Rezept.",
+          "Ich hat ein Rezept.",
+          "Ich habe ein Rezept."
+        ],
+        "answer": "Ich habe ein Rezept.",
+        "tip": "healerHutSeven.questDescription"
+      },
+      {
+        "id": 5,
+        "type": "reorder",
+        "question": "healerHutSeven.questTask5",
+        "words": [
+          "ein",
+          "Pflaster",
+          "einen",
+          "braucht",
+          "Ich",
+          "brauche"
+        ],
+        "correctOrder": [
+          "Ich",
+          "brauche",
+          "ein",
+          "Pflaster"
+        ],
+        "tip": "healerHutSeven.questDescription"
+      },
+      {
+        "id": 6,
+        "type": "select",
+        "question": "healerHutSeven.questTask6",
+        "options": [
+          "Ich nehme morgens und abends eine Tablette.",
+          "Ich nehme morgens und abends einen Tablette.",
+          "Ich nimmt morgens und abends eine Tablette."
+        ],
+        "answer": "Ich nehme morgens und abends eine Tablette.",
+        "tip": "healerHutSeven.questDescription"
+      },
+      {
+        "id": 7,
+        "type": "input",
+        "question": "healerHutSeven.questTask7",
+        "correctAnswer": "Apotheke",
+        "tip": "healerHutSeven.questDescription"
+      },
+      {
+        "id": 8,
+        "type": "select",
+        "question": "healerHutSeven.questTask8",
+        "options": [
+          "Was kostet das Medikament?",
+          "Was kostet der Medikament?",
+          "Was kosten das Medikament?"
+        ],
+        "answer": "Was kostet das Medikament?",
+        "tip": "healerHutSeven.questDescription"
+      },
+      {
+        "id": 9,
+        "type": "readAndAnswer",
+        "question": "healerHutSeven.questTask9",
+        "text": "Leo hat ein Rezept. Er bekommt Tabletten. Er muss dreimal am Tag eine Tablette nehmen. Die Tabletten kosten fünf Euro.",
+        "options": [
+          "fünfmal am Tag",
+          "dreimal am Tag",
+          "einmal am Tag"
+        ],
+        "answer": "dreimal am Tag",
+        "tip": "healerHutSeven.questDescription"
+      },
+      {
+        "id": 10,
+        "type": "input",
+        "question": "healerHutSeven.questTask10",
+        "correctAnswer": "Pflaster",
+        "tip": "healerHutSeven.questDescription"
+      },
+      {
+        "id": 11,
+        "type": "reorder",
+        "question": "healerHutSeven.questTask11",
+        "words": [
+          "sind",
+          "teuer",
+          "Medikament",
+          "ist",
+          "Der",
+          "Das",
+          "sehr"
+        ],
+        "correctOrder": [
+          "Das",
+          "Medikament",
+          "ist",
+          "sehr",
+          "teuer"
+        ],
+        "tip": "healerHutSeven.questDescription"
+      },
+      {
+        "id": 12,
+        "type": "input",
+        "question": "healerHutSeven.questTask12",
+        "correctAnswer": "tun",
+        "tip": "healerHutSeven.questDescription"
+      },
+      {
+        "id": 13,
+        "type": "select",
+        "question": "healerHutSeven.questTask13",
+        "options": [
+          "Die Hose gefällt mir nicht, sie ist zu kurz.",
+          "Die Hose gefällt mir nicht, er ist zu kurz.",
+          "Die Hose gefallen mir nicht, sie ist zu kurz."
+        ],
+        "answer": "Die Hose gefällt mir nicht, sie ist zu kurz.",
+        "tip": "healerHutSeven.questDescription"
+      },
+      {
+        "id": 14,
+        "type": "select",
+        "question": "healerHutSeven.questTask14",
+        "options": [
+          "Wo ist der Bahnhof? Geradeaus.",
+          "Wo ist die Bahnhof? Geradeaus.",
+          "Wo bist der Bahnhof? Geradeaus."
+        ],
+        "answer": "Wo ist der Bahnhof? Geradeaus.",
+        "tip": "healerHutSeven.questDescription"
+      },
+      {
+        "id": 15,
+        "type": "reorder",
+        "question": "healerHutSeven.questTask15",
+        "words": [
+          "ist",
+          "Unsere",
+          "noch",
+          "klein",
+          "Kinder",
+          "sind",
+          "Unser"
+        ],
+        "correctOrder": [
+          "Unsere",
+          "Kinder",
+          "sind",
+          "noch",
+          "klein"
+        ],
+        "tip": "healerHutSeven.questDescription"
+      }
+    ]
+  },
+  {
+    "questId": "healer-hut-eight",
+    "title": "healerHutEight.questTitle",
+    "progress": "0/15",
+    "description": "healerHutEight.questDescription",
+    "conditions": {
+      "goal": "healerHutEight.questGoal",
+      "minCorrect": 15,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
+    "vocabulary": [
+      {
+        "word": "der Chef",
+        "translation-ru": "начальник",
+        "translation-en": "boss",
+        "translation-uk": "начальник",
+        "translation-pl": "szef",
+        "translation-es": "el jefe",
+        "translation-fr": "le chef",
+        "translation-tr": "patron",
+        "translation-ro": "șeful",
+        "translation-uz": "boshliq",
+        "translation-hi": "बॉस",
+        "translation-ar": "المدير"
+      },
+      {
+        "word": "der Tee",
+        "translation-ru": "чай",
+        "translation-en": "tea",
+        "translation-uk": "чай",
+        "translation-pl": "herbata",
+        "translation-es": "el té",
+        "translation-fr": "le thé",
+        "translation-tr": "çay",
+        "translation-ro": "ceaiul",
+        "translation-uz": "choy",
+        "translation-hi": "चाय",
+        "translation-ar": "الشاي"
+      },
+      {
+        "word": "das Bett",
+        "translation-ru": "кровать",
+        "translation-en": "bed",
+        "translation-uk": "ліжко",
+        "translation-pl": "łóżko",
+        "translation-es": "la cama",
+        "translation-fr": "le lit",
+        "translation-tr": "yatak",
+        "translation-ro": "patul",
+        "translation-uz": "karavot",
+        "translation-hi": "बिस्तर",
+        "translation-ar": "السرير"
+      },
+      {
+        "word": "der Arzt",
+        "translation-ru": "врач",
+        "translation-en": "doctor",
+        "translation-uk": "лікар",
+        "translation-pl": "lekarz",
+        "translation-es": "el médico",
+        "translation-fr": "le médecin",
+        "translation-tr": "doktor",
+        "translation-ro": "medicul",
+        "translation-uz": "shifokor",
+        "translation-hi": "डॉक्टर",
+        "translation-ar": "الطبيب"
+      },
+      {
+        "word": "schlafen",
+        "translation-ru": "спать",
+        "translation-en": "to sleep",
+        "translation-uk": "спати",
+        "translation-pl": "spać",
+        "translation-es": "dormir",
+        "translation-fr": "dormir",
+        "translation-tr": "uyumak",
+        "translation-ro": "a dormi",
+        "translation-uz": "uxlamoq",
+        "translation-hi": "सोना",
+        "translation-ar": "ينام"
+      }
+    ],
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "healerHutEight.questTask1",
+        "options": [
+          "Heute ich kann nicht arbeiten, ich bin krank.",
+          "Heute kann ich arbeiten nicht, ich bin krank.",
+          "Heute kann ich nicht arbeiten, ich bin krank."
+        ],
+        "answer": "Heute kann ich nicht arbeiten, ich bin krank.",
+        "tip": "healerHutEight.questDescription"
+      },
+      {
+        "id": 2,
+        "type": "input",
+        "question": "healerHutEight.questTask2",
+        "correctAnswer": "Chef",
+        "tip": "healerHutEight.questDescription"
+      },
+      {
+        "id": 3,
+        "type": "input",
+        "question": "healerHutEight.questTask3",
+        "correctAnswer": "muss",
+        "tip": "healerHutEight.questDescription"
+      },
+      {
+        "id": 4,
+        "type": "select",
+        "question": "healerHutEight.questTask4",
+        "options": [
+          "Meine Rücken tut weh und ich bin sehr müde.",
+          "Mein Rücken tun weh und ich bin sehr müde.",
+          "Mein Rücken tut weh und ich bin sehr müde."
+        ],
+        "answer": "Mein Rücken tut weh und ich bin sehr müde.",
+        "tip": "healerHutEight.questDescription"
+      },
+      {
+        "id": 5,
+        "type": "reorder",
+        "question": "healerHutEight.questTask5",
+        "words": [
+          "trinke",
+          "Tee",
+          "Ich",
+          "trinkt",
+          "schläft",
+          "schlafe",
+          "und",
+          "viel"
+        ],
+        "correctOrder": [
+          "Ich",
+          "trinke",
+          "viel",
+          "Tee",
+          "und",
+          "schlafe"
+        ],
+        "tip": "healerHutEight.questDescription"
+      },
+      {
+        "id": 6,
+        "type": "select",
+        "question": "healerHutEight.questTask6",
+        "options": [
+          "Das Kind ist Fieber. Es darf heute nicht lernen.",
+          "Das Kind hat Fieber. Es darf heute nicht lernen.",
+          "Das Kind hat Fieber. Es muss heute nicht lernen."
+        ],
+        "answer": "Das Kind hat Fieber. Es darf heute nicht lernen.",
+        "tip": "healerHutEight.questDescription"
+      },
+      {
+        "id": 7,
+        "type": "input",
+        "question": "healerHutEight.questTask7",
+        "correctAnswer": "schlafen",
+        "tip": "healerHutEight.questDescription"
+      },
+      {
+        "id": 8,
+        "type": "select",
+        "question": "healerHutEight.questTask8",
+        "options": [
+          "Ich bleibe lange am Bett.",
+          "Ich bleibe lange im Bett.",
+          "Ich bleibt lange im Bett."
+        ],
+        "answer": "Ich bleibe lange im Bett.",
+        "tip": "healerHutEight.questDescription"
+      },
+      {
+        "id": 9,
+        "type": "readAndAnswer",
+        "question": "healerHutEight.questTask9",
+        "text": "Julia hat am Morgen Fieber. Zuerst ruft sie ihren Chef an. Dann ruft sie die Praxis an. Sie bekommt einen Termin um elf Uhr. Am Abend bringt ihre Mutter eine Suppe.",
+        "options": [
+          "ihren Chef",
+          "ihre Mutter",
+          "die Praxis"
+        ],
+        "answer": "ihren Chef",
+        "tip": "healerHutEight.questDescription"
+      },
+      {
+        "id": 10,
+        "type": "input",
+        "question": "healerHutEight.questTask10",
+        "correctAnswer": "Tee",
+        "tip": "healerHutEight.questDescription"
+      },
+      {
+        "id": 11,
+        "type": "reorder",
+        "question": "healerHutEight.questTask11",
+        "words": [
+          "kann",
+          "ich",
+          "arbeiten",
+          "Morgen",
+          "kannst",
+          "arbeite",
+          "wieder"
+        ],
+        "correctOrder": [
+          "Morgen",
+          "kann",
+          "ich",
+          "wieder",
+          "arbeiten"
+        ],
+        "tip": "healerHutEight.questDescription"
+      },
+      {
+        "id": 12,
+        "type": "input",
+        "question": "healerHutEight.questTask12",
+        "correctAnswer": "Tablette",
+        "tip": "healerHutEight.questDescription"
+      },
+      {
+        "id": 13,
+        "type": "select",
+        "question": "healerHutEight.questTask13",
+        "options": [
+          "Im November es regnet oft.",
+          "Im November regnet es oft.",
+          "Am November regnet es oft."
+        ],
+        "answer": "Im November regnet es oft.",
+        "tip": "healerHutEight.questDescription"
+      },
+      {
+        "id": 14,
+        "type": "select",
+        "question": "healerHutEight.questTask14",
+        "options": [
+          "Möchte du noch eine Tasse Tee?",
+          "Möchtest du noch eine Tasse Tee?",
+          "Möchtest du noch einen Tasse Tee?"
+        ],
+        "answer": "Möchtest du noch eine Tasse Tee?",
+        "tip": "healerHutEight.questDescription"
+      },
+      {
+        "id": 15,
+        "type": "reorder",
+        "question": "healerHutEight.questTask15",
+        "words": [
+          "sieben",
+          "um",
+          "du",
+          "Stehst",
+          "Uhr",
+          "am",
+          "aufstehst",
+          "auf"
+        ],
+        "correctOrder": [
+          "Stehst",
+          "du",
+          "um",
+          "sieben",
+          "Uhr",
+          "auf"
+        ],
+        "tip": "healerHutEight.questDescription"
+      }
+    ]
+  },
+  {
+    "questId": "healer-hut-nine",
+    "title": "healerHutNine.questTitle",
+    "progress": "0/15",
+    "description": "healerHutNine.questDescription",
+    "conditions": {
+      "goal": "healerHutNine.questGoal",
+      "minCorrect": 15,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
+    "vocabulary": [
+      {
+        "word": "das Fieber",
+        "translation-ru": "температура, жар",
+        "translation-en": "fever",
+        "translation-uk": "температура, жар",
+        "translation-pl": "gorączka",
+        "translation-es": "la fiebre",
+        "translation-fr": "la fièvre",
+        "translation-tr": "ateş",
+        "translation-ro": "febra",
+        "translation-uz": "isitma",
+        "translation-hi": "बुख़ार",
+        "translation-ar": "الحمى"
+      },
+      {
+        "word": "der Termin",
+        "translation-ru": "запись, встреча",
+        "translation-en": "appointment",
+        "translation-uk": "запис, зустріч",
+        "translation-pl": "wizyta, termin",
+        "translation-es": "la cita",
+        "translation-fr": "le rendez-vous",
+        "translation-tr": "randevu",
+        "translation-ro": "programarea",
+        "translation-uz": "qabul vaqti",
+        "translation-hi": "अपॉइंटमेंट",
+        "translation-ar": "الموعد"
+      },
+      {
+        "word": "die Tablette",
+        "translation-ru": "таблетка",
+        "translation-en": "tablet",
+        "translation-uk": "таблетка",
+        "translation-pl": "tabletka",
+        "translation-es": "la pastilla",
+        "translation-fr": "le comprimé",
+        "translation-tr": "tablet, hap",
+        "translation-ro": "tableta",
+        "translation-uz": "tabletka",
+        "translation-hi": "गोली",
+        "translation-ar": "القرص"
+      },
+      {
+        "word": "die Rückenschmerzen",
+        "translation-ru": "боль в спине",
+        "translation-en": "back pain",
+        "translation-uk": "біль у спині",
+        "translation-pl": "ból pleców",
+        "translation-es": "el dolor de espalda",
+        "translation-fr": "le mal de dos",
+        "translation-tr": "sırt ağrısı",
+        "translation-ro": "durerea de spate",
+        "translation-uz": "bel og‘rig‘i",
+        "translation-hi": "पीठ दर्द",
+        "translation-ar": "ألم الظهر"
+      },
+      {
+        "word": "tun",
+        "translation-ru": "делать",
+        "translation-en": "to do",
+        "translation-uk": "робити",
+        "translation-pl": "robić / czynić",
+        "translation-es": "hacer",
+        "translation-fr": "faire",
+        "translation-tr": "yapmak",
+        "translation-ro": "a face",
+        "translation-uz": "qilmoq",
+        "translation-hi": "करना",
+        "translation-ar": "يفعل"
+      }
+    ],
+    "tasks": [
+      {
+        "id": 1,
+        "type": "input",
+        "question": "healerHutNine.questTask1",
+        "correctAnswer": "Habt",
+        "tip": "healerHutNine.questDescription"
+      },
+      {
+        "id": 2,
+        "type": "input",
+        "question": "healerHutNine.questTask2",
+        "correctAnswer": "tut",
+        "tip": "healerHutNine.questDescription"
+      },
+      {
+        "id": 3,
+        "type": "input",
+        "question": "healerHutNine.questTask3",
+        "correctAnswer": "Rückenschmerzen",
+        "tip": "healerHutNine.questDescription"
+      },
+      {
+        "id": 4,
+        "type": "input",
+        "question": "healerHutNine.questTask4",
+        "correctAnswer": "Ohren",
+        "tip": "healerHutNine.questDescription"
+      },
+      {
+        "id": 5,
+        "type": "select",
+        "question": "healerHutNine.questTask5",
+        "options": [
+          "Muss wir das Medikament nehmen?",
+          "Müssen wir das Medikament nimmt?",
+          "Müssen wir das Medikament nehmen?"
+        ],
+        "answer": "Müssen wir das Medikament nehmen?",
+        "tip": "healerHutNine.questDescription"
+      },
+      {
+        "id": 6,
+        "type": "select",
+        "question": "healerHutNine.questTask6",
+        "options": [
+          "Die Bauch tut nicht mehr weh.",
+          "Der Bauch tut nicht mehr weh.",
+          "Der Bauch tun nicht mehr weh."
+        ],
+        "answer": "Der Bauch tut nicht mehr weh.",
+        "tip": "healerHutNine.questDescription"
+      },
+      {
+        "id": 7,
+        "type": "select",
+        "question": "healerHutNine.questTask7",
+        "options": [
+          "Der Arzt kommt um acht Uhr.",
+          "Der Arzt kommt am acht Uhr.",
+          "Der Arzt kommen um acht Uhr."
+        ],
+        "answer": "Der Arzt kommt um acht Uhr.",
+        "tip": "healerHutNine.questDescription"
+      },
+      {
+        "id": 8,
+        "type": "reorder",
+        "question": "healerHutNine.questTask8",
+        "words": [
+          "nehmen",
+          "nimmst",
+          "oft",
+          "Wie",
+          "die",
+          "nimmt",
+          "Tablette",
+          "du"
+        ],
+        "correctOrder": [
+          "Wie",
+          "oft",
+          "nimmst",
+          "du",
+          "die",
+          "Tablette"
+        ],
+        "tip": "healerHutNine.questDescription"
+      },
+      {
+        "id": 9,
+        "type": "reorder",
+        "question": "healerHutNine.questTask9",
+        "words": [
+          "Termin",
+          "brauche",
+          "heute",
+          "Ich",
+          "ein",
+          "brauchst",
+          "einen"
+        ],
+        "correctOrder": [
+          "Ich",
+          "brauche",
+          "heute",
+          "einen",
+          "Termin"
+        ],
+        "tip": "healerHutNine.questDescription"
+      },
+      {
+        "id": 10,
+        "type": "input",
+        "question": "healerHutNine.questTask10",
+        "correctAnswer": "tun",
+        "tip": "healerHutNine.questDescription"
+      },
+      {
+        "id": 11,
+        "type": "readAndAnswer",
+        "question": "healerHutNine.questTask11",
+        "text": "Sara schläft schlecht. Ihr Rücken tut weh, aber sie hat kein Fieber. Morgen hat sie einen Termin. Heute trinkt sie Tee und bleibt zu Hause.",
+        "options": [
+          "der Bauch",
+          "der Rücken",
+          "der Kopf"
+        ],
+        "answer": "der Rücken",
+        "tip": "healerHutNine.questDescription"
+      },
+      {
+        "id": 12,
+        "type": "input",
+        "question": "healerHutNine.questTask12",
+        "correctAnswer": "Trinkst",
+        "tip": "healerHutNine.questDescription"
+      },
+      {
+        "id": 13,
+        "type": "select",
+        "question": "healerHutNine.questTask13",
+        "options": [
+          "Mein Sohn trägt einen Pullover.",
+          "Mein Sohn trägt ein Pullover.",
+          "Mein Sohn tragt einen Pullover."
+        ],
+        "answer": "Mein Sohn trägt einen Pullover.",
+        "tip": "healerHutNine.questDescription"
+      },
+      {
+        "id": 14,
+        "type": "select",
+        "question": "healerHutNine.questTask14",
+        "options": [
+          "Wo arbeitest du heute?",
+          "Wo du arbeitest heute?",
+          "Wo arbeitet du heute?"
+        ],
+        "answer": "Wo arbeitest du heute?",
+        "tip": "healerHutNine.questDescription"
+      },
+      {
+        "id": 15,
+        "type": "reorder",
+        "question": "healerHutNine.questTask15",
+        "words": [
+          "ist",
+          "Heute",
+          "sind",
+          "und",
+          "bist",
+          "es",
+          "warm",
+          "sonnig"
+        ],
+        "correctOrder": [
+          "Heute",
+          "ist",
+          "es",
+          "warm",
+          "und",
+          "sonnig"
+        ],
+        "tip": "healerHutNine.questDescription"
+      }
+    ]
+  },
+  {
+    "questId": "healer-hut-ten",
+    "title": "healerHutTen.questTitle",
+    "progress": "0/15",
+    "description": "healerHutTen.questDescription",
+    "conditions": {
+      "goal": "healerHutTen.questGoal",
+      "minCorrect": 15,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
+    "vocabulary": [
+      {
+        "word": "der Bauch",
+        "translation-ru": "живот",
+        "translation-en": "stomach",
+        "translation-uk": "живіт",
+        "translation-pl": "brzuch",
+        "translation-es": "la barriga",
+        "translation-fr": "le ventre",
+        "translation-tr": "karın",
+        "translation-ro": "burta",
+        "translation-uz": "qorin",
+        "translation-hi": "पेट",
+        "translation-ar": "البطن"
+      },
+      {
+        "word": "die Hand",
+        "translation-ru": "кисть руки",
+        "translation-en": "hand",
+        "translation-uk": "кисть руки",
+        "translation-pl": "dłoń",
+        "translation-es": "la mano",
+        "translation-fr": "la main",
+        "translation-tr": "el",
+        "translation-ro": "mâna",
+        "translation-uz": "qo‘l kafti",
+        "translation-hi": "हाथ",
+        "translation-ar": "اليد"
+      },
+      {
+        "word": "der Husten",
+        "translation-ru": "кашель",
+        "translation-en": "cough",
+        "translation-uk": "кашель",
+        "translation-pl": "kaszel",
+        "translation-es": "la tos",
+        "translation-fr": "la toux",
+        "translation-tr": "öksürük",
+        "translation-ro": "tusea",
+        "translation-uz": "yo‘tal",
+        "translation-hi": "खाँसी",
+        "translation-ar": "السعال"
+      },
+      {
+        "word": "die Praxis",
+        "translation-ru": "кабинет врача",
+        "translation-en": "doctor’s surgery",
+        "translation-uk": "кабінет лікаря",
+        "translation-pl": "gabinet lekarski",
+        "translation-es": "la consulta",
+        "translation-fr": "le cabinet médical",
+        "translation-tr": "muayenehane",
+        "translation-ro": "cabinetul medical",
+        "translation-uz": "shifokor xonasi",
+        "translation-hi": "क्लिनिक",
+        "translation-ar": "العيادة"
+      },
+      {
+        "word": "der Kopf",
+        "translation-ru": "голова",
+        "translation-en": "head",
+        "translation-uk": "голова",
+        "translation-pl": "głowa",
+        "translation-es": "la cabeza",
+        "translation-fr": "la tête",
+        "translation-tr": "baş",
+        "translation-ro": "capul",
+        "translation-uz": "bosh",
+        "translation-hi": "सिर",
+        "translation-ar": "الرأس"
+      }
+    ],
+    "tasks": [
+      {
+        "id": 1,
+        "type": "input",
+        "question": "healerHutTen.questTask1",
+        "correctAnswer": "Hast",
+        "tip": "healerHutTen.questDescription"
+      },
+      {
+        "id": 2,
+        "type": "input",
+        "question": "healerHutTen.questTask2",
+        "correctAnswer": "tun",
+        "tip": "healerHutTen.questDescription"
+      },
+      {
+        "id": 3,
+        "type": "input",
+        "question": "healerHutTen.questTask3",
+        "correctAnswer": "schlafen",
+        "tip": "healerHutTen.questDescription"
+      },
+      {
+        "id": 4,
+        "type": "input",
+        "question": "healerHutTen.questTask4",
+        "correctAnswer": "Besserung",
+        "tip": "healerHutTen.questDescription"
+      },
+      {
+        "id": 5,
+        "type": "select",
+        "question": "healerHutTen.questTask5",
+        "options": [
+          "Meine Bruder ist wieder gesund.",
+          "Mein Bruder bist wieder gesund.",
+          "Mein Bruder ist wieder gesund."
+        ],
+        "answer": "Mein Bruder ist wieder gesund.",
+        "tip": "healerHutTen.questDescription"
+      },
+      {
+        "id": 6,
+        "type": "select",
+        "question": "healerHutTen.questTask6",
+        "options": [
+          "Der Praxis macht um acht Uhr auf.",
+          "Die Praxis aufmacht um acht Uhr.",
+          "Die Praxis macht um acht Uhr auf."
+        ],
+        "answer": "Die Praxis macht um acht Uhr auf.",
+        "tip": "healerHutTen.questDescription"
+      },
+      {
+        "id": 7,
+        "type": "select",
+        "question": "healerHutTen.questTask7",
+        "options": [
+          "Sie hat Fieber und ihre Hals tut weh.",
+          "Sie hat Fieber und ihr Hals tut weh.",
+          "Sie ist Fieber und ihr Hals tut weh."
+        ],
+        "answer": "Sie hat Fieber und ihr Hals tut weh.",
+        "tip": "healerHutTen.questDescription"
+      },
+      {
+        "id": 8,
+        "type": "select",
+        "question": "healerHutTen.questTask8",
+        "options": [
+          "Du darfst keinen Alkohol trinkst.",
+          "Du darfst keinen Alkohol trinken.",
+          "Du musst keinen Alkohol trinken."
+        ],
+        "answer": "Du darfst keinen Alkohol trinken.",
+        "tip": "healerHutTen.questDescription"
+      },
+      {
+        "id": 9,
+        "type": "reorder",
+        "question": "healerHutTen.questTask9",
+        "words": [
+          "tun",
+          "meine",
+          "weh",
+          "mein",
+          "tut",
+          "Heute",
+          "Bauch"
+        ],
+        "correctOrder": [
+          "Heute",
+          "tut",
+          "mein",
+          "Bauch",
+          "weh"
+        ],
+        "tip": "healerHutTen.questDescription"
+      },
+      {
+        "id": 10,
+        "type": "reorder",
+        "question": "healerHutTen.questTask10",
+        "words": [
+          "kommen",
+          "ich",
+          "komme",
+          "Kann",
+          "kannst",
+          "morgen"
+        ],
+        "correctOrder": [
+          "Kann",
+          "ich",
+          "morgen",
+          "kommen"
+        ],
+        "tip": "healerHutTen.questDescription"
+      },
+      {
+        "id": 11,
+        "type": "reorder",
+        "question": "healerHutTen.questTask11",
+        "words": [
+          "Ärztin",
+          "darf",
+          "Sie",
+          "müssen",
+          "sagt",
+          "Die",
+          "nicht",
+          "rauchen",
+          "dürfen"
+        ],
+        "correctOrder": [
+          "Die",
+          "Ärztin",
+          "sagt",
+          "Sie",
+          "dürfen",
+          "nicht",
+          "rauchen"
+        ],
+        "tip": "healerHutTen.questDescription"
+      },
+      {
+        "id": 12,
+        "type": "input",
+        "question": "healerHutTen.questTask12",
+        "correctAnswer": "keinen",
+        "tip": "healerHutTen.questDescription"
+      },
+      {
+        "id": 13,
+        "type": "input",
+        "question": "healerHutTen.questTask13",
+        "correctAnswer": "Zähne",
+        "tip": "healerHutTen.questDescription"
+      },
+      {
+        "id": 14,
+        "type": "readAndAnswer",
+        "question": "healerHutTen.questTask14",
+        "text": "Anna hat Kopfschmerzen und Schnupfen. Sie kauft Tabletten und Tee. Das Pflaster braucht sie nicht. Sie bezahlt neun Euro.",
+        "options": [
+          "eine Suppe",
+          "Tabletten und Tee",
+          "ein Pflaster"
+        ],
+        "answer": "Tabletten und Tee",
+        "tip": "healerHutTen.questDescription"
+      },
+      {
+        "id": 15,
+        "type": "readAndAnswer",
+        "question": "healerHutTen.questTask15",
+        "text": "Jan hat heute einen Termin. Die Ärztin sagt: Sie haben Husten und Fieber. Sie dürfen bis Freitag nicht arbeiten. Am Montag können Sie wieder arbeiten.",
+        "options": [
+          "am Freitag",
+          "am Montag",
+          "heute"
+        ],
+        "answer": "am Montag",
+        "tip": "healerHutTen.questDescription"
+      }
+    ]
+  }
+]

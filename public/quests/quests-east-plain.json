@@ -1,14 +1,16 @@
 [
   {
     "questId": "one",
-    "aliases": ["menschen-a1-greetings"],
-    "title": "eastPlainFirstQuests.title",
-    "progress": "0/14",
-    "description": "eastPlainFirstQuests.description",
+    "aliases": [
+      "menschen-a1-greetings"
+    ],
+    "title": "eastPlainNewOne.questTitle",
+    "progress": "0/15",
+    "description": "eastPlainNewOne.questDescription",
     "conditions": {
-      "goal": "eastPlainFirstQuests.goal",
-      "minCorrect": 14,
-      "requiredTasks": 14
+      "goal": "eastPlainNewOne.questGoal",
+      "minCorrect": 15,
+      "requiredTasks": 15
     },
     "rewards": {
       "points": 10,
@@ -22,26 +24,40 @@
         "translation-uk": "Привіт!",
         "translation-pl": "Cześć!",
         "translation-es": "¡Hola!",
-        "translation-fr": "Salut!",
-        "translation-ar": "مرحبا!",
-        "translation-hi": "नमस्ते!",
-        "translation-ro": "Salut!",
+        "translation-fr": "Salut !",
         "translation-tr": "Merhaba!",
-        "translation-uz": "Salom!"
+        "translation-ro": "Salut!",
+        "translation-uz": "Salom!",
+        "translation-hi": "नमस्ते!",
+        "translation-ar": "مرحبًا!"
+      },
+      {
+        "word": "Guten Morgen!",
+        "translation-ru": "Доброе утро!",
+        "translation-en": "Good morning!",
+        "translation-uk": "Доброго ранку!",
+        "translation-pl": "Dzień dobry! (rano)",
+        "translation-es": "¡Buenos días!",
+        "translation-fr": "Bonjour ! (le matin)",
+        "translation-tr": "Günaydın!",
+        "translation-ro": "Bună dimineața!",
+        "translation-uz": "Xayrli tong!",
+        "translation-hi": "सुप्रभात!",
+        "translation-ar": "صباح الخير!"
       },
       {
         "word": "Guten Tag!",
         "translation-ru": "Добрый день!",
-        "translation-en": "Good day!",
+        "translation-en": "Good afternoon!",
         "translation-uk": "Добрий день!",
         "translation-pl": "Dzień dobry!",
-        "translation-es": "¡Buenos días!",
-        "translation-fr": "Bonjour!",
-        "translation-ar": "نهارك سعيد!",
-        "translation-hi": "শুভ দিন!",
-        "translation-ro": "Bună ziua!",
+        "translation-es": "¡Buenas tardes!",
+        "translation-fr": "Bonjour !",
         "translation-tr": "İyi günler!",
-        "translation-uz": "Xayrli kun!"
+        "translation-ro": "Bună ziua!",
+        "translation-uz": "Xayrli kun!",
+        "translation-hi": "नमस्कार!",
+        "translation-ar": "نهارك سعيد!"
       },
       {
         "word": "Guten Abend!",
@@ -50,300 +66,252 @@
         "translation-uk": "Добрий вечір!",
         "translation-pl": "Dobry wieczór!",
         "translation-es": "¡Buenas noches!",
-        "translation-fr": "Bonsoir!",
-        "translation-ar": "مساء الخير!",
-        "translation-hi": "शुभ संध्या!",
-        "translation-ro": "Bună seara!",
+        "translation-fr": "Bonsoir !",
         "translation-tr": "İyi akşamlar!",
-        "translation-uz": "Xayrli kech!"
-      },
-      {
-        "word": "Wie geht's?",
-        "translation-ru": "Как дела?",
-        "translation-en": "How are you?",
-        "translation-uk": "Як справи?",
-        "translation-pl": "Jak się masz?",
-        "translation-es": "¿Cómo estás?",
-        "translation-fr": "Comment ça va ?",
-        "translation-ar": "كيف حالك؟",
-        "translation-hi": "आप कैसे हैं?",
-        "translation-ro": "Ce mai faci?",
-        "translation-tr": "Nasılsın?",
-        "translation-uz": "Ishlar qanday?"
-      },
-      {
-        "word": "Hallo! wie geht's?",
-        "translation-ru": "Привет! Как дела?",
-        "translation-en": "Hello! How are you?",
-        "translation-uk": "Привіт! Як справи?",
-        "translation-pl": "Cześć! Jak się masz?",
-        "translation-es": "¡Hola! ¿Cómo estás?",
-        "translation-fr": "Salut ! Comment ça va ?",
-        "translation-ar": "مرحبا! كيف حالك؟",
-        "translation-hi": "नमस्ते! आप कैसे हैं?",
-        "translation-ro": "Salut! Ce mai faci?",
-        "translation-tr": "Merhaba! Nasılsın?",
-        "translation-uz": "Salom! Ishlar qanday?"
-      },
-      {
-        "word": "Danke",
-        "translation-ru": "Спасибо",
-        "translation-en": "Thanks",
-        "translation-uk": "Дякую",
-        "translation-pl": "Dziękuję",
-        "translation-es": "Gracias",
-        "translation-fr": "Merci",
-        "translation-ar": "شكرا",
-        "translation-hi": "धन्यवाद",
-        "translation-ro": "Mulțumesc",
-        "translation-tr": "Teşekkürler",
-        "translation-uz": "Rahmat"
-      },
-      {
-        "word": "gut",
-        "translation-ru": "Хорошо",
-        "translation-en": "Good / Well",
-        "translation-uk": "Добре",
-        "translation-pl": "Dobrze",
-        "translation-es": "Bien",
-        "translation-fr": "Bien",
-        "translation-ar": "جيد",
-        "translation-hi": "अच्छा",
-        "translation-ro": "Bine",
-        "translation-tr": "İyi",
-        "translation-uz": "Yaxshi"
-      },
-      {
-        "word": "sehr gut",
-        "translation-ru": "Очень хорошо",
-        "translation-en": "Very good",
-        "translation-uk": "Дуже добре",
-        "translation-pl": "Bardzo dobrze",
-        "translation-es": "Muy bien",
-        "translation-fr": "Très bien",
-        "translation-ar": "جيد جدا",
-        "translation-hi": "बहुत अच्छा",
-        "translation-ro": "Foarte bine",
-        "translation-tr": "Çok iyi",
-        "translation-uz": "Juda yaxshi"
-      },
-      {
-        "word": "schlecht",
-        "translation-ru": "Плохо",
-        "translation-en": "Bad",
-        "translation-uk": "Погано",
-        "translation-pl": "Źle",
-        "translation-es": "Mal",
-        "translation-fr": "Mauvais / Mal",
-        "translation-ar": "سيء",
-        "translation-hi": "खराब",
-        "translation-ro": "Rău",
-        "translation-tr": "Kötü",
-        "translation-uz": "Yomon"
+        "translation-ro": "Bună seara!",
+        "translation-uz": "Xayrli kech!",
+        "translation-hi": "शुभ संध्या!",
+        "translation-ar": "مساء الخير!"
       },
       {
         "word": "Tschüss!",
         "translation-ru": "Пока!",
         "translation-en": "Bye!",
         "translation-uk": "Бувай!",
-        "translation-pl": "Pa!",
+        "translation-pl": "Cześć! (na pożegnanie)",
         "translation-es": "¡Chao!",
-        "translation-fr": "Salut ! / Bye !",
-        "translation-ar": "وداعا!",
-        "translation-hi": "बाय!",
-        "translation-ro": "Pa!",
+        "translation-fr": "Salut ! (au revoir)",
         "translation-tr": "Hoşça kal!",
-        "translation-uz": "Xayr!"
+        "translation-ro": "Pa!",
+        "translation-uz": "Xayr!",
+        "translation-hi": "बाय!",
+        "translation-ar": "إلى اللقاء!"
       },
       {
-        "word": "Auf Wiedersehen",
-        "translation-ru": "До свидания",
-        "translation-en": "Goodbye",
-        "translation-uk": "До побачення",
-        "translation-pl": "Do widzenia",
-        "translation-es": "Hasta luego",
-        "translation-fr": "Au revoir",
-        "translation-ar": "إلى اللقاء",
-        "translation-hi": "फिर मिलेंगे",
-        "translation-ro": "La revedere",
-        "translation-tr": "Görüşmek üzere",
-        "translation-uz": "Ko'rishguncha"
+        "word": "Auf Wiedersehen!",
+        "translation-ru": "До свидания!",
+        "translation-en": "Goodbye!",
+        "translation-uk": "До побачення!",
+        "translation-pl": "Do widzenia!",
+        "translation-es": "¡Adiós!",
+        "translation-fr": "Au revoir !",
+        "translation-tr": "Hoşça kalın!",
+        "translation-ro": "La revedere!",
+        "translation-uz": "Xayr! (hurmat bilan)",
+        "translation-hi": "अलविदा!",
+        "translation-ar": "مع السلامة!"
       },
       {
-        "word": "oder",
-        "translation-ru": "Или",
-        "translation-en": "Or",
-        "translation-uk": "Або",
-        "translation-pl": "Albo",
-        "translation-es": "O",
-        "translation-fr": "Ou",
-        "translation-ar": "أو",
-        "translation-hi": "या",
-        "translation-ro": "Sau",
-        "translation-tr": "Veya",
-        "translation-uz": "Yoki"
+        "word": "die Nacht",
+        "translation-ru": "ночь",
+        "translation-en": "night",
+        "translation-uk": "ніч",
+        "translation-pl": "noc",
+        "translation-es": "la noche",
+        "translation-fr": "la nuit",
+        "translation-tr": "gece",
+        "translation-ro": "noaptea",
+        "translation-uz": "tun",
+        "translation-hi": "रात",
+        "translation-ar": "الليل"
       }
     ],
     "tasks": [
       {
         "id": 1,
         "type": "select",
-        "question": "eastPlainFirstQuests.questOne",
+        "question": "eastPlainNewOne.questTask1",
         "options": [
-          "Hallo",
-          "Danke"
+          "Guten Abend!",
+          "Gute Nacht!",
+          "Guten Morgen!"
         ],
-        "answer": "Hallo"
+        "answer": "Guten Morgen!",
+        "tip": "eastPlainNewOne.questDescription"
       },
       {
         "id": 2,
-        "type": "select",
-        "question": "eastPlainFirstQuests.questTwo",
-        "options": [
-          "Danke",
-          "Hallo"
-        ],
-        "answer": "Danke"
+        "type": "input",
+        "question": "eastPlainNewOne.questTask2",
+        "correctAnswer": "Tag",
+        "tip": "eastPlainNewOne.questDescription"
       },
       {
         "id": 3,
         "type": "select",
-        "question": "eastPlainFirstQuests.questFour",
+        "question": "eastPlainNewOne.questTask3",
         "options": [
-          "Danke",
-          "Guten Abend"
+          "Gute Nachten!",
+          "Guten Nacht!",
+          "Gute Nacht!"
         ],
-        "answer": "Guten Abend"
+        "answer": "Gute Nacht!",
+        "tip": "eastPlainNewOne.questDescription"
       },
       {
         "id": 4,
-        "type": "select",
-        "question": "eastPlainFirstQuests.questFive",
-        "options": [
-          "Hallo!",
-          "Wie geht's"
-        ],
-        "answer": "Wie geht's"
+        "type": "input",
+        "question": "eastPlainNewOne.questTask4",
+        "correctAnswer": "Abend",
+        "tip": "eastPlainNewOne.questDescription"
       },
       {
         "id": 5,
         "type": "reorder",
-        "question": "eastPlainFirstQuests.questSix",
+        "question": "eastPlainNewOne.questTask5",
         "words": [
+          "Lisa",
+          "Abend",
+          "Morgen",
           "Hallo",
-          "Danke",
-          "wie geht's"
+          "Tschüss",
+          "Guten"
         ],
         "correctOrder": [
           "Hallo",
-          "wie geht's"
-        ]
+          "Lisa",
+          "Guten",
+          "Morgen"
+        ],
+        "tip": "eastPlainNewOne.questDescription"
       },
       {
         "id": 6,
         "type": "select",
-        "question": "eastPlainFirstQuests.questSeven",
+        "question": "eastPlainNewOne.questTask6",
         "options": [
-          "Tschüss",
-          "Danke"
+          "Guten Wiedersehen!",
+          "Auf Wiedersehen!",
+          "Auf Wiedersehn Tag!"
         ],
-        "answer": "Tschüss"
+        "answer": "Auf Wiedersehen!",
+        "tip": "eastPlainNewOne.questDescription"
       },
       {
         "id": 7,
-        "type": "select",
-        "question": "eastPlainFirstQuests.questEight",
-        "options": [
-          "gut",
-          "Hallo"
-        ],
-        "answer": "gut"
+        "type": "input",
+        "question": "eastPlainNewOne.questTask7",
+        "correctAnswer": "Tschüss",
+        "tip": "eastPlainNewOne.questDescription"
       },
       {
         "id": 8,
-        "type": "speechToText",
-        "question": "eastPlainFirstQuests.questNine",
-        "text": "Danke",
-        "answer": "Danke"
+        "type": "select",
+        "question": "eastPlainNewOne.questTask8",
+        "options": [
+          "Guten Morgen!",
+          "Guten Abend!",
+          "Gute Nacht!"
+        ],
+        "answer": "Guten Morgen!",
+        "tip": "eastPlainNewOne.questDescription"
       },
       {
         "id": 9,
-        "type": "reorder",
-        "question": "eastPlainFirstQuests.questTen",
-        "words": [
-          "Hallo",
-          "wie geht's",
-          "gut"
+        "type": "readAndAnswer",
+        "question": "eastPlainNewOne.questTask9",
+        "text": "Anna: Guten Abend, Tom! Tom: Hallo Anna! Guten Abend!",
+        "options": [
+          "Abend",
+          "Nacht",
+          "Morgen"
         ],
-        "correctOrder": [
-          "Hallo",
-          "wie geht's"
-        ]
+        "answer": "Abend",
+        "tip": "eastPlainNewOne.questDescription"
       },
       {
         "id": 10,
         "type": "select",
-        "question": "eastPlainFirstQuests.questEleven",
+        "question": "eastPlainNewOne.questTask10",
         "options": [
-          "gut",
-          "schlecht"
+          "Tschüss!",
+          "Guten Tag!",
+          "Guten Morgen!"
         ],
-        "answer": "schlecht"
+        "answer": "Tschüss!",
+        "tip": "eastPlainNewOne.questDescription"
       },
       {
         "id": 11,
-        "type": "select",
-        "question": "eastPlainFirstQuests.questTwelve",
-        "options": [
-          "sehr gut",
-          "danke"
+        "type": "reorder",
+        "question": "eastPlainNewOne.questTask11",
+        "words": [
+          "Gute",
+          "Tag",
+          "Mia",
+          "Nacht",
+          "Guten"
         ],
-        "answer": "sehr gut"
+        "correctOrder": [
+          "Gute",
+          "Nacht",
+          "Mia"
+        ],
+        "tip": "eastPlainNewOne.questDescription"
       },
       {
         "id": 12,
         "type": "select",
-        "question": "eastPlainFirstQuests.questThirteen",
+        "question": "eastPlainNewOne.questTask12",
         "options": [
-          "Auf Wiedersehen",
-          "Hallo",
-          "wie geht's"
+          "Tschüss Tom!",
+          "Hallo Tom!",
+          "Gute Nacht Tom!"
         ],
-        "answer": "Auf Wiedersehen"
+        "answer": "Hallo Tom!",
+        "tip": "eastPlainNewOne.questDescription"
       },
       {
         "id": 13,
-        "type": "reorder",
-        "question": "eastPlainFirstQuests.questFourteen",
-        "words": [
-          "sehr gut",
-          "danke",
-          "Hallo"
-        ],
-        "correctOrder": [
-          "sehr gut",
-          "danke"
-        ]
+        "type": "input",
+        "question": "eastPlainNewOne.questTask13",
+        "correctAnswer": "Morgen",
+        "tip": "eastPlainNewOne.questDescription"
       },
       {
         "id": 14,
-        "type": "speechToText",
-        "question": "eastPlainFirstQuests.questFifteen",
-        "text": "Hallo! wie geht's?",
-        "answer": "Hallo! wie geht's?"
+        "type": "select",
+        "question": "eastPlainNewOne.questTask14",
+        "options": [
+          "Gute Nacht!",
+          "Guten Abend!",
+          "Guten Morgen!"
+        ],
+        "answer": "Guten Abend!",
+        "tip": "eastPlainNewOne.questDescription"
+      },
+      {
+        "id": 15,
+        "type": "reorder",
+        "question": "eastPlainNewOne.questTask15",
+        "words": [
+          "Wiedersehen",
+          "Anna",
+          "Auf",
+          "Hallo",
+          "Tschüss"
+        ],
+        "correctOrder": [
+          "Auf",
+          "Wiedersehen",
+          "Anna"
+        ],
+        "tip": "eastPlainNewOne.questDescription"
       }
     ]
   },
   {
     "questId": "two",
-    "aliases": ["menschen-a1-greetings2"],
-    "title": "eastPlainSecondQuests.title",
-    "progress": "0/13",
-    "description": "eastPlainSecondQuests.description",
+    "aliases": [
+      "menschen-a1-greetings2"
+    ],
+    "title": "eastPlainNewTwo.questTitle",
+    "progress": "0/15",
+    "description": "eastPlainNewTwo.questDescription",
     "conditions": {
-      "goal": "Lerne, über Herkunft und Sprache zu sprechen und höflich Fragen zu stellen",
-      "minCorrect": 14,
-      "requiredTasks": 14
+      "goal": "eastPlainNewTwo.questGoal",
+      "minCorrect": 15,
+      "requiredTasks": 15
     },
     "rewards": {
       "points": 10,
@@ -351,75 +319,603 @@
     },
     "vocabulary": [
       {
-        "word": "Bis morgen",
-        "translation-ru": "До завтра",
-        "translation-en": "See you tomorrow",
-        "translation-uk": "До завтра",
-        "translation-pl": "Do jutra",
-        "translation-es": "Hasta mañana",
-        "translation-fr": "À demain",
-        "translation-ar": "أراك غداً",
-        "translation-hi": "कल मिलते हैं",
-        "translation-ro": "Pe mâine",
-        "translation-tr": "Yarına kadar",
-        "translation-uz": "Ertagacha"
+        "word": "Wie geht’s?",
+        "translation-ru": "Как дела?",
+        "translation-en": "How are you?",
+        "translation-uk": "Як справи?",
+        "translation-pl": "Jak się masz?",
+        "translation-es": "¿Qué tal?",
+        "translation-fr": "Ça va ?",
+        "translation-tr": "Nasılsın?",
+        "translation-ro": "Ce faci?",
+        "translation-uz": "Ishlar qalay?",
+        "translation-hi": "कैसे हो?",
+        "translation-ar": "كيف الحال؟"
       },
       {
-        "word": "Wir sehen uns",
-        "translation-ru": "Увидимся",
-        "translation-en": "See you",
-        "translation-uk": "Побачимось",
-        "translation-pl": "Do zobaczenia",
-        "translation-es": "Nos vemos",
-        "translation-fr": "On se voit",
-        "translation-ar": "نلتقي لاحقاً",
-        "translation-hi": "मिलते हैं",
-        "translation-ro": "Ne vedem",
-        "translation-tr": "Görüşürüz",
-        "translation-uz": "Ko'rishamiz"
+        "word": "gut",
+        "translation-ru": "хорошо",
+        "translation-en": "good, well",
+        "translation-uk": "добре",
+        "translation-pl": "dobrze",
+        "translation-es": "bien",
+        "translation-fr": "bien",
+        "translation-tr": "iyi",
+        "translation-ro": "bine",
+        "translation-uz": "yaxshi",
+        "translation-hi": "अच्छा",
+        "translation-ar": "جيد"
       },
       {
-        "word": "Bis bald",
-        "translation-ru": "До скорого",
-        "translation-en": "See you soon",
-        "translation-uk": "До зустрічі",
-        "translation-pl": "Do zobaczenia wkrótce",
-        "translation-es": "Hasta pronto",
-        "translation-fr": "À bientôt",
-        "translation-ar": "أراك قريباً",
-        "translation-hi": "जल्द ही मिलेंगे",
-        "translation-ro": "Pe curând",
-        "translation-tr": "Yakında görüşürüz",
-        "translation-uz": "Tez orada ko'rishguncha"
+        "word": "schlecht",
+        "translation-ru": "плохо",
+        "translation-en": "bad",
+        "translation-uk": "погано",
+        "translation-pl": "źle",
+        "translation-es": "mal",
+        "translation-fr": "mal",
+        "translation-tr": "kötü",
+        "translation-ro": "rău",
+        "translation-uz": "yomon",
+        "translation-hi": "बुरा",
+        "translation-ar": "سيئ"
       },
       {
-        "word": "und dir?",
-        "translation-ru": "А у тебя? (как дела)",
-        "translation-en": "And you? (how are you)",
-        "translation-uk": "А в тебе?",
-        "translation-pl": "A u ciebie?",
-        "translation-es": "¿Y a ti?",
-        "translation-fr": "Et toi ? (comment ça va)",
-        "translation-ar": "وأنت؟ (كيف حالك)",
-        "translation-hi": "और आप? (कैसे हैं)",
-        "translation-ro": "Și ție?",
-        "translation-tr": "Ya senin? (nasılsın)",
-        "translation-uz": "Senda-chi? (ahvoling)"
+        "word": "danke",
+        "translation-ru": "спасибо",
+        "translation-en": "thank you",
+        "translation-uk": "дякую",
+        "translation-pl": "dziękuję",
+        "translation-es": "gracias",
+        "translation-fr": "merci",
+        "translation-tr": "teşekkürler",
+        "translation-ro": "mulțumesc",
+        "translation-uz": "rahmat",
+        "translation-hi": "धन्यवाद",
+        "translation-ar": "شكرًا"
       },
       {
-        "word": "und du?",
-        "translation-ru": "А ты?",
-        "translation-en": "And you?",
-        "translation-uk": "А ти?",
-        "translation-pl": "A ty?",
-        "translation-es": "¿Y tú?",
-        "translation-fr": "Et toi ?",
-        "translation-ar": "وأنت؟",
-        "translation-hi": "और तुम?",
-        "translation-ro": "Și tu?",
-        "translation-tr": "Ya sen?",
-        "translation-uz": "Sen-chi?"
+        "word": "sehr",
+        "translation-ru": "очень",
+        "translation-en": "very",
+        "translation-uk": "дуже",
+        "translation-pl": "bardzo",
+        "translation-es": "muy",
+        "translation-fr": "très",
+        "translation-tr": "çok",
+        "translation-ro": "foarte",
+        "translation-uz": "juda",
+        "translation-hi": "बहुत",
+        "translation-ar": "جدًا"
       },
+      {
+        "word": "das geht",
+        "translation-ru": "так можно, подходит",
+        "translation-en": "that works",
+        "translation-uk": "так можна, підходить",
+        "translation-pl": "to pasuje",
+        "translation-es": "eso va bien",
+        "translation-fr": "ça va",
+        "translation-tr": "olur",
+        "translation-ro": "merge",
+        "translation-uz": "bo‘ladi",
+        "translation-hi": "यह ठीक है",
+        "translation-ar": "هذا مناسب"
+      },
+      {
+        "word": "der Papa",
+        "translation-ru": "папа",
+        "translation-en": "dad",
+        "translation-uk": "тато",
+        "translation-pl": "tata",
+        "translation-es": "papá",
+        "translation-fr": "papa",
+        "translation-tr": "baba",
+        "translation-ro": "tata",
+        "translation-uz": "dada",
+        "translation-hi": "पापा",
+        "translation-ar": "بابا"
+      }
+    ],
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "eastPlainNewTwo.questTask1",
+        "options": [
+          "Wo geht’s?",
+          "Wie heißt’s?",
+          "Wie geht’s?"
+        ],
+        "answer": "Wie geht’s?",
+        "tip": "eastPlainNewTwo.questDescription"
+      },
+      {
+        "id": 2,
+        "type": "input",
+        "question": "eastPlainNewTwo.questTask2",
+        "correctAnswer": "danke",
+        "tip": "eastPlainNewTwo.questDescription"
+      },
+      {
+        "id": 3,
+        "type": "select",
+        "question": "eastPlainNewTwo.questTask3",
+        "options": [
+          "Gut sehr!",
+          "Sehr danke!",
+          "Sehr gut!"
+        ],
+        "answer": "Sehr gut!",
+        "tip": "eastPlainNewTwo.questDescription"
+      },
+      {
+        "id": 4,
+        "type": "input",
+        "question": "eastPlainNewTwo.questTask4",
+        "correctAnswer": "Schlecht",
+        "tip": "eastPlainNewTwo.questDescription"
+      },
+      {
+        "id": 5,
+        "type": "reorder",
+        "question": "eastPlainNewTwo.questTask5",
+        "words": [
+          "gut",
+          "Tim",
+          "geht’s",
+          "danke",
+          "Hallo",
+          "wie"
+        ],
+        "correctOrder": [
+          "Hallo",
+          "Tim",
+          "wie",
+          "geht’s"
+        ],
+        "tip": "eastPlainNewTwo.questDescription"
+      },
+      {
+        "id": 6,
+        "type": "select",
+        "question": "eastPlainNewTwo.questTask6",
+        "options": [
+          "Wie geht es Ihnen?",
+          "Wie gehen Sie?",
+          "Wie geht es dir Ihnen?"
+        ],
+        "answer": "Wie geht es Ihnen?",
+        "tip": "eastPlainNewTwo.questDescription"
+      },
+      {
+        "id": 7,
+        "type": "input",
+        "question": "eastPlainNewTwo.questTask7",
+        "correctAnswer": "dir",
+        "tip": "eastPlainNewTwo.questDescription"
+      },
+      {
+        "id": 8,
+        "type": "select",
+        "question": "eastPlainNewTwo.questTask8",
+        "options": [
+          "Es geht.",
+          "Es danke.",
+          "Es gut."
+        ],
+        "answer": "Es geht.",
+        "tip": "eastPlainNewTwo.questDescription"
+      },
+      {
+        "id": 9,
+        "type": "readAndAnswer",
+        "question": "eastPlainNewTwo.questTask9",
+        "text": "Max: Hallo Lena! Wie geht’s? Lena: Danke, sehr gut! Und dir? Max: Es geht.",
+        "options": [
+          "schlecht",
+          "sehr gut",
+          "es geht"
+        ],
+        "answer": "sehr gut",
+        "tip": "eastPlainNewTwo.questDescription"
+      },
+      {
+        "id": 10,
+        "type": "input",
+        "question": "eastPlainNewTwo.questTask10",
+        "correctAnswer": "Ihnen",
+        "tip": "eastPlainNewTwo.questDescription"
+      },
+      {
+        "id": 11,
+        "type": "reorder",
+        "question": "eastPlainNewTwo.questTask11",
+        "words": [
+          "gut",
+          "geht",
+          "sehr",
+          "Danke",
+          "schlecht"
+        ],
+        "correctOrder": [
+          "Danke",
+          "sehr",
+          "gut"
+        ],
+        "tip": "eastPlainNewTwo.questDescription"
+      },
+      {
+        "id": 12,
+        "type": "select",
+        "question": "eastPlainNewTwo.questTask12",
+        "options": [
+          "Auf Wiedersehen!",
+          "Guten Morgen!",
+          "Hallo!"
+        ],
+        "answer": "Auf Wiedersehen!",
+        "tip": "eastPlainNewTwo.questDescription"
+      },
+      {
+        "id": 13,
+        "type": "input",
+        "question": "eastPlainNewTwo.questTask13",
+        "correctAnswer": "Abend",
+        "tip": "eastPlainNewTwo.questDescription"
+      },
+      {
+        "id": 14,
+        "type": "select",
+        "question": "eastPlainNewTwo.questTask14",
+        "options": [
+          "Gute Nacht, Papa!",
+          "Guten Nacht, Papa!",
+          "Gute Abend, Papa!"
+        ],
+        "answer": "Gute Nacht, Papa!",
+        "tip": "eastPlainNewTwo.questDescription"
+      },
+      {
+        "id": 15,
+        "type": "reorder",
+        "question": "eastPlainNewTwo.questTask15",
+        "words": [
+          "Morgen",
+          "Guten",
+          "geht’s",
+          "Tschüss",
+          "wie",
+          "Nacht"
+        ],
+        "correctOrder": [
+          "Guten",
+          "Morgen",
+          "wie",
+          "geht’s"
+        ],
+        "tip": "eastPlainNewTwo.questDescription"
+      }
+    ]
+  },
+  {
+    "questId": "three",
+    "aliases": [
+      "menschen-a1-shopping"
+    ],
+    "title": "eastPlainNewThree.questTitle",
+    "progress": "0/15",
+    "description": "eastPlainNewThree.questDescription",
+    "conditions": {
+      "goal": "eastPlainNewThree.questGoal",
+      "minCorrect": 15,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
+    "vocabulary": [
+      {
+        "word": "heißen",
+        "translation-ru": "называться, зваться",
+        "translation-en": "to be called",
+        "translation-uk": "зватися",
+        "translation-pl": "nazywać się",
+        "translation-es": "llamarse",
+        "translation-fr": "s’appeler",
+        "translation-tr": "adı olmak",
+        "translation-ro": "a se numi",
+        "translation-uz": "atalmoq",
+        "translation-hi": "नाम होना",
+        "translation-ar": "يُسمّى"
+      },
+      {
+        "word": "der Name",
+        "translation-ru": "имя",
+        "translation-en": "name",
+        "translation-uk": "ім’я",
+        "translation-pl": "imię",
+        "translation-es": "el nombre",
+        "translation-fr": "le nom",
+        "translation-tr": "ad, isim",
+        "translation-ro": "numele",
+        "translation-uz": "ism",
+        "translation-hi": "नाम",
+        "translation-ar": "الاسم"
+      },
+      {
+        "word": "Freut mich!",
+        "translation-ru": "Очень приятно!",
+        "translation-en": "Nice to meet you!",
+        "translation-uk": "Дуже приємно!",
+        "translation-pl": "Miło mi!",
+        "translation-es": "¡Encantado!",
+        "translation-fr": "Enchanté !",
+        "translation-tr": "Memnun oldum!",
+        "translation-ro": "Încântat!",
+        "translation-uz": "Tanishganimdan xursandman!",
+        "translation-hi": "आपसे मिलकर ख़ुशी हुई!",
+        "translation-ar": "تشرفنا!"
+      },
+      {
+        "word": "der Herr",
+        "translation-ru": "господин",
+        "translation-en": "Mr, gentleman",
+        "translation-uk": "пан",
+        "translation-pl": "pan",
+        "translation-es": "el señor",
+        "translation-fr": "monsieur",
+        "translation-tr": "bay",
+        "translation-ro": "domnul",
+        "translation-uz": "janob",
+        "translation-hi": "श्रीमान",
+        "translation-ar": "السيد"
+      },
+      {
+        "word": "die Frau",
+        "translation-ru": "госпожа; женщина",
+        "translation-en": "Mrs, Ms; woman",
+        "translation-uk": "пані; жінка",
+        "translation-pl": "pani; kobieta",
+        "translation-es": "la señora; la mujer",
+        "translation-fr": "madame; la femme",
+        "translation-tr": "bayan; kadın",
+        "translation-ro": "doamna; femeia",
+        "translation-uz": "xonim; ayol",
+        "translation-hi": "श्रीमती; महिला",
+        "translation-ar": "السيدة؛ المرأة"
+      },
+      {
+        "word": "klein",
+        "translation-ru": "маленький",
+        "translation-en": "small",
+        "translation-uk": "маленький",
+        "translation-pl": "mały",
+        "translation-es": "pequeño",
+        "translation-fr": "petit",
+        "translation-tr": "küçük",
+        "translation-ro": "mic",
+        "translation-uz": "kichik",
+        "translation-hi": "छोटा",
+        "translation-ar": "صغير"
+      },
+      {
+        "word": "braun",
+        "translation-ru": "коричневый",
+        "translation-en": "brown",
+        "translation-uk": "коричневий",
+        "translation-pl": "brązowy",
+        "translation-es": "marrón",
+        "translation-fr": "brun",
+        "translation-tr": "kahverengi",
+        "translation-ro": "maro",
+        "translation-uz": "jigarrang",
+        "translation-hi": "भूरा",
+        "translation-ar": "بنّي"
+      }
+    ],
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "eastPlainNewThree.questTask1",
+        "options": [
+          "Wie geht’s du?",
+          "Wer heißt du?",
+          "Wie heißt du?"
+        ],
+        "answer": "Wie heißt du?",
+        "tip": "eastPlainNewThree.questDescription"
+      },
+      {
+        "id": 2,
+        "type": "input",
+        "question": "eastPlainNewThree.questTask2",
+        "correctAnswer": "heiße",
+        "tip": "eastPlainNewThree.questDescription"
+      },
+      {
+        "id": 3,
+        "type": "select",
+        "question": "eastPlainNewThree.questTask3",
+        "options": [
+          "Mein Name bin Paul.",
+          "Mein Name heißt Paul.",
+          "Mein Name ist Paul."
+        ],
+        "answer": "Mein Name ist Paul.",
+        "tip": "eastPlainNewThree.questDescription"
+      },
+      {
+        "id": 4,
+        "type": "input",
+        "question": "eastPlainNewThree.questTask4",
+        "correctAnswer": "heißen",
+        "tip": "eastPlainNewThree.questDescription"
+      },
+      {
+        "id": 5,
+        "type": "reorder",
+        "question": "eastPlainNewThree.questTask5",
+        "words": [
+          "ich",
+          "Name",
+          "heiße",
+          "Hallo",
+          "Max",
+          "bin"
+        ],
+        "correctOrder": [
+          "Hallo",
+          "ich",
+          "bin",
+          "Max"
+        ],
+        "tip": "eastPlainNewThree.questDescription"
+      },
+      {
+        "id": 6,
+        "type": "select",
+        "question": "eastPlainNewThree.questTask6",
+        "options": [
+          "Gut mich!",
+          "Freut mich!",
+          "Danke mich!"
+        ],
+        "answer": "Freut mich!",
+        "tip": "eastPlainNewThree.questDescription"
+      },
+      {
+        "id": 7,
+        "type": "input",
+        "question": "eastPlainNewThree.questTask7",
+        "correctAnswer": "Herr",
+        "tip": "eastPlainNewThree.questDescription"
+      },
+      {
+        "id": 8,
+        "type": "select",
+        "question": "eastPlainNewThree.questTask8",
+        "options": [
+          "Guten Abende, Frau Klein!",
+          "Guten Abend, Frau Klein!",
+          "Gute Abend, Frau Klein!"
+        ],
+        "answer": "Guten Abend, Frau Klein!",
+        "tip": "eastPlainNewThree.questDescription"
+      },
+      {
+        "id": 9,
+        "type": "readAndAnswer",
+        "question": "eastPlainNewThree.questTask9",
+        "text": "Herr Braun: Guten Tag! Mein Name ist Braun. Wie heißen Sie? Frau: Ich heiße Sofia Rossi. Herr Braun: Freut mich!",
+        "options": [
+          "Rossi Braun",
+          "Sofia Rossi",
+          "Braun"
+        ],
+        "answer": "Sofia Rossi",
+        "tip": "eastPlainNewThree.questDescription"
+      },
+      {
+        "id": 10,
+        "type": "input",
+        "question": "eastPlainNewThree.questTask10",
+        "correctAnswer": "Lisa",
+        "tip": "eastPlainNewThree.questDescription"
+      },
+      {
+        "id": 11,
+        "type": "reorder",
+        "question": "eastPlainNewThree.questTask11",
+        "words": [
+          "Peter",
+          "Name",
+          "Mein",
+          "ist",
+          "heißt",
+          "bin",
+          "Schmidt"
+        ],
+        "correctOrder": [
+          "Mein",
+          "Name",
+          "ist",
+          "Peter",
+          "Schmidt"
+        ],
+        "tip": "eastPlainNewThree.questDescription"
+      },
+      {
+        "id": 12,
+        "type": "input",
+        "question": "eastPlainNewThree.questTask12",
+        "correctAnswer": "Ihnen",
+        "tip": "eastPlainNewThree.questDescription"
+      },
+      {
+        "id": 13,
+        "type": "select",
+        "question": "eastPlainNewThree.questTask13",
+        "options": [
+          "Gut, danke! Und du dir?",
+          "Gut, danke! Und dir?",
+          "Gut, bitte! Und dir?"
+        ],
+        "answer": "Gut, danke! Und dir?",
+        "tip": "eastPlainNewThree.questDescription"
+      },
+      {
+        "id": 14,
+        "type": "select",
+        "question": "eastPlainNewThree.questTask14",
+        "options": [
+          "Gute Nacht!",
+          "Guten Morgen!",
+          "Auf Wiedersehen!"
+        ],
+        "answer": "Guten Morgen!",
+        "tip": "eastPlainNewThree.questDescription"
+      },
+      {
+        "id": 15,
+        "type": "reorder",
+        "question": "eastPlainNewThree.questTask15",
+        "words": [
+          "auf",
+          "Wiedersehen",
+          "gut",
+          "Tschüss",
+          "Morgen"
+        ],
+        "correctOrder": [
+          "Tschüss",
+          "auf",
+          "Wiedersehen"
+        ],
+        "tip": "eastPlainNewThree.questDescription"
+      }
+    ]
+  },
+  {
+    "questId": "four",
+    "aliases": [
+      "menschen-a1-shopping2"
+    ],
+    "title": "eastPlainNewFour.questTitle",
+    "progress": "0/15",
+    "description": "eastPlainNewFour.questDescription",
+    "conditions": {
+      "goal": "eastPlainNewFour.questGoal",
+      "minCorrect": 15,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
+    "vocabulary": [
       {
         "word": "Woher kommst du?",
         "translation-ru": "Откуда ты?",
@@ -427,54 +923,26 @@
         "translation-uk": "Звідки ти?",
         "translation-pl": "Skąd jesteś?",
         "translation-es": "¿De dónde eres?",
-        "translation-fr": "D'où viens-tu ?",
-        "translation-ar": "من أين أنت؟",
-        "translation-hi": "आप कहाँ से हैं?",
-        "translation-ro": "De unde ești?",
+        "translation-fr": "D’où viens-tu ?",
         "translation-tr": "Nerelisin?",
-        "translation-uz": "Qayerdansan?"
+        "translation-ro": "De unde ești?",
+        "translation-uz": "Qayerdansan?",
+        "translation-hi": "तुम कहाँ से हो?",
+        "translation-ar": "من أين أنت؟"
       },
       {
-        "word": "Ich komme aus...",
-        "translation-ru": "Я из...",
-        "translation-en": "I come from...",
-        "translation-uk": "Я з...",
-        "translation-pl": "Pochodzę z...",
-        "translation-es": "Soy de...",
-        "translation-fr": "Je viens de...",
-        "translation-ar": "أنا من...",
-        "translation-hi": "मैं ... से हूँ",
-        "translation-ro": "Eu vin din...",
-        "translation-tr": "Ben ...'dan geliyorum",
-        "translation-uz": "Men ...danman"
-      },
-      {
-        "word": "Polen",
-        "translation-ru": "Польша",
-        "translation-en": "Poland",
-        "translation-uk": "Польща",
-        "translation-pl": "Polska",
-        "translation-es": "Polonia",
-        "translation-fr": "Pologne",
-        "translation-ar": "بولندا",
-        "translation-hi": "पोलैंड",
-        "translation-ro": "Polonia",
-        "translation-tr": "Polonya",
-        "translation-uz": "Polsha"
-      },
-      {
-        "word": "Spanien",
-        "translation-ru": "Испания",
-        "translation-en": "Spain",
-        "translation-uk": "Іспанія",
-        "translation-pl": "Hiszpania",
-        "translation-es": "España",
-        "translation-fr": "Espagne",
-        "translation-ar": "إسبانيا",
-        "translation-hi": "स्पेन",
-        "translation-ro": "Spania",
-        "translation-tr": "İspanya",
-        "translation-uz": "Ispaniya"
+        "word": "Wo wohnst du?",
+        "translation-ru": "Где ты живёшь?",
+        "translation-en": "Where do you live?",
+        "translation-uk": "Де ти живеш?",
+        "translation-pl": "Gdzie mieszkasz?",
+        "translation-es": "¿Dónde vives?",
+        "translation-fr": "Où habites-tu ?",
+        "translation-tr": "Nerede oturuyorsun?",
+        "translation-ro": "Unde locuiești?",
+        "translation-uz": "Qayerda yashaysan?",
+        "translation-hi": "तुम कहाँ रहते हो?",
+        "translation-ar": "أين تسكن؟"
       },
       {
         "word": "Deutschland",
@@ -483,2867 +951,12 @@
         "translation-uk": "Німеччина",
         "translation-pl": "Niemcy",
         "translation-es": "Alemania",
-        "translation-fr": "Allemagne",
-        "translation-ar": "ألمانيا",
-        "translation-hi": "जर्मनी",
-        "translation-ro": "Germania",
+        "translation-fr": "l’Allemagne",
         "translation-tr": "Almanya",
-        "translation-uz": "Germaniya"
-      },
-      {
-        "word": "Wie heißen Sie?",
-        "translation-ru": "Как Вас зовут? (вежливо)",
-        "translation-en": "What is your name? (formal)",
-        "translation-uk": "Як Вас звати? (ввічливо)",
-        "translation-pl": "Jak się pan/pani nazywa?",
-        "translation-es": "¿Cómo se llama usted?",
-        "translation-fr": "Comment vous appelez-vous ?",
-        "translation-ar": "ما اسم حضرتك؟",
-        "translation-hi": "आपका नाम क्या है? (औपचारिक)",
-        "translation-ro": "Cum vă numiți? (formal)",
-        "translation-tr": "Adınız nedir? (resmi)",
-        "translation-uz": "Ismingiz nima? (rasmiy)"
-      },
-      {
-        "word": "Ich heiße...",
-        "translation-ru": "Меня зовут...",
-        "translation-en": "My name is...",
-        "translation-uk": "Мене звати...",
-        "translation-pl": "Nazywam się...",
-        "translation-es": "Me llamo...",
-        "translation-fr": "Je m'appelle...",
-        "translation-ar": "اسمي...",
-        "translation-hi": "मेरा नाम ... है",
-        "translation-ro": "Mă numesc...",
-        "translation-tr": "Benim adım...",
-        "translation-uz": "Mening ismim..."
-      }
-    ],
-    "tasks": [
-      {
-        "id": 1,
-        "type": "select",
-        "question": "eastPlainSecondQuests.questOne",
-        "options": [
-          "Bis morgen",
-          "Guten Tag",
-          "Hallo"
-        ],
-        "answer": "Bis morgen"
-      },
-      {
-        "id": 2,
-        "type": "select",
-        "question": "eastPlainSecondQuests.questTwo",
-        "options": [
-          "Wir sehen uns",
-          "Bis morgen"
-        ],
-        "answer": "Wir sehen uns"
-      },
-
-      {
-        "id": 3,
-        "type": "speechToText",
-        "question": "eastPlainSecondQuests.questTree",
-        "text": "Bis morgen",
-        "answer": "Bis morgen"
-      },
-      {
-        "id": 4,
-        "type": "reorder",
-        "question": "eastPlainSecondQuests.questFour",
-        "words": [
-          "Wir", "morgen", "uns", "sehen"
-        ],
-        "correctOrder": ["Wir", "sehen", "uns", "morgen"
-        ]
-      },
-      {
-        "id": 5,
-        "type": "reorder",
-        "question": "eastPlainSecondQuests.questFive",
-        "words": [
-          "Hallo",
-          "Bis bald"
-        ],
-        "correctOrder": [
-          "Bis bald"
-        ]
-      },
-      {
-        "id": 6,
-        "type": "reorder",
-        "question": "eastPlainSecondQuests.questSix",
-        "words": [
-          "Woher?",
-          "Hallo"
-        ],
-        "correctOrder": [
-          "Woher?"
-        ]
-      },
-      {
-        "id": 7,
-        "type": "speechToText",
-        "question": "eastPlainSecondQuests.questSeven",
-        "text": "Woher?",
-        "answer": "Woher?"
-      },
-      {
-        "id": 8,
-        "type": "select",
-        "question": "eastPlainSecondQuests.questEight",
-        "options": [
-          "Woher kommst du?",
-          "Bis bald",
-          "Wir sehen uns"
-        ],
-        "answer": "Woher kommst du?"
-      },
-
-      {
-        "id": 9,
-        "type": "reorder",
-        "question": "eastPlainSecondQuests.questNine",
-        "words": [
-          "woher",
-          "kommst",
-          "du",
-          "Hallo"
-        ],
-        "correctOrder": [
-          "Hallo",
-          "woher",
-          "kommst",
-          "du"
-        ]
-      },
-      {
-        "id": 10,
-        "type": "speechToText",
-        "question": "eastPlainSecondQuests.questTen",
-        "text": "Hallo! Woher kommst du",
-        "answer": "Hallo! Woher kommst du"
-      },
-
-      {
-        "id": 11,
-        "type": "select",
-        "question": "eastPlainSecondQuests.questEleven",
-        "options": [
-          "heißen",
-          "Bis bald"
-        ],
-        "answer": "heißen"
-      },
-      {
-        "id": 12,
-        "type": "select",
-        "question": "eastPlainSecondQuests.questTwelve",
-        "options": [
-          "Wie heißen Sie?",
-          "Bis bald"
-        ],
-        "answer": "Wie heißen Sie?"
-      },
-
-      {
-        "id": 13,
-        "type": "reorder",
-        "question": "eastPlainSecondQuests.questThirteen",
-        "words": [
-          "Sie",
-          "?",
-          "heißen",
-          "Wie"
-        ],
-        "correctOrder": [
-          "Wie",
-          "heißen",
-          "Sie",
-          "?"
-        ]
-      },
-      {
-        "id": 14,
-        "type": "select",
-        "question": "eastPlainSecondQuests.questFourteen",
-        "options": [
-          "Wie heißt du?",
-          "Woher?"
-        ],
-        "answer": "Wie heißt du?"
-      }
-    ]
-  },
-  {
-    "questId": "three",
-    "aliases": ["menschen-a1-shopping"],
-    "title": "eastPlainThirdQuests.title",
-    "progress": "0/15",
-    "description": "eastPlainThirdQuests.description",
-    "conditions": {
-      "goal": "eastPlainThirdQuests.goal",
-      "minCorrect": 15,
-      "requiredTasks": 15
-    },
-    "rewards": {
-      "points": 10,
-      "xp": 10
-    },
-    "vocabulary": [
-      {
-        "word": "der Laden",
-        "translation-ru": "Магазин",
-        "translation-en": "Shop / Store",
-        "translation-uk": "Магазин",
-        "translation-pl": "Sklep",
-        "translation-es": "Tienda",
-        "translation-fr": "Magasin",
-        "translation-ar": "متجر",
-        "translation-hi": "दुकान",
-        "translation-ro": "Magazin",
-        "translation-tr": "Dükkan / Mağaza",
-        "translation-uz": "Do'kon"
-      },
-      {
-        "word": "die Kasse",
-        "translation-ru": "Касса",
-        "translation-en": "Checkout / Cash register",
-        "translation-uk": "Каса",
-        "translation-pl": "Kasa",
-        "translation-es": "Caja",
-        "translation-fr": "Caisse",
-        "translation-ar": "صندوق الدفع",
-        "translation-hi": "कैश रजिस्टर",
-        "translation-ro": "Casă (de marcat)",
-        "translation-tr": "Kasa",
-        "translation-uz": "Kassa"
-      },
-      {
-        "word": "das Geld",
-        "translation-ru": "Деньги",
-        "translation-en": "Money",
-        "translation-uk": "Гроші",
-        "translation-pl": "Pieniądze",
-        "translation-es": "Dinero",
-        "translation-fr": "Argent",
-        "translation-ar": "مال",
-        "translation-hi": "पैसा",
-        "translation-ro": "Bani",
-        "translation-tr": "Para",
-        "translation-uz": "Pul"
-      },
-      {
-        "word": "kaufen",
-        "translation-ru": "Покупать",
-        "translation-en": "To buy",
-        "translation-uk": "Купувати",
-        "translation-pl": "Kupować",
-        "translation-es": "Comprar",
-        "translation-fr": "Acheter",
-        "translation-ar": "يشتري",
-        "translation-hi": "खरीदना",
-        "translation-ro": "A cumpăra",
-        "translation-tr": "Satın almak",
-        "translation-uz": "Sotib olmoq"
-      },
-      {
-        "word": "gehen",
-        "translation-ru": "Идти",
-        "translation-en": "To go",
-        "translation-uk": "Йти",
-        "translation-pl": "Iść",
-        "translation-es": "Ir",
-        "translation-fr": "Aller",
-        "translation-ar": "يذهب",
-        "translation-hi": "जाना",
-        "translation-ro": "A merge",
-        "translation-tr": "Gitmek",
-        "translation-uz": "Bormoq"
-      },
-      {
-        "word": "Wohin gehst du?",
-        "translation-ru": "Куда ты идешь?",
-        "translation-en": "Where are you going?",
-        "translation-uk": "Куди ти йдеш?",
-        "translation-pl": "Dokąd idziesz?",
-        "translation-es": "¿A dónde vas?",
-        "translation-fr": "Où vas-tu ?",
-        "translation-ar": "إلى أين تذهب؟",
-        "translation-hi": "तुम कहाँ जा रहे हो?",
-        "translation-ro": "Încotro te duci?",
-        "translation-tr": "Nereye gidiyorsun?",
-        "translation-uz": "Qayerga ketyapsan?"
-      },
-      {
-        "word": "in den Laden",
-        "translation-ru": "В магазин",
-        "translation-en": "Into the shop",
-        "translation-uk": "У магазин",
-        "translation-pl": "Do sklepu",
-        "translation-es": "A la tienda",
-        "translation-fr": "Dans le magasin",
-        "translation-ar": "إلى المتجر",
-        "translation-hi": "दुकान में",
-        "translation-ro": "În magazin",
-        "translation-tr": "Dükkana",
-        "translation-uz": "Do'konga"
-      },
-      {
-        "word": "das Brot",
-        "translation-ru": "Хлеб",
-        "translation-en": "Bread",
-        "translation-uk": "Хліб",
-        "translation-pl": "Chleb",
-        "translation-es": "Pan",
-        "translation-fr": "Pain",
-        "translation-ar": "خبز",
-        "translation-hi": "रोटी / ब्रेड",
-        "translation-ro": "Pâine",
-        "translation-tr": "Ekmek",
-        "translation-uz": "Non"
-      },
-      {
-        "word": "auch",
-        "translation-ru": "Тоже / Также",
-        "translation-en": "Also / Too",
-        "translation-uk": "Також / Теж",
-        "translation-pl": "Też / Także",
-        "translation-es": "También",
-        "translation-fr": "Aussi",
-        "translation-ar": "أيضاً",
-        "translation-hi": "भी",
-        "translation-ro": "De asemenea",
-        "translation-tr": "Ayrıca / De",
-        "translation-uz": "Ham"
-      },
-      {
-        "word": "der Supermarkt",
-        "translation-ru": "Супермаркет",
-        "translation-en": "Supermarket",
-        "translation-uk": "Супермаркет",
-        "translation-pl": "Supermarket",
-        "translation-es": "Supermercado",
-        "translation-fr": "Supermarché",
-        "translation-ar": "سوبر ماركت",
-        "translation-hi": "सुपरमार्केट",
-        "translation-ro": "Supermarket",
-        "translation-tr": "Süpermarket",
-        "translation-uz": "Supermarket"
-      },
-      {
-        "word": "nicht",
-        "translation-ru": "Не",
-        "translation-en": "Not",
-        "translation-uk": "Не",
-        "translation-pl": "Nie",
-        "translation-es": "No",
-        "translation-fr": "Ne pas",
-        "translation-ar": "لا / ليس",
-        "translation-hi": "नहीं",
-        "translation-ro": "Nu",
-        "translation-tr": "Değil",
-        "translation-uz": "Emas"
-      },
-      {
-        "word": "der Preis",
-        "translation-ru": "Цена",
-        "translation-en": "Price",
-        "translation-uk": "Ціна",
-        "translation-pl": "Cena",
-        "translation-es": "Precio",
-        "translation-fr": "Prix",
-        "translation-ar": "السعر",
-        "translation-hi": "कीमत",
-        "translation-ro": "Preț",
-        "translation-tr": "Fiyat",
-        "translation-uz": "Narx"
-      },
-      {
-        "word": "die Rechnung",
-        "translation-ru": "Чек / Счет",
-        "translation-en": "Bill / Receipt",
-        "translation-uk": "Чек / Рахунок",
-        "translation-pl": "Rachunek",
-        "translation-es": "Factura / Cuenta",
-        "translation-fr": "Facture / L'addition",
-        "translation-ar": "فاتورة",
-        "translation-hi": "बिल / रसीद",
-        "translation-ro": "Factură / Notă de plată",
-        "translation-tr": "Hesap / Fatura",
-        "translation-uz": "Hisob / Chek"
-      }
-    ],
-    "tasks": [
-      {
-        "id": 1,
-        "type": "select",
-        "question": "eastPlainThirdQuests.questOne",
-        "options": [
-          "der Laden",
-          "die Kasse"
-        ],
-        "answer": "der Laden"
-      },
-      {
-        "id": 2,
-        "type": "select",
-        "question": "eastPlainThirdQuests.questTwo",
-        "options": [
-          "kaufen",
-          "der Laden"
-        ],
-        "answer": "kaufen"
-      },
-      {
-        "id": 3,
-        "type": "select",
-        "question": "eastPlainThirdQuests.questTree",
-        "options": [
-          "gehen",
-          "kaufen"
-        ],
-        "answer": "gehen"
-      },
-      {
-        "id": 4,
-        "type": "reorder",
-        "question": "eastPlainThirdQuests.questFour",
-        "words": [
-          "gehen",
-          "wir"
-        ],
-        "correctOrder": [
-          "wir",
-          "gehen"
-        ]
-      },
-      {
-        "id": 5,
-        "type": "reorder",
-        "question": "eastPlainThirdQuests.questFive",
-        "words": [
-          "kaufen",
-          "Wir",
-          "Brot"
-        ],
-        "correctOrder": [
-          "Wir",
-          "kaufen",
-          "Brot"
-        ]
-      },
-      {
-        "id": 6,
-        "type": "speechToText",
-        "question": "eastPlainThirdQuests.questSix",
-        "text": "Wir kaufen Brot",
-        "answer": "Wir kaufen Brot"
-      },
-      {
-        "id": 7,
-        "type": "reorder",
-        "question": "eastPlainThirdQuests.questSeven",
-        "words": [
-          "gehen",
-          "Wir",
-          "in",
-          "den",
-          "Laden"
-        ],
-        "correctOrder": [
-          "Wir",
-          "gehen",
-          "in",
-          "den",
-          "Laden"
-        ]
-      },
-      {
-        "id": 8,
-        "type": "reorder",
-        "question": "eastPlainThirdQuests.questEight",
-        "words": [
-          "ich",
-          "in",
-          "gehe",
-          "den",
-          "Laden"
-        ],
-        "correctOrder": [
-          "ich",
-          "gehe",
-          "in",
-          "den",
-          "Laden"
-        ]
-      },
-      {
-        "id": 9,
-        "type": "select",
-        "question": "eastPlainThirdQuests.questNine",
-        "options": [
-          "der Supermarkt",
-          "der Laden"
-        ],
-        "answer": "der Supermarkt"
-      },
-      {
-        "id": 10,
-        "type": "speechToText",
-        "question": "eastPlainThirdQuests.questTen",
-        "text": "der Supermarkt",
-        "answer": "der Supermarkt"
-      },
-      {
-        "id": 11,
-        "type": "reorder",
-        "question": "eastPlainThirdQuests.questEleven",
-        "words": [
-          "ich",
-          "gehe",
-          "Supermarkt",
-          "nicht",
-          "in",
-          "den"
-        ],
-        "correctOrder": [
-          "ich",
-          "gehe",
-          "nicht",
-          "in",
-          "den",
-          "Supermarkt"
-        ]
-      },
-      {
-        "id": 12,
-        "type": "select",
-        "question": "eastPlainThirdQuests.questTwelve",
-        "options": [
-          "die Kasse",
-          "der Supermarkt"
-        ],
-        "answer": "die Kasse"
-      },
-      {
-        "id": 13,
-        "type": "select",
-        "question": "eastPlainThirdQuests.questThirteen",
-        "options": [
-          "der Preis",
-          "das Geld"
-        ],
-        "answer": "der Preis"
-      },
-      {
-        "id": 14,
-        "type": "select",
-        "question": "eastPlainThirdQuests.questFourteen",
-        "options": [
-          "die Rechnung",
-          "der Preis"
-        ],
-        "answer": "die Rechnung"
-      },
-      {
-        "id": 15,
-        "type": "speechToText",
-        "question": "eastPlainThirdQuests.questFifteen",
-        "text": "die Kasse",
-        "answer": "die Kasse"
-      }
-    ]
-  },
-  {
-    "questId": "four",
-    "aliases": ["menschen-a1-shopping2"],
-    "title": "eastPlainFourthQuests.title",
-    "progress": "0/15",
-    "description": "eastPlainFourthQuests.description",
-    "conditions": {
-      "goal": "eastPlainFourthQuests.goal",
-      "minCorrect": 15,
-      "requiredTasks": 15
-    },
-    "rewards": {
-      "points": 10,
-      "xp": 10
-    },
-    "vocabulary": [
-      {
-        "word": "die Schlange",
-        "translation-ru": "Очередь",
-        "translation-en": "Queue / Line",
-        "translation-uk": "Черга",
-        "translation-pl": "Kolejka",
-        "translation-es": "Cola / Fila",
-        "translation-fr": "File d'attente",
-        "translation-ar": "طابور",
-        "translation-hi": "कतार / लाइन",
-        "translation-ro": "Coadă / Linie",
-        "translation-tr": "Kuyruk / Sıra",
-        "translation-uz": "Navbat"
-      },
-      {
-        "word": "in der Schlange stehen",
-        "translation-ru": "Стоять в очереди",
-        "translation-en": "To stand in line",
-        "translation-uk": "Стояти в черзі",
-        "translation-pl": "Stać w kolejce",
-        "translation-es": "Estar en la cola",
-        "translation-fr": "Faire la queue",
-        "translation-ar": "الوقوف في الطابور",
-        "translation-hi": "लाइन में खड़े होना",
-        "translation-ro": "A sta la coadă",
-        "translation-tr": "Sırada beklemek",
-        "translation-uz": "Navbatda turish"
-      },
-      {
-        "word": "bezahlen",
-        "translation-ru": "Оплачивать / Платить",
-        "translation-en": "To pay",
-        "translation-uk": "Платити / Оплачувати",
-        "translation-pl": "Płacić",
-        "translation-es": "Pagar",
-        "translation-fr": "Payer",
-        "translation-ar": "يدفع",
-        "translation-hi": "भुगतान करना",
-        "translation-ro": "A plăti",
-        "translation-tr": "Ödemek",
-        "translation-uz": "To'lamoq"
-      },
-      {
-        "word": "das Bargeld",
-        "translation-ru": "Наличные деньги",
-        "translation-en": "Cash",
-        "translation-uk": "Готівка",
-        "translation-pl": "Gotówka",
-        "translation-es": "Dinero en efectivo",
-        "translation-fr": "Espèces / Liquide",
-        "translation-ar": "نقداً / كاش",
-        "translation-hi": "नकद पैसा",
-        "translation-ro": "Bani gheață / Numerar",
-        "translation-tr": "Nakit para",
-        "translation-uz": "Naqd pul"
-      },
-      {
-        "word": "der Schein",
-        "translation-ru": "Банкнота / Купюра",
-        "translation-en": "Banknote / Bill",
-        "translation-uk": "Банкнота / Купюра",
-        "translation-pl": "Banknot",
-        "translation-es": "Billete",
-        "translation-fr": "Billet de banque",
-        "translation-ar": "ورقة نقود",
-        "translation-hi": "नोट",
-        "translation-ro": "Bancnotă",
-        "translation-tr": "Kağıt para / Banknot",
-        "translation-uz": "Kupyura / Qog'oz pul"
-      },
-      {
-        "word": "die Münze",
-        "translation-ru": "Монета",
-        "translation-en": "Coin",
-        "translation-uk": "Монета",
-        "translation-pl": "Moneta",
-        "translation-es": "Moneda",
-        "translation-fr": "Pièce de monnaie",
-        "translation-ar": "عملة معدنية",
-        "translation-hi": "सिक्का",
-        "translation-ro": "Monedă",
-        "translation-tr": "Bozuk para / Madeni para",
-        "translation-uz": "Tanga"
-      },
-      {
-        "word": "mit der Karte bezahlen",
-        "translation-ru": "Оплачивать картой",
-        "translation-en": "To pay by card",
-        "translation-uk": "Оплачувати карткою",
-        "translation-pl": "Płacić kartą",
-        "translation-es": "Pagar con tarjeta",
-        "translation-fr": "Payer par carte",
-        "translation-ar": "الدفع بالبطاقة",
-        "translation-hi": "कार्ड से भुगतान करना",
-        "translation-ro": "A plăti cu cardul",
-        "translation-tr": "Kartla ödemek",
-        "translation-uz": "Karta bilan to'lash"
-      },
-      {
-        "word": "bar bezahlen",
-        "translation-ru": "Оплачивать наличными",
-        "translation-en": "To pay in cash",
-        "translation-uk": "Платити готівкою",
-        "translation-pl": "Płacić gotówką",
-        "translation-es": "Pagar en efectivo",
-        "translation-fr": "Payer en espèces",
-        "translation-ar": "الدفع نقداً",
-        "translation-hi": "नकद भुगतान करना",
-        "translation-ro": "A plăti cash",
-        "translation-tr": "Nakit ödemek",
-        "translation-uz": "Naqd to'lash"
-      },
-      {
-        "word": "der Korb",
-        "translation-ru": "Корзина",
-        "translation-en": "Basket",
-        "translation-uk": "Кошик",
-        "translation-pl": "Koszyk",
-        "translation-es": "Cesta / Canasta",
-        "translation-fr": "Panier",
-        "translation-ar": "سلة",
-        "translation-hi": "टोकरी",
-        "translation-ro": "Coș",
-        "translation-tr": "Sepet",
-        "translation-uz": "Savat"
-      }
-    ],
-    "tasks": [
-      {
-        "id": 1,
-        "type": "select",
-        "question": "eastPlainFourthQuests.questOne",
-        "options": [
-          "die Schlange",
-          "der Preis"
-        ],
-        "answer": "die Schlange"
-      },
-      {
-        "id": 2,
-        "type": "select",
-        "question": "eastPlainFourthQuests.questTwo",
-        "options": [
-          "die Kasse",
-          "das Geld"
-        ],
-        "answer": "die Kasse"
-      },
-      {
-        "id": 3,
-        "type": "reorder",
-        "question": "eastPlainFourthQuests.questTree",
-        "words": [
-          "in",
-          "ich",
-          "der",
-          "stehe",
-          "schlange"
-        ],
-        "correctOrder": [
-          "ich",
-          "stehe",
-          "in",
-          "der",
-          "schlange"
-        ]
-      },
-      {
-        "id": 4,
-        "type": "speechToText",
-        "question": "eastPlainFourthQuests.questFour",
-        "text": "die Schlange",
-        "answer": "die Schlange"
-      },
-      {
-        "id": 5,
-        "type": "select",
-        "question": "eastPlainFourthQuests.questFive",
-        "options": [
-          "bezahlen",
-          "die Schlange"
-        ],
-        "answer": "bezahlen"
-      },
-      {
-        "id": 6,
-        "type": "speechToText",
-        "question": "eastPlainFourthQuests.questSix",
-        "text": "Ich bezahle",
-        "answer": "Ich bezahle"
-      },
-      {
-        "id": 7,
-        "type": "select",
-        "question": "eastPlainFourthQuests.questSeven",
-        "options": [
-          "das Geld",
-          "die Kasse"
-        ],
-        "answer": "das Geld"
-      },
-      {
-        "id": 8,
-        "type": "select",
-        "question": "eastPlainFourthQuests.questEight",
-        "options": [
-          "das Bargeld",
-          "das Geld"
-        ],
-        "answer": "das Bargeld"
-      },
-      {
-        "id": 9,
-        "type": "speechToText",
-        "question": "eastPlainFourthQuests.questNine",
-        "text": "ich bezahle bargeld",
-        "answer": "ich bezahle bargeld"
-      },
-      {
-        "id": 10,
-        "type": "select",
-        "question": "eastPlainFourthQuests.questTen",
-        "options": [
-          "das Bargeld",
-          "der Schein"
-        ],
-        "answer": "der Schein"
-      },
-      {
-        "id": 11,
-        "type": "reorder",
-        "question": "eastPlainFourthQuests.questEleven",
-        "words": [
-          "ich",
-          "bezahle",
-          "Karte",
-          "mit"
-        ],
-        "correctOrder": [
-          "ich",
-          "bezahle",
-          "mit",
-          "Karte"
-        ]
-      },
-      {
-        "id": 12,
-        "type": "speechToText",
-        "question": "eastPlainFourthQuests.questTwelve",
-        "text": "Ich bezahle mit Karte",
-        "answer": "Ich bezahle mit Karte"
-      },
-      {
-        "id": 13,
-        "type": "select",
-        "question": "eastPlainFourthQuests.questThirteen",
-        "options": [
-          "Ich bezahle bargeld",
-          "Ich bezahle mit Karte",
-          "Ich bezahle"
-        ],
-        "answer": "Ich bezahle bargeld"
-      },
-      {
-        "id": 14,
-        "type": "select",
-        "question": "eastPlainFourthQuests.questFourteen",
-        "options": [
-          "das Bargeld",
-          "die Münze"
-        ],
-        "answer": "die Münze"
-      },
-      {
-        "id": 15,
-        "type": "speechToText",
-        "question": "eastPlainFourthQuests.questFifteen",
-        "text": "die Münze",
-        "answer": "die Münze"
-      }
-    ]
-  },
-  {
-    "questId": "five",
-    "aliases": ["menschen-a1-essen"],
-    "title": "eastPlainFifthQuests.title",
-    "progress": "0/15",
-    "description": "eastPlainFifthQuests.description",
-    "conditions": {
-      "goal": "eastPlainFifthQuests.goal",
-      "minCorrect": 15,
-      "requiredTasks": 15
-    },
-    "rewards": {
-      "points": 10,
-      "xp": 10
-    },
-    "vocabulary": [
-      {
-        "word": "bitte",
-        "translation-ru": "Пожалуйста",
-        "translation-en": "Please",
-        "translation-uk": "Будь ласка",
-        "translation-pl": "Proszę",
-        "translation-es": "Por favor",
-        "translation-fr": "S'il vous plaît",
-        "translation-ar": "من فضلك",
-        "translation-hi": "कृपया",
-        "translation-ro": "Te rog / Vă rog",
-        "translation-tr": "Lütfen",
-        "translation-uz": "Iltimos"
-      },
-      {
-        "word": "Ich möchte...",
-        "translation-ru": "Я хотел(а) бы...",
-        "translation-en": "I would like...",
-        "translation-uk": "Я хотів(ла) би...",
-        "translation-pl": "Chciałbym/Chciałabym...",
-        "translation-es": "Me gustaría...",
-        "translation-fr": "Je voudrais...",
-        "translation-ar": "أرغب في...",
-        "translation-hi": "मैं ... चाहूँगा/चाहूँगी",
-        "translation-ro": "Aș dori...",
-        "translation-tr": "İsterdim...",
-        "translation-uz": "Xohlardim..."
-      },
-      {
-        "word": "der Tee",
-        "translation-ru": "Чай",
-        "translation-en": "Tea",
-        "translation-uk": "Чай",
-        "translation-pl": "Herbata",
-        "translation-es": "Té",
-        "translation-fr": "Thé",
-        "translation-ar": "شاي",
-        "translation-hi": "चाय",
-        "translation-ro": "Ceai",
-        "translation-tr": "Çay",
-        "translation-uz": "Choy"
-      },
-      {
-        "word": "der Kaffee",
-        "translation-ru": "Кофе",
-        "translation-en": "Coffee",
-        "translation-uk": "Кава",
-        "translation-pl": "Kawa",
-        "translation-es": "Café",
-        "translation-fr": "Café",
-        "translation-ar": "قهوة",
-        "translation-hi": "कॉफी",
-        "translation-ro": "Creafe",
-        "translation-tr": "Kahve",
-        "translation-uz": "Kofe"
-      },
-      {
-        "word": "Wie viel kostet...?",
-        "translation-ru": "Сколько стоит...?",
-        "translation-en": "How much does ... cost?",
-        "translation-uk": "Скільки коштує...?",
-        "translation-pl": "Ile kosztuje...?",
-        "translation-es": "¿Cuánto cuesta...?",
-        "translation-fr": "Combien coûte... ?",
-        "translation-ar": "كم ثمن...؟",
-        "translation-hi": "... की कीमत क्या है?",
-        "translation-ro": "Cât costă...?",
-        "translation-tr": "... ne kadar?",
-        "translation-uz": "... qancha turadi?"
-      },
-      {
-        "word": "der Käse",
-        "translation-ru": "Сыр",
-        "translation-en": "Cheese",
-        "translation-uk": "Сир",
-        "translation-pl": "Ser",
-        "translation-es": "Queso",
-        "translation-fr": "Fromage",
-        "translation-ar": "جبن",
-        "translation-hi": "पनीर",
-        "translation-ro": "Brânză",
-        "translation-tr": "Peynir",
-        "translation-uz": "Pishloq"
-      },
-      {
-        "word": "das Wasser",
-        "translation-ru": "Вода",
-        "translation-en": "Water",
-        "translation-uk": "Вода",
-        "translation-pl": "Woda",
-        "translation-es": "Agua",
-        "translation-fr": "Eau",
-        "translation-ar": "ماء",
-        "translation-hi": "पानी",
-        "translation-ro": "Apă",
-        "translation-tr": "Su",
-        "translation-uz": "Suv"
-      },
-      {
-        "word": "die Flasche",
-        "translation-ru": "Бутылка",
-        "translation-en": "Bottle",
-        "translation-uk": "Пляшка",
-        "translation-pl": "Butelka",
-        "translation-es": "Botella",
-        "translation-fr": "Bouteille",
-        "translation-ar": "زجاجة",
-        "translation-hi": "बोतल",
-        "translation-ro": "Sticlă",
-        "translation-tr": "Şişe",
-        "translation-uz": "Shisha / Bosh"
-      },
-      {
-        "word": "das Gemüse",
-        "translation-ru": "Овощи",
-        "translation-en": "Vegetables",
-        "translation-uk": "Овочі",
-        "translation-pl": "Warzywa",
-        "translation-es": "Verduras / Hortalizas",
-        "translation-fr": "Légumes",
-        "translation-ar": "خضروات",
-        "translation-hi": "सब्जियाँ",
-        "translation-ro": "Legume",
-        "translation-tr": "Sebze",
-        "translation-uz": "Sabzavotlar"
-      },
-      {
-        "word": "ich trinke gern",
-        "translation-ru": "Я люблю пить / Пью с удовольствием",
-        "translation-en": "I like to drink",
-        "translation-uk": "Я охоче п'ю",
-        "translation-pl": "Lubię pić",
-        "translation-es": "Me gusta beber",
-        "translation-fr": "J'aime boire",
-        "translation-ar": "أحب أن أشرب",
-        "translation-hi": "मुझे पीना पसंद है",
-        "translation-ro": "Îmi place să beau",
-        "translation-tr": "İçmeyi severim",
-        "translation-uz": "Ichishni yaxshi ko'raman"
-      },
-      {
-        "word": "die Butter",
-        "translation-ru": "Сливочное масло",
-        "translation-en": "Butter",
-        "translation-uk": "Вершкове масло",
-        "translation-pl": "Masło",
-        "translation-es": "Mantequilla",
-        "translation-fr": "Beurre",
-        "translation-ar": "زبدة",
-        "translation-hi": "मक्खन",
-        "translation-ro": "Unt",
-        "translation-tr": "Tereyağı",
-        "translation-uz": "Sariyog'"
-      },
-      {
-        "word": "Ich nehme...",
-        "translation-ru": "Я возьму...",
-        "translation-en": "I'll take...",
-        "translation-uk": "Я візьму...",
-        "translation-pl": "Wezmę...",
-        "translation-es": "Me llevo / Tomo...",
-        "translation-fr": "Je prends...",
-        "translation-ar": "سآخذ...",
-        "translation-hi": "मैं ... लूँगा/लूँगी",
-        "translation-ro": "Iau...",
-        "translation-tr": "Alıyorum...",
-        "translation-uz": "Olaman..."
-      }
-    ],
-    "tasks": [
-      {
-        "id": 1,
-        "type": "select",
-        "question": "eastPlainFifthQuests.questOne",
-        "options": [
-          "bitte",
-          "Hallo"
-        ],
-        "answer": "bitte"
-      },
-      {
-        "id": 2,
-        "type": "reorder",
-        "question": "eastPlainFifthQuests.questTwo",
-        "words": [
-          "bitte",
-          "Tee"
-        ],
-        "correctOrder": [
-          "Tee",
-          "bitte"
-        ]
-      },
-      {
-        "id": 3,
-        "type": "select",
-        "question": "eastPlainFifthQuests.questTree",
-        "options": [
-          "der Schein",
-          "Danke"
-        ],
-        "answer": "der Schein"
-      },
-      {
-        "id": 4,
-        "type": "speechToText",
-        "question": "eastPlainFifthQuests.questFour",
-        "text": "der Schein",
-        "answer": "der Schein"
-      },
-      {
-        "id": 5,
-        "type": "reorder",
-        "question": "eastPlainFifthQuests.questFive",
-        "words": [
-          "Ich",
-          "möchte",
-          "Kaffee",
-          "bitte",
-          "einen"
-        ],
-        "correctOrder": [
-          "Ich",
-          "möchte",
-          "einen",
-          "Kaffee",
-          "bitte"
-        ]
-      },
-      {
-        "id": 6,
-        "type": "reorder",
-        "question": "eastPlainFifthQuests.questSix",
-        "words": [
-          "viel",
-          "Wie",
-          "kostet"
-        ],
-        "correctOrder": [
-          "Wie",
-          "viel",
-          "kostet"
-        ]
-      },
-      {
-        "id": 7,
-        "type": "input",
-        "question": "eastPlainFifthQuests.questSeven",
-        "correctAnswer": "viel"
-      },
-      {
-        "id": 8,
-        "type": "readAndAnswer",
-        "text": "Im Supermarkt kaufe ich Brot, und Käse",
-        "question": "eastPlainFifthQuests.questEight",
-        "options": [
-          "das Brot, und das Wasser",
-          "das Brot, und der Käse",
-          "die Milch und das Wasser"
-        ],
-        "answer": "das Brot, und der Käse"
-      },
-      {
-        "id": 9,
-        "type": "speechToText",
-        "question": "eastPlainFifthQuests.questNine",
-        "text": "Ich kaufe das Brot",
-        "answer": "Ich kaufe das Brot"
-      },
-      {
-        "id": 10,
-        "type": "reorder",
-        "question": "eastPlainFifthQuests.questTen",
-        "words": [
-          "Flasche",
-          "Die",
-          "Wasser"
-        ],
-        "correctOrder": [
-          "Die",
-          "Flasche",
-          "Wasser"
-        ]
-      },
-      {
-        "id": 11,
-        "type": "select",
-        "question": "eastPlainFifthQuests.questEleven",
-        "options": [
-          "Wie viel",
-          "Wie"
-        ],
-        "answer": "Wie viel"
-      },
-      {
-        "id": 12,
-        "type": "input",
-        "question": "eastPlainFifthQuests.questTwelve",
-        "correctAnswer": "Wie"
-      },
-      {
-        "id": 13,
-        "type": "reorder",
-        "question": "eastPlainFifthQuests.questThirteen",
-        "words": [
-          "Tee",
-          "und",
-          "bitte",
-          "Brot"
-        ],
-        "correctOrder": [
-          "Tee",
-          "und",
-          "Brot",
-          "bitte"
-        ]
-      },
-      {
-        "id": 14,
-        "type": "readAndAnswer",
-        "text": "Ich nehme einen Kaffee Bitte",
-        "question": "eastPlainFifthQuests.questFourteen",
-        "options": [
-          "der Kaffee",
-          "der Tee "
-        ],
-        "answer": "der Kaffee"
-      },
-      {
-        "id": 15,
-        "type": "speechToText",
-        "question": "eastPlainFifthQuests.questFifteen",
-        "text": "Wie viel kostet?",
-        "answer": "Wie viel kostet?"
-      }
-    ]
-  },
-  {
-    "questId": "six",
-    "aliases": ["menschen-a1-beruf"],
-    "title": "eastPlainSixthQuests.title",
-    "progress": "0/15",
-    "description": "eastPlainSixthQuests.description",
-    "conditions": {
-      "goal": "eastPlainSixthQuests.goal",
-      "minCorrect": 15,
-      "requiredTasks": 15
-    },
-    "rewards": {
-      "points": 10,
-      "xp": 10
-    },
-    "vocabulary": [
-      {
-        "word": "der Lehrer / die Lehrerin",
-        "translation-ru": "Учитель / Учительница",
-        "translation-en": "Teacher (male / female)",
-        "translation-uk": "Учитель / Вчителька",
-        "translation-pl": "Nauczyciel / Nauczycielka",
-        "translation-es": "Profesor / Profesora",
-        "translation-fr": "Enseignant / Enseignante",
-        "translation-ar": "معلم / معلمة",
-        "translation-hi": "शिक्षक / शिक्षिका",
-        "translation-ro": "Profesor / Profesoară",
-        "translation-tr": "Öğretmen (erkek / kadın)",
-        "translation-uz": "O'qituvchi (erkak / ayol)"
-      },
-      {
-        "word": "der Student / die Studentin",
-        "translation-ru": "Студент / Студентка",
-        "translation-en": "Student (male / female)",
-        "translation-uk": "Студент / Студентка",
-        "translation-pl": "Student / Studentka",
-        "translation-es": "Estudiante (hombre / mujer)",
-        "translation-fr": "Étudiant / Étudiante",
-        "translation-ar": "طالب / طالبة",
-        "translation-hi": "छात्र / छात्रा",
-        "translation-ro": "Student / Studentă",
-        "translation-tr": "Öğrenci (erkek / kadın)",
-        "translation-uz": "Talaba (erkak / ayol)"
-      },
-      {
-        "word": "der Kellner / die Kellnerin",
-        "translation-ru": "Официант / Официантка",
-        "translation-en": "Waiter / Waitress",
-        "translation-uk": "Офіціант / Офіціантка",
-        "translation-pl": "Kelner / Kelnerka",
-        "translation-es": "Camarero / Camarera",
-        "translation-fr": "Serveur / Serveuse",
-        "translation-ar": "نادل / نادلة",
-        "translation-hi": "वेटर / वेट्रेस",
-        "translation-ro": "Ospătar / Ospătăriță",
-        "translation-tr": "Garson (erkek / kadın)",
-        "translation-uz": "Ofitsiant (erkak / ayol)"
-      },
-      {
-        "word": "der Fahrer / die Fahrerin",
-        "translation-ru": "Водитель / Водительница",
-        "translation-en": "Driver (male / female)",
-        "translation-uk": "Водій / Водійка",
-        "translation-pl": "Kierowca",
-        "translation-es": "Conductor / Conductora",
-        "translation-fr": "Chauffeur / Conductrice",
-        "translation-ar": "سائق / سائقة",
-        "translation-hi": "ड्राइवर",
-        "translation-ro": "Șofer / Șoferiță",
-        "translation-tr": "Sürücü / Şoför",
-        "translation-uz": "Haydovchi"
-      },
-      {
-        "word": "der Polizist / die Polizistin",
-        "translation-ru": "По полицейский / Полицейская",
-        "translation-en": "Police officer (male / female)",
-        "translation-uk": "Поліцейський / Поліцейська",
-        "translation-pl": "Policjant / Policjantka",
-        "translation-es": "Policía",
-        "translation-fr": "Policier / Policière",
-        "translation-ar": "شرطي / شرطية",
-        "translation-hi": "पुलिस अधिकारी",
-        "translation-ro": "Polițist / Polițistă",
-        "translation-tr": "Polis",
-        "translation-uz": "Militsioner / Politsiyachi"
-      },
-      {
-        "word": "arbeiten als...",
-        "translation-ru": "Работать в качестве (кем-то)",
-        "translation-en": "To work as...",
-        "translation-uk": "Працювати (кимсь)",
-        "translation-pl": "Pracować jako...",
-        "translation-es": "Trabajar como...",
-        "translation-fr": "Travailler comme...",
-        "translation-ar": "يعمل كـ...",
-        "translation-hi": "... के रूप में काम करना",
-        "translation-ro": "A lucra ca...",
-        "translation-tr": "... olarak çalışmak",
-        "translation-uz": "... bo'lib ishlamoq"
-      },
-      {
-        "word": "Was ist dein Beruf?",
-        "translation-ru": "Какая твоя профессия?",
-        "translation-en": "What is your profession?",
-        "translation-uk": "Яка твоя професія?",
-        "translation-pl": "Jaki jest twój zawód?",
-        "translation-es": "¿Cuál es tu profesión?",
-        "translation-fr": "Quel est ton métier ?",
-        "translation-ar": "ما هي مهنتك؟",
-        "translation-hi": "तुम्हारा पेशा क्या है?",
-        "translation-ro": "Care este profesia ta?",
-        "translation-tr": "Mesleğin ne?",
-        "translation-uz": "Kasbingiz nima?"
-      },
-      {
-        "word": "der Ingenieur / die Ingenieurin",
-        "translation-ru": "Инженер",
-        "translation-en": "Engineer (male / female)",
-        "translation-uk": "Інженер / Інженерка",
-        "translation-pl": "Inżynier",
-        "translation-es": "Ingeniero / Ingeniera",
-        "translation-fr": "Ingénieur / Ingénieure",
-        "translation-ar": "مهندس / مهندسة",
-        "translation-hi": "इंजीनियर",
-        "translation-ro": "Inginer / Ingineră",
-        "translation-tr": "Mühendis",
-        "translation-uz": "Muhandis"
-      },
-      {
-        "word": "der Koch / die Köchin",
-        "translation-ru": "Повар / Повариха",
-        "translation-en": "Cook / Chef",
-        "translation-uk": "Кухар / Куховарка",
-        "translation-pl": "Kucharz / Kucharka",
-        "translation-es": "Cocinero / Cocinera",
-        "translation-fr": "Cuisinier / Cuisinière",
-        "translation-ar": "طباخ / طباخة",
-        "translation-hi": "रसोइया",
-        "translation-ro": "Bucătar / Bucătăreasă",
-        "translation-tr": "Aşçı",
-        "translation-uz": "Oshpaz"
-      },
-      {
-        "word": "der Friseur / die Friseurin",
-        "translation-ru": "Парикмахер",
-        "translation-en": "Hairdresser / Hair stylist",
-        "translation-uk": "Перукар / Перукарка",
-        "translation-pl": "Fryzjer / Fryzjerka",
-        "translation-es": "Peluquero / Peluquera",
-        "translation-fr": "Coiffeur / Coiffeuse",
-        "translation-ar": "حلاق / حلاقة",
-        "translation-hi": "नाई / हेयरड्रेसर",
-        "translation-ro": "Frizer / Coafeză",
-        "translation-tr": "Kuaför / Berber",
-        "translation-uz": "Sartosh"
-      },
-      {
-        "word": "der Arzt / die Ärztin",
-        "translation-ru": "Врач / Доктор",
-        "translation-en": "Doctor / Physician",
-        "translation-uk": "Лікар / Лікарка",
-        "translation-pl": "Lekarz / Lekarka",
-        "translation-es": "Médico / Médica",
-        "translation-fr": "Médecin / Docteur",
-        "translation-ar": "طبيب / طبيبة",
-        "translation-hi": "डॉक्टर / चिकित्सक",
-        "translation-ro": "Medic / Doctor",
-        "translation-tr": "Doktor",
-        "translation-uz": "Shifokor / Doxtir"
-      },
-      {
-        "word": "im Krankenhaus arbeiten",
-        "translation-ru": "Работать в больнице",
-        "translation-en": "To work in a hospital",
-        "translation-uk": "Працювати в лікарні",
-        "translation-pl": "Pracować w szpitalu",
-        "translation-es": "Trabajar en un hospital",
-        "translation-fr": "Travailler dans un hôpital",
-        "translation-ar": "العمل في المستشفى",
-        "translation-hi": "अस्पताल में काम करना",
-        "translation-ro": "A lucra într-un spital",
-        "translation-tr": "Hastanede çalışmak",
-        "translation-uz": "Shifoxonada ishlamoq"
-      }
-    ],
-    "tasks": [
-      {
-        "id": 1,
-        "type": "select",
-        "question": "eastPlainSixthQuests.questOne",
-        "options": [
-          "ich bin Lehrer",
-          "ich bin Student"
-        ],
-        "answer": "ich bin Lehrer"
-      },
-      {
-        "id": 2,
-        "type": "input",
-        "question": "eastPlainSixthQuests.questTwo",
-        "correctAnswer": "ist"
-      },
-      {
-        "id": 3,
-        "type": "select",
-        "question": "eastPlainSixthQuests.questTree",
-        "options": [
-          "der Kellner",
-          "ich bin Student"
-        ],
-        "answer": "der Kellner"
-      },
-      {
-        "id": 4,
-        "type": "speechToText",
-        "question": "eastPlainSixthQuests.questFour",
-        "text": "ich arbeite als Kellner",
-        "answer": "ich arbeite als Kellner"
-      },
-      {
-        "id": 5,
-        "type": "speechToText",
-        "question": "eastPlainSixthQuests.questFive",
-        "text": "Er arbeitet als Polizist",
-        "answer": "Er arbeitet als Polizist"
-      },
-      {
-        "id": 6,
-        "type": "reorder",
-        "question": "eastPlainSixthQuests.questSix",
-        "words": [
-          "Was",
-          "Beruf",
-          "als",
-          "ist",
-          "dein"
-        ],
-        "correctOrder": [
-          "Was",
-          "ist",
-          "dein",
-          "Beruf"
-        ]
-      },
-      {
-        "id": 7,
-        "type": "speechToText",
-        "question": "eastPlainSixthQuests.questSeven",
-        "text": "Hallo ich arbeite als Lehrerin",
-        "answer": "Hallo ich arbeite als Lehrerin"
-      },
-      {
-        "id": 8,
-        "type": "input",
-        "question": "eastPlainSixthQuests.questEight",
-        "correctAnswer": "als"
-      },
-      {
-        "id": 9,
-        "type": "readAndAnswer",
-        "text": "Hallo, ich heiße Nina. Ich bin Lehrerin und arbeite in einer Schule.",
-        "question": "eastPlainSixthQuests.questNine",
-        "options": [
-          "eastPlainSixthQuests.questNineFirstOption",
-          "eastPlainSixthQuests.questNineSecondOption",
-          "eastPlainSixthQuests.questNineThirdOption"
-        ],
-        "answer": "eastPlainSixthQuests.questNineSecondOption"
-      },
-      {
-        "id": 10,
-        "type": "speechToText",
-        "question": "eastPlainSixthQuests.questTen",
-        "text": "Ich arbeite als Ingenieur",
-        "answer": "Ich arbeite als Ingenieur"
-      },
-      {
-        "id": 11,
-        "type": "select",
-        "question": "eastPlainSixthQuests.questEleven",
-        "options": [
-          "der Koch",
-          "die Lehrerin",
-          "die Kellnerin"
-        ],
-        "answer": "der Koch"
-      },
-      {
-        "id": 12,
-        "type": "select",
-        "question": "eastPlainSixthQuests.questTwelve",
-        "options": [
-          "die Friseurin",
-          "der Koch",
-          "der Elektriker"
-        ],
-        "answer": "die Friseurin"
-      },
-      {
-        "id": 13,
-        "type": "input",
-        "question": "eastPlainSixthQuests.questThirteen",
-        "correctAnswer": "Arzt"
-      },
-      {
-        "id": 14,
-        "type": "reorder",
-        "question": "eastPlainSixthQuests.questFourteen",
-        "words": [
-          "arbeitet",
-          "Er",
-          "Krankenhaus",
-          "im",
-          "Lager"
-        ],
-        "correctOrder": [
-          "Er",
-          "arbeitet",
-          "im",
-          "Krankenhaus"
-        ]
-      },
-      {
-        "id": 15,
-        "type": "readAndAnswer",
-        "text": "Das ist Peter. Er ist Koch und arbeitet in einem Restaurant.",
-        "question": "eastPlainSixthQuests.questFifteen",
-        "options": [
-          "der Lehrer",
-          "die Lehrerin",
-          "der Koch"
-        ],
-        "answer": "der Koch"
-      }
-    ]
-  },
-  {
-    "questId": "seven",
-    "aliases": ["menschen-a1-zahlen"],
-    "title": "eastPlainSeventhQuests.title",
-    "progress": "0/14",
-    "description": "eastPlainSeventhQuests.description",
-    "conditions": {
-      "goal": "eastPlainSeventhQuests.goal",
-      "minCorrect": 14,
-      "requiredTasks": 14
-    },
-    "rewards": {
-      "points": 10,
-      "xp": 10
-    },
-    "vocabulary": [
-      {
-        "word": "Wie viel kostet das?",
-        "translation-ru": "Сколько это стоит?",
-        "translation-en": "How much does that cost?",
-        "translation-uk": "Скільки це коштує?",
-        "translation-pl": "Ile to kosztuje?",
-        "translation-es": "¿Cuánto cuesta esto?",
-        "translation-fr": "Combien ça coûte ?",
-        "translation-ar": "كم ثمن هذا؟",
-        "translation-hi": "यह कितने का है?",
-        "translation-ro": "Cât costă asta?",
-        "translation-tr": "Bu ne kadar?",
-        "translation-uz": "Bu qancha turadi?"
-      },
-      {
-        "word": "achtundvierzig (48)",
-        "translation-ru": "Сорок восемь",
-        "translation-en": "Forty-eight",
-        "translation-uk": "Сорок вісім",
-        "translation-pl": "Czterdzieści osiem",
-        "translation-es": "Cuarenta y ocho",
-        "translation-fr": "Quarante-huit",
-        "translation-ar": "ثمانية وأربعون",
-        "translation-hi": "अड़तालीस",
-        "translation-ro": "Patruzeci și opt",
-        "translation-tr": "Kırk sekiz",
-        "translation-uz": "Qirq sakkiz"
-      },
-      {
-        "word": "Es ist Zehn Uhr",
-        "translation-ru": "Сейчас 10 часов",
-        "translation-en": "It is 10 o'clock",
-        "translation-uk": "Зараз 10 година",
-        "translation-pl": "Jest godzina 10",
-        "translation-es": "Son las 10 en punto",
-        "translation-fr": "Il est 10 heures",
-        "translation-ar": "إنها الساعة العاشرة",
-        "translation-hi": "दस बजे हैं",
-        "translation-ro": "Este ora 10",
-        "translation-tr": "Saat 10",
-        "translation-uz": "Saat 10 bo'ldi"
-      },
-      {
-        "word": "Es ist acht Uhr",
-        "translation-ru": "Сейчас 8 часов",
-        "translation-en": "It is 8 o'clock",
-        "translation-uk": "Зараз 8 година",
-        "translation-pl": "Jest godzina 8",
-        "translation-es": "Son las 8 en punto",
-        "translation-fr": "Il est 8 heures",
-        "translation-ar": "إنها الساعة الثامنة",
-        "translation-hi": "आठ बजे हैं",
-        "translation-ro": "Este ora 8",
-        "translation-tr": "Saat 8",
-        "translation-uz": "Saat 8 bo'ldi"
-      },
-      {
-        "word": "die Milch",
-        "translation-ru": "Молоко",
-        "translation-en": "Milk",
-        "translation-uk": "Молоко",
-        "translation-pl": "Mleko",
-        "translation-es": "Leche",
-        "translation-fr": "Lait",
-        "translation-ar": "حليب",
-        "translation-hi": "दूध",
-        "translation-ro": "Lapte",
-        "translation-tr": "Süt",
-        "translation-uz": "Sut"
-      },
-      {
-        "word": "der dritte Mai",
-        "translation-ru": "Третье мая",
-        "translation-en": "The 3rd of May",
-        "translation-uk": "Третє травня",
-        "translation-pl": "Trzeci maja",
-        "translation-es": "El tres de mayo",
-        "translation-fr": "Le 3 mai",
-        "translation-ar": "الثالث من مايو",
-        "translation-hi": "तीन मई",
-        "translation-ro": "Trei mai",
-        "translation-tr": "Üç mayıs",
-        "translation-uz": "Uchinchi may"
-      },
-      {
-        "word": "der zehnte Oktober",
-        "translation-ru": "Десятое октября",
-        "translation-en": "The 10th of October",
-        "translation-uk": "Десяте жовтня",
-        "translation-pl": "Dziesiąty października",
-        "translation-es": "El diez de octubre",
-        "translation-fr": "Le 10 octobre",
-        "translation-ar": "العاشر من أكتوبر",
-        "translation-hi": "दस अक्टूबर",
-        "translation-ro": "Zece octombrie",
-        "translation-tr": "On ekim",
-        "translation-uz": "O'ninchi oktyabr"
-      },
-      {
-        "word": "Der 12. März",
-        "translation-ru": "Двенадцатое марта",
-        "translation-en": "The 12th of March",
-        "translation-uk": "Дванадцяте березня",
-        "translation-pl": "Dwunasty marca",
-        "translation-es": "El doce de marzo",
-        "translation-fr": "Le 12 mars",
-        "translation-ar": "الثاني عشر من مارس",
-        "translation-hi": "बारह मार्च",
-        "translation-ro": "Douăsprezece martie",
-        "translation-tr": "On iki mart",
-        "translation-uz": "O'n ikkinchi mart"
-      },
-      {
-        "word": "siebzehn Uhr dreißig (17:30)",
-        "translation-ru": "Семнадцать тридцать (17:30)",
-        "translation-en": "Seventeen thirty (5:30 PM)",
-        "translation-uk": "Сімнадцята тридцять (17:30)",
-        "translation-pl": "Siedemnaście trzydzieści",
-        "translation-es": "Diecisiete treinta",
-        "translation-fr": "Dix-sept heures trente",
-        "translation-ar": "الخامسة والنصف مساءً (17:30)",
-        "translation-hi": "सत्रह बजकर तीस मिनट",
-        "translation-ro": "Șaptesprezece și treizeci",
-        "translation-tr": "On yedi otuz",
-        "translation-uz": "O'n yetti o'ttiz"
-      },
-      {
-        "word": "der Zug",
-        "translation-ru": "Поезд",
-        "translation-en": "Train",
-        "translation-uk": "Потяг",
-        "translation-pl": "Pociąg",
-        "translation-es": "Tren",
-        "translation-fr": "Train",
-        "translation-ar": "قطار",
-        "translation-hi": "ट्रेन / रेलगाड़ी",
-        "translation-ro": "Tren",
-        "translation-tr": "Tren",
-        "translation-uz": "Poyezd"
-      },
-      {
-        "word": "Das Ticket",
-        "translation-ru": "Билет",
-        "translation-en": "Ticket",
-        "translation-uk": "Квиток",
-        "translation-pl": "Bilet",
-        "translation-es": "Boleto / Billete",
-        "translation-fr": "Billet / Ticket",
-        "translation-ar": "تذكرة",
-        "translation-hi": "टिकट",
-        "translation-ro": "Bilet",
-        "translation-tr": "Bilet",
-        "translation-uz": "Bilet"
-      }
-    ],
-    "tasks": [
-      {
-        "id": 1,
-        "type": "select",
-        "question": "eastPlainSeventhQuests.questOne",
-        "options": [
-          "Wie viel kostet das?",
-          "Wie geht's?",
-          "Wohin gehst du"
-        ],
-        "answer": "Wie viel kostet das?"
-      },
-      {
-        "id": 2,
-        "type": "input",
-        "question": "eastPlainSeventhQuests.questTwo",
-        "correctAnswer": "23"
-      },
-      {
-        "id": 3,
-        "type": "speechToText",
-        "question": "eastPlainSeventhQuests.questTree",
-        "text": "achtundvierzig",
-        "answer": "achtundvierzig",
-        "accept": [
-          "achtundvierzig",
-          "48"
-        ]
-      },
-
-      {
-        "id": 4,
-        "type": "select",
-        "question": "eastPlainSeventhQuests.questFive",
-        "options": [
-          "Es ist Zehn Uhr",
-          "Heute ist Mittwoch",
-          "Guten Abend"
-        ],
-        "answer": "Es ist Zehn Uhr"
-      },
-      {
-        "id": 5,
-        "type": "readAndAnswer",
-        "text": "Die Milch kostet 1 Euro 20. Der Käse kostet 2 Euro 50.",
-        "question": "eastPlainSeventhQuests.questSix",
-        "options": [
-          "1.20",
-          "2.50",
-          "3.00"
-        ],
-        "answer": "2.50"
-      },
-      {
-        "id": 6,
-        "type": "reorder",
-        "question": "eastPlainSeventhQuests.questSeven",
-        "words": ["Uhr", "Es", "acht", "ist"],
-        "correctOrder": ["Es", "ist", "acht", "Uhr"]
-      },
-      {
-        "id": 7,
-        "type": "readAndAnswer",
-        "text": "Die Milch kostet 1 Euro 20. Das Brot kostet 1 Euro 10",
-        "question": "eastPlainSeventhQuests.questEight",
-        "options": [
-          "1.20",
-          "1.10",
-          "2.50"
-        ],
-        "answer": "1.10"
-      },
-      {
-        "id": 8,
-        "type": "speechToText",
-        "question": "eastPlainSeventhQuests.questNine",
-        "text": "Wie viel kostet eine Flasche Wasser?",
-        "answer": "Wie viel kostet eine Flasche Wasser?",
-        "accept": [
-          "Wie viel kostet eine Flasche Wasser?",
-          "Wie viel kostet eine Flasche Wasser?"
-        ]
-      },
-      {
-        "id": 9,
-        "type": "select",
-        "question": "eastPlainSeventhQuests.questTen",
-        "options": [
-          "drei Mai",
-          "der drei Mai",
-          "der dritte Mai"
-        ],
-        "answer": "der dritte Mai"
-      },
-      {
-        "id": 10,
-        "type": "select",
-        "question": "Der 3. Mai",
-        "options": [
-          "eastPlainSeventhQuests.questElevenFirstOption",
-          "eastPlainSeventhQuests.questElevenSecondOption",
-          "eastPlainSeventhQuests.questElevenThirdOption"
-        ],
-        "answer": "eastPlainSeventhQuests.questElevenFirstOption"
-      },
-      {
-        "id": 11,
-        "type": "select",
-        "question": "eastPlainSeventhQuests.questTwelve",
-        "options": [
-          "der zehn Oktober",
-          "zehnter Oktober",
-          "der zehnte Oktober"
-        ],
-        "answer": "der zehnte Oktober"
-      },
-      {
-        "id": 12,
-        "type": "reorder",
-        "question": "eastPlainSeventhQuests.questThirteen",
-        "words": ["heute", "Der", "ist", "März", "12."],
-        "correctOrder": [
-          "Der",
-          "12.",
-          "März",
-          "ist",
-          "heute"
-        ]
-      },
-      {
-        "id": 13,
-        "type": "readAndAnswer",
-        "text": "Der Zug kommt um siebzehn Uhr dreißig.",
-        "question": "eastPlainSeventhQuests.questFourteen",
-        "options": [
-          "17:30",
-          "7:30",
-          "13:30"
-        ],
-        "answer": "17:30"
-      },
-      {
-        "id": 14,
-        "type": "speechToText",
-        "question": "eastPlainSeventhQuests.questFifteen",
-        "text": "Das Ticket kostet zehn Euro.",
-        "answer": "Das Ticket kostet zehn Euro.",
-        "accept": [
-          "Das Ticket kostet zehn Euro.",
-          "Das Ticket kostet 10 Euro."
-        ]
-      }
-    ]
-  },
-  {
-    "questId": "eight",
-    "aliases": ["menschen-a1-familie"],
-    "title": "eastPlainEighthQuests.title",
-    "progress": "0/13",
-    "description": "eastPlainEighthQuests.description",
-    "conditions": {
-      "goal": "eastPlainEighthQuests.goal",
-      "minCorrect": 13,
-      "requiredTasks": 13
-    },
-    "rewards": {
-      "points": 10,
-      "xp": 10
-    },
-    "vocabulary": [
-      {
-        "word": "die Mutter",
-        "translation-ru": "Мама",
-        "translation-en": "Mother",
-        "translation-uk": "Мама",
-        "translation-pl": "Mama",
-        "translation-es": "Madre",
-        "translation-fr": "Mère",
-        "translation-ar": "أم",
-        "translation-hi": "माँ",
-        "translation-ro": "Mamă",
-        "translation-tr": "Anne",
-        "translation-uz": "Ona"
-      },
-      {
-        "word": "der Vater",
-        "translation-ru": "Отец",
-        "translation-en": "Father",
-        "translation-uk": "Батько",
-        "translation-pl": "Ojciec",
-        "translation-es": "Padre",
-        "translation-fr": "Père",
-        "translation-ar": "أب",
-        "translation-hi": "पिता",
-        "translation-ro": "Tată",
-        "translation-tr": "Baba",
-        "translation-uz": "Ota"
-      },
-      {
-        "word": "der Bruder",
-        "translation-ru": "Брат",
-        "translation-en": "Brother",
-        "translation-uk": "Брат",
-        "translation-pl": "Brat",
-        "translation-es": "Hermano",
-        "translation-fr": "Frère",
-        "translation-ar": "أخ",
-        "translation-hi": "भाई",
-        "translation-ro": "Frate",
-        "translation-tr": "Erkek kardeş",
-        "translation-uz": "Aka / Uka"
-      },
-      {
-        "word": "die Schwester",
-        "translation-ru": "Сестра",
-        "translation-en": "Sister",
-        "translation-uk": "Сестра",
-        "translation-pl": "Siostra",
-        "translation-es": "Hermana",
-        "translation-fr": "Sœur",
-        "translation-ar": "أخت",
-        "translation-hi": "बहन",
-        "translation-ro": "Soră",
-        "translation-tr": "Kız kardeş",
-        "translation-uz": "Opa / Singil"
-      },
-      {
-        "word": "die Geschwister",
-        "translation-ru": "Братья и сестры",
-        "translation-en": "Siblings",
-        "translation-uk": "Брати і сестри",
-        "translation-pl": "Rodzeństwo",
-        "translation-es": "Hermanos",
-        "translation-fr": "Frères et sœurs",
-        "translation-ar": "إخوة",
-        "translation-hi": "भाई-बहन",
-        "translation-ro": "Frați și surori",
-        "translation-tr": "Kardeşler",
-        "translation-uz": "Aka-uka / Opa-singillar"
-      },
-      {
-        "word": "Hast du Geschwister?",
-        "translation-ru": "У тебя есть братья или сестры?",
-        "translation-en": "Do you have siblings?",
-        "translation-uk": "У тебе є брати чи сестри?",
-        "translation-pl": "Masz rodzeństwo?",
-        "translation-es": "¿Tienes hermanos?",
-        "translation-fr": "As-tu des frères et sœurs ?",
-        "translation-ar": "هل لديك إخوة؟",
-        "translation-hi": "क्या आपके भाई-बहन हैं?",
-        "translation-ro": "Ai frați sau surori?",
-        "translation-tr": "Kardeşin var mı?",
-        "translation-uz": "Aka-ukang yoki opa-singling bormi?"
-      },
-      {
-        "word": "der Onkel",
-        "translation-ru": "Дядя",
-        "translation-en": "Uncle",
-        "translation-uk": "Дядько",
-        "translation-pl": "Wujek",
-        "translation-es": "Tío",
-        "translation-fr": "Oncle",
-        "translation-ar": "عم / خال",
-        "translation-hi": "चाचा / मामा",
-        "translation-ro": "Unchi",
-        "translation-tr": "Amca / Dayı",
-        "translation-uz": "Amaki / Tog'a"
-      },
-      {
-        "word": "die Oma",
-        "translation-ru": "Бабушка",
-        "translation-en": "Grandma",
-        "translation-uk": "Бабуся",
-        "translation-pl": "Babcia",
-        "translation-es": "Abuela",
-        "translation-fr": "Grand-mère",
-        "translation-ar": "جدة",
-        "translation-hi": "दादी / नानी",
-        "translation-ro": "Bunică",
-        "translation-tr": "Büyükanne",
-        "translation-uz": "Buvi"
-      },
-      {
-        "word": "der Opa",
-        "translation-ru": "Дедушка",
-        "translation-en": "Grandpa",
-        "translation-uk": "Дідусь",
-        "translation-pl": "Dziadek",
-        "translation-es": "Abuelo",
-        "translation-fr": "Grand-père",
-        "translation-ar": "جد",
-        "translation-hi": "दादा / नाना",
-        "translation-ro": "Bunic",
-        "translation-tr": "Dede",
-        "translation-uz": "Bobo"
-      },
-      {
-        "word": "die Tochter",
-        "translation-ru": "Дочь",
-        "translation-en": "Daughter",
-        "translation-uk": "Дочка",
-        "translation-pl": "Córka",
-        "translation-es": "Hija",
-        "translation-fr": "Fille",
-        "translation-ar": "ابنة",
-        "translation-hi": "बेटी",
-        "translation-ro": "Fiică",
-        "translation-tr": "Kız evlat",
-        "translation-uz": "Qiz"
-      },
-      {
-        "word": "mein Vater",
-        "translation-ru": "Мой отец",
-        "translation-en": "My father",
-        "translation-uk": "Мій батько",
-        "translation-pl": "Mój ojciec",
-        "translation-es": "Mi padre",
-        "translation-fr": "Mon père",
-        "translation-ar": "أبي",
-        "translation-hi": "मेरे पिता",
-        "translation-ro": "Tatăl meu",
-        "translation-tr": "Benim babam",
-        "translation-uz": "Mening otam"
-      },
-      {
-        "word": "meine Mutter",
-        "translation-ru": "Моя мама",
-        "translation-en": "My mother",
-        "translation-uk": "Моя мама",
-        "translation-pl": "Moja mama",
-        "translation-es": "Mi madre",
-        "translation-fr": "Ma mère",
-        "translation-ar": "أمي",
-        "translation-hi": "मेरी माँ",
-        "translation-ro": "Mama mea",
-        "translation-tr": "Benim annem",
-        "translation-uz": "Mening onam"
-      },
-      {
-        "word": "einen Bruder haben",
-        "translation-ru": "Иметь брата",
-        "translation-en": "To have a brother",
-        "translation-uk": "Мати брата",
-        "translation-pl": "Mieć brata",
-        "translation-es": "Tener un hermano",
-        "translation-fr": "Avoir un frère",
-        "translation-ar": "لديه أخ",
-        "translation-hi": "एक भाई होना",
-        "translation-ro": "A avea un frate",
-        "translation-tr": "Erkek kardeşi olmak",
-        "translation-uz": "Akasi/ukasi bo'lmoq"
-      },
-      {
-        "word": "eine Schwester haben",
-        "translation-ru": "Иметь сестру",
-        "translation-en": "To have a sister",
-        "translation-uk": "Мати сестру",
-        "translation-pl": "Mieć siostrę",
-        "translation-es": "Tener una hermana",
-        "translation-fr": "Avoir une sœur",
-        "translation-ar": "لديه أخت",
-        "translation-hi": "एक बहन होना",
-        "translation-ro": "A avea o soră",
-        "translation-tr": "Kız kardeşi olmak",
-        "translation-uz": "Opasi/singlisi bo'lmoq"
-      }
-    ],
-    "tasks": [
-      {
-        "id": 1,
-        "type": "select",
-        "question": "Das ist meine Mutter",
-        "options": [
-          "eastPlainEighthQuests.questOneFirstOption",
-          "eastPlainEighthQuests.questSecondFirstOption",
-          "eastPlainEighthQuests.questThirdFirstOption"
-        ],
-        "answer": "eastPlainEighthQuests.questOneFirstOption"
-      },
-      {
-        "id": 2,
-        "type": "speechToText",
-        "question": "eastPlainEighthQuests.questTwo",
-        "text": "Ich habe einen Bruder",
-        "answer": "Ich habe einen Bruder"
-      },
-      {
-        "id": 3,
-        "type": "speechToText",
-        "question": "eastPlainEighthQuests.questTree",
-        "text": "Ich habe eine Schwester",
-        "answer": "Ich habe eine Schwester"
-      },
-      {
-        "id": 4,
-        "type": "select",
-        "question": "Hast du Geschwister?",
-        "options": [
-          "eastPlainEighthQuests.questFourFirstOption",
-          "eastPlainEighthQuests.questFourSecondOption",
-          "eastPlainEighthQuests.questFourThirdOption"
-        ],
-        "answer": "eastPlainEighthQuests.questFourFirstOption"
-      },
-      {
-        "id": 5,
-        "type": "reorder",
-        "question": "eastPlainEighthQuests.questFive",
-        "words": ["mein", "ist", "Er", "Onkel"],
-        "correctOrder": ["Er", "ist", "mein", "Onkel"]
-      },
-      {
-        "id": 6,
-        "type": "reorder",
-        "question": "eastPlainEighthQuests.questSix",
-        "words": [
-          "heißt", "Meine", "Mutter", "Anna"
-        ],
-        "correctOrder": [
-          "Meine",
-          "Mutter",
-          "heißt",
-          "Anna"
-        ]
-      },
-      {
-        "id": 7,
-        "type": "readAndAnswer",
-        "text": "Ich habe einen Bruder. Er heißt Tim und wohnt in Berlin.",
-        "question": "eastPlainEighthQuests.questSeven",
-        "options": [
-          "Tom",
-          "Tim",
-          "Ben"
-        ],
-        "answer": "Tim"
-      },
-      {
-        "id": 8,
-        "type": "speechToText",
-        "question": "eastPlainEighthQuests.questEight",
-        "text": "Das ist ihre Tochter",
-        "answer": "Das ist ihre Tochter"
-      },
-
-      {
-        "id": 9,
-        "type": "select",
-        "question": "Er heißt Lukas",
-        "options": [
-          "eastPlainEighthQuests.questTenFirstOption",
-          "eastPlainEighthQuests.questTenSecondOption",
-          "eastPlainEighthQuests.questTenThirdOption"
-        ],
-        "answer": "eastPlainEighthQuests.questTenFirstOption"
-      },
-      {
-        "id": 10,
-        "type": "input",
-        "question": "eastPlainEighthQuests.questEleven",
-        "correctAnswer": "Oma"
-      },
-      {
-        "id": 11,
-        "type": "reorder",
-        "question": "eastPlainEighthQuests.questTwelve",
-        "words": [
-          "ist",
-          "meine",
-          "Sie",
-          "Mutter"
-        ],
-        "correctOrder": [
-          "Sie",
-          "ist",
-          "meine",
-          "Mutter"
-        ]
-      },
-      {
-        "id": 12,
-        "type": "readAndAnswer",
-        "text": "Paul ist mein Vater. Er arbeitet als Lehrer.",
-        "question": "eastPlainEighthQuests.questThirteen",
-        "options": [
-          "eastPlainEighthQuests.questThirteenFirstOption",
-          "eastPlainEighthQuests.questThirteenSecondOption",
-          "eastPlainEighthQuests.questThirteenThirdOption"
-        ],
-        "answer": "eastPlainEighthQuests.questThirteenSecondOption"
-      },
-      {
-        "id": 13,
-        "type": "speechToText",
-        "question": "eastPlainEighthQuests.questFourteen",
-        "text": "Sie ist meine Tochter",
-        "answer": "Sie ist meine Tochter"
-      }
-    ]
-  },
-  {
-    "questId": "nine",
-    "aliases": ["menschen-a1-tagesablauf"],
-    "title": "eastPlainNinthQuests.title",
-    "progress": "0/15",
-    "description": "eastPlainNinthQuests.description",
-    "conditions": {
-      "goal": "eastPlainNinthQuests.goal",
-      "minCorrect": 15,
-      "requiredTasks": 15
-    },
-    "rewards": {
-      "points": 10,
-      "xp": 10
-    },
-    "vocabulary": [
-      {
-        "isVerb": true,
-        "word": "aufstehen",
-        "translation-ru": "Вставать",
-        "translation-en": "To get up",
-        "translation-uk": "Вставати",
-        "translation-pl": "Wstawać",
-        "translation-es": "Levantarse",
-        "translation-fr": "Se lever",
-        "translation-ar": "النهوض",
-        "translation-hi": "उठना",
-        "translation-ro": "A se scula",
-        "translation-tr": "Kalkmak",
-        "translation-uz": "Turmoq",
-        "tip-ru": "Это глагол с отделяемой приставкой 'auf-'. В предложении приставка уходит в самый конец: Ich stehe um 7 Uhr auf.",
-        "tip-en": "This is a separable verb with the prefix 'auf-'. The prefix goes to the very end of the sentence: Ich stehe um 7 Uhr auf.",
-        "tip-uk": "Це дієслово з відокремлюваною прифіксом 'auf-'. У реченні префікс іде в самий кінець: Ich stehe um 7 Uhr auf.",
-        "tip-pl": "To czasownik z rozdzielnie złożonym przedrostkiem 'auf-'. Przedrostek idzie na sam koniec zdania: Ich stehe um 7 Uhr auf.",
-        "tip-es": "Es un verbo separable con el prefijo 'auf-'. El prefijo va al final de la frase: Ich stehe um 7 Uhr auf.",
-        "tip-fr": "C'est un verbe à particule séparable 'auf-'. La particule se place à la toute fin de la phrase : Ich stehe um 7 Uhr auf.",
-        "tip-ar": "هذا فعل منفصل مع السابقة 'auf-'. تذهب السابقة إلى نهاية الجملة: Ich stehe um 7 Uhr auf.",
-        "hi": "यह 'auf-' उपसर्ग वाला एक पृथक्करणीय क्रिया (separable verb) है। उपसर्ग वाक्य के अंत में जाता है: Ich stehe um 7 Uhr auf.",
-        "tip-ro": "Acesta este un verb cu prefix separabil 'auf-'. Prefixul merge la sfârșitul propoziției: Ich stehe um 7 Uhr auf.",
-        "tip-tr": "Bu 'auf-' ayrılabilir ön ekine sahip bir fiildir. Ön ek cümlenin en sonuna gider: Ich stehe um 7 Uhr auf.",
-        "tip-uz": "Bu 'auf-' ajraladigan qo'shimchaga ega fe'l. Qo'shimcha gapning eng oxiriga o'tadi: Ich stehe um 7 Uhr auf."
-      },
-      {
-        "word": "schlafen gehen",
-        "translation-ru": "Ложиться спать",
-        "translation-en": "To go to sleep",
-        "translation-uk": "Іти спати",
-        "translation-pl": "Iść spać",
-        "translation-es": "Ir a dormir",
-        "translation-fr": "Aller dormir",
-        "translation-ar": "الذهاب للنوم",
-        "translation-hi": "सोने जाना",
-        "translation-ro": "A merge la culcare",
-        "translation-tr": "Yatmaya gitmek",
-        "translation-uz": "Uxlashga yotmoq"
-      },
-      {
-        "word": "zur Arbeit gehen",
-        "translation-ru": "Идти на работу",
-        "translation-en": "To go to work",
-        "translation-uk": "Іти на роботу",
-        "translation-pl": "Iść do pracy",
-        "translation-es": "Ir al trabajo",
-        "translation-fr": "Aller au travail",
-        "translation-ar": "الذهاب إلى العمل",
-        "translation-hi": "काम पर जाना",
-        "translation-ro": "A merge la serviciu",
-        "translation-tr": "İşe gitmek",
-        "translation-uz": "Ishga bormoq"
-      },
-      {
-        "word": "morgens",
-        "translation-ru": "Утром",
-        "translation-en": "In the morning",
-        "translation-uk": "Вранці",
-        "translation-pl": "Rano",
-        "translation-es": "Por la mañana",
-        "translation-fr": "Le matin",
-        "translation-ar": "صباحاً",
-        "translation-hi": "सुबह",
-        "translation-ro": "Dimineața",
-        "translation-tr": "SabahLarı",
-        "translation-uz": "Ertalab"
-      },
-      {
-        "word": "vormittags",
-        "translation-ru": "До обеда",
-        "translation-en": "Before noon",
-        "translation-uk": "До обіду",
-        "translation-pl": "Przed południem",
-        "translation-es": "Antes del mediodía",
-        "translation-fr": "En matinée",
-        "translation-ar": "قبل الظهر",
-        "translation-hi": "दुपहर से पहले",
-        "translation-ro": "Înainte de prânz",
-        "translation-tr": "Öğleden önce",
-        "translation-uz": "Tushgacha"
-      },
-      {
-        "word": "nachmittags",
-        "translation-ru": "Днем",
-        "translation-en": "In the afternoon",
-        "translation-uk": "Вдень",
-        "translation-pl": "Po południu",
-        "translation-es": "Por la tarde",
-        "translation-fr": "L'après-midi",
-        "translation-ar": "بعد الظهر",
-        "translation-hi": "दोपहर के बाद",
-        "translation-ro": "După-amiază",
-        "translation-tr": "Öğleden sonra",
-        "translation-uz": "Tushdan sonra"
-      },
-      {
-        "word": "abends",
-        "translation-ru": "Вечером",
-        "translation-en": "In the evening",
-        "translation-uk": "Ввечері",
-        "translation-pl": "Wieczorem",
-        "translation-es": "Por la noche",
-        "translation-fr": "Le soir",
-        "translation-ar": "مساءً",
-        "translation-hi": "शाम को",
-        "translation-ro": "Seara",
-        "translation-tr": "Akşamları",
-        "translation-uz": "Kechqurun"
-      },
-      {
-        "word": "frühstücken",
-        "translation-ru": "Завтракать",
-        "translation-en": "To eat breakfast",
-        "translation-uk": "Снідати",
-        "translation-pl": "Jeść śniadanie",
-        "translation-es": "Desayunar",
-        "translation-fr": "Prendre le petit-déjeuner",
-        "translation-ar": "يتناول الفطور",
-        "translation-hi": "नाश्ता करना",
-        "translation-ro": "A lua micul dejun",
-        "translation-tr": "Kahvaltı yapmak",
-        "translation-uz": "Nonushta qilmoq"
-      },
-      {
-        "word": "halb acht",
-        "translation-ru": "Половина восьмого",
-        "translation-en": "Half past seven",
-        "translation-uk": "Пів на восьму",
-        "translation-pl": "W pół do ósmej",
-        "translation-es": "Siete y media",
-        "translation-fr": "Sept heures et demie",
-        "translation-ar": "السابعة والنصف",
-        "translation-hi": "साढ़े सात",
-        "translation-ro": "Șapte și jumătate",
-        "translation-tr": "Yedi buçuk",
-        "translation-uz": "Yetti yarim"
-      },
-      {
-        "word": "frei haben",
-        "translation-ru": "Быть свободным",
-        "translation-en": "To have free time",
-        "translation-uk": "Мати вільний час",
-        "translation-pl": "Mieć wolne",
-        "translation-es": "Tener tiempo libre",
-        "translation-fr": "Avoir du temps libre",
-        "translation-ar": "لديه وقت فراغ",
-        "translation-hi": "खाली होना",
-        "translation-ro": "A avea timp liber",
-        "translation-tr": "Boş zamanı olmak",
-        "translation-uz": "Bo'sh vaqti bo'lmoq"
-      },
-      {
-        "word": "ein Buch lesen",
-        "translation-ru": "Читать книгу",
-        "translation-en": "To read a book",
-        "translation-uk": "Читати книгу",
-        "translation-pl": "Czytać książkę",
-        "translation-es": "Leer un libro",
-        "translation-fr": "Lire un livre",
-        "translation-ar": "قراءة كتاب",
-        "translation-hi": "किताब पढ़ना",
-        "translation-ro": "A citi o carte",
-        "translation-tr": "Kitap okumak",
-        "translation-uz": "Kitob o'qimoq"
-      },
-      {
-        "word": "die Mitternacht",
-        "translation-ru": "Полночь",
-        "translation-en": "Midnight",
-        "translation-uk": "Північ",
-        "translation-pl": "Północ",
-        "translation-es": "Medianoche",
-        "translation-fr": "Minuit",
-        "translation-ar": "منتصف الليل",
-        "translation-hi": "आधी रात",
-        "translation-ro": "Miezul nopții",
-        "translation-tr": "Gece yarısı",
-        "translation-uz": "Yarim tun"
-      },
-      {
-        "word": "Um wie viel Uhr?",
-        "translation-ru": "Во сколько?",
-        "translation-en": "At what time?",
-        "translation-uk": "О котрій годині?",
-        "translation-pl": "O której godzinie?",
-        "translation-es": "¿A qué hora?",
-        "translation-fr": "À quelle heure ?",
-        "translation-ar": "في أي ساعة؟",
-        "translation-hi": "कितने बजे?",
-        "translation-ro": "La ce oră?",
-        "translation-tr": "Saat kaçta?",
-        "translation-uz": "Soat nechada?"
-      }
-    ],
-    "tasks": [
-      {
-        "id": 1,
-        "type": "select",
-        "question": "Ich stehe um 6 Uhr auf",
-        "options": [
-          "eastPlainNinthQuests.questOneFirstOption",
-          "eastPlainNinthQuests.questOneSecondOption",
-          "eastPlainNinthQuests.questOneThirdOption"
-        ],
-        "answer": "eastPlainNinthQuests.questOneFirstOption"
-      },
-      {
-        "id": 2,
-        "type": "speechToText",
-        "question": "eastPlainNinthQuests.questTwo",
-        "text": "Ich gehe um 21 Uhr schlafen",
-        "answer": "Ich gehe um 21 Uhr schlafen",
-        "accept": [
-          "Ich gehe um 21 Uhr schlafen",
-          "Ich gehe um einundzwanzig Uhr schlafen"
-        ]
-      },
-      {
-        "id": 3,
-        "type": "speechToText",
-        "question": "eastPlainNinthQuests.questTree",
-        "text": "Ich gehe zur Arbeit um 8 Uhr",
-        "answer": "Ich gehe zur Arbeit um 8 Uhr",
-        "accept": [
-          "Ich gehe zur Arbeit um 8 Uhr",
-          "Ich gehe zur Arbeit um acht Uhr"
-        ]
-      },
-      {
-        "id": 4,
-        "type": "reorder",
-        "question": "eastPlainNinthQuests.questFour",
-        "words": [
-          "Morgens",
-          "ich",
-          "trinke",
-          "Wasser"
-        ],
-        "correctOrder": [
-          "Morgens",
-          "trinke",
-          "ich",
-          "Wasser"
-        ]
-      },
-      {
-        "id": 5,
-        "type": "select",
-        "question": "Was machst du morgens?",
-        "options": [
-          "eastPlainNinthQuests.questFiveFirstOption",
-          "eastPlainNinthQuests.questFiveSecondOption",
-          "eastPlainNinthQuests.questFiveThirdOption"
-        ],
-        "answer": "eastPlainNinthQuests.questFiveFirstOption"
-      },
-      {
-        "id": 6,
-        "type": "select",
-        "question": "eastPlainNinthQuests.questSix",
-        "options": [
-          "morgens",
-          "nachmittags",
-          "abends"
-        ],
-        "answer": "nachmittags"
-      },
-      {
-        "id": 7,
-        "type": "reorder",
-        "question": "eastPlainNinthQuests.questSeven",
-        "words": ["auf", "Ich", "stehe", "um", "7", "Uhr"],
-        "correctOrder": ["Ich", "stehe", "um", "7", "Uhr", "auf"]
-      },
-      {
-        "id": 8,
-        "type": "readAndAnswer",
-        "text": "Ich arbeite vormittags und habe nachmittags frei.",
-        "question": "eastPlainNinthQuests.questEight",
-        "options": [
-          "eastPlainNinthQuests.questEightFirstOption",
-          "eastPlainNinthQuests.questEightSecondOption",
-          "eastPlainNinthQuests.questEightThirdOption"
-        ],
-        "answer": "eastPlainNinthQuests.questEightFirstOption"
-      },
-      {
-        "id": 9,
-        "type": "speechToText",
-        "question": "eastPlainNinthQuests.questNine",
-        "text": "Ich frühstücke um halb acht",
-        "answer": "Ich frühstücke um halb acht",
-        "accept": [
-          "Ich frühstücke um halb acht",
-          "Ich frühstücke um 7:30"
-        ]
-      },
-      {
-        "id": 10,
-        "type": "speechToText",
-        "question": "eastPlainNinthQuests.questTen",
-        "text": "Um wie viel Uhr gehst du schlafen?",
-        "answer": "Um wie viel Uhr gehst du schlafen?"
-      },
-      {
-        "id": 11,
-        "type": "select",
-        "question": "Ich habe abends frei",
-        "options": [
-          "eastPlainNinthQuests.questElevenFirstOption",
-          "eastPlainNinthQuests.questElevenSecondOption",
-          "eastPlainNinthQuests.questElevenThirdOption"
-        ],
-        "answer": "eastPlainNinthQuests.questElevenFirstOption"
-      },
-      {
-        "id": 12,
-        "type": "reorder",
-        "question": "eastPlainNinthQuests.questTwelve",
-        "words": [
-          "Er",
-          "geht",
-          "schlafen",
-          "um",
-          "11",
-          "Uhr"
-        ],
-        "correctOrder": [
-          "Er",
-          "geht",
-          "um",
-          "11",
-          "Uhr",
-          "schlafen"
-        ]
-      },
-      {
-        "id": 13,
-        "type": "reorder",
-        "question": "eastPlainNinthQuests.questThirteen",
-        "words": [
-          "Am",
-          "Abend",
-          "lese",
-          "gern",
-          "Buch",
-          "ein",
-          "ich"
-        ],
-        "correctOrder": [
-          "Am",
-          "Abend",
-          "lese",
-          "ich",
-          "gern",
-          "ein",
-          "Buch"
-        ]
-      },
-      {
-        "id": 14,
-        "type": "readAndAnswer",
-        "text": "Maria frühstückt um 7 Uhr und fährt um acht Uhr zur Arbeit.",
-        "question": "eastPlainNinthQuests.questFourteen",
-        "options": [
-          "eastPlainNinthQuests.questFourteenFirstOption",
-          "eastPlainNinthQuests.questFourteenSecondOption",
-          "eastPlainNinthQuests.questFourteenThirdOption"
-        ],
-        "answer": "eastPlainNinthQuests.questFourteenSecondOption"
-      },
-      {
-        "id": 15,
-        "type": "speechToText",
-        "question": "eastPlainNinthQuests.questFifteen",
-        "text": "Ich gehe um Mitternacht schlafen",
-        "answer": "Ich gehe um Mitternacht schlafen"
-      }
-    ]
-  },
-  {
-    "questId": "ten",
-    "aliases": ["menschen-a1-wohnort"],
-    "title": "eastPlainTenthQuests.title",
-    "progress": "0/12",
-    "description": "eastPlainTenthQuests.description",
-    "conditions": {
-      "goal": "eastPlainTenthQuests.goal",
-      "minCorrect": 12,
-      "requiredTasks": 12
-    },
-    "rewards": {
-      "points": 10,
-      "xp": 10
-    },
-    "vocabulary": [
-      {
-        "word": "wohnen",
-        "translation-ru": "Жить",
-        "translation-en": "To live / To reside",
-        "translation-uk": "Жити",
-        "translation-pl": "Mieszkać",
-        "translation-es": "Vivir / Residir",
-        "translation-fr": "Habiter",
-        "translation-ar": "يسكن",
-        "translation-hi": "रहना",
-        "translation-ro": "A locui",
-        "translation-tr": "İkamet etmek",
-        "translation-uz": "Yashamoq",
-        "isVerb": true
-      },
-      {
-        "word": "leben",
-        "translation-ru": "Жить",
-        "translation-en": "To live",
-        "translation-uk": "Жити",
-        "translation-pl": "Żyć",
-        "translation-es": "Vivir",
-        "translation-fr": "Vivre",
-        "translation-ar": "يعيش",
-        "translation-hi": "जीना",
-        "translation-ro": "A trăi",
-        "translation-tr": "Yaşamak",
-        "translation-uz": "Yashamoq",
-        "isVerb": true
-      },
-      {
-        "word": "die Wohnung",
-        "translation-ru": "Квартира",
-        "translation-en": "Apartment",
-        "translation-uk": "Квартира",
-        "translation-pl": "Mieszkanie",
-        "translation-es": "Apartamento",
-        "translation-fr": "Appartement",
-        "translation-ar": "شقة",
-        "translation-hi": "अपार्टमेंट",
-        "translation-ro": "Apartament",
-        "translation-tr": "Daire",
-        "translation-uz": "Xonadon"
-      },
-      {
-        "word": "in einer Wohnung wohnen",
-        "translation-ru": "Жить в квартире",
-        "translation-en": "To live in an apartment",
-        "translation-uk": "Жити в квартирі",
-        "translation-pl": "Mieszkać w mieszkaniu",
-        "translation-es": "Vivir en un apartamento",
-        "translation-fr": "Habiter dans un appartement",
-        "translation-ar": "السكن في شقة",
-        "translation-hi": "अपार्टमेंट में रहना",
-        "translation-ro": "A locui într-un apartament",
-        "translation-tr": "Bir dairede yaşamak",
-        "translation-uz": "Xonadonda yashamoq",
-        "isVerb": true,
-        "verbKey": "wohnen",
-        "tip-ru": "После предлога 'in' с вопросом 'Где?' (Wo?), мы используем Dativ и ставим артикль существительного в Dativ: die Wohnung → in einer Wohnung.",
-        "tip-en": "After the preposition 'in' when the question is 'Where?' (Wo?), we should use Dativ and put the noun's article in Dativ: die Wohnung → in einer Wohnung.",
-        "tip-uk": "Після прийменника 'in' з питанням 'Де?' (Wo?), ми використовуємо Dativ і ставимо артикль іменника в Dativ: die Wohnung → in einer Wohnung.",
-        "tip-pl": "Po przyimku 'in', kiedy pytanie brzmi 'Gdzie?' (Wo?), używamy Dativu i stawiamy przedimek rzeczownika w Dativie: die Wohnung → in einer Wohnung.",
-        "tip-es": "Después de la preposición 'in' cuando la pregunta es '¿Dónde?' (Wo?), usamos Dativ y ponemos el artículo del sustantivo en Dativ: die Wohnung → in einer Wohnung.",
-        "tip-fr": "Après la préposition 'in' quand la question est 'Où ?' (Wo?), nous utilisons le Dativ et mettons l'article du nom au Dativ : die Wohnung → in einer Wohnung.",
-        "tip-ar": "بعد حرف الجر 'in' عندما يكون السؤال 'أين؟' (Wo؟)، نستخدم حالة Dativ ونضع أداة الاسم في حالة Dativ: die Wohnung → in einer Wohnung.",
-        "tip-hi": "'in' पूर्वसर्ग के बाद जब प्रश्न 'कहाँ?' (Wo?) हो, तो हम Dativ का उपयोग करते हैं और संज्ञा के उपपद (article) को Dativ में रखते हैं: die Wohnung → in einer Wohnung.",
-        "tip-ro": "După prepoziția 'in' când întrebarea este 'Unde?' (Wo?), folosim Dativ și punem articolul substantivului în Dativ: die Wohnung → in einer Wohnung.",
-        "tip-tr": "'in' edatından sonra soru 'Nerede?' (Wo?) olduğunda, Dativ kullanırız ve ismin artikelini Dativ yaparız: die Wohnung → in einer Wohnung.",
-        "tip-uz": "'in' predlogidan keyin savol 'Qayerda?' (Wo?) bo'lganda, biz Dativ ishlatamiz va otning artiklini Dativga qo'yamiz: die Wohnung → in einer Wohnung."
-      },
-      {
-        "word": "das Haus",
-        "translation-ru": "Дом",
-        "translation-en": "House",
-        "translation-uk": "Будинок",
-        "translation-pl": "Dom",
-        "translation-es": "Casa",
-        "translation-fr": "Maison",
-        "translation-ar": "منزل",
-        "translation-hi": "मकान",
-        "translation-ro": "Casă",
-        "translation-tr": "Ev",
-        "translation-uz": "Uy"
-      },
-      {
-        "word": "in einem Haus wohnen",
-        "translation-ru": "Жить в доме",
-        "translation-en": "To live in a house",
-        "translation-uk": "Жити в будинку",
-        "translation-pl": "Mieszkać w domu",
-        "translation-es": "Vivir en una casa",
-        "translation-fr": "Habiter dans une maison",
-        "translation-ar": "السكن في منزل",
-        "translation-hi": "मकान में रहना",
-        "translation-ro": "A locui într-o casă",
-        "translation-tr": "Bir evde yaşamak",
-        "translation-uz": "Uyda yashamoq",
-        "isVerb": true,
-        "verbKey": "wohnen",
-        "tip-ru": "После предлога 'in' с вопросом 'Где?' (Wo?), мы используем Dativ и ставим артикль существительного в Dativ: das Haus → in einem Haus.",
-        "tip-en": "After the preposition 'in' when the question is 'Where?' (Wo?), we should use Dativ and put the noun's article in Dativ: das Haus → in einem Haus.",
-        "tip-uk": "Після прийменника 'in' з питанням 'Де?' (Wo?), ми використовуємо Dativ і ставимо артикль іменника в Dativ: das Haus → in einem Haus.",
-        "tip-pl": "Po przyimku 'in', kiedy pytanie brzmi 'Gdzie?' (Wo?), używamy Dativu i stawiamy przedimek rzeczownika w Dativie: das Haus → in einem Haus.",
-        "tip-es": "Después de la preposición 'in' cuando la pregunta es '¿Dónde?' (Wo?), usamos Dativ y ponemos el artículo del sustantivo en Dativ: das Haus → in einem Haus.",
-        "tip-fr": "Après la préposition 'in' quand la question est 'Où ?' (Wo?), nous utilisons le Dativ et mettons l'article du nom au Dativ : das Haus → in einem Haus.",
-        "tip-ar": "بعد حرف الجر 'in' عندما يكون السؤال 'أين؟' (Wo؟)، نستخدم حالة Dativ ونضع أداة الاسم في حالة Dativ: das Haus → in einem Haus.",
-        "tip-hi": "'in' पूर्वसर्ग के बाद जब प्रश्न 'कहाँ?' (Wo?) हो, तो हम Dativ का उपयोग करते हैं और संज्ञा के उपपद को Dativ में रखते हैं: das Haus → in einem Haus.",
-        "tip-ro": "După prepoziția 'in' când întrebarea este 'Unde?' (Wo?), folosim Dativ și punem articolul substantivului în Dativ: das Haus → in einem Haus.",
-        "tip-tr": "'in' edatından sonra soru 'Nerede?' (Wo?) olduğunda, Dativ kullanırız ve ismin artikelini Dativ yaparız: das Haus → in einem Haus.",
-        "tip-uz": "'in' predlogidan keyin savol 'Qayerda?' (Wo?) bo'lganda, biz Dativ ishlatamiz va otning artiklini Dativga qo'yamiz: das Haus → in einem Haus."
-      },
-      {
-        "word": "auf dem Land wohnen",
-        "translation-ru": "Жить за городом",
-        "translation-en": "To live in the countryside",
-        "translation-uk": "Жити за містом",
-        "translation-pl": "Mieszkać na wsi",
-        "translation-es": "Vivir en el campo",
-        "translation-fr": "Habiter à la campagne",
-        "translation-ar": "السكن في الريف",
-        "translation-hi": "गांव में रहना",
-        "translation-ro": "A locui la țară",
-        "translation-tr": "Kırsalda yaşamak",
-        "translation-uz": "Qishloqda yashamoq",
-        "isVerb": true,
-        "verbKey": "wohnen"
-      },
-      {
-        "word": "im Zentrum",
-        "translation-ru": "В центре",
-        "translation-en": "In the center",
-        "translation-uk": "У центрі",
-        "translation-pl": "W centrum",
-        "translation-es": "En el centro",
-        "translation-fr": "Au centre-ville",
-        "translation-ar": "في المركز",
-        "translation-hi": "केंद्र में",
-        "translation-ro": "În centru",
-        "translation-tr": "Merkezde",
-        "translation-uz": "Markazda",
-        "tip-ru": "'im' — это слияние 'in' и 'dem'. Когда вопрос 'Где?' (Wo?), мы используем Dativ и ставим артикль существительного в Dativ: in + dem Zentrum = im Zentrum.",
-        "tip-en": "'im' is a contraction of 'in' + 'dem'. When the question is 'Where?' (Wo?), we should use Dativ and put the noun's article in Dativ: in + dem Zentrum = im Zentrum.",
-        "tip-uk": "'im' — це злиття 'in' та 'dem'. Коли питання 'Де?' (Wo?), ми використовуємо Dativ і ставимо артикль іменника в Dativ: in + dem Zentrum = im Zentrum.",
-        "tip-pl": "'im' to połączenie 'in' + 'dem'. Kiedy pytanie brzmi 'Gdzie?' (Wo?), używamy Dativu i stawiamy przedimek rzeczownika w Dativie: in + dem Zentrum = im Zentrum.",
-        "tip-es": "'im' es una contracción de 'in' + 'dem'. Cuando la pregunta es '¿Dónde?' (Wo?), usamos Dativ y ponemos el artículo del sustantivo en Dativ: in + dem Zentrum = im Zentrum.",
-        "tip-fr": "'im' est une contraction de 'in' + 'dem'. Quand la question est 'Où ?' (Wo?), nous utilisons le Dativ et mettons l'article du nom au Dativ : in + dem Zentrum = im Zentrum.",
-        "tip-ar": "'im' هو دمج لـ 'in' + 'dem'. عندما يكون السؤال 'أين؟' (Wo؟)، نستخدم حالة Dativ ونضع أداة الاسم في حالة Dativ: in + dem Zentrum = im Zentrum.",
-        "tip-hi": "'im', 'in' + 'dem' का संकुचन है। जब प्रश्न 'कहाँ?' (Wo?) हो, तो हम Dativ का उपयोग करते हैं और संज्ञा के उपपद को Dativ में रखते हैं: in + dem Zentrum = im Zentrum.",
-        "tip-ro": "'im' este o contracție a 'in' + 'dem'. Când întrebarea este 'Unde?' (Wo?), folosim Dativ și punem articolul substantivului în Dativ: in + dem Zentrum = im Zentrum.",
-        "tip-tr": "'im', 'in' + 'dem' birleşimidir. Soru 'Nerede?' (Wo?) olduğunda, Dativ kullanırız ve ismin artikelini Dativ yaparız: in + dem Zentrum = im Zentrum.",
-        "tip-uz": "'im' bu 'in' + 'dem' qisqartmasi. Savol 'Qayerda?' (Wo?) bo'lganda, biz Dativ ishlatamiz va otning artiklini Dativga qo'yamiz: in + dem Zentrum = im Zentrum."
-      },
-      {
-        "word": "in der Stadt",
-        "translation-ru": "В городе",
-        "translation-en": "In the city",
-        "translation-uk": "У місті",
-        "translation-pl": "W mieście",
-        "translation-es": "En la ciudad",
-        "translation-fr": "En ville",
-        "translation-ar": "في المدينة",
-        "translation-hi": "शहर में",
-        "translation-ro": "În oraș",
-        "translation-tr": "Şehirde",
-        "translation-uz": "Shaharda",
-        "tip-ru": "Когда вопрос 'Где?' (Wo?), мы используем Dativ и ставим артикль существительного в Dativ: die Stadt → in der Stadt.",
-        "tip-en": "When the question is 'Where?' (Wo?), we should use Dativ and put the noun's article in Dativ: die Stadt → in der Stadt.",
-        "tip-uk": "Коли питання 'Де?' (Wo?), ми використовуємо Dativ і ставимо артикль іменника в Dativ: die Stadt → in der Stadt.",
-        "tip-pl": "Kiedy pytanie brzmi 'Gdzie?' (Wo?), używamy Dativu i stawiamy przedimek rzeczownika w Dativie: die Stadt → in der Stadt.",
-        "tip-es": "Cuando la pregunta es '¿Dónde?' (Wo?), usamos Dativ y ponemos el artículo del sustantivo en Dativ: die Stadt → in der Stadt.",
-        "tip-fr": "Quand la question est 'Où ?' (Wo?), nous utilisons le Dativ et mettons l'article du nom au Dativ : die Stadt → in der Stadt.",
-        "tip-ar": "عندما يكون السؤال 'أين؟' (Wo؟)، نستخدم حالة Dativ ونضع أداة الاسم في حالة Dativ: die Stadt → in der Stadt.",
-        "tip-hi": "जब प्रश्न 'कहाँ?' (Wo?) हो, तो हम Dativ का उपयोग करते हैं और संज्ञा के उपपद को Dativ में रखते हैं: die Stadt → in der Stadt.",
-        "tip-ro": "Când întrebarea este 'Unde?' (Wo?), folosim Dativ și punem articolul substantivului în Dativ: die Stadt → in der Stadt.",
-        "tip-tr": "Soru 'Nerede?' (Wo?) olduğunda, Dativ kullanırız ve ismin artikelini Dativ yaparız: die Stadt → in der Stadt.",
-        "tip-uz": "Savol 'Qayerda?' (Wo?) bo'lganda, biz Dativ ishlatamiz va otning artiklini Dativga qo'yamiz: die Stadt → in der Stadt."
-      },
-      {
-        "word": "das Dorf",
-        "translation-ru": "Деревня",
-        "translation-en": "Village",
-        "translation-uk": "Село",
-        "translation-pl": "Wieś",
-        "translation-es": "Pueblo",
-        "translation-fr": "Village",
-        "translation-ar": "قرية",
-        "translation-hi": "गाँव",
-        "translation-ro": "Sat",
-        "translation-tr": "Köy",
-        "translation-uz": "Qishloq"
-      },
-      {
-        "word": "in einem kleinen Dorf",
-        "translation-ru": "В маленькой деревне",
-        "translation-en": "In a small village",
-        "translation-uk": "У маленькому селі",
-        "translation-pl": "W małej wsi",
-        "translation-es": "En un pueblo pequeño",
-        "translation-fr": "Dans un petit village",
-        "translation-ar": "في قرية صغيرة",
-        "translation-hi": "एक छोटे से गाँव में",
-        "translation-ro": "Într-un sat mic",
-        "translation-tr": "Küçük bir köyde",
-        "translation-uz": "Kichik bir qishloqda",
-        "tip-ru": "Когда вопрос 'Где?' (Wo?), мы используем Dativ и ставим артикль существительного в Dativ: das Dorf → in einem kleinen Dorf.",
-        "tip-en": "When the question is 'Where?' (Wo?), we should use Dativ and put the noun's article in Dativ: das Dorf → in einem kleinen Dorf.",
-        "tip-uk": "Коли питання 'Де?' (Wo?), ми використовуємо Dativ і ставимо артикль іменника в Dativ: das Dorf → in einem kleinen Dorf.",
-        "tip-pl": "Kiedy pytanie brzmi 'Gdzie?' (Wo?), używamy Dativu i stawiamy przedimek rzeczownika w Dativie: das Dorf → in einem kleinen Dorf.",
-        "tip-es": "Cuando la pregunta es '¿Dónde?' (Wo?), usamos Dativ y ponemos el artículo del sustantivo en Dativ: das Dorf → in un pequeño Dorf (in einem kleinen Dorf).",
-        "tip-fr": "Quand la question est 'Où ?' (Wo?), nous utilisons le Dativ et mettons l'article du nom au Dativ : das Dorf → in einem kleinen Dorf.",
-        "tip-ar": "عندما يكون السؤال 'أين؟' (Wo؟)، نستخدم حالة Dativ ونضع أداة الاسم في حالة Dativ: das Dorf → in einem kleinen Dorf.",
-        "tip-hi": "जब प्रश्न 'कहाँ?' (Wo?) हो, तो हम Dativ का उपयोग करते हैं और संज्ञा के उपपद को Dativ में रखते हैं: das Dorf → in einem kleinen Dorf.",
-        "tip-ro": "Când întrebarea este 'Unde?' (Wo?), folosim Dativ și punem articolul substantivului în Dativ: das Dorf → in einem kleinen Dorf.",
-        "tip-tr": "Soru 'Nerede?' (Wo?) olduğunda, Dativ kullanırız ve ismin artikelini Dativ yaparız: das Dorf → in einem kleinen Dorf.",
-        "tip-uz": "Savol 'Qayerda?' (Wo?) bo'lganda, biz Dativ ishlatamiz va otning artiklini Dativga qo'yamiz: das Dorf → in einem kleinen Dorf."
+        "translation-ro": "Germania",
+        "translation-uz": "Germaniya",
+        "translation-hi": "जर्मनी",
+        "translation-ar": "ألمانيا"
       },
       {
         "word": "Österreich",
@@ -3352,167 +965,2106 @@
         "translation-uk": "Австрія",
         "translation-pl": "Austria",
         "translation-es": "Austria",
-        "translation-fr": "Autriche",
-        "translation-ar": "النمسا",
-        "translation-hi": "ऑस्ट्रिया",
-        "translation-ro": "Austria",
+        "translation-fr": "l’Autriche",
         "translation-tr": "Avusturya",
-        "translation-uz": "Avstriya"
+        "translation-ro": "Austria",
+        "translation-uz": "Avstriya",
+        "translation-hi": "ऑस्ट्रिया",
+        "translation-ar": "النمسا"
       },
       {
-        "word": "studieren",
-        "translation-ru": "Учиться (в вузе)",
-        "translation-en": "To study (at university)",
-        "translation-uk": "Навчатися (у ВНЗ)",
-        "translation-pl": "Studiować",
-        "translation-es": "Estudiar (en la universidad)",
-        "translation-fr": "Étudier (à l'université)",
-        "translation-ar": "يدرس (في الجامعة)",
-        "translation-hi": "अध्ययन करना (विश्वविद्यालय में)",
-        "translation-ro": "A studia (la universitate)",
-        "translation-tr": "Okumak (üniversitede)",
-        "translation-uz": "Tahsil olmoq (universitetda)",
-        "isVerb": true
+        "word": "die Schweiz",
+        "translation-ru": "Швейцария",
+        "translation-en": "Switzerland",
+        "translation-uk": "Швейцарія",
+        "translation-pl": "Szwajcaria",
+        "translation-es": "Suiza",
+        "translation-fr": "la Suisse",
+        "translation-tr": "İsviçre",
+        "translation-ro": "Elveția",
+        "translation-uz": "Shveytsariya",
+        "translation-hi": "स्विट्ज़रलैंड",
+        "translation-ar": "سويسرا"
+      },
+      {
+        "word": "jetzt",
+        "translation-ru": "сейчас",
+        "translation-en": "now",
+        "translation-uk": "зараз",
+        "translation-pl": "teraz",
+        "translation-es": "ahora",
+        "translation-fr": "maintenant",
+        "translation-tr": "şimdi",
+        "translation-ro": "acum",
+        "translation-uz": "hozir",
+        "translation-hi": "अब",
+        "translation-ar": "الآن"
       }
     ],
     "tasks": [
       {
         "id": 1,
         "type": "select",
-        "question": "Ich wohne in einer Wohnung",
+        "question": "eastPlainNewFour.questTask1",
         "options": [
-          "eastPlainTenthQuests.questOneFirstOption",
-          "eastPlainTenthQuests.questOneSecondOption",
-          "eastPlainTenthQuests.questOneThirdOption"
+          "Wie kommst du?",
+          "Wo kommst du?",
+          "Woher kommst du?"
         ],
-        "answer": "eastPlainTenthQuests.questOneFirstOption"
+        "answer": "Woher kommst du?",
+        "tip": "eastPlainNewFour.questDescription"
       },
       {
         "id": 2,
-        "type": "speechToText",
-        "question": "eastPlainTenthQuests.questTwo",
-        "text": "Ich wohne auf dem Land",
-        "answer": "Ich wohne auf dem Land"
+        "type": "input",
+        "question": "eastPlainNewFour.questTask2",
+        "correctAnswer": "aus",
+        "tip": "eastPlainNewFour.questDescription"
       },
       {
         "id": 3,
-        "type": "select",
-        "question": "Er lebt im Zentrum",
-        "options": [
-          "eastPlainTenthQuests.questTreeFirstOption",
-          "eastPlainTenthQuests.questTreeSecondOption",
-          "eastPlainTenthQuests.questTreeThirdOption"
-        ],
-        "answer": "eastPlainTenthQuests.questTreeFirstOption"
+        "type": "input",
+        "question": "eastPlainNewFour.questTask3",
+        "correctAnswer": "in",
+        "tip": "eastPlainNewFour.questDescription"
       },
       {
         "id": 4,
-        "type": "reorder",
-        "question": "eastPlainTenthQuests.eastPlainTenthQuests",
-        "words": [
-          "Ich",
-          "Berlin",
-          "wohne",
-          "in"
+        "type": "select",
+        "question": "eastPlainNewFour.questTask4",
+        "options": [
+          "Ich komme aus Schweiz.",
+          "Ich komme in der Schweiz.",
+          "Ich komme aus der Schweiz."
         ],
-        "correctOrder": [
-          "Ich",
-          "wohne",
-          "in",
-          "Berlin"
-        ]
+        "answer": "Ich komme aus der Schweiz.",
+        "tip": "eastPlainNewFour.questDescription"
       },
       {
         "id": 5,
-        "type": "readAndAnswer",
-        "text": "Thomas wohnt in einem Haus auf dem Land.",
-        "question": "eastPlainTenthQuests.questFive",
-        "options": [
-          "eastPlainTenthQuests.questFiveFirstOption",
-          "eastPlainTenthQuests.questFiveSecondOption",
-          "eastPlainTenthQuests.questFiveThirdOption"
+        "type": "reorder",
+        "question": "eastPlainNewFour.questTask5",
+        "words": [
+          "komme",
+          "und",
+          "in",
+          "woher",
+          "nach",
+          "Ich",
+          "Berlin",
+          "wohne",
+          "aus",
+          "Polen"
         ],
-        "answer": "eastPlainTenthQuests.questFiveThirdOption"
+        "correctOrder": [
+          "Ich",
+          "komme",
+          "aus",
+          "Polen",
+          "und",
+          "wohne",
+          "in",
+          "Berlin"
+        ],
+        "tip": "eastPlainNewFour.questDescription"
       },
       {
         "id": 6,
-        "type": "speechToText",
-        "question": "eastPlainTenthQuests.questSix",
-        "text": "Ich komme aus Polen",
-        "answer": "Ich komme aus Polen"
+        "type": "select",
+        "question": "eastPlainNewFour.questTask6",
+        "options": [
+          "Wo kommen Sie?",
+          "Woher kommen Sie?",
+          "Woher kommst Sie?"
+        ],
+        "answer": "Woher kommen Sie?",
+        "tip": "eastPlainNewFour.questDescription"
       },
       {
         "id": 7,
-        "type": "readAndAnswer",
-        "text": "Tom ist zwanzig Jahre alt und studiert in Berlin.",
-        "question": "eastPlainTenthQuests.questSeven",
-        "options": [
-          "eastPlainTenthQuests.questSevenFirstOption",
-          "eastPlainTenthQuests.questSevenSecondOption",
-          "eastPlainTenthQuests.questSevenThirdOption"
-        ],
-        "answer": "eastPlainTenthQuests.questSevenSecondOption"
+        "type": "input",
+        "question": "eastPlainNewFour.questTask7",
+        "correctAnswer": "der",
+        "tip": "eastPlainNewFour.questDescription"
       },
       {
         "id": 8,
         "type": "select",
-        "question": "Sie wohnt in einem Haus",
+        "question": "eastPlainNewFour.questTask8",
         "options": [
-          "eastPlainTenthQuests.questEightFirstOption",
-          "eastPlainTenthQuests.questEightSecondOption",
-          "eastPlainTenthQuests.questEightThirdOption"
+          "Ich komme aus Deutschland, aus Hamburg.",
+          "Ich komme in Deutschland, aus Hamburg.",
+          "Ich komme aus Deutschland, in Hamburg."
         ],
-        "answer": "eastPlainTenthQuests.questEightFirstOption"
+        "answer": "Ich komme aus Deutschland, aus Hamburg.",
+        "tip": "eastPlainNewFour.questDescription"
       },
       {
         "id": 9,
         "type": "readAndAnswer",
-        "text": "Martin wohnt auf dem Land. Er arbeitet in der Stadt.",
-        "question": "eastPlainTenthQuests.questNine",
+        "question": "eastPlainNewFour.questTask9",
+        "text": "Hallo! Ich heiße Ivan. Ich komme aus der Ukraine. Ich wohne jetzt in Leipzig.",
         "options": [
-          "eastPlainTenthQuests.questNineFirstOption",
-          "eastPlainTenthQuests.questNineSecondOption",
-          "eastPlainTenthQuests.questNineThirdOption"
+          "in Leipzig",
+          "in der Ukraine",
+          "in Berlin"
         ],
-        "answer": "eastPlainTenthQuests.questNineSecondOption"
+        "answer": "in Leipzig",
+        "tip": "eastPlainNewFour.questDescription"
       },
       {
         "id": 10,
-        "type": "reorder",
-        "question": "eastPlainTenthQuests.questTen",
-        "words": [
-          "Sie",
-          "in",
-          "wohnt",
-          "Wohnung",
-          "einer"
-        ],
-        "correctOrder": [
-          "Sie",
-          "wohnt",
-          "in",
-          "einer",
-          "Wohnung"
-        ]
+        "type": "input",
+        "question": "eastPlainNewFour.questTask10",
+        "correctAnswer": "Wo",
+        "tip": "eastPlainNewFour.questDescription"
       },
       {
         "id": 11,
-        "type": "readAndAnswer",
-        "text": "Anna kommt aus Österreich und lebt jetzt in Köln.",
-        "question": "Где Анна живёт сейчас?",
-        "options": [
-          "eastPlainTenthQuests.questElevenFirstOption",
-          "eastPlainTenthQuests.questElevenSecondOption",
-          "eastPlainTenthQuests.questElevenThirdOption"
+        "type": "reorder",
+        "question": "eastPlainNewFour.questTask11",
+        "words": [
+          "wo",
+          "Herr",
+          "kommst",
+          "Woher",
+          "Sie",
+          "kommen",
+          "Nowak"
         ],
-        "answer": "eastPlainTenthQuests.questElevenThirdOption"
+        "correctOrder": [
+          "Woher",
+          "kommen",
+          "Sie",
+          "Herr",
+          "Nowak"
+        ],
+        "tip": "eastPlainNewFour.questDescription"
       },
       {
         "id": 12,
-        "type": "speechToText",
-        "question": "eastPlainTenthQuests.questTwelve",
-        "text": "Ich wohne in einem kleinen Dorf",
-        "answer": "Ich wohne in einem kleinen Dorf"
+        "type": "input",
+        "question": "eastPlainNewFour.questTask12",
+        "correctAnswer": "mich",
+        "tip": "eastPlainNewFour.questDescription"
+      },
+      {
+        "id": 13,
+        "type": "select",
+        "question": "eastPlainNewFour.questTask13",
+        "options": [
+          "Wie heißt du? Ich heiße Kim.",
+          "Wie heißt du? Ich heißt Kim.",
+          "Wie heiße du? Ich heiße Kim."
+        ],
+        "answer": "Wie heißt du? Ich heiße Kim.",
+        "tip": "eastPlainNewFour.questDescription"
+      },
+      {
+        "id": 14,
+        "type": "select",
+        "question": "eastPlainNewFour.questTask14",
+        "options": [
+          "Wie geht’s? Es geht.",
+          "Wie geht’s? Es gut.",
+          "Wie heißt’s? Es geht."
+        ],
+        "answer": "Wie geht’s? Es geht.",
+        "tip": "eastPlainNewFour.questDescription"
+      },
+      {
+        "id": 15,
+        "type": "reorder",
+        "question": "eastPlainNewFour.questTask15",
+        "words": [
+          "ich",
+          "Guten",
+          "Tag",
+          "Ana",
+          "Abend",
+          "heiße",
+          "heißt"
+        ],
+        "correctOrder": [
+          "Guten",
+          "Tag",
+          "ich",
+          "heiße",
+          "Ana"
+        ],
+        "tip": "eastPlainNewFour.questDescription"
+      }
+    ]
+  },
+  {
+    "questId": "five",
+    "aliases": [
+      "menschen-a1-essen"
+    ],
+    "title": "eastPlainNewFive.questTitle",
+    "progress": "0/15",
+    "description": "eastPlainNewFive.questDescription",
+    "conditions": {
+      "goal": "eastPlainNewFive.questGoal",
+      "minCorrect": 15,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
+    "vocabulary": [
+      {
+        "word": "eins",
+        "translation-ru": "один",
+        "translation-en": "one",
+        "translation-uk": "один",
+        "translation-pl": "jeden",
+        "translation-es": "uno",
+        "translation-fr": "un",
+        "translation-tr": "bir",
+        "translation-ro": "unu",
+        "translation-uz": "bir",
+        "translation-hi": "एक",
+        "translation-ar": "واحد"
+      },
+      {
+        "word": "zwei",
+        "translation-ru": "два",
+        "translation-en": "two",
+        "translation-uk": "два",
+        "translation-pl": "dwa",
+        "translation-es": "dos",
+        "translation-fr": "deux",
+        "translation-tr": "iki",
+        "translation-ro": "doi",
+        "translation-uz": "ikki",
+        "translation-hi": "दो",
+        "translation-ar": "اثنان"
+      },
+      {
+        "word": "sieben",
+        "translation-ru": "семь",
+        "translation-en": "seven",
+        "translation-uk": "сім",
+        "translation-pl": "siedem",
+        "translation-es": "siete",
+        "translation-fr": "sept",
+        "translation-tr": "yedi",
+        "translation-ro": "șapte",
+        "translation-uz": "yetti",
+        "translation-hi": "सात",
+        "translation-ar": "سبعة"
+      },
+      {
+        "word": "zwölf",
+        "translation-ru": "двенадцать",
+        "translation-en": "twelve",
+        "translation-uk": "дванадцять",
+        "translation-pl": "dwanaście",
+        "translation-es": "doce",
+        "translation-fr": "douze",
+        "translation-tr": "on iki",
+        "translation-ro": "doisprezece",
+        "translation-uz": "o‘n ikki",
+        "translation-hi": "बारह",
+        "translation-ar": "اثنا عشر"
+      },
+      {
+        "word": "die Telefonnummer",
+        "translation-ru": "номер телефона",
+        "translation-en": "phone number",
+        "translation-uk": "номер телефону",
+        "translation-pl": "numer telefonu",
+        "translation-es": "el número de teléfono",
+        "translation-fr": "le numéro de téléphone",
+        "translation-tr": "telefon numarası",
+        "translation-ro": "numărul de telefon",
+        "translation-uz": "telefon raqami",
+        "translation-hi": "फ़ोन नंबर",
+        "translation-ar": "رقم الهاتف"
+      },
+      {
+        "word": "lang",
+        "translation-ru": "длинный",
+        "translation-en": "long",
+        "translation-uk": "довгий",
+        "translation-pl": "długi",
+        "translation-es": "largo",
+        "translation-fr": "long",
+        "translation-tr": "uzun",
+        "translation-ro": "lung",
+        "translation-uz": "uzun",
+        "translation-hi": "लंबा",
+        "translation-ar": "طويل"
+      }
+    ],
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "eastPlainNewFive.questTask1",
+        "options": [
+          "zehn",
+          "zwei",
+          "drei"
+        ],
+        "answer": "drei",
+        "tip": "eastPlainNewFive.questDescription"
+      },
+      {
+        "id": 2,
+        "type": "input",
+        "question": "eastPlainNewFive.questTask2",
+        "correctAnswer": "zwei",
+        "tip": "eastPlainNewFive.questDescription"
+      },
+      {
+        "id": 3,
+        "type": "select",
+        "question": "eastPlainNewFive.questTask3",
+        "options": [
+          "elf",
+          "sechs",
+          "acht"
+        ],
+        "answer": "acht",
+        "tip": "eastPlainNewFive.questDescription"
+      },
+      {
+        "id": 4,
+        "type": "input",
+        "question": "eastPlainNewFive.questTask4",
+        "correctAnswer": "sieben",
+        "tip": "eastPlainNewFive.questDescription"
+      },
+      {
+        "id": 5,
+        "type": "reorder",
+        "question": "eastPlainNewFive.questTask5",
+        "words": [
+          "woher",
+          "Telefonnummer",
+          "Wie",
+          "ist",
+          "heißt",
+          "deine"
+        ],
+        "correctOrder": [
+          "Wie",
+          "ist",
+          "deine",
+          "Telefonnummer"
+        ],
+        "tip": "eastPlainNewFive.questDescription"
+      },
+      {
+        "id": 6,
+        "type": "select",
+        "question": "eastPlainNewFive.questTask6",
+        "options": [
+          "elf",
+          "eins",
+          "zwölf"
+        ],
+        "answer": "elf",
+        "tip": "eastPlainNewFive.questDescription"
+      },
+      {
+        "id": 7,
+        "type": "input",
+        "question": "eastPlainNewFive.questTask7",
+        "correctAnswer": "zwölf",
+        "tip": "eastPlainNewFive.questDescription"
+      },
+      {
+        "id": 8,
+        "type": "select",
+        "question": "eastPlainNewFive.questTask8",
+        "options": [
+          "neu",
+          "neun",
+          "nein"
+        ],
+        "answer": "neun",
+        "tip": "eastPlainNewFive.questDescription"
+      },
+      {
+        "id": 9,
+        "type": "readAndAnswer",
+        "question": "eastPlainNewFive.questTask9",
+        "text": "Lisa: Tom, wie ist deine Telefonnummer? Tom: Null, eins, sieben, vier, zwei, neun, acht. Lisa: Danke!",
+        "options": [
+          "0147298",
+          "0174298",
+          "0174928"
+        ],
+        "answer": "0174298",
+        "tip": "eastPlainNewFive.questDescription"
+      },
+      {
+        "id": 10,
+        "type": "input",
+        "question": "eastPlainNewFive.questTask10",
+        "correctAnswer": "null",
+        "tip": "eastPlainNewFive.questDescription"
+      },
+      {
+        "id": 11,
+        "type": "reorder",
+        "question": "eastPlainNewFive.questTask11",
+        "words": [
+          "neu",
+          "elf",
+          "ist",
+          "eins",
+          "Nummer",
+          "null",
+          "Meine",
+          "fünf",
+          "sieben"
+        ],
+        "correctOrder": [
+          "Meine",
+          "Nummer",
+          "ist",
+          "null",
+          "eins",
+          "sieben",
+          "fünf"
+        ],
+        "tip": "eastPlainNewFive.questDescription"
+      },
+      {
+        "id": 12,
+        "type": "input",
+        "question": "eastPlainNewFive.questTask12",
+        "correctAnswer": "Spanien",
+        "tip": "eastPlainNewFive.questDescription"
+      },
+      {
+        "id": 13,
+        "type": "select",
+        "question": "eastPlainNewFive.questTask13",
+        "options": [
+          "Mein Name ist Frau Lang.",
+          "Mein Name heißt Frau Lang.",
+          "Mein Name bist Frau Lang."
+        ],
+        "answer": "Mein Name ist Frau Lang.",
+        "tip": "eastPlainNewFive.questDescription"
+      },
+      {
+        "id": 14,
+        "type": "select",
+        "question": "eastPlainNewFive.questTask14",
+        "options": [
+          "Woher wohnst du? In Wien.",
+          "Wo wohnst du? In Wien.",
+          "Wo wohnst du? Aus Wien."
+        ],
+        "answer": "Wo wohnst du? In Wien.",
+        "tip": "eastPlainNewFive.questDescription"
+      },
+      {
+        "id": 15,
+        "type": "reorder",
+        "question": "eastPlainNewFive.questTask15",
+        "words": [
+          "geht’s",
+          "gut",
+          "Hallo",
+          "danke",
+          "bitte",
+          "wie",
+          "heißt"
+        ],
+        "correctOrder": [
+          "Hallo",
+          "wie",
+          "geht’s",
+          "gut",
+          "danke"
+        ],
+        "tip": "eastPlainNewFive.questDescription"
+      }
+    ]
+  },
+  {
+    "questId": "six",
+    "aliases": [
+      "menschen-a1-beruf"
+    ],
+    "title": "eastPlainNewSix.questTitle",
+    "progress": "0/15",
+    "description": "eastPlainNewSix.questDescription",
+    "conditions": {
+      "goal": "eastPlainNewSix.questGoal",
+      "minCorrect": 15,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
+    "vocabulary": [
+      {
+        "word": "zwanzig",
+        "translation-ru": "двадцать",
+        "translation-en": "twenty",
+        "translation-uk": "двадцять",
+        "translation-pl": "dwadzieścia",
+        "translation-es": "veinte",
+        "translation-fr": "vingt",
+        "translation-tr": "yirmi",
+        "translation-ro": "douăzeci",
+        "translation-uz": "yigirma",
+        "translation-hi": "बीस",
+        "translation-ar": "عشرون"
+      },
+      {
+        "word": "dreißig",
+        "translation-ru": "тридцать",
+        "translation-en": "thirty",
+        "translation-uk": "тридцять",
+        "translation-pl": "trzydzieści",
+        "translation-es": "treinta",
+        "translation-fr": "trente",
+        "translation-tr": "otuz",
+        "translation-ro": "treizeci",
+        "translation-uz": "o‘ttiz",
+        "translation-hi": "तीस",
+        "translation-ar": "ثلاثون"
+      },
+      {
+        "word": "hundert",
+        "translation-ru": "сто",
+        "translation-en": "hundred",
+        "translation-uk": "сто",
+        "translation-pl": "sto",
+        "translation-es": "cien",
+        "translation-fr": "cent",
+        "translation-tr": "yüz",
+        "translation-ro": "o sută",
+        "translation-uz": "yuz",
+        "translation-hi": "सौ",
+        "translation-ar": "مئة"
+      },
+      {
+        "word": "der Euro",
+        "translation-ru": "евро",
+        "translation-en": "euro",
+        "translation-uk": "євро",
+        "translation-pl": "euro",
+        "translation-es": "el euro",
+        "translation-fr": "l’euro",
+        "translation-tr": "euro",
+        "translation-ro": "euro",
+        "translation-uz": "yevro",
+        "translation-hi": "यूरो",
+        "translation-ar": "اليورو"
+      },
+      {
+        "word": "kosten",
+        "translation-ru": "стоить",
+        "translation-en": "to cost",
+        "translation-uk": "коштувати",
+        "translation-pl": "kosztować",
+        "translation-es": "costar",
+        "translation-fr": "coûter",
+        "translation-tr": "tutmak (fiyat)",
+        "translation-ro": "a costa",
+        "translation-uz": "turmoq (narx)",
+        "translation-hi": "क़ीमत होना",
+        "translation-ar": "يكلّف"
+      },
+      {
+        "word": "der Gast",
+        "translation-ru": "гость",
+        "translation-en": "guest",
+        "translation-uk": "гість",
+        "translation-pl": "gość",
+        "translation-es": "el invitado",
+        "translation-fr": "l’invité",
+        "translation-tr": "misafir",
+        "translation-ro": "oaspetele",
+        "translation-uz": "mehmon",
+        "translation-hi": "मेहमान",
+        "translation-ar": "الضيف"
+      },
+      {
+        "word": "der Kaffee",
+        "translation-ru": "кофе",
+        "translation-en": "coffee",
+        "translation-uk": "кава",
+        "translation-pl": "kawa",
+        "translation-es": "el café",
+        "translation-fr": "le café",
+        "translation-tr": "kahve",
+        "translation-ro": "cafeaua",
+        "translation-uz": "qahva",
+        "translation-hi": "कॉफ़ी",
+        "translation-ar": "القهوة"
+      },
+      {
+        "word": "der Kellner",
+        "translation-ru": "официант",
+        "translation-en": "waiter",
+        "translation-uk": "офіціант",
+        "translation-pl": "kelner",
+        "translation-es": "el camarero",
+        "translation-fr": "le serveur",
+        "translation-tr": "garson",
+        "translation-ro": "chelnerul",
+        "translation-uz": "ofitsiant",
+        "translation-hi": "वेटर",
+        "translation-ar": "النادل"
+      },
+      {
+        "word": "der Tee",
+        "translation-ru": "чай",
+        "translation-en": "tea",
+        "translation-uk": "чай",
+        "translation-pl": "herbata",
+        "translation-es": "el té",
+        "translation-fr": "le thé",
+        "translation-tr": "çay",
+        "translation-ro": "ceaiul",
+        "translation-uz": "choy",
+        "translation-hi": "चाय",
+        "translation-ar": "الشاي"
+      }
+    ],
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "eastPlainNewSix.questTask1",
+        "options": [
+          "zwölf",
+          "zweizig",
+          "zwanzig"
+        ],
+        "answer": "zwanzig",
+        "tip": "eastPlainNewSix.questDescription"
+      },
+      {
+        "id": 2,
+        "type": "input",
+        "question": "eastPlainNewSix.questTask2",
+        "correctAnswer": "fünfzehn",
+        "tip": "eastPlainNewSix.questDescription"
+      },
+      {
+        "id": 3,
+        "type": "select",
+        "question": "eastPlainNewSix.questTask3",
+        "options": [
+          "dreizehn",
+          "dreizig",
+          "dreißig"
+        ],
+        "answer": "dreißig",
+        "tip": "eastPlainNewSix.questDescription"
+      },
+      {
+        "id": 4,
+        "type": "input",
+        "question": "eastPlainNewSix.questTask4",
+        "correctAnswer": "kostet",
+        "tip": "eastPlainNewSix.questDescription"
+      },
+      {
+        "id": 5,
+        "type": "reorder",
+        "question": "eastPlainNewSix.questTask5",
+        "words": [
+          "zwölf",
+          "Das",
+          "kosten",
+          "Euro",
+          "zwanzig",
+          "kostet"
+        ],
+        "correctOrder": [
+          "Das",
+          "kostet",
+          "zwanzig",
+          "Euro"
+        ],
+        "tip": "eastPlainNewSix.questDescription"
+      },
+      {
+        "id": 6,
+        "type": "select",
+        "question": "eastPlainNewSix.questTask6",
+        "options": [
+          "zwanzigundeins",
+          "einundzwanzig",
+          "zwanzigeins"
+        ],
+        "answer": "einundzwanzig",
+        "tip": "eastPlainNewSix.questDescription"
+      },
+      {
+        "id": 7,
+        "type": "input",
+        "question": "eastPlainNewSix.questTask7",
+        "correctAnswer": "sechzehn",
+        "tip": "eastPlainNewSix.questDescription"
+      },
+      {
+        "id": 8,
+        "type": "select",
+        "question": "eastPlainNewSix.questTask8",
+        "options": [
+          "fünfundvierzig Euro",
+          "vierzigfünf Euro",
+          "vierundfünfzig Euro"
+        ],
+        "answer": "fünfundvierzig Euro",
+        "tip": "eastPlainNewSix.questDescription"
+      },
+      {
+        "id": 9,
+        "type": "readAndAnswer",
+        "question": "eastPlainNewSix.questTask9",
+        "text": "Gast: Was kostet der Kaffee? Kellner: Der Kaffee kostet drei Euro, der Tee zwei Euro.",
+        "options": [
+          "drei Euro",
+          "dreizehn Euro",
+          "zwei Euro"
+        ],
+        "answer": "drei Euro",
+        "tip": "eastPlainNewSix.questDescription"
+      },
+      {
+        "id": 10,
+        "type": "input",
+        "question": "eastPlainNewSix.questTask10",
+        "correctAnswer": "Hundert",
+        "tip": "eastPlainNewSix.questDescription"
+      },
+      {
+        "id": 11,
+        "type": "reorder",
+        "question": "eastPlainNewSix.questTask11",
+        "words": [
+          "kosten",
+          "kostet",
+          "Das",
+          "dreiundzwanzig",
+          "zweiunddreißig",
+          "Euro"
+        ],
+        "correctOrder": [
+          "Das",
+          "kostet",
+          "zweiunddreißig",
+          "Euro"
+        ],
+        "tip": "eastPlainNewSix.questDescription"
+      },
+      {
+        "id": 12,
+        "type": "input",
+        "question": "eastPlainNewSix.questTask12",
+        "correctAnswer": "eins",
+        "tip": "eastPlainNewSix.questDescription"
+      },
+      {
+        "id": 13,
+        "type": "select",
+        "question": "eastPlainNewSix.questTask13",
+        "options": [
+          "Ich wohne in Zürich, in Schweiz.",
+          "Ich wohne in Zürich, in der Schweiz.",
+          "Ich wohne aus Zürich, in der Schweiz."
+        ],
+        "answer": "Ich wohne in Zürich, in der Schweiz.",
+        "tip": "eastPlainNewSix.questDescription"
+      },
+      {
+        "id": 14,
+        "type": "select",
+        "question": "eastPlainNewSix.questTask14",
+        "options": [
+          "zwölf",
+          "zwanzig",
+          "zwei"
+        ],
+        "answer": "zwölf",
+        "tip": "eastPlainNewSix.questDescription"
+      },
+      {
+        "id": 15,
+        "type": "reorder",
+        "question": "eastPlainNewSix.questTask15",
+        "words": [
+          "kommst",
+          "Woher",
+          "du",
+          "wo",
+          "und",
+          "wie",
+          "wohnst",
+          "heißt",
+          "du"
+        ],
+        "correctOrder": [
+          "Woher",
+          "kommst",
+          "du",
+          "und",
+          "wo",
+          "wohnst",
+          "du"
+        ],
+        "tip": "eastPlainNewSix.questDescription"
+      }
+    ]
+  },
+  {
+    "questId": "seven",
+    "aliases": [
+      "menschen-a1-zahlen"
+    ],
+    "title": "eastPlainNewSeven.questTitle",
+    "progress": "0/15",
+    "description": "eastPlainNewSeven.questDescription",
+    "conditions": {
+      "goal": "eastPlainNewSeven.questGoal",
+      "minCorrect": 15,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
+    "vocabulary": [
+      {
+        "word": "der Kaffee",
+        "translation-ru": "кофе",
+        "translation-en": "coffee",
+        "translation-uk": "кава",
+        "translation-pl": "kawa",
+        "translation-es": "el café",
+        "translation-fr": "le café",
+        "translation-tr": "kahve",
+        "translation-ro": "cafeaua",
+        "translation-uz": "qahva",
+        "translation-hi": "कॉफ़ी",
+        "translation-ar": "القهوة"
+      },
+      {
+        "word": "der Tee",
+        "translation-ru": "чай",
+        "translation-en": "tea",
+        "translation-uk": "чай",
+        "translation-pl": "herbata",
+        "translation-es": "el té",
+        "translation-fr": "le thé",
+        "translation-tr": "çay",
+        "translation-ro": "ceaiul",
+        "translation-uz": "choy",
+        "translation-hi": "चाय",
+        "translation-ar": "الشاي"
+      },
+      {
+        "word": "das Wasser",
+        "translation-ru": "вода",
+        "translation-en": "water",
+        "translation-uk": "вода",
+        "translation-pl": "woda",
+        "translation-es": "el agua",
+        "translation-fr": "l’eau",
+        "translation-tr": "su",
+        "translation-ro": "apa",
+        "translation-uz": "suv",
+        "translation-hi": "पानी",
+        "translation-ar": "الماء"
+      },
+      {
+        "word": "bitte",
+        "translation-ru": "пожалуйста",
+        "translation-en": "please",
+        "translation-uk": "будь ласка",
+        "translation-pl": "proszę",
+        "translation-es": "por favor",
+        "translation-fr": "s’il vous plaît",
+        "translation-tr": "lütfen",
+        "translation-ro": "vă rog",
+        "translation-uz": "iltimos",
+        "translation-hi": "कृपया",
+        "translation-ar": "من فضلك"
+      },
+      {
+        "word": "die Rechnung",
+        "translation-ru": "счёт",
+        "translation-en": "bill",
+        "translation-uk": "рахунок",
+        "translation-pl": "rachunek",
+        "translation-es": "la cuenta",
+        "translation-fr": "l’addition",
+        "translation-tr": "hesap",
+        "translation-ro": "nota de plată",
+        "translation-uz": "hisob",
+        "translation-hi": "बिल",
+        "translation-ar": "الحساب"
+      },
+      {
+        "word": "die Milch",
+        "translation-ru": "молоко",
+        "translation-en": "milk",
+        "translation-uk": "молоко",
+        "translation-pl": "mleko",
+        "translation-es": "la leche",
+        "translation-fr": "le lait",
+        "translation-tr": "süt",
+        "translation-ro": "laptele",
+        "translation-uz": "sut",
+        "translation-hi": "दूध",
+        "translation-ar": "الحليب"
+      },
+      {
+        "word": "bar",
+        "translation-ru": "наличными",
+        "translation-en": "in cash",
+        "translation-uk": "готівкою",
+        "translation-pl": "gotówką",
+        "translation-es": "en efectivo",
+        "translation-fr": "en espèces",
+        "translation-tr": "nakit",
+        "translation-ro": "numerar",
+        "translation-uz": "naqd",
+        "translation-hi": "नक़द",
+        "translation-ar": "نقدًا"
+      },
+      {
+        "word": "die Karte",
+        "translation-ru": "карта",
+        "translation-en": "card",
+        "translation-uk": "картка",
+        "translation-pl": "karta",
+        "translation-es": "la tarjeta",
+        "translation-fr": "la carte",
+        "translation-tr": "kart",
+        "translation-ro": "cardul",
+        "translation-uz": "karta",
+        "translation-hi": "कार्ड",
+        "translation-ar": "البطاقة"
+      }
+    ],
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "eastPlainNewSeven.questTask1",
+        "options": [
+          "Einen Tee, bitte.",
+          "Einen Kaffee, danke.",
+          "Einen Kaffee, bitte."
+        ],
+        "answer": "Einen Kaffee, bitte.",
+        "tip": "eastPlainNewSeven.questDescription"
+      },
+      {
+        "id": 2,
+        "type": "input",
+        "question": "eastPlainNewSeven.questTask2",
+        "correctAnswer": "möchte",
+        "tip": "eastPlainNewSeven.questDescription"
+      },
+      {
+        "id": 3,
+        "type": "select",
+        "question": "eastPlainNewSeven.questTask3",
+        "options": [
+          "Die Rechnung, danke!",
+          "Das Wasser, bitte!",
+          "Die Rechnung, bitte!"
+        ],
+        "answer": "Die Rechnung, bitte!",
+        "tip": "eastPlainNewSeven.questDescription"
+      },
+      {
+        "id": 4,
+        "type": "input",
+        "question": "eastPlainNewSeven.questTask4",
+        "correctAnswer": "Wasser",
+        "tip": "eastPlainNewSeven.questDescription"
+      },
+      {
+        "id": 5,
+        "type": "reorder",
+        "question": "eastPlainNewSeven.questTask5",
+        "words": [
+          "mit",
+          "Tee",
+          "Milch",
+          "Kaffee",
+          "möchte",
+          "danke",
+          "Ich",
+          "einen"
+        ],
+        "correctOrder": [
+          "Ich",
+          "möchte",
+          "einen",
+          "Kaffee",
+          "mit",
+          "Milch"
+        ],
+        "tip": "eastPlainNewSeven.questDescription"
+      },
+      {
+        "id": 6,
+        "type": "select",
+        "question": "eastPlainNewSeven.questTask6",
+        "options": [
+          "Bar oder mit Karte?",
+          "Bitte oder mit Karte?",
+          "Bar oder mit Rechnung?"
+        ],
+        "answer": "Bar oder mit Karte?",
+        "tip": "eastPlainNewSeven.questDescription"
+      },
+      {
+        "id": 7,
+        "type": "input",
+        "question": "eastPlainNewSeven.questTask7",
+        "correctAnswer": "Bitte",
+        "tip": "eastPlainNewSeven.questDescription"
+      },
+      {
+        "id": 8,
+        "type": "select",
+        "question": "eastPlainNewSeven.questTask8",
+        "options": [
+          "Einen Tee mit Milch, bitte.",
+          "Einen Kaffee mit Milch, danke.",
+          "Einen Tee mit Wasser, bitte."
+        ],
+        "answer": "Einen Tee mit Milch, bitte.",
+        "tip": "eastPlainNewSeven.questDescription"
+      },
+      {
+        "id": 9,
+        "type": "readAndAnswer",
+        "question": "eastPlainNewSeven.questTask9",
+        "text": "Kellner: Guten Tag! Was möchten Sie? Eva: Ich möchte einen Tee mit Milch, bitte. Und ein Wasser. Kellner: Gern!",
+        "options": [
+          "nur Wasser",
+          "Tee mit Milch und Wasser",
+          "Kaffee mit Milch"
+        ],
+        "answer": "Tee mit Milch und Wasser",
+        "tip": "eastPlainNewSeven.questDescription"
+      },
+      {
+        "id": 10,
+        "type": "input",
+        "question": "eastPlainNewSeven.questTask10",
+        "correctAnswer": "Rechnung",
+        "tip": "eastPlainNewSeven.questDescription"
+      },
+      {
+        "id": 11,
+        "type": "reorder",
+        "question": "eastPlainNewSeven.questTask11",
+        "words": [
+          "Rechnung",
+          "bitte",
+          "Karte",
+          "bar",
+          "Mit",
+          "danke"
+        ],
+        "correctOrder": [
+          "Mit",
+          "Karte",
+          "bitte",
+          "danke"
+        ],
+        "tip": "eastPlainNewSeven.questDescription"
+      },
+      {
+        "id": 12,
+        "type": "input",
+        "question": "eastPlainNewSeven.questTask12",
+        "correctAnswer": "Zwei",
+        "tip": "eastPlainNewSeven.questDescription"
+      },
+      {
+        "id": 13,
+        "type": "select",
+        "question": "eastPlainNewSeven.questTask13",
+        "options": [
+          "Das kostet neunzehn Euro.",
+          "Das kostet neunundzehn Euro.",
+          "Das kostet neunzig Euro."
+        ],
+        "answer": "Das kostet neunzehn Euro.",
+        "tip": "eastPlainNewSeven.questDescription"
+      },
+      {
+        "id": 14,
+        "type": "select",
+        "question": "eastPlainNewSeven.questTask14",
+        "options": [
+          "fünfzig",
+          "fünfzehn",
+          "fünfundzwanzig"
+        ],
+        "answer": "fünfzig",
+        "tip": "eastPlainNewSeven.questDescription"
+      },
+      {
+        "id": 15,
+        "type": "reorder",
+        "question": "eastPlainNewSeven.questTask15",
+        "words": [
+          "deine",
+          "Wie",
+          "Nummer",
+          "kostet",
+          "ist",
+          "Was"
+        ],
+        "correctOrder": [
+          "Wie",
+          "ist",
+          "deine",
+          "Nummer"
+        ],
+        "tip": "eastPlainNewSeven.questDescription"
+      }
+    ]
+  },
+  {
+    "questId": "eight",
+    "aliases": [
+      "menschen-a1-familie"
+    ],
+    "title": "eastPlainNewEight.questTitle",
+    "progress": "0/15",
+    "description": "eastPlainNewEight.questDescription",
+    "conditions": {
+      "goal": "eastPlainNewEight.questGoal",
+      "minCorrect": 15,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
+    "vocabulary": [
+      {
+        "word": "die Mutter",
+        "translation-ru": "мама",
+        "translation-en": "mother",
+        "translation-uk": "мама",
+        "translation-pl": "mama",
+        "translation-es": "la madre",
+        "translation-fr": "la mère",
+        "translation-tr": "anne",
+        "translation-ro": "mama",
+        "translation-uz": "ona",
+        "translation-hi": "माँ",
+        "translation-ar": "الأم"
+      },
+      {
+        "word": "der Vater",
+        "translation-ru": "папа",
+        "translation-en": "father",
+        "translation-uk": "тато",
+        "translation-pl": "tata",
+        "translation-es": "el padre",
+        "translation-fr": "le père",
+        "translation-tr": "baba",
+        "translation-ro": "tatăl",
+        "translation-uz": "ota",
+        "translation-hi": "पिता",
+        "translation-ar": "الأب"
+      },
+      {
+        "word": "der Bruder",
+        "translation-ru": "брат",
+        "translation-en": "brother",
+        "translation-uk": "брат",
+        "translation-pl": "brat",
+        "translation-es": "el hermano",
+        "translation-fr": "le frère",
+        "translation-tr": "erkek kardeş",
+        "translation-ro": "fratele",
+        "translation-uz": "aka, uka",
+        "translation-hi": "भाई",
+        "translation-ar": "الأخ"
+      },
+      {
+        "word": "die Schwester",
+        "translation-ru": "сестра",
+        "translation-en": "sister",
+        "translation-uk": "сестра",
+        "translation-pl": "siostra",
+        "translation-es": "la hermana",
+        "translation-fr": "la sœur",
+        "translation-tr": "kız kardeş",
+        "translation-ro": "sora",
+        "translation-uz": "opa, singil",
+        "translation-hi": "बहन",
+        "translation-ar": "الأخت"
+      },
+      {
+        "word": "der Lehrer",
+        "translation-ru": "учитель",
+        "translation-en": "teacher",
+        "translation-uk": "вчитель",
+        "translation-pl": "nauczyciel",
+        "translation-es": "el profesor",
+        "translation-fr": "le professeur",
+        "translation-tr": "öğretmen",
+        "translation-ro": "profesorul",
+        "translation-uz": "o‘qituvchi",
+        "translation-hi": "शिक्षक",
+        "translation-ar": "المعلم"
+      },
+      {
+        "word": "der Arzt",
+        "translation-ru": "врач",
+        "translation-en": "doctor",
+        "translation-uk": "лікар",
+        "translation-pl": "lekarz",
+        "translation-es": "el médico",
+        "translation-fr": "le médecin",
+        "translation-tr": "doktor",
+        "translation-ro": "medicul",
+        "translation-uz": "shifokor",
+        "translation-hi": "डॉक्टर",
+        "translation-ar": "الطبيب"
+      },
+      {
+        "word": "der Student",
+        "translation-ru": "студент",
+        "translation-en": "student",
+        "translation-uk": "студент",
+        "translation-pl": "student",
+        "translation-es": "el estudiante",
+        "translation-fr": "l’étudiant",
+        "translation-tr": "öğrenci",
+        "translation-ro": "studentul",
+        "translation-uz": "talaba",
+        "translation-hi": "छात्र",
+        "translation-ar": "الطالب"
+      },
+      {
+        "word": "der Beruf",
+        "translation-ru": "профессия",
+        "translation-en": "profession",
+        "translation-uk": "професія",
+        "translation-pl": "zawód",
+        "translation-es": "la profesión",
+        "translation-fr": "le métier",
+        "translation-tr": "meslek",
+        "translation-ro": "meseria",
+        "translation-uz": "kasb",
+        "translation-hi": "पेशा",
+        "translation-ar": "المهنة"
+      },
+      {
+        "word": "der Koch",
+        "translation-ru": "повар",
+        "translation-en": "cook",
+        "translation-uk": "кухар",
+        "translation-pl": "kucharz",
+        "translation-es": "el cocinero",
+        "translation-fr": "le cuisinier",
+        "translation-tr": "aşçı",
+        "translation-ro": "bucătarul",
+        "translation-uz": "oshpaz",
+        "translation-hi": "रसोइया",
+        "translation-ar": "الطباخ"
+      }
+    ],
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "eastPlainNewEight.questTask1",
+        "options": [
+          "Das ist meine Vater.",
+          "Das ist mein Mutter.",
+          "Das ist mein Vater."
+        ],
+        "answer": "Das ist mein Vater.",
+        "tip": "eastPlainNewEight.questDescription"
+      },
+      {
+        "id": 2,
+        "type": "input",
+        "question": "eastPlainNewEight.questTask2",
+        "correctAnswer": "Mutter",
+        "tip": "eastPlainNewEight.questDescription"
+      },
+      {
+        "id": 3,
+        "type": "select",
+        "question": "eastPlainNewEight.questTask3",
+        "options": [
+          "Meine Bruder ist Student.",
+          "Mein Bruder ist ein der Student.",
+          "Mein Bruder ist Student."
+        ],
+        "answer": "Mein Bruder ist Student.",
+        "tip": "eastPlainNewEight.questDescription"
+      },
+      {
+        "id": 4,
+        "type": "input",
+        "question": "eastPlainNewEight.questTask4",
+        "correctAnswer": "Lehrerin",
+        "tip": "eastPlainNewEight.questDescription"
+      },
+      {
+        "id": 5,
+        "type": "reorder",
+        "question": "eastPlainNewEight.questTask5",
+        "words": [
+          "mein",
+          "ist",
+          "Schwester",
+          "Das",
+          "Arzt",
+          "ist",
+          "Ärztin",
+          "sie",
+          "meine"
+        ],
+        "correctOrder": [
+          "Das",
+          "ist",
+          "meine",
+          "Schwester",
+          "sie",
+          "ist",
+          "Ärztin"
+        ],
+        "tip": "eastPlainNewEight.questDescription"
+      },
+      {
+        "id": 6,
+        "type": "select",
+        "question": "eastPlainNewEight.questTask6",
+        "options": [
+          "Wie sind Sie von Beruf?",
+          "Was sind Sie von Beruf?",
+          "Was sind Sie aus Beruf?"
+        ],
+        "answer": "Was sind Sie von Beruf?",
+        "tip": "eastPlainNewEight.questDescription"
+      },
+      {
+        "id": 7,
+        "type": "input",
+        "question": "eastPlainNewEight.questTask7",
+        "correctAnswer": "Koch",
+        "tip": "eastPlainNewEight.questDescription"
+      },
+      {
+        "id": 8,
+        "type": "select",
+        "question": "eastPlainNewEight.questTask8",
+        "options": [
+          "Meine Vater ist Kellner.",
+          "Mein Vater ist Kellner.",
+          "Mein Vater ist Kellnerin."
+        ],
+        "answer": "Mein Vater ist Kellner.",
+        "tip": "eastPlainNewEight.questDescription"
+      },
+      {
+        "id": 9,
+        "type": "readAndAnswer",
+        "question": "eastPlainNewEight.questTask9",
+        "text": "Hallo, ich bin Tom. Das ist mein Vater. Er ist Koch. Das ist meine Mutter. Sie ist Ärztin. Und das ist meine Schwester Lea. Sie ist Studentin.",
+        "options": [
+          "Ärztin",
+          "Studentin",
+          "Köchin"
+        ],
+        "answer": "Ärztin",
+        "tip": "eastPlainNewEight.questDescription"
+      },
+      {
+        "id": 10,
+        "type": "input",
+        "question": "eastPlainNewEight.questTask10",
+        "correctAnswer": "Bruder",
+        "tip": "eastPlainNewEight.questDescription"
+      },
+      {
+        "id": 11,
+        "type": "reorder",
+        "question": "eastPlainNewEight.questTask11",
+        "words": [
+          "und",
+          "Studentin",
+          "ist",
+          "mein",
+          "Lehrer",
+          "bin",
+          "Ich",
+          "meine",
+          "Lehrerin",
+          "Vater"
+        ],
+        "correctOrder": [
+          "Ich",
+          "bin",
+          "Studentin",
+          "und",
+          "mein",
+          "Vater",
+          "ist",
+          "Lehrer"
+        ],
+        "tip": "eastPlainNewEight.questDescription"
+      },
+      {
+        "id": 12,
+        "type": "input",
+        "question": "eastPlainNewEight.questTask12",
+        "correctAnswer": "möchte",
+        "tip": "eastPlainNewEight.questDescription"
+      },
+      {
+        "id": 13,
+        "type": "select",
+        "question": "eastPlainNewEight.questTask13",
+        "options": [
+          "Der Tee kostet dreißig Euro.",
+          "Der Tee kostet drei Euro.",
+          "Der Tee kosten drei Euro."
+        ],
+        "answer": "Der Tee kostet drei Euro.",
+        "tip": "eastPlainNewEight.questDescription"
+      },
+      {
+        "id": 14,
+        "type": "select",
+        "question": "eastPlainNewEight.questTask14",
+        "options": [
+          "Die Milch, danke!",
+          "Die Rechnung, bitte!",
+          "Guten Appetit, bitte!"
+        ],
+        "answer": "Die Rechnung, bitte!",
+        "tip": "eastPlainNewEight.questDescription"
+      },
+      {
+        "id": 15,
+        "type": "reorder",
+        "question": "eastPlainNewEight.questTask15",
+        "words": [
+          "Neunundvierzig",
+          "Euro",
+          "bitte",
+          "danke",
+          "vierundneunzig"
+        ],
+        "correctOrder": [
+          "Neunundvierzig",
+          "Euro",
+          "bitte"
+        ],
+        "tip": "eastPlainNewEight.questDescription"
+      }
+    ]
+  },
+  {
+    "questId": "nine",
+    "aliases": [
+      "menschen-a1-tagesablauf"
+    ],
+    "title": "eastPlainNewNine.questTitle",
+    "progress": "0/15",
+    "description": "eastPlainNewNine.questDescription",
+    "conditions": {
+      "goal": "eastPlainNewNine.questGoal",
+      "minCorrect": 15,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
+    "vocabulary": [
+      {
+        "word": "ja",
+        "translation-ru": "да",
+        "translation-en": "yes",
+        "translation-uk": "так",
+        "translation-pl": "tak",
+        "translation-es": "sí",
+        "translation-fr": "oui",
+        "translation-tr": "evet",
+        "translation-ro": "da",
+        "translation-uz": "ha",
+        "translation-hi": "हाँ",
+        "translation-ar": "نعم"
+      },
+      {
+        "word": "nein",
+        "translation-ru": "нет",
+        "translation-en": "no",
+        "translation-uk": "ні",
+        "translation-pl": "nie",
+        "translation-es": "no",
+        "translation-fr": "non",
+        "translation-tr": "hayır",
+        "translation-ro": "nu",
+        "translation-uz": "yo‘q",
+        "translation-hi": "नहीं",
+        "translation-ar": "لا"
+      },
+      {
+        "word": "Entschuldigung!",
+        "translation-ru": "Извините!",
+        "translation-en": "Excuse me!",
+        "translation-uk": "Перепрошую!",
+        "translation-pl": "Przepraszam!",
+        "translation-es": "¡Perdón!",
+        "translation-fr": "Excusez-moi !",
+        "translation-tr": "Affedersiniz!",
+        "translation-ro": "Scuzați-mă!",
+        "translation-uz": "Kechirasiz!",
+        "translation-hi": "माफ़ कीजिए!",
+        "translation-ar": "عفوًا!"
+      },
+      {
+        "word": "das Café",
+        "translation-ru": "кафе",
+        "translation-en": "café",
+        "translation-uk": "кафе",
+        "translation-pl": "kawiarnia",
+        "translation-es": "la cafetería",
+        "translation-fr": "le café",
+        "translation-tr": "kafe",
+        "translation-ro": "cafeneaua",
+        "translation-uz": "kafe",
+        "translation-hi": "कैफ़े",
+        "translation-ar": "المقهى"
+      },
+      {
+        "word": "die Familie",
+        "translation-ru": "семья",
+        "translation-en": "family",
+        "translation-uk": "родина",
+        "translation-pl": "rodzina",
+        "translation-es": "la familia",
+        "translation-fr": "la famille",
+        "translation-tr": "aile",
+        "translation-ro": "familia",
+        "translation-uz": "oila",
+        "translation-hi": "परिवार",
+        "translation-ar": "العائلة"
+      },
+      {
+        "word": "frei",
+        "translation-ru": "свободный",
+        "translation-en": "free",
+        "translation-uk": "вільний",
+        "translation-pl": "wolny",
+        "translation-es": "libre",
+        "translation-fr": "libre",
+        "translation-tr": "boş",
+        "translation-ro": "liber",
+        "translation-uz": "bo‘sh",
+        "translation-hi": "खाली",
+        "translation-ar": "فارغ"
+      }
+    ],
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "eastPlainNewNine.questTask1",
+        "options": [
+          "Danke, sind Sie Herr Becker?",
+          "Entschuldigung, bist Sie Herr Becker?",
+          "Entschuldigung, sind Sie Herr Becker?"
+        ],
+        "answer": "Entschuldigung, sind Sie Herr Becker?",
+        "tip": "eastPlainNewNine.questDescription"
+      },
+      {
+        "id": 2,
+        "type": "input",
+        "question": "eastPlainNewNine.questTask2",
+        "correctAnswer": "Ja",
+        "tip": "eastPlainNewNine.questDescription"
+      },
+      {
+        "id": 3,
+        "type": "select",
+        "question": "eastPlainNewNine.questTask3",
+        "options": [
+          "Ja, ich bin nicht Herr Becker.",
+          "Nein, ich bin nein Herr Becker.",
+          "Nein, ich bin nicht Herr Becker."
+        ],
+        "answer": "Nein, ich bin nicht Herr Becker.",
+        "tip": "eastPlainNewNine.questDescription"
+      },
+      {
+        "id": 4,
+        "type": "input",
+        "question": "eastPlainNewNine.questTask4",
+        "correctAnswer": "aus",
+        "tip": "eastPlainNewNine.questDescription"
+      },
+      {
+        "id": 5,
+        "type": "reorder",
+        "question": "eastPlainNewNine.questTask5",
+        "words": [
+          "der",
+          "Kaffee",
+          "Entschuldigung",
+          "bitte",
+          "kosten",
+          "was",
+          "kostet"
+        ],
+        "correctOrder": [
+          "Entschuldigung",
+          "was",
+          "kostet",
+          "der",
+          "Kaffee"
+        ],
+        "tip": "eastPlainNewNine.questDescription"
+      },
+      {
+        "id": 6,
+        "type": "select",
+        "question": "eastPlainNewNine.questTask6",
+        "options": [
+          "Das bin meine Familie.",
+          "Das ist meine Familie.",
+          "Das ist mein Familie."
+        ],
+        "answer": "Das ist meine Familie.",
+        "tip": "eastPlainNewNine.questDescription"
+      },
+      {
+        "id": 7,
+        "type": "input",
+        "question": "eastPlainNewNine.questTask7",
+        "correctAnswer": "bitte",
+        "tip": "eastPlainNewNine.questDescription"
+      },
+      {
+        "id": 8,
+        "type": "select",
+        "question": "eastPlainNewNine.questTask8",
+        "options": [
+          "Tee? Nein, danke.",
+          "Tee? Nicht, danke.",
+          "Tee? Nein, bitte danke."
+        ],
+        "answer": "Tee? Nein, danke.",
+        "tip": "eastPlainNewNine.questDescription"
+      },
+      {
+        "id": 9,
+        "type": "readAndAnswer",
+        "question": "eastPlainNewNine.questTask9",
+        "text": "Im Café. Marco: Entschuldigung, ist hier frei? Lena: Ja, bitte! Marco: Danke! Ich heiße Marco. Ich komme aus Italien. Lena: Freut mich! Ich bin Lena.",
+        "options": [
+          "aus Italien",
+          "aus dem Café",
+          "aus Deutschland"
+        ],
+        "answer": "aus Italien",
+        "tip": "eastPlainNewNine.questDescription"
+      },
+      {
+        "id": 10,
+        "type": "input",
+        "question": "eastPlainNewNine.questTask10",
+        "correctAnswer": "Entschuldigung",
+        "tip": "eastPlainNewNine.questDescription"
+      },
+      {
+        "id": 11,
+        "type": "reorder",
+        "question": "eastPlainNewNine.questTask11",
+        "words": [
+          "Hamburg",
+          "Ja",
+          "Familie",
+          "aus",
+          "wohnt",
+          "nein",
+          "meine",
+          "in"
+        ],
+        "correctOrder": [
+          "Ja",
+          "meine",
+          "Familie",
+          "wohnt",
+          "in",
+          "Hamburg"
+        ],
+        "tip": "eastPlainNewNine.questDescription"
+      },
+      {
+        "id": 12,
+        "type": "input",
+        "question": "eastPlainNewNine.questTask12",
+        "correctAnswer": "Schwester",
+        "tip": "eastPlainNewNine.questDescription"
+      },
+      {
+        "id": 13,
+        "type": "select",
+        "question": "eastPlainNewNine.questTask13",
+        "options": [
+          "Kaffee mit Milch, bitte!",
+          "Kaffee mit Wasser, bitte!",
+          "Kaffee mit Milch, danke bitte!"
+        ],
+        "answer": "Kaffee mit Milch, bitte!",
+        "tip": "eastPlainNewNine.questDescription"
+      },
+      {
+        "id": 14,
+        "type": "select",
+        "question": "eastPlainNewNine.questTask14",
+        "options": [
+          "Mein Vater ist Arzt und meine Mutter ist Lehrerin.",
+          "Meine Vater ist Arzt und mein Mutter ist Lehrerin.",
+          "Mein Vater ist Ärztin und meine Mutter ist Lehrer."
+        ],
+        "answer": "Mein Vater ist Arzt und meine Mutter ist Lehrerin.",
+        "tip": "eastPlainNewNine.questDescription"
+      },
+      {
+        "id": 15,
+        "type": "reorder",
+        "question": "eastPlainNewNine.questTask15",
+        "words": [
+          "Bar",
+          "Karte",
+          "oder",
+          "danke",
+          "Rechnung",
+          "mit",
+          "Karte",
+          "mit",
+          "bitte"
+        ],
+        "correctOrder": [
+          "Bar",
+          "oder",
+          "mit",
+          "Karte",
+          "mit",
+          "Karte",
+          "bitte"
+        ],
+        "tip": "eastPlainNewNine.questDescription"
+      }
+    ]
+  },
+  {
+    "questId": "ten",
+    "aliases": [
+      "menschen-a1-wohnort"
+    ],
+    "title": "eastPlainNewTen.questTitle",
+    "progress": "0/15",
+    "description": "eastPlainNewTen.questDescription",
+    "conditions": {
+      "goal": "eastPlainNewTen.questGoal",
+      "minCorrect": 15,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
+    "vocabulary": [
+      {
+        "word": "der Koch",
+        "translation-ru": "повар",
+        "translation-en": "cook",
+        "translation-uk": "кухар",
+        "translation-pl": "kucharz",
+        "translation-es": "el cocinero",
+        "translation-fr": "le cuisinier",
+        "translation-tr": "aşçı",
+        "translation-ro": "bucătarul",
+        "translation-uz": "oshpaz",
+        "translation-hi": "रसोइया",
+        "translation-ar": "الطباخ"
+      },
+      {
+        "word": "der Kellner",
+        "translation-ru": "официант",
+        "translation-en": "waiter",
+        "translation-uk": "офіціант",
+        "translation-pl": "kelner",
+        "translation-es": "el camarero",
+        "translation-fr": "le serveur",
+        "translation-tr": "garson",
+        "translation-ro": "chelnerul",
+        "translation-uz": "ofitsiant",
+        "translation-hi": "वेटर",
+        "translation-ar": "النادل"
+      },
+      {
+        "word": "Gute Nacht!",
+        "translation-ru": "Спокойной ночи!",
+        "translation-en": "Good night!",
+        "translation-uk": "Добраніч!",
+        "translation-pl": "Dobranoc!",
+        "translation-es": "¡Buenas noches! (al dormir)",
+        "translation-fr": "Bonne nuit !",
+        "translation-tr": "İyi geceler!",
+        "translation-ro": "Noapte bună!",
+        "translation-uz": "Xayrli tun!",
+        "translation-hi": "शुभ रात्रि!",
+        "translation-ar": "تصبح على خير!"
+      },
+      {
+        "word": "Italien",
+        "translation-ru": "Италия",
+        "translation-en": "Italy",
+        "translation-uk": "Італія",
+        "translation-pl": "Włochy",
+        "translation-es": "Italia",
+        "translation-fr": "l’Italie",
+        "translation-tr": "İtalya",
+        "translation-ro": "Italia",
+        "translation-uz": "Italiya",
+        "translation-hi": "इटली",
+        "translation-ar": "إيطاليا"
+      },
+      {
+        "word": "wie",
+        "translation-ru": "как",
+        "translation-en": "how",
+        "translation-uk": "як",
+        "translation-pl": "jak",
+        "translation-es": "cómo",
+        "translation-fr": "comment",
+        "translation-tr": "nasıl",
+        "translation-ro": "cum",
+        "translation-uz": "qanday",
+        "translation-hi": "कैसे",
+        "translation-ar": "كيف"
+      },
+      {
+        "word": "die Mama",
+        "translation-ru": "мама",
+        "translation-en": "mum",
+        "translation-uk": "мама",
+        "translation-pl": "mama",
+        "translation-es": "mamá",
+        "translation-fr": "maman",
+        "translation-tr": "anne",
+        "translation-ro": "mama",
+        "translation-uz": "oyi",
+        "translation-hi": "माँ",
+        "translation-ar": "ماما"
+      }
+    ],
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "eastPlainNewTen.questTask1",
+        "options": [
+          "Gute Abend! Ich heiße Julia.",
+          "Guten Abend! Ich heißt Julia.",
+          "Guten Abend! Ich heiße Julia."
+        ],
+        "answer": "Guten Abend! Ich heiße Julia.",
+        "tip": "eastPlainNewTen.questDescription"
+      },
+      {
+        "id": 2,
+        "type": "input",
+        "question": "eastPlainNewTen.questTask2",
+        "correctAnswer": "Woher",
+        "tip": "eastPlainNewTen.questDescription"
+      },
+      {
+        "id": 3,
+        "type": "select",
+        "question": "eastPlainNewTen.questTask3",
+        "options": [
+          "Wie geht’s dir, Frau Müller?",
+          "Wie heißen Sie, Frau Müller?",
+          "Wie geht es Ihnen, Frau Müller?"
+        ],
+        "answer": "Wie geht es Ihnen, Frau Müller?",
+        "tip": "eastPlainNewTen.questDescription"
+      },
+      {
+        "id": 4,
+        "type": "input",
+        "question": "eastPlainNewTen.questTask4",
+        "correctAnswer": "Kellner",
+        "tip": "eastPlainNewTen.questDescription"
+      },
+      {
+        "id": 5,
+        "type": "reorder",
+        "question": "eastPlainNewTen.questTask5",
+        "words": [
+          "Guten",
+          "bitte",
+          "Mama",
+          "Gute",
+          "danke",
+          "Nacht"
+        ],
+        "correctOrder": [
+          "Gute",
+          "Nacht",
+          "Mama",
+          "danke"
+        ],
+        "tip": "eastPlainNewTen.questDescription"
+      },
+      {
+        "id": 6,
+        "type": "select",
+        "question": "eastPlainNewTen.questTask6",
+        "options": [
+          "Das kostet sechzigsieben Euro.",
+          "Das kostet sechsundsiebzig Euro.",
+          "Das kostet siebenundsechzig Euro."
+        ],
+        "answer": "Das kostet siebenundsechzig Euro.",
+        "tip": "eastPlainNewTen.questDescription"
+      },
+      {
+        "id": 7,
+        "type": "input",
+        "question": "eastPlainNewTen.questTask7",
+        "correctAnswer": "Milch",
+        "tip": "eastPlainNewTen.questDescription"
+      },
+      {
+        "id": 8,
+        "type": "select",
+        "question": "eastPlainNewTen.questTask8",
+        "options": [
+          "Auf Wiedersehen!",
+          "Hallo!",
+          "Gute Nacht!"
+        ],
+        "answer": "Hallo!",
+        "tip": "eastPlainNewTen.questDescription"
+      },
+      {
+        "id": 9,
+        "type": "readAndAnswer",
+        "question": "eastPlainNewTen.questTask9",
+        "text": "Guten Tag! Mein Name ist Ali Demir. Ich komme aus der Türkei und wohne in Köln. Ich bin Koch. Meine Telefonnummer ist null, eins, fünf, zwei, acht.",
+        "options": [
+          "Student",
+          "Koch",
+          "Kellner"
+        ],
+        "answer": "Koch",
+        "tip": "eastPlainNewTen.questDescription"
+      },
+      {
+        "id": 10,
+        "type": "input",
+        "question": "eastPlainNewTen.questTask10",
+        "correctAnswer": "woher",
+        "tip": "eastPlainNewTen.questDescription"
+      },
+      {
+        "id": 11,
+        "type": "reorder",
+        "question": "eastPlainNewTen.questTask11",
+        "words": [
+          "er",
+          "ist",
+          "Nein",
+          "ja",
+          "Student",
+          "Arzt"
+        ],
+        "correctOrder": [
+          "Nein",
+          "er",
+          "ist",
+          "Arzt"
+        ],
+        "tip": "eastPlainNewTen.questDescription"
+      },
+      {
+        "id": 12,
+        "type": "input",
+        "question": "eastPlainNewTen.questTask12",
+        "correctAnswer": "achtundneunzig",
+        "tip": "eastPlainNewTen.questDescription"
+      },
+      {
+        "id": 13,
+        "type": "select",
+        "question": "eastPlainNewTen.questTask13",
+        "options": [
+          "Entschuldigung, kommen Sie in Österreich?",
+          "Entschuldigung, kommen Sie aus Österreich?",
+          "Entschuldigung, kommst Sie aus Österreich?"
+        ],
+        "answer": "Entschuldigung, kommen Sie aus Österreich?",
+        "tip": "eastPlainNewTen.questDescription"
+      },
+      {
+        "id": 14,
+        "type": "select",
+        "question": "eastPlainNewTen.questTask14",
+        "options": [
+          "Gut, bitte. Und Ihnen?",
+          "Gut, danke. Und Ihnen?",
+          "Gut, danke. Und du Ihnen?"
+        ],
+        "answer": "Gut, danke. Und Ihnen?",
+        "tip": "eastPlainNewTen.questDescription"
+      },
+      {
+        "id": 15,
+        "type": "reorder",
+        "question": "eastPlainNewTen.questTask15",
+        "words": [
+          "Wiedersehen",
+          "Herr",
+          "Frau",
+          "Koch",
+          "Tschüss",
+          "Auf",
+          "danke"
+        ],
+        "correctOrder": [
+          "Auf",
+          "Wiedersehen",
+          "Herr",
+          "Koch",
+          "danke"
+        ],
+        "tip": "eastPlainNewTen.questDescription"
       }
     ]
   }

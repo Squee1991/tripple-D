@@ -1,0 +1,2609 @@
+[
+  {
+    "questId": "wish-island-one",
+    "title": "wishIslandOne.questTitle",
+    "progress": "0/15",
+    "description": "wishIslandOne.questDescription",
+    "conditions": {
+      "goal": "wishIslandOne.questGoal",
+      "minCorrect": 15,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
+    "vocabulary": [
+      {
+        "word": "die Welt",
+        "translation-ru": "мир",
+        "translation-en": "world",
+        "translation-uk": "світ",
+        "translation-pl": "świat",
+        "translation-es": "el mundo",
+        "translation-fr": "le monde",
+        "translation-tr": "dünya",
+        "translation-ro": "lumea",
+        "translation-uz": "dunyo",
+        "translation-hi": "दुनिया",
+        "translation-ar": "العالم"
+      },
+      {
+        "word": "mehr",
+        "translation-ru": "больше",
+        "translation-en": "more",
+        "translation-uk": "більше",
+        "translation-pl": "więcej",
+        "translation-es": "más",
+        "translation-fr": "plus",
+        "translation-tr": "daha çok",
+        "translation-ro": "mai mult",
+        "translation-uz": "ko‘proq",
+        "translation-hi": "ज़्यादा",
+        "translation-ar": "أكثر"
+      },
+      {
+        "word": "der Hund",
+        "translation-ru": "собака",
+        "translation-en": "dog",
+        "translation-uk": "собака",
+        "translation-pl": "pies",
+        "translation-es": "el perro",
+        "translation-fr": "le chien",
+        "translation-tr": "köpek",
+        "translation-ro": "câinele",
+        "translation-uz": "it",
+        "translation-hi": "कुत्ता",
+        "translation-ar": "الكلب"
+      },
+      {
+        "word": "der Kunde",
+        "translation-ru": "клиент, покупатель",
+        "translation-en": "customer",
+        "translation-uk": "клієнт, покупець",
+        "translation-pl": "klient",
+        "translation-es": "el cliente",
+        "translation-fr": "le client",
+        "translation-tr": "müşteri",
+        "translation-ro": "clientul",
+        "translation-uz": "mijoz",
+        "translation-hi": "ग्राहक",
+        "translation-ar": "الزبون"
+      },
+      {
+        "word": "bewegen",
+        "translation-ru": "двигать / перемещать",
+        "translation-en": "to move",
+        "translation-uk": "рухати",
+        "translation-pl": "ruszać / poruszać",
+        "translation-es": "mover",
+        "translation-fr": "bouger",
+        "translation-tr": "hareket ettirmek",
+        "translation-ro": "a mișca",
+        "translation-uz": "qimirlatmoq",
+        "translation-hi": "हिलाना",
+        "translation-ar": "يحرك"
+      }
+    ],
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "wishIslandOne.questTask1",
+        "options": [
+          "Wenn ich Zeit habe, würde ich reisen.",
+          "Wenn ich Zeit hätte, ich würde reisen.",
+          "Wenn ich Zeit hätte, würde ich reisen."
+        ],
+        "answer": "Wenn ich Zeit hätte, würde ich reisen.",
+        "tip": "wishIslandOne.questDescription"
+      },
+      {
+        "id": 2,
+        "type": "input",
+        "question": "wishIslandOne.questTask2",
+        "correctAnswer": "hätte",
+        "tip": "wishIslandOne.questDescription"
+      },
+      {
+        "id": 3,
+        "type": "input",
+        "question": "wishIslandOne.questTask3",
+        "correctAnswer": "würden",
+        "tip": "wishIslandOne.questDescription"
+      },
+      {
+        "id": 4,
+        "type": "reorder",
+        "question": "wishIslandOne.questTask4",
+        "words": [
+          "Tag",
+          "Hund",
+          "gehen",
+          "ich",
+          "würde",
+          "spazieren",
+          "habe",
+          "ich",
+          "Wenn",
+          "einen",
+          "jeden",
+          "hätte"
+        ],
+        "correctOrder": [
+          "Wenn",
+          "ich",
+          "einen",
+          "Hund",
+          "hätte",
+          "würde",
+          "ich",
+          "jeden",
+          "Tag",
+          "spazieren",
+          "gehen"
+        ],
+        "tip": "wishIslandOne.questDescription"
+      },
+      {
+        "id": 5,
+        "type": "select",
+        "question": "wishIslandOne.questTask5",
+        "options": [
+          "Wenn sie mehr Geld hat, würde sie um die Welt reisen.",
+          "Wenn sie mehr Geld hätte, würde sie um die Welt reisen.",
+          "Wenn sie mehr Geld hätte, würde sie um die Welt gereist."
+        ],
+        "answer": "Wenn sie mehr Geld hätte, würde sie um die Welt reisen.",
+        "tip": "wishIslandOne.questDescription"
+      },
+      {
+        "id": 6,
+        "type": "input",
+        "question": "wishIslandOne.questTask6",
+        "correctAnswer": "hättest",
+        "tip": "wishIslandOne.questDescription"
+      },
+      {
+        "id": 7,
+        "type": "readAndAnswer",
+        "question": "wishIslandOne.questTask7",
+        "text": "Tom arbeitet jeden Tag zehn Stunden. Er sagt: „Wenn ich mehr Zeit hätte, würde ich Sport machen und meine Eltern besuchen.“",
+        "options": [
+          "fernsehen",
+          "sich mehr bewegen",
+          "mehr arbeiten"
+        ],
+        "answer": "sich mehr bewegen",
+        "tip": "wishIslandOne.questDescription"
+      },
+      {
+        "id": 8,
+        "type": "input",
+        "question": "wishIslandOne.questTask8",
+        "correctAnswer": "würden",
+        "tip": "wishIslandOne.questDescription"
+      },
+      {
+        "id": 9,
+        "type": "reorder",
+        "question": "wishIslandOne.questTask10",
+        "words": [
+          "einen",
+          "ich",
+          "würde",
+          "hätte",
+          "ein",
+          "Hund",
+          "kaufen",
+          "Haus",
+          "Wenn",
+          "habe",
+          "ich"
+        ],
+        "correctOrder": [
+          "Wenn",
+          "ich",
+          "ein",
+          "Haus",
+          "hätte",
+          "würde",
+          "ich",
+          "einen",
+          "Hund",
+          "kaufen"
+        ],
+        "tip": "wishIslandOne.questDescription"
+      },
+      {
+        "id": 10,
+        "type": "select",
+        "question": "wishIslandOne.questTask11",
+        "options": [
+          "Wenn sie mehr Geld hätten, sie würden eine Wohnung kaufen.",
+          "Wenn sie mehr Geld hätten, würden sie eine Wohnung kaufen.",
+          "Wenn sie mehr Geld hätten, würden sie eine Wohnung gekauft."
+        ],
+        "answer": "Wenn sie mehr Geld hätten, würden sie eine Wohnung kaufen.",
+        "tip": "wishIslandOne.questDescription"
+      },
+      {
+        "id": 11,
+        "type": "input",
+        "question": "decisionWorkshopEight.questTask9",
+        "correctAnswer": "nahmen",
+        "tip": "decisionWorkshopEight.questDescription",
+        "reviewOf": "decision-workshop-eight",
+        "reviewLand": "decision-workshop"
+      },
+      {
+        "id": 12,
+        "type": "input",
+        "question": "decisionWorkshopFive.questTask12",
+        "correctAnswer": "Vorschlag",
+        "tip": "decisionWorkshopFive.questDescription",
+        "reviewOf": "decision-workshop-five",
+        "reviewLand": "decision-workshop"
+      },
+      {
+        "id": 13,
+        "type": "input",
+        "question": "decisionWorkshopTwo.questTask13",
+        "correctAnswer": "stellten",
+        "tip": "decisionWorkshopTwo.questDescription",
+        "reviewOf": "decision-workshop-two",
+        "reviewLand": "decision-workshop"
+      },
+      {
+        "id": 14,
+        "type": "input",
+        "question": "wishIslandOne.questTask14",
+        "correctAnswer": "wurde",
+        "tip": "wishIslandOne.questDescription"
+      },
+      {
+        "id": 15,
+        "type": "input",
+        "question": "wishIslandOne.questTask15",
+        "correctAnswer": "zu",
+        "tip": "wishIslandOne.questDescription"
+      }
+    ]
+  },
+  {
+    "questId": "wish-island-two",
+    "title": "wishIslandTwo.questTitle",
+    "progress": "0/15",
+    "description": "wishIslandTwo.questDescription",
+    "conditions": {
+      "goal": "wishIslandTwo.questGoal",
+      "minCorrect": 15,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
+    "vocabulary": [
+      {
+        "word": "berühmt",
+        "translation-ru": "знаменитый",
+        "translation-en": "famous",
+        "translation-uk": "відомий",
+        "translation-pl": "sławny",
+        "translation-es": "famoso",
+        "translation-fr": "célèbre",
+        "translation-tr": "ünlü",
+        "translation-ro": "celebru",
+        "translation-uz": "mashhur",
+        "translation-hi": "मशहूर",
+        "translation-ar": "مشهور"
+      },
+      {
+        "word": "die Sängerin",
+        "translation-ru": "певица",
+        "translation-en": "singer (female)",
+        "translation-uk": "співачка",
+        "translation-pl": "piosenkarka",
+        "translation-es": "la cantante",
+        "translation-fr": "la chanteuse",
+        "translation-tr": "kadın şarkıcı",
+        "translation-ro": "cântăreața",
+        "translation-uz": "qo‘shiqchi ayol",
+        "translation-hi": "गायिका",
+        "translation-ar": "المغنّية"
+      },
+      {
+        "word": "jung",
+        "translation-ru": "молодой",
+        "translation-en": "young",
+        "translation-uk": "молодий",
+        "translation-pl": "młody",
+        "translation-es": "joven",
+        "translation-fr": "jeune",
+        "translation-tr": "genç",
+        "translation-ro": "tânăr",
+        "translation-uz": "yosh",
+        "translation-hi": "जवान",
+        "translation-ar": "شاب"
+      },
+      {
+        "word": "die Entscheidung",
+        "translation-ru": "решение",
+        "translation-en": "decision",
+        "translation-uk": "рішення",
+        "translation-pl": "decyzja",
+        "translation-es": "la decisión",
+        "translation-fr": "la décision",
+        "translation-tr": "karar",
+        "translation-ro": "decizia",
+        "translation-uz": "qaror",
+        "translation-hi": "फ़ैसला",
+        "translation-ar": "القرار"
+      },
+      {
+        "word": "die Nachbarin",
+        "translation-ru": "соседка",
+        "translation-en": "neighbour (female)",
+        "translation-uk": "сусідка",
+        "translation-pl": "sąsiadka",
+        "translation-es": "la vecina",
+        "translation-fr": "la voisine",
+        "translation-tr": "kadın komşu",
+        "translation-ro": "vecina",
+        "translation-uz": "qo‘shni ayol",
+        "translation-hi": "पड़ोसन",
+        "translation-ar": "الجارة"
+      }
+    ],
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "wishIslandTwo.questTask1",
+        "options": [
+          "Wenn ich reich wäre, würde ich ein Haus am Meer gekauft.",
+          "Wenn ich reich bin, würde ich ein Haus am Meer kaufen.",
+          "Wenn ich reich wäre, würde ich ein Haus am Meer kaufen."
+        ],
+        "answer": "Wenn ich reich wäre, würde ich ein Haus am Meer kaufen.",
+        "tip": "wishIslandTwo.questDescription"
+      },
+      {
+        "id": 2,
+        "type": "input",
+        "question": "wishIslandTwo.questTask2",
+        "correctAnswer": "wäre",
+        "tip": "wishIslandTwo.questDescription"
+      },
+      {
+        "id": 3,
+        "type": "input",
+        "question": "wishIslandTwo.questTask3",
+        "correctAnswer": "wärst",
+        "tip": "wishIslandTwo.questDescription"
+      },
+      {
+        "id": 4,
+        "type": "reorder",
+        "question": "wishIslandTwo.questTask4",
+        "words": [
+          "An",
+          "werde",
+          "nehmen",
+          "deiner",
+          "frei",
+          "einen",
+          "ich",
+          "Tag",
+          "Stelle",
+          "würde"
+        ],
+        "correctOrder": [
+          "An",
+          "deiner",
+          "Stelle",
+          "würde",
+          "ich",
+          "einen",
+          "Tag",
+          "frei",
+          "nehmen"
+        ],
+        "tip": "wishIslandTwo.questDescription"
+      },
+      {
+        "id": 5,
+        "type": "select",
+        "question": "wishIslandTwo.questTask5",
+        "options": [
+          "Wenn wir jünger sind, würden wir mehr reisen.",
+          "Wenn wir jünger wären, würden wir mehr reisen.",
+          "Wenn wir jünger wären, wir würden mehr reisen."
+        ],
+        "answer": "Wenn wir jünger wären, würden wir mehr reisen.",
+        "tip": "wishIslandTwo.questDescription"
+      },
+      {
+        "id": 6,
+        "type": "input",
+        "question": "wishIslandTwo.questTask6",
+        "correctAnswer": "wäre",
+        "tip": "wishIslandTwo.questDescription"
+      },
+      {
+        "id": 7,
+        "type": "readAndAnswer",
+        "question": "wishIslandTwo.questTask7",
+        "text": "Lisa sagt: „Wenn ich Sängerin wäre, würde ich in der ganzen Welt singen. Aber ich bin Lehrerin, und das ist auch schön.“",
+        "options": [
+          "Sie ist Lehrerin.",
+          "Sie ist Ärztin.",
+          "Sie ist Sängerin."
+        ],
+        "answer": "Sie ist Lehrerin.",
+        "tip": "wishIslandTwo.questDescription"
+      },
+      {
+        "id": 8,
+        "type": "input",
+        "question": "wishIslandTwo.questTask8",
+        "correctAnswer": "wären",
+        "tip": "wishIslandTwo.questDescription"
+      },
+      {
+        "id": 9,
+        "type": "reorder",
+        "question": "wishIslandTwo.questTask10",
+        "words": [
+          "Wenn",
+          "kalt",
+          "es",
+          "ist",
+          "spazieren",
+          "gehen",
+          "so",
+          "wir",
+          "wäre",
+          "nicht",
+          "würden"
+        ],
+        "correctOrder": [
+          "Wenn",
+          "es",
+          "nicht",
+          "so",
+          "kalt",
+          "wäre",
+          "würden",
+          "wir",
+          "spazieren",
+          "gehen"
+        ],
+        "tip": "wishIslandTwo.questDescription"
+      },
+      {
+        "id": 10,
+        "type": "select",
+        "question": "wishIslandTwo.questTask11",
+        "options": [
+          "Wenn ich Lehrer wäre, ich würde langsam erklären.",
+          "Wenn ich Lehrer wäre, würde ich langsam erklären.",
+          "Wenn ich Lehrer wäre, würde ich langsam erklärt."
+        ],
+        "answer": "Wenn ich Lehrer wäre, würde ich langsam erklären.",
+        "tip": "wishIslandTwo.questDescription"
+      },
+      {
+        "id": 11,
+        "type": "input",
+        "question": "wishIslandOne.questTask9",
+        "correctAnswer": "hätte",
+        "tip": "wishIslandOne.questDescription",
+        "reviewOf": "wish-island-one",
+        "reviewLand": "wish-island"
+      },
+      {
+        "id": 12,
+        "type": "input",
+        "question": "decisionWorkshopSix.questTask12",
+        "correctAnswer": "Entscheidung",
+        "tip": "decisionWorkshopSix.questDescription",
+        "reviewOf": "decision-workshop-six",
+        "reviewLand": "decision-workshop"
+      },
+      {
+        "id": 13,
+        "type": "input",
+        "question": "decisionWorkshopThree.questTask13",
+        "correctAnswer": "Bescheid",
+        "tip": "decisionWorkshopThree.questDescription",
+        "reviewOf": "decision-workshop-three",
+        "reviewLand": "decision-workshop"
+      },
+      {
+        "id": 14,
+        "type": "input",
+        "question": "wishIslandTwo.questTask14",
+        "correctAnswer": "die",
+        "tip": "wishIslandTwo.questDescription"
+      },
+      {
+        "id": 15,
+        "type": "input",
+        "question": "wishIslandTwo.questTask15",
+        "correctAnswer": "war",
+        "tip": "wishIslandTwo.questDescription"
+      }
+    ]
+  },
+  {
+    "questId": "wish-island-three",
+    "title": "wishIslandThree.questTitle",
+    "progress": "0/15",
+    "description": "wishIslandThree.questDescription",
+    "conditions": {
+      "goal": "wishIslandThree.questGoal",
+      "minCorrect": 15,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
+    "vocabulary": [
+      {
+        "word": "die Million",
+        "translation-ru": "миллион",
+        "translation-en": "million",
+        "translation-uk": "мільйон",
+        "translation-pl": "milion",
+        "translation-es": "el millón",
+        "translation-fr": "le million",
+        "translation-tr": "milyon",
+        "translation-ro": "milionul",
+        "translation-uz": "million",
+        "translation-hi": "दस लाख",
+        "translation-ar": "المليون"
+      },
+      {
+        "word": "länger",
+        "translation-ru": "дольше",
+        "translation-en": "longer",
+        "translation-uk": "довше",
+        "translation-pl": "dłużej",
+        "translation-es": "más tiempo",
+        "translation-fr": "plus longtemps",
+        "translation-tr": "daha uzun",
+        "translation-ro": "mai mult timp",
+        "translation-uz": "uzoqroq",
+        "translation-hi": "ज़्यादा देर",
+        "translation-ar": "مدة أطول"
+      },
+      {
+        "word": "öfter",
+        "translation-ru": "чаще",
+        "translation-en": "more often",
+        "translation-uk": "частіше",
+        "translation-pl": "częściej",
+        "translation-es": "más a menudo",
+        "translation-fr": "plus souvent",
+        "translation-tr": "daha sık",
+        "translation-ro": "mai des",
+        "translation-uz": "tez-tez, ko‘proq",
+        "translation-hi": "ज़्यादा बार",
+        "translation-ar": "أكثر"
+      },
+      {
+        "word": "die Besprechung",
+        "translation-ru": "совещание",
+        "translation-en": "meeting",
+        "translation-uk": "нарада",
+        "translation-pl": "zebranie",
+        "translation-es": "la reunión",
+        "translation-fr": "la réunion",
+        "translation-tr": "toplantı",
+        "translation-ro": "ședința",
+        "translation-uz": "yig‘ilish",
+        "translation-hi": "मीटिंग",
+        "translation-ar": "الاجتماع"
+      },
+      {
+        "word": "nachdem",
+        "translation-ru": "после того как",
+        "translation-en": "after (conjunction)",
+        "translation-uk": "після того як",
+        "translation-pl": "po tym, jak",
+        "translation-es": "después de que",
+        "translation-fr": "après que",
+        "translation-tr": "-dıktan sonra",
+        "translation-ro": "după ce",
+        "translation-uz": "…gandan keyin",
+        "translation-hi": "…के बाद",
+        "translation-ar": "بعد أن"
+      }
+    ],
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "wishIslandThree.questTask1",
+        "options": [
+          "Ich würde fahren, wenn ich hätte Zeit.",
+          "Ich würde fahren, wenn ich Zeit habe.",
+          "Ich würde fahren, wenn ich Zeit hätte."
+        ],
+        "answer": "Ich würde fahren, wenn ich Zeit hätte.",
+        "tip": "wishIslandThree.questDescription"
+      },
+      {
+        "id": 2,
+        "type": "input",
+        "question": "wishIslandThree.questTask2",
+        "correctAnswer": "hätten",
+        "tip": "wishIslandThree.questDescription"
+      },
+      {
+        "id": 3,
+        "type": "input",
+        "question": "wishIslandThree.questTask3",
+        "correctAnswer": "wäre",
+        "tip": "wishIslandThree.questDescription"
+      },
+      {
+        "id": 4,
+        "type": "reorder",
+        "question": "wishIslandThree.questTask4",
+        "words": [
+          "wenn",
+          "hättest",
+          "du",
+          "eine",
+          "würdest",
+          "du",
+          "Was",
+          "hast",
+          "Million",
+          "machen"
+        ],
+        "correctOrder": [
+          "Was",
+          "würdest",
+          "du",
+          "machen",
+          "wenn",
+          "du",
+          "eine",
+          "Million",
+          "hättest"
+        ],
+        "tip": "wishIslandThree.questDescription"
+      },
+      {
+        "id": 5,
+        "type": "select",
+        "question": "wishIslandThree.questTask5",
+        "options": [
+          "Ich wäre glücklich, wenn du kommen würdest.",
+          "Ich bin glücklich, wenn du kommen würdest.",
+          "Ich wäre glücklich, wenn du würdest kommen."
+        ],
+        "answer": "Ich wäre glücklich, wenn du kommen würdest.",
+        "tip": "wishIslandThree.questDescription"
+      },
+      {
+        "id": 6,
+        "type": "input",
+        "question": "wishIslandThree.questTask6",
+        "correctAnswer": "Würdest",
+        "tip": "wishIslandThree.questDescription"
+      },
+      {
+        "id": 7,
+        "type": "readAndAnswer",
+        "question": "wishIslandThree.questTask7",
+        "text": "Paul und Maria wohnen in einer kleinen Wohnung in der Stadt. Maria sagt: „Wir würden in einem Haus mit Garten wohnen, wenn wir mehr Geld hätten.“",
+        "options": [
+          "in einem Hotel",
+          "in einem Haus mit Garten",
+          "in einer kleinen Wohnung"
+        ],
+        "answer": "in einem Haus mit Garten",
+        "tip": "wishIslandThree.questDescription"
+      },
+      {
+        "id": 8,
+        "type": "input",
+        "question": "wishIslandThree.questTask8",
+        "correctAnswer": "wäre",
+        "tip": "wishIslandThree.questDescription"
+      },
+      {
+        "id": 9,
+        "type": "reorder",
+        "question": "wishIslandThree.questTask10",
+        "words": [
+          "Wetter",
+          "wenn",
+          "ans",
+          "Wir",
+          "ist",
+          "fahren",
+          "wäre",
+          "Meer",
+          "würden",
+          "besser",
+          "das"
+        ],
+        "correctOrder": [
+          "Wir",
+          "würden",
+          "ans",
+          "Meer",
+          "fahren",
+          "wenn",
+          "das",
+          "Wetter",
+          "besser",
+          "wäre"
+        ],
+        "tip": "wishIslandThree.questDescription"
+      },
+      {
+        "id": 10,
+        "type": "select",
+        "question": "wishIslandThree.questTask11",
+        "options": [
+          "Was würdest du an meiner Stelle machen?",
+          "Was du würdest an meiner Stelle machen?",
+          "Was würdest du an meiner Stelle gemacht?"
+        ],
+        "answer": "Was würdest du an meiner Stelle machen?",
+        "tip": "wishIslandThree.questDescription"
+      },
+      {
+        "id": 11,
+        "type": "input",
+        "question": "wishIslandTwo.questTask9",
+        "correctAnswer": "wäre",
+        "tip": "wishIslandTwo.questDescription",
+        "reviewOf": "wish-island-two",
+        "reviewLand": "wish-island"
+      },
+      {
+        "id": 12,
+        "type": "input",
+        "question": "decisionWorkshopSeven.questTask12",
+        "correctAnswer": "Frage",
+        "tip": "decisionWorkshopSeven.questDescription",
+        "reviewOf": "decision-workshop-seven",
+        "reviewLand": "decision-workshop"
+      },
+      {
+        "id": 13,
+        "type": "input",
+        "question": "decisionWorkshopFour.questTask13",
+        "correctAnswer": "Platz",
+        "tip": "decisionWorkshopFour.questDescription",
+        "reviewOf": "decision-workshop-four",
+        "reviewLand": "decision-workshop"
+      },
+      {
+        "id": 14,
+        "type": "input",
+        "question": "wishIslandThree.questTask14",
+        "correctAnswer": "werden",
+        "tip": "wishIslandThree.questDescription"
+      },
+      {
+        "id": 15,
+        "type": "input",
+        "question": "wishIslandThree.questTask15",
+        "correctAnswer": "Nachdem",
+        "tip": "wishIslandThree.questDescription"
+      }
+    ]
+  },
+  {
+    "questId": "wish-island-four",
+    "title": "wishIslandFour.questTitle",
+    "progress": "0/15",
+    "description": "wishIslandFour.questDescription",
+    "conditions": {
+      "goal": "wishIslandFour.questGoal",
+      "minCorrect": 15,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
+    "vocabulary": [
+      {
+        "word": "fließend",
+        "translation-ru": "свободно (о языке)",
+        "translation-en": "fluently",
+        "translation-uk": "вільно",
+        "translation-pl": "płynnie",
+        "translation-es": "con fluidez",
+        "translation-fr": "couramment",
+        "translation-tr": "akıcı",
+        "translation-ro": "fluent",
+        "translation-uz": "ravon",
+        "translation-hi": "धाराप्रवाह",
+        "translation-ar": "بطلاقة"
+      },
+      {
+        "word": "das Ausland",
+        "translation-ru": "заграница",
+        "translation-en": "abroad",
+        "translation-uk": "закордон",
+        "translation-pl": "zagranica",
+        "translation-es": "el extranjero",
+        "translation-fr": "l’étranger",
+        "translation-tr": "yurt dışı",
+        "translation-ro": "străinătatea",
+        "translation-uz": "chet el",
+        "translation-hi": "विदेश",
+        "translation-ar": "الخارج"
+      },
+      {
+        "word": "schneller",
+        "translation-ru": "быстрее",
+        "translation-en": "faster",
+        "translation-uk": "швидше",
+        "translation-pl": "szybciej",
+        "translation-es": "más rápido",
+        "translation-fr": "plus vite",
+        "translation-tr": "daha hızlı",
+        "translation-ro": "mai repede",
+        "translation-uz": "tezroq",
+        "translation-hi": "ज़्यादा जल्दी",
+        "translation-ar": "أسرع"
+      },
+      {
+        "word": "das Gespräch",
+        "translation-ru": "разговор",
+        "translation-en": "conversation",
+        "translation-uk": "розмова",
+        "translation-pl": "rozmowa",
+        "translation-es": "la conversación",
+        "translation-fr": "la discussion",
+        "translation-tr": "konuşma",
+        "translation-ro": "discuția",
+        "translation-uz": "suhbat",
+        "translation-hi": "बातचीत",
+        "translation-ar": "الحديث"
+      },
+      {
+        "word": "deshalb",
+        "translation-ru": "поэтому",
+        "translation-en": "that’s why",
+        "translation-uk": "тому",
+        "translation-pl": "dlatego",
+        "translation-es": "por eso",
+        "translation-fr": "c’est pourquoi",
+        "translation-tr": "bu yüzden",
+        "translation-ro": "de aceea",
+        "translation-uz": "shuning uchun",
+        "translation-hi": "इसलिए",
+        "translation-ar": "لذلك"
+      }
+    ],
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "wishIslandFour.questTask1",
+        "options": [
+          "Wenn ich ein Auto hätte, könnte ich zu Oma gefahren.",
+          "Wenn ich ein Auto hätte, kann ich zu Oma fahren.",
+          "Wenn ich ein Auto hätte, könnte ich zu Oma fahren."
+        ],
+        "answer": "Wenn ich ein Auto hätte, könnte ich zu Oma fahren.",
+        "tip": "wishIslandFour.questDescription"
+      },
+      {
+        "id": 2,
+        "type": "input",
+        "question": "wishIslandFour.questTask2",
+        "correctAnswer": "könnte",
+        "tip": "wishIslandFour.questDescription"
+      },
+      {
+        "id": 3,
+        "type": "input",
+        "question": "wishIslandFour.questTask3",
+        "correctAnswer": "Könntest",
+        "tip": "wishIslandFour.questDescription"
+      },
+      {
+        "id": 4,
+        "type": "reorder",
+        "question": "wishIslandFour.questTask4",
+        "words": [
+          "wir",
+          "Zeit",
+          "ins",
+          "wir",
+          "gehen",
+          "Wenn",
+          "könnten",
+          "Kino",
+          "können",
+          "hätten"
+        ],
+        "correctOrder": [
+          "Wenn",
+          "wir",
+          "Zeit",
+          "hätten",
+          "könnten",
+          "wir",
+          "ins",
+          "Kino",
+          "gehen"
+        ],
+        "tip": "wishIslandFour.questDescription"
+      },
+      {
+        "id": 5,
+        "type": "select",
+        "question": "wishIslandFour.questTask5",
+        "options": [
+          "Wir könnten uns morgen getroffen.",
+          "Wir könnten uns morgen treffen.",
+          "Wir könntet uns morgen treffen."
+        ],
+        "answer": "Wir könnten uns morgen treffen.",
+        "tip": "wishIslandFour.questDescription"
+      },
+      {
+        "id": 6,
+        "type": "input",
+        "question": "wishIslandFour.questTask6",
+        "correctAnswer": "könnten",
+        "tip": "wishIslandFour.questDescription"
+      },
+      {
+        "id": 7,
+        "type": "readAndAnswer",
+        "question": "wishIslandFour.questTask7",
+        "text": "Anna spricht fließend Englisch und Deutsch. Sie sagt: „Wenn ich auch Spanisch sprechen könnte, könnte ich in Spanien arbeiten. Deshalb lerne ich jetzt Spanisch.“",
+        "options": [
+          "um in Spanien zu arbeiten",
+          "weil sie keine Arbeit hat",
+          "weil sie in Spanien wohnt"
+        ],
+        "answer": "um in Spanien zu arbeiten",
+        "tip": "wishIslandFour.questDescription"
+      },
+      {
+        "id": 8,
+        "type": "input",
+        "question": "wishIslandFour.questTask8",
+        "correctAnswer": "Könnten",
+        "tip": "wishIslandFour.questDescription"
+      },
+      {
+        "id": 9,
+        "type": "reorder",
+        "question": "wishIslandFour.questTask10",
+        "words": [
+          "Könntest",
+          "du",
+          "kannst",
+          "abholen",
+          "mich",
+          "morgen"
+        ],
+        "correctOrder": [
+          "Könntest",
+          "du",
+          "mich",
+          "morgen",
+          "abholen"
+        ],
+        "tip": "wishIslandFour.questDescription"
+      },
+      {
+        "id": 10,
+        "type": "select",
+        "question": "wishIslandFour.questTask11",
+        "options": [
+          "Wenn er mehr lernen würde, könnte er die Prüfung bestanden.",
+          "Wenn er mehr lernen würde, könnte er die Prüfung bestehen.",
+          "Wenn er mehr lernen würde, kann er die Prüfung bestehen."
+        ],
+        "answer": "Wenn er mehr lernen würde, könnte er die Prüfung bestehen.",
+        "tip": "wishIslandFour.questDescription"
+      },
+      {
+        "id": 11,
+        "type": "input",
+        "question": "wishIslandThree.questTask9",
+        "correctAnswer": "hätte",
+        "tip": "wishIslandThree.questDescription",
+        "reviewOf": "wish-island-three",
+        "reviewLand": "wish-island"
+      },
+      {
+        "id": 12,
+        "type": "input",
+        "question": "decisionWorkshopEight.questTask12",
+        "correctAnswer": "Platz",
+        "tip": "decisionWorkshopEight.questDescription",
+        "reviewOf": "decision-workshop-eight",
+        "reviewLand": "decision-workshop"
+      },
+      {
+        "id": 13,
+        "type": "input",
+        "question": "decisionWorkshopFive.questTask13",
+        "correctAnswer": "führten",
+        "tip": "decisionWorkshopFive.questDescription",
+        "reviewOf": "decision-workshop-five",
+        "reviewLand": "decision-workshop"
+      },
+      {
+        "id": 14,
+        "type": "input",
+        "question": "wishIslandFour.questTask14",
+        "correctAnswer": "zu",
+        "tip": "wishIslandFour.questDescription"
+      },
+      {
+        "id": 15,
+        "type": "input",
+        "question": "wishIslandFour.questTask15",
+        "correctAnswer": "denen",
+        "tip": "wishIslandFour.questDescription"
+      }
+    ]
+  },
+  {
+    "questId": "wish-island-five",
+    "title": "wishIslandFive.questTitle",
+    "progress": "0/15",
+    "description": "wishIslandFive.questDescription",
+    "conditions": {
+      "goal": "wishIslandFive.questGoal",
+      "minCorrect": 15,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
+    "vocabulary": [
+      {
+        "word": "ich wünschte",
+        "translation-ru": "жаль, что нет; хотел бы я",
+        "translation-en": "I wish",
+        "translation-uk": "шкода, що немає",
+        "translation-pl": "szkoda, że nie",
+        "translation-es": "ojalá",
+        "translation-fr": "j’aimerais que",
+        "translation-tr": "keşke",
+        "translation-ro": "aș vrea să",
+        "translation-uz": "qani edi",
+        "translation-hi": "काश",
+        "translation-ar": "ليت"
+      },
+      {
+        "word": "die Geduld",
+        "translation-ru": "терпение",
+        "translation-en": "patience",
+        "translation-uk": "терпіння",
+        "translation-pl": "cierpliwość",
+        "translation-es": "la paciencia",
+        "translation-fr": "la patience",
+        "translation-tr": "sabır",
+        "translation-ro": "răbdarea",
+        "translation-uz": "sabr",
+        "translation-hi": "धैर्य",
+        "translation-ar": "الصبر"
+      },
+      {
+        "word": "sportlich",
+        "translation-ru": "спортивный",
+        "translation-en": "sporty",
+        "translation-uk": "спортивний",
+        "translation-pl": "wysportowany",
+        "translation-es": "deportista",
+        "translation-fr": "sportif",
+        "translation-tr": "sportif",
+        "translation-ro": "sportiv",
+        "translation-uz": "sportchi",
+        "translation-hi": "खिलाड़ी जैसा, फ़िट",
+        "translation-ar": "رياضي"
+      },
+      {
+        "word": "schwimmen",
+        "translation-ru": "плавать",
+        "translation-en": "to swim",
+        "translation-uk": "плавати",
+        "translation-pl": "pływać",
+        "translation-es": "nadar",
+        "translation-fr": "nager",
+        "translation-tr": "yüzmek",
+        "translation-ro": "a înota",
+        "translation-uz": "suzmoq",
+        "translation-hi": "तैरना",
+        "translation-ar": "يسبح"
+      },
+      {
+        "word": "müde",
+        "translation-ru": "усталый",
+        "translation-en": "tired",
+        "translation-uk": "втомлений",
+        "translation-pl": "zmęczony",
+        "translation-es": "cansado",
+        "translation-fr": "fatigué",
+        "translation-tr": "yorgun",
+        "translation-ro": "obosit",
+        "translation-uz": "charchagan",
+        "translation-hi": "थका हुआ",
+        "translation-ar": "متعب"
+      }
+    ],
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "wishIslandFive.questTask1",
+        "options": [
+          "Ich wünschte, ich mehr Zeit hätte.",
+          "Ich wünschte, ich habe mehr Zeit.",
+          "Ich wünschte, ich hätte mehr Zeit."
+        ],
+        "answer": "Ich wünschte, ich hätte mehr Zeit.",
+        "tip": "wishIslandFive.questDescription"
+      },
+      {
+        "id": 2,
+        "type": "input",
+        "question": "wishIslandFive.questTask2",
+        "correctAnswer": "wäre",
+        "tip": "wishIslandFive.questDescription"
+      },
+      {
+        "id": 3,
+        "type": "input",
+        "question": "wishIslandFive.questTask3",
+        "correctAnswer": "könnte",
+        "tip": "wishIslandFive.questDescription"
+      },
+      {
+        "id": 4,
+        "type": "reorder",
+        "question": "wishIslandFive.questTask4",
+        "words": [
+          "hätte",
+          "wünschte",
+          "einen",
+          "Hund",
+          "habe",
+          "Ich",
+          "ich"
+        ],
+        "correctOrder": [
+          "Ich",
+          "wünschte",
+          "ich",
+          "hätte",
+          "einen",
+          "Hund"
+        ],
+        "tip": "wishIslandFive.questDescription"
+      },
+      {
+        "id": 5,
+        "type": "select",
+        "question": "wishIslandFive.questTask5",
+        "options": [
+          "Ich wünschte, es wäre jetzt Sommer.",
+          "Ich wünschte, es jetzt Sommer wäre.",
+          "Ich wünschte, es ist jetzt Sommer."
+        ],
+        "answer": "Ich wünschte, es wäre jetzt Sommer.",
+        "tip": "wishIslandFive.questDescription"
+      },
+      {
+        "id": 6,
+        "type": "input",
+        "question": "wishIslandFive.questTask6",
+        "correctAnswer": "hätten",
+        "tip": "wishIslandFive.questDescription"
+      },
+      {
+        "id": 7,
+        "type": "readAndAnswer",
+        "question": "wishIslandFive.questTask7",
+        "text": "Max ist oft müde. Er sagt: „Ich wünschte, ich wäre sportlicher. Ich wünschte, ich hätte mehr Zeit für Sport. Aber ich arbeite zu viel.“",
+        "options": [
+          "Er arbeitet zu viel.",
+          "Er hat keine Lust.",
+          "Er ist krank."
+        ],
+        "answer": "Er arbeitet zu viel.",
+        "tip": "wishIslandFive.questDescription"
+      },
+      {
+        "id": 8,
+        "type": "input",
+        "question": "wishIslandFive.questTask8",
+        "correctAnswer": "wärst",
+        "tip": "wishIslandFive.questDescription"
+      },
+      {
+        "id": 9,
+        "type": "reorder",
+        "question": "wishIslandFive.questTask10",
+        "words": [
+          "ich",
+          "kommen",
+          "kann",
+          "wünschte",
+          "Ich",
+          "könnte"
+        ],
+        "correctOrder": [
+          "Ich",
+          "wünschte",
+          "ich",
+          "könnte",
+          "kommen"
+        ],
+        "tip": "wishIslandFive.questDescription"
+      },
+      {
+        "id": 10,
+        "type": "select",
+        "question": "wishIslandFive.questTask11",
+        "options": [
+          "Ich wünschte, meine Eltern würden näher wohnen.",
+          "Ich wünschte, meine Eltern würde näher wohnen.",
+          "Ich wünschte, meine Eltern wohnen näher würden."
+        ],
+        "answer": "Ich wünschte, meine Eltern würden näher wohnen.",
+        "tip": "wishIslandFive.questDescription"
+      },
+      {
+        "id": 11,
+        "type": "input",
+        "question": "wishIslandFour.questTask9",
+        "correctAnswer": "könnten",
+        "tip": "wishIslandFour.questDescription",
+        "reviewOf": "wish-island-four",
+        "reviewLand": "wish-island"
+      },
+      {
+        "id": 12,
+        "type": "input",
+        "question": "wishIslandOne.questTask12",
+        "correctAnswer": "würden",
+        "tip": "wishIslandOne.questDescription",
+        "reviewOf": "wish-island-one",
+        "reviewLand": "wish-island"
+      },
+      {
+        "id": 13,
+        "type": "input",
+        "question": "decisionWorkshopSix.questTask13",
+        "correctAnswer": "gebe",
+        "tip": "decisionWorkshopSix.questDescription",
+        "reviewOf": "decision-workshop-six",
+        "reviewLand": "decision-workshop"
+      },
+      {
+        "id": 14,
+        "type": "input",
+        "question": "wishIslandFive.questTask14",
+        "correctAnswer": "lässt",
+        "tip": "wishIslandFive.questDescription"
+      },
+      {
+        "id": 15,
+        "type": "input",
+        "question": "wishIslandFive.questTask15",
+        "correctAnswer": "um",
+        "tip": "wishIslandFive.questDescription"
+      }
+    ]
+  },
+  {
+    "questId": "wish-island-six",
+    "title": "wishIslandSix.questTitle",
+    "progress": "0/15",
+    "description": "wishIslandSix.questDescription",
+    "conditions": {
+      "goal": "wishIslandSix.questGoal",
+      "minCorrect": 15,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
+    "vocabulary": [
+      {
+        "word": "leider",
+        "translation-ru": "к сожалению",
+        "translation-en": "unfortunately",
+        "translation-uk": "на жаль",
+        "translation-pl": "niestety",
+        "translation-es": "por desgracia",
+        "translation-fr": "malheureusement",
+        "translation-tr": "maalesef",
+        "translation-ro": "din păcate",
+        "translation-uz": "afsuski",
+        "translation-hi": "दुर्भाग्य से",
+        "translation-ar": "للأسف"
+      },
+      {
+        "word": "vielleicht",
+        "translation-ru": "может быть",
+        "translation-en": "maybe",
+        "translation-uk": "можливо",
+        "translation-pl": "może",
+        "translation-es": "quizás",
+        "translation-fr": "peut-être",
+        "translation-tr": "belki",
+        "translation-ro": "poate",
+        "translation-uz": "balki",
+        "translation-hi": "शायद",
+        "translation-ar": "ربما"
+      },
+      {
+        "word": "die Frage",
+        "translation-ru": "вопрос",
+        "translation-en": "question",
+        "translation-uk": "питання",
+        "translation-pl": "pytanie",
+        "translation-es": "la pregunta",
+        "translation-fr": "la question",
+        "translation-tr": "soru",
+        "translation-ro": "întrebarea",
+        "translation-uz": "savol",
+        "translation-hi": "सवाल",
+        "translation-ar": "السؤال"
+      },
+      {
+        "word": "das Museum",
+        "translation-ru": "музей",
+        "translation-en": "museum",
+        "translation-uk": "музей",
+        "translation-pl": "muzeum",
+        "translation-es": "el museo",
+        "translation-fr": "le musée",
+        "translation-tr": "müze",
+        "translation-ro": "muzeul",
+        "translation-uz": "muzey",
+        "translation-hi": "संग्रहालय",
+        "translation-ar": "المتحف"
+      },
+      {
+        "word": "der Direktor",
+        "translation-ru": "директор",
+        "translation-en": "director",
+        "translation-uk": "директор",
+        "translation-pl": "dyrektor",
+        "translation-es": "director",
+        "translation-fr": "directeur",
+        "translation-tr": "müdür",
+        "translation-ro": "director",
+        "translation-uz": "direktor",
+        "translation-hi": "निर्देशक",
+        "translation-ar": "مدير"
+      }
+    ],
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "wishIslandSix.questTask1",
+        "options": [
+          "Wenn es morgen regnet, ich nehme den Bus.",
+          "Wenn es morgen regnen würde, nehme ich den Bus.",
+          "Wenn es morgen regnet, nehme ich den Bus."
+        ],
+        "answer": "Wenn es morgen regnet, nehme ich den Bus.",
+        "tip": "wishIslandSix.questDescription"
+      },
+      {
+        "id": 2,
+        "type": "input",
+        "question": "wishIslandSix.questTask2",
+        "correctAnswer": "würde",
+        "tip": "wishIslandSix.questDescription"
+      },
+      {
+        "id": 3,
+        "type": "input",
+        "question": "wishIslandSix.questTask3",
+        "correctAnswer": "ist",
+        "tip": "wishIslandSix.questDescription"
+      },
+      {
+        "id": 4,
+        "type": "reorder",
+        "question": "wishIslandSix.questTask4",
+        "words": [
+          "bin",
+          "gehen",
+          "Arbeit",
+          "ich",
+          "zur",
+          "ich",
+          "nicht",
+          "wäre",
+          "Wenn",
+          "würde",
+          "krank"
+        ],
+        "correctOrder": [
+          "Wenn",
+          "ich",
+          "nicht",
+          "krank",
+          "wäre",
+          "würde",
+          "ich",
+          "zur",
+          "Arbeit",
+          "gehen"
+        ],
+        "tip": "wishIslandSix.questDescription"
+      },
+      {
+        "id": 5,
+        "type": "select",
+        "question": "wishIslandSix.questTask5",
+        "options": [
+          "Wenn du müde wärst, geh ins Bett.",
+          "Wenn du bist müde, geh ins Bett.",
+          "Wenn du müde bist, geh ins Bett."
+        ],
+        "answer": "Wenn du müde bist, geh ins Bett.",
+        "tip": "wishIslandSix.questDescription"
+      },
+      {
+        "id": 6,
+        "type": "input",
+        "question": "wishIslandSix.questTask6",
+        "correctAnswer": "wäre",
+        "tip": "wishIslandSix.questDescription"
+      },
+      {
+        "id": 7,
+        "type": "readAndAnswer",
+        "question": "wishIslandSix.questTask7",
+        "text": "Leider ist das Wetter heute schlecht. Wenn es schön wäre, würden wir ein Picknick machen. Vielleicht ist das Wetter morgen besser. Wenn es morgen schön ist, machen wir das Picknick.",
+        "options": [
+          "nie",
+          "morgen",
+          "heute"
+        ],
+        "answer": "morgen",
+        "tip": "wishIslandSix.questDescription"
+      },
+      {
+        "id": 8,
+        "type": "input",
+        "question": "wishIslandSix.questTask8",
+        "correctAnswer": "hast",
+        "tip": "wishIslandSix.questDescription"
+      },
+      {
+        "id": 9,
+        "type": "reorder",
+        "question": "wishIslandSix.questTask10",
+        "words": [
+          "Hunger",
+          "hast",
+          "du",
+          "Wenn",
+          "ich",
+          "etwas",
+          "hättest",
+          "koche"
+        ],
+        "correctOrder": [
+          "Wenn",
+          "du",
+          "Hunger",
+          "hast",
+          "koche",
+          "ich",
+          "etwas"
+        ],
+        "tip": "wishIslandSix.questDescription"
+      },
+      {
+        "id": 10,
+        "type": "select",
+        "question": "wishIslandSix.questTask11",
+        "options": [
+          "Wenn ich in Berlin wohnen würde, würde ich jedes Wochenende ins Museum gegangen.",
+          "Wenn ich in Berlin wohnen würde, würde ich jedes Wochenende ins Museum gehen.",
+          "Wenn ich in Berlin wohne, würde ich jedes Wochenende ins Museum gehen."
+        ],
+        "answer": "Wenn ich in Berlin wohnen würde, würde ich jedes Wochenende ins Museum gehen.",
+        "tip": "wishIslandSix.questDescription"
+      },
+      {
+        "id": 11,
+        "type": "input",
+        "question": "wishIslandFive.questTask9",
+        "correctAnswer": "wäre",
+        "tip": "wishIslandFive.questDescription",
+        "reviewOf": "wish-island-five",
+        "reviewLand": "wish-island"
+      },
+      {
+        "id": 12,
+        "type": "input",
+        "question": "wishIslandTwo.questTask12",
+        "correctAnswer": "wärst",
+        "tip": "wishIslandTwo.questDescription",
+        "reviewOf": "wish-island-two",
+        "reviewLand": "wish-island"
+      },
+      {
+        "id": 13,
+        "type": "input",
+        "question": "decisionWorkshopSeven.questTask13",
+        "correctAnswer": "gegeben",
+        "tip": "decisionWorkshopSeven.questDescription",
+        "reviewOf": "decision-workshop-seven",
+        "reviewLand": "decision-workshop"
+      },
+      {
+        "id": 14,
+        "type": "input",
+        "question": "wishIslandSix.questTask14",
+        "correctAnswer": "der",
+        "tip": "wishIslandSix.questDescription"
+      },
+      {
+        "id": 15,
+        "type": "input",
+        "question": "wishIslandSix.questTask15",
+        "correctAnswer": "war",
+        "tip": "wishIslandSix.questDescription"
+      }
+    ]
+  },
+  {
+    "questId": "wish-island-seven",
+    "title": "wishIslandSeven.questTitle",
+    "progress": "0/15",
+    "description": "wishIslandSeven.questDescription",
+    "conditions": {
+      "goal": "wishIslandSeven.questGoal",
+      "minCorrect": 15,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
+    "vocabulary": [
+      {
+        "word": "die Welt",
+        "translation-ru": "мир",
+        "translation-en": "world",
+        "translation-uk": "світ",
+        "translation-pl": "świat",
+        "translation-es": "el mundo",
+        "translation-fr": "le monde",
+        "translation-tr": "dünya",
+        "translation-ro": "lumea",
+        "translation-uz": "dunyo",
+        "translation-hi": "दुनिया",
+        "translation-ar": "العالم"
+      },
+      {
+        "word": "reisen",
+        "translation-ru": "путешествовать",
+        "translation-en": "to travel",
+        "translation-uk": "подорожувати",
+        "translation-pl": "podróżować",
+        "translation-es": "viajar",
+        "translation-fr": "voyager",
+        "translation-tr": "seyahat etmek",
+        "translation-ro": "a călători",
+        "translation-uz": "sayohat qilmoq",
+        "translation-hi": "घूमना, यात्रा करना",
+        "translation-ar": "يسافر"
+      },
+      {
+        "word": "die Insel",
+        "translation-ru": "остров",
+        "translation-en": "island",
+        "translation-uk": "острів",
+        "translation-pl": "wyspa",
+        "translation-es": "la isla",
+        "translation-fr": "l’île",
+        "translation-tr": "ada",
+        "translation-ro": "insula",
+        "translation-uz": "orol",
+        "translation-hi": "द्वीप",
+        "translation-ar": "الجزيرة"
+      },
+      {
+        "word": "das Schiff",
+        "translation-ru": "корабль",
+        "translation-en": "ship",
+        "translation-uk": "корабель",
+        "translation-pl": "statek",
+        "translation-es": "el barco",
+        "translation-fr": "le bateau",
+        "translation-tr": "gemi",
+        "translation-ro": "nava",
+        "translation-uz": "kema",
+        "translation-hi": "जहाज़",
+        "translation-ar": "السفينة"
+      },
+      {
+        "word": "reich",
+        "translation-ru": "богатый",
+        "translation-en": "rich",
+        "translation-uk": "багатий",
+        "translation-pl": "bogaty",
+        "translation-es": "rico",
+        "translation-fr": "riche",
+        "translation-tr": "zengin",
+        "translation-ro": "bogat",
+        "translation-uz": "boy",
+        "translation-hi": "अमीर",
+        "translation-ar": "غني"
+      },
+      {
+        "word": "riesig",
+        "translation-ru": "огромный",
+        "translation-en": "huge",
+        "translation-uk": "величезний",
+        "translation-pl": "ogromny",
+        "translation-es": "enorme",
+        "translation-fr": "énorme",
+        "translation-tr": "kocaman",
+        "translation-ro": "imens",
+        "translation-uz": "ulkan",
+        "translation-hi": "विशाल",
+        "translation-ar": "ضخم"
+      }
+    ],
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "wishIslandSeven.questTask1",
+        "options": [
+          "Wenn ich hätte viel Geld, würde ich eine lange Reise mit dem Schiff machen.",
+          "Wenn ich viel Geld habe, würde ich eine lange Reise mit dem Schiff machen.",
+          "Wenn ich viel Geld hätte, würde ich eine lange Reise mit dem Schiff machen."
+        ],
+        "answer": "Wenn ich viel Geld hätte, würde ich eine lange Reise mit dem Schiff machen.",
+        "tip": "wishIslandSeven.questDescription"
+      },
+      {
+        "id": 2,
+        "type": "input",
+        "question": "wishIslandSeven.questTask2",
+        "correctAnswer": "wäre",
+        "tip": "wishIslandSeven.questDescription"
+      },
+      {
+        "id": 3,
+        "type": "input",
+        "question": "wishIslandSeven.questTask3",
+        "correctAnswer": "könnten",
+        "tip": "wishIslandSeven.questDescription"
+      },
+      {
+        "id": 4,
+        "type": "reorder",
+        "question": "wishIslandSeven.questTask4",
+        "words": [
+          "kaufen",
+          "eine",
+          "bin",
+          "Insel",
+          "wäre",
+          "ich",
+          "Wenn",
+          "würde",
+          "ich",
+          "reich"
+        ],
+        "correctOrder": [
+          "Wenn",
+          "ich",
+          "reich",
+          "wäre",
+          "würde",
+          "ich",
+          "eine",
+          "Insel",
+          "kaufen"
+        ],
+        "tip": "wishIslandSeven.questDescription"
+      },
+      {
+        "id": 5,
+        "type": "select",
+        "question": "wishIslandSeven.questTask5",
+        "options": [
+          "Ich wünschte, ich habe Urlaub.",
+          "Ich wünschte, ich hätte Urlaub gehabt hätte.",
+          "Ich wünschte, ich hätte Urlaub."
+        ],
+        "answer": "Ich wünschte, ich hätte Urlaub.",
+        "tip": "wishIslandSeven.questDescription"
+      },
+      {
+        "id": 6,
+        "type": "input",
+        "question": "wishIslandSeven.questTask6",
+        "correctAnswer": "würden",
+        "tip": "wishIslandSeven.questDescription"
+      },
+      {
+        "id": 7,
+        "type": "readAndAnswer",
+        "question": "wishIslandSeven.questTask7",
+        "text": "Sara arbeitet viel und hat wenig Urlaub. Sie sagt: „Wenn ich mehr Zeit hätte, würde ich nach Island fliegen. Ich wünschte, ich könnte dort die Natur sehen. Aber dieses Jahr bleibe ich zu Hause.“",
+        "options": [
+          "nach Island",
+          "nach Hause",
+          "nach Italien"
+        ],
+        "answer": "nach Island",
+        "tip": "wishIslandSeven.questDescription"
+      },
+      {
+        "id": 8,
+        "type": "input",
+        "question": "wishIslandSeven.questTask8",
+        "correctAnswer": "hätten",
+        "tip": "wishIslandSeven.questDescription"
+      },
+      {
+        "id": 9,
+        "type": "reorder",
+        "question": "wishIslandSeven.questTask10",
+        "words": [
+          "Ich",
+          "ich",
+          "bin",
+          "am",
+          "Meer",
+          "wünschte",
+          "wäre"
+        ],
+        "correctOrder": [
+          "Ich",
+          "wünschte",
+          "ich",
+          "wäre",
+          "am",
+          "Meer"
+        ],
+        "tip": "wishIslandSeven.questDescription"
+      },
+      {
+        "id": 10,
+        "type": "select",
+        "question": "wishIslandSeven.questTask11",
+        "options": [
+          "Wenn ich Spanisch könnte, ich würde in Spanien wohnen.",
+          "Wenn ich Spanisch könnte, würde ich in Spanien wohnen.",
+          "Wenn ich Spanisch kann, würde ich in Spanien wohnen."
+        ],
+        "answer": "Wenn ich Spanisch könnte, würde ich in Spanien wohnen.",
+        "tip": "wishIslandSeven.questDescription"
+      },
+      {
+        "id": 11,
+        "type": "input",
+        "question": "wishIslandSix.questTask9",
+        "correctAnswer": "hast",
+        "tip": "wishIslandSix.questDescription",
+        "reviewOf": "wish-island-six",
+        "reviewLand": "wish-island"
+      },
+      {
+        "id": 12,
+        "type": "input",
+        "question": "wishIslandThree.questTask12",
+        "correctAnswer": "würden",
+        "tip": "wishIslandThree.questDescription",
+        "reviewOf": "wish-island-three",
+        "reviewLand": "wish-island"
+      },
+      {
+        "id": 13,
+        "type": "input",
+        "question": "decisionWorkshopEight.questTask13",
+        "correctAnswer": "Schwester",
+        "tip": "decisionWorkshopEight.questDescription",
+        "reviewOf": "decision-workshop-eight",
+        "reviewLand": "decision-workshop"
+      },
+      {
+        "id": 14,
+        "type": "input",
+        "question": "wishIslandSeven.questTask14",
+        "correctAnswer": "schönste",
+        "tip": "wishIslandSeven.questDescription"
+      },
+      {
+        "id": 15,
+        "type": "input",
+        "question": "wishIslandSeven.questTask15",
+        "correctAnswer": "dem",
+        "tip": "wishIslandSeven.questDescription"
+      }
+    ]
+  },
+  {
+    "questId": "wish-island-eight",
+    "title": "wishIslandEight.questTitle",
+    "progress": "0/15",
+    "description": "wishIslandEight.questDescription",
+    "conditions": {
+      "goal": "wishIslandEight.questGoal",
+      "minCorrect": 15,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
+    "vocabulary": [
+      {
+        "word": "der Rat",
+        "translation-ru": "совет",
+        "translation-en": "advice",
+        "translation-uk": "порада",
+        "translation-pl": "rada",
+        "translation-es": "el consejo",
+        "translation-fr": "le conseil",
+        "translation-tr": "tavsiye",
+        "translation-ro": "sfatul",
+        "translation-uz": "maslahat",
+        "translation-hi": "सलाह",
+        "translation-ar": "النصيحة"
+      },
+      {
+        "word": "an deiner Stelle",
+        "translation-ru": "на твоём месте",
+        "translation-en": "if I were you",
+        "translation-uk": "на твоєму місці",
+        "translation-pl": "na twoim miejscu",
+        "translation-es": "yo que tú",
+        "translation-fr": "à ta place",
+        "translation-tr": "senin yerinde",
+        "translation-ro": "în locul tău",
+        "translation-uz": "sening o‘rningda",
+        "translation-hi": "तुम्हारी जगह",
+        "translation-ar": "لو كنت مكانك"
+      },
+      {
+        "word": "sich ausruhen",
+        "translation-ru": "отдыхать",
+        "translation-en": "to rest",
+        "translation-uk": "відпочивати",
+        "translation-pl": "odpoczywać",
+        "translation-es": "descansar",
+        "translation-fr": "se reposer",
+        "translation-tr": "dinlenmek",
+        "translation-ro": "a se odihni",
+        "translation-uz": "dam olmoq",
+        "translation-hi": "आराम करना",
+        "translation-ar": "يستريح"
+      },
+      {
+        "word": "das Problem",
+        "translation-ru": "проблема",
+        "translation-en": "problem",
+        "translation-uk": "проблема",
+        "translation-pl": "problem",
+        "translation-es": "el problema",
+        "translation-fr": "le problème",
+        "translation-tr": "sorun",
+        "translation-ro": "problema",
+        "translation-uz": "muammo",
+        "translation-hi": "समस्या",
+        "translation-ar": "المشكلة"
+      },
+      {
+        "word": "die Arbeit",
+        "translation-ru": "работа",
+        "translation-en": "work, job",
+        "translation-uk": "робота",
+        "translation-pl": "praca",
+        "translation-es": "el trabajo",
+        "translation-fr": "le travail",
+        "translation-tr": "iş",
+        "translation-ro": "munca",
+        "translation-uz": "ish",
+        "translation-hi": "काम",
+        "translation-ar": "العمل"
+      }
+    ],
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "wishIslandEight.questTask1",
+        "options": [
+          "An deiner Stelle werde ich mich mehr ausruhen.",
+          "An deiner Stelle ich würde mich mehr ausruhen.",
+          "An deiner Stelle würde ich mich mehr ausruhen."
+        ],
+        "answer": "An deiner Stelle würde ich mich mehr ausruhen.",
+        "tip": "wishIslandEight.questDescription"
+      },
+      {
+        "id": 2,
+        "type": "input",
+        "question": "wishIslandEight.questTask2",
+        "correctAnswer": "könntest",
+        "tip": "wishIslandEight.questDescription"
+      },
+      {
+        "id": 3,
+        "type": "input",
+        "question": "wishIslandEight.questTask3",
+        "correctAnswer": "wäre",
+        "tip": "wishIslandEight.questDescription"
+      },
+      {
+        "id": 4,
+        "type": "reorder",
+        "question": "wishIslandEight.questTask4",
+        "words": [
+          "trinken",
+          "An",
+          "werde",
+          "ich",
+          "weniger",
+          "würde",
+          "deiner",
+          "Kaffee",
+          "Stelle"
+        ],
+        "correctOrder": [
+          "An",
+          "deiner",
+          "Stelle",
+          "würde",
+          "ich",
+          "weniger",
+          "Kaffee",
+          "trinken"
+        ],
+        "tip": "wishIslandEight.questDescription"
+      },
+      {
+        "id": 5,
+        "type": "select",
+        "question": "wishIslandEight.questTask5",
+        "options": [
+          "Wenn du hast morgen Zeit, treffen wir uns.",
+          "Wenn du morgen Zeit hättest, treffen wir uns.",
+          "Wenn du morgen Zeit hast, treffen wir uns."
+        ],
+        "answer": "Wenn du morgen Zeit hast, treffen wir uns.",
+        "tip": "wishIslandEight.questDescription"
+      },
+      {
+        "id": 6,
+        "type": "input",
+        "question": "wishIslandEight.questTask6",
+        "correctAnswer": "schlafen",
+        "tip": "wishIslandEight.questDescription"
+      },
+      {
+        "id": 7,
+        "type": "readAndAnswer",
+        "question": "wishIslandEight.questTask7",
+        "text": "Tom ist immer müde und hat viel Stress bei der Arbeit. Seine Freundin Mia sagt: „An deiner Stelle würde ich weniger arbeiten. Du könntest am Wochenende in die Berge fahren. Wenn ich du wäre, würde ich auch mehr schlafen.“",
+        "options": [
+          "in die Stadt zu ziehen",
+          "weniger zu arbeiten",
+          "mehr zu arbeiten"
+        ],
+        "answer": "weniger zu arbeiten",
+        "tip": "wishIslandEight.questDescription"
+      },
+      {
+        "id": 8,
+        "type": "input",
+        "question": "wishIslandEight.questTask8",
+        "correctAnswer": "hätte",
+        "tip": "wishIslandEight.questDescription"
+      },
+      {
+        "id": 9,
+        "type": "reorder",
+        "question": "wishIslandEight.questTask10",
+        "words": [
+          "du",
+          "würde",
+          "Wenn",
+          "wäre",
+          "bin",
+          "ich",
+          "mehr",
+          "trinken",
+          "Wasser",
+          "ich"
+        ],
+        "correctOrder": [
+          "Wenn",
+          "ich",
+          "du",
+          "wäre",
+          "würde",
+          "ich",
+          "mehr",
+          "Wasser",
+          "trinken"
+        ],
+        "tip": "wishIslandEight.questDescription"
+      },
+      {
+        "id": 10,
+        "type": "select",
+        "question": "wishIslandEight.questTask11",
+        "options": [
+          "Du solltest weniger Süßes essen.",
+          "Du sollst weniger Süßes gegessen.",
+          "Du solltest weniger Süßes zu essen."
+        ],
+        "answer": "Du solltest weniger Süßes essen.",
+        "tip": "wishIslandEight.questDescription"
+      },
+      {
+        "id": 11,
+        "type": "input",
+        "question": "wishIslandSeven.questTask9",
+        "correctAnswer": "würde",
+        "tip": "wishIslandSeven.questDescription",
+        "reviewOf": "wish-island-seven",
+        "reviewLand": "wish-island"
+      },
+      {
+        "id": 12,
+        "type": "input",
+        "question": "wishIslandFour.questTask12",
+        "correctAnswer": "könnte",
+        "tip": "wishIslandFour.questDescription",
+        "reviewOf": "wish-island-four",
+        "reviewLand": "wish-island"
+      },
+      {
+        "id": 13,
+        "type": "input",
+        "question": "wishIslandOne.questTask13",
+        "correctAnswer": "hättest",
+        "tip": "wishIslandOne.questDescription",
+        "reviewOf": "wish-island-one",
+        "reviewLand": "wish-island"
+      },
+      {
+        "id": 14,
+        "type": "input",
+        "question": "wishIslandEight.questTask14",
+        "correctAnswer": "deshalb",
+        "tip": "wishIslandEight.questDescription"
+      },
+      {
+        "id": 15,
+        "type": "input",
+        "question": "wishIslandEight.questTask15",
+        "correctAnswer": "ist",
+        "tip": "wishIslandEight.questDescription"
+      }
+    ]
+  },
+  {
+    "questId": "wish-island-nine",
+    "title": "wishIslandNine.questTitle",
+    "progress": "0/15",
+    "description": "wishIslandNine.questDescription",
+    "conditions": {
+      "goal": "wishIslandNine.questGoal",
+      "minCorrect": 15,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
+    "vocabulary": [
+      {
+        "word": "das Leben",
+        "translation-ru": "жизнь",
+        "translation-en": "life",
+        "translation-uk": "життя",
+        "translation-pl": "życie",
+        "translation-es": "la vida",
+        "translation-fr": "la vie",
+        "translation-tr": "hayat",
+        "translation-ro": "viața",
+        "translation-uz": "hayot",
+        "translation-hi": "ज़िंदगी",
+        "translation-ar": "الحياة"
+      },
+      {
+        "word": "wärmer",
+        "translation-ru": "теплее",
+        "translation-en": "warmer",
+        "translation-uk": "тепліше",
+        "translation-pl": "cieplej",
+        "translation-es": "más cálido",
+        "translation-fr": "plus chaud",
+        "translation-tr": "daha sıcak",
+        "translation-ro": "mai cald",
+        "translation-uz": "iliqroq",
+        "translation-hi": "ज़्यादा गरम",
+        "translation-ar": "أدفأ"
+      },
+      {
+        "word": "der Laden",
+        "translation-ru": "магазин",
+        "translation-en": "shop",
+        "translation-uk": "магазин",
+        "translation-pl": "sklep",
+        "translation-es": "la tienda",
+        "translation-fr": "le magasin",
+        "translation-tr": "dükkân",
+        "translation-ro": "magazinul",
+        "translation-uz": "do‘kon",
+        "translation-hi": "दुकान",
+        "translation-ar": "المتجر"
+      },
+      {
+        "word": "reich",
+        "translation-ru": "богатый",
+        "translation-en": "rich",
+        "translation-uk": "багатий",
+        "translation-pl": "bogaty",
+        "translation-es": "rico",
+        "translation-fr": "riche",
+        "translation-tr": "zengin",
+        "translation-ro": "bogat",
+        "translation-uz": "boy",
+        "translation-hi": "अमीर",
+        "translation-ar": "غني"
+      },
+      {
+        "word": "reisen",
+        "translation-ru": "путешествовать",
+        "translation-en": "to travel",
+        "translation-uk": "подорожувати",
+        "translation-pl": "podróżować",
+        "translation-es": "viajar",
+        "translation-fr": "voyager",
+        "translation-tr": "seyahat etmek",
+        "translation-ro": "a călători",
+        "translation-uz": "sayohat qilmoq",
+        "translation-hi": "यात्रा करना",
+        "translation-ar": "يسافر"
+      }
+    ],
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "wishIslandNine.questTask1",
+        "options": [
+          "Wenn ich du wäre, ich würde diese Wohnung kaufen.",
+          "Wenn ich du bin, würde ich diese Wohnung kaufen.",
+          "Wenn ich du wäre, würde ich diese Wohnung kaufen."
+        ],
+        "answer": "Wenn ich du wäre, würde ich diese Wohnung kaufen.",
+        "tip": "wishIslandNine.questDescription"
+      },
+      {
+        "id": 2,
+        "type": "input",
+        "question": "wishIslandNine.questTask2",
+        "correctAnswer": "hätten",
+        "tip": "wishIslandNine.questDescription"
+      },
+      {
+        "id": 3,
+        "type": "input",
+        "question": "wishIslandNine.questTask3",
+        "correctAnswer": "Könntest",
+        "tip": "wishIslandNine.questDescription"
+      },
+      {
+        "id": 4,
+        "type": "reorder",
+        "question": "wishIslandNine.questTask4",
+        "words": [
+          "bin",
+          "Hause",
+          "zu",
+          "Ich",
+          "wäre",
+          "ich",
+          "wünschte"
+        ],
+        "correctOrder": [
+          "Ich",
+          "wünschte",
+          "ich",
+          "wäre",
+          "zu",
+          "Hause"
+        ],
+        "tip": "wishIslandNine.questDescription"
+      },
+      {
+        "id": 5,
+        "type": "select",
+        "question": "wishIslandNine.questTask5",
+        "options": [
+          "Wir würden kommen, wenn du uns würdest einladen.",
+          "Wir kommen, wenn du uns einladen würdest.",
+          "Wir würden kommen, wenn du uns einladen würdest."
+        ],
+        "answer": "Wir würden kommen, wenn du uns einladen würdest.",
+        "tip": "wishIslandNine.questDescription"
+      },
+      {
+        "id": 6,
+        "type": "input",
+        "question": "wishIslandNine.questTask6",
+        "correctAnswer": "wäre",
+        "tip": "wishIslandNine.questDescription"
+      },
+      {
+        "id": 7,
+        "type": "readAndAnswer",
+        "question": "wishIslandNine.questTask7",
+        "text": "Herr Klein ist 70 Jahre alt. Er sagt: „Wenn ich noch einmal jung wäre, würde ich mehr reisen und Sprachen lernen. Aber ich bin zufrieden mit meinem Leben.“",
+        "options": [
+          "mehr reisen",
+          "Fußball spielen",
+          "mehr arbeiten"
+        ],
+        "answer": "mehr reisen",
+        "tip": "wishIslandNine.questDescription"
+      },
+      {
+        "id": 8,
+        "type": "input",
+        "question": "wishIslandNine.questTask8",
+        "correctAnswer": "wärst",
+        "tip": "wishIslandNine.questDescription"
+      },
+      {
+        "id": 9,
+        "type": "select",
+        "question": "wishIslandNine.questTask9",
+        "options": [
+          "Ich würde gern helfen, aber ich habe keine Zeit.",
+          "Ich würde helfen gern, aber ich habe keine Zeit.",
+          "Ich würde gern geholfen, aber ich habe keine Zeit."
+        ],
+        "answer": "Ich würde gern helfen, aber ich habe keine Zeit.",
+        "tip": "wishIslandNine.questDescription"
+      },
+      {
+        "id": 10,
+        "type": "input",
+        "question": "wishIslandNine.questTask10",
+        "correctAnswer": "wären",
+        "tip": "wishIslandNine.questDescription"
+      },
+      {
+        "id": 11,
+        "type": "reorder",
+        "question": "wishIslandNine.questTask11",
+        "words": [
+          "Wir",
+          "ins",
+          "können",
+          "gehen",
+          "könnten",
+          "Kino"
+        ],
+        "correctOrder": [
+          "Wir",
+          "könnten",
+          "ins",
+          "Kino",
+          "gehen"
+        ],
+        "tip": "wishIslandNine.questDescription"
+      },
+      {
+        "id": 12,
+        "type": "select",
+        "question": "wishIslandNine.questTask12",
+        "options": [
+          "Wenn es morgen regnet, bleiben wir zu Hause würden.",
+          "Wenn es morgen regnet, bleiben wir zu Hause.",
+          "Wenn es morgen regnet, wir bleiben zu Hause."
+        ],
+        "answer": "Wenn es morgen regnet, bleiben wir zu Hause.",
+        "tip": "wishIslandNine.questDescription"
+      },
+      {
+        "id": 13,
+        "type": "readAndAnswer",
+        "question": "wishIslandNine.questTask13",
+        "text": "Sara möchte gern einen Hund. Aber ihre Wohnung ist klein, und sie arbeitet den ganzen Tag. „Wenn ich einen Garten und mehr Zeit hätte, würde ich sofort einen Hund kaufen“, sagt sie.",
+        "options": [
+          "Ihre Wohnung ist klein und sie hat keine Zeit.",
+          "Hunde sind zu teuer.",
+          "Sie mag keine Hunde."
+        ],
+        "answer": "Ihre Wohnung ist klein und sie hat keine Zeit.",
+        "tip": "wishIslandNine.questDescription"
+      },
+      {
+        "id": 14,
+        "type": "input",
+        "question": "wishIslandNine.questTask14",
+        "correctAnswer": "Stelle",
+        "tip": "wishIslandNine.questDescription"
+      },
+      {
+        "id": 15,
+        "type": "input",
+        "question": "wishIslandNine.questTask15",
+        "correctAnswer": "könntest",
+        "tip": "wishIslandNine.questDescription"
+      }
+    ]
+  },
+  {
+    "questId": "wish-island-ten",
+    "title": "wishIslandTen.questTitle",
+    "progress": "0/15",
+    "description": "wishIslandTen.questDescription",
+    "conditions": {
+      "goal": "wishIslandTen.questGoal",
+      "minCorrect": 15,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
+    "vocabulary": [
+      {
+        "word": "der Pilot",
+        "translation-ru": "пилот",
+        "translation-en": "pilot",
+        "translation-uk": "пілот",
+        "translation-pl": "pilot",
+        "translation-es": "el piloto",
+        "translation-fr": "le pilote",
+        "translation-tr": "pilot",
+        "translation-ro": "pilotul",
+        "translation-uz": "uchuvchi",
+        "translation-hi": "पायलट",
+        "translation-ar": "الطيّار"
+      },
+      {
+        "word": "das Büro",
+        "translation-ru": "офис",
+        "translation-en": "office",
+        "translation-uk": "офіс",
+        "translation-pl": "biuro",
+        "translation-es": "la oficina",
+        "translation-fr": "le bureau",
+        "translation-tr": "ofis",
+        "translation-ro": "biroul",
+        "translation-uz": "ofis",
+        "translation-hi": "दफ़्तर",
+        "translation-ar": "المكتب"
+      },
+      {
+        "word": "schneiden",
+        "translation-ru": "резать, стричь",
+        "translation-en": "to cut",
+        "translation-uk": "різати, стригти",
+        "translation-pl": "ciąć, strzyc",
+        "translation-es": "cortar",
+        "translation-fr": "couper",
+        "translation-tr": "kesmek",
+        "translation-ro": "a tăia",
+        "translation-uz": "kesmoq",
+        "translation-hi": "काटना",
+        "translation-ar": "يقصّ"
+      },
+      {
+        "word": "das Ende",
+        "translation-ru": "конец",
+        "translation-en": "end",
+        "translation-uk": "кінець",
+        "translation-pl": "koniec",
+        "translation-es": "el final",
+        "translation-fr": "la fin",
+        "translation-tr": "son",
+        "translation-ro": "sfârșitul",
+        "translation-uz": "oxir",
+        "translation-hi": "अंत",
+        "translation-ar": "النهاية"
+      },
+      {
+        "word": "die Nachbarin",
+        "translation-ru": "соседка",
+        "translation-en": "neighbour (female)",
+        "translation-uk": "сусідка",
+        "translation-pl": "sąsiadka",
+        "translation-es": "la vecina",
+        "translation-fr": "la voisine",
+        "translation-tr": "kadın komşu",
+        "translation-ro": "vecina",
+        "translation-uz": "qo‘shni ayol",
+        "translation-hi": "पड़ोसन",
+        "translation-ar": "الجارة"
+      }
+    ],
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "wishIslandTen.questTask1",
+        "options": [
+          "Wenn ich mehr Zeit hätte, würde ich Spanisch gelernt.",
+          "Wenn ich mehr Zeit habe, würde ich Spanisch lernen.",
+          "Wenn ich mehr Zeit hätte, würde ich Spanisch lernen."
+        ],
+        "answer": "Wenn ich mehr Zeit hätte, würde ich Spanisch lernen.",
+        "tip": "wishIslandTen.questDescription"
+      },
+      {
+        "id": 2,
+        "type": "input",
+        "question": "wishIslandTen.questTask2",
+        "correctAnswer": "Obwohl",
+        "tip": "wishIslandTen.questDescription"
+      },
+      {
+        "id": 3,
+        "type": "input",
+        "question": "wishIslandTen.questTask3",
+        "correctAnswer": "renoviert",
+        "tip": "wishIslandTen.questDescription"
+      },
+      {
+        "id": 4,
+        "type": "input",
+        "question": "wishIslandTen.questTask4",
+        "correctAnswer": "wäre",
+        "tip": "wishIslandTen.questDescription"
+      },
+      {
+        "id": 5,
+        "type": "select",
+        "question": "wishIslandTen.questTask5",
+        "options": [
+          "Die Frau, der ich habe geholfen, ist meine Nachbarin.",
+          "Die Frau, die ich geholfen habe, ist meine Nachbarin.",
+          "Die Frau, der ich geholfen habe, ist meine Nachbarin."
+        ],
+        "answer": "Die Frau, der ich geholfen habe, ist meine Nachbarin.",
+        "tip": "wishIslandTen.questDescription"
+      },
+      {
+        "id": 6,
+        "type": "input",
+        "question": "wishIslandTen.questTask6",
+        "correctAnswer": "um",
+        "tip": "wishIslandTen.questDescription"
+      },
+      {
+        "id": 7,
+        "type": "readAndAnswer",
+        "question": "wishIslandTen.questTask7",
+        "text": "Als Jonas jung war, wollte er Pilot werden. Aber er hatte Angst vor dem Fliegen. Heute ist er Lehrer. Er sagt: „Wenn ich keine Angst hätte, wäre ich heute vielleicht Pilot.“",
+        "options": [
+          "Arzt",
+          "Lehrer",
+          "Pilot"
+        ],
+        "answer": "Lehrer",
+        "tip": "wishIslandTen.questDescription"
+      },
+      {
+        "id": 8,
+        "type": "input",
+        "question": "wishIslandTen.questTask8",
+        "correctAnswer": "Könntet",
+        "tip": "wishIslandTen.questDescription"
+      },
+      {
+        "id": 9,
+        "type": "reorder",
+        "question": "wishIslandTen.questTask9",
+        "words": [
+          "zu",
+          "schließen",
+          "Tür",
+          "vergessen",
+          "um",
+          "habe",
+          "Ich",
+          "die"
+        ],
+        "correctOrder": [
+          "Ich",
+          "habe",
+          "vergessen",
+          "die",
+          "Tür",
+          "zu",
+          "schließen"
+        ],
+        "tip": "wishIslandTen.questDescription"
+      },
+      {
+        "id": 10,
+        "type": "input",
+        "question": "wishIslandTen.questTask10",
+        "correctAnswer": "hättest",
+        "tip": "wishIslandTen.questDescription"
+      },
+      {
+        "id": 11,
+        "type": "input",
+        "question": "wishIslandTen.questTask11",
+        "correctAnswer": "was",
+        "tip": "wishIslandTen.questDescription"
+      },
+      {
+        "id": 12,
+        "type": "select",
+        "question": "wishIslandTen.questTask12",
+        "options": [
+          "Ich wünschte, es wäre Wochenende.",
+          "Ich wünschte, es Wochenende wäre.",
+          "Ich wünschte, es ist Wochenende."
+        ],
+        "answer": "Ich wünschte, es wäre Wochenende.",
+        "tip": "wishIslandTen.questDescription"
+      },
+      {
+        "id": 13,
+        "type": "readAndAnswer",
+        "question": "wishIslandTen.questTask13",
+        "text": "Gestern wurde bei uns im Büro eine Party gemacht, weil unser Chef Geburtstag hatte. Obwohl ich müde war, blieb ich bis zum Ende.",
+        "options": [
+          "Es war Freitag.",
+          "Der Chef hatte Geburtstag.",
+          "Ein Kollege hatte Geburtstag."
+        ],
+        "answer": "Der Chef hatte Geburtstag.",
+        "tip": "wishIslandTen.questDescription"
+      },
+      {
+        "id": 14,
+        "type": "input",
+        "question": "wishIslandTen.questTask14",
+        "correctAnswer": "hatte",
+        "tip": "wishIslandTen.questDescription"
+      },
+      {
+        "id": 15,
+        "type": "input",
+        "question": "wishIslandTen.questTask15",
+        "correctAnswer": "lasse",
+        "tip": "wishIslandTen.questDescription"
+      }
+    ]
+  }
+]

@@ -60,6 +60,21 @@ const user = useCurrentUser()
 const sentencesStore = useSentencesStore();
 const langStore = userlangStore()
 const daily = dailyStore()
+const chainStore = userChainStore()
+const {$setUserProps} = useNuxtApp()
+
+// Уровень немецкого как свойство пользователя в аналитике: так в отчётах делим аудиторию по A1/A2/B1
+watch(() => authStore.germanLevel, (level) => {
+  if (level) $setUserProps?.({german_level: level})
+}, {immediate: true})
+
+// Уровень поднимаем только после загрузки learningStore: он сохраняет свой isLeveling в документ
+// и, загрузившись позже, перезаписал бы поднятый уровень старым
+watch(() => learningStore.isLoaded && authStore.uid, (ready) => {
+  if (ready) {
+    chainStore.raiseLevelToProgress().catch(err => console.error(err))
+  }
+}, {immediate: true})
 const onToastFinished = () => {
   if (authStore.uid) {
     const key = `step_hint_seen_${authStore.uid}`

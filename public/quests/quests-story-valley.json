@@ -1,0 +1,2696 @@
+[
+  {
+    "questId": "story-valley-one",
+    "title": "storyValleyOne.questTitle",
+    "progress": "0/15",
+    "description": "storyValleyOne.questDescription",
+    "conditions": {
+      "goal": "storyValleyOne.questGoal",
+      "minCorrect": 15,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
+    "vocabulary": [
+      {
+        "word": "damals",
+        "translation-ru": "тогда, в то время",
+        "translation-en": "back then",
+        "translation-uk": "тоді",
+        "translation-pl": "wtedy",
+        "translation-es": "entonces",
+        "translation-fr": "à l’époque",
+        "translation-tr": "o zamanlar",
+        "translation-ro": "pe atunci",
+        "translation-uz": "o‘shanda",
+        "translation-hi": "उस समय",
+        "translation-ar": "آنذاك"
+      },
+      {
+        "word": "früher",
+        "translation-ru": "раньше",
+        "translation-en": "in the past, earlier",
+        "translation-uk": "раніше",
+        "translation-pl": "dawniej",
+        "translation-es": "antes",
+        "translation-fr": "autrefois",
+        "translation-tr": "eskiden",
+        "translation-ro": "înainte",
+        "translation-uz": "ilgari",
+        "translation-hi": "पहले",
+        "translation-ar": "في الماضي"
+      },
+      {
+        "word": "die Kindheit",
+        "translation-ru": "детство",
+        "translation-en": "childhood",
+        "translation-uk": "дитинство",
+        "translation-pl": "dzieciństwo",
+        "translation-es": "la infancia",
+        "translation-fr": "l’enfance",
+        "translation-tr": "çocukluk",
+        "translation-ro": "copilăria",
+        "translation-uz": "bolalik",
+        "translation-hi": "बचपन",
+        "translation-ar": "الطفولة"
+      },
+      {
+        "word": "der Großvater",
+        "translation-ru": "дедушка",
+        "translation-en": "grandfather",
+        "translation-uk": "дідусь",
+        "translation-pl": "dziadek",
+        "translation-es": "el abuelo",
+        "translation-fr": "le grand-père",
+        "translation-tr": "büyükbaba",
+        "translation-ro": "bunicul",
+        "translation-uz": "bobo",
+        "translation-hi": "दादा",
+        "translation-ar": "الجد"
+      },
+      {
+        "word": "das Dorf",
+        "translation-ru": "деревня",
+        "translation-en": "village",
+        "translation-uk": "село",
+        "translation-pl": "wieś",
+        "translation-es": "el pueblo",
+        "translation-fr": "le village",
+        "translation-tr": "köy",
+        "translation-ro": "satul",
+        "translation-uz": "qishloq",
+        "translation-hi": "गाँव",
+        "translation-ar": "القرية"
+      },
+      {
+        "word": "etwas",
+        "translation-ru": "что-то",
+        "translation-en": "something",
+        "translation-uk": "щось",
+        "translation-pl": "coś",
+        "translation-es": "algo",
+        "translation-fr": "quelque chose",
+        "translation-tr": "bir şey",
+        "translation-ro": "ceva",
+        "translation-uz": "biror narsa",
+        "translation-hi": "कुछ",
+        "translation-ar": "شيء ما"
+      },
+      {
+        "word": "der Keks",
+        "translation-ru": "печенье",
+        "translation-en": "cookie",
+        "translation-uk": "печиво",
+        "translation-pl": "ciasteczko",
+        "translation-es": "galleta",
+        "translation-fr": "biscuit",
+        "translation-tr": "kurabiye",
+        "translation-ro": "biscuit",
+        "translation-uz": "pishiriq",
+        "translation-hi": "बिस्कुट",
+        "translation-ar": "بسكويت"
+      }
+    ],
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "storyValleyOne.questTask1",
+        "options": [
+          "Früher wohnen wir in einem Dorf.",
+          "Jetzt wohnen wir in einem Dorf.",
+          "Früher wohnten wir in einem Dorf."
+        ],
+        "answer": "Früher wohnten wir in einem Dorf.",
+        "tip": "storyValleyOne.questDescription"
+      },
+      {
+        "id": 2,
+        "type": "input",
+        "question": "storyValleyOne.questTask2",
+        "correctAnswer": "arbeitete",
+        "tip": "storyValleyOne.questDescription"
+      },
+      {
+        "id": 3,
+        "type": "input",
+        "question": "storyValleyOne.questTask3",
+        "correctAnswer": "spielte",
+        "tip": "storyValleyOne.questDescription"
+      },
+      {
+        "id": 4,
+        "type": "reorder",
+        "question": "storyValleyOne.questTask4",
+        "words": [
+          "lernen",
+          "Englisch",
+          "Damals",
+          "wir",
+          "lernten"
+        ],
+        "correctOrder": [
+          "Damals",
+          "lernten",
+          "wir",
+          "Englisch"
+        ],
+        "tip": "storyValleyOne.questDescription"
+      },
+      {
+        "id": 5,
+        "type": "select",
+        "question": "storyValleyOne.questTask5",
+        "options": [
+          "Der Großvater hört eine Geschichte.",
+          "Der Großvater erzählte eine Geschichte.",
+          "Der Großvater erzählt eine Geschichte."
+        ],
+        "answer": "Der Großvater erzählte eine Geschichte.",
+        "tip": "storyValleyOne.questDescription"
+      },
+      {
+        "id": 6,
+        "type": "input",
+        "question": "storyValleyOne.questTask6",
+        "correctAnswer": "Wohntet",
+        "tip": "storyValleyOne.questDescription"
+      },
+      {
+        "id": 7,
+        "type": "readAndAnswer",
+        "question": "storyValleyOne.questTask7",
+        "text": "Mein Großvater wohnte früher in einem kleinen Dorf. Er arbeitete jeden Tag im Garten.",
+        "options": [
+          "am Meer",
+          "in einem Dorf",
+          "in einer Stadt"
+        ],
+        "answer": "in einem Dorf",
+        "tip": "storyValleyOne.questDescription"
+      },
+      {
+        "id": 8,
+        "type": "input",
+        "question": "storyValleyOne.questTask8",
+        "correctAnswer": "Sagtest",
+        "tip": "storyValleyOne.questDescription"
+      },
+      {
+        "id": 9,
+        "type": "input",
+        "question": "storyValleyOne.questTask10",
+        "correctAnswer": "kauften",
+        "tip": "storyValleyOne.questDescription"
+      },
+      {
+        "id": 10,
+        "type": "reorder",
+        "question": "storyValleyOne.questTask11",
+        "words": [
+          "kochte",
+          "Früher",
+          "Oma",
+          "Tag",
+          "kocht",
+          "meine",
+          "jeden"
+        ],
+        "correctOrder": [
+          "Früher",
+          "kochte",
+          "meine",
+          "Oma",
+          "jeden",
+          "Tag"
+        ],
+        "tip": "storyValleyOne.questDescription"
+      },
+      {
+        "id": 11,
+        "type": "input",
+        "question": "nobodyVillageEight.questTask9",
+        "correctAnswer": "tanzen",
+        "tip": "nobodyVillageEight.questDescription",
+        "reviewOf": "nobody-village-eight",
+        "reviewLand": "nobody-village"
+      },
+      {
+        "id": 12,
+        "type": "input",
+        "question": "nobodyVillageFive.questTask12",
+        "correctAnswer": "einen",
+        "tip": "nobodyVillageFive.questDescription",
+        "reviewOf": "nobody-village-five",
+        "reviewLand": "nobody-village"
+      },
+      {
+        "id": 13,
+        "type": "input",
+        "question": "nobodyVillageTwo.questTask13",
+        "correctAnswer": "nichts",
+        "tip": "nobodyVillageTwo.questDescription",
+        "reviewOf": "nobody-village-two",
+        "reviewLand": "nobody-village"
+      },
+      {
+        "id": 14,
+        "type": "input",
+        "question": "storyValleyOne.questTask14",
+        "correctAnswer": "gefahren",
+        "tip": "storyValleyOne.questDescription"
+      },
+      {
+        "id": 15,
+        "type": "input",
+        "question": "storyValleyOne.questTask15",
+        "correctAnswer": "kälter",
+        "tip": "storyValleyOne.questDescription"
+      }
+    ]
+  },
+  {
+    "questId": "story-valley-two",
+    "title": "storyValleyTwo.questTitle",
+    "progress": "0/15",
+    "description": "storyValleyTwo.questDescription",
+    "conditions": {
+      "goal": "storyValleyTwo.questGoal",
+      "minCorrect": 15,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
+    "vocabulary": [
+      {
+        "word": "plötzlich",
+        "translation-ru": "вдруг",
+        "translation-en": "suddenly",
+        "translation-uk": "раптом",
+        "translation-pl": "nagle",
+        "translation-es": "de repente",
+        "translation-fr": "soudain",
+        "translation-tr": "birden",
+        "translation-ro": "deodată",
+        "translation-uz": "to‘satdan",
+        "translation-hi": "अचानक",
+        "translation-ar": "فجأة"
+      },
+      {
+        "word": "der Schatz",
+        "translation-ru": "сокровище",
+        "translation-en": "treasure",
+        "translation-uk": "скарб",
+        "translation-pl": "skarb",
+        "translation-es": "el tesoro",
+        "translation-fr": "le trésor",
+        "translation-tr": "hazine",
+        "translation-ro": "comoara",
+        "translation-uz": "xazina",
+        "translation-hi": "ख़ज़ाना",
+        "translation-ar": "الكنز"
+      },
+      {
+        "word": "die Höhle",
+        "translation-ru": "пещера",
+        "translation-en": "cave",
+        "translation-uk": "печера",
+        "translation-pl": "jaskinia",
+        "translation-es": "la cueva",
+        "translation-fr": "la grotte",
+        "translation-tr": "mağara",
+        "translation-ro": "peștera",
+        "translation-uz": "g‘or",
+        "translation-hi": "गुफा",
+        "translation-ar": "الكهف"
+      },
+      {
+        "word": "dunkel",
+        "translation-ru": "тёмный",
+        "translation-en": "dark",
+        "translation-uk": "темний",
+        "translation-pl": "ciemny",
+        "translation-es": "oscuro",
+        "translation-fr": "sombre",
+        "translation-tr": "karanlık",
+        "translation-ro": "întunecat",
+        "translation-uz": "qorong‘i",
+        "translation-hi": "अँधेरा",
+        "translation-ar": "مظلم"
+      },
+      {
+        "word": "die Kiste",
+        "translation-ru": "ящик, сундук",
+        "translation-en": "box, chest",
+        "translation-uk": "скриня",
+        "translation-pl": "skrzynia",
+        "translation-es": "la caja",
+        "translation-fr": "la caisse",
+        "translation-tr": "sandık",
+        "translation-ro": "lada",
+        "translation-uz": "quti",
+        "translation-hi": "संदूक",
+        "translation-ar": "الصندوق"
+      },
+      {
+        "word": "das Gold",
+        "translation-ru": "золото",
+        "translation-en": "gold",
+        "translation-uk": "золото",
+        "translation-pl": "złoto",
+        "translation-es": "el oro",
+        "translation-fr": "l’or",
+        "translation-tr": "altın",
+        "translation-ro": "aurul",
+        "translation-uz": "oltin",
+        "translation-hi": "सोना",
+        "translation-ar": "الذهب"
+      }
+    ],
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "storyValleyTwo.questTask1",
+        "options": [
+          "Plötzlich suchte er ein Licht.",
+          "Plötzlich sieht er ein Licht.",
+          "Plötzlich sah er ein Licht."
+        ],
+        "answer": "Plötzlich sah er ein Licht.",
+        "tip": "storyValleyTwo.questDescription"
+      },
+      {
+        "id": 2,
+        "type": "input",
+        "question": "storyValleyTwo.questTask2",
+        "correctAnswer": "gingen",
+        "tip": "storyValleyTwo.questDescription"
+      },
+      {
+        "id": 3,
+        "type": "input",
+        "question": "storyValleyTwo.questTask3",
+        "correctAnswer": "fand",
+        "tip": "storyValleyTwo.questDescription"
+      },
+      {
+        "id": 4,
+        "type": "reorder",
+        "question": "storyValleyTwo.questTask4",
+        "words": [
+          "In",
+          "dunkel",
+          "war",
+          "ist",
+          "es",
+          "der",
+          "Höhle"
+        ],
+        "correctOrder": [
+          "In",
+          "der",
+          "Höhle",
+          "war",
+          "es",
+          "dunkel"
+        ],
+        "tip": "storyValleyTwo.questDescription"
+      },
+      {
+        "id": 5,
+        "type": "select",
+        "question": "storyValleyTwo.questTask5",
+        "options": [
+          "Die Kinder gingen früh.",
+          "Die Kinder kamen spät.",
+          "Die Kinder kommen spät."
+        ],
+        "answer": "Die Kinder kamen spät.",
+        "tip": "storyValleyTwo.questDescription"
+      },
+      {
+        "id": 6,
+        "type": "input",
+        "question": "storyValleyTwo.questTask6",
+        "correctAnswer": "gab",
+        "tip": "storyValleyTwo.questDescription"
+      },
+      {
+        "id": 7,
+        "type": "readAndAnswer",
+        "question": "storyValleyTwo.questTask7",
+        "text": "Die Kinder gingen in eine Höhle. Es war sehr dunkel. Plötzlich fanden sie eine alte Kiste mit Gold.",
+        "options": [
+          "Gold",
+          "eine Lampe",
+          "einen Hund"
+        ],
+        "answer": "Gold",
+        "tip": "storyValleyTwo.questDescription"
+      },
+      {
+        "id": 8,
+        "type": "input",
+        "question": "storyValleyTwo.questTask8",
+        "correctAnswer": "blieben",
+        "tip": "storyValleyTwo.questDescription"
+      },
+      {
+        "id": 9,
+        "type": "input",
+        "question": "storyValleyTwo.questTask10",
+        "correctAnswer": "kam",
+        "tip": "storyValleyTwo.questDescription"
+      },
+      {
+        "id": 10,
+        "type": "reorder",
+        "question": "storyValleyTwo.questTask11",
+        "words": [
+          "kommen",
+          "aus",
+          "Dorf",
+          "kamen",
+          "Sie",
+          "dem"
+        ],
+        "correctOrder": [
+          "Sie",
+          "kamen",
+          "aus",
+          "dem",
+          "Dorf"
+        ],
+        "tip": "storyValleyTwo.questDescription"
+      },
+      {
+        "id": 11,
+        "type": "select",
+        "question": "storyValleyOne.questTask9",
+        "options": [
+          "Sie warteten lange.",
+          "Sie wartete lange.",
+          "Sie warten lange."
+        ],
+        "answer": "Sie warteten lange.",
+        "tip": "storyValleyOne.questDescription",
+        "reviewOf": "story-valley-one",
+        "reviewLand": "story-valley"
+      },
+      {
+        "id": 12,
+        "type": "input",
+        "question": "nobodyVillageSix.questTask12",
+        "correctAnswer": "deiner",
+        "tip": "nobodyVillageSix.questDescription",
+        "reviewOf": "nobody-village-six",
+        "reviewLand": "nobody-village"
+      },
+      {
+        "id": 13,
+        "type": "input",
+        "question": "nobodyVillageThree.questTask13",
+        "correctAnswer": "alles",
+        "tip": "nobodyVillageThree.questDescription",
+        "reviewOf": "nobody-village-three",
+        "reviewLand": "nobody-village"
+      },
+      {
+        "id": 14,
+        "type": "input",
+        "question": "storyValleyTwo.questTask14",
+        "correctAnswer": "hat",
+        "tip": "storyValleyTwo.questDescription"
+      },
+      {
+        "id": 15,
+        "type": "input",
+        "question": "storyValleyTwo.questTask15",
+        "correctAnswer": "solltest",
+        "tip": "storyValleyTwo.questDescription"
+      }
+    ]
+  },
+  {
+    "questId": "story-valley-three",
+    "title": "storyValleyThree.questTitle",
+    "progress": "0/15",
+    "description": "storyValleyThree.questDescription",
+    "conditions": {
+      "goal": "storyValleyThree.questGoal",
+      "minCorrect": 15,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
+    "vocabulary": [
+      {
+        "word": "das Schiff",
+        "translation-ru": "корабль",
+        "translation-en": "ship",
+        "translation-uk": "корабель",
+        "translation-pl": "statek",
+        "translation-es": "el barco",
+        "translation-fr": "le bateau",
+        "translation-tr": "gemi",
+        "translation-ro": "nava",
+        "translation-uz": "kema",
+        "translation-hi": "जहाज़",
+        "translation-ar": "السفينة"
+      },
+      {
+        "word": "der Hafen",
+        "translation-ru": "порт, гавань",
+        "translation-en": "harbour",
+        "translation-uk": "порт",
+        "translation-pl": "port",
+        "translation-es": "el puerto",
+        "translation-fr": "le port",
+        "translation-tr": "liman",
+        "translation-ro": "portul",
+        "translation-uz": "port",
+        "translation-hi": "बंदरगाह",
+        "translation-ar": "الميناء"
+      },
+      {
+        "word": "fremd",
+        "translation-ru": "чужой, незнакомый",
+        "translation-en": "foreign, strange",
+        "translation-uk": "чужий, незнайомий",
+        "translation-pl": "obcy",
+        "translation-es": "extranjero, desconocido",
+        "translation-fr": "étranger",
+        "translation-tr": "yabancı",
+        "translation-ro": "străin",
+        "translation-uz": "begona",
+        "translation-hi": "अनजान",
+        "translation-ar": "غريب"
+      },
+      {
+        "word": "das Land",
+        "translation-ru": "страна",
+        "translation-en": "country",
+        "translation-uk": "країна",
+        "translation-pl": "kraj",
+        "translation-es": "el país",
+        "translation-fr": "le pays",
+        "translation-tr": "ülke",
+        "translation-ro": "țara",
+        "translation-uz": "mamlakat",
+        "translation-hi": "देश",
+        "translation-ar": "البلد"
+      },
+      {
+        "word": "die Postkarte",
+        "translation-ru": "открытка",
+        "translation-en": "postcard",
+        "translation-uk": "листівка",
+        "translation-pl": "pocztówka",
+        "translation-es": "la postal",
+        "translation-fr": "la carte postale",
+        "translation-tr": "kartpostal",
+        "translation-ro": "cartea poștală",
+        "translation-uz": "otkritka",
+        "translation-hi": "पोस्टकार्ड",
+        "translation-ar": "البطاقة البريدية"
+      },
+      {
+        "word": "die Sprache",
+        "translation-ru": "язык",
+        "translation-en": "language",
+        "translation-uk": "мова",
+        "translation-pl": "język",
+        "translation-es": "el idioma",
+        "translation-fr": "la langue",
+        "translation-tr": "dil",
+        "translation-ro": "limba",
+        "translation-uz": "til",
+        "translation-hi": "भाषा",
+        "translation-ar": "اللغة"
+      }
+    ],
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "storyValleyThree.questTask1",
+        "options": [
+          "Wir fahren mit dem Schiff nach Italien.",
+          "Wir fuhren mit dem Zug nach Italien.",
+          "Wir fuhren mit dem Schiff nach Italien."
+        ],
+        "answer": "Wir fuhren mit dem Schiff nach Italien.",
+        "tip": "storyValleyThree.questDescription"
+      },
+      {
+        "id": 2,
+        "type": "input",
+        "question": "storyValleyThree.questTask2",
+        "correctAnswer": "las",
+        "tip": "storyValleyThree.questDescription"
+      },
+      {
+        "id": 3,
+        "type": "input",
+        "question": "storyValleyThree.questTask3",
+        "correctAnswer": "schrieb",
+        "tip": "storyValleyThree.questDescription"
+      },
+      {
+        "id": 4,
+        "type": "reorder",
+        "question": "storyValleyThree.questTask4",
+        "words": [
+          "wir",
+          "tranken",
+          "Im",
+          "trinken",
+          "Kaffee",
+          "Hafen"
+        ],
+        "correctOrder": [
+          "Im",
+          "Hafen",
+          "tranken",
+          "wir",
+          "Kaffee"
+        ],
+        "tip": "storyValleyThree.questDescription"
+      },
+      {
+        "id": 5,
+        "type": "select",
+        "question": "storyValleyThree.questTask5",
+        "options": [
+          "Er sprach eine fremde Sprache.",
+          "Er sprach eine neue Sprache.",
+          "Er spricht eine fremde Sprache."
+        ],
+        "answer": "Er sprach eine fremde Sprache.",
+        "tip": "storyValleyThree.questDescription"
+      },
+      {
+        "id": 6,
+        "type": "input",
+        "question": "storyValleyThree.questTask6",
+        "correctAnswer": "aßen",
+        "tip": "storyValleyThree.questDescription"
+      },
+      {
+        "id": 7,
+        "type": "readAndAnswer",
+        "question": "storyValleyThree.questTask7",
+        "text": "Wir fuhren drei Tage mit dem Schiff. Im Hafen nahmen wir ein Taxi zum Hotel.",
+        "options": [
+          "zwei Stunden",
+          "drei Tage",
+          "eine Woche"
+        ],
+        "answer": "drei Tage",
+        "tip": "storyValleyThree.questDescription"
+      },
+      {
+        "id": 8,
+        "type": "input",
+        "question": "storyValleyThree.questTask8",
+        "correctAnswer": "nahm",
+        "tip": "storyValleyThree.questDescription"
+      },
+      {
+        "id": 9,
+        "type": "input",
+        "question": "storyValleyThree.questTask10",
+        "correctAnswer": "fuhren",
+        "tip": "storyValleyThree.questDescription"
+      },
+      {
+        "id": 10,
+        "type": "reorder",
+        "question": "storyValleyThree.questTask11",
+        "words": [
+          "mit",
+          "sprach",
+          "Ich",
+          "viel",
+          "Leuten",
+          "spreche",
+          "den"
+        ],
+        "correctOrder": [
+          "Ich",
+          "sprach",
+          "viel",
+          "mit",
+          "den",
+          "Leuten"
+        ],
+        "tip": "storyValleyThree.questDescription"
+      },
+      {
+        "id": 11,
+        "type": "select",
+        "question": "storyValleyTwo.questTask9",
+        "options": [
+          "Sahen du den Hund?",
+          "Sahst du den Hund?",
+          "Siehst du den Hund?"
+        ],
+        "answer": "Sahst du den Hund?",
+        "tip": "storyValleyTwo.questDescription",
+        "reviewOf": "story-valley-two",
+        "reviewLand": "story-valley"
+      },
+      {
+        "id": 12,
+        "type": "input",
+        "question": "nobodyVillageSeven.questTask12",
+        "correctAnswer": "meiner",
+        "tip": "nobodyVillageSeven.questDescription",
+        "reviewOf": "nobody-village-seven",
+        "reviewLand": "nobody-village"
+      },
+      {
+        "id": 13,
+        "type": "input",
+        "question": "nobodyVillageFour.questTask13",
+        "correctAnswer": "Schild",
+        "tip": "nobodyVillageFour.questDescription",
+        "reviewOf": "nobody-village-four",
+        "reviewLand": "nobody-village"
+      },
+      {
+        "id": 14,
+        "type": "input",
+        "question": "storyValleyThree.questTask14",
+        "correctAnswer": "meiner",
+        "tip": "storyValleyThree.questDescription"
+      },
+      {
+        "id": 15,
+        "type": "input",
+        "question": "storyValleyThree.questTask15",
+        "correctAnswer": "schnellste",
+        "tip": "storyValleyThree.questDescription"
+      }
+    ]
+  },
+  {
+    "questId": "story-valley-four",
+    "title": "storyValleyFour.questTitle",
+    "progress": "0/15",
+    "description": "storyValleyFour.questDescription",
+    "conditions": {
+      "goal": "storyValleyFour.questGoal",
+      "minCorrect": 15,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
+    "vocabulary": [
+      {
+        "word": "endlich",
+        "translation-ru": "наконец",
+        "translation-en": "finally",
+        "translation-uk": "нарешті",
+        "translation-pl": "wreszcie",
+        "translation-es": "por fin",
+        "translation-fr": "enfin",
+        "translation-tr": "sonunda",
+        "translation-ro": "în sfârșit",
+        "translation-uz": "nihoyat",
+        "translation-hi": "आख़िरकार",
+        "translation-ar": "أخيرًا"
+      },
+      {
+        "word": "sofort",
+        "translation-ru": "сразу",
+        "translation-en": "immediately",
+        "translation-uk": "одразу",
+        "translation-pl": "od razu",
+        "translation-es": "enseguida",
+        "translation-fr": "tout de suite",
+        "translation-tr": "hemen",
+        "translation-ro": "imediat",
+        "translation-uz": "darhol",
+        "translation-hi": "तुरंत",
+        "translation-ar": "فورًا"
+      },
+      {
+        "word": "die Überraschung",
+        "translation-ru": "сюрприз",
+        "translation-en": "surprise",
+        "translation-uk": "сюрприз",
+        "translation-pl": "niespodzianka",
+        "translation-es": "la sorpresa",
+        "translation-fr": "la surprise",
+        "translation-tr": "sürpriz",
+        "translation-ro": "surpriza",
+        "translation-uz": "syurpriz",
+        "translation-hi": "सरप्राइज़",
+        "translation-ar": "المفاجأة"
+      },
+      {
+        "word": "die Antwort",
+        "translation-ru": "ответ",
+        "translation-en": "answer",
+        "translation-uk": "відповідь",
+        "translation-pl": "odpowiedź",
+        "translation-es": "la respuesta",
+        "translation-fr": "la réponse",
+        "translation-tr": "cevap",
+        "translation-ro": "răspunsul",
+        "translation-uz": "javob",
+        "translation-hi": "जवाब",
+        "translation-ar": "الجواب"
+      },
+      {
+        "word": "müde",
+        "translation-ru": "уставший",
+        "translation-en": "tired",
+        "translation-uk": "втомлений",
+        "translation-pl": "zmęczony",
+        "translation-es": "cansado",
+        "translation-fr": "fatigué",
+        "translation-tr": "yorgun",
+        "translation-ro": "obosit",
+        "translation-uz": "charchagan",
+        "translation-hi": "थका हुआ",
+        "translation-ar": "متعب"
+      }
+    ],
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "storyValleyFour.questTask1",
+        "options": [
+          "Er kaufte eine Überraschung.",
+          "Er bringt eine Überraschung.",
+          "Er brachte eine Überraschung."
+        ],
+        "answer": "Er brachte eine Überraschung.",
+        "tip": "storyValleyFour.questDescription"
+      },
+      {
+        "id": 2,
+        "type": "input",
+        "question": "storyValleyFour.questTask2",
+        "correctAnswer": "dachte",
+        "tip": "storyValleyFour.questDescription"
+      },
+      {
+        "id": 3,
+        "type": "input",
+        "question": "storyValleyFour.questTask3",
+        "correctAnswer": "wussten",
+        "tip": "storyValleyFour.questDescription"
+      },
+      {
+        "id": 4,
+        "type": "reorder",
+        "question": "storyValleyFour.questTask4",
+        "words": [
+          "sechs",
+          "stand",
+          "Ich",
+          "auf",
+          "Uhr",
+          "aufstand",
+          "um"
+        ],
+        "correctOrder": [
+          "Ich",
+          "stand",
+          "um",
+          "sechs",
+          "Uhr",
+          "auf"
+        ],
+        "tip": "storyValleyFour.questDescription"
+      },
+      {
+        "id": 5,
+        "type": "select",
+        "question": "storyValleyFour.questTask5",
+        "options": [
+          "Der Zug fuhr endlich ab.",
+          "Der Zug kam endlich an.",
+          "Der Zug kommt endlich an."
+        ],
+        "answer": "Der Zug kam endlich an.",
+        "tip": "storyValleyFour.questDescription"
+      },
+      {
+        "id": 6,
+        "type": "input",
+        "question": "storyValleyFour.questTask6",
+        "correctAnswer": "kannte",
+        "tip": "storyValleyFour.questDescription"
+      },
+      {
+        "id": 7,
+        "type": "readAndAnswer",
+        "question": "storyValleyFour.questTask7",
+        "text": "Paul kam um elf Uhr in der Nacht an. Er war sehr müde und ging sofort ins Bett.",
+        "options": [
+          "um elf Uhr",
+          "am Morgen",
+          "um sieben Uhr"
+        ],
+        "answer": "um elf Uhr",
+        "tip": "storyValleyFour.questDescription"
+      },
+      {
+        "id": 8,
+        "type": "input",
+        "question": "storyValleyFour.questTask8",
+        "correctAnswer": "rief",
+        "tip": "storyValleyFour.questDescription"
+      },
+      {
+        "id": 9,
+        "type": "input",
+        "question": "storyValleyFour.questTask10",
+        "correctAnswer": "brachten",
+        "tip": "storyValleyFour.questDescription"
+      },
+      {
+        "id": 10,
+        "type": "reorder",
+        "question": "storyValleyFour.questTask11",
+        "words": [
+          "ankamen",
+          "Sie",
+          "an",
+          "kamen",
+          "spät"
+        ],
+        "correctOrder": [
+          "Sie",
+          "kamen",
+          "spät",
+          "an"
+        ],
+        "tip": "storyValleyFour.questDescription"
+      },
+      {
+        "id": 11,
+        "type": "select",
+        "question": "storyValleyThree.questTask9",
+        "options": [
+          "Lasen ihr dieses Buch?",
+          "Last ihr dieses Buch?",
+          "Lest ihr dieses Buch?"
+        ],
+        "answer": "Last ihr dieses Buch?",
+        "tip": "storyValleyThree.questDescription",
+        "reviewOf": "story-valley-three",
+        "reviewLand": "story-valley"
+      },
+      {
+        "id": 12,
+        "type": "input",
+        "question": "nobodyVillageEight.questTask12",
+        "correctAnswer": "Niemand",
+        "tip": "nobodyVillageEight.questDescription",
+        "reviewOf": "nobody-village-eight",
+        "reviewLand": "nobody-village"
+      },
+      {
+        "id": 13,
+        "type": "input",
+        "question": "nobodyVillageFive.questTask13",
+        "correctAnswer": "keins",
+        "tip": "nobodyVillageFive.questDescription",
+        "reviewOf": "nobody-village-five",
+        "reviewLand": "nobody-village"
+      },
+      {
+        "id": 14,
+        "type": "input",
+        "question": "storyValleyFour.questTask14",
+        "correctAnswer": "gegessen",
+        "tip": "storyValleyFour.questDescription"
+      },
+      {
+        "id": 15,
+        "type": "input",
+        "question": "storyValleyFour.questTask15",
+        "correctAnswer": "würde",
+        "tip": "storyValleyFour.questDescription"
+      }
+    ]
+  },
+  {
+    "questId": "story-valley-five",
+    "title": "storyValleyFive.questTitle",
+    "progress": "0/15",
+    "description": "storyValleyFive.questDescription",
+    "conditions": {
+      "goal": "storyValleyFive.questGoal",
+      "minCorrect": 15,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
+    "vocabulary": [
+      {
+        "word": "als",
+        "translation-ru": "когда (один раз в прошлом)",
+        "translation-en": "when (once in the past)",
+        "translation-uk": "коли (один раз у минулому)",
+        "translation-pl": "kiedy (raz w przeszłości)",
+        "translation-es": "cuando (una vez en el pasado)",
+        "translation-fr": "quand (une fois au passé)",
+        "translation-tr": "-dığında (geçmişte bir kez)",
+        "translation-ro": "când (o dată în trecut)",
+        "translation-uz": "qachonki (o‘tmishda bir marta)",
+        "translation-hi": "जब (अतीत में एक बार)",
+        "translation-ar": "عندما (مرة في الماضي)"
+      },
+      {
+        "word": "jedes Mal",
+        "translation-ru": "каждый раз",
+        "translation-en": "every time",
+        "translation-uk": "щоразу",
+        "translation-pl": "za każdym razem",
+        "translation-es": "cada vez",
+        "translation-fr": "chaque fois",
+        "translation-tr": "her seferinde",
+        "translation-ro": "de fiecare dată",
+        "translation-uz": "har safar",
+        "translation-hi": "हर बार",
+        "translation-ar": "كل مرة"
+      },
+      {
+        "word": "die Schulzeit",
+        "translation-ru": "школьные годы",
+        "translation-en": "school days",
+        "translation-uk": "шкільні роки",
+        "translation-pl": "czasy szkolne",
+        "translation-es": "la época escolar",
+        "translation-fr": "les années d’école",
+        "translation-tr": "okul yılları",
+        "translation-ro": "anii de școală",
+        "translation-uz": "maktab yillari",
+        "translation-hi": "स्कूल के दिन",
+        "translation-ar": "أيام المدرسة"
+      },
+      {
+        "word": "traurig",
+        "translation-ru": "грустный",
+        "translation-en": "sad",
+        "translation-uk": "сумний",
+        "translation-pl": "smutny",
+        "translation-es": "triste",
+        "translation-fr": "triste",
+        "translation-tr": "üzgün",
+        "translation-ro": "trist",
+        "translation-uz": "xafa",
+        "translation-hi": "उदास",
+        "translation-ar": "حزين"
+      },
+      {
+        "word": "zum ersten Mal",
+        "translation-ru": "впервые",
+        "translation-en": "for the first time",
+        "translation-uk": "вперше",
+        "translation-pl": "po raz pierwszy",
+        "translation-es": "por primera vez",
+        "translation-fr": "pour la première fois",
+        "translation-tr": "ilk kez",
+        "translation-ro": "prima dată",
+        "translation-uz": "birinchi marta",
+        "translation-hi": "पहली बार",
+        "translation-ar": "لأول مرة"
+      },
+      {
+        "word": "denn",
+        "translation-ru": "потому что, ведь",
+        "translation-en": "because",
+        "translation-uk": "бо",
+        "translation-pl": "bo",
+        "translation-es": "porque",
+        "translation-fr": "car",
+        "translation-tr": "çünkü",
+        "translation-ro": "căci",
+        "translation-uz": "chunki",
+        "translation-hi": "क्योंकि",
+        "translation-ar": "لأنّ"
+      }
+    ],
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "storyValleyFive.questTask1",
+        "options": [
+          "Als ich ein Kind bin, wohne ich in Hamburg.",
+          "Wenn ich ein Kind war, wohnte ich in Hamburg.",
+          "Als ich ein Kind war, wohnte ich in Hamburg."
+        ],
+        "answer": "Als ich ein Kind war, wohnte ich in Hamburg.",
+        "tip": "storyValleyFive.questDescription"
+      },
+      {
+        "id": 2,
+        "type": "input",
+        "question": "storyValleyFive.questTask2",
+        "correctAnswer": "Als",
+        "tip": "storyValleyFive.questDescription"
+      },
+      {
+        "id": 3,
+        "type": "input",
+        "question": "storyValleyFive.questTask3",
+        "correctAnswer": "wenn",
+        "tip": "storyValleyFive.questDescription"
+      },
+      {
+        "id": 4,
+        "type": "reorder",
+        "question": "storyValleyFive.questTask4",
+        "words": [
+          "sie",
+          "ich",
+          "war",
+          "zu",
+          "Hause",
+          "wenn",
+          "Als",
+          "kam"
+        ],
+        "correctOrder": [
+          "Als",
+          "sie",
+          "kam",
+          "war",
+          "ich",
+          "zu",
+          "Hause"
+        ],
+        "tip": "storyValleyFive.questDescription"
+      },
+      {
+        "id": 5,
+        "type": "select",
+        "question": "storyValleyFive.questTask5",
+        "options": [
+          "Wenn es regnete, blieben wir zu Hause.",
+          "Wenn es regnet, bleiben wir zu Hause.",
+          "Als es regnete, blieben wir zu Hause."
+        ],
+        "answer": "Wenn es regnete, blieben wir zu Hause.",
+        "tip": "storyValleyFive.questDescription"
+      },
+      {
+        "id": 6,
+        "type": "input",
+        "question": "storyValleyFive.questTask6",
+        "correctAnswer": "wenn",
+        "tip": "storyValleyFive.questDescription"
+      },
+      {
+        "id": 7,
+        "type": "readAndAnswer",
+        "question": "storyValleyFive.questTask7",
+        "text": "Als Anna zwölf war, ging ihre Familie nach Berlin. Anna war traurig, denn ihre Freunde blieben in München.",
+        "options": [
+          "Ihre Freunde waren weit weg.",
+          "Sie mochte Berlin nicht.",
+          "Ihre Familie blieb dort."
+        ],
+        "answer": "Ihre Freunde waren weit weg.",
+        "tip": "storyValleyFive.questDescription"
+      },
+      {
+        "id": 8,
+        "type": "input",
+        "question": "storyValleyFive.questTask8",
+        "correctAnswer": "Als",
+        "tip": "storyValleyFive.questDescription"
+      },
+      {
+        "id": 9,
+        "type": "input",
+        "question": "storyValleyFive.questTask10",
+        "correctAnswer": "hatte",
+        "tip": "storyValleyFive.questDescription"
+      },
+      {
+        "id": 10,
+        "type": "reorder",
+        "question": "storyValleyFive.questTask11",
+        "words": [
+          "einen",
+          "kam",
+          "als",
+          "Oma",
+          "brachte",
+          "Wenn",
+          "Kuchen",
+          "sie"
+        ],
+        "correctOrder": [
+          "Wenn",
+          "Oma",
+          "kam",
+          "brachte",
+          "sie",
+          "einen",
+          "Kuchen"
+        ],
+        "tip": "storyValleyFive.questDescription"
+      },
+      {
+        "id": 11,
+        "type": "select",
+        "question": "storyValleyFour.questTask9",
+        "options": [
+          "Wusstest du das?",
+          "Wussten du das?",
+          "Weißt du das?"
+        ],
+        "answer": "Wusstest du das?",
+        "tip": "storyValleyFour.questDescription",
+        "reviewOf": "story-valley-four",
+        "reviewLand": "story-valley"
+      },
+      {
+        "id": 12,
+        "type": "select",
+        "question": "storyValleyOne.questTask12",
+        "options": [
+          "Damals wohne ich bei meiner Oma.",
+          "Damals wohnte ich bei meiner Oma.",
+          "Damals besuchte ich meine Oma."
+        ],
+        "answer": "Damals wohnte ich bei meiner Oma.",
+        "tip": "storyValleyOne.questDescription",
+        "reviewOf": "story-valley-one",
+        "reviewLand": "story-valley"
+      },
+      {
+        "id": 13,
+        "type": "input",
+        "question": "nobodyVillageSix.questTask13",
+        "correctAnswer": "meins",
+        "tip": "nobodyVillageSix.questDescription",
+        "reviewOf": "nobody-village-six",
+        "reviewLand": "nobody-village"
+      },
+      {
+        "id": 14,
+        "type": "input",
+        "question": "storyValleyFive.questTask14",
+        "correctAnswer": "hast",
+        "tip": "storyValleyFive.questDescription"
+      },
+      {
+        "id": 15,
+        "type": "input",
+        "question": "storyValleyFive.questTask15",
+        "correctAnswer": "älter",
+        "tip": "storyValleyFive.questDescription"
+      }
+    ]
+  },
+  {
+    "questId": "story-valley-six",
+    "title": "storyValleySix.questTitle",
+    "progress": "0/15",
+    "description": "storyValleySix.questDescription",
+    "conditions": {
+      "goal": "storyValleySix.questGoal",
+      "minCorrect": 15,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
+    "vocabulary": [
+      {
+        "word": "zuerst",
+        "translation-ru": "сначала",
+        "translation-en": "first",
+        "translation-uk": "спочатку",
+        "translation-pl": "najpierw",
+        "translation-es": "primero",
+        "translation-fr": "d’abord",
+        "translation-tr": "önce",
+        "translation-ro": "mai întâi",
+        "translation-uz": "avval",
+        "translation-hi": "पहले",
+        "translation-ar": "أولًا"
+      },
+      {
+        "word": "danach",
+        "translation-ru": "после этого",
+        "translation-en": "after that",
+        "translation-uk": "після цього",
+        "translation-pl": "następnie",
+        "translation-es": "después",
+        "translation-fr": "après",
+        "translation-tr": "ondan sonra",
+        "translation-ro": "după aceea",
+        "translation-uz": "shundan so‘ng",
+        "translation-hi": "उसके बाद",
+        "translation-ar": "بعد ذلك"
+      },
+      {
+        "word": "später",
+        "translation-ru": "позже",
+        "translation-en": "later",
+        "translation-uk": "пізніше",
+        "translation-pl": "później",
+        "translation-es": "más tarde",
+        "translation-fr": "plus tard",
+        "translation-tr": "daha sonra",
+        "translation-ro": "mai târziu",
+        "translation-uz": "keyinroq",
+        "translation-hi": "बाद में",
+        "translation-ar": "لاحقًا"
+      },
+      {
+        "word": "am Ende",
+        "translation-ru": "в конце",
+        "translation-en": "in the end",
+        "translation-uk": "наприкінці",
+        "translation-pl": "na końcu",
+        "translation-es": "al final",
+        "translation-fr": "à la fin",
+        "translation-tr": "sonunda",
+        "translation-ro": "la sfârșit",
+        "translation-uz": "oxirida",
+        "translation-hi": "अंत में",
+        "translation-ar": "في النهاية"
+      },
+      {
+        "word": "das Abenteuer",
+        "translation-ru": "приключение",
+        "translation-en": "adventure",
+        "translation-uk": "пригода",
+        "translation-pl": "przygoda",
+        "translation-es": "la aventura",
+        "translation-fr": "l’aventure",
+        "translation-tr": "macera",
+        "translation-ro": "aventura",
+        "translation-uz": "sarguzasht",
+        "translation-hi": "रोमांच",
+        "translation-ar": "المغامرة"
+      }
+    ],
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "storyValleySix.questTask1",
+        "options": [
+          "Zuerst wir frühstückten.",
+          "Später frühstückten wir.",
+          "Zuerst frühstückten wir."
+        ],
+        "answer": "Zuerst frühstückten wir.",
+        "tip": "storyValleySix.questDescription"
+      },
+      {
+        "id": 2,
+        "type": "input",
+        "question": "storyValleySix.questTask2",
+        "correctAnswer": "gingen",
+        "tip": "storyValleySix.questDescription"
+      },
+      {
+        "id": 3,
+        "type": "input",
+        "question": "storyValleySix.questTask3",
+        "correctAnswer": "rief",
+        "tip": "storyValleySix.questDescription"
+      },
+      {
+        "id": 4,
+        "type": "reorder",
+        "question": "storyValleySix.questTask4",
+        "words": [
+          "Hause",
+          "nach",
+          "fahren",
+          "Später",
+          "wir",
+          "fuhren"
+        ],
+        "correctOrder": [
+          "Später",
+          "fuhren",
+          "wir",
+          "nach",
+          "Hause"
+        ],
+        "tip": "storyValleySix.questDescription"
+      },
+      {
+        "id": 5,
+        "type": "select",
+        "question": "storyValleySix.questTask5",
+        "options": [
+          "Am Ende alle waren zufrieden.",
+          "Am Anfang waren alle zufrieden.",
+          "Am Ende waren alle zufrieden."
+        ],
+        "answer": "Am Ende waren alle zufrieden.",
+        "tip": "storyValleySix.questDescription"
+      },
+      {
+        "id": 6,
+        "type": "input",
+        "question": "storyValleySix.questTask6",
+        "correctAnswer": "wusste",
+        "tip": "storyValleySix.questDescription"
+      },
+      {
+        "id": 7,
+        "type": "readAndAnswer",
+        "question": "storyValleySix.questTask7",
+        "text": "Zuerst gingen Tom und Lisa ins Museum. Danach aßen sie Pizza. Am Ende tranken sie einen Kaffee am Fluss.",
+        "options": [
+          "Sie aßen Pizza.",
+          "Sie tranken einen Kaffee.",
+          "Sie gingen ins Museum."
+        ],
+        "answer": "Sie tranken einen Kaffee.",
+        "tip": "storyValleySix.questDescription"
+      },
+      {
+        "id": 8,
+        "type": "input",
+        "question": "storyValleySix.questTask8",
+        "correctAnswer": "kam",
+        "tip": "storyValleySix.questDescription"
+      },
+      {
+        "id": 9,
+        "type": "input",
+        "question": "storyValleySix.questTask10",
+        "correctAnswer": "fanden",
+        "tip": "storyValleySix.questDescription"
+      },
+      {
+        "id": 10,
+        "type": "reorder",
+        "question": "storyValleySix.questTask11",
+        "words": [
+          "ist",
+          "war",
+          "Das",
+          "Abenteuer",
+          "ein",
+          "großes"
+        ],
+        "correctOrder": [
+          "Das",
+          "war",
+          "ein",
+          "großes",
+          "Abenteuer"
+        ],
+        "tip": "storyValleySix.questDescription"
+      },
+      {
+        "id": 11,
+        "type": "select",
+        "question": "storyValleyFive.questTask9",
+        "options": [
+          "Als er anruft, bin ich bei der Arbeit.",
+          "Als er anrief, war ich bei der Arbeit.",
+          "Wenn er anrief, war ich bei der Arbeit."
+        ],
+        "answer": "Als er anrief, war ich bei der Arbeit.",
+        "tip": "storyValleyFive.questDescription",
+        "reviewOf": "story-valley-five",
+        "reviewLand": "story-valley"
+      },
+      {
+        "id": 12,
+        "type": "select",
+        "question": "storyValleyTwo.questTask12",
+        "options": [
+          "Ich ging nach Hause.",
+          "Ich ging zu Hause.",
+          "Ich gehe nach Hause."
+        ],
+        "answer": "Ich ging nach Hause.",
+        "tip": "storyValleyTwo.questDescription",
+        "reviewOf": "story-valley-two",
+        "reviewLand": "story-valley"
+      },
+      {
+        "id": 13,
+        "type": "input",
+        "question": "nobodyVillageSeven.questTask13",
+        "correctAnswer": "Jemand",
+        "tip": "nobodyVillageSeven.questDescription",
+        "reviewOf": "nobody-village-seven",
+        "reviewLand": "nobody-village"
+      },
+      {
+        "id": 14,
+        "type": "input",
+        "question": "storyValleySix.questTask14",
+        "correctAnswer": "ist",
+        "tip": "storyValleySix.questDescription"
+      },
+      {
+        "id": 15,
+        "type": "input",
+        "question": "storyValleySix.questTask15",
+        "correctAnswer": "Könnten",
+        "tip": "storyValleySix.questDescription"
+      }
+    ]
+  },
+  {
+    "questId": "story-valley-seven",
+    "title": "storyValleySeven.questTitle",
+    "progress": "0/15",
+    "description": "storyValleySeven.questDescription",
+    "conditions": {
+      "goal": "storyValleySeven.questGoal",
+      "minCorrect": 15,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
+    "vocabulary": [
+      {
+        "word": "die Bank",
+        "translation-ru": "скамейка",
+        "translation-en": "bench",
+        "translation-uk": "лавка",
+        "translation-pl": "ławka",
+        "translation-es": "el banco",
+        "translation-fr": "le banc",
+        "translation-tr": "bank",
+        "translation-ro": "banca",
+        "translation-uz": "skameyka",
+        "translation-hi": "बेंच",
+        "translation-ar": "المقعد"
+      },
+      {
+        "word": "der Boden",
+        "translation-ru": "пол, земля",
+        "translation-en": "floor, ground",
+        "translation-uk": "підлога, земля",
+        "translation-pl": "podłoga, ziemia",
+        "translation-es": "el suelo",
+        "translation-fr": "le sol",
+        "translation-tr": "yer, zemin",
+        "translation-ro": "podeaua, pământul",
+        "translation-uz": "pol, yer",
+        "translation-hi": "फ़र्श, ज़मीन",
+        "translation-ar": "الأرض"
+      },
+      {
+        "word": "die Treppe",
+        "translation-ru": "лестница",
+        "translation-en": "stairs",
+        "translation-uk": "сходи",
+        "translation-pl": "schody",
+        "translation-es": "la escalera",
+        "translation-fr": "l’escalier",
+        "translation-tr": "merdiven",
+        "translation-ro": "scara",
+        "translation-uz": "zinapoya",
+        "translation-hi": "सीढ़ियाँ",
+        "translation-ar": "الدرج"
+      },
+      {
+        "word": "zufällig",
+        "translation-ru": "случайно",
+        "translation-en": "by chance",
+        "translation-uk": "випадково",
+        "translation-pl": "przypadkiem",
+        "translation-es": "por casualidad",
+        "translation-fr": "par hasard",
+        "translation-tr": "tesadüfen",
+        "translation-ro": "întâmplător",
+        "translation-uz": "tasodifan",
+        "translation-hi": "संयोग से",
+        "translation-ar": "بالصدفة"
+      },
+      {
+        "word": "der Nachbar",
+        "translation-ru": "сосед",
+        "translation-en": "neighbour",
+        "translation-uk": "сусід",
+        "translation-pl": "sąsiad",
+        "translation-es": "el vecino",
+        "translation-fr": "le voisin",
+        "translation-tr": "komşu",
+        "translation-ro": "vecinul",
+        "translation-uz": "qo‘shni",
+        "translation-hi": "पड़ोसी",
+        "translation-ar": "الجار"
+      },
+      {
+        "word": "das Kino",
+        "translation-ru": "кинотеатр",
+        "translation-en": "cinema",
+        "translation-uk": "кінотеатр",
+        "translation-pl": "kino",
+        "translation-es": "el cine",
+        "translation-fr": "le cinéma",
+        "translation-tr": "sinema",
+        "translation-ro": "cinematograful",
+        "translation-uz": "kinoteatr",
+        "translation-hi": "सिनेमाघर",
+        "translation-ar": "السينما"
+      },
+      {
+        "word": "schlecht",
+        "translation-ru": "плохой",
+        "translation-en": "bad",
+        "translation-uk": "поганий",
+        "translation-pl": "zły",
+        "translation-es": "malo",
+        "translation-fr": "mauvais",
+        "translation-tr": "kötü",
+        "translation-ro": "rău",
+        "translation-uz": "yomon",
+        "translation-hi": "बुरा",
+        "translation-ar": "سيئ"
+      },
+      {
+        "word": "laut",
+        "translation-ru": "громко, громкий",
+        "translation-en": "loud",
+        "translation-uk": "голосно",
+        "translation-pl": "głośno",
+        "translation-es": "fuerte, ruidoso",
+        "translation-fr": "fort, bruyant",
+        "translation-tr": "yüksek sesle",
+        "translation-ro": "tare",
+        "translation-uz": "baland ovozda",
+        "translation-hi": "ज़ोर से",
+        "translation-ar": "بصوت عالٍ"
+      }
+    ],
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "storyValleySeven.questTask1",
+        "options": [
+          "Er saß lange auf dem Boden.",
+          "Er sitzt lange auf der Bank.",
+          "Er saß lange auf der Bank."
+        ],
+        "answer": "Er saß lange auf der Bank.",
+        "tip": "storyValleySeven.questDescription"
+      },
+      {
+        "id": 2,
+        "type": "input",
+        "question": "storyValleySeven.questTask2",
+        "correctAnswer": "lag",
+        "tip": "storyValleySeven.questDescription"
+      },
+      {
+        "id": 3,
+        "type": "input",
+        "question": "storyValleySeven.questTask3",
+        "correctAnswer": "traf",
+        "tip": "storyValleySeven.questDescription"
+      },
+      {
+        "id": 4,
+        "type": "reorder",
+        "question": "storyValleySeven.questTask4",
+        "words": [
+          "in",
+          "laufen",
+          "Park",
+          "den",
+          "Die",
+          "schnell",
+          "Kinder",
+          "liefen"
+        ],
+        "correctOrder": [
+          "Die",
+          "Kinder",
+          "liefen",
+          "schnell",
+          "in",
+          "den",
+          "Park"
+        ],
+        "tip": "storyValleySeven.questDescription"
+      },
+      {
+        "id": 5,
+        "type": "select",
+        "question": "storyValleySeven.questTask5",
+        "options": [
+          "Sie fällt auf der Treppe.",
+          "Sie fiel auf die Bank.",
+          "Sie fiel auf der Treppe."
+        ],
+        "answer": "Sie fiel auf der Treppe.",
+        "tip": "storyValleySeven.questDescription"
+      },
+      {
+        "id": 6,
+        "type": "input",
+        "question": "storyValleySeven.questTask6",
+        "correctAnswer": "schliefen",
+        "tip": "storyValleySeven.questDescription"
+      },
+      {
+        "id": 7,
+        "type": "readAndAnswer",
+        "question": "storyValleySeven.questTask7",
+        "text": "Tom stand eine Stunde vor dem Kino. Dann traf er endlich seine Freundin.",
+        "options": [
+          "vor dem Kino",
+          "vor der Schule",
+          "im Kino"
+        ],
+        "answer": "vor dem Kino",
+        "tip": "storyValleySeven.questDescription"
+      },
+      {
+        "id": 8,
+        "type": "input",
+        "question": "storyValleySeven.questTask8",
+        "correctAnswer": "half",
+        "tip": "storyValleySeven.questDescription"
+      },
+      {
+        "id": 9,
+        "type": "input",
+        "question": "storyValleySeven.questTask10",
+        "correctAnswer": "saßen",
+        "tip": "storyValleySeven.questDescription"
+      },
+      {
+        "id": 10,
+        "type": "reorder",
+        "question": "storyValleySeven.questTask11",
+        "words": [
+          "schlafe",
+          "schlief",
+          "schlecht",
+          "Gestern",
+          "ich"
+        ],
+        "correctOrder": [
+          "Gestern",
+          "schlief",
+          "ich",
+          "schlecht"
+        ],
+        "tip": "storyValleySeven.questDescription"
+      },
+      {
+        "id": 11,
+        "type": "select",
+        "question": "storyValleySix.questTask9",
+        "options": [
+          "Danach sprachen wir lange.",
+          "Danach sprechen wir lange.",
+          "Danach wir sprachen lange."
+        ],
+        "answer": "Danach sprachen wir lange.",
+        "tip": "storyValleySix.questDescription",
+        "reviewOf": "story-valley-six",
+        "reviewLand": "story-valley"
+      },
+      {
+        "id": 12,
+        "type": "select",
+        "question": "storyValleyThree.questTask12",
+        "options": [
+          "Wir fuhren mit dem Bus zum Hafen.",
+          "Wir fuhren mit dem Bus zu Hause.",
+          "Wir fahren mit dem Bus zum Hafen."
+        ],
+        "answer": "Wir fuhren mit dem Bus zum Hafen.",
+        "tip": "storyValleyThree.questDescription",
+        "reviewOf": "story-valley-three",
+        "reviewLand": "story-valley"
+      },
+      {
+        "id": 13,
+        "type": "input",
+        "question": "nobodyVillageEight.questTask13",
+        "correctAnswer": "singen",
+        "tip": "nobodyVillageEight.questDescription",
+        "reviewOf": "nobody-village-eight",
+        "reviewLand": "nobody-village"
+      },
+      {
+        "id": 14,
+        "type": "input",
+        "question": "storyValleySeven.questTask14",
+        "correctAnswer": "schneller",
+        "tip": "storyValleySeven.questDescription"
+      },
+      {
+        "id": 15,
+        "type": "input",
+        "question": "storyValleySeven.questTask15",
+        "correctAnswer": "mit",
+        "tip": "storyValleySeven.questDescription"
+      }
+    ]
+  },
+  {
+    "questId": "story-valley-eight",
+    "title": "storyValleyEight.questTitle",
+    "progress": "0/15",
+    "description": "storyValleyEight.questDescription",
+    "conditions": {
+      "goal": "storyValleyEight.questGoal",
+      "minCorrect": 15,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
+    "vocabulary": [
+      {
+        "word": "der König",
+        "translation-ru": "король",
+        "translation-en": "king",
+        "translation-uk": "король",
+        "translation-pl": "król",
+        "translation-es": "el rey",
+        "translation-fr": "le roi",
+        "translation-tr": "kral",
+        "translation-ro": "regele",
+        "translation-uz": "qirol",
+        "translation-hi": "राजा",
+        "translation-ar": "الملك"
+      },
+      {
+        "word": "die Prinzessin",
+        "translation-ru": "принцесса",
+        "translation-en": "princess",
+        "translation-uk": "принцеса",
+        "translation-pl": "księżniczka",
+        "translation-es": "la princesa",
+        "translation-fr": "la princesse",
+        "translation-tr": "prenses",
+        "translation-ro": "prințesa",
+        "translation-uz": "malika",
+        "translation-hi": "राजकुमारी",
+        "translation-ar": "الأميرة"
+      },
+      {
+        "word": "das Schloss",
+        "translation-ru": "замок, дворец",
+        "translation-en": "castle",
+        "translation-uk": "замок, палац",
+        "translation-pl": "zamek",
+        "translation-es": "el castillo",
+        "translation-fr": "le château",
+        "translation-tr": "şato",
+        "translation-ro": "castelul",
+        "translation-uz": "qasr",
+        "translation-hi": "महल",
+        "translation-ar": "القصر"
+      },
+      {
+        "word": "es war einmal",
+        "translation-ru": "жил-был",
+        "translation-en": "once upon a time there was",
+        "translation-uk": "жив-був",
+        "translation-pl": "dawno, dawno temu był",
+        "translation-es": "érase una vez",
+        "translation-fr": "il était une fois",
+        "translation-tr": "bir varmış bir yokmuş",
+        "translation-ro": "a fost odată",
+        "translation-uz": "bir bor ekan",
+        "translation-hi": "एक बार की बात है",
+        "translation-ar": "كان يا ما كان"
+      },
+      {
+        "word": "eines Tages",
+        "translation-ru": "однажды",
+        "translation-en": "one day",
+        "translation-uk": "одного дня",
+        "translation-pl": "pewnego dnia",
+        "translation-es": "un día",
+        "translation-fr": "un jour",
+        "translation-tr": "bir gün",
+        "translation-ro": "într-o zi",
+        "translation-uz": "bir kuni",
+        "translation-hi": "एक दिन",
+        "translation-ar": "في يوم من الأيام"
+      }
+    ],
+    "tasks": [
+      {
+        "id": 1,
+        "type": "input",
+        "question": "storyValleyEight.questTask1",
+        "correctAnswer": "wohnte",
+        "tip": "storyValleyEight.questDescription"
+      },
+      {
+        "id": 2,
+        "type": "input",
+        "question": "storyValleyEight.questTask2",
+        "correctAnswer": "gesehen",
+        "tip": "storyValleyEight.questDescription"
+      },
+      {
+        "id": 3,
+        "type": "input",
+        "question": "storyValleyEight.questTask3",
+        "correctAnswer": "hatten",
+        "tip": "storyValleyEight.questDescription"
+      },
+      {
+        "id": 4,
+        "type": "select",
+        "question": "storyValleyEight.questTask4",
+        "options": [
+          "Ich habe dich nicht anrufen gekonnt.",
+          "Ich kann dich nicht anrufen.",
+          "Ich konnte dich nicht anrufen."
+        ],
+        "answer": "Ich konnte dich nicht anrufen.",
+        "tip": "storyValleyEight.questDescription"
+      },
+      {
+        "id": 5,
+        "type": "reorder",
+        "question": "storyValleyEight.questTask5",
+        "words": [
+          "gelebt",
+          "Die",
+          "Prinzessin",
+          "Schloss",
+          "einem",
+          "in",
+          "lebte"
+        ],
+        "correctOrder": [
+          "Die",
+          "Prinzessin",
+          "lebte",
+          "in",
+          "einem",
+          "Schloss"
+        ],
+        "tip": "storyValleyEight.questDescription"
+      },
+      {
+        "id": 6,
+        "type": "input",
+        "question": "storyValleyEight.questTask6",
+        "correctAnswer": "gegangen",
+        "tip": "storyValleyEight.questDescription"
+      },
+      {
+        "id": 7,
+        "type": "readAndAnswer",
+        "question": "storyValleyEight.questTask7",
+        "text": "Es war einmal ein König. Er hatte eine schöne Tochter. Eines Tages kam ein junger Mann in das Schloss.",
+        "options": [
+          "einen Hund",
+          "eine Tochter",
+          "einen Sohn"
+        ],
+        "answer": "eine Tochter",
+        "tip": "storyValleyEight.questDescription"
+      },
+      {
+        "id": 8,
+        "type": "input",
+        "question": "storyValleyEight.questTask8",
+        "correctAnswer": "fuhren",
+        "tip": "storyValleyEight.questDescription"
+      },
+      {
+        "id": 9,
+        "type": "select",
+        "question": "storyValleyEight.questTask10",
+        "options": [
+          "Ich musste am Wochenende arbeiten.",
+          "Ich musste am Wochenende gearbeitet.",
+          "Ich muss am Wochenende arbeiten."
+        ],
+        "answer": "Ich musste am Wochenende arbeiten.",
+        "tip": "storyValleyEight.questDescription"
+      },
+      {
+        "id": 10,
+        "type": "reorder",
+        "question": "storyValleyEight.questTask11",
+        "words": [
+          "bist",
+          "du",
+          "Hause",
+          "Wann",
+          "gekommen",
+          "kamst",
+          "nach"
+        ],
+        "correctOrder": [
+          "Wann",
+          "bist",
+          "du",
+          "nach",
+          "Hause",
+          "gekommen"
+        ],
+        "tip": "storyValleyEight.questDescription"
+      },
+      {
+        "id": 11,
+        "type": "input",
+        "question": "storyValleySeven.questTask12",
+        "correctAnswer": "halfen",
+        "tip": "storyValleySeven.questDescription",
+        "reviewOf": "story-valley-seven",
+        "reviewLand": "story-valley"
+      },
+      {
+        "id": 12,
+        "type": "select",
+        "question": "storyValleyFour.questTask12",
+        "options": [
+          "Ich setzte mich sofort.",
+          "Ich stand sofort auf.",
+          "Ich stehe sofort auf."
+        ],
+        "answer": "Ich stand sofort auf.",
+        "tip": "storyValleyFour.questDescription",
+        "reviewOf": "story-valley-four",
+        "reviewLand": "story-valley"
+      },
+      {
+        "id": 13,
+        "type": "readAndAnswer",
+        "question": "storyValleyOne.questTask13",
+        "text": "Im Sommer spielten die Kinder im Garten. Abends erzählte der Großvater Geschichten.",
+        "options": [
+          "Sie lernten in der Schule.",
+          "Sie spielten im Garten.",
+          "Sie kochten in der Küche."
+        ],
+        "answer": "Sie spielten im Garten.",
+        "tip": "storyValleyOne.questDescription",
+        "reviewOf": "story-valley-one",
+        "reviewLand": "story-valley"
+      },
+      {
+        "id": 14,
+        "type": "input",
+        "question": "storyValleyEight.questTask14",
+        "correctAnswer": "bei",
+        "tip": "storyValleyEight.questDescription"
+      },
+      {
+        "id": 15,
+        "type": "input",
+        "question": "storyValleyEight.questTask15",
+        "correctAnswer": "hätte",
+        "tip": "storyValleyEight.questDescription"
+      }
+    ]
+  },
+  {
+    "questId": "story-valley-nine",
+    "title": "storyValleyNine.questTitle",
+    "progress": "0/15",
+    "description": "storyValleyNine.questDescription",
+    "conditions": {
+      "goal": "storyValleyNine.questGoal",
+      "minCorrect": 15,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
+    "vocabulary": [
+      {
+        "word": "die Geschichte",
+        "translation-ru": "история, рассказ",
+        "translation-en": "story",
+        "translation-uk": "історія",
+        "translation-pl": "historia",
+        "translation-es": "la historia",
+        "translation-fr": "l’histoire",
+        "translation-tr": "hikâye",
+        "translation-ro": "povestea",
+        "translation-uz": "hikoya",
+        "translation-hi": "कहानी",
+        "translation-ar": "القصة"
+      },
+      {
+        "word": "der Koffer",
+        "translation-ru": "чемодан",
+        "translation-en": "suitcase",
+        "translation-uk": "валіза",
+        "translation-pl": "walizka",
+        "translation-es": "la maleta",
+        "translation-fr": "la valise",
+        "translation-tr": "bavul",
+        "translation-ro": "valiza",
+        "translation-uz": "chamadon",
+        "translation-hi": "सूटकेस",
+        "translation-ar": "حقيبة السفر"
+      },
+      {
+        "word": "packen",
+        "translation-ru": "упаковывать",
+        "translation-en": "to pack",
+        "translation-uk": "пакувати",
+        "translation-pl": "pakować",
+        "translation-es": "hacer la maleta",
+        "translation-fr": "faire sa valise",
+        "translation-tr": "bavul hazırlamak",
+        "translation-ro": "a împacheta",
+        "translation-uz": "joylamoq",
+        "translation-hi": "पैक करना",
+        "translation-ar": "يحزم"
+      },
+      {
+        "word": "der Freund",
+        "translation-ru": "друг",
+        "translation-en": "friend",
+        "translation-uk": "друг",
+        "translation-pl": "przyjaciel",
+        "translation-es": "el amigo",
+        "translation-fr": "l’ami",
+        "translation-tr": "arkadaş",
+        "translation-ro": "prietenul",
+        "translation-uz": "do‘st",
+        "translation-hi": "दोस्त",
+        "translation-ar": "الصديق"
+      },
+      {
+        "word": "der Abend",
+        "translation-ru": "вечер",
+        "translation-en": "evening",
+        "translation-uk": "вечір",
+        "translation-pl": "wieczór",
+        "translation-es": "la tarde",
+        "translation-fr": "le soir",
+        "translation-tr": "akşam",
+        "translation-ro": "seara",
+        "translation-uz": "kechqurun",
+        "translation-hi": "शाम",
+        "translation-ar": "المساء"
+      },
+      {
+        "word": "lächeln",
+        "translation-ru": "улыбаться",
+        "translation-en": "to smile",
+        "translation-uk": "усміхатися",
+        "translation-pl": "uśmiechać się",
+        "translation-es": "sonreír",
+        "translation-fr": "sourire",
+        "translation-tr": "gülümsemek",
+        "translation-ro": "a zâmbi",
+        "translation-uz": "jilmaymoq",
+        "translation-hi": "मुस्कुराना",
+        "translation-ar": "يبتسم"
+      }
+    ],
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "storyValleyNine.questTask1",
+        "options": [
+          "Als wir in Rom ankommen, ist es heiß.",
+          "Wenn wir in Rom ankamen, war es heiß.",
+          "Als wir in Rom ankamen, war es heiß."
+        ],
+        "answer": "Als wir in Rom ankamen, war es heiß.",
+        "tip": "storyValleyNine.questDescription"
+      },
+      {
+        "id": 2,
+        "type": "input",
+        "question": "storyValleyNine.questTask2",
+        "correctAnswer": "packte",
+        "tip": "storyValleyNine.questDescription"
+      },
+      {
+        "id": 3,
+        "type": "input",
+        "question": "storyValleyNine.questTask3",
+        "correctAnswer": "fuhren",
+        "tip": "storyValleyNine.questDescription"
+      },
+      {
+        "id": 4,
+        "type": "reorder",
+        "question": "storyValleyNine.questTask4",
+        "words": [
+          "liest",
+          "Geschichte",
+          "eine",
+          "Am",
+          "er",
+          "las",
+          "Abend"
+        ],
+        "correctOrder": [
+          "Am",
+          "Abend",
+          "las",
+          "er",
+          "eine",
+          "Geschichte"
+        ],
+        "tip": "storyValleyNine.questDescription"
+      },
+      {
+        "id": 5,
+        "type": "select",
+        "question": "storyValleyNine.questTask5",
+        "options": [
+          "Als ich in Berlin war, besuchte ich meinen Freund.",
+          "Wenn ich in Berlin bin, besuche ich meinen Freund.",
+          "Wenn ich in Berlin war, besuchte ich meinen Freund."
+        ],
+        "answer": "Wenn ich in Berlin war, besuchte ich meinen Freund.",
+        "tip": "storyValleyNine.questDescription"
+      },
+      {
+        "id": 6,
+        "type": "input",
+        "question": "storyValleyNine.questTask6",
+        "correctAnswer": "wusste",
+        "tip": "storyValleyNine.questDescription"
+      },
+      {
+        "id": 7,
+        "type": "readAndAnswer",
+        "question": "storyValleyNine.questTask7",
+        "text": "Als Lisa am Bahnhof ankam, war ihr Koffer weg. Zuerst suchte sie ihn überall. Am Ende fand sie ihn im Zug.",
+        "options": [
+          "am Bahnhof",
+          "am Flughafen",
+          "im Hotel"
+        ],
+        "answer": "am Bahnhof",
+        "tip": "storyValleyNine.questDescription"
+      },
+      {
+        "id": 8,
+        "type": "input",
+        "question": "storyValleyNine.questTask8",
+        "correctAnswer": "standen",
+        "tip": "storyValleyNine.questDescription"
+      },
+      {
+        "id": 9,
+        "type": "select",
+        "question": "storyValleyNine.questTask9",
+        "options": [
+          "Er brachte mir ein Buch.",
+          "Er kaufte mir ein Buch.",
+          "Er bringt mir ein Buch."
+        ],
+        "answer": "Er brachte mir ein Buch.",
+        "tip": "storyValleyNine.questDescription"
+      },
+      {
+        "id": 10,
+        "type": "input",
+        "question": "storyValleyNine.questTask10",
+        "correctAnswer": "gingen",
+        "tip": "storyValleyNine.questDescription"
+      },
+      {
+        "id": 11,
+        "type": "reorder",
+        "question": "storyValleyNine.questTask11",
+        "words": [
+          "kochte",
+          "Als",
+          "nach",
+          "wenn",
+          "Hause",
+          "Mama",
+          "ich",
+          "kam"
+        ],
+        "correctOrder": [
+          "Als",
+          "ich",
+          "nach",
+          "Hause",
+          "kam",
+          "kochte",
+          "Mama"
+        ],
+        "tip": "storyValleyNine.questDescription"
+      },
+      {
+        "id": 12,
+        "type": "select",
+        "question": "storyValleyNine.questTask12",
+        "options": [
+          "Wir fand nichts.",
+          "Wir fanden nichts.",
+          "Wir finden nichts."
+        ],
+        "answer": "Wir fanden nichts.",
+        "tip": "storyValleyNine.questDescription"
+      },
+      {
+        "id": 13,
+        "type": "readAndAnswer",
+        "question": "storyValleyNine.questTask13",
+        "text": "Gestern wollte Tim ins Kino gehen. Zuerst fand er seinen Schlüssel nicht. Dann kam der Bus zu spät. Am Ende sah er den Film.",
+        "options": [
+          "Er sah den Film.",
+          "Er fuhr mit dem Auto.",
+          "Er blieb zu Hause."
+        ],
+        "answer": "Er sah den Film.",
+        "tip": "storyValleyNine.questDescription"
+      },
+      {
+        "id": 14,
+        "type": "input",
+        "question": "storyValleyNine.questTask14",
+        "correctAnswer": "Riefst",
+        "tip": "storyValleyNine.questDescription"
+      },
+      {
+        "id": 15,
+        "type": "input",
+        "question": "storyValleyNine.questTask15",
+        "correctAnswer": "wenn",
+        "tip": "storyValleyNine.questDescription"
+      }
+    ]
+  },
+  {
+    "questId": "story-valley-ten",
+    "title": "storyValleyTen.questTitle",
+    "progress": "0/15",
+    "description": "storyValleyTen.questDescription",
+    "conditions": {
+      "goal": "storyValleyTen.questGoal",
+      "minCorrect": 15,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
+    "vocabulary": [
+      {
+        "word": "das Fenster",
+        "translation-ru": "окно",
+        "translation-en": "window",
+        "translation-uk": "вікно",
+        "translation-pl": "okno",
+        "translation-es": "la ventana",
+        "translation-fr": "la fenêtre",
+        "translation-tr": "pencere",
+        "translation-ro": "fereastra",
+        "translation-uz": "deraza",
+        "translation-hi": "खिड़की",
+        "translation-ar": "النافذة"
+      },
+      {
+        "word": "der Weg",
+        "translation-ru": "дорога, путь",
+        "translation-en": "way",
+        "translation-uk": "дорога",
+        "translation-pl": "droga",
+        "translation-es": "el camino",
+        "translation-fr": "le chemin",
+        "translation-tr": "yol",
+        "translation-ro": "drumul",
+        "translation-uz": "yo‘l",
+        "translation-hi": "रास्ता",
+        "translation-ar": "الطريق"
+      },
+      {
+        "word": "die Brücke",
+        "translation-ru": "мост",
+        "translation-en": "bridge",
+        "translation-uk": "міст",
+        "translation-pl": "most",
+        "translation-es": "el puente",
+        "translation-fr": "le pont",
+        "translation-tr": "köprü",
+        "translation-ro": "podul",
+        "translation-uz": "ko‘prik",
+        "translation-hi": "पुल",
+        "translation-ar": "الجسر"
+      },
+      {
+        "word": "glücklich",
+        "translation-ru": "счастливый",
+        "translation-en": "happy",
+        "translation-uk": "щасливий",
+        "translation-pl": "szczęśliwy",
+        "translation-es": "feliz",
+        "translation-fr": "heureux",
+        "translation-tr": "mutlu",
+        "translation-ro": "fericit",
+        "translation-uz": "baxtli",
+        "translation-hi": "ख़ुश",
+        "translation-ar": "سعيد"
+      },
+      {
+        "word": "die Großmutter",
+        "translation-ru": "бабушка",
+        "translation-en": "grandmother",
+        "translation-uk": "бабуся",
+        "translation-pl": "babcia",
+        "translation-es": "la abuela",
+        "translation-fr": "la grand-mère",
+        "translation-tr": "büyükanne",
+        "translation-ro": "bunica",
+        "translation-uz": "buvi",
+        "translation-hi": "दादी",
+        "translation-ar": "الجدة"
+      },
+      {
+        "word": "falsch",
+        "translation-ru": "неправильный",
+        "translation-en": "wrong",
+        "translation-uk": "неправильний",
+        "translation-pl": "błędny",
+        "translation-es": "equivocado",
+        "translation-fr": "faux",
+        "translation-tr": "yanlış",
+        "translation-ro": "greșit",
+        "translation-uz": "noto‘g‘ri",
+        "translation-hi": "ग़लत",
+        "translation-ar": "خاطئ"
+      },
+      {
+        "word": "die Richtung",
+        "translation-ru": "направление",
+        "translation-en": "direction",
+        "translation-uk": "напрямок",
+        "translation-pl": "kierunek",
+        "translation-es": "la dirección",
+        "translation-fr": "la direction",
+        "translation-tr": "yön",
+        "translation-ro": "direcția",
+        "translation-uz": "yo‘nalish",
+        "translation-hi": "दिशा",
+        "translation-ar": "الاتجاه"
+      },
+      {
+        "word": "niemand",
+        "translation-ru": "никто",
+        "translation-en": "nobody",
+        "translation-uk": "ніхто",
+        "translation-pl": "nikt",
+        "translation-es": "nadie",
+        "translation-fr": "personne",
+        "translation-tr": "hiç kimse",
+        "translation-ro": "nimeni",
+        "translation-uz": "hech kim",
+        "translation-hi": "कोई नहीं",
+        "translation-ar": "لا أحد"
+      }
+    ],
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "storyValleyTen.questTask1",
+        "options": [
+          "Wenn ich jung war, reiste ich viel.",
+          "Als ich jung bin, reise ich viel.",
+          "Als ich jung war, reiste ich viel."
+        ],
+        "answer": "Als ich jung war, reiste ich viel.",
+        "tip": "storyValleyTen.questDescription"
+      },
+      {
+        "id": 2,
+        "type": "input",
+        "question": "storyValleyTen.questTask2",
+        "correctAnswer": "öffnete",
+        "tip": "storyValleyTen.questDescription"
+      },
+      {
+        "id": 3,
+        "type": "input",
+        "question": "storyValleyTen.questTask3",
+        "correctAnswer": "gingen",
+        "tip": "storyValleyTen.questDescription"
+      },
+      {
+        "id": 4,
+        "type": "input",
+        "question": "storyValleyTen.questTask4",
+        "correctAnswer": "getroffen",
+        "tip": "storyValleyTen.questDescription"
+      },
+      {
+        "id": 5,
+        "type": "select",
+        "question": "storyValleyTen.questTask5",
+        "options": [
+          "Die Großmutter war sehr traurig.",
+          "Die Großmutter ist sehr glücklich.",
+          "Die Großmutter war sehr glücklich."
+        ],
+        "answer": "Die Großmutter war sehr glücklich.",
+        "tip": "storyValleyTen.questDescription"
+      },
+      {
+        "id": 6,
+        "type": "input",
+        "question": "storyValleyTen.questTask6",
+        "correctAnswer": "meinem",
+        "tip": "storyValleyTen.questDescription"
+      },
+      {
+        "id": 7,
+        "type": "readAndAnswer",
+        "question": "storyValleyTen.questTask7",
+        "text": "Paul kam zu spät zur Arbeit, weil er den Weg nicht fand. Zuerst fuhr er in die falsche Richtung.",
+        "options": [
+          "Der Bus kam nicht.",
+          "Er fand den Weg nicht.",
+          "Er war krank."
+        ],
+        "answer": "Er fand den Weg nicht.",
+        "tip": "storyValleyTen.questDescription"
+      },
+      {
+        "id": 8,
+        "type": "input",
+        "question": "storyValleyTen.questTask8",
+        "correctAnswer": "dachte",
+        "tip": "storyValleyTen.questDescription"
+      },
+      {
+        "id": 9,
+        "type": "select",
+        "question": "storyValleyTen.questTask9",
+        "options": [
+          "Wenn ich Zeit habe, besuche ich meine Großmutter.",
+          "Wenn ich Zeit hatte, besuchte ich meine Großmutter.",
+          "Als ich Zeit hatte, besuchte ich meine Großmutter."
+        ],
+        "answer": "Wenn ich Zeit hatte, besuchte ich meine Großmutter.",
+        "tip": "storyValleyTen.questDescription"
+      },
+      {
+        "id": 10,
+        "type": "input",
+        "question": "storyValleyTen.questTask10",
+        "correctAnswer": "kürzer",
+        "tip": "storyValleyTen.questDescription"
+      },
+      {
+        "id": 11,
+        "type": "reorder",
+        "question": "storyValleyTen.questTask11",
+        "words": [
+          "solltest",
+          "deine",
+          "Du",
+          "sollst",
+          "anrufen",
+          "Oma"
+        ],
+        "correctOrder": [
+          "Du",
+          "solltest",
+          "deine",
+          "Oma",
+          "anrufen"
+        ],
+        "tip": "storyValleyTen.questDescription"
+      },
+      {
+        "id": 12,
+        "type": "select",
+        "question": "storyValleyTen.questTask12",
+        "options": [
+          "Als ich die Tür öffnete, war niemand da.",
+          "Als ich die Tür öffne, ist niemand da.",
+          "Wenn ich die Tür öffnete, war niemand da."
+        ],
+        "answer": "Als ich die Tür öffnete, war niemand da.",
+        "tip": "storyValleyTen.questDescription"
+      },
+      {
+        "id": 13,
+        "type": "readAndAnswer",
+        "question": "storyValleyTen.questTask13",
+        "text": "Als Anna nach Wien kam, kannte sie niemanden. Zuerst war sie traurig. Später fand sie neue Freunde. Am Ende blieb sie fünf Jahre in Wien.",
+        "options": [
+          "Sie fand keine Freunde.",
+          "Sie blieb fünf Jahre in Wien.",
+          "Sie fuhr nach Hause."
+        ],
+        "answer": "Sie blieb fünf Jahre in Wien.",
+        "tip": "storyValleyTen.questDescription"
+      },
+      {
+        "id": 14,
+        "type": "input",
+        "question": "storyValleyTen.questTask14",
+        "correctAnswer": "wollten",
+        "tip": "storyValleyTen.questDescription"
+      },
+      {
+        "id": 15,
+        "type": "input",
+        "question": "storyValleyTen.questTask15",
+        "correctAnswer": "weil",
+        "tip": "storyValleyTen.questDescription"
+      }
+    ]
+  }
+]

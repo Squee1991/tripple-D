@@ -1,0 +1,2841 @@
+[
+  {
+    "questId": "hearty-inn-one",
+    "title": "heartyInnOne.questTitle",
+    "progress": "0/15",
+    "description": "heartyInnOne.questDescription",
+    "conditions": {
+      "goal": "heartyInnOne.questGoal",
+      "minCorrect": 15,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
+    "vocabulary": [
+      {
+        "word": "mögen",
+        "translation-ru": "любить, нравиться",
+        "translation-en": "to like",
+        "translation-uk": "любити, подобатися",
+        "translation-pl": "lubić",
+        "translation-es": "gustar",
+        "translation-fr": "aimer",
+        "translation-tr": "sevmek",
+        "translation-ro": "a plăcea",
+        "translation-uz": "yoqtirmoq",
+        "translation-hi": "पसंद करना",
+        "translation-ar": "يحب"
+      },
+      {
+        "word": "der Käse",
+        "translation-ru": "сыр",
+        "translation-en": "cheese",
+        "translation-uk": "сир",
+        "translation-pl": "ser",
+        "translation-es": "el queso",
+        "translation-fr": "le fromage",
+        "translation-tr": "peynir",
+        "translation-ro": "brânza",
+        "translation-uz": "pishloq",
+        "translation-hi": "पनीर",
+        "translation-ar": "الجبن"
+      },
+      {
+        "word": "der Fisch",
+        "translation-ru": "рыба",
+        "translation-en": "fish",
+        "translation-uk": "риба",
+        "translation-pl": "ryba",
+        "translation-es": "el pescado",
+        "translation-fr": "le poisson",
+        "translation-tr": "balık",
+        "translation-ro": "peștele",
+        "translation-uz": "baliq",
+        "translation-hi": "मछली",
+        "translation-ar": "السمك"
+      },
+      {
+        "word": "das Fleisch",
+        "translation-ru": "мясо",
+        "translation-en": "meat",
+        "translation-uk": "м’ясо",
+        "translation-pl": "mięso",
+        "translation-es": "la carne",
+        "translation-fr": "la viande",
+        "translation-tr": "et",
+        "translation-ro": "carnea",
+        "translation-uz": "go‘sht",
+        "translation-hi": "मांस",
+        "translation-ar": "اللحم"
+      },
+      {
+        "word": "das Gemüse",
+        "translation-ru": "овощи",
+        "translation-en": "vegetables",
+        "translation-uk": "овочі",
+        "translation-pl": "warzywa",
+        "translation-es": "la verdura",
+        "translation-fr": "les légumes",
+        "translation-tr": "sebze",
+        "translation-ro": "legumele",
+        "translation-uz": "sabzavot",
+        "translation-hi": "सब्ज़ी",
+        "translation-ar": "الخضروات"
+      },
+      {
+        "word": "die Zwiebel",
+        "translation-ru": "лук",
+        "translation-en": "onion",
+        "translation-uk": "цибуля",
+        "translation-pl": "cebula",
+        "translation-es": "la cebolla",
+        "translation-fr": "l’oignon",
+        "translation-tr": "soğan",
+        "translation-ro": "ceapa",
+        "translation-uz": "piyoz",
+        "translation-hi": "प्याज़",
+        "translation-ar": "البصل"
+      }
+    ],
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "heartyInnOne.questTask1",
+        "options": [
+          "Ich mage Käse.",
+          "Ich mögen Käse.",
+          "Ich mag Käse."
+        ],
+        "answer": "Ich mag Käse.",
+        "tip": "heartyInnOne.questDescription"
+      },
+      {
+        "id": 2,
+        "type": "input",
+        "question": "heartyInnOne.questTask2",
+        "correctAnswer": "Magst",
+        "tip": "heartyInnOne.questDescription"
+      },
+      {
+        "id": 3,
+        "type": "input",
+        "question": "heartyInnOne.questTask3",
+        "correctAnswer": "mag",
+        "tip": "heartyInnOne.questDescription"
+      },
+      {
+        "id": 4,
+        "type": "select",
+        "question": "heartyInnOne.questTask4",
+        "options": [
+          "Wir mögen Gemüse.",
+          "Wir mögt Gemüse.",
+          "Wir mag Gemüse."
+        ],
+        "answer": "Wir mögen Gemüse.",
+        "tip": "heartyInnOne.questDescription"
+      },
+      {
+        "id": 5,
+        "type": "reorder",
+        "question": "heartyInnOne.questTask5",
+        "words": [
+          "mag",
+          "keinen",
+          "Tomaten",
+          "Sie",
+          "magst",
+          "keine"
+        ],
+        "correctOrder": [
+          "Sie",
+          "mag",
+          "keine",
+          "Tomaten"
+        ],
+        "tip": "heartyInnOne.questDescription"
+      },
+      {
+        "id": 6,
+        "type": "select",
+        "question": "heartyInnOne.questTask6",
+        "options": [
+          "Ich mag kein Fisch.",
+          "Ich mag keinen Fisch.",
+          "Ich mag keine Fisch."
+        ],
+        "answer": "Ich mag keinen Fisch.",
+        "tip": "heartyInnOne.questDescription"
+      },
+      {
+        "id": 7,
+        "type": "input",
+        "question": "heartyInnOne.questTask7",
+        "correctAnswer": "Mögt",
+        "tip": "heartyInnOne.questDescription"
+      },
+      {
+        "id": 8,
+        "type": "select",
+        "question": "heartyInnOne.questTask8",
+        "options": [
+          "Die Kinder mögen keine Zwiebeln.",
+          "Die Kinder mögen keinen Zwiebeln.",
+          "Die Kinder mag keine Zwiebeln."
+        ],
+        "answer": "Die Kinder mögen keine Zwiebeln.",
+        "tip": "heartyInnOne.questDescription"
+      },
+      {
+        "id": 9,
+        "type": "readAndAnswer",
+        "question": "heartyInnOne.questTask9",
+        "text": "Paul mag Fleisch und Käse. Seine Frau Maria mag Gemüse und Obst. Paul mag kein Gemüse, aber er isst gern Kartoffeln.",
+        "options": [
+          "Gemüse",
+          "Kartoffeln",
+          "Fleisch"
+        ],
+        "answer": "Gemüse",
+        "tip": "heartyInnOne.questDescription"
+      },
+      {
+        "id": 10,
+        "type": "input",
+        "question": "heartyInnOne.questTask10",
+        "correctAnswer": "Zwiebel",
+        "tip": "heartyInnOne.questDescription"
+      },
+      {
+        "id": 11,
+        "type": "reorder",
+        "question": "heartyInnOne.questTask11",
+        "words": [
+          "Wir",
+          "keinen",
+          "mögen",
+          "mag",
+          "kein",
+          "Fleisch"
+        ],
+        "correctOrder": [
+          "Wir",
+          "mögen",
+          "kein",
+          "Fleisch"
+        ],
+        "tip": "heartyInnOne.questDescription"
+      },
+      {
+        "id": 12,
+        "type": "input",
+        "question": "heartyInnOne.questTask12",
+        "correctAnswer": "musst",
+        "tip": "heartyInnOne.questDescription"
+      },
+      {
+        "id": 13,
+        "type": "select",
+        "question": "heartyInnOne.questTask13",
+        "options": [
+          "Ich kaufe ein Apfel und eine Banane.",
+          "Ich kaufe einen Apfel und eine Banane.",
+          "Ich kaufe einen Apfel und einen Banane."
+        ],
+        "answer": "Ich kaufe einen Apfel und eine Banane.",
+        "tip": "heartyInnOne.questDescription"
+      },
+      {
+        "id": 14,
+        "type": "select",
+        "question": "heartyInnOne.questTask14",
+        "options": [
+          "Darf ich die Zeitung nehme?",
+          "Darf ich die Zeitung nehmen?",
+          "Darf ich die Zeitung nimmt?"
+        ],
+        "answer": "Darf ich die Zeitung nehmen?",
+        "tip": "heartyInnOne.questDescription"
+      },
+      {
+        "id": 15,
+        "type": "reorder",
+        "question": "heartyInnOne.questTask15",
+        "words": [
+          "kaufen",
+          "ein",
+          "wir",
+          "Samstag",
+          "Am",
+          "kauft",
+          "einkaufen"
+        ],
+        "correctOrder": [
+          "Am",
+          "Samstag",
+          "kaufen",
+          "wir",
+          "ein"
+        ],
+        "tip": "heartyInnOne.questDescription"
+      }
+    ]
+  },
+  {
+    "questId": "hearty-inn-two",
+    "title": "heartyInnTwo.questTitle",
+    "progress": "0/15",
+    "description": "heartyInnTwo.questDescription",
+    "conditions": {
+      "goal": "heartyInnTwo.questGoal",
+      "minCorrect": 15,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
+    "vocabulary": [
+      {
+        "word": "gern",
+        "translation-ru": "с удовольствием, охотно",
+        "translation-en": "gladly",
+        "translation-uk": "із задоволенням",
+        "translation-pl": "chętnie",
+        "translation-es": "con gusto",
+        "translation-fr": "volontiers",
+        "translation-tr": "severek",
+        "translation-ro": "cu plăcere",
+        "translation-uz": "mamnuniyat bilan",
+        "translation-hi": "ख़ुशी से",
+        "translation-ar": "بكل سرور"
+      },
+      {
+        "word": "die Pizza",
+        "translation-ru": "пицца",
+        "translation-en": "pizza",
+        "translation-uk": "піца",
+        "translation-pl": "pizza",
+        "translation-es": "la pizza",
+        "translation-fr": "la pizza",
+        "translation-tr": "pizza",
+        "translation-ro": "pizza",
+        "translation-uz": "pitsa",
+        "translation-hi": "पिज़्ज़ा",
+        "translation-ar": "البيتزا"
+      },
+      {
+        "word": "die Nudeln",
+        "translation-ru": "макароны, лапша",
+        "translation-en": "pasta, noodles",
+        "translation-uk": "макарони, локшина",
+        "translation-pl": "makaron",
+        "translation-es": "la pasta",
+        "translation-fr": "les pâtes",
+        "translation-tr": "makarna",
+        "translation-ro": "pastele",
+        "translation-uz": "makaron",
+        "translation-hi": "नूडल्स",
+        "translation-ar": "المعكرونة"
+      },
+      {
+        "word": "das Eis",
+        "translation-ru": "мороженое",
+        "translation-en": "ice cream",
+        "translation-uk": "морозиво",
+        "translation-pl": "lody",
+        "translation-es": "el helado",
+        "translation-fr": "la glace",
+        "translation-tr": "dondurma",
+        "translation-ro": "înghețata",
+        "translation-uz": "muzqaymoq",
+        "translation-hi": "आइसक्रीम",
+        "translation-ar": "المثلجات"
+      },
+      {
+        "word": "die Schokolade",
+        "translation-ru": "шоколад",
+        "translation-en": "chocolate",
+        "translation-uk": "шоколад",
+        "translation-pl": "czekolada",
+        "translation-es": "el chocolate",
+        "translation-fr": "le chocolat",
+        "translation-tr": "çikolata",
+        "translation-ro": "ciocolata",
+        "translation-uz": "shokolad",
+        "translation-hi": "चॉकलेट",
+        "translation-ar": "الشوكولاتة"
+      }
+    ],
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "heartyInnTwo.questTask1",
+        "options": [
+          "Gern ich esse Pizza.",
+          "Ich gern esse Pizza.",
+          "Ich esse gern Pizza."
+        ],
+        "answer": "Ich esse gern Pizza.",
+        "tip": "heartyInnTwo.questDescription"
+      },
+      {
+        "id": 2,
+        "type": "input",
+        "question": "heartyInnTwo.questTask2",
+        "correctAnswer": "gern",
+        "tip": "heartyInnTwo.questDescription"
+      },
+      {
+        "id": 3,
+        "type": "input",
+        "question": "heartyInnTwo.questTask3",
+        "correctAnswer": "Isst",
+        "tip": "heartyInnTwo.questDescription"
+      },
+      {
+        "id": 4,
+        "type": "select",
+        "question": "heartyInnTwo.questTask4",
+        "options": [
+          "Ich koche kein gern.",
+          "Ich koche nicht gern.",
+          "Ich koche gern nicht."
+        ],
+        "answer": "Ich koche nicht gern.",
+        "tip": "heartyInnTwo.questDescription"
+      },
+      {
+        "id": 5,
+        "type": "reorder",
+        "question": "heartyInnTwo.questTask5",
+        "words": [
+          "Kinder",
+          "isst",
+          "mag",
+          "Eis",
+          "gern",
+          "Die",
+          "essen"
+        ],
+        "correctOrder": [
+          "Die",
+          "Kinder",
+          "essen",
+          "gern",
+          "Eis"
+        ],
+        "tip": "heartyInnTwo.questDescription"
+      },
+      {
+        "id": 6,
+        "type": "select",
+        "question": "heartyInnTwo.questTask6",
+        "options": [
+          "Sie isst gern Schokolade.",
+          "Sie gern isst Schokolade.",
+          "Sie esst gern Schokolade."
+        ],
+        "answer": "Sie isst gern Schokolade.",
+        "tip": "heartyInnTwo.questDescription"
+      },
+      {
+        "id": 7,
+        "type": "input",
+        "question": "heartyInnTwo.questTask7",
+        "correctAnswer": "Nudeln",
+        "tip": "heartyInnTwo.questDescription"
+      },
+      {
+        "id": 8,
+        "type": "select",
+        "question": "heartyInnTwo.questTask8",
+        "options": [
+          "Er trinkt nicht gern Kaffee.",
+          "Er trinkt kein gern Kaffee.",
+          "Er trinkt gern nicht Kaffee."
+        ],
+        "answer": "Er trinkt nicht gern Kaffee.",
+        "tip": "heartyInnTwo.questDescription"
+      },
+      {
+        "id": 9,
+        "type": "readAndAnswer",
+        "question": "heartyInnTwo.questTask9",
+        "text": "Lena kocht gern Suppe. Ihr Mann isst gern Pizza, aber er kocht nicht gern. Am Sonntag essen sie zusammen ein Eis.",
+        "options": [
+          "Eis",
+          "Suppe",
+          "Pizza"
+        ],
+        "answer": "Suppe",
+        "tip": "heartyInnTwo.questDescription"
+      },
+      {
+        "id": 10,
+        "type": "input",
+        "question": "heartyInnTwo.questTask10",
+        "correctAnswer": "Schokolade",
+        "tip": "heartyInnTwo.questDescription"
+      },
+      {
+        "id": 11,
+        "type": "reorder",
+        "question": "heartyInnTwo.questTask11",
+        "words": [
+          "magst",
+          "du",
+          "trinkt",
+          "trinkst",
+          "Was",
+          "gern"
+        ],
+        "correctOrder": [
+          "Was",
+          "trinkst",
+          "du",
+          "gern"
+        ],
+        "tip": "heartyInnTwo.questDescription"
+      },
+      {
+        "id": 12,
+        "type": "input",
+        "question": "heartyInnTwo.questTask12",
+        "correctAnswer": "mag",
+        "tip": "heartyInnTwo.questDescription"
+      },
+      {
+        "id": 13,
+        "type": "select",
+        "question": "heartyInnTwo.questTask13",
+        "options": [
+          "Magst du Tomaten?",
+          "Mag du Tomaten?",
+          "Du magst Tomaten?"
+        ],
+        "answer": "Magst du Tomaten?",
+        "tip": "heartyInnTwo.questDescription"
+      },
+      {
+        "id": 14,
+        "type": "select",
+        "question": "heartyInnTwo.questTask14",
+        "options": [
+          "Am Abend muss ich kochen.",
+          "Am Abend ich muss kochen.",
+          "Am Abend muss ich koche."
+        ],
+        "answer": "Am Abend muss ich kochen.",
+        "tip": "heartyInnTwo.questDescription"
+      },
+      {
+        "id": 15,
+        "type": "reorder",
+        "question": "heartyInnTwo.questTask15",
+        "words": [
+          "du",
+          "Willst",
+          "mitkommen",
+          "kommst",
+          "heute",
+          "will"
+        ],
+        "correctOrder": [
+          "Willst",
+          "du",
+          "heute",
+          "mitkommen"
+        ],
+        "tip": "heartyInnTwo.questDescription"
+      }
+    ]
+  },
+  {
+    "questId": "hearty-inn-three",
+    "title": "heartyInnThree.questTitle",
+    "progress": "0/15",
+    "description": "heartyInnThree.questDescription",
+    "conditions": {
+      "goal": "heartyInnThree.questGoal",
+      "minCorrect": 15,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
+    "vocabulary": [
+      {
+        "word": "schmecken",
+        "translation-ru": "быть на вкус",
+        "translation-en": "to taste",
+        "translation-uk": "смакувати",
+        "translation-pl": "smakować",
+        "translation-es": "saber",
+        "translation-fr": "avoir un goût",
+        "translation-tr": "tadı olmak",
+        "translation-ro": "a avea gust",
+        "translation-uz": "ta’mi bo‘lmoq",
+        "translation-hi": "स्वाद होना",
+        "translation-ar": "له طعم"
+      },
+      {
+        "word": "salzig",
+        "translation-ru": "солёный",
+        "translation-en": "salty",
+        "translation-uk": "солоний",
+        "translation-pl": "słony",
+        "translation-es": "salado",
+        "translation-fr": "salé",
+        "translation-tr": "tuzlu",
+        "translation-ro": "sărat",
+        "translation-uz": "sho‘r",
+        "translation-hi": "नमकीन",
+        "translation-ar": "مالح"
+      },
+      {
+        "word": "sauer",
+        "translation-ru": "кислый",
+        "translation-en": "sour",
+        "translation-uk": "кислий",
+        "translation-pl": "kwaśny",
+        "translation-es": "ácido",
+        "translation-fr": "acide",
+        "translation-tr": "ekşi",
+        "translation-ro": "acru",
+        "translation-uz": "nordon",
+        "translation-hi": "खट्टा",
+        "translation-ar": "حامض"
+      },
+      {
+        "word": "scharf",
+        "translation-ru": "острый",
+        "translation-en": "spicy",
+        "translation-uk": "гострий",
+        "translation-pl": "ostry",
+        "translation-es": "picante",
+        "translation-fr": "épicé",
+        "translation-tr": "acı",
+        "translation-ro": "iute",
+        "translation-uz": "achchiq",
+        "translation-hi": "तीखा",
+        "translation-ar": "حار"
+      },
+      {
+        "word": "die Suppe",
+        "translation-ru": "суп",
+        "translation-en": "soup",
+        "translation-uk": "суп",
+        "translation-pl": "zupa",
+        "translation-es": "la sopa",
+        "translation-fr": "la soupe",
+        "translation-tr": "çorba",
+        "translation-ro": "supa",
+        "translation-uz": "sho‘rva",
+        "translation-hi": "सूप",
+        "translation-ar": "الحساء"
+      },
+      {
+        "word": "die Zitrone",
+        "translation-ru": "лимон",
+        "translation-en": "lemon",
+        "translation-uk": "лимон",
+        "translation-pl": "cytryna",
+        "translation-es": "el limón",
+        "translation-fr": "le citron",
+        "translation-tr": "limon",
+        "translation-ro": "lămâia",
+        "translation-uz": "limon",
+        "translation-hi": "नींबू",
+        "translation-ar": "الليمون"
+      }
+    ],
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "heartyInnThree.questTask1",
+        "options": [
+          "Die Suppe schmecken gut.",
+          "Die Suppe schmeckst gut.",
+          "Die Suppe schmeckt gut."
+        ],
+        "answer": "Die Suppe schmeckt gut.",
+        "tip": "heartyInnThree.questDescription"
+      },
+      {
+        "id": 2,
+        "type": "input",
+        "question": "heartyInnThree.questTask2",
+        "correctAnswer": "sauer",
+        "tip": "heartyInnThree.questDescription"
+      },
+      {
+        "id": 3,
+        "type": "input",
+        "question": "heartyInnThree.questTask3",
+        "correctAnswer": "schmeckt",
+        "tip": "heartyInnThree.questDescription"
+      },
+      {
+        "id": 4,
+        "type": "select",
+        "question": "heartyInnThree.questTask4",
+        "options": [
+          "Die Äpfel schmecken sauer.",
+          "Die Äpfel schmeckt süß.",
+          "Die Äpfel schmecken süß."
+        ],
+        "answer": "Die Äpfel schmecken süß.",
+        "tip": "heartyInnThree.questDescription"
+      },
+      {
+        "id": 5,
+        "type": "reorder",
+        "question": "heartyInnThree.questTask5",
+        "words": [
+          "schmeckt",
+          "salzig",
+          "sehr",
+          "Käse",
+          "Der",
+          "zu",
+          "ist"
+        ],
+        "correctOrder": [
+          "Der",
+          "Käse",
+          "ist",
+          "zu",
+          "salzig"
+        ],
+        "tip": "heartyInnThree.questDescription"
+      },
+      {
+        "id": 6,
+        "type": "select",
+        "question": "heartyInnThree.questTask6",
+        "options": [
+          "Das Fleisch sind zu scharf.",
+          "Das Fleisch ist zu scharf.",
+          "Das Fleisch ist zu sauer."
+        ],
+        "answer": "Das Fleisch ist zu scharf.",
+        "tip": "heartyInnThree.questDescription"
+      },
+      {
+        "id": 7,
+        "type": "input",
+        "question": "heartyInnThree.questTask7",
+        "correctAnswer": "lecker",
+        "tip": "heartyInnThree.questDescription"
+      },
+      {
+        "id": 8,
+        "type": "select",
+        "question": "heartyInnThree.questTask8",
+        "options": [
+          "Die Torte bist zu süß.",
+          "Die Torte ist zu süß.",
+          "Die Torte ist zu scharf."
+        ],
+        "answer": "Die Torte ist zu süß.",
+        "tip": "heartyInnThree.questDescription"
+      },
+      {
+        "id": 9,
+        "type": "readAndAnswer",
+        "question": "heartyInnThree.questTask9",
+        "text": "Mama kocht heute Suppe. Papa isst und sagt: Die Suppe schmeckt nicht gut, sie ist zu salzig. Aber der Kuchen schmeckt sehr gut.",
+        "options": [
+          "Sie ist zu scharf.",
+          "Sie ist zu salzig.",
+          "Sie ist zu süß."
+        ],
+        "answer": "Sie ist zu salzig.",
+        "tip": "heartyInnThree.questDescription"
+      },
+      {
+        "id": 10,
+        "type": "input",
+        "question": "heartyInnThree.questTask10",
+        "correctAnswer": "schmecken",
+        "tip": "heartyInnThree.questDescription"
+      },
+      {
+        "id": 11,
+        "type": "reorder",
+        "question": "heartyInnThree.questTask11",
+        "words": [
+          "Schmeckt",
+          "es",
+          "bist",
+          "gut",
+          "schmecken"
+        ],
+        "correctOrder": [
+          "Schmeckt",
+          "es",
+          "gut"
+        ],
+        "tip": "heartyInnThree.questDescription"
+      },
+      {
+        "id": 12,
+        "type": "input",
+        "question": "heartyInnThree.questTask12",
+        "correctAnswer": "Mögt",
+        "tip": "heartyInnThree.questDescription"
+      },
+      {
+        "id": 13,
+        "type": "select",
+        "question": "heartyInnThree.questTask13",
+        "options": [
+          "Papa esst gern Fisch.",
+          "Papa isst gern Fisch.",
+          "Papa gern isst Fisch."
+        ],
+        "answer": "Papa isst gern Fisch.",
+        "tip": "heartyInnThree.questDescription"
+      },
+      {
+        "id": 14,
+        "type": "select",
+        "question": "heartyInnThree.questTask14",
+        "options": [
+          "Ich muss keine Schokolade essen.",
+          "Ich darf keine Schokolade essen.",
+          "Ich darf keine Schokolade esse."
+        ],
+        "answer": "Ich darf keine Schokolade essen.",
+        "tip": "heartyInnThree.questDescription"
+      },
+      {
+        "id": 15,
+        "type": "reorder",
+        "question": "heartyInnThree.questTask15",
+        "words": [
+          "kaufen",
+          "Gemüse",
+          "wollen",
+          "will",
+          "Wir",
+          "kauft"
+        ],
+        "correctOrder": [
+          "Wir",
+          "wollen",
+          "Gemüse",
+          "kaufen"
+        ],
+        "tip": "heartyInnThree.questDescription"
+      }
+    ]
+  },
+  {
+    "questId": "hearty-inn-four",
+    "title": "heartyInnFour.questTitle",
+    "progress": "0/15",
+    "description": "heartyInnFour.questDescription",
+    "conditions": {
+      "goal": "heartyInnFour.questGoal",
+      "minCorrect": 15,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
+    "vocabulary": [
+      {
+        "word": "das Frühstück",
+        "translation-ru": "завтрак",
+        "translation-en": "breakfast",
+        "translation-uk": "сніданок",
+        "translation-pl": "śniadanie",
+        "translation-es": "el desayuno",
+        "translation-fr": "le petit déjeuner",
+        "translation-tr": "kahvaltı",
+        "translation-ro": "micul dejun",
+        "translation-uz": "nonushta",
+        "translation-hi": "नाश्ता",
+        "translation-ar": "الفطور"
+      },
+      {
+        "word": "das Mittagessen",
+        "translation-ru": "обед",
+        "translation-en": "lunch",
+        "translation-uk": "обід",
+        "translation-pl": "obiad",
+        "translation-es": "la comida",
+        "translation-fr": "le déjeuner",
+        "translation-tr": "öğle yemeği",
+        "translation-ro": "prânzul",
+        "translation-uz": "tushlik",
+        "translation-hi": "दोपहर का खाना",
+        "translation-ar": "الغداء"
+      },
+      {
+        "word": "das Abendessen",
+        "translation-ru": "ужин",
+        "translation-en": "dinner",
+        "translation-uk": "вечеря",
+        "translation-pl": "kolacja",
+        "translation-es": "la cena",
+        "translation-fr": "le dîner",
+        "translation-tr": "akşam yemeği",
+        "translation-ro": "cina",
+        "translation-uz": "kechki ovqat",
+        "translation-hi": "रात का खाना",
+        "translation-ar": "العشاء"
+      },
+      {
+        "word": "die Marmelade",
+        "translation-ru": "варенье, джем",
+        "translation-en": "jam",
+        "translation-uk": "варення, джем",
+        "translation-pl": "dżem",
+        "translation-es": "la mermelada",
+        "translation-fr": "la confiture",
+        "translation-tr": "reçel",
+        "translation-ro": "gemul",
+        "translation-uz": "murabbo",
+        "translation-hi": "जैम",
+        "translation-ar": "المربى"
+      },
+      {
+        "word": "das Müsli",
+        "translation-ru": "мюсли",
+        "translation-en": "muesli",
+        "translation-uk": "мюслі",
+        "translation-pl": "musli",
+        "translation-es": "el muesli",
+        "translation-fr": "le muesli",
+        "translation-tr": "müsli",
+        "translation-ro": "musliul",
+        "translation-uz": "myusli",
+        "translation-hi": "म्यूज़ली",
+        "translation-ar": "الموسلي"
+      },
+      {
+        "word": "fertig",
+        "translation-ru": "готовый",
+        "translation-en": "ready",
+        "translation-uk": "готовий",
+        "translation-pl": "gotowy",
+        "translation-es": "listo",
+        "translation-fr": "prêt",
+        "translation-tr": "hazır",
+        "translation-ro": "gata",
+        "translation-uz": "tayyor",
+        "translation-hi": "तैयार",
+        "translation-ar": "جاهز"
+      }
+    ],
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "heartyInnFour.questTask1",
+        "options": [
+          "Ich frühstücke am acht Uhr.",
+          "Ich frühstückt um acht Uhr.",
+          "Ich frühstücke um acht Uhr."
+        ],
+        "answer": "Ich frühstücke um acht Uhr.",
+        "tip": "heartyInnFour.questDescription"
+      },
+      {
+        "id": 2,
+        "type": "input",
+        "question": "heartyInnFour.questTask2",
+        "correctAnswer": "Mittagessen",
+        "tip": "heartyInnFour.questDescription"
+      },
+      {
+        "id": 3,
+        "type": "input",
+        "question": "heartyInnFour.questTask3",
+        "correctAnswer": "gibt",
+        "tip": "heartyInnFour.questDescription"
+      },
+      {
+        "id": 4,
+        "type": "select",
+        "question": "heartyInnFour.questTask4",
+        "options": [
+          "Am Morgen ich esse Brot mit Marmelade.",
+          "Am Morgen isst ich Brot mit Marmelade.",
+          "Am Morgen esse ich Brot mit Marmelade."
+        ],
+        "answer": "Am Morgen esse ich Brot mit Marmelade.",
+        "tip": "heartyInnFour.questDescription"
+      },
+      {
+        "id": 5,
+        "type": "reorder",
+        "question": "heartyInnFour.questTask5",
+        "words": [
+          "Abend",
+          "esst",
+          "Was",
+          "Morgen",
+          "am",
+          "isst",
+          "du"
+        ],
+        "correctOrder": [
+          "Was",
+          "isst",
+          "du",
+          "am",
+          "Morgen"
+        ],
+        "tip": "heartyInnFour.questDescription"
+      },
+      {
+        "id": 6,
+        "type": "select",
+        "question": "heartyInnFour.questTask6",
+        "options": [
+          "Am Mittag esst wir Suppe.",
+          "Am Mittag essen wir Suppe.",
+          "Am Mittag wir essen Suppe."
+        ],
+        "answer": "Am Mittag essen wir Suppe.",
+        "tip": "heartyInnFour.questDescription"
+      },
+      {
+        "id": 7,
+        "type": "input",
+        "question": "heartyInnFour.questTask7",
+        "correctAnswer": "Müsli",
+        "tip": "heartyInnFour.questDescription"
+      },
+      {
+        "id": 8,
+        "type": "select",
+        "question": "heartyInnFour.questTask8",
+        "options": [
+          "Am Abend gibt es Salat.",
+          "Am Abend es gibt Salat.",
+          "Am Abend gibt es einen Salate."
+        ],
+        "answer": "Am Abend gibt es Salat.",
+        "tip": "heartyInnFour.questDescription"
+      },
+      {
+        "id": 9,
+        "type": "readAndAnswer",
+        "question": "heartyInnFour.questTask9",
+        "text": "Anna frühstückt um sieben Uhr. Sie isst Müsli und trinkt Kaffee. Das Mittagessen ist um eins, dann isst sie Nudeln. Am Abend gibt es nur Brot und Käse.",
+        "options": [
+          "Nudeln",
+          "Brot und Käse",
+          "Müsli"
+        ],
+        "answer": "Nudeln",
+        "tip": "heartyInnFour.questDescription"
+      },
+      {
+        "id": 10,
+        "type": "input",
+        "question": "heartyInnFour.questTask10",
+        "correctAnswer": "Marmelade",
+        "tip": "heartyInnFour.questDescription"
+      },
+      {
+        "id": 11,
+        "type": "reorder",
+        "question": "heartyInnFour.questTask11",
+        "words": [
+          "sind",
+          "Der",
+          "Das",
+          "ist",
+          "Abendessen",
+          "fertig"
+        ],
+        "correctOrder": [
+          "Das",
+          "Abendessen",
+          "ist",
+          "fertig"
+        ],
+        "tip": "heartyInnFour.questDescription"
+      },
+      {
+        "id": 12,
+        "type": "input",
+        "question": "heartyInnFour.questTask12",
+        "correctAnswer": "scharf",
+        "tip": "heartyInnFour.questDescription"
+      },
+      {
+        "id": 13,
+        "type": "select",
+        "question": "heartyInnFour.questTask13",
+        "options": [
+          "Ich esse nicht gern Eis.",
+          "Ich esse gern nicht Eis.",
+          "Ich nicht esse gern Eis."
+        ],
+        "answer": "Ich esse nicht gern Eis.",
+        "tip": "heartyInnFour.questDescription"
+      },
+      {
+        "id": 14,
+        "type": "select",
+        "question": "heartyInnFour.questTask14",
+        "options": [
+          "Am Montagmorgen muss ich früh aufstehen.",
+          "Im Montagmorgen muss ich früh aufstehen.",
+          "Am Montagmorgen muss ich früh stehe auf."
+        ],
+        "answer": "Am Montagmorgen muss ich früh aufstehen.",
+        "tip": "heartyInnFour.questDescription"
+      },
+      {
+        "id": 15,
+        "type": "reorder",
+        "question": "heartyInnFour.questTask15",
+        "words": [
+          "Der",
+          "Apfel",
+          "Die",
+          "schmeckt",
+          "sauer",
+          "schmecken"
+        ],
+        "correctOrder": [
+          "Der",
+          "Apfel",
+          "schmeckt",
+          "sauer"
+        ],
+        "tip": "heartyInnFour.questDescription"
+      }
+    ]
+  },
+  {
+    "questId": "hearty-inn-five",
+    "title": "heartyInnFive.questTitle",
+    "progress": "0/15",
+    "description": "heartyInnFive.questDescription",
+    "conditions": {
+      "goal": "heartyInnFive.questGoal",
+      "minCorrect": 15,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
+    "vocabulary": [
+      {
+        "word": "die Tasse",
+        "translation-ru": "чашка",
+        "translation-en": "cup",
+        "translation-uk": "чашка",
+        "translation-pl": "filiżanka",
+        "translation-es": "la taza",
+        "translation-fr": "la tasse",
+        "translation-tr": "fincan",
+        "translation-ro": "ceașca",
+        "translation-uz": "piyola",
+        "translation-hi": "कप",
+        "translation-ar": "الفنجان"
+      },
+      {
+        "word": "das Glas",
+        "translation-ru": "стакан, бокал",
+        "translation-en": "glass",
+        "translation-uk": "склянка",
+        "translation-pl": "szklanka",
+        "translation-es": "el vaso",
+        "translation-fr": "le verre",
+        "translation-tr": "bardak",
+        "translation-ro": "paharul",
+        "translation-uz": "stakan",
+        "translation-hi": "गिलास",
+        "translation-ar": "الكوب"
+      },
+      {
+        "word": "die Flasche",
+        "translation-ru": "бутылка",
+        "translation-en": "bottle",
+        "translation-uk": "пляшка",
+        "translation-pl": "butelka",
+        "translation-es": "la botella",
+        "translation-fr": "la bouteille",
+        "translation-tr": "şişe",
+        "translation-ro": "sticla",
+        "translation-uz": "shisha",
+        "translation-hi": "बोतल",
+        "translation-ar": "الزجاجة"
+      },
+      {
+        "word": "das Stück",
+        "translation-ru": "кусок",
+        "translation-en": "piece",
+        "translation-uk": "шматок",
+        "translation-pl": "kawałek",
+        "translation-es": "el trozo",
+        "translation-fr": "le morceau",
+        "translation-tr": "dilim",
+        "translation-ro": "bucata",
+        "translation-uz": "bo‘lak",
+        "translation-hi": "टुकड़ा",
+        "translation-ar": "القطعة"
+      },
+      {
+        "word": "der Teller",
+        "translation-ru": "тарелка",
+        "translation-en": "plate",
+        "translation-uk": "тарілка",
+        "translation-pl": "talerz",
+        "translation-es": "el plato",
+        "translation-fr": "l’assiette",
+        "translation-tr": "tabak",
+        "translation-ro": "farfuria",
+        "translation-uz": "likopcha",
+        "translation-hi": "थाली",
+        "translation-ar": "الطبق"
+      }
+    ],
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "heartyInnFive.questTask1",
+        "options": [
+          "Ich trinke einen Tasse Kaffee.",
+          "Ich trinke eine Tasse von den Kaffee.",
+          "Ich trinke eine Tasse Kaffee."
+        ],
+        "answer": "Ich trinke eine Tasse Kaffee.",
+        "tip": "heartyInnFive.questDescription"
+      },
+      {
+        "id": 2,
+        "type": "input",
+        "question": "heartyInnFive.questTask2",
+        "correctAnswer": "Glas",
+        "tip": "heartyInnFive.questDescription"
+      },
+      {
+        "id": 3,
+        "type": "input",
+        "question": "heartyInnFive.questTask3",
+        "correctAnswer": "Stück",
+        "tip": "heartyInnFive.questDescription"
+      },
+      {
+        "id": 4,
+        "type": "input",
+        "question": "heartyInnFive.questTask4",
+        "correctAnswer": "einen",
+        "tip": "heartyInnFive.questDescription"
+      },
+      {
+        "id": 5,
+        "type": "reorder",
+        "question": "heartyInnFive.questTask5",
+        "words": [
+          "Flasche",
+          "Wir",
+          "den",
+          "Saft",
+          "kaufen",
+          "einen",
+          "eine"
+        ],
+        "correctOrder": [
+          "Wir",
+          "kaufen",
+          "eine",
+          "Flasche",
+          "Saft"
+        ],
+        "tip": "heartyInnFive.questDescription"
+      },
+      {
+        "id": 6,
+        "type": "select",
+        "question": "heartyInnFive.questTask6",
+        "options": [
+          "Möchtest du ein Glas Saft?",
+          "Möchtest du ein Glas von Saft?",
+          "Möchtest du einen Glas Saft?"
+        ],
+        "answer": "Möchtest du ein Glas Saft?",
+        "tip": "heartyInnFive.questDescription"
+      },
+      {
+        "id": 7,
+        "type": "select",
+        "question": "heartyInnFive.questTask7",
+        "options": [
+          "Trinkst du zwei Tassen Kaffee?",
+          "Trinkst du zwei Tassen von Kaffee?",
+          "Trinkst du zwei Tasse Kaffee?"
+        ],
+        "answer": "Trinkst du zwei Tassen Kaffee?",
+        "tip": "heartyInnFive.questDescription"
+      },
+      {
+        "id": 8,
+        "type": "select",
+        "question": "heartyInnFive.questTask8",
+        "options": [
+          "Das Kind esst einen Teller Suppe.",
+          "Das Kind isst einen Teller Suppe.",
+          "Das Kind isst ein Teller Suppe."
+        ],
+        "answer": "Das Kind isst einen Teller Suppe.",
+        "tip": "heartyInnFive.questDescription"
+      },
+      {
+        "id": 9,
+        "type": "readAndAnswer",
+        "question": "heartyInnFive.questTask9",
+        "text": "Olga und Max sind im Café. Max trinkt eine Tasse Kaffee. Olga möchte ein Glas Saft und ein Stück Kuchen. Der Kuchen schmeckt sehr gut.",
+        "options": [
+          "einen Teller Suppe",
+          "ein Glas Saft und ein Stück Kuchen",
+          "eine Tasse Kaffee"
+        ],
+        "answer": "ein Glas Saft und ein Stück Kuchen",
+        "tip": "heartyInnFive.questDescription"
+      },
+      {
+        "id": 10,
+        "type": "input",
+        "question": "heartyInnFive.questTask10",
+        "correctAnswer": "Flasche",
+        "tip": "heartyInnFive.questDescription"
+      },
+      {
+        "id": 11,
+        "type": "reorder",
+        "question": "heartyInnFive.questTask11",
+        "words": [
+          "Tasse",
+          "möchte",
+          "du",
+          "eine",
+          "Möchtest",
+          "einen",
+          "Tee"
+        ],
+        "correctOrder": [
+          "Möchtest",
+          "du",
+          "eine",
+          "Tasse",
+          "Tee"
+        ],
+        "tip": "heartyInnFive.questDescription"
+      },
+      {
+        "id": 12,
+        "type": "input",
+        "question": "heartyInnFive.questTask12",
+        "correctAnswer": "schmecken",
+        "tip": "heartyInnFive.questDescription"
+      },
+      {
+        "id": 13,
+        "type": "select",
+        "question": "heartyInnFive.questTask13",
+        "options": [
+          "Das Abendessen ist um sieben Uhr.",
+          "Das Abendessen ist am sieben Uhr.",
+          "Der Abendessen ist um sieben Uhr."
+        ],
+        "answer": "Das Abendessen ist um sieben Uhr.",
+        "tip": "heartyInnFive.questDescription"
+      },
+      {
+        "id": 14,
+        "type": "select",
+        "question": "heartyInnFive.questTask14",
+        "options": [
+          "Kannst du Suppe kochst?",
+          "Kannst du Suppe kochen?",
+          "Du kannst Suppe kochen?"
+        ],
+        "answer": "Kannst du Suppe kochen?",
+        "tip": "heartyInnFive.questDescription"
+      },
+      {
+        "id": 15,
+        "type": "reorder",
+        "question": "heartyInnFive.questTask15",
+        "words": [
+          "wir",
+          "heute",
+          "Was",
+          "essen",
+          "esst",
+          "wollen",
+          "will"
+        ],
+        "correctOrder": [
+          "Was",
+          "wollen",
+          "wir",
+          "heute",
+          "essen"
+        ],
+        "tip": "heartyInnFive.questDescription"
+      }
+    ]
+  },
+  {
+    "questId": "hearty-inn-six",
+    "title": "heartyInnSix.questTitle",
+    "progress": "0/15",
+    "description": "heartyInnSix.questDescription",
+    "conditions": {
+      "goal": "heartyInnSix.questGoal",
+      "minCorrect": 15,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
+    "vocabulary": [
+      {
+        "word": "die Speisekarte",
+        "translation-ru": "меню",
+        "translation-en": "menu",
+        "translation-uk": "меню",
+        "translation-pl": "karta dań",
+        "translation-es": "la carta",
+        "translation-fr": "la carte",
+        "translation-tr": "menü",
+        "translation-ro": "meniul",
+        "translation-uz": "menyu",
+        "translation-hi": "मेन्यू",
+        "translation-ar": "قائمة الطعام"
+      },
+      {
+        "word": "der Nachtisch",
+        "translation-ru": "десерт",
+        "translation-en": "dessert",
+        "translation-uk": "десерт",
+        "translation-pl": "deser",
+        "translation-es": "el postre",
+        "translation-fr": "le dessert",
+        "translation-tr": "tatlı",
+        "translation-ro": "desertul",
+        "translation-uz": "shirinlik",
+        "translation-hi": "मिठाई",
+        "translation-ar": "الحلوى"
+      },
+      {
+        "word": "der Tisch",
+        "translation-ru": "стол",
+        "translation-en": "table",
+        "translation-uk": "стіл",
+        "translation-pl": "stół",
+        "translation-es": "la mesa",
+        "translation-fr": "la table",
+        "translation-tr": "masa",
+        "translation-ro": "masa",
+        "translation-uz": "stol",
+        "translation-hi": "मेज़",
+        "translation-ar": "الطاولة"
+      },
+      {
+        "word": "das Getränk",
+        "translation-ru": "напиток",
+        "translation-en": "drink",
+        "translation-uk": "напій",
+        "translation-pl": "napój",
+        "translation-es": "la bebida",
+        "translation-fr": "la boisson",
+        "translation-tr": "içecek",
+        "translation-ro": "băutura",
+        "translation-uz": "ichimlik",
+        "translation-hi": "पेय",
+        "translation-ar": "المشروب"
+      },
+      {
+        "word": "reservieren",
+        "translation-ru": "бронировать",
+        "translation-en": "to reserve",
+        "translation-uk": "бронювати",
+        "translation-pl": "rezerwować",
+        "translation-es": "reservar",
+        "translation-fr": "réserver",
+        "translation-tr": "rezervasyon yapmak",
+        "translation-ro": "a rezerva",
+        "translation-uz": "band qilmoq",
+        "translation-hi": "आरक्षित करना",
+        "translation-ar": "يحجز"
+      },
+      {
+        "word": "bringen",
+        "translation-ru": "приносить",
+        "translation-en": "to bring",
+        "translation-uk": "приносити",
+        "translation-pl": "przynosić",
+        "translation-es": "traer",
+        "translation-fr": "apporter",
+        "translation-tr": "getirmek",
+        "translation-ro": "a aduce",
+        "translation-uz": "olib kelmoq",
+        "translation-hi": "लाना",
+        "translation-ar": "يحضر"
+      }
+    ],
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "heartyInnSix.questTask1",
+        "options": [
+          "Haben Sie ein Tisch frei?",
+          "Sie haben einen Tisch frei?",
+          "Haben Sie einen Tisch frei?"
+        ],
+        "answer": "Haben Sie einen Tisch frei?",
+        "tip": "heartyInnSix.questDescription"
+      },
+      {
+        "id": 2,
+        "type": "input",
+        "question": "heartyInnSix.questTask2",
+        "correctAnswer": "Speisekarte",
+        "tip": "heartyInnSix.questDescription"
+      },
+      {
+        "id": 3,
+        "type": "input",
+        "question": "heartyInnSix.questTask3",
+        "correctAnswer": "möchten",
+        "tip": "heartyInnSix.questDescription"
+      },
+      {
+        "id": 4,
+        "type": "select",
+        "question": "heartyInnSix.questTask4",
+        "options": [
+          "Ich nimmt den Fisch.",
+          "Ich nehme der Fisch.",
+          "Ich nehme den Fisch."
+        ],
+        "answer": "Ich nehme den Fisch.",
+        "tip": "heartyInnSix.questDescription"
+      },
+      {
+        "id": 5,
+        "type": "reorder",
+        "question": "heartyInnSix.questTask5",
+        "words": [
+          "will",
+          "ein",
+          "Ich",
+          "Tisch",
+          "reservieren",
+          "reserviere",
+          "einen"
+        ],
+        "correctOrder": [
+          "Ich",
+          "will",
+          "einen",
+          "Tisch",
+          "reservieren"
+        ],
+        "tip": "heartyInnSix.questDescription"
+      },
+      {
+        "id": 6,
+        "type": "select",
+        "question": "heartyInnSix.questTask6",
+        "options": [
+          "Was Sie nehmen als Nachtisch?",
+          "Was nehmen Sie als Nachtisch?",
+          "Was nimmt Sie als Nachtisch?"
+        ],
+        "answer": "Was nehmen Sie als Nachtisch?",
+        "tip": "heartyInnSix.questDescription"
+      },
+      {
+        "id": 7,
+        "type": "input",
+        "question": "heartyInnSix.questTask7",
+        "correctAnswer": "Getränke",
+        "tip": "heartyInnSix.questDescription"
+      },
+      {
+        "id": 8,
+        "type": "select",
+        "question": "heartyInnSix.questTask8",
+        "options": [
+          "Der Kellner bringt die Suppe.",
+          "Der Kellner bringt der Suppe.",
+          "Der Kellner bringe die Suppe."
+        ],
+        "answer": "Der Kellner bringt die Suppe.",
+        "tip": "heartyInnSix.questDescription"
+      },
+      {
+        "id": 9,
+        "type": "readAndAnswer",
+        "question": "heartyInnSix.questTask9",
+        "text": "Kellner: Guten Abend! Was möchten Sie? Sara: Ich nehme die Suppe und einen Salat. Kellner: Und was möchten Sie trinken? Sara: Ein Glas Wasser, bitte.",
+        "options": [
+          "Suppe, Salat und Wasser",
+          "Suppe und Kaffee",
+          "Fisch und Wasser"
+        ],
+        "answer": "Suppe, Salat und Wasser",
+        "tip": "heartyInnSix.questDescription"
+      },
+      {
+        "id": 10,
+        "type": "input",
+        "question": "heartyInnSix.questTask10",
+        "correctAnswer": "Nachtisch",
+        "tip": "heartyInnSix.questDescription"
+      },
+      {
+        "id": 11,
+        "type": "reorder",
+        "question": "heartyInnSix.questTask11",
+        "words": [
+          "Ihr",
+          "möchten",
+          "möchtest",
+          "Was",
+          "Herr",
+          "Sie",
+          "Weber"
+        ],
+        "correctOrder": [
+          "Was",
+          "möchten",
+          "Sie",
+          "Herr",
+          "Weber"
+        ],
+        "tip": "heartyInnSix.questDescription"
+      },
+      {
+        "id": 12,
+        "type": "input",
+        "question": "heartyInnSix.questTask12",
+        "correctAnswer": "Torte",
+        "tip": "heartyInnSix.questDescription"
+      },
+      {
+        "id": 13,
+        "type": "select",
+        "question": "heartyInnSix.questTask13",
+        "options": [
+          "Morgens isst ich Müsli.",
+          "Morgens esse ich Müsli.",
+          "Morgens ich esse Müsli."
+        ],
+        "answer": "Morgens esse ich Müsli.",
+        "tip": "heartyInnSix.questDescription"
+      },
+      {
+        "id": 14,
+        "type": "select",
+        "question": "heartyInnSix.questTask14",
+        "options": [
+          "Hier darfst du nicht essen.",
+          "Hier musst du nicht essen.",
+          "Hier darfst du nicht isst."
+        ],
+        "answer": "Hier darfst du nicht essen.",
+        "tip": "heartyInnSix.questDescription"
+      },
+      {
+        "id": 15,
+        "type": "reorder",
+        "question": "heartyInnSix.questTask15",
+        "words": [
+          "Sara",
+          "trinkt",
+          "gern",
+          "mag",
+          "Kaffee",
+          "trinke"
+        ],
+        "correctOrder": [
+          "Sara",
+          "trinkt",
+          "gern",
+          "Kaffee"
+        ],
+        "tip": "heartyInnSix.questDescription"
+      }
+    ]
+  },
+  {
+    "questId": "hearty-inn-seven",
+    "title": "heartyInnSeven.questTitle",
+    "progress": "0/15",
+    "description": "heartyInnSeven.questDescription",
+    "conditions": {
+      "goal": "heartyInnSeven.questGoal",
+      "minCorrect": 15,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
+    "vocabulary": [
+      {
+        "word": "die Rechnung",
+        "translation-ru": "счёт",
+        "translation-en": "bill",
+        "translation-uk": "рахунок",
+        "translation-pl": "rachunek",
+        "translation-es": "la cuenta",
+        "translation-fr": "l’addition",
+        "translation-tr": "hesap",
+        "translation-ro": "nota de plată",
+        "translation-uz": "hisob",
+        "translation-hi": "बिल",
+        "translation-ar": "الحساب"
+      },
+      {
+        "word": "getrennt",
+        "translation-ru": "раздельно",
+        "translation-en": "separately",
+        "translation-uk": "окремо",
+        "translation-pl": "osobno",
+        "translation-es": "por separado",
+        "translation-fr": "séparément",
+        "translation-tr": "ayrı",
+        "translation-ro": "separat",
+        "translation-uz": "alohida",
+        "translation-hi": "अलग-अलग",
+        "translation-ar": "منفصلين"
+      },
+      {
+        "word": "zusammen",
+        "translation-ru": "вместе",
+        "translation-en": "together",
+        "translation-uk": "разом",
+        "translation-pl": "razem",
+        "translation-es": "juntos",
+        "translation-fr": "ensemble",
+        "translation-tr": "birlikte",
+        "translation-ro": "împreună",
+        "translation-uz": "birga",
+        "translation-hi": "साथ",
+        "translation-ar": "معًا"
+      },
+      {
+        "word": "bar",
+        "translation-ru": "наличными",
+        "translation-en": "in cash",
+        "translation-uk": "готівкою",
+        "translation-pl": "gotówką",
+        "translation-es": "en efectivo",
+        "translation-fr": "en espèces",
+        "translation-tr": "nakit",
+        "translation-ro": "numerar",
+        "translation-uz": "naqd",
+        "translation-hi": "नक़द",
+        "translation-ar": "نقدًا"
+      },
+      {
+        "word": "das Trinkgeld",
+        "translation-ru": "чаевые",
+        "translation-en": "tip",
+        "translation-uk": "чайові",
+        "translation-pl": "napiwek",
+        "translation-es": "la propina",
+        "translation-fr": "le pourboire",
+        "translation-tr": "bahşiş",
+        "translation-ro": "bacșișul",
+        "translation-uz": "choychaqa",
+        "translation-hi": "टिप",
+        "translation-ar": "البقشيش"
+      },
+      {
+        "word": "zahlen",
+        "translation-ru": "платить",
+        "translation-en": "to pay",
+        "translation-uk": "платити",
+        "translation-pl": "płacić",
+        "translation-es": "pagar",
+        "translation-fr": "payer",
+        "translation-tr": "ödemek",
+        "translation-ro": "a plăti",
+        "translation-uz": "to‘lamoq",
+        "translation-hi": "भुगतान करना",
+        "translation-ar": "يدفع"
+      },
+      {
+        "word": "bekommen",
+        "translation-ru": "получать",
+        "translation-en": "to get",
+        "translation-uk": "отримувати",
+        "translation-pl": "dostawać",
+        "translation-es": "recibir",
+        "translation-fr": "recevoir",
+        "translation-tr": "almak",
+        "translation-ro": "a primi",
+        "translation-uz": "olmoq",
+        "translation-hi": "पाना",
+        "translation-ar": "يحصل على"
+      },
+      {
+        "word": "das Restaurant",
+        "translation-ru": "ресторан",
+        "translation-en": "restaurant",
+        "translation-uk": "ресторан",
+        "translation-pl": "restauracja",
+        "translation-es": "el restaurante",
+        "translation-fr": "le restaurant",
+        "translation-tr": "restoran",
+        "translation-ro": "restaurantul",
+        "translation-uz": "restoran",
+        "translation-hi": "रेस्तराँ",
+        "translation-ar": "المطعم"
+      },
+      {
+        "word": "stimmen",
+        "translation-ru": "быть верным",
+        "translation-en": "to be correct",
+        "translation-uk": "бути правильним",
+        "translation-pl": "zgadzać się",
+        "translation-es": "ser correcto",
+        "translation-fr": "être exact",
+        "translation-tr": "doğru olmak",
+        "translation-ro": "a fi corect",
+        "translation-uz": "to‘g‘ri bo‘lmoq",
+        "translation-hi": "सही होना",
+        "translation-ar": "يكون صحيحًا"
+      }
+    ],
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "heartyInnSeven.questTask1",
+        "options": [
+          "Entschuldigung, die Rechnen, bitte!",
+          "Entschuldigung, der Rechnung, bitte!",
+          "Entschuldigung, die Rechnung, bitte!"
+        ],
+        "answer": "Entschuldigung, die Rechnung, bitte!",
+        "tip": "heartyInnSeven.questDescription"
+      },
+      {
+        "id": 2,
+        "type": "input",
+        "question": "heartyInnSeven.questTask2",
+        "correctAnswer": "getrennt",
+        "tip": "heartyInnSeven.questDescription"
+      },
+      {
+        "id": 3,
+        "type": "input",
+        "question": "heartyInnSeven.questTask3",
+        "correctAnswer": "macht",
+        "tip": "heartyInnSeven.questDescription"
+      },
+      {
+        "id": 4,
+        "type": "select",
+        "question": "heartyInnSeven.questTask4",
+        "options": [
+          "Ich zahlt bar.",
+          "Ich bar zahle.",
+          "Ich zahle bar."
+        ],
+        "answer": "Ich zahle bar.",
+        "tip": "heartyInnSeven.questDescription"
+      },
+      {
+        "id": 5,
+        "type": "reorder",
+        "question": "heartyInnSeven.questTask5",
+        "words": [
+          "bezahle",
+          "Karte",
+          "kannst",
+          "bezahlen",
+          "ich",
+          "Kann",
+          "mit"
+        ],
+        "correctOrder": [
+          "Kann",
+          "ich",
+          "mit",
+          "Karte",
+          "bezahlen"
+        ],
+        "tip": "heartyInnSeven.questDescription"
+      },
+      {
+        "id": 6,
+        "type": "select",
+        "question": "heartyInnSeven.questTask6",
+        "options": [
+          "Wir möchten bezahlen.",
+          "Wir möchten bezahlt.",
+          "Wir möchte bezahlen."
+        ],
+        "answer": "Wir möchten bezahlen.",
+        "tip": "heartyInnSeven.questDescription"
+      },
+      {
+        "id": 7,
+        "type": "input",
+        "question": "heartyInnSeven.questTask7",
+        "correctAnswer": "Trinkgeld",
+        "tip": "heartyInnSeven.questDescription"
+      },
+      {
+        "id": 8,
+        "type": "select",
+        "question": "heartyInnSeven.questTask8",
+        "options": [
+          "Stimmt so!",
+          "Stimmt sie!",
+          "Stimmen so!"
+        ],
+        "answer": "Stimmt so!",
+        "tip": "heartyInnSeven.questDescription"
+      },
+      {
+        "id": 9,
+        "type": "readAndAnswer",
+        "question": "heartyInnSeven.questTask9",
+        "text": "Tom: Die Rechnung, bitte! Kellner: Zusammen oder getrennt? Tom: Zusammen, bitte. Kellner: Das macht 18 Euro. Tom: Hier sind 20 Euro. Stimmt so!",
+        "options": [
+          "2 Euro",
+          "20 Euro",
+          "18 Euro"
+        ],
+        "answer": "20 Euro",
+        "tip": "heartyInnSeven.questDescription"
+      },
+      {
+        "id": 10,
+        "type": "input",
+        "question": "heartyInnSeven.questTask10",
+        "correctAnswer": "zusammen",
+        "tip": "heartyInnSeven.questDescription"
+      },
+      {
+        "id": 11,
+        "type": "reorder",
+        "question": "heartyInnSeven.questTask11",
+        "words": [
+          "kein",
+          "bar",
+          "zahlt",
+          "mit",
+          "Karte",
+          "du",
+          "Zahlst",
+          "oder"
+        ],
+        "correctOrder": [
+          "Zahlst",
+          "du",
+          "mit",
+          "Karte",
+          "oder",
+          "bar"
+        ],
+        "tip": "heartyInnSeven.questDescription"
+      },
+      {
+        "id": 12,
+        "type": "input",
+        "question": "heartyInnSeven.questTask12",
+        "correctAnswer": "Tassen",
+        "tip": "heartyInnSeven.questDescription"
+      },
+      {
+        "id": 13,
+        "type": "select",
+        "question": "heartyInnSeven.questTask13",
+        "options": [
+          "Der Kellner bringt die Speisekarte.",
+          "Der Kellner bringst die Speisekarte.",
+          "Der Kellner bringt der Speisekarte."
+        ],
+        "answer": "Der Kellner bringt die Speisekarte.",
+        "tip": "heartyInnSeven.questDescription"
+      },
+      {
+        "id": 14,
+        "type": "select",
+        "question": "heartyInnSeven.questTask14",
+        "options": [
+          "Muss ich lange warten?",
+          "Ich muss lange warten?",
+          "Muss ich lange warte?"
+        ],
+        "answer": "Muss ich lange warten?",
+        "tip": "heartyInnSeven.questDescription"
+      },
+      {
+        "id": 15,
+        "type": "reorder",
+        "question": "heartyInnSeven.questTask15",
+        "words": [
+          "Restaurant",
+          "Am",
+          "will",
+          "im",
+          "Samstag",
+          "esst",
+          "wollen",
+          "wir",
+          "essen"
+        ],
+        "correctOrder": [
+          "Am",
+          "Samstag",
+          "wollen",
+          "wir",
+          "im",
+          "Restaurant",
+          "essen"
+        ],
+        "tip": "heartyInnSeven.questDescription"
+      }
+    ]
+  },
+  {
+    "questId": "hearty-inn-eight",
+    "title": "heartyInnEight.questTitle",
+    "progress": "0/15",
+    "description": "heartyInnEight.questDescription",
+    "conditions": {
+      "goal": "heartyInnEight.questGoal",
+      "minCorrect": 15,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
+    "vocabulary": [
+      {
+        "word": "der Wein",
+        "translation-ru": "вино",
+        "translation-en": "wine",
+        "translation-uk": "вино",
+        "translation-pl": "wino",
+        "translation-es": "el vino",
+        "translation-fr": "le vin",
+        "translation-tr": "şarap",
+        "translation-ro": "vinul",
+        "translation-uz": "vino",
+        "translation-hi": "वाइन",
+        "translation-ar": "النبيذ"
+      },
+      {
+        "word": "das Bier",
+        "translation-ru": "пиво",
+        "translation-en": "beer",
+        "translation-uk": "пиво",
+        "translation-pl": "piwo",
+        "translation-es": "la cerveza",
+        "translation-fr": "la bière",
+        "translation-tr": "bira",
+        "translation-ro": "berea",
+        "translation-uz": "pivo",
+        "translation-hi": "बीयर",
+        "translation-ar": "الجعة"
+      },
+      {
+        "word": "das Rezept",
+        "translation-ru": "рецепт",
+        "translation-en": "recipe",
+        "translation-uk": "рецепт",
+        "translation-pl": "przepis",
+        "translation-es": "la receta",
+        "translation-fr": "la recette",
+        "translation-tr": "tarif",
+        "translation-ro": "rețeta",
+        "translation-uz": "retsept",
+        "translation-hi": "विधि",
+        "translation-ar": "الوصفة"
+      },
+      {
+        "word": "vegetarisch",
+        "translation-ru": "вегетарианский",
+        "translation-en": "vegetarian",
+        "translation-uk": "вегетаріанський",
+        "translation-pl": "wegetariański",
+        "translation-es": "vegetariano",
+        "translation-fr": "végétarien",
+        "translation-tr": "vejetaryen",
+        "translation-ro": "vegetarian",
+        "translation-uz": "vegetarian",
+        "translation-hi": "शाकाहारी",
+        "translation-ar": "نباتي"
+      },
+      {
+        "word": "noch",
+        "translation-ru": "ещё",
+        "translation-en": "still, more",
+        "translation-uk": "ще",
+        "translation-pl": "jeszcze",
+        "translation-es": "todavía, más",
+        "translation-fr": "encore",
+        "translation-tr": "daha",
+        "translation-ro": "încă",
+        "translation-uz": "yana",
+        "translation-hi": "और",
+        "translation-ar": "بعد، أيضًا"
+      }
+    ],
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "heartyInnEight.questTask1",
+        "options": [
+          "Möchtest du noch einen Stück Kuchen?",
+          "Möchte du noch ein Stück Kuchen?",
+          "Möchtest du noch ein Stück Kuchen?"
+        ],
+        "answer": "Möchtest du noch ein Stück Kuchen?",
+        "tip": "heartyInnEight.questDescription"
+      },
+      {
+        "id": 2,
+        "type": "input",
+        "question": "heartyInnEight.questTask2",
+        "correctAnswer": "vegetarisch",
+        "tip": "heartyInnEight.questDescription"
+      },
+      {
+        "id": 3,
+        "type": "input",
+        "question": "heartyInnEight.questTask3",
+        "correctAnswer": "brauchen",
+        "tip": "heartyInnEight.questDescription"
+      },
+      {
+        "id": 4,
+        "type": "select",
+        "question": "heartyInnEight.questTask4",
+        "options": [
+          "Du trinkst Wein oder Bier?",
+          "Trinkt du Wein oder Bier?",
+          "Trinkst du Wein oder Bier?"
+        ],
+        "answer": "Trinkst du Wein oder Bier?",
+        "tip": "heartyInnEight.questDescription"
+      },
+      {
+        "id": 5,
+        "type": "reorder",
+        "question": "heartyInnEight.questTask5",
+        "words": [
+          "Ich",
+          "brauchst",
+          "ein",
+          "einen",
+          "Rezept",
+          "brauche"
+        ],
+        "correctOrder": [
+          "Ich",
+          "brauche",
+          "ein",
+          "Rezept"
+        ],
+        "tip": "heartyInnEight.questDescription"
+      },
+      {
+        "id": 6,
+        "type": "select",
+        "question": "heartyInnEight.questTask6",
+        "options": [
+          "Die Gäste kommen um sieben Uhr. Ich darf kochen.",
+          "Die Gäste kommen um sieben Uhr. Ich muss kochen.",
+          "Die Gäste kommt um sieben Uhr. Ich muss kochen."
+        ],
+        "answer": "Die Gäste kommen um sieben Uhr. Ich muss kochen.",
+        "tip": "heartyInnEight.questDescription"
+      },
+      {
+        "id": 7,
+        "type": "input",
+        "question": "heartyInnEight.questTask7",
+        "correctAnswer": "noch",
+        "tip": "heartyInnEight.questDescription"
+      },
+      {
+        "id": 8,
+        "type": "select",
+        "question": "heartyInnEight.questTask8",
+        "options": [
+          "Was isst du? Mag du Nudeln?",
+          "Was isst du? Magst du Nudeln?",
+          "Was esst du? Magst du Nudeln?"
+        ],
+        "answer": "Was isst du? Magst du Nudeln?",
+        "tip": "heartyInnEight.questDescription"
+      },
+      {
+        "id": 9,
+        "type": "readAndAnswer",
+        "question": "heartyInnEight.questTask9",
+        "text": "Emma lädt ihre Freunde ein. Ben isst gern Fisch, aber Lena ist vegetarisch. Emma kocht eine Suppe mit Gemüse. Dann gibt es noch Kuchen und Kaffee.",
+        "options": [
+          "Lena ist vegetarisch.",
+          "Emma hat keine Zeit.",
+          "Ben mag keinen Fisch."
+        ],
+        "answer": "Lena ist vegetarisch.",
+        "tip": "heartyInnEight.questDescription"
+      },
+      {
+        "id": 10,
+        "type": "input",
+        "question": "heartyInnEight.questTask10",
+        "correctAnswer": "Wein",
+        "tip": "heartyInnEight.questDescription"
+      },
+      {
+        "id": 11,
+        "type": "reorder",
+        "question": "heartyInnEight.questTask11",
+        "words": [
+          "bringt",
+          "den",
+          "Wer",
+          "das",
+          "bringst",
+          "Bier"
+        ],
+        "correctOrder": [
+          "Wer",
+          "bringt",
+          "das",
+          "Bier"
+        ],
+        "tip": "heartyInnEight.questDescription"
+      },
+      {
+        "id": 12,
+        "type": "input",
+        "question": "heartyInnEight.questTask12",
+        "correctAnswer": "Tisch",
+        "tip": "heartyInnEight.questDescription"
+      },
+      {
+        "id": 13,
+        "type": "select",
+        "question": "heartyInnEight.questTask13",
+        "options": [
+          "Wir getrennt bezahlen.",
+          "Wir bezahlen getrennt.",
+          "Wir bezahlt getrennt."
+        ],
+        "answer": "Wir bezahlen getrennt.",
+        "tip": "heartyInnEight.questDescription"
+      },
+      {
+        "id": 14,
+        "type": "select",
+        "question": "heartyInnEight.questTask14",
+        "options": [
+          "Darf ich noch einen Stuhl nimmt?",
+          "Darf ich noch einen Stuhl nehmen?",
+          "Darf ich noch ein Stuhl nehmen?"
+        ],
+        "answer": "Darf ich noch einen Stuhl nehmen?",
+        "tip": "heartyInnEight.questDescription"
+      },
+      {
+        "id": 15,
+        "type": "reorder",
+        "question": "heartyInnEight.questTask15",
+        "words": [
+          "für",
+          "ist",
+          "Trinkgeld",
+          "Das",
+          "den",
+          "sind",
+          "dem",
+          "Kellner"
+        ],
+        "correctOrder": [
+          "Das",
+          "Trinkgeld",
+          "ist",
+          "für",
+          "den",
+          "Kellner"
+        ],
+        "tip": "heartyInnEight.questDescription"
+      }
+    ]
+  },
+  {
+    "questId": "hearty-inn-nine",
+    "title": "heartyInnNine.questTitle",
+    "progress": "0/15",
+    "description": "heartyInnNine.questDescription",
+    "conditions": {
+      "goal": "heartyInnNine.questGoal",
+      "minCorrect": 15,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
+    "vocabulary": [
+      {
+        "word": "der Salat",
+        "translation-ru": "салат",
+        "translation-en": "salad",
+        "translation-uk": "салат",
+        "translation-pl": "sałatka",
+        "translation-es": "la ensalada",
+        "translation-fr": "la salade",
+        "translation-tr": "salata",
+        "translation-ro": "salata",
+        "translation-uz": "salat",
+        "translation-hi": "सलाद",
+        "translation-ar": "السلطة"
+      },
+      {
+        "word": "der Reis",
+        "translation-ru": "рис",
+        "translation-en": "rice",
+        "translation-uk": "рис",
+        "translation-pl": "ryż",
+        "translation-es": "el arroz",
+        "translation-fr": "le riz",
+        "translation-tr": "pirinç",
+        "translation-ro": "orezul",
+        "translation-uz": "guruch",
+        "translation-hi": "चावल",
+        "translation-ar": "الأرز"
+      },
+      {
+        "word": "der Hunger",
+        "translation-ru": "голод",
+        "translation-en": "hunger",
+        "translation-uk": "голод",
+        "translation-pl": "głód",
+        "translation-es": "el hambre",
+        "translation-fr": "la faim",
+        "translation-tr": "açlık",
+        "translation-ro": "foamea",
+        "translation-uz": "ochlik",
+        "translation-hi": "भूख",
+        "translation-ar": "الجوع"
+      },
+      {
+        "word": "der Durst",
+        "translation-ru": "жажда",
+        "translation-en": "thirst",
+        "translation-uk": "спрага",
+        "translation-pl": "pragnienie",
+        "translation-es": "la sed",
+        "translation-fr": "la soif",
+        "translation-tr": "susuzluk",
+        "translation-ro": "setea",
+        "translation-uz": "chanqoq",
+        "translation-hi": "प्यास",
+        "translation-ar": "العطش"
+      },
+      {
+        "word": "lecker",
+        "translation-ru": "вкусный",
+        "translation-en": "tasty",
+        "translation-uk": "смачний",
+        "translation-pl": "smaczny",
+        "translation-es": "rico",
+        "translation-fr": "bon",
+        "translation-tr": "lezzetli",
+        "translation-ro": "gustos",
+        "translation-uz": "mazali",
+        "translation-hi": "स्वादिष्ट",
+        "translation-ar": "لذيذ"
+      }
+    ],
+    "tasks": [
+      {
+        "id": 1,
+        "type": "input",
+        "question": "heartyInnNine.questTask1",
+        "correctAnswer": "mögen",
+        "tip": "heartyInnNine.questDescription"
+      },
+      {
+        "id": 2,
+        "type": "input",
+        "question": "heartyInnNine.questTask2",
+        "correctAnswer": "trinkt",
+        "tip": "heartyInnNine.questDescription"
+      },
+      {
+        "id": 3,
+        "type": "input",
+        "question": "heartyInnNine.questTask3",
+        "correctAnswer": "Hunger",
+        "tip": "heartyInnNine.questDescription"
+      },
+      {
+        "id": 4,
+        "type": "input",
+        "question": "heartyInnNine.questTask4",
+        "correctAnswer": "Durst",
+        "tip": "heartyInnNine.questDescription"
+      },
+      {
+        "id": 5,
+        "type": "select",
+        "question": "heartyInnNine.questTask5",
+        "options": [
+          "Der Salat sind sehr lecker.",
+          "Die Salat ist sehr lecker.",
+          "Der Salat ist sehr lecker."
+        ],
+        "answer": "Der Salat ist sehr lecker.",
+        "tip": "heartyInnNine.questDescription"
+      },
+      {
+        "id": 6,
+        "type": "select",
+        "question": "heartyInnNine.questTask6",
+        "options": [
+          "Ich nimmt ein Glas Wasser und eine Suppe.",
+          "Ich nehme ein Glas Wasser und eine Suppe.",
+          "Ich nehme einen Glas Wasser und eine Suppe."
+        ],
+        "answer": "Ich nehme ein Glas Wasser und eine Suppe.",
+        "tip": "heartyInnNine.questDescription"
+      },
+      {
+        "id": 7,
+        "type": "select",
+        "question": "heartyInnNine.questTask7",
+        "options": [
+          "Das Fleisch schmeckt heute nicht gut.",
+          "Das Fleisch schmeckt heute gut nicht.",
+          "Das Fleisch schmecken heute nicht gut."
+        ],
+        "answer": "Das Fleisch schmeckt heute nicht gut.",
+        "tip": "heartyInnNine.questDescription"
+      },
+      {
+        "id": 8,
+        "type": "reorder",
+        "question": "heartyInnNine.questTask8",
+        "words": [
+          "sind",
+          "gibt",
+          "Mittag",
+          "Am",
+          "heute",
+          "gibst",
+          "Reis",
+          "es"
+        ],
+        "correctOrder": [
+          "Am",
+          "Mittag",
+          "gibt",
+          "es",
+          "heute",
+          "Reis"
+        ],
+        "tip": "heartyInnNine.questDescription"
+      },
+      {
+        "id": 9,
+        "type": "reorder",
+        "question": "heartyInnNine.questTask9",
+        "words": [
+          "noch",
+          "Kaffee",
+          "du",
+          "einen",
+          "Möchtest",
+          "Tasse",
+          "möchten",
+          "eine"
+        ],
+        "correctOrder": [
+          "Möchtest",
+          "du",
+          "noch",
+          "eine",
+          "Tasse",
+          "Kaffee"
+        ],
+        "tip": "heartyInnNine.questDescription"
+      },
+      {
+        "id": 10,
+        "type": "input",
+        "question": "heartyInnNine.questTask10",
+        "correctAnswer": "Rechnung",
+        "tip": "heartyInnNine.questDescription"
+      },
+      {
+        "id": 11,
+        "type": "readAndAnswer",
+        "question": "heartyInnNine.questTask11",
+        "text": "Kira isst gern Reis und Gemüse. Sie mag keinen Fisch und kein Fleisch. Am Morgen trinkt sie eine Tasse Tee. Kaffee schmeckt nicht gut, sagt sie.",
+        "options": [
+          "Kaffee",
+          "Reis und Gemüse",
+          "Fisch und Fleisch"
+        ],
+        "answer": "Reis und Gemüse",
+        "tip": "heartyInnNine.questDescription"
+      },
+      {
+        "id": 12,
+        "type": "input",
+        "question": "heartyInnNine.questTask12",
+        "correctAnswer": "Kannst",
+        "tip": "heartyInnNine.questDescription"
+      },
+      {
+        "id": 13,
+        "type": "select",
+        "question": "heartyInnNine.questTask13",
+        "options": [
+          "Seine Frau nimmt den Zug.",
+          "Seine Frau nehmt den Zug.",
+          "Sein Frau nimmt den Zug."
+        ],
+        "answer": "Seine Frau nimmt den Zug.",
+        "tip": "heartyInnNine.questDescription"
+      },
+      {
+        "id": 14,
+        "type": "select",
+        "question": "heartyInnNine.questTask14",
+        "options": [
+          "Der Laden macht um acht Uhr zu.",
+          "Der Laden macht zu um acht Uhr zu.",
+          "Der Laden zumacht um acht Uhr."
+        ],
+        "answer": "Der Laden macht um acht Uhr zu.",
+        "tip": "heartyInnNine.questDescription"
+      },
+      {
+        "id": 15,
+        "type": "reorder",
+        "question": "heartyInnNine.questTask15",
+        "words": [
+          "Im",
+          "um",
+          "am",
+          "August",
+          "ist",
+          "es",
+          "heiß"
+        ],
+        "correctOrder": [
+          "Im",
+          "August",
+          "ist",
+          "es",
+          "heiß"
+        ],
+        "tip": "heartyInnNine.questDescription"
+      }
+    ]
+  },
+  {
+    "questId": "hearty-inn-ten",
+    "title": "heartyInnTen.questTitle",
+    "progress": "0/15",
+    "description": "heartyInnTen.questDescription",
+    "conditions": {
+      "goal": "heartyInnTen.questGoal",
+      "minCorrect": 15,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
+    "vocabulary": [
+      {
+        "word": "das Brot",
+        "translation-ru": "хлеб",
+        "translation-en": "bread",
+        "translation-uk": "хліб",
+        "translation-pl": "chleb",
+        "translation-es": "el pan",
+        "translation-fr": "le pain",
+        "translation-tr": "ekmek",
+        "translation-ro": "pâinea",
+        "translation-uz": "non",
+        "translation-hi": "ब्रेड",
+        "translation-ar": "الخبز"
+      },
+      {
+        "word": "der Kaffee",
+        "translation-ru": "кофе",
+        "translation-en": "coffee",
+        "translation-uk": "кава",
+        "translation-pl": "kawa",
+        "translation-es": "el café",
+        "translation-fr": "le café",
+        "translation-tr": "kahve",
+        "translation-ro": "cafeaua",
+        "translation-uz": "kofe",
+        "translation-hi": "कॉफ़ी",
+        "translation-ar": "القهوة"
+      },
+      {
+        "word": "die Milch",
+        "translation-ru": "молоко",
+        "translation-en": "milk",
+        "translation-uk": "молоко",
+        "translation-pl": "mleko",
+        "translation-es": "la leche",
+        "translation-fr": "le lait",
+        "translation-tr": "süt",
+        "translation-ro": "laptele",
+        "translation-uz": "sut",
+        "translation-hi": "दूध",
+        "translation-ar": "الحليب"
+      },
+      {
+        "word": "der Saft",
+        "translation-ru": "сок",
+        "translation-en": "juice",
+        "translation-uk": "сік",
+        "translation-pl": "sok",
+        "translation-es": "el zumo",
+        "translation-fr": "le jus",
+        "translation-tr": "meyve suyu",
+        "translation-ro": "sucul",
+        "translation-uz": "sharbat",
+        "translation-hi": "जूस",
+        "translation-ar": "العصير"
+      },
+      {
+        "word": "süß",
+        "translation-ru": "сладкий",
+        "translation-en": "sweet",
+        "translation-uk": "солодкий",
+        "translation-pl": "słodki",
+        "translation-es": "dulce",
+        "translation-fr": "sucré",
+        "translation-tr": "tatlı",
+        "translation-ro": "dulce",
+        "translation-uz": "shirin",
+        "translation-hi": "मीठा",
+        "translation-ar": "حلو"
+      }
+    ],
+    "tasks": [
+      {
+        "id": 1,
+        "type": "input",
+        "question": "heartyInnTen.questTask1",
+        "correctAnswer": "Magst",
+        "tip": "heartyInnTen.questDescription"
+      },
+      {
+        "id": 2,
+        "type": "input",
+        "question": "heartyInnTen.questTask2",
+        "correctAnswer": "mag",
+        "tip": "heartyInnTen.questDescription"
+      },
+      {
+        "id": 3,
+        "type": "input",
+        "question": "heartyInnTen.questTask3",
+        "correctAnswer": "schmeckt",
+        "tip": "heartyInnTen.questDescription"
+      },
+      {
+        "id": 4,
+        "type": "input",
+        "question": "heartyInnTen.questTask4",
+        "correctAnswer": "Glas",
+        "tip": "heartyInnTen.questDescription"
+      },
+      {
+        "id": 5,
+        "type": "select",
+        "question": "heartyInnTen.questTask5",
+        "options": [
+          "Ich gern esse nicht Reis.",
+          "Ich esse gern nicht Reis.",
+          "Ich esse nicht gern Reis."
+        ],
+        "answer": "Ich esse nicht gern Reis.",
+        "tip": "heartyInnTen.questDescription"
+      },
+      {
+        "id": 6,
+        "type": "select",
+        "question": "heartyInnTen.questTask6",
+        "options": [
+          "Was Sie trinken?",
+          "Was trinkst Sie?",
+          "Was trinken Sie?"
+        ],
+        "answer": "Was trinken Sie?",
+        "tip": "heartyInnTen.questDescription"
+      },
+      {
+        "id": 7,
+        "type": "select",
+        "question": "heartyInnTen.questTask7",
+        "options": [
+          "Das Brot sind frisch und lecker.",
+          "Das Brot ist frisch und lecker.",
+          "Der Brot ist frisch und lecker."
+        ],
+        "answer": "Das Brot ist frisch und lecker.",
+        "tip": "heartyInnTen.questDescription"
+      },
+      {
+        "id": 8,
+        "type": "select",
+        "question": "heartyInnTen.questTask8",
+        "options": [
+          "Das Frühstück ist im acht Uhr.",
+          "Das Frühstück ist um acht Uhr.",
+          "Der Frühstück ist um acht Uhr."
+        ],
+        "answer": "Das Frühstück ist um acht Uhr.",
+        "tip": "heartyInnTen.questDescription"
+      },
+      {
+        "id": 9,
+        "type": "reorder",
+        "question": "heartyInnTen.questTask9",
+        "words": [
+          "einen",
+          "bestellt",
+          "Torte",
+          "ein",
+          "bestelle",
+          "Ich",
+          "Stück"
+        ],
+        "correctOrder": [
+          "Ich",
+          "bestelle",
+          "ein",
+          "Stück",
+          "Torte"
+        ],
+        "tip": "heartyInnTen.questDescription"
+      },
+      {
+        "id": 10,
+        "type": "reorder",
+        "question": "heartyInnTen.questTask10",
+        "words": [
+          "heiß",
+          "ist",
+          "Suppe",
+          "der",
+          "Die",
+          "sind",
+          "zu"
+        ],
+        "correctOrder": [
+          "Die",
+          "Suppe",
+          "ist",
+          "zu",
+          "heiß"
+        ],
+        "tip": "heartyInnTen.questDescription"
+      },
+      {
+        "id": 11,
+        "type": "reorder",
+        "question": "heartyInnTen.questTask11",
+        "words": [
+          "möchten",
+          "die",
+          "Wir",
+          "der",
+          "möchte",
+          "Speisekarte"
+        ],
+        "correctOrder": [
+          "Wir",
+          "möchten",
+          "die",
+          "Speisekarte"
+        ],
+        "tip": "heartyInnTen.questDescription"
+      },
+      {
+        "id": 12,
+        "type": "input",
+        "question": "heartyInnTen.questTask12",
+        "correctAnswer": "bar",
+        "tip": "heartyInnTen.questDescription"
+      },
+      {
+        "id": 13,
+        "type": "input",
+        "question": "heartyInnTen.questTask13",
+        "correctAnswer": "noch",
+        "tip": "heartyInnTen.questDescription"
+      },
+      {
+        "id": 14,
+        "type": "readAndAnswer",
+        "question": "heartyInnTen.questTask14",
+        "text": "Im Café Müller: Eine Tasse Kaffee kostet 3 Euro. Ein Glas Saft kostet 4 Euro. Ein Stück Kuchen kostet 5 Euro. Heute gibt es keine Suppe.",
+        "options": [
+          "5 Euro",
+          "3 Euro",
+          "4 Euro"
+        ],
+        "answer": "3 Euro",
+        "tip": "heartyInnTen.questDescription"
+      },
+      {
+        "id": 15,
+        "type": "readAndAnswer",
+        "question": "heartyInnTen.questTask15",
+        "text": "Julia und Tim sind im Restaurant. Tim nimmt den Fisch und ein Stück Kuchen. Julia nimmt nur einen Salat. Sie darf keinen Zucker essen, sagt der Arzt.",
+        "options": [
+          "Sie mag keinen Kuchen.",
+          "Sie darf keinen Zucker essen.",
+          "Sie hat kein Geld."
+        ],
+        "answer": "Sie darf keinen Zucker essen.",
+        "tip": "heartyInnTen.questDescription"
+      }
+    ]
+  }
+]

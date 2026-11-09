@@ -1,7 +1,9 @@
 [
   {
     "questId": "order-one",
-    "aliases": ["sub-clauses-order"],
+    "aliases": [
+      "sub-clauses-order"
+    ],
     "title": "orderValleyQuestOne.title",
     "progress": "0/15",
     "description": "orderValleyQuestOne.description",
@@ -19,8 +21,22 @@
         "id": 1,
         "type": "reorder",
         "question": "orderValleyQuestOne.questOne",
-        "words": ["ist", "wichtig", "es", "weil", "lerne", "Ich"],
-        "correctOrder": ["Ich", "lerne", "weil", "es", "wichtig", "ist"],
+        "words": [
+          "ist",
+          "wichtig",
+          "es",
+          "weil",
+          "lerne",
+          "Ich"
+        ],
+        "correctOrder": [
+          "Ich",
+          "lerne",
+          "weil",
+          "es",
+          "wichtig",
+          "ist"
+        ],
         "tip": "orderValleyQuestOne.questOneTip"
       },
       {
@@ -47,8 +63,26 @@
         "id": 4,
         "type": "reorder",
         "question": "orderValleyQuestOne.questFour",
-        "words": ["endet", "Film", "der", "wenn", "Hause", "nach", "gehen", "Wir"],
-        "correctOrder": ["Wir", "gehen", "nach", "Hause", "wenn", "der", "Film", "endet"],
+        "words": [
+          "endet",
+          "Film",
+          "der",
+          "wenn",
+          "Hause",
+          "nach",
+          "gehen",
+          "Wir"
+        ],
+        "correctOrder": [
+          "Wir",
+          "gehen",
+          "nach",
+          "Hause",
+          "wenn",
+          "der",
+          "Film",
+          "endet"
+        ],
         "tip": "orderValleyQuestOne.questFourTip"
       },
       {
@@ -67,8 +101,22 @@
         "id": 6,
         "type": "reorder",
         "question": "orderValleyQuestOne.questSix",
-        "words": ["ist", "krank", "sie", "obwohl", "arbeitet", "Sie"],
-        "correctOrder": ["Sie", "arbeitet", "obwohl", "sie", "krank", "ist"],
+        "words": [
+          "ist",
+          "krank",
+          "sie",
+          "obwohl",
+          "arbeitet",
+          "Sie"
+        ],
+        "correctOrder": [
+          "Sie",
+          "arbeitet",
+          "obwohl",
+          "sie",
+          "krank",
+          "ist"
+        ],
         "tip": "orderValleyQuestOne.questSixTip"
       },
       {
@@ -76,7 +124,8 @@
         "type": "speechToText",
         "question": "orderValleyQuestOne.questSeven",
         "text": "Ich weiß, dass du Recht hast",
-        "answer": "Ich weiß, dass du Recht hast"
+        "answer": "Ich weiß, dass du Recht hast",
+        "tip": "orderValleyQuestOne.description"
       },
       {
         "id": 8,
@@ -94,8 +143,22 @@
         "id": 9,
         "type": "reorder",
         "question": "orderValleyQuestOne.questNine",
-        "words": ["hast", "Recht", "du", "dass", "glaube", "Ich"],
-        "correctOrder": ["Ich", "glaube", "dass", "du", "Recht", "hast"],
+        "words": [
+          "hast",
+          "Recht",
+          "du",
+          "dass",
+          "glaube",
+          "Ich"
+        ],
+        "correctOrder": [
+          "Ich",
+          "glaube",
+          "dass",
+          "du",
+          "Recht",
+          "hast"
+        ],
         "tip": "orderValleyQuestOne.questNineTip"
       },
       {
@@ -108,31 +171,69 @@
       },
       {
         "id": 11,
-        "type": "select",
-        "question": "orderValleyQuestOne.questEleven",
-        "options": [
-          "Wir wissen, dass wir helfen müssen",
-          "Wir wissen, dass wir müssen helfen",
-          "Wir wissen, dass, helfen wir müssen"
+        "type": "reorder",
+        "question": "actionValleyQuestTen.questTwo",
+        "words": [
+          "mich",
+          "darauf",
+          "verlasse",
+          "Ich"
         ],
-        "answer": "Wir wissen, dass wir helfen müssen",
-        "tip": "orderValleyQuestOne.questElevenTip"
+        "correctOrder": [
+          "Ich",
+          "verlasse",
+          "mich",
+          "darauf"
+        ],
+        "tip": "actionValleyQuestTen.questTwoTip",
+        "reviewOf": "action-ten",
+        "reviewLand": "action-valley"
       },
       {
         "id": 12,
         "type": "reorder",
-        "question": "orderValleyQuestOne.questTwelve",
-        "words": ["ankomme", "ich", "sobald", "dich", "rufe", "Ich", "an"],
-        "correctOrder": ["Ich", "rufe", "dich", "an", "sobald", "ich", "ankomme"],
-        "tip": "orderValleyQuestOne.questTwelveTip"
+        "question": "actionValleyQuestEight.questFive",
+        "words": [
+          "mich",
+          "Geschenk",
+          "das",
+          "über",
+          "freue",
+          "Ich"
+        ],
+        "correctOrder": [
+          "Ich",
+          "freue",
+          "mich",
+          "über",
+          "das",
+          "Geschenk"
+        ],
+        "tip": "actionValleyQuestEight.questFiveTip",
+        "reviewOf": "action-eight",
+        "reviewLand": "action-valley"
       },
       {
         "id": 13,
-        "type": "speechToText",
-        "question": "orderValleyQuestOne.questThirteen",
-        "text": "Er lernt viel, damit er die Prüfung besteht",
-        "answer": "Er lernt viel, damit er die Prüfung besteht",
-        "tip": "orderValleyQuestOne.questThirteenTip"
+        "type": "reorder",
+        "question": "actionValleyQuestFour.questNine",
+        "words": [
+          "mich",
+          "hinter",
+          "sich",
+          "setzt",
+          "Er"
+        ],
+        "correctOrder": [
+          "Er",
+          "setzt",
+          "sich",
+          "hinter",
+          "mich"
+        ],
+        "tip": "actionValleyQuestFour.questNineTip",
+        "reviewOf": "action-four",
+        "reviewLand": "action-valley"
       },
       {
         "id": 14,
@@ -150,15 +251,109 @@
         "id": 15,
         "type": "reorder",
         "question": "orderValleyQuestOne.questFifteen",
-        "words": ["hast", "gekauft", "Buch", "dieses", "du", "wo", "gefragt", "hat", "Er"],
-        "correctOrder": ["Er", "hat", "gefragt", "wo", "du", "dieses", "Buch", "gekauft", "hast"],
+        "words": [
+          "hast",
+          "gekauft",
+          "Buch",
+          "dieses",
+          "du",
+          "wo",
+          "gefragt",
+          "hat",
+          "Er"
+        ],
+        "correctOrder": [
+          "Er",
+          "hat",
+          "gefragt",
+          "wo",
+          "du",
+          "dieses",
+          "Buch",
+          "gekauft",
+          "hast"
+        ],
         "tip": "orderValleyQuestOne.questFifteenTip"
+      }
+    ],
+    "vocabulary": [
+      {
+        "word": "wichtig",
+        "translation-ru": "важный",
+        "translation-en": "important",
+        "translation-uk": "важливий",
+        "translation-pl": "ważny",
+        "translation-es": "importante",
+        "translation-fr": "important",
+        "translation-tr": "önemli",
+        "translation-ro": "important",
+        "translation-uz": "muhim",
+        "translation-hi": "ज़रूरी",
+        "translation-ar": "مهم"
+      },
+      {
+        "word": "obwohl",
+        "translation-ru": "хотя",
+        "translation-en": "although",
+        "translation-uk": "хоча",
+        "translation-pl": "chociaż",
+        "translation-es": "aunque",
+        "translation-fr": "bien que",
+        "translation-tr": "-e rağmen",
+        "translation-ro": "deși",
+        "translation-uz": "garchi",
+        "translation-hi": "हालाँकि",
+        "translation-ar": "رغم أن"
+      },
+      {
+        "word": "verlassen",
+        "translation-ru": "оставлять / покидать",
+        "translation-en": "to leave / abandon",
+        "translation-uk": "залишати / покидати",
+        "translation-pl": "opuszczać",
+        "translation-es": "abandonar / dejar",
+        "translation-fr": "quitter / abandonner",
+        "translation-tr": "terk etmek / ayrılmak",
+        "translation-ro": "a părăsi",
+        "translation-uz": "tark etmoq",
+        "translation-hi": "छोड़ना",
+        "translation-ar": "يغادر / يترك"
+      },
+      {
+        "word": "glauben",
+        "translation-ru": "верить / полагать",
+        "translation-en": "to believe / think",
+        "translation-uk": "вірити / думати",
+        "translation-pl": "wierzyć",
+        "translation-es": "creer",
+        "translation-fr": "croire",
+        "translation-tr": "inanmak",
+        "translation-ro": "a crede",
+        "translation-uz": "ishonmoq",
+        "translation-hi": "विश्वास करना",
+        "translation-ar": "يعتقد / يؤمن"
+      },
+      {
+        "word": "der Film",
+        "translation-ru": "фильм",
+        "translation-en": "film",
+        "translation-uk": "фільм",
+        "translation-pl": "film",
+        "translation-es": "la película",
+        "translation-fr": "le film",
+        "translation-tr": "film",
+        "translation-ro": "filmul",
+        "translation-uz": "film",
+        "translation-hi": "फ़िल्म",
+        "translation-ar": "الفيلم"
       }
     ]
   },
   {
     "questId": "order-two",
-    "aliases": ["sub-clauses-short"],
+    "aliases": [
+      "sub-clauses-short"
+    ],
     "title": "orderValleyQuestTwo.title",
     "progress": "0/15",
     "description": "orderValleyQuestTwo.description",
@@ -176,8 +371,22 @@
         "id": 1,
         "type": "reorder",
         "question": "orderValleyQuestTwo.questOne",
-        "words": ["bist", "hier", "du", "dass", "weiß", "Ich"],
-        "correctOrder": ["Ich", "weiß", "dass", "du", "hier", "bist"],
+        "words": [
+          "bist",
+          "hier",
+          "du",
+          "dass",
+          "weiß",
+          "Ich"
+        ],
+        "correctOrder": [
+          "Ich",
+          "weiß",
+          "dass",
+          "du",
+          "hier",
+          "bist"
+        ],
         "tip": "orderValleyQuestTwo.questOneTip"
       },
       {
@@ -204,8 +413,20 @@
         "id": 4,
         "type": "reorder",
         "question": "orderValleyQuestTwo.questFour",
-        "words": ["kommt", "er", "ob", "frage", "Ich"],
-        "correctOrder": ["Ich", "frage", "ob", "er", "kommt"],
+        "words": [
+          "kommt",
+          "er",
+          "ob",
+          "frage",
+          "Ich"
+        ],
+        "correctOrder": [
+          "Ich",
+          "frage",
+          "ob",
+          "er",
+          "kommt"
+        ],
         "tip": "orderValleyQuestTwo.questFourTip"
       },
       {
@@ -224,8 +445,24 @@
         "id": 6,
         "type": "reorder",
         "question": "orderValleyQuestTwo.questSix",
-        "words": ["regnet", "es", "wenn", "Hause", "zu", "bleiben", "Wir"],
-        "correctOrder": ["Wir", "bleiben", "zu", "Hause", "wenn", "es", "regnet"],
+        "words": [
+          "regnet",
+          "es",
+          "wenn",
+          "Hause",
+          "zu",
+          "bleiben",
+          "Wir"
+        ],
+        "correctOrder": [
+          "Wir",
+          "bleiben",
+          "zu",
+          "Hause",
+          "wenn",
+          "es",
+          "regnet"
+        ],
         "tip": "orderValleyQuestTwo.questSixTip"
       },
       {
@@ -252,8 +489,20 @@
         "id": 9,
         "type": "reorder",
         "question": "orderValleyQuestTwo.questNine",
-        "words": ["anruft", "er", "bis", "warten", "Wir"],
-        "correctOrder": ["Wir", "warten", "bis", "er", "anruft"],
+        "words": [
+          "anruft",
+          "er",
+          "bis",
+          "warten",
+          "Wir"
+        ],
+        "correctOrder": [
+          "Wir",
+          "warten",
+          "bis",
+          "er",
+          "anruft"
+        ],
         "tip": "orderValleyQuestTwo.questNineTip"
       },
       {
@@ -266,31 +515,67 @@
       },
       {
         "id": 11,
-        "type": "select",
-        "question": "orderValleyQuestTwo.questEleven",
-        "options": [
-          "Ich weiß, wo du wohnst",
-          "Ich weiß, wo wohnst du",
-          "Ich weiß, du wohnst wo"
+        "type": "reorder",
+        "question": "orderValleyQuestOne.questOne",
+        "words": [
+          "ist",
+          "wichtig",
+          "es",
+          "weil",
+          "lerne",
+          "Ich"
         ],
-        "answer": "Ich weiß, wo du wohnst",
-        "tip": "orderValleyQuestTwo.questElevenTip"
+        "correctOrder": [
+          "Ich",
+          "lerne",
+          "weil",
+          "es",
+          "wichtig",
+          "ist"
+        ],
+        "tip": "orderValleyQuestOne.questOneTip",
+        "reviewOf": "order-one",
+        "reviewLand": "order-valley"
       },
       {
         "id": 12,
         "type": "reorder",
-        "question": "orderValleyQuestTwo.questTwelve",
-        "words": ["kannst", "kommen", "du", "dass", "froh", "bin", "Ich"],
-        "correctOrder": ["Ich", "bin", "froh", "dass", "du", "kommen", "kannst"],
-        "tip": "orderValleyQuestTwo.questTwelveTip"
+        "question": "actionValleyQuestNine.questFive",
+        "words": [
+          "dazu",
+          "passt",
+          "Das"
+        ],
+        "correctOrder": [
+          "Das",
+          "passt",
+          "dazu"
+        ],
+        "reviewOf": "action-nine",
+        "reviewLand": "action-valley",
+        "tip": "actionValleyQuestNine.description"
       },
       {
         "id": 13,
-        "type": "speechToText",
-        "question": "orderValleyQuestTwo.questThirteen",
-        "text": "Es ist wichtig, dass du das machst",
-        "answer": "Es ist wichtig, dass du das machst",
-        "tip": "orderValleyQuestTwo.questThirteenTip"
+        "type": "reorder",
+        "question": "actionValleyQuestFive.questEight",
+        "words": [
+          "Geschenk",
+          "das",
+          "ihnen",
+          "schicken",
+          "Wir"
+        ],
+        "correctOrder": [
+          "Wir",
+          "schicken",
+          "ihnen",
+          "das",
+          "Geschenk"
+        ],
+        "tip": "actionValleyQuestFive.questEightTip",
+        "reviewOf": "action-five",
+        "reviewLand": "action-valley"
       },
       {
         "id": 14,
@@ -308,15 +593,117 @@
         "id": 15,
         "type": "reorder",
         "question": "orderValleyQuestTwo.questFifteen",
-        "words": ["kommt", "er", "wann", "nicht", "weiß", "Ich"],
-        "correctOrder": ["Ich", "weiß", "nicht", "wann", "er", "kommt"],
+        "words": [
+          "kommt",
+          "er",
+          "wann",
+          "nicht",
+          "weiß",
+          "Ich"
+        ],
+        "correctOrder": [
+          "Ich",
+          "weiß",
+          "nicht",
+          "wann",
+          "er",
+          "kommt"
+        ],
         "tip": "orderValleyQuestTwo.questFifteenTip"
+      }
+    ],
+    "vocabulary": [
+      {
+        "word": "das Handy",
+        "translation-ru": "мобильный телефон",
+        "translation-en": "mobile phone",
+        "translation-uk": "мобільний телефон",
+        "translation-pl": "komórka",
+        "translation-es": "el móvil",
+        "translation-fr": "le portable",
+        "translation-tr": "cep telefonu",
+        "translation-ro": "mobilul",
+        "translation-uz": "mobil telefon",
+        "translation-hi": "मोबाइल",
+        "translation-ar": "الهاتف المحمول"
+      },
+      {
+        "word": "glücklich",
+        "translation-ru": "счастливый",
+        "translation-en": "happy",
+        "translation-uk": "щасливий",
+        "translation-pl": "szczęśliwy",
+        "translation-es": "feliz",
+        "translation-fr": "heureux",
+        "translation-tr": "mutlu",
+        "translation-ro": "fericit",
+        "translation-uz": "baxtli",
+        "translation-hi": "ख़ुश",
+        "translation-ar": "سعيد"
+      },
+      {
+        "word": "die Liebe",
+        "translation-ru": "любовь",
+        "translation-en": "love",
+        "translation-uk": "любов",
+        "translation-pl": "miłość",
+        "translation-es": "amor",
+        "translation-fr": "amour",
+        "translation-tr": "aşk",
+        "translation-ro": "dragoste",
+        "translation-uz": "sevgi",
+        "translation-hi": "प्यार",
+        "translation-ar": "حب"
+      },
+      {
+        "word": "obwohl",
+        "translation-ru": "хотя",
+        "translation-en": "although",
+        "translation-uk": "хоча",
+        "translation-pl": "chociaż",
+        "translation-es": "aunque",
+        "translation-fr": "bien que",
+        "translation-tr": "-e rağmen",
+        "translation-ro": "deși",
+        "translation-uz": "garchi",
+        "translation-hi": "हालाँकि",
+        "translation-ar": "رغم أن"
+      },
+      {
+        "word": "wichtig",
+        "translation-ru": "важный",
+        "translation-en": "important",
+        "translation-uk": "важливий",
+        "translation-pl": "ważny",
+        "translation-es": "importante",
+        "translation-fr": "important",
+        "translation-tr": "önemli",
+        "translation-ro": "important",
+        "translation-uz": "muhim",
+        "translation-hi": "ज़रूरी",
+        "translation-ar": "مهم"
+      },
+      {
+        "word": "schweigen",
+        "translation-ru": "молчать",
+        "translation-en": "to be silent",
+        "translation-uk": "мовчати",
+        "translation-pl": "milczeć",
+        "translation-es": "callar",
+        "translation-fr": "se taire",
+        "translation-tr": "susmak",
+        "translation-ro": "a tăcea",
+        "translation-uz": "jim turmoq",
+        "translation-hi": "चुप रहना",
+        "translation-ar": "يصمت"
       }
     ]
   },
   {
     "questId": "order-three",
-    "aliases": ["sub-clauses-extended"],
+    "aliases": [
+      "sub-clauses-extended"
+    ],
     "title": "orderValleyQuestThree.title",
     "progress": "0/15",
     "description": "orderValleyQuestThree.description",
@@ -334,8 +721,26 @@
         "id": 1,
         "type": "reorder",
         "question": "orderValleyQuestThree.questOne",
-        "words": ["muss", "arbeiten", "ich", "weil", "kommen", "nicht", "kann", "Ich"],
-        "correctOrder": ["Ich", "kann", "nicht", "kommen", "weil", "ich", "arbeiten", "muss"],
+        "words": [
+          "muss",
+          "arbeiten",
+          "ich",
+          "weil",
+          "kommen",
+          "nicht",
+          "kann",
+          "Ich"
+        ],
+        "correctOrder": [
+          "Ich",
+          "kann",
+          "nicht",
+          "kommen",
+          "weil",
+          "ich",
+          "arbeiten",
+          "muss"
+        ],
         "tip": "orderValleyQuestThree.questOneTip"
       },
       {
@@ -362,8 +767,30 @@
         "id": 4,
         "type": "reorder",
         "question": "orderValleyQuestThree.questFour",
-        "words": ["hat", "verkauft", "Auto", "neues", "sein", "er", "warum", "mich", "frage", "Ich"],
-        "correctOrder": ["Ich", "frage", "mich", "warum", "er", "sein", "neues", "Auto", "verkauft", "hat"],
+        "words": [
+          "hat",
+          "verkauft",
+          "Auto",
+          "neues",
+          "sein",
+          "er",
+          "warum",
+          "mich",
+          "frage",
+          "Ich"
+        ],
+        "correctOrder": [
+          "Ich",
+          "frage",
+          "mich",
+          "warum",
+          "er",
+          "sein",
+          "neues",
+          "Auto",
+          "verkauft",
+          "hat"
+        ],
         "tip": "orderValleyQuestThree.questFourTip"
       },
       {
@@ -382,8 +809,26 @@
         "id": 6,
         "type": "reorder",
         "question": "orderValleyQuestThree.questSix",
-        "words": ["hat", "geschlafen", "lange", "er", "obwohl", "müde", "ist", "Er"],
-        "correctOrder": ["Er", "ist", "müde", "obwohl", "er", "lange", "geschlafen", "hat"],
+        "words": [
+          "hat",
+          "geschlafen",
+          "lange",
+          "er",
+          "obwohl",
+          "müde",
+          "ist",
+          "Er"
+        ],
+        "correctOrder": [
+          "Er",
+          "ist",
+          "müde",
+          "obwohl",
+          "er",
+          "lange",
+          "geschlafen",
+          "hat"
+        ],
         "tip": "orderValleyQuestThree.questSixTip"
       },
       {
@@ -410,8 +855,32 @@
         "id": 9,
         "type": "reorder",
         "question": "orderValleyQuestThree.questNine",
-        "words": ["bin", "fertig", "Essen", "dem", "mit", "ich", "sobald", "an", "dich", "rufe", "Ich"],
-        "correctOrder": ["Ich", "rufe", "dich", "an", "sobald", "ich", "mit", "dem", "Essen", "fertig", "bin"],
+        "words": [
+          "bin",
+          "fertig",
+          "Essen",
+          "dem",
+          "mit",
+          "ich",
+          "sobald",
+          "an",
+          "dich",
+          "rufe",
+          "Ich"
+        ],
+        "correctOrder": [
+          "Ich",
+          "rufe",
+          "dich",
+          "an",
+          "sobald",
+          "ich",
+          "mit",
+          "dem",
+          "Essen",
+          "fertig",
+          "bin"
+        ],
         "tip": "orderValleyQuestThree.questNineTip"
       },
       {
@@ -424,31 +893,68 @@
       },
       {
         "id": 11,
-        "type": "select",
-        "question": "orderValleyQuestThree.questEleven",
-        "options": [
-          "Weißt du, wann der Film beginnt?",
-          "Weißt du, wann beginnt der Film?",
-          "Weißt du, der Film wann beginnt?"
+        "type": "reorder",
+        "question": "orderValleyQuestTwo.questOne",
+        "words": [
+          "bist",
+          "hier",
+          "du",
+          "dass",
+          "weiß",
+          "Ich"
         ],
-        "answer": "Weißt du, wann der Film beginnt?",
-        "tip": "orderValleyQuestThree.questElevenTip"
+        "correctOrder": [
+          "Ich",
+          "weiß",
+          "dass",
+          "du",
+          "hier",
+          "bist"
+        ],
+        "tip": "orderValleyQuestTwo.questOneTip",
+        "reviewOf": "order-two",
+        "reviewLand": "order-valley"
       },
       {
         "id": 12,
         "type": "reorder",
-        "question": "orderValleyQuestThree.questTwelve",
-        "words": ["ist", "gekommen", "hast", "Schule", "zur", "nicht", "heute", "sie", "warum", "du", "Weißt"],
-        "correctOrder": ["Weißt", "du", "warum", "sie", "heute", "nicht", "zur", "Schule", "gekommen", "ist"],
-        "tip": "orderValleyQuestThree.questTwelveTip"
+        "question": "actionValleyQuestTen.questFive",
+        "words": [
+          "daran",
+          "zweifle",
+          "Ich"
+        ],
+        "correctOrder": [
+          "Ich",
+          "zweifle",
+          "daran"
+        ],
+        "tip": "actionValleyQuestTen.questFiveTip",
+        "reviewOf": "action-ten",
+        "reviewLand": "action-valley"
       },
       {
         "id": 13,
-        "type": "speechToText",
-        "question": "orderValleyQuestThree.questThirteen",
-        "text": "Ich hoffe, dass wir uns morgen sehen",
-        "answer": "Ich hoffe, dass wir uns morgen sehen",
-        "tip": "orderValleyQuestThree.questThirteenTip"
+        "type": "reorder",
+        "question": "actionValleyQuestSix.questEight",
+        "words": [
+          "Schlüssel",
+          "meinen",
+          "du",
+          "Kannst",
+          "finden",
+          "meine"
+        ],
+        "correctOrder": [
+          "Kannst",
+          "du",
+          "meinen",
+          "Schlüssel",
+          "finden"
+        ],
+        "tip": "actionValleyQuestSix.questEightTip",
+        "reviewOf": "action-six",
+        "reviewLand": "action-valley"
       },
       {
         "id": 14,
@@ -466,15 +972,151 @@
         "id": 15,
         "type": "reorder",
         "question": "orderValleyQuestThree.questFifteen",
-        "words": ["lernst", "skillupgerman", "auf", "Deutsch", "du", "dass", "froh", "sind", "Wir"],
-        "correctOrder": ["Wir", "sind", "froh", "dass", "du", "Deutsch", "auf", "skillupgerman", "lernst"],
+        "words": [
+          "lernst",
+          "skillupgerman",
+          "auf",
+          "Deutsch",
+          "du",
+          "dass",
+          "froh",
+          "sind",
+          "Wir"
+        ],
+        "correctOrder": [
+          "Wir",
+          "sind",
+          "froh",
+          "dass",
+          "du",
+          "Deutsch",
+          "auf",
+          "skillupgerman",
+          "lernst"
+        ],
         "tip": "orderValleyQuestThree.questFifteenTip"
+      }
+    ],
+    "vocabulary": [
+      {
+        "word": "schade",
+        "translation-ru": "жаль",
+        "translation-en": "a pity",
+        "translation-uk": "шкода",
+        "translation-pl": "szkoda",
+        "translation-es": "qué pena",
+        "translation-fr": "dommage",
+        "translation-tr": "yazık",
+        "translation-ro": "păcat",
+        "translation-uz": "afsus",
+        "translation-hi": "अफ़सोस",
+        "translation-ar": "للأسف"
+      },
+      {
+        "word": "sobald",
+        "translation-ru": "как только",
+        "translation-en": "as soon as",
+        "translation-uk": "щойно, як тільки",
+        "translation-pl": "jak tylko",
+        "translation-es": "en cuanto",
+        "translation-fr": "dès que",
+        "translation-tr": "…ir …mez",
+        "translation-ro": "imediat ce",
+        "translation-uz": "…ishi bilan",
+        "translation-hi": "जैसे ही",
+        "translation-ar": "بمجرد أن"
+      },
+      {
+        "word": "froh",
+        "translation-ru": "радостный",
+        "translation-en": "glad",
+        "translation-uk": "радісний",
+        "translation-pl": "radosny",
+        "translation-es": "contento",
+        "translation-fr": "content",
+        "translation-tr": "mutlu",
+        "translation-ro": "bucuros",
+        "translation-uz": "xursand",
+        "translation-hi": "ख़ुश",
+        "translation-ar": "مسرور"
+      },
+      {
+        "word": "obwohl",
+        "translation-ru": "хотя",
+        "translation-en": "although",
+        "translation-uk": "хоча",
+        "translation-pl": "chociaż",
+        "translation-es": "aunque",
+        "translation-fr": "bien que",
+        "translation-tr": "-e rağmen",
+        "translation-ro": "deși",
+        "translation-uz": "garchi",
+        "translation-hi": "हालाँकि",
+        "translation-ar": "رغم أن"
+      },
+      {
+        "word": "wissen",
+        "translation-ru": "знать",
+        "translation-en": "to know",
+        "translation-uk": "знати",
+        "translation-pl": "wiedzieć",
+        "translation-es": "saber",
+        "translation-fr": "savoir",
+        "translation-tr": "bilmek",
+        "translation-ro": "a ști",
+        "translation-uz": "bilmoq",
+        "translation-hi": "पता होना",
+        "translation-ar": "يعلم"
+      },
+      {
+        "word": "sicher",
+        "translation-ru": "уверенный, точно",
+        "translation-en": "sure",
+        "translation-uk": "упевнений, точно",
+        "translation-pl": "pewny",
+        "translation-es": "seguro",
+        "translation-fr": "sûr",
+        "translation-tr": "emin",
+        "translation-ro": "sigur",
+        "translation-uz": "ishonchli",
+        "translation-hi": "निश्चित",
+        "translation-ar": "متأكد"
+      },
+      {
+        "word": "bestehen",
+        "translation-ru": "сдать (экзамен)",
+        "translation-en": "to pass (an exam)",
+        "translation-uk": "скласти (іспит)",
+        "translation-pl": "zdać",
+        "translation-es": "aprobar",
+        "translation-fr": "réussir",
+        "translation-tr": "geçmek (sınav)",
+        "translation-ro": "a lua (examenul)",
+        "translation-uz": "topshirmoq (imtihon)",
+        "translation-hi": "पास होना",
+        "translation-ar": "ينجح في"
+      },
+      {
+        "word": "studieren",
+        "translation-ru": "учиться в вузе",
+        "translation-en": "to study",
+        "translation-uk": "навчатися у виші",
+        "translation-pl": "studiować",
+        "translation-es": "estudiar",
+        "translation-fr": "étudier",
+        "translation-tr": "üniversitede okumak",
+        "translation-ro": "a studia",
+        "translation-uz": "oliy o‘quv yurtida o‘qimoq",
+        "translation-hi": "पढ़ाई करना",
+        "translation-ar": "يدرس في الجامعة"
       }
     ]
   },
   {
     "questId": "order-four",
-    "aliases": ["es-gibt-intro"],
+    "aliases": [
+      "es-gibt-intro"
+    ],
     "title": "orderValleyQuestFour.title",
     "progress": "0/15",
     "description": "orderValleyQuestFour.description",
@@ -492,8 +1134,20 @@
         "id": 1,
         "type": "reorder",
         "question": "orderValleyQuestFour.questOne",
-        "words": ["einen", "Park", "hier", "gibt", "Es"],
-        "correctOrder": ["Es", "gibt", "hier", "einen", "Park"],
+        "words": [
+          "einen",
+          "Park",
+          "hier",
+          "gibt",
+          "Es"
+        ],
+        "correctOrder": [
+          "Es",
+          "gibt",
+          "hier",
+          "einen",
+          "Park"
+        ],
         "tip": "orderValleyQuestFour.questOneTip"
       },
       {
@@ -520,8 +1174,18 @@
         "id": 4,
         "type": "reorder",
         "question": "orderValleyQuestFour.questFour",
-        "words": ["Probleme", "keine", "gibt", "Es"],
-        "correctOrder": ["Es", "gibt", "keine", "Probleme"],
+        "words": [
+          "Probleme",
+          "keine",
+          "gibt",
+          "Es"
+        ],
+        "correctOrder": [
+          "Es",
+          "gibt",
+          "keine",
+          "Probleme"
+        ],
         "tip": "orderValleyQuestFour.questFourTip"
       },
       {
@@ -540,8 +1204,20 @@
         "id": 6,
         "type": "reorder",
         "question": "orderValleyQuestFour.questSix",
-        "words": ["Restaurant", "ein", "hier", "es", "Gibt"],
-        "correctOrder": ["Gibt", "es", "hier", "ein", "Restaurant"],
+        "words": [
+          "Restaurant",
+          "ein",
+          "hier",
+          "es",
+          "Gibt"
+        ],
+        "correctOrder": [
+          "Gibt",
+          "es",
+          "hier",
+          "ein",
+          "Restaurant"
+        ],
         "tip": "orderValleyQuestFour.questSixTip"
       },
       {
@@ -568,8 +1244,21 @@
         "id": 9,
         "type": "reorder",
         "question": "orderValleyQuestFour.questNine",
-        "words": ["Kaffee", "Frühstück", "zum", "es", "gibt", "Es"],
-        "correctOrder": ["Es", "gibt", "zum", "Frühstück", "Kaffee"],
+        "words": [
+          "Kaffee",
+          "Frühstück",
+          "zum",
+          "es",
+          "gibt",
+          "Es"
+        ],
+        "correctOrder": [
+          "Es",
+          "gibt",
+          "zum",
+          "Frühstück",
+          "Kaffee"
+        ],
         "tip": "orderValleyQuestFour.questNineTip"
       },
       {
@@ -582,31 +1271,82 @@
       },
       {
         "id": 11,
-        "type": "select",
-        "question": "orderValleyQuestFour.questEleven",
-        "options": [
-          "Es gibt viele Bäume im Wald",
-          "Es geben viele Bäume im Wald",
-          "Es gibt vielen Bäume im Wald"
+        "type": "reorder",
+        "question": "orderValleyQuestThree.questOne",
+        "words": [
+          "muss",
+          "arbeiten",
+          "ich",
+          "weil",
+          "kommen",
+          "nicht",
+          "kann",
+          "Ich"
         ],
-        "answer": "Es gibt viele Bäume im Wald",
-        "tip": "orderValleyQuestFour.questElevenTip"
+        "correctOrder": [
+          "Ich",
+          "kann",
+          "nicht",
+          "kommen",
+          "weil",
+          "ich",
+          "arbeiten",
+          "muss"
+        ],
+        "tip": "orderValleyQuestThree.questOneTip",
+        "reviewOf": "order-three",
+        "reviewLand": "order-valley"
       },
       {
         "id": 12,
         "type": "reorder",
-        "question": "orderValleyQuestFour.questTwelve",
-        "words": ["Zeit", "noch", "es", "gibt", "Es"],
-        "correctOrder": ["Es", "gibt", "noch", "Zeit"],
-        "tip": "orderValleyQuestFour.questTwelveTip"
+        "question": "orderValleyQuestOne.questFour",
+        "words": [
+          "endet",
+          "Film",
+          "der",
+          "wenn",
+          "Hause",
+          "nach",
+          "gehen",
+          "Wir"
+        ],
+        "correctOrder": [
+          "Wir",
+          "gehen",
+          "nach",
+          "Hause",
+          "wenn",
+          "der",
+          "Film",
+          "endet"
+        ],
+        "tip": "orderValleyQuestOne.questFourTip",
+        "reviewOf": "order-one",
+        "reviewLand": "order-valley"
       },
       {
         "id": 13,
-        "type": "speechToText",
-        "question": "orderValleyQuestFour.questThirteen",
-        "text": "Es gibt nichts",
-        "answer": "Es gibt nichts",
-        "tip": "orderValleyQuestFour.questThirteenTip"
+        "type": "reorder",
+        "question": "actionValleyQuestSeven.questEight",
+        "words": [
+          "dir",
+          "zu",
+          "höre",
+          "Ich",
+          "aufmerksam",
+          "dich"
+        ],
+        "correctOrder": [
+          "Ich",
+          "höre",
+          "dir",
+          "aufmerksam",
+          "zu"
+        ],
+        "tip": "actionValleyQuestSeven.questEightTip",
+        "reviewOf": "action-seven",
+        "reviewLand": "action-valley"
       },
       {
         "id": 14,
@@ -624,15 +1364,106 @@
         "id": 15,
         "type": "reorder",
         "question": "orderValleyQuestFour.questFifteen",
-        "words": ["Schüler", "viele", "Schule", "unserer", "in", "es", "gibt", "Es"],
-        "correctOrder": ["Es", "gibt", "in", "unserer", "Schule", "viele", "Schüler"],
+        "words": [
+          "Schüler",
+          "viele",
+          "Schule",
+          "unserer",
+          "in",
+          "es",
+          "gibt",
+          "Es"
+        ],
+        "correctOrder": [
+          "Es",
+          "gibt",
+          "in",
+          "unserer",
+          "Schule",
+          "viele",
+          "Schüler"
+        ],
         "tip": "orderValleyQuestFour.questFifteenTip"
+      }
+    ],
+    "vocabulary": [
+      {
+        "word": "der Fehler",
+        "translation-ru": "ошибка",
+        "translation-en": "mistake",
+        "translation-uk": "помилка",
+        "translation-pl": "błąd",
+        "translation-es": "el error",
+        "translation-fr": "l’erreur",
+        "translation-tr": "hata",
+        "translation-ro": "greșeala",
+        "translation-uz": "xato",
+        "translation-hi": "ग़लती",
+        "translation-ar": "الخطأ"
+      },
+      {
+        "word": "der Schüler",
+        "translation-ru": "ученик",
+        "translation-en": "pupil",
+        "translation-uk": "учень",
+        "translation-pl": "uczeń",
+        "translation-es": "el alumno",
+        "translation-fr": "l’élève",
+        "translation-tr": "öğrenci",
+        "translation-ro": "elevul",
+        "translation-uz": "o‘quvchi",
+        "translation-hi": "छात्र",
+        "translation-ar": "التلميذ"
+      },
+      {
+        "word": "der Film",
+        "translation-ru": "фильм",
+        "translation-en": "film",
+        "translation-uk": "фільм",
+        "translation-pl": "film",
+        "translation-es": "la película",
+        "translation-fr": "le film",
+        "translation-tr": "film",
+        "translation-ro": "filmul",
+        "translation-uz": "film",
+        "translation-hi": "फ़िल्म",
+        "translation-ar": "الفيلم"
+      },
+      {
+        "word": "viel",
+        "translation-ru": "много",
+        "translation-en": "much, a lot",
+        "translation-uk": "багато",
+        "translation-pl": "dużo",
+        "translation-es": "mucho",
+        "translation-fr": "beaucoup",
+        "translation-tr": "çok",
+        "translation-ro": "mult",
+        "translation-uz": "ko‘p",
+        "translation-hi": "बहुत",
+        "translation-ar": "كثير"
+      },
+      {
+        "word": "das Internet",
+        "translation-ru": "интернет",
+        "translation-en": "internet",
+        "translation-uk": "інтернет",
+        "translation-pl": "internet",
+        "translation-es": "internet",
+        "translation-fr": "internet",
+        "translation-tr": "internet",
+        "translation-ro": "internetul",
+        "translation-uz": "internet",
+        "translation-hi": "इंटरनेट",
+        "translation-ar": "الإنترنت"
       }
     ]
   },
   {
     "questId": "order-five",
-    "aliases": ["es-gibt-pro"],
+    "aliases": [
+      "es-gibt-pro"
+    ],
     "title": "orderValleyQuestFive.title",
     "progress": "0/15",
     "description": "orderValleyQuestFive.description",
@@ -650,8 +1481,20 @@
         "id": 1,
         "type": "reorder",
         "question": "orderValleyQuestFive.questOne",
-        "words": ["Gibt", "es", "hier", "einen", "Ausgang"],
-        "correctOrder": ["Gibt", "es", "hier", "einen", "Ausgang"],
+        "words": [
+          "Gibt",
+          "es",
+          "hier",
+          "einen",
+          "Ausgang"
+        ],
+        "correctOrder": [
+          "Gibt",
+          "es",
+          "hier",
+          "einen",
+          "Ausgang"
+        ],
         "tip": "orderValleyQuestFive.questOneTip"
       },
       {
@@ -678,8 +1521,20 @@
         "id": 4,
         "type": "reorder",
         "question": "orderValleyQuestFive.questFour",
-        "words": ["Es", "gibt", "hier", "einen", "Fehler"],
-        "correctOrder": ["Es", "gibt", "hier", "einen", "Fehler"],
+        "words": [
+          "Es",
+          "gibt",
+          "hier",
+          "einen",
+          "Fehler"
+        ],
+        "correctOrder": [
+          "Es",
+          "gibt",
+          "hier",
+          "einen",
+          "Fehler"
+        ],
         "tip": "orderValleyQuestFive.questFourTip"
       },
       {
@@ -698,8 +1553,18 @@
         "id": 6,
         "type": "reorder",
         "question": "orderValleyQuestFive.questSix",
-        "words": ["Es", "gibt", "einen", "Grund"],
-        "correctOrder": ["Es", "gibt", "einen", "Grund"],
+        "words": [
+          "Es",
+          "gibt",
+          "einen",
+          "Grund"
+        ],
+        "correctOrder": [
+          "Es",
+          "gibt",
+          "einen",
+          "Grund"
+        ],
         "tip": "orderValleyQuestFive.questSixTip"
       },
       {
@@ -726,8 +1591,20 @@
         "id": 9,
         "type": "reorder",
         "question": "orderValleyQuestFive.questNine",
-        "words": ["heute", "nichts", "Es", "mehr", "gibt"],
-        "correctOrder": ["Es", "gibt", "heute", "nichts", "mehr"],
+        "words": [
+          "heute",
+          "nichts",
+          "Es",
+          "mehr",
+          "gibt"
+        ],
+        "correctOrder": [
+          "Es",
+          "gibt",
+          "heute",
+          "nichts",
+          "mehr"
+        ],
         "tip": "orderValleyQuestFive.questNineTip"
       },
       {
@@ -740,31 +1617,69 @@
       },
       {
         "id": 11,
-        "type": "select",
-        "question": "orderValleyQuestFive.questEleven",
-        "options": [
-          "Gibt es eine Apotheke in der Nähe?",
-          "Gibt es ein Apotheke in der Nähe?",
-          "Es gibt eine Apotheke in der Nähe?"
+        "type": "reorder",
+        "question": "orderValleyQuestFour.questOne",
+        "words": [
+          "einen",
+          "Park",
+          "hier",
+          "gibt",
+          "Es"
         ],
-        "answer": "Gibt es eine Apotheke in der Nähe?",
-        "tip": "orderValleyQuestFive.questElevenTip"
+        "correctOrder": [
+          "Es",
+          "gibt",
+          "hier",
+          "einen",
+          "Park"
+        ],
+        "tip": "orderValleyQuestFour.questOneTip",
+        "reviewOf": "order-four",
+        "reviewLand": "order-valley"
       },
       {
         "id": 12,
         "type": "reorder",
-        "question": "orderValleyQuestFive.questTwelve",
-        "words": ["Es", "gibt", "dafür", "keine", "Hoffnung"],
-        "correctOrder": ["Es", "gibt", "dafür", "keine", "Hoffnung"],
-        "tip": "orderValleyQuestFive.questTwelveTip"
+        "question": "orderValleyQuestTwo.questFour",
+        "words": [
+          "kommt",
+          "er",
+          "ob",
+          "frage",
+          "Ich"
+        ],
+        "correctOrder": [
+          "Ich",
+          "frage",
+          "ob",
+          "er",
+          "kommt"
+        ],
+        "tip": "orderValleyQuestTwo.questFourTip",
+        "reviewOf": "order-two",
+        "reviewLand": "order-valley"
       },
       {
         "id": 13,
-        "type": "speechToText",
-        "question": "orderValleyQuestFive.questThirteen",
-        "text": "Es gibt viel zu tun",
-        "answer": "Es gibt viel zu tun",
-        "tip": "orderValleyQuestFive.questThirteenTip"
+        "type": "reorder",
+        "question": "actionValleyQuestEight.questEight",
+        "words": [
+          "mich",
+          "Musik",
+          "für",
+          "interessiere",
+          "Ich"
+        ],
+        "correctOrder": [
+          "Ich",
+          "interessiere",
+          "mich",
+          "für",
+          "Musik"
+        ],
+        "tip": "actionValleyQuestEight.questEightTip",
+        "reviewOf": "action-eight",
+        "reviewLand": "action-valley"
       },
       {
         "id": 14,
@@ -782,15 +1697,115 @@
         "id": 15,
         "type": "reorder",
         "question": "orderValleyQuestFive.questFifteen",
-        "words": ["Es", "gibt", "noch", "eine", "Chance"],
-        "correctOrder": ["Es", "gibt", "noch", "eine", "Chance"],
+        "words": [
+          "Es",
+          "gibt",
+          "noch",
+          "eine",
+          "Chance"
+        ],
+        "correctOrder": [
+          "Es",
+          "gibt",
+          "noch",
+          "eine",
+          "Chance"
+        ],
         "tip": "orderValleyQuestFive.questFifteenTip"
+      }
+    ],
+    "vocabulary": [
+      {
+        "word": "die Toilette",
+        "translation-ru": "туалет",
+        "translation-en": "toilet",
+        "translation-uk": "туалет",
+        "translation-pl": "toaleta",
+        "translation-es": "baño",
+        "translation-fr": "toilettes",
+        "translation-tr": "tuvalet",
+        "translation-ro": "toaletă",
+        "translation-uz": "hojatxona",
+        "translation-hi": "शौचालय",
+        "translation-ar": "مرحاض"
+      },
+      {
+        "word": "der Grund",
+        "translation-ru": "причина",
+        "translation-en": "reason",
+        "translation-uk": "причина",
+        "translation-pl": "powód",
+        "translation-es": "la razón",
+        "translation-fr": "la raison",
+        "translation-tr": "sebep",
+        "translation-ro": "motivul",
+        "translation-uz": "sabab",
+        "translation-hi": "कारण",
+        "translation-ar": "السبب"
+      },
+      {
+        "word": "der Unterricht",
+        "translation-ru": "урок, занятия",
+        "translation-en": "lesson, class",
+        "translation-uk": "урок, заняття",
+        "translation-pl": "lekcja, zajęcia",
+        "translation-es": "la clase",
+        "translation-fr": "le cours",
+        "translation-tr": "ders",
+        "translation-ro": "ora, lecția",
+        "translation-uz": "dars",
+        "translation-hi": "क्लास",
+        "translation-ar": "الدرس"
+      },
+      {
+        "word": "die Chance",
+        "translation-ru": "шанс",
+        "translation-en": "chance",
+        "translation-uk": "шанс",
+        "translation-pl": "szansa",
+        "translation-es": "la oportunidad",
+        "translation-fr": "la chance",
+        "translation-tr": "şans",
+        "translation-ro": "șansa",
+        "translation-uz": "imkoniyat",
+        "translation-hi": "मौक़ा",
+        "translation-ar": "الفرصة"
+      },
+      {
+        "word": "der Fehler",
+        "translation-ru": "ошибка",
+        "translation-en": "mistake",
+        "translation-uk": "помилка",
+        "translation-pl": "błąd",
+        "translation-es": "el error",
+        "translation-fr": "l’erreur",
+        "translation-tr": "hata",
+        "translation-ro": "greșeala",
+        "translation-uz": "xato",
+        "translation-hi": "ग़लती",
+        "translation-ar": "الخطأ"
+      },
+      {
+        "word": "die Lösung",
+        "translation-ru": "решение",
+        "translation-en": "solution",
+        "translation-uk": "рішення",
+        "translation-pl": "rozwiązanie",
+        "translation-es": "la solución",
+        "translation-fr": "la solution",
+        "translation-tr": "çözüm",
+        "translation-ro": "soluția",
+        "translation-uz": "yechim",
+        "translation-hi": "समाधान",
+        "translation-ar": "الحل"
       }
     ]
   },
   {
     "questId": "order-six",
-    "aliases": ["reflexiv-base"],
+    "aliases": [
+      "reflexiv-base"
+    ],
     "title": "orderValleyQuestSix.title",
     "progress": "0/15",
     "description": "orderValleyQuestSix.description",
@@ -808,8 +1823,17 @@
         "id": 1,
         "type": "reorder",
         "question": "orderValleyQuestSix.questOne",
-        "words": ["Ich", "mir", "wasche", "mich"],
-        "correctOrder": ["Ich", "wasche", "mich"],
+        "words": [
+          "Ich",
+          "mir",
+          "wasche",
+          "mich"
+        ],
+        "correctOrder": [
+          "Ich",
+          "wasche",
+          "mich"
+        ],
         "tip": "orderValleyQuestSix.questOneTip"
       },
       {
@@ -836,8 +1860,20 @@
         "id": 4,
         "type": "reorder",
         "question": "orderValleyQuestSix.questFour",
-        "words": ["Wir", "putzen", "uns", "die", "Zähne"],
-        "correctOrder": ["Wir", "putzen", "uns", "die", "Zähne"],
+        "words": [
+          "Wir",
+          "putzen",
+          "uns",
+          "die",
+          "Zähne"
+        ],
+        "correctOrder": [
+          "Wir",
+          "putzen",
+          "uns",
+          "die",
+          "Zähne"
+        ],
         "tip": "orderValleyQuestSix.questFourTip"
       },
       {
@@ -856,8 +1892,21 @@
         "id": 6,
         "type": "reorder",
         "question": "orderValleyQuestSix.questSix",
-        "words": ["Ich", "wasche", "mir", "die", "Hände", "mich"],
-        "correctOrder": ["Ich", "wasche", "mir", "die", "Hände"],
+        "words": [
+          "Ich",
+          "wasche",
+          "mir",
+          "die",
+          "Hände",
+          "mich"
+        ],
+        "correctOrder": [
+          "Ich",
+          "wasche",
+          "mir",
+          "die",
+          "Hände"
+        ],
         "tip": "orderValleyQuestSix.questSixTip"
       },
       {
@@ -884,8 +1933,19 @@
         "id": 9,
         "type": "reorder",
         "question": "orderValleyQuestSix.questNine",
-        "words": ["Du", "ziehst", "dich", "an", "dir"],
-        "correctOrder": ["Du", "ziehst", "dich", "an"],
+        "words": [
+          "Du",
+          "ziehst",
+          "dich",
+          "an",
+          "dir"
+        ],
+        "correctOrder": [
+          "Du",
+          "ziehst",
+          "dich",
+          "an"
+        ],
         "tip": "orderValleyQuestSix.questNineTip"
       },
       {
@@ -902,38 +1962,97 @@
       },
       {
         "id": 11,
-        "type": "speechToText",
-        "question": "orderValleyQuestSix.questEleven",
-        "text": "Wir treffen uns heute",
-        "answer": "Wir treffen uns heute",
-        "tip": "orderValleyQuestSix.questElevenTip"
+        "type": "reorder",
+        "question": "orderValleyQuestFive.questOne",
+        "words": [
+          "Gibt",
+          "es",
+          "hier",
+          "einen",
+          "Ausgang"
+        ],
+        "correctOrder": [
+          "Gibt",
+          "es",
+          "hier",
+          "einen",
+          "Ausgang"
+        ],
+        "tip": "orderValleyQuestFive.questOneTip",
+        "reviewOf": "order-five",
+        "reviewLand": "order-valley"
       },
       {
         "id": 12,
         "type": "reorder",
-        "question": "orderValleyQuestSix.questTwelve",
-        "words": ["Ich", "merke", "mir", "das"],
-        "correctOrder": ["Ich", "merke", "mir", "das"],
-        "tip": "orderValleyQuestSix.questTwelveTip"
+        "question": "orderValleyQuestThree.questFour",
+        "words": [
+          "hat",
+          "verkauft",
+          "Auto",
+          "neues",
+          "sein",
+          "er",
+          "warum",
+          "mich",
+          "frage",
+          "Ich"
+        ],
+        "correctOrder": [
+          "Ich",
+          "frage",
+          "mich",
+          "warum",
+          "er",
+          "sein",
+          "neues",
+          "Auto",
+          "verkauft",
+          "hat"
+        ],
+        "tip": "orderValleyQuestThree.questFourTip",
+        "reviewOf": "order-three",
+        "reviewLand": "order-valley"
       },
       {
         "id": 13,
-        "type": "select",
-        "question": "orderValleyQuestSix.questThirteen",
-        "options": [
-          "Sie schminkt sich",
-          "Sie schminkt mich",
-          "Sie schminkt dich"
+        "type": "reorder",
+        "question": "actionValleyQuestNine.questNine",
+        "words": [
+          "darum",
+          "bittet",
+          "Er",
+          "daran"
         ],
-        "answer": "Sie schminkt sich",
-        "tip": "orderValleyQuestSix.questThirteenTip"
+        "correctOrder": [
+          "Er",
+          "bittet",
+          "darum"
+        ],
+        "tip": "actionValleyQuestNine.questNineTip",
+        "reviewOf": "action-nine",
+        "reviewLand": "action-valley"
       },
       {
         "id": 14,
         "type": "reorder",
         "question": "orderValleyQuestSix.questFourteen",
-        "words": ["Ihr", "schaut", "euch", "ein", "Video", "an"],
-        "correctOrder": ["Ihr", "schaut", "euch", "ein", "Video", "an"],
+        "words": [
+          "Ihr",
+          "schaut",
+          "euch",
+          "ein",
+          "Video",
+          "an"
+        ],
+        "correctOrder": [
+          "Ihr",
+          "schaut",
+          "euch",
+          "ein",
+          "Video",
+          "an"
+        ],
         "tip": "orderValleyQuestSix.questFourteenTip"
       },
       {
@@ -948,11 +2067,141 @@
         "answer": "Das Kind hat sich verletzt",
         "tip": "orderValleyQuestSix.questFifteenTip"
       }
+    ],
+    "vocabulary": [
+      {
+        "word": "waschen",
+        "translation-ru": "мыть / стирать",
+        "translation-en": "to wash",
+        "translation-uk": "мити / прати",
+        "translation-pl": "myć",
+        "translation-es": "lavar",
+        "translation-fr": "laver",
+        "translation-tr": "yıkamak",
+        "translation-ro": "a spăla",
+        "translation-uz": "yuvmoq",
+        "translation-hi": "धोना",
+        "translation-ar": "يغسل"
+      },
+      {
+        "word": "die Haare",
+        "translation-ru": "волосы",
+        "translation-en": "hair",
+        "translation-uk": "волосся",
+        "translation-pl": "włosy",
+        "translation-es": "el pelo",
+        "translation-fr": "les cheveux",
+        "translation-tr": "saç",
+        "translation-ro": "părul",
+        "translation-uz": "soch",
+        "translation-hi": "बाल",
+        "translation-ar": "الشعر"
+      },
+      {
+        "word": "beeilen (sich)",
+        "translation-ru": "торопиться",
+        "translation-en": "to hurry",
+        "translation-uk": "поспішати",
+        "translation-pl": "spieszyć się",
+        "translation-es": "apresurarse",
+        "translation-fr": "se dépêcher",
+        "translation-tr": "acele etmek",
+        "translation-ro": "a se grăbi",
+        "translation-uz": "shoshilmoq",
+        "translation-hi": "जल्दी करना",
+        "translation-ar": "يستعجل"
+      },
+      {
+        "word": "die Hand",
+        "translation-ru": "рука",
+        "translation-en": "hand",
+        "translation-uk": "рука",
+        "translation-pl": "ręka",
+        "translation-es": "mano",
+        "translation-fr": "main",
+        "translation-tr": "el",
+        "translation-ro": "mână",
+        "translation-uz": "qo‘l",
+        "translation-hi": "हाथ",
+        "translation-ar": "يد"
+      },
+      {
+        "word": "ziehen",
+        "translation-ru": "тянуть / тащить",
+        "translation-en": "to pull / draw",
+        "translation-uk": "тягнути",
+        "translation-pl": "ciągnąć",
+        "translation-es": "tirar / jalar",
+        "translation-fr": "tirer",
+        "translation-tr": "çekmek",
+        "translation-ro": "a trage",
+        "translation-uz": "tortmoq",
+        "translation-hi": "खींचना",
+        "translation-ar": "يسحب"
+      },
+      {
+        "word": "sich kämmen",
+        "translation-ru": "причёсываться",
+        "translation-en": "to comb one’s hair",
+        "translation-uk": "розчісуватися",
+        "translation-pl": "czesać się",
+        "translation-es": "peinarse",
+        "translation-fr": "se peigner",
+        "translation-tr": "taranmak",
+        "translation-ro": "a se pieptăna",
+        "translation-uz": "soch taramoq",
+        "translation-hi": "बाल सँवारना",
+        "translation-ar": "يمشط شعره"
+      },
+      {
+        "word": "sich rasieren",
+        "translation-ru": "бриться",
+        "translation-en": "to shave",
+        "translation-uk": "голитися",
+        "translation-pl": "golić się",
+        "translation-es": "afeitarse",
+        "translation-fr": "se raser",
+        "translation-tr": "tıraş olmak",
+        "translation-ro": "a se bărbieri",
+        "translation-uz": "soqol olmoq",
+        "translation-hi": "दाढ़ी बनाना",
+        "translation-ar": "يحلق"
+      },
+      {
+        "word": "das Video",
+        "translation-ru": "видео",
+        "translation-en": "video",
+        "translation-uk": "відео",
+        "translation-pl": "film wideo",
+        "translation-es": "el vídeo",
+        "translation-fr": "la vidéo",
+        "translation-tr": "video",
+        "translation-ro": "videoclipul",
+        "translation-uz": "video",
+        "translation-hi": "वीडियो",
+        "translation-ar": "الفيديو"
+      },
+      {
+        "word": "verletzen",
+        "translation-ru": "ранить",
+        "translation-en": "to hurt, to injure",
+        "translation-uk": "ранити",
+        "translation-pl": "ranić",
+        "translation-es": "herir",
+        "translation-fr": "blesser",
+        "translation-tr": "yaralamak",
+        "translation-ro": "a răni",
+        "translation-uz": "jarohatlamoq",
+        "translation-hi": "घायल करना",
+        "translation-ar": "يجرح"
+      }
     ]
   },
   {
     "questId": "order-seven",
-    "aliases": ["summary-hardcore"],
+    "aliases": [
+      "summary-hardcore"
+    ],
     "title": "orderValleyQuestSeven.title",
     "progress": "0/15",
     "description": "orderValleyQuestSeven.description",
@@ -970,8 +2219,28 @@
         "id": 1,
         "type": "reorder",
         "question": "orderValleyQuestSeven.questOne",
-        "words": ["hier", "weiß", "Fehler", "Ich", "dass", "es", "gibt", "einen", "ein", "mich"],
-        "correctOrder": ["Ich", "weiß", "dass", "es", "hier", "einen", "Fehler", "gibt"],
+        "words": [
+          "hier",
+          "weiß",
+          "Fehler",
+          "Ich",
+          "dass",
+          "es",
+          "gibt",
+          "einen",
+          "ein",
+          "mich"
+        ],
+        "correctOrder": [
+          "Ich",
+          "weiß",
+          "dass",
+          "es",
+          "hier",
+          "einen",
+          "Fehler",
+          "gibt"
+        ],
         "tip": "orderValleyQuestSeven.questOneTip"
       },
       {
@@ -998,8 +2267,28 @@
         "id": 4,
         "type": "reorder",
         "question": "orderValleyQuestSeven.questFour",
-        "words": ["dir", "du", "kämmst", "sehe", "dass", "die", "Ich", "Haare", "es", "dich"],
-        "correctOrder": ["Ich", "sehe", "dass", "du", "dir", "die", "Haare", "kämmst"],
+        "words": [
+          "dir",
+          "du",
+          "kämmst",
+          "sehe",
+          "dass",
+          "die",
+          "Ich",
+          "Haare",
+          "es",
+          "dich"
+        ],
+        "correctOrder": [
+          "Ich",
+          "sehe",
+          "dass",
+          "du",
+          "dir",
+          "die",
+          "Haare",
+          "kämmst"
+        ],
         "tip": "orderValleyQuestSeven.questFourTip"
       },
       {
@@ -1018,8 +2307,30 @@
         "id": 6,
         "type": "reorder",
         "question": "orderValleyQuestSeven.questSix",
-        "words": ["dass", "Fehler", "Ich", "mir", "gibt", "merke", "es", "einen", "hier", "ein", "mich"],
-        "correctOrder": ["Ich", "merke", "mir", "dass", "es", "hier", "einen", "Fehler", "gibt"],
+        "words": [
+          "dass",
+          "Fehler",
+          "Ich",
+          "mir",
+          "gibt",
+          "merke",
+          "es",
+          "einen",
+          "hier",
+          "ein",
+          "mich"
+        ],
+        "correctOrder": [
+          "Ich",
+          "merke",
+          "mir",
+          "dass",
+          "es",
+          "hier",
+          "einen",
+          "Fehler",
+          "gibt"
+        ],
         "tip": "orderValleyQuestSeven.questSixTip"
       },
       {
@@ -1054,48 +2365,123 @@
         "id": 10,
         "type": "reorder",
         "question": "orderValleyQuestSeven.questTen",
-        "words": ["bestelle", "eine", "wenn", "Rabatt", "mir", "Pizza", "Ich", "es", "gibt", "einen", "einem", "mich"],
-        "correctOrder": ["Ich", "bestelle", "mir", "eine", "Pizza", "wenn", "es", "einen", "Rabatt", "gibt"],
+        "words": [
+          "bestelle",
+          "eine",
+          "wenn",
+          "Rabatt",
+          "mir",
+          "Pizza",
+          "Ich",
+          "es",
+          "gibt",
+          "einen",
+          "einem",
+          "mich"
+        ],
+        "correctOrder": [
+          "Ich",
+          "bestelle",
+          "mir",
+          "eine",
+          "Pizza",
+          "wenn",
+          "es",
+          "einen",
+          "Rabatt",
+          "gibt"
+        ],
         "tip": "orderValleyQuestSeven.questTenTip"
       },
       {
         "id": 11,
-        "type": "select",
-        "question": "orderValleyQuestSeven.questEleven",
-        "options": [
-          "Du siehst, dass es hier ein Problem gibt",
-          "Du siehst, dass es gibt hier ein Problem",
-          "Du siehst, dass es hier einen Problem gibt"
+        "type": "reorder",
+        "question": "orderValleyQuestSix.questOne",
+        "words": [
+          "Ich",
+          "mir",
+          "wasche",
+          "mich"
         ],
-        "answer": "Du siehst, dass es hier ein Problem gibt",
-        "tip": "orderValleyQuestSeven.questElevenTip"
+        "correctOrder": [
+          "Ich",
+          "wasche",
+          "mich"
+        ],
+        "tip": "orderValleyQuestSix.questOneTip",
+        "reviewOf": "order-six",
+        "reviewLand": "order-valley"
       },
       {
         "id": 12,
         "type": "reorder",
-        "question": "orderValleyQuestSeven.questTwelve",
-        "words": ["Eingang", "dass", "Es", "ist", "wichtig", "hier", "einen", "es", "gibt", "sich", "ein"],
-        "correctOrder": ["Es", "ist", "wichtig", "dass", "es", "hier", "einen", "Eingang", "gibt"],
-        "tip": "orderValleyQuestSeven.questTwelveTip"
+        "question": "orderValleyQuestFour.questFour",
+        "words": [
+          "Probleme",
+          "keine",
+          "gibt",
+          "Es"
+        ],
+        "correctOrder": [
+          "Es",
+          "gibt",
+          "keine",
+          "Probleme"
+        ],
+        "tip": "orderValleyQuestFour.questFourTip",
+        "reviewOf": "order-four",
+        "reviewLand": "order-valley"
       },
       {
         "id": 13,
-        "type": "select",
-        "question": "orderValleyQuestSeven.questThirteen",
-        "options": [
-          "Ich freue mich, weil es einen Rabatt gibt",
-          "Ich freue mich, weil es gibt einen Rabatt",
-          "Ich freue mich, weil es ein Rabatt gibt"
+        "type": "reorder",
+        "question": "actionValleyQuestTen.questNine",
+        "words": [
+          "bereit",
+          "bin",
+          "dazu",
+          "Ich"
         ],
-        "answer": "Ich freue mich, weil es einen Rabatt gibt",
-        "tip": "orderValleyQuestSeven.questThirteenTip"
+        "correctOrder": [
+          "Ich",
+          "bin",
+          "dazu",
+          "bereit"
+        ],
+        "tip": "actionValleyQuestTen.questNineTip",
+        "reviewOf": "action-ten",
+        "reviewLand": "action-valley"
       },
       {
         "id": 14,
         "type": "reorder",
         "question": "orderValleyQuestSeven.questFourteen",
-        "words": ["Wohnung", "miete", "mir", "Balkon", "wenn", "es", "Ich", "einen", "gibt", "eine", "mich", "ein"],
-        "correctOrder": ["Ich", "miete", "mir", "eine", "Wohnung", "wenn", "es", "einen", "Balkon", "gibt"],
+        "words": [
+          "Wohnung",
+          "miete",
+          "mir",
+          "Balkon",
+          "wenn",
+          "es",
+          "Ich",
+          "einen",
+          "gibt",
+          "eine",
+          "mich",
+          "ein"
+        ],
+        "correctOrder": [
+          "Ich",
+          "miete",
+          "mir",
+          "eine",
+          "Wohnung",
+          "wenn",
+          "es",
+          "einen",
+          "Balkon",
+          "gibt"
+        ],
         "tip": "orderValleyQuestSeven.questFourteenTip"
       },
       {
@@ -1106,11 +2492,127 @@
         "answer": "Er glaubt, dass es hier keine Hoffnung gibt",
         "tip": "orderValleyQuestSeven.questFifteenTip"
       }
+    ],
+    "vocabulary": [
+      {
+        "word": "wenig",
+        "translation-ru": "мало",
+        "translation-en": "little",
+        "translation-uk": "мало",
+        "translation-pl": "mało",
+        "translation-es": "poco",
+        "translation-fr": "peu",
+        "translation-tr": "az",
+        "translation-ro": "puțin",
+        "translation-uz": "kam",
+        "translation-hi": "कम",
+        "translation-ar": "قليل"
+      },
+      {
+        "word": "sich freuen",
+        "translation-ru": "радоваться",
+        "translation-en": "to be happy, to look forward",
+        "translation-uk": "радіти",
+        "translation-pl": "cieszyć się",
+        "translation-es": "alegrarse",
+        "translation-fr": "se réjouir",
+        "translation-tr": "sevinmek",
+        "translation-ro": "a se bucura",
+        "translation-uz": "quvonmoq",
+        "translation-hi": "ख़ुश होना",
+        "translation-ar": "يفرح"
+      },
+      {
+        "word": "die Miete",
+        "translation-ru": "квартплата",
+        "translation-en": "rent",
+        "translation-uk": "орендна плата",
+        "translation-pl": "czynsz",
+        "translation-es": "el alquiler",
+        "translation-fr": "le loyer",
+        "translation-tr": "kira",
+        "translation-ro": "chiria",
+        "translation-uz": "ijara haqi",
+        "translation-hi": "किराया",
+        "translation-ar": "الإيجار"
+      },
+      {
+        "word": "die Hoffnung",
+        "translation-ru": "надежда",
+        "translation-en": "hope",
+        "translation-uk": "надія",
+        "translation-pl": "nadzieja",
+        "translation-es": "esperanza",
+        "translation-fr": "espoir",
+        "translation-tr": "umut",
+        "translation-ro": "speranță",
+        "translation-uz": "umid",
+        "translation-hi": "आशा",
+        "translation-ar": "أمل"
+      },
+      {
+        "word": "waschen",
+        "translation-ru": "мыть / стирать",
+        "translation-en": "to wash",
+        "translation-uk": "мити / прати",
+        "translation-pl": "myć",
+        "translation-es": "lavar",
+        "translation-fr": "laver",
+        "translation-tr": "yıkamak",
+        "translation-ro": "a spăla",
+        "translation-uz": "yuvmoq",
+        "translation-hi": "धोना",
+        "translation-ar": "يغسل"
+      },
+      {
+        "word": "sich merken",
+        "translation-ru": "запоминать",
+        "translation-en": "to remember",
+        "translation-uk": "запам’ятовувати",
+        "translation-pl": "zapamiętywać",
+        "translation-es": "recordar",
+        "translation-fr": "retenir",
+        "translation-tr": "aklında tutmak",
+        "translation-ro": "a reține",
+        "translation-uz": "eslab qolmoq",
+        "translation-hi": "याद रखना",
+        "translation-ar": "يتذكر"
+      },
+      {
+        "word": "sich schminken",
+        "translation-ru": "краситься",
+        "translation-en": "to put on make-up",
+        "translation-uk": "фарбуватися",
+        "translation-pl": "malować się",
+        "translation-es": "maquillarse",
+        "translation-fr": "se maquiller",
+        "translation-tr": "makyaj yapmak",
+        "translation-ro": "a se machia",
+        "translation-uz": "pardoz qilmoq",
+        "translation-hi": "मेकअप करना",
+        "translation-ar": "تضع المكياج"
+      },
+      {
+        "word": "der Rabatt",
+        "translation-ru": "скидка",
+        "translation-en": "discount",
+        "translation-uk": "знижка",
+        "translation-pl": "rabat",
+        "translation-es": "el descuento",
+        "translation-fr": "la réduction",
+        "translation-tr": "indirim",
+        "translation-ro": "reducerea",
+        "translation-uz": "chegirma",
+        "translation-hi": "छूट",
+        "translation-ar": "الخصم"
+      }
     ]
   },
   {
     "questId": "order-eight",
-    "aliases": ["travel-mix-pro"],
+    "aliases": [
+      "travel-mix-pro"
+    ],
     "title": "orderValleyQuestEight.title",
     "progress": "0/15",
     "description": "orderValleyQuestEight.description",
@@ -1128,8 +2630,27 @@
         "id": 1,
         "type": "reorder",
         "question": "orderValleyQuestEight.questOne",
-        "words": ["Strand", "weiß", "dass", "einen", "es", "Ich", "hier", "gibt", "ein"],
-        "correctOrder": ["Ich", "weiß", "dass", "es", "hier", "einen", "Strand", "gibt"],
+        "words": [
+          "Strand",
+          "weiß",
+          "dass",
+          "einen",
+          "es",
+          "Ich",
+          "hier",
+          "gibt",
+          "ein"
+        ],
+        "correctOrder": [
+          "Ich",
+          "weiß",
+          "dass",
+          "es",
+          "hier",
+          "einen",
+          "Strand",
+          "gibt"
+        ],
         "tip": "orderValleyQuestEight.questOneTip"
       },
       {
@@ -1156,8 +2677,33 @@
         "id": 4,
         "type": "reorder",
         "question": "orderValleyQuestEight.questFour",
-        "words": ["Taxi", "bestellt", "da", "U-Bahn", "keine", "gibt", "Er", "sich", "es", "hier", "mich", "ein"],
-        "correctOrder": ["Er", "bestellt", "sich", "ein", "Taxi", "da", "es", "hier", "keine", "U-Bahn", "gibt"],
+        "words": [
+          "Taxi",
+          "bestellt",
+          "da",
+          "U-Bahn",
+          "keine",
+          "gibt",
+          "Er",
+          "sich",
+          "es",
+          "hier",
+          "mich",
+          "ein"
+        ],
+        "correctOrder": [
+          "Er",
+          "bestellt",
+          "sich",
+          "ein",
+          "Taxi",
+          "da",
+          "es",
+          "hier",
+          "keine",
+          "U-Bahn",
+          "gibt"
+        ],
         "tip": "orderValleyQuestEight.questFourTip"
       },
       {
@@ -1176,8 +2722,30 @@
         "id": 6,
         "type": "reorder",
         "question": "orderValleyQuestEight.questSix",
-        "words": ["merke", "mir", "dass", "Bahnhof", "gibt", "hier", "Ich", "es", "einen", "ein", "mich"],
-        "correctOrder": ["Ich", "merke", "mir", "dass", "es", "hier", "einen", "Bahnhof", "gibt"],
+        "words": [
+          "merke",
+          "mir",
+          "dass",
+          "Bahnhof",
+          "gibt",
+          "hier",
+          "Ich",
+          "es",
+          "einen",
+          "ein",
+          "mich"
+        ],
+        "correctOrder": [
+          "Ich",
+          "merke",
+          "mir",
+          "dass",
+          "es",
+          "hier",
+          "einen",
+          "Bahnhof",
+          "gibt"
+        ],
         "tip": "orderValleyQuestEight.questSixTip"
       },
       {
@@ -1204,8 +2772,32 @@
         "id": 9,
         "type": "reorder",
         "question": "orderValleyQuestEight.questNine",
-        "words": ["reserviere", "mir", "Zimmer", "wenn", "Platz", "Ich", "ein", "es", "einen", "gibt", "mich", "frei"],
-        "correctOrder": ["Ich", "reserviere", "mir", "ein", "Zimmer", "wenn", "es", "einen", "Platz", "gibt"],
+        "words": [
+          "reserviere",
+          "mir",
+          "Zimmer",
+          "wenn",
+          "Platz",
+          "Ich",
+          "ein",
+          "es",
+          "einen",
+          "gibt",
+          "mich",
+          "frei"
+        ],
+        "correctOrder": [
+          "Ich",
+          "reserviere",
+          "mir",
+          "ein",
+          "Zimmer",
+          "wenn",
+          "es",
+          "einen",
+          "Platz",
+          "gibt"
+        ],
         "tip": "orderValleyQuestEight.questNineTip"
       },
       {
@@ -1222,38 +2814,110 @@
       },
       {
         "id": 11,
-        "type": "speechToText",
-        "question": "orderValleyQuestEight.questEleven",
-        "text": "Sie sagt, dass sie sich auf den Urlaub freut",
-        "answer": "Sie sagt, dass sie sich auf den Urlaub freut",
-        "tip": "orderValleyQuestEight.questElevenTip"
+        "type": "reorder",
+        "question": "orderValleyQuestSeven.questOne",
+        "words": [
+          "hier",
+          "weiß",
+          "Fehler",
+          "Ich",
+          "dass",
+          "es",
+          "gibt",
+          "einen",
+          "ein",
+          "mich"
+        ],
+        "correctOrder": [
+          "Ich",
+          "weiß",
+          "dass",
+          "es",
+          "hier",
+          "einen",
+          "Fehler",
+          "gibt"
+        ],
+        "tip": "orderValleyQuestSeven.questOneTip",
+        "reviewOf": "order-seven",
+        "reviewLand": "order-valley"
       },
       {
         "id": 12,
         "type": "reorder",
-        "question": "orderValleyQuestEight.questTwelve",
-        "words": ["ist", "wichtig", "dass", "Pool", "gibt", "es", "hier", "einen", "Es", "ein", "sich"],
-        "correctOrder": ["Es", "ist", "wichtig", "dass", "es", "hier", "einen", "Pool", "gibt"],
-        "tip": "orderValleyQuestEight.questTwelveTip"
+        "question": "orderValleyQuestFive.questFour",
+        "words": [
+          "Es",
+          "gibt",
+          "hier",
+          "einen",
+          "Fehler"
+        ],
+        "correctOrder": [
+          "Es",
+          "gibt",
+          "hier",
+          "einen",
+          "Fehler"
+        ],
+        "tip": "orderValleyQuestFive.questFourTip",
+        "reviewOf": "order-five",
+        "reviewLand": "order-valley"
       },
       {
         "id": 13,
-        "type": "select",
-        "question": "orderValleyQuestEight.questThirteen",
-        "options": [
-          "Ich freue mich, dass es ein Ausflug gibt",
-          "Ich freue mich, dass es gibt einen Ausflug",
-          "Ich freue mich, dass es einen Ausflug gibt"
+        "type": "reorder",
+        "question": "orderValleyQuestOne.questSix",
+        "words": [
+          "ist",
+          "krank",
+          "sie",
+          "obwohl",
+          "arbeitet",
+          "Sie"
         ],
-        "answer": "Ich freue mich, dass es einen Ausflug gibt",
-        "tip": "orderValleyQuestEight.questThirteenTip"
+        "correctOrder": [
+          "Sie",
+          "arbeitet",
+          "obwohl",
+          "sie",
+          "krank",
+          "ist"
+        ],
+        "tip": "orderValleyQuestOne.questSixTip",
+        "reviewOf": "order-one",
+        "reviewLand": "order-valley"
       },
       {
         "id": 14,
         "type": "reorder",
         "question": "orderValleyQuestEight.questFourteen",
-        "words": ["nimmst", "dir", "Auto", "wenn", "Verleih", "Du", "ein", "es", "einen", "gibt", "dich", "mit"],
-        "correctOrder": ["Du", "nimmst", "dir", "ein", "Auto", "wenn", "es", "einen", "Verleih", "gibt"],
+        "words": [
+          "nimmst",
+          "dir",
+          "Auto",
+          "wenn",
+          "Verleih",
+          "Du",
+          "ein",
+          "es",
+          "einen",
+          "gibt",
+          "dich",
+          "mit"
+        ],
+        "correctOrder": [
+          "Du",
+          "nimmst",
+          "dir",
+          "ein",
+          "Auto",
+          "wenn",
+          "es",
+          "einen",
+          "Verleih",
+          "gibt"
+        ],
         "tip": "orderValleyQuestEight.questFourteenTip"
       },
       {
@@ -1264,11 +2928,113 @@
         "answer": "Er glaubt, dass es hier keine Probleme gibt",
         "tip": "orderValleyQuestEight.questFifteenTip"
       }
+    ],
+    "vocabulary": [
+      {
+        "word": "sich freuen",
+        "translation-ru": "радоваться",
+        "translation-en": "to be happy, to look forward",
+        "translation-uk": "радіти",
+        "translation-pl": "cieszyć się",
+        "translation-es": "alegrarse",
+        "translation-fr": "se réjouir",
+        "translation-tr": "sevinmek",
+        "translation-ro": "a se bucura",
+        "translation-uz": "quvonmoq",
+        "translation-hi": "ख़ुश होना",
+        "translation-ar": "يفرح"
+      },
+      {
+        "word": "der Fehler",
+        "translation-ru": "ошибка",
+        "translation-en": "mistake",
+        "translation-uk": "помилка",
+        "translation-pl": "błąd",
+        "translation-es": "el error",
+        "translation-fr": "l’erreur",
+        "translation-tr": "hata",
+        "translation-ro": "greșeala",
+        "translation-uz": "xato",
+        "translation-hi": "ग़लती",
+        "translation-ar": "الخطأ"
+      },
+      {
+        "word": "schade",
+        "translation-ru": "жаль",
+        "translation-en": "a pity",
+        "translation-uk": "шкода",
+        "translation-pl": "szkoda",
+        "translation-es": "qué pena",
+        "translation-fr": "dommage",
+        "translation-tr": "yazık",
+        "translation-ro": "păcat",
+        "translation-uz": "afsus",
+        "translation-hi": "अफ़सोस",
+        "translation-ar": "للأسف"
+      },
+      {
+        "word": "obwohl",
+        "translation-ru": "хотя",
+        "translation-en": "although",
+        "translation-uk": "хоча",
+        "translation-pl": "chociaż",
+        "translation-es": "aunque",
+        "translation-fr": "bien que",
+        "translation-tr": "-e rağmen",
+        "translation-ro": "deși",
+        "translation-uz": "garchi",
+        "translation-hi": "हालाँकि",
+        "translation-ar": "رغم أن"
+      },
+      {
+        "word": "glauben",
+        "translation-ru": "верить / полагать",
+        "translation-en": "to believe / think",
+        "translation-uk": "вірити / думати",
+        "translation-pl": "wierzyć",
+        "translation-es": "creer",
+        "translation-fr": "croire",
+        "translation-tr": "inanmak",
+        "translation-ro": "a crede",
+        "translation-uz": "ishonmoq",
+        "translation-hi": "विश्वास करना",
+        "translation-ar": "يعتقد / يؤمن"
+      },
+      {
+        "word": "sich ausruhen",
+        "translation-ru": "отдыхать",
+        "translation-en": "to rest",
+        "translation-uk": "відпочивати",
+        "translation-pl": "odpoczywać",
+        "translation-es": "descansar",
+        "translation-fr": "se reposer",
+        "translation-tr": "dinlenmek",
+        "translation-ro": "a se odihni",
+        "translation-uz": "dam olmoq",
+        "translation-hi": "आराम करना",
+        "translation-ar": "يرتاح"
+      },
+      {
+        "word": "der Verleih",
+        "translation-ru": "прокат",
+        "translation-en": "rental",
+        "translation-uk": "прокат",
+        "translation-pl": "wypożyczalnia",
+        "translation-es": "el alquiler",
+        "translation-fr": "la location",
+        "translation-tr": "kiralama",
+        "translation-ro": "închirierea",
+        "translation-uz": "ijara",
+        "translation-hi": "किराया सेवा",
+        "translation-ar": "التأجير"
+      }
     ]
   },
   {
     "questId": "order-nine",
-    "aliases": ["work-mix-pro"],
+    "aliases": [
+      "work-mix-pro"
+    ],
     "title": "orderValleyQuestNine.title",
     "progress": "0/15",
     "description": "orderValleyQuestNine.description",
@@ -1286,8 +3052,28 @@
         "id": 1,
         "type": "reorder",
         "question": "orderValleyQuestNine.questOne",
-        "words": ["bewerbe", "mich", "wenn", "Job", "gibt", "Ich", "es", "einen", "ein", "mir"],
-        "correctOrder": ["Ich", "bewerbe", "mich", "wenn", "es", "einen", "Job", "gibt"],
+        "words": [
+          "bewerbe",
+          "mich",
+          "wenn",
+          "Job",
+          "gibt",
+          "Ich",
+          "es",
+          "einen",
+          "ein",
+          "mir"
+        ],
+        "correctOrder": [
+          "Ich",
+          "bewerbe",
+          "mich",
+          "wenn",
+          "es",
+          "einen",
+          "Job",
+          "gibt"
+        ],
         "tip": "orderValleyQuestNine.questOneTip"
       },
       {
@@ -1314,8 +3100,28 @@
         "id": 4,
         "type": "reorder",
         "question": "orderValleyQuestNine.questFour",
-        "words": ["merke", "mir", "dass", "Termin", "gibt", "Ich", "es", "einen", "ein", "mich"],
-        "correctOrder": ["Ich", "merke", "mir", "dass", "es", "einen", "Termin", "gibt"],
+        "words": [
+          "merke",
+          "mir",
+          "dass",
+          "Termin",
+          "gibt",
+          "Ich",
+          "es",
+          "einen",
+          "ein",
+          "mich"
+        ],
+        "correctOrder": [
+          "Ich",
+          "merke",
+          "mir",
+          "dass",
+          "es",
+          "einen",
+          "Termin",
+          "gibt"
+        ],
         "tip": "orderValleyQuestNine.questFourTip"
       },
       {
@@ -1334,8 +3140,31 @@
         "id": 6,
         "type": "reorder",
         "question": "orderValleyQuestNine.questSix",
-        "words": ["suche", "mir", "Job", "einen", "wenn", "Stelle", "es", "gibt", "eine", "Ich", "mich"],
-        "correctOrder": ["Ich", "suche", "mir", "einen", "Job", "wenn", "es", "eine", "Stelle", "gibt"],
+        "words": [
+          "suche",
+          "mir",
+          "Job",
+          "einen",
+          "wenn",
+          "Stelle",
+          "es",
+          "gibt",
+          "eine",
+          "Ich",
+          "mich"
+        ],
+        "correctOrder": [
+          "Ich",
+          "suche",
+          "mir",
+          "einen",
+          "Job",
+          "wenn",
+          "es",
+          "eine",
+          "Stelle",
+          "gibt"
+        ],
         "tip": "orderValleyQuestNine.questSixTip"
       },
       {
@@ -1351,19 +3180,42 @@
         "type": "select",
         "question": "orderValleyQuestNine.questEight",
         "options": [
-          "Wir freuen uns, dass es keine Arbeit gibt",
-          "Wir freuen uns, dass es gibt keine Arbeit",
-          "Wir freuen sich, dass es keine Arbeit gibt"
+          "Wir ärgern uns, dass es keine Arbeit gibt",
+          "Wir ärgern uns, dass es gibt keine Arbeit",
+          "Wir ärgern sich, dass es keine Arbeit gibt"
         ],
-        "answer": "Wir freuen uns, dass es keine Arbeit gibt",
+        "answer": "Wir ärgern uns, dass es keine Arbeit gibt",
         "tip": "orderValleyQuestNine.questEightTip"
       },
       {
         "id": 9,
         "type": "reorder",
         "question": "orderValleyQuestNine.questNine",
-        "words": ["kaufe", "Laptop", "einen", "Rabatt", "mir", "Ich", "einen", "es", "gibt", "wenn", "mich"],
-        "correctOrder": ["Ich", "kaufe", "mir", "einen", "Laptop", "wenn", "es", "einen", "Rabatt", "gibt"],
+        "words": [
+          "kaufe",
+          "Laptop",
+          "einen",
+          "Rabatt",
+          "mir",
+          "Ich",
+          "einen",
+          "es",
+          "gibt",
+          "wenn",
+          "mich"
+        ],
+        "correctOrder": [
+          "Ich",
+          "kaufe",
+          "mir",
+          "einen",
+          "Laptop",
+          "wenn",
+          "es",
+          "einen",
+          "Rabatt",
+          "gibt"
+        ],
         "tip": "orderValleyQuestNine.questNineTip"
       },
       {
@@ -1372,7 +3224,7 @@
         "question": "orderValleyQuestNine.questTen",
         "options": [
           "Du siehst, dass es ein Problem gibt",
-          "Du siehst, dass es hier ein Problem gibt",
+          "Du siehst, dass es gibt ein Problem",
           "Du siehst, dass es einen Problem gibt"
         ],
         "answer": "Du siehst, dass es ein Problem gibt",
@@ -1380,38 +3232,110 @@
       },
       {
         "id": 11,
-        "type": "speechToText",
-        "question": "orderValleyQuestNine.questEleven",
-        "text": "Sie sagt, dass sie sich jetzt vorbereitet",
-        "answer": "Sie sagt, dass sie sich jetzt vorbereitet",
-        "tip": "orderValleyQuestNine.questElevenTip"
+        "type": "reorder",
+        "question": "orderValleyQuestEight.questOne",
+        "words": [
+          "Strand",
+          "weiß",
+          "dass",
+          "einen",
+          "es",
+          "Ich",
+          "hier",
+          "gibt",
+          "ein"
+        ],
+        "correctOrder": [
+          "Ich",
+          "weiß",
+          "dass",
+          "es",
+          "hier",
+          "einen",
+          "Strand",
+          "gibt"
+        ],
+        "tip": "orderValleyQuestEight.questOneTip",
+        "reviewOf": "order-eight",
+        "reviewLand": "order-valley"
       },
       {
         "id": 12,
         "type": "reorder",
-        "question": "orderValleyQuestNine.questTwelve",
-        "words": ["ist", "wichtig", "dass", "Plan", "gibt", "es", "einen", "Es", "ein", "sich"],
-        "correctOrder": ["Es", "ist", "wichtig", "dass", "es", "einen", "Plan", "gibt"],
-        "tip": "orderValleyQuestNine.questTwelveTip"
+        "question": "orderValleyQuestSix.questFour",
+        "words": [
+          "Wir",
+          "putzen",
+          "uns",
+          "die",
+          "Zähne"
+        ],
+        "correctOrder": [
+          "Wir",
+          "putzen",
+          "uns",
+          "die",
+          "Zähne"
+        ],
+        "tip": "orderValleyQuestSix.questFourTip",
+        "reviewOf": "order-six",
+        "reviewLand": "order-valley"
       },
       {
         "id": 13,
-        "type": "select",
-        "question": "orderValleyQuestNine.questThirteen",
-        "options": [
-          "Ich beeile mich, weil es ein Termin gibt",
-          "Ich beeile mich, weil es einen Termin gibt",
-          "Ich beeile mir, weil es gibt einen Termin"
+        "type": "reorder",
+        "question": "orderValleyQuestTwo.questSix",
+        "words": [
+          "regnet",
+          "es",
+          "wenn",
+          "Hause",
+          "zu",
+          "bleiben",
+          "Wir"
         ],
-        "answer": "Ich beeile mich, weil es einen Termin gibt",
-        "tip": "orderValleyQuestNine.questThirteenTip"
+        "correctOrder": [
+          "Wir",
+          "bleiben",
+          "zu",
+          "Hause",
+          "wenn",
+          "es",
+          "regnet"
+        ],
+        "tip": "orderValleyQuestTwo.questSixTip",
+        "reviewOf": "order-two",
+        "reviewLand": "order-valley"
       },
       {
         "id": 14,
         "type": "reorder",
         "question": "orderValleyQuestNine.questFourteen",
-        "words": ["nehme", "Job", "den", "Vertrag", "mir", "es", "Ich", "einen", "gibt", "wenn", "mich"],
-        "correctOrder": ["Ich", "nehme", "mir", "den", "Job", "wenn", "es", "einen", "Vertrag", "gibt"],
+        "words": [
+          "nehme",
+          "Job",
+          "den",
+          "Vertrag",
+          "mir",
+          "es",
+          "Ich",
+          "einen",
+          "gibt",
+          "wenn",
+          "mich"
+        ],
+        "correctOrder": [
+          "Ich",
+          "nehme",
+          "mir",
+          "den",
+          "Job",
+          "wenn",
+          "es",
+          "einen",
+          "Vertrag",
+          "gibt"
+        ],
         "tip": "orderValleyQuestNine.questFourteenTip"
       },
       {
@@ -1422,11 +3346,141 @@
         "answer": "Er glaubt, dass es kein Geld gibt",
         "tip": "orderValleyQuestNine.questFifteenTip"
       }
+    ],
+    "vocabulary": [
+      {
+        "word": "sich ärgern über",
+        "translation-ru": "злиться на",
+        "translation-en": "to be annoyed about",
+        "translation-uk": "сердитися на",
+        "translation-pl": "złościć się na",
+        "translation-es": "enfadarse por",
+        "translation-fr": "s’énerver à cause de",
+        "translation-tr": "…e kızmak",
+        "translation-ro": "a se supăra pe",
+        "translation-uz": "…dan jahli chiqmoq",
+        "translation-hi": "… पर नाराज़ होना",
+        "translation-ar": "ينزعج من"
+      },
+      {
+        "word": "der Laptop",
+        "translation-ru": "ноутбук",
+        "translation-en": "laptop",
+        "translation-uk": "ноутбук",
+        "translation-pl": "laptop",
+        "translation-es": "portátil",
+        "translation-fr": "ordinateur portable",
+        "translation-tr": "dizüstü bilgisayar",
+        "translation-ro": "laptop",
+        "translation-uz": "noutbuk",
+        "translation-hi": "लैपटॉप",
+        "translation-ar": "حاسوب محمول"
+      },
+      {
+        "word": "schade",
+        "translation-ru": "жаль",
+        "translation-en": "a pity",
+        "translation-uk": "шкода",
+        "translation-pl": "szkoda",
+        "translation-es": "qué pena",
+        "translation-fr": "dommage",
+        "translation-tr": "yazık",
+        "translation-ro": "păcat",
+        "translation-uz": "afsus",
+        "translation-hi": "अफ़सोस",
+        "translation-ar": "للأسف"
+      },
+      {
+        "word": "putzen",
+        "translation-ru": "убирать, мыть",
+        "translation-en": "to clean",
+        "translation-uk": "прибирати, мити",
+        "translation-pl": "sprzątać, myć",
+        "translation-es": "limpiar",
+        "translation-fr": "nettoyer",
+        "translation-tr": "temizlemek",
+        "translation-ro": "a curăța",
+        "translation-uz": "tozalamoq",
+        "translation-hi": "साफ़ करना",
+        "translation-ar": "ينظّف"
+      },
+      {
+        "word": "der Zahn",
+        "translation-ru": "зуб",
+        "translation-en": "tooth",
+        "translation-uk": "зуб",
+        "translation-pl": "ząb",
+        "translation-es": "diente",
+        "translation-fr": "dent",
+        "translation-tr": "diş",
+        "translation-ro": "dinte",
+        "translation-uz": "tish",
+        "translation-hi": "दाँत",
+        "translation-ar": "سنّ"
+      },
+      {
+        "word": "der Job",
+        "translation-ru": "работа",
+        "translation-en": "job",
+        "translation-uk": "робота",
+        "translation-pl": "praca",
+        "translation-es": "el trabajo",
+        "translation-fr": "le boulot",
+        "translation-tr": "iş",
+        "translation-ro": "jobul",
+        "translation-uz": "ish",
+        "translation-hi": "नौकरी",
+        "translation-ar": "الوظيفة"
+      },
+      {
+        "word": "sich bewerben",
+        "translation-ru": "подавать заявку",
+        "translation-en": "to apply",
+        "translation-uk": "подавати заявку",
+        "translation-pl": "ubiegać się",
+        "translation-es": "solicitar",
+        "translation-fr": "postuler",
+        "translation-tr": "başvurmak",
+        "translation-ro": "a aplica",
+        "translation-uz": "ariza bermoq",
+        "translation-hi": "आवेदन करना",
+        "translation-ar": "يتقدم بطلب"
+      },
+      {
+        "word": "vorstellen",
+        "translation-ru": "представлять",
+        "translation-en": "to introduce",
+        "translation-uk": "представляти",
+        "translation-pl": "przedstawiać",
+        "translation-es": "presentar",
+        "translation-fr": "présenter",
+        "translation-tr": "tanıtmak",
+        "translation-ro": "a prezenta",
+        "translation-uz": "tanishtirmoq",
+        "translation-hi": "परिचय कराना",
+        "translation-ar": "يقدّم"
+      },
+      {
+        "word": "der Bonus",
+        "translation-ru": "бонус",
+        "translation-en": "bonus",
+        "translation-uk": "бонус",
+        "translation-pl": "premia",
+        "translation-es": "el bono",
+        "translation-fr": "la prime",
+        "translation-tr": "prim",
+        "translation-ro": "bonusul",
+        "translation-uz": "bonus",
+        "translation-hi": "बोनस",
+        "translation-ar": "العلاوة"
+      }
     ]
   },
   {
     "questId": "order-ten",
-    "aliases": ["work-basic-vibe"],
+    "aliases": [
+      "work-basic-vibe"
+    ],
     "title": "orderValleyQuestTen.title",
     "progress": "0/15",
     "description": "orderValleyQuestTen.description",
@@ -1444,8 +3498,26 @@
         "id": 1,
         "type": "reorder",
         "question": "orderValleyQuestTen.questOne",
-        "words": ["bin", "Ich", "heute", "nicht", "weil", "ich", "krank", "arbeite"],
-        "correctOrder": ["Ich", "arbeite", "heute", "nicht", "weil", "ich", "krank", "bin"],
+        "words": [
+          "bin",
+          "Ich",
+          "heute",
+          "nicht",
+          "weil",
+          "ich",
+          "krank",
+          "arbeite"
+        ],
+        "correctOrder": [
+          "Ich",
+          "arbeite",
+          "heute",
+          "nicht",
+          "weil",
+          "ich",
+          "krank",
+          "bin"
+        ],
         "tip": "orderValleyQuestTen.questOneTip"
       },
       {
@@ -1472,8 +3544,26 @@
         "id": 4,
         "type": "reorder",
         "question": "orderValleyQuestTen.questFour",
-        "words": ["freue", "mich", "dass", "frei", "habe", "Ich", "heute", "ich"],
-        "correctOrder": ["Ich", "freue", "mich", "dass", "ich", "heute", "frei", "habe"],
+        "words": [
+          "freue",
+          "mich",
+          "dass",
+          "frei",
+          "habe",
+          "Ich",
+          "heute",
+          "ich"
+        ],
+        "correctOrder": [
+          "Ich",
+          "freue",
+          "mich",
+          "dass",
+          "ich",
+          "heute",
+          "frei",
+          "habe"
+        ],
         "tip": "orderValleyQuestTen.questFourTip"
       },
       {
@@ -1492,8 +3582,28 @@
         "id": 6,
         "type": "reorder",
         "question": "orderValleyQuestTen.questSix",
-        "words": ["merke", "mir", "dass", "morgen", "Termin", "es", "gibt", "Ich", "einen"],
-        "correctOrder": ["Ich", "merke", "mir", "dass", "es", "morgen", "einen", "Termin", "gibt"],
+        "words": [
+          "merke",
+          "mir",
+          "dass",
+          "morgen",
+          "Termin",
+          "es",
+          "gibt",
+          "Ich",
+          "einen"
+        ],
+        "correctOrder": [
+          "Ich",
+          "merke",
+          "mir",
+          "dass",
+          "es",
+          "morgen",
+          "einen",
+          "Termin",
+          "gibt"
+        ],
         "tip": "orderValleyQuestTen.questSixTip"
       },
       {
@@ -1520,8 +3630,26 @@
         "id": 9,
         "type": "reorder",
         "question": "orderValleyQuestTen.questNine",
-        "words": ["kaufe", "mir", "das", "wenn", "Geld", "gibt", "Ich", "es"],
-        "correctOrder": ["Ich", "kaufe", "mir", "das", "wenn", "es", "Geld", "gibt"],
+        "words": [
+          "kaufe",
+          "mir",
+          "das",
+          "wenn",
+          "Geld",
+          "gibt",
+          "Ich",
+          "es"
+        ],
+        "correctOrder": [
+          "Ich",
+          "kaufe",
+          "mir",
+          "das",
+          "wenn",
+          "es",
+          "Geld",
+          "gibt"
+        ],
         "tip": "orderValleyQuestTen.questNineTip"
       },
       {
@@ -1538,38 +3666,118 @@
       },
       {
         "id": 11,
-        "type": "speechToText",
-        "question": "orderValleyQuestTen.questEleven",
-        "text": "Sie sagt, dass sie sich jetzt wäscht",
-        "answer": "Sie sagt, dass sie sich jetzt wäscht",
-        "tip": "orderValleyQuestTen.questElevenTip"
+        "type": "reorder",
+        "question": "orderValleyQuestNine.questOne",
+        "words": [
+          "bewerbe",
+          "mich",
+          "wenn",
+          "Job",
+          "gibt",
+          "Ich",
+          "es",
+          "einen",
+          "ein",
+          "mir"
+        ],
+        "correctOrder": [
+          "Ich",
+          "bewerbe",
+          "mich",
+          "wenn",
+          "es",
+          "einen",
+          "Job",
+          "gibt"
+        ],
+        "tip": "orderValleyQuestNine.questOneTip",
+        "reviewOf": "order-nine",
+        "reviewLand": "order-valley"
       },
       {
         "id": 12,
         "type": "reorder",
-        "question": "orderValleyQuestTen.questTwelve",
-        "words": ["ist", "wichtig", "dass", "Arbeit", "gibt", "es", "Es"],
-        "correctOrder": ["Es", "ist", "wichtig", "dass", "es", "Arbeit", "gibt"],
-        "tip": "orderValleyQuestTen.questTwelveTip"
+        "question": "orderValleyQuestSeven.questFour",
+        "words": [
+          "dir",
+          "du",
+          "kämmst",
+          "sehe",
+          "dass",
+          "die",
+          "Ich",
+          "Haare",
+          "es",
+          "dich"
+        ],
+        "correctOrder": [
+          "Ich",
+          "sehe",
+          "dass",
+          "du",
+          "dir",
+          "die",
+          "Haare",
+          "kämmst"
+        ],
+        "tip": "orderValleyQuestSeven.questFourTip",
+        "reviewOf": "order-seven",
+        "reviewLand": "order-valley"
       },
       {
         "id": 13,
-        "type": "select",
-        "question": "orderValleyQuestTen.questThirteen",
-        "options": [
-          "Ich beeile mich, weil es wenig Zeit gibt",
-          "Ich beeile mich, weil es gibt wenig Zeit",
-          "Ich beeile mir, weil es wenig Zeit gibt"
+        "type": "reorder",
+        "question": "orderValleyQuestThree.questSix",
+        "words": [
+          "hat",
+          "geschlafen",
+          "lange",
+          "er",
+          "obwohl",
+          "müde",
+          "ist",
+          "Er"
         ],
-        "answer": "Ich beeile mich, weil es wenig Zeit gibt",
-        "tip": "orderValleyQuestTen.questThirteenTip"
+        "correctOrder": [
+          "Er",
+          "ist",
+          "müde",
+          "obwohl",
+          "er",
+          "lange",
+          "geschlafen",
+          "hat"
+        ],
+        "tip": "orderValleyQuestThree.questSixTip",
+        "reviewOf": "order-three",
+        "reviewLand": "order-valley"
       },
       {
         "id": 14,
         "type": "reorder",
         "question": "orderValleyQuestTen.questFourteen",
-        "words": ["nehme", "mir", "das", "Quittung", "eine", "es", "gibt", "Ich", "wenn"],
-        "correctOrder": ["Ich", "nehme", "mir", "das", "wenn", "es", "eine", "Quittung", "gibt"],
+        "words": [
+          "nehme",
+          "mir",
+          "das",
+          "Quittung",
+          "eine",
+          "es",
+          "gibt",
+          "Ich",
+          "wenn"
+        ],
+        "correctOrder": [
+          "Ich",
+          "nehme",
+          "mir",
+          "das",
+          "wenn",
+          "es",
+          "eine",
+          "Quittung",
+          "gibt"
+        ],
         "tip": "orderValleyQuestTen.questFourteenTip"
       },
       {
@@ -1580,11 +3788,85 @@
         "answer": "Er glaubt, dass es keinen Stress gibt",
         "tip": "orderValleyQuestTen.questFifteenTip"
       }
+    ],
+    "vocabulary": [
+      {
+        "word": "der Stress",
+        "translation-ru": "стресс",
+        "translation-en": "stress",
+        "translation-uk": "стрес",
+        "translation-pl": "stres",
+        "translation-es": "el estrés",
+        "translation-fr": "le stress",
+        "translation-tr": "stres",
+        "translation-ro": "stresul",
+        "translation-uz": "stress",
+        "translation-hi": "तनाव",
+        "translation-ar": "التوتر"
+      },
+      {
+        "word": "sich ärgern über",
+        "translation-ru": "злиться на",
+        "translation-en": "to be annoyed about",
+        "translation-uk": "сердитися на",
+        "translation-pl": "złościć się na",
+        "translation-es": "enfadarse por",
+        "translation-fr": "s’énerver à cause de",
+        "translation-tr": "…e kızmak",
+        "translation-ro": "a se supăra pe",
+        "translation-uz": "…dan jahli chiqmoq",
+        "translation-hi": "… पर नाराज़ होना",
+        "translation-ar": "ينزعج من"
+      },
+      {
+        "word": "die Haare",
+        "translation-ru": "волосы",
+        "translation-en": "hair",
+        "translation-uk": "волосся",
+        "translation-pl": "włosy",
+        "translation-es": "el pelo",
+        "translation-fr": "les cheveux",
+        "translation-tr": "saç",
+        "translation-ro": "părul",
+        "translation-uz": "soch",
+        "translation-hi": "बाल",
+        "translation-ar": "الشعر"
+      },
+      {
+        "word": "schade",
+        "translation-ru": "жаль",
+        "translation-en": "a pity",
+        "translation-uk": "шкода",
+        "translation-pl": "szkoda",
+        "translation-es": "qué pena",
+        "translation-fr": "dommage",
+        "translation-tr": "yazık",
+        "translation-ro": "păcat",
+        "translation-uz": "afsus",
+        "translation-hi": "अफ़सोस",
+        "translation-ar": "للأسف"
+      },
+      {
+        "word": "obwohl",
+        "translation-ru": "хотя",
+        "translation-en": "although",
+        "translation-uk": "хоча",
+        "translation-pl": "chociaż",
+        "translation-es": "aunque",
+        "translation-fr": "bien que",
+        "translation-tr": "-e rağmen",
+        "translation-ro": "deși",
+        "translation-uz": "garchi",
+        "translation-hi": "हालाँकि",
+        "translation-ar": "رغم أن"
+      }
     ]
   },
   {
     "questId": "order-eleven",
-    "aliases": ["new-real-life-drill"],
+    "aliases": [
+      "new-real-life-drill"
+    ],
     "title": "orderValleyQuestEleven.title",
     "progress": "0/15",
     "description": "orderValleyQuestEleven.description",
@@ -1602,8 +3884,30 @@
         "id": 1,
         "type": "reorder",
         "question": "orderValleyQuestEleven.questOne",
-        "words": ["bestelle", "mir", "Pizza", "eine", "weil", "Pasta", "keine", "gibt", "es", "Ich"],
-        "correctOrder": ["Ich", "bestelle", "mir", "eine", "Pizza", "weil", "es", "keine", "Pasta", "gibt"],
+        "words": [
+          "bestelle",
+          "mir",
+          "Pizza",
+          "eine",
+          "weil",
+          "Pasta",
+          "keine",
+          "gibt",
+          "es",
+          "Ich"
+        ],
+        "correctOrder": [
+          "Ich",
+          "bestelle",
+          "mir",
+          "eine",
+          "Pizza",
+          "weil",
+          "es",
+          "keine",
+          "Pasta",
+          "gibt"
+        ],
         "tip": "orderValleyQuestEleven.questOneTip"
       },
       {
@@ -1630,8 +3934,24 @@
         "id": 4,
         "type": "reorder",
         "question": "orderValleyQuestEleven.questFour",
-        "words": ["sagt", "dass", "sie", "sich", "jetzt", "schminkt", "Sie"],
-        "correctOrder": ["Sie", "sagt", "dass", "sie", "sich", "jetzt", "schminkt"],
+        "words": [
+          "sagt",
+          "dass",
+          "sie",
+          "sich",
+          "jetzt",
+          "schminkt",
+          "Sie"
+        ],
+        "correctOrder": [
+          "Sie",
+          "sagt",
+          "dass",
+          "sie",
+          "sich",
+          "jetzt",
+          "schminkt"
+        ],
         "tip": "orderValleyQuestEleven.questFourTip"
       },
       {
@@ -1650,8 +3970,22 @@
         "id": 6,
         "type": "reorder",
         "question": "orderValleyQuestEleven.questSix",
-        "words": ["Schade", "dass", "es", "Handtuch", "kein", "gibt"],
-        "correctOrder": ["Schade", "dass", "es", "kein", "Handtuch", "gibt"],
+        "words": [
+          "Schade",
+          "dass",
+          "es",
+          "Handtuch",
+          "kein",
+          "gibt"
+        ],
+        "correctOrder": [
+          "Schade",
+          "dass",
+          "es",
+          "kein",
+          "Handtuch",
+          "gibt"
+        ],
         "tip": "orderValleyQuestEleven.questSixTip"
       },
       {
@@ -1678,8 +4012,32 @@
         "id": 9,
         "type": "reorder",
         "question": "orderValleyQuestEleven.questNine",
-        "words": ["schaue", "mir", "Auto", "das", "an", "wenn", "Schlüssel", "es", "einen", "gibt", "Ich"],
-        "correctOrder": ["Ich", "schaue", "mir", "das", "Auto", "an", "wenn", "es", "einen", "Schlüssel", "gibt"],
+        "words": [
+          "schaue",
+          "mir",
+          "Auto",
+          "das",
+          "an",
+          "wenn",
+          "Schlüssel",
+          "es",
+          "einen",
+          "gibt",
+          "Ich"
+        ],
+        "correctOrder": [
+          "Ich",
+          "schaue",
+          "mir",
+          "das",
+          "Auto",
+          "an",
+          "wenn",
+          "es",
+          "einen",
+          "Schlüssel",
+          "gibt"
+        ],
         "tip": "orderValleyQuestEleven.questNineTip"
       },
       {
@@ -1696,38 +4054,115 @@
       },
       {
         "id": 11,
-        "type": "speechToText",
-        "question": "orderValleyQuestEleven.questEleven",
-        "text": "Er sagt, dass er sich jetzt rasiert",
-        "answer": "Er sagt, dass er sich jetzt rasiert",
-        "tip": "orderValleyQuestEleven.questElevenTip"
+        "type": "reorder",
+        "question": "orderValleyQuestTen.questOne",
+        "words": [
+          "bin",
+          "Ich",
+          "heute",
+          "nicht",
+          "weil",
+          "ich",
+          "krank",
+          "arbeite"
+        ],
+        "correctOrder": [
+          "Ich",
+          "arbeite",
+          "heute",
+          "nicht",
+          "weil",
+          "ich",
+          "krank",
+          "bin"
+        ],
+        "tip": "orderValleyQuestTen.questOneTip",
+        "reviewOf": "order-ten",
+        "reviewLand": "order-valley"
       },
       {
         "id": 12,
         "type": "reorder",
-        "question": "orderValleyQuestEleven.questTwelve",
-        "words": ["ist", "wichtig", "dass", "Trainer", "einen", "es", "gibt", "Es"],
-        "correctOrder": ["Es", "ist", "wichtig", "dass", "es", "einen", "Trainer", "gibt"],
-        "tip": "orderValleyQuestEleven.questTwelveTip"
+        "question": "orderValleyQuestEight.questFour",
+        "words": [
+          "Taxi",
+          "bestellt",
+          "da",
+          "U-Bahn",
+          "keine",
+          "gibt",
+          "Er",
+          "sich",
+          "es",
+          "hier",
+          "mich",
+          "ein"
+        ],
+        "correctOrder": [
+          "Er",
+          "bestellt",
+          "sich",
+          "ein",
+          "Taxi",
+          "da",
+          "es",
+          "hier",
+          "keine",
+          "U-Bahn",
+          "gibt"
+        ],
+        "tip": "orderValleyQuestEight.questFourTip",
+        "reviewOf": "order-eight",
+        "reviewLand": "order-valley"
       },
       {
         "id": 13,
-        "type": "select",
-        "question": "orderValleyQuestEleven.questThirteen",
-        "options": [
-          "Ich beeile mich, weil es eine Termin gibt",
-          "Ich beeile mich, weil es gibt einen Termin",
-          "Ich beeile mich, weil es einen Termin gibt"
+        "type": "reorder",
+        "question": "orderValleyQuestFour.questSix",
+        "words": [
+          "Restaurant",
+          "ein",
+          "hier",
+          "es",
+          "Gibt"
         ],
-        "answer": "Ich beeile mich, weil es einen Termin gibt",
-        "tip": "orderValleyQuestEleven.questThirteenTip"
+        "correctOrder": [
+          "Gibt",
+          "es",
+          "hier",
+          "ein",
+          "Restaurant"
+        ],
+        "tip": "orderValleyQuestFour.questSixTip",
+        "reviewOf": "order-four",
+        "reviewLand": "order-valley"
       },
       {
         "id": 14,
         "type": "reorder",
         "question": "orderValleyQuestEleven.questFourteen",
-        "words": ["nehme", "mir", "Kaffee", "einen", "wenn", "Milch", "es", "gibt", "Ich"],
-        "correctOrder": ["Ich", "nehme", "mir", "einen", "Kaffee", "wenn", "es", "Milch", "gibt"],
+        "words": [
+          "nehme",
+          "mir",
+          "Kaffee",
+          "einen",
+          "wenn",
+          "Milch",
+          "es",
+          "gibt",
+          "Ich"
+        ],
+        "correctOrder": [
+          "Ich",
+          "nehme",
+          "mir",
+          "einen",
+          "Kaffee",
+          "wenn",
+          "es",
+          "Milch",
+          "gibt"
+        ],
         "tip": "orderValleyQuestEleven.questFourteenTip"
       },
       {
@@ -1738,11 +4173,99 @@
         "answer": "Er glaubt, dass es keinen Test gibt",
         "tip": "orderValleyQuestEleven.questFifteenTip"
       }
+    ],
+    "vocabulary": [
+      {
+        "word": "die Ruhe",
+        "translation-ru": "спокойствие",
+        "translation-en": "calmness",
+        "translation-uk": "спокій",
+        "translation-pl": "spokój",
+        "translation-es": "calma",
+        "translation-fr": "calme",
+        "translation-tr": "sakinlik",
+        "translation-ro": "calm",
+        "translation-uz": "xotirjamlik",
+        "translation-hi": "शांति",
+        "translation-ar": "هدوء"
+      },
+      {
+        "word": "sich ärgern über",
+        "translation-ru": "злиться на",
+        "translation-en": "to be annoyed about",
+        "translation-uk": "сердитися на",
+        "translation-pl": "złościć się na",
+        "translation-es": "enfadarse por",
+        "translation-fr": "s’énerver à cause de",
+        "translation-tr": "…e kızmak",
+        "translation-ro": "a se supăra pe",
+        "translation-uz": "…dan jahli chiqmoq",
+        "translation-hi": "… पर नाराज़ होना",
+        "translation-ar": "ينزعج من"
+      },
+      {
+        "word": "schade",
+        "translation-ru": "жаль",
+        "translation-en": "a pity",
+        "translation-uk": "шкода",
+        "translation-pl": "szkoda",
+        "translation-es": "qué pena",
+        "translation-fr": "dommage",
+        "translation-tr": "yazık",
+        "translation-ro": "păcat",
+        "translation-uz": "afsus",
+        "translation-hi": "अफ़सोस",
+        "translation-ar": "للأسف"
+      },
+      {
+        "word": "glauben",
+        "translation-ru": "верить / полагать",
+        "translation-en": "to believe / think",
+        "translation-uk": "вірити / думати",
+        "translation-pl": "wierzyć",
+        "translation-es": "creer",
+        "translation-fr": "croire",
+        "translation-tr": "inanmak",
+        "translation-ro": "a crede",
+        "translation-uz": "ishonmoq",
+        "translation-hi": "विश्वास करना",
+        "translation-ar": "يعتقد / يؤمن"
+      },
+      {
+        "word": "das Bier",
+        "translation-ru": "пиво",
+        "translation-en": "beer",
+        "translation-uk": "пиво",
+        "translation-pl": "piwo",
+        "translation-es": "cerveza",
+        "translation-fr": "bière",
+        "translation-tr": "bira",
+        "translation-ro": "bere",
+        "translation-uz": "pivo",
+        "translation-hi": "बीयर",
+        "translation-ar": "بيرة"
+      },
+      {
+        "word": "die Pasta",
+        "translation-ru": "паста",
+        "translation-en": "pasta",
+        "translation-uk": "паста",
+        "translation-pl": "makaron",
+        "translation-es": "la pasta",
+        "translation-fr": "les pâtes",
+        "translation-tr": "makarna",
+        "translation-ro": "pastele",
+        "translation-uz": "makaron",
+        "translation-hi": "पास्ता",
+        "translation-ar": "المعكرونة"
+      }
     ]
   },
   {
     "questId": "order-twelve",
-    "aliases": ["daily-grammar-v1"],
+    "aliases": [
+      "daily-grammar-v1"
+    ],
     "title": "orderValleyQuestTwelve.title",
     "progress": "0/15",
     "description": "orderValleyQuestTwelve.description",
@@ -1760,8 +4283,30 @@
         "id": 1,
         "type": "reorder",
         "question": "orderValleyQuestTwelve.questOne",
-        "words": ["treffe", "mich", "mit", "Leuten", "weil", "Party", "eine", "gibt", "es", "Ich"],
-        "correctOrder": ["Ich", "treffe", "mich", "mit", "Leuten", "weil", "es", "eine", "Party", "gibt"],
+        "words": [
+          "treffe",
+          "mich",
+          "mit",
+          "Leuten",
+          "weil",
+          "Party",
+          "eine",
+          "gibt",
+          "es",
+          "Ich"
+        ],
+        "correctOrder": [
+          "Ich",
+          "treffe",
+          "mich",
+          "mit",
+          "Leuten",
+          "weil",
+          "es",
+          "eine",
+          "Party",
+          "gibt"
+        ],
         "tip": "orderValleyQuestTwelve.questOneTip"
       },
       {
@@ -1788,8 +4333,28 @@
         "id": 4,
         "type": "reorder",
         "question": "orderValleyQuestTwelve.questFour",
-        "words": ["überlege", "mir", "das", "wenn", "Chance", "es", "eine", "gibt", "Ich"],
-        "correctOrder": ["Ich", "überlege", "mir", "das", "wenn", "es", "eine", "Chance", "gibt"],
+        "words": [
+          "überlege",
+          "mir",
+          "das",
+          "wenn",
+          "Chance",
+          "es",
+          "eine",
+          "gibt",
+          "Ich"
+        ],
+        "correctOrder": [
+          "Ich",
+          "überlege",
+          "mir",
+          "das",
+          "wenn",
+          "es",
+          "eine",
+          "Chance",
+          "gibt"
+        ],
         "tip": "orderValleyQuestTwelve.questFourTip"
       },
       {
@@ -1808,8 +4373,24 @@
         "id": 6,
         "type": "reorder",
         "question": "orderValleyQuestTwelve.questSix",
-        "words": ["Schade", "dass", "es", "hier", "Hund", "keinen", "gibt"],
-        "correctOrder": ["Schade", "dass", "es", "hier", "keinen", "Hund", "gibt"],
+        "words": [
+          "Schade",
+          "dass",
+          "es",
+          "hier",
+          "Hund",
+          "keinen",
+          "gibt"
+        ],
+        "correctOrder": [
+          "Schade",
+          "dass",
+          "es",
+          "hier",
+          "keinen",
+          "Hund",
+          "gibt"
+        ],
         "tip": "orderValleyQuestTwelve.questSixTip"
       },
       {
@@ -1836,8 +4417,32 @@
         "id": 9,
         "type": "reorder",
         "question": "orderValleyQuestTwelve.questNine",
-        "words": ["schaue", "mir", "Wohnung", "die", "an", "wenn", "Schlüssel", "es", "einen", "gibt", "Ich"],
-        "correctOrder": ["Ich", "schaue", "mir", "die", "Wohnung", "an", "wenn", "es", "einen", "Schlüssel", "gibt"],
+        "words": [
+          "schaue",
+          "mir",
+          "Wohnung",
+          "die",
+          "an",
+          "wenn",
+          "Schlüssel",
+          "es",
+          "einen",
+          "gibt",
+          "Ich"
+        ],
+        "correctOrder": [
+          "Ich",
+          "schaue",
+          "mir",
+          "die",
+          "Wohnung",
+          "an",
+          "wenn",
+          "es",
+          "einen",
+          "Schlüssel",
+          "gibt"
+        ],
         "tip": "orderValleyQuestTwelve.questNineTip"
       },
       {
@@ -1854,38 +4459,114 @@
       },
       {
         "id": 11,
-        "type": "speechToText",
-        "question": "orderValleyQuestTwelve.questEleven",
-        "text": "Er sagt, dass er sich jetzt wäscht",
-        "answer": "Er sagt, dass er sich jetzt wäscht",
-        "tip": "orderValleyQuestTwelve.questElevenTip"
+        "type": "reorder",
+        "question": "orderValleyQuestEleven.questOne",
+        "words": [
+          "bestelle",
+          "mir",
+          "Pizza",
+          "eine",
+          "weil",
+          "Pasta",
+          "keine",
+          "gibt",
+          "es",
+          "Ich"
+        ],
+        "correctOrder": [
+          "Ich",
+          "bestelle",
+          "mir",
+          "eine",
+          "Pizza",
+          "weil",
+          "es",
+          "keine",
+          "Pasta",
+          "gibt"
+        ],
+        "tip": "orderValleyQuestEleven.questOneTip",
+        "reviewOf": "order-eleven",
+        "reviewLand": "order-valley"
       },
       {
         "id": 12,
         "type": "reorder",
-        "question": "orderValleyQuestTwelve.questTwelve",
-        "words": ["ist", "wichtig", "dass", "Garten", "einen", "es", "gibt", "Es"],
-        "correctOrder": ["Es", "ist", "wichtig", "dass", "es", "einen", "Garten", "gibt"],
-        "tip": "orderValleyQuestTwelve.questTwelveTip"
+        "question": "orderValleyQuestNine.questFour",
+        "words": [
+          "merke",
+          "mir",
+          "dass",
+          "Termin",
+          "gibt",
+          "Ich",
+          "es",
+          "einen",
+          "ein",
+          "mich"
+        ],
+        "correctOrder": [
+          "Ich",
+          "merke",
+          "mir",
+          "dass",
+          "es",
+          "einen",
+          "Termin",
+          "gibt"
+        ],
+        "tip": "orderValleyQuestNine.questFourTip",
+        "reviewOf": "order-nine",
+        "reviewLand": "order-valley"
       },
       {
         "id": 13,
-        "type": "select",
-        "question": "orderValleyQuestTwelve.questThirteen",
-        "options": [
-          "Ich wasche mir die Hände, weil es Seife gibt",
-          "Ich wasche mich die Hände, weil es Seife gibt",
-          "Ich wasche mir die Hände, weil es Seife ist"
+        "type": "reorder",
+        "question": "orderValleyQuestFive.questSix",
+        "words": [
+          "Es",
+          "gibt",
+          "einen",
+          "Grund"
         ],
-        "answer": "Ich wasche mir die Hände, weil es Seife gibt",
-        "tip": "orderValleyQuestTwelve.questThirteenTip"
+        "correctOrder": [
+          "Es",
+          "gibt",
+          "einen",
+          "Grund"
+        ],
+        "tip": "orderValleyQuestFive.questSixTip",
+        "reviewOf": "order-five",
+        "reviewLand": "order-valley"
       },
       {
         "id": 14,
         "type": "reorder",
         "question": "orderValleyQuestTwelve.questFourteen",
-        "words": ["nehme", "mir", "Zimmer", "das", "wenn", "Bett", "ein", "es", "gibt", "Ich"],
-        "correctOrder": ["Ich", "nehme", "mir", "das", "Zimmer", "wenn", "es", "ein", "Bett", "gibt"],
+        "words": [
+          "nehme",
+          "mir",
+          "Zimmer",
+          "das",
+          "wenn",
+          "Bett",
+          "ein",
+          "es",
+          "gibt",
+          "Ich"
+        ],
+        "correctOrder": [
+          "Ich",
+          "nehme",
+          "mir",
+          "das",
+          "Zimmer",
+          "wenn",
+          "es",
+          "ein",
+          "Bett",
+          "gibt"
+        ],
         "tip": "orderValleyQuestTwelve.questFourteenTip"
       },
       {
@@ -1895,6 +4576,120 @@
         "text": "Er glaubt, dass es kein Problem gibt",
         "answer": "Er glaubt, dass es kein Problem gibt",
         "tip": "orderValleyQuestTwelve.questFifteenTip"
+      }
+    ],
+    "vocabulary": [
+      {
+        "word": "die Ruhe",
+        "translation-ru": "спокойствие",
+        "translation-en": "calmness",
+        "translation-uk": "спокій",
+        "translation-pl": "spokój",
+        "translation-es": "calma",
+        "translation-fr": "calme",
+        "translation-tr": "sakinlik",
+        "translation-ro": "calm",
+        "translation-uz": "xotirjamlik",
+        "translation-hi": "शांति",
+        "translation-ar": "هدوء"
+      },
+      {
+        "word": "der Stress",
+        "translation-ru": "стресс",
+        "translation-en": "stress",
+        "translation-uk": "стрес",
+        "translation-pl": "stres",
+        "translation-es": "el estrés",
+        "translation-fr": "le stress",
+        "translation-tr": "stres",
+        "translation-ro": "stresul",
+        "translation-uz": "stress",
+        "translation-hi": "तनाव",
+        "translation-ar": "التوتر"
+      },
+      {
+        "word": "ziehen",
+        "translation-ru": "тянуть / тащить",
+        "translation-en": "to pull / draw",
+        "translation-uk": "тягнути",
+        "translation-pl": "ciągnąć",
+        "translation-es": "tirar / jalar",
+        "translation-fr": "tirer",
+        "translation-tr": "çekmek",
+        "translation-ro": "a trage",
+        "translation-uz": "tortmoq",
+        "translation-hi": "खींचना",
+        "translation-ar": "يسحب"
+      },
+      {
+        "word": "die Chance",
+        "translation-ru": "шанс",
+        "translation-en": "chance",
+        "translation-uk": "шанс",
+        "translation-pl": "szansa",
+        "translation-es": "la oportunidad",
+        "translation-fr": "la chance",
+        "translation-tr": "şans",
+        "translation-ro": "șansa",
+        "translation-uz": "imkoniyat",
+        "translation-hi": "मौक़ा",
+        "translation-ar": "الفرصة"
+      },
+      {
+        "word": "der Grund",
+        "translation-ru": "причина",
+        "translation-en": "reason",
+        "translation-uk": "причина",
+        "translation-pl": "powód",
+        "translation-es": "la razón",
+        "translation-fr": "la raison",
+        "translation-tr": "sebep",
+        "translation-ro": "motivul",
+        "translation-uz": "sabab",
+        "translation-hi": "कारण",
+        "translation-ar": "السبب"
+      },
+      {
+        "word": "ansehen",
+        "translation-ru": "смотреть на",
+        "translation-en": "to look at",
+        "translation-uk": "дивитися на",
+        "translation-pl": "oglądać",
+        "translation-es": "mirar",
+        "translation-fr": "regarder",
+        "translation-tr": "bakmak",
+        "translation-ro": "a privi",
+        "translation-uz": "qaramoq",
+        "translation-hi": "देखना",
+        "translation-ar": "ينظر إلى"
+      },
+      {
+        "word": "überlegen",
+        "translation-ru": "обдумывать",
+        "translation-en": "to think over",
+        "translation-uk": "обмірковувати",
+        "translation-pl": "zastanawiać się",
+        "translation-es": "reflexionar",
+        "translation-fr": "réfléchir",
+        "translation-tr": "düşünmek",
+        "translation-ro": "a se gândi",
+        "translation-uz": "o‘ylab ko‘rmoq",
+        "translation-hi": "सोचना",
+        "translation-ar": "يفكر"
+      },
+      {
+        "word": "das Date",
+        "translation-ru": "свидание",
+        "translation-en": "date",
+        "translation-uk": "побачення",
+        "translation-pl": "randka",
+        "translation-es": "la cita",
+        "translation-fr": "le rendez-vous",
+        "translation-tr": "randevu",
+        "translation-ro": "întâlnirea",
+        "translation-uz": "uchrashuv",
+        "translation-hi": "डेट",
+        "translation-ar": "الموعد الغرامي"
       }
     ]
   }

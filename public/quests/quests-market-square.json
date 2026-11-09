@@ -1,0 +1,2952 @@
+[
+  {
+    "questId": "market-square-one",
+    "title": "marketSquareOne.questTitle",
+    "progress": "0/15",
+    "description": "marketSquareOne.questDescription",
+    "conditions": {
+      "goal": "marketSquareOne.questGoal",
+      "minCorrect": 15,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
+    "vocabulary": [
+      {
+        "word": "kaufen",
+        "translation-ru": "покупать",
+        "translation-en": "to buy",
+        "translation-uk": "купувати",
+        "translation-pl": "kupować",
+        "translation-es": "comprar",
+        "translation-fr": "acheter",
+        "translation-tr": "satın almak",
+        "translation-ro": "a cumpăra",
+        "translation-uz": "sotib olmoq",
+        "translation-hi": "ख़रीदना",
+        "translation-ar": "يشتري"
+      },
+      {
+        "word": "brauchen",
+        "translation-ru": "нуждаться",
+        "translation-en": "to need",
+        "translation-uk": "потребувати",
+        "translation-pl": "potrzebować",
+        "translation-es": "necesitar",
+        "translation-fr": "avoir besoin de",
+        "translation-tr": "ihtiyacı olmak",
+        "translation-ro": "a avea nevoie",
+        "translation-uz": "kerak bo‘lmoq",
+        "translation-hi": "ज़रूरत होना",
+        "translation-ar": "يحتاج"
+      },
+      {
+        "word": "suchen",
+        "translation-ru": "искать",
+        "translation-en": "to look for",
+        "translation-uk": "шукати",
+        "translation-pl": "szukać",
+        "translation-es": "buscar",
+        "translation-fr": "chercher",
+        "translation-tr": "aramak",
+        "translation-ro": "a căuta",
+        "translation-uz": "qidirmoq",
+        "translation-hi": "ढूँढना",
+        "translation-ar": "يبحث عن"
+      },
+      {
+        "word": "der Stift",
+        "translation-ru": "ручка",
+        "translation-en": "pen",
+        "translation-uk": "ручка",
+        "translation-pl": "długopis",
+        "translation-es": "el bolígrafo",
+        "translation-fr": "le stylo",
+        "translation-tr": "kalem",
+        "translation-ro": "pixul",
+        "translation-uz": "ruchka",
+        "translation-hi": "पेन",
+        "translation-ar": "القلم"
+      },
+      {
+        "word": "der Laden",
+        "translation-ru": "магазин",
+        "translation-en": "shop",
+        "translation-uk": "крамниця",
+        "translation-pl": "sklep",
+        "translation-es": "la tienda",
+        "translation-fr": "le magasin",
+        "translation-tr": "dükkân",
+        "translation-ro": "magazinul",
+        "translation-uz": "do‘kon",
+        "translation-hi": "दुकान",
+        "translation-ar": "المتجر"
+      },
+      {
+        "word": "leer",
+        "translation-ru": "пустой",
+        "translation-en": "empty",
+        "translation-uk": "порожній",
+        "translation-pl": "pusty",
+        "translation-es": "vacío",
+        "translation-fr": "vide",
+        "translation-tr": "boş",
+        "translation-ro": "gol",
+        "translation-uz": "bo‘sh",
+        "translation-hi": "ख़ाली",
+        "translation-ar": "فارغ"
+      }
+    ],
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "marketSquareOne.questTask1",
+        "options": [
+          "Ich brauche ein Stuhl.",
+          "Ich brauche einer Stuhl.",
+          "Ich brauche einen Stuhl."
+        ],
+        "answer": "Ich brauche einen Stuhl.",
+        "tip": "marketSquareOne.questDescription"
+      },
+      {
+        "id": 2,
+        "type": "input",
+        "question": "marketSquareOne.questTask2",
+        "correctAnswer": "den",
+        "tip": "marketSquareOne.questDescription"
+      },
+      {
+        "id": 3,
+        "type": "input",
+        "question": "marketSquareOne.questTask3",
+        "correctAnswer": "einen",
+        "tip": "marketSquareOne.questDescription"
+      },
+      {
+        "id": 4,
+        "type": "select",
+        "question": "marketSquareOne.questTask4",
+        "options": [
+          "Wir kaufen einen Computer.",
+          "Wir kaufen den einen Computer.",
+          "Wir kaufen ein Computer."
+        ],
+        "answer": "Wir kaufen einen Computer.",
+        "tip": "marketSquareOne.questDescription"
+      },
+      {
+        "id": 5,
+        "type": "reorder",
+        "question": "marketSquareOne.questTask5",
+        "words": [
+          "ein",
+          "einen",
+          "Stuhl",
+          "kaufe",
+          "Ich",
+          "der",
+          "heute"
+        ],
+        "correctOrder": [
+          "Ich",
+          "kaufe",
+          "heute",
+          "einen",
+          "Stuhl"
+        ],
+        "tip": "marketSquareOne.questDescription"
+      },
+      {
+        "id": 6,
+        "type": "select",
+        "question": "marketSquareOne.questTask6",
+        "options": [
+          "Was sucht du?",
+          "Was suchst du?",
+          "Wen suchst du Laden?"
+        ],
+        "answer": "Was suchst du?",
+        "tip": "marketSquareOne.questDescription"
+      },
+      {
+        "id": 7,
+        "type": "input",
+        "question": "marketSquareOne.questTask7",
+        "correctAnswer": "einen",
+        "tip": "marketSquareOne.questDescription"
+      },
+      {
+        "id": 8,
+        "type": "select",
+        "question": "marketSquareOne.questTask8",
+        "options": [
+          "Der Laden ist groß.",
+          "Einen Laden ist groß.",
+          "Den Laden ist groß."
+        ],
+        "answer": "Der Laden ist groß.",
+        "tip": "marketSquareOne.questDescription"
+      },
+      {
+        "id": 9,
+        "type": "readAndAnswer",
+        "question": "marketSquareOne.questTask9",
+        "text": "Tim wohnt jetzt in Berlin. Die Wohnung ist neu, aber sie ist leer. Tim hat ein Bett. Er braucht einen Tisch und einen Schrank. Er sucht einen Laden.",
+        "options": [
+          "einen Tisch und einen Schrank",
+          "eine Wohnung",
+          "ein Bett"
+        ],
+        "answer": "einen Tisch und einen Schrank",
+        "tip": "marketSquareOne.questDescription"
+      },
+      {
+        "id": 10,
+        "type": "input",
+        "question": "marketSquareOne.questTask10",
+        "correctAnswer": "einen",
+        "tip": "marketSquareOne.questDescription"
+      },
+      {
+        "id": 11,
+        "type": "reorder",
+        "question": "marketSquareOne.questTask11",
+        "words": [
+          "Kaufen",
+          "kauft",
+          "Sie",
+          "den",
+          "das",
+          "Sofa"
+        ],
+        "correctOrder": [
+          "Kaufen",
+          "Sie",
+          "das",
+          "Sofa"
+        ],
+        "tip": "marketSquareOne.questDescription"
+      },
+      {
+        "id": 12,
+        "type": "input",
+        "question": "marketSquareOne.questTask12",
+        "correctAnswer": "kein",
+        "tip": "marketSquareOne.questDescription"
+      },
+      {
+        "id": 13,
+        "type": "select",
+        "question": "marketSquareOne.questTask13",
+        "options": [
+          "Woher kommst ihr?",
+          "Woher kommt ihr?",
+          "Woher ihr kommt?"
+        ],
+        "answer": "Woher kommt ihr?",
+        "tip": "marketSquareOne.questDescription"
+      },
+      {
+        "id": 14,
+        "type": "select",
+        "question": "marketSquareOne.questTask14",
+        "options": [
+          "Das ist kein mein Stuhl.",
+          "Das ist nicht mein Stuhl.",
+          "Das ist nicht meinen Stuhl."
+        ],
+        "answer": "Das ist nicht mein Stuhl.",
+        "tip": "marketSquareOne.questDescription"
+      },
+      {
+        "id": 15,
+        "type": "reorder",
+        "question": "marketSquareOne.questTask15",
+        "words": [
+          "Zeit",
+          "heute",
+          "du",
+          "Hast",
+          "keine",
+          "hat"
+        ],
+        "correctOrder": [
+          "Hast",
+          "du",
+          "heute",
+          "Zeit"
+        ],
+        "tip": "marketSquareOne.questDescription"
+      }
+    ]
+  },
+  {
+    "questId": "market-square-two",
+    "title": "marketSquareTwo.questTitle",
+    "progress": "0/15",
+    "description": "marketSquareTwo.questDescription",
+    "conditions": {
+      "goal": "marketSquareTwo.questGoal",
+      "minCorrect": 15,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
+    "vocabulary": [
+      {
+        "word": "der Apfel, die Äpfel",
+        "translation-ru": "яблоко, яблоки",
+        "translation-en": "apple, apples",
+        "translation-uk": "яблуко, яблука",
+        "translation-pl": "jabłko, jabłka",
+        "translation-es": "la manzana, las manzanas",
+        "translation-fr": "la pomme, les pommes",
+        "translation-tr": "elma, elmalar",
+        "translation-ro": "mărul, merele",
+        "translation-uz": "olma, olmalar",
+        "translation-hi": "सेब, सेब (बहुवचन)",
+        "translation-ar": "التفاحة، التفاح"
+      },
+      {
+        "word": "die Banane",
+        "translation-ru": "банан",
+        "translation-en": "banana",
+        "translation-uk": "банан",
+        "translation-pl": "banan",
+        "translation-es": "el plátano",
+        "translation-fr": "la banane",
+        "translation-tr": "muz",
+        "translation-ro": "banana",
+        "translation-uz": "banan",
+        "translation-hi": "केला",
+        "translation-ar": "الموزة"
+      },
+      {
+        "word": "das Brot",
+        "translation-ru": "хлеб",
+        "translation-en": "bread",
+        "translation-uk": "хліб",
+        "translation-pl": "chleb",
+        "translation-es": "el pan",
+        "translation-fr": "le pain",
+        "translation-tr": "ekmek",
+        "translation-ro": "pâinea",
+        "translation-uz": "non",
+        "translation-hi": "ब्रेड",
+        "translation-ar": "الخبز"
+      },
+      {
+        "word": "das Ei, die Eier",
+        "translation-ru": "яйцо, яйца",
+        "translation-en": "egg, eggs",
+        "translation-uk": "яйце, яйця",
+        "translation-pl": "jajko, jajka",
+        "translation-es": "el huevo, los huevos",
+        "translation-fr": "l’œuf, les œufs",
+        "translation-tr": "yumurta, yumurtalar",
+        "translation-ro": "oul, ouăle",
+        "translation-uz": "tuxum, tuxumlar",
+        "translation-hi": "अंडा, अंडे",
+        "translation-ar": "البيضة، البيض"
+      },
+      {
+        "word": "die Tüte",
+        "translation-ru": "пакет",
+        "translation-en": "bag",
+        "translation-uk": "пакет",
+        "translation-pl": "reklamówka",
+        "translation-es": "la bolsa",
+        "translation-fr": "le sac",
+        "translation-tr": "poşet",
+        "translation-ro": "punga",
+        "translation-uz": "paket",
+        "translation-hi": "थैली",
+        "translation-ar": "الكيس"
+      }
+    ],
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "marketSquareTwo.questTask1",
+        "options": [
+          "Ich kaufe einer Banane.",
+          "Ich kaufe einen Banane.",
+          "Ich kaufe eine Banane."
+        ],
+        "answer": "Ich kaufe eine Banane.",
+        "tip": "marketSquareTwo.questDescription"
+      },
+      {
+        "id": 2,
+        "type": "input",
+        "question": "marketSquareTwo.questTask2",
+        "correctAnswer": "das",
+        "tip": "marketSquareTwo.questDescription"
+      },
+      {
+        "id": 3,
+        "type": "input",
+        "question": "marketSquareTwo.questTask3",
+        "correctAnswer": "eine",
+        "tip": "marketSquareTwo.questDescription"
+      },
+      {
+        "id": 4,
+        "type": "select",
+        "question": "marketSquareTwo.questTask4",
+        "options": [
+          "Ich kaufe Apfels und Eis.",
+          "Ich kaufe Äpfel und Eier.",
+          "Ich kaufe einen Äpfel und Eier."
+        ],
+        "answer": "Ich kaufe Äpfel und Eier.",
+        "tip": "marketSquareTwo.questDescription"
+      },
+      {
+        "id": 5,
+        "type": "reorder",
+        "question": "marketSquareTwo.questTask5",
+        "words": [
+          "den",
+          "brauche",
+          "ein",
+          "einen",
+          "eine",
+          "Tüte",
+          "und",
+          "Ich",
+          "Ei"
+        ],
+        "correctOrder": [
+          "Ich",
+          "brauche",
+          "ein",
+          "Ei",
+          "und",
+          "eine",
+          "Tüte"
+        ],
+        "tip": "marketSquareTwo.questDescription"
+      },
+      {
+        "id": 6,
+        "type": "select",
+        "question": "marketSquareTwo.questTask6",
+        "options": [
+          "Suchst du die Lampe?",
+          "Suchst du der Lampe?",
+          "Suchst du den Lampe?"
+        ],
+        "answer": "Suchst du die Lampe?",
+        "tip": "marketSquareTwo.questDescription"
+      },
+      {
+        "id": 7,
+        "type": "input",
+        "question": "marketSquareTwo.questTask7",
+        "correctAnswer": "Äpfel",
+        "tip": "marketSquareTwo.questDescription"
+      },
+      {
+        "id": 8,
+        "type": "select",
+        "question": "marketSquareTwo.questTask8",
+        "options": [
+          "Wir brauchen das Buch.",
+          "Wir brauchen der Buch.",
+          "Wir brauchen den Buch."
+        ],
+        "answer": "Wir brauchen das Buch.",
+        "tip": "marketSquareTwo.questDescription"
+      },
+      {
+        "id": 9,
+        "type": "readAndAnswer",
+        "question": "marketSquareTwo.questTask9",
+        "text": "Anna kauft Brot, eine Banane und sechs Eier. Äpfel kauft sie nicht, sie hat Äpfel im Garten. Sie braucht eine Tüte.",
+        "options": [
+          "Eier",
+          "Äpfel",
+          "Brot"
+        ],
+        "answer": "Äpfel",
+        "tip": "marketSquareTwo.questDescription"
+      },
+      {
+        "id": 10,
+        "type": "input",
+        "question": "marketSquareTwo.questTask10",
+        "correctAnswer": "Sie",
+        "tip": "marketSquareTwo.questDescription"
+      },
+      {
+        "id": 11,
+        "type": "reorder",
+        "question": "marketSquareTwo.questTask11",
+        "words": [
+          "kauft",
+          "kaufen",
+          "einen",
+          "Kinder",
+          "Die",
+          "Bananen"
+        ],
+        "correctOrder": [
+          "Die",
+          "Kinder",
+          "kaufen",
+          "Bananen"
+        ],
+        "tip": "marketSquareTwo.questDescription"
+      },
+      {
+        "id": 12,
+        "type": "input",
+        "question": "marketSquareTwo.questTask12",
+        "correctAnswer": "einen",
+        "tip": "marketSquareTwo.questDescription"
+      },
+      {
+        "id": 13,
+        "type": "select",
+        "question": "marketSquareTwo.questTask13",
+        "options": [
+          "Kauft ihr den Schrank?",
+          "Kauft ihr der Schrank?",
+          "Kaufst ihr den Schrank?"
+        ],
+        "answer": "Kauft ihr den Schrank?",
+        "tip": "marketSquareTwo.questDescription"
+      },
+      {
+        "id": 14,
+        "type": "select",
+        "question": "marketSquareTwo.questTask14",
+        "options": [
+          "Das ist kein Handy.",
+          "Das ist nicht Handy.",
+          "Das ist keinen Handy."
+        ],
+        "answer": "Das ist kein Handy.",
+        "tip": "marketSquareTwo.questDescription"
+      },
+      {
+        "id": 15,
+        "type": "reorder",
+        "question": "marketSquareTwo.questTask15",
+        "words": [
+          "macht",
+          "Was",
+          "manchmal",
+          "wo",
+          "ihr",
+          "machst"
+        ],
+        "correctOrder": [
+          "Was",
+          "macht",
+          "ihr",
+          "manchmal"
+        ],
+        "tip": "marketSquareTwo.questDescription"
+      }
+    ]
+  },
+  {
+    "questId": "market-square-three",
+    "title": "marketSquareThree.questTitle",
+    "progress": "0/15",
+    "description": "marketSquareThree.questDescription",
+    "conditions": {
+      "goal": "marketSquareThree.questGoal",
+      "minCorrect": 15,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
+    "vocabulary": [
+      {
+        "word": "besuchen",
+        "translation-ru": "навещать",
+        "translation-en": "to visit",
+        "translation-uk": "відвідувати",
+        "translation-pl": "odwiedzać",
+        "translation-es": "visitar",
+        "translation-fr": "rendre visite",
+        "translation-tr": "ziyaret etmek",
+        "translation-ro": "a vizita",
+        "translation-uz": "ziyorat qilmoq",
+        "translation-hi": "मिलने जाना",
+        "translation-ar": "يزور"
+      },
+      {
+        "word": "fragen",
+        "translation-ru": "спрашивать",
+        "translation-en": "to ask",
+        "translation-uk": "питати",
+        "translation-pl": "pytać",
+        "translation-es": "preguntar",
+        "translation-fr": "demander",
+        "translation-tr": "sormak",
+        "translation-ro": "a întreba",
+        "translation-uz": "so‘ramoq",
+        "translation-hi": "पूछना",
+        "translation-ar": "يسأل"
+      },
+      {
+        "word": "der Opa",
+        "translation-ru": "дедушка",
+        "translation-en": "grandpa",
+        "translation-uk": "дідусь",
+        "translation-pl": "dziadek",
+        "translation-es": "el abuelo",
+        "translation-fr": "le papi",
+        "translation-tr": "dede",
+        "translation-ro": "bunicul",
+        "translation-uz": "buva",
+        "translation-hi": "दादा",
+        "translation-ar": "الجد"
+      },
+      {
+        "word": "die Oma",
+        "translation-ru": "бабушка",
+        "translation-en": "grandma",
+        "translation-uk": "бабуся",
+        "translation-pl": "babcia",
+        "translation-es": "la abuela",
+        "translation-fr": "la mamie",
+        "translation-tr": "nine",
+        "translation-ro": "bunica",
+        "translation-uz": "buvi",
+        "translation-hi": "दादी",
+        "translation-ar": "الجدة"
+      },
+      {
+        "word": "der Freund",
+        "translation-ru": "друг",
+        "translation-en": "friend",
+        "translation-uk": "друг",
+        "translation-pl": "przyjaciel",
+        "translation-es": "el amigo",
+        "translation-fr": "l’ami",
+        "translation-tr": "arkadaş",
+        "translation-ro": "prietenul",
+        "translation-uz": "do‘st",
+        "translation-hi": "दोस्त",
+        "translation-ar": "الصديق"
+      },
+      {
+        "word": "der Zucker",
+        "translation-ru": "сахар",
+        "translation-en": "sugar",
+        "translation-uk": "цукор",
+        "translation-pl": "cukier",
+        "translation-es": "el azúcar",
+        "translation-fr": "le sucre",
+        "translation-tr": "şeker",
+        "translation-ro": "zahărul",
+        "translation-uz": "shakar",
+        "translation-hi": "चीनी",
+        "translation-ar": "السكر"
+      }
+    ],
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "marketSquareThree.questTask1",
+        "options": [
+          "Ich habe kein Stift.",
+          "Ich habe nicht einen Stift.",
+          "Ich habe keinen Stift."
+        ],
+        "answer": "Ich habe keinen Stift.",
+        "tip": "marketSquareThree.questDescription"
+      },
+      {
+        "id": 2,
+        "type": "input",
+        "question": "marketSquareThree.questTask2",
+        "correctAnswer": "Wen",
+        "tip": "marketSquareThree.questDescription"
+      },
+      {
+        "id": 3,
+        "type": "input",
+        "question": "marketSquareThree.questTask3",
+        "correctAnswer": "den",
+        "tip": "marketSquareThree.questDescription"
+      },
+      {
+        "id": 4,
+        "type": "select",
+        "question": "marketSquareThree.questTask4",
+        "options": [
+          "Wir fragen dem Lehrer.",
+          "Wir fragen der Lehrer.",
+          "Wir fragen den Lehrer."
+        ],
+        "answer": "Wir fragen den Lehrer.",
+        "tip": "marketSquareThree.questDescription"
+      },
+      {
+        "id": 5,
+        "type": "reorder",
+        "question": "marketSquareThree.questTask5",
+        "words": [
+          "besucht",
+          "Oma",
+          "den",
+          "besuchen",
+          "Heute",
+          "die",
+          "wir"
+        ],
+        "correctOrder": [
+          "Heute",
+          "besuchen",
+          "wir",
+          "die",
+          "Oma"
+        ],
+        "tip": "marketSquareThree.questDescription"
+      },
+      {
+        "id": 6,
+        "type": "select",
+        "question": "marketSquareThree.questTask6",
+        "options": [
+          "Wir haben keine Zucker.",
+          "Wir haben keinen Zucker.",
+          "Wir haben kein Zucker."
+        ],
+        "answer": "Wir haben keinen Zucker.",
+        "tip": "marketSquareThree.questDescription"
+      },
+      {
+        "id": 7,
+        "type": "input",
+        "question": "marketSquareThree.questTask7",
+        "correctAnswer": "den",
+        "tip": "marketSquareThree.questDescription"
+      },
+      {
+        "id": 8,
+        "type": "select",
+        "question": "marketSquareThree.questTask8",
+        "options": [
+          "Wer suchen Sie? Den Lehrer.",
+          "Wen suchen Sie? Den Lehrer.",
+          "Was suchen Sie? Der Lehrer."
+        ],
+        "answer": "Wen suchen Sie? Den Lehrer.",
+        "tip": "marketSquareThree.questDescription"
+      },
+      {
+        "id": 9,
+        "type": "readAndAnswer",
+        "question": "marketSquareThree.questTask9",
+        "text": "Lisa hat heute keine Zeit. Sie besucht den Opa. Der Opa ist krank. Lisa kauft Brot und Äpfel für den Opa.",
+        "options": [
+          "den Freund",
+          "den Opa",
+          "die Oma"
+        ],
+        "answer": "den Opa",
+        "tip": "marketSquareThree.questDescription"
+      },
+      {
+        "id": 10,
+        "type": "input",
+        "question": "marketSquareThree.questTask10",
+        "correctAnswer": "keinen",
+        "tip": "marketSquareThree.questDescription"
+      },
+      {
+        "id": 11,
+        "type": "reorder",
+        "question": "marketSquareThree.questTask11",
+        "words": [
+          "die",
+          "fragst",
+          "Wen",
+          "du",
+          "wer",
+          "was",
+          "Oma"
+        ],
+        "correctOrder": [
+          "Wen",
+          "fragst",
+          "du",
+          "die",
+          "Oma"
+        ],
+        "tip": "marketSquareThree.questDescription"
+      },
+      {
+        "id": 12,
+        "type": "input",
+        "question": "marketSquareThree.questTask12",
+        "correctAnswer": "Äpfel",
+        "tip": "marketSquareThree.questDescription"
+      },
+      {
+        "id": 13,
+        "type": "select",
+        "question": "marketSquareThree.questTask13",
+        "options": [
+          "Er sucht ein Laden.",
+          "Er sucht einen Laden.",
+          "Er sucht einer Laden."
+        ],
+        "answer": "Er sucht einen Laden.",
+        "tip": "marketSquareThree.questDescription"
+      },
+      {
+        "id": 14,
+        "type": "select",
+        "question": "marketSquareThree.questTask14",
+        "options": [
+          "Brauchen Sie einen Tüte?",
+          "Brauchen Sie eine Tüte?",
+          "Braucht Sie eine Tüte?"
+        ],
+        "answer": "Brauchen Sie eine Tüte?",
+        "tip": "marketSquareThree.questDescription"
+      },
+      {
+        "id": 15,
+        "type": "reorder",
+        "question": "marketSquareThree.questTask15",
+        "words": [
+          "kaufe",
+          "Eier",
+          "sechs",
+          "und",
+          "Brot",
+          "Ei",
+          "Ich",
+          "einen"
+        ],
+        "correctOrder": [
+          "Ich",
+          "kaufe",
+          "Brot",
+          "und",
+          "sechs",
+          "Eier"
+        ],
+        "tip": "marketSquareThree.questDescription"
+      }
+    ]
+  },
+  {
+    "questId": "market-square-four",
+    "title": "marketSquareFour.questTitle",
+    "progress": "0/15",
+    "description": "marketSquareFour.questDescription",
+    "conditions": {
+      "goal": "marketSquareFour.questGoal",
+      "minCorrect": 15,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
+    "vocabulary": [
+      {
+        "word": "der Markt",
+        "translation-ru": "рынок",
+        "translation-en": "market",
+        "translation-uk": "ринок",
+        "translation-pl": "targ",
+        "translation-es": "el mercado",
+        "translation-fr": "le marché",
+        "translation-tr": "pazar",
+        "translation-ro": "piața",
+        "translation-uz": "bozor",
+        "translation-hi": "बाज़ार",
+        "translation-ar": "السوق"
+      },
+      {
+        "word": "das Kilo",
+        "translation-ru": "килограмм",
+        "translation-en": "kilo",
+        "translation-uk": "кілограм",
+        "translation-pl": "kilogram",
+        "translation-es": "el kilo",
+        "translation-fr": "le kilo",
+        "translation-tr": "kilo",
+        "translation-ro": "kilogramul",
+        "translation-uz": "kilogramm",
+        "translation-hi": "किलो",
+        "translation-ar": "الكيلو"
+      },
+      {
+        "word": "die Tomate",
+        "translation-ru": "помидор",
+        "translation-en": "tomato",
+        "translation-uk": "помідор",
+        "translation-pl": "pomidor",
+        "translation-es": "el tomate",
+        "translation-fr": "la tomate",
+        "translation-tr": "domates",
+        "translation-ro": "roșia",
+        "translation-uz": "pomidor",
+        "translation-hi": "टमाटर",
+        "translation-ar": "الطماطم"
+      },
+      {
+        "word": "die Kartoffel",
+        "translation-ru": "картофель",
+        "translation-en": "potato",
+        "translation-uk": "картопля",
+        "translation-pl": "ziemniak",
+        "translation-es": "la patata",
+        "translation-fr": "la pomme de terre",
+        "translation-tr": "patates",
+        "translation-ro": "cartoful",
+        "translation-uz": "kartoshka",
+        "translation-hi": "आलू",
+        "translation-ar": "البطاطا"
+      },
+      {
+        "word": "frisch",
+        "translation-ru": "свежий",
+        "translation-en": "fresh",
+        "translation-uk": "свіжий",
+        "translation-pl": "świeży",
+        "translation-es": "fresco",
+        "translation-fr": "frais",
+        "translation-tr": "taze",
+        "translation-ro": "proaspăt",
+        "translation-uz": "yangi, toza",
+        "translation-hi": "ताज़ा",
+        "translation-ar": "طازج"
+      },
+      {
+        "word": "nehmen",
+        "translation-ru": "брать",
+        "translation-en": "to take",
+        "translation-uk": "брати",
+        "translation-pl": "brać",
+        "translation-es": "tomar",
+        "translation-fr": "prendre",
+        "translation-tr": "almak",
+        "translation-ro": "a lua",
+        "translation-uz": "olmoq",
+        "translation-hi": "लेना",
+        "translation-ar": "يأخذ"
+      },
+      {
+        "word": "der Verkäufer",
+        "translation-ru": "продавец",
+        "translation-en": "shop assistant",
+        "translation-uk": "продавець",
+        "translation-pl": "sprzedawca",
+        "translation-es": "el dependiente",
+        "translation-fr": "le vendeur",
+        "translation-tr": "satıcı",
+        "translation-ro": "vânzătorul",
+        "translation-uz": "sotuvchi",
+        "translation-hi": "दुकानदार",
+        "translation-ar": "البائع"
+      },
+      {
+        "word": "halb",
+        "translation-ru": "половина",
+        "translation-en": "half",
+        "translation-uk": "пів",
+        "translation-pl": "wpół",
+        "translation-es": "y media",
+        "translation-fr": "et demie",
+        "translation-tr": "buçuk",
+        "translation-ro": "jumătate",
+        "translation-uz": "yarim",
+        "translation-hi": "आधा",
+        "translation-ar": "نصف"
+      },
+      {
+        "word": "der Käse",
+        "translation-ru": "сыр",
+        "translation-en": "cheese",
+        "translation-uk": "сир",
+        "translation-pl": "ser",
+        "translation-es": "el queso",
+        "translation-fr": "le fromage",
+        "translation-tr": "peynir",
+        "translation-ro": "brânza",
+        "translation-uz": "pishloq",
+        "translation-hi": "पनीर",
+        "translation-ar": "الجبن"
+      }
+    ],
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "marketSquareFour.questTask1",
+        "options": [
+          "Ein Kilo Äpfeln, bitte.",
+          "Ein Kilo die Äpfel, bitte.",
+          "Ein Kilo Äpfel, bitte."
+        ],
+        "answer": "Ein Kilo Äpfel, bitte.",
+        "tip": "marketSquareFour.questDescription"
+      },
+      {
+        "id": 2,
+        "type": "input",
+        "question": "marketSquareFour.questTask2",
+        "correctAnswer": "Kilo",
+        "tip": "marketSquareFour.questDescription"
+      },
+      {
+        "id": 3,
+        "type": "select",
+        "question": "marketSquareFour.questTask3",
+        "options": [
+          "Die Tomate sind sehr frisch.",
+          "Die Tomaten ist sehr frisch.",
+          "Die Tomaten sind sehr frisch."
+        ],
+        "answer": "Die Tomaten sind sehr frisch.",
+        "tip": "marketSquareFour.questDescription"
+      },
+      {
+        "id": 4,
+        "type": "input",
+        "question": "marketSquareFour.questTask4",
+        "correctAnswer": "Tomaten",
+        "tip": "marketSquareFour.questDescription"
+      },
+      {
+        "id": 5,
+        "type": "reorder",
+        "question": "marketSquareFour.questTask5",
+        "words": [
+          "auf",
+          "einen",
+          "kauft",
+          "Wir",
+          "Markt",
+          "dem",
+          "kaufen",
+          "Kartoffeln"
+        ],
+        "correctOrder": [
+          "Wir",
+          "kaufen",
+          "Kartoffeln",
+          "auf",
+          "dem",
+          "Markt"
+        ],
+        "tip": "marketSquareFour.questDescription"
+      },
+      {
+        "id": 6,
+        "type": "select",
+        "question": "marketSquareFour.questTask6",
+        "options": [
+          "Ein halbes Kilo den Käse, bitte.",
+          "Ein halbes Kilo Käse, bitte.",
+          "Ein halbe Kilo Käse, bitte."
+        ],
+        "answer": "Ein halbes Kilo Käse, bitte.",
+        "tip": "marketSquareFour.questDescription"
+      },
+      {
+        "id": 7,
+        "type": "input",
+        "question": "marketSquareFour.questTask7",
+        "correctAnswer": "Markt",
+        "tip": "marketSquareFour.questDescription"
+      },
+      {
+        "id": 8,
+        "type": "select",
+        "question": "marketSquareFour.questTask8",
+        "options": [
+          "Die Kartoffeln sind nicht frisch.",
+          "Die Kartoffeln sind keine frisch.",
+          "Die Kartoffeln sind kein frisch."
+        ],
+        "answer": "Die Kartoffeln sind nicht frisch.",
+        "tip": "marketSquareFour.questDescription"
+      },
+      {
+        "id": 9,
+        "type": "readAndAnswer",
+        "question": "marketSquareFour.questTask9",
+        "text": "Verkäufer: Guten Morgen! Was möchten Sie? Maria: Ein Kilo Tomaten, bitte. Was kosten die Äpfel? Verkäufer: Drei Euro das Kilo. Maria: Das ist teuer. Nur die Tomaten, bitte.",
+        "options": [
+          "nur Tomaten",
+          "nur Äpfel",
+          "Tomaten und Äpfel"
+        ],
+        "answer": "nur Tomaten",
+        "tip": "marketSquareFour.questDescription"
+      },
+      {
+        "id": 10,
+        "type": "input",
+        "question": "marketSquareFour.questTask10",
+        "correctAnswer": "frisch",
+        "tip": "marketSquareFour.questDescription"
+      },
+      {
+        "id": 11,
+        "type": "reorder",
+        "question": "marketSquareFour.questTask11",
+        "words": [
+          "die",
+          "Kilos",
+          "Zwei",
+          "Kartoffeln",
+          "Kilo",
+          "bitte"
+        ],
+        "correctOrder": [
+          "Zwei",
+          "Kilo",
+          "Kartoffeln",
+          "bitte"
+        ],
+        "tip": "marketSquareFour.questDescription"
+      },
+      {
+        "id": 12,
+        "type": "input",
+        "question": "marketSquareFour.questTask12",
+        "correctAnswer": "Einen",
+        "tip": "marketSquareFour.questDescription"
+      },
+      {
+        "id": 13,
+        "type": "select",
+        "question": "marketSquareFour.questTask13",
+        "options": [
+          "Wir brauchen Brot und eine Tüte.",
+          "Wir brauchen Brot und einen Tüte.",
+          "Wir braucht Brot und eine Tüte."
+        ],
+        "answer": "Wir brauchen Brot und eine Tüte.",
+        "tip": "marketSquareFour.questDescription"
+      },
+      {
+        "id": 14,
+        "type": "select",
+        "question": "marketSquareFour.questTask14",
+        "options": [
+          "Fragst du die Oma?",
+          "Fragst du den Oma?",
+          "Fragt du die Oma?"
+        ],
+        "answer": "Fragst du die Oma?",
+        "tip": "marketSquareFour.questDescription"
+      },
+      {
+        "id": 15,
+        "type": "reorder",
+        "question": "marketSquareFour.questTask15",
+        "words": [
+          "nicht",
+          "Das",
+          "ist",
+          "Stift",
+          "meinen",
+          "mein",
+          "kein"
+        ],
+        "correctOrder": [
+          "Das",
+          "ist",
+          "nicht",
+          "mein",
+          "Stift"
+        ],
+        "tip": "marketSquareFour.questDescription"
+      }
+    ]
+  },
+  {
+    "questId": "market-square-five",
+    "title": "marketSquareFive.questTitle",
+    "progress": "0/15",
+    "description": "marketSquareFive.questDescription",
+    "conditions": {
+      "goal": "marketSquareFive.questGoal",
+      "minCorrect": 15,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
+    "vocabulary": [
+      {
+        "word": "der Liter",
+        "translation-ru": "литр",
+        "translation-en": "litre",
+        "translation-uk": "літр",
+        "translation-pl": "litr",
+        "translation-es": "el litro",
+        "translation-fr": "le litre",
+        "translation-tr": "litre",
+        "translation-ro": "litrul",
+        "translation-uz": "litr",
+        "translation-hi": "लीटर",
+        "translation-ar": "اللتر"
+      },
+      {
+        "word": "die Butter",
+        "translation-ru": "сливочное масло",
+        "translation-en": "butter",
+        "translation-uk": "вершкове масло",
+        "translation-pl": "masło",
+        "translation-es": "la mantequilla",
+        "translation-fr": "le beurre",
+        "translation-tr": "tereyağı",
+        "translation-ro": "untul",
+        "translation-uz": "sariyog‘",
+        "translation-hi": "मक्खन",
+        "translation-ar": "الزبدة"
+      },
+      {
+        "word": "der Zucker",
+        "translation-ru": "сахар",
+        "translation-en": "sugar",
+        "translation-uk": "цукор",
+        "translation-pl": "cukier",
+        "translation-es": "el azúcar",
+        "translation-fr": "le sucre",
+        "translation-tr": "şeker",
+        "translation-ro": "zahărul",
+        "translation-uz": "shakar",
+        "translation-hi": "चीनी",
+        "translation-ar": "السكر"
+      },
+      {
+        "word": "die Flasche",
+        "translation-ru": "бутылка",
+        "translation-en": "bottle",
+        "translation-uk": "пляшка",
+        "translation-pl": "butelka",
+        "translation-es": "la botella",
+        "translation-fr": "la bouteille",
+        "translation-tr": "şişe",
+        "translation-ro": "sticla",
+        "translation-uz": "shisha",
+        "translation-hi": "बोतल",
+        "translation-ar": "الزجاجة"
+      },
+      {
+        "word": "der Käse",
+        "translation-ru": "сыр",
+        "translation-en": "cheese",
+        "translation-uk": "сир",
+        "translation-pl": "ser",
+        "translation-es": "el queso",
+        "translation-fr": "le fromage",
+        "translation-tr": "peynir",
+        "translation-ro": "brânza",
+        "translation-uz": "pishloq",
+        "translation-hi": "पनीर",
+        "translation-ar": "الجبن"
+      },
+      {
+        "word": "der Saft",
+        "translation-ru": "сок",
+        "translation-en": "juice",
+        "translation-uk": "сік",
+        "translation-pl": "sok",
+        "translation-es": "el zumo",
+        "translation-fr": "le jus",
+        "translation-tr": "meyve suyu",
+        "translation-ro": "sucul",
+        "translation-uz": "sharbat",
+        "translation-hi": "जूस",
+        "translation-ar": "العصير"
+      },
+      {
+        "word": "die Einkaufsliste",
+        "translation-ru": "список покупок",
+        "translation-en": "shopping list",
+        "translation-uk": "список покупок",
+        "translation-pl": "lista zakupów",
+        "translation-es": "la lista de la compra",
+        "translation-fr": "la liste de courses",
+        "translation-tr": "alışveriş listesi",
+        "translation-ro": "lista de cumpărături",
+        "translation-uz": "xarid ro‘yxati",
+        "translation-hi": "ख़रीदारी की सूची",
+        "translation-ar": "قائمة التسوق"
+      }
+    ],
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "marketSquareFive.questTask1",
+        "options": [
+          "Was braucht wir?",
+          "Wen brauchen wir?",
+          "Was brauchen wir?"
+        ],
+        "answer": "Was brauchen wir?",
+        "tip": "marketSquareFive.questDescription"
+      },
+      {
+        "id": 2,
+        "type": "input",
+        "question": "marketSquareFive.questTask2",
+        "correctAnswer": "einen",
+        "tip": "marketSquareFive.questDescription"
+      },
+      {
+        "id": 3,
+        "type": "select",
+        "question": "marketSquareFive.questTask3",
+        "options": [
+          "Ich kaufe einen Butter und Zucker.",
+          "Ich kaufe die Butter und den Zucker kaufen.",
+          "Ich kaufe Butter und Zucker."
+        ],
+        "answer": "Ich kaufe Butter und Zucker.",
+        "tip": "marketSquareFive.questDescription"
+      },
+      {
+        "id": 4,
+        "type": "input",
+        "question": "marketSquareFive.questTask4",
+        "correctAnswer": "Flasche",
+        "tip": "marketSquareFive.questDescription"
+      },
+      {
+        "id": 5,
+        "type": "reorder",
+        "question": "marketSquareFive.questTask5",
+        "words": [
+          "den",
+          "wir",
+          "suchen",
+          "Wo",
+          "sucht",
+          "ist",
+          "der",
+          "Käse",
+          "Käse"
+        ],
+        "correctOrder": [
+          "Wo",
+          "ist",
+          "der",
+          "Käse",
+          "wir",
+          "suchen",
+          "Käse"
+        ],
+        "tip": "marketSquareFive.questDescription"
+      },
+      {
+        "id": 6,
+        "type": "select",
+        "question": "marketSquareFive.questTask6",
+        "options": [
+          "Wir brauchen keinen Zucker.",
+          "Wir brauchen nicht Zucker.",
+          "Wir brauchen kein Zucker."
+        ],
+        "answer": "Wir brauchen keinen Zucker.",
+        "tip": "marketSquareFive.questDescription"
+      },
+      {
+        "id": 7,
+        "type": "input",
+        "question": "marketSquareFive.questTask7",
+        "correctAnswer": "keine",
+        "tip": "marketSquareFive.questDescription"
+      },
+      {
+        "id": 8,
+        "type": "select",
+        "question": "marketSquareFive.questTask8",
+        "options": [
+          "Zwei Flaschen den Saft, bitte.",
+          "Zwei Flaschen Saft, bitte.",
+          "Zwei Flasche Saft, bitte."
+        ],
+        "answer": "Zwei Flaschen Saft, bitte.",
+        "tip": "marketSquareFive.questDescription"
+      },
+      {
+        "id": 9,
+        "type": "readAndAnswer",
+        "question": "marketSquareFive.questTask9",
+        "text": "Einkaufsliste: Milch, Butter, Eier, Käse. Jan kauft einen Liter Milch, Butter und sechs Eier. Käse kauft er nicht, der Käse ist nicht frisch.",
+        "options": [
+          "Eier",
+          "Käse",
+          "Milch"
+        ],
+        "answer": "Käse",
+        "tip": "marketSquareFive.questDescription"
+      },
+      {
+        "id": 10,
+        "type": "input",
+        "question": "marketSquareFive.questTask10",
+        "correctAnswer": "Liter",
+        "tip": "marketSquareFive.questDescription"
+      },
+      {
+        "id": 11,
+        "type": "reorder",
+        "question": "marketSquareFive.questTask11",
+        "words": [
+          "und",
+          "einen",
+          "du",
+          "Käse",
+          "Brauchst",
+          "braucht",
+          "Butter"
+        ],
+        "correctOrder": [
+          "Brauchst",
+          "du",
+          "Käse",
+          "und",
+          "Butter"
+        ],
+        "tip": "marketSquareFive.questDescription"
+      },
+      {
+        "id": 12,
+        "type": "input",
+        "question": "marketSquareFive.questTask12",
+        "correctAnswer": "Tomaten",
+        "tip": "marketSquareFive.questDescription"
+      },
+      {
+        "id": 13,
+        "type": "select",
+        "question": "marketSquareFive.questTask13",
+        "options": [
+          "Ich besuche einen Freund.",
+          "Ich besuche einem Freund.",
+          "Ich besuche ein Freund."
+        ],
+        "answer": "Ich besuche einen Freund.",
+        "tip": "marketSquareFive.questDescription"
+      },
+      {
+        "id": 14,
+        "type": "select",
+        "question": "marketSquareFive.questTask14",
+        "options": [
+          "Den Markt hier ist sehr gut.",
+          "Der Markt hier ist sehr gut.",
+          "Der Markt hier sind sehr gut."
+        ],
+        "answer": "Der Markt hier ist sehr gut.",
+        "tip": "marketSquareFive.questDescription"
+      },
+      {
+        "id": 15,
+        "type": "reorder",
+        "question": "marketSquareFive.questTask15",
+        "words": [
+          "Paul",
+          "den",
+          "Wen",
+          "Lehrer",
+          "fragst",
+          "fragt",
+          "der"
+        ],
+        "correctOrder": [
+          "Wen",
+          "fragt",
+          "Paul",
+          "den",
+          "Lehrer"
+        ],
+        "tip": "marketSquareFive.questDescription"
+      }
+    ]
+  },
+  {
+    "questId": "market-square-six",
+    "title": "marketSquareSix.questTitle",
+    "progress": "0/15",
+    "description": "marketSquareSix.questDescription",
+    "conditions": {
+      "goal": "marketSquareSix.questGoal",
+      "minCorrect": 15,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
+    "vocabulary": [
+      {
+        "word": "die Kasse",
+        "translation-ru": "касса",
+        "translation-en": "checkout, till",
+        "translation-uk": "каса",
+        "translation-pl": "kasa",
+        "translation-es": "la caja",
+        "translation-fr": "la caisse",
+        "translation-tr": "kasa",
+        "translation-ro": "casa de marcat",
+        "translation-uz": "kassa",
+        "translation-hi": "काउंटर",
+        "translation-ar": "الصندوق"
+      },
+      {
+        "word": "bezahlen",
+        "translation-ru": "платить",
+        "translation-en": "to pay",
+        "translation-uk": "платити",
+        "translation-pl": "płacić",
+        "translation-es": "pagar",
+        "translation-fr": "payer",
+        "translation-tr": "ödemek",
+        "translation-ro": "a plăti",
+        "translation-uz": "to‘lamoq",
+        "translation-hi": "भुगतान करना",
+        "translation-ar": "يدفع"
+      },
+      {
+        "word": "zusammen",
+        "translation-ru": "вместе",
+        "translation-en": "together",
+        "translation-uk": "разом",
+        "translation-pl": "razem",
+        "translation-es": "juntos",
+        "translation-fr": "ensemble",
+        "translation-tr": "birlikte",
+        "translation-ro": "împreună",
+        "translation-uz": "birga",
+        "translation-hi": "एक साथ",
+        "translation-ar": "معًا"
+      },
+      {
+        "word": "der Cent",
+        "translation-ru": "цент",
+        "translation-en": "cent",
+        "translation-uk": "цент",
+        "translation-pl": "cent",
+        "translation-es": "el céntimo",
+        "translation-fr": "le centime",
+        "translation-tr": "sent",
+        "translation-ro": "centul",
+        "translation-uz": "sent",
+        "translation-hi": "सेंट",
+        "translation-ar": "السنت"
+      },
+      {
+        "word": "die Karte",
+        "translation-ru": "карта",
+        "translation-en": "card",
+        "translation-uk": "картка",
+        "translation-pl": "karta",
+        "translation-es": "la tarjeta",
+        "translation-fr": "la carte",
+        "translation-tr": "kart",
+        "translation-ro": "cardul",
+        "translation-uz": "karta",
+        "translation-hi": "कार्ड",
+        "translation-ar": "البطاقة"
+      },
+      {
+        "word": "dort",
+        "translation-ru": "там",
+        "translation-en": "there",
+        "translation-uk": "там",
+        "translation-pl": "tam",
+        "translation-es": "allí",
+        "translation-fr": "là-bas",
+        "translation-tr": "orada",
+        "translation-ro": "acolo",
+        "translation-uz": "u yerda",
+        "translation-hi": "वहाँ",
+        "translation-ar": "هناك"
+      },
+      {
+        "word": "die Kassiererin",
+        "translation-ru": "кассирша",
+        "translation-en": "cashier",
+        "translation-uk": "касирка",
+        "translation-pl": "kasjerka",
+        "translation-es": "la cajera",
+        "translation-fr": "la caissière",
+        "translation-tr": "kasiyer",
+        "translation-ro": "casiera",
+        "translation-uz": "kassir ayol",
+        "translation-hi": "कैशियर",
+        "translation-ar": "أمينة الصندوق"
+      }
+    ],
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "marketSquareSix.questTask1",
+        "options": [
+          "Das kauft zwölf Euro.",
+          "Das macht zwanzig Euro.",
+          "Das macht zwölf Euro."
+        ],
+        "answer": "Das macht zwölf Euro.",
+        "tip": "marketSquareSix.questDescription"
+      },
+      {
+        "id": 2,
+        "type": "input",
+        "question": "marketSquareSix.questTask2",
+        "correctAnswer": "bezahlen",
+        "tip": "marketSquareSix.questDescription"
+      },
+      {
+        "id": 3,
+        "type": "input",
+        "question": "marketSquareSix.questTask3",
+        "correctAnswer": "Bezahlst",
+        "tip": "marketSquareSix.questDescription"
+      },
+      {
+        "id": 4,
+        "type": "select",
+        "question": "marketSquareSix.questTask4",
+        "options": [
+          "Zusammen? Doch, zusammen.",
+          "Zusammen? Ja, zusammenen.",
+          "Zusammen? Ja, zusammen."
+        ],
+        "answer": "Zusammen? Ja, zusammen.",
+        "tip": "marketSquareSix.questDescription"
+      },
+      {
+        "id": 5,
+        "type": "reorder",
+        "question": "marketSquareSix.questTask5",
+        "words": [
+          "Wo",
+          "die",
+          "den",
+          "die",
+          "dort",
+          "ist",
+          "Kasse",
+          "ist",
+          "wer",
+          "Kasse"
+        ],
+        "correctOrder": [
+          "Wo",
+          "ist",
+          "die",
+          "Kasse",
+          "die",
+          "Kasse",
+          "ist",
+          "dort"
+        ],
+        "tip": "marketSquareSix.questDescription"
+      },
+      {
+        "id": 6,
+        "type": "select",
+        "question": "marketSquareSix.questTask6",
+        "options": [
+          "Das kostet drei Euro fünfzehn.",
+          "Das kostet drei Euro fünfzig.",
+          "Das kostet fünfzig Euro drei."
+        ],
+        "answer": "Das kostet drei Euro fünfzig.",
+        "tip": "marketSquareSix.questDescription"
+      },
+      {
+        "id": 7,
+        "type": "input",
+        "question": "marketSquareSix.questTask7",
+        "correctAnswer": "zusammen",
+        "tip": "marketSquareSix.questDescription"
+      },
+      {
+        "id": 8,
+        "type": "select",
+        "question": "marketSquareSix.questTask8",
+        "options": [
+          "Brauchen Sie eine Tüte? Nein, danke.",
+          "Brauchen Sie eine Tüte? Kein, danke.",
+          "Brauchen Sie einen Tüte? Nein, danke."
+        ],
+        "answer": "Brauchen Sie eine Tüte? Nein, danke.",
+        "tip": "marketSquareSix.questDescription"
+      },
+      {
+        "id": 9,
+        "type": "readAndAnswer",
+        "question": "marketSquareSix.questTask9",
+        "text": "Kassiererin: Das macht neun Euro zwanzig. Bar oder mit Karte? Paul: Mit Karte, bitte. Kassiererin: Brauchen Sie eine Tüte? Paul: Nein, danke. Ich habe eine Tasche.",
+        "options": [
+          "mit Karte",
+          "nicht",
+          "bar"
+        ],
+        "answer": "mit Karte",
+        "tip": "marketSquareSix.questDescription"
+      },
+      {
+        "id": 10,
+        "type": "input",
+        "question": "marketSquareSix.questTask10",
+        "correctAnswer": "Cent",
+        "tip": "marketSquareSix.questDescription"
+      },
+      {
+        "id": 11,
+        "type": "reorder",
+        "question": "marketSquareSix.questTask11",
+        "words": [
+          "eine",
+          "du",
+          "Tasche",
+          "eine",
+          "Tüte",
+          "einen",
+          "keine",
+          "Brauchst",
+          "ich",
+          "nein",
+          "habe"
+        ],
+        "correctOrder": [
+          "Brauchst",
+          "du",
+          "eine",
+          "Tüte",
+          "nein",
+          "ich",
+          "habe",
+          "eine",
+          "Tasche"
+        ],
+        "tip": "marketSquareSix.questDescription"
+      },
+      {
+        "id": 12,
+        "type": "input",
+        "question": "marketSquareSix.questTask12",
+        "correctAnswer": "Flasche",
+        "tip": "marketSquareSix.questDescription"
+      },
+      {
+        "id": 13,
+        "type": "select",
+        "question": "marketSquareSix.questTask13",
+        "options": [
+          "Die Tomaten sind frischen.",
+          "Die Tomaten sind frisch.",
+          "Die Tomaten ist frisch."
+        ],
+        "answer": "Die Tomaten sind frisch.",
+        "tip": "marketSquareSix.questDescription"
+      },
+      {
+        "id": 14,
+        "type": "select",
+        "question": "marketSquareSix.questTask14",
+        "options": [
+          "Ich kaufe einen Liter Milch und Käse.",
+          "Ich kaufe ein Liter Milch und Käse.",
+          "Ich kaufe einen Liter die Milch und Käse."
+        ],
+        "answer": "Ich kaufe einen Liter Milch und Käse.",
+        "tip": "marketSquareSix.questDescription"
+      },
+      {
+        "id": 15,
+        "type": "reorder",
+        "question": "marketSquareSix.questTask15",
+        "words": [
+          "Ein",
+          "Kilo",
+          "Kartoffeln",
+          "Kartoffel",
+          "bitte",
+          "einen"
+        ],
+        "correctOrder": [
+          "Ein",
+          "Kilo",
+          "Kartoffeln",
+          "bitte"
+        ],
+        "tip": "marketSquareSix.questDescription"
+      }
+    ]
+  },
+  {
+    "questId": "market-square-seven",
+    "title": "marketSquareSeven.questTitle",
+    "progress": "0/15",
+    "description": "marketSquareSeven.questDescription",
+    "conditions": {
+      "goal": "marketSquareSeven.questGoal",
+      "minCorrect": 15,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
+    "vocabulary": [
+      {
+        "word": "die Bäckerei",
+        "translation-ru": "пекарня",
+        "translation-en": "bakery",
+        "translation-uk": "пекарня",
+        "translation-pl": "piekarnia",
+        "translation-es": "la panadería",
+        "translation-fr": "la boulangerie",
+        "translation-tr": "fırın",
+        "translation-ro": "brutăria",
+        "translation-uz": "novvoyxona",
+        "translation-hi": "बेकरी",
+        "translation-ar": "المخبز"
+      },
+      {
+        "word": "das Brötchen",
+        "translation-ru": "булочка",
+        "translation-en": "bread roll",
+        "translation-uk": "булочка",
+        "translation-pl": "bułka",
+        "translation-es": "el panecillo",
+        "translation-fr": "le petit pain",
+        "translation-tr": "küçük ekmek",
+        "translation-ro": "chifla",
+        "translation-uz": "bulochka",
+        "translation-hi": "बन",
+        "translation-ar": "الخبز الصغير"
+      },
+      {
+        "word": "der Kuchen",
+        "translation-ru": "пирог, торт",
+        "translation-en": "cake",
+        "translation-uk": "пиріг",
+        "translation-pl": "ciasto",
+        "translation-es": "el pastel",
+        "translation-fr": "le gâteau",
+        "translation-tr": "kek, pasta",
+        "translation-ro": "prăjitura",
+        "translation-uz": "pirog",
+        "translation-hi": "केक",
+        "translation-ar": "الكعكة"
+      },
+      {
+        "word": "die Brezel",
+        "translation-ru": "крендель",
+        "translation-en": "pretzel",
+        "translation-uk": "крендель",
+        "translation-pl": "precel",
+        "translation-es": "el pretzel",
+        "translation-fr": "le bretzel",
+        "translation-tr": "brezel",
+        "translation-ro": "covrigul",
+        "translation-uz": "krendel",
+        "translation-hi": "प्रेट्ज़ेल",
+        "translation-ar": "البريتزل"
+      },
+      {
+        "word": "lecker",
+        "translation-ru": "вкусный",
+        "translation-en": "tasty",
+        "translation-uk": "смачний",
+        "translation-pl": "smaczny",
+        "translation-es": "rico",
+        "translation-fr": "délicieux",
+        "translation-tr": "lezzetli",
+        "translation-ro": "gustos",
+        "translation-uz": "mazali",
+        "translation-hi": "स्वादिष्ट",
+        "translation-ar": "لذيذ"
+      },
+      {
+        "word": "links",
+        "translation-ru": "слева",
+        "translation-en": "on the left",
+        "translation-uk": "ліворуч",
+        "translation-pl": "po lewej",
+        "translation-es": "a la izquierda",
+        "translation-fr": "à gauche",
+        "translation-tr": "solda",
+        "translation-ro": "la stânga",
+        "translation-uz": "chapda",
+        "translation-hi": "बाईं ओर",
+        "translation-ar": "على اليسار"
+      }
+    ],
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "marketSquareSeven.questTask1",
+        "options": [
+          "Zwei die Brötchen, bitte.",
+          "Zwei Brötchens, bitte.",
+          "Zwei Brötchen, bitte."
+        ],
+        "answer": "Zwei Brötchen, bitte.",
+        "tip": "marketSquareSeven.questDescription"
+      },
+      {
+        "id": 2,
+        "type": "input",
+        "question": "marketSquareSeven.questTask2",
+        "correctAnswer": "einen",
+        "tip": "marketSquareSeven.questDescription"
+      },
+      {
+        "id": 3,
+        "type": "select",
+        "question": "marketSquareSeven.questTask3",
+        "options": [
+          "Haben Sie einen Brezeln?",
+          "Hat Sie Brezeln?",
+          "Haben Sie Brezeln?"
+        ],
+        "answer": "Haben Sie Brezeln?",
+        "tip": "marketSquareSeven.questDescription"
+      },
+      {
+        "id": 4,
+        "type": "input",
+        "question": "marketSquareSeven.questTask4",
+        "correctAnswer": "lecker",
+        "tip": "marketSquareSeven.questDescription"
+      },
+      {
+        "id": 5,
+        "type": "reorder",
+        "question": "marketSquareSeven.questTask5",
+        "words": [
+          "eine",
+          "einen",
+          "wir",
+          "ist",
+          "Bäckerei",
+          "suchen",
+          "die",
+          "sucht",
+          "Wo",
+          "Bäckerei"
+        ],
+        "correctOrder": [
+          "Wo",
+          "ist",
+          "die",
+          "Bäckerei",
+          "wir",
+          "suchen",
+          "eine",
+          "Bäckerei"
+        ],
+        "tip": "marketSquareSeven.questDescription"
+      },
+      {
+        "id": 6,
+        "type": "select",
+        "question": "marketSquareSeven.questTask6",
+        "options": [
+          "Ich möchte eine Brezel und einen Kaffee.",
+          "Ich möchte eine Brezel und ein Kaffee.",
+          "Ich möchte einen Brezel und einen Kaffee."
+        ],
+        "answer": "Ich möchte eine Brezel und einen Kaffee.",
+        "tip": "marketSquareSeven.questDescription"
+      },
+      {
+        "id": 7,
+        "type": "input",
+        "question": "marketSquareSeven.questTask7",
+        "correctAnswer": "Brötchen",
+        "tip": "marketSquareSeven.questDescription"
+      },
+      {
+        "id": 8,
+        "type": "select",
+        "question": "marketSquareSeven.questTask8",
+        "options": [
+          "Der Kuchen kostet zehn Euro.",
+          "Der Kuchen kosten zehn Euro.",
+          "Den Kuchen kostet zehn Euro."
+        ],
+        "answer": "Der Kuchen kostet zehn Euro.",
+        "tip": "marketSquareSeven.questDescription"
+      },
+      {
+        "id": 9,
+        "type": "readAndAnswer",
+        "question": "marketSquareSeven.questTask9",
+        "text": "Nina: Guten Morgen! Vier Brötchen und eine Brezel, bitte. Verkäufer: Gern. Noch etwas? Nina: Nein, danke. Verkäufer: Das macht drei Euro zehn.",
+        "options": [
+          "4,10 €",
+          "3,10 €",
+          "3,50 €"
+        ],
+        "answer": "3,10 €",
+        "tip": "marketSquareSeven.questDescription"
+      },
+      {
+        "id": 10,
+        "type": "input",
+        "question": "marketSquareSeven.questTask10",
+        "correctAnswer": "Bäckerei",
+        "tip": "marketSquareSeven.questDescription"
+      },
+      {
+        "id": 11,
+        "type": "reorder",
+        "question": "marketSquareSeven.questTask11",
+        "words": [
+          "nicht",
+          "danke",
+          "brauche",
+          "keinen",
+          "kein",
+          "Ich",
+          "Kuchen"
+        ],
+        "correctOrder": [
+          "Ich",
+          "brauche",
+          "keinen",
+          "Kuchen",
+          "danke"
+        ],
+        "tip": "marketSquareSeven.questDescription"
+      },
+      {
+        "id": 12,
+        "type": "input",
+        "question": "marketSquareSeven.questTask12",
+        "correctAnswer": "Bezahlen",
+        "tip": "marketSquareSeven.questDescription"
+      },
+      {
+        "id": 13,
+        "type": "select",
+        "question": "marketSquareSeven.questTask13",
+        "options": [
+          "Das macht fünf Euro achtzig.",
+          "Das macht fünf Euro achtzehn.",
+          "Das macht achtzig Euro fünf."
+        ],
+        "answer": "Das macht fünf Euro achtzig.",
+        "tip": "marketSquareSeven.questDescription"
+      },
+      {
+        "id": 14,
+        "type": "select",
+        "question": "marketSquareSeven.questTask14",
+        "options": [
+          "Wir haben keine Butter.",
+          "Wir haben keinen Butter.",
+          "Wir haben nicht Butter."
+        ],
+        "answer": "Wir haben keine Butter.",
+        "tip": "marketSquareSeven.questDescription"
+      },
+      {
+        "id": 15,
+        "type": "reorder",
+        "question": "marketSquareSeven.questTask15",
+        "words": [
+          "rechts",
+          "Die",
+          "dort",
+          "links",
+          "Kasse",
+          "ist",
+          "den"
+        ],
+        "correctOrder": [
+          "Die",
+          "Kasse",
+          "ist",
+          "dort",
+          "links"
+        ],
+        "tip": "marketSquareSeven.questDescription"
+      }
+    ]
+  },
+  {
+    "questId": "market-square-eight",
+    "title": "marketSquareEight.questTitle",
+    "progress": "0/15",
+    "description": "marketSquareEight.questDescription",
+    "conditions": {
+      "goal": "marketSquareEight.questGoal",
+      "minCorrect": 15,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
+    "vocabulary": [
+      {
+        "word": "der Geburtstag",
+        "translation-ru": "день рождения",
+        "translation-en": "birthday",
+        "translation-uk": "день народження",
+        "translation-pl": "urodziny",
+        "translation-es": "el cumpleaños",
+        "translation-fr": "l’anniversaire",
+        "translation-tr": "doğum günü",
+        "translation-ro": "ziua de naștere",
+        "translation-uz": "tug‘ilgan kun",
+        "translation-hi": "जन्मदिन",
+        "translation-ar": "عيد الميلاد"
+      },
+      {
+        "word": "die Torte",
+        "translation-ru": "торт",
+        "translation-en": "gateau, cake",
+        "translation-uk": "торт",
+        "translation-pl": "tort",
+        "translation-es": "la tarta",
+        "translation-fr": "le gâteau",
+        "translation-tr": "pasta",
+        "translation-ro": "tortul",
+        "translation-uz": "tort",
+        "translation-hi": "केक",
+        "translation-ar": "الكعكة"
+      },
+      {
+        "word": "die Kerze",
+        "translation-ru": "свеча",
+        "translation-en": "candle",
+        "translation-uk": "свічка",
+        "translation-pl": "świeczka",
+        "translation-es": "la vela",
+        "translation-fr": "la bougie",
+        "translation-tr": "mum",
+        "translation-ro": "lumânarea",
+        "translation-uz": "sham",
+        "translation-hi": "मोमबत्ती",
+        "translation-ar": "الشمعة"
+      },
+      {
+        "word": "der Saft",
+        "translation-ru": "сок",
+        "translation-en": "juice",
+        "translation-uk": "сік",
+        "translation-pl": "sok",
+        "translation-es": "el zumo",
+        "translation-fr": "le jus",
+        "translation-tr": "meyve suyu",
+        "translation-ro": "sucul",
+        "translation-uz": "sharbat",
+        "translation-hi": "जूस",
+        "translation-ar": "العصير"
+      },
+      {
+        "word": "das Geschenk",
+        "translation-ru": "подарок",
+        "translation-en": "present",
+        "translation-uk": "подарунок",
+        "translation-pl": "prezent",
+        "translation-es": "el regalo",
+        "translation-fr": "le cadeau",
+        "translation-tr": "hediye",
+        "translation-ro": "cadoul",
+        "translation-uz": "sovg‘a",
+        "translation-hi": "उपहार",
+        "translation-ar": "الهدية"
+      }
+    ],
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "marketSquareEight.questTask1",
+        "options": [
+          "Wir brauchen einen Torte und Kerzen.",
+          "Wir brauchen eine Torte und einen Kerzen.",
+          "Wir brauchen eine Torte und Kerzen."
+        ],
+        "answer": "Wir brauchen eine Torte und Kerzen.",
+        "tip": "marketSquareEight.questDescription"
+      },
+      {
+        "id": 2,
+        "type": "input",
+        "question": "marketSquareEight.questTask2",
+        "correctAnswer": "Geburtstag",
+        "tip": "marketSquareEight.questDescription"
+      },
+      {
+        "id": 3,
+        "type": "input",
+        "question": "marketSquareEight.questTask3",
+        "correctAnswer": "ein",
+        "tip": "marketSquareEight.questDescription"
+      },
+      {
+        "id": 4,
+        "type": "select",
+        "question": "marketSquareEight.questTask4",
+        "options": [
+          "Wir haben keine Saft.",
+          "Wir haben kein Saft.",
+          "Wir haben keinen Saft."
+        ],
+        "answer": "Wir haben keinen Saft.",
+        "tip": "marketSquareEight.questDescription"
+      },
+      {
+        "id": 5,
+        "type": "reorder",
+        "question": "marketSquareEight.questTask5",
+        "words": [
+          "Was",
+          "kosten",
+          "die",
+          "den",
+          "Torte",
+          "kostet"
+        ],
+        "correctOrder": [
+          "Was",
+          "kostet",
+          "die",
+          "Torte"
+        ],
+        "tip": "marketSquareEight.questDescription"
+      },
+      {
+        "id": 6,
+        "type": "select",
+        "question": "marketSquareEight.questTask6",
+        "options": [
+          "Tim kaufst Saft und Wasser.",
+          "Tim kauft Saft und Wasser.",
+          "Tim kauft einen Saft und Wassers."
+        ],
+        "answer": "Tim kauft Saft und Wasser.",
+        "tip": "marketSquareEight.questDescription"
+      },
+      {
+        "id": 7,
+        "type": "input",
+        "question": "marketSquareEight.questTask7",
+        "correctAnswer": "Torte",
+        "tip": "marketSquareEight.questDescription"
+      },
+      {
+        "id": 8,
+        "type": "select",
+        "question": "marketSquareEight.questTask8",
+        "options": [
+          "Braucht du Kerzen?",
+          "Brauchst du Kerzen?",
+          "Brauchst du einen Kerzen?"
+        ],
+        "answer": "Brauchst du Kerzen?",
+        "tip": "marketSquareEight.questDescription"
+      },
+      {
+        "id": 9,
+        "type": "readAndAnswer",
+        "question": "marketSquareEight.questTask9",
+        "text": "Lena hat Geburtstag. Anna kauft eine Torte und Kerzen. Max kauft ein Geschenk: ein Buch. Tim kauft Saft. Zusammen kostet alles sechzig Euro.",
+        "options": [
+          "ein Buch",
+          "Saft",
+          "eine Torte"
+        ],
+        "answer": "ein Buch",
+        "tip": "marketSquareEight.questDescription"
+      },
+      {
+        "id": 10,
+        "type": "input",
+        "question": "marketSquareEight.questTask10",
+        "correctAnswer": "Zusammen",
+        "tip": "marketSquareEight.questDescription"
+      },
+      {
+        "id": 11,
+        "type": "reorder",
+        "question": "marketSquareEight.questTask11",
+        "words": [
+          "ein",
+          "Geschenk",
+          "suchen",
+          "Lena",
+          "Wir",
+          "einen",
+          "sucht",
+          "für"
+        ],
+        "correctOrder": [
+          "Wir",
+          "suchen",
+          "ein",
+          "Geschenk",
+          "für",
+          "Lena"
+        ],
+        "tip": "marketSquareEight.questDescription"
+      },
+      {
+        "id": 12,
+        "type": "input",
+        "question": "marketSquareEight.questTask12",
+        "correctAnswer": "Karte",
+        "tip": "marketSquareEight.questDescription"
+      },
+      {
+        "id": 13,
+        "type": "select",
+        "question": "marketSquareEight.questTask13",
+        "options": [
+          "Die Brezel sind sehr leckere.",
+          "Die Brezeln sind sehr lecker.",
+          "Die Brezeln ist sehr lecker."
+        ],
+        "answer": "Die Brezeln sind sehr lecker.",
+        "tip": "marketSquareEight.questDescription"
+      },
+      {
+        "id": 14,
+        "type": "select",
+        "question": "marketSquareEight.questTask14",
+        "options": [
+          "Ich nehme einen Kuchen und zwei Brötchens.",
+          "Ich nehme einen Kuchen und zwei Brötchen.",
+          "Ich nehme ein Kuchen und zwei Brötchen."
+        ],
+        "answer": "Ich nehme einen Kuchen und zwei Brötchen.",
+        "tip": "marketSquareEight.questDescription"
+      },
+      {
+        "id": 15,
+        "type": "reorder",
+        "question": "marketSquareEight.questTask15",
+        "words": [
+          "sieben",
+          "macht",
+          "Das",
+          "Euro",
+          "zwölf",
+          "kauft",
+          "zusammen"
+        ],
+        "correctOrder": [
+          "Das",
+          "macht",
+          "sieben",
+          "Euro",
+          "zusammen"
+        ],
+        "tip": "marketSquareEight.questDescription"
+      }
+    ]
+  },
+  {
+    "questId": "market-square-nine",
+    "title": "marketSquareNine.questTitle",
+    "progress": "0/15",
+    "description": "marketSquareNine.questDescription",
+    "conditions": {
+      "goal": "marketSquareNine.questGoal",
+      "minCorrect": 15,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
+    "vocabulary": [
+      {
+        "word": "das Obst",
+        "translation-ru": "фрукты",
+        "translation-en": "fruit",
+        "translation-uk": "фрукти",
+        "translation-pl": "owoce",
+        "translation-es": "la fruta",
+        "translation-fr": "les fruits",
+        "translation-tr": "meyve",
+        "translation-ro": "fructele",
+        "translation-uz": "meva",
+        "translation-hi": "फल",
+        "translation-ar": "الفاكهة"
+      },
+      {
+        "word": "das Gemüse",
+        "translation-ru": "овощи",
+        "translation-en": "vegetables",
+        "translation-uk": "овочі",
+        "translation-pl": "warzywa",
+        "translation-es": "la verdura",
+        "translation-fr": "les légumes",
+        "translation-tr": "sebze",
+        "translation-ro": "legumele",
+        "translation-uz": "sabzavot",
+        "translation-hi": "सब्ज़ियाँ",
+        "translation-ar": "الخضار"
+      },
+      {
+        "word": "die Orange",
+        "translation-ru": "апельсин",
+        "translation-en": "orange",
+        "translation-uk": "апельсин",
+        "translation-pl": "pomarańcza",
+        "translation-es": "la naranja",
+        "translation-fr": "l’orange",
+        "translation-tr": "portakal",
+        "translation-ro": "portocala",
+        "translation-uz": "apelsin",
+        "translation-hi": "संतरा",
+        "translation-ar": "البرتقالة"
+      },
+      {
+        "word": "der Joghurt",
+        "translation-ru": "йогурт",
+        "translation-en": "yoghurt",
+        "translation-uk": "йогурт",
+        "translation-pl": "jogurt",
+        "translation-es": "el yogur",
+        "translation-fr": "le yaourt",
+        "translation-tr": "yoğurt",
+        "translation-ro": "iaurtul",
+        "translation-uz": "yogurt",
+        "translation-hi": "दही",
+        "translation-ar": "الزبادي"
+      },
+      {
+        "word": "billig",
+        "translation-ru": "дешёвый",
+        "translation-en": "cheap",
+        "translation-uk": "дешевий",
+        "translation-pl": "tani",
+        "translation-es": "barato",
+        "translation-fr": "bon marché",
+        "translation-tr": "ucuz",
+        "translation-ro": "ieftin",
+        "translation-uz": "arzon",
+        "translation-hi": "सस्ता",
+        "translation-ar": "رخيص"
+      }
+    ],
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "marketSquareNine.questTask1",
+        "options": [
+          "Ich kaufe Obsts und Gemüses.",
+          "Ich kaufe einen Obst und Gemüse.",
+          "Ich kaufe Obst und Gemüse."
+        ],
+        "answer": "Ich kaufe Obst und Gemüse.",
+        "tip": "marketSquareNine.questDescription"
+      },
+      {
+        "id": 2,
+        "type": "input",
+        "question": "marketSquareNine.questTask2",
+        "correctAnswer": "einen",
+        "tip": "marketSquareNine.questDescription"
+      },
+      {
+        "id": 3,
+        "type": "input",
+        "question": "marketSquareNine.questTask3",
+        "correctAnswer": "billig",
+        "tip": "marketSquareNine.questDescription"
+      },
+      {
+        "id": 4,
+        "type": "select",
+        "question": "marketSquareNine.questTask4",
+        "options": [
+          "Kaufst du einen Orange?",
+          "Kauft du eine Orange?",
+          "Kaufst du eine Orange?"
+        ],
+        "answer": "Kaufst du eine Orange?",
+        "tip": "marketSquareNine.questDescription"
+      },
+      {
+        "id": 5,
+        "type": "reorder",
+        "question": "marketSquareNine.questTask5",
+        "words": [
+          "billig",
+          "und",
+          "frisch",
+          "sind",
+          "Das",
+          "teuer",
+          "ist",
+          "Gemüse",
+          "hier"
+        ],
+        "correctOrder": [
+          "Das",
+          "Gemüse",
+          "hier",
+          "ist",
+          "frisch",
+          "und",
+          "billig"
+        ],
+        "tip": "marketSquareNine.questDescription"
+      },
+      {
+        "id": 6,
+        "type": "select",
+        "question": "marketSquareNine.questTask6",
+        "options": [
+          "Wer suchst du? Den Opa.",
+          "Wen suchst du? Den Opa.",
+          "Was suchst du? Der Opa."
+        ],
+        "answer": "Wen suchst du? Den Opa.",
+        "tip": "marketSquareNine.questDescription"
+      },
+      {
+        "id": 7,
+        "type": "input",
+        "question": "marketSquareNine.questTask7",
+        "correctAnswer": "Joghurt",
+        "tip": "marketSquareNine.questDescription"
+      },
+      {
+        "id": 8,
+        "type": "select",
+        "question": "marketSquareNine.questTask8",
+        "options": [
+          "Ich habe kein Obst.",
+          "Ich habe nicht Obst.",
+          "Ich habe keinen Obst."
+        ],
+        "answer": "Ich habe kein Obst.",
+        "tip": "marketSquareNine.questDescription"
+      },
+      {
+        "id": 9,
+        "type": "readAndAnswer",
+        "question": "marketSquareNine.questTask9",
+        "text": "Heute ist Markt. Das Obst ist teuer, aber das Gemüse ist billig. Ich kaufe zwei Kilo Kartoffeln und Tomaten. Obst kaufe ich nicht.",
+        "options": [
+          "das Gemüse",
+          "der Käse",
+          "das Obst"
+        ],
+        "answer": "das Gemüse",
+        "tip": "marketSquareNine.questDescription"
+      },
+      {
+        "id": 10,
+        "type": "input",
+        "question": "marketSquareNine.questTask10",
+        "correctAnswer": "die",
+        "tip": "marketSquareNine.questDescription"
+      },
+      {
+        "id": 11,
+        "type": "reorder",
+        "question": "marketSquareNine.questTask11",
+        "words": [
+          "Wir",
+          "danke",
+          "nicht",
+          "kein",
+          "keinen",
+          "brauchen",
+          "Gemüse"
+        ],
+        "correctOrder": [
+          "Wir",
+          "brauchen",
+          "kein",
+          "Gemüse",
+          "danke"
+        ],
+        "tip": "marketSquareNine.questDescription"
+      },
+      {
+        "id": 12,
+        "type": "input",
+        "question": "marketSquareNine.questTask12",
+        "correctAnswer": "Kaufst",
+        "tip": "marketSquareNine.questDescription"
+      },
+      {
+        "id": 13,
+        "type": "select",
+        "question": "marketSquareNine.questTask13",
+        "options": [
+          "Wo ist die Bäckerei? Hier ist keine Bäckerei.",
+          "Wo ist die Bäckerei? Hier ist kein Bäckerei.",
+          "Wo ist die Bäckerei? Hier ist nicht Bäckerei."
+        ],
+        "answer": "Wo ist die Bäckerei? Hier ist keine Bäckerei.",
+        "tip": "marketSquareNine.questDescription"
+      },
+      {
+        "id": 14,
+        "type": "select",
+        "question": "marketSquareNine.questTask14",
+        "options": [
+          "Kerzen auf der Torte!",
+          "Kerzen auf den Torte!",
+          "Kerze auf der Torten!"
+        ],
+        "answer": "Kerzen auf der Torte!",
+        "tip": "marketSquareNine.questDescription"
+      },
+      {
+        "id": 15,
+        "type": "reorder",
+        "question": "marketSquareNine.questTask15",
+        "words": [
+          "Hast",
+          "kein",
+          "nein",
+          "du",
+          "keinen",
+          "Hunger",
+          "doch"
+        ],
+        "correctOrder": [
+          "Hast",
+          "du",
+          "keinen",
+          "Hunger",
+          "doch"
+        ],
+        "tip": "marketSquareNine.questDescription"
+      }
+    ]
+  },
+  {
+    "questId": "market-square-ten",
+    "title": "marketSquareTen.questTitle",
+    "progress": "0/15",
+    "description": "marketSquareTen.questDescription",
+    "conditions": {
+      "goal": "marketSquareTen.questGoal",
+      "minCorrect": 15,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
+    "vocabulary": [
+      {
+        "word": "die Wurst",
+        "translation-ru": "колбаса",
+        "translation-en": "sausage",
+        "translation-uk": "ковбаса",
+        "translation-pl": "kiełbasa",
+        "translation-es": "la salchicha",
+        "translation-fr": "la saucisse",
+        "translation-tr": "sosis",
+        "translation-ro": "cârnatul",
+        "translation-uz": "kolbasa",
+        "translation-hi": "सॉसेज",
+        "translation-ar": "النقانق"
+      },
+      {
+        "word": "das Fleisch",
+        "translation-ru": "мясо",
+        "translation-en": "meat",
+        "translation-uk": "м’ясо",
+        "translation-pl": "mięso",
+        "translation-es": "la carne",
+        "translation-fr": "la viande",
+        "translation-tr": "et",
+        "translation-ro": "carnea",
+        "translation-uz": "go‘sht",
+        "translation-hi": "मांस",
+        "translation-ar": "اللحم"
+      },
+      {
+        "word": "der Fisch",
+        "translation-ru": "рыба",
+        "translation-en": "fish",
+        "translation-uk": "риба",
+        "translation-pl": "ryba",
+        "translation-es": "el pescado",
+        "translation-fr": "le poisson",
+        "translation-tr": "balık",
+        "translation-ro": "peștele",
+        "translation-uz": "baliq",
+        "translation-hi": "मछली",
+        "translation-ar": "السمك"
+      },
+      {
+        "word": "der Reis",
+        "translation-ru": "рис",
+        "translation-en": "rice",
+        "translation-uk": "рис",
+        "translation-pl": "ryż",
+        "translation-es": "el arroz",
+        "translation-fr": "le riz",
+        "translation-tr": "pirinç",
+        "translation-ro": "orezul",
+        "translation-uz": "guruch",
+        "translation-hi": "चावल",
+        "translation-ar": "الأرز"
+      },
+      {
+        "word": "alles",
+        "translation-ru": "всё",
+        "translation-en": "everything",
+        "translation-uk": "усе",
+        "translation-pl": "wszystko",
+        "translation-es": "todo",
+        "translation-fr": "tout",
+        "translation-tr": "her şey",
+        "translation-ro": "tot",
+        "translation-uz": "hammasi",
+        "translation-hi": "सब कुछ",
+        "translation-ar": "كل شيء"
+      },
+      {
+        "word": "essen",
+        "translation-ru": "есть",
+        "translation-en": "to eat",
+        "translation-uk": "їсти",
+        "translation-pl": "jeść",
+        "translation-es": "comer",
+        "translation-fr": "manger",
+        "translation-tr": "yemek",
+        "translation-ro": "a mânca",
+        "translation-uz": "yemoq",
+        "translation-hi": "खाना",
+        "translation-ar": "يأكل"
+      }
+    ],
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "marketSquareTen.questTask1",
+        "options": [
+          "Ich kaufe einen Fisch und Reise.",
+          "Ich kaufst Fisch und Reis.",
+          "Ich kaufe Fisch und Reis."
+        ],
+        "answer": "Ich kaufe Fisch und Reis.",
+        "tip": "marketSquareTen.questDescription"
+      },
+      {
+        "id": 2,
+        "type": "input",
+        "question": "marketSquareTen.questTask2",
+        "correctAnswer": "den",
+        "tip": "marketSquareTen.questDescription"
+      },
+      {
+        "id": 3,
+        "type": "input",
+        "question": "marketSquareTen.questTask3",
+        "correctAnswer": "keine",
+        "tip": "marketSquareTen.questDescription"
+      },
+      {
+        "id": 4,
+        "type": "select",
+        "question": "marketSquareTen.questTask4",
+        "options": [
+          "Wen besuchst du heute? Ein Freund.",
+          "Was besuchst du heute? Ein Freund.",
+          "Wen besuchst du heute? Einen Freund."
+        ],
+        "answer": "Wen besuchst du heute? Einen Freund.",
+        "tip": "marketSquareTen.questDescription"
+      },
+      {
+        "id": 5,
+        "type": "reorder",
+        "question": "marketSquareTen.questTask5",
+        "words": [
+          "Fleisch",
+          "der",
+          "den",
+          "billig",
+          "teuer",
+          "Fisch",
+          "Das",
+          "auch",
+          "ist"
+        ],
+        "correctOrder": [
+          "Das",
+          "Fleisch",
+          "ist",
+          "teuer",
+          "der",
+          "Fisch",
+          "auch"
+        ],
+        "tip": "marketSquareTen.questDescription"
+      },
+      {
+        "id": 6,
+        "type": "select",
+        "question": "marketSquareTen.questTask6",
+        "options": [
+          "Das machen zusammen fünfzehn Euro.",
+          "Das macht zusammen fünfzig Euro.",
+          "Das macht zusammen fünfzehn Euro."
+        ],
+        "answer": "Das macht zusammen fünfzehn Euro.",
+        "tip": "marketSquareTen.questDescription"
+      },
+      {
+        "id": 7,
+        "type": "input",
+        "question": "marketSquareTen.questTask7",
+        "correctAnswer": "Kilo",
+        "tip": "marketSquareTen.questDescription"
+      },
+      {
+        "id": 8,
+        "type": "select",
+        "question": "marketSquareTen.questTask8",
+        "options": [
+          "Noch etwas? Kein, das ist alles.",
+          "Noch etwas? Nein, das ist alles.",
+          "Noch etwas? Nein, das ist alle."
+        ],
+        "answer": "Noch etwas? Nein, das ist alles.",
+        "tip": "marketSquareTen.questDescription"
+      },
+      {
+        "id": 9,
+        "type": "readAndAnswer",
+        "question": "marketSquareTen.questTask9",
+        "text": "Olga kauft heute für die Familie ein. Sie braucht Fleisch, Reis und Gemüse. Fisch kauft sie nicht, die Kinder essen keinen Fisch. Das macht zusammen zweiundzwanzig Euro.",
+        "options": [
+          "Reis",
+          "Fisch",
+          "Fleisch"
+        ],
+        "answer": "Fisch",
+        "tip": "marketSquareTen.questDescription"
+      },
+      {
+        "id": 10,
+        "type": "input",
+        "question": "marketSquareTen.questTask10",
+        "correctAnswer": "den",
+        "tip": "marketSquareTen.questDescription"
+      },
+      {
+        "id": 11,
+        "type": "reorder",
+        "question": "marketSquareTen.questTask11",
+        "words": [
+          "oder",
+          "den",
+          "Karte",
+          "alle",
+          "mit",
+          "Bar",
+          "mit",
+          "Karte",
+          "alles"
+        ],
+        "correctOrder": [
+          "Bar",
+          "oder",
+          "mit",
+          "Karte",
+          "alles",
+          "mit",
+          "Karte"
+        ],
+        "tip": "marketSquareTen.questDescription"
+      },
+      {
+        "id": 12,
+        "type": "input",
+        "question": "marketSquareTen.questTask12",
+        "correctAnswer": "Brauchst",
+        "tip": "marketSquareTen.questDescription"
+      },
+      {
+        "id": 13,
+        "type": "select",
+        "question": "marketSquareTen.questTask13",
+        "options": [
+          "Ich esse nicht gern einen Fisch.",
+          "Ich esse nicht gern Fisch.",
+          "Ich esse kein gern Fisch."
+        ],
+        "answer": "Ich esse nicht gern Fisch.",
+        "tip": "marketSquareTen.questDescription"
+      },
+      {
+        "id": 14,
+        "type": "select",
+        "question": "marketSquareTen.questTask14",
+        "options": [
+          "Was ist das? Das ist der Verkäufer.",
+          "Wer ist das? Das ist der Verkäufer.",
+          "Wer ist das? Das ist den Verkäufer."
+        ],
+        "answer": "Wer ist das? Das ist der Verkäufer.",
+        "tip": "marketSquareTen.questDescription"
+      },
+      {
+        "id": 15,
+        "type": "reorder",
+        "question": "marketSquareTen.questTask15",
+        "words": [
+          "wohnen",
+          "jetzt",
+          "wohnt",
+          "in",
+          "woher",
+          "Wir",
+          "Hamburg"
+        ],
+        "correctOrder": [
+          "Wir",
+          "wohnen",
+          "jetzt",
+          "in",
+          "Hamburg"
+        ],
+        "tip": "marketSquareTen.questDescription"
+      }
+    ]
+  }
+]

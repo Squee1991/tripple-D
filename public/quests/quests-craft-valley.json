@@ -1,0 +1,2575 @@
+[
+  {
+    "questId": "craft-valley-one",
+    "title": "craftValleyOne.questTitle",
+    "progress": "0/15",
+    "description": "craftValleyOne.questDescription",
+    "conditions": {
+      "goal": "craftValleyOne.questGoal",
+      "minCorrect": 15,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
+    "vocabulary": [
+      {
+        "word": "reparieren",
+        "translation-ru": "ремонтировать",
+        "translation-en": "to repair",
+        "translation-uk": "ремонтувати",
+        "translation-pl": "naprawiać",
+        "translation-es": "reparar",
+        "translation-fr": "réparer",
+        "translation-tr": "tamir etmek",
+        "translation-ro": "a repara",
+        "translation-uz": "tuzatmoq",
+        "translation-hi": "ठीक करना",
+        "translation-ar": "يُصلح"
+      },
+      {
+        "word": "bauen",
+        "translation-ru": "строить",
+        "translation-en": "to build",
+        "translation-uk": "будувати",
+        "translation-pl": "budować",
+        "translation-es": "construir",
+        "translation-fr": "construire",
+        "translation-tr": "inşa etmek",
+        "translation-ro": "a construi",
+        "translation-uz": "qurmoq",
+        "translation-hi": "बनाना",
+        "translation-ar": "يبني"
+      },
+      {
+        "word": "putzen",
+        "translation-ru": "убирать, мыть",
+        "translation-en": "to clean",
+        "translation-uk": "прибирати, мити",
+        "translation-pl": "sprzątać, myć",
+        "translation-es": "limpiar",
+        "translation-fr": "nettoyer",
+        "translation-tr": "temizlemek",
+        "translation-ro": "a curăța",
+        "translation-uz": "tozalamoq",
+        "translation-hi": "साफ़ करना",
+        "translation-ar": "ينظّف"
+      },
+      {
+        "word": "waschen",
+        "translation-ru": "мыть, стирать",
+        "translation-en": "to wash",
+        "translation-uk": "мити, прати",
+        "translation-pl": "myć, prać",
+        "translation-es": "lavar",
+        "translation-fr": "laver",
+        "translation-tr": "yıkamak",
+        "translation-ro": "a spăla",
+        "translation-uz": "yuvmoq",
+        "translation-hi": "धोना",
+        "translation-ar": "يغسل"
+      },
+      {
+        "word": "die Werkstatt",
+        "translation-ru": "мастерская",
+        "translation-en": "workshop, garage",
+        "translation-uk": "майстерня",
+        "translation-pl": "warsztat",
+        "translation-es": "el taller",
+        "translation-fr": "l’atelier, le garage",
+        "translation-tr": "atölye",
+        "translation-ro": "atelierul",
+        "translation-uz": "ustaxona",
+        "translation-hi": "वर्कशॉप",
+        "translation-ar": "الورشة"
+      }
+    ],
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "craftValleyOne.questTask1",
+        "options": [
+          "Das Auto wird reparieren.",
+          "Das Auto repariert wird.",
+          "Das Auto wird repariert."
+        ],
+        "answer": "Das Auto wird repariert.",
+        "tip": "craftValleyOne.questDescription"
+      },
+      {
+        "id": 2,
+        "type": "input",
+        "question": "craftValleyOne.questTask2",
+        "correctAnswer": "wird",
+        "tip": "craftValleyOne.questDescription"
+      },
+      {
+        "id": 3,
+        "type": "input",
+        "question": "craftValleyOne.questTask3",
+        "correctAnswer": "geputzt",
+        "tip": "craftValleyOne.questDescription"
+      },
+      {
+        "id": 4,
+        "type": "reorder",
+        "question": "craftValleyOne.questTask4",
+        "words": [
+          "gebaut",
+          "bauen",
+          "Die",
+          "Straße",
+          "gerade",
+          "wird"
+        ],
+        "correctOrder": [
+          "Die",
+          "Straße",
+          "wird",
+          "gerade",
+          "gebaut"
+        ],
+        "tip": "craftValleyOne.questDescription"
+      },
+      {
+        "id": 5,
+        "type": "select",
+        "question": "craftValleyOne.questTask5",
+        "options": [
+          "Hier wird gesprochen Deutsch.",
+          "Hier wird Deutsch gesprochen.",
+          "Hier wird Deutsch sprechen."
+        ],
+        "answer": "Hier wird Deutsch gesprochen.",
+        "tip": "craftValleyOne.questDescription"
+      },
+      {
+        "id": 6,
+        "type": "input",
+        "question": "craftValleyOne.questTask6",
+        "correctAnswer": "gebacken",
+        "tip": "craftValleyOne.questDescription"
+      },
+      {
+        "id": 7,
+        "type": "readAndAnswer",
+        "question": "craftValleyOne.questTask7",
+        "text": "In der Werkstatt von Herrn Klein gibt es viel Arbeit. Ein Auto wird repariert, ein Fahrrad wird geputzt, und ein Bus wird gerade gewaschen.",
+        "options": [
+          "Es wird gewaschen.",
+          "Es wird geputzt.",
+          "Es wird repariert."
+        ],
+        "answer": "Es wird geputzt.",
+        "tip": "craftValleyOne.questDescription"
+      },
+      {
+        "id": 8,
+        "type": "input",
+        "question": "craftValleyOne.questTask8",
+        "correctAnswer": "wird",
+        "tip": "craftValleyOne.questDescription"
+      },
+      {
+        "id": 9,
+        "type": "reorder",
+        "question": "craftValleyOne.questTask10",
+        "words": [
+          "geschrieben",
+          "wird",
+          "Brief",
+          "Der",
+          "schreiben",
+          "jetzt"
+        ],
+        "correctOrder": [
+          "Der",
+          "Brief",
+          "wird",
+          "jetzt",
+          "geschrieben"
+        ],
+        "tip": "craftValleyOne.questDescription"
+      },
+      {
+        "id": 10,
+        "type": "select",
+        "question": "craftValleyOne.questTask11",
+        "options": [
+          "Das Abendessen gekocht wird.",
+          "Das Abendessen wird gekocht.",
+          "Das Abendessen wird kochen."
+        ],
+        "answer": "Das Abendessen wird gekocht.",
+        "tip": "craftValleyOne.questDescription"
+      },
+      {
+        "id": 11,
+        "type": "input",
+        "question": "neighborStreetEight.questTask9",
+        "correctAnswer": "das",
+        "tip": "neighborStreetEight.questDescription",
+        "reviewOf": "neighbor-street-eight",
+        "reviewLand": "neighbor-street"
+      },
+      {
+        "id": 12,
+        "type": "input",
+        "question": "neighborStreetFive.questTask12",
+        "correctAnswer": "was",
+        "tip": "neighborStreetFive.questDescription",
+        "reviewOf": "neighbor-street-five",
+        "reviewLand": "neighbor-street"
+      },
+      {
+        "id": 13,
+        "type": "input",
+        "question": "neighborStreetTwo.questTask13",
+        "correctAnswer": "den",
+        "tip": "neighborStreetTwo.questDescription",
+        "reviewOf": "neighbor-street-two",
+        "reviewLand": "neighbor-street"
+      },
+      {
+        "id": 14,
+        "type": "input",
+        "question": "craftValleyOne.questTask14",
+        "correctAnswer": "die",
+        "tip": "craftValleyOne.questDescription"
+      },
+      {
+        "id": 15,
+        "type": "input",
+        "question": "craftValleyOne.questTask15",
+        "correctAnswer": "um",
+        "tip": "craftValleyOne.questDescription"
+      }
+    ]
+  },
+  {
+    "questId": "craft-valley-two",
+    "title": "craftValleyTwo.questTitle",
+    "progress": "0/15",
+    "description": "craftValleyTwo.questDescription",
+    "conditions": {
+      "goal": "craftValleyTwo.questGoal",
+      "minCorrect": 15,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
+    "vocabulary": [
+      {
+        "word": "das Paket",
+        "translation-ru": "посылка",
+        "translation-en": "parcel",
+        "translation-uk": "посилка",
+        "translation-pl": "paczka",
+        "translation-es": "el paquete",
+        "translation-fr": "le colis",
+        "translation-tr": "paket",
+        "translation-ro": "coletul",
+        "translation-uz": "posilka",
+        "translation-hi": "पार्सल",
+        "translation-ar": "الطرد"
+      },
+      {
+        "word": "die Rechnung",
+        "translation-ru": "счёт",
+        "translation-en": "bill",
+        "translation-uk": "рахунок",
+        "translation-pl": "rachunek",
+        "translation-es": "la factura",
+        "translation-fr": "la facture",
+        "translation-tr": "fatura",
+        "translation-ro": "factura",
+        "translation-uz": "hisob",
+        "translation-hi": "बिल",
+        "translation-ar": "الفاتورة"
+      },
+      {
+        "word": "einladen",
+        "translation-ru": "приглашать",
+        "translation-en": "to invite",
+        "translation-uk": "запрошувати",
+        "translation-pl": "zapraszać",
+        "translation-es": "invitar",
+        "translation-fr": "inviter",
+        "translation-tr": "davet etmek",
+        "translation-ro": "a invita",
+        "translation-uz": "taklif qilmoq",
+        "translation-hi": "बुलाना",
+        "translation-ar": "يدعو"
+      },
+      {
+        "word": "verkaufen",
+        "translation-ru": "продавать",
+        "translation-en": "to sell",
+        "translation-uk": "продавати",
+        "translation-pl": "sprzedawać",
+        "translation-es": "vender",
+        "translation-fr": "vendre",
+        "translation-tr": "satmak",
+        "translation-ro": "a vinde",
+        "translation-uz": "sotmoq",
+        "translation-hi": "बेचना",
+        "translation-ar": "يبيع"
+      },
+      {
+        "word": "der Gast",
+        "translation-ru": "гость",
+        "translation-en": "guest",
+        "translation-uk": "гість",
+        "translation-pl": "gość",
+        "translation-es": "el invitado",
+        "translation-fr": "l’invité",
+        "translation-tr": "misafir",
+        "translation-ro": "oaspetele",
+        "translation-uz": "mehmon",
+        "translation-hi": "मेहमान",
+        "translation-ar": "الضيف"
+      }
+    ],
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "craftValleyTwo.questTask1",
+        "options": [
+          "Die Fenster werden putzen.",
+          "Die Fenster wird geputzt.",
+          "Die Fenster werden geputzt."
+        ],
+        "answer": "Die Fenster werden geputzt.",
+        "tip": "craftValleyTwo.questDescription"
+      },
+      {
+        "id": 2,
+        "type": "input",
+        "question": "craftValleyTwo.questTask2",
+        "correctAnswer": "werden",
+        "tip": "craftValleyTwo.questDescription"
+      },
+      {
+        "id": 3,
+        "type": "input",
+        "question": "craftValleyTwo.questTask3",
+        "correctAnswer": "eingeladen",
+        "tip": "craftValleyTwo.questDescription"
+      },
+      {
+        "id": 4,
+        "type": "reorder",
+        "question": "craftValleyTwo.questTask4",
+        "words": [
+          "Die",
+          "bezahlt",
+          "jeden",
+          "wird",
+          "Freitag",
+          "Rechnungen",
+          "werden"
+        ],
+        "correctOrder": [
+          "Die",
+          "Rechnungen",
+          "werden",
+          "jeden",
+          "Freitag",
+          "bezahlt"
+        ],
+        "tip": "craftValleyTwo.questDescription"
+      },
+      {
+        "id": 5,
+        "type": "select",
+        "question": "craftValleyTwo.questTask5",
+        "options": [
+          "Die Autos werden waschen.",
+          "Die Autos werden gewaschen.",
+          "Die Autos wird gewaschen."
+        ],
+        "answer": "Die Autos werden gewaschen.",
+        "tip": "craftValleyTwo.questDescription"
+      },
+      {
+        "id": 6,
+        "type": "input",
+        "question": "craftValleyTwo.questTask6",
+        "correctAnswer": "werden",
+        "tip": "craftValleyTwo.questDescription"
+      },
+      {
+        "id": 7,
+        "type": "readAndAnswer",
+        "question": "craftValleyTwo.questTask7",
+        "text": "Morgen hat Oma Geburtstag. Heute gibt es viel Arbeit: Die Gäste werden eingeladen, ein Kuchen wird gebacken, und die Geschenke werden gekauft.",
+        "options": [
+          "Sie werden gekauft.",
+          "Sie werden eingeladen.",
+          "Sie werden gebacken."
+        ],
+        "answer": "Sie werden gekauft.",
+        "tip": "craftValleyTwo.questDescription"
+      },
+      {
+        "id": 8,
+        "type": "input",
+        "question": "craftValleyTwo.questTask8",
+        "correctAnswer": "wiederholt",
+        "tip": "craftValleyTwo.questDescription"
+      },
+      {
+        "id": 9,
+        "type": "reorder",
+        "question": "craftValleyTwo.questTask10",
+        "words": [
+          "Uhr",
+          "Die",
+          "geweckt",
+          "werden",
+          "wird",
+          "um",
+          "Kinder",
+          "acht"
+        ],
+        "correctOrder": [
+          "Die",
+          "Kinder",
+          "werden",
+          "um",
+          "acht",
+          "Uhr",
+          "geweckt"
+        ],
+        "tip": "craftValleyTwo.questDescription"
+      },
+      {
+        "id": 10,
+        "type": "select",
+        "question": "craftValleyTwo.questTask11",
+        "options": [
+          "Hier werden Bücher verkaufen.",
+          "Hier werden Bücher verkauft.",
+          "Hier wird Bücher verkauft."
+        ],
+        "answer": "Hier werden Bücher verkauft.",
+        "tip": "craftValleyTwo.questDescription"
+      },
+      {
+        "id": 11,
+        "type": "input",
+        "question": "craftValleyOne.questTask9",
+        "correctAnswer": "wird",
+        "tip": "craftValleyOne.questDescription",
+        "reviewOf": "craft-valley-one",
+        "reviewLand": "craft-valley"
+      },
+      {
+        "id": 12,
+        "type": "input",
+        "question": "neighborStreetSix.questTask12",
+        "correctAnswer": "dem",
+        "tip": "neighborStreetSix.questDescription",
+        "reviewOf": "neighbor-street-six",
+        "reviewLand": "neighbor-street"
+      },
+      {
+        "id": 13,
+        "type": "input",
+        "question": "neighborStreetThree.questTask13",
+        "correctAnswer": "dem",
+        "tip": "neighborStreetThree.questDescription",
+        "reviewOf": "neighbor-street-three",
+        "reviewLand": "neighbor-street"
+      },
+      {
+        "id": 14,
+        "type": "input",
+        "question": "craftValleyTwo.questTask14",
+        "correctAnswer": "obwohl",
+        "tip": "craftValleyTwo.questDescription"
+      },
+      {
+        "id": 15,
+        "type": "input",
+        "question": "craftValleyTwo.questTask15",
+        "correctAnswer": "tranken",
+        "tip": "craftValleyTwo.questDescription"
+      }
+    ]
+  },
+  {
+    "questId": "craft-valley-three",
+    "title": "craftValleyThree.questTitle",
+    "progress": "0/15",
+    "description": "craftValleyThree.questDescription",
+    "conditions": {
+      "goal": "craftValleyThree.questGoal",
+      "minCorrect": 15,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
+    "vocabulary": [
+      {
+        "word": "der Mechaniker",
+        "translation-ru": "механик",
+        "translation-en": "mechanic",
+        "translation-uk": "механік",
+        "translation-pl": "mechanik",
+        "translation-es": "el mecánico",
+        "translation-fr": "le mécanicien",
+        "translation-tr": "tamirci",
+        "translation-ro": "mecanicul",
+        "translation-uz": "mexanik",
+        "translation-hi": "मैकेनिक",
+        "translation-ar": "الميكانيكي"
+      },
+      {
+        "word": "untersuchen",
+        "translation-ru": "обследовать",
+        "translation-en": "to examine",
+        "translation-uk": "обстежувати",
+        "translation-pl": "badać",
+        "translation-es": "examinar",
+        "translation-fr": "examiner",
+        "translation-tr": "muayene etmek",
+        "translation-ro": "a examina",
+        "translation-uz": "tekshirmoq",
+        "translation-hi": "जाँच करना",
+        "translation-ar": "يفحص"
+      },
+      {
+        "word": "zeigen",
+        "translation-ru": "показывать",
+        "translation-en": "to show",
+        "translation-uk": "показувати",
+        "translation-pl": "pokazywać",
+        "translation-es": "mostrar",
+        "translation-fr": "montrer",
+        "translation-tr": "göstermek",
+        "translation-ro": "a arăta",
+        "translation-uz": "ko‘rsatmoq",
+        "translation-hi": "दिखाना",
+        "translation-ar": "يُري"
+      },
+      {
+        "word": "der Vermieter",
+        "translation-ru": "арендодатель",
+        "translation-en": "landlord",
+        "translation-uk": "орендодавець",
+        "translation-pl": "wynajmujący",
+        "translation-es": "el casero",
+        "translation-fr": "le propriétaire",
+        "translation-tr": "ev sahibi",
+        "translation-ro": "proprietarul",
+        "translation-uz": "ijaraga beruvchi",
+        "translation-hi": "मकान मालिक",
+        "translation-ar": "المؤجّر"
+      },
+      {
+        "word": "der Sohn",
+        "translation-ru": "сын",
+        "translation-en": "son",
+        "translation-uk": "син",
+        "translation-pl": "syn",
+        "translation-es": "el hijo",
+        "translation-fr": "le fils",
+        "translation-tr": "oğul",
+        "translation-ro": "fiul",
+        "translation-uz": "o‘g‘il",
+        "translation-hi": "बेटा",
+        "translation-ar": "الابن"
+      }
+    ],
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "craftValleyThree.questTask1",
+        "options": [
+          "Das Abendessen wird von mein Vater gekocht.",
+          "Das Abendessen wird von meinem Vater kochen.",
+          "Das Abendessen wird von meinem Vater gekocht."
+        ],
+        "answer": "Das Abendessen wird von meinem Vater gekocht.",
+        "tip": "craftValleyThree.questDescription"
+      },
+      {
+        "id": 2,
+        "type": "input",
+        "question": "craftValleyThree.questTask2",
+        "correctAnswer": "von",
+        "tip": "craftValleyThree.questDescription"
+      },
+      {
+        "id": 3,
+        "type": "input",
+        "question": "craftValleyThree.questTask3",
+        "correctAnswer": "vom",
+        "tip": "craftValleyThree.questDescription"
+      },
+      {
+        "id": 4,
+        "type": "reorder",
+        "question": "craftValleyThree.questTask4",
+        "words": [
+          "von",
+          "gebacken",
+          "meiner",
+          "Kuchen",
+          "Der",
+          "meine",
+          "Oma",
+          "wird"
+        ],
+        "correctOrder": [
+          "Der",
+          "Kuchen",
+          "wird",
+          "von",
+          "meiner",
+          "Oma",
+          "gebacken"
+        ],
+        "tip": "craftValleyThree.questDescription"
+      },
+      {
+        "id": 5,
+        "type": "select",
+        "question": "craftValleyThree.questTask5",
+        "options": [
+          "Der Brief wird vom Chef geschrieben.",
+          "Der Brief wird vom Chef schreiben.",
+          "Der Brief wird von der Chef geschrieben."
+        ],
+        "answer": "Der Brief wird vom Chef geschrieben.",
+        "tip": "craftValleyThree.questDescription"
+      },
+      {
+        "id": 6,
+        "type": "input",
+        "question": "craftValleyThree.questTask6",
+        "correctAnswer": "ihrem",
+        "tip": "craftValleyThree.questDescription"
+      },
+      {
+        "id": 7,
+        "type": "readAndAnswer",
+        "question": "craftValleyThree.questTask7",
+        "text": "Bei Familie Wagner gibt es viel Arbeit. Das Essen wird von Papa gekocht. Die Wohnung wird von Mama geputzt. Und das Auto wird von den Kindern gewaschen.",
+        "options": [
+          "die Kinder",
+          "Mama",
+          "Papa"
+        ],
+        "answer": "Mama",
+        "tip": "craftValleyThree.questDescription"
+      },
+      {
+        "id": 8,
+        "type": "input",
+        "question": "craftValleyThree.questTask8",
+        "correctAnswer": "vom",
+        "tip": "craftValleyThree.questDescription"
+      },
+      {
+        "id": 9,
+        "type": "reorder",
+        "question": "craftValleyThree.questTask10",
+        "words": [
+          "eine",
+          "von",
+          "wird",
+          "geputzt",
+          "Wohnung",
+          "Die",
+          "Firma",
+          "einer"
+        ],
+        "correctOrder": [
+          "Die",
+          "Wohnung",
+          "wird",
+          "von",
+          "einer",
+          "Firma",
+          "geputzt"
+        ],
+        "tip": "craftValleyThree.questDescription"
+      },
+      {
+        "id": 10,
+        "type": "select",
+        "question": "craftValleyThree.questTask11",
+        "options": [
+          "Die Briefe werden von den Kindern geschrieben.",
+          "Die Briefe wird von den Kindern geschrieben.",
+          "Die Briefe werden von die Kinder geschrieben."
+        ],
+        "answer": "Die Briefe werden von den Kindern geschrieben.",
+        "tip": "craftValleyThree.questDescription"
+      },
+      {
+        "id": 11,
+        "type": "input",
+        "question": "craftValleyTwo.questTask9",
+        "correctAnswer": "werden",
+        "tip": "craftValleyTwo.questDescription",
+        "reviewOf": "craft-valley-two",
+        "reviewLand": "craft-valley"
+      },
+      {
+        "id": 12,
+        "type": "input",
+        "question": "neighborStreetSeven.questTask12",
+        "correctAnswer": "der",
+        "tip": "neighborStreetSeven.questDescription",
+        "reviewOf": "neighbor-street-seven",
+        "reviewLand": "neighbor-street"
+      },
+      {
+        "id": 13,
+        "type": "input",
+        "question": "neighborStreetFour.questTask13",
+        "correctAnswer": "dem",
+        "tip": "neighborStreetFour.questDescription",
+        "reviewOf": "neighbor-street-four",
+        "reviewLand": "neighbor-street"
+      },
+      {
+        "id": 14,
+        "type": "input",
+        "question": "craftValleyThree.questTask14",
+        "correctAnswer": "das",
+        "tip": "craftValleyThree.questDescription"
+      },
+      {
+        "id": 15,
+        "type": "input",
+        "question": "craftValleyThree.questTask15",
+        "correctAnswer": "damit",
+        "tip": "craftValleyThree.questDescription"
+      }
+    ]
+  },
+  {
+    "questId": "craft-valley-four",
+    "title": "craftValleyFour.questTitle",
+    "progress": "0/15",
+    "description": "craftValleyFour.questDescription",
+    "conditions": {
+      "goal": "craftValleyFour.questGoal",
+      "minCorrect": 15,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
+    "vocabulary": [
+      {
+        "word": "das Rathaus",
+        "translation-ru": "ратуша",
+        "translation-en": "town hall",
+        "translation-uk": "ратуша",
+        "translation-pl": "ratusz",
+        "translation-es": "el ayuntamiento",
+        "translation-fr": "la mairie",
+        "translation-tr": "belediye binası",
+        "translation-ro": "primăria",
+        "translation-uz": "shahar hokimiyati",
+        "translation-hi": "टाउन हॉल",
+        "translation-ar": "مبنى البلدية"
+      },
+      {
+        "word": "renovieren",
+        "translation-ru": "ремонтировать (здание)",
+        "translation-en": "to renovate",
+        "translation-uk": "ремонтувати (будівлю)",
+        "translation-pl": "remontować",
+        "translation-es": "renovar",
+        "translation-fr": "rénover",
+        "translation-tr": "yenilemek",
+        "translation-ro": "a renova",
+        "translation-uz": "ta’mirlamoq",
+        "translation-hi": "मरम्मत करना",
+        "translation-ar": "يرمّم"
+      },
+      {
+        "word": "vertrauen",
+        "translation-ru": "доверять",
+        "translation-en": "to trust / rely on",
+        "translation-uk": "довіряти",
+        "translation-pl": "ufać",
+        "translation-es": "confiar",
+        "translation-fr": "faire confiance à",
+        "translation-tr": "güvenmek",
+        "translation-ro": "a avea încredere",
+        "translation-uz": "ishonmoq",
+        "translation-hi": "भरोसा करना",
+        "translation-ar": "يثق"
+      },
+      {
+        "word": "das Telefon",
+        "translation-ru": "телефон",
+        "translation-en": "phone",
+        "translation-uk": "телефон",
+        "translation-pl": "telefon",
+        "translation-es": "el teléfono",
+        "translation-fr": "le téléphone",
+        "translation-tr": "telefon",
+        "translation-ro": "telefonul",
+        "translation-uz": "telefon",
+        "translation-hi": "फ़ोन",
+        "translation-ar": "الهاتف"
+      },
+      {
+        "word": "unser",
+        "translation-ru": "наш",
+        "translation-en": "our",
+        "translation-uk": "наш",
+        "translation-pl": "nasz",
+        "translation-es": "nuestro",
+        "translation-fr": "notre",
+        "translation-tr": "bizim",
+        "translation-ro": "nostru",
+        "translation-uz": "bizning",
+        "translation-hi": "हमारा",
+        "translation-ar": "لنا"
+      },
+      {
+        "word": "erfinden",
+        "translation-ru": "изобретать",
+        "translation-en": "to invent",
+        "translation-uk": "винаходити",
+        "translation-pl": "wynajdywać",
+        "translation-es": "inventar",
+        "translation-fr": "inventer",
+        "translation-tr": "icat etmek",
+        "translation-ro": "a inventa",
+        "translation-uz": "ixtiro qilmoq",
+        "translation-hi": "आविष्कार करना",
+        "translation-ar": "يخترع"
+      }
+    ],
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "craftValleyFour.questTask1",
+        "options": [
+          "Das Haus wird 1900 gebaut.",
+          "Das Haus wurden 1900 gebaut.",
+          "Das Haus wurde 1900 gebaut."
+        ],
+        "answer": "Das Haus wurde 1900 gebaut.",
+        "tip": "craftValleyFour.questDescription"
+      },
+      {
+        "id": 2,
+        "type": "input",
+        "question": "craftValleyFour.questTask2",
+        "correctAnswer": "wurden",
+        "tip": "craftValleyFour.questDescription"
+      },
+      {
+        "id": 3,
+        "type": "input",
+        "question": "craftValleyFour.questTask3",
+        "correctAnswer": "wurde",
+        "tip": "craftValleyFour.questDescription"
+      },
+      {
+        "id": 4,
+        "type": "reorder",
+        "question": "craftValleyFour.questTask4",
+        "words": [
+          "letztes",
+          "Rathaus",
+          "Das",
+          "renoviert",
+          "Jahr",
+          "wurden",
+          "wurde"
+        ],
+        "correctOrder": [
+          "Das",
+          "Rathaus",
+          "wurde",
+          "letztes",
+          "Jahr",
+          "renoviert"
+        ],
+        "tip": "craftValleyFour.questDescription"
+      },
+      {
+        "id": 5,
+        "type": "select",
+        "question": "craftValleyFour.questTask5",
+        "options": [
+          "Das Telefon wurde vor langer Zeit erfinden.",
+          "Das Telefon wurde vor langer Zeit erfunden.",
+          "Das Telefon wurden vor langer Zeit erfunden."
+        ],
+        "answer": "Das Telefon wurde vor langer Zeit erfunden.",
+        "tip": "craftValleyFour.questDescription"
+      },
+      {
+        "id": 6,
+        "type": "input",
+        "question": "craftValleyFour.questTask6",
+        "correctAnswer": "eingeladen",
+        "tip": "craftValleyFour.questDescription"
+      },
+      {
+        "id": 7,
+        "type": "readAndAnswer",
+        "question": "craftValleyFour.questTask7",
+        "text": "Unser Rathaus ist sehr alt. Es wurde vor 300 Jahren gebaut. Letztes Jahr wurde es renoviert, und jetzt ist es wieder schön.",
+        "options": [
+          "letztes Jahr",
+          "gestern",
+          "vor 300 Jahren"
+        ],
+        "answer": "letztes Jahr",
+        "tip": "craftValleyFour.questDescription"
+      },
+      {
+        "id": 8,
+        "type": "input",
+        "question": "craftValleyFour.questTask8",
+        "correctAnswer": "wurden",
+        "tip": "craftValleyFour.questDescription"
+      },
+      {
+        "id": 9,
+        "type": "reorder",
+        "question": "craftValleyFour.questTask10",
+        "words": [
+          "Ich",
+          "wurde",
+          "wurden",
+          "eingeladen",
+          "zur",
+          "Party"
+        ],
+        "correctOrder": [
+          "Ich",
+          "wurde",
+          "zur",
+          "Party",
+          "eingeladen"
+        ],
+        "tip": "craftValleyFour.questDescription"
+      },
+      {
+        "id": 10,
+        "type": "select",
+        "question": "craftValleyFour.questTask11",
+        "options": [
+          "Die Rechnung wird gestern bezahlt.",
+          "Die Rechnung wurde gestern bezahlt.",
+          "Die Rechnung wurden gestern bezahlt."
+        ],
+        "answer": "Die Rechnung wurde gestern bezahlt.",
+        "tip": "craftValleyFour.questDescription"
+      },
+      {
+        "id": 11,
+        "type": "input",
+        "question": "craftValleyThree.questTask9",
+        "correctAnswer": "von",
+        "tip": "craftValleyThree.questDescription",
+        "reviewOf": "craft-valley-three",
+        "reviewLand": "craft-valley"
+      },
+      {
+        "id": 12,
+        "type": "input",
+        "question": "neighborStreetEight.questTask12",
+        "correctAnswer": "der",
+        "tip": "neighborStreetEight.questDescription",
+        "reviewOf": "neighbor-street-eight",
+        "reviewLand": "neighbor-street"
+      },
+      {
+        "id": 13,
+        "type": "input",
+        "question": "neighborStreetFive.questTask13",
+        "correctAnswer": "ist",
+        "tip": "neighborStreetFive.questDescription",
+        "reviewOf": "neighbor-street-five",
+        "reviewLand": "neighbor-street"
+      },
+      {
+        "id": 14,
+        "type": "input",
+        "question": "craftValleyFour.questTask14",
+        "correctAnswer": "werden",
+        "tip": "craftValleyFour.questDescription"
+      },
+      {
+        "id": 15,
+        "type": "input",
+        "question": "craftValleyFour.questTask15",
+        "correctAnswer": "der",
+        "tip": "craftValleyFour.questDescription"
+      }
+    ]
+  },
+  {
+    "questId": "craft-valley-five",
+    "title": "craftValleyFive.questTitle",
+    "progress": "0/15",
+    "description": "craftValleyFive.questDescription",
+    "conditions": {
+      "goal": "craftValleyFive.questGoal",
+      "minCorrect": 15,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
+    "vocabulary": [
+      {
+        "word": "rauchen",
+        "translation-ru": "курить",
+        "translation-en": "to smoke",
+        "translation-uk": "курити",
+        "translation-pl": "palić",
+        "translation-es": "fumar",
+        "translation-fr": "fumer",
+        "translation-tr": "sigara içmek",
+        "translation-ro": "a fuma",
+        "translation-uz": "chekmoq",
+        "translation-hi": "धूम्रपान करना",
+        "translation-ar": "يدخّن"
+      },
+      {
+        "word": "unterschreiben",
+        "translation-ru": "подписывать",
+        "translation-en": "to sign",
+        "translation-uk": "підписувати",
+        "translation-pl": "podpisywać",
+        "translation-es": "firmar",
+        "translation-fr": "signer",
+        "translation-tr": "imzalamak",
+        "translation-ro": "a semna",
+        "translation-uz": "imzolamoq",
+        "translation-hi": "हस्ताक्षर करना",
+        "translation-ar": "يوقّع"
+      },
+      {
+        "word": "die Heizung",
+        "translation-ru": "отопление",
+        "translation-en": "heating",
+        "translation-uk": "опалення",
+        "translation-pl": "ogrzewanie",
+        "translation-es": "la calefacción",
+        "translation-fr": "le chauffage",
+        "translation-tr": "kalorifer",
+        "translation-ro": "încălzirea",
+        "translation-uz": "isitish tizimi",
+        "translation-hi": "हीटर",
+        "translation-ar": "التدفئة"
+      },
+      {
+        "word": "sofort",
+        "translation-ru": "сразу",
+        "translation-en": "immediately",
+        "translation-uk": "одразу",
+        "translation-pl": "natychmiast",
+        "translation-es": "enseguida",
+        "translation-fr": "tout de suite",
+        "translation-tr": "hemen",
+        "translation-ro": "imediat",
+        "translation-uz": "darhol",
+        "translation-hi": "तुरंत",
+        "translation-ar": "فورًا"
+      },
+      {
+        "word": "kaputt",
+        "translation-ru": "сломанный",
+        "translation-en": "broken",
+        "translation-uk": "зламаний",
+        "translation-pl": "zepsuty",
+        "translation-es": "roto",
+        "translation-fr": "cassé",
+        "translation-tr": "bozuk",
+        "translation-ro": "stricat",
+        "translation-uz": "buzilgan",
+        "translation-hi": "ख़राब",
+        "translation-ar": "معطّل"
+      }
+    ],
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "craftValleyFive.questTask1",
+        "options": [
+          "Das Auto muss reparieren werden.",
+          "Das Auto muss werden repariert.",
+          "Das Auto muss repariert werden."
+        ],
+        "answer": "Das Auto muss repariert werden.",
+        "tip": "craftValleyFive.questDescription"
+      },
+      {
+        "id": 2,
+        "type": "input",
+        "question": "craftValleyFive.questTask2",
+        "correctAnswer": "werden",
+        "tip": "craftValleyFive.questDescription"
+      },
+      {
+        "id": 3,
+        "type": "input",
+        "question": "craftValleyFive.questTask3",
+        "correctAnswer": "muss",
+        "tip": "craftValleyFive.questDescription"
+      },
+      {
+        "id": 4,
+        "type": "reorder",
+        "question": "craftValleyFive.questTask4",
+        "words": [
+          "muss",
+          "unterschrieben",
+          "werden",
+          "wird",
+          "Das",
+          "Formular"
+        ],
+        "correctOrder": [
+          "Das",
+          "Formular",
+          "muss",
+          "unterschrieben",
+          "werden"
+        ],
+        "tip": "craftValleyFive.questDescription"
+      },
+      {
+        "id": 5,
+        "type": "select",
+        "question": "craftValleyFive.questTask5",
+        "options": [
+          "Die Heizung kann repariert werden.",
+          "Die Heizung kann repariert wird.",
+          "Die Heizung kann werden repariert."
+        ],
+        "answer": "Die Heizung kann repariert werden.",
+        "tip": "craftValleyFive.questDescription"
+      },
+      {
+        "id": 6,
+        "type": "input",
+        "question": "craftValleyFive.questTask6",
+        "correctAnswer": "müssen",
+        "tip": "craftValleyFive.questDescription"
+      },
+      {
+        "id": 7,
+        "type": "readAndAnswer",
+        "question": "craftValleyFive.questTask7",
+        "text": "Im Büro gibt es viel Arbeit. Die Heizung ist kaputt und muss sofort repariert werden. Die Briefe können morgen geschickt werden.",
+        "options": [
+          "die Heizung reparieren",
+          "den Chef anrufen",
+          "das Büro putzen"
+        ],
+        "answer": "die Heizung reparieren",
+        "tip": "craftValleyFive.questDescription"
+      },
+      {
+        "id": 8,
+        "type": "input",
+        "question": "craftValleyFive.questTask8",
+        "correctAnswer": "werden",
+        "tip": "craftValleyFive.questDescription"
+      },
+      {
+        "id": 9,
+        "type": "reorder",
+        "question": "craftValleyFive.questTask10",
+        "words": [
+          "muss",
+          "werden",
+          "wurde",
+          "geschickt",
+          "Paket",
+          "Das",
+          "heute"
+        ],
+        "correctOrder": [
+          "Das",
+          "Paket",
+          "muss",
+          "heute",
+          "geschickt",
+          "werden"
+        ],
+        "tip": "craftValleyFive.questDescription"
+      },
+      {
+        "id": 10,
+        "type": "select",
+        "question": "craftValleyFive.questTask11",
+        "options": [
+          "Diese Tür darf nicht geöffnet werden.",
+          "Diese Tür darf nicht geöffnet wird.",
+          "Diese Tür darf nicht werden geöffnet."
+        ],
+        "answer": "Diese Tür darf nicht geöffnet werden.",
+        "tip": "craftValleyFive.questDescription"
+      },
+      {
+        "id": 11,
+        "type": "input",
+        "question": "craftValleyFour.questTask9",
+        "correctAnswer": "wurde",
+        "tip": "craftValleyFour.questDescription",
+        "reviewOf": "craft-valley-four",
+        "reviewLand": "craft-valley"
+      },
+      {
+        "id": 12,
+        "type": "input",
+        "question": "craftValleyOne.questTask12",
+        "correctAnswer": "gewaschen",
+        "tip": "craftValleyOne.questDescription",
+        "reviewOf": "craft-valley-one",
+        "reviewLand": "craft-valley"
+      },
+      {
+        "id": 13,
+        "type": "input",
+        "question": "neighborStreetSix.questTask13",
+        "correctAnswer": "die",
+        "tip": "neighborStreetSix.questDescription",
+        "reviewOf": "neighbor-street-six",
+        "reviewLand": "neighbor-street"
+      },
+      {
+        "id": 14,
+        "type": "input",
+        "question": "craftValleyFive.questTask14",
+        "correctAnswer": "trotzdem",
+        "tip": "craftValleyFive.questDescription"
+      },
+      {
+        "id": 15,
+        "type": "input",
+        "question": "craftValleyFive.questTask15",
+        "correctAnswer": "blieben",
+        "tip": "craftValleyFive.questDescription"
+      }
+    ]
+  },
+  {
+    "questId": "craft-valley-six",
+    "title": "craftValleySix.questTitle",
+    "progress": "0/15",
+    "description": "craftValleySix.questDescription",
+    "conditions": {
+      "goal": "craftValleySix.questGoal",
+      "minCorrect": 15,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
+    "vocabulary": [
+      {
+        "word": "die Post",
+        "translation-ru": "почта",
+        "translation-en": "post office",
+        "translation-uk": "пошта",
+        "translation-pl": "poczta",
+        "translation-es": "correos",
+        "translation-fr": "la poste",
+        "translation-tr": "postane",
+        "translation-ro": "poșta",
+        "translation-uz": "pochta",
+        "translation-hi": "डाकघर",
+        "translation-ar": "مكتب البريد"
+      },
+      {
+        "word": "abgeben",
+        "translation-ru": "сдавать, отдавать",
+        "translation-en": "to hand in",
+        "translation-uk": "здавати, віддавати",
+        "translation-pl": "oddawać",
+        "translation-es": "entregar",
+        "translation-fr": "déposer, remettre",
+        "translation-tr": "teslim etmek",
+        "translation-ro": "a preda",
+        "translation-uz": "topshirmoq",
+        "translation-hi": "जमा करना",
+        "translation-ar": "يسلّم"
+      },
+      {
+        "word": "prüfen",
+        "translation-ru": "проверять",
+        "translation-en": "to check",
+        "translation-uk": "перевіряти",
+        "translation-pl": "sprawdzać",
+        "translation-es": "revisar",
+        "translation-fr": "vérifier",
+        "translation-tr": "kontrol etmek",
+        "translation-ro": "a verifica",
+        "translation-uz": "tekshirmoq",
+        "translation-hi": "जाँचना",
+        "translation-ar": "يفحص، يتحقّق"
+      },
+      {
+        "word": "das Licht",
+        "translation-ru": "свет, фара",
+        "translation-en": "light",
+        "translation-uk": "світло, фара",
+        "translation-pl": "światło",
+        "translation-es": "la luz",
+        "translation-fr": "la lumière, le phare",
+        "translation-tr": "ışık, far",
+        "translation-ro": "lumina, farul",
+        "translation-uz": "chiroq",
+        "translation-hi": "लाइट",
+        "translation-ar": "الضوء"
+      },
+      {
+        "word": "der Mechaniker",
+        "translation-ru": "механик",
+        "translation-en": "mechanic",
+        "translation-uk": "механік",
+        "translation-pl": "mechanik",
+        "translation-es": "el mecánico",
+        "translation-fr": "le mécanicien",
+        "translation-tr": "tamirci",
+        "translation-ro": "mecanicul",
+        "translation-uz": "mexanik",
+        "translation-hi": "मैकेनिक",
+        "translation-ar": "الميكانيكي"
+      }
+    ],
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "craftValleySix.questTask1",
+        "options": [
+          "Das Paket wird bei der Post abgeben.",
+          "Das Paket werden bei der Post abgegeben.",
+          "Das Paket wird bei der Post abgegeben."
+        ],
+        "answer": "Das Paket wird bei der Post abgegeben.",
+        "tip": "craftValleySix.questDescription"
+      },
+      {
+        "id": 2,
+        "type": "input",
+        "question": "craftValleySix.questTask2",
+        "correctAnswer": "werden",
+        "tip": "craftValleySix.questDescription"
+      },
+      {
+        "id": 3,
+        "type": "input",
+        "question": "craftValleySix.questTask3",
+        "correctAnswer": "geprüft",
+        "tip": "craftValleySix.questDescription"
+      },
+      {
+        "id": 4,
+        "type": "reorder",
+        "question": "craftValleySix.questTask4",
+        "words": [
+          "abgeben",
+          "werden",
+          "abgegeben",
+          "Formular",
+          "bis",
+          "Das",
+          "Freitag",
+          "muss"
+        ],
+        "correctOrder": [
+          "Das",
+          "Formular",
+          "muss",
+          "bis",
+          "Freitag",
+          "abgegeben",
+          "werden"
+        ],
+        "tip": "craftValleySix.questDescription"
+      },
+      {
+        "id": 5,
+        "type": "select",
+        "question": "craftValleySix.questTask5",
+        "options": [
+          "Der Mechaniker wird das Auto repariert.",
+          "Der Mechaniker repariert das Auto werden.",
+          "Der Mechaniker repariert das Auto."
+        ],
+        "answer": "Der Mechaniker repariert das Auto.",
+        "tip": "craftValleySix.questDescription"
+      },
+      {
+        "id": 6,
+        "type": "input",
+        "question": "craftValleySix.questTask6",
+        "correctAnswer": "werden",
+        "tip": "craftValleySix.questDescription"
+      },
+      {
+        "id": 7,
+        "type": "readAndAnswer",
+        "question": "craftValleySix.questTask7",
+        "text": "Herr Braun bringt sein Auto in die Werkstatt. Dort wird es geprüft. Der Mechaniker sagt: „Das Licht muss repariert werden. Das Auto ist morgen fertig.“",
+        "options": [
+          "in einer Woche",
+          "morgen",
+          "heute"
+        ],
+        "answer": "morgen",
+        "tip": "craftValleySix.questDescription"
+      },
+      {
+        "id": 8,
+        "type": "input",
+        "question": "craftValleySix.questTask8",
+        "correctAnswer": "geschickt",
+        "tip": "craftValleySix.questDescription"
+      },
+      {
+        "id": 9,
+        "type": "reorder",
+        "question": "craftValleySix.questTask10",
+        "words": [
+          "Sonntag",
+          "Am",
+          "wird",
+          "gearbeitet",
+          "werden",
+          "nicht"
+        ],
+        "correctOrder": [
+          "Am",
+          "Sonntag",
+          "wird",
+          "nicht",
+          "gearbeitet"
+        ],
+        "tip": "craftValleySix.questDescription"
+      },
+      {
+        "id": 10,
+        "type": "select",
+        "question": "craftValleySix.questTask11",
+        "options": [
+          "Die Wohnung muss putzen werden.",
+          "Die Wohnung muss geputzt werden.",
+          "Die Wohnung muss werden geputzt."
+        ],
+        "answer": "Die Wohnung muss geputzt werden.",
+        "tip": "craftValleySix.questDescription"
+      },
+      {
+        "id": 11,
+        "type": "input",
+        "question": "craftValleyFive.questTask9",
+        "correctAnswer": "werden",
+        "tip": "craftValleyFive.questDescription",
+        "reviewOf": "craft-valley-five",
+        "reviewLand": "craft-valley"
+      },
+      {
+        "id": 12,
+        "type": "input",
+        "question": "craftValleyTwo.questTask12",
+        "correctAnswer": "verkauft",
+        "tip": "craftValleyTwo.questDescription",
+        "reviewOf": "craft-valley-two",
+        "reviewLand": "craft-valley"
+      },
+      {
+        "id": 13,
+        "type": "input",
+        "question": "neighborStreetSeven.questTask13",
+        "correctAnswer": "den",
+        "tip": "neighborStreetSeven.questDescription",
+        "reviewOf": "neighbor-street-seven",
+        "reviewLand": "neighbor-street"
+      },
+      {
+        "id": 14,
+        "type": "input",
+        "question": "craftValleySix.questTask14",
+        "correctAnswer": "der",
+        "tip": "craftValleySix.questDescription"
+      },
+      {
+        "id": 15,
+        "type": "input",
+        "question": "craftValleySix.questTask15",
+        "correctAnswer": "war",
+        "tip": "craftValleySix.questDescription"
+      }
+    ]
+  },
+  {
+    "questId": "craft-valley-seven",
+    "title": "craftValleySeven.questTitle",
+    "progress": "0/15",
+    "description": "craftValleySeven.questDescription",
+    "conditions": {
+      "goal": "craftValleySeven.questGoal",
+      "minCorrect": 15,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
+    "vocabulary": [
+      {
+        "word": "der Bäcker",
+        "translation-ru": "пекарь",
+        "translation-en": "baker",
+        "translation-uk": "пекар",
+        "translation-pl": "piekarz",
+        "translation-es": "el panadero",
+        "translation-fr": "le boulanger",
+        "translation-tr": "fırıncı",
+        "translation-ro": "brutarul",
+        "translation-uz": "novvoy",
+        "translation-hi": "बेकर",
+        "translation-ar": "الخباز"
+      },
+      {
+        "word": "das Mehl",
+        "translation-ru": "мука",
+        "translation-en": "flour",
+        "translation-uk": "борошно",
+        "translation-pl": "mąka",
+        "translation-es": "la harina",
+        "translation-fr": "la farine",
+        "translation-tr": "un",
+        "translation-ro": "făina",
+        "translation-uz": "un",
+        "translation-hi": "आटा",
+        "translation-ar": "الدقيق"
+      },
+      {
+        "word": "mischen",
+        "translation-ru": "смешивать",
+        "translation-en": "to mix",
+        "translation-uk": "змішувати",
+        "translation-pl": "mieszać",
+        "translation-es": "mezclar",
+        "translation-fr": "mélanger",
+        "translation-tr": "karıştırmak",
+        "translation-ro": "a amesteca",
+        "translation-uz": "aralashtirmoq",
+        "translation-hi": "मिलाना",
+        "translation-ar": "يخلط"
+      },
+      {
+        "word": "der Ofen",
+        "translation-ru": "печь, духовка",
+        "translation-en": "oven",
+        "translation-uk": "піч, духовка",
+        "translation-pl": "piec",
+        "translation-es": "el horno",
+        "translation-fr": "le four",
+        "translation-tr": "fırın",
+        "translation-ro": "cuptorul",
+        "translation-uz": "pech",
+        "translation-hi": "ओवन",
+        "translation-ar": "الفرن"
+      },
+      {
+        "word": "der Teig",
+        "translation-ru": "тесто",
+        "translation-en": "dough",
+        "translation-uk": "тісто",
+        "translation-pl": "ciasto",
+        "translation-es": "la masa",
+        "translation-fr": "la pâte",
+        "translation-tr": "hamur",
+        "translation-ro": "aluatul",
+        "translation-uz": "xamir",
+        "translation-hi": "गुँथा आटा",
+        "translation-ar": "العجين"
+      },
+      {
+        "word": "das Messer",
+        "translation-ru": "нож",
+        "translation-en": "knife",
+        "translation-uk": "ніж",
+        "translation-pl": "nóż",
+        "translation-es": "cuchillo",
+        "translation-fr": "couteau",
+        "translation-tr": "bıçak",
+        "translation-ro": "cuțit",
+        "translation-uz": "pichoq",
+        "translation-hi": "चाकू",
+        "translation-ar": "سكين"
+      },
+      {
+        "word": "schneiden",
+        "translation-ru": "резать",
+        "translation-en": "to cut",
+        "translation-uk": "різати",
+        "translation-pl": "ciąć / kroić",
+        "translation-es": "cortar",
+        "translation-fr": "couper",
+        "translation-tr": "kesmek",
+        "translation-ro": "a tăia",
+        "translation-uz": "kesmoq",
+        "translation-hi": "काटना",
+        "translation-ar": "يقطع"
+      }
+    ],
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "craftValleySeven.questTask1",
+        "options": [
+          "Das Brot werden früh am Morgen gebacken.",
+          "Das Brot wird früh am Morgen backen.",
+          "Das Brot wird früh am Morgen gebacken."
+        ],
+        "answer": "Das Brot wird früh am Morgen gebacken.",
+        "tip": "craftValleySeven.questDescription"
+      },
+      {
+        "id": 2,
+        "type": "input",
+        "question": "craftValleySeven.questTask2",
+        "correctAnswer": "werden",
+        "tip": "craftValleySeven.questDescription"
+      },
+      {
+        "id": 3,
+        "type": "input",
+        "question": "craftValleySeven.questTask3",
+        "correctAnswer": "gelegt",
+        "tip": "craftValleySeven.questDescription"
+      },
+      {
+        "id": 4,
+        "type": "reorder",
+        "question": "craftValleySeven.questTask4",
+        "words": [
+          "im",
+          "verkauft",
+          "Laden",
+          "Die",
+          "werden",
+          "wird",
+          "Brötchen"
+        ],
+        "correctOrder": [
+          "Die",
+          "Brötchen",
+          "werden",
+          "im",
+          "Laden",
+          "verkauft"
+        ],
+        "tip": "craftValleySeven.questDescription"
+      },
+      {
+        "id": 5,
+        "type": "select",
+        "question": "craftValleySeven.questTask5",
+        "options": [
+          "Der Kuchen wird von meine Mutter gebacken.",
+          "Der Kuchen wird mit meiner Mutter gebacken.",
+          "Der Kuchen wird von meiner Mutter gebacken."
+        ],
+        "answer": "Der Kuchen wird von meiner Mutter gebacken.",
+        "tip": "craftValleySeven.questDescription"
+      },
+      {
+        "id": 6,
+        "type": "input",
+        "question": "craftValleySeven.questTask6",
+        "correctAnswer": "werden",
+        "tip": "craftValleySeven.questDescription"
+      },
+      {
+        "id": 7,
+        "type": "readAndAnswer",
+        "question": "craftValleySeven.questTask7",
+        "text": "In der Bäckerei Schmidt wird schon um drei Uhr gearbeitet. Zuerst wird der Teig gemacht. Um fünf Uhr werden die Brötchen gebacken. Um sieben Uhr wird der Laden geöffnet.",
+        "options": [
+          "um drei Uhr",
+          "um sieben Uhr",
+          "um fünf Uhr"
+        ],
+        "answer": "um drei Uhr",
+        "tip": "craftValleySeven.questDescription"
+      },
+      {
+        "id": 8,
+        "type": "input",
+        "question": "craftValleySeven.questTask8",
+        "correctAnswer": "von",
+        "tip": "craftValleySeven.questDescription"
+      },
+      {
+        "id": 9,
+        "type": "reorder",
+        "question": "craftValleySeven.questTask10",
+        "words": [
+          "Hier",
+          "Deutsch",
+          "werden",
+          "Englisch",
+          "gesprochen",
+          "wird",
+          "und"
+        ],
+        "correctOrder": [
+          "Hier",
+          "wird",
+          "Deutsch",
+          "und",
+          "Englisch",
+          "gesprochen"
+        ],
+        "tip": "craftValleySeven.questDescription"
+      },
+      {
+        "id": 10,
+        "type": "select",
+        "question": "craftValleySeven.questTask11",
+        "options": [
+          "Das Brot wird mit einem Messer schneiden.",
+          "Das Brot wird mit einem Messer geschnitten.",
+          "Das Brot wird von einem Messer geschnitten."
+        ],
+        "answer": "Das Brot wird mit einem Messer geschnitten.",
+        "tip": "craftValleySeven.questDescription"
+      },
+      {
+        "id": 11,
+        "type": "input",
+        "question": "craftValleySix.questTask9",
+        "correctAnswer": "werden",
+        "tip": "craftValleySix.questDescription",
+        "reviewOf": "craft-valley-six",
+        "reviewLand": "craft-valley"
+      },
+      {
+        "id": 12,
+        "type": "input",
+        "question": "craftValleyThree.questTask12",
+        "correctAnswer": "vom",
+        "tip": "craftValleyThree.questDescription",
+        "reviewOf": "craft-valley-three",
+        "reviewLand": "craft-valley"
+      },
+      {
+        "id": 13,
+        "type": "input",
+        "question": "neighborStreetEight.questTask13",
+        "correctAnswer": "dem",
+        "tip": "neighborStreetEight.questDescription",
+        "reviewOf": "neighbor-street-eight",
+        "reviewLand": "neighbor-street"
+      },
+      {
+        "id": 14,
+        "type": "input",
+        "question": "craftValleySeven.questTask14",
+        "correctAnswer": "den",
+        "tip": "craftValleySeven.questDescription"
+      },
+      {
+        "id": 15,
+        "type": "input",
+        "question": "craftValleySeven.questTask15",
+        "correctAnswer": "backen",
+        "tip": "craftValleySeven.questDescription"
+      }
+    ]
+  },
+  {
+    "questId": "craft-valley-eight",
+    "title": "craftValleyEight.questTitle",
+    "progress": "0/15",
+    "description": "craftValleyEight.questDescription",
+    "conditions": {
+      "goal": "craftValleyEight.questGoal",
+      "minCorrect": 15,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
+    "vocabulary": [
+      {
+        "word": "renovieren",
+        "translation-ru": "ремонтировать (здание)",
+        "translation-en": "to renovate",
+        "translation-uk": "ремонтувати",
+        "translation-pl": "remontować",
+        "translation-es": "renovar",
+        "translation-fr": "rénover",
+        "translation-tr": "yenilemek",
+        "translation-ro": "a renova",
+        "translation-uz": "ta’mirlamoq",
+        "translation-hi": "मरम्मत करना",
+        "translation-ar": "يرمّم"
+      },
+      {
+        "word": "der Bürgermeister",
+        "translation-ru": "мэр",
+        "translation-en": "mayor",
+        "translation-uk": "мер",
+        "translation-pl": "burmistrz",
+        "translation-es": "el alcalde",
+        "translation-fr": "le maire",
+        "translation-tr": "belediye başkanı",
+        "translation-ro": "primarul",
+        "translation-uz": "shahar hokimi",
+        "translation-hi": "मेयर",
+        "translation-ar": "رئيس البلدية"
+      },
+      {
+        "word": "eröffnen",
+        "translation-ru": "открывать (впервые)",
+        "translation-en": "to open (officially)",
+        "translation-uk": "відкривати",
+        "translation-pl": "otwierać",
+        "translation-es": "inaugurar",
+        "translation-fr": "inaugurer",
+        "translation-tr": "açılışını yapmak",
+        "translation-ro": "a inaugura",
+        "translation-uz": "ochmoq",
+        "translation-hi": "उद्घाटन करना",
+        "translation-ar": "يفتتح"
+      },
+      {
+        "word": "die Schule",
+        "translation-ru": "школа",
+        "translation-en": "school",
+        "translation-uk": "школа",
+        "translation-pl": "szkoła",
+        "translation-es": "la escuela",
+        "translation-fr": "l’école",
+        "translation-tr": "okul",
+        "translation-ro": "școala",
+        "translation-uz": "maktab",
+        "translation-hi": "स्कूल",
+        "translation-ar": "المدرسة"
+      },
+      {
+        "word": "der Spielplatz",
+        "translation-ru": "детская площадка",
+        "translation-en": "playground",
+        "translation-uk": "дитячий майданчик",
+        "translation-pl": "plac zabaw",
+        "translation-es": "el parque infantil",
+        "translation-fr": "l’aire de jeux",
+        "translation-tr": "oyun parkı",
+        "translation-ro": "locul de joacă",
+        "translation-uz": "bolalar maydonchasi",
+        "translation-hi": "खेल का मैदान",
+        "translation-ar": "ملعب الأطفال"
+      },
+      {
+        "word": "das Fest",
+        "translation-ru": "праздник",
+        "translation-en": "celebration, party",
+        "translation-uk": "свято",
+        "translation-pl": "święto, przyjęcie",
+        "translation-es": "la fiesta",
+        "translation-fr": "la fête",
+        "translation-tr": "kutlama",
+        "translation-ro": "sărbătoarea",
+        "translation-uz": "bayram",
+        "translation-hi": "उत्सव",
+        "translation-ar": "الحفل"
+      }
+    ],
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "craftValleyEight.questTask1",
+        "options": [
+          "Die Schule wurde im Sommer renovieren.",
+          "Die Schule wurden im Sommer renoviert.",
+          "Die Schule wurde im Sommer renoviert."
+        ],
+        "answer": "Die Schule wurde im Sommer renoviert.",
+        "tip": "craftValleyEight.questDescription"
+      },
+      {
+        "id": 2,
+        "type": "input",
+        "question": "craftValleyEight.questTask2",
+        "correctAnswer": "von",
+        "tip": "craftValleyEight.questDescription"
+      },
+      {
+        "id": 3,
+        "type": "input",
+        "question": "craftValleyEight.questTask3",
+        "correctAnswer": "werden",
+        "tip": "craftValleyEight.questDescription"
+      },
+      {
+        "id": 4,
+        "type": "reorder",
+        "question": "craftValleyEight.questTask4",
+        "words": [
+          "gebaut",
+          "Kirche",
+          "dreihundert",
+          "wird",
+          "vor",
+          "Die",
+          "Jahren",
+          "wurde"
+        ],
+        "correctOrder": [
+          "Die",
+          "Kirche",
+          "wurde",
+          "vor",
+          "dreihundert",
+          "Jahren",
+          "gebaut"
+        ],
+        "tip": "craftValleyEight.questDescription"
+      },
+      {
+        "id": 5,
+        "type": "select",
+        "question": "craftValleyEight.questTask5",
+        "options": [
+          "Gestern wurde ein neues Museum eröffnen.",
+          "Gestern wird ein neues Museum eröffnet.",
+          "Gestern wurde ein neues Museum eröffnet."
+        ],
+        "answer": "Gestern wurde ein neues Museum eröffnet.",
+        "tip": "craftValleyEight.questDescription"
+      },
+      {
+        "id": 6,
+        "type": "input",
+        "question": "craftValleyEight.questTask6",
+        "correctAnswer": "wurden",
+        "tip": "craftValleyEight.questDescription"
+      },
+      {
+        "id": 7,
+        "type": "readAndAnswer",
+        "question": "craftValleyEight.questTask7",
+        "text": "In unserer Stadt ist viel passiert. Die Schule wurde renoviert, und ein neues Schwimmbad wurde vom Bürgermeister eröffnet. Aber die Hauptstraße muss noch repariert werden.",
+        "options": [
+          "von der Polizei",
+          "vom Bürgermeister",
+          "von den Schülern"
+        ],
+        "answer": "vom Bürgermeister",
+        "tip": "craftValleyEight.questDescription"
+      },
+      {
+        "id": 8,
+        "type": "input",
+        "question": "craftValleyEight.questTask8",
+        "correctAnswer": "werden",
+        "tip": "craftValleyEight.questDescription"
+      },
+      {
+        "id": 9,
+        "type": "reorder",
+        "question": "craftValleyEight.questTask10",
+        "words": [
+          "Spielplatz",
+          "Der",
+          "muss",
+          "werden",
+          "wurde",
+          "geputzt"
+        ],
+        "correctOrder": [
+          "Der",
+          "Spielplatz",
+          "muss",
+          "geputzt",
+          "werden"
+        ],
+        "tip": "craftValleyEight.questDescription"
+      },
+      {
+        "id": 10,
+        "type": "select",
+        "question": "craftValleyEight.questTask11",
+        "options": [
+          "Der Bürgermeister wurde im Mai gewählt.",
+          "Der Bürgermeister wurden im Mai gewählt.",
+          "Der Bürgermeister wurde im Mai wählen."
+        ],
+        "answer": "Der Bürgermeister wurde im Mai gewählt.",
+        "tip": "craftValleyEight.questDescription"
+      },
+      {
+        "id": 11,
+        "type": "input",
+        "question": "craftValleySeven.questTask9",
+        "correctAnswer": "angemacht",
+        "tip": "craftValleySeven.questDescription",
+        "reviewOf": "craft-valley-seven",
+        "reviewLand": "craft-valley"
+      },
+      {
+        "id": 12,
+        "type": "input",
+        "question": "craftValleyFour.questTask12",
+        "correctAnswer": "wurden",
+        "tip": "craftValleyFour.questDescription",
+        "reviewOf": "craft-valley-four",
+        "reviewLand": "craft-valley"
+      },
+      {
+        "id": 13,
+        "type": "input",
+        "question": "craftValleyOne.questTask13",
+        "correctAnswer": "wird",
+        "tip": "craftValleyOne.questDescription",
+        "reviewOf": "craft-valley-one",
+        "reviewLand": "craft-valley"
+      },
+      {
+        "id": 14,
+        "type": "input",
+        "question": "craftValleyEight.questTask14",
+        "correctAnswer": "dem",
+        "tip": "craftValleyEight.questDescription"
+      },
+      {
+        "id": 15,
+        "type": "input",
+        "question": "craftValleyEight.questTask15",
+        "correctAnswer": "Obwohl",
+        "tip": "craftValleyEight.questDescription"
+      }
+    ]
+  },
+  {
+    "questId": "craft-valley-nine",
+    "title": "craftValleyNine.questTitle",
+    "progress": "0/15",
+    "description": "craftValleyNine.questDescription",
+    "conditions": {
+      "goal": "craftValleyNine.questGoal",
+      "minCorrect": 15,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
+    "vocabulary": [
+      {
+        "word": "das Gemüse",
+        "translation-ru": "овощи",
+        "translation-en": "vegetables",
+        "translation-uk": "овочі",
+        "translation-pl": "warzywa",
+        "translation-es": "la verdura",
+        "translation-fr": "les légumes",
+        "translation-tr": "sebze",
+        "translation-ro": "legumele",
+        "translation-uz": "sabzavotlar",
+        "translation-hi": "सब्ज़ियाँ",
+        "translation-ar": "الخضروات"
+      },
+      {
+        "word": "der Markt",
+        "translation-ru": "рынок",
+        "translation-en": "market",
+        "translation-uk": "ринок",
+        "translation-pl": "targ",
+        "translation-es": "el mercado",
+        "translation-fr": "le marché",
+        "translation-tr": "pazar",
+        "translation-ro": "piața",
+        "translation-uz": "bozor",
+        "translation-hi": "बाज़ार",
+        "translation-ar": "السوق"
+      },
+      {
+        "word": "deshalb",
+        "translation-ru": "поэтому",
+        "translation-en": "that’s why",
+        "translation-uk": "тому",
+        "translation-pl": "dlatego",
+        "translation-es": "por eso",
+        "translation-fr": "c’est pourquoi",
+        "translation-tr": "bu yüzden",
+        "translation-ro": "de aceea",
+        "translation-uz": "shuning uchun",
+        "translation-hi": "इसलिए",
+        "translation-ar": "لذلك"
+      },
+      {
+        "word": "niemand",
+        "translation-ru": "никто",
+        "translation-en": "no one",
+        "translation-uk": "ніхто",
+        "translation-pl": "nikt",
+        "translation-es": "nadie",
+        "translation-fr": "personne",
+        "translation-tr": "kimse",
+        "translation-ro": "nimeni",
+        "translation-uz": "hech kim",
+        "translation-hi": "कोई नहीं",
+        "translation-ar": "لا أحد"
+      },
+      {
+        "word": "das Brot",
+        "translation-ru": "хлеб",
+        "translation-en": "bread",
+        "translation-uk": "хліб",
+        "translation-pl": "chleb",
+        "translation-es": "el pan",
+        "translation-fr": "le pain",
+        "translation-tr": "ekmek",
+        "translation-ro": "pâinea",
+        "translation-uz": "non",
+        "translation-hi": "ब्रेड",
+        "translation-ar": "الخبز"
+      }
+    ],
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "craftValleyNine.questTask1",
+        "options": [
+          "Das Brot wird jeden Morgen backen.",
+          "Das Brot werden jeden Morgen gebacken.",
+          "Das Brot wird jeden Morgen gebacken."
+        ],
+        "answer": "Das Brot wird jeden Morgen gebacken.",
+        "tip": "craftValleyNine.questDescription"
+      },
+      {
+        "id": 2,
+        "type": "input",
+        "question": "craftValleyNine.questTask2",
+        "correctAnswer": "werden",
+        "tip": "craftValleyNine.questDescription"
+      },
+      {
+        "id": 3,
+        "type": "input",
+        "question": "craftValleyNine.questTask3",
+        "correctAnswer": "wurde",
+        "tip": "craftValleyNine.questDescription"
+      },
+      {
+        "id": 4,
+        "type": "reorder",
+        "question": "craftValleyNine.questTask4",
+        "words": [
+          "aufgeräumt",
+          "Zimmer",
+          "von",
+          "Kindern",
+          "Das",
+          "den",
+          "vom",
+          "wird"
+        ],
+        "correctOrder": [
+          "Das",
+          "Zimmer",
+          "wird",
+          "von",
+          "den",
+          "Kindern",
+          "aufgeräumt"
+        ],
+        "tip": "craftValleyNine.questDescription"
+      },
+      {
+        "id": 5,
+        "type": "select",
+        "question": "craftValleyNine.questTask5",
+        "options": [
+          "Die Heizung muss werden repariert.",
+          "Die Heizung muss repariert wird.",
+          "Die Heizung muss repariert werden."
+        ],
+        "answer": "Die Heizung muss repariert werden.",
+        "tip": "craftValleyNine.questDescription"
+      },
+      {
+        "id": 6,
+        "type": "input",
+        "question": "craftValleyNine.questTask6",
+        "correctAnswer": "gemacht",
+        "tip": "craftValleyNine.questDescription"
+      },
+      {
+        "id": 7,
+        "type": "readAndAnswer",
+        "question": "craftValleyNine.questTask7",
+        "text": "Im Restaurant „Sonne“ wird jeden Tag frisch gekocht. Das Brot wird jeden Morgen gebacken, und das Gemüse wird auf dem Markt gekauft.",
+        "options": [
+          "auf dem Markt",
+          "im Garten",
+          "im Supermarkt"
+        ],
+        "answer": "auf dem Markt",
+        "tip": "craftValleyNine.questDescription"
+      },
+      {
+        "id": 8,
+        "type": "input",
+        "question": "craftValleyNine.questTask8",
+        "correctAnswer": "von",
+        "tip": "craftValleyNine.questDescription"
+      },
+      {
+        "id": 9,
+        "type": "select",
+        "question": "craftValleyNine.questTask9",
+        "options": [
+          "Die Häuser wurden letztes Jahr gebaut.",
+          "Die Häuser werden letztes Jahr gebaut.",
+          "Die Häuser wurde letztes Jahr gebaut."
+        ],
+        "answer": "Die Häuser wurden letztes Jahr gebaut.",
+        "tip": "craftValleyNine.questDescription"
+      },
+      {
+        "id": 10,
+        "type": "input",
+        "question": "craftValleyNine.questTask10",
+        "correctAnswer": "telefoniert",
+        "tip": "craftValleyNine.questDescription"
+      },
+      {
+        "id": 11,
+        "type": "reorder",
+        "question": "craftValleyNine.questTask11",
+        "words": [
+          "Die",
+          "Samstag",
+          "werden",
+          "wird",
+          "gezeigt",
+          "Wohnung",
+          "am"
+        ],
+        "correctOrder": [
+          "Die",
+          "Wohnung",
+          "wird",
+          "am",
+          "Samstag",
+          "gezeigt"
+        ],
+        "tip": "craftValleyNine.questDescription"
+      },
+      {
+        "id": 12,
+        "type": "select",
+        "question": "craftValleyNine.questTask12",
+        "options": [
+          "Das Haus wird von meinen Eltern verkaufen.",
+          "Das Haus wird von meinen Eltern verkauft.",
+          "Das Haus wird von meine Eltern verkauft."
+        ],
+        "answer": "Das Haus wird von meinen Eltern verkauft.",
+        "tip": "craftValleyNine.questDescription"
+      },
+      {
+        "id": 13,
+        "type": "readAndAnswer",
+        "question": "craftValleyNine.questTask13",
+        "text": "Das Paket wurde am Montag geschickt. Es wurde am Mittwoch gebracht, aber niemand war zu Hause. Deshalb muss es bei der Post abgeholt werden.",
+        "options": [
+          "bei der Post",
+          "zu Hause",
+          "beim Nachbarn"
+        ],
+        "answer": "bei der Post",
+        "tip": "craftValleyNine.questDescription"
+      },
+      {
+        "id": 14,
+        "type": "input",
+        "question": "craftValleyNine.questTask14",
+        "correctAnswer": "werden",
+        "tip": "craftValleyNine.questDescription"
+      },
+      {
+        "id": 15,
+        "type": "input",
+        "question": "craftValleyNine.questTask15",
+        "correctAnswer": "renoviert",
+        "tip": "craftValleyNine.questDescription"
+      }
+    ]
+  },
+  {
+    "questId": "craft-valley-ten",
+    "title": "craftValleyTen.questTitle",
+    "progress": "0/15",
+    "description": "craftValleyTen.questDescription",
+    "conditions": {
+      "goal": "craftValleyTen.questGoal",
+      "minCorrect": 15,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
+    "vocabulary": [
+      {
+        "word": "das Kino",
+        "translation-ru": "кинотеатр",
+        "translation-en": "cinema",
+        "translation-uk": "кінотеатр",
+        "translation-pl": "kino",
+        "translation-es": "el cine",
+        "translation-fr": "le cinéma",
+        "translation-tr": "sinema",
+        "translation-ro": "cinematograful",
+        "translation-uz": "kinoteatr",
+        "translation-hi": "सिनेमाघर",
+        "translation-ar": "السينما"
+      },
+      {
+        "word": "fernsehen",
+        "translation-ru": "смотреть телевизор",
+        "translation-en": "to watch TV",
+        "translation-uk": "дивитися телевізор",
+        "translation-pl": "oglądać telewizję",
+        "translation-es": "ver la tele",
+        "translation-fr": "regarder la télé",
+        "translation-tr": "televizyon izlemek",
+        "translation-ro": "a se uita la televizor",
+        "translation-uz": "televizor ko‘rmoq",
+        "translation-hi": "टीवी देखना",
+        "translation-ar": "يشاهد التلفاز"
+      },
+      {
+        "word": "der Koch",
+        "translation-ru": "повар",
+        "translation-en": "cook",
+        "translation-uk": "кухар",
+        "translation-pl": "kucharz",
+        "translation-es": "el cocinero",
+        "translation-fr": "le cuisinier",
+        "translation-tr": "aşçı",
+        "translation-ro": "bucătarul",
+        "translation-uz": "oshpaz",
+        "translation-hi": "रसोइया",
+        "translation-ar": "الطبّاخ"
+      },
+      {
+        "word": "der Mechaniker",
+        "translation-ru": "механик",
+        "translation-en": "mechanic",
+        "translation-uk": "механік",
+        "translation-pl": "mechanik",
+        "translation-es": "el mecánico",
+        "translation-fr": "le mécanicien",
+        "translation-tr": "tamirci",
+        "translation-ro": "mecanicul",
+        "translation-uz": "mexanik",
+        "translation-hi": "मैकेनिक",
+        "translation-ar": "الميكانيكي"
+      },
+      {
+        "word": "während",
+        "translation-ru": "пока, в то время как",
+        "translation-en": "while",
+        "translation-uk": "поки, у той час як",
+        "translation-pl": "podczas gdy",
+        "translation-es": "mientras",
+        "translation-fr": "pendant que",
+        "translation-tr": "-iken",
+        "translation-ro": "în timp ce",
+        "translation-uz": "…ayotganda",
+        "translation-hi": "जबकि, जब तक",
+        "translation-ar": "بينما"
+      }
+    ],
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "craftValleyTen.questTask1",
+        "options": [
+          "Das Auto wurden vom Mechaniker repariert.",
+          "Das Auto wurde vom Mechaniker reparieren.",
+          "Das Auto wurde vom Mechaniker repariert."
+        ],
+        "answer": "Das Auto wurde vom Mechaniker repariert.",
+        "tip": "craftValleyTen.questDescription"
+      },
+      {
+        "id": 2,
+        "type": "input",
+        "question": "craftValleyTen.questTask2",
+        "correctAnswer": "dem",
+        "tip": "craftValleyTen.questDescription"
+      },
+      {
+        "id": 3,
+        "type": "input",
+        "question": "craftValleyTen.questTask3",
+        "correctAnswer": "um",
+        "tip": "craftValleyTen.questDescription"
+      },
+      {
+        "id": 4,
+        "type": "input",
+        "question": "craftValleyTen.questTask4",
+        "correctAnswer": "gesprochen",
+        "tip": "craftValleyTen.questDescription"
+      },
+      {
+        "id": 5,
+        "type": "select",
+        "question": "craftValleyTen.questTask5",
+        "options": [
+          "Obwohl er war krank, arbeitete er.",
+          "Obwohl er krank war, er arbeitete.",
+          "Obwohl er krank war, arbeitete er."
+        ],
+        "answer": "Obwohl er krank war, arbeitete er.",
+        "tip": "craftValleyTen.questDescription"
+      },
+      {
+        "id": 6,
+        "type": "input",
+        "question": "craftValleyTen.questTask6",
+        "correctAnswer": "was",
+        "tip": "craftValleyTen.questDescription"
+      },
+      {
+        "id": 7,
+        "type": "readAndAnswer",
+        "question": "craftValleyTen.questTask7",
+        "text": "Das alte Kino in unserer Stadt wurde vor hundert Jahren gebaut. Jetzt wird es renoviert. Danach sollen dort wieder Filme gezeigt werden.",
+        "options": [
+          "Es wird verkauft.",
+          "Es wird renoviert.",
+          "Es wird gebaut."
+        ],
+        "answer": "Es wird renoviert.",
+        "tip": "craftValleyTen.questDescription"
+      },
+      {
+        "id": 8,
+        "type": "input",
+        "question": "craftValleyTen.questTask8",
+        "correctAnswer": "waren",
+        "tip": "craftValleyTen.questDescription"
+      },
+      {
+        "id": 9,
+        "type": "reorder",
+        "question": "craftValleyTen.questTask9",
+        "words": [
+          "bezahlt",
+          "Rechnungen",
+          "muss",
+          "werden",
+          "Die",
+          "müssen"
+        ],
+        "correctOrder": [
+          "Die",
+          "Rechnungen",
+          "müssen",
+          "bezahlt",
+          "werden"
+        ],
+        "tip": "craftValleyTen.questDescription"
+      },
+      {
+        "id": 10,
+        "type": "input",
+        "question": "craftValleyTen.questTask10",
+        "correctAnswer": "nahmen",
+        "tip": "craftValleyTen.questDescription"
+      },
+      {
+        "id": 11,
+        "type": "input",
+        "question": "craftValleyTen.questTask11",
+        "correctAnswer": "älter",
+        "tip": "craftValleyTen.questDescription"
+      },
+      {
+        "id": 12,
+        "type": "select",
+        "question": "craftValleyTen.questTask12",
+        "options": [
+          "Die Pakete wurden am Freitag abgeholt.",
+          "Die Pakete wurden am Freitag abholen.",
+          "Die Pakete wurde am Freitag abgeholt."
+        ],
+        "answer": "Die Pakete wurden am Freitag abgeholt.",
+        "tip": "craftValleyTen.questDescription"
+      },
+      {
+        "id": 13,
+        "type": "readAndAnswer",
+        "question": "craftValleyTen.questTask13",
+        "text": "Mein Freund, der in Köln wohnt, hat eine neue Stelle. Er arbeitet in einer Firma, in der Autos gebaut werden.",
+        "options": [
+          "Brot wird gebacken.",
+          "Autos werden gebaut.",
+          "Bücher werden verkauft."
+        ],
+        "answer": "Autos werden gebaut.",
+        "tip": "craftValleyTen.questDescription"
+      },
+      {
+        "id": 14,
+        "type": "input",
+        "question": "craftValleyTen.questTask14",
+        "correctAnswer": "sah",
+        "tip": "craftValleyTen.questDescription"
+      },
+      {
+        "id": 15,
+        "type": "input",
+        "question": "craftValleyTen.questTask15",
+        "correctAnswer": "meinem",
+        "tip": "craftValleyTen.questDescription"
+      }
+    ]
+  }
+]

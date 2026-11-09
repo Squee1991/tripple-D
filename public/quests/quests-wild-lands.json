@@ -1,7 +1,9 @@
 [
   {
     "questId": "env",
-    "aliases": ["natur-a1-env-start"],
+    "aliases": [
+      "natur-a1-env-start"
+    ],
     "title": "wildLandsFirstQuest.title",
     "progress": "0/15",
     "description": "wildLandsFirstQuest.description",
@@ -161,7 +163,11 @@
         "id": 1,
         "type": "select",
         "question": "wildLandsFirstQuest.questOne",
-        "options": ["Der Wald", "Die Natur", "Der Baum"],
+        "options": [
+          "Der Wald",
+          "Die Natur",
+          "Der Baum"
+        ],
         "answer": "Die Natur"
       },
       {
@@ -175,14 +181,26 @@
         "id": 3,
         "type": "reorder",
         "question": "wildLandsFirstQuest.questThree",
-        "words": ["ist", "Die Natur", "schön"],
-        "correctOrder": ["Die Natur", "ist", "schön"]
+        "words": [
+          "ist",
+          "Die Natur",
+          "schön"
+        ],
+        "correctOrder": [
+          "Die Natur",
+          "ist",
+          "schön"
+        ]
       },
       {
         "id": 4,
         "type": "select",
         "question": "wildLandsFirstQuest.questFour",
-        "options": ["Der Fluss", "Der Wald", "Der Baum"],
+        "options": [
+          "Der Fluss",
+          "Der Wald",
+          "Der Baum"
+        ],
         "answer": "Der Wald"
       },
       {
@@ -196,8 +214,20 @@
         "id": 6,
         "type": "reorder",
         "question": "wildLandsFirstQuest.questSix",
-        "words": ["ist", "und" , "schön", "groß", "Der Wald"],
-        "correctOrder": ["Der Wald", "ist", "groß" , "und" , "schön"]
+        "words": [
+          "ist",
+          "und",
+          "schön",
+          "groß",
+          "Der Wald"
+        ],
+        "correctOrder": [
+          "Der Wald",
+          "ist",
+          "groß",
+          "und",
+          "schön"
+        ]
       },
       {
         "id": 7,
@@ -210,7 +240,11 @@
         "id": 8,
         "type": "select",
         "question": "wildLandsFirstQuest.questEight",
-        "options": ["Der Wald", "Der Fluss", "Der Baum"],
+        "options": [
+          "Der Wald",
+          "Der Fluss",
+          "Der Baum"
+        ],
         "answer": "Der Baum"
       },
       {
@@ -224,21 +258,41 @@
         "id": 10,
         "type": "reorder",
         "question": "wildLandsFirstQuest.questTen",
-        "words": ["Dieser", "Baum", "ist", "sehr", "alt"],
-        "correctOrder": ["Dieser", "Baum", "ist", "sehr", "alt"]
+        "words": [
+          "Dieser",
+          "Baum",
+          "ist",
+          "sehr",
+          "alt"
+        ],
+        "correctOrder": [
+          "Dieser",
+          "Baum",
+          "ist",
+          "sehr",
+          "alt"
+        ]
       },
       {
         "id": 11,
         "type": "select",
         "question": "wildLandsFirstQuest.questEleven",
-        "options": ["Der Baum ist groß", "Der Wald ist schön", "Der Fluss"],
+        "options": [
+          "Der Baum ist groß",
+          "Der Wald ist schön",
+          "Der Fluss"
+        ],
         "answer": "Der Baum ist groß"
       },
       {
         "id": 12,
         "type": "select",
         "question": "wildLandsFirstQuest.questTwelve",
-        "options": ["Der Fluss", "Der Wald", "Die Natur"],
+        "options": [
+          "Der Fluss",
+          "Der Wald",
+          "Die Natur"
+        ],
         "answer": "Der Fluss"
       },
       {
@@ -252,21 +306,45 @@
         "id": 14,
         "type": "reorder",
         "question": "wildLandsFirstQuest.questFourteen",
-        "words": ["ist", "Der Fluss", "sehr", "schön"],
-        "correctOrder": ["Der Fluss", "ist", "sehr", "schön"]
+        "words": [
+          "ist",
+          "Der Fluss",
+          "sehr",
+          "schön"
+        ],
+        "correctOrder": [
+          "Der Fluss",
+          "ist",
+          "sehr",
+          "schön"
+        ]
       },
       {
         "id": 15,
         "type": "reorder",
         "question": "wildLandsFirstQuest.questFifteen",
-        "words": ["ist", "Die Natur", "hier", "sehr", "schön"],
-        "correctOrder": ["Die Natur", "ist", "hier", "sehr", "schön"]
+        "words": [
+          "ist",
+          "Die Natur",
+          "hier",
+          "sehr",
+          "schön"
+        ],
+        "correctOrder": [
+          "Die Natur",
+          "ist",
+          "hier",
+          "sehr",
+          "schön"
+        ]
       }
     ]
   },
   {
     "questId": "animals",
-    "aliases": ["natur-a1-animals-start"],
+    "aliases": [
+      "natur-a1-animals-start"
+    ],
     "title": "wildLandsSecondQuest.title",
     "progress": "0/15",
     "description": "wildLandsSecondQuest.description",
@@ -433,20 +511,6 @@
         "translation-ro": "Cu adevărat / Într-adevăr",
         "translation-tr": "Gerçekten",
         "translation-uz": "Haqiqatan / Rostdan"
-      },
-      {
-        "word": "der Vogel",
-        "translation-ru": "Птица",
-        "translation-en": "Bird",
-        "translation-uk": "Птах",
-        "translation-pl": "Ptak",
-        "translation-es": "Pájaro / Ave",
-        "translation-fr": "Oiseau",
-        "translation-ar": "طائر / عصفور",
-        "translation-hi": "पक्षी / चिड़िया",
-        "translation-ro": "Pasăre",
-        "translation-tr": "Kuş",
-        "translation-uz": "Qush"
       }
     ],
     "tasks": [
@@ -454,7 +518,11 @@
         "id": 1,
         "type": "select",
         "question": "wildLandsSecondQuest.questOne",
-        "options": ["Der Wolf", "Der Bär", "Der Fuchs"],
+        "options": [
+          "Der Wolf",
+          "Der Bär",
+          "Der Fuchs"
+        ],
         "answer": "Der Wolf"
       },
       {
@@ -468,14 +536,26 @@
         "id": 3,
         "type": "reorder",
         "question": "wildLandsSecondQuest.questThree",
-        "words": ["ist", "im Wald", "Der Wolf"],
-        "correctOrder": ["Der Wolf", "ist", "im Wald"]
+        "words": [
+          "ist",
+          "im Wald",
+          "Der Wolf"
+        ],
+        "correctOrder": [
+          "Der Wolf",
+          "ist",
+          "im Wald"
+        ]
       },
       {
         "id": 4,
         "type": "select",
         "question": "wildLandsSecondQuest.questFour",
-        "options": ["Der Wolf", "Der Bär", "Der Baum"],
+        "options": [
+          "Der Wolf",
+          "Der Bär",
+          "Der Baum"
+        ],
         "answer": "Der Bär"
       },
       {
@@ -489,21 +569,49 @@
         "id": 6,
         "type": "reorder",
         "question": "wildLandsSecondQuest.questSix",
-        "words": ["am Fluss", "ist", "Der Bär"],
-        "correctOrder": ["Der Bär", "ist", "am Fluss"]
+        "words": [
+          "am Fluss",
+          "ist",
+          "Der Bär"
+        ],
+        "correctOrder": [
+          "Der Bär",
+          "ist",
+          "am Fluss"
+        ]
       },
       {
         "id": 7,
         "type": "reorder",
         "question": "wildLandsSecondQuest.questSeven",
-        "words": ["In", "den", "Bergen", "lebt", "ein", "wilder", "Bär"],
-        "correctOrder": ["In", "den", "Bergen", "lebt", "ein", "wilder", "Bär"]
+        "words": [
+          "In",
+          "den",
+          "Bergen",
+          "lebt",
+          "ein",
+          "wilder",
+          "Bär"
+        ],
+        "correctOrder": [
+          "In",
+          "den",
+          "Bergen",
+          "lebt",
+          "ein",
+          "wilder",
+          "Bär"
+        ]
       },
       {
         "id": 8,
         "type": "select",
         "question": "wildLandsSecondQuest.questEight",
-        "options": ["Der Fuchs", "Der Wolf", "Die Natur"],
+        "options": [
+          "Der Fuchs",
+          "Der Wolf",
+          "Die Natur"
+        ],
         "answer": "Der Fuchs"
       },
       {
@@ -517,8 +625,20 @@
         "id": 10,
         "type": "reorder",
         "question": "wildLandsSecondQuest.questTen",
-        "words": ["sitzt", "Der", "Fuchs", "Baum", "am"],
-        "correctOrder": ["Der", "Fuchs", "sitzt", "am", "Baum"]
+        "words": [
+          "sitzt",
+          "Der",
+          "Fuchs",
+          "Baum",
+          "am"
+        ],
+        "correctOrder": [
+          "Der",
+          "Fuchs",
+          "sitzt",
+          "am",
+          "Baum"
+        ]
       },
       {
         "id": 11,
@@ -542,15 +662,39 @@
         "id": 13,
         "type": "reorder",
         "question": "wildLandsSecondQuest.questThirteen",
-        "words": ["Der Fuchs", "läuft", "zum", "Fluss"],
-        "correctOrder": ["Der Fuchs", "läuft", "zum", "Fluss"]
+        "words": [
+          "Der Fuchs",
+          "läuft",
+          "zum",
+          "Fluss"
+        ],
+        "correctOrder": [
+          "Der Fuchs",
+          "läuft",
+          "zum",
+          "Fluss"
+        ]
       },
       {
         "id": 14,
         "type": "reorder",
         "question": "wildLandsSecondQuest.questFourteen",
-        "words": ["Der Fuchs", "trinkt", "Wasser", "aus", "dem", "Fluss"],
-        "correctOrder": ["Der Fuchs", "trinkt", "Wasser", "aus", "dem", "Fluss"]
+        "words": [
+          "Der Fuchs",
+          "trinkt",
+          "Wasser",
+          "aus",
+          "dem",
+          "Fluss"
+        ],
+        "correctOrder": [
+          "Der Fuchs",
+          "trinkt",
+          "Wasser",
+          "aus",
+          "dem",
+          "Fluss"
+        ]
       },
       {
         "id": 15,
@@ -563,7 +707,9 @@
   },
   {
     "questId": "nature",
-    "aliases": ["natur-a1-env-hills"],
+    "aliases": [
+      "natur-a1-env-hills"
+    ],
     "title": "wildLandsThirdQuest.title",
     "progress": "0/15",
     "description": "wildLandsThirdQuest.description",
@@ -572,7 +718,10 @@
       "minCorrect": 15,
       "requiredTasks": 15
     },
-    "rewards": { "points": 10, "xp": 10 },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
     "vocabulary": [
       {
         "word": "die Sonne",
@@ -706,7 +855,11 @@
         "id": 1,
         "type": "select",
         "question": "wildLandsThirdQuest.questOne",
-        "options": ["Der Berg", "Der Wald", "Die Sonne"],
+        "options": [
+          "Der Berg",
+          "Der Wald",
+          "Die Sonne"
+        ],
         "answer": "Der Berg"
       },
       {
@@ -720,14 +873,26 @@
         "id": 3,
         "type": "reorder",
         "question": "wildLandsThirdQuest.questThree",
-        "words": ["ist", "groß", "Der Berg"],
-        "correctOrder": ["Der Berg", "ist", "groß"]
+        "words": [
+          "ist",
+          "groß",
+          "Der Berg"
+        ],
+        "correctOrder": [
+          "Der Berg",
+          "ist",
+          "groß"
+        ]
       },
       {
         "id": 4,
         "type": "select",
         "question": "wildLandsThirdQuest.questFour",
-        "options": ["Die Natur", "Die Sonne", "Der Fluss"],
+        "options": [
+          "Die Natur",
+          "Die Sonne",
+          "Der Fluss"
+        ],
         "answer": "Die Sonne"
       },
       {
@@ -741,8 +906,17 @@
         "id": 6,
         "type": "reorder",
         "question": "wildLandsThirdQuest.questSix",
-        "words": ["scheint", "Die", "Sonne", "Das"],
-        "correctOrder": ["Die", "Sonne", "scheint"]
+        "words": [
+          "scheint",
+          "Die",
+          "Sonne",
+          "Das"
+        ],
+        "correctOrder": [
+          "Die",
+          "Sonne",
+          "scheint"
+        ]
       },
       {
         "id": 7,
@@ -780,8 +954,24 @@
         "id": 11,
         "type": "reorder",
         "question": "wildLandsThirdQuest.questEleven",
-        "words": ["Natur", "Die", "schön", "ist", "Sonne", "die", "scheint"],
-        "correctOrder": ["Die", "Natur", "ist", "schön", "die", "Sonne", "scheint"]
+        "words": [
+          "Natur",
+          "Die",
+          "schön",
+          "ist",
+          "Sonne",
+          "die",
+          "scheint"
+        ],
+        "correctOrder": [
+          "Die",
+          "Natur",
+          "ist",
+          "schön",
+          "die",
+          "Sonne",
+          "scheint"
+        ]
       },
       {
         "id": 12,
@@ -815,7 +1005,9 @@
   },
   {
     "questId": "fauna",
-    "aliases": ["natur-a1-env-lake"],
+    "aliases": [
+      "natur-a1-env-lake"
+    ],
     "title": "wildLandsFourthQuest.title",
     "progress": "0/15",
     "description": "wildLandsFourthQuest.description",
@@ -824,7 +1016,10 @@
       "minCorrect": 15,
       "requiredTasks": 15
     },
-    "rewards": { "points": 10, "xp": 10 },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
     "vocabulary": [
       {
         "word": "der See",
@@ -944,7 +1139,11 @@
         "id": 1,
         "type": "select",
         "question": "wildLandsFourthQuest.questOne",
-        "options": ["Der See", "Der Fluss", "Der Wald"],
+        "options": [
+          "Der See",
+          "Der Fluss",
+          "Der Wald"
+        ],
         "answer": "Der See"
       },
       {
@@ -958,14 +1157,31 @@
         "id": 3,
         "type": "reorder",
         "question": "wildLandsFourthQuest.questThree",
-        "words": ["See", "Der", "ist", "sehr", "groß", "Das"],
-        "correctOrder": ["Der","See", "ist", "sehr", "groß"]
+        "words": [
+          "See",
+          "Der",
+          "ist",
+          "sehr",
+          "groß",
+          "Das"
+        ],
+        "correctOrder": [
+          "Der",
+          "See",
+          "ist",
+          "sehr",
+          "groß"
+        ]
       },
       {
         "id": 4,
         "type": "select",
         "question": "wildLandsFourthQuest.questFour",
-        "options": ["Das Wasser", "Die Natur", "Der Berg"],
+        "options": [
+          "Das Wasser",
+          "Die Natur",
+          "Der Berg"
+        ],
         "answer": "Das Wasser"
       },
       {
@@ -979,8 +1195,23 @@
         "id": 6,
         "type": "reorder",
         "question": "wildLandsFourthQuest.questSix",
-        "words": ["Wasser", "Das", "See", "ist", "im", "kalt", "in"],
-        "correctOrder": ["Das", "Wasser", "im", "See", "ist", "kalt"]
+        "words": [
+          "Wasser",
+          "Das",
+          "See",
+          "ist",
+          "im",
+          "kalt",
+          "in"
+        ],
+        "correctOrder": [
+          "Das",
+          "Wasser",
+          "im",
+          "See",
+          "ist",
+          "kalt"
+        ]
       },
       {
         "id": 7,
@@ -993,14 +1224,31 @@
         "id": 8,
         "type": "reorder",
         "question": "wildLandsFourthQuest.questEight",
-        "words": ["See", "Der", "tief", "ist", "sehr", "Das"],
-        "correctOrder": ["Der","See", "ist", "sehr", "tief"]
+        "words": [
+          "See",
+          "Der",
+          "tief",
+          "ist",
+          "sehr",
+          "Das"
+        ],
+        "correctOrder": [
+          "Der",
+          "See",
+          "ist",
+          "sehr",
+          "tief"
+        ]
       },
       {
         "id": 9,
         "type": "select",
         "question": "wildLandsFourthQuest.questNine",
-        "options": ["Der Bär steht am See", "Der Bär ist am Berg", "Der Wolf läuft"],
+        "options": [
+          "Der Bär steht am See",
+          "Der Bär ist am Berg",
+          "Der Wolf läuft"
+        ],
         "answer": "Der Bär steht am See"
       },
       {
@@ -1014,14 +1262,38 @@
         "id": 11,
         "type": "reorder",
         "question": "wildLandsFourthQuest.questEleven",
-        "words": ["ist", "Berg", "groß", "Der", "und", "schön", "der", "See", "ist"],
-        "correctOrder": ["Der", "Berg", "ist", "groß", "und", "der", "See", "ist", "schön"]
+        "words": [
+          "ist",
+          "Berg",
+          "groß",
+          "Der",
+          "und",
+          "schön",
+          "der",
+          "See",
+          "ist"
+        ],
+        "correctOrder": [
+          "Der",
+          "Berg",
+          "ist",
+          "groß",
+          "und",
+          "der",
+          "See",
+          "ist",
+          "schön"
+        ]
       },
       {
         "id": 12,
         "type": "select",
         "question": "wildLandsFourthQuest.questTwelve",
-        "options": ["Der Fuchs am Wasser", "Der Wolf im Wald", "Der Fuchs in Wasser"],
+        "options": [
+          "Der Fuchs am Wasser",
+          "Der Wolf im Wald",
+          "Der Fuchs in Wasser"
+        ],
         "answer": "Der Fuchs am Wasser"
       },
       {
@@ -1035,8 +1307,22 @@
         "id": 14,
         "type": "reorder",
         "question": "wildLandsFourthQuest.questFourteen",
-        "words": ["See", "ist", "Das", "in", "klar", "dem", "Wasser"],
-        "correctOrder": ["Das", "Wasser", "ist", "in", "dem", "See", "klar"]
+        "words": [
+          "Das",
+          "Wasser",
+          "im",
+          "klar",
+          "See",
+          "ist"
+        ],
+        "correctOrder": [
+          "Das",
+          "Wasser",
+          "im",
+          "See",
+          "ist",
+          "klar"
+        ]
       },
       {
         "id": 15,
@@ -1049,7 +1335,9 @@
   },
   {
     "questId": "weather",
-    "aliases": ["natur-a1-env-weather"],
+    "aliases": [
+      "natur-a1-env-weather"
+    ],
     "title": "wildLandsFifthQuest.title",
     "progress": "0/15",
     "description": "wildLandsFifthQuest.description",
@@ -1209,7 +1497,11 @@
         "id": 1,
         "type": "select",
         "question": "wildLandsFifthQuest.questOne",
-        "options": ["Der Wind", "Das Wasser", "Der Wald"],
+        "options": [
+          "Der Wind",
+          "Das Wasser",
+          "Der Wald"
+        ],
         "answer": "Der Wind"
       },
       {
@@ -1223,14 +1515,26 @@
         "id": 3,
         "type": "reorder",
         "question": "wildLandsFifthQuest.questThree",
-        "words": ["ist", "kalt", "Der Wind"],
-        "correctOrder": ["Der Wind", "ist", "kalt"]
+        "words": [
+          "ist",
+          "kalt",
+          "Der Wind"
+        ],
+        "correctOrder": [
+          "Der Wind",
+          "ist",
+          "kalt"
+        ]
       },
       {
         "id": 4,
         "type": "select",
         "question": "wildLandsFifthQuest.questFour",
-        "options": ["Der Regen", "Der Berg", "Die Sonne"],
+        "options": [
+          "Der Regen",
+          "Der Berg",
+          "Die Sonne"
+        ],
         "answer": "Der Regen"
       },
       {
@@ -1256,15 +1560,32 @@
         "id": 7,
         "type": "select",
         "question": "wildLandsFifthQuest.questSeven",
-        "options": ["Die Wolke", "Der Wolf", "Der Wald"],
+        "options": [
+          "Die Wolke",
+          "Der Wolf",
+          "Der Wald"
+        ],
         "answer": "Die Wolke"
       },
       {
         "id": 8,
         "type": "reorder",
         "question": "wildLandsFifthQuest.questEight",
-        "words": ["ist", "Die Wolke", "und", "groß", "ist", "grau"],
-        "correctOrder": ["Die Wolke", "ist", "groß", "und", "grau"]
+        "words": [
+          "ist",
+          "Die Wolke",
+          "und",
+          "groß",
+          "ist",
+          "grau"
+        ],
+        "correctOrder": [
+          "Die Wolke",
+          "ist",
+          "groß",
+          "und",
+          "grau"
+        ]
       },
       {
         "id": 9,
@@ -1289,8 +1610,32 @@
         "id": 11,
         "type": "reorder",
         "question": "wildLandsFifthQuest.questEleven",
-        "words": ["Sonne", "In", "regnet", "Wald", "dem", "die", "Bergen", "aber", "es", "in", "scheint", "den"],
-        "correctOrder": ["In", "dem", "Wald", "regnet", "es", "aber", "in", "den", "Bergen", "scheint", "die", "Sonne"]
+        "words": [
+          "in",
+          "die",
+          "Bergen",
+          "Wald",
+          "es",
+          "Sonne",
+          "regnet",
+          "aber",
+          "Im",
+          "scheint",
+          "den"
+        ],
+        "correctOrder": [
+          "Im",
+          "Wald",
+          "regnet",
+          "es",
+          "aber",
+          "in",
+          "den",
+          "Bergen",
+          "scheint",
+          "die",
+          "Sonne"
+        ]
       },
       {
         "id": 12,
@@ -1298,11 +1643,11 @@
         "text": "Es ist grau hier. Es regnet und der Wind ist kalt.",
         "question": "wildLandsFifthQuest.questTwelve",
         "options": [
-          "nicht Warm",
-          "sehr Warm",
+          "nicht warm",
+          "sehr warm",
           "sehr schnell"
         ],
-        "answer": "nicht Warm"
+        "answer": "nicht warm"
       },
       {
         "id": 13,
@@ -1319,8 +1664,24 @@
         "id": 14,
         "type": "reorder",
         "question": "wildLandsFifthQuest.questFourteen",
-        "words": ["kalt", "ist", "Die Natur", "aber", "ist", "schön,", "der Wind"],
-        "correctOrder": ["Die Natur", "ist", "schön,", "aber", "der Wind",  "ist", "kalt"]
+        "words": [
+          "kalt",
+          "ist",
+          "Die Natur",
+          "aber",
+          "ist",
+          "schön,",
+          "der Wind"
+        ],
+        "correctOrder": [
+          "Die Natur",
+          "ist",
+          "schön,",
+          "aber",
+          "der Wind",
+          "ist",
+          "kalt"
+        ]
       },
       {
         "id": 15,
@@ -1333,7 +1694,9 @@
   },
   {
     "questId": "winter",
-    "aliases": ["natur-a1-env-winter"],
+    "aliases": [
+      "natur-a1-env-winter"
+    ],
     "title": "wildLandsSixthQuest.title",
     "progress": "0/15",
     "description": "wildLandsSixthQuest.description",
@@ -1493,7 +1856,11 @@
         "id": 1,
         "type": "select",
         "question": "wildLandsSixthQuest.questOne",
-        "options": ["Der Winter", "Der Wind", "Der Wald"],
+        "options": [
+          "Der Winter",
+          "Der Wind",
+          "Der Wald"
+        ],
         "answer": "Der Winter"
       },
       {
@@ -1507,14 +1874,26 @@
         "id": 3,
         "type": "reorder",
         "question": "wildLandsSixthQuest.questThree",
-        "words": ["ist", "kalt", "Der Winter"],
-        "correctOrder": ["Der Winter", "ist", "kalt"]
+        "words": [
+          "ist",
+          "kalt",
+          "Der Winter"
+        ],
+        "correctOrder": [
+          "Der Winter",
+          "ist",
+          "kalt"
+        ]
       },
       {
         "id": 4,
         "type": "select",
         "question": "wildLandsSixthQuest.questFour",
-        "options": ["Der Schnee", "Der See", "Die Sonne"],
+        "options": [
+          "Der Schnee",
+          "Der See",
+          "Die Sonne"
+        ],
         "answer": "Der Schnee"
       },
       {
@@ -1533,14 +1912,29 @@
         "id": 6,
         "type": "reorder",
         "question": "wildLandsSixthQuest.questSix",
-        "words": ["ist", "hier", "überall", "Der", "Schnee"],
-        "correctOrder": ["Der", "Schnee", "ist", "überall"]
+        "words": [
+          "ist",
+          "hier",
+          "überall",
+          "Der",
+          "Schnee"
+        ],
+        "correctOrder": [
+          "Der",
+          "Schnee",
+          "ist",
+          "überall"
+        ]
       },
       {
         "id": 7,
         "type": "select",
         "question": "wildLandsSixthQuest.questSeven",
-        "options": ["Das Eis", "Der Schnee", "Das Wasser"],
+        "options": [
+          "Das Eis",
+          "Der Schnee",
+          "Das Wasser"
+        ],
         "answer": "Das Eis"
       },
       {
@@ -1566,14 +1960,32 @@
         "id": 10,
         "type": "reorder",
         "question": "wildLandsSixthQuest.questTen",
-        "words": ["Wald", "ist", "dem", "weiß", "In", "Winter", "der"],
-        "correctOrder": ["In", "dem", "Winter", "ist", "der", "Wald", "weiß"]
+        "words": [
+          "Winter",
+          "Im",
+          "ist",
+          "Wald",
+          "weiß",
+          "der"
+        ],
+        "correctOrder": [
+          "Im",
+          "Winter",
+          "ist",
+          "der",
+          "Wald",
+          "weiß"
+        ]
       },
       {
         "id": 11,
         "type": "select",
         "question": "wildLandsSixthQuest.questEleven",
-        "options": ["Es schneit", "Der Schnee ist da", "Schnee kommt"],
+        "options": [
+          "Es schneit",
+          "Der Schnee ist da",
+          "Schnee kommt"
+        ],
         "answer": "Es schneit"
       },
       {
@@ -1592,8 +2004,18 @@
         "id": 13,
         "type": "reorder",
         "question": "wildLandsSixthQuest.questThirteen",
-        "words": ["ist weiß,", "Der Berg", "weil", "es schneit"],
-        "correctOrder": ["Der Berg", "ist weiß,", "weil", "es schneit"]
+        "words": [
+          "ist weiß,",
+          "Der Berg",
+          "weil",
+          "es schneit"
+        ],
+        "correctOrder": [
+          "Der Berg",
+          "ist weiß,",
+          "weil",
+          "es schneit"
+        ]
       },
       {
         "id": 14,
@@ -1622,7 +2044,9 @@
   },
   {
     "questId": "night-sky",
-    "aliases": ["natur-a1-night-sky"],
+    "aliases": [
+      "natur-a1-night-sky"
+    ],
     "title": "wildLandsSeventhQuest.title",
     "progress": "0/15",
     "description": "wildLandsSeventhQuest.description",
@@ -1782,7 +2206,11 @@
         "id": 1,
         "type": "select",
         "question": "wildLandsSeventhQuest.questOne",
-        "options": ["Die Nacht", "Der Nebel", "Der Norden"],
+        "options": [
+          "Die Nacht",
+          "Der Nebel",
+          "Der Norden"
+        ],
         "answer": "Die Nacht"
       },
       {
@@ -1796,14 +2224,33 @@
         "id": 3,
         "type": "reorder",
         "question": "wildLandsSeventhQuest.questThree",
-        "words": ["Der","und", "kalt" ,"ist", "Die", "dunkel", "Nacht"],
-        "correctOrder": ["Die", "Nacht", "ist", "dunkel", "und", "kalt"]
+        "words": [
+          "Der",
+          "und",
+          "kalt",
+          "ist",
+          "Die",
+          "dunkel",
+          "Nacht"
+        ],
+        "correctOrder": [
+          "Die",
+          "Nacht",
+          "ist",
+          "dunkel",
+          "und",
+          "kalt"
+        ]
       },
       {
         "id": 4,
         "type": "select",
         "question": "wildLandsSeventhQuest.questFour",
-        "options": ["Der Mond", "Der Morgen", "Das Meer"],
+        "options": [
+          "Der Mond",
+          "Der Morgen",
+          "Das Meer"
+        ],
         "answer": "Der Mond"
       },
       {
@@ -1817,14 +2264,32 @@
         "id": 6,
         "type": "reorder",
         "question": "wildLandsSeventhQuest.questSix",
-        "words": ["ist", "Mond", "Der", "kalt", "und", "weiß"],
-        "correctOrder": ["Der","Mond", "ist", "kalt", "und", "weiß"]
+        "words": [
+          "ist",
+          "Mond",
+          "Der",
+          "kalt",
+          "und",
+          "weiß"
+        ],
+        "correctOrder": [
+          "Der",
+          "Mond",
+          "ist",
+          "kalt",
+          "und",
+          "weiß"
+        ]
       },
       {
         "id": 7,
         "type": "select",
         "question": "wildLandsSeventhQuest.questSeven",
-        "options": ["Der Stern", "Der Stein", "Die Stadt"],
+        "options": [
+          "Der Stern",
+          "Der Stein",
+          "Die Stadt"
+        ],
         "answer": "Der Stern"
       },
       {
@@ -1838,11 +2303,15 @@
         "id": 9,
         "type": "select",
         "question": "wildLandsSeventhQuest.questNine",
-        "options": ["Der Himmel", "Die Hölle", "Das Haus"],
+        "options": [
+          "Der Himmel",
+          "Die Hölle",
+          "Das Haus"
+        ],
         "answer": "Der Himmel"
       },
       {
-        "id": 8,
+        "id": 10,
         "type": "speechToText",
         "question": "wildLandsSeventhQuest.questTen",
         "text": "Der Himmel ist klar und die Sterne sind hell",
@@ -1852,7 +2321,11 @@
         "id": 11,
         "type": "select",
         "question": "wildLandsSeventhQuest.questEleven",
-        "options": ["Das Licht", "Die Luft", "Das Land"],
+        "options": [
+          "Das Licht",
+          "Die Luft",
+          "Das Land"
+        ],
         "answer": "Das Licht"
       },
       {
@@ -1863,16 +2336,29 @@
         "options": [
           "Man sieht dort nichts",
           "Alles ist sehr hell",
-          "Die Sonne nicht scheint"
+          "Die Sonne scheint dort"
         ],
         "answer": "Man sieht dort nichts"
       },
       {
         "id": 13,
         "type": "reorder",
-        "question": "Собери предложение: Луна на небе",
-        "words": ["Der","ist", "auf", "Mond", "Himmel", "am"],
-        "correctOrder": ["Der","Mond", "ist", "am", "Himmel"]
+        "question": "wildLandsSeventhQuest.questThirteen",
+        "words": [
+          "Der",
+          "ist",
+          "auf",
+          "Mond",
+          "Himmel",
+          "am"
+        ],
+        "correctOrder": [
+          "Der",
+          "Mond",
+          "ist",
+          "am",
+          "Himmel"
+        ]
       },
       {
         "id": 14,
@@ -1892,7 +2378,9 @@
   },
   {
     "questId": "nature-walk",
-    "aliases": ["natur-a1-fox-walk"],
+    "aliases": [
+      "natur-a1-fox-walk"
+    ],
     "title": "wildLandsEightQuest.title",
     "progress": "0/15",
     "description": "wildLandsEightQuest.description",
@@ -1933,20 +2421,6 @@
         "translation-ro": "Piatră",
         "translation-tr": "Taş",
         "translation-uz": "Tosh"
-      },
-      {
-        "word": "der Fisch",
-        "translation-ru": "Рыба",
-        "translation-en": "Fish",
-        "translation-uk": "Риба",
-        "translation-pl": "Ryba",
-        "translation-es": "Pez / Pescado",
-        "translation-fr": "Poisson",
-        "translation-ar": "سمكة",
-        "translation-hi": "मछली",
-        "translation-ro": "Pește",
-        "translation-tr": "Balık",
-        "translation-uz": "Baliq"
       },
       {
         "word": "rot",
@@ -2031,20 +2505,6 @@
         "translation-ro": "Deseori / Des",
         "translation-tr": "Sık sık / Çoğu zaman",
         "translation-uz": "Tez-tez / Ko'pincha"
-      },
-      {
-        "word": "herauskommen",
-        "translation-ru": "Выходить наружу / Появляться",
-        "translation-en": "To come out",
-        "translation-uk": "Виходити назовні / З'являтися",
-        "translation-pl": "Wychodzić na zewnątrz / Wychodzić",
-        "translation-es": "Salir / Salir afuera",
-        "translation-fr": "Sortir",
-        "translation-ar": "يخرج / يظهر",
-        "translation-hi": "बाहर निकलना / बाहर आना",
-        "translation-ro": "A ieși afară",
-        "translation-tr": "Dışarı çıkmak / Meydana çıkmak",
-        "translation-uz": "Tashqariga chiqmoq / Namoyon bo'lmoq"
       }
     ],
     "tasks": [
@@ -2052,7 +2512,11 @@
         "id": 1,
         "type": "select",
         "question": "wildLandsEightQuest.questOne",
-        "options": ["Der Fuchs", "Der Fisch", "Der Fluss"],
+        "options": [
+          "Der Fuchs",
+          "Der Fisch",
+          "Der Fluss"
+        ],
         "answer": "Der Fuchs"
       },
       {
@@ -2066,8 +2530,19 @@
         "id": 3,
         "type": "reorder",
         "question": "wildLandsEightQuest.questThree",
-        "words": ["rot", "Fuchs", "Der", "ist", "Die"],
-        "correctOrder": ["Der", "Fuchs", "ist", "rot"]
+        "words": [
+          "rot",
+          "Fuchs",
+          "Der",
+          "ist",
+          "Die"
+        ],
+        "correctOrder": [
+          "Der",
+          "Fuchs",
+          "ist",
+          "rot"
+        ]
       },
       {
         "id": 4,
@@ -2080,29 +2555,57 @@
         "id": 5,
         "type": "select",
         "question": "wildLandsEightQuest.questFive",
-        "options": ["Der Baum", "Der Berg", "Das Boot"],
+        "options": [
+          "Der Baum",
+          "Der Berg",
+          "Das Boot"
+        ],
         "answer": "Der Baum"
       },
       {
         "id": 6,
         "type": "reorder",
         "question": "wildLandsEightQuest.questSix",
-        "words": ["ist", "hoch", "Baum" , "Der"],
-        "correctOrder": ["Der","Baum", "ist", "hoch"]
+        "words": [
+          "ist",
+          "hoch",
+          "Baum",
+          "Der"
+        ],
+        "correctOrder": [
+          "Der",
+          "Baum",
+          "ist",
+          "hoch"
+        ]
       },
       {
         "id": 7,
         "type": "select",
         "question": "wildLandsEightQuest.questSeven",
-        "options": ["Der Stein", "Der Stern", "Die Sonne"],
+        "options": [
+          "Der Stein",
+          "Der Stern",
+          "Die Sonne"
+        ],
         "answer": "Der Stein"
       },
       {
         "id": 8,
         "type": "reorder",
         "question": "wildLandsEightQuest.questEight",
-        "words": ["ist", "grau", "Stein", "Der"],
-        "correctOrder": ["Der","Stein", "ist", "grau"]
+        "words": [
+          "ist",
+          "grau",
+          "Stein",
+          "Der"
+        ],
+        "correctOrder": [
+          "Der",
+          "Stein",
+          "ist",
+          "grau"
+        ]
       },
       {
         "id": 9,
@@ -2115,7 +2618,11 @@
         "id": 10,
         "type": "select",
         "question": "wildLandsEightQuest.questTen",
-        "options": ["Der Fluss", "Das Feuer", "Der Fuß"],
+        "options": [
+          "Der Fluss",
+          "Das Feuer",
+          "Der Fuß"
+        ],
         "answer": "Der Fluss"
       },
       {
@@ -2141,15 +2648,48 @@
         "id": 13,
         "type": "reorder",
         "question": "wildLandsEightQuest.questThirteen",
-        "words": ["am", "Wasser", "sitzt", "Der", "Fuchs", "im"],
-        "correctOrder": ["Der", "Fuchs", "sitzt", "am", "Wasser"]
+        "words": [
+          "am",
+          "Wasser",
+          "sitzt",
+          "Der",
+          "Fuchs",
+          "im"
+        ],
+        "correctOrder": [
+          "Der",
+          "Fuchs",
+          "sitzt",
+          "am",
+          "Wasser"
+        ]
       },
       {
         "id": 14,
         "type": "reorder",
         "question": "wildLandsEightQuest.questFourteen",
-        "words": ["ist", "Fluss", "blau", "grün", "der", "und", "Wald", "ist", "Der"],
-        "correctOrder": ["Der", "Wald", "ist", "grün", "und", "der", "Fluss", "ist", "blau"]
+        "words": [
+          "ist",
+          "Fluss",
+          "blau",
+          "grün",
+          "der",
+          "und",
+          "Wald",
+          "ist",
+          "Der"
+        ],
+        "correctOrder": [
+          "Der",
+          "Wald",
+          "ist",
+          "grün",
+          "und",
+          "der",
+          "Fluss",
+          "ist",
+          "blau"
+        ]
       },
       {
         "id": 15,
@@ -2162,7 +2702,9 @@
   },
   {
     "questId": "mountains",
-    "aliases": ["natur-a1-mountains"],
+    "aliases": [
+      "natur-a1-mountains"
+    ],
     "title": "Горы",
     "progress": "0/15",
     "description": "Лес и скалы. Здесь высоко и тихо. Учись описывать горный ландшафт.",
@@ -2205,34 +2747,6 @@
         "translation-uz": "Qoya / Qoyatosh"
       },
       {
-        "word": "die Burg",
-        "translation-ru": "Замок / Крепость",
-        "translation-en": "Castle / Fortress",
-        "translation-uk": "Замок / Фортеця",
-        "translation-pl": "Zamek / Twierdza",
-        "translation-es": "Castillo / Fortaleza",
-        "translation-fr": "Château fort / Forteresse",
-        "translation-ar": "قلعة / حصن",
-        "translation-hi": "किला / दुर्ग",
-        "translation-ro": "Castel / Cetate",
-        "translation-tr": "Kale / Şato",
-        "translation-uz": "Qasr / Qal'a"
-      },
-      {
-        "word": "das Feld",
-        "translation-ru": "Поле",
-        "translation-en": "Field",
-        "translation-uk": "Поле",
-        "translation-pl": "Pole",
-        "translation-es": "Campo",
-        "translation-fr": "Champ",
-        "translation-ar": "حقل",
-        "translation-hi": "खेत / मैदान",
-        "translation-ro": "Câmp",
-        "translation-tr": "Tarla / Alan",
-        "translation-uz": "Dala / Maydon"
-      },
-      {
         "word": "oben",
         "translation-ru": "Наверху / Вверху",
         "translation-en": "Above / Up / At the top",
@@ -2273,48 +2787,6 @@
         "translation-ro": "Plat / Neted / Puțin adânc",
         "translation-tr": "Düz / Sığ",
         "translation-uz": "Yassi / Sayoz"
-      },
-      {
-        "word": "trocken",
-        "translation-ru": "Сухой",
-        "translation-en": "Dry",
-        "translation-uk": "Сухий",
-        "translation-pl": "Suchy",
-        "translation-es": "Seco",
-        "translation-fr": "Sec",
-        "translation-ar": "جاف / ناشف",
-        "translation-hi": "सूखा",
-        "translation-ro": "Uscat",
-        "translation-tr": "Kuru",
-        "translation-uz": "Quruq"
-      },
-      {
-        "word": "der Sand",
-        "translation-ru": "Песок",
-        "translation-en": "Sand",
-        "translation-uk": "Пісок",
-        "translation-pl": "Piasek",
-        "translation-es": "Arena",
-        "translation-fr": "Sable",
-        "translation-ar": "رمل",
-        "translation-hi": "रेत / बालू",
-        "translation-ro": "Nisip",
-        "translation-tr": "Kum",
-        "translation-uz": "Qum"
-      },
-      {
-        "word": "weich",
-        "translation-ru": "Мягкий",
-        "translation-en": "Soft",
-        "translation-uk": "М'який",
-        "translation-pl": "Miękki",
-        "translation-es": "Blando / Suave",
-        "translation-fr": "Mou / Doux",
-        "translation-ar": "ناعم / طري",
-        "translation-hi": "मुलायम / नरम",
-        "translation-ro": "Moale",
-        "translation-tr": "Yumuşak",
-        "translation-uz": "Yumshoq"
       }
     ],
     "tasks": [
@@ -2322,7 +2794,11 @@
         "id": 1,
         "type": "select",
         "question": "wildLandsNinthQuest.questOne",
-        "options": ["Der Berg", "Das Bett", "Die Burg"],
+        "options": [
+          "Der Berg",
+          "Das Bett",
+          "Die Burg"
+        ],
         "answer": "Der Berg"
       },
       {
@@ -2336,14 +2812,26 @@
         "id": 3,
         "type": "reorder",
         "question": "wildLandsNinthQuest.questThree",
-        "words": ["ist", "hoch", "Der Berg"],
-        "correctOrder": ["Der Berg", "ist", "hoch"]
+        "words": [
+          "ist",
+          "hoch",
+          "Der Berg"
+        ],
+        "correctOrder": [
+          "Der Berg",
+          "ist",
+          "hoch"
+        ]
       },
       {
         "id": 4,
         "type": "select",
         "question": "wildLandsNinthQuest.questFour",
-        "options": ["Das Tal", "Der Tag", "Das Tier"],
+        "options": [
+          "Das Tal",
+          "Der Tag",
+          "Das Tier"
+        ],
         "answer": "Das Tal"
       },
       {
@@ -2351,29 +2839,55 @@
         "type": "readAndAnswer",
         "text": "Oben ist der Berg, unten ist das Tal.",
         "question": "wildLandsNinthQuest.questFive",
-        "options": ["Es geht hoch und tief", "Alles ist ganz flach", "Dort gibt es Sand"],
-        "answer": "Es geht hoch und tief"
+        "options": [
+          "Es gibt Berge und Täler",
+          "Alles ist ganz flach",
+          "Dort gibt es Sand"
+        ],
+        "answer": "Es gibt Berge und Täler"
       },
       {
         "id": 6,
         "type": "reorder",
         "question": "wildLandsNinthQuest.questSix",
-        "words": ["grün", "Das Tal", "ist"],
-        "correctOrder": ["Das Tal", "ist", "grün"]
+        "words": [
+          "grün",
+          "Das Tal",
+          "ist"
+        ],
+        "correctOrder": [
+          "Das Tal",
+          "ist",
+          "grün"
+        ]
       },
       {
         "id": 7,
         "type": "reorder",
         "question": "wildLandsNinthQuest.questSeven",
-        "words": ["hoch", "Die", "sind", "Bäume"],
-        "correctOrder": ["Die", "Bäume", "sind", "hoch"]
+        "words": [
+          "hoch",
+          "Die",
+          "sind",
+          "Bäume"
+        ],
+        "correctOrder": [
+          "Die",
+          "Bäume",
+          "sind",
+          "hoch"
+        ]
       },
       {
         "id": 8,
         "type": "select",
         "question": "wildLandsNinthQuest.questEight",
-        "options": ["Tief", "Teuer", "Trocken"],
-        "answer": "Tief"
+        "options": [
+          "tief",
+          "teuer",
+          "trocken"
+        ],
+        "answer": "tief"
       },
       {
         "id": 9,
@@ -2398,30 +2912,60 @@
         "id": 11,
         "type": "select",
         "question": "wildLandsNinthQuest.questEleven",
-        "options": ["Der Fels", "Das Feld", "Der Fluss"],
+        "options": [
+          "Der Fels",
+          "Das Feld",
+          "Der Fluss"
+        ],
         "answer": "Der Fels"
       },
       {
         "id": 12,
         "type": "reorder",
         "question": "wildLandsNinthQuest.questTwelve",
-        "words": ["grau", "Die Felsen", "sind"],
-        "correctOrder": ["Die Felsen", "sind", "grau"]
+        "words": [
+          "grau",
+          "Die Felsen",
+          "sind"
+        ],
+        "correctOrder": [
+          "Die Felsen",
+          "sind",
+          "grau"
+        ]
       },
       {
         "id": 13,
         "type": "readAndAnswer",
         "text": "Im Tal ist ein großer Fels.",
         "question": "wildLandsNinthQuest.questThirteen",
-        "options": ["Er ist nicht klein", "Ein sehr kleiner Stein", "Es ist dort weich"],
+        "options": [
+          "Er ist nicht klein",
+          "Ein sehr kleiner Stein",
+          "Es ist dort weich"
+        ],
         "answer": "Er ist nicht klein"
       },
       {
         "id": 14,
         "type": "reorder",
         "question": "wildLandsNinthQuest.questFourteen",
-        "words": ["grau", "Der", "ist", "hoch", "und", "Berg"],
-        "correctOrder": ["Der", "Berg", "ist", "grau", "und", "hoch"]
+        "words": [
+          "grau",
+          "Der",
+          "ist",
+          "hoch",
+          "und",
+          "Berg"
+        ],
+        "correctOrder": [
+          "Der",
+          "Berg",
+          "ist",
+          "grau",
+          "und",
+          "hoch"
+        ]
       },
       {
         "id": 15,
@@ -2434,7 +2978,9 @@
   },
   {
     "questId": "fog",
-    "aliases": ["natur-a1-fog-grass"],
+    "aliases": [
+      "natur-a1-fog-grass"
+    ],
     "title": "wildLandsTenthQuest.title",
     "progress": "0/15",
     "description": "wildLandsTenthQuest.description",
@@ -2519,20 +3065,6 @@
         "translation-uz": "Tinch / Sokin"
       },
       {
-        "word": "laut",
-        "translation-ru": "Громкий / Громко",
-        "translation-en": "Loud / Noisy",
-        "translation-uk": "Голосний / Гучний",
-        "translation-pl": "Głośny / Głośno",
-        "translation-es": "Ruidoso / Alto (sonido)",
-        "translation-fr": "Bruyant / Fort (son)",
-        "translation-ar": "صاخب / عالي الصوت",
-        "translation-hi": "ज़ोर से / तेज़ (आवाज़)",
-        "translation-ro": "Zgomotos / Tare (sunet)",
-        "translation-tr": "Gürültülü / Yüksek sesli",
-        "translation-uz": "Baland ovozli / Shovqinli"
-      },
-      {
         "word": "liegen",
         "translation-ru": "Лежать / Находиться",
         "translation-en": "To lie / To be situated",
@@ -2561,32 +3093,18 @@
         "translation-uz": "Tong / Ertalab"
       },
       {
-        "word": "der Lärm",
-        "translation-ru": "Шум / Гвалт",
-        "translation-en": "Noise",
-        "translation-uk": "Шум / Галас",
-        "translation-pl": "Hałas",
-        "translation-es": "Ruido",
-        "translation-fr": "Bruit",
-        "translation-ar": "ضجيج / ضوضاء",
-        "translation-hi": "शोर / कोलाहल",
-        "translation-ro": "Zgomot",
-        "translation-tr": "Gürültü",
-        "translation-uz": "Shovqin"
-      },
-      {
-        "word": "der Sturm",
-        "translation-ru": "Буря / Шторм",
-        "translation-en": "Storm / Gale",
-        "translation-uk": "Буря / Шторм",
-        "translation-pl": "Burza / Sztorm",
-        "translation-es": "Tormenta / Temporal",
-        "translation-fr": "Tempête",
-        "translation-ar": "عاصفة",
-        "translation-hi": "तूफ़ान / आँधी",
-        "translation-ro": "Furtună",
-        "translation-tr": "Fırtına",
-        "translation-uz": "Bo'ron"
+        "word": "hören",
+        "translation-ru": "слышать / слушать",
+        "translation-en": "to hear / listen",
+        "translation-uk": "чути / слухати",
+        "translation-pl": "słyszeć / słuchać",
+        "translation-es": "oír / escuchar",
+        "translation-fr": "entendre / écouter",
+        "translation-tr": "duymak / dinlemek",
+        "translation-ro": "a auzi / a asculta",
+        "translation-uz": "eshitmoq / tinglamoq",
+        "translation-hi": "सुनना",
+        "translation-ar": "يسمع"
       }
     ],
     "tasks": [
@@ -2594,7 +3112,11 @@
         "id": 1,
         "type": "select",
         "question": "wildLandsTenthQuest.questOne",
-        "options": ["Der Nebel", "Die Nacht", "Die Nase"],
+        "options": [
+          "Der Nebel",
+          "Die Nacht",
+          "Die Nase"
+        ],
         "answer": "Der Nebel"
       },
       {
@@ -2608,7 +3130,11 @@
         "id": 3,
         "type": "select",
         "question": "wildLandsTenthQuest.questThree",
-        "options": ["Das Gras", "Das Glas", "Das Grau"],
+        "options": [
+          "Das Gras",
+          "Das Glas",
+          "Das Grau"
+        ],
         "answer": "Das Gras"
       },
       {
@@ -2627,14 +3153,32 @@
         "id": 5,
         "type": "reorder",
         "question": "wildLandsTenthQuest.questFive",
-        "words": ["liegt", "Wald", "Am", "Nebel", "im", "Morgen"],
-        "correctOrder": ["Am", "Morgen", "liegt", "Nebel", "im", "Wald"]
+        "words": [
+          "liegt",
+          "Wald",
+          "Am",
+          "Nebel",
+          "im",
+          "Morgen"
+        ],
+        "correctOrder": [
+          "Am",
+          "Morgen",
+          "liegt",
+          "Nebel",
+          "im",
+          "Wald"
+        ]
       },
       {
         "id": 6,
         "type": "select",
         "question": "wildLandsTenthQuest.questSix",
-        "options": ["Die Luft", "Das Licht", "Die Lust"],
+        "options": [
+          "Die Luft",
+          "Das Licht",
+          "Die Lust"
+        ],
         "answer": "Die Luft"
       },
       {
@@ -2643,11 +3187,11 @@
         "text": "Die Luft im Wald ist frisch.",
         "question": "wildLandsTenthQuest.questSeven",
         "options": [
-          "Sie ist dort gesund",
+          "Sie ist sauber",
           "Sie ist sehr schlecht",
           "Alles ist dort schmutzig"
         ],
-        "answer": "Sie ist dort gesund"
+        "answer": "Sie ist sauber"
       },
       {
         "id": 8,
@@ -2660,8 +3204,12 @@
         "id": 9,
         "type": "select",
         "question": "wildLandsTenthQuest.questNine",
-        "options": ["Still", "Stark", "Stein"],
-        "answer": "Still"
+        "options": [
+          "still",
+          "stark",
+          "Stein"
+        ],
+        "answer": "still"
       },
       {
         "id": 10,
@@ -2679,15 +3227,40 @@
         "id": 11,
         "type": "reorder",
         "question": "wildLandsTenthQuest.questEleven",
-        "words": ["still", "Die", "Wald", "ist", "Der", "laut"],
-        "correctOrder": ["Der", "Wald", "ist", "still"]
+        "words": [
+          "still",
+          "Die",
+          "Wald",
+          "ist",
+          "Der",
+          "laut"
+        ],
+        "correctOrder": [
+          "Der",
+          "Wald",
+          "ist",
+          "still"
+        ]
       },
       {
         "id": 12,
         "type": "reorder",
         "question": "wildLandsTenthQuest.questTwelve",
-        "words": ["ist", "Wald", "Der", "im", "Nebel", "am"],
-        "correctOrder": ["Der", "Nebel", "ist", "im", "Wald"]
+        "words": [
+          "ist",
+          "Wald",
+          "Der",
+          "im",
+          "Nebel",
+          "am"
+        ],
+        "correctOrder": [
+          "Der",
+          "Nebel",
+          "ist",
+          "im",
+          "Wald"
+        ]
       },
       {
         "id": 13,
@@ -2700,8 +3273,28 @@
         "id": 14,
         "type": "reorder",
         "question": "wildLandsTenthQuest.questFourteen",
-        "words": ["frisch", "Die", "ist", "und", "der", "Nebel", "Luft", "hier", "ist"],
-        "correctOrder": ["Die", "Luft", "ist", "frisch", "und", "der", "Nebel", "ist", "hier"]
+        "words": [
+          "frisch",
+          "Die",
+          "ist",
+          "und",
+          "der",
+          "Nebel",
+          "Luft",
+          "hier",
+          "ist"
+        ],
+        "correctOrder": [
+          "Die",
+          "Luft",
+          "ist",
+          "frisch",
+          "und",
+          "der",
+          "Nebel",
+          "ist",
+          "hier"
+        ]
       },
       {
         "id": 15,
@@ -2714,7 +3307,9 @@
   },
   {
     "questId": "morning",
-    "aliases": ["natur-a1-morning"],
+    "aliases": [
+      "natur-a1-morning"
+    ],
     "title": "wildLandsElevenQuest.title",
     "progress": "0/15",
     "description": "wildLandsElevenQuest.description",
@@ -2755,20 +3350,6 @@
         "translation-ro": "Floare",
         "translation-tr": "Çiçek",
         "translation-uz": "Gul"
-      },
-      {
-        "word": "das Meer",
-        "translation-ru": "Море",
-        "translation-en": "Sea",
-        "translation-uk": "Море",
-        "translation-pl": "Morze",
-        "translation-es": "Mar",
-        "translation-fr": "Mer",
-        "translation-ar": "بحر",
-        "translation-hi": "समुद्र / सागर",
-        "translation-ro": "Mare",
-        "translation-tr": "Deniz",
-        "translation-uz": "Dengiz"
       },
       {
         "word": "singen",
@@ -2839,6 +3420,20 @@
         "translation-ro": "De la",
         "translation-tr": "-den / -dan",
         "translation-uz": "-dan"
+      },
+      {
+        "word": "der Vogel",
+        "translation-ru": "птица",
+        "translation-en": "bird",
+        "translation-uk": "птах",
+        "translation-pl": "ptak",
+        "translation-es": "pájaro",
+        "translation-fr": "oiseau",
+        "translation-tr": "kuş",
+        "translation-ro": "pasăre",
+        "translation-uz": "qush",
+        "translation-hi": "पक्षी",
+        "translation-ar": "طائر"
       }
     ],
     "tasks": [
@@ -2846,7 +3441,11 @@
         "id": 1,
         "type": "select",
         "question": "wildLandsElevenQuest.questOne",
-        "options": ["Der Morgen", "Der Mond", "Das Meer"],
+        "options": [
+          "Der Morgen",
+          "Der Mond",
+          "Das Meer"
+        ],
         "answer": "Der Morgen"
       },
       {
@@ -2860,36 +3459,89 @@
         "id": 3,
         "type": "reorder",
         "question": "wildLandsElevenQuest.questThree",
-        "words": ["ist", "still", "Der", "Morgen", "im", "Wald", "laut"],
-        "correctOrder": ["Der", "Morgen", "ist", "still", "im", "Wald"]
+        "words": [
+          "ist",
+          "still",
+          "Der",
+          "Morgen",
+          "im",
+          "Wald",
+          "laut"
+        ],
+        "correctOrder": [
+          "Der",
+          "Morgen",
+          "ist",
+          "still",
+          "im",
+          "Wald"
+        ]
       },
       {
         "id": 4,
         "type": "select",
         "question": "wildLandsElevenQuest.questFour",
-        "options": ["Der Vogel", "Der Wolf", "Der Wind"],
+        "options": [
+          "Der Vogel",
+          "Der Wolf",
+          "Der Wind"
+        ],
         "answer": "Der Vogel"
       },
       {
         "id": 5,
         "type": "reorder",
         "question": "wildLandsElevenQuest.questFive",
-        "words": ["Stein", "am", "sitzt", "Vogel", "Der", "im"],
-        "correctOrder": ["Der", "Vogel", "sitzt", "am", "Stein"]
+        "words": [
+          "Der",
+          "Stein",
+          "dem",
+          "im",
+          "auf",
+          "sitzt",
+          "Vogel"
+        ],
+        "correctOrder": [
+          "Der",
+          "Vogel",
+          "sitzt",
+          "auf",
+          "dem",
+          "Stein"
+        ]
       },
       {
         "id": 6,
         "type": "select",
         "question": "wildLandsElevenQuest.questSix",
-        "options": ["Das Blatt", "Der Baum", "Das Gras"],
+        "options": [
+          "Das Blatt",
+          "Der Baum",
+          "Das Gras"
+        ],
         "answer": "Das Blatt"
       },
       {
         "id": 7,
         "type": "reorder",
         "question": "wildLandsElevenQuest.questSeven",
-        "words": ["im", "Fluss", "Das", "Blatt", "ist", "Der", "Baum", "Stein"],
-        "correctOrder": ["Das", "Blatt", "ist", "im", "Fluss"]
+        "words": [
+          "im",
+          "Fluss",
+          "Das",
+          "Blatt",
+          "ist",
+          "Der",
+          "Baum",
+          "Stein"
+        ],
+        "correctOrder": [
+          "Das",
+          "Blatt",
+          "ist",
+          "im",
+          "Fluss"
+        ]
       },
       {
         "id": 8,
@@ -2902,15 +3554,32 @@
         "id": 9,
         "type": "select",
         "question": "wildLandsElevenQuest.questNine",
-        "options": ["Die Blume", "Der Baum", "Die Wolke"],
+        "options": [
+          "Die Blume",
+          "Der Baum",
+          "Die Wolke"
+        ],
         "answer": "Die Blume"
       },
       {
         "id": 10,
         "type": "reorder",
         "question": "wildLandsElevenQuest.questTen",
-        "words": ["Blume", "wächst", "Tal", "im", "Die", "Der"],
-        "correctOrder": ["Die", "Blume", "wächst", "im", "Tal"]
+        "words": [
+          "Blume",
+          "wächst",
+          "Tal",
+          "im",
+          "Die",
+          "Der"
+        ],
+        "correctOrder": [
+          "Die",
+          "Blume",
+          "wächst",
+          "im",
+          "Tal"
+        ]
       },
       {
         "id": 11,
@@ -2928,15 +3597,43 @@
         "id": 12,
         "type": "reorder",
         "question": "wildLandsElevenQuest.questTwelve",
-        "words": ["Morgen", "singt", "Der", "Vogel", "am", "singen"],
-        "correctOrder": ["Der", "Vogel", "singt", "am", "Morgen"]
+        "words": [
+          "Morgen",
+          "singt",
+          "Der",
+          "Vogel",
+          "am",
+          "singen"
+        ],
+        "correctOrder": [
+          "Der",
+          "Vogel",
+          "singt",
+          "am",
+          "Morgen"
+        ]
       },
       {
         "id": 13,
         "type": "reorder",
         "question": "wildLandsElevenQuest.questThirteen",
-        "words": ["ist", "im", "Gras", "Die", "Blume", "Der", "Nebel", "am"],
-        "correctOrder": ["Die", "Blume", "ist", "im", "Gras"]
+        "words": [
+          "ist",
+          "im",
+          "Gras",
+          "Die",
+          "Blume",
+          "Der",
+          "Nebel",
+          "am"
+        ],
+        "correctOrder": [
+          "Die",
+          "Blume",
+          "ist",
+          "im",
+          "Gras"
+        ]
       },
       {
         "id": 14,
@@ -2956,7 +3653,9 @@
   },
   {
     "questId": "sea",
-    "aliases": ["natur-a1-sea"],
+    "aliases": [
+      "natur-a1-sea"
+    ],
     "title": "wildLandsTwelveQuest.title",
     "progress": "0/15",
     "description": "wildLandsTwelveQuest.description",
@@ -3027,76 +3726,6 @@
         "translation-uz": "Bo'ronli / To'lqinli"
       },
       {
-        "word": "ruhig",
-        "translation-ru": "Спокойный / Тихий",
-        "translation-en": "Calm / Quiet",
-        "translation-uk": "Спокійний / Тихий",
-        "translation-pl": "Spokojny / Cichy",
-        "translation-es": "Calmado / Tranquilo",
-        "translation-fr": "Calme / Tranquille",
-        "translation-ar": "هادئ",
-        "translation-hi": "शांत",
-        "translation-ro": "Liniștit / Calm",
-        "translation-tr": "Sakin / Durgun",
-        "translation-uz": "Sokin / Tinch"
-      },
-      {
-        "word": "leise",
-        "translation-ru": "Тихий / Негромко",
-        "translation-en": "Quiet / Low (sound)",
-        "translation-uk": "Тихий / Неголосно",
-        "translation-pl": "Cichy / Cicho",
-        "translation-es": "Bajo / En voz baja / Silencioso",
-        "translation-fr": "Silencieux / Doux (son)",
-        "translation-ar": "خافت / هادئ",
-        "translation-hi": "धीमा (आवाज़)",
-        "translation-ro": "Încet / Liniștit",
-        "translation-tr": "Sessiz / Alçak sesle",
-        "translation-uz": "Sekin / Past ovozda"
-      },
-      {
-        "word": "die Mauer",
-        "translation-ru": "Стена / Каменная ограда",
-        "translation-en": "Wall (stone/brick)",
-        "translation-uk": "Мури / Стіна",
-        "translation-pl": "Mur / Ściana",
-        "translation-es": "Muro / Pared",
-        "translation-fr": "Mur / Muraille",
-        "translation-ar": "جدار / حائط",
-        "translation-hi": "दीवार / प्राचीर",
-        "translation-ro": "Zid",
-        "translation-tr": "Duvar / Sur",
-        "translation-uz": "Devor / Tomorqa devori"
-      },
-      {
-        "word": "die Straße",
-        "translation-ru": "Улица / Дорога",
-        "translation-en": "Street / Road",
-        "translation-uk": "Вулиця / Дорога",
-        "translation-pl": "Ulica / Droga",
-        "translation-es": "Calle / Carretera",
-        "translation-fr": "Rue / Route",
-        "translation-ar": "شارع / طريق",
-        "translation-hi": "सड़क / रास्ता",
-        "translation-ro": "Stradă / Drum",
-        "translation-tr": "Cadde / Sokak",
-        "translation-uz": "Ko'cha / Yo'l"
-      },
-      {
-        "word": "die Wolle",
-        "translation-ru": "Шерсть / Пряжа",
-        "translation-en": "Wool",
-        "translation-uk": "Вовна / Шерсть",
-        "translation-pl": "Wełna",
-        "translation-es": "Lana",
-        "translation-fr": "Laine",
-        "translation-ar": "صوف",
-        "translation-hi": "ऊन",
-        "translation-ro": "Lână",
-        "translation-tr": "Yün",
-        "translation-uz": "Jun"
-      },
-      {
         "word": "kommen",
         "translation-ru": "Приходить / Идти",
         "translation-en": "To come",
@@ -3109,6 +3738,20 @@
         "translation-ro": "A veni",
         "translation-tr": "Gelmek",
         "translation-uz": "Kelmoq"
+      },
+      {
+        "word": "der Sand",
+        "translation-ru": "песок",
+        "translation-en": "sand",
+        "translation-uk": "пісок",
+        "translation-pl": "piasek",
+        "translation-es": "arena",
+        "translation-fr": "sable",
+        "translation-tr": "kum",
+        "translation-ro": "nisip",
+        "translation-uz": "qum",
+        "translation-hi": "रेत",
+        "translation-ar": "رمل"
       }
     ],
     "tasks": [
@@ -3116,7 +3759,11 @@
         "id": 1,
         "type": "select",
         "question": "wildLandsTwelveQuest.questOne",
-        "options": ["Das Meer", "Der Mond", "Die Mauer"],
+        "options": [
+          "Das Meer",
+          "Der Mond",
+          "Die Mauer"
+        ],
         "answer": "Das Meer"
       },
       {
@@ -3130,44 +3777,92 @@
         "id": 3,
         "type": "reorder",
         "question": "wildLandsTwelveQuest.questThree",
-        "words": ["ist", "windig", "Am", "Meer", "es", "im"],
-        "correctOrder": ["Am", "Meer", "ist", "es", "windig"]
+        "words": [
+          "ist",
+          "windig",
+          "Am",
+          "Meer",
+          "es",
+          "im"
+        ],
+        "correctOrder": [
+          "Am",
+          "Meer",
+          "ist",
+          "es",
+          "windig"
+        ]
       },
       {
         "id": 4,
         "type": "select",
         "question": "wildLandsTwelveQuest.questFour",
-        "options": ["Der Strand", "Der Stein", "Die Straße"],
+        "options": [
+          "Der Strand",
+          "Der Stein",
+          "Die Straße"
+        ],
         "answer": "Der Strand"
       },
       {
         "id": 5,
         "type": "reorder",
         "question": "wildLandsTwelveQuest.questFive",
-        "words": ["Hier", "ist", "der", "Strand", "Wald", "Meer"],
-        "correctOrder": ["Hier", "ist", "der", "Strand"]
+        "words": [
+          "Hier",
+          "ist",
+          "der",
+          "Strand",
+          "Wald",
+          "Meer"
+        ],
+        "correctOrder": [
+          "Hier",
+          "ist",
+          "der",
+          "Strand"
+        ]
       },
       {
         "id": 6,
         "type": "readAndAnswer",
         "text": "Keine Bäume hier. Nur Wasser und Strand.",
         "question": "wildLandsTwelveQuest.questSix",
-        "options": ["Ich bin am Meer", "Ich bin im Wald", "Ich bin in Bergen"],
+        "options": [
+          "Ich bin am Meer",
+          "Ich bin im Wald",
+          "Ich bin in Bergen"
+        ],
         "answer": "Ich bin am Meer"
       },
       {
         "id": 7,
         "type": "select",
         "question": "wildLandsTwelveQuest.questSeven",
-        "options": ["Der Sand", "Die Sonne", "Der See"],
+        "options": [
+          "Der Sand",
+          "Die Sonne",
+          "Der See"
+        ],
         "answer": "Der Sand"
       },
       {
         "id": 8,
         "type": "reorder",
         "question": "wildLandsTwelveQuest.questEight",
-        "words": ["Sand", "ist", "warm", "Der", "nass"],
-        "correctOrder": ["Der", "Sand", "ist", "warm"]
+        "words": [
+          "Sand",
+          "ist",
+          "warm",
+          "Der",
+          "nass"
+        ],
+        "correctOrder": [
+          "Der",
+          "Sand",
+          "ist",
+          "warm"
+        ]
       },
       {
         "id": 9,
@@ -3180,15 +3875,30 @@
         "id": 10,
         "type": "select",
         "question": "wildLandsTwelveQuest.questTen",
-        "options": ["Die Welle", "Der Wind", "Die Wolle"],
+        "options": [
+          "Die Welle",
+          "Der Wind",
+          "Die Wolle"
+        ],
         "answer": "Die Welle"
       },
       {
         "id": 11,
         "type": "reorder",
         "question": "wildLandsTwelveQuest.questEleven",
-        "words": ["Welle", "ist", "hoch", "Die", "tief"],
-        "correctOrder": ["Die", "Welle", "ist", "hoch"]
+        "words": [
+          "Welle",
+          "ist",
+          "hoch",
+          "Die",
+          "tief"
+        ],
+        "correctOrder": [
+          "Die",
+          "Welle",
+          "ist",
+          "hoch"
+        ]
       },
       {
         "id": 12,
@@ -3206,15 +3916,38 @@
         "id": 13,
         "type": "reorder",
         "question": "wildLandsTwelveQuest.questThirteen",
-        "words": ["Das", "Wasser", "ist", "am", "kalt"],
-        "correctOrder": ["Das", "Wasser", "ist", "kalt"]
+        "words": [
+          "Das",
+          "Wasser",
+          "ist",
+          "am",
+          "kalt"
+        ],
+        "correctOrder": [
+          "Das",
+          "Wasser",
+          "ist",
+          "kalt"
+        ]
       },
       {
         "id": 14,
         "type": "reorder",
         "question": "wildLandsTwelveQuest.questFourteen",
-        "words": ["Meer", "ist", "laut", "Das", "leise", "still"],
-        "correctOrder": ["Das", "Meer", "ist", "laut"]
+        "words": [
+          "Meer",
+          "ist",
+          "laut",
+          "Das",
+          "leise",
+          "still"
+        ],
+        "correctOrder": [
+          "Das",
+          "Meer",
+          "ist",
+          "laut"
+        ]
       },
       {
         "id": 15,
@@ -3227,7 +3960,9 @@
   },
   {
     "questId": "storm",
-    "aliases": ["natur-a1-storm"],
+    "aliases": [
+      "natur-a1-storm"
+    ],
     "title": "Гроза, непогода",
     "progress": "0/15",
     "description": "Небо темнеет. Ветер срывает листья. Начинается буря. Ты слышишь гром и видишь вспышки в небе.",
@@ -3312,34 +4047,6 @@
         "translation-uz": "Urilmoq / Tegmoq / Uchrashmoq"
       },
       {
-        "word": "das Dorf",
-        "translation-ru": "Деревня / Село",
-        "translation-en": "Village",
-        "translation-uk": "Село / Вьоска",
-        "translation-pl": "Wieś / Wioska",
-        "translation-es": "Pueblo / Aldea",
-        "translation-fr": "Village",
-        "translation-ar": "قرية",
-        "translation-hi": "गाँव",
-        "translation-ro": "Sat",
-        "translation-tr": "Köy",
-        "translation-uz": "Qishloq"
-      },
-      {
-        "word": "der Dank",
-        "translation-ru": "Благодарность / Спасибо",
-        "translation-en": "Gratitude / Thanks",
-        "translation-uk": "Подяка",
-        "translation-pl": "Podziękowanie / Wdzięczność",
-        "translation-es": "Agradecimiento / Gracias",
-        "translation-fr": "Remerciement / Gratitude",
-        "translation-ar": "شكر / امتنان",
-        "translation-hi": "धन्यवाद / आभार",
-        "translation-ro": "Mulțumire / Recunoștință",
-        "translation-tr": "Teşekkür / Şükran",
-        "translation-uz": "Tashakkur / Minnatdorchilik"
-      },
-      {
         "word": "hören",
         "translation-ru": "Слышать / Слушать",
         "translation-en": "To hear / To listen",
@@ -3387,7 +4094,11 @@
         "id": 1,
         "type": "select",
         "question": "wildLandsThirteenQuest.questOne",
-        "options": ["Das Gewitter", "Das Gras", "Das Wasser"],
+        "options": [
+          "Das Gewitter",
+          "Das Gras",
+          "Das Wasser"
+        ],
         "answer": "Das Gewitter"
       },
       {
@@ -3401,22 +4112,50 @@
         "id": 3,
         "type": "reorder",
         "question": "wildLandsThirteenQuest.questThree",
-        "words": ["ist", "schwarz", "Der", "Himmel", "blau"],
-        "correctOrder": ["Der", "Himmel", "ist", "schwarz"]
+        "words": [
+          "ist",
+          "schwarz",
+          "Der",
+          "Himmel",
+          "blau"
+        ],
+        "correctOrder": [
+          "Der",
+          "Himmel",
+          "ist",
+          "schwarz"
+        ]
       },
       {
         "id": 4,
         "type": "select",
         "question": "wildLandsThirteenQuest.questFour",
-        "options": ["Der Blitz", "Die Blume", "Der Baum"],
+        "options": [
+          "Der Blitz",
+          "Die Blume",
+          "Der Baum"
+        ],
         "answer": "Der Blitz"
       },
       {
         "id": 5,
         "type": "reorder",
         "question": "wildLandsThirteenQuest.questFive",
-        "words": ["Blitz", "ist", "sehr", "hell", "Der", "dunkel"],
-        "correctOrder": ["Der", "Blitz", "ist", "sehr", "hell"]
+        "words": [
+          "Blitz",
+          "ist",
+          "sehr",
+          "hell",
+          "Der",
+          "dunkel"
+        ],
+        "correctOrder": [
+          "Der",
+          "Blitz",
+          "ist",
+          "sehr",
+          "hell"
+        ]
       },
       {
         "id": 6,
@@ -3434,15 +4173,31 @@
         "id": 7,
         "type": "select",
         "question": "wildLandsThirteenQuest.questSeven",
-        "options": ["Der Donner", "Der Dank", "Das Dorf"],
+        "options": [
+          "Der Donner",
+          "Der Dank",
+          "Das Dorf"
+        ],
         "answer": "Der Donner"
       },
       {
         "id": 8,
         "type": "reorder",
         "question": "wildLandsThirteenQuest.questEight",
-        "words": ["Donner", "ist", "laut", "Der", "leise", "still"],
-        "correctOrder": ["Der", "Donner", "ist", "laut"]
+        "words": [
+          "Donner",
+          "ist",
+          "laut",
+          "Der",
+          "leise",
+          "still"
+        ],
+        "correctOrder": [
+          "Der",
+          "Donner",
+          "ist",
+          "laut"
+        ]
       },
       {
         "id": 9,
@@ -3455,15 +4210,35 @@
         "id": 10,
         "type": "select",
         "question": "wildLandsThirteenQuest.questTen",
-        "options": ["Schwarz", "Weiß", "Schön"],
-        "answer": "Schwarz"
+        "options": [
+          "schwarz",
+          "weiß",
+          "schön"
+        ],
+        "answer": "schwarz"
       },
       {
         "id": 11,
         "type": "reorder",
         "question": "wildLandsThirteenQuest.questEleven",
-        "words": ["Wolken", "sind", "schwarz", "Die", "und", "es", "regnet"],
-        "correctOrder": ["Die", "Wolken", "sind", "schwarz", "und", "es", "regnet"]
+        "words": [
+          "Wolken",
+          "sind",
+          "schwarz",
+          "Die",
+          "und",
+          "es",
+          "regnet"
+        ],
+        "correctOrder": [
+          "Die",
+          "Wolken",
+          "sind",
+          "schwarz",
+          "und",
+          "es",
+          "regnet"
+        ]
       },
       {
         "id": 12,
@@ -3481,8 +4256,26 @@
         "id": 13,
         "type": "reorder",
         "question": "wildLandsThirteenQuest.questThirteen",
-        "words": ["Wind", "ist", "stark,", "der", "Regen", "ist", "kalt", "Der"],
-        "correctOrder": ["Der", "Wind", "ist", "stark,", "der", "Regen", "ist", "kalt"]
+        "words": [
+          "Wind",
+          "ist",
+          "stark,",
+          "der",
+          "Regen",
+          "ist",
+          "kalt",
+          "Der"
+        ],
+        "correctOrder": [
+          "Der",
+          "Wind",
+          "ist",
+          "stark,",
+          "der",
+          "Regen",
+          "ist",
+          "kalt"
+        ]
       },
       {
         "id": 14,
@@ -3502,7 +4295,9 @@
   },
   {
     "questId": "meadow",
-    "aliases": ["natur-a1-meadow"],
+    "aliases": [
+      "natur-a1-meadow"
+    ],
     "title": "wildLandsFourteenQuest.title",
     "progress": "0/15",
     "description": "wildLandsFourteenQuest.description",
@@ -3559,20 +4354,6 @@
         "translation-uz": "Uchmoq"
       },
       {
-        "word": "fallen",
-        "translation-ru": "Падать",
-        "translation-en": "To fall",
-        "translation-uk": "Падати",
-        "translation-pl": "Spadać / Padać",
-        "translation-es": "Caer",
-        "translation-fr": "Tomber",
-        "translation-ar": "يسقط / يقع",
-        "translation-hi": "गिरना",
-        "translation-ro": "A cădea",
-        "translation-tr": "Düşmek",
-        "translation-uz": "Yiqilmoq / Tushmoq"
-      },
-      {
         "word": "bunt",
         "translation-ru": "Пёстрый / Разноцветный",
         "translation-en": "Colorful / Multicolored",
@@ -3585,20 +4366,6 @@
         "translation-ro": "Colorat / Multicolor",
         "translation-tr": "Renkli / Rengârenk",
         "translation-uz": "Rang-barang / Rangdor"
-      },
-      {
-        "word": "braun",
-        "translation-ru": "Коричневый",
-        "translation-en": "Brown",
-        "translation-uk": "Коричневий",
-        "translation-pl": "Brązowy",
-        "translation-es": "Marrón / Café",
-        "translation-fr": "Marron / Brun",
-        "translation-ar": "بني",
-        "translation-hi": "भूरा",
-        "translation-ro": "Maro",
-        "translation-tr": "Kahverengi",
-        "translation-uz": "Jigarrang"
       },
       {
         "word": "gelb",
@@ -3662,7 +4429,11 @@
         "id": 1,
         "type": "select",
         "question": "wildLandsFourteenQuest.questOne",
-        "options": ["Die Wiese", "Der Wald", "Die Wolke"],
+        "options": [
+          "Die Wiese",
+          "Der Wald",
+          "Die Wolke"
+        ],
         "answer": "Die Wiese"
       },
       {
@@ -3676,22 +4447,53 @@
         "id": 3,
         "type": "reorder",
         "question": "wildLandsFourteenQuest.questThree",
-        "words": ["wächst", "auf", "der", "Wiese", "Die", "Blume", "ist"],
-        "correctOrder": ["Die", "Blume", "wächst", "auf", "der", "Wiese"]
+        "words": [
+          "wächst",
+          "auf",
+          "der",
+          "Wiese",
+          "Die",
+          "Blume",
+          "ist"
+        ],
+        "correctOrder": [
+          "Die",
+          "Blume",
+          "wächst",
+          "auf",
+          "der",
+          "Wiese"
+        ]
       },
       {
         "id": 4,
         "type": "select",
         "question": "wildLandsFourteenQuest.questFour",
-        "options": ["Der Schmetterling", "Der Schnee", "Die Sonne"],
+        "options": [
+          "Der Schmetterling",
+          "Der Schnee",
+          "Die Sonne"
+        ],
         "answer": "Der Schmetterling"
       },
       {
         "id": 5,
         "type": "reorder",
         "question": "wildLandsFourteenQuest.questFive",
-        "words": ["Schmetterling", "ist", "schön", "Der", "Das", "Vogel"],
-        "correctOrder": ["Der", "Schmetterling", "ist", "schön"]
+        "words": [
+          "Schmetterling",
+          "ist",
+          "schön",
+          "Der",
+          "Das",
+          "Vogel"
+        ],
+        "correctOrder": [
+          "Der",
+          "Schmetterling",
+          "ist",
+          "schön"
+        ]
       },
       {
         "id": 6,
@@ -3709,15 +4511,34 @@
         "id": 7,
         "type": "select",
         "question": "wildLandsFourteenQuest.questSeven",
-        "options": ["Fliegen", "Fallen", "Fließen"],
-        "answer": "Fliegen"
+        "options": [
+          "fliegen",
+          "fallen",
+          "fließen"
+        ],
+        "answer": "fliegen"
       },
       {
         "id": 8,
         "type": "reorder",
         "question": "wildLandsFourteenQuest.questEight",
-        "words": ["Vogel", "fliegt", "in", "den", "Wald", "Der", "liegt"],
-        "correctOrder": ["Der", "Vogel", "fliegt", "in", "den", "Wald"]
+        "words": [
+          "Vogel",
+          "fliegt",
+          "in",
+          "den",
+          "Wald",
+          "Der",
+          "liegt"
+        ],
+        "correctOrder": [
+          "Der",
+          "Vogel",
+          "fliegt",
+          "in",
+          "den",
+          "Wald"
+        ]
       },
       {
         "id": 9,
@@ -3730,15 +4551,31 @@
         "id": 10,
         "type": "select",
         "question": "wildLandsFourteenQuest.questTen",
-        "options": ["Bunt", "Blau", "Braun"],
-        "answer": "Bunt"
+        "options": [
+          "bunt",
+          "blau",
+          "braun"
+        ],
+        "answer": "bunt"
       },
       {
         "id": 11,
         "type": "reorder",
         "question": "wildLandsFourteenQuest.questEleven",
-        "words": ["Blumen", "sind", "bunt", "Die", "Der", "grün"],
-        "correctOrder": ["Die", "Blumen", "sind", "bunt"]
+        "words": [
+          "Blumen",
+          "sind",
+          "bunt",
+          "Die",
+          "Der",
+          "grün"
+        ],
+        "correctOrder": [
+          "Die",
+          "Blumen",
+          "sind",
+          "bunt"
+        ]
       },
       {
         "id": 12,
@@ -3756,8 +4593,23 @@
         "id": 13,
         "type": "reorder",
         "question": "wildLandsFourteenQuest.questThirteen",
-        "words": ["Sonne", "scheint", "auf", "die", "Wiese", "Die", "Der"],
-        "correctOrder": ["Die", "Sonne", "scheint", "auf", "die", "Wiese"]
+        "words": [
+          "Sonne",
+          "scheint",
+          "auf",
+          "die",
+          "Wiese",
+          "Die",
+          "Der"
+        ],
+        "correctOrder": [
+          "Die",
+          "Sonne",
+          "scheint",
+          "auf",
+          "die",
+          "Wiese"
+        ]
       },
       {
         "id": 14,
@@ -3777,7 +4629,9 @@
   },
   {
     "questId": "nature-final",
-    "aliases": [""],
+    "aliases": [
+      ""
+    ],
     "title": "wildLandsFifteenQuest.title",
     "progress": "0/15",
     "description": "wildLandsFifteenQuest.description",
@@ -3818,20 +4672,6 @@
         "translation-ro": "După / Spre",
         "translation-tr": "Sonra / -e doğru",
         "translation-uz": "Keyin / So'ng"
-      },
-      {
-        "word": "leer",
-        "translation-ru": "Пустой",
-        "translation-en": "Empty",
-        "translation-uk": "Порожній",
-        "translation-pl": "Pusty",
-        "translation-es": "Vacío",
-        "translation-fr": "Vide",
-        "translation-ar": "فارغ / خالٍ",
-        "translation-hi": "खाली",
-        "translation-ro": "Gol",
-        "translation-tr": "Boş",
-        "translation-uz": "Bo'sh"
       },
       {
         "word": "schnell",
@@ -3909,37 +4749,87 @@
         "id": 1,
         "type": "select",
         "question": "wildLandsFifteenQuest.questOne",
-        "options": ["Die Natur", "Die Nacht", "Der Nebel"],
+        "options": [
+          "Die Natur",
+          "Die Nacht",
+          "Der Nebel"
+        ],
         "answer": "Die Natur"
       },
       {
         "id": 2,
         "type": "reorder",
         "question": "wildLandsFifteenQuest.questTwo",
-        "words": ["Sonne", "scheint", "auf", "den", "Berg", "Die"],
-        "correctOrder": ["Die", "Sonne", "scheint", "auf", "den", "Berg"]
+        "words": [
+          "Sonne",
+          "scheint",
+          "auf",
+          "den",
+          "Berg",
+          "Die"
+        ],
+        "correctOrder": [
+          "Die",
+          "Sonne",
+          "scheint",
+          "auf",
+          "den",
+          "Berg"
+        ]
       },
       {
         "id": 3,
         "type": "readAndAnswer",
         "text": "Der Wolf steht im Schnee",
         "question": "wildLandsFifteenQuest.questThree",
-        "options": ["Im Schnee", "Im Wasser", "Auf dem Baum"],
+        "options": [
+          "Im Schnee",
+          "Im Wasser",
+          "Auf dem Baum"
+        ],
         "answer": "Im Schnee"
       },
       {
         "id": 4,
         "type": "reorder",
         "question": "wildLandsFifteenQuest.questFour",
-        "words": ["Fluss", "fließt", "in", "das", "Meer", "Der"],
-        "correctOrder": ["Der", "Fluss", "fließt", "in", "das", "Meer"]
+        "words": [
+          "Fluss",
+          "fließt",
+          "Meer",
+          "ins",
+          "Der"
+        ],
+        "correctOrder": [
+          "Der",
+          "Fluss",
+          "fließt",
+          "ins",
+          "Meer"
+        ]
       },
       {
         "id": 5,
         "type": "reorder",
         "question": "wildLandsFifteenQuest.questFive",
-        "words": ["Luft", "ist", "die", "dem", "frisch", "Gewitter", "Nach"],
-        "correctOrder": ["Nach", "dem", "Gewitter", "ist", "die", "Luft", "frisch"]
+        "words": [
+          "Luft",
+          "ist",
+          "die",
+          "dem",
+          "frisch",
+          "Gewitter",
+          "Nach"
+        ],
+        "correctOrder": [
+          "Nach",
+          "dem",
+          "Gewitter",
+          "ist",
+          "die",
+          "Luft",
+          "frisch"
+        ]
       },
       {
         "id": 6,
@@ -3952,29 +4842,70 @@
         "id": 7,
         "type": "reorder",
         "question": "wildLandsFifteenQuest.questSeven",
-        "words": ["Fuchs", "schläft", "im", "Gras", "Der"],
-        "correctOrder": ["Der", "Fuchs", "schläft", "im", "Gras"]
+        "words": [
+          "Fuchs",
+          "schläft",
+          "im",
+          "Gras",
+          "Der"
+        ],
+        "correctOrder": [
+          "Der",
+          "Fuchs",
+          "schläft",
+          "im",
+          "Gras"
+        ]
       },
       {
         "id": 8,
         "type": "readAndAnswer",
         "text": "Es regnet stark. Das Wasser im Fluss ist hoch und schnell.",
         "question": "wildLandsFifteenQuest.questEight",
-        "options": ["Hoch und schnell", "Hoch und ruhig", "Trocken und leer"],
+        "options": [
+          "Hoch und schnell",
+          "Hoch und ruhig",
+          "Trocken und leer"
+        ],
         "answer": "Hoch und schnell"
       },
       {
         "id": 9,
         "type": "reorder",
         "question": "wildLandsFifteenQuest.questNine",
-        "words": ["Nacht", "ist", "es", "in", "den", "Bergen", "kalt", "am", "In", "der"],
-        "correctOrder": ["In", "der", "Nacht", "ist", "es", "in", "den", "Bergen", "kalt"]
+        "words": [
+          "Nacht",
+          "ist",
+          "es",
+          "in",
+          "den",
+          "Bergen",
+          "kalt",
+          "am",
+          "In",
+          "der"
+        ],
+        "correctOrder": [
+          "In",
+          "der",
+          "Nacht",
+          "ist",
+          "es",
+          "in",
+          "den",
+          "Bergen",
+          "kalt"
+        ]
       },
       {
         "id": 10,
         "type": "select",
         "question": "wildLandsFifteenQuest.questTen",
-        "options": ["Blumen wachsen im Gras", "Blumen liegen im Gras", "Blumen wachsen in Gras"],
+        "options": [
+          "Blumen wachsen im Gras",
+          "Blumen liegen im Gras",
+          "Blumen wachsen in Gras"
+        ],
         "answer": "Blumen wachsen im Gras"
       },
       {
@@ -3989,15 +4920,39 @@
         "type": "readAndAnswer",
         "text": "Der Bär schläft in der Höhle. Draußen ist Sturm.",
         "question": "wildLandsFifteenQuest.questTwelve",
-        "options": ["In der Höhle", "Auf dem Berg", "Im Fluss"],
+        "options": [
+          "In der Höhle",
+          "Auf dem Berg",
+          "Im Fluss"
+        ],
         "answer": "In der Höhle"
       },
       {
         "id": 13,
         "type": "reorder",
         "question": "wildLandsFifteenQuest.questThirteen",
-        "words": ["kalt", "ist", "Wasser", "aber", "Der", "warm", "das", "ist", "Wind"],
-        "correctOrder": ["Der", "Wind", "ist", "warm", "aber", "das", "Wasser", "ist", "kalt"]
+        "words": [
+          "kalt",
+          "ist",
+          "Wasser",
+          "aber",
+          "Der",
+          "warm",
+          "das",
+          "ist",
+          "Wind"
+        ],
+        "correctOrder": [
+          "Der",
+          "Wind",
+          "ist",
+          "warm",
+          "aber",
+          "das",
+          "Wasser",
+          "ist",
+          "kalt"
+        ]
       },
       {
         "id": 14,

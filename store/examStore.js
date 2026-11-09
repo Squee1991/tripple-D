@@ -42,6 +42,9 @@ function pruneUndefinedDeep(v) {
 
 export const userExamStore = defineStore("exam", () => {
 	const exercises = ref([])
+	const availableExams = ref([])
+	const selectedExamId = ref(null)
+	const currentExamTheme = ref("")
 	const currentIndex = ref(0)
 	const userAnswers = ref([])
 	const loading = ref(false)
@@ -87,21 +90,35 @@ export const userExamStore = defineStore("exam", () => {
 	}
 
 	const currentExercise = computed(() => exercises.value[currentIndex.value])
-	const isFinished = computed(() => currentIndex.value >= exercises.value.length)
+	const isFinished = computed(() => currentIndex.value >= exercises.value.length && exercises.value.length > 0)
 
 	async function ensureAuth() {
 		if (!auth.currentUser) await signInAnonymously(auth)
 		return auth.currentUser?.uid || null
 	}
 
-	async function loadTopics(theme) {
+	// файл уровня содержит несколько тематических вариантов (exams); старый формат с modules тоже понимаем
+	async function loadTopics(url, targetExamId = null) {
 		loading.value = true
 		try {
-			const res = await fetch(theme)
+			const res = await fetch(url)
 			const data = await res.json()
-			exercises.value = data.modules || []
+			if (Array.isArray(data.exams) && data.exams.length) {
+				availableExams.value = data.exams
+				const target = data.exams.find(e => String(e.exam_id) === String(targetExamId)) || data.exams[0]
+				selectedExamId.value = target.exam_id
+				currentExamTheme.value = target.theme || ""
+				exercises.value = target.modules || []
+			} else {
+				availableExams.value = []
+				selectedExamId.value = null
+				currentExamTheme.value = ""
+				exercises.value = data.modules || []
+			}
 			currentIndex.value = 0
 			userAnswers.value = []
+		} catch (e) {
+			console.error(e)
 		} finally {
 			loading.value = false
 		}
@@ -127,7 +144,7 @@ export const userExamStore = defineStore("exam", () => {
 	async function answerCurrent(userAnswer, feedback = null) {
 		const current = currentExercise.value
 		if (!current || !current.task || !current.id) return
-		const correct = current.task.answer ? userAnswer === current.task.answer : true
+		const correct = current.task.answer ? (String(userAnswer).trim() === String(current.task.answer).trim()) : true
 		userAnswers.value.push({
 			id: current.id,
 			answer: userAnswer ?? null,
@@ -217,6 +234,8 @@ export const userExamStore = defineStore("exam", () => {
 			sharedWith: [],
 			pendingShares: [],
 			level: level.value || "",
+			theme: currentExamTheme.value || "",
+			examId: selectedExamId.value ?? null,
 			locale: locale.value || "de-DE",
 			startedAt: startedAt.value || null,
 			finishedAt: finishedAt.value || null,
@@ -478,6 +497,7 @@ export const userExamStore = defineStore("exam", () => {
 
 	return {
 		exercises, currentIndex, userAnswers, loading,
+		availableExams, selectedExamId, currentExamTheme,
 		attemptId, ownerUid, level, locale,
 		startedAt, finishedAt, durationSec,
 		speakingMedia, speakingDraftBlobs,

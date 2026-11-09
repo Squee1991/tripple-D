@@ -43,20 +43,6 @@
         "translation-uz": "maktab"
       },
       {
-        "word": "der Markt",
-        "translation-ru": "рынок",
-        "translation-en": "market",
-        "translation-uk": "ринок",
-        "translation-pl": "targ",
-        "translation-es": "el mercado",
-        "translation-fr": "le marché",
-        "translation-ar": "السوق",
-        "translation-hi": "बाज़ार",
-        "translation-ro": "piața",
-        "translation-tr": "pazar",
-        "translation-uz": "bozor"
-      },
-      {
         "word": "der Friseur",
         "translation-ru": "парикмахер",
         "translation-en": "hairdresser",
@@ -71,18 +57,46 @@
         "translation-uz": "sartarosh"
       },
       {
-        "word": "die Eltern",
-        "translation-ru": "родители",
-        "translation-en": "parents",
-        "translation-uk": "батьки",
-        "translation-pl": "rodzice",
-        "translation-es": "los padres",
-        "translation-fr": "les parents",
-        "translation-ar": "الوالدان",
-        "translation-hi": "माता-पिता",
-        "translation-ro": "părinții",
-        "translation-tr": "anne baba",
-        "translation-uz": "ota-ona"
+        "word": "der Freund",
+        "translation-ru": "друг",
+        "translation-en": "friend",
+        "translation-uk": "друг",
+        "translation-pl": "przyjaciel",
+        "translation-es": "el amigo",
+        "translation-fr": "l’ami",
+        "translation-tr": "arkadaş",
+        "translation-ro": "prietenul",
+        "translation-uz": "do‘st",
+        "translation-hi": "दोस्त",
+        "translation-ar": "الصديق"
+      },
+      {
+        "word": "die Kinder",
+        "translation-ru": "дети",
+        "translation-en": "children",
+        "translation-uk": "діти",
+        "translation-pl": "dzieci",
+        "translation-es": "los niños",
+        "translation-fr": "les enfants",
+        "translation-tr": "çocuklar",
+        "translation-ro": "copiii",
+        "translation-uz": "bolalar",
+        "translation-hi": "बच्चे",
+        "translation-ar": "الأطفال"
+      },
+      {
+        "word": "der Zahnarzt",
+        "translation-ru": "стоматолог",
+        "translation-en": "dentist",
+        "translation-uk": "стоматолог",
+        "translation-pl": "dentysta",
+        "translation-es": "el dentista",
+        "translation-fr": "le dentiste",
+        "translation-tr": "diş hekimi",
+        "translation-ro": "dentistul",
+        "translation-uz": "tish shifokori",
+        "translation-hi": "दाँतों का डॉक्टर",
+        "translation-ar": "طبيب الأسنان"
       }
     ],
     "tasks": [
@@ -95,7 +109,8 @@
           "beim Arzt",
           "nach Arzt"
         ],
-        "answer": "zum Arzt"
+        "answer": "zum Arzt",
+        "tip": "directionPrepositions.questDescription"
       },
       {
         "id": 2,
@@ -115,19 +130,22 @@
           "zu",
           "meinem",
           "Freund"
-        ]
+        ],
+        "tip": "directionPrepositions.questDescription"
       },
       {
         "id": 3,
         "type": "input",
         "question": "directionPrepositions.questTask3",
-        "correctAnswer": "zur"
+        "correctAnswer": "zur",
+        "tip": "directionPrepositions.questDescription"
       },
       {
         "id": 4,
         "type": "input",
         "question": "directionPrepositions.questTask4",
-        "correctAnswer": "zum"
+        "correctAnswer": "zum",
+        "tip": "directionPrepositions.questDescription"
       },
       {
         "id": 5,
@@ -138,7 +156,8 @@
           "zu meine Schwester",
           "nach meiner Schwester"
         ],
-        "answer": "zu meiner Schwester"
+        "answer": "zu meiner Schwester",
+        "tip": "directionPrepositions.questDescription"
       },
       {
         "id": 6,
@@ -158,7 +177,8 @@
           "gehen",
           "zur",
           "Schule"
-        ]
+        ],
+        "tip": "directionPrepositions.questDescription"
       },
       {
         "id": 7,
@@ -170,7 +190,8 @@
           "zum Bahnhof",
           "zur Schule"
         ],
-        "answer": "zum Zahnarzt"
+        "answer": "zum Zahnarzt",
+        "tip": "directionPrepositions.questDescription"
       },
       {
         "id": 8,
@@ -181,13 +202,15 @@
           "Wir gehen nach Anna.",
           "Wir gehen bei Anna."
         ],
-        "answer": "Wir gehen zu Anna."
+        "answer": "Wir gehen zu Anna.",
+        "tip": "directionPrepositions.questDescription"
       },
       {
         "id": 9,
         "type": "input",
         "question": "directionPrepositions.questTask9",
-        "correctAnswer": "zur"
+        "correctAnswer": "zur",
+        "tip": "directionPrepositions.questDescription"
       },
       {
         "id": 10,
@@ -207,36 +230,86 @@
           "ich",
           "zum",
           "Bahnhof"
-        ]
+        ],
+        "tip": "directionPrepositions.questDescription"
       },
       {
         "id": 11,
-        "type": "select",
-        "question": "directionPrepositions.questTask11",
-        "options": [
-          "zur Post",
-          "zum Post",
-          "nach Post"
+        "type": "reorder",
+        "question": "placePrepositionsSix.questTask2",
+        "words": [
+          "ist",
+          "Tasche",
+          "Wo",
+          "deine",
+          "wohin"
         ],
-        "answer": "zur Post"
+        "correctOrder": [
+          "Wo",
+          "ist",
+          "deine",
+          "Tasche"
+        ],
+        "reviewOf": "place-prep-6",
+        "reviewLand": "place-prepositions",
+        "tip": "placePrepositionsSix.questDescription"
       },
       {
         "id": 12,
-        "type": "input",
-        "question": "directionPrepositions.questTask12",
-        "correctAnswer": "zum"
+        "type": "reorder",
+        "question": "placePrepositionsFour.questTask4",
+        "words": [
+          "steht",
+          "Fenster",
+          "Der",
+          "dem",
+          "zwischen",
+          "Tisch",
+          "und",
+          "dem",
+          "Schrank",
+          "den"
+        ],
+        "correctOrder": [
+          "Der",
+          "Tisch",
+          "steht",
+          "zwischen",
+          "dem",
+          "Fenster",
+          "und",
+          "dem",
+          "Schrank"
+        ],
+        "reviewOf": "place-prep-4",
+        "reviewLand": "place-prepositions",
+        "tip": "placePrepositionsFour.questDescription"
       },
       {
         "id": 13,
-        "type": "readAndAnswer",
-        "question": "directionPrepositions.questTask13",
-        "text": "Am Samstag fahre ich zu meinen Eltern.",
-        "options": [
-          "zu meinen Eltern",
-          "zu meinem Freund",
-          "zum Bahnhof"
+        "type": "reorder",
+        "question": "a2Course.t48",
+        "words": [
+          "unter",
+          "Tisch",
+          "Schlüssel",
+          "liegt",
+          "dem",
+          "Der",
+          "auf",
+          "den"
         ],
-        "answer": "zu meinen Eltern"
+        "correctOrder": [
+          "Der",
+          "Schlüssel",
+          "liegt",
+          "unter",
+          "dem",
+          "Tisch"
+        ],
+        "reviewOf": "place-prep-2",
+        "reviewLand": "place-prepositions",
+        "tip": "placePrepositionsTwo.questDescription"
       },
       {
         "id": 14,
@@ -247,7 +320,8 @@
           "Ich gehe zur Friseur.",
           "Ich gehe nach Friseur."
         ],
-        "answer": "Ich gehe zum Friseur."
+        "answer": "Ich gehe zum Friseur.",
+        "tip": "directionPrepositions.questDescription"
       },
       {
         "id": 15,
@@ -267,7 +341,8 @@
           "zu",
           "ihrer",
           "Mutter"
-        ]
+        ],
+        "tip": "directionPrepositions.questDescription"
       }
     ]
   },
@@ -367,7 +442,8 @@
           "zu Berlin",
           "bei Berlin"
         ],
-        "answer": "nach Berlin"
+        "answer": "nach Berlin",
+        "tip": "directionPrepositionsTwo.questDescription"
       },
       {
         "id": 2,
@@ -385,19 +461,22 @@
           "fliegen",
           "nach",
           "Spanien"
-        ]
+        ],
+        "tip": "directionPrepositionsTwo.questDescription"
       },
       {
         "id": 3,
         "type": "input",
         "question": "directionPrepositionsTwo.questTask3",
-        "correctAnswer": "nach"
+        "correctAnswer": "nach",
+        "tip": "directionPrepositionsTwo.questDescription"
       },
       {
         "id": 4,
         "type": "input",
         "question": "directionPrepositionsTwo.questTask4",
-        "correctAnswer": "nach"
+        "correctAnswer": "nach",
+        "tip": "directionPrepositionsTwo.questDescription"
       },
       {
         "id": 5,
@@ -408,7 +487,8 @@
           "zu Italien",
           "aus Italien"
         ],
-        "answer": "nach Italien"
+        "answer": "nach Italien",
+        "tip": "directionPrepositionsTwo.questDescription"
       },
       {
         "id": 6,
@@ -419,7 +499,8 @@
           "Nach der Arbeit gehe ich zu Hause.",
           "Nach der Arbeit gehe ich zum Haus."
         ],
-        "answer": "Nach der Arbeit gehe ich nach Hause."
+        "answer": "Nach der Arbeit gehe ich nach Hause.",
+        "tip": "directionPrepositionsTwo.questDescription"
       },
       {
         "id": 7,
@@ -431,7 +512,8 @@
           "nach München",
           "nach Berlin"
         ],
-        "answer": "nach Wien"
+        "answer": "nach Wien",
+        "tip": "directionPrepositionsTwo.questDescription"
       },
       {
         "id": 8,
@@ -451,13 +533,15 @@
           "du",
           "nach",
           "Hause"
-        ]
+        ],
+        "tip": "directionPrepositionsTwo.questDescription"
       },
       {
         "id": 9,
         "type": "input",
         "question": "directionPrepositionsTwo.questTask9",
-        "correctAnswer": "nach"
+        "correctAnswer": "nach",
+        "tip": "directionPrepositionsTwo.questDescription"
       },
       {
         "id": 10,
@@ -468,36 +552,49 @@
           "Ich fahre nach meinem Freund zu Köln.",
           "Ich fahre zu meinem Freund zu Köln."
         ],
-        "answer": "Ich fahre zu meinem Freund nach Köln."
+        "answer": "Ich fahre zu meinem Freund nach Köln.",
+        "tip": "directionPrepositionsTwo.questDescription"
       },
       {
         "id": 11,
-        "type": "input",
-        "question": "directionPrepositionsTwo.questTask11",
-        "correctAnswer": "zum"
+        "type": "reorder",
+        "question": "directionPrepositions.questTask2",
+        "words": [
+          "gehe",
+          "Freund",
+          "Ich",
+          "meinem",
+          "zu",
+          "nach"
+        ],
+        "correctOrder": [
+          "Ich",
+          "gehe",
+          "zu",
+          "meinem",
+          "Freund"
+        ],
+        "reviewOf": "direction-prep-1",
+        "reviewLand": "direction-prepositions",
+        "tip": "directionPrepositions.questDescription"
       },
       {
         "id": 12,
-        "type": "select",
-        "question": "directionPrepositionsTwo.questTask12",
-        "options": [
-          "zur Apotheke",
-          "zum Apotheke",
-          "nach Apotheke"
-        ],
-        "answer": "zur Apotheke"
+        "type": "input",
+        "question": "placePrepositionsFive.questTask4",
+        "correctAnswer": "an",
+        "reviewOf": "place-prep-5",
+        "reviewLand": "place-prepositions",
+        "tip": "placePrepositionsFive.questDescription"
       },
       {
         "id": 13,
-        "type": "readAndAnswer",
-        "question": "directionPrepositionsTwo.questTask13",
-        "text": "Ich bin sehr müde. Ich gehe jetzt nach Hause.",
-        "options": [
-          "nach Hause",
-          "zum Arzt",
-          "nach Berlin"
-        ],
-        "answer": "nach Hause"
+        "type": "input",
+        "question": "placePrepositions.questTask5",
+        "correctAnswer": "in",
+        "reviewOf": "place-prep-1",
+        "reviewLand": "place-prepositions",
+        "tip": "placePrepositions.questDescription"
       },
       {
         "id": 14,
@@ -517,13 +614,15 @@
           "fliegt",
           "nach",
           "Paris"
-        ]
+        ],
+        "tip": "directionPrepositionsTwo.questDescription"
       },
       {
         "id": 15,
         "type": "input",
         "question": "directionPrepositionsTwo.questTask15",
-        "correctAnswer": "nach"
+        "correctAnswer": "nach",
+        "tip": "directionPrepositionsTwo.questDescription"
       }
     ]
   },
@@ -611,6 +710,20 @@
         "translation-ro": "a locui",
         "translation-tr": "oturmak",
         "translation-uz": "yashamoq"
+      },
+      {
+        "word": "die Eltern",
+        "translation-ru": "родители",
+        "translation-en": "parents",
+        "translation-uk": "батьки",
+        "translation-pl": "rodzice",
+        "translation-es": "los padres",
+        "translation-fr": "les parents",
+        "translation-ar": "الوالدان",
+        "translation-hi": "माता-पिता",
+        "translation-ro": "părinții",
+        "translation-tr": "anne baba",
+        "translation-uz": "ota-ona"
       }
     ],
     "tasks": [
@@ -623,7 +736,8 @@
           "zum Arzt",
           "vom Arzt"
         ],
-        "answer": "beim Arzt"
+        "answer": "beim Arzt",
+        "tip": "directionPrepositionsThree.questDescription"
       },
       {
         "id": 2,
@@ -643,19 +757,22 @@
           "ich",
           "bei",
           "Oma"
-        ]
+        ],
+        "tip": "directionPrepositionsThree.questDescription"
       },
       {
         "id": 3,
         "type": "input",
         "question": "directionPrepositionsThree.questTask3",
-        "correctAnswer": "beim"
+        "correctAnswer": "beim",
+        "tip": "directionPrepositionsThree.questDescription"
       },
       {
         "id": 4,
         "type": "input",
         "question": "directionPrepositionsThree.questTask4",
-        "correctAnswer": "bei"
+        "correctAnswer": "bei",
+        "tip": "directionPrepositionsThree.questDescription"
       },
       {
         "id": 5,
@@ -666,13 +783,15 @@
           "Ich wohne zu meinen Eltern.",
           "Ich wohne bei meine Eltern."
         ],
-        "answer": "Ich wohne bei meinen Eltern."
+        "answer": "Ich wohne bei meinen Eltern.",
+        "tip": "directionPrepositionsThree.questDescription"
       },
       {
         "id": 6,
         "type": "input",
         "question": "directionPrepositionsThree.questTask6",
-        "correctAnswer": "beim"
+        "correctAnswer": "beim",
+        "tip": "directionPrepositionsThree.questDescription"
       },
       {
         "id": 7,
@@ -684,7 +803,8 @@
           "beim Friseur",
           "zu Hause"
         ],
-        "answer": "beim Zahnarzt"
+        "answer": "beim Zahnarzt",
+        "tip": "directionPrepositionsThree.questDescription"
       },
       {
         "id": 8,
@@ -695,7 +815,8 @@
           "bei mich",
           "nach mir"
         ],
-        "answer": "bei mir"
+        "answer": "bei mir",
+        "tip": "directionPrepositionsThree.questDescription"
       },
       {
         "id": 9,
@@ -717,7 +838,8 @@
           "wir",
           "bei",
           "Freunden"
-        ]
+        ],
+        "tip": "directionPrepositionsThree.questDescription"
       },
       {
         "id": 10,
@@ -728,31 +850,63 @@
           "Er geht beim Arzt.",
           "Er geht nach Arzt."
         ],
-        "answer": "Er geht zum Arzt."
+        "answer": "Er geht zum Arzt.",
+        "tip": "directionPrepositionsThree.questDescription"
       },
       {
         "id": 11,
-        "type": "input",
-        "question": "directionPrepositionsThree.questTask11",
-        "correctAnswer": "nach"
+        "type": "reorder",
+        "question": "directionPrepositionsTwo.questTask2",
+        "words": [
+          "fliegen",
+          "Spanien",
+          "Wir",
+          "nach",
+          "zu"
+        ],
+        "correctOrder": [
+          "Wir",
+          "fliegen",
+          "nach",
+          "Spanien"
+        ],
+        "reviewOf": "direction-prep-2",
+        "reviewLand": "direction-prepositions",
+        "tip": "directionPrepositionsTwo.questDescription"
       },
       {
         "id": 12,
-        "type": "input",
-        "question": "directionPrepositionsThree.questTask12",
-        "correctAnswer": "zur"
+        "type": "reorder",
+        "question": "placePrepositionsSix.questTask4",
+        "words": [
+          "liegen",
+          "Tasche",
+          "Die",
+          "meiner",
+          "in",
+          "Schlüssel",
+          "meine"
+        ],
+        "correctOrder": [
+          "Die",
+          "Schlüssel",
+          "liegen",
+          "in",
+          "meiner",
+          "Tasche"
+        ],
+        "reviewOf": "place-prep-6",
+        "reviewLand": "place-prepositions",
+        "tip": "placePrepositionsSix.questDescription"
       },
       {
         "id": 13,
-        "type": "readAndAnswer",
-        "question": "directionPrepositionsThree.questTask13",
-        "text": "Wo ist Lisa? Sie ist bei ihrer Freundin.",
-        "options": [
-          "bei ihrer Freundin",
-          "bei ihrer Oma",
-          "zu Hause"
-        ],
-        "answer": "bei ihrer Freundin"
+        "type": "input",
+        "question": "placePrepositionsTwo.questTask5",
+        "correctAnswer": "unter",
+        "reviewOf": "place-prep-2",
+        "reviewLand": "place-prepositions",
+        "tip": "placePrepositionsTwo.questDescription"
       },
       {
         "id": 14,
@@ -772,7 +926,8 @@
           "ist",
           "bei",
           "mir"
-        ]
+        ],
+        "tip": "directionPrepositionsThree.questDescription"
       },
       {
         "id": 15,
@@ -783,7 +938,8 @@
           "zu Deutschland",
           "bei Deutschland"
         ],
-        "answer": "nach Deutschland"
+        "answer": "nach Deutschland",
+        "tip": "directionPrepositionsThree.questDescription"
       }
     ]
   },
@@ -883,7 +1039,8 @@
           "nach Spanien",
           "bei Spanien"
         ],
-        "answer": "aus Spanien"
+        "answer": "aus Spanien",
+        "tip": "directionPrepositionsFour.questDescription"
       },
       {
         "id": 2,
@@ -903,19 +1060,22 @@
           "aus",
           "der",
           "Türkei"
-        ]
+        ],
+        "tip": "directionPrepositionsFour.questDescription"
       },
       {
         "id": 3,
         "type": "input",
         "question": "directionPrepositionsFour.questTask3",
-        "correctAnswer": "aus"
+        "correctAnswer": "aus",
+        "tip": "directionPrepositionsFour.questDescription"
       },
       {
         "id": 4,
         "type": "input",
         "question": "directionPrepositionsFour.questTask4",
-        "correctAnswer": "aus"
+        "correctAnswer": "aus",
+        "tip": "directionPrepositionsFour.questDescription"
       },
       {
         "id": 5,
@@ -926,7 +1086,8 @@
           "Wohin kommst du?",
           "Wo kommst du?"
         ],
-        "answer": "Woher kommst du?"
+        "answer": "Woher kommst du?",
+        "tip": "directionPrepositionsFour.questDescription"
       },
       {
         "id": 6,
@@ -948,7 +1109,8 @@
           "dem",
           "Bus",
           "aus"
-        ]
+        ],
+        "tip": "directionPrepositionsFour.questDescription"
       },
       {
         "id": 7,
@@ -960,13 +1122,15 @@
           "aus Berlin",
           "aus Spanien"
         ],
-        "answer": "aus Italien"
+        "answer": "aus Italien",
+        "tip": "directionPrepositionsFour.questDescription"
       },
       {
         "id": 8,
         "type": "input",
         "question": "directionPrepositionsFour.questTask8",
-        "correctAnswer": "der"
+        "correctAnswer": "der",
+        "tip": "directionPrepositionsFour.questDescription"
       },
       {
         "id": 9,
@@ -977,7 +1141,8 @@
           "nach der Küche",
           "bei der Küche"
         ],
-        "answer": "aus der Küche"
+        "answer": "aus der Küche",
+        "tip": "directionPrepositionsFour.questDescription"
       },
       {
         "id": 10,
@@ -988,31 +1153,49 @@
           "Mein Kollege kommt nach Polen.",
           "Mein Kollege kommt bei Polen."
         ],
-        "answer": "Mein Kollege kommt aus Polen."
+        "answer": "Mein Kollege kommt aus Polen.",
+        "tip": "directionPrepositionsFour.questDescription"
       },
       {
         "id": 11,
-        "type": "input",
-        "question": "directionPrepositionsFour.questTask11",
-        "correctAnswer": "beim"
+        "type": "reorder",
+        "question": "directionPrepositionsThree.questTask2",
+        "words": [
+          "bin",
+          "Oma",
+          "Heute",
+          "bei",
+          "ich",
+          "zu"
+        ],
+        "correctOrder": [
+          "Heute",
+          "bin",
+          "ich",
+          "bei",
+          "Oma"
+        ],
+        "reviewOf": "direction-prep-3",
+        "reviewLand": "direction-prepositions",
+        "tip": "directionPrepositionsThree.questDescription"
       },
       {
         "id": 12,
         "type": "input",
-        "question": "directionPrepositionsFour.questTask12",
-        "correctAnswer": "nach"
+        "question": "directionPrepositions.questTask3",
+        "correctAnswer": "zur",
+        "reviewOf": "direction-prep-1",
+        "reviewLand": "direction-prepositions",
+        "tip": "directionPrepositions.questDescription"
       },
       {
         "id": 13,
-        "type": "readAndAnswer",
-        "question": "directionPrepositionsFour.questTask13",
-        "text": "Tom nimmt das Handy aus der Jacke und ruft seine Mutter an.",
-        "options": [
-          "aus der Jacke",
-          "aus der Tasche",
-          "aus dem Auto"
-        ],
-        "answer": "aus der Jacke"
+        "type": "input",
+        "question": "placePrepositionsThree.questTask5",
+        "correctAnswer": "vor",
+        "reviewOf": "place-prep-3",
+        "reviewLand": "place-prepositions",
+        "tip": "placePrepositionsThree.questDescription"
       },
       {
         "id": 14,
@@ -1032,13 +1215,15 @@
           "kommt",
           "aus",
           "Brasilien"
-        ]
+        ],
+        "tip": "directionPrepositionsFour.questDescription"
       },
       {
         "id": 15,
         "type": "input",
         "question": "directionPrepositionsFour.questTask15",
-        "correctAnswer": "zur"
+        "correctAnswer": "zur",
+        "tip": "directionPrepositionsFour.questDescription"
       }
     ]
   },
@@ -1138,7 +1323,8 @@
           "zum Arzt",
           "beim Arzt"
         ],
-        "answer": "vom Arzt"
+        "answer": "vom Arzt",
+        "tip": "directionPrepositionsFive.questDescription"
       },
       {
         "id": 2,
@@ -1158,19 +1344,22 @@
           "von",
           "der",
           "Arbeit"
-        ]
+        ],
+        "tip": "directionPrepositionsFive.questDescription"
       },
       {
         "id": 3,
         "type": "input",
         "question": "directionPrepositionsFive.questTask3",
-        "correctAnswer": "vom"
+        "correctAnswer": "vom",
+        "tip": "directionPrepositionsFive.questDescription"
       },
       {
         "id": 4,
         "type": "input",
         "question": "directionPrepositionsFive.questTask4",
-        "correctAnswer": "von"
+        "correctAnswer": "von",
+        "tip": "directionPrepositionsFive.questDescription"
       },
       {
         "id": 5,
@@ -1181,7 +1370,8 @@
           "Der Brief ist aus meinem Freund.",
           "Der Brief ist bei meinem Freund."
         ],
-        "answer": "Der Brief ist von meinem Freund."
+        "answer": "Der Brief ist von meinem Freund.",
+        "tip": "directionPrepositionsFive.questDescription"
       },
       {
         "id": 6,
@@ -1205,7 +1395,8 @@
           "Berlin",
           "nach",
           "München"
-        ]
+        ],
+        "tip": "directionPrepositionsFive.questDescription"
       },
       {
         "id": 7,
@@ -1217,13 +1408,15 @@
           "vom Arzt",
           "von der Arbeit"
         ],
-        "answer": "vom Supermarkt"
+        "answer": "vom Supermarkt",
+        "tip": "directionPrepositionsFive.questDescription"
       },
       {
         "id": 8,
         "type": "input",
         "question": "directionPrepositionsFive.questTask8",
-        "correctAnswer": "von"
+        "correctAnswer": "von",
+        "tip": "directionPrepositionsFive.questDescription"
       },
       {
         "id": 9,
@@ -1234,7 +1427,8 @@
           "zum Bahnhof",
           "beim Bahnhof"
         ],
-        "answer": "vom Bahnhof"
+        "answer": "vom Bahnhof",
+        "tip": "directionPrepositionsFive.questDescription"
       },
       {
         "id": 10,
@@ -1245,31 +1439,49 @@
           "Ich nehme das Buch aus dem Tisch.",
           "Ich nehme das Buch zum Tisch."
         ],
-        "answer": "Ich nehme das Buch vom Tisch."
+        "answer": "Ich nehme das Buch vom Tisch.",
+        "tip": "directionPrepositionsFive.questDescription"
       },
       {
         "id": 11,
-        "type": "input",
-        "question": "directionPrepositionsFive.questTask11",
-        "correctAnswer": "aus"
+        "type": "reorder",
+        "question": "directionPrepositionsFour.questTask2",
+        "words": [
+          "komme",
+          "Türkei",
+          "Ich",
+          "der",
+          "aus",
+          "nach"
+        ],
+        "correctOrder": [
+          "Ich",
+          "komme",
+          "aus",
+          "der",
+          "Türkei"
+        ],
+        "reviewOf": "direction-prep-4",
+        "reviewLand": "direction-prepositions",
+        "tip": "directionPrepositionsFour.questDescription"
       },
       {
         "id": 12,
         "type": "input",
-        "question": "directionPrepositionsFive.questTask12",
-        "correctAnswer": "beim"
+        "question": "directionPrepositionsTwo.questTask3",
+        "correctAnswer": "nach",
+        "reviewOf": "direction-prep-2",
+        "reviewLand": "direction-prepositions",
+        "tip": "directionPrepositionsTwo.questDescription"
       },
       {
         "id": 13,
-        "type": "readAndAnswer",
-        "question": "directionPrepositionsFive.questTask13",
-        "text": "Mein Bruder kommt um sechs Uhr von der Schule nach Hause.",
-        "options": [
-          "von der Schule",
-          "von der Arbeit",
-          "vom Bahnhof"
-        ],
-        "answer": "von der Schule"
+        "type": "input",
+        "question": "placePrepositionsFour.questTask5",
+        "correctAnswer": "neben",
+        "reviewOf": "place-prep-4",
+        "reviewLand": "place-prepositions",
+        "tip": "placePrepositionsFour.questDescription"
       },
       {
         "id": 14,
@@ -1289,13 +1501,15 @@
           "ist",
           "vom",
           "Chef"
-        ]
+        ],
+        "tip": "directionPrepositionsFive.questDescription"
       },
       {
         "id": 15,
         "type": "input",
         "question": "directionPrepositionsFive.questTask15",
-        "correctAnswer": "zum"
+        "correctAnswer": "zum",
+        "tip": "directionPrepositionsFive.questDescription"
       }
     ]
   },
@@ -1395,7 +1609,8 @@
           "mit den Bus",
           "zum Bus"
         ],
-        "answer": "mit dem Bus"
+        "answer": "mit dem Bus",
+        "tip": "directionPrepositionsSix.questDescription"
       },
       {
         "id": 2,
@@ -1415,19 +1630,22 @@
           "mit",
           "dem",
           "Fahrrad"
-        ]
+        ],
+        "tip": "directionPrepositionsSix.questDescription"
       },
       {
         "id": 3,
         "type": "input",
         "question": "directionPrepositionsSix.questTask3",
-        "correctAnswer": "dem"
+        "correctAnswer": "dem",
+        "tip": "directionPrepositionsSix.questDescription"
       },
       {
         "id": 4,
         "type": "input",
         "question": "directionPrepositionsSix.questTask4",
-        "correctAnswer": "mit"
+        "correctAnswer": "mit",
+        "tip": "directionPrepositionsSix.questDescription"
       },
       {
         "id": 5,
@@ -1438,13 +1656,15 @@
           "Er spricht mit den Lehrer.",
           "Er spricht mit der Lehrer."
         ],
-        "answer": "Er spricht mit dem Lehrer."
+        "answer": "Er spricht mit dem Lehrer.",
+        "tip": "directionPrepositionsSix.questDescription"
       },
       {
         "id": 6,
         "type": "input",
         "question": "directionPrepositionsSix.questTask6",
-        "correctAnswer": "dem"
+        "correctAnswer": "dem",
+        "tip": "directionPrepositionsSix.questDescription"
       },
       {
         "id": 7,
@@ -1456,7 +1676,8 @@
           "mit dem Bus",
           "mit dem Auto"
         ],
-        "answer": "mit der U-Bahn"
+        "answer": "mit der U-Bahn",
+        "tip": "directionPrepositionsSix.questDescription"
       },
       {
         "id": 8,
@@ -1467,7 +1688,8 @@
           "mit meinen Bruder",
           "mit mein Bruder"
         ],
-        "answer": "mit meinem Bruder"
+        "answer": "mit meinem Bruder",
+        "tip": "directionPrepositionsSix.questDescription"
       },
       {
         "id": 9,
@@ -1487,37 +1709,56 @@
           "mit",
           "dem",
           "Flugzeug"
-        ]
+        ],
+        "tip": "directionPrepositionsSix.questDescription"
       },
       {
         "id": 10,
         "type": "input",
         "question": "directionPrepositionsSix.questTask10",
-        "correctAnswer": "er"
+        "correctAnswer": "er",
+        "tip": "directionPrepositionsSix.questDescription"
       },
       {
         "id": 11,
-        "type": "input",
-        "question": "directionPrepositionsSix.questTask11",
-        "correctAnswer": "vom"
+        "type": "reorder",
+        "question": "directionPrepositionsFive.questTask2",
+        "words": [
+          "komme",
+          "Arbeit",
+          "Ich",
+          "der",
+          "von",
+          "zur"
+        ],
+        "correctOrder": [
+          "Ich",
+          "komme",
+          "von",
+          "der",
+          "Arbeit"
+        ],
+        "reviewOf": "direction-prep-5",
+        "reviewLand": "direction-prepositions",
+        "tip": "directionPrepositionsFive.questDescription"
       },
       {
         "id": 12,
         "type": "input",
-        "question": "directionPrepositionsSix.questTask12",
-        "correctAnswer": "aus"
+        "question": "directionPrepositionsThree.questTask3",
+        "correctAnswer": "beim",
+        "reviewOf": "direction-prep-3",
+        "reviewLand": "direction-prepositions",
+        "tip": "directionPrepositionsThree.questDescription"
       },
       {
         "id": 13,
-        "type": "readAndAnswer",
-        "question": "directionPrepositionsSix.questTask13",
-        "text": "Am Wochenende fahre ich mit meinen Eltern ans Meer.",
-        "options": [
-          "mit meinen Eltern",
-          "mit meinem Bruder",
-          "mit meiner Freundin"
-        ],
-        "answer": "mit meinen Eltern"
+        "type": "input",
+        "question": "placePrepositionsFive.questTask5",
+        "correctAnswer": "im",
+        "reviewOf": "place-prep-5",
+        "reviewLand": "place-prepositions",
+        "tip": "placePrepositionsFive.questDescription"
       },
       {
         "id": 14,
@@ -1528,13 +1769,15 @@
           "Ich bezahle mit die Karte.",
           "Ich bezahle von der Karte."
         ],
-        "answer": "Ich bezahle mit der Karte."
+        "answer": "Ich bezahle mit der Karte.",
+        "tip": "directionPrepositionsSix.questDescription"
       },
       {
         "id": 15,
         "type": "input",
         "question": "directionPrepositionsSix.questTask15",
-        "correctAnswer": "beim"
+        "correctAnswer": "beim",
+        "tip": "directionPrepositionsSix.questDescription"
       }
     ]
   },
@@ -1568,20 +1811,6 @@
         "translation-uz": "uyda"
       },
       {
-        "word": "die Tante",
-        "translation-ru": "тётя",
-        "translation-en": "aunt",
-        "translation-uk": "тітка",
-        "translation-pl": "ciocia",
-        "translation-es": "la tía",
-        "translation-fr": "la tante",
-        "translation-ar": "العمة",
-        "translation-hi": "चाची",
-        "translation-ro": "mătușa",
-        "translation-tr": "teyze",
-        "translation-uz": "xola"
-      },
-      {
         "word": "Frankreich",
         "translation-ru": "Франция",
         "translation-en": "France",
@@ -1596,20 +1825,6 @@
         "translation-uz": "Fransiya"
       },
       {
-        "word": "der Kühlschrank",
-        "translation-ru": "холодильник",
-        "translation-en": "fridge",
-        "translation-uk": "холодильник",
-        "translation-pl": "lodówka",
-        "translation-es": "la nevera",
-        "translation-fr": "le frigo",
-        "translation-ar": "الثلاجة",
-        "translation-hi": "फ़्रिज",
-        "translation-ro": "frigiderul",
-        "translation-tr": "buzdolabı",
-        "translation-uz": "muzlatgich"
-      },
-      {
         "word": "die Straßenbahn",
         "translation-ru": "трамвай",
         "translation-en": "tram",
@@ -1622,6 +1837,34 @@
         "translation-ro": "tramvaiul",
         "translation-tr": "tramvay",
         "translation-uz": "tramvay"
+      },
+      {
+        "word": "der Markt",
+        "translation-ru": "рынок",
+        "translation-en": "market",
+        "translation-uk": "ринок",
+        "translation-pl": "targ",
+        "translation-es": "el mercado",
+        "translation-fr": "le marché",
+        "translation-ar": "السوق",
+        "translation-hi": "बाज़ार",
+        "translation-ro": "piața",
+        "translation-tr": "pazar",
+        "translation-uz": "bozor"
+      },
+      {
+        "word": "das Handy",
+        "translation-ru": "мобильный телефон",
+        "translation-en": "mobile phone",
+        "translation-uk": "мобільний телефон",
+        "translation-pl": "komórka",
+        "translation-es": "el móvil",
+        "translation-fr": "le portable",
+        "translation-tr": "cep telefonu",
+        "translation-ro": "mobilul",
+        "translation-uz": "mobil telefon",
+        "translation-hi": "मोबाइल",
+        "translation-ar": "الهاتف المحمول"
       }
     ],
     "tasks": [
@@ -1634,7 +1877,8 @@
           "Ich gehe beim Arzt.",
           "Ich gehe vom Arzt."
         ],
-        "answer": "Ich gehe zum Arzt."
+        "answer": "Ich gehe zum Arzt.",
+        "tip": "directionPrepositionsSeven.questDescription"
       },
       {
         "id": 2,
@@ -1645,7 +1889,8 @@
           "Ich bin zum Arzt.",
           "Ich bin vom Arzt."
         ],
-        "answer": "Ich bin beim Arzt."
+        "answer": "Ich bin beim Arzt.",
+        "tip": "directionPrepositionsSeven.questDescription"
       },
       {
         "id": 3,
@@ -1656,19 +1901,22 @@
           "Ich komme zum Arzt.",
           "Ich komme beim Arzt."
         ],
-        "answer": "Ich komme vom Arzt."
+        "answer": "Ich komme vom Arzt.",
+        "tip": "directionPrepositionsSeven.questDescription"
       },
       {
         "id": 4,
         "type": "input",
         "question": "directionPrepositionsSeven.questTask4",
-        "correctAnswer": "nach"
+        "correctAnswer": "nach",
+        "tip": "directionPrepositionsSeven.questDescription"
       },
       {
         "id": 5,
         "type": "input",
         "question": "directionPrepositionsSeven.questTask5",
-        "correctAnswer": "zu"
+        "correctAnswer": "zu",
+        "tip": "directionPrepositionsSeven.questDescription"
       },
       {
         "id": 6,
@@ -1686,7 +1934,8 @@
           "du",
           "zu",
           "Hause"
-        ]
+        ],
+        "tip": "directionPrepositionsSeven.questDescription"
       },
       {
         "id": 7,
@@ -1698,13 +1947,15 @@
           "nach Hause",
           "zum Arzt"
         ],
-        "answer": "zur Arbeit"
+        "answer": "zur Arbeit",
+        "tip": "directionPrepositionsSeven.questDescription"
       },
       {
         "id": 8,
         "type": "input",
         "question": "directionPrepositionsSeven.questTask8",
-        "correctAnswer": "zum"
+        "correctAnswer": "zum",
+        "tip": "directionPrepositionsSeven.questDescription"
       },
       {
         "id": 9,
@@ -1715,7 +1966,8 @@
           "nach Frankreich",
           "bei Frankreich"
         ],
-        "answer": "aus Frankreich"
+        "answer": "aus Frankreich",
+        "tip": "directionPrepositionsSeven.questDescription"
       },
       {
         "id": 10,
@@ -1735,48 +1987,575 @@
           "bei",
           "seiner",
           "Schwester"
-        ]
+        ],
+        "tip": "directionPrepositionsSeven.questDescription"
       },
       {
         "id": 11,
-        "type": "select",
-        "question": "directionPrepositionsSeven.questTask11",
-        "options": [
-          "Ich fahre nach Wien.",
-          "Ich fahre zu Wien.",
-          "Ich fahre bei Wien."
+        "type": "reorder",
+        "question": "directionPrepositionsSix.questTask2",
+        "words": [
+          "fahre",
+          "Fahrrad",
+          "Ich",
+          "dem",
+          "mit",
+          "den"
         ],
-        "answer": "Ich fahre nach Wien."
+        "correctOrder": [
+          "Ich",
+          "fahre",
+          "mit",
+          "dem",
+          "Fahrrad"
+        ],
+        "reviewOf": "direction-prep-6",
+        "reviewLand": "direction-prepositions",
+        "tip": "directionPrepositionsSix.questDescription"
       },
       {
         "id": 12,
         "type": "input",
-        "question": "directionPrepositionsSeven.questTask12",
-        "correctAnswer": "aus"
+        "question": "directionPrepositionsFour.questTask3",
+        "correctAnswer": "aus",
+        "reviewOf": "direction-prep-4",
+        "reviewLand": "direction-prepositions",
+        "tip": "directionPrepositionsFour.questDescription"
       },
       {
         "id": 13,
-        "type": "readAndAnswer",
-        "question": "directionPrepositionsSeven.questTask13",
-        "text": "Sara wohnt bei ihrer Tante. Am Wochenende fährt sie zu ihren Eltern.",
-        "options": [
-          "bei ihrer Tante",
-          "bei ihren Eltern",
-          "bei ihrer Oma"
-        ],
-        "answer": "bei ihrer Tante"
+        "type": "input",
+        "question": "placePrepositionsSix.questTask5",
+        "correctAnswer": "er",
+        "reviewOf": "place-prep-6",
+        "reviewLand": "place-prepositions",
+        "tip": "placePrepositionsSix.questDescription"
       },
       {
         "id": 14,
         "type": "input",
         "question": "directionPrepositionsSeven.questTask14",
-        "correctAnswer": "zum"
+        "correctAnswer": "zum",
+        "tip": "directionPrepositionsSeven.questDescription"
       },
       {
         "id": 15,
         "type": "input",
         "question": "directionPrepositionsSeven.questTask15",
-        "correctAnswer": "der"
+        "correctAnswer": "der",
+        "tip": "directionPrepositionsSeven.questDescription"
+      }
+    ]
+  },
+  {
+    "questId": "direction-prep-9",
+    "title": "directionPrepositionsExtraOne.questTitle",
+    "progress": "0/15",
+    "description": "directionPrepositionsExtraOne.questDescription",
+    "conditions": {
+      "goal": "directionPrepositionsExtraOne.questGoal",
+      "minCorrect": 15,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
+    "vocabulary": [
+      {
+        "word": "der Bahnhof",
+        "translation-ru": "вокзал",
+        "translation-en": "station",
+        "translation-uk": "вокзал",
+        "translation-pl": "dworzec",
+        "translation-es": "la estación",
+        "translation-fr": "la gare",
+        "translation-tr": "gar",
+        "translation-ro": "gara",
+        "translation-uz": "vokzal",
+        "translation-hi": "स्टेशन",
+        "translation-ar": "المحطة"
+      },
+      {
+        "word": "die Fahrkarte",
+        "translation-ru": "билет",
+        "translation-en": "ticket",
+        "translation-uk": "квиток",
+        "translation-pl": "bilet",
+        "translation-es": "el billete",
+        "translation-fr": "le billet",
+        "translation-tr": "bilet",
+        "translation-ro": "biletul",
+        "translation-uz": "chipta",
+        "translation-hi": "टिकट",
+        "translation-ar": "التذكرة"
+      },
+      {
+        "word": "das Dorf",
+        "translation-ru": "деревня",
+        "translation-en": "village",
+        "translation-uk": "село",
+        "translation-pl": "wieś",
+        "translation-es": "el pueblo",
+        "translation-fr": "le village",
+        "translation-tr": "köy",
+        "translation-ro": "satul",
+        "translation-uz": "qishloq",
+        "translation-hi": "गाँव",
+        "translation-ar": "القرية"
+      },
+      {
+        "word": "der Opa",
+        "translation-ru": "дедушка",
+        "translation-en": "grandpa",
+        "translation-uk": "дідусь",
+        "translation-pl": "dziadek",
+        "translation-es": "el abuelo",
+        "translation-fr": "papi",
+        "translation-tr": "dede",
+        "translation-ro": "bunicul",
+        "translation-uz": "bobo",
+        "translation-hi": "दादा",
+        "translation-ar": "الجد"
+      },
+      {
+        "word": "der Koffer",
+        "translation-ru": "чемодан",
+        "translation-en": "suitcase",
+        "translation-uk": "валіза",
+        "translation-pl": "walizka",
+        "translation-es": "la maleta",
+        "translation-fr": "la valise",
+        "translation-tr": "bavul",
+        "translation-ro": "valiza",
+        "translation-uz": "chamadon",
+        "translation-hi": "सूटकेस",
+        "translation-ar": "الحقيبة"
+      }
+    ],
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "directionPrepositionsExtraOne.questTask1",
+        "options": [
+          "Am Samstag fahren wir zur Oma.",
+          "Am Samstag fahren wir zum Oma.",
+          "Am Samstag fahren wir nach Oma."
+        ],
+        "answer": "Am Samstag fahren wir zur Oma.",
+        "tip": "directionPrepositionsExtraOne.questDescription"
+      },
+      {
+        "id": 2,
+        "type": "input",
+        "question": "directionPrepositionsExtraOne.questTask2",
+        "correctAnswer": "mit",
+        "tip": "directionPrepositionsExtraOne.questDescription"
+      },
+      {
+        "id": 3,
+        "type": "input",
+        "question": "directionPrepositionsExtraOne.questTask3",
+        "correctAnswer": "zum",
+        "tip": "directionPrepositionsExtraOne.questDescription"
+      },
+      {
+        "id": 4,
+        "type": "reorder",
+        "question": "directionPrepositionsExtraOne.questTask4",
+        "words": [
+          "kleinen",
+          "einem",
+          "Dorf",
+          "nach",
+          "wohnt",
+          "in",
+          "Oma"
+        ],
+        "correctOrder": [
+          "Oma",
+          "wohnt",
+          "in",
+          "einem",
+          "kleinen",
+          "Dorf"
+        ],
+        "tip": "directionPrepositionsExtraOne.questDescription"
+      },
+      {
+        "id": 5,
+        "type": "select",
+        "question": "directionPrepositionsExtraOne.questTask5",
+        "options": [
+          "Wir wohnen eine Woche zu Oma und Opa.",
+          "Wir wohnen eine Woche bei die Oma und Opa.",
+          "Wir wohnen eine Woche bei Oma und Opa."
+        ],
+        "answer": "Wir wohnen eine Woche bei Oma und Opa.",
+        "tip": "directionPrepositionsExtraOne.questDescription"
+      },
+      {
+        "id": 6,
+        "type": "input",
+        "question": "directionPrepositionsExtraOne.questTask6",
+        "correctAnswer": "vom",
+        "tip": "directionPrepositionsExtraOne.questDescription"
+      },
+      {
+        "id": 7,
+        "type": "readAndAnswer",
+        "question": "directionPrepositionsExtraOne.questTask7",
+        "text": "Familie Schulz fährt im Sommer zur Oma. Oma wohnt in einem Dorf bei München. Sie fahren mit dem Zug nach München. Dort holt Opa sie mit dem Auto vom Bahnhof ab.",
+        "options": [
+          "mit dem Fahrrad",
+          "mit dem Flugzeug",
+          "mit dem Zug und dem Auto"
+        ],
+        "answer": "mit dem Zug und dem Auto",
+        "tip": "directionPrepositionsExtraOne.questDescription"
+      },
+      {
+        "id": 8,
+        "type": "input",
+        "question": "directionPrepositionsExtraOne.questTask8",
+        "correctAnswer": "nach",
+        "tip": "directionPrepositionsExtraOne.questDescription"
+      },
+      {
+        "id": 9,
+        "type": "input",
+        "question": "directionPrepositionsExtraOne.questTask9",
+        "correctAnswer": "aus",
+        "tip": "directionPrepositionsExtraOne.questDescription"
+      },
+      {
+        "id": 10,
+        "type": "reorder",
+        "question": "directionPrepositionsExtraOne.questTask10",
+        "words": [
+          "nach",
+          "Hause",
+          "wir",
+          "Abend",
+          "Am",
+          "zu",
+          "fahren"
+        ],
+        "correctOrder": [
+          "Am",
+          "Abend",
+          "fahren",
+          "wir",
+          "nach",
+          "Hause"
+        ],
+        "tip": "directionPrepositionsExtraOne.questDescription"
+      },
+      {
+        "id": 11,
+        "type": "select",
+        "question": "directionPrepositionsExtraOne.questTask11",
+        "options": [
+          "Die Fahrkarte kaufe ich im Bahnhof gekauft.",
+          "Die Fahrkarte kaufe ich am Bahnhof.",
+          "Die Fahrkarte kaufe ich zum Bahnhof."
+        ],
+        "answer": "Die Fahrkarte kaufe ich am Bahnhof.",
+        "tip": "directionPrepositionsExtraOne.questDescription"
+      },
+      {
+        "id": 12,
+        "type": "input",
+        "question": "directionPrepositionsExtraOne.questTask12",
+        "correctAnswer": "zu",
+        "tip": "directionPrepositionsExtraOne.questDescription"
+      },
+      {
+        "id": 13,
+        "type": "input",
+        "question": "directionPrepositionsExtraOne.questTask13",
+        "correctAnswer": "von",
+        "tip": "directionPrepositionsExtraOne.questDescription"
+      },
+      {
+        "id": 14,
+        "type": "input",
+        "question": "directionPrepositionsExtraOne.questTask14",
+        "correctAnswer": "der",
+        "tip": "directionPrepositionsExtraOne.questDescription"
+      },
+      {
+        "id": 15,
+        "type": "input",
+        "question": "directionPrepositionsExtraOne.questTask15",
+        "correctAnswer": "gekauft",
+        "tip": "directionPrepositionsExtraOne.questDescription"
+      }
+    ]
+  },
+  {
+    "questId": "direction-prep-10",
+    "title": "directionPrepositionsExtraTwo.questTitle",
+    "progress": "0/15",
+    "description": "directionPrepositionsExtraTwo.questDescription",
+    "conditions": {
+      "goal": "directionPrepositionsExtraTwo.questGoal",
+      "minCorrect": 15,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
+    "vocabulary": [
+      {
+        "word": "die Arbeit",
+        "translation-ru": "работа",
+        "translation-en": "work",
+        "translation-uk": "робота",
+        "translation-pl": "praca",
+        "translation-es": "el trabajo",
+        "translation-fr": "le travail",
+        "translation-tr": "iş",
+        "translation-ro": "munca",
+        "translation-uz": "ish",
+        "translation-hi": "काम",
+        "translation-ar": "العمل"
+      },
+      {
+        "word": "der Supermarkt",
+        "translation-ru": "супермаркет",
+        "translation-en": "supermarket",
+        "translation-uk": "супермаркет",
+        "translation-pl": "supermarket",
+        "translation-es": "el supermercado",
+        "translation-fr": "le supermarché",
+        "translation-tr": "süpermarket",
+        "translation-ro": "supermarketul",
+        "translation-uz": "supermarket",
+        "translation-hi": "सुपरमार्केट",
+        "translation-ar": "السوبرماركت"
+      },
+      {
+        "word": "der Kindergarten",
+        "translation-ru": "детский сад",
+        "translation-en": "nursery, kindergarten",
+        "translation-uk": "дитячий садок",
+        "translation-pl": "przedszkole",
+        "translation-es": "la guardería",
+        "translation-fr": "la maternelle",
+        "translation-tr": "anaokulu",
+        "translation-ro": "grădinița",
+        "translation-uz": "bolalar bog‘chasi",
+        "translation-hi": "किंडरगार्टन",
+        "translation-ar": "الروضة"
+      },
+      {
+        "word": "die Freundin",
+        "translation-ru": "подруга",
+        "translation-en": "friend (female)",
+        "translation-uk": "подруга",
+        "translation-pl": "przyjaciółka",
+        "translation-es": "la amiga",
+        "translation-fr": "l’amie",
+        "translation-tr": "kız arkadaş",
+        "translation-ro": "prietena",
+        "translation-uz": "dugona",
+        "translation-hi": "सहेली",
+        "translation-ar": "الصديقة"
+      },
+      {
+        "word": "das Büro",
+        "translation-ru": "офис",
+        "translation-en": "office",
+        "translation-uk": "офіс",
+        "translation-pl": "biuro",
+        "translation-es": "la oficina",
+        "translation-fr": "le bureau",
+        "translation-tr": "ofis",
+        "translation-ro": "biroul",
+        "translation-uz": "ofis",
+        "translation-hi": "दफ़्तर",
+        "translation-ar": "المكتب"
+      },
+      {
+        "word": "der Kollege",
+        "translation-ru": "коллега",
+        "translation-en": "colleague",
+        "translation-uk": "колега",
+        "translation-pl": "kolega",
+        "translation-es": "el compañero",
+        "translation-fr": "le collègue",
+        "translation-tr": "iş arkadaşı",
+        "translation-ro": "colegul",
+        "translation-uz": "hamkasb",
+        "translation-hi": "सहकर्मी",
+        "translation-ar": "الزميل"
+      }
+    ],
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "directionPrepositionsExtraTwo.questTask1",
+        "options": [
+          "Am Morgen fahre ich mit dem Bus zur Arbeit.",
+          "Am Morgen fahre ich mit dem Bus zum Arbeit.",
+          "Am Morgen fahre ich mit den Bus zur Arbeit."
+        ],
+        "answer": "Am Morgen fahre ich mit dem Bus zur Arbeit.",
+        "tip": "directionPrepositionsExtraTwo.questDescription"
+      },
+      {
+        "id": 2,
+        "type": "input",
+        "question": "directionPrepositionsExtraTwo.questTask2",
+        "correctAnswer": "zum",
+        "tip": "directionPrepositionsExtraTwo.questDescription"
+      },
+      {
+        "id": 3,
+        "type": "input",
+        "question": "directionPrepositionsExtraTwo.questTask3",
+        "correctAnswer": "im",
+        "tip": "directionPrepositionsExtraTwo.questDescription"
+      },
+      {
+        "id": 4,
+        "type": "reorder",
+        "question": "directionPrepositionsExtraTwo.questTask4",
+        "words": [
+          "Arbeit",
+          "Supermarkt",
+          "ich",
+          "der",
+          "gehe",
+          "zum",
+          "nach",
+          "Nach"
+        ],
+        "correctOrder": [
+          "Nach",
+          "der",
+          "Arbeit",
+          "gehe",
+          "ich",
+          "zum",
+          "Supermarkt"
+        ],
+        "tip": "directionPrepositionsExtraTwo.questDescription"
+      },
+      {
+        "id": 5,
+        "type": "select",
+        "question": "directionPrepositionsExtraTwo.questTask5",
+        "options": [
+          "Am Abend bin ich bei meine Freundin.",
+          "Am Abend bin ich zu meiner Freundin.",
+          "Am Abend bin ich bei meiner Freundin."
+        ],
+        "answer": "Am Abend bin ich bei meiner Freundin.",
+        "tip": "directionPrepositionsExtraTwo.questDescription"
+      },
+      {
+        "id": 6,
+        "type": "input",
+        "question": "directionPrepositionsExtraTwo.questTask6",
+        "correctAnswer": "von",
+        "tip": "directionPrepositionsExtraTwo.questDescription"
+      },
+      {
+        "id": 7,
+        "type": "readAndAnswer",
+        "question": "directionPrepositionsExtraTwo.questTask7",
+        "text": "Anna steht um sechs auf. Sie fährt mit dem Fahrrad zur Arbeit. Am Mittag ist sie beim Arzt, denn sie hat einen Termin. Am Abend kommt sie müde nach Hause.",
+        "options": [
+          "zu Hause",
+          "im Büro",
+          "beim Arzt"
+        ],
+        "answer": "beim Arzt",
+        "tip": "directionPrepositionsExtraTwo.questDescription"
+      },
+      {
+        "id": 8,
+        "type": "input",
+        "question": "directionPrepositionsExtraTwo.questTask8",
+        "correctAnswer": "Hause",
+        "tip": "directionPrepositionsExtraTwo.questDescription"
+      },
+      {
+        "id": 9,
+        "type": "input",
+        "question": "directionPrepositionsExtraTwo.questTask9",
+        "correctAnswer": "von",
+        "tip": "directionPrepositionsExtraTwo.questDescription"
+      },
+      {
+        "id": 10,
+        "type": "reorder",
+        "question": "directionPrepositionsExtraTwo.questTask10",
+        "words": [
+          "ins",
+          "gehe",
+          "meinen",
+          "Café",
+          "Kollegen",
+          "meinem",
+          "Ich",
+          "mit"
+        ],
+        "correctOrder": [
+          "Ich",
+          "gehe",
+          "mit",
+          "meinem",
+          "Kollegen",
+          "ins",
+          "Café"
+        ],
+        "tip": "directionPrepositionsExtraTwo.questDescription"
+      },
+      {
+        "id": 11,
+        "type": "select",
+        "question": "directionPrepositionsExtraTwo.questTask11",
+        "options": [
+          "Mein Bruder arbeitet bei einem Arzt.",
+          "Mein Bruder arbeitet bei einen Arzt.",
+          "Mein Bruder arbeitet zu einem Arzt."
+        ],
+        "answer": "Mein Bruder arbeitet bei einem Arzt.",
+        "tip": "directionPrepositionsExtraTwo.questDescription"
+      },
+      {
+        "id": 12,
+        "type": "input",
+        "question": "directionPrepositionsExtraTwo.questTask12",
+        "correctAnswer": "nach",
+        "tip": "directionPrepositionsExtraTwo.questDescription"
+      },
+      {
+        "id": 13,
+        "type": "input",
+        "question": "directionPrepositionsExtraTwo.questTask13",
+        "correctAnswer": "aus",
+        "tip": "directionPrepositionsExtraTwo.questDescription"
+      },
+      {
+        "id": 14,
+        "type": "input",
+        "question": "directionPrepositionsExtraTwo.questTask14",
+        "correctAnswer": "getrunken",
+        "tip": "directionPrepositionsExtraTwo.questDescription"
+      },
+      {
+        "id": 15,
+        "type": "input",
+        "question": "directionPrepositionsExtraTwo.questTask15",
+        "correctAnswer": "unter",
+        "tip": "directionPrepositionsExtraTwo.questDescription"
       }
     ]
   },
@@ -1824,34 +2603,6 @@
         "translation-uz": "kurs"
       },
       {
-        "word": "schenken",
-        "translation-ru": "дарить",
-        "translation-en": "to give as a present",
-        "translation-uk": "дарувати",
-        "translation-pl": "dawać w prezencie",
-        "translation-es": "regalar",
-        "translation-fr": "offrir",
-        "translation-ar": "يُهدي",
-        "translation-hi": "तोहफ़ा देना",
-        "translation-ro": "a dărui",
-        "translation-tr": "hediye etmek",
-        "translation-uz": "sovg‘a qilmoq"
-      },
-      {
-        "word": "die Blumen",
-        "translation-ru": "цветы",
-        "translation-en": "flowers",
-        "translation-uk": "квіти",
-        "translation-pl": "kwiaty",
-        "translation-es": "las flores",
-        "translation-fr": "les fleurs",
-        "translation-ar": "الزهور",
-        "translation-hi": "फूल",
-        "translation-ro": "florile",
-        "translation-tr": "çiçekler",
-        "translation-uz": "gullar"
-      },
-      {
         "word": "der Stuhl",
         "translation-ru": "стул",
         "translation-en": "chair",
@@ -1864,6 +2615,34 @@
         "translation-ro": "scaunul",
         "translation-tr": "sandalye",
         "translation-uz": "stul"
+      },
+      {
+        "word": "die Fliege",
+        "translation-ru": "муха",
+        "translation-en": "fly",
+        "translation-uk": "муха",
+        "translation-pl": "mucha",
+        "translation-es": "mosca",
+        "translation-fr": "mouche",
+        "translation-tr": "sinek",
+        "translation-ro": "muscă",
+        "translation-uz": "pashsha",
+        "translation-hi": "मक्खी",
+        "translation-ar": "ذبابة"
+      },
+      {
+        "word": "du",
+        "translation-ru": "ты",
+        "translation-en": "you",
+        "translation-uk": "ти",
+        "translation-pl": "ty",
+        "translation-es": "tú",
+        "translation-fr": "tu",
+        "translation-tr": "sen",
+        "translation-ro": "tu",
+        "translation-uz": "sen",
+        "translation-hi": "तुम",
+        "translation-ar": "أنت"
       }
     ],
     "tasks": [
@@ -1876,7 +2655,8 @@
           "zu meine Oma",
           "bei meiner Oma"
         ],
-        "answer": "zu meiner Oma"
+        "answer": "zu meiner Oma",
+        "tip": "directionPrepositionsEight.questDescription"
       },
       {
         "id": 2,
@@ -1896,25 +2676,29 @@
           "ich",
           "nach",
           "London"
-        ]
+        ],
+        "tip": "directionPrepositionsEight.questDescription"
       },
       {
         "id": 3,
         "type": "input",
         "question": "directionPrepositionsEight.questTask3",
-        "correctAnswer": "zur"
+        "correctAnswer": "zur",
+        "tip": "directionPrepositionsEight.questDescription"
       },
       {
         "id": 4,
         "type": "input",
         "question": "directionPrepositionsEight.questTask4",
-        "correctAnswer": "beim"
+        "correctAnswer": "beim",
+        "tip": "directionPrepositionsEight.questDescription"
       },
       {
         "id": 5,
         "type": "input",
         "question": "directionPrepositionsEight.questTask5",
-        "correctAnswer": "von"
+        "correctAnswer": "von",
+        "tip": "directionPrepositionsEight.questDescription"
       },
       {
         "id": 6,
@@ -1925,7 +2709,8 @@
           "Wohin kommst du?",
           "Wo kommst du?"
         ],
-        "answer": "Woher kommst du?"
+        "answer": "Woher kommst du?",
+        "tip": "directionPrepositionsEight.questDescription"
       },
       {
         "id": 7,
@@ -1937,19 +2722,22 @@
           "mit dem Fahrrad",
           "mit dem Auto"
         ],
-        "answer": "mit dem Bus"
+        "answer": "mit dem Bus",
+        "tip": "directionPrepositionsEight.questDescription"
       },
       {
         "id": 8,
         "type": "input",
         "question": "directionPrepositionsEight.questTask8",
-        "correctAnswer": "dem"
+        "correctAnswer": "dem",
+        "tip": "directionPrepositionsEight.questDescription"
       },
       {
         "id": 9,
         "type": "input",
         "question": "directionPrepositionsEight.questTask9",
-        "correctAnswer": "unter"
+        "correctAnswer": "unter",
+        "tip": "directionPrepositionsEight.questDescription"
       },
       {
         "id": 10,
@@ -1960,7 +2748,8 @@
           "Das Bild hängt an die Wand.",
           "Das Bild hängt auf der Wand."
         ],
-        "answer": "Das Bild hängt an der Wand."
+        "answer": "Das Bild hängt an der Wand.",
+        "tip": "directionPrepositionsEight.questDescription"
       },
       {
         "id": 11,
@@ -1982,18 +2771,20 @@
           "neben",
           "dem",
           "Stuhl"
-        ]
+        ],
+        "tip": "directionPrepositionsEight.questDescription"
       },
       {
         "id": 12,
         "type": "select",
-        "question": "directionPrepositionsEight.questTask12",
+        "question": "a2Course.t49",
         "options": [
-          "Ich schenke meiner Mutter Blumen.",
-          "Ich schenke meine Mutter Blumen.",
-          "Ich schenke mein Mutter Blumen."
+          "Ich fahre zu meinen Bruder.",
+          "Ich fahre zu mein Bruder.",
+          "Ich fahre zu meinem Bruder."
         ],
-        "answer": "Ich schenke meiner Mutter Blumen."
+        "answer": "Ich fahre zu meinem Bruder.",
+        "tip": "directionPrepositionsEight.questDescription"
       },
       {
         "id": 13,
@@ -2005,13 +2796,15 @@
           "mit Lisa",
           "mit Tom"
         ],
-        "answer": "mit Anna"
+        "answer": "mit Anna",
+        "tip": "directionPrepositionsEight.questDescription"
       },
       {
         "id": 14,
         "type": "input",
         "question": "directionPrepositionsEight.questTask14",
-        "correctAnswer": "zu"
+        "correctAnswer": "zu",
+        "tip": "directionPrepositionsEight.questDescription"
       },
       {
         "id": 15,
@@ -2031,7 +2824,8 @@
           "bei",
           "meinem",
           "Freund"
-        ]
+        ],
+        "tip": "directionPrepositionsEight.questDescription"
       }
     ]
   }

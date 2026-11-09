@@ -9,14 +9,33 @@
       "minCorrect": 15,
       "requiredTasks": 15
     },
-    "rewards": { "points": 10, "xp": 10 },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
     "tasks": [
       {
         "id": 1,
         "type": "reorder",
         "question": "edgeImagesQuestOne.questOne",
-        "words": ["sehe", "den", "alten", "Hund", "Ich", "alte", "dem", "der", "das"],
-        "correctOrder": ["Ich", "sehe", "den", "alten", "Hund"],
+        "words": [
+          "sehe",
+          "den",
+          "alten",
+          "Hund",
+          "Ich",
+          "alte",
+          "dem",
+          "der",
+          "das"
+        ],
+        "correctOrder": [
+          "Ich",
+          "sehe",
+          "den",
+          "alten",
+          "Hund"
+        ],
         "tip": "edgeImagesQuestOne.questOneTip"
       },
       {
@@ -38,8 +57,22 @@
         "id": 4,
         "type": "reorder",
         "question": "edgeImagesQuestOne.questFour",
-        "words": ["gehe", "mit", "dem", "netten", "Freund", "Ich"],
-        "correctOrder": ["Ich", "gehe", "mit", "dem", "netten", "Freund"],
+        "words": [
+          "gehe",
+          "mit",
+          "dem",
+          "netten",
+          "Freund",
+          "Ich"
+        ],
+        "correctOrder": [
+          "Ich",
+          "gehe",
+          "mit",
+          "dem",
+          "netten",
+          "Freund"
+        ],
         "tip": "edgeImagesQuestOne.questFourTip"
       },
       {
@@ -54,7 +87,11 @@
         "type": "readAndAnswer",
         "text": "In der Stadt steht das moderne Museum. Viele Touristen besuchen das graue Gebäude.",
         "question": "edgeImagesQuestOne.questSix",
-        "options": ["das graue Gebäude", "das alte Haus", "den großen Park"],
+        "options": [
+          "das graue Gebäude",
+          "das alte Haus",
+          "den großen Park"
+        ],
         "answer": "das graue Gebäude",
         "tip": "edgeImagesQuestOne.questSixTip"
       },
@@ -62,8 +99,20 @@
         "id": 7,
         "type": "reorder",
         "question": "edgeImagesQuestOne.questSeven",
-        "words": ["liest", "das", "interessante", "Buch", "Sie"],
-        "correctOrder": ["Sie", "liest", "das", "interessante", "Buch"],
+        "words": [
+          "liest",
+          "das",
+          "interessante",
+          "Buch",
+          "Sie"
+        ],
+        "correctOrder": [
+          "Sie",
+          "liest",
+          "das",
+          "interessante",
+          "Buch"
+        ],
         "tip": "edgeImagesQuestOne.questSevenTip"
       },
       {
@@ -86,39 +135,121 @@
         "type": "readAndAnswer",
         "text": "Der junge Mann arbeitet viel. Er trinkt oft den starken Kaffee.",
         "question": "edgeImagesQuestOne.questTen",
-        "options": ["den starken Kaffee", "den süßen Tee", "das kalte Wasser"],
+        "options": [
+          "den starken Kaffee",
+          "den süßen Tee",
+          "das kalte Wasser"
+        ],
         "answer": "den starken Kaffee",
         "tip": "edgeImagesQuestOne.questTenTip"
       },
       {
         "id": 11,
         "type": "reorder",
-        "question": "edgeImagesQuestOne.questEleven",
-        "words": ["ist", "die", "lange", "Straße", "Wo", "langen"],
-        "correctOrder": ["Wo", "ist", "die", "lange", "Straße"],
-        "tip": "edgeImagesQuestOne.questElevenTip"
+        "question": "a2Course.t50",
+        "words": [
+          "ich",
+          "wie",
+          "Bruder",
+          "älter",
+          "alt",
+          "Mein",
+          "als",
+          "ist"
+        ],
+        "correctOrder": [
+          "Mein",
+          "Bruder",
+          "ist",
+          "älter",
+          "als",
+          "ich"
+        ],
+        "reviewOf": "comparison-hills-two",
+        "reviewLand": "comparison-hills",
+        "tip": "comparisonHillsTwo.questDescription"
       },
       {
         "id": 12,
-        "type": "input",
-        "question": "edgeImagesQuestOne.questTwelve",
-        "answer": "großen",
-        "tip": "edgeImagesQuestOne.questTwelveTip"
+        "type": "reorder",
+        "question": "a2Course.t51",
+        "words": [
+          "als",
+          "Dieser",
+          "Film",
+          "guter",
+          "Buch",
+          "ist",
+          "wie",
+          "besser",
+          "das"
+        ],
+        "correctOrder": [
+          "Dieser",
+          "Film",
+          "ist",
+          "besser",
+          "als",
+          "das",
+          "Buch"
+        ],
+        "reviewOf": "comparison-hills-three",
+        "reviewLand": "comparison-hills",
+        "tip": "comparisonHillsThree.questDescription"
       },
       {
         "id": 13,
-        "type": "speechToText",
-        "question": "edgeImagesQuestOne.questThirteen",
-        "text": "Das ist der neue Schlüssel",
-        "answer": "Das ist der neue Schlüssel",
-        "tip": "edgeImagesQuestOne.questThirteenTip"
+        "type": "reorder",
+        "question": "a2Course.t52",
+        "words": [
+          "Auto",
+          "schnell",
+          "so",
+          "wie",
+          "Zug",
+          "Der",
+          "das",
+          "schneller",
+          "ist",
+          "als"
+        ],
+        "correctOrder": [
+          "Der",
+          "Zug",
+          "ist",
+          "so",
+          "schnell",
+          "wie",
+          "das",
+          "Auto"
+        ],
+        "reviewOf": "comparison-hills-four",
+        "reviewLand": "comparison-hills",
+        "tip": "comparisonHillsFour.questDescription"
       },
       {
         "id": 14,
         "type": "reorder",
         "question": "edgeImagesQuestOne.questFourteen",
-        "words": ["gehe", "in", "die", "alte", "Schule", "Ich", "alten", "der", "den"],
-        "correctOrder": ["Ich", "gehe", "in", "die", "alte", "Schule"],
+        "words": [
+          "gehe",
+          "in",
+          "die",
+          "alte",
+          "Schule",
+          "Ich",
+          "alten",
+          "der",
+          "den"
+        ],
+        "correctOrder": [
+          "Ich",
+          "gehe",
+          "in",
+          "die",
+          "alte",
+          "Schule"
+        ],
         "tip": "edgeImagesQuestOne.questFourteenTip"
       },
       {
@@ -127,6 +258,78 @@
         "question": "edgeImagesQuestOne.questFifteen",
         "answer": "netten",
         "tip": "edgeImagesQuestOne.questFifteenTip"
+      }
+    ],
+    "vocabulary": [
+      {
+        "word": "nett",
+        "translation-ru": "милый, приятный",
+        "translation-en": "nice",
+        "translation-uk": "милий",
+        "translation-pl": "miły",
+        "translation-es": "simpático",
+        "translation-fr": "gentil",
+        "translation-tr": "kibar, hoş",
+        "translation-ro": "drăguț",
+        "translation-uz": "yoqimli",
+        "translation-hi": "अच्छा, प्यारा",
+        "translation-ar": "لطيف"
+      },
+      {
+        "word": "bequem",
+        "translation-ru": "удобный",
+        "translation-en": "comfortable",
+        "translation-uk": "зручний",
+        "translation-pl": "wygodny",
+        "translation-es": "cómodo",
+        "translation-fr": "confortable",
+        "translation-tr": "rahat",
+        "translation-ro": "comod",
+        "translation-uz": "qulay",
+        "translation-hi": "आरामदायक",
+        "translation-ar": "مريح"
+      },
+      {
+        "word": "der Tourist",
+        "translation-ru": "турист",
+        "translation-en": "tourist",
+        "translation-uk": "турист",
+        "translation-pl": "turysta",
+        "translation-es": "el turista",
+        "translation-fr": "le touriste",
+        "translation-tr": "turist",
+        "translation-ro": "turistul",
+        "translation-uz": "sayyoh",
+        "translation-hi": "पर्यटक",
+        "translation-ar": "السائح"
+      },
+      {
+        "word": "das Gebäude",
+        "translation-ru": "здание",
+        "translation-en": "building",
+        "translation-uk": "будівля",
+        "translation-pl": "budynek",
+        "translation-es": "el edificio",
+        "translation-fr": "le bâtiment",
+        "translation-tr": "bina",
+        "translation-ro": "clădirea",
+        "translation-uz": "bino",
+        "translation-hi": "इमारत",
+        "translation-ar": "المبنى"
+      },
+      {
+        "word": "der Junge",
+        "translation-ru": "мальчик",
+        "translation-en": "boy",
+        "translation-uk": "хлопчик",
+        "translation-pl": "chłopiec",
+        "translation-es": "el niño, el chico",
+        "translation-fr": "le garçon",
+        "translation-tr": "oğlan",
+        "translation-ro": "băiatul",
+        "translation-uz": "o‘g‘il bola",
+        "translation-hi": "लड़का",
+        "translation-ar": "الولد"
       }
     ]
   },
@@ -140,14 +343,30 @@
       "minCorrect": 15,
       "requiredTasks": 15
     },
-    "rewards": { "points": 10, "xp": 10 },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
     "tasks": [
       {
         "id": 1,
         "type": "reorder",
         "question": "edgeImagesQuestTwo.questOne",
-        "words": ["Ich", "kaufe", "den", "neuen", "Computer", "neue"],
-        "correctOrder": ["Ich", "kaufe", "den", "neuen", "Computer"],
+        "words": [
+          "Ich",
+          "kaufe",
+          "den",
+          "neuen",
+          "Computer",
+          "neue"
+        ],
+        "correctOrder": [
+          "Ich",
+          "kaufe",
+          "den",
+          "neuen",
+          "Computer"
+        ],
         "tip": "edgeImagesQuestTwo.questOneTip"
       },
       {
@@ -183,7 +402,11 @@
         "id": 6,
         "type": "select",
         "question": "edgeImagesQuestTwo.questSix",
-        "options": ["schöne", "schönen", "schöner"],
+        "options": [
+          "schöne",
+          "schönen",
+          "schöner"
+        ],
         "answer": "schöne",
         "tip": "edgeImagesQuestTwo.questSixTip"
       },
@@ -191,8 +414,21 @@
         "id": 7,
         "type": "reorder",
         "question": "edgeImagesQuestTwo.questSeven",
-        "words": ["Er", "liebt", "die", "warme", "Suppe", "warmen"],
-        "correctOrder": ["Er", "liebt", "die", "warme", "Suppe"],
+        "words": [
+          "Er",
+          "liebt",
+          "die",
+          "warme",
+          "Suppe",
+          "warmen"
+        ],
+        "correctOrder": [
+          "Er",
+          "liebt",
+          "die",
+          "warme",
+          "Suppe"
+        ],
         "tip": "edgeImagesQuestTwo.questSevenTip"
       },
       {
@@ -220,25 +456,76 @@
       {
         "id": 11,
         "type": "reorder",
-        "question": "edgeImagesQuestTwo.questEleven",
-        "words": ["Ich", "helfe", "der", "alten", "Frau", "alte"],
-        "correctOrder": ["Ich", "helfe", "der", "alten", "Frau"],
-        "tip": "edgeImagesQuestTwo.questElevenTip"
+        "question": "edgeImagesQuestOne.questOne",
+        "words": [
+          "sehe",
+          "den",
+          "alten",
+          "Hund",
+          "Ich",
+          "alte",
+          "dem",
+          "der",
+          "das"
+        ],
+        "correctOrder": [
+          "Ich",
+          "sehe",
+          "den",
+          "alten",
+          "Hund"
+        ],
+        "tip": "edgeImagesQuestOne.questOneTip",
+        "reviewOf": "adjective-one",
+        "reviewLand": "edge-images"
       },
       {
         "id": 12,
-        "type": "input",
-        "question": "edgeImagesQuestTwo.questTwelve",
-        "answer": "kalten",
-        "tip": "edgeImagesQuestTwo.questTwelveTip"
+        "type": "reorder",
+        "question": "a2Course.t53",
+        "words": [
+          "sollst",
+          "mehr",
+          "solltest",
+          "schlafen",
+          "viel",
+          "Du"
+        ],
+        "correctOrder": [
+          "Du",
+          "solltest",
+          "mehr",
+          "schlafen"
+        ],
+        "reviewOf": "advice-garden-one",
+        "reviewLand": "advice-garden",
+        "tip": "adviceGardenOne.questDescription"
       },
       {
         "id": 13,
-        "type": "speechToText",
-        "question": "edgeImagesQuestTwo.questThirteen",
-        "text": "Wir sehen die blauen Berge",
-        "answer": "Wir sehen die blauen Berge",
-        "tip": "edgeImagesQuestTwo.questThirteenTip"
+        "type": "reorder",
+        "question": "a2Course.t54",
+        "words": [
+          "fahre",
+          "fahren",
+          "werde",
+          "würde",
+          "Rom",
+          "gern",
+          "Ich",
+          "nach"
+        ],
+        "correctOrder": [
+          "Ich",
+          "würde",
+          "gern",
+          "nach",
+          "Rom",
+          "fahren"
+        ],
+        "reviewOf": "advice-garden-three",
+        "reviewLand": "advice-garden",
+        "tip": "adviceGardenThree.questDescription"
       },
       {
         "id": 14,
@@ -254,6 +541,78 @@
         "answer": "besten",
         "tip": "edgeImagesQuestTwo.questFifteenTip"
       }
+    ],
+    "vocabulary": [
+      {
+        "word": "lieben",
+        "translation-ru": "любить",
+        "translation-en": "to love",
+        "translation-uk": "любити",
+        "translation-pl": "kochać",
+        "translation-es": "amar",
+        "translation-fr": "aimer",
+        "translation-tr": "sevmek",
+        "translation-ro": "a iubi",
+        "translation-uz": "sevmoq",
+        "translation-hi": "प्यार करना",
+        "translation-ar": "يحب"
+      },
+      {
+        "word": "nett",
+        "translation-ru": "милый, приятный",
+        "translation-en": "nice",
+        "translation-uk": "милий",
+        "translation-pl": "miły",
+        "translation-es": "simpático",
+        "translation-fr": "gentil",
+        "translation-tr": "kibar, hoş",
+        "translation-ro": "drăguț",
+        "translation-uz": "yoqimli",
+        "translation-hi": "अच्छा, प्यारा",
+        "translation-ar": "لطيف"
+      },
+      {
+        "word": "jung",
+        "translation-ru": "молодой",
+        "translation-en": "young",
+        "translation-uk": "молодий",
+        "translation-pl": "młody",
+        "translation-es": "joven",
+        "translation-fr": "jeune",
+        "translation-tr": "genç",
+        "translation-ro": "tânăr",
+        "translation-uz": "yosh",
+        "translation-hi": "जवान",
+        "translation-ar": "شاب"
+      },
+      {
+        "word": "das Kind",
+        "translation-ru": "ребёнок",
+        "translation-en": "child",
+        "translation-uk": "дитина",
+        "translation-pl": "dziecko",
+        "translation-es": "el niño",
+        "translation-fr": "l’enfant",
+        "translation-tr": "çocuk",
+        "translation-ro": "copilul",
+        "translation-uz": "bola",
+        "translation-hi": "बच्चा",
+        "translation-ar": "الطفل"
+      },
+      {
+        "word": "antworten",
+        "translation-ru": "отвечать",
+        "translation-en": "to answer / reply",
+        "translation-uk": "відповідати",
+        "translation-pl": "odpowiadać",
+        "translation-es": "responder / contestar",
+        "translation-fr": "répondre",
+        "translation-tr": "cevap vermek",
+        "translation-ro": "a răspunde",
+        "translation-uz": "javob bermoq",
+        "translation-hi": "उत्तर देना",
+        "translation-ar": "يجيب"
+      }
     ]
   },
   {
@@ -266,14 +625,29 @@
       "minCorrect": 15,
       "requiredTasks": 15
     },
-    "rewards": { "points": 10, "xp": 10 },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
     "tasks": [
       {
         "id": 1,
         "type": "reorder",
         "question": "edgeImagesQuestThree.questOne",
-        "words": ["liebe", "Ich", "grünen", "den", "Tee"],
-        "correctOrder": ["Ich", "liebe", "den", "grünen", "Tee"],
+        "words": [
+          "liebe",
+          "Ich",
+          "grünen",
+          "den",
+          "Tee"
+        ],
+        "correctOrder": [
+          "Ich",
+          "liebe",
+          "den",
+          "grünen",
+          "Tee"
+        ],
         "tip": "edgeImagesQuestThree.questOneTip"
       },
       {
@@ -316,8 +690,20 @@
         "id": 7,
         "type": "reorder",
         "question": "edgeImagesQuestThree.questSeven",
-        "words": ["Sie", "das", "schöne", "sieht", "Bild"],
-        "correctOrder": ["Sie", "sieht", "das", "schöne", "Bild"],
+        "words": [
+          "Sie",
+          "das",
+          "schöne",
+          "sieht",
+          "Bild"
+        ],
+        "correctOrder": [
+          "Sie",
+          "sieht",
+          "das",
+          "schöne",
+          "Bild"
+        ],
         "tip": "edgeImagesQuestThree.questSevenTip"
       },
       {
@@ -345,25 +731,73 @@
       {
         "id": 11,
         "type": "reorder",
-        "question": "edgeImagesQuestThree.questEleven",
-        "words": ["Wir", "in", "dem", "wohnen", "großen", "Haus"],
-        "correctOrder": ["Wir", "wohnen", "in", "dem", "großen", "Haus"],
-        "tip": "edgeImagesQuestThree.questElevenTip"
+        "question": "edgeImagesQuestTwo.questOne",
+        "words": [
+          "Ich",
+          "kaufe",
+          "den",
+          "neuen",
+          "Computer",
+          "neue"
+        ],
+        "correctOrder": [
+          "Ich",
+          "kaufe",
+          "den",
+          "neuen",
+          "Computer"
+        ],
+        "tip": "edgeImagesQuestTwo.questOneTip",
+        "reviewOf": "adjective-two",
+        "reviewLand": "edge-images"
       },
       {
         "id": 12,
-        "type": "input",
-        "question": "edgeImagesQuestThree.questTwelve",
-        "answer": "guten",
-        "tip": "edgeImagesQuestThree.questTwelveTip"
+        "type": "reorder",
+        "question": "a2Course.t55",
+        "words": [
+          "du",
+          "nimmst",
+          "Bus",
+          "Welchen",
+          "nimmt",
+          "Welcher"
+        ],
+        "correctOrder": [
+          "Welchen",
+          "Bus",
+          "nimmst",
+          "du"
+        ],
+        "reviewOf": "choice-crossing-one",
+        "reviewLand": "choice-crossing",
+        "tip": "choiceCrossingOne.questDescription"
       },
       {
         "id": 13,
-        "type": "speechToText",
-        "question": "edgeImagesQuestThree.questThirteen",
-        "text": "Die kluge Katze wartet",
-        "answer": "Die kluge Katze wartet",
-        "tip": "edgeImagesQuestThree.questThirteenTip"
+        "type": "reorder",
+        "question": "a2Course.t56",
+        "words": [
+          "Jede",
+          "Tag",
+          "lernst",
+          "lerne",
+          "zehn",
+          "ich",
+          "Wörter",
+          "Jeden"
+        ],
+        "correctOrder": [
+          "Jeden",
+          "Tag",
+          "lerne",
+          "ich",
+          "zehn",
+          "Wörter"
+        ],
+        "reviewOf": "choice-crossing-four",
+        "reviewLand": "choice-crossing",
+        "tip": "choiceCrossingFour.questDescription"
       },
       {
         "id": 14,
@@ -379,6 +813,92 @@
         "answer": "neue",
         "tip": "edgeImagesQuestThree.questFifteenTip"
       }
+    ],
+    "vocabulary": [
+      {
+        "word": "teuer",
+        "translation-ru": "дорогой",
+        "translation-en": "expensive",
+        "translation-uk": "дорогий",
+        "translation-pl": "drogi",
+        "translation-es": "caro",
+        "translation-fr": "cher",
+        "translation-tr": "pahalı",
+        "translation-ro": "scump",
+        "translation-uz": "qimmat",
+        "translation-hi": "महँगा",
+        "translation-ar": "غالٍ"
+      },
+      {
+        "word": "richtig",
+        "translation-ru": "правильно, правильный",
+        "translation-en": "right, correct",
+        "translation-uk": "правильно",
+        "translation-pl": "dobrze, poprawnie",
+        "translation-es": "correcto",
+        "translation-fr": "juste, correct",
+        "translation-tr": "doğru",
+        "translation-ro": "corect",
+        "translation-uz": "to‘g‘ri",
+        "translation-hi": "सही",
+        "translation-ar": "صحيح"
+      },
+      {
+        "word": "nett",
+        "translation-ru": "милый, приятный",
+        "translation-en": "nice",
+        "translation-uk": "милий",
+        "translation-pl": "miły",
+        "translation-es": "simpático",
+        "translation-fr": "gentil",
+        "translation-tr": "kibar, hoş",
+        "translation-ro": "drăguț",
+        "translation-uz": "yoqimli",
+        "translation-hi": "अच्छा, प्यारा",
+        "translation-ar": "لطيف"
+      },
+      {
+        "word": "die Liebe",
+        "translation-ru": "любовь",
+        "translation-en": "love",
+        "translation-uk": "любов",
+        "translation-pl": "miłość",
+        "translation-es": "amor",
+        "translation-fr": "amour",
+        "translation-tr": "aşk",
+        "translation-ro": "dragoste",
+        "translation-uz": "sevgi",
+        "translation-hi": "प्यार",
+        "translation-ar": "حب"
+      },
+      {
+        "word": "Sie",
+        "translation-ru": "Вы (вежливо)",
+        "translation-en": "you (formal)",
+        "translation-uk": "Ви (ввічливо)",
+        "translation-pl": "Pan/Pani",
+        "translation-es": "usted",
+        "translation-fr": "vous (poli)",
+        "translation-tr": "siz (resmî)",
+        "translation-ro": "dumneavoastră",
+        "translation-uz": "Siz (hurmat bilan)",
+        "translation-hi": "आप",
+        "translation-ar": "حضرتك"
+      },
+      {
+        "word": "super",
+        "translation-ru": "отлично",
+        "translation-en": "great",
+        "translation-uk": "чудово",
+        "translation-pl": "super",
+        "translation-es": "genial",
+        "translation-fr": "super",
+        "translation-tr": "harika",
+        "translation-ro": "super",
+        "translation-uz": "ajoyib",
+        "translation-hi": "बढ़िया",
+        "translation-ar": "رائع"
+      }
     ]
   },
   {
@@ -391,14 +911,31 @@
       "minCorrect": 15,
       "requiredTasks": 15
     },
-    "rewards": { "points": 10, "xp": 10 },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
     "tasks": [
       {
         "id": 1,
         "type": "reorder",
         "question": "edgeImagesQuestFour.questOne",
-        "words": ["Ich", "habe", "verkauft", "das", "alte", "Auto"],
-        "correctOrder": ["Ich", "habe", "das", "alte", "Auto", "verkauft"],
+        "words": [
+          "Ich",
+          "habe",
+          "verkauft",
+          "das",
+          "alte",
+          "Auto"
+        ],
+        "correctOrder": [
+          "Ich",
+          "habe",
+          "das",
+          "alte",
+          "Auto",
+          "verkauft"
+        ],
         "tip": "edgeImagesQuestFour.questOneTip"
       },
       {
@@ -434,7 +971,11 @@
         "id": 6,
         "type": "select",
         "question": "edgeImagesQuestFour.questSix",
-        "options": ["netten", "nette", "netter"],
+        "options": [
+          "netten",
+          "nette",
+          "netter"
+        ],
         "answer": "netten",
         "tip": "edgeImagesQuestFour.questSixTip"
       },
@@ -442,8 +983,22 @@
         "id": 7,
         "type": "reorder",
         "question": "edgeImagesQuestFour.questSeven",
-        "words": ["Du", "die", "rote", "Jacke", "hast", "getragen"],
-        "correctOrder": ["Du", "hast", "die", "rote", "Jacke", "getragen"],
+        "words": [
+          "Du",
+          "die",
+          "rote",
+          "Jacke",
+          "hast",
+          "getragen"
+        ],
+        "correctOrder": [
+          "Du",
+          "hast",
+          "die",
+          "rote",
+          "Jacke",
+          "getragen"
+        ],
         "tip": "edgeImagesQuestFour.questSevenTip"
       },
       {
@@ -471,25 +1026,57 @@
       {
         "id": 11,
         "type": "reorder",
-        "question": "edgeImagesQuestFour.questEleven",
-        "words": ["Der", "neue", "Film", "wird", "bald", "starten", "neuen"],
-        "correctOrder": ["Der", "neue", "Film", "wird", "bald", "starten"],
-        "tip": "edgeImagesQuestFour.questElevenTip"
+        "question": "edgeImagesQuestThree.questOne",
+        "words": [
+          "liebe",
+          "Ich",
+          "grünen",
+          "den",
+          "Tee"
+        ],
+        "correctOrder": [
+          "Ich",
+          "liebe",
+          "den",
+          "grünen",
+          "Tee"
+        ],
+        "tip": "edgeImagesQuestThree.questOneTip",
+        "reviewOf": "adjective-three",
+        "reviewLand": "edge-images"
       },
       {
         "id": 12,
         "type": "input",
-        "question": "edgeImagesQuestFour.questTwelve",
-        "answer": "leckere",
-        "tip": "edgeImagesQuestFour.questTwelveTip"
+        "question": "edgeImagesQuestOne.questTwo",
+        "answer": "rote",
+        "tip": "edgeImagesQuestOne.questTwoTip",
+        "reviewOf": "adjective-one",
+        "reviewLand": "edge-images"
       },
       {
         "id": 13,
-        "type": "speechToText",
-        "question": "edgeImagesQuestFour.questThirteen",
-        "text": "Die kluge Frau hat alles gewusst",
-        "answer": "Die kluge Frau hat alles gewusst",
-        "tip": "edgeImagesQuestFour.questThirteenTip"
+        "type": "reorder",
+        "question": "a2Course.t57",
+        "words": [
+          "meinen",
+          "niemand",
+          "gesehen",
+          "mein",
+          "Hat",
+          "Schlüssel",
+          "jemand"
+        ],
+        "correctOrder": [
+          "Hat",
+          "jemand",
+          "meinen",
+          "Schlüssel",
+          "gesehen"
+        ],
+        "reviewOf": "nobody-village-one",
+        "reviewLand": "nobody-village",
+        "tip": "nobodyVillageOne.questDescription"
       },
       {
         "id": 14,
@@ -505,6 +1092,92 @@
         "answer": "alte",
         "tip": "edgeImagesQuestFour.questFifteenTip"
       }
+    ],
+    "vocabulary": [
+      {
+        "word": "bauen",
+        "translation-ru": "строить",
+        "translation-en": "to build",
+        "translation-uk": "будувати",
+        "translation-pl": "budować",
+        "translation-es": "construir",
+        "translation-fr": "construire",
+        "translation-tr": "inşa etmek",
+        "translation-ro": "a construi",
+        "translation-uz": "qurmoq",
+        "translation-hi": "बनाना",
+        "translation-ar": "يبني"
+      },
+      {
+        "word": "schwierig",
+        "translation-ru": "трудный",
+        "translation-en": "difficult",
+        "translation-uk": "важкий",
+        "translation-pl": "trudny",
+        "translation-es": "difícil",
+        "translation-fr": "difficile",
+        "translation-tr": "zor",
+        "translation-ro": "dificil",
+        "translation-uz": "qiyin",
+        "translation-hi": "मुश्किल",
+        "translation-ar": "صعب"
+      },
+      {
+        "word": "freundlich",
+        "translation-ru": "дружелюбный",
+        "translation-en": "friendly",
+        "translation-uk": "привітний",
+        "translation-pl": "życzliwy",
+        "translation-es": "amable",
+        "translation-fr": "aimable",
+        "translation-tr": "güler yüzlü",
+        "translation-ro": "prietenos",
+        "translation-uz": "xushmuomala",
+        "translation-hi": "मिलनसार",
+        "translation-ar": "لطيف"
+      },
+      {
+        "word": "reparieren",
+        "translation-ru": "ремонтировать",
+        "translation-en": "to repair",
+        "translation-uk": "ремонтувати",
+        "translation-pl": "naprawiać",
+        "translation-es": "reparar",
+        "translation-fr": "réparer",
+        "translation-tr": "tamir etmek",
+        "translation-ro": "a repara",
+        "translation-uz": "tuzatmoq",
+        "translation-hi": "मरम्मत करना",
+        "translation-ar": "يصلح"
+      },
+      {
+        "word": "nett",
+        "translation-ru": "милый, приятный",
+        "translation-en": "nice",
+        "translation-uk": "милий",
+        "translation-pl": "miły",
+        "translation-es": "simpático",
+        "translation-fr": "gentil",
+        "translation-tr": "kibar, hoş",
+        "translation-ro": "drăguț",
+        "translation-uz": "yoqimli",
+        "translation-hi": "अच्छा, प्यारा",
+        "translation-ar": "لطيف"
+      },
+      {
+        "word": "perfekt",
+        "translation-ru": "идеальный",
+        "translation-en": "perfect",
+        "translation-uk": "ідеальний",
+        "translation-pl": "idealny",
+        "translation-es": "perfecto",
+        "translation-fr": "parfait",
+        "translation-tr": "mükemmel",
+        "translation-ro": "perfect",
+        "translation-uz": "mukammal",
+        "translation-hi": "उत्तम",
+        "translation-ar": "مثالي"
+      }
     ]
   },
   {
@@ -517,14 +1190,30 @@
       "minCorrect": 15,
       "requiredTasks": 15
     },
-    "rewards": { "points": 10, "xp": 10 },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
     "tasks": [
       {
         "id": 1,
         "type": "reorder",
         "question": "edgeImagesQuestFive.questOne",
-        "words": ["Der", "italienischen", "hat", "geschmeckt", "Käse", "italienische"],
-        "correctOrder": ["Der", "italienische", "Käse", "hat", "geschmeckt"],
+        "words": [
+          "Der",
+          "italienischen",
+          "hat",
+          "geschmeckt",
+          "Käse",
+          "italienische"
+        ],
+        "correctOrder": [
+          "Der",
+          "italienische",
+          "Käse",
+          "hat",
+          "geschmeckt"
+        ],
         "tip": "edgeImagesQuestFive.questOneTip"
       },
       {
@@ -560,7 +1249,11 @@
         "id": 6,
         "type": "select",
         "question": "edgeImagesQuestFive.questSix",
-        "options": ["kleinen", "kleine", "kleines"],
+        "options": [
+          "kleinen",
+          "kleine",
+          "kleines"
+        ],
         "answer": "kleinen",
         "tip": "edgeImagesQuestFive.questSixTip"
       },
@@ -568,8 +1261,23 @@
         "id": 7,
         "type": "reorder",
         "question": "edgeImagesQuestFive.questSeven",
-        "words": ["Sie", "wird", "die", "rote", "Tasche", "kaufen", "roten"],
-        "correctOrder": ["Sie", "wird", "die", "rote", "Tasche", "kaufen"],
+        "words": [
+          "Sie",
+          "wird",
+          "die",
+          "rote",
+          "Tasche",
+          "kaufen",
+          "roten"
+        ],
+        "correctOrder": [
+          "Sie",
+          "wird",
+          "die",
+          "rote",
+          "Tasche",
+          "kaufen"
+        ],
         "tip": "edgeImagesQuestFive.questSevenTip"
       },
       {
@@ -597,25 +1305,59 @@
       {
         "id": 11,
         "type": "reorder",
-        "question": "edgeImagesQuestFive.questEleven",
-        "words": ["Der", "schnelle", "Zug", "ist", "angekommen", "schnellen"],
-        "correctOrder": ["Der", "schnelle", "Zug", "ist", "angekommen"],
-        "tip": "edgeImagesQuestFive.questElevenTip"
+        "question": "edgeImagesQuestFour.questOne",
+        "words": [
+          "Ich",
+          "habe",
+          "verkauft",
+          "das",
+          "alte",
+          "Auto"
+        ],
+        "correctOrder": [
+          "Ich",
+          "habe",
+          "das",
+          "alte",
+          "Auto",
+          "verkauft"
+        ],
+        "tip": "edgeImagesQuestFour.questOneTip",
+        "reviewOf": "adjective-four",
+        "reviewLand": "edge-images"
       },
       {
         "id": 12,
         "type": "input",
-        "question": "edgeImagesQuestFive.questTwelve",
-        "answer": "leckeren",
-        "tip": "edgeImagesQuestFive.questTwelveTip"
+        "question": "edgeImagesQuestTwo.questTwo",
+        "answer": "alte",
+        "tip": "edgeImagesQuestTwo.questTwoTip",
+        "reviewOf": "adjective-two",
+        "reviewLand": "edge-images"
       },
       {
         "id": 13,
-        "type": "speechToText",
-        "question": "edgeImagesQuestFive.questThirteen",
-        "text": "Der kluge Junge hat gefragt",
-        "answer": "Der kluge Junge hat gefragt",
-        "tip": "edgeImagesQuestFive.questThirteenTip"
+        "type": "reorder",
+        "question": "a2Course.t58",
+        "words": [
+          "habe",
+          "Ich",
+          "etwas",
+          "gegessen",
+          "bin",
+          "heute",
+          "nichts"
+        ],
+        "correctOrder": [
+          "Ich",
+          "habe",
+          "heute",
+          "nichts",
+          "gegessen"
+        ],
+        "reviewOf": "nobody-village-two",
+        "reviewLand": "nobody-village",
+        "tip": "nobodyVillageTwo.questDescription"
       },
       {
         "id": 14,
@@ -631,6 +1373,106 @@
         "answer": "besten",
         "tip": "edgeImagesQuestFive.questFifteenTip"
       }
+    ],
+    "vocabulary": [
+      {
+        "word": "der Junge",
+        "translation-ru": "мальчик",
+        "translation-en": "boy",
+        "translation-uk": "хлопчик",
+        "translation-pl": "chłopiec",
+        "translation-es": "el niño, el chico",
+        "translation-fr": "le garçon",
+        "translation-tr": "oğlan",
+        "translation-ro": "băiatul",
+        "translation-uz": "o‘g‘il bola",
+        "translation-hi": "लड़का",
+        "translation-ar": "الولد"
+      },
+      {
+        "word": "nett",
+        "translation-ru": "милый, приятный",
+        "translation-en": "nice",
+        "translation-uk": "милий",
+        "translation-pl": "miły",
+        "translation-es": "simpático",
+        "translation-fr": "gentil",
+        "translation-tr": "kibar, hoş",
+        "translation-ro": "drăguț",
+        "translation-uz": "yoqimli",
+        "translation-hi": "अच्छा, प्यारा",
+        "translation-ar": "لطيف"
+      },
+      {
+        "word": "lesen",
+        "translation-ru": "читать",
+        "translation-en": "to read",
+        "translation-uk": "читати",
+        "translation-pl": "czytać",
+        "translation-es": "leer",
+        "translation-fr": "lire",
+        "translation-tr": "okumak",
+        "translation-ro": "a citi",
+        "translation-uz": "o'qimoq",
+        "translation-hi": "पढ़ना",
+        "translation-ar": "يقرأ"
+      },
+      {
+        "word": "lachen",
+        "translation-ru": "смеяться",
+        "translation-en": "to laugh",
+        "translation-uk": "сміятися",
+        "translation-pl": "śmiać się",
+        "translation-es": "reír",
+        "translation-fr": "rire",
+        "translation-tr": "gülmek",
+        "translation-ro": "a râde",
+        "translation-uz": "kulmoq",
+        "translation-hi": "हँसना",
+        "translation-ar": "يضحك"
+      },
+      {
+        "word": "schmecken",
+        "translation-ru": "быть вкусным / пробовать на вкус",
+        "translation-en": "to taste",
+        "translation-uk": "смакувати",
+        "translation-pl": "smakować",
+        "translation-es": "saber / gustar",
+        "translation-fr": "goûter / avoir bon goût",
+        "translation-tr": "tadına bakmak / lezzetli olmak",
+        "translation-ro": "a avea gust",
+        "translation-uz": "mazasi bo'lmoq",
+        "translation-hi": "चखना / स्वादिष्ट होना",
+        "translation-ar": "يتذوق"
+      },
+      {
+        "word": "italienisch",
+        "translation-ru": "итальянский",
+        "translation-en": "Italian",
+        "translation-uk": "італійський",
+        "translation-pl": "włoski",
+        "translation-es": "italiano",
+        "translation-fr": "italien",
+        "translation-tr": "İtalyan",
+        "translation-ro": "italian",
+        "translation-uz": "italyan",
+        "translation-hi": "इतालवी",
+        "translation-ar": "إيطالي"
+      },
+      {
+        "word": "starten",
+        "translation-ru": "стартовать",
+        "translation-en": "to start",
+        "translation-uk": "стартувати",
+        "translation-pl": "startować",
+        "translation-es": "empezar",
+        "translation-fr": "démarrer",
+        "translation-tr": "başlamak",
+        "translation-ro": "a porni",
+        "translation-uz": "boshlamoq",
+        "translation-hi": "शुरू करना",
+        "translation-ar": "يبدأ"
+      }
     ]
   },
   {
@@ -643,14 +1485,32 @@
       "minCorrect": 15,
       "requiredTasks": 15
     },
-    "rewards": { "points": 10, "xp": 10 },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
     "tasks": [
       {
         "id": 1,
         "type": "reorder",
         "question": "edgeImagesQuestSix.questOne",
-        "words": ["Ich", "werde", "den", "guten", "Freund", "treffen", "gute"],
-        "correctOrder": ["Ich", "werde", "den", "guten", "Freund", "treffen"],
+        "words": [
+          "Ich",
+          "werde",
+          "den",
+          "guten",
+          "Freund",
+          "treffen",
+          "gute"
+        ],
+        "correctOrder": [
+          "Ich",
+          "werde",
+          "den",
+          "guten",
+          "Freund",
+          "treffen"
+        ],
         "tip": "edgeImagesQuestSix.questOneTip"
       },
       {
@@ -686,7 +1546,11 @@
         "id": 6,
         "type": "select",
         "question": "edgeImagesQuestSix.questSix",
-        "options": ["kleinen", "kleine", "kleines"],
+        "options": [
+          "kleinen",
+          "kleine",
+          "kleines"
+        ],
         "answer": "kleinen",
         "tip": "edgeImagesQuestSix.questSixTip"
       },
@@ -694,8 +1558,23 @@
         "id": 7,
         "type": "reorder",
         "question": "edgeImagesQuestSix.questSeven",
-        "words": ["Er", "hat", "den", "leckeren", "Apfel", "gekauft", "leckere"],
-        "correctOrder": ["Er", "hat", "den", "leckeren", "Apfel", "gekauft"],
+        "words": [
+          "Er",
+          "hat",
+          "den",
+          "leckeren",
+          "Apfel",
+          "gekauft",
+          "leckere"
+        ],
+        "correctOrder": [
+          "Er",
+          "hat",
+          "den",
+          "leckeren",
+          "Apfel",
+          "gekauft"
+        ],
         "tip": "edgeImagesQuestSix.questSevenTip"
       },
       {
@@ -723,25 +1602,56 @@
       {
         "id": 11,
         "type": "reorder",
-        "question": "edgeImagesQuestSix.questEleven",
-        "words": ["Die", "kleine", "Katze", "ist", "gesprungen", "kleinen"],
-        "correctOrder": ["Die", "kleine", "Katze", "ist", "gesprungen"],
-        "tip": "edgeImagesQuestSix.questElevenTip"
+        "question": "edgeImagesQuestFive.questOne",
+        "words": [
+          "Der",
+          "italienischen",
+          "hat",
+          "geschmeckt",
+          "Käse",
+          "italienische"
+        ],
+        "correctOrder": [
+          "Der",
+          "italienische",
+          "Käse",
+          "hat",
+          "geschmeckt"
+        ],
+        "tip": "edgeImagesQuestFive.questOneTip",
+        "reviewOf": "adjective-five",
+        "reviewLand": "edge-images"
       },
       {
         "id": 12,
         "type": "input",
-        "question": "edgeImagesQuestSix.questTwelve",
-        "answer": "kalten",
-        "tip": "edgeImagesQuestSix.questTwelveTip"
+        "question": "edgeImagesQuestThree.questTwo",
+        "answer": "interessante",
+        "tip": "edgeImagesQuestThree.questTwoTip",
+        "reviewOf": "adjective-three",
+        "reviewLand": "edge-images"
       },
       {
         "id": 13,
-        "type": "speechToText",
-        "question": "edgeImagesQuestSix.questThirteen",
-        "text": "Das neue Jahr hat begonnen",
-        "answer": "Das neue Jahr hat begonnen",
-        "tip": "edgeImagesQuestSix.questThirteenTip"
+        "type": "reorder",
+        "question": "a2Course.t59",
+        "words": [
+          "man",
+          "Hier",
+          "Deutsch",
+          "sprechen",
+          "spricht",
+          "wer"
+        ],
+        "correctOrder": [
+          "Hier",
+          "spricht",
+          "man",
+          "Deutsch"
+        ],
+        "reviewOf": "nobody-village-four",
+        "reviewLand": "nobody-village",
+        "tip": "nobodyVillageFour.questDescription"
       },
       {
         "id": 14,
@@ -757,6 +1667,134 @@
         "answer": "jungen",
         "tip": "edgeImagesQuestSix.questFifteenTip"
       }
+    ],
+    "vocabulary": [
+      {
+        "word": "genießen",
+        "translation-ru": "наслаждаться",
+        "translation-en": "to enjoy / savor",
+        "translation-uk": "насолоджуватися",
+        "translation-pl": "cieszyć się / delektować",
+        "translation-es": "disfrutar / gozar",
+        "translation-fr": "profiter de / savourer",
+        "translation-tr": "tadını çıkarmak",
+        "translation-ro": "a savura / a se bucura de",
+        "translation-uz": "rohatlanmoq",
+        "translation-hi": "आनंद लेना",
+        "translation-ar": "يستمتع"
+      },
+      {
+        "word": "nett",
+        "translation-ru": "милый, приятный",
+        "translation-en": "nice",
+        "translation-uk": "милий",
+        "translation-pl": "miły",
+        "translation-es": "simpático",
+        "translation-fr": "gentil",
+        "translation-tr": "kibar, hoş",
+        "translation-ro": "drăguț",
+        "translation-uz": "yoqimli",
+        "translation-hi": "अच्छा, प्यारा",
+        "translation-ar": "لطيف"
+      },
+      {
+        "word": "das Handy",
+        "translation-ru": "мобильный телефон",
+        "translation-en": "mobile phone",
+        "translation-uk": "мобільний телефон",
+        "translation-pl": "komórka",
+        "translation-es": "el móvil",
+        "translation-fr": "le portable",
+        "translation-tr": "cep telefonu",
+        "translation-ro": "mobilul",
+        "translation-uz": "mobil telefon",
+        "translation-hi": "मोबाइल",
+        "translation-ar": "الهاتف المحمول"
+      },
+      {
+        "word": "jung",
+        "translation-ru": "молодой",
+        "translation-en": "young",
+        "translation-uk": "молодий",
+        "translation-pl": "młody",
+        "translation-es": "joven",
+        "translation-fr": "jeune",
+        "translation-tr": "genç",
+        "translation-ro": "tânăr",
+        "translation-uz": "yosh",
+        "translation-hi": "जवान",
+        "translation-ar": "شاب"
+      },
+      {
+        "word": "der Apfel",
+        "translation-ru": "яблоко",
+        "translation-en": "apple",
+        "translation-uk": "яблуко",
+        "translation-pl": "jabłko",
+        "translation-es": "manzana",
+        "translation-fr": "pomme",
+        "translation-tr": "elma",
+        "translation-ro": "măr",
+        "translation-uz": "olma",
+        "translation-hi": "सेब",
+        "translation-ar": "تفاحة"
+      },
+      {
+        "word": "hängen",
+        "translation-ru": "висеть",
+        "translation-en": "to hang",
+        "translation-uk": "висіти",
+        "translation-pl": "wisieć",
+        "translation-es": "colgar",
+        "translation-fr": "être suspendu",
+        "translation-tr": "asılı olmak",
+        "translation-ro": "a atârna",
+        "translation-uz": "osilib turmoq",
+        "translation-hi": "लटकना",
+        "translation-ar": "يعلق"
+      },
+      {
+        "word": "wegfahren",
+        "translation-ru": "уезжать",
+        "translation-en": "to drive away",
+        "translation-uk": "їхати геть",
+        "translation-pl": "odjeżdżać",
+        "translation-es": "irse",
+        "translation-fr": "partir",
+        "translation-tr": "gitmek",
+        "translation-ro": "a pleca",
+        "translation-uz": "ketmoq",
+        "translation-hi": "चले जाना",
+        "translation-ar": "يغادر"
+      },
+      {
+        "word": "die Aussicht",
+        "translation-ru": "вид",
+        "translation-en": "view",
+        "translation-uk": "краєвид",
+        "translation-pl": "widok",
+        "translation-es": "la vista",
+        "translation-fr": "la vue",
+        "translation-tr": "manzara",
+        "translation-ro": "priveliștea",
+        "translation-uz": "manzara",
+        "translation-hi": "दृश्य",
+        "translation-ar": "الإطلالة"
+      },
+      {
+        "word": "wehen",
+        "translation-ru": "дуть, развеваться",
+        "translation-en": "to blow",
+        "translation-uk": "дути, майоріти",
+        "translation-pl": "wiać",
+        "translation-es": "soplar",
+        "translation-fr": "souffler",
+        "translation-tr": "esmek",
+        "translation-ro": "a bate (vântul)",
+        "translation-uz": "esmoq",
+        "translation-hi": "बहना",
+        "translation-ar": "يهب"
+      }
     ]
   },
   {
@@ -769,14 +1807,30 @@
       "minCorrect": 15,
       "requiredTasks": 15
     },
-    "rewards": { "points": 10, "xp": 10 },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
     "tasks": [
       {
         "id": 1,
         "type": "reorder",
         "question": "edgeImagesQuestSeven.questOne",
-        "words": ["Der", "neue", "Plan", "wird", "funktionieren", "neuen"],
-        "correctOrder": ["Der", "neue", "Plan", "wird", "funktionieren"],
+        "words": [
+          "Der",
+          "neue",
+          "Plan",
+          "wird",
+          "funktionieren",
+          "neuen"
+        ],
+        "correctOrder": [
+          "Der",
+          "neue",
+          "Plan",
+          "wird",
+          "funktionieren"
+        ],
         "tip": "edgeImagesQuestSeven.questOneTip"
       },
       {
@@ -812,7 +1866,11 @@
         "id": 6,
         "type": "select",
         "question": "edgeImagesQuestSeven.questSix",
-        "options": ["teure", "teuren", "teurer"],
+        "options": [
+          "teure",
+          "teuren",
+          "teurer"
+        ],
         "answer": "teure",
         "tip": "edgeImagesQuestSeven.questSixTip"
       },
@@ -820,8 +1878,23 @@
         "id": 7,
         "type": "reorder",
         "question": "edgeImagesQuestSeven.questSeven",
-        "words": ["Wir", "werden", "den", "alten", "Freund", "sehen", "alte"],
-        "correctOrder": ["Wir", "werden", "den", "alten", "Freund", "sehen"],
+        "words": [
+          "Wir",
+          "werden",
+          "den",
+          "alten",
+          "Freund",
+          "sehen",
+          "alte"
+        ],
+        "correctOrder": [
+          "Wir",
+          "werden",
+          "den",
+          "alten",
+          "Freund",
+          "sehen"
+        ],
         "tip": "edgeImagesQuestSeven.questSevenTip"
       },
       {
@@ -849,25 +1922,66 @@
       {
         "id": 11,
         "type": "reorder",
-        "question": "edgeImagesQuestSeven.questEleven",
-        "words": ["Das", "schöne", "Bild", "hat", "dort", "gehangen", "schönen"],
-        "correctOrder": ["Das", "schöne", "Bild", "hat", "dort", "gehangen"],
-        "tip": "edgeImagesQuestSeven.questElevenTip"
+        "question": "edgeImagesQuestSix.questOne",
+        "words": [
+          "Ich",
+          "werde",
+          "den",
+          "guten",
+          "Freund",
+          "treffen",
+          "gute"
+        ],
+        "correctOrder": [
+          "Ich",
+          "werde",
+          "den",
+          "guten",
+          "Freund",
+          "treffen"
+        ],
+        "tip": "edgeImagesQuestSix.questOneTip",
+        "reviewOf": "adjective-six",
+        "reviewLand": "edge-images"
       },
       {
         "id": 12,
         "type": "input",
-        "question": "edgeImagesQuestSeven.questTwelve",
-        "answer": "großen",
-        "tip": "edgeImagesQuestSeven.questTwelveTip"
+        "question": "edgeImagesQuestFour.questTwo",
+        "answer": "neue",
+        "tip": "edgeImagesQuestFour.questTwoTip",
+        "reviewOf": "adjective-four",
+        "reviewLand": "edge-images"
       },
       {
         "id": 13,
-        "type": "speechToText",
-        "question": "edgeImagesQuestSeven.questThirteen",
-        "text": "Der neue Schlüssel hat gepasst",
-        "answer": "Der neue Schlüssel hat gepasst",
-        "tip": "edgeImagesQuestSeven.questThirteenTip"
+        "type": "reorder",
+        "question": "a2Course.t60",
+        "words": [
+          "ich",
+          "Hause",
+          "bin",
+          "zu",
+          "weil",
+          "Ich",
+          "bin",
+          "krank",
+          "denn",
+          "bleibe"
+        ],
+        "correctOrder": [
+          "Ich",
+          "bleibe",
+          "zu",
+          "Hause",
+          "weil",
+          "ich",
+          "krank",
+          "bin"
+        ],
+        "reviewOf": "order-one",
+        "reviewLand": "order-valley",
+        "tip": "orderValleyQuestOne.description"
       },
       {
         "id": 14,
@@ -883,6 +1997,92 @@
         "answer": "jungen",
         "tip": "edgeImagesQuestSeven.questFifteenTip"
       }
+    ],
+    "vocabulary": [
+      {
+        "word": "der Plan",
+        "translation-ru": "план",
+        "translation-en": "plan",
+        "translation-uk": "план",
+        "translation-pl": "plan",
+        "translation-es": "el plan",
+        "translation-fr": "le projet",
+        "translation-tr": "plan",
+        "translation-ro": "planul",
+        "translation-uz": "reja",
+        "translation-hi": "योजना",
+        "translation-ar": "الخطة"
+      },
+      {
+        "word": "der Anzug",
+        "translation-ru": "костюм(мужской)",
+        "translation-en": "suit (men)",
+        "translation-uk": "костюм (чоловічий)",
+        "translation-pl": "garnitur",
+        "translation-es": "traje (hombre)",
+        "translation-fr": "costume (homme)",
+        "translation-tr": "takım elbise (erkek)",
+        "translation-ro": "costum (bărbătesc)",
+        "translation-uz": "kostyum (erkaklar uchun)",
+        "translation-hi": "सूट (पुरुष)",
+        "translation-ar": "بدلة (رجالية)"
+      },
+      {
+        "word": "bauen",
+        "translation-ru": "строить",
+        "translation-en": "to build",
+        "translation-uk": "будувати",
+        "translation-pl": "budować",
+        "translation-es": "construir",
+        "translation-fr": "construire",
+        "translation-tr": "inşa etmek",
+        "translation-ro": "a construi",
+        "translation-uz": "qurmoq",
+        "translation-hi": "बनाना",
+        "translation-ar": "يبني"
+      },
+      {
+        "word": "nett",
+        "translation-ru": "милый, приятный",
+        "translation-en": "nice",
+        "translation-uk": "милий",
+        "translation-pl": "miły",
+        "translation-es": "simpático",
+        "translation-fr": "gentil",
+        "translation-tr": "kibar, hoş",
+        "translation-ro": "drăguț",
+        "translation-uz": "yoqimli",
+        "translation-hi": "अच्छा, प्यारा",
+        "translation-ar": "لطيف"
+      },
+      {
+        "word": "der Schüler",
+        "translation-ru": "ученик",
+        "translation-en": "pupil",
+        "translation-uk": "учень",
+        "translation-pl": "uczeń",
+        "translation-es": "el alumno",
+        "translation-fr": "l’élève",
+        "translation-tr": "öğrenci",
+        "translation-ro": "elevul",
+        "translation-uz": "o‘quvchi",
+        "translation-hi": "छात्र",
+        "translation-ar": "التلميذ"
+      },
+      {
+        "word": "klug",
+        "translation-ru": "умный",
+        "translation-en": "clever",
+        "translation-uk": "розумний",
+        "translation-pl": "mądry",
+        "translation-es": "inteligente",
+        "translation-fr": "intelligent",
+        "translation-tr": "akıllı",
+        "translation-ro": "deștept",
+        "translation-uz": "aqlli",
+        "translation-hi": "समझदार",
+        "translation-ar": "ذكي"
+      }
     ]
   },
   {
@@ -895,14 +2095,32 @@
       "minCorrect": 15,
       "requiredTasks": 15
     },
-    "rewards": { "points": 10, "xp": 10 },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
     "tasks": [
       {
         "id": 1,
         "type": "reorder",
         "question": "edgeImagesQuestEight.questOne",
-        "words": ["Ich", "habe", "das", "alte", "Auto", "verkauft", "alten"],
-        "correctOrder": ["Ich", "habe", "das", "alte", "Auto", "verkauft"],
+        "words": [
+          "Ich",
+          "habe",
+          "das",
+          "alte",
+          "Auto",
+          "verkauft",
+          "alten"
+        ],
+        "correctOrder": [
+          "Ich",
+          "habe",
+          "das",
+          "alte",
+          "Auto",
+          "verkauft"
+        ],
         "tip": "edgeImagesQuestEight.questOneTip"
       },
       {
@@ -938,7 +2156,11 @@
         "id": 6,
         "type": "select",
         "question": "edgeImagesQuestEight.questSix",
-        "options": ["schöne", "schönen", "schöner"],
+        "options": [
+          "schöne",
+          "schönen",
+          "schöner"
+        ],
         "answer": "schöne",
         "tip": "edgeImagesQuestEight.questSixTip"
       },
@@ -946,8 +2168,23 @@
         "id": 7,
         "type": "reorder",
         "question": "edgeImagesQuestEight.questSeven",
-        "words": ["Wir", "werden", "den", "bekannten", "Schauspieler", "sehen", "bekannte"],
-        "correctOrder": ["Wir", "werden", "den", "bekannten", "Schauspieler", "sehen"],
+        "words": [
+          "Wir",
+          "werden",
+          "den",
+          "bekannten",
+          "Schauspieler",
+          "sehen",
+          "bekannte"
+        ],
+        "correctOrder": [
+          "Wir",
+          "werden",
+          "den",
+          "bekannten",
+          "Schauspieler",
+          "sehen"
+        ],
         "tip": "edgeImagesQuestEight.questSevenTip"
       },
       {
@@ -975,25 +2212,58 @@
       {
         "id": 11,
         "type": "reorder",
-        "question": "edgeImagesQuestEight.questEleven",
-        "words": ["Der", "gute", "Freund", "wird", "später", "kommen", "guten"],
-        "correctOrder": ["Der", "gute", "Freund", "wird", "später", "kommen"],
-        "tip": "edgeImagesQuestEight.questElevenTip"
+        "question": "edgeImagesQuestSeven.questOne",
+        "words": [
+          "Der",
+          "neue",
+          "Plan",
+          "wird",
+          "funktionieren",
+          "neuen"
+        ],
+        "correctOrder": [
+          "Der",
+          "neue",
+          "Plan",
+          "wird",
+          "funktionieren"
+        ],
+        "tip": "edgeImagesQuestSeven.questOneTip",
+        "reviewOf": "adjective-seven",
+        "reviewLand": "edge-images"
       },
       {
         "id": 12,
         "type": "input",
-        "question": "edgeImagesQuestEight.questTwelve",
-        "answer": "modernen",
-        "tip": "edgeImagesQuestEight.questTwelveTip"
+        "question": "edgeImagesQuestFive.questTwo",
+        "answer": "neue",
+        "tip": "edgeImagesQuestFive.questTwoTip",
+        "reviewOf": "adjective-five",
+        "reviewLand": "edge-images"
       },
       {
         "id": 13,
-        "type": "speechToText",
-        "question": "edgeImagesQuestEight.questThirteen",
-        "text": "Den neuen Termin haben wir vergessen",
-        "answer": "Den neuen Termin haben wir vergessen",
-        "tip": "edgeImagesQuestEight.questThirteenTip"
+        "type": "reorder",
+        "question": "edgeImagesQuestOne.questFour",
+        "words": [
+          "gehe",
+          "mit",
+          "dem",
+          "netten",
+          "Freund",
+          "Ich"
+        ],
+        "correctOrder": [
+          "Ich",
+          "gehe",
+          "mit",
+          "dem",
+          "netten",
+          "Freund"
+        ],
+        "tip": "edgeImagesQuestOne.questFourTip",
+        "reviewOf": "adjective-one",
+        "reviewLand": "edge-images"
       },
       {
         "id": 14,
@@ -1009,6 +2279,78 @@
         "answer": "kleinen",
         "tip": "edgeImagesQuestEight.questFifteenTip"
       }
+    ],
+    "vocabulary": [
+      {
+        "word": "bekannt",
+        "translation-ru": "известный",
+        "translation-en": "well-known",
+        "translation-uk": "відомий",
+        "translation-pl": "znany",
+        "translation-es": "conocido",
+        "translation-fr": "connu",
+        "translation-tr": "tanınmış",
+        "translation-ro": "cunoscut",
+        "translation-uz": "mashhur",
+        "translation-hi": "मशहूर",
+        "translation-ar": "معروف"
+      },
+      {
+        "word": "der Plan",
+        "translation-ru": "план",
+        "translation-en": "plan",
+        "translation-uk": "план",
+        "translation-pl": "plan",
+        "translation-es": "el plan",
+        "translation-fr": "le projet",
+        "translation-tr": "plan",
+        "translation-ro": "planul",
+        "translation-uz": "reja",
+        "translation-hi": "योजना",
+        "translation-ar": "الخطة"
+      },
+      {
+        "word": "nett",
+        "translation-ru": "милый, приятный",
+        "translation-en": "nice",
+        "translation-uk": "милий",
+        "translation-pl": "miły",
+        "translation-es": "simpático",
+        "translation-fr": "gentil",
+        "translation-tr": "kibar, hoş",
+        "translation-ro": "drăguț",
+        "translation-uz": "yoqimli",
+        "translation-hi": "अच्छा, प्यारा",
+        "translation-ar": "لطيف"
+      },
+      {
+        "word": "der Junge",
+        "translation-ru": "мальчик",
+        "translation-en": "boy",
+        "translation-uk": "хлопчик",
+        "translation-pl": "chłopiec",
+        "translation-es": "el niño, el chico",
+        "translation-fr": "le garçon",
+        "translation-tr": "oğlan",
+        "translation-ro": "băiatul",
+        "translation-uz": "o‘g‘il bola",
+        "translation-hi": "लड़का",
+        "translation-ar": "الولد"
+      },
+      {
+        "word": "der Schauspieler",
+        "translation-ru": "актёр",
+        "translation-en": "actor",
+        "translation-uk": "актор",
+        "translation-pl": "aktor",
+        "translation-es": "actor",
+        "translation-fr": "acteur",
+        "translation-tr": "aktör",
+        "translation-ro": "actor",
+        "translation-uz": "aktyor",
+        "translation-hi": "अभिनेता",
+        "translation-ar": "ممثل"
+      }
     ]
   },
   {
@@ -1021,14 +2363,32 @@
       "minCorrect": 15,
       "requiredTasks": 15
     },
-    "rewards": { "points": 10, "xp": 10 },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
     "tasks": [
       {
         "id": 1,
         "type": "reorder",
         "question": "edgeImagesQuestNine.questOne",
-        "words": ["Wir", "werden", "das", "alte", "Gebäude", "sehen", "alten"],
-        "correctOrder": ["Wir", "werden", "das", "alte", "Gebäude", "sehen"],
+        "words": [
+          "Wir",
+          "werden",
+          "das",
+          "alte",
+          "Gebäude",
+          "sehen",
+          "alten"
+        ],
+        "correctOrder": [
+          "Wir",
+          "werden",
+          "das",
+          "alte",
+          "Gebäude",
+          "sehen"
+        ],
         "tip": "edgeImagesQuestNine.questOneTip"
       },
       {
@@ -1064,7 +2424,11 @@
         "id": 6,
         "type": "select",
         "question": "edgeImagesQuestNine.questSix",
-        "options": ["gute", "guten", "guter"],
+        "options": [
+          "gute",
+          "guten",
+          "guter"
+        ],
         "answer": "gute",
         "tip": "edgeImagesQuestNine.questSixTip"
       },
@@ -1072,8 +2436,21 @@
         "id": 7,
         "type": "reorder",
         "question": "edgeImagesQuestNine.questSeven",
-        "words": ["Der", "bester", "anrufen", "Freund", "wird", "besten"],
-        "correctOrder": ["Der", "bester", "Freund", "wird", "anrufen"],
+        "words": [
+          "Dein",
+          "bester",
+          "anrufen",
+          "Freund",
+          "wird",
+          "besten"
+        ],
+        "correctOrder": [
+          "Dein",
+          "bester",
+          "Freund",
+          "wird",
+          "anrufen"
+        ],
         "tip": "edgeImagesQuestNine.questSevenTip"
       },
       {
@@ -1101,25 +2478,45 @@
       {
         "id": 11,
         "type": "reorder",
-        "question": "edgeImagesQuestNine.questEleven",
-        "words": ["Der", "starke", "Wind", "hat", "das", "Dach", "abgerissen", "starken"],
-        "correctOrder": ["Der", "starke", "Wind", "hat", "das", "Dach", "abgerissen"],
-        "tip": "edgeImagesQuestNine.questElevenTip"
+        "question": "edgeImagesQuestEight.questOne",
+        "words": [
+          "Ich",
+          "habe",
+          "das",
+          "alte",
+          "Auto",
+          "verkauft",
+          "alten"
+        ],
+        "correctOrder": [
+          "Ich",
+          "habe",
+          "das",
+          "alte",
+          "Auto",
+          "verkauft"
+        ],
+        "tip": "edgeImagesQuestEight.questOneTip",
+        "reviewOf": "adjective-eight",
+        "reviewLand": "edge-images"
       },
       {
         "id": 12,
         "type": "input",
-        "question": "edgeImagesQuestNine.questTwelve",
-        "answer": "saubere",
-        "tip": "edgeImagesQuestNine.questTwelveTip"
+        "question": "edgeImagesQuestSix.questTwo",
+        "answer": "schnelle",
+        "tip": "edgeImagesQuestSix.questTwoTip",
+        "reviewOf": "adjective-six",
+        "reviewLand": "edge-images"
       },
       {
         "id": 13,
-        "type": "speechToText",
-        "question": "edgeImagesQuestNine.questThirteen",
-        "text": "Die kleinen Vögel haben gesungen",
-        "answer": "Die kleinen Vögel haben gesungen",
-        "tip": "edgeImagesQuestNine.questThirteenTip"
+        "type": "input",
+        "question": "edgeImagesQuestTwo.questFour",
+        "answer": "netten",
+        "tip": "edgeImagesQuestTwo.questFourTip",
+        "reviewOf": "adjective-two",
+        "reviewLand": "edge-images"
       },
       {
         "id": 14,
@@ -1135,6 +2532,120 @@
         "answer": "bekannten",
         "tip": "edgeImagesQuestNine.questFifteenTip"
       }
+    ],
+    "vocabulary": [
+      {
+        "word": "der Wagen",
+        "translation-ru": "автомобиль (Wagen)",
+        "translation-en": "car (Wagen)",
+        "translation-uk": "автомобіль (Wagen)",
+        "translation-pl": "samochód (Wagen)",
+        "translation-es": "coche (Wagen)",
+        "translation-fr": "voiture",
+        "translation-tr": "araba (Wagen)",
+        "translation-ro": "vehicul",
+        "translation-uz": "mashina (Wagen)",
+        "translation-hi": "गाड़ी",
+        "translation-ar": "سيارة (Wagen)"
+      },
+      {
+        "word": "bekannt",
+        "translation-ru": "известный",
+        "translation-en": "well-known",
+        "translation-uk": "відомий",
+        "translation-pl": "znany",
+        "translation-es": "conocido",
+        "translation-fr": "connu",
+        "translation-tr": "tanınmış",
+        "translation-ro": "cunoscut",
+        "translation-uz": "mashhur",
+        "translation-hi": "मशहूर",
+        "translation-ar": "معروف"
+      },
+      {
+        "word": "das Gebäude",
+        "translation-ru": "здание",
+        "translation-en": "building",
+        "translation-uk": "будівля",
+        "translation-pl": "budynek",
+        "translation-es": "el edificio",
+        "translation-fr": "le bâtiment",
+        "translation-tr": "bina",
+        "translation-ro": "clădirea",
+        "translation-uz": "bino",
+        "translation-hi": "इमारत",
+        "translation-ar": "المبنى"
+      },
+      {
+        "word": "der Junge",
+        "translation-ru": "мальчик",
+        "translation-en": "boy",
+        "translation-uk": "хлопчик",
+        "translation-pl": "chłopiec",
+        "translation-es": "el niño, el chico",
+        "translation-fr": "le garçon",
+        "translation-tr": "oğlan",
+        "translation-ro": "băiatul",
+        "translation-uz": "o‘g‘il bola",
+        "translation-hi": "लड़का",
+        "translation-ar": "الولد"
+      },
+      {
+        "word": "nett",
+        "translation-ru": "милый, приятный",
+        "translation-en": "nice",
+        "translation-uk": "милий",
+        "translation-pl": "miły",
+        "translation-es": "simpático",
+        "translation-fr": "gentil",
+        "translation-tr": "kibar, hoş",
+        "translation-ro": "drăguț",
+        "translation-uz": "yoqimli",
+        "translation-hi": "अच्छा, प्यारा",
+        "translation-ar": "لطيف"
+      },
+      {
+        "word": "der Künstler",
+        "translation-ru": "художник",
+        "translation-en": "artist",
+        "translation-uk": "художник",
+        "translation-pl": "artysta",
+        "translation-es": "artista",
+        "translation-fr": "artiste",
+        "translation-tr": "sanatçı",
+        "translation-ro": "artist",
+        "translation-uz": "rassom",
+        "translation-hi": "कलाकार",
+        "translation-ar": "فنان"
+      },
+      {
+        "word": "malen",
+        "translation-ru": "рисовать красками",
+        "translation-en": "to paint",
+        "translation-uk": "малювати",
+        "translation-pl": "malować",
+        "translation-es": "pintar",
+        "translation-fr": "peindre",
+        "translation-tr": "resim yapmak",
+        "translation-ro": "a picta",
+        "translation-uz": "rasm chizmoq",
+        "translation-hi": "चित्र बनाना",
+        "translation-ar": "يرسم"
+      },
+      {
+        "word": "der Musiker",
+        "translation-ru": "музыкант",
+        "translation-en": "musician",
+        "translation-uk": "музикант",
+        "translation-pl": "muzyk",
+        "translation-es": "músico",
+        "translation-fr": "musicien",
+        "translation-tr": "müzisyen",
+        "translation-ro": "muzician",
+        "translation-uz": "musiqachi",
+        "translation-hi": "संगीतकार",
+        "translation-ar": "موسيقي"
+      }
     ]
   },
   {
@@ -1147,14 +2658,32 @@
       "minCorrect": 15,
       "requiredTasks": 15
     },
-    "rewards": { "points": 10, "xp": 10 },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
     "tasks": [
       {
         "id": 1,
         "type": "reorder",
         "question": "edgeImagesQuestTen.questOne",
-        "words": ["Wir", "werden", "das", "alte", "Museum", "besuchen", "alten"],
-        "correctOrder": ["Wir", "werden", "das", "alte", "Museum", "besuchen"],
+        "words": [
+          "Wir",
+          "werden",
+          "das",
+          "alte",
+          "Museum",
+          "besuchen",
+          "alten"
+        ],
+        "correctOrder": [
+          "Wir",
+          "werden",
+          "das",
+          "alte",
+          "Museum",
+          "besuchen"
+        ],
         "tip": "edgeImagesQuestTen.questOneTip"
       },
       {
@@ -1190,7 +2719,11 @@
         "id": 6,
         "type": "select",
         "question": "edgeImagesQuestTen.questSix",
-        "options": ["schnellen", "schnelle", "schnelles"],
+        "options": [
+          "schnellen",
+          "schnelle",
+          "schnelles"
+        ],
         "answer": "schnellen",
         "tip": "edgeImagesQuestTen.questSixTip"
       },
@@ -1198,8 +2731,23 @@
         "id": 7,
         "type": "reorder",
         "question": "edgeImagesQuestTen.questSeven",
-        "words": ["Ich", "werde", "das", "frische", "Brot", "kaufen", "frischen"],
-        "correctOrder": ["Ich", "werde", "das", "frische", "Brot", "kaufen"],
+        "words": [
+          "Ich",
+          "werde",
+          "das",
+          "frische",
+          "Brot",
+          "kaufen",
+          "frischen"
+        ],
+        "correctOrder": [
+          "Ich",
+          "werde",
+          "das",
+          "frische",
+          "Brot",
+          "kaufen"
+        ],
         "tip": "edgeImagesQuestTen.questSevenTip"
       },
       {
@@ -1227,25 +2775,45 @@
       {
         "id": 11,
         "type": "reorder",
-        "question": "edgeImagesQuestTen.questEleven",
-        "words": ["Der", "Kellner", "hat", "die", "leckere", "Suppe", "gebracht", "leckeren"],
-        "correctOrder": ["Der", "Kellner", "hat", "die", "leckere", "Suppe", "gebracht"],
-        "tip": "edgeImagesQuestTen.questElevenTip"
+        "question": "edgeImagesQuestNine.questOne",
+        "words": [
+          "Wir",
+          "werden",
+          "das",
+          "alte",
+          "Gebäude",
+          "sehen",
+          "alten"
+        ],
+        "correctOrder": [
+          "Wir",
+          "werden",
+          "das",
+          "alte",
+          "Gebäude",
+          "sehen"
+        ],
+        "tip": "edgeImagesQuestNine.questOneTip",
+        "reviewOf": "adjective-nine",
+        "reviewLand": "edge-images"
       },
       {
         "id": 12,
         "type": "input",
-        "question": "edgeImagesQuestTen.questTwelve",
-        "answer": "modernen",
-        "tip": "edgeImagesQuestTen.questTwelveTip"
+        "question": "edgeImagesQuestSeven.questTwo",
+        "answer": "kalte",
+        "tip": "edgeImagesQuestSeven.questTwoTip",
+        "reviewOf": "adjective-seven",
+        "reviewLand": "edge-images"
       },
       {
         "id": 13,
-        "type": "speechToText",
-        "question": "edgeImagesQuestTen.questThirteen",
-        "text": "Der kluge Mechaniker hat das Auto repariert",
-        "answer": "Der kluge Mechaniker hat das Auto repariert",
-        "tip": "edgeImagesQuestTen.questThirteenTip"
+        "type": "input",
+        "question": "edgeImagesQuestThree.questFour",
+        "answer": "netten",
+        "tip": "edgeImagesQuestThree.questFourTip",
+        "reviewOf": "adjective-three",
+        "reviewLand": "edge-images"
       },
       {
         "id": 14,
@@ -1261,6 +2829,162 @@
         "answer": "besten",
         "tip": "edgeImagesQuestTen.questFifteenTip"
       }
+    ],
+    "vocabulary": [
+      {
+        "word": "der Patient",
+        "translation-ru": "пациент",
+        "translation-en": "patient",
+        "translation-uk": "пацієнт",
+        "translation-pl": "pacjent",
+        "translation-es": "el paciente",
+        "translation-fr": "le patient",
+        "translation-tr": "hasta",
+        "translation-ro": "pacientul",
+        "translation-uz": "bemor",
+        "translation-hi": "मरीज़",
+        "translation-ar": "المريض"
+      },
+      {
+        "word": "teuer",
+        "translation-ru": "дорогой",
+        "translation-en": "expensive",
+        "translation-uk": "дорогий",
+        "translation-pl": "drogi",
+        "translation-es": "caro",
+        "translation-fr": "cher",
+        "translation-tr": "pahalı",
+        "translation-ro": "scump",
+        "translation-uz": "qimmat",
+        "translation-hi": "महँगा",
+        "translation-ar": "غالٍ"
+      },
+      {
+        "word": "das Gebäude",
+        "translation-ru": "здание",
+        "translation-en": "building",
+        "translation-uk": "будівля",
+        "translation-pl": "budynek",
+        "translation-es": "el edificio",
+        "translation-fr": "le bâtiment",
+        "translation-tr": "bina",
+        "translation-ro": "clădirea",
+        "translation-uz": "bino",
+        "translation-hi": "इमारत",
+        "translation-ar": "المبنى"
+      },
+      {
+        "word": "nett",
+        "translation-ru": "милый, приятный",
+        "translation-en": "nice",
+        "translation-uk": "милий",
+        "translation-pl": "miły",
+        "translation-es": "simpático",
+        "translation-fr": "gentil",
+        "translation-tr": "kibar, hoş",
+        "translation-ro": "drăguț",
+        "translation-uz": "yoqimli",
+        "translation-hi": "अच्छा, प्यारा",
+        "translation-ar": "لطيف"
+      },
+      {
+        "word": "das Handy",
+        "translation-ru": "мобильный телефон",
+        "translation-en": "mobile phone",
+        "translation-uk": "мобільний телефон",
+        "translation-pl": "komórka",
+        "translation-es": "el móvil",
+        "translation-fr": "le portable",
+        "translation-tr": "cep telefonu",
+        "translation-ro": "mobilul",
+        "translation-uz": "mobil telefon",
+        "translation-hi": "मोबाइल",
+        "translation-ar": "الهاتف المحمول"
+      },
+      {
+        "word": "die Medizin",
+        "translation-ru": "лекарство",
+        "translation-en": "medicine",
+        "translation-uk": "ліки",
+        "translation-pl": "lekarstwo",
+        "translation-es": "la medicina",
+        "translation-fr": "le médicament",
+        "translation-tr": "ilaç",
+        "translation-ro": "medicamentul",
+        "translation-uz": "dori",
+        "translation-hi": "दवा",
+        "translation-ar": "الدواء"
+      },
+      {
+        "word": "der Schmerz",
+        "translation-ru": "боль",
+        "translation-en": "pain",
+        "translation-uk": "біль",
+        "translation-pl": "ból",
+        "translation-es": "el dolor",
+        "translation-fr": "la douleur",
+        "translation-tr": "ağrı",
+        "translation-ro": "durerea",
+        "translation-uz": "og‘riq",
+        "translation-hi": "दर्द",
+        "translation-ar": "الألم"
+      },
+      {
+        "word": "telefonieren",
+        "translation-ru": "разговаривать по телефону",
+        "translation-en": "to talk on the phone",
+        "translation-uk": "розмовляти телефоном",
+        "translation-pl": "telefonować",
+        "translation-es": "hablar por teléfono",
+        "translation-fr": "téléphoner",
+        "translation-tr": "telefonla konuşmak",
+        "translation-ro": "a vorbi la telefon",
+        "translation-uz": "telefonda gaplashmoq",
+        "translation-hi": "फ़ोन पर बात करना",
+        "translation-ar": "يتحدث بالهاتف"
+      },
+      {
+        "word": "spüren",
+        "translation-ru": "чувствовать",
+        "translation-en": "to feel",
+        "translation-uk": "відчувати",
+        "translation-pl": "czuć",
+        "translation-es": "sentir",
+        "translation-fr": "sentir",
+        "translation-tr": "hissetmek",
+        "translation-ro": "a simți",
+        "translation-uz": "his qilmoq",
+        "translation-hi": "महसूस करना",
+        "translation-ar": "يشعر"
+      },
+      {
+        "word": "überraschen",
+        "translation-ru": "удивлять",
+        "translation-en": "to surprise",
+        "translation-uk": "дивувати",
+        "translation-pl": "zaskakiwać",
+        "translation-es": "sorprender",
+        "translation-fr": "surprendre",
+        "translation-tr": "şaşırtmak",
+        "translation-ro": "a surprinde",
+        "translation-uz": "ajablantirmoq",
+        "translation-hi": "चौंकाना",
+        "translation-ar": "يفاجئ"
+      },
+      {
+        "word": "die Fabrik",
+        "translation-ru": "фабрика",
+        "translation-en": "factory",
+        "translation-uk": "фабрика",
+        "translation-pl": "fabryka",
+        "translation-es": "la fábrica",
+        "translation-fr": "l’usine",
+        "translation-tr": "fabrika",
+        "translation-ro": "fabrica",
+        "translation-uz": "fabrika",
+        "translation-hi": "कारख़ाना",
+        "translation-ar": "المصنع"
+      }
     ]
   },
   {
@@ -1273,14 +2997,32 @@
       "minCorrect": 15,
       "requiredTasks": 15
     },
-    "rewards": { "points": 10, "xp": 10 },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
     "tasks": [
       {
         "id": 1,
         "type": "reorder",
         "question": "edgeImagesQuestEleven.questOne",
-        "words": ["Wir", "werden", "den", "blauen", "Himmel", "sehen", "blaue"],
-        "correctOrder": ["Wir", "werden", "den", "blauen", "Himmel", "sehen"],
+        "words": [
+          "Wir",
+          "werden",
+          "den",
+          "blauen",
+          "Himmel",
+          "sehen",
+          "blaue"
+        ],
+        "correctOrder": [
+          "Wir",
+          "werden",
+          "den",
+          "blauen",
+          "Himmel",
+          "sehen"
+        ],
         "tip": "edgeImagesQuestEleven.questOneTip"
       },
       {
@@ -1316,7 +3058,11 @@
         "id": 6,
         "type": "select",
         "question": "edgeImagesQuestEleven.questSix",
-        "options": ["neue", "neuen", "neues"],
+        "options": [
+          "neue",
+          "neuen",
+          "neues"
+        ],
         "answer": "neue",
         "tip": "edgeImagesQuestEleven.questSixTip"
       },
@@ -1324,8 +3070,25 @@
         "id": 7,
         "type": "reorder",
         "question": "edgeImagesQuestEleven.questSeven",
-        "words": ["Der", "Koch", "hat", "den", "leckeren", "Fisch", "gekocht", "leckere"],
-        "correctOrder": ["Der", "Koch", "hat", "den", "leckeren", "Fisch", "gekocht"],
+        "words": [
+          "Der",
+          "Koch",
+          "hat",
+          "den",
+          "leckeren",
+          "Fisch",
+          "gekocht",
+          "leckere"
+        ],
+        "correctOrder": [
+          "Der",
+          "Koch",
+          "hat",
+          "den",
+          "leckeren",
+          "Fisch",
+          "gekocht"
+        ],
         "tip": "edgeImagesQuestEleven.questSevenTip"
       },
       {
@@ -1354,8 +3117,25 @@
         "id": 11,
         "type": "reorder",
         "question": "edgeImagesQuestEleven.questEleven",
-        "words": ["Die", "kleine", "Katze", "hat", "die", "Maus", "gefangen", "kleinen"],
-        "correctOrder": ["Die", "kleine", "Katze", "hat", "die", "Maus", "gefangen"],
+        "words": [
+          "Die",
+          "kleine",
+          "Katze",
+          "hat",
+          "die",
+          "Maus",
+          "gefangen",
+          "kleinen"
+        ],
+        "correctOrder": [
+          "Die",
+          "kleine",
+          "Katze",
+          "hat",
+          "die",
+          "Maus",
+          "gefangen"
+        ],
         "tip": "edgeImagesQuestEleven.questElevenTip"
       },
       {
@@ -1387,6 +3167,78 @@
         "answer": "besten",
         "tip": "edgeImagesQuestEleven.questFifteenTip"
       }
+    ],
+    "vocabulary": [
+      {
+        "word": "der Koch",
+        "translation-ru": "повар",
+        "translation-en": "cook",
+        "translation-uk": "кухар",
+        "translation-pl": "kucharz",
+        "translation-es": "el cocinero",
+        "translation-fr": "le cuisinier",
+        "translation-tr": "aşçı",
+        "translation-ro": "bucătarul",
+        "translation-uz": "oshpaz",
+        "translation-hi": "रसोइया",
+        "translation-ar": "الطبّاخ"
+      },
+      {
+        "word": "der Monitor",
+        "translation-ru": "монитор",
+        "translation-en": "monitor",
+        "translation-uk": "монітор",
+        "translation-pl": "monitor",
+        "translation-es": "monitor",
+        "translation-fr": "moniteur",
+        "translation-tr": "monitör",
+        "translation-ro": "monitor",
+        "translation-uz": "monitor",
+        "translation-hi": "मॉनिटर",
+        "translation-ar": "شاشة"
+      },
+      {
+        "word": "die Maus",
+        "translation-ru": "мышь",
+        "translation-en": "mouse",
+        "translation-uk": "миша",
+        "translation-pl": "mysz",
+        "translation-es": "ratón",
+        "translation-fr": "souris",
+        "translation-tr": "fare",
+        "translation-ro": "șoarece",
+        "translation-uz": "sichqon",
+        "translation-hi": "चूहा",
+        "translation-ar": "فأر"
+      },
+      {
+        "word": "probieren",
+        "translation-ru": "пробовать / дегустировать",
+        "translation-en": "to try / taste",
+        "translation-uk": "пробувати",
+        "translation-pl": "próbować",
+        "translation-es": "probar",
+        "translation-fr": "essayer / goûter",
+        "translation-tr": "denemek / tadına bakmak",
+        "translation-ro": "a încerca / a gusta",
+        "translation-uz": "tatib ko'rmoq / urinib ko'rmoq",
+        "translation-hi": "चखना / कोशिश करना",
+        "translation-ar": "يجرب"
+      },
+      {
+        "word": "nett",
+        "translation-ru": "милый, приятный",
+        "translation-en": "nice",
+        "translation-uk": "милий",
+        "translation-pl": "miły",
+        "translation-es": "simpático",
+        "translation-fr": "gentil",
+        "translation-tr": "kibar, hoş",
+        "translation-ro": "drăguț",
+        "translation-uz": "yoqimli",
+        "translation-hi": "अच्छा, प्यारा",
+        "translation-ar": "لطيف"
+      }
     ]
   },
   {
@@ -1399,14 +3251,34 @@
       "minCorrect": 15,
       "requiredTasks": 15
     },
-    "rewards": { "points": 10, "xp": 10 },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
     "tasks": [
       {
         "id": 1,
         "type": "reorder",
         "question": "edgeImagesQuestTwelve.questOne",
-        "words": ["Der", "Student", "wird", "die", "schwere", "Prüfung", "bestehen", "schweren"],
-        "correctOrder": ["Der", "Student", "wird", "die", "schwere", "Prüfung", "bestehen"],
+        "words": [
+          "Der",
+          "Student",
+          "wird",
+          "die",
+          "schwere",
+          "Prüfung",
+          "bestehen",
+          "schweren"
+        ],
+        "correctOrder": [
+          "Der",
+          "Student",
+          "wird",
+          "die",
+          "schwere",
+          "Prüfung",
+          "bestehen"
+        ],
         "tip": "edgeImagesQuestTwelve.questOneTip"
       },
       {
@@ -1442,7 +3314,11 @@
         "id": 6,
         "type": "select",
         "question": "edgeImagesQuestTwelve.questSix",
-        "options": ["gute", "guten", "guter"],
+        "options": [
+          "gute",
+          "guten",
+          "guter"
+        ],
         "answer": "gute",
         "tip": "edgeImagesQuestTwelve.questSixTip"
       },
@@ -1450,8 +3326,23 @@
         "id": 7,
         "type": "reorder",
         "question": "edgeImagesQuestTwelve.questSeven",
-        "words": ["Wir", "haben", "den", "weißen", "Tisch", "gekauft", "weiße"],
-        "correctOrder": ["Wir", "haben", "den", "weißen", "Tisch", "gekauft"],
+        "words": [
+          "Wir",
+          "haben",
+          "den",
+          "weißen",
+          "Tisch",
+          "gekauft",
+          "weiße"
+        ],
+        "correctOrder": [
+          "Wir",
+          "haben",
+          "den",
+          "weißen",
+          "Tisch",
+          "gekauft"
+        ],
         "tip": "edgeImagesQuestTwelve.questSevenTip"
       },
       {
@@ -1480,8 +3371,22 @@
         "id": 11,
         "type": "reorder",
         "question": "edgeImagesQuestTwelve.questEleven",
-        "words": ["bekannte", "Der", "Arzt", "wird", "helfen", "uns"],
-        "correctOrder": ["Der", "bekannte", "Arzt", "wird", "uns", "helfen"],
+        "words": [
+          "bekannte",
+          "Der",
+          "Arzt",
+          "wird",
+          "helfen",
+          "uns"
+        ],
+        "correctOrder": [
+          "Der",
+          "bekannte",
+          "Arzt",
+          "wird",
+          "uns",
+          "helfen"
+        ],
         "tip": "edgeImagesQuestTwelve.questElevenTip"
       },
       {
@@ -1513,6 +3418,92 @@
         "answer": "leckere",
         "tip": "edgeImagesQuestTwelve.questFifteenTip"
       }
+    ],
+    "vocabulary": [
+      {
+        "word": "bekannt",
+        "translation-ru": "известный",
+        "translation-en": "well-known",
+        "translation-uk": "відомий",
+        "translation-pl": "znany",
+        "translation-es": "conocido",
+        "translation-fr": "connu",
+        "translation-tr": "tanınmış",
+        "translation-ro": "cunoscut",
+        "translation-uz": "mashhur",
+        "translation-hi": "मशहूर",
+        "translation-ar": "معروف"
+      },
+      {
+        "word": "der Student",
+        "translation-ru": "студент",
+        "translation-en": "student",
+        "translation-uk": "студент",
+        "translation-pl": "student",
+        "translation-es": "el estudiante",
+        "translation-fr": "l’étudiant",
+        "translation-tr": "üniversite öğrencisi",
+        "translation-ro": "studentul",
+        "translation-uz": "talaba",
+        "translation-hi": "छात्र",
+        "translation-ar": "الطالب"
+      },
+      {
+        "word": "die Leute",
+        "translation-ru": "люди",
+        "translation-en": "people",
+        "translation-uk": "люди",
+        "translation-pl": "ludzie",
+        "translation-es": "la gente",
+        "translation-fr": "les gens",
+        "translation-tr": "insanlar",
+        "translation-ro": "oamenii",
+        "translation-uz": "odamlar",
+        "translation-hi": "लोग",
+        "translation-ar": "الناس"
+      },
+      {
+        "word": "das Bier",
+        "translation-ru": "пиво",
+        "translation-en": "beer",
+        "translation-uk": "пиво",
+        "translation-pl": "piwo",
+        "translation-es": "cerveza",
+        "translation-fr": "bière",
+        "translation-tr": "bira",
+        "translation-ro": "bere",
+        "translation-uz": "pivo",
+        "translation-hi": "बीयर",
+        "translation-ar": "بيرة"
+      },
+      {
+        "word": "die Suppe",
+        "translation-ru": "суп",
+        "translation-en": "soup",
+        "translation-uk": "суп",
+        "translation-pl": "zupa",
+        "translation-es": "la sopa",
+        "translation-fr": "la soupe",
+        "translation-tr": "çorba",
+        "translation-ro": "supa",
+        "translation-uz": "sho‘rva",
+        "translation-hi": "सूप",
+        "translation-ar": "الحساء"
+      },
+      {
+        "word": "gewinnen",
+        "translation-ru": "выигрывать",
+        "translation-en": "to win / gain",
+        "translation-uk": "вигравати",
+        "translation-pl": "wygrywać",
+        "translation-es": "ganar",
+        "translation-fr": "gagner",
+        "translation-tr": "kazanmak",
+        "translation-ro": "a câștiga",
+        "translation-uz": "yutmoq",
+        "translation-hi": "जीतना",
+        "translation-ar": "يفوز"
+      }
     ]
   },
   {
@@ -1525,14 +3516,32 @@
       "minCorrect": 15,
       "requiredTasks": 15
     },
-    "rewards": { "points": 10, "xp": 10 },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
     "tasks": [
       {
         "id": 1,
         "type": "reorder",
         "question": "edgeImagesQuestThirteen.questOne",
-        "words": ["Ich", "werde", "die", "blaue", "Jacke", "kaufen", "blauen"],
-        "correctOrder": ["Ich", "werde", "die", "blaue", "Jacke", "kaufen"],
+        "words": [
+          "Ich",
+          "werde",
+          "die",
+          "blaue",
+          "Jacke",
+          "kaufen",
+          "blauen"
+        ],
+        "correctOrder": [
+          "Ich",
+          "werde",
+          "die",
+          "blaue",
+          "Jacke",
+          "kaufen"
+        ],
         "tip": "edgeImagesQuestThirteen.questOneTip"
       },
       {
@@ -1568,7 +3577,11 @@
         "id": 6,
         "type": "select",
         "question": "edgeImagesQuestThirteen.questSix",
-        "options": ["warme", "warmen", "warmes"],
+        "options": [
+          "warme",
+          "warmen",
+          "warmes"
+        ],
         "answer": "warme",
         "tip": "edgeImagesQuestThirteen.questSixTip"
       },
@@ -1576,8 +3589,22 @@
         "id": 7,
         "type": "reorder",
         "question": "edgeImagesQuestThirteen.questSeven",
-        "words": ["Wir", "werden", "schönen", "Garten", "den", "sehen"],
-        "correctOrder": ["Wir", "werden", "den", "schönen", "Garten", "sehen"],
+        "words": [
+          "Wir",
+          "werden",
+          "schönen",
+          "Garten",
+          "den",
+          "sehen"
+        ],
+        "correctOrder": [
+          "Wir",
+          "werden",
+          "den",
+          "schönen",
+          "Garten",
+          "sehen"
+        ],
         "tip": "edgeImagesQuestThirteen.questSevenTip"
       },
       {
@@ -1605,25 +3632,45 @@
       {
         "id": 11,
         "type": "reorder",
-        "question": "edgeImagesQuestThirteen.questEleven",
-        "words": ["Der", "Junge", "kleine", "hat", "Schlüssel", "den", "gefunden"],
-        "correctOrder": ["Der", "kleine", "Junge", "hat", "den", "Schlüssel", "gefunden"],
-        "tip": "edgeImagesQuestThirteen.questElevenTip"
+        "question": "edgeImagesQuestTen.questOne",
+        "words": [
+          "Wir",
+          "werden",
+          "das",
+          "alte",
+          "Museum",
+          "besuchen",
+          "alten"
+        ],
+        "correctOrder": [
+          "Wir",
+          "werden",
+          "das",
+          "alte",
+          "Museum",
+          "besuchen"
+        ],
+        "tip": "edgeImagesQuestTen.questOneTip",
+        "reviewOf": "adjective-ten",
+        "reviewLand": "edge-images"
       },
       {
         "id": 12,
         "type": "input",
-        "question": "edgeImagesQuestThirteen.questTwelve",
-        "answer": "modernen",
-        "tip": "edgeImagesQuestThirteen.questTwelveTip"
+        "question": "edgeImagesQuestEight.questTwo",
+        "answer": "neue",
+        "tip": "edgeImagesQuestEight.questTwoTip",
+        "reviewOf": "adjective-eight",
+        "reviewLand": "edge-images"
       },
       {
         "id": 13,
-        "type": "speechToText",
-        "question": "edgeImagesQuestThirteen.questThirteen",
-        "text": "Die besten Rezepte haben wir gefunden",
-        "answer": "Die besten Rezepte haben wir gefunden",
-        "tip": "edgeImagesQuestThirteen.questThirteenTip"
+        "type": "input",
+        "question": "edgeImagesQuestFour.questFour",
+        "answer": "schnellen",
+        "tip": "edgeImagesQuestFour.questFourTip",
+        "reviewOf": "adjective-four",
+        "reviewLand": "edge-images"
       },
       {
         "id": 14,
@@ -1639,6 +3686,106 @@
         "answer": "besten",
         "tip": "edgeImagesQuestThirteen.questFifteenTip"
       }
+    ],
+    "vocabulary": [
+      {
+        "word": "freuen (sich)",
+        "translation-ru": "радоваться",
+        "translation-en": "to be glad / look forward",
+        "translation-uk": "радіти",
+        "translation-pl": "cieszyć się",
+        "translation-es": "alegrarse",
+        "translation-fr": "se réjouir",
+        "translation-tr": "sevinmek",
+        "translation-ro": "a se bucura",
+        "translation-uz": "hursand bo'lmoq",
+        "translation-hi": "खुश होना",
+        "translation-ar": "يفرح"
+      },
+      {
+        "word": "die Zeitung",
+        "translation-ru": "газета",
+        "translation-en": "newspaper",
+        "translation-uk": "газета",
+        "translation-pl": "gazeta",
+        "translation-es": "el periódico",
+        "translation-fr": "le journal",
+        "translation-tr": "gazete",
+        "translation-ro": "ziarul",
+        "translation-uz": "gazeta",
+        "translation-hi": "अख़बार",
+        "translation-ar": "الجريدة"
+      },
+      {
+        "word": "das Obst",
+        "translation-ru": "фрукты",
+        "translation-en": "fruit",
+        "translation-uk": "фрукти",
+        "translation-pl": "owoce",
+        "translation-es": "la fruta",
+        "translation-fr": "les fruits",
+        "translation-tr": "meyve",
+        "translation-ro": "fructele",
+        "translation-uz": "meva",
+        "translation-hi": "फल",
+        "translation-ar": "الفاكهة"
+      },
+      {
+        "word": "reparieren",
+        "translation-ru": "ремонтировать",
+        "translation-en": "to repair",
+        "translation-uk": "ремонтувати",
+        "translation-pl": "naprawiać",
+        "translation-es": "reparar",
+        "translation-fr": "réparer",
+        "translation-tr": "tamir etmek",
+        "translation-ro": "a repara",
+        "translation-uz": "tuzatmoq",
+        "translation-hi": "मरम्मत करना",
+        "translation-ar": "يصلح"
+      },
+      {
+        "word": "teuer",
+        "translation-ru": "дорогой",
+        "translation-en": "expensive",
+        "translation-uk": "дорогий",
+        "translation-pl": "drogi",
+        "translation-es": "caro",
+        "translation-fr": "cher",
+        "translation-tr": "pahalı",
+        "translation-ro": "scump",
+        "translation-uz": "qimmat",
+        "translation-hi": "महँगा",
+        "translation-ar": "غالٍ"
+      },
+      {
+        "word": "die Kamera",
+        "translation-ru": "камера",
+        "translation-en": "camera",
+        "translation-uk": "камера",
+        "translation-pl": "aparat",
+        "translation-es": "la cámara",
+        "translation-fr": "l’appareil photo",
+        "translation-tr": "kamera",
+        "translation-ro": "camera",
+        "translation-uz": "kamera",
+        "translation-hi": "कैमरा",
+        "translation-ar": "الكاميرا"
+      },
+      {
+        "word": "bellen",
+        "translation-ru": "лаять",
+        "translation-en": "to bark",
+        "translation-uk": "гавкати",
+        "translation-pl": "szczekać",
+        "translation-es": "ladrar",
+        "translation-fr": "aboyer",
+        "translation-tr": "havlamak",
+        "translation-ro": "a lătra",
+        "translation-uz": "vovillamoq",
+        "translation-hi": "भोंकना",
+        "translation-ar": "ينبح"
+      }
     ]
   },
   {
@@ -1651,14 +3798,31 @@
       "minCorrect": 15,
       "requiredTasks": 15
     },
-    "rewards": { "points": 10, "xp": 10 },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
     "tasks": [
       {
         "id": 1,
         "type": "reorder",
         "question": "edgeImagesQuestFourteen.questOne",
-        "words": ["Wir", "werden", "das", "teure", "buchen", "Hotel"],
-        "correctOrder": ["Wir", "werden", "das", "teure", "Hotel", "buchen"],
+        "words": [
+          "Wir",
+          "werden",
+          "das",
+          "teure",
+          "buchen",
+          "Hotel"
+        ],
+        "correctOrder": [
+          "Wir",
+          "werden",
+          "das",
+          "teure",
+          "Hotel",
+          "buchen"
+        ],
         "tip": "edgeImagesQuestFourteen.questOneTip"
       },
       {
@@ -1694,7 +3858,11 @@
         "id": 6,
         "type": "select",
         "question": "edgeImagesQuestFourteen.questSix",
-        "options": ["schöne", "schönen", "schöner"],
+        "options": [
+          "schöne",
+          "schönen",
+          "schöner"
+        ],
         "answer": "schöne",
         "tip": "edgeImagesQuestFourteen.questSixTip"
       },
@@ -1702,8 +3870,22 @@
         "id": 7,
         "type": "reorder",
         "question": "edgeImagesQuestFourteen.questSeven",
-        "words": ["Sie", "den", "wird", "heißen", "Tee", "trinken"],
-        "correctOrder": ["Sie", "wird", "den", "heißen", "Tee", "trinken"],
+        "words": [
+          "Sie",
+          "den",
+          "wird",
+          "heißen",
+          "Tee",
+          "trinken"
+        ],
+        "correctOrder": [
+          "Sie",
+          "wird",
+          "den",
+          "heißen",
+          "Tee",
+          "trinken"
+        ],
         "tip": "edgeImagesQuestFourteen.questSevenTip"
       },
       {
@@ -1731,25 +3913,45 @@
       {
         "id": 11,
         "type": "reorder",
-        "question": "edgeImagesQuestFourteen.questEleven",
-        "words": ["Die", "schwere", "sein", "Prüfung", "wird", "beendet"],
-        "correctOrder": ["Die", "schwere", "Prüfung", "wird", "beendet", "sein"],
-        "tip": "edgeImagesQuestFourteen.questElevenTip"
+        "question": "edgeImagesQuestThirteen.questOne",
+        "words": [
+          "Ich",
+          "werde",
+          "die",
+          "blaue",
+          "Jacke",
+          "kaufen",
+          "blauen"
+        ],
+        "correctOrder": [
+          "Ich",
+          "werde",
+          "die",
+          "blaue",
+          "Jacke",
+          "kaufen"
+        ],
+        "tip": "edgeImagesQuestThirteen.questOneTip",
+        "reviewOf": "adjective-thirteen",
+        "reviewLand": "edge-images"
       },
       {
         "id": 12,
         "type": "input",
-        "question": "edgeImagesQuestFourteen.questTwelve",
-        "answer": "kalte",
-        "tip": "edgeImagesQuestFourteen.questTwelveTip"
+        "question": "edgeImagesQuestNine.questTwo",
+        "answer": "leckeren",
+        "tip": "edgeImagesQuestNine.questTwoTip",
+        "reviewOf": "adjective-nine",
+        "reviewLand": "edge-images"
       },
       {
         "id": 13,
-        "type": "speechToText",
-        "question": "edgeImagesQuestFourteen.questThirteen",
-        "text": "Die kleinen Fenster haben wir geputzt",
-        "answer": "Die kleinen Fenster haben wir geputzt",
-        "tip": "edgeImagesQuestFourteen.questThirteenTip"
+        "type": "input",
+        "question": "edgeImagesQuestFive.questFour",
+        "answer": "blauen",
+        "tip": "edgeImagesQuestFive.questFourTip",
+        "reviewOf": "adjective-five",
+        "reviewLand": "edge-images"
       },
       {
         "id": 14,
@@ -1765,6 +3967,78 @@
         "answer": "neue",
         "tip": "edgeImagesQuestFourteen.questFifteenTip"
       }
+    ],
+    "vocabulary": [
+      {
+        "word": "vorstellen (sich)",
+        "translation-ru": "представлять",
+        "translation-en": "to introduce / imagine",
+        "translation-uk": "представляти",
+        "translation-pl": "przedstawiać",
+        "translation-es": "presentar",
+        "translation-fr": "présenter",
+        "translation-tr": "tanıtmak",
+        "translation-ro": "a prezenta",
+        "translation-uz": "tanishtirmoq",
+        "translation-hi": "परिचय देना",
+        "translation-ar": "يقدّم"
+      },
+      {
+        "word": "heißen",
+        "translation-ru": "называться",
+        "translation-en": "to be called / mean",
+        "translation-uk": "називатися",
+        "translation-pl": "nazywać się",
+        "translation-es": "llamarse",
+        "translation-fr": "s'appeler",
+        "translation-tr": "adı olmak",
+        "translation-ro": "a se numi",
+        "translation-uz": "nomlanmoq",
+        "translation-hi": "कहलाना",
+        "translation-ar": "يُسمى"
+      },
+      {
+        "word": "die Zeitung",
+        "translation-ru": "газета",
+        "translation-en": "newspaper",
+        "translation-uk": "газета",
+        "translation-pl": "gazeta",
+        "translation-es": "el periódico",
+        "translation-fr": "le journal",
+        "translation-tr": "gazete",
+        "translation-ro": "ziarul",
+        "translation-uz": "gazeta",
+        "translation-hi": "अख़बार",
+        "translation-ar": "الجريدة"
+      },
+      {
+        "word": "freuen (sich)",
+        "translation-ru": "радоваться",
+        "translation-en": "to be glad / look forward",
+        "translation-uk": "радіти",
+        "translation-pl": "cieszyć się",
+        "translation-es": "alegrarse",
+        "translation-fr": "se réjouir",
+        "translation-tr": "sevinmek",
+        "translation-ro": "a se bucura",
+        "translation-uz": "hursand bo'lmoq",
+        "translation-hi": "खुश होना",
+        "translation-ar": "يفرح"
+      },
+      {
+        "word": "der Patient",
+        "translation-ru": "пациент",
+        "translation-en": "patient",
+        "translation-uk": "пацієнт",
+        "translation-pl": "pacjent",
+        "translation-es": "el paciente",
+        "translation-fr": "le patient",
+        "translation-tr": "hasta",
+        "translation-ro": "pacientul",
+        "translation-uz": "bemor",
+        "translation-hi": "मरीज़",
+        "translation-ar": "المريض"
+      }
     ]
   },
   {
@@ -1777,14 +4051,32 @@
       "minCorrect": 15,
       "requiredTasks": 15
     },
-    "rewards": { "points": 10, "xp": 10 },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
     "tasks": [
       {
         "id": 1,
         "type": "reorder",
         "question": "edgeImagesQuestFifteen.questOne",
-        "words": ["Wir", "werden", "das", "neue", "Theater", "besuchen", "neuen"],
-        "correctOrder": ["Wir", "werden", "das", "neue", "Theater", "besuchen"],
+        "words": [
+          "Wir",
+          "werden",
+          "das",
+          "neue",
+          "Theater",
+          "besuchen",
+          "neuen"
+        ],
+        "correctOrder": [
+          "Wir",
+          "werden",
+          "das",
+          "neue",
+          "Theater",
+          "besuchen"
+        ],
         "tip": "edgeImagesQuestFifteen.questOneTip"
       },
       {
@@ -1820,7 +4112,11 @@
         "id": 6,
         "type": "select",
         "question": "edgeImagesQuestFifteen.questSix",
-        "options": ["fleißigen", "fleißige", "fleißiger"],
+        "options": [
+          "fleißigen",
+          "fleißige",
+          "fleißiger"
+        ],
         "answer": "fleißigen",
         "tip": "edgeImagesQuestFifteen.questSixTip"
       },
@@ -1828,8 +4124,23 @@
         "id": 7,
         "type": "reorder",
         "question": "edgeImagesQuestFifteen.questSeven",
-        "words": ["Ich", "werde", "den", "richtigen", "Weg", "finden", "richtige"],
-        "correctOrder": ["Ich", "werde", "den", "richtigen", "Weg", "finden"],
+        "words": [
+          "Ich",
+          "werde",
+          "den",
+          "richtigen",
+          "Weg",
+          "finden",
+          "richtige"
+        ],
+        "correctOrder": [
+          "Ich",
+          "werde",
+          "den",
+          "richtigen",
+          "Weg",
+          "finden"
+        ],
         "tip": "edgeImagesQuestFifteen.questSevenTip"
       },
       {
@@ -1857,25 +4168,44 @@
       {
         "id": 11,
         "type": "reorder",
-        "question": "edgeImagesQuestFifteen.questEleven",
-        "words": ["Der", "bekannte", "Schauspieler", "wird", "morgen", "kommen", "bekannten"],
-        "correctOrder": ["Der", "bekannte", "Schauspieler", "wird", "morgen", "kommen"],
-        "tip": "edgeImagesQuestFifteen.questElevenTip"
+        "question": "edgeImagesQuestFourteen.questOne",
+        "words": [
+          "Wir",
+          "werden",
+          "das",
+          "teure",
+          "buchen",
+          "Hotel"
+        ],
+        "correctOrder": [
+          "Wir",
+          "werden",
+          "das",
+          "teure",
+          "Hotel",
+          "buchen"
+        ],
+        "tip": "edgeImagesQuestFourteen.questOneTip",
+        "reviewOf": "adjective-fourteen",
+        "reviewLand": "edge-images"
       },
       {
         "id": 12,
         "type": "input",
-        "question": "edgeImagesQuestFifteen.questTwelve",
-        "answer": "interessante",
-        "tip": "edgeImagesQuestFifteen.questTwelveTip"
+        "question": "edgeImagesQuestTen.questTwo",
+        "answer": "kranke",
+        "tip": "edgeImagesQuestTen.questTwoTip",
+        "reviewOf": "adjective-ten",
+        "reviewLand": "edge-images"
       },
       {
         "id": 13,
-        "type": "speechToText",
-        "question": "edgeImagesQuestFifteen.questThirteen",
-        "text": "Den schwarzen Mantel habe ich gekauft",
-        "answer": "Den schwarzen Mantel habe ich gekauft",
-        "tip": "edgeImagesQuestFifteen.questThirteenTip"
+        "type": "input",
+        "question": "edgeImagesQuestSix.questFour",
+        "answer": "alten",
+        "tip": "edgeImagesQuestSix.questFourTip",
+        "reviewOf": "adjective-six",
+        "reviewLand": "edge-images"
       },
       {
         "id": 14,
@@ -1890,6 +4220,106 @@
         "question": "edgeImagesQuestFifteen.questFifteen",
         "answer": "leckere",
         "tip": "edgeImagesQuestFifteen.questFifteenTip"
+      }
+    ],
+    "vocabulary": [
+      {
+        "word": "der Patient",
+        "translation-ru": "пациент",
+        "translation-en": "patient",
+        "translation-uk": "пацієнт",
+        "translation-pl": "pacjent",
+        "translation-es": "el paciente",
+        "translation-fr": "le patient",
+        "translation-tr": "hasta",
+        "translation-ro": "pacientul",
+        "translation-uz": "bemor",
+        "translation-hi": "मरीज़",
+        "translation-ar": "المريض"
+      },
+      {
+        "word": "richtig",
+        "translation-ru": "правильно, правильный",
+        "translation-en": "right, correct",
+        "translation-uk": "правильно",
+        "translation-pl": "dobrze, poprawnie",
+        "translation-es": "correcto",
+        "translation-fr": "juste, correct",
+        "translation-tr": "doğru",
+        "translation-ro": "corect",
+        "translation-uz": "to‘g‘ri",
+        "translation-hi": "सही",
+        "translation-ar": "صحيح"
+      },
+      {
+        "word": "das Theater",
+        "translation-ru": "театр",
+        "translation-en": "theatre",
+        "translation-uk": "театр",
+        "translation-pl": "teatr",
+        "translation-es": "teatro",
+        "translation-fr": "théâtre",
+        "translation-tr": "tiyatro",
+        "translation-ro": "teatru",
+        "translation-uz": "teatr",
+        "translation-hi": "थियेटर",
+        "translation-ar": "مسرح"
+      },
+      {
+        "word": "der Professor",
+        "translation-ru": "профессор",
+        "translation-en": "professor",
+        "translation-uk": "професор",
+        "translation-pl": "profesor",
+        "translation-es": "profesor",
+        "translation-fr": "professeur",
+        "translation-tr": "profesör",
+        "translation-ro": "profesor",
+        "translation-uz": "professor",
+        "translation-hi": "प्रोफेसर",
+        "translation-ar": "أستاذ"
+      },
+      {
+        "word": "hängen",
+        "translation-ru": "висеть",
+        "translation-en": "to hang",
+        "translation-uk": "висіти",
+        "translation-pl": "wisieć",
+        "translation-es": "colgar",
+        "translation-fr": "être suspendu",
+        "translation-tr": "asılı olmak",
+        "translation-ro": "a atârna",
+        "translation-uz": "osilib turmoq",
+        "translation-hi": "लटकना",
+        "translation-ar": "يعلق"
+      },
+      {
+        "word": "die Galerie",
+        "translation-ru": "галерея",
+        "translation-en": "gallery",
+        "translation-uk": "галерея",
+        "translation-pl": "galeria",
+        "translation-es": "la galería",
+        "translation-fr": "la galerie",
+        "translation-tr": "galeri",
+        "translation-ro": "galeria",
+        "translation-uz": "galereya",
+        "translation-hi": "गैलरी",
+        "translation-ar": "المعرض"
+      },
+      {
+        "word": "fleißig",
+        "translation-ru": "прилежный",
+        "translation-en": "hard-working",
+        "translation-uk": "старанний",
+        "translation-pl": "pilny",
+        "translation-es": "trabajador",
+        "translation-fr": "travailleur",
+        "translation-tr": "çalışkan",
+        "translation-ro": "harnic",
+        "translation-uz": "tirishqoq",
+        "translation-hi": "मेहनती",
+        "translation-ar": "مجتهد"
       }
     ]
   }
