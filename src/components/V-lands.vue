@@ -41,10 +41,44 @@
                     {{ activeRegionLevel }} · {{ t(`locationsMenu.level${activeRegionLevel}`) }}
                   </span>
                   <p class="map-left__desc">{{ t(active.desc) }}</p>
-                  <p class="map-left__level" :class="isUnlocked ? 'ok' : 'locked'">
-                    <span v-if="isUnlocked">{{ t('locationsMenu.access') }}</span>
-                    <span v-else>{{ t('locationsMenu.accessWithLevel') }} {{ needLevel(active) }}</span>
+                  <p v-if="isUnlocked" class="map-left__level ok">
+                    <span>{{ t('locationsMenu.access') }}</span>
                   </p>
+                  <!-- закрытая земля: карточка с двумя способами открыть, у каждого видно, сколько уже есть -->
+                  <div v-else class="land-lock">
+                    <div class="land-lock__head">
+                      <div class="land-lock__head-text">
+                        <span class="land-lock__title">{{ t('locationsMenu.landLockTitle') }}</span>
+                        <span v-if="activePrevRegion" class="land-lock__hint">{{ t('locationsMenu.landLockHint') }}</span>
+                      </div>
+                    </div>
+                    <div class="land-lock__way">
+                      <!-- значок уровня: сам номер нужного уровня, как медаль на карте -->
+                      <span class="land-lock__icon land-lock__icon--level" aria-hidden="true">
+                        <span class="land-lock__lvl-num">{{ needLevel(active) }}</span>
+                      </span>
+                      <div class="land-lock__way-text">
+                        <span class="land-lock__way-title">{{ t('locationsMenu.landLockLevel', { level: needLevel(active) }) }}</span>
+                        <span class="land-lock__way-sub">{{ t('locationsMenu.landLockLevelNow', { level: clampedLevel }) }}</span>
+                      </div>
+                    </div>
+                    <template v-if="activePrevRegion">
+                      <div class="land-lock__or"><span>{{ t('locationsMenu.landLockOr') }}</span></div>
+                      <div class="land-lock__way">
+                        <!-- картинка той самой земли, которую надо пройти -->
+                        <span class="land-lock__icon land-lock__icon--land" aria-hidden="true">
+                          <img :src="activePrevRegion.icon" alt="" decoding="async">
+                        </span>
+                        <div class="land-lock__way-text">
+                          <span class="land-lock__way-title">{{ t('locationsMenu.landLockPrev', { land: t(activePrevRegion.name) }) }}</span>
+                          <span class="land-lock__way-sub">{{ t('locationsMenu.landLockPrevNow', activePrevProgress) }}</span>
+                          <span class="land-lock__bar" aria-hidden="true">
+                            <span class="land-lock__bar-fill" :style="{ width: (activePrevProgress.total ? activePrevProgress.done / activePrevProgress.total * 100 : 0) + '%' }"></span>
+                          </span>
+                        </div>
+                      </div>
+                    </template>
+                  </div>
                 </div>
               </div>
               <button class="map-btn"
@@ -105,6 +139,8 @@
                   :prev-theme="index ? (levelOfCategory(categoryKeys[index - 1]) || 'A1').toLowerCase() : ''"
                   :is-locked="isRegionLocked"
                   :need-level="needLevel"
+                  :progress-of="progressOf"
+                  :current-id="currentRegion?.id || ''"
                   @select="select"
               />
             </section>
@@ -124,7 +160,7 @@
 </template>
 
 <script setup>
-import {ref, computed, onMounted, onBeforeUnmount, watch} from 'vue'
+import {ref, computed, onMounted, onBeforeUnmount, watch, nextTick} from 'vue'
 import {useRouter} from 'vue-router'
 import { useI18n } from 'vue-i18n'
 import {regions} from '@/utils/regions.js'
@@ -134,7 +170,7 @@ import {visibleRegionCategories, requiredLandLevel, levelOfCategory, LEVEL_SUMMI
 import VLandsMap from "~/src/components/V-landsMap.vue";
 import VTestLockedModal from "~/src/components/V-testLockedModal.vue";
 import {userChainStore} from "~/store/chainStore.js";
-import {landsWithProgress} from "~/utils/landProgress.js";
+import {landsWithProgress, landCompletion, isPrevLandDone, previousRegion} from "~/utils/landProgress.js";
 
 const authStore = userAuthStore()
 const {t, locale} = useI18n()
@@ -252,7 +288,64 @@ const activeRegionLevel = computed(() => {
 // земля закрыта, пока уровень аккаунта ниже нужного (премиум открывает всё)
 // земля закрыта, только если не хватает уровня и в ней ещё нет прогресса
 const openedLands = computed(() => landsWithProgress(chainStore.questProgress))
-const isRegionLocked = (region) => !authStore.isPremium && !openedLands.value.has(region.id) && clampedLevel.value < needLevel(region)
+// или если предыдущая земля пройдена целиком: можно открыть уровнем или прохождением
+const isRegionLocked = (region) => !authStore.isPremium && !openedLands.value.has(region.id)
+    && clampedLevel.value < needLevel(region) && !isPrevLandDone(chainStore.questProgress, region.id)
+// подпись закрытой земли: какой уровень нужен и какую землю пройти
+const activePrevRegion = computed(() => active.value ? previousRegion(active.value.id) : null)
+const activePrevProgress = computed(() => activePrevRegion.value
+    ? landCompletion(chainStore.questProgress, activePrevRegion.value.id)
+    : {done: 0, total: 0})
+
+// сколько квестов каждой земли пройдено: кольцо вокруг земли на карте
+const completion = computed(() => {
+  const out = {}
+  for (const key of categoryKeys.value) {
+    for (const region of regions[key] || []) out[region.id] = landCompletion(chainStore.questProgress, region.id)
+  }
+  return out
+})
+const progressOf = (region) => completion.value[region.id] || {done: 0, total: 0}
+const isRegionDone = (region) => {
+  const p = progressOf(region)
+  return p.total > 0 && p.done >= p.total
+}
+
+// земля, на которой игрок остановился: самая дальняя с прогрессом;
+// если она уже пройдена, то следующая открытая; без прогресса первая земля
+const currentRegion = computed(() => {
+  const list = categoryKeys.value.flatMap(key => regions[key] || [])
+  if (!list.length) return null
+  let index = -1
+  list.forEach((region, i) => {
+    if (openedLands.value.has(region.id)) index = i
+  })
+  if (index === -1) return list[0]
+  const next = list[index + 1]
+  if (isRegionDone(list[index]) && next && !isRegionLocked(next)) return next
+  return list[index]
+})
+
+// при открытии карта сама едет к текущей земле (один раз, когда прогресс загружен)
+let scrolledToCurrent = false
+function scrollToCurrent() {
+  const box = mapScroll.value
+  const region = currentRegion.value
+  if (scrolledToCurrent || !box || !region || !chainStore.progressLoaded) return
+  const el = box.querySelector(`[data-land-id="${region.id}"]`)
+  // высота окна карты ещё не выставлена: прокрутить нечего, попробуем после замера
+  if (!el || box.scrollHeight <= box.clientHeight) return
+  scrolledToCurrent = true
+  active.value = region
+  const top = el.getBoundingClientRect().top - box.getBoundingClientRect().top + box.scrollTop
+  box.scrollTop = Math.max(top - box.clientHeight / 2, 0)
+  onMapScroll()
+}
+
+// прогресс загрузился или окно карты получило высоту: пробуем доехать до текущей земли
+watch([() => chainStore.progressLoaded, scrollHeight], () => {
+  nextTick(() => requestAnimationFrame(scrollToCurrent))
+})
 
 const filteredRegions = computed(() => {
   return regions[activeCategory.value] || []
@@ -527,8 +620,141 @@ html.orange .map__title {
   color: #137a4a;
 }
 
-.map-left__level.locked {
-  color: #b21f24;
+/* карточка закрытой земли: в стиле карты, без браузерных рамок */
+.land-lock {
+  --lock-line: color-mix(in srgb, var(--titleColor) 14%, transparent);
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 18px;
+  padding: 12px;
+  border: 2px solid var(--lock-line);
+  border-radius: 18px;
+  background: color-mix(in srgb, var(--titleColor) 5%, transparent);
+  box-shadow: 0 4px 0 var(--lock-line);
+  color: var(--titleColor);
+}
+
+.land-lock__head {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.land-lock__head-text,
+.land-lock__way-text {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 0;
+}
+
+.land-lock__title {
+  font-size: 16px;
+  font-weight: 900;
+  line-height: 1.2;
+}
+
+.land-lock__hint,
+.land-lock__way-sub {
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 1.25;
+  opacity: 0.7;
+}
+
+/* способ открыть: строка с круглой иконкой */
+.land-lock__way {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 9px 10px;
+  border-radius: 14px;
+  background: color-mix(in srgb, var(--titleColor) 6%, transparent);
+}
+
+.land-lock__icon {
+  display: flex;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  font-size: 17px;
+}
+
+/* значок уровня: синий жетон с номером нужного уровня */
+.land-lock__icon--level {
+  border: 2px solid #fff;
+  background: radial-gradient(circle at 35% 30%, #7cc0ff, #2563eb);
+  box-shadow: 0 3px 0 #1a3f9e;
+  color: #fff;
+  line-height: 1;
+}
+
+.land-lock__lvl-num {
+  font-size: 16px;
+  font-weight: 900;
+  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.3);
+}
+
+/* картинка земли в круглой рамке */
+.land-lock__icon--land {
+  overflow: hidden;
+  border: 2px solid #fff;
+  box-shadow: 0 3px 0 rgba(0, 0, 0, 0.3);
+}
+
+.land-lock__icon--land img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.land-lock__way-title {
+  font-size: 14px;
+  font-weight: 900;
+  line-height: 1.2;
+}
+
+/* полоска: сколько квестов предыдущей земли уже пройдено */
+.land-lock__bar {
+  display: block;
+  height: 6px;
+  margin-top: 3px;
+  border-radius: 3px;
+  background: color-mix(in srgb, var(--titleColor) 14%, transparent);
+  overflow: hidden;
+}
+
+.land-lock__bar-fill {
+  display: block;
+  height: 100%;
+  border-radius: 3px;
+  background: linear-gradient(90deg, #4ade80, #16a34a);
+  transition: width 0.4s ease;
+}
+
+/* разделитель «или» с линиями по бокам */
+.land-lock__or {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 11px;
+  font-weight: 900;
+  text-transform: uppercase;
+  opacity: 0.6;
+}
+
+.land-lock__or::before,
+.land-lock__or::after {
+  content: "";
+  flex: 1;
+  height: 2px;
+  border-radius: 1px;
+  background: var(--lock-line);
 }
 
 .mal__left-content {

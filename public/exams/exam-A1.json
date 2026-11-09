@@ -13,7 +13,7 @@
           "type": "multiple-choice",
           "task": {
             "text": "Supermarkt Müller\nÖffnungszeiten: von Montag bis Samstag 8–20 Uhr",
-            "question": "Am Sonntag is der Supermarkt geöffnet",
+            "question": "Am Sonntag ist der Supermarkt geöffnet",
             "options": [
               "Richtig",
               "Falsch"

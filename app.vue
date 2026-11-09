@@ -180,6 +180,14 @@ watch(() => authStore.uid, (newUid) => {
   }
 }, { immediate: true });
 
+// Уровень поднимаем только после загрузки learningStore: он сохраняет свой isLeveling в документ
+// и, загрузившись позже, перезаписал бы поднятый уровень старым
+watch(() => learningStore.isLoaded && authStore.uid, (ready) => {
+  if (ready) {
+    chainStore.raiseLevelToProgress().catch(err => console.error(err))
+  }
+}, { immediate: true });
+
 watch(user, (currentUser, prevUser) => {
   if (prevUser && !currentUser) {
     router.push('/')

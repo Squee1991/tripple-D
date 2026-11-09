@@ -2,10 +2,10 @@
 import {onBeforeUnmount, onMounted, ref} from 'vue'
 import {userExamStore} from '~/store/examStore.js'
 import {useRouter} from 'vue-router'
-import VConsentModal from "../../src/components/V-consentModal.vue";
 import {userAuthStore} from "../../store/authStore.js";
 import {useHead, useSeoMeta} from '#imports'
 import VBackBtn from "~/src/components/V-back-btn.vue";
+import {examThemeLabel} from "~/utils/examThemes.js";
 
 const {t} = useI18n()
 
@@ -14,12 +14,9 @@ useSeoMeta({
 })
 
 const authStore = userAuthStore()
-const showConsentModal = ref(false)
-const consentGiven = ref(false)
 const isPageLoaded = ref(false)
 const router = useRouter()
 const examStore = userExamStore()
-const showHint = ref(false)
 const notAllowed = ref({
   title: t('examIndexPage.notAllowedTitle'),
   btns: [
@@ -124,17 +121,7 @@ const startSpecificExam = (examId) => {
 }
 
 const attemptToStartExam = (levelId) => {
-  if (authStore.voiceConsentGiven) {
-    onLevelSelect(levelId)
-  } else {
-    showConsentModal.value = true
-  }
-}
-const handleConsentGiven = async () => {
-  await authStore.setVoiceConsent(true)
-  showConsentModal.value = false
-  showHint.value = true
-  setTimeout(() => showHint.value = false, 10000)
+  onLevelSelect(levelId)
 }
 
 onMounted(async () => {
@@ -142,7 +129,6 @@ onMounted(async () => {
   isPageLoaded.value = true
   await authStore.initAuth()
   examStore.loadTopics('/exams/exam-A1.json')
-  showConsentModal.value = !authStore.voiceConsentGiven
 })
 
 onBeforeUnmount(() => {
@@ -153,16 +139,6 @@ onBeforeUnmount(() => {
 <template>
   <div class="exam-app-theme">
     <div class="exam">
-      <transition name="fade">
-        <div v-if="showHint" class="exam-hint">
-          ℹ️ {{ t('examIndexPage.hint') }}
-        </div>
-      </transition>
-      <VConsentModal
-          v-if="showConsentModal"
-          @consent-given="handleConsentGiven"
-          @close="showConsentModal = false"
-      />
       <Transition name="picker-slide">
         <div v-if="showThemePicker" :class="['theme-picker', `card--${selectedLevelId}`]">
           <div class="picker-header">
@@ -187,8 +163,9 @@ onBeforeUnmount(() => {
                   :data-track="`exam_theme_${selectedLevelId}_${exam.exam_id}`"
                   @click="startSpecificExam(exam.exam_id)"
               >
+                <!-- яркая карточка: у каждой темы свой цвет, иконка в белом круге -->
                 <span class="picker-tile-icon">{{ exam.icon || '📝' }}</span>
-                <span class="picker-tile-theme">{{ exam.theme }}</span>
+                <span class="picker-tile-theme">{{ examThemeLabel(t, exam.theme) }}</span>
               </button>
             </div>
           </div>
@@ -481,24 +458,6 @@ onBeforeUnmount(() => {
   box-shadow: 0 5px 0 #c54d4d;
 }
 
-.exam-hint {
-  position: fixed;
-  top: 100px;
-  left: 50%;
-  transform: translateX(-50%);
-  background: #fff;
-  color: #000;
-  border: 3px solid #000;
-  border-radius: 16px;
-  padding: 12px 20px;
-  z-index: 100;
-  font-weight: 800;
-  box-shadow: 0 4px 0 #000;
-  text-align: center;
-  width: 90%;
-  max-width: 300px;
-}
-
 /* полноэкранный выбор темы; цвет уровня берётся из card--a1 … card--b2 на корне */
 .theme-picker.card--a1 { --level-color: #4ade80; }
 .theme-picker.card--a2 { --level-color: #60a5fa; }
@@ -522,6 +481,11 @@ onBeforeUnmount(() => {
   display: flex;
   align-items: center;
   gap: 15px;
+  width: 100%;
+  /* на широких экранах шапка по ширине сетки тем (560px + отступы), а не на весь экран */
+  max-width: 590px;
+  margin: 0 auto;
+  box-sizing: border-box;
   padding: 10px 10px 15px 10px;
 }
 
@@ -596,56 +560,78 @@ onBeforeUnmount(() => {
   margin: 0 auto;
 }
 
+/* карточка темы: яркая заливка своим цветом, белый текст, снизу объёмная толщина, при нажатии проседает.
+   Цвета идут по кругу, как у плиток модулей на стартовом экране теста */
 .picker-tile {
+  --tile: #3b82f6;
+  --tile-light: #60a5fa;
+  --tile-dark: #1d4ed8;
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   gap: 10px;
+  min-height: 128px;
   padding: 16px 10px 14px;
-  border: 2px solid var(--tabsSlideBorderColor);
+  border: 2px solid color-mix(in srgb, var(--tile-light) 65%, #fff);
   border-radius: 20px;
-  background: var(--menuItemsBg);
-  box-shadow: var(--boxShadowMobile);
+  background: linear-gradient(180deg, var(--tile-light) 0%, var(--tile) 100%);
+  box-shadow: 0 5px 0 var(--tile-dark), 0 8px 14px rgba(0, 0, 0, 0.25);
   font-family: inherit;
   cursor: pointer;
   opacity: 0;
+  /* появление двигает отдельное свойство translate, чтобы не мешать transform при нажатии */
   animation: picker-tile-in 0.3s ease forwards;
-  transition: transform 0.1s;
+  transition: transform 0.1s ease, box-shadow 0.1s ease;
+  -webkit-tap-highlight-color: transparent;
 }
+
+.picker-tile:nth-child(8n + 1) { --tile: #3b82f6; --tile-light: #60a5fa; --tile-dark: #1d4ed8; }
+.picker-tile:nth-child(8n + 2) { --tile: #ec4899; --tile-light: #f472b6; --tile-dark: #be185d; }
+.picker-tile:nth-child(8n + 3) { --tile: #16a34a; --tile-light: #22c55e; --tile-dark: #15803d; }
+.picker-tile:nth-child(8n + 4) { --tile: #f59e0b; --tile-light: #fbbf24; --tile-dark: #b45309; }
+.picker-tile:nth-child(8n + 5) { --tile: #8b5cf6; --tile-light: #a78bfa; --tile-dark: #6d28d9; }
+.picker-tile:nth-child(8n + 6) { --tile: #0891b2; --tile-light: #22d3ee; --tile-dark: #0e7490; }
+.picker-tile:nth-child(8n + 7) { --tile: #ef4444; --tile-light: #f87171; --tile-dark: #b91c1c; }
+.picker-tile:nth-child(8n + 8) { --tile: #ea580c; --tile-light: #fb923c; --tile-dark: #c2410c; }
 
 .picker-tile:active {
-  transform: translateY(2px);
+  transform: translateY(5px);
+  box-shadow: 0 0 0 var(--tile-dark), 0 2px 6px rgba(0, 0, 0, 0.2);
 }
 
+/* иконка в белом круге */
 .picker-tile-icon {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 64px;
-  height: 64px;
-  border-radius: 16px;
+  width: 58px;
+  height: 58px;
+  border-radius: 50%;
   background: #fff;
-  border: 3px solid var(--level-color);
-  font-size: 34px;
+  box-shadow: 0 3px 0 var(--tile-dark);
+  font-size: 30px;
   line-height: 1;
 }
 
 .picker-tile-theme {
-  font-size: 15px;
-  font-weight: 800;
-  line-height: 1.25;
+  font-size: 14px;
+  font-weight: 900;
+  line-height: 1.2;
   text-align: center;
-  color: var(--titleColor);
+  color: #fff;
+  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.25);
 }
 
 @keyframes picker-tile-in {
   from {
     opacity: 0;
-    transform: translateY(10px);
+    translate: 0 10px;
   }
   to {
     opacity: 1;
-    transform: translateY(0);
+    translate: 0 0;
   }
 }
 

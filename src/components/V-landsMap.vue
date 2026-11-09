@@ -1,7 +1,5 @@
 <template>
-  <!-- Мультяшная карта раздела: земли стоят островками вдоль извилистой дороги -->
   <div ref="root" class="lands-map" :class="['lands-map--' + theme, 'road-theme--' + theme, prevTheme && 'lands-map--from-' + prevTheme]" :style="{ height: mapHeight + 'px' }">
-    <!-- дорога своего цвета у каждого уровня: тень, обводка, полотно, блик и разметка; открытый путь яркий, закрытый приглушённый -->
     <svg class="lands-map__road" :viewBox="`0 0 ${mapWidth} ${mapHeight}`" aria-hidden="true">
       <defs v-if="handover">
         <clipPath :id="handover.clipId">
@@ -25,7 +23,6 @@
           class="road road--dash"
           :class="{ 'road--dash-open': seg.open, 'road--locked': !seg.open }"
       />
-      <!-- до медали дорога ещё цвета прошлого уровня: цвет меняется под медалью -->
       <g v-if="handover" :clip-path="`url(#${handover.clipId})`" :class="'road-theme--' + prevTheme">
         <path :d="handover.seg.d" class="road road--edge"/>
         <path :d="handover.seg.d" class="road road--surface" :class="{ 'road--locked': !handover.seg.open }"/>
@@ -33,8 +30,6 @@
         <path :d="handover.seg.d" class="road road--dash" :class="{ 'road--dash-open': handover.seg.open, 'road--locked': !handover.seg.open }"/>
       </g>
     </svg>
-
-    <!-- рубеж нового уровня: медаль на дороге; кольцо вокруг неё показывает, сколько земель уровня открыто -->
     <div v-if="isNewLevel" class="level-gate" :style="{ top: GATE_Y + 'px' }">
       <span class="level-gate__medal">
         <span class="level-gate__code">
@@ -56,8 +51,6 @@
         </span>
       </span>
     </div>
-
-    <!-- земли -->
     <button
         v-for="(node, index) in nodes"
         :key="node.region.id"
@@ -65,21 +58,64 @@
         class="land-node"
         :class="{
           'land-node--active': node.region.id === activeId,
-          'land-node--locked': isLocked(node.region)
+          'land-node--current': node.region.id === currentId,
+          'land-node--locked': node.locked,
+          'land-node--done': node.done
         }"
         :style="{ left: node.x + '%', top: node.y + 'px', '--delay': (index * 0.35) + 's' }"
+        :data-land-id="node.region.id"
         :data-track="'region_card_clicked_' + node.region.id"
         @click="$emit('select', node.region)"
     >
       <span class="land-node__base" aria-hidden="true"></span>
-      <span class="land-node__island">
-        <img class="land-node__img" :src="node.region.icon" :alt="t(node.region.name)" decoding="async">
+      <span class="land-node__orb">
+        <svg v-if="!node.locked && node.progress.total" class="land-node__ring" viewBox="0 0 92 92" aria-hidden="true">
+          <circle cx="46" cy="46" r="41" class="land-node__ring-base"/>
+          <circle v-if="node.done" cx="46" cy="46" r="41" class="land-node__ring-full"/>
+          <template v-else>
+            <circle
+                v-for="seg in ringSegments(node.progress.total)"
+                :key="seg.i"
+                cx="46" cy="46" r="41"
+                class="land-node__ring-seg"
+                :class="{ 'land-node__ring-seg--done': seg.i < node.progress.done }"
+                :stroke-dasharray="seg.dash"
+                :stroke-dashoffset="seg.offset"
+            />
+          </template>
+        </svg>
+        <span class="land-node__island">
+          <img class="land-node__img" :src="node.region.icon" :alt="t(node.region.name)" decoding="async">
+        </span>
       </span>
-      <span v-if="isLocked(node.region)" class="land-node__lock">🔒 {{ needLevel(node.region) }}</span>
-      <span class="land-node__label" :class="'land-node__label--' + node.side">{{ t(node.region.name) }}</span>
+      <span
+          v-if="node.region.id === currentId"
+          class="land-node__pointer"
+          :class="'land-node__pointer--' + (node.side === 'left' ? 'right' : 'left')"
+          aria-hidden="true"
+      >
+        <svg viewBox="0 0 44 38" width="32" height="28">
+          <defs>
+            <linearGradient id="land-pointer-face" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0" stop-color="#fff3a8"/>
+              <stop offset="0.45" stop-color="#ffd03a"/>
+              <stop offset="1" stop-color="#ff9f0a"/>
+            </linearGradient>
+          </defs>
+          <path class="land-node__pointer-side" d="M4 19 L19 5 L19 12 L37 12 Q40 12 40 15 L40 23 Q40 26 37 26 L19 26 L19 33 Z" transform="translate(0 4)"/>
+          <path class="land-node__pointer-face" d="M4 19 L19 5 L19 12 L37 12 Q40 12 40 15 L40 23 Q40 26 37 26 L19 26 L19 33 Z"/>
+          <path class="land-node__pointer-shine" d="M9 18 L17 10.5"/>
+          <path class="land-node__pointer-shine" d="M22 15.5 L35 15.5"/>
+          <circle cx="37.5" cy="15.5" r="1.3" fill="#fff" opacity="0.9"/>
+        </svg>
+      </span>
+      <span class="land-node__label" :class="'land-node__label--' + node.side">
+        <span class="land-node__name">{{ t(node.region.name) }}</span>
+        <span v-if="!node.locked && node.done" class="land-node__check" aria-hidden="true">
+          <svg viewBox="0 0 24 24" width="10" height="10" fill="none" stroke="#fff" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"><polyline points="5 13 10 18 19 7"></polyline></svg>
+        </span>
+      </span>
     </button>
-
-    <!-- итоговый тест уровня: стоит на дороге сразу за вершиной -->
     <button
         v-if="testLevel"
         type="button"
@@ -123,7 +159,11 @@ const props = defineProps({
   testLevel: { type: String, default: '' },
   testOpen: { type: Boolean, default: false },
   isLocked: { type: Function, default: () => false },
-  needLevel: { type: Function, default: () => 0 }
+  needLevel: { type: Function, default: () => 0 },
+  // сколько квестов земли пройдено: { done, total }
+  progressOf: { type: Function, default: () => ({ done: 0, total: 0 }) },
+  // земля, на которой игрок остановился
+  currentId: { type: String, default: '' }
 })
 defineEmits(['select', 'test'])
 
@@ -146,12 +186,34 @@ const X_PATTERN = [50, 70, 50, 30]
 // подпись стоит сбоку от земли, там где больше места; дорога входит сверху и уходит вниз, бока свободны
 const LABEL_SIDE = ['left', 'left', 'right', 'right']
 
-const nodes = computed(() => props.regions.map((region, i) => ({
-  region,
-  x: X_PATTERN[i % X_PATTERN.length],
-  y: top.value + i * ROW,
-  side: LABEL_SIDE[i % LABEL_SIDE.length]
-})))
+const LAND_RING_LEN = 2 * Math.PI * 41
+// зазор между делениями кольца
+const SEG_GAP = 5
+
+// деления кольца: каждое деление это дуга, сдвинутая на свой угол
+function ringSegments(total) {
+  if (!total) return []
+  const step = LAND_RING_LEN / total
+  const len = Math.max(step - SEG_GAP, 1)
+  return Array.from({ length: total }, (_, i) => ({
+    i,
+    dash: `${len} ${LAND_RING_LEN - len}`,
+    offset: -(i * step + SEG_GAP / 2)
+  }))
+}
+
+const nodes = computed(() => props.regions.map((region, i) => {
+  const progress = props.progressOf(region)
+  return {
+    region,
+    x: X_PATTERN[i % X_PATTERN.length],
+    y: top.value + i * ROW,
+    side: LABEL_SIDE[i % LABEL_SIDE.length],
+    locked: props.isLocked(region),
+    progress,
+    done: progress.total > 0 && progress.done >= progress.total
+  }
+}))
 
 // под последней землёй последнего раздела оставляем место только для подписи
 const TEST_ROW = 126
@@ -179,7 +241,7 @@ const px = (pct) => (pct / 100) * mapWidth.value
 
 // точки дороги: вход сверху, земли, выход вниз; open = путь к точке уже открыт
 const roadPoints = computed(() => {
-  const list = nodes.value.map(n => ({ x: px(n.x), y: n.y, open: !props.isLocked(n.region) }))
+  const list = nodes.value.map(n => ({ x: px(n.x), y: n.y, open: !n.locked }))
   if (!list.length) return []
   // в первом разделе дорога начинается от медали уровня
   const start = props.prevTheme ? 0 : GATE_Y
@@ -558,8 +620,19 @@ const handover = computed(() => {
   box-shadow: 0 10px 14px rgba(0, 0, 0, 0.3);
 }
 
+/* земля вместе с кольцом прогресса: покачиваются вместе */
+.land-node__orb {
+  position: relative;
+  display: block;
+  width: 70px;
+  height: 70px;
+  animation: land-float 3.4s ease-in-out infinite;
+  animation-delay: var(--delay);
+}
+
 .land-node__island {
   position: relative;
+  display: block;
   width: 70px;
   height: 70px;
   border-radius: 50%;
@@ -568,8 +641,150 @@ const handover = computed(() => {
   background: var(--landsTabBg);
   box-shadow: 0 5px 0 rgba(0, 0, 0, 0.25), 0 8px 14px rgba(0, 0, 0, 0.25);
   transition: transform 0.15s ease;
-  animation: land-float 3.4s ease-in-out infinite;
-  animation-delay: var(--delay);
+}
+
+/* кольцо прогресса вокруг земли, как у медали уровня */
+.land-node__ring {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 92px;
+  height: 92px;
+  overflow: visible;
+  transform: translate(-50%, -50%) rotate(-90deg);
+  pointer-events: none;
+}
+
+.land-node__ring circle {
+  fill: none;
+  stroke-width: 6;
+}
+
+/* подложка закрывает дорогу под кольцом */
+.land-node__ring .land-node__ring-base {
+  stroke: var(--landsTabBg);
+  stroke-width: 9;
+}
+
+/* деление ещё не пройденного квеста: нейтральное и полупрозрачное, не спорит с дорогой */
+.land-node__ring .land-node__ring-seg {
+  stroke: color-mix(in srgb, var(--title) 18%, transparent);
+  transition: stroke 0.3s ease;
+}
+
+/* пройденный квест: деление яркое, цвета уровня */
+.land-node__ring .land-node__ring-seg--done {
+  stroke: color-mix(in srgb, var(--accent) 75%, #fff);
+  filter: drop-shadow(0 0 3px var(--accent));
+}
+
+/* пройденная земля: сплошное золотое кольцо */
+.land-node__ring .land-node__ring-full {
+  stroke: #ffc83d;
+  filter: drop-shadow(0 0 4px rgba(255, 177, 0, 0.7));
+}
+
+/* галочка у пройденной земли: значок на верхнем углу подписи,
+   поверх неё, поэтому подпись не становится шире и кольцо ничем не закрыто */
+.land-node__check {
+  position: absolute;
+  top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid #fff;
+  color: #fff;
+  font-weight: 900;
+  box-shadow: 0 2px 0 rgba(0, 0, 0, 0.25);
+}
+
+/* значок на углу подписи, который ближе к земле: у края экрана его не обрежет */
+.land-node__label--left .land-node__check {
+  right: 0;
+  transform: translate(40%, -55%);
+}
+
+.land-node__label--right .land-node__check {
+  left: 0;
+  transform: translate(-40%, -55%);
+}
+
+.land-node__check {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #ffcf4a 0%, #f59e0b 100%);
+}
+
+/* стрелка у земли, где игрок остановился: смотрит остриём на землю и прыгает к ней */
+.land-node__pointer {
+  position: absolute;
+  top: 35px;
+  z-index: 3;
+  display: block;
+  line-height: 0;
+  filter: drop-shadow(0 6px 5px rgba(0, 0, 0, 0.35));
+  pointer-events: none;
+}
+
+/* толщина стрелки: та же форма темнее и ниже */
+.land-node__pointer-side {
+  fill: #c2620a;
+  stroke: #6b3a00;
+  stroke-width: 2.4;
+  stroke-linejoin: round;
+}
+
+.land-node__pointer-face {
+  fill: url(#land-pointer-face);
+  stroke: #6b3a00;
+  stroke-width: 2.4;
+  stroke-linejoin: round;
+}
+
+/* блики сверху: стрелка выглядит выпуклой */
+.land-node__pointer-shine {
+  fill: none;
+  stroke: #fff;
+  stroke-width: 2.6;
+  stroke-linecap: round;
+  opacity: 0.85;
+}
+
+/* стрелка справа от земли: остриё влево */
+.land-node__pointer--right {
+  left: calc(100% + 7px);
+  animation: pointer-hop-left 1.6s infinite;
+  /* сжимается к острию, как будто упирается в землю */
+  transform-origin: left center;
+}
+
+/* стрелка слева от земли: остриё вправо */
+.land-node__pointer--left {
+  right: calc(100% + 14px);
+  animation: pointer-hop-right 1.6s infinite;
+  transform-origin: right center;
+}
+
+.land-node__pointer--left svg {
+  transform: scaleX(-1);
+}
+
+/* пружинистый прыжок к земле: разгон, мягкое сплющивание у земли, распрямление и один длинный плавный возврат */
+@keyframes pointer-hop-left {
+  0% { transform: translate(9px, -50%) scale(1, 1); animation-timing-function: cubic-bezier(0.45, 0, 0.85, 0.55); }
+  36% { transform: translate(0, -50%) scale(1, 1); animation-timing-function: ease-out; }
+  46% { transform: translate(0, -50%) scale(0.9, 1.08); animation-timing-function: ease-in-out; }
+  58% { transform: translate(1px, -50%) scale(1, 1); animation-timing-function: cubic-bezier(0.25, 0.5, 0.35, 1); }
+  100% { transform: translate(9px, -50%) scale(1, 1); }
+}
+
+@keyframes pointer-hop-right {
+  0% { transform: translate(-9px, -50%) scale(1, 1); animation-timing-function: cubic-bezier(0.45, 0, 0.85, 0.55); }
+  36% { transform: translate(0, -50%) scale(1, 1); animation-timing-function: ease-out; }
+  46% { transform: translate(0, -50%) scale(0.9, 1.08); animation-timing-function: ease-in-out; }
+  58% { transform: translate(-1px, -50%) scale(1, 1); animation-timing-function: cubic-bezier(0.25, 0.5, 0.35, 1); }
+  100% { transform: translate(-9px, -50%) scale(1, 1); }
 }
 
 .land-node:active .land-node__island {
@@ -586,21 +801,6 @@ const handover = computed(() => {
 @keyframes land-float {
   0%, 100% { translate: 0 0; }
   50% { translate: 0 -5px; }
-}
-
-.land-node__lock {
-  position: absolute;
-  top: -4px;
-  right: -22px;
-  z-index: 3;
-  padding: 2px 6px;
-  border-radius: 10px;
-  border: 2px solid #fff;
-  background: linear-gradient(135deg, #8b7cf6 0%, #5d4ad8 100%);
-  color: #fff;
-  font-size: 10px;
-  font-weight: 900;
-  box-shadow: 0 3px 0 rgba(0, 0, 0, 0.25);
 }
 
 .land-node__label {
@@ -623,12 +823,13 @@ const handover = computed(() => {
   box-shadow: 0 3px 0 rgba(0, 0, 0, 0.2);
 }
 
+/* отступ с учётом кольца вокруг земли */
 .land-node__label--left {
-  right: calc(100% + 8px);
+  right: calc(100% + 16px);
 }
 
 .land-node__label--right {
-  left: calc(100% + 8px);
+  left: calc(100% + 16px);
 }
 
 /* закрытая земля */
@@ -653,8 +854,13 @@ const handover = computed(() => {
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .land-node__island {
+  .land-node__orb {
     animation: none;
+  }
+
+  .land-node__pointer {
+    animation: none;
+    transform: translateY(-50%);
   }
 }
 </style>
