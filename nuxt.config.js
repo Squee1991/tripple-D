@@ -32,7 +32,7 @@ if (rawJson) {
 const siteUrl = process.env.NUXT_SITE_URL || (process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` : 'http://localhost:3000')
 
 export default defineNuxtConfig({
-	ssr: true,
+	ssr: false,
 	experimental: {
 		payloadExtraction: true,
 		appManifest: false
@@ -154,7 +154,7 @@ export default defineNuxtConfig({
 	},
 	routeRules: {
 		'/**': { ssr: false },
-		'/info-about': { ssr: true },
+		'/info-about': { ssr: false },
 		'/admin/**': {status: 404},
 		'/wp-login.php': {status: 404},
 		'/sounds/**': {headers: {'Cache-Control': 'no-cache, no-store, must-revalidate'}},
