@@ -1,0 +1,2714 @@
+[
+  {
+    "questId": "memory-lake-one",
+    "title": "memoryLakeOne.questTitle",
+    "progress": "0/15",
+    "description": "memoryLakeOne.questDescription",
+    "conditions": {
+      "goal": "memoryLakeOne.questGoal",
+      "minCorrect": 15,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
+    "vocabulary": [
+      {
+        "word": "vorher",
+        "translation-ru": "до этого, заранее",
+        "translation-en": "before, beforehand",
+        "translation-uk": "до цього, заздалегідь",
+        "translation-pl": "wcześniej",
+        "translation-es": "antes",
+        "translation-fr": "avant",
+        "translation-tr": "önceden",
+        "translation-ro": "înainte",
+        "translation-uz": "oldindan",
+        "translation-hi": "पहले से",
+        "translation-ar": "من قبل"
+      },
+      {
+        "word": "das Gepäck",
+        "translation-ru": "багаж",
+        "translation-en": "luggage",
+        "translation-uk": "багаж",
+        "translation-pl": "bagaż",
+        "translation-es": "el equipaje",
+        "translation-fr": "les bagages",
+        "translation-tr": "bagaj",
+        "translation-ro": "bagajul",
+        "translation-uz": "yuk",
+        "translation-hi": "सामान",
+        "translation-ar": "الأمتعة"
+      },
+      {
+        "word": "aufräumen",
+        "translation-ru": "убирать (комнату)",
+        "translation-en": "to tidy up",
+        "translation-uk": "прибирати",
+        "translation-pl": "sprzątać",
+        "translation-es": "ordenar",
+        "translation-fr": "ranger",
+        "translation-tr": "toplamak",
+        "translation-ro": "a face ordine",
+        "translation-uz": "yig‘ishtirmoq",
+        "translation-hi": "साफ़ करना",
+        "translation-ar": "يرتّب"
+      },
+      {
+        "word": "verpassen",
+        "translation-ru": "пропустить, опоздать на",
+        "translation-en": "to miss",
+        "translation-uk": "пропустити, спізнитися на",
+        "translation-pl": "spóźnić się na",
+        "translation-es": "perder",
+        "translation-fr": "rater",
+        "translation-tr": "kaçırmak",
+        "translation-ro": "a pierde",
+        "translation-uz": "qolib ketmoq",
+        "translation-hi": "छूट जाना",
+        "translation-ar": "يفوّت"
+      },
+      {
+        "word": "die Hausaufgaben",
+        "translation-ru": "домашние задания",
+        "translation-en": "homework",
+        "translation-uk": "домашні завдання",
+        "translation-pl": "zadania domowe",
+        "translation-es": "los deberes",
+        "translation-fr": "les devoirs",
+        "translation-tr": "ödevler",
+        "translation-ro": "temele",
+        "translation-uz": "uy vazifalari",
+        "translation-hi": "गृहकार्य",
+        "translation-ar": "الواجبات المنزلية"
+      }
+    ],
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "memoryLakeOne.questTask1",
+        "options": [
+          "Als er kam, habe ich schon gegessen.",
+          "Als er kam, hatte ich noch nicht gegessen.",
+          "Als er kam, hatte ich schon gegessen."
+        ],
+        "answer": "Als er kam, hatte ich schon gegessen.",
+        "tip": "memoryLakeOne.questDescription"
+      },
+      {
+        "id": 2,
+        "type": "input",
+        "question": "memoryLakeOne.questTask2",
+        "correctAnswer": "angefangen",
+        "tip": "memoryLakeOne.questDescription"
+      },
+      {
+        "id": 3,
+        "type": "input",
+        "question": "memoryLakeOne.questTask3",
+        "correctAnswer": "hatte",
+        "tip": "memoryLakeOne.questDescription"
+      },
+      {
+        "id": 4,
+        "type": "reorder",
+        "question": "memoryLakeOne.questTask4",
+        "words": [
+          "hat",
+          "schon",
+          "gekauft",
+          "Sie",
+          "hatte",
+          "Tickets",
+          "die"
+        ],
+        "correctOrder": [
+          "Sie",
+          "hatte",
+          "die",
+          "Tickets",
+          "schon",
+          "gekauft"
+        ],
+        "tip": "memoryLakeOne.questDescription"
+      },
+      {
+        "id": 5,
+        "type": "select",
+        "question": "memoryLakeOne.questTask5",
+        "options": [
+          "Er konnte die Tür nicht öffnen, weil er den Schlüssel gefunden hatte.",
+          "Er konnte die Tür nicht öffnen, weil er den Schlüssel vergessen hatte.",
+          "Er konnte die Tür nicht öffnen, weil er den Schlüssel vergessen war."
+        ],
+        "answer": "Er konnte die Tür nicht öffnen, weil er den Schlüssel vergessen hatte.",
+        "tip": "memoryLakeOne.questDescription"
+      },
+      {
+        "id": 6,
+        "type": "input",
+        "question": "memoryLakeOne.questTask6",
+        "correctAnswer": "hatten",
+        "tip": "memoryLakeOne.questDescription"
+      },
+      {
+        "id": 7,
+        "type": "readAndAnswer",
+        "question": "memoryLakeOne.questTask7",
+        "text": "Als Lisa am Bahnhof ankam, war der Zug schon weg. Sie hatte zu lange geschlafen.",
+        "options": [
+          "Sie nahm den falschen Zug.",
+          "Sie stand zu spät auf.",
+          "Der Zug hatte Verspätung."
+        ],
+        "answer": "Sie stand zu spät auf.",
+        "tip": "memoryLakeOne.questDescription"
+      },
+      {
+        "id": 8,
+        "type": "input",
+        "question": "memoryLakeOne.questTask8",
+        "correctAnswer": "Hattest",
+        "tip": "memoryLakeOne.questDescription"
+      },
+      {
+        "id": 9,
+        "type": "input",
+        "question": "memoryLakeOne.questTask10",
+        "correctAnswer": "hatte",
+        "tip": "memoryLakeOne.questDescription"
+      },
+      {
+        "id": 10,
+        "type": "reorder",
+        "question": "memoryLakeOne.questTask11",
+        "words": [
+          "hatte",
+          "Er",
+          "Gepäck",
+          "gepackt",
+          "hat",
+          "das",
+          "schon"
+        ],
+        "correctOrder": [
+          "Er",
+          "hatte",
+          "das",
+          "Gepäck",
+          "schon",
+          "gepackt"
+        ],
+        "tip": "memoryLakeOne.questDescription"
+      },
+      {
+        "id": 11,
+        "type": "input",
+        "question": "storyValleyEight.questTask9",
+        "correctAnswer": "gelesen",
+        "tip": "storyValleyEight.questDescription",
+        "reviewOf": "story-valley-eight",
+        "reviewLand": "story-valley"
+      },
+      {
+        "id": 12,
+        "type": "select",
+        "question": "storyValleyFive.questTask12",
+        "options": [
+          "Als wir ankamen, war es schon dunkel.",
+          "Als wir ankommen, ist es schon dunkel.",
+          "Wenn wir ankamen, war es schon dunkel."
+        ],
+        "answer": "Als wir ankamen, war es schon dunkel.",
+        "tip": "storyValleyFive.questDescription",
+        "reviewOf": "story-valley-five",
+        "reviewLand": "story-valley"
+      },
+      {
+        "id": 13,
+        "type": "readAndAnswer",
+        "question": "storyValleyTwo.questTask13",
+        "text": "Am Sonntag blieb Tim zu Hause. Es war kalt und dunkel. Er spielte Karten.",
+        "options": [
+          "Das Wetter war schlecht.",
+          "Er hatte Besuch.",
+          "Er musste Karten kaufen."
+        ],
+        "answer": "Das Wetter war schlecht.",
+        "tip": "storyValleyTwo.questDescription",
+        "reviewOf": "story-valley-two",
+        "reviewLand": "story-valley"
+      },
+      {
+        "id": 14,
+        "type": "input",
+        "question": "memoryLakeOne.questTask14",
+        "correctAnswer": "stand",
+        "tip": "memoryLakeOne.questDescription"
+      },
+      {
+        "id": 15,
+        "type": "input",
+        "question": "memoryLakeOne.questTask15",
+        "correctAnswer": "kürzeste",
+        "tip": "memoryLakeOne.questDescription"
+      }
+    ]
+  },
+  {
+    "questId": "memory-lake-two",
+    "title": "memoryLakeTwo.questTitle",
+    "progress": "0/15",
+    "description": "memoryLakeTwo.questDescription",
+    "conditions": {
+      "goal": "memoryLakeTwo.questGoal",
+      "minCorrect": 15,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
+    "vocabulary": [
+      {
+        "word": "weggehen",
+        "translation-ru": "уходить",
+        "translation-en": "to leave, to go away",
+        "translation-uk": "йти геть",
+        "translation-pl": "odchodzić",
+        "translation-es": "irse",
+        "translation-fr": "partir",
+        "translation-tr": "gitmek, ayrılmak",
+        "translation-ro": "a pleca",
+        "translation-uz": "ketmoq",
+        "translation-hi": "चले जाना",
+        "translation-ar": "يغادر"
+      },
+      {
+        "word": "der Bahnsteig",
+        "translation-ru": "перрон",
+        "translation-en": "platform",
+        "translation-uk": "перон",
+        "translation-pl": "peron",
+        "translation-es": "el andén",
+        "translation-fr": "le quai",
+        "translation-tr": "peron",
+        "translation-ro": "peronul",
+        "translation-uz": "perron",
+        "translation-hi": "प्लेटफ़ॉर्म",
+        "translation-ar": "الرصيف"
+      },
+      {
+        "word": "gerade",
+        "translation-ru": "только что",
+        "translation-en": "just",
+        "translation-uk": "щойно",
+        "translation-pl": "właśnie",
+        "translation-es": "justo",
+        "translation-fr": "juste",
+        "translation-tr": "az önce",
+        "translation-ro": "tocmai",
+        "translation-uz": "hozirgina",
+        "translation-hi": "अभी अभी",
+        "translation-ar": "للتو"
+      },
+      {
+        "word": "die Feier",
+        "translation-ru": "праздник, вечеринка",
+        "translation-en": "party, celebration",
+        "translation-uk": "свято",
+        "translation-pl": "impreza",
+        "translation-es": "la fiesta",
+        "translation-fr": "la fête",
+        "translation-tr": "kutlama",
+        "translation-ro": "petrecerea",
+        "translation-uz": "bayram",
+        "translation-hi": "जश्न",
+        "translation-ar": "الحفل"
+      },
+      {
+        "word": "weit",
+        "translation-ru": "далеко",
+        "translation-en": "far",
+        "translation-uk": "далеко",
+        "translation-pl": "daleko",
+        "translation-es": "lejos",
+        "translation-fr": "loin",
+        "translation-tr": "uzak",
+        "translation-ro": "departe",
+        "translation-uz": "uzoq",
+        "translation-hi": "दूर",
+        "translation-ar": "بعيدًا"
+      }
+    ],
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "memoryLakeTwo.questTask1",
+        "options": [
+          "Als ich anrief, war er noch nicht weggegangen.",
+          "Als ich anrief, hatte er schon weggegangen.",
+          "Als ich anrief, war er schon weggegangen."
+        ],
+        "answer": "Als ich anrief, war er schon weggegangen.",
+        "tip": "memoryLakeTwo.questDescription"
+      },
+      {
+        "id": 2,
+        "type": "input",
+        "question": "memoryLakeTwo.questTask2",
+        "correctAnswer": "war",
+        "tip": "memoryLakeTwo.questDescription"
+      },
+      {
+        "id": 3,
+        "type": "input",
+        "question": "memoryLakeTwo.questTask3",
+        "correctAnswer": "waren",
+        "tip": "memoryLakeTwo.questDescription"
+      },
+      {
+        "id": 4,
+        "type": "reorder",
+        "question": "memoryLakeTwo.questTask4",
+        "words": [
+          "Wir",
+          "angekommen",
+          "im",
+          "hatten",
+          "Hotel",
+          "waren",
+          "schon"
+        ],
+        "correctOrder": [
+          "Wir",
+          "waren",
+          "schon",
+          "im",
+          "Hotel",
+          "angekommen"
+        ],
+        "tip": "memoryLakeTwo.questDescription"
+      },
+      {
+        "id": 5,
+        "type": "select",
+        "question": "memoryLakeTwo.questTask5",
+        "options": [
+          "Er war müde, weil er spät nach Hause kommen war.",
+          "Er war müde, weil er spät nach Hause gekommen war.",
+          "Er war müde, weil er spät nach Hause gekommen hatte."
+        ],
+        "answer": "Er war müde, weil er spät nach Hause gekommen war.",
+        "tip": "memoryLakeTwo.questDescription"
+      },
+      {
+        "id": 6,
+        "type": "input",
+        "question": "memoryLakeTwo.questTask6",
+        "correctAnswer": "waren",
+        "tip": "memoryLakeTwo.questDescription"
+      },
+      {
+        "id": 7,
+        "type": "readAndAnswer",
+        "question": "memoryLakeTwo.questTask7",
+        "text": "Als Tom zur Feier kam, waren alle Gäste schon gegangen. Er hatte den Bus verpasst.",
+        "options": [
+          "Alle Gäste waren schon gegangen.",
+          "Niemand war gekommen.",
+          "Alle Gäste waren noch da."
+        ],
+        "answer": "Alle Gäste waren schon gegangen.",
+        "tip": "memoryLakeTwo.questDescription"
+      },
+      {
+        "id": 8,
+        "type": "input",
+        "question": "memoryLakeTwo.questTask8",
+        "correctAnswer": "war",
+        "tip": "memoryLakeTwo.questDescription"
+      },
+      {
+        "id": 9,
+        "type": "input",
+        "question": "memoryLakeTwo.questTask10",
+        "correctAnswer": "war",
+        "tip": "memoryLakeTwo.questDescription"
+      },
+      {
+        "id": 10,
+        "type": "reorder",
+        "question": "memoryLakeTwo.questTask11",
+        "words": [
+          "schon",
+          "hatten",
+          "waren",
+          "Sie",
+          "weggegangen"
+        ],
+        "correctOrder": [
+          "Sie",
+          "waren",
+          "schon",
+          "weggegangen"
+        ],
+        "tip": "memoryLakeTwo.questDescription"
+      },
+      {
+        "id": 11,
+        "type": "select",
+        "question": "memoryLakeOne.questTask9",
+        "options": [
+          "Sie hatten schon zu Abend gegessen.",
+          "Sie waren schon zu Abend gegessen.",
+          "Sie hatten schon zu Abend essen."
+        ],
+        "answer": "Sie hatten schon zu Abend gegessen.",
+        "tip": "memoryLakeOne.questDescription",
+        "reviewOf": "memory-lake-one",
+        "reviewLand": "memory-lake"
+      },
+      {
+        "id": 12,
+        "type": "select",
+        "question": "storyValleySix.questTask12",
+        "options": [
+          "Dann regnet es.",
+          "Dann regnete es.",
+          "Dann es regnete."
+        ],
+        "answer": "Dann regnete es.",
+        "tip": "storyValleySix.questDescription",
+        "reviewOf": "story-valley-six",
+        "reviewLand": "story-valley"
+      },
+      {
+        "id": 13,
+        "type": "readAndAnswer",
+        "question": "storyValleyThree.questTask13",
+        "text": "Am Abend schrieb Lisa eine Postkarte an ihre Mutter. Dann las sie noch ein Buch.",
+        "options": [
+          "ihrem Bruder",
+          "ihrer Mutter",
+          "ihrer Freundin"
+        ],
+        "answer": "ihrer Mutter",
+        "tip": "storyValleyThree.questDescription",
+        "reviewOf": "story-valley-three",
+        "reviewLand": "story-valley"
+      },
+      {
+        "id": 14,
+        "type": "input",
+        "question": "memoryLakeTwo.questTask14",
+        "correctAnswer": "Als",
+        "tip": "memoryLakeTwo.questDescription"
+      },
+      {
+        "id": 15,
+        "type": "input",
+        "question": "memoryLakeTwo.questTask15",
+        "correctAnswer": "solltest",
+        "tip": "memoryLakeTwo.questDescription"
+      }
+    ]
+  },
+  {
+    "questId": "memory-lake-three",
+    "title": "memoryLakeThree.questTitle",
+    "progress": "0/15",
+    "description": "memoryLakeThree.questDescription",
+    "conditions": {
+      "goal": "memoryLakeThree.questGoal",
+      "minCorrect": 15,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
+    "vocabulary": [
+      {
+        "word": "nachdem",
+        "translation-ru": "после того как",
+        "translation-en": "after (conjunction)",
+        "translation-uk": "після того як",
+        "translation-pl": "po tym, jak",
+        "translation-es": "después de que",
+        "translation-fr": "après que",
+        "translation-tr": "-dıktan sonra",
+        "translation-ro": "după ce",
+        "translation-uz": "…gandan keyin",
+        "translation-hi": "…के बाद",
+        "translation-ar": "بعد أن"
+      },
+      {
+        "word": "der Spaziergang",
+        "translation-ru": "прогулка",
+        "translation-en": "walk",
+        "translation-uk": "прогулянка",
+        "translation-pl": "spacer",
+        "translation-es": "el paseo",
+        "translation-fr": "la promenade",
+        "translation-tr": "yürüyüş",
+        "translation-ro": "plimbarea",
+        "translation-uz": "sayr",
+        "translation-hi": "सैर",
+        "translation-ar": "النزهة"
+      },
+      {
+        "word": "bestehen",
+        "translation-ru": "сдать (экзамен)",
+        "translation-en": "to pass (an exam)",
+        "translation-uk": "скласти (іспит)",
+        "translation-pl": "zdać",
+        "translation-es": "aprobar",
+        "translation-fr": "réussir",
+        "translation-tr": "geçmek (sınav)",
+        "translation-ro": "a lua (examenul)",
+        "translation-uz": "topshirmoq (imtihon)",
+        "translation-hi": "पास करना",
+        "translation-ar": "ينجح في"
+      },
+      {
+        "word": "duschen",
+        "translation-ru": "принимать душ",
+        "translation-en": "to shower",
+        "translation-uk": "приймати душ",
+        "translation-pl": "brać prysznic",
+        "translation-es": "ducharse",
+        "translation-fr": "se doucher",
+        "translation-tr": "duş almak",
+        "translation-ro": "a face duș",
+        "translation-uz": "dush qabul qilmoq",
+        "translation-hi": "नहाना",
+        "translation-ar": "يستحم"
+      },
+      {
+        "word": "enden",
+        "translation-ru": "заканчиваться",
+        "translation-en": "to end",
+        "translation-uk": "закінчуватися",
+        "translation-pl": "kończyć się",
+        "translation-es": "terminar",
+        "translation-fr": "se terminer",
+        "translation-tr": "bitmek",
+        "translation-ro": "a se termina",
+        "translation-uz": "tugamoq",
+        "translation-hi": "ख़त्म होना",
+        "translation-ar": "ينتهي"
+      }
+    ],
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "memoryLakeThree.questTask1",
+        "options": [
+          "Nachdem ich gegessen hatte, gehe ich spazieren.",
+          "Nachdem ich gegessen hatte, ich ging spazieren.",
+          "Nachdem ich gegessen hatte, ging ich spazieren."
+        ],
+        "answer": "Nachdem ich gegessen hatte, ging ich spazieren.",
+        "tip": "memoryLakeThree.questDescription"
+      },
+      {
+        "id": 2,
+        "type": "input",
+        "question": "memoryLakeThree.questTask2",
+        "correctAnswer": "Nachdem",
+        "tip": "memoryLakeThree.questDescription"
+      },
+      {
+        "id": 3,
+        "type": "input",
+        "question": "memoryLakeThree.questTask3",
+        "correctAnswer": "hatte",
+        "tip": "memoryLakeThree.questDescription"
+      },
+      {
+        "id": 4,
+        "type": "reorder",
+        "question": "memoryLakeThree.questTask4",
+        "words": [
+          "hatte",
+          "war",
+          "wir",
+          "Nachdem",
+          "sie",
+          "aßen",
+          "gekommen"
+        ],
+        "correctOrder": [
+          "Nachdem",
+          "sie",
+          "gekommen",
+          "war",
+          "aßen",
+          "wir"
+        ],
+        "tip": "memoryLakeThree.questDescription"
+      },
+      {
+        "id": 5,
+        "type": "select",
+        "question": "memoryLakeThree.questTask5",
+        "options": [
+          "Nachdem ich die Hausaufgaben gemacht hatte, spielte ich Fußball.",
+          "Nachdem ich die Hausaufgaben machte, spielte ich Fußball.",
+          "Nachdem ich die Hausaufgaben gemacht hatte, ich spielte Fußball."
+        ],
+        "answer": "Nachdem ich die Hausaufgaben gemacht hatte, spielte ich Fußball.",
+        "tip": "memoryLakeThree.questDescription"
+      },
+      {
+        "id": 6,
+        "type": "input",
+        "question": "memoryLakeThree.questTask6",
+        "correctAnswer": "ruhten",
+        "tip": "memoryLakeThree.questDescription"
+      },
+      {
+        "id": 7,
+        "type": "readAndAnswer",
+        "question": "memoryLakeThree.questTask7",
+        "text": "Nachdem Anna die Prüfung bestanden hatte, rief sie ihre Mutter an. Danach ging sie mit Freunden ins Café.",
+        "options": [
+          "Sie schrieb eine E-Mail.",
+          "Sie rief ihre Mutter an.",
+          "Sie ging nach Hause."
+        ],
+        "answer": "Sie rief ihre Mutter an.",
+        "tip": "memoryLakeThree.questDescription"
+      },
+      {
+        "id": 8,
+        "type": "input",
+        "question": "memoryLakeThree.questTask8",
+        "correctAnswer": "waren",
+        "tip": "memoryLakeThree.questDescription"
+      },
+      {
+        "id": 9,
+        "type": "input",
+        "question": "memoryLakeThree.questTask10",
+        "correctAnswer": "war",
+        "tip": "memoryLakeThree.questDescription"
+      },
+      {
+        "id": 10,
+        "type": "reorder",
+        "question": "memoryLakeThree.questTask11",
+        "words": [
+          "gingen",
+          "der",
+          "Film",
+          "Hause",
+          "geendet",
+          "Nachdem",
+          "hatte",
+          "nach",
+          "ist",
+          "wir"
+        ],
+        "correctOrder": [
+          "Nachdem",
+          "der",
+          "Film",
+          "geendet",
+          "hatte",
+          "gingen",
+          "wir",
+          "nach",
+          "Hause"
+        ],
+        "tip": "memoryLakeThree.questDescription"
+      },
+      {
+        "id": 11,
+        "type": "select",
+        "question": "memoryLakeTwo.questTask9",
+        "options": [
+          "Wart ihr schon abfahren?",
+          "Wart ihr schon abgefahren?",
+          "Hattet ihr schon abgefahren?"
+        ],
+        "answer": "Wart ihr schon abgefahren?",
+        "tip": "memoryLakeTwo.questDescription",
+        "reviewOf": "memory-lake-two",
+        "reviewLand": "memory-lake"
+      },
+      {
+        "id": 12,
+        "type": "select",
+        "question": "storyValleySeven.questTask9",
+        "options": [
+          "Wo stand du?",
+          "Wo standest du?",
+          "Wo stehst du?"
+        ],
+        "answer": "Wo standest du?",
+        "tip": "storyValleySeven.questDescription",
+        "reviewOf": "story-valley-seven",
+        "reviewLand": "story-valley"
+      },
+      {
+        "id": 13,
+        "type": "readAndAnswer",
+        "question": "storyValleyFour.questTask13",
+        "text": "Am Abend klingelte es. Mia stand vor der Tür. Sie brachte einen Kuchen. Was für eine Überraschung!",
+        "options": [
+          "einen Kuchen",
+          "Blumen",
+          "ein Buch"
+        ],
+        "answer": "einen Kuchen",
+        "tip": "storyValleyFour.questDescription",
+        "reviewOf": "story-valley-four",
+        "reviewLand": "story-valley"
+      },
+      {
+        "id": 14,
+        "type": "input",
+        "question": "memoryLakeThree.questTask14",
+        "correctAnswer": "nahmen",
+        "tip": "memoryLakeThree.questDescription"
+      },
+      {
+        "id": 15,
+        "type": "input",
+        "question": "memoryLakeThree.questTask15",
+        "correctAnswer": "hätte",
+        "tip": "memoryLakeThree.questDescription"
+      }
+    ]
+  },
+  {
+    "questId": "memory-lake-four",
+    "title": "memoryLakeFour.questTitle",
+    "progress": "0/15",
+    "description": "memoryLakeFour.questDescription",
+    "conditions": {
+      "goal": "memoryLakeFour.questGoal",
+      "minCorrect": 15,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
+    "vocabulary": [
+      {
+        "word": "bevor",
+        "translation-ru": "прежде чем",
+        "translation-en": "before (conjunction)",
+        "translation-uk": "перш ніж",
+        "translation-pl": "zanim",
+        "translation-es": "antes de que",
+        "translation-fr": "avant que",
+        "translation-tr": "-madan önce",
+        "translation-ro": "înainte să",
+        "translation-uz": "…dan oldin",
+        "translation-hi": "…से पहले",
+        "translation-ar": "قبل أن"
+      },
+      {
+        "word": "sich verabschieden",
+        "translation-ru": "прощаться",
+        "translation-en": "to say goodbye",
+        "translation-uk": "прощатися",
+        "translation-pl": "żegnać się",
+        "translation-es": "despedirse",
+        "translation-fr": "dire au revoir",
+        "translation-tr": "vedalaşmak",
+        "translation-ro": "a-și lua rămas bun",
+        "translation-uz": "xayrlashmoq",
+        "translation-hi": "विदा लेना",
+        "translation-ar": "يودّع"
+      },
+      {
+        "word": "das Licht",
+        "translation-ru": "свет",
+        "translation-en": "light",
+        "translation-uk": "світло",
+        "translation-pl": "światło",
+        "translation-es": "la luz",
+        "translation-fr": "la lumière",
+        "translation-tr": "ışık",
+        "translation-ro": "lumina",
+        "translation-uz": "chiroq",
+        "translation-hi": "रोशनी",
+        "translation-ar": "الضوء"
+      },
+      {
+        "word": "ausmachen",
+        "translation-ru": "выключать",
+        "translation-en": "to switch off",
+        "translation-uk": "вимикати",
+        "translation-pl": "wyłączać",
+        "translation-es": "apagar",
+        "translation-fr": "éteindre",
+        "translation-tr": "kapatmak",
+        "translation-ro": "a stinge",
+        "translation-uz": "o‘chirmoq",
+        "translation-hi": "बंद करना",
+        "translation-ar": "يطفئ"
+      },
+      {
+        "word": "die Sommerferien",
+        "translation-ru": "летние каникулы",
+        "translation-en": "summer holidays",
+        "translation-uk": "літні канікули",
+        "translation-pl": "wakacje",
+        "translation-es": "las vacaciones de verano",
+        "translation-fr": "les vacances d’été",
+        "translation-tr": "yaz tatili",
+        "translation-ro": "vacanța de vară",
+        "translation-uz": "yozgi ta’til",
+        "translation-hi": "गर्मी की छुट्टियाँ",
+        "translation-ar": "العطلة الصيفية"
+      }
+    ],
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "memoryLakeFour.questTask1",
+        "options": [
+          "Nachdem ich gegangen war, machte ich das Licht aus.",
+          "Bevor ich ging, ich machte das Licht aus.",
+          "Bevor ich ging, machte ich das Licht aus."
+        ],
+        "answer": "Bevor ich ging, machte ich das Licht aus.",
+        "tip": "memoryLakeFour.questDescription"
+      },
+      {
+        "id": 2,
+        "type": "input",
+        "question": "memoryLakeFour.questTask2",
+        "correctAnswer": "Bevor",
+        "tip": "memoryLakeFour.questDescription"
+      },
+      {
+        "id": 3,
+        "type": "input",
+        "question": "memoryLakeFour.questTask3",
+        "correctAnswer": "verabschiedete",
+        "tip": "memoryLakeFour.questDescription"
+      },
+      {
+        "id": 4,
+        "type": "reorder",
+        "question": "memoryLakeFour.questTask4",
+        "words": [
+          "Tisch",
+          "wir",
+          "wir",
+          "Bevor",
+          "deckten",
+          "den",
+          "nachdem",
+          "aßen"
+        ],
+        "correctOrder": [
+          "Bevor",
+          "wir",
+          "aßen",
+          "deckten",
+          "wir",
+          "den",
+          "Tisch"
+        ],
+        "tip": "memoryLakeFour.questDescription"
+      },
+      {
+        "id": 5,
+        "type": "select",
+        "question": "memoryLakeFour.questTask5",
+        "options": [
+          "Bevor er antwortet, dachte er lange.",
+          "Bevor er antwortete, dachte er lange.",
+          "Bevor er antwortete, er dachte lange."
+        ],
+        "answer": "Bevor er antwortete, dachte er lange.",
+        "tip": "memoryLakeFour.questDescription"
+      },
+      {
+        "id": 6,
+        "type": "input",
+        "question": "memoryLakeFour.questTask6",
+        "correctAnswer": "las",
+        "tip": "memoryLakeFour.questDescription"
+      },
+      {
+        "id": 7,
+        "type": "readAndAnswer",
+        "question": "memoryLakeFour.questTask7",
+        "text": "Bevor Max in den Urlaub fuhr, verabschiedete er sich von seinen Nachbarn. Er gab ihnen den Schlüssel.",
+        "options": [
+          "Er verabschiedete sich von den Nachbarn.",
+          "Er rief seine Mutter an.",
+          "Er kaufte ein neues Auto."
+        ],
+        "answer": "Er verabschiedete sich von den Nachbarn.",
+        "tip": "memoryLakeFour.questDescription"
+      },
+      {
+        "id": 8,
+        "type": "input",
+        "question": "memoryLakeFour.questTask8",
+        "correctAnswer": "bevor",
+        "tip": "memoryLakeFour.questDescription"
+      },
+      {
+        "id": 9,
+        "type": "input",
+        "question": "memoryLakeFour.questTask10",
+        "correctAnswer": "kauften",
+        "tip": "memoryLakeFour.questDescription"
+      },
+      {
+        "id": 10,
+        "type": "reorder",
+        "question": "memoryLakeFour.questTask11",
+        "words": [
+          "uns",
+          "verabschiedeten",
+          "nachdem",
+          "Bevor",
+          "abfuhren",
+          "wir",
+          "wir"
+        ],
+        "correctOrder": [
+          "Bevor",
+          "wir",
+          "abfuhren",
+          "verabschiedeten",
+          "wir",
+          "uns"
+        ],
+        "tip": "memoryLakeFour.questDescription"
+      },
+      {
+        "id": 11,
+        "type": "select",
+        "question": "memoryLakeThree.questTask9",
+        "options": [
+          "Nachdem er gegangen war, wir sprachen lange.",
+          "Nachdem er gegangen war, sprachen wir lange.",
+          "Nachdem er gegangen hatte, sprachen wir lange."
+        ],
+        "answer": "Nachdem er gegangen war, sprachen wir lange.",
+        "tip": "memoryLakeThree.questDescription",
+        "reviewOf": "memory-lake-three",
+        "reviewLand": "memory-lake"
+      },
+      {
+        "id": 12,
+        "type": "input",
+        "question": "storyValleyEight.questTask13",
+        "correctAnswer": "warst",
+        "tip": "storyValleyEight.questDescription",
+        "reviewOf": "story-valley-eight",
+        "reviewLand": "story-valley"
+      },
+      {
+        "id": 13,
+        "type": "readAndAnswer",
+        "question": "storyValleyFive.questTask13",
+        "text": "Wenn Sommerferien waren, fuhr Max immer zu seinem Großvater aufs Land. Dort arbeitete er im Garten.",
+        "options": [
+          "Er fuhr zu seinem Großvater.",
+          "Er arbeitete im Büro.",
+          "Er blieb in der Stadt."
+        ],
+        "answer": "Er fuhr zu seinem Großvater.",
+        "tip": "storyValleyFive.questDescription",
+        "reviewOf": "story-valley-five",
+        "reviewLand": "story-valley"
+      },
+      {
+        "id": 14,
+        "type": "input",
+        "question": "memoryLakeFour.questTask14",
+        "correctAnswer": "Nachdem",
+        "tip": "memoryLakeFour.questDescription"
+      },
+      {
+        "id": 15,
+        "type": "input",
+        "question": "memoryLakeFour.questTask15",
+        "correctAnswer": "kommst",
+        "tip": "memoryLakeFour.questDescription"
+      }
+    ]
+  },
+  {
+    "questId": "memory-lake-five",
+    "title": "memoryLakeFive.questTitle",
+    "progress": "0/15",
+    "description": "memoryLakeFive.questDescription",
+    "conditions": {
+      "goal": "memoryLakeFive.questGoal",
+      "minCorrect": 15,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
+    "vocabulary": [
+      {
+        "word": "während",
+        "translation-ru": "пока, в то время как",
+        "translation-en": "while",
+        "translation-uk": "поки, у той час як",
+        "translation-pl": "podczas gdy",
+        "translation-es": "mientras",
+        "translation-fr": "pendant que",
+        "translation-tr": "-iken",
+        "translation-ro": "în timp ce",
+        "translation-uz": "…ayotganda",
+        "translation-hi": "जबकि, जब तक",
+        "translation-ar": "بينما"
+      },
+      {
+        "word": "fernsehen",
+        "translation-ru": "смотреть телевизор",
+        "translation-en": "to watch TV",
+        "translation-uk": "дивитися телевізор",
+        "translation-pl": "oglądać telewizję",
+        "translation-es": "ver la tele",
+        "translation-fr": "regarder la télé",
+        "translation-tr": "televizyon izlemek",
+        "translation-ro": "a se uita la televizor",
+        "translation-uz": "televizor ko‘rmoq",
+        "translation-hi": "टीवी देखना",
+        "translation-ar": "يشاهد التلفاز"
+      },
+      {
+        "word": "telefonieren",
+        "translation-ru": "разговаривать по телефону",
+        "translation-en": "to talk on the phone",
+        "translation-uk": "розмовляти по телефону",
+        "translation-pl": "rozmawiać przez telefon",
+        "translation-es": "hablar por teléfono",
+        "translation-fr": "téléphoner",
+        "translation-tr": "telefonla konuşmak",
+        "translation-ro": "a vorbi la telefon",
+        "translation-uz": "telefonda gaplashmoq",
+        "translation-hi": "फ़ोन पर बात करना",
+        "translation-ar": "يتكلم بالهاتف"
+      },
+      {
+        "word": "aufpassen auf",
+        "translation-ru": "присматривать за",
+        "translation-en": "to look after",
+        "translation-uk": "наглядати за",
+        "translation-pl": "pilnować",
+        "translation-es": "cuidar de",
+        "translation-fr": "surveiller",
+        "translation-tr": "göz kulak olmak",
+        "translation-ro": "a avea grijă de",
+        "translation-uz": "qarab turmoq",
+        "translation-hi": "ध्यान रखना",
+        "translation-ar": "يعتني بـ"
+      },
+      {
+        "word": "der kleine Bruder",
+        "translation-ru": "младший брат",
+        "translation-en": "little brother",
+        "translation-uk": "молодший брат",
+        "translation-pl": "młodszy brat",
+        "translation-es": "el hermano pequeño",
+        "translation-fr": "le petit frère",
+        "translation-tr": "küçük erkek kardeş",
+        "translation-ro": "fratele mai mic",
+        "translation-uz": "ukasi",
+        "translation-hi": "छोटा भाई",
+        "translation-ar": "الأخ الصغير"
+      }
+    ],
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "memoryLakeFive.questTask1",
+        "options": [
+          "Nachdem ich gekocht hatte, sah er fern.",
+          "Während ich kochte, er sah fern.",
+          "Während ich kochte, sah er fern."
+        ],
+        "answer": "Während ich kochte, sah er fern.",
+        "tip": "memoryLakeFive.questDescription"
+      },
+      {
+        "id": 2,
+        "type": "input",
+        "question": "memoryLakeFive.questTask2",
+        "correctAnswer": "Während",
+        "tip": "memoryLakeFive.questDescription"
+      },
+      {
+        "id": 3,
+        "type": "input",
+        "question": "memoryLakeFive.questTask3",
+        "correctAnswer": "arbeitete",
+        "tip": "memoryLakeFive.questDescription"
+      },
+      {
+        "id": 4,
+        "type": "reorder",
+        "question": "memoryLakeFive.questTask4",
+        "words": [
+          "telefonierte",
+          "las",
+          "ich",
+          "lese",
+          "Während",
+          "er"
+        ],
+        "correctOrder": [
+          "Während",
+          "er",
+          "telefonierte",
+          "las",
+          "ich"
+        ],
+        "tip": "memoryLakeFive.questDescription"
+      },
+      {
+        "id": 5,
+        "type": "select",
+        "question": "memoryLakeFive.questTask5",
+        "options": [
+          "Während es regnete, blieben wir zu Hause.",
+          "Während es regnet, blieben wir zu Hause.",
+          "Während es regnete, wir blieben zu Hause."
+        ],
+        "answer": "Während es regnete, blieben wir zu Hause.",
+        "tip": "memoryLakeFive.questDescription"
+      },
+      {
+        "id": 6,
+        "type": "input",
+        "question": "memoryLakeFive.questTask6",
+        "correctAnswer": "räumte",
+        "tip": "memoryLakeFive.questDescription"
+      },
+      {
+        "id": 7,
+        "type": "readAndAnswer",
+        "question": "memoryLakeFive.questTask7",
+        "text": "Während Oma telefonierte, passte Lena auf ihren kleinen Bruder auf. Er spielte im Garten.",
+        "options": [
+          "Sie passte auf ihren Bruder auf.",
+          "Sie kochte.",
+          "Sie sah fern."
+        ],
+        "answer": "Sie passte auf ihren Bruder auf.",
+        "tip": "memoryLakeFive.questDescription"
+      },
+      {
+        "id": 8,
+        "type": "input",
+        "question": "memoryLakeFive.questTask8",
+        "correctAnswer": "warst",
+        "tip": "memoryLakeFive.questDescription"
+      },
+      {
+        "id": 9,
+        "type": "input",
+        "question": "memoryLakeFive.questTask10",
+        "correctAnswer": "während",
+        "tip": "memoryLakeFive.questDescription"
+      },
+      {
+        "id": 10,
+        "type": "reorder",
+        "question": "memoryLakeFive.questTask11",
+        "words": [
+          "sprachen",
+          "essen",
+          "wir",
+          "aßen",
+          "Während",
+          "viel",
+          "wir"
+        ],
+        "correctOrder": [
+          "Während",
+          "wir",
+          "aßen",
+          "sprachen",
+          "wir",
+          "viel"
+        ],
+        "tip": "memoryLakeFive.questDescription"
+      },
+      {
+        "id": 11,
+        "type": "select",
+        "question": "memoryLakeFour.questTask9",
+        "options": [
+          "Bevor ich aß, rief ich meine Mutter an.",
+          "Bevor ich esse, rief ich meine Mutter an.",
+          "Bevor ich aß, ich rief meine Mutter an."
+        ],
+        "answer": "Bevor ich aß, rief ich meine Mutter an.",
+        "tip": "memoryLakeFour.questDescription",
+        "reviewOf": "memory-lake-four",
+        "reviewLand": "memory-lake"
+      },
+      {
+        "id": 12,
+        "type": "select",
+        "question": "memoryLakeOne.questTask12",
+        "options": [
+          "Wir waren schon bezahlt.",
+          "Wir hatten schon bezahlt.",
+          "Wir hatten noch nicht bezahlt."
+        ],
+        "answer": "Wir hatten schon bezahlt.",
+        "tip": "memoryLakeOne.questDescription",
+        "reviewOf": "memory-lake-one",
+        "reviewLand": "memory-lake"
+      },
+      {
+        "id": 13,
+        "type": "readAndAnswer",
+        "question": "storyValleySix.questTask13",
+        "text": "Am Samstag stand Ben früh auf. Zuerst machte er Sport, danach duschte er. Später besuchte er seine Freunde.",
+        "options": [
+          "Er besuchte seine Freunde.",
+          "Er machte Sport.",
+          "Er duschte."
+        ],
+        "answer": "Er machte Sport.",
+        "tip": "storyValleySix.questDescription",
+        "reviewOf": "story-valley-six",
+        "reviewLand": "story-valley"
+      },
+      {
+        "id": 14,
+        "type": "input",
+        "question": "memoryLakeFive.questTask14",
+        "correctAnswer": "Bevor",
+        "tip": "memoryLakeFive.questDescription"
+      },
+      {
+        "id": 15,
+        "type": "input",
+        "question": "memoryLakeFive.questTask15",
+        "correctAnswer": "war",
+        "tip": "memoryLakeFive.questDescription"
+      }
+    ]
+  },
+  {
+    "questId": "memory-lake-six",
+    "title": "memoryLakeSix.questTitle",
+    "progress": "0/15",
+    "description": "memoryLakeSix.questDescription",
+    "conditions": {
+      "goal": "memoryLakeSix.questGoal",
+      "minCorrect": 15,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
+    "vocabulary": [
+      {
+        "word": "sich erinnern an",
+        "translation-ru": "помнить, вспоминать",
+        "translation-en": "to remember",
+        "translation-uk": "пам’ятати, згадувати",
+        "translation-pl": "pamiętać",
+        "translation-es": "acordarse de",
+        "translation-fr": "se souvenir de",
+        "translation-tr": "hatırlamak",
+        "translation-ro": "a-și aminti de",
+        "translation-uz": "eslamoq",
+        "translation-hi": "याद करना",
+        "translation-ar": "يتذكّر"
+      },
+      {
+        "word": "schließlich",
+        "translation-ru": "в конце концов",
+        "translation-en": "finally, in the end",
+        "translation-uk": "зрештою",
+        "translation-pl": "w końcu",
+        "translation-es": "al final",
+        "translation-fr": "finalement",
+        "translation-tr": "sonunda",
+        "translation-ro": "în cele din urmă",
+        "translation-uz": "oxir-oqibat",
+        "translation-hi": "आख़िरकार",
+        "translation-ar": "في النهاية"
+      },
+      {
+        "word": "das Erlebnis",
+        "translation-ru": "переживание, впечатление",
+        "translation-en": "experience",
+        "translation-uk": "враження",
+        "translation-pl": "przeżycie",
+        "translation-es": "la experiencia",
+        "translation-fr": "l’expérience",
+        "translation-tr": "yaşantı",
+        "translation-ro": "experiența",
+        "translation-uz": "taassurot",
+        "translation-hi": "अनुभव",
+        "translation-ar": "التجربة"
+      },
+      {
+        "word": "sauber",
+        "translation-ru": "чистый",
+        "translation-en": "clean",
+        "translation-uk": "чистий",
+        "translation-pl": "czysty",
+        "translation-es": "limpio",
+        "translation-fr": "propre",
+        "translation-tr": "temiz",
+        "translation-ro": "curat",
+        "translation-uz": "toza",
+        "translation-hi": "साफ़",
+        "translation-ar": "نظيف"
+      },
+      {
+        "word": "während",
+        "translation-ru": "пока, в то время как",
+        "translation-en": "while",
+        "translation-uk": "поки, у той час як",
+        "translation-pl": "podczas gdy",
+        "translation-es": "mientras",
+        "translation-fr": "pendant que",
+        "translation-tr": "-iken",
+        "translation-ro": "în timp ce",
+        "translation-uz": "…ayotganda",
+        "translation-hi": "जबकि, जब तक",
+        "translation-ar": "بينما"
+      }
+    ],
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "memoryLakeSix.questTask1",
+        "options": [
+          "Ich erinnere mich an den Tag, wenn wir zum ersten Mal ans Meer fuhren.",
+          "Ich erinnere mich an den Tag, als wir zum ersten Mal ans Meer fahren.",
+          "Ich erinnere mich an den Tag, als wir zum ersten Mal ans Meer fuhren."
+        ],
+        "answer": "Ich erinnere mich an den Tag, als wir zum ersten Mal ans Meer fuhren.",
+        "tip": "memoryLakeSix.questDescription"
+      },
+      {
+        "id": 2,
+        "type": "input",
+        "question": "memoryLakeSix.questTask2",
+        "correctAnswer": "hatte",
+        "tip": "memoryLakeSix.questDescription"
+      },
+      {
+        "id": 3,
+        "type": "input",
+        "question": "memoryLakeSix.questTask3",
+        "correctAnswer": "Während",
+        "tip": "memoryLakeSix.questDescription"
+      },
+      {
+        "id": 4,
+        "type": "reorder",
+        "question": "memoryLakeSix.questTask4",
+        "words": [
+          "Stadt",
+          "die",
+          "in",
+          "hatten",
+          "wir",
+          "haben",
+          "fuhren",
+          "Nachdem",
+          "wir",
+          "gefrühstückt"
+        ],
+        "correctOrder": [
+          "Nachdem",
+          "wir",
+          "gefrühstückt",
+          "hatten",
+          "fuhren",
+          "wir",
+          "in",
+          "die",
+          "Stadt"
+        ],
+        "tip": "memoryLakeSix.questDescription"
+      },
+      {
+        "id": 5,
+        "type": "select",
+        "question": "memoryLakeSix.questTask5",
+        "options": [
+          "Schließlich wir fanden das Hotel.",
+          "Schließlich finden wir das Hotel.",
+          "Schließlich fanden wir das Hotel."
+        ],
+        "answer": "Schließlich fanden wir das Hotel.",
+        "tip": "memoryLakeSix.questDescription"
+      },
+      {
+        "id": 6,
+        "type": "input",
+        "question": "memoryLakeSix.questTask6",
+        "correctAnswer": "packten",
+        "tip": "memoryLakeSix.questDescription"
+      },
+      {
+        "id": 7,
+        "type": "readAndAnswer",
+        "question": "memoryLakeSix.questTask7",
+        "text": "Als Ben nach Hause kam, war die Wohnung sauber. Seine Frau hatte alles aufgeräumt, während er arbeitete.",
+        "options": [
+          "sein Sohn",
+          "seine Frau",
+          "Ben"
+        ],
+        "answer": "seine Frau",
+        "tip": "memoryLakeSix.questDescription"
+      },
+      {
+        "id": 8,
+        "type": "input",
+        "question": "memoryLakeSix.questTask8",
+        "correctAnswer": "erinnere",
+        "tip": "memoryLakeSix.questDescription"
+      },
+      {
+        "id": 9,
+        "type": "input",
+        "question": "memoryLakeSix.questTask10",
+        "correctAnswer": "war",
+        "tip": "memoryLakeSix.questDescription"
+      },
+      {
+        "id": 10,
+        "type": "reorder",
+        "question": "memoryLakeSix.questTask11",
+        "words": [
+          "war",
+          "angefangen",
+          "wir",
+          "ankamen",
+          "schon",
+          "Als",
+          "das",
+          "hatte",
+          "Konzert"
+        ],
+        "correctOrder": [
+          "Als",
+          "wir",
+          "ankamen",
+          "hatte",
+          "das",
+          "Konzert",
+          "schon",
+          "angefangen"
+        ],
+        "tip": "memoryLakeSix.questDescription"
+      },
+      {
+        "id": 11,
+        "type": "select",
+        "question": "memoryLakeFive.questTask9",
+        "options": [
+          "Während Mama kocht, las Papa die Zeitung.",
+          "Während Mama kochte, las Papa die Zeitung.",
+          "Während Mama kochte, Papa las die Zeitung."
+        ],
+        "answer": "Während Mama kochte, las Papa die Zeitung.",
+        "tip": "memoryLakeFive.questDescription",
+        "reviewOf": "memory-lake-five",
+        "reviewLand": "memory-lake"
+      },
+      {
+        "id": 12,
+        "type": "select",
+        "question": "memoryLakeTwo.questTask12",
+        "options": [
+          "Er war auf der Feier geblieben.",
+          "Er war auf der Feier gegangen.",
+          "Er hatte auf der Feier geblieben."
+        ],
+        "answer": "Er war auf der Feier geblieben.",
+        "tip": "memoryLakeTwo.questDescription",
+        "reviewOf": "memory-lake-two",
+        "reviewLand": "memory-lake"
+      },
+      {
+        "id": 13,
+        "type": "select",
+        "question": "storyValleySeven.questTask13",
+        "options": [
+          "Er traf zufällig seinen Lehrer.",
+          "Er traf zufällig seinem Lehrer.",
+          "Er trifft zufällig seinen Lehrer."
+        ],
+        "answer": "Er traf zufällig seinen Lehrer.",
+        "tip": "storyValleySeven.questDescription",
+        "reviewOf": "story-valley-seven",
+        "reviewLand": "story-valley"
+      },
+      {
+        "id": 14,
+        "type": "input",
+        "question": "memoryLakeSix.questTask14",
+        "correctAnswer": "tranken",
+        "tip": "memoryLakeSix.questDescription"
+      },
+      {
+        "id": 15,
+        "type": "input",
+        "question": "memoryLakeSix.questTask15",
+        "correctAnswer": "würden",
+        "tip": "memoryLakeSix.questDescription"
+      }
+    ]
+  },
+  {
+    "questId": "memory-lake-seven",
+    "title": "memoryLakeSeven.questTitle",
+    "progress": "0/15",
+    "description": "memoryLakeSeven.questDescription",
+    "conditions": {
+      "goal": "memoryLakeSeven.questGoal",
+      "minCorrect": 15,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
+    "vocabulary": [
+      {
+        "word": "der Flughafen",
+        "translation-ru": "аэропорт",
+        "translation-en": "airport",
+        "translation-uk": "аеропорт",
+        "translation-pl": "lotnisko",
+        "translation-es": "el aeropuerto",
+        "translation-fr": "l’aéroport",
+        "translation-tr": "havalimanı",
+        "translation-ro": "aeroportul",
+        "translation-uz": "aeroport",
+        "translation-hi": "हवाई अड्डा",
+        "translation-ar": "المطار"
+      },
+      {
+        "word": "landen",
+        "translation-ru": "приземляться",
+        "translation-en": "to land",
+        "translation-uk": "приземлятися",
+        "translation-pl": "lądować",
+        "translation-es": "aterrizar",
+        "translation-fr": "atterrir",
+        "translation-tr": "iniş yapmak",
+        "translation-ro": "a ateriza",
+        "translation-uz": "qo‘nmoq",
+        "translation-hi": "उतरना",
+        "translation-ar": "يهبط"
+      },
+      {
+        "word": "das Gepäck",
+        "translation-ru": "багаж",
+        "translation-en": "luggage",
+        "translation-uk": "багаж",
+        "translation-pl": "bagaż",
+        "translation-es": "el equipaje",
+        "translation-fr": "les bagages",
+        "translation-tr": "bagaj",
+        "translation-ro": "bagajul",
+        "translation-uz": "yuk",
+        "translation-hi": "सामान",
+        "translation-ar": "الأمتعة"
+      },
+      {
+        "word": "der Koffer",
+        "translation-ru": "чемодан",
+        "translation-en": "suitcase",
+        "translation-uk": "валіза",
+        "translation-pl": "walizka",
+        "translation-es": "la maleta",
+        "translation-fr": "la valise",
+        "translation-tr": "bavul",
+        "translation-ro": "valiza",
+        "translation-uz": "chamadon",
+        "translation-hi": "सूटकेस",
+        "translation-ar": "الحقيبة"
+      },
+      {
+        "word": "der Pass",
+        "translation-ru": "паспорт",
+        "translation-en": "passport",
+        "translation-uk": "паспорт",
+        "translation-pl": "paszport",
+        "translation-es": "el pasaporte",
+        "translation-fr": "le passeport",
+        "translation-tr": "pasaport",
+        "translation-ro": "pașaportul",
+        "translation-uz": "pasport",
+        "translation-hi": "पासपोर्ट",
+        "translation-ar": "جواز السفر"
+      },
+      {
+        "word": "offen",
+        "translation-ru": "открытый",
+        "translation-en": "open",
+        "translation-uk": "відчинений",
+        "translation-pl": "otwarty",
+        "translation-es": "abierto",
+        "translation-fr": "ouvert",
+        "translation-tr": "açık",
+        "translation-ro": "deschis",
+        "translation-uz": "ochiq",
+        "translation-hi": "खुला",
+        "translation-ar": "مفتوح"
+      },
+      {
+        "word": "losfahren",
+        "translation-ru": "отправляться, выезжать",
+        "translation-en": "to set off",
+        "translation-uk": "вирушати",
+        "translation-pl": "wyruszać",
+        "translation-es": "salir, ponerse en marcha",
+        "translation-fr": "partir",
+        "translation-tr": "yola çıkmak",
+        "translation-ro": "a pleca",
+        "translation-uz": "yo‘lga chiqmoq",
+        "translation-hi": "रवाना होना",
+        "translation-ar": "ينطلق"
+      }
+    ],
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "memoryLakeSeven.questTask1",
+        "options": [
+          "Als wir zum Markt kamen, hatten die Leute schon alles verkaufen.",
+          "Als wir zum Markt kamen, waren die Leute schon alles verkauft.",
+          "Als wir zum Markt kamen, hatten die Leute schon alles verkauft."
+        ],
+        "answer": "Als wir zum Markt kamen, hatten die Leute schon alles verkauft.",
+        "tip": "memoryLakeSeven.questDescription"
+      },
+      {
+        "id": 2,
+        "type": "input",
+        "question": "memoryLakeSeven.questTask2",
+        "correctAnswer": "hatte",
+        "tip": "memoryLakeSeven.questDescription"
+      },
+      {
+        "id": 3,
+        "type": "input",
+        "question": "memoryLakeSeven.questTask3",
+        "correctAnswer": "losfuhren",
+        "tip": "memoryLakeSeven.questDescription"
+      },
+      {
+        "id": 4,
+        "type": "reorder",
+        "question": "memoryLakeSeven.questTask4",
+        "words": [
+          "wir",
+          "Gepäck",
+          "waren",
+          "hatten",
+          "das",
+          "Nachdem",
+          "holten",
+          "wir",
+          "gelandet"
+        ],
+        "correctOrder": [
+          "Nachdem",
+          "wir",
+          "gelandet",
+          "waren",
+          "holten",
+          "wir",
+          "das",
+          "Gepäck"
+        ],
+        "tip": "memoryLakeSeven.questDescription"
+      },
+      {
+        "id": 5,
+        "type": "select",
+        "question": "memoryLakeSeven.questTask5",
+        "options": [
+          "Er konnte nicht bezahlen, weil er sein Geld zu Hause vergessen war.",
+          "Er konnte nicht bezahlen, weil er hatte sein Geld zu Hause vergessen.",
+          "Er konnte nicht bezahlen, weil er sein Geld zu Hause vergessen hatte."
+        ],
+        "answer": "Er konnte nicht bezahlen, weil er sein Geld zu Hause vergessen hatte.",
+        "tip": "memoryLakeSeven.questDescription"
+      },
+      {
+        "id": 6,
+        "type": "input",
+        "question": "memoryLakeSeven.questTask6",
+        "correctAnswer": "warteten",
+        "tip": "memoryLakeSeven.questDescription"
+      },
+      {
+        "id": 7,
+        "type": "readAndAnswer",
+        "question": "memoryLakeSeven.questTask7",
+        "text": "Letzten Sommer flog Familie Klein nach Spanien. Bevor sie losfuhren, hatte der Vater alle Koffer gepackt. Aber am Flughafen sah die Mutter, dass sie ihren Pass zu Hause vergessen hatte. Zum Glück wohnten sie nicht weit vom Flughafen.",
+        "options": [
+          "ihren Pass",
+          "das Wasser",
+          "die Koffer"
+        ],
+        "answer": "ihren Pass",
+        "tip": "memoryLakeSeven.questDescription"
+      },
+      {
+        "id": 8,
+        "type": "input",
+        "question": "memoryLakeSeven.questTask8",
+        "correctAnswer": "weil",
+        "tip": "memoryLakeSeven.questDescription"
+      },
+      {
+        "id": 9,
+        "type": "reorder",
+        "question": "memoryLakeSeven.questTask10",
+        "words": [
+          "Zähne",
+          "nachdem",
+          "mir",
+          "Bevor",
+          "putzte",
+          "ging",
+          "die",
+          "schlafen",
+          "ich",
+          "ich"
+        ],
+        "correctOrder": [
+          "Bevor",
+          "ich",
+          "schlafen",
+          "ging",
+          "putzte",
+          "ich",
+          "mir",
+          "die",
+          "Zähne"
+        ],
+        "tip": "memoryLakeSeven.questDescription"
+      },
+      {
+        "id": 10,
+        "type": "select",
+        "question": "memoryLakeSeven.questTask11",
+        "options": [
+          "Während kochte ich, deckte sie den Tisch.",
+          "Während ich kochte, deckte sie den Tisch.",
+          "Während ich kochte, sie deckte den Tisch."
+        ],
+        "answer": "Während ich kochte, deckte sie den Tisch.",
+        "tip": "memoryLakeSeven.questDescription"
+      },
+      {
+        "id": 11,
+        "type": "select",
+        "question": "memoryLakeSix.questTask9",
+        "options": [
+          "Als wir zurückkamen, war die Tür offen.",
+          "Als wir zurückkommen, ist die Tür offen.",
+          "Wenn wir zurückkamen, war die Tür offen."
+        ],
+        "answer": "Als wir zurückkamen, war die Tür offen.",
+        "tip": "memoryLakeSix.questDescription",
+        "reviewOf": "memory-lake-six",
+        "reviewLand": "memory-lake"
+      },
+      {
+        "id": 12,
+        "type": "select",
+        "question": "memoryLakeThree.questTask12",
+        "options": [
+          "Nachdem wir gegessen hatten, bezahlten wir.",
+          "Nachdem wir gegessen haben, bezahlten wir.",
+          "Nachdem wir gegessen hatten, wir bezahlten."
+        ],
+        "answer": "Nachdem wir gegessen hatten, bezahlten wir.",
+        "tip": "memoryLakeThree.questDescription",
+        "reviewOf": "memory-lake-three",
+        "reviewLand": "memory-lake"
+      },
+      {
+        "id": 13,
+        "type": "select",
+        "question": "storyValleyEight.questTask12",
+        "options": [
+          "Eines Tages rief der König seinen Kinder.",
+          "Eines Tages rief der König seine Kinder.",
+          "Eines Tages ruft der König seine Kinder."
+        ],
+        "answer": "Eines Tages rief der König seine Kinder.",
+        "tip": "storyValleyEight.questDescription",
+        "reviewOf": "story-valley-eight",
+        "reviewLand": "story-valley"
+      },
+      {
+        "id": 14,
+        "type": "input",
+        "question": "memoryLakeSeven.questTask14",
+        "correctAnswer": "spielte",
+        "tip": "memoryLakeSeven.questDescription"
+      },
+      {
+        "id": 15,
+        "type": "input",
+        "question": "memoryLakeSeven.questTask15",
+        "correctAnswer": "geschenkt",
+        "tip": "memoryLakeSeven.questDescription"
+      }
+    ]
+  },
+  {
+    "questId": "memory-lake-eight",
+    "title": "memoryLakeEight.questTitle",
+    "progress": "0/15",
+    "description": "memoryLakeEight.questDescription",
+    "conditions": {
+      "goal": "memoryLakeEight.questGoal",
+      "minCorrect": 15,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
+    "vocabulary": [
+      {
+        "word": "aufwachen",
+        "translation-ru": "просыпаться",
+        "translation-en": "to wake up",
+        "translation-uk": "прокидатися",
+        "translation-pl": "budzić się",
+        "translation-es": "despertarse",
+        "translation-fr": "se réveiller",
+        "translation-tr": "uyanmak",
+        "translation-ro": "a se trezi",
+        "translation-uz": "uyg‘onmoq",
+        "translation-hi": "जागना",
+        "translation-ar": "يستيقظ"
+      },
+      {
+        "word": "der Schirm",
+        "translation-ru": "зонт",
+        "translation-en": "umbrella",
+        "translation-uk": "парасолька",
+        "translation-pl": "parasol",
+        "translation-es": "el paraguas",
+        "translation-fr": "le parapluie",
+        "translation-tr": "şemsiye",
+        "translation-ro": "umbrela",
+        "translation-uz": "soyabon",
+        "translation-hi": "छाता",
+        "translation-ar": "المظلة"
+      },
+      {
+        "word": "nass",
+        "translation-ru": "мокрый",
+        "translation-en": "wet",
+        "translation-uk": "мокрий",
+        "translation-pl": "mokry",
+        "translation-es": "mojado",
+        "translation-fr": "mouillé",
+        "translation-tr": "ıslak",
+        "translation-ro": "ud",
+        "translation-uz": "ho‘l",
+        "translation-hi": "गीला",
+        "translation-ar": "مبلل"
+      },
+      {
+        "word": "die Haltestelle",
+        "translation-ru": "остановка",
+        "translation-en": "stop (bus stop)",
+        "translation-uk": "зупинка",
+        "translation-pl": "przystanek",
+        "translation-es": "la parada",
+        "translation-fr": "l’arrêt",
+        "translation-tr": "durak",
+        "translation-ro": "stația",
+        "translation-uz": "bekat",
+        "translation-hi": "बस स्टॉप",
+        "translation-ar": "المحطة"
+      },
+      {
+        "word": "klingeln",
+        "translation-ru": "звонить, звенеть",
+        "translation-en": "to ring",
+        "translation-uk": "дзвонити",
+        "translation-pl": "dzwonić",
+        "translation-es": "sonar",
+        "translation-fr": "sonner",
+        "translation-tr": "çalmak",
+        "translation-ro": "a suna",
+        "translation-uz": "jiringlamoq",
+        "translation-hi": "घंटी बजना",
+        "translation-ar": "يرنّ"
+      },
+      {
+        "word": "das Flugzeug",
+        "translation-ru": "самолёт",
+        "translation-en": "plane",
+        "translation-uk": "літак",
+        "translation-pl": "samolot",
+        "translation-es": "el avión",
+        "translation-fr": "l’avion",
+        "translation-tr": "uçak",
+        "translation-ro": "avionul",
+        "translation-uz": "samolyot",
+        "translation-hi": "हवाई जहाज़",
+        "translation-ar": "الطائرة"
+      },
+      {
+        "word": "verschlafen",
+        "translation-ru": "проспать",
+        "translation-en": "to oversleep",
+        "translation-uk": "проспати",
+        "translation-pl": "zaspać",
+        "translation-es": "quedarse dormido",
+        "translation-fr": "ne pas se réveiller à temps",
+        "translation-tr": "uyuyakalmak",
+        "translation-ro": "a se trezi prea târziu",
+        "translation-uz": "uxlab qolmoq",
+        "translation-hi": "देर तक सोते रह जाना",
+        "translation-ar": "يتأخر في النوم"
+      }
+    ],
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "memoryLakeEight.questTask1",
+        "options": [
+          "Nachdem ich aufgewacht hatte, sah ich, dass es regnete.",
+          "Nachdem ich war aufgewacht, sah ich, dass es regnete.",
+          "Nachdem ich aufgewacht war, sah ich, dass es regnete."
+        ],
+        "answer": "Nachdem ich aufgewacht war, sah ich, dass es regnete.",
+        "tip": "memoryLakeEight.questDescription"
+      },
+      {
+        "id": 2,
+        "type": "input",
+        "question": "memoryLakeEight.questTask2",
+        "correctAnswer": "deshalb",
+        "tip": "memoryLakeEight.questDescription"
+      },
+      {
+        "id": 3,
+        "type": "input",
+        "question": "memoryLakeEight.questTask3",
+        "correctAnswer": "ging",
+        "tip": "memoryLakeEight.questDescription"
+      },
+      {
+        "id": 4,
+        "type": "reorder",
+        "question": "memoryLakeEight.questTask4",
+        "words": [
+          "Haltestelle",
+          "ich",
+          "wenn",
+          "Der",
+          "schon",
+          "als",
+          "kam",
+          "weg",
+          "Bus",
+          "zur",
+          "war"
+        ],
+        "correctOrder": [
+          "Der",
+          "Bus",
+          "war",
+          "schon",
+          "weg",
+          "als",
+          "ich",
+          "zur",
+          "Haltestelle",
+          "kam"
+        ],
+        "tip": "memoryLakeEight.questDescription"
+      },
+      {
+        "id": 5,
+        "type": "select",
+        "question": "memoryLakeEight.questTask5",
+        "options": [
+          "Während ich auf den Bus wartete, mein Handy klingelte.",
+          "Während ich wartete auf den Bus, klingelte mein Handy.",
+          "Während ich auf den Bus wartete, klingelte mein Handy."
+        ],
+        "answer": "Während ich auf den Bus wartete, klingelte mein Handy.",
+        "tip": "memoryLakeEight.questDescription"
+      },
+      {
+        "id": 6,
+        "type": "input",
+        "question": "memoryLakeEight.questTask6",
+        "correctAnswer": "hatte",
+        "tip": "memoryLakeEight.questDescription"
+      },
+      {
+        "id": 7,
+        "type": "readAndAnswer",
+        "question": "memoryLakeEight.questTask7",
+        "text": "Gestern war ein schlechter Tag für Ben. Er hatte verschlafen, und als er zur Haltestelle kam, war der Bus schon weg. Im Büro sah er, dass er sein Handy zu Hause gelassen hatte. Am Abend lachte er aber darüber.",
+        "options": [
+          "Der Bus kam zu früh.",
+          "Er ist zu spät aufgewacht.",
+          "Er vergaß sein Handy."
+        ],
+        "answer": "Er ist zu spät aufgewacht.",
+        "tip": "memoryLakeEight.questDescription"
+      },
+      {
+        "id": 8,
+        "type": "input",
+        "question": "memoryLakeEight.questTask8",
+        "correctAnswer": "sahen",
+        "tip": "memoryLakeEight.questDescription"
+      },
+      {
+        "id": 9,
+        "type": "reorder",
+        "question": "memoryLakeEight.questTask10",
+        "words": [
+          "schliefen",
+          "Während",
+          "Kinder",
+          "nachdem",
+          "die",
+          "ich",
+          "Wohnung",
+          "die",
+          "putzte"
+        ],
+        "correctOrder": [
+          "Während",
+          "die",
+          "Kinder",
+          "schliefen",
+          "putzte",
+          "ich",
+          "die",
+          "Wohnung"
+        ],
+        "tip": "memoryLakeEight.questDescription"
+      },
+      {
+        "id": 10,
+        "type": "select",
+        "question": "memoryLakeEight.questTask11",
+        "options": [
+          "Als ich nach Hause kam, hatte Mama schon das Abendessen gekocht.",
+          "Als ich nach Hause kam, hat Mama schon das Abendessen gekocht hatte.",
+          "Als ich nach Hause kam, war Mama schon das Abendessen gekocht."
+        ],
+        "answer": "Als ich nach Hause kam, hatte Mama schon das Abendessen gekocht.",
+        "tip": "memoryLakeEight.questDescription"
+      },
+      {
+        "id": 11,
+        "type": "input",
+        "question": "memoryLakeSeven.questTask9",
+        "correctAnswer": "gelandet",
+        "tip": "memoryLakeSeven.questDescription",
+        "reviewOf": "memory-lake-seven",
+        "reviewLand": "memory-lake"
+      },
+      {
+        "id": 12,
+        "type": "select",
+        "question": "memoryLakeFour.questTask12",
+        "options": [
+          "Bevor wir in den Urlaub fuhren, geben wir der Nachbarin den Schlüssel.",
+          "Bevor wir in den Urlaub fuhren, gaben wir der Nachbarin den Schlüssel.",
+          "Bevor wir in den Urlaub fuhren, wir gaben der Nachbarin den Schlüssel."
+        ],
+        "answer": "Bevor wir in den Urlaub fuhren, gaben wir der Nachbarin den Schlüssel.",
+        "tip": "memoryLakeFour.questDescription",
+        "reviewOf": "memory-lake-four",
+        "reviewLand": "memory-lake"
+      },
+      {
+        "id": 13,
+        "type": "readAndAnswer",
+        "question": "memoryLakeOne.questTask13",
+        "text": "Als die Freunde kamen, hatte Max schon gekocht und den Tisch gedeckt.",
+        "options": [
+          "Er hatte geschlafen.",
+          "Er hatte gekocht.",
+          "Er hatte eingekauft."
+        ],
+        "answer": "Er hatte gekocht.",
+        "tip": "memoryLakeOne.questDescription",
+        "reviewOf": "memory-lake-one",
+        "reviewLand": "memory-lake"
+      },
+      {
+        "id": 14,
+        "type": "input",
+        "question": "memoryLakeEight.questTask14",
+        "correctAnswer": "länger",
+        "tip": "memoryLakeEight.questDescription"
+      },
+      {
+        "id": 15,
+        "type": "input",
+        "question": "memoryLakeEight.questTask15",
+        "correctAnswer": "als",
+        "tip": "memoryLakeEight.questDescription"
+      }
+    ]
+  },
+  {
+    "questId": "memory-lake-nine",
+    "title": "memoryLakeNine.questTitle",
+    "progress": "0/15",
+    "description": "memoryLakeNine.questDescription",
+    "conditions": {
+      "goal": "memoryLakeNine.questGoal",
+      "minCorrect": 15,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
+    "vocabulary": [
+      {
+        "word": "wecken",
+        "translation-ru": "будить",
+        "translation-en": "to wake (someone)",
+        "translation-uk": "будити",
+        "translation-pl": "budzić",
+        "translation-es": "despertar",
+        "translation-fr": "réveiller",
+        "translation-tr": "uyandırmak",
+        "translation-ro": "a trezi",
+        "translation-uz": "uyg‘otmoq",
+        "translation-hi": "जगाना",
+        "translation-ar": "يوقظ"
+      },
+      {
+        "word": "ein paar",
+        "translation-ru": "несколько",
+        "translation-en": "a few",
+        "translation-uk": "кілька",
+        "translation-pl": "kilka",
+        "translation-es": "unos cuantos",
+        "translation-fr": "quelques",
+        "translation-tr": "birkaç",
+        "translation-ro": "câteva",
+        "translation-uz": "bir nechta",
+        "translation-hi": "कुछ",
+        "translation-ar": "بعض"
+      },
+      {
+        "word": "sonnig",
+        "translation-ru": "солнечный",
+        "translation-en": "sunny",
+        "translation-uk": "сонячний",
+        "translation-pl": "słoneczny",
+        "translation-es": "soleado",
+        "translation-fr": "ensoleillé",
+        "translation-tr": "güneşli",
+        "translation-ro": "însorit",
+        "translation-uz": "quyoshli",
+        "translation-hi": "धूप वाला",
+        "translation-ar": "مشمس"
+      },
+      {
+        "word": "ein bisschen",
+        "translation-ru": "немного",
+        "translation-en": "a little",
+        "translation-uk": "трохи",
+        "translation-pl": "trochę",
+        "translation-es": "un poco",
+        "translation-fr": "un peu",
+        "translation-tr": "biraz",
+        "translation-ro": "puțin",
+        "translation-uz": "ozgina",
+        "translation-hi": "थोड़ा",
+        "translation-ar": "قليلًا"
+      },
+      {
+        "word": "Spanisch",
+        "translation-ru": "испанский язык",
+        "translation-en": "Spanish",
+        "translation-uk": "іспанська мова",
+        "translation-pl": "hiszpański",
+        "translation-es": "el español",
+        "translation-fr": "l’espagnol",
+        "translation-tr": "İspanyolca",
+        "translation-ro": "spaniola",
+        "translation-uz": "ispan tili",
+        "translation-hi": "स्पेनिश",
+        "translation-ar": "الإسبانية"
+      },
+      {
+        "word": "das Geschenk",
+        "translation-ru": "подарок",
+        "translation-en": "present",
+        "translation-uk": "подарунок",
+        "translation-pl": "prezent",
+        "translation-es": "el regalo",
+        "translation-fr": "le cadeau",
+        "translation-tr": "hediye",
+        "translation-ro": "cadoul",
+        "translation-uz": "sovg‘a",
+        "translation-hi": "तोहफ़ा",
+        "translation-ar": "الهدية"
+      }
+    ],
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "memoryLakeNine.questTask1",
+        "options": [
+          "Als er anruft, bin ich schon gegangen.",
+          "Als er anrief, hatte ich schon gegangen.",
+          "Als er anrief, war ich schon gegangen."
+        ],
+        "answer": "Als er anrief, war ich schon gegangen.",
+        "tip": "memoryLakeNine.questDescription"
+      },
+      {
+        "id": 2,
+        "type": "input",
+        "question": "memoryLakeNine.questTask2",
+        "correctAnswer": "hatten",
+        "tip": "memoryLakeNine.questDescription"
+      },
+      {
+        "id": 3,
+        "type": "input",
+        "question": "memoryLakeNine.questTask3",
+        "correctAnswer": "Nachdem",
+        "tip": "memoryLakeNine.questDescription"
+      },
+      {
+        "id": 4,
+        "type": "reorder",
+        "question": "memoryLakeNine.questTask4",
+        "words": [
+          "Zeitung",
+          "ich",
+          "las",
+          "die",
+          "Während",
+          "ich",
+          "nachdem",
+          "wartete"
+        ],
+        "correctOrder": [
+          "Während",
+          "ich",
+          "wartete",
+          "las",
+          "ich",
+          "die",
+          "Zeitung"
+        ],
+        "tip": "memoryLakeNine.questDescription"
+      },
+      {
+        "id": 5,
+        "type": "select",
+        "question": "memoryLakeNine.questTask5",
+        "options": [
+          "Bevor ich abfuhr, verabschiedete ich mich von meine Freunden.",
+          "Bevor ich abfahre, verabschiedete ich mich von meinen Freunden.",
+          "Bevor ich abfuhr, verabschiedete ich mich von meinen Freunden."
+        ],
+        "answer": "Bevor ich abfuhr, verabschiedete ich mich von meinen Freunden.",
+        "tip": "memoryLakeNine.questDescription"
+      },
+      {
+        "id": 6,
+        "type": "input",
+        "question": "memoryLakeNine.questTask6",
+        "correctAnswer": "waren",
+        "tip": "memoryLakeNine.questDescription"
+      },
+      {
+        "id": 7,
+        "type": "readAndAnswer",
+        "question": "memoryLakeNine.questTask7",
+        "text": "Nachdem Tom das Frühstück gemacht hatte, weckte er seine Kinder. Während sie aßen, packte er die Taschen.",
+        "options": [
+          "Er packte die Taschen.",
+          "Er machte das Frühstück.",
+          "Er weckte die Kinder."
+        ],
+        "answer": "Er packte die Taschen.",
+        "tip": "memoryLakeNine.questDescription"
+      },
+      {
+        "id": 8,
+        "type": "input",
+        "question": "memoryLakeNine.questTask8",
+        "correctAnswer": "war",
+        "tip": "memoryLakeNine.questDescription"
+      },
+      {
+        "id": 9,
+        "type": "select",
+        "question": "memoryLakeNine.questTask9",
+        "options": [
+          "Ich dachte, dass ich den Schlüssel vergessen hatte.",
+          "Ich dachte, dass ich hatte den Schlüssel vergessen.",
+          "Ich dachte, dass ich den Schlüssel vergessen war."
+        ],
+        "answer": "Ich dachte, dass ich den Schlüssel vergessen hatte.",
+        "tip": "memoryLakeNine.questDescription"
+      },
+      {
+        "id": 10,
+        "type": "input",
+        "question": "memoryLakeNine.questTask10",
+        "correctAnswer": "hatte",
+        "tip": "memoryLakeNine.questDescription"
+      },
+      {
+        "id": 11,
+        "type": "reorder",
+        "question": "memoryLakeNine.questTask11",
+        "words": [
+          "Bevor",
+          "frühstückte",
+          "während",
+          "er",
+          "er",
+          "duschte"
+        ],
+        "correctOrder": [
+          "Bevor",
+          "er",
+          "frühstückte",
+          "duschte",
+          "er"
+        ],
+        "tip": "memoryLakeNine.questDescription"
+      },
+      {
+        "id": 12,
+        "type": "select",
+        "question": "memoryLakeNine.questTask12",
+        "options": [
+          "Nachdem wir ankommen, gingen wir ins Hotel.",
+          "Nachdem wir angekommen waren, gingen wir ins Hotel.",
+          "Nachdem wir angekommen hatten, gingen wir ins Hotel."
+        ],
+        "answer": "Nachdem wir angekommen waren, gingen wir ins Hotel.",
+        "tip": "memoryLakeNine.questDescription"
+      },
+      {
+        "id": 13,
+        "type": "readAndAnswer",
+        "question": "memoryLakeNine.questTask13",
+        "text": "Bevor Anna nach Spanien fuhr, lernte sie ein bisschen Spanisch. Als sie ankam, konnte sie schon ein paar Wörter sagen.",
+        "options": [
+          "Sie lernte Spanisch.",
+          "Sie besuchte ihre Oma.",
+          "Sie kaufte ein Auto."
+        ],
+        "answer": "Sie lernte Spanisch.",
+        "tip": "memoryLakeNine.questDescription"
+      },
+      {
+        "id": 14,
+        "type": "input",
+        "question": "memoryLakeNine.questTask14",
+        "correctAnswer": "Während",
+        "tip": "memoryLakeNine.questDescription"
+      },
+      {
+        "id": 15,
+        "type": "input",
+        "question": "memoryLakeNine.questTask15",
+        "correctAnswer": "waren",
+        "tip": "memoryLakeNine.questDescription"
+      }
+    ]
+  },
+  {
+    "questId": "memory-lake-ten",
+    "title": "memoryLakeTen.questTitle",
+    "progress": "0/15",
+    "description": "memoryLakeTen.questDescription",
+    "conditions": {
+      "goal": "memoryLakeTen.questGoal",
+      "minCorrect": 15,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
+    "vocabulary": [
+      {
+        "word": "zurückkommen",
+        "translation-ru": "возвращаться",
+        "translation-en": "to come back",
+        "translation-uk": "повертатися",
+        "translation-pl": "wracać",
+        "translation-es": "volver",
+        "translation-fr": "revenir",
+        "translation-tr": "geri gelmek",
+        "translation-ro": "a se întoarce",
+        "translation-uz": "qaytib kelmoq",
+        "translation-hi": "लौटना",
+        "translation-ar": "يعود"
+      },
+      {
+        "word": "das Wort",
+        "translation-ru": "слово",
+        "translation-en": "word",
+        "translation-uk": "слово",
+        "translation-pl": "słowo",
+        "translation-es": "la palabra",
+        "translation-fr": "le mot",
+        "translation-tr": "kelime",
+        "translation-ro": "cuvântul",
+        "translation-uz": "so‘z",
+        "translation-hi": "शब्द",
+        "translation-ar": "الكلمة"
+      },
+      {
+        "word": "die E-Mail",
+        "translation-ru": "электронное письмо",
+        "translation-en": "email",
+        "translation-uk": "електронний лист",
+        "translation-pl": "e-mail",
+        "translation-es": "el correo electrónico",
+        "translation-fr": "l’e-mail",
+        "translation-tr": "e-posta",
+        "translation-ro": "e-mailul",
+        "translation-uz": "elektron xat",
+        "translation-hi": "ईमेल",
+        "translation-ar": "البريد الإلكتروني"
+      },
+      {
+        "word": "die Nachbarin",
+        "translation-ru": "соседка",
+        "translation-en": "neighbour (female)",
+        "translation-uk": "сусідка",
+        "translation-pl": "sąsiadka",
+        "translation-es": "la vecina",
+        "translation-fr": "la voisine",
+        "translation-tr": "kadın komşu",
+        "translation-ro": "vecina",
+        "translation-uz": "qo‘shni ayol",
+        "translation-hi": "पड़ोसन",
+        "translation-ar": "الجارة"
+      },
+      {
+        "word": "die Geschichte",
+        "translation-ru": "история, рассказ",
+        "translation-en": "story",
+        "translation-uk": "історія",
+        "translation-pl": "historia",
+        "translation-es": "la historia",
+        "translation-fr": "l’histoire",
+        "translation-tr": "hikâye",
+        "translation-ro": "povestea",
+        "translation-uz": "hikoya",
+        "translation-hi": "कहानी",
+        "translation-ar": "القصة"
+      }
+    ],
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "memoryLakeTen.questTask1",
+        "options": [
+          "Nachdem wir das Museum besucht hatten, wir gingen ins Café.",
+          "Nachdem wir das Museum besucht haben, gingen wir ins Café.",
+          "Nachdem wir das Museum besucht hatten, gingen wir ins Café."
+        ],
+        "answer": "Nachdem wir das Museum besucht hatten, gingen wir ins Café.",
+        "tip": "memoryLakeTen.questDescription"
+      },
+      {
+        "id": 2,
+        "type": "input",
+        "question": "memoryLakeTen.questTask2",
+        "correctAnswer": "fand",
+        "tip": "memoryLakeTen.questDescription"
+      },
+      {
+        "id": 3,
+        "type": "input",
+        "question": "memoryLakeTen.questTask3",
+        "correctAnswer": "hatten",
+        "tip": "memoryLakeTen.questDescription"
+      },
+      {
+        "id": 4,
+        "type": "input",
+        "question": "memoryLakeTen.questTask4",
+        "correctAnswer": "gekauft",
+        "tip": "memoryLakeTen.questDescription"
+      },
+      {
+        "id": 5,
+        "type": "select",
+        "question": "memoryLakeTen.questTask5",
+        "options": [
+          "Während Mama liest, spielten die Kinder.",
+          "Während Mama las, die Kinder spielten.",
+          "Während Mama las, spielten die Kinder."
+        ],
+        "answer": "Während Mama las, spielten die Kinder.",
+        "tip": "memoryLakeTen.questDescription"
+      },
+      {
+        "id": 6,
+        "type": "input",
+        "question": "memoryLakeTen.questTask6",
+        "correctAnswer": "Als",
+        "tip": "memoryLakeTen.questDescription"
+      },
+      {
+        "id": 7,
+        "type": "readAndAnswer",
+        "question": "memoryLakeTen.questTask7",
+        "text": "Bevor Lisa zur Arbeit ging, trank sie einen Kaffee. Nachdem sie im Büro angekommen war, schrieb sie viele E-Mails.",
+        "options": [
+          "Sie telefonierte.",
+          "Sie schrieb E-Mails.",
+          "Sie trank Kaffee."
+        ],
+        "answer": "Sie schrieb E-Mails.",
+        "tip": "memoryLakeTen.questDescription"
+      },
+      {
+        "id": 8,
+        "type": "input",
+        "question": "memoryLakeTen.questTask8",
+        "correctAnswer": "meiner",
+        "tip": "memoryLakeTen.questDescription"
+      },
+      {
+        "id": 9,
+        "type": "reorder",
+        "question": "memoryLakeTen.questTask9",
+        "words": [
+          "Hause",
+          "Bevor",
+          "sie",
+          "Oma",
+          "an",
+          "ihre",
+          "nachdem",
+          "rief",
+          "nach",
+          "Mia",
+          "ging"
+        ],
+        "correctOrder": [
+          "Bevor",
+          "Mia",
+          "nach",
+          "Hause",
+          "ging",
+          "rief",
+          "sie",
+          "ihre",
+          "Oma",
+          "an"
+        ],
+        "tip": "memoryLakeTen.questDescription"
+      },
+      {
+        "id": 10,
+        "type": "input",
+        "question": "memoryLakeTen.questTask10",
+        "correctAnswer": "hatte",
+        "tip": "memoryLakeTen.questDescription"
+      },
+      {
+        "id": 11,
+        "type": "input",
+        "question": "memoryLakeTen.questTask11",
+        "correctAnswer": "interessanter",
+        "tip": "memoryLakeTen.questDescription"
+      },
+      {
+        "id": 12,
+        "type": "select",
+        "question": "memoryLakeTen.questTask12",
+        "options": [
+          "Du solltest dich verabschieden.",
+          "Du solltest dich verabschiedet.",
+          "Du solltest sich verabschieden."
+        ],
+        "answer": "Du solltest dich verabschieden.",
+        "tip": "memoryLakeTen.questDescription"
+      },
+      {
+        "id": 13,
+        "type": "readAndAnswer",
+        "question": "memoryLakeTen.questTask13",
+        "text": "Während wir im Urlaub waren, passte die Nachbarin auf unsere Katze auf. Als wir zurückkamen, gab sie uns den Schlüssel.",
+        "options": [
+          "mein Bruder",
+          "die Nachbarin",
+          "unsere Oma"
+        ],
+        "answer": "die Nachbarin",
+        "tip": "memoryLakeTen.questDescription"
+      },
+      {
+        "id": 14,
+        "type": "input",
+        "question": "memoryLakeTen.questTask14",
+        "correctAnswer": "würde",
+        "tip": "memoryLakeTen.questDescription"
+      },
+      {
+        "id": 15,
+        "type": "input",
+        "question": "memoryLakeTen.questTask15",
+        "correctAnswer": "waren",
+        "tip": "memoryLakeTen.questDescription"
+      }
+    ]
+  }
+]

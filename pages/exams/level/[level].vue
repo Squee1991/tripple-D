@@ -31,12 +31,6 @@ const startExam = async () => {
   await examStore.startAttempt({level: level.value, locale: i18nLocale.value})
 }
 
-const onAudioRecorded = async ({blob, durationSec}) => {
-  const exerciseId = currentExercise.value?.id
-  if (!exerciseId || !blob) return
-  await examStore.uploadSpeakingAudio({exerciseId, blob, durationSec, transcription: ""})
-}
-
 const submitTextAnswer = async () => {
   const answer = (userInput.value || "").trim()
   if (!answer || isSubmitting.value) return
@@ -144,7 +138,7 @@ const moduleCounts = computed(() => {
 
 onMounted(() => {
   level.value = (route.params.level || "").toString().toUpperCase()
-  examStore.loadTopics(`/exams/exam-${level.value}.json`)
+  examStore.loadTopics(`/exams/exam-${level.value}.json`, route.query.examId || null)
 })
 </script>
 
@@ -188,6 +182,9 @@ onMounted(() => {
             <img class="card__icon-item" src="../../../assets/images/exam-results.svg" alt="exam-results">
           </div>
           <h2 class="card-title">{{ t('examSession.ready') }}</h2>
+          <div v-if="examStore.currentExamTheme" class="theme-banner">
+            {{ t('plExam.theme') }}: <strong>{{ examStore.currentExamTheme }}</strong>
+          </div>
           <p class="card-text">
             {{ t('examSession.cardTextOne') }} <strong>{{ moduleCounts.length }}</strong> {{ t('examSession.cardTextTwo') }}
             <strong>{{ examStore.exercises.length }}</strong> {{ t('examSession.cardTextThree') }}
@@ -254,7 +251,6 @@ onMounted(() => {
                 :key="examStore.currentIndex"
                 @start="isRecording = true"
                 @stop="isRecording = false"
-                @audio="onAudioRecorded"
                 @submit="submitTranscription"
             />
           </div>
@@ -274,6 +270,7 @@ onMounted(() => {
           <span class="score-max">/ 10</span>
         </div>
         <p class="results-subtitle">{{ t('examSession.result') }} {{ level }}</p>
+        <p v-if="examStore.currentExamTheme" class="results-theme">{{ examStore.currentExamTheme }}</p>
       </div>
       <div v-if="examStore.saveLoading" class="saving-status">{{ t('examSession.save') }}</div>
       <div class="results-scroll-area">
@@ -425,6 +422,24 @@ onMounted(() => {
   text-align: center;
   margin-bottom: 20px;
   font-weight: 600;
+}
+
+.theme-banner {
+  margin-bottom: 15px;
+  padding: 10px;
+  border: 2px dashed var(--tabsSlideBorderColor);
+  border-radius: 14px;
+  color: var(--title);
+  font-size: 15px;
+  text-align: center;
+}
+
+.results-theme {
+  margin-top: 4px;
+  color: var(--title);
+  font-size: 16px;
+  font-weight: 700;
+  opacity: .75;
 }
 
 .intro-stats {

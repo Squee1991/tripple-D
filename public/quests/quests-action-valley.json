@@ -1,7 +1,9 @@
 [
   {
     "questId": "action-one",
-    "aliases": ["dativ-pronouns"],
+    "aliases": [
+      "dativ-pronouns"
+    ],
     "title": "actionValleyQuestOne.title",
     "progress": "0/15",
     "description": "actionValleyQuestOne.description",
@@ -19,8 +21,17 @@
         "id": 1,
         "type": "reorder",
         "question": "actionValleyQuestOne.questOne",
-        "words": ["dir", "helfe", "Ich", "dich"],
-        "correctOrder": ["Ich", "helfe", "dir"],
+        "words": [
+          "dir",
+          "helfe",
+          "Ich",
+          "dich"
+        ],
+        "correctOrder": [
+          "Ich",
+          "helfe",
+          "dir"
+        ],
         "tip": "actionValleyQuestOne.questOneTip"
       },
       {
@@ -32,7 +43,8 @@
           "Kannst du mich helfen?",
           "Kannst du mein helfen?"
         ],
-        "answer": "Kannst du mir helfen?"
+        "answer": "Kannst du mir helfen?",
+        "tip": "actionValleyQuestOne.description"
       },
       {
         "id": 3,
@@ -46,8 +58,17 @@
         "id": 4,
         "type": "reorder",
         "question": "actionValleyQuestOne.questFour",
-        "words": ["euch", "danken", "Wir", "ihr"],
-        "correctOrder": ["Wir", "danken", "euch"],
+        "words": [
+          "euch",
+          "danken",
+          "Wir",
+          "ihr"
+        ],
+        "correctOrder": [
+          "Wir",
+          "danken",
+          "euch"
+        ],
         "tip": "actionValleyQuestOne.questFourTip"
       },
       {
@@ -59,14 +80,27 @@
           "Das gehört ihn",
           "Das gehört er"
         ],
-        "answer": "Das gehört ihm"
+        "answer": "Das gehört ihm",
+        "tip": "actionValleyQuestOne.description"
       },
       {
         "id": 6,
         "type": "reorder",
         "question": "actionValleyQuestOne.questSix",
-        "words": ["mir", "Buch", "ein", "schenkt", "Sie"],
-        "correctOrder": ["Sie", "schenkt", "mir", "ein", "Buch"],
+        "words": [
+          "mir",
+          "Buch",
+          "ein",
+          "schenkt",
+          "Sie"
+        ],
+        "correctOrder": [
+          "Sie",
+          "schenkt",
+          "mir",
+          "ein",
+          "Buch"
+        ],
         "tip": "actionValleyQuestOne.questSixTip"
       },
       {
@@ -74,7 +108,8 @@
         "type": "speechToText",
         "question": "actionValleyQuestOne.questSeven",
         "text": "Wie geht es dir?",
-        "answer": "Wie geht es dir?"
+        "answer": "Wie geht es dir?",
+        "tip": "actionValleyQuestOne.description"
       },
       {
         "id": 8,
@@ -92,49 +127,115 @@
         "id": 9,
         "type": "reorder",
         "question": "actionValleyQuestOne.questNine",
-        "words": ["helfen", "uns", "musst", "Du"],
-        "correctOrder": ["Du", "musst", "uns", "helfen"]
+        "words": [
+          "helfen",
+          "uns",
+          "musst",
+          "Du"
+        ],
+        "correctOrder": [
+          "Du",
+          "musst",
+          "uns",
+          "helfen"
+        ],
+        "tip": "actionValleyQuestOne.description"
       },
       {
         "id": 10,
         "type": "speechToText",
         "question": "actionValleyQuestOne.questTen",
         "text": "Das gefällt mir",
-        "answer": "Das gefällt mir"
+        "answer": "Das gefällt mir",
+        "tip": "actionValleyQuestOne.description"
       },
       {
         "id": 11,
         "type": "reorder",
-        "question": "actionValleyQuestOne.questEleven",
-        "words": ["dir", "Kaffee", "einen", "kaufe", "Ich", "eine"],
-        "correctOrder": ["Ich", "kaufe", "dir", "einen", "Kaffee"],
-        "tip": "actionValleyQuestOne.questElevenTip"
+        "question": "pastValleyQuestTwelve.questOne",
+        "words": [
+          "einen",
+          "tollen",
+          "Film",
+          "habe",
+          "Ich",
+          "gesehen"
+        ],
+        "correctOrder": [
+          "Ich",
+          "habe",
+          "einen",
+          "tollen",
+          "Film",
+          "gesehen"
+        ],
+        "reviewOf": "past-twelve",
+        "reviewLand": "past-land",
+        "tip": "pastValleyQuestTwelve.description"
       },
       {
         "id": 12,
-        "type": "select",
-        "question": "actionValleyQuestOne.questTwelve",
-        "options": [
-          "Können Sie ihnen bitte helfen?",
-          "Können Sie sie helfen?",
-          "Können Sie ihr bitte helfen?"
+        "type": "reorder",
+        "question": "pastValleyQuestTen.questFour",
+        "words": [
+          "spät",
+          "ist",
+          "angekommen",
+          "Der Zug"
         ],
-        "answer": "Können Sie ihnen bitte helfen?"
+        "correctOrder": [
+          "Der Zug",
+          "ist",
+          "spät",
+          "angekommen"
+        ],
+        "tip": "pastValleyQuestTen.questFourTip",
+        "reviewOf": "past-ten",
+        "reviewLand": "past-land"
       },
       {
         "id": 13,
-        "type": "speechToText",
-        "question": "actionValleyQuestOne.questThirteen",
-        "text": "Er gibt mir diesen Schlüssel",
-        "answer": "Er gibt mir diesen Schlüssel",
-        "tip": "actionValleyQuestOne.questThirteenTip"
+        "type": "reorder",
+        "question": "pastValleyQuestSix.questSix",
+        "words": [
+          "Hotel",
+          "das",
+          "habe",
+          "Ich",
+          "gebucht"
+        ],
+        "correctOrder": [
+          "Ich",
+          "habe",
+          "das",
+          "Hotel",
+          "gebucht"
+        ],
+        "reviewOf": "past-six",
+        "reviewLand": "past-land",
+        "tip": "pastValleyQuestSix.description"
       },
       {
         "id": 14,
         "type": "reorder",
         "question": "actionValleyQuestOne.questFourteen",
-        "words": ["bringen", "Tee", "einen", "euch", "will", "Ich"],
-        "correctOrder": ["Ich", "will", "euch", "einen", "Tee", "bringen"]
+        "words": [
+          "bringen",
+          "Tee",
+          "einen",
+          "euch",
+          "will",
+          "Ich"
+        ],
+        "correctOrder": [
+          "Ich",
+          "will",
+          "euch",
+          "einen",
+          "Tee",
+          "bringen"
+        ],
+        "tip": "actionValleyQuestOne.description"
       },
       {
         "id": 15,
@@ -148,11 +249,85 @@
         "answer": "Du sollst ihr antworten",
         "tip": "actionValleyQuestOne.questFifteenTip"
       }
+    ],
+    "vocabulary": [
+      {
+        "word": "glauben",
+        "translation-ru": "верить / полагать",
+        "translation-en": "to believe / think",
+        "translation-uk": "вірити / думати",
+        "translation-pl": "wierzyć",
+        "translation-es": "creer",
+        "translation-fr": "croire",
+        "translation-tr": "inanmak",
+        "translation-ro": "a crede",
+        "translation-uz": "ishonmoq",
+        "translation-hi": "विश्वास करना",
+        "translation-ar": "يعتقد / يؤمن"
+      },
+      {
+        "word": "danken",
+        "translation-ru": "благодарить",
+        "translation-en": "to thank",
+        "translation-uk": "дякувати",
+        "translation-pl": "dziękować",
+        "translation-es": "agradecer",
+        "translation-fr": "remercier",
+        "translation-tr": "teşekkür etmek",
+        "translation-ro": "a mulțumi",
+        "translation-uz": "rahmat aytmoq",
+        "translation-hi": "धन्यवाद देना",
+        "translation-ar": "يشكر"
+      },
+      {
+        "word": "antworten",
+        "translation-ru": "отвечать",
+        "translation-en": "to answer / reply",
+        "translation-uk": "відповідати",
+        "translation-pl": "odpowiadać",
+        "translation-es": "responder / contestar",
+        "translation-fr": "répondre",
+        "translation-tr": "cevap vermek",
+        "translation-ro": "a răspunde",
+        "translation-uz": "javob bermoq",
+        "translation-hi": "उत्तर देना",
+        "translation-ar": "يجيب"
+      },
+      {
+        "word": "gefallen",
+        "translation-ru": "нравиться",
+        "translation-en": "to please / like",
+        "translation-uk": "подобатися",
+        "translation-pl": "podobać się",
+        "translation-es": "gustar",
+        "translation-fr": "plaire",
+        "translation-tr": "hoşuna gitmek",
+        "translation-ro": "a plăcea",
+        "translation-uz": "yoqmoq",
+        "translation-hi": "पसंद आना",
+        "translation-ar": "يعجب"
+      },
+      {
+        "word": "das geht",
+        "translation-ru": "так можно, подходит",
+        "translation-en": "that works",
+        "translation-uk": "так можна, підходить",
+        "translation-pl": "to pasuje",
+        "translation-es": "eso va bien",
+        "translation-fr": "ça va",
+        "translation-tr": "olur",
+        "translation-ro": "merge",
+        "translation-uz": "bo‘ladi",
+        "translation-hi": "यह ठीक है",
+        "translation-ar": "هذا مناسب"
+      }
     ]
   },
   {
     "questId": "action-two",
-    "aliases": ["dativ-prep"],
+    "aliases": [
+      "dativ-prep"
+    ],
     "title": "actionValleyQuestTwo.title",
     "progress": "0/15",
     "description": "actionValleyQuestTwo.description",
@@ -170,8 +345,21 @@
         "id": 1,
         "type": "reorder",
         "question": "actionValleyQuestTwo.questOne",
-        "words": ["mit", "dem", "Freund", "gehe", "Ich"],
-        "correctOrder": ["Ich", "gehe", "mit", "dem", "Freund"]
+        "words": [
+          "mit",
+          "dem",
+          "Freund",
+          "gehe",
+          "Ich"
+        ],
+        "correctOrder": [
+          "Ich",
+          "gehe",
+          "mit",
+          "dem",
+          "Freund"
+        ],
+        "tip": "actionValleyQuestTwo.description"
       },
       {
         "id": 2,
@@ -197,8 +385,20 @@
         "id": 4,
         "type": "reorder",
         "question": "actionValleyQuestTwo.questFour",
-        "words": ["Eltern", "den", "bei", "wohnt", "Er"],
-        "correctOrder": ["Er", "wohnt", "bei", "den", "Eltern"],
+        "words": [
+          "Eltern",
+          "den",
+          "bei",
+          "wohnt",
+          "Er"
+        ],
+        "correctOrder": [
+          "Er",
+          "wohnt",
+          "bei",
+          "den",
+          "Eltern"
+        ],
         "tip": "actionValleyQuestTwo.questFourTip"
       },
       {
@@ -217,8 +417,19 @@
         "id": 6,
         "type": "reorder",
         "question": "actionValleyQuestTwo.questSix",
-        "words": ["Bahnhof", "zum", "fahre", "Ich", "zu"],
-        "correctOrder": ["Ich", "fahre", "zum", "Bahnhof"],
+        "words": [
+          "Bahnhof",
+          "zum",
+          "fahre",
+          "Ich",
+          "zu"
+        ],
+        "correctOrder": [
+          "Ich",
+          "fahre",
+          "zum",
+          "Bahnhof"
+        ],
         "tip": "actionValleyQuestTwo.questSixTip"
       },
       {
@@ -245,8 +456,20 @@
         "id": 9,
         "type": "reorder",
         "question": "actionValleyQuestTwo.questNine",
-        "words": ["einer", "Freundin", "bei", "bin", "Ich"],
-        "correctOrder": ["Ich", "bin", "bei", "einer", "Freundin"],
+        "words": [
+          "einer",
+          "Freundin",
+          "bei",
+          "bin",
+          "Ich"
+        ],
+        "correctOrder": [
+          "Ich",
+          "bin",
+          "bei",
+          "einer",
+          "Freundin"
+        ],
         "tip": "actionValleyQuestTwo.questNineTip"
       },
       {
@@ -254,39 +477,90 @@
         "type": "speechToText",
         "question": "actionValleyQuestTwo.questTen",
         "text": "Ich gehe zum Supermarkt",
-        "answer": "Ich gehe zum Supermarkt"
+        "answer": "Ich gehe zum Supermarkt",
+        "tip": "actionValleyQuestTwo.description"
       },
       {
         "id": 11,
         "type": "reorder",
-        "question": "actionValleyQuestTwo.questEleven",
-        "words": ["Stadt", "der", "aus", "kommen", "Wir"],
-        "correctOrder": ["Wir", "kommen", "aus", "der", "Stadt"]
+        "question": "actionValleyQuestOne.questOne",
+        "words": [
+          "dir",
+          "helfe",
+          "Ich",
+          "dich"
+        ],
+        "correctOrder": [
+          "Ich",
+          "helfe",
+          "dir"
+        ],
+        "tip": "actionValleyQuestOne.questOneTip",
+        "reviewOf": "action-one",
+        "reviewLand": "action-valley"
       },
       {
         "id": 12,
-        "type": "select",
-        "question": "actionValleyQuestTwo.questTwelve",
-        "options": [
-          "Mit meinem Bruder",
-          "Mit meinen Bruder",
-          "Mit mein Bruder"
+        "type": "reorder",
+        "question": "pastValleyQuestEleven.questFour",
+        "words": [
+          "Buch",
+          "ein",
+          "mir",
+          "hat",
+          "Er",
+          "geschenkt"
         ],
-        "answer": "Mit meinem Bruder"
+        "correctOrder": [
+          "Er",
+          "hat",
+          "mir",
+          "ein",
+          "Buch",
+          "geschenkt"
+        ],
+        "tip": "pastValleyQuestEleven.questFourTip",
+        "reviewOf": "past-eleven",
+        "reviewLand": "past-land"
       },
       {
         "id": 13,
-        "type": "speechToText",
-        "question": "actionValleyQuestTwo.questThirteen",
-        "text": "Ich spreche mit dem Chef",
-        "answer": "Ich spreche mit dem Chef"
+        "type": "reorder",
+        "question": "pastValleyQuestSeven.questSix",
+        "words": [
+          "ausgedruckt",
+          "Dokument",
+          "das",
+          "hat",
+          "Er"
+        ],
+        "correctOrder": [
+          "Er",
+          "hat",
+          "das",
+          "Dokument",
+          "ausgedruckt"
+        ],
+        "tip": "pastValleyQuestSeven.questSixTip",
+        "reviewOf": "past-seven",
+        "reviewLand": "past-land"
       },
       {
         "id": 14,
         "type": "reorder",
         "question": "actionValleyQuestTwo.questFourteen",
-        "words": ["Bibliothek", "zur", "geht", "Er"],
-        "correctOrder": ["Er", "geht", "zur", "Bibliothek"],
+        "words": [
+          "Bibliothek",
+          "zur",
+          "geht",
+          "Er"
+        ],
+        "correctOrder": [
+          "Er",
+          "geht",
+          "zur",
+          "Bibliothek"
+        ],
         "tip": "actionValleyQuestTwo.questFourteenTip"
       },
       {
@@ -298,13 +572,88 @@
           "Seit eine Woche",
           "Seit einen Woche"
         ],
-        "answer": "Seit einer Woche"
+        "answer": "Seit einer Woche",
+        "tip": "actionValleyQuestTwo.description"
+      }
+    ],
+    "vocabulary": [
+      {
+        "word": "seit",
+        "translation-ru": "с, уже (о времени)",
+        "translation-en": "since, for",
+        "translation-uk": "з, уже (про час)",
+        "translation-pl": "od (o czasie)",
+        "translation-es": "desde",
+        "translation-fr": "depuis",
+        "translation-tr": "-den beri",
+        "translation-ro": "de, din",
+        "translation-uz": "beri",
+        "translation-hi": "से (समय)",
+        "translation-ar": "منذ"
+      },
+      {
+        "word": "die Bibliothek",
+        "translation-ru": "библиотека",
+        "translation-en": "library",
+        "translation-uk": "бібліотека",
+        "translation-pl": "biblioteka",
+        "translation-es": "biblioteca",
+        "translation-fr": "bibliothèque",
+        "translation-tr": "kütüphane",
+        "translation-ro": "bibliotecă",
+        "translation-uz": "kutubxona",
+        "translation-hi": "पुस्तकालय",
+        "translation-ar": "مكتبة"
+      },
+      {
+        "word": "das Dokument",
+        "translation-ru": "документ",
+        "translation-en": "document",
+        "translation-uk": "документ",
+        "translation-pl": "dokument",
+        "translation-es": "documento",
+        "translation-fr": "document",
+        "translation-tr": "belge",
+        "translation-ro": "document",
+        "translation-uz": "hujjat",
+        "translation-hi": "दस्तावेज़",
+        "translation-ar": "وثيقة"
+      },
+      {
+        "word": "der Freund",
+        "translation-ru": "друг",
+        "translation-en": "friend",
+        "translation-uk": "друг",
+        "translation-pl": "przyjaciel",
+        "translation-es": "el amigo",
+        "translation-fr": "l’ami",
+        "translation-tr": "arkadaş",
+        "translation-ro": "prietenul",
+        "translation-uz": "do‘st",
+        "translation-hi": "दोस्त",
+        "translation-ar": "الصديق"
+      },
+      {
+        "word": "lernen",
+        "translation-ru": "учиться / выучить",
+        "translation-en": "to learn / study",
+        "translation-uk": "вчитися",
+        "translation-pl": "uczyć się",
+        "translation-es": "aprender / estudiar",
+        "translation-fr": "apprendre",
+        "translation-tr": "öğrenmek",
+        "translation-ro": "a învăța",
+        "translation-uz": "o'rganmoq",
+        "translation-hi": "सीखना",
+        "translation-ar": "يتعلم"
       }
     ]
   },
   {
     "questId": "action-three",
-    "aliases": ["akk-prep"],
+    "aliases": [
+      "akk-prep"
+    ],
     "title": "actionValleyQuestThree.title",
     "progress": "0/15",
     "description": "actionValleyQuestThree.description",
@@ -322,8 +671,19 @@
         "id": 1,
         "type": "reorder",
         "question": "actionValleyQuestThree.questOne",
-        "words": ["für", "Das", "dich", "ist", "dir"],
-        "correctOrder": ["Das", "ist", "für", "dich"],
+        "words": [
+          "für",
+          "Das",
+          "dich",
+          "ist",
+          "dir"
+        ],
+        "correctOrder": [
+          "Das",
+          "ist",
+          "für",
+          "dich"
+        ],
         "tip": "actionValleyQuestThree.questOneTip"
       },
       {
@@ -331,11 +691,11 @@
         "type": "select",
         "question": "actionValleyQuestThree.questTwo",
         "options": [
-          "Kaffee ohne den Zucker",
-          "Kaffee ohne dem Zucker",
-          "Kaffee ohne der Zucker"
+          "Ich komme ohne den Hund",
+          "Ich komme ohne dem Hund",
+          "Ich komme ohne der Hund"
         ],
-        "answer": "Kaffee ohne den Zucker",
+        "answer": "Ich komme ohne den Hund",
         "tip": "actionValleyQuestThree.questTwoTip"
       },
       {
@@ -350,8 +710,20 @@
         "id": 4,
         "type": "reorder",
         "question": "actionValleyQuestThree.questFour",
-        "words": ["Vater", "den", "Geschenk", "für", "Das"],
-        "correctOrder": ["Das", "Geschenk", "für", "den", "Vater"],
+        "words": [
+          "Vater",
+          "den",
+          "Geschenk",
+          "für",
+          "Das"
+        ],
+        "correctOrder": [
+          "Das",
+          "Geschenk",
+          "für",
+          "den",
+          "Vater"
+        ],
         "tip": "actionValleyQuestThree.questFourTip"
       },
       {
@@ -370,8 +742,20 @@
         "id": 6,
         "type": "reorder",
         "question": "actionValleyQuestThree.questSix",
-        "words": ["ohne", "Schlüssel", "den", "gehe", "Ich"],
-        "correctOrder": ["Ich", "gehe", "ohne", "den", "Schlüssel"],
+        "words": [
+          "ohne",
+          "Schlüssel",
+          "den",
+          "gehe",
+          "Ich"
+        ],
+        "correctOrder": [
+          "Ich",
+          "gehe",
+          "ohne",
+          "den",
+          "Schlüssel"
+        ],
         "tip": "actionValleyQuestThree.questSixTip"
       },
       {
@@ -379,14 +763,15 @@
         "type": "speechToText",
         "question": "actionValleyQuestThree.questSeven",
         "text": "Das ist ein Geschenk für meine Schwester",
-        "answer": "Das ist ein Geschenk für meine Schwester"
+        "answer": "Das ist ein Geschenk für meine Schwester",
+        "tip": "actionValleyQuestThree.description"
       },
       {
         "id": 8,
         "type": "select",
         "question": "actionValleyQuestThree.questEight",
         "options": [
-          "Wir gehen um den Garten",
+          "Gehen wir um der Garten?",
           "Gehen wir um dem Garten?",
           "Gehen wir um den Garten?"
         ],
@@ -397,8 +782,21 @@
         "id": 9,
         "type": "reorder",
         "question": "actionValleyQuestThree.questNine",
-        "words": ["Stadt", "die", "durch", "fährt", "Er", "der"],
-        "correctOrder": ["Er", "fährt", "durch", "die", "Stadt"],
+        "words": [
+          "Stadt",
+          "die",
+          "durch",
+          "fährt",
+          "Er",
+          "der"
+        ],
+        "correctOrder": [
+          "Er",
+          "fährt",
+          "durch",
+          "die",
+          "Stadt"
+        ],
         "tip": "actionValleyQuestThree.questNineTip"
       },
       {
@@ -412,37 +810,88 @@
       {
         "id": 11,
         "type": "reorder",
-        "question": "actionValleyQuestThree.questEleven",
-        "words": ["meinen", "Sohn", "für", "das", "kaufe", "Ich"],
-        "correctOrder": ["Ich", "kaufe", "das", "für", "meinen", "Sohn"],
-        "tip": "actionValleyQuestThree.questElevenTip"
+        "question": "actionValleyQuestTwo.questOne",
+        "words": [
+          "mit",
+          "dem",
+          "Freund",
+          "gehe",
+          "Ich"
+        ],
+        "correctOrder": [
+          "Ich",
+          "gehe",
+          "mit",
+          "dem",
+          "Freund"
+        ],
+        "reviewOf": "action-two",
+        "reviewLand": "action-valley",
+        "tip": "actionValleyQuestTwo.description"
       },
       {
         "id": 12,
-        "type": "select",
-        "question": "actionValleyQuestThree.questTwelve",
-        "options": [
-          "Gegen den Strom schwimmen",
-          "Gegen dem Strom schwimmen",
-          "Gegen der Strom schwimmen"
+        "type": "reorder",
+        "question": "pastValleyQuestTwelve.questFour",
+        "words": [
+          "Gitarre",
+          "gespielt",
+          "hat",
+          "Er"
         ],
-        "answer": "Gegen den Strom schwimmen",
-        "tip": "actionValleyQuestThree.questTwelveTip"
+        "correctOrder": [
+          "Er",
+          "hat",
+          "Gitarre",
+          "gespielt"
+        ],
+        "reviewOf": "past-twelve",
+        "reviewLand": "past-land",
+        "tip": "pastValleyQuestTwelve.description"
       },
       {
         "id": 13,
-        "type": "speechToText",
-        "question": "actionValleyQuestThree.questThirteen",
-        "text": "Ohne dich gehe ich nicht",
-        "answer": "Ohne dich gehe ich nicht",
-        "tip": "actionValleyQuestThree.questThirteenTip"
+        "type": "reorder",
+        "question": "pastValleyQuestEight.questSix",
+        "words": [
+          "aufgeschrieben",
+          "Wort",
+          "das",
+          "hat",
+          "Er",
+          "den"
+        ],
+        "correctOrder": [
+          "Er",
+          "hat",
+          "das",
+          "Wort",
+          "aufgeschrieben"
+        ],
+        "tip": "pastValleyQuestEight.questSixTip",
+        "reviewOf": "past-eight",
+        "reviewLand": "past-land"
       },
       {
         "id": 14,
         "type": "reorder",
         "question": "actionValleyQuestThree.questFourteen",
-        "words": ["sind", "Blumen", "für", "dich", "Die", "dir"],
-        "correctOrder": ["Die", "Blumen", "sind", "für", "dich"]
+        "words": [
+          "sind",
+          "Blumen",
+          "für",
+          "dich",
+          "Die",
+          "dir"
+        ],
+        "correctOrder": [
+          "Die",
+          "Blumen",
+          "sind",
+          "für",
+          "dich"
+        ],
+        "tip": "actionValleyQuestThree.description"
       },
       {
         "id": 15,
@@ -456,11 +905,85 @@
         "answer": "Wir gehen durch den Wald",
         "tip": "actionValleyQuestThree.questFifteenTip"
       }
+    ],
+    "vocabulary": [
+      {
+        "word": "die Gitarre",
+        "translation-ru": "гитара",
+        "translation-en": "guitar",
+        "translation-uk": "гітара",
+        "translation-pl": "gitara",
+        "translation-es": "guitarra",
+        "translation-fr": "guitare",
+        "translation-tr": "gitar",
+        "translation-ro": "chitară",
+        "translation-uz": "gitara",
+        "translation-hi": "गिटार",
+        "translation-ar": "غيتار"
+      },
+      {
+        "word": "das Wort",
+        "translation-ru": "слово",
+        "translation-en": "word",
+        "translation-uk": "слово",
+        "translation-pl": "słowo",
+        "translation-es": "la palabra",
+        "translation-fr": "le mot",
+        "translation-tr": "kelime",
+        "translation-ro": "cuvântul",
+        "translation-uz": "so‘z",
+        "translation-hi": "शब्द",
+        "translation-ar": "الكلمة"
+      },
+      {
+        "word": "meinen",
+        "translation-ru": "считать, иметь в виду",
+        "translation-en": "to think, mean",
+        "translation-uk": "вважати, мати на увазі",
+        "translation-pl": "uważać, mieć na myśli",
+        "translation-es": "opinar, querer decir",
+        "translation-fr": "penser, vouloir dire",
+        "translation-tr": "düşünmek, kastetmek",
+        "translation-ro": "a crede, a vrea să spui",
+        "translation-uz": "fikrda bo‘lmoq",
+        "translation-hi": "सोचना, मतलब होना",
+        "translation-ar": "يقصد"
+      },
+      {
+        "word": "der Freund",
+        "translation-ru": "друг",
+        "translation-en": "friend",
+        "translation-uk": "друг",
+        "translation-pl": "przyjaciel",
+        "translation-es": "el amigo",
+        "translation-fr": "l’ami",
+        "translation-tr": "arkadaş",
+        "translation-ro": "prietenul",
+        "translation-uz": "do‘st",
+        "translation-hi": "दोस्त",
+        "translation-ar": "الصديق"
+      },
+      {
+        "word": "der Garten",
+        "translation-ru": "сад",
+        "translation-en": "garden",
+        "translation-uk": "сад",
+        "translation-pl": "ogród",
+        "translation-es": "el jardín",
+        "translation-fr": "le jardin",
+        "translation-tr": "bahçe",
+        "translation-ro": "grădina",
+        "translation-uz": "bog‘",
+        "translation-hi": "बगीचा",
+        "translation-ar": "الحديقة"
+      }
     ]
   },
   {
     "questId": "action-four",
-    "aliases": ["wechsel-prep"],
+    "aliases": [
+      "wechsel-prep"
+    ],
     "title": "actionValleyQuestFour.title",
     "progress": "0/15",
     "description": "actionValleyQuestFour.description",
@@ -490,8 +1013,23 @@
         "id": 2,
         "type": "reorder",
         "question": "actionValleyQuestFour.questTwo",
-        "words": ["Tisch", "dem", "auf", "steht", "Vase", "Die", "den"],
-        "correctOrder": ["Die", "Vase", "steht", "auf", "dem", "Tisch"],
+        "words": [
+          "Tisch",
+          "dem",
+          "auf",
+          "steht",
+          "Vase",
+          "Die",
+          "den"
+        ],
+        "correctOrder": [
+          "Die",
+          "Vase",
+          "steht",
+          "auf",
+          "dem",
+          "Tisch"
+        ],
         "tip": "actionValleyQuestFour.questTwoTip"
       },
       {
@@ -518,8 +1056,24 @@
         "id": 5,
         "type": "reorder",
         "question": "actionValleyQuestFour.questFive",
-        "words": ["Schrank", "den", "in", "Buch", "das", "lege", "Ich"],
-        "correctOrder": ["Ich", "lege", "das", "Buch", "in", "den", "Schrank"],
+        "words": [
+          "Schrank",
+          "den",
+          "in",
+          "Buch",
+          "das",
+          "lege",
+          "Ich"
+        ],
+        "correctOrder": [
+          "Ich",
+          "lege",
+          "das",
+          "Buch",
+          "in",
+          "den",
+          "Schrank"
+        ],
         "tip": "actionValleyQuestFour.questFiveTip"
       },
       {
@@ -558,8 +1112,20 @@
         "id": 9,
         "type": "reorder",
         "question": "actionValleyQuestFour.questNine",
-        "words": ["mich", "hinter", "sich", "setzt", "Er"],
-        "correctOrder": ["Er", "setzt", "sich", "hinter", "mich"],
+        "words": [
+          "mich",
+          "hinter",
+          "sich",
+          "setzt",
+          "Er"
+        ],
+        "correctOrder": [
+          "Er",
+          "setzt",
+          "sich",
+          "hinter",
+          "mich"
+        ],
         "tip": "actionValleyQuestFour.questNineTip"
       },
       {
@@ -572,31 +1138,63 @@
       },
       {
         "id": 11,
-        "type": "select",
-        "question": "actionValleyQuestFour.questEleven",
-        "options": [
-          "Die Katze läuft unter das Bett",
-          "Die Katze läuft unter dem Bett",
-          "Die Katze läuft unter den Bett"
+        "type": "reorder",
+        "question": "actionValleyQuestThree.questOne",
+        "words": [
+          "für",
+          "Das",
+          "dich",
+          "ist",
+          "dir"
         ],
-        "answer": "Die Katze läuft unter das Bett",
-        "tip": "actionValleyQuestFour.questElevenTip"
+        "correctOrder": [
+          "Das",
+          "ist",
+          "für",
+          "dich"
+        ],
+        "tip": "actionValleyQuestThree.questOneTip",
+        "reviewOf": "action-three",
+        "reviewLand": "action-valley"
       },
       {
         "id": 12,
         "type": "reorder",
-        "question": "actionValleyQuestFour.questTwelve",
-        "words": ["Bett", "dem", "unter", "schläft", "Katze", "Die"],
-        "correctOrder": ["Die", "Katze", "schläft", "unter", "dem", "Bett"],
-        "tip": "actionValleyQuestFour.questTwelveTip"
+        "question": "actionValleyQuestOne.questFour",
+        "words": [
+          "euch",
+          "danken",
+          "Wir",
+          "ihr"
+        ],
+        "correctOrder": [
+          "Wir",
+          "danken",
+          "euch"
+        ],
+        "tip": "actionValleyQuestOne.questFourTip",
+        "reviewOf": "action-one",
+        "reviewLand": "action-valley"
       },
       {
         "id": 13,
         "type": "reorder",
-        "question": "actionValleyQuestFour.questThirteen",
-        "words": ["Bett", "das", "unter", "läuft", "Katze", "Die"],
-        "correctOrder": ["Die", "Katze", "läuft", "unter", "das", "Bett"],
-        "tip": "actionValleyQuestFour.questThirteenTip"
+        "question": "pastValleyQuestNine.questSix",
+        "words": [
+          "gelacht",
+          "Wir",
+          "viel",
+          "haben"
+        ],
+        "correctOrder": [
+          "Wir",
+          "haben",
+          "viel",
+          "gelacht"
+        ],
+        "reviewOf": "past-nine",
+        "reviewLand": "past-land",
+        "tip": "pastValleyQuestNine.description"
       },
       {
         "id": 14,
@@ -622,11 +1220,127 @@
         "answer": "Wir wohnen in der Stadt",
         "tip": "actionValleyQuestFour.questFifteenTip"
       }
+    ],
+    "vocabulary": [
+      {
+        "word": "die Stelle",
+        "translation-ru": "место работы, должность",
+        "translation-en": "job, position",
+        "translation-uk": "посада, місце роботи",
+        "translation-pl": "posada, praca",
+        "translation-es": "el puesto",
+        "translation-fr": "le poste",
+        "translation-tr": "iş yeri, pozisyon",
+        "translation-ro": "postul",
+        "translation-uz": "lavozim",
+        "translation-hi": "नौकरी, पद",
+        "translation-ar": "الوظيفة"
+      },
+      {
+        "word": "hängen",
+        "translation-ru": "висеть",
+        "translation-en": "to hang",
+        "translation-uk": "висіти",
+        "translation-pl": "wisieć",
+        "translation-es": "colgar",
+        "translation-fr": "être suspendu",
+        "translation-tr": "asılı olmak",
+        "translation-ro": "a atârna",
+        "translation-uz": "osilib turmoq",
+        "translation-hi": "लटकना",
+        "translation-ar": "يعلق"
+      },
+      {
+        "word": "danken",
+        "translation-ru": "благодарить",
+        "translation-en": "to thank",
+        "translation-uk": "дякувати",
+        "translation-pl": "dziękować",
+        "translation-es": "agradecer",
+        "translation-fr": "remercier",
+        "translation-tr": "teşekkür etmek",
+        "translation-ro": "a mulțumi",
+        "translation-uz": "rahmat aytmoq",
+        "translation-hi": "धन्यवाद देना",
+        "translation-ar": "يشكر"
+      },
+      {
+        "word": "lachen",
+        "translation-ru": "смеяться",
+        "translation-en": "to laugh",
+        "translation-uk": "сміятися",
+        "translation-pl": "śmiać się",
+        "translation-es": "reír",
+        "translation-fr": "rire",
+        "translation-tr": "gülmek",
+        "translation-ro": "a râde",
+        "translation-uz": "kulmoq",
+        "translation-hi": "हँसना",
+        "translation-ar": "يضحك"
+      },
+      {
+        "word": "viel",
+        "translation-ru": "много",
+        "translation-en": "much, a lot",
+        "translation-uk": "багато",
+        "translation-pl": "dużo",
+        "translation-es": "mucho",
+        "translation-fr": "beaucoup",
+        "translation-tr": "çok",
+        "translation-ro": "mult",
+        "translation-uz": "ko‘p",
+        "translation-hi": "बहुत",
+        "translation-ar": "كثير"
+      },
+      {
+        "word": "die Vase",
+        "translation-ru": "ваза",
+        "translation-en": "vase",
+        "translation-uk": "ваза",
+        "translation-pl": "wazon",
+        "translation-es": "el jarrón",
+        "translation-fr": "le vase",
+        "translation-tr": "vazo",
+        "translation-ro": "vaza",
+        "translation-uz": "vaza",
+        "translation-hi": "फूलदान",
+        "translation-ar": "المزهرية"
+      },
+      {
+        "word": "legen",
+        "translation-ru": "класть",
+        "translation-en": "to put, to lay",
+        "translation-uk": "класти",
+        "translation-pl": "kłaść",
+        "translation-es": "poner",
+        "translation-fr": "poser",
+        "translation-tr": "koymak",
+        "translation-ro": "a pune",
+        "translation-uz": "qo‘ymoq",
+        "translation-hi": "रखना",
+        "translation-ar": "يضع"
+      },
+      {
+        "word": "setzen",
+        "translation-ru": "сажать, ставить",
+        "translation-en": "to put, to seat",
+        "translation-uk": "садити, ставити",
+        "translation-pl": "sadzać",
+        "translation-es": "sentar",
+        "translation-fr": "asseoir",
+        "translation-tr": "oturtmak",
+        "translation-ro": "a așeza",
+        "translation-uz": "o‘tqazmoq",
+        "translation-hi": "बिठाना",
+        "translation-ar": "يُجلس"
+      }
     ]
   },
   {
     "questId": "action-five",
-    "aliases": ["dat-akk-order"],
+    "aliases": [
+      "dat-akk-order"
+    ],
     "title": "actionValleyQuestFive.title",
     "progress": "0/15",
     "description": "actionValleyQuestFive.description",
@@ -656,8 +1370,22 @@
         "id": 2,
         "type": "reorder",
         "question": "actionValleyQuestFive.questTwo",
-        "words": ["Kind", "dem", "Apfel", "den", "gibt", "Er"],
-        "correctOrder": ["Er", "gibt", "dem", "Kind", "den", "Apfel"],
+        "words": [
+          "Kind",
+          "dem",
+          "Apfel",
+          "den",
+          "gibt",
+          "Er"
+        ],
+        "correctOrder": [
+          "Er",
+          "gibt",
+          "dem",
+          "Kind",
+          "den",
+          "Apfel"
+        ],
         "tip": "actionValleyQuestFive.questTwoTip"
       },
       {
@@ -684,8 +1412,22 @@
         "id": 5,
         "type": "reorder",
         "question": "actionValleyQuestFive.questFive",
-        "words": ["Freund", "dem", "Brief", "den", "schreibt", "Sie"],
-        "correctOrder": ["Sie", "schreibt", "dem", "Freund", "den", "Brief"],
+        "words": [
+          "Freund",
+          "dem",
+          "Brief",
+          "den",
+          "schreibt",
+          "Sie"
+        ],
+        "correctOrder": [
+          "Sie",
+          "schreibt",
+          "dem",
+          "Freund",
+          "den",
+          "Brief"
+        ],
         "tip": "actionValleyQuestFive.questFiveTip"
       },
       {
@@ -712,8 +1454,20 @@
         "id": 8,
         "type": "reorder",
         "question": "actionValleyQuestFive.questEight",
-        "words": ["Geschenk", "das", "ihnen", "schicken", "Wir"],
-        "correctOrder": ["Wir", "schicken", "ihnen", "das", "Geschenk"],
+        "words": [
+          "Geschenk",
+          "das",
+          "ihnen",
+          "schicken",
+          "Wir"
+        ],
+        "correctOrder": [
+          "Wir",
+          "schicken",
+          "ihnen",
+          "das",
+          "Geschenk"
+        ],
         "tip": "actionValleyQuestFive.questEightTip"
       },
       {
@@ -739,37 +1493,95 @@
       {
         "id": 11,
         "type": "reorder",
-        "question": "actionValleyQuestFive.questEleven",
-        "words": ["Eis", "ein", "Der", "Kind", "dem", "kauft", "Vater"],
-        "correctOrder": ["Der", "Vater", "kauft", "dem", "Kind", "ein", "Eis"],
-        "tip": "actionValleyQuestFive.questElevenTip"
+        "question": "actionValleyQuestFour.questTwo",
+        "words": [
+          "Tisch",
+          "dem",
+          "auf",
+          "steht",
+          "Vase",
+          "Die",
+          "den"
+        ],
+        "correctOrder": [
+          "Die",
+          "Vase",
+          "steht",
+          "auf",
+          "dem",
+          "Tisch"
+        ],
+        "tip": "actionValleyQuestFour.questTwoTip",
+        "reviewOf": "action-four",
+        "reviewLand": "action-valley"
       },
       {
         "id": 12,
-        "type": "select",
-        "question": "actionValleyQuestFive.questTwelve",
-        "options": [
-          "Ich erzähle den Kindern eine Geschichte",
-          "Ich erzähle die Kinder eine Geschichte",
-          "Ich erzähle den Kinder eine Geschichte"
+        "type": "reorder",
+        "question": "actionValleyQuestTwo.questFour",
+        "words": [
+          "Eltern",
+          "den",
+          "bei",
+          "wohnt",
+          "Er"
         ],
-        "answer": "Ich erzähle den Kindern eine Geschichte",
-        "tip": "actionValleyQuestFive.questTwelveTip"
+        "correctOrder": [
+          "Er",
+          "wohnt",
+          "bei",
+          "den",
+          "Eltern"
+        ],
+        "tip": "actionValleyQuestTwo.questFourTip",
+        "reviewOf": "action-two",
+        "reviewLand": "action-valley"
       },
       {
         "id": 13,
-        "type": "speechToText",
-        "question": "actionValleyQuestFive.questThirteen",
-        "text": "Er verkauft mir sein Auto",
-        "answer": "Er verkauft mir sein Auto",
-        "tip": "actionValleyQuestFive.questThirteenTip"
+        "type": "reorder",
+        "question": "pastValleyQuestTen.questSix",
+        "words": [
+          "U-Bahn",
+          "die",
+          "in",
+          "bin",
+          "Ich",
+          "umgestiegen",
+          "habe"
+        ],
+        "correctOrder": [
+          "Ich",
+          "bin",
+          "in",
+          "die",
+          "U-Bahn",
+          "umgestiegen"
+        ],
+        "tip": "pastValleyQuestTen.questSixTip",
+        "reviewOf": "past-ten",
+        "reviewLand": "past-land"
       },
       {
         "id": 14,
         "type": "reorder",
         "question": "actionValleyQuestFive.questFourteen",
-        "words": ["Schlüssel", "die", "dir", "gebe", "Ich", "zurück"],
-        "correctOrder": ["Ich", "gebe", "dir", "die", "Schlüssel", "zurück"],
+        "words": [
+          "Schlüssel",
+          "die",
+          "dir",
+          "gebe",
+          "Ich",
+          "zurück"
+        ],
+        "correctOrder": [
+          "Ich",
+          "gebe",
+          "dir",
+          "die",
+          "Schlüssel",
+          "zurück"
+        ],
         "tip": "actionValleyQuestFive.questFourteenTip"
       },
       {
@@ -784,11 +1596,85 @@
         "answer": "Wir wünschen dir viel Glück",
         "tip": "actionValleyQuestFive.questFifteenTip"
       }
+    ],
+    "vocabulary": [
+      {
+        "word": "das Kind",
+        "translation-ru": "ребёнок",
+        "translation-en": "child",
+        "translation-uk": "дитина",
+        "translation-pl": "dziecko",
+        "translation-es": "el niño",
+        "translation-fr": "l’enfant",
+        "translation-tr": "çocuk",
+        "translation-ro": "copilul",
+        "translation-uz": "bola",
+        "translation-hi": "बच्चा",
+        "translation-ar": "الطفل"
+      },
+      {
+        "word": "der Apfel",
+        "translation-ru": "яблоко",
+        "translation-en": "apple",
+        "translation-uk": "яблуко",
+        "translation-pl": "jabłko",
+        "translation-es": "manzana",
+        "translation-fr": "pomme",
+        "translation-tr": "elma",
+        "translation-ro": "măr",
+        "translation-uz": "olma",
+        "translation-hi": "सेब",
+        "translation-ar": "تفاحة"
+      },
+      {
+        "word": "zurück",
+        "translation-ru": "обратно, назад",
+        "translation-en": "back",
+        "translation-uk": "назад",
+        "translation-pl": "z powrotem",
+        "translation-es": "de vuelta",
+        "translation-fr": "de retour",
+        "translation-tr": "geri",
+        "translation-ro": "înapoi",
+        "translation-uz": "qaytib",
+        "translation-hi": "वापस",
+        "translation-ar": "عائد"
+      },
+      {
+        "word": "wünschen",
+        "translation-ru": "желать",
+        "translation-en": "to wish / desire",
+        "translation-uk": "бажати",
+        "translation-pl": "życzyć",
+        "translation-es": "desear",
+        "translation-fr": "souhaiter",
+        "translation-tr": "dilemek",
+        "translation-ro": "a dori",
+        "translation-uz": "tilamoq / xohlamoq",
+        "translation-hi": "इच्छा करना",
+        "translation-ar": "يتمنى"
+      },
+      {
+        "word": "das Glück",
+        "translation-ru": "счастье",
+        "translation-en": "happiness",
+        "translation-uk": "щастя",
+        "translation-pl": "szczęście",
+        "translation-es": "felicidad",
+        "translation-fr": "bonheur",
+        "translation-tr": "mutluluk",
+        "translation-ro": "fericire",
+        "translation-uz": "baxt",
+        "translation-hi": "खुशी",
+        "translation-ar": "سعادة"
+      }
     ]
   },
   {
     "questId": "action-six",
-    "aliases": ["verbs-gov-complex"],
+    "aliases": [
+      "verbs-gov-complex"
+    ],
     "title": "actionValleyQuestSix.title",
     "progress": "0/15",
     "description": "actionValleyQuestSix.description",
@@ -806,7 +1692,11 @@
         "id": 1,
         "type": "select",
         "question": "actionValleyQuestSix.questOne",
-        "options": ["Ich danke dir", "Ich danke dich", "Ich danke du"],
+        "options": [
+          "Ich danke dir",
+          "Ich danke dich",
+          "Ich danke du"
+        ],
         "answer": "Ich danke dir",
         "tip": "actionValleyQuestSix.questOneTip"
       },
@@ -814,8 +1704,21 @@
         "id": 2,
         "type": "reorder",
         "question": "actionValleyQuestSix.questTwo",
-        "words": ["Vater", "seinem", "oft", "hilft", "Er", "seinen"],
-        "correctOrder": ["Er", "hilft", "oft", "seinem", "Vater"],
+        "words": [
+          "Vater",
+          "seinem",
+          "oft",
+          "hilft",
+          "Er",
+          "seinen"
+        ],
+        "correctOrder": [
+          "Er",
+          "hilft",
+          "oft",
+          "seinem",
+          "Vater"
+        ],
         "tip": "actionValleyQuestSix.questTwoTip"
       },
       {
@@ -830,7 +1733,11 @@
         "id": 4,
         "type": "select",
         "question": "actionValleyQuestSix.questFour",
-        "options": ["Das Kleid gefällt meiner Frau", "Das Kleid gefällt meine Frau", "Das Kleid gefällt meinen Frau"],
+        "options": [
+          "Das Kleid gefällt meiner Frau",
+          "Das Kleid gefällt meine Frau",
+          "Das Kleid gefällt meinen Frau"
+        ],
         "answer": "Das Kleid gefällt meiner Frau",
         "tip": "actionValleyQuestSix.questFourTip"
       },
@@ -838,15 +1745,31 @@
         "id": 5,
         "type": "reorder",
         "question": "actionValleyQuestSix.questFive",
-        "words": ["besuchen", "Oma", "unsere", "müssen", "Wir"],
-        "correctOrder": ["Wir", "müssen", "unsere", "Oma", "besuchen"],
+        "words": [
+          "besuchen",
+          "Oma",
+          "unsere",
+          "müssen",
+          "Wir"
+        ],
+        "correctOrder": [
+          "Wir",
+          "müssen",
+          "unsere",
+          "Oma",
+          "besuchen"
+        ],
         "tip": "actionValleyQuestSix.questFiveTip"
       },
       {
         "id": 6,
         "type": "select",
         "question": "actionValleyQuestSix.questSix",
-        "options": ["Der Student antwortet dem Professor", "Der Student antwortet den Professor", "Der Student antwortet der Professor"],
+        "options": [
+          "Der Student antwortet dem Professor",
+          "Der Student antwortet den Professor",
+          "Der Student antwortet der Professor"
+        ],
         "answer": "Der Student antwortet dem Professor",
         "tip": "actionValleyQuestSix.questSixTip"
       },
@@ -855,21 +1778,39 @@
         "type": "speechToText",
         "question": "actionValleyQuestSix.questSeven",
         "text": "Ich glaube diesem Mann nicht",
-        "answer": "Ich glaube diesem Mann nicht"
+        "answer": "Ich glaube diesem Mann nicht",
+        "tip": "actionValleyQuestSix.description"
       },
       {
         "id": 8,
         "type": "reorder",
         "question": "actionValleyQuestSix.questEight",
-        "words": ["Schlüssel", "meinen", "du", "Kannst", "finden", "meine"],
-        "correctOrder": ["Kannst", "du", "meinen", "Schlüssel", "finden"],
+        "words": [
+          "Schlüssel",
+          "meinen",
+          "du",
+          "Kannst",
+          "finden",
+          "meine"
+        ],
+        "correctOrder": [
+          "Kannst",
+          "du",
+          "meinen",
+          "Schlüssel",
+          "finden"
+        ],
         "tip": "actionValleyQuestSix.questEightTip"
       },
       {
         "id": 9,
         "type": "select",
         "question": "actionValleyQuestSix.questNine",
-        "options": ["Das Fahrrad gehört meinem Freund", "Das Fahrrad gehört meinen Freund", "Das Fahrrad gehört mein Freund"],
+        "options": [
+          "Das Fahrrad gehört meinem Freund",
+          "Das Fahrrad gehört meinen Freund",
+          "Das Fahrrad gehört mein Freund"
+        ],
         "answer": "Das Fahrrad gehört meinem Freund",
         "tip": "actionValleyQuestSix.questNineTip"
       },
@@ -884,48 +1825,199 @@
       {
         "id": 11,
         "type": "reorder",
-        "question": "actionValleyQuestSix.questEleven",
-        "words": ["gratulieren", "Bruder", "meinem", "will", "Ich", "meinen"],
-        "correctOrder": ["Ich", "will", "meinem", "Bruder", "gratulieren"],
-        "tip": "actionValleyQuestSix.questElevenTip"
+        "question": "actionValleyQuestFive.questTwo",
+        "words": [
+          "Kind",
+          "dem",
+          "Apfel",
+          "den",
+          "gibt",
+          "Er"
+        ],
+        "correctOrder": [
+          "Er",
+          "gibt",
+          "dem",
+          "Kind",
+          "den",
+          "Apfel"
+        ],
+        "tip": "actionValleyQuestFive.questTwoTip",
+        "reviewOf": "action-five",
+        "reviewLand": "action-valley"
       },
       {
         "id": 12,
-        "type": "select",
-        "question": "actionValleyQuestSix.questTwelve",
-        "options": ["Die Suppe schmeckt mir nicht", "Die Suppe schmeckt mich nicht", "Die Suppe schmeckt nicht"],
-        "answer": "Die Suppe schmeckt mir nicht",
-        "tip": "actionValleyQuestSix.questTwelveTip"
+        "type": "reorder",
+        "question": "actionValleyQuestThree.questFour",
+        "words": [
+          "Vater",
+          "den",
+          "Geschenk",
+          "für",
+          "Das"
+        ],
+        "correctOrder": [
+          "Das",
+          "Geschenk",
+          "für",
+          "den",
+          "Vater"
+        ],
+        "tip": "actionValleyQuestThree.questFourTip",
+        "reviewOf": "action-three",
+        "reviewLand": "action-valley"
       },
       {
         "id": 13,
-        "type": "speechToText",
-        "question": "actionValleyQuestSix.questThirteen",
-        "text": "Wir hören den ganzen Abend Musik",
-        "answer": "Wir hören den ganzen Abend Musik",
-        "tip": "actionValleyQuestSix.questThirteenTip"
+        "type": "reorder",
+        "question": "pastValleyQuestEleven.questSix",
+        "words": [
+          "den",
+          "Bruder",
+          "deinem",
+          "geholfen",
+          "Hast",
+          "du"
+        ],
+        "correctOrder": [
+          "Hast",
+          "du",
+          "deinem",
+          "Bruder",
+          "geholfen"
+        ],
+        "tip": "pastValleyQuestEleven.questSixTip",
+        "reviewOf": "past-eleven",
+        "reviewLand": "past-land"
       },
       {
         "id": 14,
         "type": "reorder",
         "question": "actionValleyQuestSix.questFourteen",
-        "words": ["Lehrer", "seinem", "zu", "hört", "Er", "aufmerksam"],
-        "correctOrder": ["Er", "hört", "seinem", "Lehrer", "aufmerksam", "zu"],
+        "words": [
+          "Lehrer",
+          "seinem",
+          "zu",
+          "hört",
+          "Er",
+          "aufmerksam"
+        ],
+        "correctOrder": [
+          "Er",
+          "hört",
+          "seinem",
+          "Lehrer",
+          "aufmerksam",
+          "zu"
+        ],
         "tip": "actionValleyQuestSix.questFourteenTip"
       },
       {
         "id": 15,
         "type": "select",
         "question": "actionValleyQuestSix.questFifteen",
-        "options": ["Brauchen Sie meine Hilfe?", "Brauchen Sie meiner Hilfe?", "Brauchen Sie meinen Hilfe?"],
+        "options": [
+          "Brauchen Sie meine Hilfe?",
+          "Brauchen Sie meiner Hilfe?",
+          "Brauchen Sie meinen Hilfe?"
+        ],
         "answer": "Brauchen Sie meine Hilfe?",
         "tip": "actionValleyQuestSix.questFifteenTip"
+      }
+    ],
+    "vocabulary": [
+      {
+        "word": "der Student",
+        "translation-ru": "студент",
+        "translation-en": "student",
+        "translation-uk": "студент",
+        "translation-pl": "student",
+        "translation-es": "el estudiante",
+        "translation-fr": "l’étudiant",
+        "translation-tr": "üniversite öğrencisi",
+        "translation-ro": "studentul",
+        "translation-uz": "talaba",
+        "translation-hi": "छात्र",
+        "translation-ar": "الطالب"
+      },
+      {
+        "word": "der Professor",
+        "translation-ru": "профессор",
+        "translation-en": "professor",
+        "translation-uk": "професор",
+        "translation-pl": "profesor",
+        "translation-es": "profesor",
+        "translation-fr": "professeur",
+        "translation-tr": "profesör",
+        "translation-ro": "profesor",
+        "translation-uz": "professor",
+        "translation-hi": "प्रोफेसर",
+        "translation-ar": "أستاذ"
+      },
+      {
+        "word": "die Hilfe",
+        "translation-ru": "помощь",
+        "translation-en": "help",
+        "translation-uk": "допомога",
+        "translation-pl": "pomoc",
+        "translation-es": "la ayuda",
+        "translation-fr": "l’aide",
+        "translation-tr": "yardım",
+        "translation-ro": "ajutorul",
+        "translation-uz": "yordam",
+        "translation-hi": "मदद",
+        "translation-ar": "المساعدة"
+      },
+      {
+        "word": "das Kind",
+        "translation-ru": "ребёнок",
+        "translation-en": "child",
+        "translation-uk": "дитина",
+        "translation-pl": "dziecko",
+        "translation-es": "el niño",
+        "translation-fr": "l’enfant",
+        "translation-tr": "çocuk",
+        "translation-ro": "copilul",
+        "translation-uz": "bola",
+        "translation-hi": "बच्चा",
+        "translation-ar": "الطفل"
+      },
+      {
+        "word": "der Apfel",
+        "translation-ru": "яблоко",
+        "translation-en": "apple",
+        "translation-uk": "яблуко",
+        "translation-pl": "jabłko",
+        "translation-es": "manzana",
+        "translation-fr": "pomme",
+        "translation-tr": "elma",
+        "translation-ro": "măr",
+        "translation-uz": "olma",
+        "translation-hi": "सेब",
+        "translation-ar": "تفاحة"
+      },
+      {
+        "word": "aufmerksam",
+        "translation-ru": "внимательный",
+        "translation-en": "attentive",
+        "translation-uk": "уважний",
+        "translation-pl": "uważny",
+        "translation-es": "atento",
+        "translation-fr": "attentif",
+        "translation-tr": "dikkatli",
+        "translation-ro": "atent",
+        "translation-uz": "diqqatli",
+        "translation-hi": "सावधान",
+        "translation-ar": "منتبه"
       }
     ]
   },
   {
     "questId": "action-seven",
-    "aliases": ["akk-dat-traps"],
+    "aliases": [
+      "akk-dat-traps"
+    ],
     "title": "actionValleyQuestSeven.title",
     "progress": "0/15",
     "description": "actionValleyQuestSeven.description",
@@ -934,8 +2026,7 @@
       "minCorrect": 15,
       "requiredTasks": 15
     },
-    "rewards":
-    {
+    "rewards": {
       "points": 10,
       "xp": 10
     },
@@ -944,7 +2035,11 @@
         "id": 1,
         "type": "select",
         "question": "actionValleyQuestSeven.questOne",
-        "options": ["Ich rufe den Vater an", "Ich rufe dem Vater an", "Ich rufe der Vater an"],
+        "options": [
+          "Ich rufe den Vater an",
+          "Ich rufe dem Vater an",
+          "Ich rufe der Vater an"
+        ],
         "answer": "Ich rufe den Vater an",
         "tip": "actionValleyQuestSeven.questOneTip"
       },
@@ -952,8 +2047,18 @@
         "id": 2,
         "type": "reorder",
         "question": "actionValleyQuestSeven.questTwo",
-        "words": ["besuchen", "Oma", "unsere", "Wir"],
-        "correctOrder": ["Wir", "besuchen", "unsere", "Oma"],
+        "words": [
+          "besuchen",
+          "Oma",
+          "unsere",
+          "Wir"
+        ],
+        "correctOrder": [
+          "Wir",
+          "besuchen",
+          "unsere",
+          "Oma"
+        ],
         "tip": "actionValleyQuestSeven.questTwoTip"
       },
       {
@@ -961,13 +2066,18 @@
         "type": "speechToText",
         "question": "actionValleyQuestSeven.questThree",
         "text": "Ich gratuliere dir",
-        "answer": "Ich gratuliere dir"
+        "answer": "Ich gratuliere dir",
+        "tip": "actionValleyQuestSeven.description"
       },
       {
         "id": 4,
         "type": "select",
         "question": "actionValleyQuestSeven.questFour",
-        "options": ["Glaubst du mir?", "Glaubst du mich?", "Du glaubst mir?"],
+        "options": [
+          "Glaubst du mir?",
+          "Glaubst du mich?",
+          "Du glaubst mir?"
+        ],
         "answer": "Glaubst du mir?",
         "tip": "actionValleyQuestSeven.questFourTip"
       },
@@ -975,15 +2085,30 @@
         "id": 5,
         "type": "reorder",
         "question": "actionValleyQuestSeven.questFive",
-        "words": ["passen", "mir", "Jeans", "Diese", "mich"],
-        "correctOrder": ["Diese", "Jeans", "passen", "mir"],
+        "words": [
+          "passen",
+          "mir",
+          "Jeans",
+          "Diese",
+          "mich"
+        ],
+        "correctOrder": [
+          "Diese",
+          "Jeans",
+          "passen",
+          "mir"
+        ],
         "tip": "actionValleyQuestSeven.questFiveTip"
       },
       {
         "id": 6,
         "type": "select",
         "question": "actionValleyQuestSeven.questSix",
-        "options": ["Das Hemd steht dir", "Das Hemd steht dich", "Das Hemd steht du"],
+        "options": [
+          "Das Hemd steht dir",
+          "Das Hemd steht dich",
+          "Das Hemd steht du"
+        ],
         "answer": "Das Hemd steht dir",
         "tip": "actionValleyQuestSeven.questSixTip"
       },
@@ -999,15 +2124,32 @@
         "id": 8,
         "type": "reorder",
         "question": "actionValleyQuestSeven.questEight",
-        "words": ["dir", "zu", "höre", "Ich", "aufmerksam", "dich"],
-        "correctOrder": ["Ich", "höre", "dir", "aufmerksam", "zu"],
+        "words": [
+          "dir",
+          "zu",
+          "höre",
+          "Ich",
+          "aufmerksam",
+          "dich"
+        ],
+        "correctOrder": [
+          "Ich",
+          "höre",
+          "dir",
+          "aufmerksam",
+          "zu"
+        ],
         "tip": "actionValleyQuestSeven.questEightTip"
       },
       {
         "id": 9,
         "type": "select",
         "question": "actionValleyQuestSeven.questNine",
-        "options": ["Ich lade einen Freund ein", "Ich lade einem Freund ein", "Ich lade ein Freund ein"],
+        "options": [
+          "Ich lade einen Freund ein",
+          "Ich lade einem Freund ein",
+          "Ich lade ein Freund ein"
+        ],
         "answer": "Ich lade einen Freund ein",
         "tip": "actionValleyQuestSeven.questNineTip"
       },
@@ -1022,48 +2164,184 @@
       {
         "id": 11,
         "type": "reorder",
-        "question": "actionValleyQuestSeven.questEleven",
-        "words": ["dich", "ich", "Störe", "dir"],
-        "correctOrder": ["Störe", "ich", "dich"],
-        "tip": "actionValleyQuestSeven.questElevenTip"
+        "question": "actionValleyQuestSix.questTwo",
+        "words": [
+          "Vater",
+          "seinem",
+          "oft",
+          "hilft",
+          "Er",
+          "seinen"
+        ],
+        "correctOrder": [
+          "Er",
+          "hilft",
+          "oft",
+          "seinem",
+          "Vater"
+        ],
+        "tip": "actionValleyQuestSix.questTwoTip",
+        "reviewOf": "action-six",
+        "reviewLand": "action-valley"
       },
       {
         "id": 12,
-        "type": "select",
-        "question": "actionValleyQuestSeven.questTwelve",
-        "options": ["Kennst du diesen Mann?", "Kennst du diesem Mann?", "Kennst du dieser Mann?"],
-        "answer": "Kennst du diesen Mann?",
-        "tip": "actionValleyQuestSeven.questTwelveTip"
+        "type": "reorder",
+        "question": "actionValleyQuestFour.questFive",
+        "words": [
+          "Schrank",
+          "den",
+          "in",
+          "Buch",
+          "das",
+          "lege",
+          "Ich"
+        ],
+        "correctOrder": [
+          "Ich",
+          "lege",
+          "das",
+          "Buch",
+          "in",
+          "den",
+          "Schrank"
+        ],
+        "tip": "actionValleyQuestFour.questFiveTip",
+        "reviewOf": "action-four",
+        "reviewLand": "action-valley"
       },
       {
         "id": 13,
-        "type": "speechToText",
-        "question": "actionValleyQuestSeven.questThirteen",
-        "text": "Er holt mich ab",
-        "answer": "Er holt mich ab",
-        "tip": "actionValleyQuestSeven.questThirteenTip"
+        "type": "reorder",
+        "question": "pastValleyQuestTwelve.questSix",
+        "words": [
+          "leckeres",
+          "haben",
+          "Wir",
+          "gekocht",
+          "Abendessen",
+          "ein",
+          "hat"
+        ],
+        "correctOrder": [
+          "Wir",
+          "haben",
+          "ein",
+          "leckeres",
+          "Abendessen",
+          "gekocht"
+        ],
+        "reviewOf": "past-twelve",
+        "reviewLand": "past-land",
+        "tip": "pastValleyQuestTwelve.description"
       },
       {
         "id": 14,
         "type": "reorder",
         "question": "actionValleyQuestSeven.questFourteen",
-        "words": ["gehört", "uns", "Das"],
-        "correctOrder": ["Das", "gehört", "uns"],
+        "words": [
+          "gehört",
+          "uns",
+          "Das"
+        ],
+        "correctOrder": [
+          "Das",
+          "gehört",
+          "uns"
+        ],
         "tip": "actionValleyQuestSeven.questFourteenTip"
       },
       {
         "id": 15,
         "type": "select",
         "question": "actionValleyQuestSeven.questFifteen",
-        "options": ["Ich danke dem Kollegen", "Ich danke den Kollegen", "Ich danke der Kollege"],
+        "options": [
+          "Ich danke dem Kollegen",
+          "Ich danke den Kollegen",
+          "Ich danke der Kollege"
+        ],
         "answer": "Ich danke dem Kollegen",
         "tip": "actionValleyQuestSeven.questFifteenTip"
+      }
+    ],
+    "vocabulary": [
+      {
+        "word": "die Frage",
+        "translation-ru": "вопрос",
+        "translation-en": "question",
+        "translation-uk": "питання",
+        "translation-pl": "pytanie",
+        "translation-es": "la pregunta",
+        "translation-fr": "la question",
+        "translation-tr": "soru",
+        "translation-ro": "întrebarea",
+        "translation-uz": "savol",
+        "translation-hi": "सवाल",
+        "translation-ar": "السؤال"
+      },
+      {
+        "word": "verzeihen",
+        "translation-ru": "прощать",
+        "translation-en": "to forgive / pardon",
+        "translation-uk": "прощати",
+        "translation-pl": "wybaczać",
+        "translation-es": "perdonar",
+        "translation-fr": "pardonner",
+        "translation-tr": "affetmek",
+        "translation-ro": "a ierta",
+        "translation-uz": "kechirmoq",
+        "translation-hi": "क्षमा करना",
+        "translation-ar": "يغفر / يسامح"
+      },
+      {
+        "word": "glauben",
+        "translation-ru": "верить / полагать",
+        "translation-en": "to believe / think",
+        "translation-uk": "вірити / думати",
+        "translation-pl": "wierzyć",
+        "translation-es": "creer",
+        "translation-fr": "croire",
+        "translation-tr": "inanmak",
+        "translation-ro": "a crede",
+        "translation-uz": "ishonmoq",
+        "translation-hi": "विश्वास करना",
+        "translation-ar": "يعتقد / يؤمن"
+      },
+      {
+        "word": "rufen",
+        "translation-ru": "звать / кричать",
+        "translation-en": "to call / shout",
+        "translation-uk": "кликати / звати",
+        "translation-pl": "wołać / dzwonić",
+        "translation-es": "llamar / gritar",
+        "translation-fr": "appeler / crier",
+        "translation-tr": "çağırmak / seslenmek",
+        "translation-ro": "a chema / a striga",
+        "translation-uz": "chaqirmoq",
+        "translation-hi": "बुलाना",
+        "translation-ar": "ينادي"
+      },
+      {
+        "word": "der Lehrer",
+        "translation-ru": "учитель",
+        "translation-en": "teacher",
+        "translation-uk": "учитель",
+        "translation-pl": "nauczyciel",
+        "translation-es": "profesor",
+        "translation-fr": "enseignant",
+        "translation-tr": "öğretmen",
+        "translation-ro": "profesor",
+        "translation-uz": "o‘qituvchi",
+        "translation-hi": "शिक्षक",
+        "translation-ar": "معلّم"
       }
     ]
   },
   {
     "questId": "action-eight",
-    "aliases": ["verb-prep-combos"],
+    "aliases": [
+      "verb-prep-combos"
+    ],
     "title": "actionValleyQuestEight.title",
     "progress": "0/15",
     "description": "actionValleyQuestEight.description",
@@ -1081,7 +2359,11 @@
         "id": 1,
         "type": "select",
         "question": "actionValleyQuestEight.questOne",
-        "options": ["Ich warte auf dich", "Ich warte auf dir", "Ich warte dich"],
+        "options": [
+          "Ich warte auf dich",
+          "Ich warte auf dir",
+          "Ich warte dich"
+        ],
         "answer": "Ich warte auf dich",
         "tip": "actionValleyQuestEight.questOneTip"
       },
@@ -1089,8 +2371,18 @@
         "id": 2,
         "type": "reorder",
         "question": "actionValleyQuestEight.questTwo",
-        "words": ["an", "dich", "denke", "Ich"],
-        "correctOrder": ["Ich", "denke", "an", "dich"],
+        "words": [
+          "an",
+          "dich",
+          "denke",
+          "Ich"
+        ],
+        "correctOrder": [
+          "Ich",
+          "denke",
+          "an",
+          "dich"
+        ],
         "tip": "actionValleyQuestEight.questTwoTip"
       },
       {
@@ -1105,7 +2397,11 @@
         "id": 4,
         "type": "select",
         "question": "actionValleyQuestEight.questFour",
-        "options": ["Ich träume von einem Auto", "Ich träume über ein Auto", "Ich träume von ein Auto"],
+        "options": [
+          "Ich träume von einem Auto",
+          "Ich träume über ein Auto",
+          "Ich träume von ein Auto"
+        ],
         "answer": "Ich träume von einem Auto",
         "tip": "actionValleyQuestEight.questFourTip"
       },
@@ -1113,15 +2409,33 @@
         "id": 5,
         "type": "reorder",
         "question": "actionValleyQuestEight.questFive",
-        "words": ["mich", "Geschenk", "das", "über", "freue", "Ich"],
-        "correctOrder": ["Ich", "freue", "mich", "über", "das", "Geschenk"],
+        "words": [
+          "mich",
+          "Geschenk",
+          "das",
+          "über",
+          "freue",
+          "Ich"
+        ],
+        "correctOrder": [
+          "Ich",
+          "freue",
+          "mich",
+          "über",
+          "das",
+          "Geschenk"
+        ],
         "tip": "actionValleyQuestEight.questFiveTip"
       },
       {
         "id": 6,
         "type": "select",
         "question": "actionValleyQuestEight.questSix",
-        "options": ["Ich danke dir für die Hilfe", "Ich danke dich für die Hilfe", "Ich danke dir für der Hilfe"],
+        "options": [
+          "Ich danke dir für die Hilfe",
+          "Ich danke dich für die Hilfe",
+          "Ich danke dir für der Hilfe"
+        ],
         "answer": "Ich danke dir für die Hilfe",
         "tip": "actionValleyQuestEight.questSixTip"
       },
@@ -1137,15 +2451,31 @@
         "id": 8,
         "type": "reorder",
         "question": "actionValleyQuestEight.questEight",
-        "words": ["mich", "Musik", "für", "interessiere", "Ich"],
-        "correctOrder": ["Ich", "interessiere", "mich", "für", "Musik"],
+        "words": [
+          "mich",
+          "Musik",
+          "für",
+          "interessiere",
+          "Ich"
+        ],
+        "correctOrder": [
+          "Ich",
+          "interessiere",
+          "mich",
+          "für",
+          "Musik"
+        ],
         "tip": "actionValleyQuestEight.questEightTip"
       },
       {
         "id": 9,
         "type": "select",
         "question": "actionValleyQuestEight.questNine",
-        "options": ["Ich erzähle von der Reise", "Ich erzähle über die Reise", "Ich erzähle von die Reise"],
+        "options": [
+          "Ich erzähle von der Reise",
+          "Ich erzähle über die Reise",
+          "Ich erzähle von die Reise"
+        ],
         "answer": "Ich erzähle von der Reise",
         "tip": "actionValleyQuestEight.questNineTip"
       },
@@ -1160,48 +2490,222 @@
       {
         "id": 11,
         "type": "reorder",
-        "question": "actionValleyQuestEight.questEleven",
-        "words": ["Bruder", "meinem", "mit", "spreche", "Ich"],
-        "correctOrder": ["Ich", "spreche", "mit", "meinem", "Bruder"],
-        "tip": "actionValleyQuestEight.questElevenTip"
+        "question": "actionValleyQuestSeven.questTwo",
+        "words": [
+          "besuchen",
+          "Oma",
+          "unsere",
+          "Wir"
+        ],
+        "correctOrder": [
+          "Wir",
+          "besuchen",
+          "unsere",
+          "Oma"
+        ],
+        "tip": "actionValleyQuestSeven.questTwoTip",
+        "reviewOf": "action-seven",
+        "reviewLand": "action-valley"
       },
       {
         "id": 12,
-        "type": "select",
-        "question": "actionValleyQuestEight.questTwelve",
-        "options": ["Wir lachen über den Witz", "Wir lachen von dem Witz", "Wir lachen über dem Witz"],
-        "answer": "Wir lachen über den Witz",
-        "tip": "actionValleyQuestEight.questTwelveTip"
+        "type": "reorder",
+        "question": "actionValleyQuestFive.questFive",
+        "words": [
+          "Freund",
+          "dem",
+          "Brief",
+          "den",
+          "schreibt",
+          "Sie"
+        ],
+        "correctOrder": [
+          "Sie",
+          "schreibt",
+          "dem",
+          "Freund",
+          "den",
+          "Brief"
+        ],
+        "tip": "actionValleyQuestFive.questFiveTip",
+        "reviewOf": "action-five",
+        "reviewLand": "action-valley"
       },
       {
         "id": 13,
-        "type": "speechToText",
-        "question": "actionValleyQuestEight.questThirteen",
-        "text": "Ich erinnere mich an den Sommer",
-        "answer": "Ich erinnere mich an den Sommer",
-        "tip": "actionValleyQuestEight.questThirteenTip"
+        "type": "reorder",
+        "question": "actionValleyQuestOne.questSix",
+        "words": [
+          "mir",
+          "Buch",
+          "ein",
+          "schenkt",
+          "Sie"
+        ],
+        "correctOrder": [
+          "Sie",
+          "schenkt",
+          "mir",
+          "ein",
+          "Buch"
+        ],
+        "tip": "actionValleyQuestOne.questSixTip",
+        "reviewOf": "action-one",
+        "reviewLand": "action-valley"
       },
       {
         "id": 14,
         "type": "reorder",
         "question": "actionValleyQuestEight.questFourteen",
-        "words": ["Weg", "dem", "nach", "fragt", "Er"],
-        "correctOrder": ["Er", "fragt", "nach", "dem", "Weg"],
+        "words": [
+          "Weg",
+          "dem",
+          "nach",
+          "fragt",
+          "Er"
+        ],
+        "correctOrder": [
+          "Er",
+          "fragt",
+          "nach",
+          "dem",
+          "Weg"
+        ],
         "tip": "actionValleyQuestEight.questFourteenTip"
       },
       {
         "id": 15,
         "type": "select",
         "question": "actionValleyQuestEight.questFifteen",
-        "options": ["Ich nehme an dem Kurs teil", "Ich nehme in dem Kurs teil", "Ich nehme an den Kurs teil"],
+        "options": [
+          "Ich nehme an dem Kurs teil",
+          "Ich nehme in dem Kurs teil",
+          "Ich nehme an den Kurs teil"
+        ],
         "answer": "Ich nehme an dem Kurs teil",
         "tip": "actionValleyQuestEight.questFifteenTip"
+      }
+    ],
+    "vocabulary": [
+      {
+        "word": "denken",
+        "translation-ru": "думать",
+        "translation-en": "to think",
+        "translation-uk": "думати",
+        "translation-pl": "myśleć",
+        "translation-es": "pensar",
+        "translation-fr": "penser",
+        "translation-tr": "düşünmek",
+        "translation-ro": "a gândi",
+        "translation-uz": "o'ylamoq",
+        "translation-hi": "सोचना",
+        "translation-ar": "يفكر"
+      },
+      {
+        "word": "bitten",
+        "translation-ru": "просить",
+        "translation-en": "to ask / request",
+        "translation-uk": "просити",
+        "translation-pl": "prosić",
+        "translation-es": "pedir / rogar",
+        "translation-fr": "prier / demander",
+        "translation-tr": "rica etmek / istemek",
+        "translation-ro": "a ruga",
+        "translation-uz": "iltimos qilmoq",
+        "translation-hi": "अनुरोध करना",
+        "translation-ar": "يطلب / يرجو"
+      },
+      {
+        "word": "interessieren",
+        "translation-ru": "интересовать / интересоваться",
+        "translation-en": "to interest / to be interested in",
+        "translation-uk": "цікавити / цікавитися",
+        "translation-pl": "interesować / interesować się",
+        "translation-es": "interesar / interesarse",
+        "translation-fr": "intéresser / s'intéresser",
+        "translation-tr": "ilgisini çekmek / ilgilenmek",
+        "translation-ro": "a interesa / a fi interesat",
+        "translation-uz": "qiziqtirmoq / qiziqmoq",
+        "translation-hi": "रुचि रखना / दिलचस्पी लेना",
+        "translation-ar": "يهمّ / يهتم بـ"
+      },
+      {
+        "word": "die Angst",
+        "translation-ru": "страх",
+        "translation-en": "fear",
+        "translation-uk": "страх",
+        "translation-pl": "strach",
+        "translation-es": "el miedo",
+        "translation-fr": "la peur",
+        "translation-tr": "korku",
+        "translation-ro": "frica",
+        "translation-uz": "qo‘rquv",
+        "translation-hi": "डर",
+        "translation-ar": "الخوف"
+      },
+      {
+        "word": "der Teil",
+        "translation-ru": "часть",
+        "translation-en": "part",
+        "translation-uk": "частина",
+        "translation-pl": "część",
+        "translation-es": "parte",
+        "translation-fr": "partie",
+        "translation-tr": "kısım",
+        "translation-ro": "parte",
+        "translation-uz": "qism",
+        "translation-hi": "हिंसा",
+        "translation-ar": "جزء"
+      },
+      {
+        "word": "träumen",
+        "translation-ru": "мечтать, видеть сны",
+        "translation-en": "to dream",
+        "translation-uk": "мріяти",
+        "translation-pl": "marzyć",
+        "translation-es": "soñar",
+        "translation-fr": "rêver",
+        "translation-tr": "hayal etmek",
+        "translation-ro": "a visa",
+        "translation-uz": "orzu qilmoq",
+        "translation-hi": "सपना देखना",
+        "translation-ar": "يحلم"
+      },
+      {
+        "word": "die Dunkelheit",
+        "translation-ru": "темнота",
+        "translation-en": "darkness",
+        "translation-uk": "темрява",
+        "translation-pl": "ciemność",
+        "translation-es": "la oscuridad",
+        "translation-fr": "l’obscurité",
+        "translation-tr": "karanlık",
+        "translation-ro": "întunericul",
+        "translation-uz": "qorong‘ilik",
+        "translation-hi": "अँधेरा",
+        "translation-ar": "الظلام"
+      },
+      {
+        "word": "der Weg",
+        "translation-ru": "дорога",
+        "translation-en": "way",
+        "translation-uk": "дорога",
+        "translation-pl": "droga",
+        "translation-es": "el camino",
+        "translation-fr": "le chemin",
+        "translation-tr": "yol",
+        "translation-ro": "drumul",
+        "translation-uz": "yo‘l",
+        "translation-hi": "रास्ता",
+        "translation-ar": "الطريق"
       }
     ]
   },
   {
     "questId": "action-nine",
-    "aliases": ["da-wo-compounds-2"],
+    "aliases": [
+      "da-wo-compounds-2"
+    ],
     "title": "actionValleyQuestNine.title",
     "progress": "0/15",
     "description": "actionValleyQuestNine.description",
@@ -1211,14 +2715,19 @@
       "requiredTasks": 15
     },
     "rewards": {
-      "points": 10, "xp": 10
+      "points": 10,
+      "xp": 10
     },
     "tasks": [
       {
         "id": 1,
         "type": "select",
         "question": "actionValleyQuestNine.questOne",
-        "options": ["Wonach fragst du?", "Nach was fragst du?", "Woran fragst du?"],
+        "options": [
+          "Wonach fragst du?",
+          "Nach was fragst du?",
+          "Woran fragst du?"
+        ],
         "answer": "Wonach fragst du?",
         "tip": "actionValleyQuestNine.questOneTip"
       },
@@ -1226,8 +2735,19 @@
         "id": 2,
         "type": "reorder",
         "question": "actionValleyQuestNine.questTwo",
-        "words": ["darüber", "mich", "ärgere", "Ich", "daran"],
-        "correctOrder": ["Ich", "ärgere", "mich", "darüber"],
+        "words": [
+          "darüber",
+          "mich",
+          "ärgere",
+          "Ich",
+          "daran"
+        ],
+        "correctOrder": [
+          "Ich",
+          "ärgere",
+          "mich",
+          "darüber"
+        ],
         "tip": "actionValleyQuestNine.questTwoTip"
       },
       {
@@ -1254,14 +2774,27 @@
         "id": 5,
         "type": "reorder",
         "question": "actionValleyQuestNine.questFive",
-        "words": ["dazu", "passt", "Das"],
-        "correctOrder": ["Das", "passt", "dazu"]
+        "words": [
+          "dazu",
+          "passt",
+          "Das"
+        ],
+        "correctOrder": [
+          "Das",
+          "passt",
+          "dazu"
+        ],
+        "tip": "actionValleyQuestNine.description"
       },
       {
         "id": 6,
         "type": "select",
         "question": "actionValleyQuestNine.questSix",
-        "options": ["Worauf hast du Lust?", "Wofür hast du Lust?", "Auf was hast du Lust?"],
+        "options": [
+          "Worauf hast du Lust?",
+          "Wofür hast du Lust?",
+          "Auf was hast du Lust?"
+        ],
         "answer": "Worauf hast du Lust?",
         "tip": "actionValleyQuestNine.questSixTip"
       },
@@ -1277,7 +2810,11 @@
         "id": 8,
         "type": "select",
         "question": "actionValleyQuestNine.questEight",
-        "options": ["Wovor hast du Angst?", "Vor was hast du Angst?", "Wovon hast du Angst?"],
+        "options": [
+          "Wovor hast du Angst?",
+          "Vor was hast du Angst?",
+          "Wovon hast du Angst?"
+        ],
         "answer": "Wovor hast du Angst?",
         "tip": "actionValleyQuestNine.questEightTip"
       },
@@ -1285,52 +2822,101 @@
         "id": 9,
         "type": "reorder",
         "question": "actionValleyQuestNine.questNine",
-        "words": ["darum", "bittet", "Er", "daran"],
-        "correctOrder": ["Er", "bittet", "darum"],
+        "words": [
+          "darum",
+          "bittet",
+          "Er",
+          "daran"
+        ],
+        "correctOrder": [
+          "Er",
+          "bittet",
+          "darum"
+        ],
         "tip": "actionValleyQuestNine.questNineTip"
       },
       {
         "id": 10,
         "type": "select",
         "question": "actionValleyQuestNine.questTen",
-        "options": ["Womit fängst du an?", "Wovon fängst du an?", "Mit was fängst du an?"],
+        "options": [
+          "Womit fängst du an?",
+          "Wovon fängst du an?",
+          "Mit was fängst du an?"
+        ],
         "answer": "Womit fängst du an?",
         "tip": "actionValleyQuestNine.questTenTip"
       },
       {
         "id": 11,
-        "type": "speechToText",
-        "question": "actionValleyQuestNine.questEleven",
-        "text": "Ich hoffe darauf",
-        "answer": "Ich hoffe darauf",
-        "tip": "actionValleyQuestNine.questElevenTip"
+        "type": "reorder",
+        "question": "actionValleyQuestEight.questTwo",
+        "words": [
+          "an",
+          "dich",
+          "denke",
+          "Ich"
+        ],
+        "correctOrder": [
+          "Ich",
+          "denke",
+          "an",
+          "dich"
+        ],
+        "tip": "actionValleyQuestEight.questTwoTip",
+        "reviewOf": "action-eight",
+        "reviewLand": "action-valley"
       },
       {
         "id": 12,
         "type": "reorder",
-        "question": "actionValleyQuestNine.questTwelve",
-        "words": ["daran", "arbeiten", "Wir"],
-        "correctOrder": ["Wir", "arbeiten", "daran"],
-        "tip": "actionValleyQuestNine.questTwelveTip"
+        "question": "actionValleyQuestSix.questFive",
+        "words": [
+          "besuchen",
+          "Oma",
+          "unsere",
+          "müssen",
+          "Wir"
+        ],
+        "correctOrder": [
+          "Wir",
+          "müssen",
+          "unsere",
+          "Oma",
+          "besuchen"
+        ],
+        "tip": "actionValleyQuestSix.questFiveTip",
+        "reviewOf": "action-six",
+        "reviewLand": "action-valley"
       },
       {
         "id": 13,
-        "type": "select",
-        "question": "actionValleyQuestNine.questThirteen",
-        "options": [
-          "Ich feiere Geburtstag und lade dich dazu ein",
-          "Ich feiere Geburtstag und lade dich dafür ein",
-          "Ich feiere Geburtstag und lade dich daran ein"
+        "type": "reorder",
+        "question": "actionValleyQuestTwo.questSix",
+        "words": [
+          "Bahnhof",
+          "zum",
+          "fahre",
+          "Ich",
+          "zu"
         ],
-        "answer": "Ich feiere Geburtstag und lade dich dazu ein",
-        "tip": "actionValleyQuestNine.questThirteenTip"
+        "correctOrder": [
+          "Ich",
+          "fahre",
+          "zum",
+          "Bahnhof"
+        ],
+        "tip": "actionValleyQuestTwo.questSixTip",
+        "reviewOf": "action-two",
+        "reviewLand": "action-valley"
       },
       {
         "id": 14,
         "type": "speechToText",
         "question": "actionValleyQuestNine.questFourteen",
         "text": "Worauf freust du dich?",
-        "answer": "Worauf freust du dich?"
+        "answer": "Worauf freust du dich?",
+        "tip": "actionValleyQuestNine.description"
       },
       {
         "id": 15,
@@ -1344,11 +2930,99 @@
         "answer": "Ich passe darauf auf",
         "tip": "actionValleyQuestNine.questFifteenTip"
       }
+    ],
+    "vocabulary": [
+      {
+        "word": "die Lust",
+        "translation-ru": "желание, охота",
+        "translation-en": "desire, mood",
+        "translation-uk": "бажання",
+        "translation-pl": "ochota",
+        "translation-es": "las ganas",
+        "translation-fr": "l’envie",
+        "translation-tr": "istek",
+        "translation-ro": "cheful",
+        "translation-uz": "xohish",
+        "translation-hi": "मन, इच्छा",
+        "translation-ar": "الرغبة"
+      },
+      {
+        "word": "damit",
+        "translation-ru": "чтобы (кто-то другой)",
+        "translation-en": "so that",
+        "translation-uk": "щоб (хтось інший)",
+        "translation-pl": "żeby (ktoś inny)",
+        "translation-es": "para que",
+        "translation-fr": "pour que",
+        "translation-tr": "(başkası) … için",
+        "translation-ro": "ca (altcineva) să",
+        "translation-uz": "(boshqasi) … uchun",
+        "translation-hi": "ताकि",
+        "translation-ar": "لكي (شخص آخر)"
+      },
+      {
+        "word": "zufrieden",
+        "translation-ru": "довольный",
+        "translation-en": "satisfied",
+        "translation-uk": "задоволений",
+        "translation-pl": "zadowolony",
+        "translation-es": "satisfecho",
+        "translation-fr": "satisfait",
+        "translation-tr": "memnun",
+        "translation-ro": "mulțumit",
+        "translation-uz": "mamnun",
+        "translation-hi": "संतुष्ट",
+        "translation-ar": "راضٍ"
+      },
+      {
+        "word": "darum",
+        "translation-ru": "поэтому",
+        "translation-en": "that’s why",
+        "translation-uk": "тому",
+        "translation-pl": "dlatego",
+        "translation-es": "por eso",
+        "translation-fr": "c’est pour ça",
+        "translation-tr": "o yüzden",
+        "translation-ro": "de asta",
+        "translation-uz": "shuning uchun",
+        "translation-hi": "इसलिए",
+        "translation-ar": "لذلك"
+      },
+      {
+        "word": "fangen",
+        "translation-ru": "ловить",
+        "translation-en": "to catch",
+        "translation-uk": "ловити",
+        "translation-pl": "łapać",
+        "translation-es": "atrapar / coger",
+        "translation-fr": "attraper",
+        "translation-tr": "yakalamak",
+        "translation-ro": "a prinde",
+        "translation-uz": "tutmoq",
+        "translation-hi": "पकड़ना",
+        "translation-ar": "يمسك"
+      },
+      {
+        "word": "der Ärger",
+        "translation-ru": "раздражение",
+        "translation-en": "irritation",
+        "translation-uk": "роздратування",
+        "translation-pl": "irytacja",
+        "translation-es": "irritación",
+        "translation-fr": "irritation",
+        "translation-tr": "sinirlilik",
+        "translation-ro": "iritare",
+        "translation-uz": "g'azablanish",
+        "translation-hi": "चिड़चिड़ापन",
+        "translation-ar": "تهيج"
+      }
     ]
   },
   {
     "questId": "action-ten",
-    "aliases": ["da-wo-compounds-3"],
+    "aliases": [
+      "da-wo-compounds-3"
+    ],
     "title": "actionValleyQuestTen.title",
     "progress": "0/15",
     "description": "actionValleyQuestTen.description",
@@ -1357,13 +3031,20 @@
       "minCorrect": 15,
       "requiredTasks": 15
     },
-    "rewards": { "points": 10, "xp": 10 },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
     "tasks": [
       {
         "id": 1,
         "type": "select",
         "question": "actionValleyQuestTen.questOne",
-        "options": ["Worauf verlässt du dich?", "Woran verlässt du dich?", "Wozu verlässt du dich?"],
+        "options": [
+          "Worauf verlässt du dich?",
+          "Woran verlässt du dich?",
+          "Wozu verlässt du dich?"
+        ],
         "answer": "Worauf verlässt du dich?",
         "tip": "actionValleyQuestTen.questOneTip"
       },
@@ -1371,8 +3052,18 @@
         "id": 2,
         "type": "reorder",
         "question": "actionValleyQuestTen.questTwo",
-        "words": ["mich", "darauf", "verlasse", "Ich"],
-        "correctOrder": ["Ich", "verlasse", "mich", "darauf"],
+        "words": [
+          "mich",
+          "darauf",
+          "verlasse",
+          "Ich"
+        ],
+        "correctOrder": [
+          "Ich",
+          "verlasse",
+          "mich",
+          "darauf"
+        ],
         "tip": "actionValleyQuestTen.questTwoTip"
       },
       {
@@ -1387,7 +3078,11 @@
         "id": 4,
         "type": "select",
         "question": "actionValleyQuestTen.questFour",
-        "options": ["Ich bin damit einverstanden", "Ich bin davon einverstanden", "Ich bin daran einverstanden"],
+        "options": [
+          "Ich bin damit einverstanden",
+          "Ich bin davon einverstanden",
+          "Ich bin daran einverstanden"
+        ],
         "answer": "Ich bin damit einverstanden",
         "tip": "actionValleyQuestTen.questFourTip"
       },
@@ -1395,15 +3090,27 @@
         "id": 5,
         "type": "reorder",
         "question": "actionValleyQuestTen.questFive",
-        "words": ["daran", "zweifle", "Ich"],
-        "correctOrder": ["Ich", "zweifle", "daran"],
+        "words": [
+          "daran",
+          "zweifle",
+          "Ich"
+        ],
+        "correctOrder": [
+          "Ich",
+          "zweifle",
+          "daran"
+        ],
         "tip": "actionValleyQuestTen.questFiveTip"
       },
       {
         "id": 6,
         "type": "select",
         "question": "actionValleyQuestTen.questSix",
-        "options": ["Worüber beschwerst du dich?", "Wovon beschwerst du dich?", "Womit beschwerst du dich?"],
+        "options": [
+          "Worüber beschwerst du dich?",
+          "Wovon beschwerst du dich?",
+          "Womit beschwerst du dich?"
+        ],
         "answer": "Worüber beschwerst du dich?",
         "tip": "actionValleyQuestTen.questSixTip"
       },
@@ -1419,7 +3126,11 @@
         "id": 8,
         "type": "select",
         "question": "actionValleyQuestTen.questEight",
-        "options": ["Woran nimmst du teil?", "Womit nimmst du teil?", "Wovon nimmst du teil?"],
+        "options": [
+          "Woran nimmst du teil?",
+          "Womit nimmst du teil?",
+          "Wovon nimmst du teil?"
+        ],
         "answer": "Woran nimmst du teil?",
         "tip": "actionValleyQuestTen.questEightTip"
       },
@@ -1427,41 +3138,95 @@
         "id": 9,
         "type": "reorder",
         "question": "actionValleyQuestTen.questNine",
-        "words": ["bereit", "bin", "dazu", "Ich"],
-        "correctOrder": ["Ich", "bin", "dazu", "bereit"],
+        "words": [
+          "bereit",
+          "bin",
+          "dazu",
+          "Ich"
+        ],
+        "correctOrder": [
+          "Ich",
+          "bin",
+          "dazu",
+          "bereit"
+        ],
         "tip": "actionValleyQuestTen.questNineTip"
       },
       {
         "id": 10,
         "type": "select",
         "question": "actionValleyQuestTen.questTen",
-        "options": ["Woraus besteht das?", "Wovon besteht das?", "Womit besteht das?"],
+        "options": [
+          "Woraus besteht das?",
+          "Wovon besteht das?",
+          "Womit besteht das?"
+        ],
         "answer": "Woraus besteht das?",
         "tip": "actionValleyQuestTen.questTenTip"
       },
       {
         "id": 11,
-        "type": "speechToText",
-        "question": "actionValleyQuestTen.questEleven",
-        "text": "Wir haben uns darauf geeinigt",
-        "answer": "Wir haben uns darauf geeinigt",
-        "tip": "actionValleyQuestTen.questElevenTip"
+        "type": "reorder",
+        "question": "actionValleyQuestNine.questTwo",
+        "words": [
+          "darüber",
+          "mich",
+          "ärgere",
+          "Ich",
+          "daran"
+        ],
+        "correctOrder": [
+          "Ich",
+          "ärgere",
+          "mich",
+          "darüber"
+        ],
+        "tip": "actionValleyQuestNine.questTwoTip",
+        "reviewOf": "action-nine",
+        "reviewLand": "action-valley"
       },
       {
         "id": 12,
         "type": "reorder",
-        "question": "actionValleyQuestTen.questTwelve",
-        "words": ["geht", "es", "Worum"],
-        "correctOrder": ["Worum", "geht", "es"],
-        "tip": "actionValleyQuestTen.questTwelveTip"
+        "question": "actionValleyQuestSeven.questFive",
+        "words": [
+          "passen",
+          "mir",
+          "Jeans",
+          "Diese",
+          "mich"
+        ],
+        "correctOrder": [
+          "Diese",
+          "Jeans",
+          "passen",
+          "mir"
+        ],
+        "tip": "actionValleyQuestSeven.questFiveTip",
+        "reviewOf": "action-seven",
+        "reviewLand": "action-valley"
       },
       {
         "id": 13,
-        "type": "select",
-        "question": "actionValleyQuestTen.questThirteen",
-        "options": ["Ich bin davon überzeugt", "Ich bin daran überzeugt", "Ich bin darüber überzeugt"],
-        "answer": "Ich bin davon überzeugt",
-        "tip": "actionValleyQuestTen.questThirteenTip"
+        "type": "reorder",
+        "question": "actionValleyQuestThree.questSix",
+        "words": [
+          "ohne",
+          "Schlüssel",
+          "den",
+          "gehe",
+          "Ich"
+        ],
+        "correctOrder": [
+          "Ich",
+          "gehe",
+          "ohne",
+          "den",
+          "Schlüssel"
+        ],
+        "tip": "actionValleyQuestThree.questSixTip",
+        "reviewOf": "action-three",
+        "reviewLand": "action-valley"
       },
       {
         "id": 14,
@@ -1475,15 +3240,135 @@
         "id": 15,
         "type": "select",
         "question": "actionValleyQuestTen.questFifteen",
-        "options": ["Ich gratuliere dir dazu", "Ich gratuliere dir dafür", "Ich gratuliere dir daran"],
+        "options": [
+          "Ich gratuliere dir dazu",
+          "Ich gratuliere dir dafür",
+          "Ich gratuliere dir daran"
+        ],
         "answer": "Ich gratuliere dir dazu",
         "tip": "actionValleyQuestTen.questFifteenTip"
+      }
+    ],
+    "vocabulary": [
+      {
+        "word": "verlassen",
+        "translation-ru": "оставлять / покидать",
+        "translation-en": "to leave / abandon",
+        "translation-uk": "залишати / покидати",
+        "translation-pl": "opuszczać",
+        "translation-es": "abandonar / dejar",
+        "translation-fr": "quitter / abandonner",
+        "translation-tr": "terk etmek / ayrılmak",
+        "translation-ro": "a părăsi",
+        "translation-uz": "tark etmoq",
+        "translation-hi": "छोड़ना",
+        "translation-ar": "يغادر / يترك"
+      },
+      {
+        "word": "wissen",
+        "translation-ru": "знать",
+        "translation-en": "to know",
+        "translation-uk": "знати",
+        "translation-pl": "wiedzieć",
+        "translation-es": "saber",
+        "translation-fr": "savoir",
+        "translation-tr": "bilmek",
+        "translation-ro": "a ști",
+        "translation-uz": "bilmoq",
+        "translation-hi": "पता होना",
+        "translation-ar": "يعلم"
+      },
+      {
+        "word": "nichts",
+        "translation-ru": "ничего",
+        "translation-en": "nothing",
+        "translation-uk": "нічого",
+        "translation-pl": "nic",
+        "translation-es": "nada",
+        "translation-fr": "rien",
+        "translation-tr": "hiçbir şey",
+        "translation-ro": "nimic",
+        "translation-uz": "hech narsa",
+        "translation-hi": "कुछ नहीं",
+        "translation-ar": "لا شيء"
+      },
+      {
+        "word": "bereit",
+        "translation-ru": "готовый",
+        "translation-en": "ready",
+        "translation-uk": "готовий",
+        "translation-pl": "gotowy",
+        "translation-es": "preparado",
+        "translation-fr": "prêt",
+        "translation-tr": "hazır",
+        "translation-ro": "pregătit",
+        "translation-uz": "tayyor",
+        "translation-hi": "तैयार",
+        "translation-ar": "مستعد"
+      },
+      {
+        "word": "damit",
+        "translation-ru": "чтобы (кто-то другой)",
+        "translation-en": "so that",
+        "translation-uk": "щоб (хтось інший)",
+        "translation-pl": "żeby (ktoś inny)",
+        "translation-es": "para que",
+        "translation-fr": "pour que",
+        "translation-tr": "(başkası) … için",
+        "translation-ro": "ca (altcineva) să",
+        "translation-uz": "(boshqasi) … uchun",
+        "translation-hi": "ताकि",
+        "translation-ar": "لكي (شخص آخر)"
+      },
+      {
+        "word": "einverstanden",
+        "translation-ru": "согласен",
+        "translation-en": "agreed",
+        "translation-uk": "згоден",
+        "translation-pl": "zgodny",
+        "translation-es": "de acuerdo",
+        "translation-fr": "d’accord",
+        "translation-tr": "kabul",
+        "translation-ro": "de acord",
+        "translation-uz": "rozi",
+        "translation-hi": "सहमत",
+        "translation-ar": "موافق"
+      },
+      {
+        "word": "sich beschweren",
+        "translation-ru": "жаловаться",
+        "translation-en": "to complain",
+        "translation-uk": "скаржитися",
+        "translation-pl": "skarżyć się",
+        "translation-es": "quejarse",
+        "translation-fr": "se plaindre",
+        "translation-tr": "şikâyet etmek",
+        "translation-ro": "a se plânge",
+        "translation-uz": "shikoyat qilmoq",
+        "translation-hi": "शिकायत करना",
+        "translation-ar": "يشتكي"
+      },
+      {
+        "word": "zweifeln",
+        "translation-ru": "сомневаться",
+        "translation-en": "to doubt",
+        "translation-uk": "сумніватися",
+        "translation-pl": "wątpić",
+        "translation-es": "dudar",
+        "translation-fr": "douter",
+        "translation-tr": "şüphe etmek",
+        "translation-ro": "a se îndoi",
+        "translation-uz": "shubhalanmoq",
+        "translation-hi": "संदेह करना",
+        "translation-ar": "يشك"
       }
     ]
   },
   {
     "questId": "action-eleven",
-    "aliases": ["summary-mega-mix"],
+    "aliases": [
+      "summary-mega-mix"
+    ],
     "title": "actionValleyQuestEleven.title",
     "progress": "0/15",
     "description": "actionValleyQuestEleven.description",
@@ -1492,13 +3377,20 @@
       "minCorrect": 15,
       "requiredTasks": 15
     },
-    "rewards": { "points": 10, "xp": 10 },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
     "tasks": [
       {
         "id": 1,
         "type": "select",
         "question": "actionValleyQuestEleven.questOne",
-        "options": ["Ich helfe dir", "Ich helfe dich", "Ich helfe du"],
+        "options": [
+          "Ich helfe dir",
+          "Ich helfe dich",
+          "Ich helfe du"
+        ],
         "answer": "Ich helfe dir",
         "tip": "actionValleyQuestEleven.questOneTip"
       },
@@ -1506,15 +3398,31 @@
         "id": 2,
         "type": "reorder",
         "question": "actionValleyQuestEleven.questTwo",
-        "words": ["mit", "Freund", "meinem", "gehe", "Ich"],
-        "correctOrder": ["Ich", "gehe", "mit", "meinem", "Freund"],
+        "words": [
+          "mit",
+          "Freund",
+          "meinem",
+          "gehe",
+          "Ich"
+        ],
+        "correctOrder": [
+          "Ich",
+          "gehe",
+          "mit",
+          "meinem",
+          "Freund"
+        ],
         "tip": "actionValleyQuestEleven.questTwoTip"
       },
       {
         "id": 3,
         "type": "select",
         "question": "actionValleyQuestEleven.questThree",
-        "options": ["Wir gehen durch den Park", "Wir gehen durch dem Park", "Wir gehen durch der Park"],
+        "options": [
+          "Wir gehen durch den Park",
+          "Wir gehen durch dem Park",
+          "Wir gehen durch der Park"
+        ],
         "answer": "Wir gehen durch den Park",
         "tip": "actionValleyQuestEleven.questThreeTip"
       },
@@ -1530,15 +3438,29 @@
         "id": 5,
         "type": "reorder",
         "question": "actionValleyQuestEleven.questFive",
-        "words": ["Kino", "ins", "gehe", "Ich"],
-        "correctOrder": ["Ich", "gehe", "ins", "Kino"],
+        "words": [
+          "Kino",
+          "ins",
+          "gehe",
+          "Ich"
+        ],
+        "correctOrder": [
+          "Ich",
+          "gehe",
+          "ins",
+          "Kino"
+        ],
         "tip": "actionValleyQuestEleven.questFiveTip"
       },
       {
         "id": 6,
         "type": "select",
         "question": "actionValleyQuestEleven.questSix",
-        "options": ["Ich rufe den Vater an", "Ich rufe dem Vater an", "Ich rufe der Vater an"],
+        "options": [
+          "Ich rufe den Vater an",
+          "Ich rufe dem Vater an",
+          "Ich rufe der Vater an"
+        ],
         "answer": "Ich rufe den Vater an",
         "tip": "actionValleyQuestEleven.questSixTip"
       },
@@ -1554,15 +3476,32 @@
         "id": 8,
         "type": "reorder",
         "question": "actionValleyQuestEleven.questEight",
-        "words": ["Zähne", "die", "mir", "putze", "mich", "Ich"],
-        "correctOrder": ["Ich", "putze", "mir", "die", "Zähne"],
+        "words": [
+          "Zähne",
+          "die",
+          "mir",
+          "putze",
+          "mich",
+          "Ich"
+        ],
+        "correctOrder": [
+          "Ich",
+          "putze",
+          "mir",
+          "die",
+          "Zähne"
+        ],
         "tip": "actionValleyQuestEleven.questEightTip"
       },
       {
         "id": 9,
         "type": "select",
         "question": "actionValleyQuestEleven.questNine",
-        "options": ["Ich warte auf der Bus", "Ich warte auf dem Bus", "Ich warte auf den Bus"],
+        "options": [
+          "Ich warte auf der Bus",
+          "Ich warte auf dem Bus",
+          "Ich warte auf den Bus"
+        ],
         "answer": "Ich warte auf den Bus",
         "tip": "actionValleyQuestEleven.questNineTip"
       },
@@ -1578,15 +3517,29 @@
         "id": 11,
         "type": "reorder",
         "question": "actionValleyQuestEleven.questEleven",
-        "words": ["bin", "Ich", "damit", "einverstanden"],
-        "correctOrder": ["Ich", "bin", "damit", "einverstanden"],
+        "words": [
+          "bin",
+          "Ich",
+          "damit",
+          "einverstanden"
+        ],
+        "correctOrder": [
+          "Ich",
+          "bin",
+          "damit",
+          "einverstanden"
+        ],
         "tip": "actionValleyQuestEleven.questElevenTip"
       },
       {
         "id": 12,
         "type": "select",
         "question": "actionValleyQuestEleven.questTwelve",
-        "options": ["Der Kellner bringt dem Gast die Suppe", "Der Kellner bringt den Gast die Suppe", "Der Kellner bringt dem Gast der Suppe"],
+        "options": [
+          "Der Kellner bringt dem Gast die Suppe",
+          "Der Kellner bringt den Gast die Suppe",
+          "Der Kellner bringt dem Gast der Suppe"
+        ],
         "answer": "Der Kellner bringt dem Gast die Suppe",
         "tip": "actionValleyQuestEleven.questTwelveTip"
       },
@@ -1602,17 +3555,103 @@
         "id": 14,
         "type": "reorder",
         "question": "actionValleyQuestEleven.questFourteen",
-        "words": ["Kollegen", "dem", "danke", "Ich"],
-        "correctOrder": ["Ich", "danke", "dem", "Kollegen"],
+        "words": [
+          "Kollegen",
+          "dem",
+          "danke",
+          "Ich"
+        ],
+        "correctOrder": [
+          "Ich",
+          "danke",
+          "dem",
+          "Kollegen"
+        ],
         "tip": "actionValleyQuestEleven.questFourteenTip"
       },
       {
         "id": 15,
         "type": "select",
         "question": "actionValleyQuestEleven.questFifteen",
-        "options": ["Mit wem sprichst du?", "Womit sprichst du?", "Mit wen sprichst du?"],
+        "options": [
+          "Mit wem sprichst du?",
+          "Womit sprichst du?",
+          "Mit wen sprichst du?"
+        ],
         "answer": "Mit wem sprichst du?",
         "tip": "actionValleyQuestEleven.questFifteenTip"
+      }
+    ],
+    "vocabulary": [
+      {
+        "word": "jung",
+        "translation-ru": "молодой",
+        "translation-en": "young",
+        "translation-uk": "молодий",
+        "translation-pl": "młody",
+        "translation-es": "joven",
+        "translation-fr": "jeune",
+        "translation-tr": "genç",
+        "translation-ro": "tânăr",
+        "translation-uz": "yosh",
+        "translation-hi": "जवान",
+        "translation-ar": "شاب"
+      },
+      {
+        "word": "putzen",
+        "translation-ru": "чистить / мыть",
+        "translation-en": "to clean / polish",
+        "translation-uk": "чистити",
+        "translation-pl": "czyścić",
+        "translation-es": "limpiar",
+        "translation-fr": "nettoyer",
+        "translation-tr": "temizlemek",
+        "translation-ro": "a curăța",
+        "translation-uz": "tozalamoq",
+        "translation-hi": "साफ करना",
+        "translation-ar": "ينظف"
+      },
+      {
+        "word": "der Zahn",
+        "translation-ru": "зуб",
+        "translation-en": "tooth",
+        "translation-uk": "зуб",
+        "translation-pl": "ząb",
+        "translation-es": "diente",
+        "translation-fr": "dent",
+        "translation-tr": "diş",
+        "translation-ro": "dinte",
+        "translation-uz": "tish",
+        "translation-hi": "दाँत",
+        "translation-ar": "سنّ"
+      },
+      {
+        "word": "damit",
+        "translation-ru": "чтобы (кто-то другой)",
+        "translation-en": "so that",
+        "translation-uk": "щоб (хтось інший)",
+        "translation-pl": "żeby (ktoś inny)",
+        "translation-es": "para que",
+        "translation-fr": "pour que",
+        "translation-tr": "(başkası) … için",
+        "translation-ro": "ca (altcineva) să",
+        "translation-uz": "(boshqasi) … uchun",
+        "translation-hi": "ताकि",
+        "translation-ar": "لكي (شخص آخر)"
+      },
+      {
+        "word": "denken",
+        "translation-ru": "думать",
+        "translation-en": "to think",
+        "translation-uk": "думати",
+        "translation-pl": "myśleć",
+        "translation-es": "pensar",
+        "translation-fr": "penser",
+        "translation-tr": "düşünmek",
+        "translation-ro": "a gândi",
+        "translation-uz": "o'ylamoq",
+        "translation-hi": "सोचना",
+        "translation-ar": "يفكر"
       }
     ]
   }

@@ -1,0 +1,2654 @@
+[
+  {
+    "questId": "experience-summit-one",
+    "title": "experienceSummitOne.questTitle",
+    "progress": "0/15",
+    "description": "experienceSummitOne.questDescription",
+    "conditions": {
+      "goal": "experienceSummitOne.questGoal",
+      "minCorrect": 15,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
+    "vocabulary": [
+      {
+        "word": "sich erinnern an",
+        "translation-ru": "помнить, вспоминать",
+        "translation-en": "to remember",
+        "translation-uk": "пам’ятати, згадувати",
+        "translation-pl": "pamiętać",
+        "translation-es": "acordarse de",
+        "translation-fr": "se souvenir de",
+        "translation-tr": "hatırlamak",
+        "translation-ro": "a-și aminti de",
+        "translation-uz": "eslamoq",
+        "translation-hi": "याद करना",
+        "translation-ar": "يتذكّر"
+      },
+      {
+        "word": "schließlich",
+        "translation-ru": "наконец, в конце концов",
+        "translation-en": "finally",
+        "translation-uk": "зрештою",
+        "translation-pl": "w końcu",
+        "translation-es": "finalmente",
+        "translation-fr": "finalement",
+        "translation-tr": "sonunda",
+        "translation-ro": "în cele din urmă",
+        "translation-uz": "nihoyat",
+        "translation-hi": "आख़िर में",
+        "translation-ar": "في النهاية"
+      },
+      {
+        "word": "während",
+        "translation-ru": "пока, в то время как",
+        "translation-en": "while",
+        "translation-uk": "поки, у той час як",
+        "translation-pl": "podczas gdy",
+        "translation-es": "mientras",
+        "translation-fr": "pendant que",
+        "translation-tr": "-iken",
+        "translation-ro": "în timp ce",
+        "translation-uz": "…ayotganda",
+        "translation-hi": "जबकि, जब तक",
+        "translation-ar": "بينما"
+      },
+      {
+        "word": "bevor",
+        "translation-ru": "прежде чем",
+        "translation-en": "before (conjunction)",
+        "translation-uk": "перш ніж",
+        "translation-pl": "zanim",
+        "translation-es": "antes de que",
+        "translation-fr": "avant que",
+        "translation-tr": "-madan önce",
+        "translation-ro": "înainte să",
+        "translation-uz": "…dan oldin",
+        "translation-hi": "…से पहले",
+        "translation-ar": "قبل أن"
+      },
+      {
+        "word": "nachdem",
+        "translation-ru": "после того как",
+        "translation-en": "after (conjunction)",
+        "translation-uk": "після того як",
+        "translation-pl": "po tym, jak",
+        "translation-es": "después de que",
+        "translation-fr": "après que",
+        "translation-tr": "-dıktan sonra",
+        "translation-ro": "după ce",
+        "translation-uz": "…gandan keyin",
+        "translation-hi": "…के बाद",
+        "translation-ar": "بعد أن"
+      }
+    ],
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "experienceSummitOne.questTask1",
+        "options": [
+          "Wenn ich ein Kind war, wohnten wir am Meer.",
+          "Als ich ein Kind war, wir wohnten am Meer.",
+          "Als ich ein Kind war, wohnten wir am Meer."
+        ],
+        "answer": "Als ich ein Kind war, wohnten wir am Meer.",
+        "tip": "experienceSummitOne.questDescription"
+      },
+      {
+        "id": 2,
+        "type": "input",
+        "question": "experienceSummitOne.questTask2",
+        "correctAnswer": "fand",
+        "tip": "experienceSummitOne.questDescription"
+      },
+      {
+        "id": 3,
+        "type": "input",
+        "question": "experienceSummitOne.questTask3",
+        "correctAnswer": "spielten",
+        "tip": "experienceSummitOne.questDescription"
+      },
+      {
+        "id": 4,
+        "type": "reorder",
+        "question": "experienceSummitOne.questTask4",
+        "words": [
+          "haben",
+          "hatten",
+          "wir",
+          "fern",
+          "Nachdem",
+          "wir",
+          "sahen",
+          "gegessen"
+        ],
+        "correctOrder": [
+          "Nachdem",
+          "wir",
+          "gegessen",
+          "hatten",
+          "sahen",
+          "wir",
+          "fern"
+        ],
+        "tip": "experienceSummitOne.questDescription"
+      },
+      {
+        "id": 5,
+        "type": "select",
+        "question": "experienceSummitOne.questTask5",
+        "options": [
+          "Als wir ankamen, hatten unsere Freunde schon essen.",
+          "Als wir ankamen, hatten unsere Freunde schon gegessen.",
+          "Wenn wir ankamen, hatten unsere Freunde schon gegessen."
+        ],
+        "answer": "Als wir ankamen, hatten unsere Freunde schon gegessen.",
+        "tip": "experienceSummitOne.questDescription"
+      },
+      {
+        "id": 6,
+        "type": "input",
+        "question": "experienceSummitOne.questTask6",
+        "correctAnswer": "Bevor",
+        "tip": "experienceSummitOne.questDescription"
+      },
+      {
+        "id": 7,
+        "type": "readAndAnswer",
+        "question": "experienceSummitOne.questTask7",
+        "text": "Als Oma jung war, gab es noch kein Internet. Sie schrieb ihren Freunden Briefe. Immer wenn ein Brief kam, war sie sehr glücklich.",
+        "options": [
+          "Sie schrieb E-Mails.",
+          "Sie schrieb Briefe.",
+          "Sie telefonierte."
+        ],
+        "answer": "Sie schrieb Briefe.",
+        "tip": "experienceSummitOne.questDescription"
+      },
+      {
+        "id": 8,
+        "type": "input",
+        "question": "experienceSummitOne.questTask8",
+        "correctAnswer": "hörte",
+        "tip": "experienceSummitOne.questDescription"
+      },
+      {
+        "id": 9,
+        "type": "select",
+        "question": "experienceSummitOne.questTask9",
+        "options": [
+          "Zuerst fuhren wir nach Berlin, dann nach Hamburg.",
+          "Zuerst fuhr wir nach Berlin, dann nach Hamburg.",
+          "Zuerst wir fuhren nach Berlin, dann nach Hamburg."
+        ],
+        "answer": "Zuerst fuhren wir nach Berlin, dann nach Hamburg.",
+        "tip": "experienceSummitOne.questDescription"
+      },
+      {
+        "id": 10,
+        "type": "input",
+        "question": "experienceSummitOne.questTask10",
+        "correctAnswer": "war",
+        "tip": "experienceSummitOne.questDescription"
+      },
+      {
+        "id": 11,
+        "type": "reorder",
+        "question": "experienceSummitOne.questTask11",
+        "words": [
+          "nach",
+          "Hause",
+          "ich",
+          "sehr",
+          "Als",
+          "war",
+          "müde",
+          "wenn",
+          "kam",
+          "ich"
+        ],
+        "correctOrder": [
+          "Als",
+          "ich",
+          "nach",
+          "Hause",
+          "kam",
+          "war",
+          "ich",
+          "sehr",
+          "müde"
+        ],
+        "tip": "experienceSummitOne.questDescription"
+      },
+      {
+        "id": 12,
+        "type": "select",
+        "question": "experienceSummitOne.questTask12",
+        "options": [
+          "Immer als ich sie sah, lachte sie.",
+          "Immer wenn ich sie sah, lachte sie.",
+          "Immer wenn ich sah sie, lachte sie."
+        ],
+        "answer": "Immer wenn ich sie sah, lachte sie.",
+        "tip": "experienceSummitOne.questDescription"
+      },
+      {
+        "id": 13,
+        "type": "readAndAnswer",
+        "question": "experienceSummitOne.questTask13",
+        "text": "Gestern hatte Ben einen langen Tag. Zuerst arbeitete er acht Stunden. Danach kaufte er ein. Schließlich kochte er für seine Familie, obwohl er sehr müde war.",
+        "options": [
+          "Er kaufte ein.",
+          "Er kochte.",
+          "Er arbeitete."
+        ],
+        "answer": "Er kochte.",
+        "tip": "experienceSummitOne.questDescription"
+      },
+      {
+        "id": 14,
+        "type": "input",
+        "question": "experienceSummitOne.questTask14",
+        "correctAnswer": "sprachen",
+        "tip": "experienceSummitOne.questDescription"
+      },
+      {
+        "id": 15,
+        "type": "input",
+        "question": "experienceSummitOne.questTask15",
+        "correctAnswer": "an",
+        "tip": "experienceSummitOne.questDescription"
+      }
+    ]
+  },
+  {
+    "questId": "experience-summit-two",
+    "title": "experienceSummitTwo.questTitle",
+    "progress": "0/15",
+    "description": "experienceSummitTwo.questDescription",
+    "conditions": {
+      "goal": "experienceSummitTwo.questGoal",
+      "minCorrect": 15,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
+    "vocabulary": [
+      {
+        "word": "die Sprache",
+        "translation-ru": "язык",
+        "translation-en": "language",
+        "translation-uk": "мова",
+        "translation-pl": "język",
+        "translation-es": "el idioma",
+        "translation-fr": "la langue",
+        "translation-tr": "dil",
+        "translation-ro": "limba",
+        "translation-uz": "til",
+        "translation-hi": "भाषा",
+        "translation-ar": "اللغة"
+      },
+      {
+        "word": "heiß",
+        "translation-ru": "жаркий, горячий",
+        "translation-en": "hot",
+        "translation-uk": "спекотний, гарячий",
+        "translation-pl": "gorący",
+        "translation-es": "caluroso",
+        "translation-fr": "chaud",
+        "translation-tr": "sıcak",
+        "translation-ro": "cald",
+        "translation-uz": "issiq",
+        "translation-hi": "गरम",
+        "translation-ar": "حار"
+      },
+      {
+        "word": "der Urlaub",
+        "translation-ru": "отпуск",
+        "translation-en": "holiday",
+        "translation-uk": "відпустка",
+        "translation-pl": "urlop",
+        "translation-es": "las vacaciones",
+        "translation-fr": "les vacances",
+        "translation-tr": "tatil",
+        "translation-ro": "concediul",
+        "translation-uz": "ta’til",
+        "translation-hi": "छुट्टी",
+        "translation-ar": "الإجازة"
+      },
+      {
+        "word": "das Telefon",
+        "translation-ru": "телефон",
+        "translation-en": "phone",
+        "translation-uk": "телефон",
+        "translation-pl": "telefon",
+        "translation-es": "el teléfono",
+        "translation-fr": "le téléphone",
+        "translation-tr": "telefon",
+        "translation-ro": "telefonul",
+        "translation-uz": "telefon",
+        "translation-hi": "फ़ोन",
+        "translation-ar": "الهاتف"
+      },
+      {
+        "word": "trotzdem",
+        "translation-ru": "всё равно, несмотря на это",
+        "translation-en": "anyway, nevertheless",
+        "translation-uk": "усе одно, попри це",
+        "translation-pl": "mimo to",
+        "translation-es": "aun así",
+        "translation-fr": "quand même",
+        "translation-tr": "yine de",
+        "translation-ro": "totuși",
+        "translation-uz": "baribir",
+        "translation-hi": "फिर भी",
+        "translation-ar": "ومع ذلك"
+      }
+    ],
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "experienceSummitTwo.questTask1",
+        "options": [
+          "Der Bus kam spät, trotzdem kam ich zu spät zur Arbeit.",
+          "Der Bus kam spät, deshalb ich kam zu spät zur Arbeit.",
+          "Der Bus kam spät, deshalb kam ich zu spät zur Arbeit."
+        ],
+        "answer": "Der Bus kam spät, deshalb kam ich zu spät zur Arbeit.",
+        "tip": "experienceSummitTwo.questDescription"
+      },
+      {
+        "id": 2,
+        "type": "input",
+        "question": "experienceSummitTwo.questTask2",
+        "correctAnswer": "Obwohl",
+        "tip": "experienceSummitTwo.questDescription"
+      },
+      {
+        "id": 3,
+        "type": "input",
+        "question": "experienceSummitTwo.questTask3",
+        "correctAnswer": "trotzdem",
+        "tip": "experienceSummitTwo.questDescription"
+      },
+      {
+        "id": 4,
+        "type": "reorder",
+        "question": "experienceSummitTwo.questTask4",
+        "words": [
+          "Deutsch",
+          "liebe",
+          "Ich",
+          "Sprache",
+          "ich",
+          "denn",
+          "die",
+          "lerne",
+          "weil"
+        ],
+        "correctOrder": [
+          "Ich",
+          "lerne",
+          "Deutsch",
+          "weil",
+          "ich",
+          "die",
+          "Sprache",
+          "liebe"
+        ],
+        "tip": "experienceSummitTwo.questDescription"
+      },
+      {
+        "id": 5,
+        "type": "select",
+        "question": "experienceSummitTwo.questTask5",
+        "options": [
+          "Er kam nicht, deshalb war er krank.",
+          "Er kam nicht, denn er war krank.",
+          "Er kam nicht, denn er krank war."
+        ],
+        "answer": "Er kam nicht, denn er war krank.",
+        "tip": "experienceSummitTwo.questDescription"
+      },
+      {
+        "id": 6,
+        "type": "input",
+        "question": "experienceSummitTwo.questTask6",
+        "correctAnswer": "gingen",
+        "tip": "experienceSummitTwo.questDescription"
+      },
+      {
+        "id": 7,
+        "type": "readAndAnswer",
+        "question": "experienceSummitTwo.questTask7",
+        "text": "Mia wollte ans Meer fahren. Aber das Hotel war zu teuer. Deshalb blieb sie zu Hause. Trotzdem hatte sie einen schönen Urlaub, denn ihre Freunde besuchten sie.",
+        "options": [
+          "Ihre Freunde kamen zu ihr.",
+          "Sie fuhr ans Meer.",
+          "Das Hotel war billig."
+        ],
+        "answer": "Ihre Freunde kamen zu ihr.",
+        "tip": "experienceSummitTwo.questDescription"
+      },
+      {
+        "id": 8,
+        "type": "input",
+        "question": "experienceSummitTwo.questTask8",
+        "correctAnswer": "wohnt",
+        "tip": "experienceSummitTwo.questDescription"
+      },
+      {
+        "id": 9,
+        "type": "select",
+        "question": "experienceSummitTwo.questTask9",
+        "options": [
+          "Ich habe Hunger, obwohl gehe ich ins Restaurant.",
+          "Ich habe Hunger, darum gehe ich ins Restaurant.",
+          "Ich habe Hunger, darum ich gehe ins Restaurant."
+        ],
+        "answer": "Ich habe Hunger, darum gehe ich ins Restaurant.",
+        "tip": "experienceSummitTwo.questDescription"
+      },
+      {
+        "id": 10,
+        "type": "input",
+        "question": "experienceSummitTwo.questTask10",
+        "correctAnswer": "hatte",
+        "tip": "experienceSummitTwo.questDescription"
+      },
+      {
+        "id": 11,
+        "type": "reorder",
+        "question": "experienceSummitTwo.questTask11",
+        "words": [
+          "sahen",
+          "trotzdem",
+          "obwohl",
+          "war",
+          "noch",
+          "fern",
+          "spät",
+          "Es",
+          "wir"
+        ],
+        "correctOrder": [
+          "Es",
+          "war",
+          "spät",
+          "trotzdem",
+          "sahen",
+          "wir",
+          "noch",
+          "fern"
+        ],
+        "tip": "experienceSummitTwo.questDescription"
+      },
+      {
+        "id": 12,
+        "type": "select",
+        "question": "experienceSummitTwo.questTask12",
+        "options": [
+          "Obwohl sie wenig Zeit hat, hilft sie mir.",
+          "Obwohl sie hat wenig Zeit, hilft sie mir.",
+          "Obwohl sie wenig Zeit hat, sie hilft mir."
+        ],
+        "answer": "Obwohl sie wenig Zeit hat, hilft sie mir.",
+        "tip": "experienceSummitTwo.questDescription"
+      },
+      {
+        "id": 13,
+        "type": "readAndAnswer",
+        "question": "experienceSummitTwo.questTask13",
+        "text": "Herr Wolf fährt jeden Tag mit dem Fahrrad zur Arbeit, obwohl er ein Auto hat. Er sagt: „Ich fahre Fahrrad, denn das ist gesund und billig.“",
+        "options": [
+          "Es kostet wenig.",
+          "Er hat kein Auto.",
+          "Sein Auto ist kaputt."
+        ],
+        "answer": "Es kostet wenig.",
+        "tip": "experienceSummitTwo.questDescription"
+      },
+      {
+        "id": 14,
+        "type": "input",
+        "question": "experienceSummitTwo.questTask14",
+        "correctAnswer": "trotzdem",
+        "tip": "experienceSummitTwo.questDescription"
+      },
+      {
+        "id": 15,
+        "type": "input",
+        "question": "experienceSummitTwo.questTask15",
+        "correctAnswer": "weil",
+        "tip": "experienceSummitTwo.questDescription"
+      }
+    ]
+  },
+  {
+    "questId": "experience-summit-three",
+    "title": "experienceSummitThree.questTitle",
+    "progress": "0/15",
+    "description": "experienceSummitThree.questDescription",
+    "conditions": {
+      "goal": "experienceSummitThree.questGoal",
+      "minCorrect": 15,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
+    "vocabulary": [
+      {
+        "word": "lustig",
+        "translation-ru": "смешной, весёлый",
+        "translation-en": "funny",
+        "translation-uk": "смішний",
+        "translation-pl": "zabawny",
+        "translation-es": "divertido",
+        "translation-fr": "drôle",
+        "translation-tr": "komik",
+        "translation-ro": "amuzant",
+        "translation-uz": "kulgili",
+        "translation-hi": "मज़ेदार",
+        "translation-ar": "مضحك"
+      },
+      {
+        "word": "frisch",
+        "translation-ru": "свежий",
+        "translation-en": "fresh",
+        "translation-uk": "свіжий",
+        "translation-pl": "świeży",
+        "translation-es": "fresco",
+        "translation-fr": "frais",
+        "translation-tr": "taze",
+        "translation-ro": "proaspăt",
+        "translation-uz": "yangi, toza",
+        "translation-hi": "ताज़ा",
+        "translation-ar": "طازج"
+      },
+      {
+        "word": "der Deutschkurs",
+        "translation-ru": "курс немецкого",
+        "translation-en": "German course",
+        "translation-uk": "курс німецької",
+        "translation-pl": "kurs niemieckiego",
+        "translation-es": "el curso de alemán",
+        "translation-fr": "le cours d’allemand",
+        "translation-tr": "Almanca kursu",
+        "translation-ro": "cursul de germană",
+        "translation-uz": "nemis tili kursi",
+        "translation-hi": "जर्मन कोर्स",
+        "translation-ar": "دورة اللغة الألمانية"
+      },
+      {
+        "word": "wozu",
+        "translation-ru": "зачем, для чего",
+        "translation-en": "what for",
+        "translation-uk": "навіщо",
+        "translation-pl": "po co",
+        "translation-es": "para qué",
+        "translation-fr": "pour quoi faire",
+        "translation-tr": "ne için",
+        "translation-ro": "pentru ce",
+        "translation-uz": "nima uchun",
+        "translation-hi": "किसलिए",
+        "translation-ar": "لأي غرض"
+      },
+      {
+        "word": "erreichen",
+        "translation-ru": "достигать, успевать на",
+        "translation-en": "to reach, to catch",
+        "translation-uk": "досягати, встигати на",
+        "translation-pl": "osiągać, zdążyć na",
+        "translation-es": "alcanzar, llegar a tiempo",
+        "translation-fr": "atteindre, attraper",
+        "translation-tr": "ulaşmak, yetişmek",
+        "translation-ro": "a atinge, a prinde",
+        "translation-uz": "erishmoq, ulgurmoq",
+        "translation-hi": "पहुँचना, पकड़ना",
+        "translation-ar": "يصل إلى، يلحق بـ"
+      }
+    ],
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "experienceSummitThree.questTask1",
+        "options": [
+          "Ich lerne Deutsch, damit eine Arbeit zu finden.",
+          "Ich lerne Deutsch, um eine Arbeit finden zu.",
+          "Ich lerne Deutsch, um eine Arbeit zu finden."
+        ],
+        "answer": "Ich lerne Deutsch, um eine Arbeit zu finden.",
+        "tip": "experienceSummitThree.questDescription"
+      },
+      {
+        "id": 2,
+        "type": "input",
+        "question": "experienceSummitThree.questTask2",
+        "correctAnswer": "damit",
+        "tip": "experienceSummitThree.questDescription"
+      },
+      {
+        "id": 3,
+        "type": "input",
+        "question": "experienceSummitThree.questTask3",
+        "correctAnswer": "verpassen",
+        "tip": "experienceSummitThree.questDescription"
+      },
+      {
+        "id": 4,
+        "type": "reorder",
+        "question": "experienceSummitThree.questTask4",
+        "words": [
+          "eine",
+          "kaufen",
+          "Wohnung",
+          "spart",
+          "Sie",
+          "damit",
+          "zu",
+          "um"
+        ],
+        "correctOrder": [
+          "Sie",
+          "spart",
+          "um",
+          "eine",
+          "Wohnung",
+          "zu",
+          "kaufen"
+        ],
+        "tip": "experienceSummitThree.questDescription"
+      },
+      {
+        "id": 5,
+        "type": "select",
+        "question": "experienceSummitThree.questTask5",
+        "options": [
+          "Wozu stehst du so früh auf? Um den Bus zu erreichen.",
+          "Wozu stehst du so früh auf? Damit den Bus zu erreichen.",
+          "Wozu stehst du so früh auf? Weil den Bus zu erreichen."
+        ],
+        "answer": "Wozu stehst du so früh auf? Um den Bus zu erreichen.",
+        "tip": "experienceSummitThree.questDescription"
+      },
+      {
+        "id": 6,
+        "type": "input",
+        "question": "experienceSummitThree.questTask6",
+        "correctAnswer": "damit",
+        "tip": "experienceSummitThree.questDescription"
+      },
+      {
+        "id": 7,
+        "type": "readAndAnswer",
+        "question": "experienceSummitThree.questTask7",
+        "text": "Jana macht einen Deutschkurs, um in Deutschland Ärztin zu werden. Ihr Mann hilft ihr zu Hause, damit sie genug Zeit zum Lernen hat.",
+        "options": [
+          "um nach Spanien zu fahren",
+          "um Ärztin zu werden",
+          "damit ihr Mann lernt"
+        ],
+        "answer": "um Ärztin zu werden",
+        "tip": "experienceSummitThree.questDescription"
+      },
+      {
+        "id": 8,
+        "type": "input",
+        "question": "experienceSummitThree.questTask8",
+        "correctAnswer": "einzuladen",
+        "tip": "experienceSummitThree.questDescription"
+      },
+      {
+        "id": 9,
+        "type": "select",
+        "question": "experienceSummitThree.questTask9",
+        "options": [
+          "Der Lehrer erklärt es noch einmal, damit wir verstehen es.",
+          "Der Lehrer erklärt es noch einmal, damit wir es verstehen.",
+          "Der Lehrer erklärt es noch einmal, um wir es verstehen."
+        ],
+        "answer": "Der Lehrer erklärt es noch einmal, damit wir es verstehen.",
+        "tip": "experienceSummitThree.questDescription"
+      },
+      {
+        "id": 10,
+        "type": "input",
+        "question": "experienceSummitThree.questTask10",
+        "correctAnswer": "zu",
+        "tip": "experienceSummitThree.questDescription"
+      },
+      {
+        "id": 11,
+        "type": "reorder",
+        "question": "experienceSummitThree.questTask11",
+        "words": [
+          "zu",
+          "gehen",
+          "früh",
+          "kommen",
+          "um",
+          "Wir",
+          "nicht",
+          "zu",
+          "damit",
+          "spät"
+        ],
+        "correctOrder": [
+          "Wir",
+          "gehen",
+          "früh",
+          "um",
+          "nicht",
+          "zu",
+          "spät",
+          "zu",
+          "kommen"
+        ],
+        "tip": "experienceSummitThree.questDescription"
+      },
+      {
+        "id": 12,
+        "type": "select",
+        "question": "experienceSummitThree.questTask12",
+        "options": [
+          "Warum lachst du? Weil der Film lustig ist.",
+          "Warum lachst du? Um lustig zu sein.",
+          "Wozu lachst du? Weil der Film lustig ist."
+        ],
+        "answer": "Warum lachst du? Weil der Film lustig ist.",
+        "tip": "experienceSummitThree.questDescription"
+      },
+      {
+        "id": 13,
+        "type": "readAndAnswer",
+        "question": "experienceSummitThree.questTask13",
+        "text": "Am Samstag steht Lukas früh auf, um auf den Markt zu gehen. Er kauft frisches Gemüse, damit seine Familie gesund isst.",
+        "options": [
+          "um früh aufzustehen",
+          "für gesundes Essen",
+          "weil er Koch ist"
+        ],
+        "answer": "für gesundes Essen",
+        "tip": "experienceSummitThree.questDescription"
+      },
+      {
+        "id": 14,
+        "type": "input",
+        "question": "experienceSummitThree.questTask14",
+        "correctAnswer": "zu",
+        "tip": "experienceSummitThree.questDescription"
+      },
+      {
+        "id": 15,
+        "type": "input",
+        "question": "experienceSummitThree.questTask15",
+        "correctAnswer": "damit",
+        "tip": "experienceSummitThree.questDescription"
+      }
+    ]
+  },
+  {
+    "questId": "experience-summit-four",
+    "title": "experienceSummitFour.questTitle",
+    "progress": "0/15",
+    "description": "experienceSummitFour.questDescription",
+    "conditions": {
+      "goal": "experienceSummitFour.questGoal",
+      "minCorrect": 15,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
+    "vocabulary": [
+      {
+        "word": "kaputt",
+        "translation-ru": "сломанный",
+        "translation-en": "broken",
+        "translation-uk": "зламаний",
+        "translation-pl": "zepsuty",
+        "translation-es": "roto",
+        "translation-fr": "cassé",
+        "translation-tr": "bozuk",
+        "translation-ro": "stricat",
+        "translation-uz": "buzilgan",
+        "translation-hi": "टूटा हुआ",
+        "translation-ar": "معطّل"
+      },
+      {
+        "word": "die Brücke",
+        "translation-ru": "мост",
+        "translation-en": "bridge",
+        "translation-uk": "міст",
+        "translation-pl": "most",
+        "translation-es": "el puente",
+        "translation-fr": "le pont",
+        "translation-tr": "köprü",
+        "translation-ro": "podul",
+        "translation-uz": "ko‘prik",
+        "translation-hi": "पुल",
+        "translation-ar": "الجسر"
+      },
+      {
+        "word": "dunkel",
+        "translation-ru": "тёмный",
+        "translation-en": "dark",
+        "translation-uk": "темний",
+        "translation-pl": "ciemny",
+        "translation-es": "oscuro",
+        "translation-fr": "sombre",
+        "translation-tr": "karanlık",
+        "translation-ro": "întunecat",
+        "translation-uz": "qorong‘i",
+        "translation-hi": "अँधेरा",
+        "translation-ar": "مظلم"
+      },
+      {
+        "word": "draußen",
+        "translation-ru": "на улице, снаружи",
+        "translation-en": "outside",
+        "translation-uk": "надворі",
+        "translation-pl": "na dworze",
+        "translation-es": "fuera",
+        "translation-fr": "dehors",
+        "translation-tr": "dışarıda",
+        "translation-ro": "afară",
+        "translation-uz": "tashqarida",
+        "translation-hi": "बाहर",
+        "translation-ar": "في الخارج"
+      },
+      {
+        "word": "froh",
+        "translation-ru": "радостный",
+        "translation-en": "glad",
+        "translation-uk": "радісний",
+        "translation-pl": "radosny",
+        "translation-es": "contento",
+        "translation-fr": "content",
+        "translation-tr": "mutlu",
+        "translation-ro": "bucuros",
+        "translation-uz": "xursand",
+        "translation-hi": "ख़ुश",
+        "translation-ar": "مسرور"
+      }
+    ],
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "experienceSummitFour.questTask1",
+        "options": [
+          "Es schneite stark, damit der Zug Verspätung hatte.",
+          "Es schneite stark, sodass hatte der Zug Verspätung.",
+          "Es schneite stark, sodass der Zug Verspätung hatte."
+        ],
+        "answer": "Es schneite stark, sodass der Zug Verspätung hatte.",
+        "tip": "experienceSummitFour.questDescription"
+      },
+      {
+        "id": 2,
+        "type": "input",
+        "question": "experienceSummitFour.questTask2",
+        "correctAnswer": "so",
+        "tip": "experienceSummitFour.questDescription"
+      },
+      {
+        "id": 3,
+        "type": "input",
+        "question": "experienceSummitFour.questTask3",
+        "correctAnswer": "bleiben",
+        "tip": "experienceSummitFour.questDescription"
+      },
+      {
+        "id": 4,
+        "type": "reorder",
+        "question": "experienceSummitFour.questTask4",
+        "words": [
+          "früh",
+          "wir",
+          "standen",
+          "ersten",
+          "den",
+          "damit",
+          "Wir",
+          "nahmen",
+          "Bus",
+          "sodass",
+          "auf"
+        ],
+        "correctOrder": [
+          "Wir",
+          "standen",
+          "früh",
+          "auf",
+          "sodass",
+          "wir",
+          "den",
+          "ersten",
+          "Bus",
+          "nahmen"
+        ],
+        "tip": "experienceSummitFour.questDescription"
+      },
+      {
+        "id": 5,
+        "type": "select",
+        "question": "experienceSummitFour.questTask5",
+        "options": [
+          "Ich schreibe dir die Adresse, um du uns findest.",
+          "Ich schreibe dir die Adresse, damit du uns findest.",
+          "Ich schreibe dir die Adresse, damit findest du uns."
+        ],
+        "answer": "Ich schreibe dir die Adresse, damit du uns findest.",
+        "tip": "experienceSummitFour.questDescription"
+      },
+      {
+        "id": 6,
+        "type": "input",
+        "question": "experienceSummitFour.questTask6",
+        "correctAnswer": "blieben",
+        "tip": "experienceSummitFour.questDescription"
+      },
+      {
+        "id": 7,
+        "type": "readAndAnswer",
+        "question": "experienceSummitFour.questTask7",
+        "text": "Lukas hatte am Montag eine Prüfung. Am Sonntag war er so krank, dass er nicht lernen konnte. Falls er am Montag noch krank ist, ruft er die Schule an. Solange er Fieber hat, bleibt er im Bett.",
+        "options": [
+          "Er ruft die Schule an.",
+          "Er fährt in die Stadt.",
+          "Er geht zur Prüfung."
+        ],
+        "answer": "Er ruft die Schule an.",
+        "tip": "experienceSummitFour.questDescription"
+      },
+      {
+        "id": 8,
+        "type": "input",
+        "question": "experienceSummitFour.questTask8",
+        "correctAnswer": "sodass",
+        "tip": "experienceSummitFour.questDescription"
+      },
+      {
+        "id": 9,
+        "type": "select",
+        "question": "experienceSummitFour.questTask9",
+        "options": [
+          "Falls du zu spät kommst, schreib mir.",
+          "Sodass du zu spät kommst, schreib mir.",
+          "Falls du kommst zu spät, schreib mir."
+        ],
+        "answer": "Falls du zu spät kommst, schreib mir.",
+        "tip": "experienceSummitFour.questDescription"
+      },
+      {
+        "id": 10,
+        "type": "input",
+        "question": "experienceSummitFour.questTask10",
+        "correctAnswer": "wohnst",
+        "tip": "experienceSummitFour.questDescription"
+      },
+      {
+        "id": 11,
+        "type": "select",
+        "question": "experienceSummitFour.questTask11",
+        "options": [
+          "Der Laden war zu, sodass fuhren wir zu einem anderen.",
+          "Der Laden war zu, sodass wir zu einem anderen fuhren.",
+          "Der Laden war zu, damit wir zu einem anderen fuhren."
+        ],
+        "answer": "Der Laden war zu, sodass wir zu einem anderen fuhren.",
+        "tip": "experienceSummitFour.questDescription"
+      },
+      {
+        "id": 12,
+        "type": "reorder",
+        "question": "experienceSummitFour.questTask12",
+        "words": [
+          "laut",
+          "dass",
+          "damit",
+          "lachte",
+          "froh",
+          "war",
+          "so",
+          "Sie",
+          "sie"
+        ],
+        "correctOrder": [
+          "Sie",
+          "war",
+          "so",
+          "froh",
+          "dass",
+          "sie",
+          "laut",
+          "lachte"
+        ],
+        "tip": "experienceSummitFour.questDescription"
+      },
+      {
+        "id": 13,
+        "type": "input",
+        "question": "experienceSummitFour.questTask13",
+        "correctAnswer": "damit",
+        "tip": "experienceSummitFour.questDescription"
+      },
+      {
+        "id": 14,
+        "type": "input",
+        "question": "experienceSummitFour.questTask14",
+        "correctAnswer": "fanden",
+        "tip": "experienceSummitFour.questDescription"
+      },
+      {
+        "id": 15,
+        "type": "input",
+        "question": "experienceSummitFour.questTask15",
+        "correctAnswer": "so",
+        "tip": "experienceSummitFour.questDescription"
+      }
+    ]
+  },
+  {
+    "questId": "experience-summit-five",
+    "title": "experienceSummitFive.questTitle",
+    "progress": "0/15",
+    "description": "experienceSummitFive.questDescription",
+    "conditions": {
+      "goal": "experienceSummitFive.questGoal",
+      "minCorrect": 15,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
+    "vocabulary": [
+      {
+        "word": "der Onkel",
+        "translation-ru": "дядя",
+        "translation-en": "uncle",
+        "translation-uk": "дядько",
+        "translation-pl": "wujek",
+        "translation-es": "el tío",
+        "translation-fr": "l’oncle",
+        "translation-tr": "amca, dayı",
+        "translation-ro": "unchiul",
+        "translation-uz": "amaki, tog‘a",
+        "translation-hi": "चाचा",
+        "translation-ar": "العمّ"
+      },
+      {
+        "word": "manchmal",
+        "translation-ru": "иногда",
+        "translation-en": "sometimes",
+        "translation-uk": "іноді",
+        "translation-pl": "czasami",
+        "translation-es": "a veces",
+        "translation-fr": "parfois",
+        "translation-tr": "bazen",
+        "translation-ro": "uneori",
+        "translation-uz": "ba’zan",
+        "translation-hi": "कभी-कभी",
+        "translation-ar": "أحيانًا"
+      },
+      {
+        "word": "geantwortet",
+        "translation-ru": "ответил (Partizip от antworten)",
+        "translation-en": "answered",
+        "translation-uk": "відповів",
+        "translation-pl": "odpowiedział",
+        "translation-es": "respondido",
+        "translation-fr": "répondu",
+        "translation-tr": "cevap vermiş",
+        "translation-ro": "răspuns",
+        "translation-uz": "javob bergan",
+        "translation-hi": "जवाब दिया",
+        "translation-ar": "أجاب"
+      },
+      {
+        "word": "etwas",
+        "translation-ru": "что-то",
+        "translation-en": "something",
+        "translation-uk": "щось",
+        "translation-pl": "coś",
+        "translation-es": "algo",
+        "translation-fr": "quelque chose",
+        "translation-tr": "bir şey",
+        "translation-ro": "ceva",
+        "translation-uz": "nimadir",
+        "translation-hi": "कुछ",
+        "translation-ar": "شيء ما"
+      },
+      {
+        "word": "der Stand",
+        "translation-ru": "прилавок",
+        "translation-en": "stall",
+        "translation-uk": "прилавок",
+        "translation-pl": "stoisko",
+        "translation-es": "el puesto",
+        "translation-fr": "le stand",
+        "translation-tr": "tezgâh",
+        "translation-ro": "taraba",
+        "translation-uz": "rasta",
+        "translation-hi": "स्टॉल",
+        "translation-ar": "الكشك"
+      }
+    ],
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "experienceSummitFive.questTask1",
+        "options": [
+          "Die Frau, die wohnt über uns, ist Ärztin.",
+          "Die Frau, der über uns wohnt, ist Ärztin.",
+          "Die Frau, die über uns wohnt, ist Ärztin."
+        ],
+        "answer": "Die Frau, die über uns wohnt, ist Ärztin.",
+        "tip": "experienceSummitFive.questDescription"
+      },
+      {
+        "id": 2,
+        "type": "input",
+        "question": "experienceSummitFive.questTask2",
+        "correctAnswer": "den",
+        "tip": "experienceSummitFive.questDescription"
+      },
+      {
+        "id": 3,
+        "type": "input",
+        "question": "experienceSummitFive.questTask3",
+        "correctAnswer": "dem",
+        "tip": "experienceSummitFive.questDescription"
+      },
+      {
+        "id": 4,
+        "type": "reorder",
+        "question": "experienceSummitFive.questTask4",
+        "words": [
+          "Oma",
+          "das",
+          "ist",
+          "meine",
+          "dem",
+          "in",
+          "wohnt",
+          "der",
+          "Das",
+          "Dorf"
+        ],
+        "correctOrder": [
+          "Das",
+          "ist",
+          "das",
+          "Dorf",
+          "in",
+          "dem",
+          "meine",
+          "Oma",
+          "wohnt"
+        ],
+        "tip": "experienceSummitFive.questDescription"
+      },
+      {
+        "id": 5,
+        "type": "select",
+        "question": "experienceSummitFive.questTask5",
+        "options": [
+          "Die Kinder, mit denen ich arbeite, sind sehr freundlich.",
+          "Die Kinder, mit denen arbeite ich, sind sehr freundlich.",
+          "Die Kinder, mit die ich arbeite, sind sehr freundlich."
+        ],
+        "answer": "Die Kinder, mit denen ich arbeite, sind sehr freundlich.",
+        "tip": "experienceSummitFive.questDescription"
+      },
+      {
+        "id": 6,
+        "type": "input",
+        "question": "experienceSummitFive.questTask6",
+        "correctAnswer": "was",
+        "tip": "experienceSummitFive.questDescription"
+      },
+      {
+        "id": 7,
+        "type": "readAndAnswer",
+        "question": "experienceSummitFive.questTask7",
+        "text": "Im Haus, in dem ich wohne, gibt es zwölf Wohnungen. Die Familie, die unter uns wohnt, hat drei Kinder. Der alte Mann, dem ich manchmal helfe, wohnt ganz oben.",
+        "options": [
+          "dem alten Mann",
+          "den Kindern",
+          "der Familie"
+        ],
+        "answer": "dem alten Mann",
+        "tip": "experienceSummitFive.questDescription"
+      },
+      {
+        "id": 8,
+        "type": "input",
+        "question": "experienceSummitFive.questTask8",
+        "correctAnswer": "dem",
+        "tip": "experienceSummitFive.questDescription"
+      },
+      {
+        "id": 9,
+        "type": "select",
+        "question": "experienceSummitFive.questTask9",
+        "options": [
+          "Das ist das Buch, von dem ich habe dir erzählt.",
+          "Das ist das Buch, von dem ich dir erzählt habe.",
+          "Das ist das Buch, von das ich dir erzählt habe."
+        ],
+        "answer": "Das ist das Buch, von dem ich dir erzählt habe.",
+        "tip": "experienceSummitFive.questDescription"
+      },
+      {
+        "id": 10,
+        "type": "input",
+        "question": "experienceSummitFive.questTask10",
+        "correctAnswer": "arbeitet",
+        "tip": "experienceSummitFive.questDescription"
+      },
+      {
+        "id": 11,
+        "type": "reorder",
+        "question": "experienceSummitFive.questTask11",
+        "words": [
+          "Tasche",
+          "habe",
+          "gestern",
+          "der",
+          "suche",
+          "die",
+          "die",
+          "Ich",
+          "gekauft",
+          "ich"
+        ],
+        "correctOrder": [
+          "Ich",
+          "suche",
+          "die",
+          "Tasche",
+          "die",
+          "ich",
+          "gestern",
+          "gekauft",
+          "habe"
+        ],
+        "tip": "experienceSummitFive.questDescription"
+      },
+      {
+        "id": 12,
+        "type": "select",
+        "question": "experienceSummitFive.questTask12",
+        "options": [
+          "Die Leute, denen dieses Haus gehört, wohnen in München.",
+          "Die Leute, denen dieses Haus gehört, in München wohnen.",
+          "Die Leute, die dieses Haus gehört, wohnen in München."
+        ],
+        "answer": "Die Leute, denen dieses Haus gehört, wohnen in München.",
+        "tip": "experienceSummitFive.questDescription"
+      },
+      {
+        "id": 13,
+        "type": "readAndAnswer",
+        "question": "experienceSummitFive.questTask13",
+        "text": "Mein bester Freund, den ich seit der Schule kenne, wohnt jetzt in Wien. Er arbeitet in einem Restaurant, in dem es sehr gutes Essen gibt.",
+        "options": [
+          "in einem Restaurant",
+          "in einem Hotel",
+          "in einer Schule"
+        ],
+        "answer": "in einem Restaurant",
+        "tip": "experienceSummitFive.questDescription"
+      },
+      {
+        "id": 14,
+        "type": "input",
+        "question": "experienceSummitFive.questTask14",
+        "correctAnswer": "dem",
+        "tip": "experienceSummitFive.questDescription"
+      },
+      {
+        "id": 15,
+        "type": "input",
+        "question": "experienceSummitFive.questTask15",
+        "correctAnswer": "was",
+        "tip": "experienceSummitFive.questDescription"
+      }
+    ]
+  },
+  {
+    "questId": "experience-summit-six",
+    "title": "experienceSummitSix.questTitle",
+    "progress": "0/15",
+    "description": "experienceSummitSix.questDescription",
+    "conditions": {
+      "goal": "experienceSummitSix.questGoal",
+      "minCorrect": 15,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
+    "vocabulary": [
+      {
+        "word": "die Schule",
+        "translation-ru": "школа",
+        "translation-en": "school",
+        "translation-uk": "школа",
+        "translation-pl": "szkoła",
+        "translation-es": "el colegio",
+        "translation-fr": "l’école",
+        "translation-tr": "okul",
+        "translation-ro": "școala",
+        "translation-uz": "maktab",
+        "translation-hi": "स्कूल",
+        "translation-ar": "المدرسة"
+      },
+      {
+        "word": "das Mittagessen",
+        "translation-ru": "обед",
+        "translation-en": "lunch",
+        "translation-uk": "обід",
+        "translation-pl": "obiad",
+        "translation-es": "la comida",
+        "translation-fr": "le déjeuner",
+        "translation-tr": "öğle yemeği",
+        "translation-ro": "prânzul",
+        "translation-uz": "tushlik",
+        "translation-hi": "दोपहर का खाना",
+        "translation-ar": "الغداء"
+      },
+      {
+        "word": "ausfüllen",
+        "translation-ru": "заполнять",
+        "translation-en": "to fill in",
+        "translation-uk": "заповнювати",
+        "translation-pl": "wypełniać",
+        "translation-es": "rellenar",
+        "translation-fr": "remplir",
+        "translation-tr": "doldurmak",
+        "translation-ro": "a completa",
+        "translation-uz": "to‘ldirmoq",
+        "translation-hi": "भरना",
+        "translation-ar": "يملأ"
+      },
+      {
+        "word": "der Adler",
+        "translation-ru": "орёл",
+        "translation-en": "eagle",
+        "translation-uk": "орел",
+        "translation-pl": "orzeł",
+        "translation-es": "águila",
+        "translation-fr": "aigle",
+        "translation-tr": "kartal",
+        "translation-ro": "vultur",
+        "translation-uz": "burgut",
+        "translation-hi": "चील",
+        "translation-ar": "نسر"
+      },
+      {
+        "word": "das Formular",
+        "translation-ru": "бланк, анкета",
+        "translation-en": "form",
+        "translation-uk": "бланк",
+        "translation-pl": "formularz",
+        "translation-es": "el formulario",
+        "translation-fr": "le formulaire",
+        "translation-tr": "form",
+        "translation-ro": "formularul",
+        "translation-uz": "anketa",
+        "translation-hi": "फ़ॉर्म",
+        "translation-ar": "الاستمارة"
+      }
+    ],
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "experienceSummitSix.questTask1",
+        "options": [
+          "Die neue Schule wird seit zwei Jahren bauen.",
+          "Die neue Schule werden seit zwei Jahren gebaut.",
+          "Die neue Schule wird seit zwei Jahren gebaut."
+        ],
+        "answer": "Die neue Schule wird seit zwei Jahren gebaut.",
+        "tip": "experienceSummitSix.questDescription"
+      },
+      {
+        "id": 2,
+        "type": "input",
+        "question": "experienceSummitSix.questTask2",
+        "correctAnswer": "werden",
+        "tip": "experienceSummitSix.questDescription"
+      },
+      {
+        "id": 3,
+        "type": "input",
+        "question": "experienceSummitSix.questTask3",
+        "correctAnswer": "wurde",
+        "tip": "experienceSummitSix.questDescription"
+      },
+      {
+        "id": 4,
+        "type": "reorder",
+        "question": "experienceSummitSix.questTask4",
+        "words": [
+          "mein",
+          "repariert",
+          "Bruder",
+          "Auto",
+          "von",
+          "Das",
+          "meinem",
+          "wird"
+        ],
+        "correctOrder": [
+          "Das",
+          "Auto",
+          "wird",
+          "von",
+          "meinem",
+          "Bruder",
+          "repariert"
+        ],
+        "tip": "experienceSummitSix.questDescription"
+      },
+      {
+        "id": 5,
+        "type": "select",
+        "question": "experienceSummitSix.questTask5",
+        "options": [
+          "Diese Arbeit muss heute werden gemacht.",
+          "Diese Arbeit muss heute gemacht wird.",
+          "Diese Arbeit muss heute gemacht werden."
+        ],
+        "answer": "Diese Arbeit muss heute gemacht werden.",
+        "tip": "experienceSummitSix.questDescription"
+      },
+      {
+        "id": 6,
+        "type": "input",
+        "question": "experienceSummitSix.questTask6",
+        "correctAnswer": "abgeholt",
+        "tip": "experienceSummitSix.questDescription"
+      },
+      {
+        "id": 7,
+        "type": "readAndAnswer",
+        "question": "experienceSummitSix.questTask7",
+        "text": "Das Restaurant „Adler“ wurde 1950 gebaut. Heute gehört es der Familie Huber. Jeden Tag werden dort Fisch und Fleisch gekocht. Am Montag wird nicht gekocht.",
+        "options": [
+          "2010",
+          "1950",
+          "1990"
+        ],
+        "answer": "1950",
+        "tip": "experienceSummitSix.questDescription"
+      },
+      {
+        "id": 8,
+        "type": "input",
+        "question": "experienceSummitSix.questTask8",
+        "correctAnswer": "werden",
+        "tip": "experienceSummitSix.questDescription"
+      },
+      {
+        "id": 9,
+        "type": "select",
+        "question": "experienceSummitSix.questTask9",
+        "options": [
+          "Das Paket wurde am Mittwoch geschickt.",
+          "Das Paket wurde am Mittwoch schicken.",
+          "Das Paket wurden am Mittwoch geschickt."
+        ],
+        "answer": "Das Paket wurde am Mittwoch geschickt.",
+        "tip": "experienceSummitSix.questDescription"
+      },
+      {
+        "id": 10,
+        "type": "input",
+        "question": "experienceSummitSix.questTask10",
+        "correctAnswer": "vom",
+        "tip": "experienceSummitSix.questDescription"
+      },
+      {
+        "id": 11,
+        "type": "reorder",
+        "question": "experienceSummitSix.questTask11",
+        "words": [
+          "wird",
+          "Formular",
+          "Das",
+          "werden",
+          "muss",
+          "ausgefüllt"
+        ],
+        "correctOrder": [
+          "Das",
+          "Formular",
+          "muss",
+          "ausgefüllt",
+          "werden"
+        ],
+        "tip": "experienceSummitSix.questDescription"
+      },
+      {
+        "id": 12,
+        "type": "select",
+        "question": "experienceSummitSix.questTask12",
+        "options": [
+          "Das Rathaus wurden 1600 gebaut.",
+          "Das Rathaus wurde 1600 gebaut.",
+          "Das Rathaus wird 1600 gebaut."
+        ],
+        "answer": "Das Rathaus wurde 1600 gebaut.",
+        "tip": "experienceSummitSix.questDescription"
+      },
+      {
+        "id": 13,
+        "type": "readAndAnswer",
+        "question": "experienceSummitSix.questTask13",
+        "text": "In unserer Firma wird viel gearbeitet. Jeden Morgen werden die Briefe geöffnet, und am Nachmittag werden die Pakete geschickt. Am Freitag wird das Büro geputzt.",
+        "options": [
+          "am Nachmittag",
+          "am Freitag",
+          "jeden Morgen"
+        ],
+        "answer": "am Freitag",
+        "tip": "experienceSummitSix.questDescription"
+      },
+      {
+        "id": 14,
+        "type": "input",
+        "question": "experienceSummitSix.questTask14",
+        "correctAnswer": "bezahlt",
+        "tip": "experienceSummitSix.questDescription"
+      },
+      {
+        "id": 15,
+        "type": "input",
+        "question": "experienceSummitSix.questTask15",
+        "correctAnswer": "werden",
+        "tip": "experienceSummitSix.questDescription"
+      }
+    ]
+  },
+  {
+    "questId": "experience-summit-seven",
+    "title": "experienceSummitSeven.questTitle",
+    "progress": "0/15",
+    "description": "experienceSummitSeven.questDescription",
+    "conditions": {
+      "goal": "experienceSummitSeven.questGoal",
+      "minCorrect": 15,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
+    "vocabulary": [
+      {
+        "word": "versuchen",
+        "translation-ru": "пытаться",
+        "translation-en": "to try",
+        "translation-uk": "пробувати",
+        "translation-pl": "próbować",
+        "translation-es": "intentar",
+        "translation-fr": "essayer",
+        "translation-tr": "denemek",
+        "translation-ro": "a încerca",
+        "translation-uz": "urinmoq",
+        "translation-hi": "कोशिश करना",
+        "translation-ar": "يحاول"
+      },
+      {
+        "word": "das Kleid",
+        "translation-ru": "платье",
+        "translation-en": "dress",
+        "translation-uk": "сукня",
+        "translation-pl": "sukienka",
+        "translation-es": "el vestido",
+        "translation-fr": "la robe",
+        "translation-tr": "elbise",
+        "translation-ro": "rochia",
+        "translation-uz": "ko‘ylak",
+        "translation-hi": "पोशाक",
+        "translation-ar": "الفستان"
+      },
+      {
+        "word": "Österreich",
+        "translation-ru": "Австрия",
+        "translation-en": "Austria",
+        "translation-uk": "Австрія",
+        "translation-pl": "Austria",
+        "translation-es": "Austria",
+        "translation-fr": "l’Autriche",
+        "translation-tr": "Avusturya",
+        "translation-ro": "Austria",
+        "translation-uz": "Avstriya",
+        "translation-hi": "ऑस्ट्रिया",
+        "translation-ar": "النمسا"
+      },
+      {
+        "word": "der Friseur",
+        "translation-ru": "парикмахер",
+        "translation-en": "hairdresser",
+        "translation-uk": "перукар",
+        "translation-pl": "fryzjer",
+        "translation-es": "el peluquero",
+        "translation-fr": "le coiffeur",
+        "translation-tr": "kuaför",
+        "translation-ro": "frizerul",
+        "translation-uz": "sartarosh",
+        "translation-hi": "नाई",
+        "translation-ar": "الحلاق"
+      },
+      {
+        "word": "schneiden",
+        "translation-ru": "резать, стричь",
+        "translation-en": "to cut",
+        "translation-uk": "різати, стригти",
+        "translation-pl": "ciąć, strzyc",
+        "translation-es": "cortar",
+        "translation-fr": "couper",
+        "translation-tr": "kesmek",
+        "translation-ro": "a tăia",
+        "translation-uz": "kesmoq",
+        "translation-hi": "काटना",
+        "translation-ar": "يقصّ"
+      }
+    ],
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "experienceSummitSeven.questTask1",
+        "options": [
+          "Ich versuche, jeden Tag auf Deutsch lesen.",
+          "Ich versuche, jeden Tag auf Deutsch lesen zu.",
+          "Ich versuche, jeden Tag auf Deutsch zu lesen."
+        ],
+        "answer": "Ich versuche, jeden Tag auf Deutsch zu lesen.",
+        "tip": "experienceSummitSeven.questDescription"
+      },
+      {
+        "id": 2,
+        "type": "input",
+        "question": "experienceSummitSeven.questTask2",
+        "correctAnswer": "einzukaufen",
+        "tip": "experienceSummitSeven.questDescription"
+      },
+      {
+        "id": 3,
+        "type": "input",
+        "question": "experienceSummitSeven.questTask3",
+        "correctAnswer": "zu",
+        "tip": "experienceSummitSeven.questDescription"
+      },
+      {
+        "id": 4,
+        "type": "reorder",
+        "question": "experienceSummitSeven.questTask4",
+        "words": [
+          "die",
+          "schneiden",
+          "beim",
+          "zu",
+          "Haare",
+          "Ich",
+          "Friseur",
+          "lasse",
+          "mir"
+        ],
+        "correctOrder": [
+          "Ich",
+          "lasse",
+          "mir",
+          "beim",
+          "Friseur",
+          "die",
+          "Haare",
+          "schneiden"
+        ],
+        "tip": "experienceSummitSeven.questDescription"
+      },
+      {
+        "id": 5,
+        "type": "select",
+        "question": "experienceSummitSeven.questTask5",
+        "options": [
+          "Er ging, ohne danke sagen zu.",
+          "Er ging, ohne zu danke sagen.",
+          "Er ging, ohne danke zu sagen."
+        ],
+        "answer": "Er ging, ohne danke zu sagen.",
+        "tip": "experienceSummitSeven.questDescription"
+      },
+      {
+        "id": 6,
+        "type": "input",
+        "question": "experienceSummitSeven.questTask6",
+        "correctAnswer": "reparieren",
+        "tip": "experienceSummitSeven.questDescription"
+      },
+      {
+        "id": 7,
+        "type": "readAndAnswer",
+        "question": "experienceSummitSeven.questTask7",
+        "text": "Am Wochenende hatte Clara viel vor. Sie wollte ihre Wohnung aufräumen und ihr Fahrrad reparieren lassen. Aber es hat angefangen zu regnen, und sie hatte keine Lust, aus dem Haus zu gehen.",
+        "options": [
+          "Es hat geregnet.",
+          "Ihr Fahrrad war kaputt.",
+          "Sie war krank."
+        ],
+        "answer": "Es hat geregnet.",
+        "tip": "experienceSummitSeven.questDescription"
+      },
+      {
+        "id": 8,
+        "type": "input",
+        "question": "experienceSummitSeven.questTask8",
+        "correctAnswer": "kaufen",
+        "tip": "experienceSummitSeven.questDescription"
+      },
+      {
+        "id": 9,
+        "type": "select",
+        "question": "experienceSummitSeven.questTask9",
+        "options": [
+          "Es ist gefährlich, hier zu über die Straße gehen.",
+          "Es ist gefährlich, hier über die Straße zu gehen.",
+          "Es ist gefährlich, hier über die Straße gehen zu."
+        ],
+        "answer": "Es ist gefährlich, hier über die Straße zu gehen.",
+        "tip": "experienceSummitSeven.questDescription"
+      },
+      {
+        "id": 10,
+        "type": "input",
+        "question": "experienceSummitSeven.questTask10",
+        "correctAnswer": "lässt",
+        "tip": "experienceSummitSeven.questDescription"
+      },
+      {
+        "id": 11,
+        "type": "reorder",
+        "question": "experienceSummitSeven.questTask11",
+        "words": [
+          "um",
+          "zu",
+          "habe",
+          "angefangen",
+          "lernen",
+          "Ich",
+          "Spanisch"
+        ],
+        "correctOrder": [
+          "Ich",
+          "habe",
+          "angefangen",
+          "Spanisch",
+          "zu",
+          "lernen"
+        ],
+        "tip": "experienceSummitSeven.questDescription"
+      },
+      {
+        "id": 12,
+        "type": "select",
+        "question": "experienceSummitSeven.questTask12",
+        "options": [
+          "Wir planen, nach Österreich zu fahren.",
+          "Wir planen, zu nach Österreich fahren.",
+          "Wir planen, nach Österreich fahren zu."
+        ],
+        "answer": "Wir planen, nach Österreich zu fahren.",
+        "tip": "experienceSummitSeven.questDescription"
+      },
+      {
+        "id": 13,
+        "type": "readAndAnswer",
+        "question": "experienceSummitSeven.questTask13",
+        "text": "Herr Lange hat aufgehört zu rauchen. Jetzt versucht er, jeden Morgen spazieren zu gehen. Es ist nicht leicht, aber er macht es jeden Tag.",
+        "options": [
+          "jeden Morgen spazieren gehen",
+          "lange schlafen",
+          "rauchen"
+        ],
+        "answer": "jeden Morgen spazieren gehen",
+        "tip": "experienceSummitSeven.questDescription"
+      },
+      {
+        "id": 14,
+        "type": "input",
+        "question": "experienceSummitSeven.questTask14",
+        "correctAnswer": "zu",
+        "tip": "experienceSummitSeven.questDescription"
+      },
+      {
+        "id": 15,
+        "type": "input",
+        "question": "experienceSummitSeven.questTask15",
+        "correctAnswer": "Lasst",
+        "tip": "experienceSummitSeven.questDescription"
+      }
+    ]
+  },
+  {
+    "questId": "experience-summit-eight",
+    "title": "experienceSummitEight.questTitle",
+    "progress": "0/15",
+    "description": "experienceSummitEight.questDescription",
+    "conditions": {
+      "goal": "experienceSummitEight.questGoal",
+      "minCorrect": 15,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
+    "vocabulary": [
+      {
+        "word": "der Preis",
+        "translation-ru": "цена",
+        "translation-en": "price",
+        "translation-uk": "ціна",
+        "translation-pl": "cena",
+        "translation-es": "el precio",
+        "translation-fr": "le prix",
+        "translation-tr": "fiyat",
+        "translation-ro": "prețul",
+        "translation-uz": "narx",
+        "translation-hi": "क़ीमत",
+        "translation-ar": "السعر"
+      },
+      {
+        "word": "das Wartezimmer",
+        "translation-ru": "приёмная, зал ожидания",
+        "translation-en": "waiting room",
+        "translation-uk": "приймальня",
+        "translation-pl": "poczekalnia",
+        "translation-es": "la sala de espera",
+        "translation-fr": "la salle d’attente",
+        "translation-tr": "bekleme odası",
+        "translation-ro": "sala de așteptare",
+        "translation-uz": "kutish xonasi",
+        "translation-hi": "प्रतीक्षालय",
+        "translation-ar": "غرفة الانتظار"
+      },
+      {
+        "word": "die Familie",
+        "translation-ru": "семья",
+        "translation-en": "family",
+        "translation-uk": "сім’я",
+        "translation-pl": "rodzina",
+        "translation-es": "la familia",
+        "translation-fr": "la famille",
+        "translation-tr": "aile",
+        "translation-ro": "familia",
+        "translation-uz": "oila",
+        "translation-hi": "परिवार",
+        "translation-ar": "العائلة"
+      },
+      {
+        "word": "die Ärztin",
+        "translation-ru": "врач (женщина)",
+        "translation-en": "doctor (woman)",
+        "translation-uk": "лікарка",
+        "translation-pl": "lekarka",
+        "translation-es": "la médica",
+        "translation-fr": "la médecin",
+        "translation-tr": "kadın doktor",
+        "translation-ro": "doctorița",
+        "translation-uz": "shifokor ayol",
+        "translation-hi": "डॉक्टर (महिला)",
+        "translation-ar": "الطبيبة"
+      },
+      {
+        "word": "helfen",
+        "translation-ru": "помогать",
+        "translation-en": "to help",
+        "translation-uk": "допомагати",
+        "translation-pl": "pomagać",
+        "translation-es": "ayudar",
+        "translation-fr": "aider",
+        "translation-tr": "yardım etmek",
+        "translation-ro": "a ajuta",
+        "translation-uz": "yordam bermoq",
+        "translation-hi": "मदद करना",
+        "translation-ar": "يساعد"
+      },
+      {
+        "word": "der Verkäufer",
+        "translation-ru": "продавец",
+        "translation-en": "salesperson",
+        "translation-uk": "продавець",
+        "translation-pl": "sprzedawca",
+        "translation-es": "el vendedor",
+        "translation-fr": "le vendeur",
+        "translation-tr": "satıcı",
+        "translation-ro": "vânzătorul",
+        "translation-uz": "sotuvchi",
+        "translation-hi": "विक्रेता",
+        "translation-ar": "البائع"
+      },
+      {
+        "word": "der Nachbar",
+        "translation-ru": "сосед",
+        "translation-en": "neighbour",
+        "translation-uk": "сусід",
+        "translation-pl": "sąsiad",
+        "translation-es": "el vecino",
+        "translation-fr": "le voisin",
+        "translation-tr": "komşu",
+        "translation-ro": "vecinul",
+        "translation-uz": "qo‘shni",
+        "translation-hi": "पड़ोसी",
+        "translation-ar": "الجار"
+      }
+    ],
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "experienceSummitEight.questTask1",
+        "options": [
+          "Hast du deine Frage schon gemacht?",
+          "Hast du deine Frage schon gefragt?",
+          "Hast du deine Frage schon gestellt?"
+        ],
+        "answer": "Hast du deine Frage schon gestellt?",
+        "tip": "experienceSummitEight.questDescription"
+      },
+      {
+        "id": 2,
+        "type": "input",
+        "question": "experienceSummitEight.questTask2",
+        "correctAnswer": "Entscheidung",
+        "tip": "experienceSummitEight.questDescription"
+      },
+      {
+        "id": 3,
+        "type": "input",
+        "question": "experienceSummitEight.questTask3",
+        "correctAnswer": "nehmen",
+        "tip": "experienceSummitEight.questDescription"
+      },
+      {
+        "id": 4,
+        "type": "reorder",
+        "question": "experienceSummitEight.questTask4",
+        "words": [
+          "Bescheid",
+          "mir",
+          "einen",
+          "Sie",
+          "Bitte",
+          "morgen",
+          "sagen"
+        ],
+        "correctOrder": [
+          "Bitte",
+          "sagen",
+          "Sie",
+          "mir",
+          "morgen",
+          "Bescheid"
+        ],
+        "tip": "experienceSummitEight.questDescription"
+      },
+      {
+        "id": 5,
+        "type": "select",
+        "question": "experienceSummitEight.questTask5",
+        "options": [
+          "Sie machte den Vorschlag, einen Kuchen kaufen zu.",
+          "Sie stellte den Vorschlag, einen Kuchen zu kaufen.",
+          "Sie machte den Vorschlag, einen Kuchen zu kaufen."
+        ],
+        "answer": "Sie machte den Vorschlag, einen Kuchen zu kaufen.",
+        "tip": "experienceSummitEight.questDescription"
+      },
+      {
+        "id": 6,
+        "type": "input",
+        "question": "experienceSummitEight.questTask6",
+        "correctAnswer": "führen",
+        "tip": "experienceSummitEight.questDescription"
+      },
+      {
+        "id": 7,
+        "type": "readAndAnswer",
+        "question": "experienceSummitEight.questTask7",
+        "text": "Tina will ein Auto kaufen. Sie führt ein Gespräch mit dem Verkäufer und stellt viele Fragen. Der Verkäufer macht ihr einen guten Preis. Tina sagt: „Ich gebe Ihnen morgen Bescheid.“",
+        "options": [
+          "nächste Woche",
+          "morgen",
+          "heute"
+        ],
+        "answer": "morgen",
+        "tip": "experienceSummitEight.questDescription"
+      },
+      {
+        "id": 8,
+        "type": "input",
+        "question": "experienceSummitEight.questTask8",
+        "correctAnswer": "Platz",
+        "tip": "experienceSummitEight.questDescription"
+      },
+      {
+        "id": 9,
+        "type": "select",
+        "question": "experienceSummitEight.questTask9",
+        "options": [
+          "Warum hast du keine Antwort auf meine Frage gegeben?",
+          "Warum hast du keine Antwort auf meine Frage gestellt?",
+          "Warum hast du keine Antwort an meine Frage gegeben?"
+        ],
+        "answer": "Warum hast du keine Antwort auf meine Frage gegeben?",
+        "tip": "experienceSummitEight.questDescription"
+      },
+      {
+        "id": 10,
+        "type": "input",
+        "question": "experienceSummitEight.questTask10",
+        "correctAnswer": "weiß",
+        "tip": "experienceSummitEight.questDescription"
+      },
+      {
+        "id": 11,
+        "type": "select",
+        "question": "experienceSummitEight.questTask11",
+        "options": [
+          "Die ganze Familie trifft die Entscheidung.",
+          "Die ganze Familie trefft die Entscheidung.",
+          "Die ganze Familie macht die Entscheidung."
+        ],
+        "answer": "Die ganze Familie trifft die Entscheidung.",
+        "tip": "experienceSummitEight.questDescription"
+      },
+      {
+        "id": 12,
+        "type": "reorder",
+        "question": "experienceSummitEight.questTask12",
+        "words": [
+          "eine",
+          "stellte",
+          "Der",
+          "Lehrer",
+          "Antwort",
+          "gab",
+          "lange"
+        ],
+        "correctOrder": [
+          "Der",
+          "Lehrer",
+          "gab",
+          "eine",
+          "lange",
+          "Antwort"
+        ],
+        "tip": "experienceSummitEight.questDescription"
+      },
+      {
+        "id": 13,
+        "type": "input",
+        "question": "experienceSummitEight.questTask13",
+        "correctAnswer": "Rücksicht",
+        "tip": "experienceSummitEight.questDescription"
+      },
+      {
+        "id": 14,
+        "type": "input",
+        "question": "experienceSummitEight.questTask14",
+        "correctAnswer": "hat",
+        "tip": "experienceSummitEight.questDescription"
+      },
+      {
+        "id": 15,
+        "type": "input",
+        "question": "experienceSummitEight.questTask15",
+        "correctAnswer": "Gespräch",
+        "tip": "experienceSummitEight.questDescription"
+      }
+    ]
+  },
+  {
+    "questId": "experience-summit-nine",
+    "title": "experienceSummitNine.questTitle",
+    "progress": "0/15",
+    "description": "experienceSummitNine.questDescription",
+    "conditions": {
+      "goal": "experienceSummitNine.questGoal",
+      "minCorrect": 15,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
+    "vocabulary": [
+      {
+        "word": "trotzdem",
+        "translation-ru": "всё равно, несмотря на это",
+        "translation-en": "anyway, nevertheless",
+        "translation-uk": "усе одно, попри це",
+        "translation-pl": "mimo to",
+        "translation-es": "aun así",
+        "translation-fr": "quand même",
+        "translation-tr": "yine de",
+        "translation-ro": "totuși",
+        "translation-uz": "baribir",
+        "translation-hi": "फिर भी",
+        "translation-ar": "ومع ذلك"
+      },
+      {
+        "word": "schließlich",
+        "translation-ru": "в конце концов",
+        "translation-en": "finally, in the end",
+        "translation-uk": "зрештою",
+        "translation-pl": "w końcu",
+        "translation-es": "al final",
+        "translation-fr": "finalement",
+        "translation-tr": "sonunda",
+        "translation-ro": "în cele din urmă",
+        "translation-uz": "oxir-oqibat",
+        "translation-hi": "आख़िरकार",
+        "translation-ar": "في النهاية"
+      },
+      {
+        "word": "bevor",
+        "translation-ru": "прежде чем",
+        "translation-en": "before (conjunction)",
+        "translation-uk": "перш ніж",
+        "translation-pl": "zanim",
+        "translation-es": "antes de que",
+        "translation-fr": "avant que",
+        "translation-tr": "-madan önce",
+        "translation-ro": "înainte să",
+        "translation-uz": "…dan oldin",
+        "translation-hi": "…से पहले",
+        "translation-ar": "قبل أن"
+      },
+      {
+        "word": "nachdem",
+        "translation-ru": "после того как",
+        "translation-en": "after (conjunction)",
+        "translation-uk": "після того як",
+        "translation-pl": "po tym, jak",
+        "translation-es": "después de que",
+        "translation-fr": "après que",
+        "translation-tr": "-dıktan sonra",
+        "translation-ro": "după ce",
+        "translation-uz": "…gandan keyin",
+        "translation-hi": "…के बाद",
+        "translation-ar": "بعد أن"
+      },
+      {
+        "word": "deshalb",
+        "translation-ru": "поэтому",
+        "translation-en": "that’s why",
+        "translation-uk": "тому",
+        "translation-pl": "dlatego",
+        "translation-es": "por eso",
+        "translation-fr": "c’est pourquoi",
+        "translation-tr": "bu yüzden",
+        "translation-ro": "de aceea",
+        "translation-uz": "shuning uchun",
+        "translation-hi": "इसलिए",
+        "translation-ar": "لذلك"
+      }
+    ],
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "experienceSummitNine.questTask1",
+        "options": [
+          "Obwohl es kalt war, gingen wir ans Meer, um schwimmen zu.",
+          "Obwohl es kalt war, wir gingen ans Meer, um zu schwimmen.",
+          "Obwohl es kalt war, gingen wir ans Meer, um zu schwimmen."
+        ],
+        "answer": "Obwohl es kalt war, gingen wir ans Meer, um zu schwimmen.",
+        "tip": "experienceSummitNine.questDescription"
+      },
+      {
+        "id": 2,
+        "type": "input",
+        "question": "experienceSummitNine.questTask2",
+        "correctAnswer": "hat",
+        "tip": "experienceSummitNine.questDescription"
+      },
+      {
+        "id": 3,
+        "type": "input",
+        "question": "experienceSummitNine.questTask3",
+        "correctAnswer": "Nachdem",
+        "tip": "experienceSummitNine.questDescription"
+      },
+      {
+        "id": 4,
+        "type": "reorder",
+        "question": "experienceSummitNine.questTask4",
+        "words": [
+          "gemacht",
+          "Fotos",
+          "von",
+          "Bruder",
+          "Die",
+          "meinem",
+          "wurde",
+          "wurden"
+        ],
+        "correctOrder": [
+          "Die",
+          "Fotos",
+          "wurden",
+          "von",
+          "meinem",
+          "Bruder",
+          "gemacht"
+        ],
+        "tip": "experienceSummitNine.questDescription"
+      },
+      {
+        "id": 5,
+        "type": "select",
+        "question": "experienceSummitNine.questTask5",
+        "options": [
+          "Ich habe keine Lust, zur Arbeit zu gehen, deshalb ich bleibe zu Hause.",
+          "Ich habe keine Lust, zur Arbeit gehen zu, deshalb bleibe ich zu Hause.",
+          "Ich habe keine Lust, zur Arbeit zu gehen, deshalb bleibe ich zu Hause."
+        ],
+        "answer": "Ich habe keine Lust, zur Arbeit zu gehen, deshalb bleibe ich zu Hause.",
+        "tip": "experienceSummitNine.questDescription"
+      },
+      {
+        "id": 6,
+        "type": "input",
+        "question": "experienceSummitNine.questTask6",
+        "correctAnswer": "damit",
+        "tip": "experienceSummitNine.questDescription"
+      },
+      {
+        "id": 7,
+        "type": "readAndAnswer",
+        "question": "experienceSummitNine.questTask7",
+        "text": "Als Peter nach Deutschland kam, sprach er kein Wort Deutsch. Deshalb machte er einen Kurs. Obwohl es schwer war, lernte er jeden Tag. Heute arbeitet er in einer Firma, in der nur Deutsch gesprochen wird.",
+        "options": [
+          "nur Deutsch",
+          "Deutsch und Englisch",
+          "nur Englisch"
+        ],
+        "answer": "nur Deutsch",
+        "tip": "experienceSummitNine.questDescription"
+      },
+      {
+        "id": 8,
+        "type": "input",
+        "question": "experienceSummitNine.questTask8",
+        "correctAnswer": "waren",
+        "tip": "experienceSummitNine.questDescription"
+      },
+      {
+        "id": 9,
+        "type": "select",
+        "question": "experienceSummitNine.questTask9",
+        "options": [
+          "Das ist das Kind, dem ich Deutsch erkläre.",
+          "Das ist das Kind, dem erkläre ich Deutsch.",
+          "Das ist das Kind, das ich Deutsch erkläre."
+        ],
+        "answer": "Das ist das Kind, dem ich Deutsch erkläre.",
+        "tip": "experienceSummitNine.questDescription"
+      },
+      {
+        "id": 10,
+        "type": "input",
+        "question": "experienceSummitNine.questTask10",
+        "correctAnswer": "geschickt",
+        "tip": "experienceSummitNine.questDescription"
+      },
+      {
+        "id": 11,
+        "type": "reorder",
+        "question": "experienceSummitNine.questTask11",
+        "words": [
+          "ihre",
+          "Sie",
+          "Mutter",
+          "zum",
+          "damit",
+          "Bahnhof",
+          "abzuholen",
+          "fuhr",
+          "um"
+        ],
+        "correctOrder": [
+          "Sie",
+          "fuhr",
+          "zum",
+          "Bahnhof",
+          "um",
+          "ihre",
+          "Mutter",
+          "abzuholen"
+        ],
+        "tip": "experienceSummitNine.questDescription"
+      },
+      {
+        "id": 12,
+        "type": "select",
+        "question": "experienceSummitNine.questTask12",
+        "options": [
+          "Es war laut, obwohl lernte sie.",
+          "Es war laut, trotzdem lernte sie.",
+          "Es war laut, trotzdem sie lernte."
+        ],
+        "answer": "Es war laut, trotzdem lernte sie.",
+        "tip": "experienceSummitNine.questDescription"
+      },
+      {
+        "id": 13,
+        "type": "readAndAnswer",
+        "question": "experienceSummitNine.questTask13",
+        "text": "Bevor Anna nach Berlin kam, hatte sie bei ihren Eltern gewohnt. In Berlin suchte sie eine Wohnung, die nicht zu teuer war. Schließlich fand sie eine kleine Wohnung mit Balkon.",
+        "options": [
+          "bei ihren Eltern",
+          "in einem Hotel",
+          "in einer kleinen Wohnung"
+        ],
+        "answer": "bei ihren Eltern",
+        "tip": "experienceSummitNine.questDescription"
+      },
+      {
+        "id": 14,
+        "type": "input",
+        "question": "experienceSummitNine.questTask14",
+        "correctAnswer": "was",
+        "tip": "experienceSummitNine.questDescription"
+      },
+      {
+        "id": 15,
+        "type": "input",
+        "question": "experienceSummitNine.questTask15",
+        "correctAnswer": "werden",
+        "tip": "experienceSummitNine.questDescription"
+      }
+    ]
+  },
+  {
+    "questId": "experience-summit-ten",
+    "title": "experienceSummitTen.questTitle",
+    "progress": "0/15",
+    "description": "experienceSummitTen.questDescription",
+    "conditions": {
+      "goal": "experienceSummitTen.questGoal",
+      "minCorrect": 15,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
+    "vocabulary": [
+      {
+        "word": "die Prüfung",
+        "translation-ru": "экзамен",
+        "translation-en": "exam",
+        "translation-uk": "іспит",
+        "translation-pl": "egzamin",
+        "translation-es": "el examen",
+        "translation-fr": "l’examen",
+        "translation-tr": "sınav",
+        "translation-ro": "examenul",
+        "translation-uz": "imtihon",
+        "translation-hi": "परीक्षा",
+        "translation-ar": "الامتحان"
+      },
+      {
+        "word": "bestehen",
+        "translation-ru": "сдать (экзамен)",
+        "translation-en": "to pass (an exam)",
+        "translation-uk": "скласти (іспит)",
+        "translation-pl": "zdać (egzamin)",
+        "translation-es": "aprobar",
+        "translation-fr": "réussir (un examen)",
+        "translation-tr": "(sınavı) geçmek",
+        "translation-ro": "a lua (un examen)",
+        "translation-uz": "(imtihondan) o‘tmoq",
+        "translation-hi": "(परीक्षा) पास करना",
+        "translation-ar": "ينجح (في امتحان)"
+      },
+      {
+        "word": "nachdem",
+        "translation-ru": "после того как",
+        "translation-en": "after (conjunction)",
+        "translation-uk": "після того як",
+        "translation-pl": "po tym, jak",
+        "translation-es": "después de que",
+        "translation-fr": "après que",
+        "translation-tr": "-dıktan sonra",
+        "translation-ro": "după ce",
+        "translation-uz": "…gandan keyin",
+        "translation-hi": "…के बाद",
+        "translation-ar": "بعد أن"
+      },
+      {
+        "word": "deshalb",
+        "translation-ru": "поэтому",
+        "translation-en": "that’s why",
+        "translation-uk": "тому",
+        "translation-pl": "dlatego",
+        "translation-es": "por eso",
+        "translation-fr": "c’est pourquoi",
+        "translation-tr": "bu yüzden",
+        "translation-ro": "de aceea",
+        "translation-uz": "shuning uchun",
+        "translation-hi": "इसलिए",
+        "translation-ar": "لذلك"
+      },
+      {
+        "word": "man",
+        "translation-ru": "люди вообще (безличное)",
+        "translation-en": "one, people (impersonal)",
+        "translation-uk": "люди взагалі (безособове)",
+        "translation-pl": "się (bezosobowo)",
+        "translation-es": "se, uno",
+        "translation-fr": "on",
+        "translation-tr": "insan (genel)",
+        "translation-ro": "se (impersonal)",
+        "translation-uz": "kishi (umumiy)",
+        "translation-hi": "लोग (आम तौर पर)",
+        "translation-ar": "المرء"
+      }
+    ],
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "experienceSummitTen.questTask1",
+        "options": [
+          "Obwohl die Prüfung schwer war, ich habe sie bestanden.",
+          "Obwohl die Prüfung war schwer, habe ich sie bestanden.",
+          "Obwohl die Prüfung schwer war, habe ich sie bestanden."
+        ],
+        "answer": "Obwohl die Prüfung schwer war, habe ich sie bestanden.",
+        "tip": "experienceSummitTen.questDescription"
+      },
+      {
+        "id": 2,
+        "type": "input",
+        "question": "experienceSummitTen.questTask2",
+        "correctAnswer": "las",
+        "tip": "experienceSummitTen.questDescription"
+      },
+      {
+        "id": 3,
+        "type": "input",
+        "question": "experienceSummitTen.questTask3",
+        "correctAnswer": "der",
+        "tip": "experienceSummitTen.questDescription"
+      },
+      {
+        "id": 4,
+        "type": "reorder",
+        "question": "experienceSummitTen.questTask4",
+        "words": [
+          "Die",
+          "Brücke",
+          "wird",
+          "werden",
+          "gebaut",
+          "neue"
+        ],
+        "correctOrder": [
+          "Die",
+          "neue",
+          "Brücke",
+          "wird",
+          "gebaut"
+        ],
+        "tip": "experienceSummitTen.questDescription"
+      },
+      {
+        "id": 5,
+        "type": "select",
+        "question": "experienceSummitTen.questTask5",
+        "options": [
+          "Ich ging zum Arzt, deshalb war ich krank.",
+          "Ich ging zum Arzt, weil ich war krank.",
+          "Ich ging zum Arzt, weil ich krank war."
+        ],
+        "answer": "Ich ging zum Arzt, weil ich krank war.",
+        "tip": "experienceSummitTen.questDescription"
+      },
+      {
+        "id": 6,
+        "type": "input",
+        "question": "experienceSummitTen.questTask6",
+        "correctAnswer": "zu",
+        "tip": "experienceSummitTen.questDescription"
+      },
+      {
+        "id": 7,
+        "type": "readAndAnswer",
+        "question": "experienceSummitTen.questTask7",
+        "text": "Liebe Oma, letzte Woche habe ich die Prüfung B1 bestanden! Ich hatte viel gelernt, obwohl ich wenig Zeit hatte. Jetzt kann ich eine Arbeit suchen, für die man gutes Deutsch braucht.",
+        "options": [
+          "Oma besucht",
+          "die Prüfung bestanden",
+          "eine Arbeit gefunden"
+        ],
+        "answer": "die Prüfung bestanden",
+        "tip": "experienceSummitTen.questDescription"
+      },
+      {
+        "id": 8,
+        "type": "input",
+        "question": "experienceSummitTen.questTask8",
+        "correctAnswer": "hatten",
+        "tip": "experienceSummitTen.questDescription"
+      },
+      {
+        "id": 9,
+        "type": "select",
+        "question": "experienceSummitTen.questTask9",
+        "options": [
+          "Das Auto muss waschen werden.",
+          "Das Auto muss gewaschen werden.",
+          "Das Auto muss werden gewaschen."
+        ],
+        "answer": "Das Auto muss gewaschen werden.",
+        "tip": "experienceSummitTen.questDescription"
+      },
+      {
+        "id": 10,
+        "type": "input",
+        "question": "experienceSummitTen.questTask10",
+        "correctAnswer": "lasse",
+        "tip": "experienceSummitTen.questDescription"
+      },
+      {
+        "id": 11,
+        "type": "reorder",
+        "question": "experienceSummitTen.questTask11",
+        "words": [
+          "Geld",
+          "damit",
+          "spart",
+          "Er",
+          "reisen",
+          "zu",
+          "um"
+        ],
+        "correctOrder": [
+          "Er",
+          "spart",
+          "Geld",
+          "um",
+          "zu",
+          "reisen"
+        ],
+        "tip": "experienceSummitTen.questDescription"
+      },
+      {
+        "id": 12,
+        "type": "select",
+        "question": "experienceSummitTen.questTask12",
+        "options": [
+          "Das ist die Wohnung, die wir kaufen wollen.",
+          "Das ist die Wohnung, den wir kaufen wollen.",
+          "Das ist die Wohnung, die wir wollen kaufen."
+        ],
+        "answer": "Das ist die Wohnung, die wir kaufen wollen.",
+        "tip": "experienceSummitTen.questDescription"
+      },
+      {
+        "id": 13,
+        "type": "readAndAnswer",
+        "question": "experienceSummitTen.questTask13",
+        "text": "Seit gestern gibt es in unserer Straße ein neues Café. Der Kaffee, der dort gemacht wird, ist sehr gut. Deshalb trinke ich jetzt jeden Morgen dort einen Kaffee, obwohl er ein bisschen teuer ist.",
+        "options": [
+          "Das Café ist neben der Arbeit.",
+          "Der Kaffee ist sehr gut.",
+          "Der Kaffee ist billig."
+        ],
+        "answer": "Der Kaffee ist sehr gut.",
+        "tip": "experienceSummitTen.questDescription"
+      },
+      {
+        "id": 14,
+        "type": "input",
+        "question": "experienceSummitTen.questTask14",
+        "correctAnswer": "ohne",
+        "tip": "experienceSummitTen.questDescription"
+      },
+      {
+        "id": 15,
+        "type": "input",
+        "question": "experienceSummitTen.questTask15",
+        "correctAnswer": "fuhren",
+        "tip": "experienceSummitTen.questDescription"
+      }
+    ]
+  }
+]

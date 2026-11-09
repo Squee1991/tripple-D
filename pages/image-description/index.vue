@@ -75,7 +75,7 @@
 </template>
 
 <script setup>
-import {ref, onMounted} from 'vue'
+import {ref, computed, watch, onMounted} from 'vue'
 import {preloadInterstitial} from '~/utils/admob.js'
 import {useSeoMeta, useState} from "#imports"
 import {useRouter} from 'vue-router'
@@ -87,6 +87,7 @@ import PhotoFrame from "../../assets/images/photo-frame.svg"
 import VArrowNav from "~/src/components/V-arrowNav.vue"
 import VTransition from "~/src/components/V-transition.vue"
 import { userAuthStore } from '../../store/authStore.js'
+import { visibleLevels } from '~/utils/germanLevel.js'
 import VPremiumModal from "~/src/components/V-premiumModal.vue"
 
 useSeoMeta({
@@ -97,10 +98,14 @@ const router = useRouter()
 const {t} = useI18n()
 const authStore = userAuthStore()
 const { $track } = useNuxtApp()
-const levels = ['A1', 'A2', 'B1']
+// уровни ниже выбранного уровня немецкого скрыты
+const levels = computed(() => visibleLevels(['A1', 'A2', 'B1'], authStore.germanLevel))
 const viewState = ref('topics')
 const selectedTopic = ref(null)
-const selectedLevel = ref('A1')
+const selectedLevel = ref(levels.value[0] || 'A1')
+watch(levels, (list) => {
+  if (!list.includes(selectedLevel.value)) selectedLevel.value = list[0] || 'A1'
+})
 const showDevModal = ref(false)
 const showPremiumModal = ref(false)
 

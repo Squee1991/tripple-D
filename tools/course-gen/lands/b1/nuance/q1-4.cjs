@@ -1,0 +1,212 @@
+// Мост оттенков, квесты 1-4: zwar… aber, sowohl… als auch, indem, bis
+// порядок переводов: ru en uk pl es fr tr ro uz hi ar
+module.exports = [
+	// 1. zwar… aber
+	{
+		title: ['Хоть и…, но… (zwar… aber)', 'True…, but… (zwar… aber)', 'Хоч і…, але… (zwar… aber)', 'Wprawdzie…, ale… (zwar… aber)', 'Es cierto que…, pero… (zwar… aber)', 'Certes…, mais… (zwar… aber)', 'Gerçi…, ama… (zwar… aber)', 'Ce-i drept…, dar… (zwar… aber)', 'To‘g‘ri…, lekin… (zwar… aber)', 'हालाँकि…, लेकिन… (zwar… aber)', 'صحيح أن…، لكن… (zwar… aber)'],
+		desc: [
+			'zwar…, aber… = хоть и…, но…: Das Auto ist zwar alt, aber es fährt gut. Сначала признаём факт, потом говорим главное. zwar стоит в середине предложения, а aber начинает вторую часть. После aber порядок слов обычный.',
+			'zwar…, aber… = true…, but…: Das Auto ist zwar alt, aber es fährt gut. First you admit a fact, then you say the main point. zwar stands in the middle of the sentence and aber begins the second part. Word order after aber is normal.',
+			'zwar…, aber… = хоч і…, але…: Das Auto ist zwar alt, aber es fährt gut. Спочатку визнаємо факт, потім кажемо головне. zwar стоїть у середині речення, а aber починає другу частину. Після aber порядок слів звичайний.',
+			'zwar…, aber… = wprawdzie…, ale…: Das Auto ist zwar alt, aber es fährt gut. Najpierw przyznajemy fakt, potem mówimy to, co najważniejsze. zwar stoi w środku zdania, a aber zaczyna drugą część. Po aber szyk jest zwykły.',
+			'zwar…, aber… = es cierto que…, pero…: Das Auto ist zwar alt, aber es fährt gut. Primero admites un hecho y luego dices lo principal. zwar va en medio de la frase y aber empieza la segunda parte. Después de aber el orden es normal.',
+			'zwar…, aber… = certes…, mais… : Das Auto ist zwar alt, aber es fährt gut. On admet d’abord un fait, puis on dit l’essentiel. zwar se place au milieu de la phrase et aber commence la deuxième partie. Après aber, l’ordre des mots est normal.',
+			'zwar…, aber… = gerçi…, ama…: Das Auto ist zwar alt, aber es fährt gut. Önce bir gerçeği kabul eder, sonra asıl şeyi söylersin. zwar cümlenin ortasında durur, aber ikinci bölümü başlatır. aber sonrasında kelime sırası normaldir.',
+			'zwar…, aber… = ce-i drept…, dar…: Das Auto ist zwar alt, aber es fährt gut. Mai întâi recunoști un fapt, apoi spui ideea principală. zwar stă în mijlocul propoziției, iar aber începe partea a doua. După aber, ordinea cuvintelor este normală.',
+			'zwar…, aber… = to‘g‘ri…, lekin…: Das Auto ist zwar alt, aber es fährt gut. Avval faktni tan olasan, keyin asosiy gapni aytasan. zwar gap o‘rtasida turadi, aber ikkinchi qismni boshlaydi. aber dan keyin so‘z tartibi odatdagidek.',
+			'zwar…, aber… = हालाँकि…, लेकिन…: Das Auto ist zwar alt, aber es fährt gut. पहले तुम एक तथ्य मानते हो, फिर मुख्य बात कहते हो। zwar वाक्य के बीच में आता है और aber दूसरा भाग शुरू करता है। aber के बाद शब्द क्रम सामान्य रहता है।',
+			'zwar…, aber… = صحيح أن…، لكن…: Das Auto ist zwar alt, aber es fährt gut. تعترف أولًا بحقيقة ثم تقول الفكرة الأساسية. تأتي zwar في وسط الجملة وتبدأ aber الجزء الثاني. بعد aber يبقى ترتيب الكلمات عاديًا.'
+		],
+		vocab: [
+			['zwar', 'хоть и, правда', 'true, admittedly', 'хоч і, щоправда', 'wprawdzie', 'es cierto que', 'certes', 'gerçi', 'ce-i drept', 'to‘g‘ri', 'हालाँकि', 'صحيح أن']
+		],
+		tasks: [
+			['tr', ['Машина хоть и старая, но ездит хорошо.', 'The car is old, but it runs well.', 'Машина хоч і стара, але їздить добре.', 'Samochód jest wprawdzie stary, ale jeździ dobrze.', 'Es cierto que el coche es viejo, pero funciona bien.', 'La voiture est certes vieille, mais elle roule bien.', 'Araba gerçi eski ama iyi gidiyor.', 'Mașina e veche, ce-i drept, dar merge bine.', 'Mashina eski bo‘lsa ham, yaxshi yuradi.', 'कार पुरानी ज़रूर है, लेकिन अच्छी चलती है।', 'صحيح أن السيارة قديمة، لكنها تسير جيدًا.'],
+				['Das Auto ist zwar alt, aber es fährt gut.', 'Das Auto ist zwar alt, oder es fährt gut.', 'Das Auto ist alt zwar, aber es fährt gut.'], 'Das Auto ist zwar alt, aber es fährt gut.'],
+			['gw', ['Квартира хоть и маленькая, но светлая', 'The flat is small, but bright', 'Квартира хоч і маленька, але світла', 'Mieszkanie jest wprawdzie małe, ale jasne', 'El piso es pequeño, pero luminoso', 'L’appartement est certes petit, mais clair', 'Daire gerçi küçük ama aydınlık', 'Apartamentul e mic, dar luminos', 'Kvartira kichik bo‘lsa ham, yorug‘', 'फ़्लैट छोटा ज़रूर है, लेकिन रोशन है', 'الشقة صغيرة لكنها مضيئة'],
+				'Die Wohnung ist ___ klein, aber hell.', 'zwar'],
+			['gw', ['Он хоть и устал, но ещё работает', 'He is tired, but he is still working', 'Він хоч і втомився, але ще працює', 'Jest wprawdzie zmęczony, ale jeszcze pracuje', 'Está cansado, pero sigue trabajando', 'Il est certes fatigué, mais il travaille encore', 'Gerçi yorgun ama hâlâ çalışıyor', 'E obosit, dar încă lucrează', 'U charchagan bo‘lsa ham, hali ishlayapti', 'वह थका ज़रूर है, लेकिन अभी भी काम कर रहा है', 'هو متعب لكنه ما زال يعمل'],
+				'Er ist zwar müde, ___ er arbeitet noch.', 'aber'],
+			['ro', ['Фильм хоть и длинный, но интересный', 'The film is long, but interesting', 'Фільм хоч і довгий, але цікавий', 'Film jest wprawdzie długi, ale ciekawy', 'La película es larga, pero interesante', 'Le film est certes long, mais intéressant', 'Film gerçi uzun ama ilginç', 'Filmul e lung, dar interesant', 'Film uzun bo‘lsa ham, qiziq', 'फ़िल्म लंबी ज़रूर है, लेकिन दिलचस्प है', 'الفيلم طويل لكنه ممتع'],
+				'Der Film ist zwar lang aber interessant', ['oder']],
+			['ok', ['Я хоть и живу в Берлине, но работаю в Гамбурге.', 'I do live in Berlin, but I work in Hamburg.', 'Я хоч і живу в Берліні, але працюю в Гамбурзі.', 'Mieszkam wprawdzie w Berlinie, ale pracuję w Hamburgu.', 'Vivo en Berlín, es cierto, pero trabajo en Hamburgo.', 'J’habite certes à Berlin, mais je travaille à Hambourg.', 'Gerçi Berlin’de yaşıyorum ama Hamburg’da çalışıyorum.', 'Locuiesc în Berlin, ce-i drept, dar lucrez în Hamburg.', 'Berlinda yashasam ham, Gamburgda ishlayman.', 'मैं रहता तो बर्लिन में हूँ, लेकिन काम हैम्बर्ग में करता हूँ।', 'صحيح أنني أسكن في برلين، لكنني أعمل في هامبورغ.'],
+				['Ich wohne zwar in Berlin, aber ich arbeite in Hamburg.', 'Ich wohne zwar in Berlin, oder ich arbeite in Hamburg.', 'Ich zwar wohne in Berlin, aber ich arbeite in Hamburg.'], 'Ich wohne zwar in Berlin, aber ich arbeite in Hamburg.'],
+			['gw', ['Мороженое хоть и дорогое, но вкусное', 'The ice cream is expensive, but tasty', 'Морозиво хоч і дороге, але смачне', 'Lody są wprawdzie drogie, ale smaczne', 'El helado es caro, pero rico', 'La glace est certes chère, mais bonne', 'Dondurma gerçi pahalı ama lezzetli', 'Înghețata e scumpă, dar gustoasă', 'Muzqaymoq qimmat bo‘lsa ham, mazali', 'आइसक्रीम महँगी ज़रूर है, लेकिन स्वादिष्ट है', 'المثلجات غالية لكنها لذيذة'],
+				'Das Eis ist zwar teuer, ___ lecker.', 'aber'],
+			['rd', ['Почему Тим едет на поезде?', 'Why is Tim taking the train?', 'Чому Тім їде поїздом?', 'Dlaczego Tim jedzie pociągiem?', '¿Por qué va Tim en tren?', 'Pourquoi Tim prend-il le train ?', 'Tim neden trenle gidiyor?', 'De ce merge Tim cu trenul?', 'Tim nega poyezdda ketyapti?', 'टिम ट्रेन से क्यों जा रहा है?', 'لماذا يسافر تيم بالقطار؟'],
+				'Tim fährt heute mit dem Zug. Der Zug ist zwar teuer, aber er ist schnell. Das Auto ist zwar billiger, aber es dauert zu lange.', ['Der Zug ist schnell.', 'Der Zug ist billig.', 'Das Auto ist kaputt.'], 'Der Zug ist schnell.'],
+			['gw', ['Я хоть и знаю слово, но не могу его написать', 'I do know the word, but I cannot write it', 'Я хоч і знаю слово, але не можу його написати', 'Znam wprawdzie to słowo, ale nie umiem go napisać', 'Conozco la palabra, pero no sé escribirla', 'Je connais certes le mot, mais je ne sais pas l’écrire', 'Kelimeyi gerçi biliyorum ama yazamıyorum', 'Știu cuvântul, dar nu îl pot scrie', 'So‘zni bilsam ham, yoza olmayman', 'मैं शब्द जानता तो हूँ, लेकिन लिख नहीं सकता', 'أعرف الكلمة لكنني لا أستطيع كتابتها'],
+				'Ich kenne ___ das Wort, aber ich kann es nicht schreiben.', 'zwar'],
+			['gw', ['Погода хоть и холодная, но солнечная', 'The weather is cold, but sunny', 'Погода хоч і холодна, але сонячна', 'Pogoda jest wprawdzie zimna, ale słoneczna', 'El tiempo es frío, pero soleado', 'Le temps est certes froid, mais ensoleillé', 'Hava gerçi soğuk ama güneşli', 'Vremea e rece, dar însorită', 'Havo sovuq bo‘lsa ham, quyoshli', 'मौसम ठंडा ज़रूर है, लेकिन धूप है', 'الطقس بارد لكنه مشمس'],
+				'Das Wetter ist ___ kalt, aber sonnig.', 'zwar'],
+			['ro', ['Он хоть и маленький, но сильный', 'He is small, but strong', 'Він хоч і маленький, але сильний', 'Jest wprawdzie mały, ale silny', 'Es pequeño, pero fuerte', 'Il est certes petit, mais fort', 'Gerçi küçük ama güçlü', 'E mic, dar puternic', 'U kichik bo‘lsa ham, kuchli', 'वह छोटा ज़रूर है, लेकिन ताकतवर है', 'هو صغير لكنه قوي'],
+				'Er ist zwar klein aber stark', ['sondern']],
+			['ok', ['Курс хоть и трудный, но он мне нравится.', 'The course is difficult, but I like it.', 'Курс хоч і важкий, але він мені подобається.', 'Kurs jest wprawdzie trudny, ale mi się podoba.', 'El curso es difícil, pero me gusta.', 'Le cours est certes difficile, mais il me plaît.', 'Kurs gerçi zor ama hoşuma gidiyor.', 'Cursul e greu, dar îmi place.', 'Kurs qiyin bo‘lsa ham, menga yoqadi.', 'कोर्स कठिन ज़रूर है, लेकिन मुझे पसंद है।', 'الدورة صعبة لكنها تعجبني.'],
+				['Der Kurs ist zwar schwer, aber er gefällt mir.', 'Der Kurs ist zwar schwer, aber er gefalle mir.', 'Der Kurs zwar ist schwer, aber er gefällt mir.'], 'Der Kurs ist zwar schwer, aber er gefällt mir.'],
+			['ro', ['Суп хоть и горячий, но вкусный', 'The soup is hot, but tasty', 'Суп хоч і гарячий, але смачний', 'Zupa jest wprawdzie gorąca, ale smaczna', 'La sopa está caliente, pero rica', 'La soupe est certes chaude, mais bonne', 'Çorba gerçi sıcak ama lezzetli', 'Supa e fierbinte, dar gustoasă', 'Sho‘rva issiq bo‘lsa ham, mazali', 'सूप गरम ज़रूर है, लेकिन स्वादिष्ट है', 'الحساء ساخن لكنه لذيذ'],
+				'Die Suppe ist zwar heiß aber lecker', ['oder']],
+			['gw', ['Мы хоть и устали, но счастливы', 'We are tired, but happy', 'Ми хоч і втомилися, але щасливі', 'Jesteśmy wprawdzie zmęczeni, ale szczęśliwi', 'Estamos cansados, pero felices', 'Nous sommes certes fatigués, mais heureux', 'Gerçi yorgunuz ama mutluyuz', 'Suntem obosiți, dar fericiți', 'Charchagan bo‘lsak ham, baxtlimiz', 'हम थके ज़रूर हैं, लेकिन खुश हैं', 'نحن متعبون لكننا سعداء'],
+				'Wir sind zwar müde, ___ glücklich.', 'aber'],
+			['gw', ['Мы не пьём ни чай, ни кофе', 'We drink neither tea nor coffee', 'Ми не п’ємо ні чаю, ні кави', 'Nie pijemy ani herbaty, ani kawy', 'No bebemos ni té ni café', 'Nous ne buvons ni thé ni café', 'Ne çay ne kahve içiyoruz', 'Nu bem nici ceai, nici cafea', 'Biz na choy, na qahva ichamiz', 'हम न चाय पीते हैं, न कॉफ़ी', 'لا نشرب الشاي ولا القهوة'],
+				'Wir trinken weder Tee ___ Kaffee.', 'noch'],
+			['gw', ['Чем дольше я практикуюсь, тем лучше говорю', 'The longer I practise, the better I speak', 'Чим довше я практикуюся, тим краще говорю', 'Im dłużej ćwiczę, tym lepiej mówię', 'Cuanto más practico, mejor hablo', 'Plus je m’exerce, mieux je parle', 'Ne kadar uzun çalışırsam, o kadar iyi konuşurum', 'Cu cât exersez mai mult, cu atât vorbesc mai bine', 'Qancha ko‘p mashq qilsam, shuncha yaxshi gapiraman', 'जितना ज़्यादा अभ्यास करता हूँ, उतना अच्छा बोलता हूँ', 'كلما تدربت أكثر تحدثت أفضل'],
+				'Je länger ich übe, ___ besser spreche ich.', 'desto']
+		]
+	},
+	// 2. sowohl… als auch
+	{
+		title: ['Как…, так и… (sowohl… als auch)', 'Both… and… (sowohl… als auch)', 'Як…, так і… (sowohl… als auch)', 'Zarówno…, jak i… (sowohl… als auch)', 'Tanto… como… (sowohl… als auch)', 'Aussi bien… que… (sowohl… als auch)', 'Hem… hem… (sowohl… als auch)', 'Atât…, cât și… (sowohl… als auch)', 'Ham…, ham… (sowohl… als auch)', '…और… दोनों (sowohl… als auch)', 'كل من… و… (sowohl… als auch)'],
+		desc: [
+			'sowohl… als auch… = как…, так и…: Ich spreche sowohl Deutsch als auch Englisch. Верны обе части. Запятая перед als auch не нужна. Это чуть более красивый вариант простого und.',
+			'sowohl… als auch… = both… and…: Ich spreche sowohl Deutsch als auch Englisch. Both parts are true. There is no comma before als auch. It is a slightly more elegant version of a simple und.',
+			'sowohl… als auch… = як…, так і…: Ich spreche sowohl Deutsch als auch Englisch. Правильні обидві частини. Кома перед als auch не потрібна. Це трохи гарніший варіант простого und.',
+			'sowohl… als auch… = zarówno…, jak i…: Ich spreche sowohl Deutsch als auch Englisch. Obie części są prawdziwe. Przed als auch nie ma przecinka. To trochę ładniejsza wersja zwykłego und.',
+			'sowohl… als auch… = tanto… como…: Ich spreche sowohl Deutsch als auch Englisch. Las dos partes son ciertas. No hay coma antes de als auch. Es una versión algo más elegante de un simple und.',
+			'sowohl… als auch… = aussi bien… que… : Ich spreche sowohl Deutsch als auch Englisch. Les deux parties sont vraies. Il n’y a pas de virgule avant als auch. C’est une version un peu plus élégante d’un simple und.',
+			'sowohl… als auch… = hem… hem…: Ich spreche sowohl Deutsch als auch Englisch. İki bölüm de doğrudur. als auch önünde virgül olmaz. Basit und yerine biraz daha şık bir seçenektir.',
+			'sowohl… als auch… = atât…, cât și…: Ich spreche sowohl Deutsch als auch Englisch. Ambele părți sunt adevărate. Înainte de als auch nu se pune virgulă. Este o variantă puțin mai frumoasă a simplului und.',
+			'sowohl… als auch… = ham…, ham…: Ich spreche sowohl Deutsch als auch Englisch. Ikkala qism ham to‘g‘ri. als auch oldidan vergul qo‘yilmaydi. Bu oddiy und ning biroz chiroyliroq varianti.',
+			'sowohl… als auch… = …और… दोनों: Ich spreche sowohl Deutsch als auch Englisch। दोनों भाग सही होते हैं। als auch से पहले अल्पविराम नहीं लगता। यह साधारण und का थोड़ा सुंदर रूप है।',
+			'sowohl… als auch… = كل من… و…: Ich spreche sowohl Deutsch als auch Englisch. الجزآن صحيحان. لا توضع فاصلة قبل als auch. وهي صيغة أجمل قليلًا من und البسيطة.'
+		],
+		vocab: [
+			['sowohl… als auch', 'как…, так и', 'both… and', 'як…, так і', 'zarówno…, jak i', 'tanto… como', 'aussi bien… que', 'hem… hem', 'atât…, cât și', 'ham…, ham', '…और… दोनों', 'كل من… و']
+		],
+		tasks: [
+			['tr', ['Я говорю как по-немецки, так и по-английски.', 'I speak both German and English.', 'Я говорю як німецькою, так і англійською.', 'Mówię zarówno po niemiecku, jak i po angielsku.', 'Hablo tanto alemán como inglés.', 'Je parle aussi bien allemand qu’anglais.', 'Hem Almanca hem İngilizce konuşuyorum.', 'Vorbesc atât germană, cât și engleză.', 'Men ham nemischa, ham inglizcha gapiraman.', 'मैं जर्मन और अंग्रेज़ी दोनों बोलता हूँ।', 'أتحدث الألمانية والإنجليزية كلتيهما.'],
+				['Ich spreche sowohl Deutsch als auch Englisch.', 'Ich spreche sowohl Deutsch oder auch Englisch.', 'Ich spreche sowohl Deutsch als noch Englisch.'], 'Ich spreche sowohl Deutsch als auch Englisch.'],
+			['gw', ['Я пью как чай, так и кофе', 'I drink both tea and coffee', 'Я п’ю як чай, так і каву', 'Piję zarówno herbatę, jak i kawę', 'Bebo tanto té como café', 'Je bois aussi bien du thé que du café', 'Hem çay hem kahve içerim', 'Beau atât ceai, cât și cafea', 'Men ham choy, ham qahva ichaman', 'मैं चाय और कॉफ़ी दोनों पीता हूँ', 'أشرب الشاي والقهوة كليهما'],
+				'Ich trinke ___ Tee als auch Kaffee.', 'sowohl'],
+			['gw', ['Мы были и в Италии, и в Испании', 'We were both in Italy and in Spain', 'Ми були і в Італії, і в Іспанії', 'Byliśmy zarówno we Włoszech, jak i w Hiszpanii', 'Estuvimos tanto en Italia como en España', 'Nous avons été aussi bien en Italie qu’en Espagne', 'Hem İtalya’da hem İspanya’daydık', 'Am fost atât în Italia, cât și în Spania', 'Biz ham Italiyada, ham Ispaniyada bo‘ldik', 'हम इटली और स्पेन दोनों में थे', 'كنا في إيطاليا وإسبانيا كلتيهما'],
+				'Wir waren sowohl in Italien ___ auch in Spanien.', 'als'],
+			['ro', ['Я люблю и кошек, и собак', 'I like both cats and dogs', 'Я люблю і котів, і собак', 'Lubię zarówno koty, jak i psy', 'Me gustan tanto los gatos como los perros', 'J’aime aussi bien les chats que les chiens', 'Hem kedileri hem köpekleri severim', 'Îmi plac atât pisicile, cât și câinii', 'Men ham mushuklarni, ham itlarni yaxshi ko‘raman', 'मुझे बिल्लियाँ और कुत्ते दोनों पसंद हैं', 'أحب القطط والكلاب كليهما'],
+				'Ich mag sowohl Katzen als auch Hunde', ['oder']],
+			['ok', ['И Анна, и Тим придут.', 'Both Anna and Tim are coming.', 'І Анна, і Тім прийдуть.', 'Zarówno Anna, jak i Tim przyjdą.', 'Tanto Anna como Tim vienen.', 'Anna et Tim viennent tous les deux.', 'Hem Anna hem Tim geliyor.', 'Atât Anna, cât și Tim vin.', 'Anna ham, Tim ham keladi.', 'अन्ना और टिम दोनों आ रहे हैं।', 'ستأتي آنا وتيم كلاهما.'],
+				['Sowohl Anna als auch Tim kommen.', 'Sowohl Anna oder auch Tim kommen.', 'Sowohl Anna als noch Tim kommen.'], 'Sowohl Anna als auch Tim kommen.'],
+			['gw', ['Она работает и утром, и вечером', 'She works both in the morning and in the evening', 'Вона працює і вранці, і ввечері', 'Pracuje zarówno rano, jak i wieczorem', 'Trabaja tanto por la mañana como por la noche', 'Elle travaille aussi bien le matin que le soir', 'Hem sabahları hem akşamları çalışıyor', 'Lucrează atât dimineața, cât și seara', 'U ham ertalab, ham kechqurun ishlaydi', 'वह सुबह और शाम दोनों समय काम करती है', 'تعمل صباحًا ومساءً'],
+				'Sie arbeitet sowohl morgens als ___ abends.', 'auch'],
+			['rd', ['Что есть в отеле?', 'What is there in the hotel?', 'Що є в готелі?', 'Co jest w hotelu?', '¿Qué hay en el hotel?', 'Qu’y a-t-il à l’hôtel ?', 'Otelde ne var?', 'Ce există la hotel?', 'Mehmonxonada nima bor?', 'होटल में क्या है?', 'ماذا يوجد في الفندق؟'],
+				'Das Hotel ist neu. Es gibt sowohl ein Restaurant als auch ein Café. Das Frühstück ist im Preis.', ['ein Restaurant und ein Café', 'nur ein Restaurant', 'nur ein Café'], 'ein Restaurant und ein Café'],
+			['gw', ['В магазине есть и хлеб, и молоко', 'The shop has both bread and milk', 'У магазині є і хліб, і молоко', 'W sklepie jest zarówno chleb, jak i mleko', 'En la tienda hay tanto pan como leche', 'Au magasin, il y a aussi bien du pain que du lait', 'Dükkânda hem ekmek hem süt var', 'În magazin există atât pâine, cât și lapte', 'Do‘konda ham non, ham sut bor', 'दुकान में ब्रेड और दूध दोनों हैं', 'في المتجر خبز وحليب'],
+				'Im Laden gibt es sowohl Brot ___ auch Milch.', 'als'],
+			['gw', ['Мне нравится и лето, и зима', 'I like both summer and winter', 'Мені подобається і літо, і зима', 'Podoba mi się zarówno lato, jak i zima', 'Me gustan tanto el verano como el invierno', 'J’aime aussi bien l’été que l’hiver', 'Hem yazı hem kışı severim', 'Îmi plac atât vara, cât și iarna', 'Menga ham yoz, ham qish yoqadi', 'मुझे गर्मी और सर्दी दोनों पसंद हैं', 'أحب الصيف والشتاء كليهما'],
+				'Mir gefällt ___ der Sommer als auch der Winter.', 'sowohl'],
+			['ro', ['Она умеет и петь, и танцевать', 'She can both sing and dance', 'Вона вміє і співати, і танцювати', 'Umie zarówno śpiewać, jak i tańczyć', 'Sabe tanto cantar como bailar', 'Elle sait aussi bien chanter que danser', 'Hem şarkı söyleyebilir hem dans edebilir', 'Știe atât să cânte, cât și să danseze', 'U ham kuylay oladi, ham raqsga tusha oladi', 'वह गा भी सकती है और नाच भी सकती है', 'تستطيع الغناء والرقص'],
+				'Sie kann sowohl singen als auch tanzen', ['noch']],
+			['ok', ['Мой брат готовит и хорошо, и быстро.', 'My brother cooks both well and quickly.', 'Мій брат готує і добре, і швидко.', 'Mój brat gotuje zarówno dobrze, jak i szybko.', 'Mi hermano cocina tanto bien como rápido.', 'Mon frère cuisine aussi bien que vite.', 'Kardeşim hem iyi hem hızlı yemek yapar.', 'Fratele meu gătește atât bine, cât și repede.', 'Akam ham yaxshi, ham tez ovqat pishiradi.', 'मेरा भाई अच्छा और जल्दी दोनों तरह से खाना बनाता है।', 'يطبخ أخي جيدًا وبسرعة.'],
+				['Mein Bruder kocht sowohl gut als auch schnell.', 'Mein Bruder kocht sowohl gut oder auch schnell.', 'Mein Bruder kocht gut sowohl als schnell auch.'], 'Mein Bruder kocht sowohl gut als auch schnell.'],
+			['ro', ['Мы покупаем и яблоки, и помидоры', 'We are buying both apples and tomatoes', 'Ми купуємо і яблука, і помідори', 'Kupujemy zarówno jabłka, jak i pomidory', 'Compramos tanto manzanas como tomates', 'Nous achetons aussi bien des pommes que des tomates', 'Hem elma hem domates alıyoruz', 'Cumpărăm atât mere, cât și roșii', 'Biz ham olma, ham pomidor sotib olyapmiz', 'हम सेब और टमाटर दोनों खरीद रहे हैं', 'نشتري التفاح والطماطم'],
+				'Wir kaufen sowohl Äpfel als auch Tomaten', ['oder']],
+			['gw', ['Он понимает и немецкий, и французский', 'He understands both German and French', 'Він розуміє і німецьку, і французьку', 'Rozumie zarówno niemiecki, jak i francuski', 'Entiende tanto alemán como francés', 'Il comprend aussi bien l’allemand que le français', 'Hem Almanca hem Fransızca anlıyor', 'Înțelege atât germana, cât și franceza', 'U ham nemis, ham fransuz tilini tushunadi', 'वह जर्मन और फ़्रेंच दोनों समझता है', 'يفهم الألمانية والفرنسية'],
+				'Er versteht sowohl Deutsch als ___ Französisch.', 'auch'],
+			['gv', ['Как только дождь кончится, мы пойдём', 'As soon as the rain stops, we will go', 'Щойно дощ припиниться, ми підемо', 'Gdy tylko przestanie padać, pójdziemy', 'En cuanto pare la lluvia, nos vamos', 'Dès que la pluie s’arrête, nous partons', 'Yağmur durur durmaz gideceğiz', 'Imediat ce se oprește ploaia, plecăm', 'Yomg‘ir to‘xtashi bilan ketamiz', 'बारिश रुकते ही हम चलेंगे', 'بمجرد أن يتوقف المطر سنذهب'],
+				'Sobald der Regen aufhört, ___ wir los.', 'gehen'],
+			['gw', ['Я жду автобус', 'I am waiting for the bus', 'Я чекаю на автобус', 'Czekam na autobus', 'Espero el autobús', 'J’attends le bus', 'Otobüsü bekliyorum', 'Aștept autobuzul', 'Men avtobusni kutyapman', 'मैं बस का इंतज़ार कर रहा हूँ', 'أنتظر الحافلة'],
+				'Ich warte ___ den Bus.', 'auf']
+		]
+	},
+	// 3. indem
+	{
+		title: ['Тем, что… (indem)', 'By doing… (indem)', 'Тим, що… (indem)', 'Przez to, że… (indem)', 'Haciendo… (indem)', 'En faisant… (indem)', '…arak (indem)', 'Prin faptul că… (indem)', '…ib (indem)', '…करके (indem)', 'عن طريق… (indem)'],
+		desc: [
+			'indem = тем, что; с помощью того, что: Man lernt eine Sprache, indem man viel übt. Отвечает на вопрос Wie? (как, каким способом?). Глагол стоит в конце, как после weil. Подлежащее в обеих частях обычно одно и то же.',
+			'indem = by doing something: Man lernt eine Sprache, indem man viel übt. It answers the question Wie? (how, in what way?). The verb goes to the end, as after weil. The subject is usually the same in both parts.',
+			'indem = тим, що; за допомогою того, що: Man lernt eine Sprache, indem man viel übt. Відповідає на питання Wie? (як, яким способом?). Дієслово стоїть у кінці, як після weil. Підмет в обох частинах зазвичай той самий.',
+			'indem = przez to, że: Man lernt eine Sprache, indem man viel übt. Odpowiada na pytanie Wie? (jak, w jaki sposób?). Czasownik stoi na końcu, jak po weil. Podmiot w obu częściach jest zwykle ten sam.',
+			'indem = haciendo algo, mediante: Man lernt eine Sprache, indem man viel übt. Responde a la pregunta Wie? (¿cómo, de qué manera?). El verbo va al final, como después de weil. El sujeto suele ser el mismo en las dos partes.',
+			'indem = en faisant quelque chose : Man lernt eine Sprache, indem man viel übt. Il répond à la question Wie? (comment, de quelle manière ?). Le verbe se place à la fin, comme après weil. Le sujet est en général le même dans les deux parties.',
+			'indem = bir şeyi yaparak: Man lernt eine Sprache, indem man viel übt. Wie? (nasıl, hangi yolla?) sorusunu yanıtlar. Fiil, weil sonrasında olduğu gibi sona gider. Özne iki bölümde genellikle aynıdır.',
+			'indem = prin faptul că: Man lernt eine Sprache, indem man viel übt. Răspunde la întrebarea Wie? (cum, în ce fel?). Verbul stă la sfârșit, ca după weil. Subiectul este de obicei același în ambele părți.',
+			'indem = biror ishni qilish orqali: Man lernt eine Sprache, indem man viel übt. Wie? (qanday, qaysi yo‘l bilan?) savoliga javob beradi. Fe’l weil dan keyingidek oxirda turadi. Ega ikkala qismda odatda bir xil.',
+			'indem = कुछ करके: Man lernt eine Sprache, indem man viel übt। यह Wie? (कैसे, किस तरीके से?) का उत्तर देता है। क्रिया weil की तरह अंत में जाती है। दोनों भागों में कर्ता आमतौर पर एक ही होता है।',
+			'indem = عن طريق فعل شيء: Man lernt eine Sprache, indem man viel übt. يجيب عن السؤال Wie? (كيف، بأي طريقة؟). يأتي الفعل في النهاية كما بعد weil. يكون الفاعل عادة نفسه في الجزأين.'
+		],
+		vocab: [
+			['indem', 'тем, что', 'by (doing)', 'тим, що', 'przez to, że', 'haciendo, mediante', 'en faisant', '…arak', 'prin faptul că', '…ib, orqali', 'करके', 'عن طريق']
+		],
+		tasks: [
+			['tr', ['Я учу слова тем, что много читаю.', 'I learn words by reading a lot.', 'Я вчу слова тим, що багато читаю.', 'Uczę się słów przez to, że dużo czytam.', 'Aprendo palabras leyendo mucho.', 'J’apprends des mots en lisant beaucoup.', 'Çok okuyarak kelime öğreniyorum.', 'Învăț cuvinte prin faptul că citesc mult.', 'Men ko‘p o‘qib, so‘z o‘rganaman.', 'मैं बहुत पढ़कर शब्द सीखता हूँ।', 'أتعلم الكلمات عن طريق القراءة كثيرًا.'],
+				['Ich lerne Wörter, indem ich viel lese.', 'Ich lerne Wörter, indem ich lese viel.', 'Ich lerne Wörter, indem lese ich viel.'], 'Ich lerne Wörter, indem ich viel lese.'],
+			['gw', ['Он экономит деньги тем, что ездит на велосипеде', 'He saves money by cycling', 'Він заощаджує гроші тим, що їздить на велосипеді', 'Oszczędza pieniądze przez to, że jeździ rowerem', 'Ahorra dinero yendo en bicicleta', 'Il économise de l’argent en allant à vélo', 'Bisikletle giderek para biriktiriyor', 'Economisește bani prin faptul că merge cu bicicleta', 'U velosipedda yurib, pul tejaydi', 'वह साइकिल चलाकर पैसे बचाता है', 'يوفر المال عن طريق ركوب الدراجة'],
+				'Er spart Geld, ___ er mit dem Fahrrad fährt.', 'indem'],
+			['gv', ['Она помогает маме тем, что готовит', 'She helps her mother by cooking', 'Вона допомагає мамі тим, що готує', 'Pomaga mamie przez to, że gotuje', 'Ayuda a su madre cocinando', 'Elle aide sa mère en cuisinant', 'Yemek yaparak annesine yardım ediyor', 'Își ajută mama prin faptul că gătește', 'U ovqat pishirib, onasiga yordam beradi', 'वह खाना बनाकर माँ की मदद करती है', 'تساعد أمها عن طريق الطبخ'],
+				'Sie hilft ihrer Mutter, indem sie ___.', 'kocht'],
+			['ro', ['Я практикуюсь тем, что говорю с друзьями', 'I practise by talking to friends', 'Я практикуюся тим, що говорю з друзями', 'Ćwiczę przez to, że rozmawiam z przyjaciółmi', 'Practico hablando con amigos', 'Je m’exerce en parlant avec des amis', 'Arkadaşlarımla konuşarak pratik yapıyorum', 'Exersez prin faptul că vorbesc cu prietenii', 'Men do‘stlar bilan gaplashib mashq qilaman', 'मैं दोस्तों से बात करके अभ्यास करता हूँ', 'أتدرب عن طريق التحدث مع الأصدقاء'],
+				'Ich übe indem ich mit Freunden spreche', ['um']],
+			['ok', ['Здоровым остаёшься благодаря тому, что много занимаешься спортом.', 'You stay healthy by doing a lot of sport.', 'Здоровим залишаєшся завдяки тому, що багато займаєшся спортом.', 'Zdrowym pozostaje się przez to, że dużo się ćwiczy.', 'Uno se mantiene sano haciendo mucho deporte.', 'On reste en bonne santé en faisant beaucoup de sport.', 'Çok spor yaparak sağlıklı kalınır.', 'Rămâi sănătos prin faptul că faci mult sport.', 'Ko‘p sport bilan shug‘ullanib, sog‘lom qolasan.', 'खूब खेल करके इंसान स्वस्थ रहता है।', 'يبقى المرء بصحة جيدة عن طريق ممارسة الرياضة كثيرًا.'],
+				['Man bleibt gesund, indem man viel Sport macht.', 'Man bleibt gesund, indem man macht viel Sport.', 'Man bleibt gesund, indem macht man viel Sport.'], 'Man bleibt gesund, indem man viel Sport macht.'],
+			['gw', ['Мы учим немецкий тем, что занимаемся каждый день', 'We learn German by practising every day', 'Ми вчимо німецьку тим, що займаємося щодня', 'Uczymy się niemieckiego przez to, że ćwiczymy codziennie', 'Aprendemos alemán practicando cada día', 'Nous apprenons l’allemand en nous exerçant chaque jour', 'Her gün çalışarak Almanca öğreniyoruz', 'Învățăm germana prin faptul că exersăm zilnic', 'Biz har kuni mashq qilib, nemis tilini o‘rganamiz', 'हम रोज़ अभ्यास करके जर्मन सीखते हैं', 'نتعلم الألمانية عن طريق التدرب كل يوم'],
+				'Wir lernen Deutsch, ___ wir jeden Tag üben.', 'indem'],
+			['rd', ['Как Лиза учит новые слова?', 'How does Lisa learn new words?', 'Як Ліза вчить нові слова?', 'Jak Lisa uczy się nowych słów?', '¿Cómo aprende Lisa palabras nuevas?', 'Comment Lisa apprend-elle de nouveaux mots ?', 'Lisa yeni kelimeleri nasıl öğreniyor?', 'Cum învață Lisa cuvinte noi?', 'Lisa yangi so‘zlarni qanday o‘rganadi?', 'लीज़ा नए शब्द कैसे सीखती है?', 'كيف تتعلم ليزا كلمات جديدة؟'],
+				'Lisa lernt neue Wörter, indem sie kleine Karten schreibt. Jeden Abend liest sie die Karten. So vergisst sie die Wörter nicht.', ['Sie schreibt Karten.', 'Sie sieht Filme.', 'Sie fragt ihre Lehrerin.'], 'Sie schreibt Karten.'],
+			['gv', ['Он будит нас тем, что громко поёт', 'He wakes us up by singing loudly', 'Він будить нас тим, що голосно співає', 'Budzi nas przez to, że głośno śpiewa', 'Nos despierta cantando alto', 'Il nous réveille en chantant fort', 'Yüksek sesle şarkı söyleyerek bizi uyandırıyor', 'Ne trezește prin faptul că cântă tare', 'U baland ovozda kuylab, bizni uyg‘otadi', 'वह ज़ोर से गाकर हमें जगाता है', 'يوقظنا عن طريق الغناء بصوت عالٍ'],
+				'Er weckt uns, indem er laut ___.', 'singt'],
+			['gw', ['Я сплю лучше благодаря тому, что рано ложусь', 'I sleep better by going to bed early', 'Я сплю краще завдяки тому, що рано лягаю', 'Śpię lepiej przez to, że wcześnie się kładę', 'Duermo mejor acostándome temprano', 'Je dors mieux en me couchant tôt', 'Erken yatarak daha iyi uyuyorum', 'Dorm mai bine prin faptul că mă culc devreme', 'Erta yotib, yaxshiroq uxlayman', 'मैं जल्दी सोकर बेहतर नींद लेता हूँ', 'أنام أفضل عن طريق الذهاب إلى السرير مبكرًا'],
+				'Ich schlafe besser, ___ ich früh ins Bett gehe.', 'indem'],
+			['ro', ['Она учится, слушая радио', 'She learns by listening to the radio', 'Вона вчиться, слухаючи радіо', 'Uczy się przez to, że słucha radia', 'Aprende escuchando la radio', 'Elle apprend en écoutant la radio', 'Radyo dinleyerek öğreniyor', 'Învață prin faptul că ascultă radioul', 'U radio tinglab o‘rganadi', 'वह रेडियो सुनकर सीखती है', 'تتعلم عن طريق الاستماع إلى الراديو'],
+				'Sie lernt indem sie Radio hört', ['um']],
+			['tr', ['Он нашёл работу тем, что искал в газете.', 'He found work by looking in the newspaper.', 'Він знайшов роботу тим, що шукав у газеті.', 'Znalazł pracę przez to, że szukał w gazecie.', 'Encontró trabajo buscando en el periódico.', 'Il a trouvé du travail en cherchant dans le journal.', 'Gazetede arayarak iş buldu.', 'A găsit de lucru prin faptul că a căutat în ziar.', 'U gazetadan qidirib, ish topdi.', 'उसने अख़बार में खोजकर काम पाया।', 'وجد عملًا عن طريق البحث في الجريدة.'],
+				['Er hat Arbeit gefunden, indem er in der Zeitung gesucht hat.', 'Er hat Arbeit gefunden, indem er hat in der Zeitung gesucht.', 'Er hat Arbeit gefunden, indem hat er in der Zeitung gesucht.'], 'Er hat Arbeit gefunden, indem er in der Zeitung gesucht hat.'],
+			['ro', ['Мы экономим тем, что готовим дома', 'We save by cooking at home', 'Ми заощаджуємо тим, що готуємо вдома', 'Oszczędzamy przez to, że gotujemy w domu', 'Ahorramos cocinando en casa', 'Nous économisons en cuisinant à la maison', 'Evde yemek yaparak tasarruf ediyoruz', 'Economisim prin faptul că gătim acasă', 'Biz uyda ovqat pishirib, tejaymiz', 'हम घर पर खाना बनाकर बचत करते हैं', 'نوفر عن طريق الطبخ في البيت'],
+				'Wir sparen indem wir zu Hause kochen', ['um']],
+			['gv', ['Ты помогаешь мне тем, что делаешь это', 'You help me by doing this', 'Ти допомагаєш мені тим, що робиш це', 'Pomagasz mi przez to, że to robisz', 'Me ayudas haciendo esto', 'Tu m’aides en faisant cela', 'Bunu yaparak bana yardım ediyorsun', 'Mă ajuți prin faptul că faci asta', 'Sen buni qilib, menga yordam berasan', 'तुम यह करके मेरी मदद करते हो', 'تساعدني عن طريق فعل هذا'],
+				'Du hilfst mir, indem du das ___.', 'machst'],
+			['gw', ['Я покупаю и хлеб, и молоко', 'I am buying both bread and milk', 'Я купую і хліб, і молоко', 'Kupuję zarówno chleb, jak i mleko', 'Compro tanto pan como leche', 'J’achète aussi bien du pain que du lait', 'Hem ekmek hem süt alıyorum', 'Cumpăr atât pâine, cât și lapte', 'Men ham non, ham sut sotib olyapman', 'मैं ब्रेड और दूध दोनों खरीद रहा हूँ', 'أشتري الخبز والحليب'],
+				'Ich kaufe ___ Brot als auch Milch.', 'sowohl'],
+			['gw', ['Магазин хоть и маленький, но хороший', 'The shop is small, but good', 'Магазин хоч і маленький, але хороший', 'Sklep jest wprawdzie mały, ale dobry', 'La tienda es pequeña, pero buena', 'Le magasin est certes petit, mais bon', 'Dükkân gerçi küçük ama iyi', 'Magazinul e mic, dar bun', 'Do‘kon kichik bo‘lsa ham, yaxshi', 'दुकान छोटी ज़रूर है, लेकिन अच्छी है', 'المتجر صغير لكنه جيد'],
+				'Der Laden ist zwar klein, ___ gut.', 'aber']
+		]
+	},
+	// 4. bis как союз
+	{
+		title: ['Пока не… (bis)', 'Until… (bis)', 'Доки не… (bis)', 'Dopóki nie… (bis)', 'Hasta que… (bis)', 'Jusqu’à ce que… (bis)', '…e kadar (bis)', 'Până când… (bis)', '…guncha (bis)', 'जब तक… नहीं (bis)', 'حتى… (bis)'],
+		desc: [
+			'bis = пока не, до тех пор пока: Wir warten, bis der Bus kommt. Действие идёт и заканчивается, когда наступает второе событие. Глагол стоит в конце. Не путай с bevor (перед тем как) и während (пока, в то время как).',
+			'bis = until: Wir warten, bis der Bus kommt. The action goes on and ends when the second event happens. The verb goes to the end. Do not confuse it with bevor (before) and während (while).',
+			'bis = доки не, аж поки: Wir warten, bis der Bus kommt. Дія триває і закінчується, коли настає друга подія. Дієслово стоїть у кінці. Не плутай із bevor (перед тим як) і während (поки, у той час як).',
+			'bis = dopóki nie, aż: Wir warten, bis der Bus kommt. Czynność trwa i kończy się, gdy nastąpi drugie zdarzenie. Czasownik stoi na końcu. Nie myl z bevor (zanim) i während (podczas gdy).',
+			'bis = hasta que: Wir warten, bis der Bus kommt. La acción continúa y termina cuando ocurre lo segundo. El verbo va al final. No lo confundas con bevor (antes de que) y während (mientras).',
+			'bis = jusqu’à ce que : Wir warten, bis der Bus kommt. L’action continue et se termine quand le deuxième événement arrive. Le verbe se place à la fin. Ne le confonds pas avec bevor (avant que) et während (pendant que).',
+			'bis = …e kadar: Wir warten, bis der Bus kommt. Eylem sürer ve ikinci olay gerçekleşince biter. Fiil sona gider. bevor (…den önce) ve während (…iken) ile karıştırma.',
+			'bis = până când: Wir warten, bis der Bus kommt. Acțiunea continuă și se încheie când are loc al doilea eveniment. Verbul stă la sfârșit. Nu îl confunda cu bevor (înainte să) și während (în timp ce).',
+			'bis = …guncha: Wir warten, bis der Bus kommt. Harakat davom etadi va ikkinchi voqea yuz berganda tugaydi. Fe’l oxirda turadi. bevor (…dan oldin) va während (…ayotganda) bilan adashtirma.',
+			'bis = जब तक… नहीं: Wir warten, bis der Bus kommt। काम चलता रहता है और दूसरी घटना होने पर खत्म होता है। क्रिया अंत में जाती है। इसे bevor (से पहले) और während (जबकि) से न मिलाओ।',
+			'bis = حتى: Wir warten, bis der Bus kommt. يستمر الفعل وينتهي عند وقوع الحدث الثاني. يأتي الفعل في النهاية. لا تخلط بينها وبين bevor (قبل أن) و während (بينما).'
+		],
+		vocab: [
+			['bis', 'пока не, до', 'until', 'доки не, до', 'dopóki nie, aż', 'hasta que', 'jusqu’à ce que', '…e kadar', 'până când', '…guncha', 'जब तक', 'حتى']
+		],
+		tasks: [
+			['tr', ['Мы ждём, пока придёт автобус.', 'We are waiting until the bus comes.', 'Ми чекаємо, доки прийде автобус.', 'Czekamy, aż przyjedzie autobus.', 'Esperamos hasta que venga el autobús.', 'Nous attendons jusqu’à ce que le bus arrive.', 'Otobüs gelene kadar bekliyoruz.', 'Așteptăm până când vine autobuzul.', 'Avtobus kelguncha kutamiz.', 'हम बस आने तक इंतज़ार कर रहे हैं।', 'ننتظر حتى تأتي الحافلة.'],
+				['Wir warten, bis der Bus kommt.', 'Wir warten, bis der Bus kommen.', 'Wir warten, bis kommt der Bus.'], 'Wir warten, bis der Bus kommt.'],
+			['gw', ['Я останусь, пока ты не вернёшься', 'I will stay until you come back', 'Я залишуся, доки ти не повернешся', 'Zostanę, aż wrócisz', 'Me quedo hasta que vuelvas', 'Je reste jusqu’à ce que tu reviennes', 'Sen dönene kadar kalacağım', 'Rămân până când te întorci', 'Sen qaytguncha qolaman', 'जब तक तुम लौट नहीं आते, मैं रुकूँगा', 'سأبقى حتى تعود'],
+				'Ich bleibe, ___ du zurückkommst.', 'bis'],
+			['gv', ['Подожди, пока фильм закончится', 'Wait until the film is over', 'Зачекай, доки фільм закінчиться', 'Poczekaj, aż film się skończy', 'Espera hasta que termine la película', 'Attends jusqu’à ce que le film soit fini', 'Film bitene kadar bekle', 'Așteaptă până când se termină filmul', 'Film tugaguncha kut', 'फ़िल्म खत्म होने तक रुको', 'انتظر حتى ينتهي الفيلم'],
+				'Warte, bis der Film zu Ende ___.', 'ist'],
+			['ro', ['Он работает, пока не устанет', 'He works until he is tired', 'Він працює, доки не втомиться', 'Pracuje, aż się zmęczy', 'Trabaja hasta que está cansado', 'Il travaille jusqu’à ce qu’il soit fatigué', 'Yorulana kadar çalışıyor', 'Lucrează până când obosește', 'U charchaguncha ishlaydi', 'वह थकने तक काम करता है', 'يعمل حتى يتعب'],
+				'Er arbeitet bis er müde ist', ['um']],
+			['ok', ['Я учу, пока не пойму всё.', 'I study until I understand everything.', 'Я вчу, доки не зрозумію все.', 'Uczę się, aż wszystko zrozumiem.', 'Estudio hasta que lo entiendo todo.', 'J’étudie jusqu’à ce que je comprenne tout.', 'Her şeyi anlayana kadar çalışıyorum.', 'Învăț până când înțeleg tot.', 'Hammasini tushunguncha o‘qiyman.', 'सब समझने तक मैं पढ़ता हूँ।', 'أدرس حتى أفهم كل شيء.'],
+				['Ich lerne, bis ich alles verstehe.', 'Ich lerne, bis ich verstehe alles.', 'Ich lerne, bis verstehe ich alles.'], 'Ich lerne, bis ich alles verstehe.'],
+			['gw', ['Мы едем, пока улица не закончится', 'We drive until the street ends', 'Ми їдемо, доки вулиця не закінчиться', 'Jedziemy, aż skończy się ulica', 'Conducimos hasta que termine la calle', 'Nous roulons jusqu’à ce que la rue se termine', 'Sokak bitene kadar gidiyoruz', 'Mergem până când se termină strada', 'Ko‘cha tugaguncha yuramiz', 'सड़क खत्म होने तक हम चलते हैं', 'نسير حتى ينتهي الشارع'],
+				'Wir fahren, ___ die Straße zu Ende ist.', 'bis'],
+			['rd', ['Когда дети пойдут домой?', 'When will the children go home?', 'Коли діти підуть додому?', 'Kiedy dzieci pójdą do domu?', '¿Cuándo volverán los niños a casa?', 'Quand les enfants rentreront-ils à la maison ?', 'Çocuklar ne zaman eve gidecek?', 'Când vor merge copiii acasă?', 'Bolalar qachon uyga ketadi?', 'बच्चे घर कब जाएँगे?', 'متى سيذهب الأطفال إلى البيت؟'],
+				'Die Kinder spielen im Park. Sie bleiben dort, bis es dunkel wird. Dann gehen sie nach Hause und essen zu Abend.', ['wenn es dunkel wird', 'nach dem Frühstück', 'um zwölf Uhr'], 'wenn es dunkel wird'],
+			['gv', ['Он ждёт, пока она не позвонит', 'He is waiting until she calls', 'Він чекає, доки вона не зателефонує', 'Czeka, aż ona zadzwoni', 'Espera hasta que ella llame', 'Il attend jusqu’à ce qu’elle appelle', 'O arayana kadar bekliyor', 'Așteaptă până când ea sună', 'U qo‘ng‘iroq qilguncha kutadi', 'वह उसके फ़ोन आने तक इंतज़ार कर रहा है', 'ينتظر حتى تتصل'],
+				'Er wartet, bis sie ___.', 'anruft'],
+			['gw', ['Оставайся здесь, пока я не приду', 'Stay here until I come', 'Залишайся тут, доки я не прийду', 'Zostań tutaj, aż przyjdę', 'Quédate aquí hasta que yo llegue', 'Reste ici jusqu’à ce que j’arrive', 'Ben gelene kadar burada kal', 'Rămâi aici până când vin eu', 'Men kelgunimcha shu yerda qol', 'मेरे आने तक यहीं रहो', 'ابق هنا حتى آتي'],
+				'Bleib hier, ___ ich komme.', 'bis'],
+			['ro', ['Мы играем, пока не пойдёт дождь', 'We play until it rains', 'Ми граємо, доки не піде дощ', 'Gramy, aż zacznie padać', 'Jugamos hasta que llueva', 'Nous jouons jusqu’à ce qu’il pleuve', 'Yağmur yağana kadar oynuyoruz', 'Ne jucăm până când plouă', 'Yomg‘ir yog‘guncha o‘ynaymiz', 'बारिश होने तक हम खेलते हैं', 'نلعب حتى تمطر'],
+				'Wir spielen bis es regnet', ['um']],
+			['ok', ['Я читала, пока не уснула.', 'I read until I fell asleep.', 'Я читала, доки не заснула.', 'Czytałam, aż zasnęłam.', 'Leí hasta que me dormí.', 'J’ai lu jusqu’à ce que je m’endorme.', 'Uyuyana kadar okudum.', 'Am citit până când am adormit.', 'Uxlab qolgunimcha o‘qidim.', 'मैं सोने तक पढ़ती रही।', 'قرأت حتى نمت.'],
+				['Ich habe gelesen, bis ich eingeschlafen bin.', 'Ich habe gelesen, bis ich bin eingeschlafen.', 'Ich habe gelesen, bis bin ich eingeschlafen.'], 'Ich habe gelesen, bis ich eingeschlafen bin.'],
+			['ro', ['Я жду, пока она закончит', 'I am waiting until she is finished', 'Я чекаю, доки вона закінчить', 'Czekam, aż skończy', 'Espero hasta que termine', 'J’attends jusqu’à ce qu’elle ait fini', 'O bitirene kadar bekliyorum', 'Aștept până când termină', 'U tugatguncha kutaman', 'उसके काम पूरा करने तक मैं रुका हूँ', 'أنتظر حتى تنتهي'],
+				'Ich warte bis sie fertig ist', ['um']],
+			['gv', ['Мама ждёт, пока мы поедим', 'Mum is waiting until we have eaten', 'Мама чекає, доки ми поїмо', 'Mama czeka, aż zjemy', 'Mamá espera hasta que comamos', 'Maman attend jusqu’à ce que nous mangions', 'Annem biz yiyene kadar bekliyor', 'Mama așteaptă până când mâncăm', 'Oyim biz ovqatlanib bo‘lguncha kutadi', 'माँ हमारे खाने तक इंतज़ार कर रही है', 'تنتظر أمي حتى نأكل'],
+				'Mama wartet, bis wir ___.', 'essen'],
+			['gw', ['Учатся тем, что практикуются', 'You learn by practising', 'Вчаться тим, що практикуються', 'Uczymy się przez to, że ćwiczymy', 'Se aprende practicando', 'On apprend en s’exerçant', 'Pratik yaparak öğrenilir', 'Înveți prin faptul că exersezi', 'Mashq qilib o‘rganiladi', 'अभ्यास करके सीखा जाता है', 'يتعلم المرء عن طريق التدرب'],
+				'Man lernt, ___ man übt.', 'indem'],
+			['gw', ['Я играю и в теннис, и в футбол', 'I play both tennis and football', 'Я граю і в теніс, і у футбол', 'Gram zarówno w tenisa, jak i w piłkę nożną', 'Juego tanto al tenis como al fútbol', 'Je joue aussi bien au tennis qu’au football', 'Hem tenis hem futbol oynuyorum', 'Joc atât tenis, cât și fotbal', 'Men ham tennis, ham futbol o‘ynayman', 'मैं टेनिस और फ़ुटबॉल दोनों खेलता हूँ', 'ألعب التنس وكرة القدم'],
+				'Ich spiele ___ Tennis als auch Fußball.', 'sowohl']
+		]
+	}
+]

@@ -1,0 +1,120 @@
+// Площадь ориентиров (place-prepositions): 2 практических квеста перед «Повторением»
+// порядок переводов: ru en uk pl es fr tr ro uz hi ar
+module.exports = {
+	file: 'place-prepositions',
+	ns: 'placePrepositionsExtra',
+	ids: ['place-prep-9', 'place-prep-10'],
+	before: 'place-prep-7',
+	quests: [
+		{
+			title: ['Моя комната', 'My room', 'Моя кімната', 'Mój pokój', 'Mi habitación', 'Ma chambre', 'Odam', 'Camera mea', 'Mening xonam', 'मेरा कमरा', 'غرفتي'],
+			desc: [
+				'Практика без новой грамматики. Где? Предлог + Dativ: in, auf, an, unter, über, vor, hinter, neben, zwischen. der → dem, die → der, das → dem: Das Buch liegt auf dem Tisch. Die Lampe hängt über dem Bett.',
+				'Practice without new grammar. Where? Preposition + dative: in, auf, an, unter, über, vor, hinter, neben, zwischen. der → dem, die → der, das → dem: Das Buch liegt auf dem Tisch. Die Lampe hängt über dem Bett.',
+				'Практика без нової граматики. Де? Прийменник + Dativ: in, auf, an, unter, über, vor, hinter, neben, zwischen. der → dem, die → der, das → dem: Das Buch liegt auf dem Tisch. Die Lampe hängt über dem Bett.',
+				'Ćwiczenie bez nowej gramatyki. Gdzie? Przyimek + celownik: in, auf, an, unter, über, vor, hinter, neben, zwischen. der → dem, die → der, das → dem: Das Buch liegt auf dem Tisch. Die Lampe hängt über dem Bett.',
+				'Práctica sin gramática nueva. ¿Dónde? Preposición + dativo: in, auf, an, unter, über, vor, hinter, neben, zwischen. der → dem, die → der, das → dem: Das Buch liegt auf dem Tisch. Die Lampe hängt über dem Bett.',
+				'Entraînement sans nouvelle grammaire. Où ? Préposition + datif : in, auf, an, unter, über, vor, hinter, neben, zwischen. der → dem, die → der, das → dem : Das Buch liegt auf dem Tisch. Die Lampe hängt über dem Bett.',
+				'Yeni dilbilgisi olmadan pratik. Nerede? Edat + Dativ: in, auf, an, unter, über, vor, hinter, neben, zwischen. der → dem, die → der, das → dem: Das Buch liegt auf dem Tisch. Die Lampe hängt über dem Bett.',
+				'Exercițiu fără gramatică nouă. Unde? Prepoziție + dativ: in, auf, an, unter, über, vor, hinter, neben, zwischen. der → dem, die → der, das → dem: Das Buch liegt auf dem Tisch. Die Lampe hängt über dem Bett.',
+				'Yangi grammatikasiz mashq. Qayerda? Predlog + Dativ: in, auf, an, unter, über, vor, hinter, neben, zwischen. der → dem, die → der, das → dem: Das Buch liegt auf dem Tisch. Die Lampe hängt über dem Bett.',
+				'बिना नए व्याकरण का अभ्यास। कहाँ? पूर्वसर्ग + Dativ: in, auf, an, unter, über, vor, hinter, neben, zwischen. der → dem, die → der, das → dem: Das Buch liegt auf dem Tisch. Die Lampe hängt über dem Bett.',
+				'تدريب بلا قواعد جديدة. أين؟ حرف الجر + Dativ: in و auf و an و unter و über و vor و hinter و neben و zwischen. der → dem و die → der و das → dem: Das Buch liegt auf dem Tisch. Die Lampe hängt über dem Bett.'
+			],
+			vocab: [
+				['der Schrank', 'шкаф', 'wardrobe, cupboard', 'шафа', 'szafa', 'el armario', 'l’armoire', 'dolap', 'dulapul', 'shkaf', 'अलमारी', 'الخزانة'],
+				['das Regal', 'полка', 'shelf', 'полиця', 'regał', 'la estantería', 'l’étagère', 'raf', 'raftul', 'javon', 'शेल्फ़', 'الرف'],
+				['der Schreibtisch', 'письменный стол', 'desk', 'письмовий стіл', 'biurko', 'el escritorio', 'le bureau', 'çalışma masası', 'biroul', 'yozuv stoli', 'डेस्क', 'المكتب'],
+				['das Bild', 'картина', 'picture', 'картина', 'obraz', 'el cuadro', 'le tableau', 'resim', 'tabloul', 'rasm', 'तस्वीर', 'اللوحة'],
+				['die Katze', 'кошка', 'cat', 'кішка', 'kot', 'el gato', 'le chat', 'kedi', 'pisica', 'mushuk', 'बिल्ली', 'القطة']
+			],
+			tasks: [
+				['tr', ['Кошка спит под кроватью.', 'The cat is sleeping under the bed.', 'Кішка спить під ліжком.', 'Kot śpi pod łóżkiem.', 'El gato duerme debajo de la cama.', 'Le chat dort sous le lit.', 'Kedi yatağın altında uyuyor.', 'Pisica doarme sub pat.', 'Mushuk karavot tagida uxlayapti.', 'बिल्ली बिस्तर के नीचे सो रही है।', 'القطة نائمة تحت السرير.'],
+					['Die Katze schläft unter dem Bett.', 'Die Katze schläft unter das Bett.', 'Die Katze schläft unter den Bett.'], 'Die Katze schläft unter dem Bett.'],
+				['gw', ['Книги стоят на полке', 'The books are on the shelf', 'Книжки стоять на полиці', 'Książki stoją na regale', 'Los libros están en la estantería', 'Les livres sont sur l’étagère', 'Kitaplar rafta duruyor', 'Cărțile stau pe raft', 'Kitoblar javonda turibdi', 'किताबें शेल्फ़ पर रखी हैं', 'الكتب على الرف'],
+					'Die Bücher stehen auf ___ Regal.', 'dem'],
+				['gw', ['Картина висит над письменным столом', 'The picture hangs above the desk', 'Картина висить над письмовим столом', 'Obraz wisi nad biurkiem', 'El cuadro cuelga encima del escritorio', 'Le tableau est accroché au-dessus du bureau', 'Resim çalışma masasının üstünde asılı', 'Tabloul atârnă deasupra biroului', 'Rasm yozuv stoli ustida osig‘liq', 'तस्वीर डेस्क के ऊपर लटकी है', 'اللوحة معلقة فوق المكتب'],
+					'Das Bild hängt ___ dem Schreibtisch.', 'über'],
+				['ro', ['Стул стоит между шкафом и столом', 'The chair is between the wardrobe and the table', 'Стілець стоїть між шафою і столом', 'Krzesło stoi między szafą a stołem', 'La silla está entre el armario y la mesa', 'La chaise est entre l’armoire et la table', 'Sandalye dolapla masanın arasında', 'Scaunul stă între dulap și masă', 'Stul shkaf bilan stol orasida turibdi', 'कुर्सी अलमारी और मेज़ के बीच है', 'الكرسي بين الخزانة والطاولة'],
+					'Der Stuhl steht zwischen dem Schrank und dem Tisch', ['den']],
+				['ok', ['Сумка стоит рядом с дверью.', 'The bag is next to the door.', 'Сумка стоїть біля дверей.', 'Torba stoi obok drzwi.', 'La bolsa está al lado de la puerta.', 'Le sac est à côté de la porte.', 'Çanta kapının yanında duruyor.', 'Geanta stă lângă ușă.', 'Sumka eshik yonida turibdi.', 'बैग दरवाज़े के पास रखा है।', 'الحقيبة بجانب الباب.'],
+					['Die Tasche steht neben der Tür.', 'Die Tasche steht neben die Tür.', 'Die Tasche steht neben dem Tür.'], 'Die Tasche steht neben der Tür.'],
+				['gw', ['Одежда висит в шкафу', 'The clothes are hanging in the wardrobe', 'Одяг висить у шафі', 'Ubrania wiszą w szafie', 'La ropa está colgada en el armario', 'Les vêtements sont dans l’armoire', 'Kıyafetler dolapta asılı', 'Hainele atârnă în dulap', 'Kiyimlar shkafda osig‘liq', 'कपड़े अलमारी में टँगे हैं', 'الملابس معلقة في الخزانة'],
+					'Die Kleider hängen im ___.', 'Schrank'],
+				['rd', ['Где лежит телефон Лены?', 'Where is Lena’s phone?', 'Де лежить телефон Лени?', 'Gdzie leży telefon Leny?', '¿Dónde está el móvil de Lena?', 'Où est le portable de Lena ?', 'Lena’nın telefonu nerede?', 'Unde e telefonul Lenei?', 'Lenaning telefoni qayerda?', 'लेना का फ़ोन कहाँ है?', 'أين هاتف لينا؟'],
+					'Lena sucht ihr Handy. Es ist nicht auf dem Schreibtisch und nicht im Regal. Die Katze sitzt auf dem Bett. Unter der Katze liegt das Handy!', ['unter der Katze', 'auf dem Schreibtisch', 'im Regal'], 'unter der Katze'],
+				['gw', ['Лампа стоит на письменном столе', 'The lamp is on the desk', 'Лампа стоїть на письмовому столі', 'Lampa stoi na biurku', 'La lámpara está en el escritorio', 'La lampe est sur le bureau', 'Lamba çalışma masasının üstünde', 'Lampa stă pe birou', 'Chiroq yozuv stoli ustida', 'लैंप डेस्क पर है', 'المصباح على المكتب'],
+					'Die Lampe steht ___ dem Schreibtisch.', 'auf'],
+				['gw', ['За дверью висит куртка', 'Behind the door there is a jacket hanging', 'За дверима висить куртка', 'Za drzwiami wisi kurtka', 'Detrás de la puerta cuelga una chaqueta', 'Derrière la porte, il y a une veste', 'Kapının arkasında bir ceket asılı', 'În spatele ușii atârnă o geacă', 'Eshik orqasida kurtka osig‘liq', 'दरवाज़े के पीछे एक जैकेट टँगी है', 'خلف الباب سترة معلقة'],
+					'___ der Tür hängt eine Jacke.', 'Hinter'],
+				['ro', ['Ковёр лежит перед диваном', 'The rug is in front of the sofa', 'Килим лежить перед диваном', 'Dywan leży przed kanapą', 'La alfombra está delante del sofá', 'Le tapis est devant le canapé', 'Halı kanepenin önünde', 'Covorul e în fața canapelei', 'Gilam divan oldida yotibdi', 'कालीन सोफ़े के सामने है', 'السجادة أمام الأريكة'],
+					'Der Teppich liegt vor dem Sofa', ['das']],
+				['ok', ['Мои очки лежат на полке.', 'My glasses are on the shelf.', 'Мої окуляри лежать на полиці.', 'Moje okulary leżą na regale.', 'Mis gafas están en la estantería.', 'Mes lunettes sont sur l’étagère.', 'Gözlüğüm rafta.', 'Ochelarii mei sunt pe raft.', 'Ko‘zoynagim javonda yotibdi.', 'मेरा चश्मा शेल्फ़ पर है।', 'نظارتي على الرف.'],
+					['Meine Brille liegt auf dem Regal.', 'Meine Brille liegt auf das Regal.', 'Meine Brille liegt auf der Regal.'], 'Meine Brille liegt auf dem Regal.'],
+				['gw', ['Окно находится рядом с кроватью', 'The window is next to the bed', 'Вікно знаходиться біля ліжка', 'Okno jest obok łóżka', 'La ventana está junto a la cama', 'La fenêtre est à côté du lit', 'Pencere yatağın yanında', 'Fereastra e lângă pat', 'Deraza karavot yonida', 'खिड़की बिस्तर के पास है', 'النافذة بجانب السرير'],
+					'Das Fenster ist ___ dem Bett.', 'neben'],
+				['gw', ['Кошка сидит у окна', 'The cat is sitting at the window', 'Кішка сидить біля вікна', 'Kot siedzi przy oknie', 'El gato está sentado junto a la ventana', 'Le chat est assis à la fenêtre', 'Kedi pencerenin önünde oturuyor', 'Pisica stă la fereastră', 'Mushuk deraza oldida o‘tiribdi', 'बिल्ली खिड़की के पास बैठी है', 'القطة جالسة عند النافذة'],
+					'Die Katze sitzt am ___.', 'Fenster'],
+				['gv', ['Я купил новую полку', 'I bought a new shelf', 'Я купив нову полицю', 'Kupiłem nowy regał', 'Compré una estantería nueva', 'J’ai acheté une nouvelle étagère', 'Yeni bir raf aldım', 'Am cumpărat un raft nou', 'Yangi javon sotib oldim', 'मैंने नई शेल्फ़ ख़रीदी', 'اشتريت رفًا جديدًا'],
+					'Ich habe ein neues Regal ___.', 'gekauft'],
+				['gv', ['В понедельник мы были в музее', 'On Monday we were at the museum', 'У понеділок ми були в музеї', 'W poniedziałek byliśmy w muzeum', 'El lunes estuvimos en el museo', 'Lundi, nous étions au musée', 'Pazartesi müzedeydik', 'Luni am fost la muzeu', 'Dushanba kuni muzeyda edik', 'सोमवार को हम संग्रहालय में थे', 'يوم الاثنين كنا في المتحف'],
+					'Am Montag ___ wir im Museum.', 'waren']
+			]
+		},
+		{
+			title: ['Где это в городе?', 'Where is it in town?', 'Де це в місті?', 'Gdzie to jest w mieście?', '¿Dónde está en la ciudad?', 'Où est-ce en ville ?', 'Şehirde nerede?', 'Unde e în oraș?', 'Shaharda qayerda?', 'शहर में कहाँ है?', 'أين يقع في المدينة؟'],
+			desc: [
+				'Практика без новой грамматики. В городе: im Park, am Bahnhof, in der Stadt, an der Ecke, neben der Post, vor dem Kino, hinter dem Rathaus, zwischen der Bank und der Apotheke. in + dem = im, an + dem = am. Вопрос: Wo ist …?',
+				'Practice without new grammar. In town: im Park, am Bahnhof, in der Stadt, an der Ecke, neben der Post, vor dem Kino, hinter dem Rathaus, zwischen der Bank und der Apotheke. in + dem = im, an + dem = am. The question: Wo ist …?',
+				'Практика без нової граматики. У місті: im Park, am Bahnhof, in der Stadt, an der Ecke, neben der Post, vor dem Kino, hinter dem Rathaus, zwischen der Bank und der Apotheke. in + dem = im, an + dem = am. Питання: Wo ist …?',
+				'Ćwiczenie bez nowej gramatyki. W mieście: im Park, am Bahnhof, in der Stadt, an der Ecke, neben der Post, vor dem Kino, hinter dem Rathaus, zwischen der Bank und der Apotheke. in + dem = im, an + dem = am. Pytanie: Wo ist …?',
+				'Práctica sin gramática nueva. En la ciudad: im Park, am Bahnhof, in der Stadt, an der Ecke, neben der Post, vor dem Kino, hinter dem Rathaus, zwischen der Bank und der Apotheke. in + dem = im, an + dem = am. La pregunta: Wo ist …?',
+				'Entraînement sans nouvelle grammaire. En ville : im Park, am Bahnhof, in der Stadt, an der Ecke, neben der Post, vor dem Kino, hinter dem Rathaus, zwischen der Bank und der Apotheke. in + dem = im, an + dem = am. La question : Wo ist … ?',
+				'Yeni dilbilgisi olmadan pratik. Şehirde: im Park, am Bahnhof, in der Stadt, an der Ecke, neben der Post, vor dem Kino, hinter dem Rathaus, zwischen der Bank und der Apotheke. in + dem = im, an + dem = am. Soru: Wo ist …?',
+				'Exercițiu fără gramatică nouă. În oraș: im Park, am Bahnhof, in der Stadt, an der Ecke, neben der Post, vor dem Kino, hinter dem Rathaus, zwischen der Bank und der Apotheke. in + dem = im, an + dem = am. Întrebarea: Wo ist …?',
+				'Yangi grammatikasiz mashq. Shaharda: im Park, am Bahnhof, in der Stadt, an der Ecke, neben der Post, vor dem Kino, hinter dem Rathaus, zwischen der Bank und der Apotheke. in + dem = im, an + dem = am. Savol: Wo ist …?',
+				'बिना नए व्याकरण का अभ्यास। शहर में: im Park, am Bahnhof, in der Stadt, an der Ecke, neben der Post, vor dem Kino, hinter dem Rathaus, zwischen der Bank und der Apotheke. in + dem = im, an + dem = am. सवाल: Wo ist …?',
+				'تدريب بلا قواعد جديدة. في المدينة: im Park و am Bahnhof و in der Stadt و an der Ecke و neben der Post و vor dem Kino و hinter dem Rathaus و zwischen der Bank und der Apotheke. in + dem = im و an + dem = am. السؤال: Wo ist …?'
+			],
+			vocab: [
+				['das Rathaus', 'ратуша', 'town hall', 'ратуша', 'ratusz', 'el ayuntamiento', 'la mairie', 'belediye binası', 'primăria', 'shahar hokimiyati', 'टाउन हॉल', 'مبنى البلدية'],
+				['die Bäckerei', 'пекарня', 'bakery', 'пекарня', 'piekarnia', 'la panadería', 'la boulangerie', 'fırın', 'brutăria', 'novvoyxona', 'बेकरी', 'المخبز'],
+				['der Parkplatz', 'парковка', 'car park', 'парковка', 'parking', 'el aparcamiento', 'le parking', 'otopark', 'parcarea', 'avtoturargoh', 'पार्किंग', 'موقف السيارات'],
+				['die Schule', 'школа', 'school', 'школа', 'szkoła', 'la escuela', 'l’école', 'okul', 'școala', 'maktab', 'स्कूल', 'المدرسة'],
+				['das Café', 'кафе', 'café', 'кафе', 'kawiarnia', 'el café', 'le café', 'kafe', 'cafeneaua', 'kafe', 'कैफ़े', 'المقهى']
+			],
+			tasks: [
+				['tr', ['Пекарня находится рядом со школой.', 'The bakery is next to the school.', 'Пекарня знаходиться біля школи.', 'Piekarnia jest obok szkoły.', 'La panadería está al lado de la escuela.', 'La boulangerie est à côté de l’école.', 'Fırın okulun yanında.', 'Brutăria e lângă școală.', 'Novvoyxona maktab yonida.', 'बेकरी स्कूल के पास है।', 'المخبز بجانب المدرسة.'],
+					['Die Bäckerei ist neben der Schule.', 'Die Bäckerei ist neben die Schule.', 'Die Bäckerei ist neben dem Schule.'], 'Die Bäckerei ist neben der Schule.'],
+				['gw', ['Мы ждём тебя на вокзале', 'We are waiting for you at the station', 'Ми чекаємо на тебе на вокзалі', 'Czekamy na ciebie na dworcu', 'Te esperamos en la estación', 'Nous t’attendons à la gare', 'Seni garda bekliyoruz', 'Te așteptăm la gară', 'Seni vokzalda kutyapmiz', 'हम स्टेशन पर तुम्हारा इंतज़ार कर रहे हैं', 'ننتظرك في المحطة'],
+					'Wir warten ___ Bahnhof auf dich.', 'am'],
+				['gw', ['Парковка находится за ратушей', 'The car park is behind the town hall', 'Парковка знаходиться за ратушею', 'Parking jest za ratuszem', 'El aparcamiento está detrás del ayuntamiento', 'Le parking est derrière la mairie', 'Otopark belediye binasının arkasında', 'Parcarea e în spatele primăriei', 'Avtoturargoh hokimiyat binosi orqasida', 'पार्किंग टाउन हॉल के पीछे है', 'موقف السيارات خلف مبنى البلدية'],
+					'Der Parkplatz ist hinter ___ Rathaus.', 'dem'],
+				['ro', ['Кафе находится на углу', 'The café is on the corner', 'Кафе знаходиться на розі', 'Kawiarnia jest na rogu', 'El café está en la esquina', 'Le café est au coin', 'Kafe köşede', 'Cafeneaua e la colț', 'Kafe muyulishda', 'कैफ़े कोने पर है', 'المقهى عند الزاوية'],
+					'Das Café ist an der Ecke', ['dem']],
+				['ok', ['Дети играют в парке.', 'The children are playing in the park.', 'Діти граються в парку.', 'Dzieci bawią się w parku.', 'Los niños juegan en el parque.', 'Les enfants jouent dans le parc.', 'Çocuklar parkta oynuyor.', 'Copiii se joacă în parc.', 'Bolalar parkda o‘ynayapti.', 'बच्चे पार्क में खेल रहे हैं।', 'الأطفال يلعبون في الحديقة.'],
+					['Die Kinder spielen im Park.', 'Die Kinder spielen in Park.', 'Die Kinder spielen am Park.'], 'Die Kinder spielen im Park.'],
+				['gw', ['Банк находится между почтой и аптекой', 'The bank is between the post office and the pharmacy', 'Банк знаходиться між поштою і аптекою', 'Bank jest między pocztą a apteką', 'El banco está entre correos y la farmacia', 'La banque est entre la poste et la pharmacie', 'Banka postane ile eczanenin arasında', 'Banca e între poștă și farmacie', 'Bank pochta bilan dorixona orasida', 'बैंक डाकघर और दवा की दुकान के बीच है', 'البنك بين البريد والصيدلية'],
+					'Die Bank ist ___ der Post und der Apotheke.', 'zwischen'],
+				['rd', ['Где Мия ждёт Тома?', 'Where is Mia waiting for Tom?', 'Де Мія чекає Тома?', 'Gdzie Mia czeka na Toma?', '¿Dónde espera Mia a Tom?', 'Où Mia attend-elle Tom ?', 'Mia Tom’u nerede bekliyor?', 'Unde îl așteaptă Mia pe Tom?', 'Miya Tomni qayerda kutyapti?', 'मिया टॉम का इंतज़ार कहाँ कर रही है?', 'أين تنتظر ميا توم؟'],
+					'Mia trifft Tom in der Stadt. Sie wartet vor dem Kino. Das Kino ist neben der Bäckerei, gegenüber vom Rathaus. Tom steht aber am Bahnhof!', ['vor dem Kino', 'am Bahnhof', 'in der Bäckerei'], 'vor dem Kino'],
+				['gw', ['Машина стоит на парковке', 'The car is in the car park', 'Машина стоїть на парковці', 'Samochód stoi na parkingu', 'El coche está en el aparcamiento', 'La voiture est au parking', 'Araba otoparkta', 'Mașina e în parcare', 'Mashina avtoturargohda turibdi', 'गाड़ी पार्किंग में खड़ी है', 'السيارة في موقف السيارات'],
+					'Das Auto steht auf dem ___.', 'Parkplatz'],
+				['gw', ['Мы встречаемся перед школой', 'We are meeting in front of the school', 'Ми зустрічаємося перед школою', 'Spotykamy się przed szkołą', 'Quedamos delante de la escuela', 'Nous nous retrouvons devant l’école', 'Okulun önünde buluşuyoruz', 'Ne întâlnim în fața școlii', 'Maktab oldida uchrashamiz', 'हम स्कूल के सामने मिल रहे हैं', 'نلتقي أمام المدرسة'],
+					'Wir treffen uns vor ___ Schule.', 'der'],
+				['ro', ['Автобусная остановка находится рядом с кафе', 'The bus stop is next to the café', 'Автобусна зупинка знаходиться біля кафе', 'Przystanek jest obok kawiarni', 'La parada está al lado del café', 'L’arrêt de bus est à côté du café', 'Otobüs durağı kafenin yanında', 'Stația de autobuz e lângă cafenea', 'Avtobus bekati kafe yonida', 'बस स्टॉप कैफ़े के पास है', 'موقف الحافلات بجانب المقهى'],
+					'Die Haltestelle ist neben dem Café', ['das']],
+				['ok', ['Моя сестра работает в банке.', 'My sister works at the bank.', 'Моя сестра працює в банку.', 'Moja siostra pracuje w banku.', 'Mi hermana trabaja en el banco.', 'Ma sœur travaille à la banque.', 'Kız kardeşim bankada çalışıyor.', 'Sora mea lucrează la bancă.', 'Singlim bankda ishlaydi.', 'मेरी बहन बैंक में काम करती है।', 'أختي تعمل في البنك.'],
+					['Meine Schwester arbeitet in der Bank.', 'Meine Schwester arbeitet in die Bank.', 'Meine Schwester arbeitet im Bank.'], 'Meine Schwester arbeitet in der Bank.'],
+				['gw', ['Где ратуша? Она на площади', 'Where is the town hall? It is on the square', 'Де ратуша? Вона на площі', 'Gdzie jest ratusz? Na placu', '¿Dónde está el ayuntamiento? Está en la plaza', 'Où est la mairie ? Elle est sur la place', 'Belediye binası nerede? Meydanda', 'Unde e primăria? E în piață', 'Hokimiyat binosi qayerda? Maydonda', 'टाउन हॉल कहाँ है? चौक पर है', 'أين مبنى البلدية؟ في الساحة'],
+					'___ ist das Rathaus? Es ist am Marktplatz.', 'Wo'],
+				['gw', ['Я покупаю хлеб в пекарне', 'I buy bread at the bakery', 'Я купую хліб у пекарні', 'Kupuję chleb w piekarni', 'Compro pan en la panadería', 'J’achète du pain à la boulangerie', 'Ekmeği fırından alıyorum', 'Cumpăr pâine de la brutărie', 'Nonni novvoyxonadan olaman', 'मैं बेकरी से रोटी ख़रीदता हूँ', 'أشتري الخبز من المخبز'],
+					'Ich kaufe Brot in der ___.', 'Bäckerei'],
+				['gv', ['Вчера я сидел в кафе', 'Yesterday I sat in the café', 'Учора я сидів у кафе', 'Wczoraj siedziałem w kawiarni', 'Ayer estuve sentado en el café', 'Hier, j’étais assis au café', 'Dün kafede oturdum', 'Ieri am stat în cafenea', 'Kecha kafeda o‘tirdim', 'कल मैं कैफ़े में बैठा था', 'أمس جلست في المقهى'],
+					'Gestern habe ich im Café ___.', 'gesessen'],
+				['gw', ['Вечером мы идём в театр', 'In the evening we are going to the theatre', 'Увечері ми йдемо в театр', 'Wieczorem idziemy do teatru', 'Por la noche vamos al teatro', 'Ce soir, nous allons au théâtre', 'Akşam tiyatroya gidiyoruz', 'Seara mergem la teatru', 'Kechqurun teatrga boramiz', 'शाम को हम थिएटर जा रहे हैं', 'في المساء نذهب إلى المسرح'],
+					'Am Abend gehen wir ins ___.', 'Theater']
+			]
+		}
+	]
+}

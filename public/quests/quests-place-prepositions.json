@@ -71,18 +71,32 @@
         "translation-uz": "divan"
       },
       {
-        "word": "der Garten",
-        "translation-ru": "сад",
-        "translation-en": "garden",
-        "translation-uk": "сад",
-        "translation-pl": "ogród",
-        "translation-es": "el jardín",
-        "translation-fr": "le jardin",
-        "translation-ar": "الحديقة",
-        "translation-hi": "बगीचा",
-        "translation-ro": "grădina",
-        "translation-tr": "bahçe",
-        "translation-uz": "bog‘"
+        "word": "hängen",
+        "translation-ru": "висеть",
+        "translation-en": "to hang",
+        "translation-uk": "висіти",
+        "translation-pl": "wisieć",
+        "translation-es": "estar colgado",
+        "translation-fr": "être accroché",
+        "translation-tr": "asılı olmak",
+        "translation-ro": "a atârna",
+        "translation-uz": "osilib turmoq",
+        "translation-hi": "टंगा होना",
+        "translation-ar": "يتدلى"
+      },
+      {
+        "word": "der Kühlschrank",
+        "translation-ru": "холодильник",
+        "translation-en": "fridge",
+        "translation-uk": "холодильник",
+        "translation-pl": "lodówka",
+        "translation-es": "la nevera",
+        "translation-fr": "le réfrigérateur",
+        "translation-tr": "buzdolabı",
+        "translation-ro": "frigiderul",
+        "translation-uz": "muzlatgich",
+        "translation-hi": "फ़्रिज",
+        "translation-ar": "الثلاجة"
       }
     ],
     "tasks": [
@@ -95,7 +109,8 @@
           "unter dem Tisch",
           "im Tisch"
         ],
-        "answer": "auf dem Tisch"
+        "answer": "auf dem Tisch",
+        "tip": "placePrepositions.questDescription"
       },
       {
         "id": 2,
@@ -117,7 +132,8 @@
           "auf",
           "dem",
           "Tisch"
-        ]
+        ],
+        "tip": "placePrepositions.questDescription"
       },
       {
         "id": 3,
@@ -128,7 +144,8 @@
           "auf der Wand",
           "in der Wand"
         ],
-        "answer": "an der Wand"
+        "answer": "an der Wand",
+        "tip": "placePrepositions.questDescription"
       },
       {
         "id": 4,
@@ -150,13 +167,15 @@
           "an",
           "der",
           "Wand"
-        ]
+        ],
+        "tip": "placePrepositions.questDescription"
       },
       {
         "id": 5,
         "type": "input",
         "question": "placePrepositions.questTask5",
-        "correctAnswer": "in"
+        "correctAnswer": "in",
+        "tip": "placePrepositions.questDescription"
       },
       {
         "id": 6,
@@ -176,13 +195,15 @@
           "ist",
           "im",
           "Kühlschrank"
-        ]
+        ],
+        "tip": "placePrepositions.questDescription"
       },
       {
         "id": 7,
         "type": "input",
         "question": "placePrepositions.questTask7",
-        "correctAnswer": "in"
+        "correctAnswer": "in",
+        "tip": "placePrepositions.questDescription"
       },
       {
         "id": 8,
@@ -193,13 +214,15 @@
           "im Fenster",
           "auf dem Fenster"
         ],
-        "answer": "am Fenster"
+        "answer": "am Fenster",
+        "tip": "placePrepositions.questDescription"
       },
       {
         "id": 9,
         "type": "input",
         "question": "placePrepositions.questTask9",
-        "correctAnswer": "dem"
+        "correctAnswer": "dem",
+        "tip": "placePrepositions.questDescription"
       },
       {
         "id": 10,
@@ -211,46 +234,35 @@
           "in der Jacke",
           "an der Wand"
         ],
-        "answer": "auf dem Sofa"
+        "answer": "auf dem Sofa",
+        "tip": "placePrepositions.questDescription"
       },
       {
         "id": 11,
-        "type": "reorder",
-        "question": "placePrepositions.questTask11",
-        "words": [
-          "sitzt",
-          "Bett",
-          "Die",
-          "dem",
-          "auf",
-          "Katze",
-          "das"
-        ],
-        "correctOrder": [
-          "Die",
-          "Katze",
-          "sitzt",
-          "auf",
-          "dem",
-          "Bett"
-        ]
+        "type": "input",
+        "question": "a2Course.t35",
+        "correctAnswer": "habe",
+        "reviewOf": "past-one",
+        "reviewLand": "past-land",
+        "tip": "pastValleyQuestOne.description"
       },
       {
         "id": 12,
         "type": "input",
-        "question": "placePrepositions.questTask12",
-        "correctAnswer": "an"
+        "question": "a2Course.t36",
+        "correctAnswer": "sind",
+        "reviewOf": "past-two",
+        "reviewLand": "past-land",
+        "tip": "pastValleyQuestTwo.description"
       },
       {
         "id": 13,
-        "type": "select",
-        "question": "placePrepositions.questTask13",
-        "options": [
-          "im Garten",
-          "am Garten",
-          "auf dem Garten"
-        ],
-        "answer": "im Garten"
+        "type": "input",
+        "question": "a2Course.t37",
+        "correctAnswer": "gesehen",
+        "reviewOf": "past-one",
+        "reviewLand": "past-land",
+        "tip": "pastValleyQuestOne.description"
       },
       {
         "id": 14,
@@ -262,7 +274,8 @@
           "im Wohnzimmer",
           "im Garten"
         ],
-        "answer": "in der Küche"
+        "answer": "in der Küche",
+        "tip": "placePrepositions.questDescription"
       },
       {
         "id": 15,
@@ -273,7 +286,8 @@
           "Die Teller stehen auf den Tisch.",
           "Die Teller stehen im Tisch."
         ],
-        "answer": "Die Teller stehen auf dem Tisch."
+        "answer": "Die Teller stehen auf dem Tisch.",
+        "tip": "placePrepositions.questDescription"
       }
     ]
   },
@@ -373,7 +387,8 @@
           "über dem Bett",
           "auf dem Bett"
         ],
-        "answer": "unter dem Bett"
+        "answer": "unter dem Bett",
+        "tip": "placePrepositionsTwo.questDescription"
       },
       {
         "id": 2,
@@ -395,7 +410,8 @@
           "unter",
           "dem",
           "Tisch"
-        ]
+        ],
+        "tip": "placePrepositionsTwo.questDescription"
       },
       {
         "id": 3,
@@ -406,7 +422,8 @@
           "unter dem Sofa",
           "im Sofa"
         ],
-        "answer": "über dem Sofa"
+        "answer": "über dem Sofa",
+        "tip": "placePrepositionsTwo.questDescription"
       },
       {
         "id": 4,
@@ -428,19 +445,22 @@
           "über",
           "dem",
           "Tisch"
-        ]
+        ],
+        "tip": "placePrepositionsTwo.questDescription"
       },
       {
         "id": 5,
         "type": "input",
         "question": "placePrepositionsTwo.questTask5",
-        "correctAnswer": "unter"
+        "correctAnswer": "unter",
+        "tip": "placePrepositionsTwo.questDescription"
       },
       {
         "id": 6,
         "type": "input",
         "question": "placePrepositionsTwo.questTask6",
-        "correctAnswer": "über"
+        "correctAnswer": "über",
+        "tip": "placePrepositionsTwo.questDescription"
       },
       {
         "id": 7,
@@ -452,13 +472,15 @@
           "auf dem Teppich",
           "über dem Tisch"
         ],
-        "answer": "unter dem Tisch"
+        "answer": "unter dem Tisch",
+        "tip": "placePrepositionsTwo.questDescription"
       },
       {
         "id": 8,
         "type": "input",
         "question": "placePrepositionsTwo.questTask8",
-        "correctAnswer": "dem"
+        "correctAnswer": "dem",
+        "tip": "placePrepositionsTwo.questDescription"
       },
       {
         "id": 9,
@@ -469,7 +491,8 @@
           "Über die Tür hängt eine Uhr.",
           "Unter der Tür hängt eine Uhr."
         ],
-        "answer": "Über der Tür hängt eine Uhr."
+        "answer": "Über der Tür hängt eine Uhr.",
+        "tip": "placePrepositionsTwo.questDescription"
       },
       {
         "id": 10,
@@ -491,30 +514,51 @@
           "unter",
           "dem",
           "Teppich"
-        ]
+        ],
+        "tip": "placePrepositionsTwo.questDescription"
       },
       {
         "id": 11,
-        "type": "input",
-        "question": "placePrepositionsTwo.questTask11",
-        "correctAnswer": "über"
+        "type": "reorder",
+        "question": "placePrepositions.questTask2",
+        "words": [
+          "liegt",
+          "Tisch",
+          "Das",
+          "dem",
+          "auf",
+          "Buch",
+          "den"
+        ],
+        "correctOrder": [
+          "Das",
+          "Buch",
+          "liegt",
+          "auf",
+          "dem",
+          "Tisch"
+        ],
+        "reviewOf": "place-prep-1",
+        "reviewLand": "place-prepositions",
+        "tip": "placePrepositions.questDescription"
       },
       {
         "id": 12,
-        "type": "select",
-        "question": "placePrepositionsTwo.questTask12",
-        "options": [
-          "im Schrank",
-          "am Schrank",
-          "unter den Schrank"
-        ],
-        "answer": "im Schrank"
+        "type": "input",
+        "question": "a2Course.t38",
+        "correctAnswer": "bin",
+        "reviewOf": "past-two",
+        "reviewLand": "past-land",
+        "tip": "pastValleyQuestTwo.description"
       },
       {
         "id": 13,
         "type": "input",
-        "question": "placePrepositionsTwo.questTask13",
-        "correctAnswer": "auf"
+        "question": "a2Course.t39",
+        "correctAnswer": "gelesen",
+        "reviewOf": "past-three",
+        "reviewLand": "past-land",
+        "tip": "pastValleyQuestThree.description"
       },
       {
         "id": 14,
@@ -534,7 +578,8 @@
           "in",
           "der",
           "Küche"
-        ]
+        ],
+        "tip": "placePrepositionsTwo.questDescription"
       },
       {
         "id": 15,
@@ -546,7 +591,8 @@
           "unter dem Kissen",
           "unter dem Tisch"
         ],
-        "answer": "auf dem Tisch"
+        "answer": "auf dem Tisch",
+        "tip": "placePrepositionsTwo.questDescription"
       }
     ]
   },
@@ -622,18 +668,18 @@
         "translation-uz": "ko‘zgu"
       },
       {
-        "word": "der Bahnhof",
-        "translation-ru": "вокзал",
-        "translation-en": "station",
-        "translation-uk": "вокзал",
-        "translation-pl": "dworzec",
-        "translation-es": "la estación",
-        "translation-fr": "la gare",
-        "translation-ar": "محطة القطار",
-        "translation-hi": "रेलवे स्टेशन",
-        "translation-ro": "gara",
-        "translation-tr": "tren istasyonu",
-        "translation-uz": "vokzal"
+        "word": "hängen",
+        "translation-ru": "висеть",
+        "translation-en": "to hang",
+        "translation-uk": "висіти",
+        "translation-pl": "wisieć",
+        "translation-es": "colgar",
+        "translation-fr": "être suspendu",
+        "translation-tr": "asılı olmak",
+        "translation-ro": "a atârna",
+        "translation-uz": "osilib turmoq",
+        "translation-hi": "लटकना",
+        "translation-ar": "يعلق"
       }
     ],
     "tasks": [
@@ -646,7 +692,8 @@
           "hinter dem Haus",
           "im Haus"
         ],
-        "answer": "vor dem Haus"
+        "answer": "vor dem Haus",
+        "tip": "placePrepositionsThree.questDescription"
       },
       {
         "id": 2,
@@ -668,7 +715,8 @@
           "vor",
           "dem",
           "Haus"
-        ]
+        ],
+        "tip": "placePrepositionsThree.questDescription"
       },
       {
         "id": 3,
@@ -679,7 +727,8 @@
           "vor der Tür",
           "an der Tür"
         ],
-        "answer": "hinter der Tür"
+        "answer": "hinter der Tür",
+        "tip": "placePrepositionsThree.questDescription"
       },
       {
         "id": 4,
@@ -701,25 +750,29 @@
           "hinter",
           "dem",
           "Haus"
-        ]
+        ],
+        "tip": "placePrepositionsThree.questDescription"
       },
       {
         "id": 5,
         "type": "input",
         "question": "placePrepositionsThree.questTask5",
-        "correctAnswer": "vor"
+        "correctAnswer": "vor",
+        "tip": "placePrepositionsThree.questDescription"
       },
       {
         "id": 6,
         "type": "input",
         "question": "placePrepositionsThree.questTask6",
-        "correctAnswer": "hinter"
+        "correctAnswer": "hinter",
+        "tip": "placePrepositionsThree.questDescription"
       },
       {
         "id": 7,
         "type": "input",
         "question": "placePrepositionsThree.questTask7",
-        "correctAnswer": "der"
+        "correctAnswer": "der",
+        "tip": "placePrepositionsThree.questDescription"
       },
       {
         "id": 8,
@@ -731,7 +784,8 @@
           "vor dem Haus",
           "im Haus"
         ],
-        "answer": "hinter dem Haus"
+        "answer": "hinter dem Haus",
+        "tip": "placePrepositionsThree.questDescription"
       },
       {
         "id": 9,
@@ -753,7 +807,8 @@
           "hinter",
           "der",
           "Schule"
-        ]
+        ],
+        "tip": "placePrepositionsThree.questDescription"
       },
       {
         "id": 10,
@@ -764,36 +819,51 @@
           "Er steht vor den Spiegel.",
           "Er steht hinter dem Spiegel."
         ],
-        "answer": "Er steht vor dem Spiegel."
+        "answer": "Er steht vor dem Spiegel.",
+        "tip": "placePrepositionsThree.questDescription"
       },
       {
         "id": 11,
-        "type": "readAndAnswer",
-        "question": "placePrepositionsThree.questTask11",
-        "text": "Wir treffen uns um acht Uhr vor dem Bahnhof.",
-        "options": [
-          "vor dem Bahnhof",
-          "hinter dem Bahnhof",
-          "im Bahnhof"
+        "type": "reorder",
+        "question": "placePrepositionsTwo.questTask2",
+        "words": [
+          "schläft",
+          "Tisch",
+          "Der",
+          "dem",
+          "unter",
+          "Hund",
+          "den"
         ],
-        "answer": "vor dem Bahnhof"
+        "correctOrder": [
+          "Der",
+          "Hund",
+          "schläft",
+          "unter",
+          "dem",
+          "Tisch"
+        ],
+        "reviewOf": "place-prep-2",
+        "reviewLand": "place-prepositions",
+        "tip": "placePrepositionsTwo.questDescription"
       },
       {
         "id": 12,
         "type": "input",
-        "question": "placePrepositionsThree.questTask12",
-        "correctAnswer": "unter"
+        "question": "a2Course.t40",
+        "correctAnswer": "hast",
+        "reviewOf": "past-three",
+        "reviewLand": "past-land",
+        "tip": "pastValleyQuestThree.description"
       },
       {
         "id": 13,
-        "type": "select",
-        "question": "placePrepositionsThree.questTask13",
-        "options": [
-          "über dem Tisch",
-          "unter dem Tisch",
-          "über den Tisch"
-        ],
-        "answer": "über dem Tisch"
+        "type": "input",
+        "question": "a2Course.t41",
+        "correctAnswer": "bezahlt",
+        "reviewOf": "past-four",
+        "reviewLand": "past-land",
+        "tip": "pastValleyQuestFour.description"
       },
       {
         "id": 14,
@@ -815,7 +885,8 @@
           "an",
           "der",
           "Wand"
-        ]
+        ],
+        "tip": "placePrepositionsThree.questDescription"
       },
       {
         "id": 15,
@@ -826,7 +897,8 @@
           "vor dem Auto",
           "unter dem Auto"
         ],
-        "answer": "hinter dem Auto"
+        "answer": "hinter dem Auto",
+        "tip": "placePrepositionsThree.questDescription"
       }
     ]
   },
@@ -926,7 +998,8 @@
           "zwischen der Apotheke",
           "hinter die Apotheke"
         ],
-        "answer": "neben der Apotheke"
+        "answer": "neben der Apotheke",
+        "tip": "placePrepositionsFour.questDescription"
       },
       {
         "id": 2,
@@ -948,7 +1021,8 @@
           "neben",
           "der",
           "Bank"
-        ]
+        ],
+        "tip": "placePrepositionsFour.questDescription"
       },
       {
         "id": 3,
@@ -959,7 +1033,8 @@
           "zwischen das Fenster und die Tür",
           "unter dem Fenster und der Tür"
         ],
-        "answer": "zwischen dem Fenster und der Tür"
+        "answer": "zwischen dem Fenster und der Tür",
+        "tip": "placePrepositionsFour.questDescription"
       },
       {
         "id": 4,
@@ -987,25 +1062,29 @@
           "und",
           "dem",
           "Schrank"
-        ]
+        ],
+        "tip": "placePrepositionsFour.questDescription"
       },
       {
         "id": 5,
         "type": "input",
         "question": "placePrepositionsFour.questTask5",
-        "correctAnswer": "neben"
+        "correctAnswer": "neben",
+        "tip": "placePrepositionsFour.questDescription"
       },
       {
         "id": 6,
         "type": "input",
         "question": "placePrepositionsFour.questTask6",
-        "correctAnswer": "zwischen"
+        "correctAnswer": "zwischen",
+        "tip": "placePrepositionsFour.questDescription"
       },
       {
         "id": 7,
         "type": "input",
         "question": "placePrepositionsFour.questTask7",
-        "correctAnswer": "dem"
+        "correctAnswer": "dem",
+        "tip": "placePrepositionsFour.questDescription"
       },
       {
         "id": 8,
@@ -1017,7 +1096,8 @@
           "vor der Post",
           "hinter der Bank"
         ],
-        "answer": "zwischen der Post und der Bank"
+        "answer": "zwischen der Post und der Bank",
+        "tip": "placePrepositionsFour.questDescription"
       },
       {
         "id": 9,
@@ -1035,7 +1115,8 @@
           "sitze",
           "neben",
           "Anna"
-        ]
+        ],
+        "tip": "placePrepositionsFour.questDescription"
       },
       {
         "id": 10,
@@ -1046,47 +1127,82 @@
           "Er sitzt zwischen mich und dich.",
           "Er sitzt zwischen ich und du."
         ],
-        "answer": "Er sitzt zwischen mir und dir."
+        "answer": "Er sitzt zwischen mir und dir.",
+        "tip": "placePrepositionsFour.questDescription"
       },
       {
         "id": 11,
-        "type": "readAndAnswer",
-        "question": "placePrepositionsFour.questTask11",
-        "text": "Im Kino sitze ich neben Max. Lisa sitzt hinter uns.",
-        "options": [
-          "hinter uns",
-          "neben Max",
-          "vor uns"
+        "type": "reorder",
+        "question": "placePrepositionsThree.questTask2",
+        "words": [
+          "steht",
+          "Haus",
+          "Das",
+          "dem",
+          "vor",
+          "Auto",
+          "den"
         ],
-        "answer": "hinter uns"
+        "correctOrder": [
+          "Das",
+          "Auto",
+          "steht",
+          "vor",
+          "dem",
+          "Haus"
+        ],
+        "reviewOf": "place-prep-3",
+        "reviewLand": "place-prepositions",
+        "tip": "placePrepositionsThree.questDescription"
       },
       {
         "id": 12,
-        "type": "input",
-        "question": "placePrepositionsFour.questTask12",
-        "correctAnswer": "vor"
+        "type": "reorder",
+        "question": "placePrepositions.questTask4",
+        "words": [
+          "hängt",
+          "Wand",
+          "Das",
+          "der",
+          "an",
+          "Bild",
+          "die"
+        ],
+        "correctOrder": [
+          "Das",
+          "Bild",
+          "hängt",
+          "an",
+          "der",
+          "Wand"
+        ],
+        "reviewOf": "place-prep-1",
+        "reviewLand": "place-prepositions",
+        "tip": "placePrepositions.questDescription"
       },
       {
         "id": 13,
         "type": "reorder",
-        "question": "placePrepositionsFour.questTask13",
+        "question": "a2Course.t42",
         "words": [
-          "sitzt",
-          "Baum",
-          "Die",
-          "dem",
-          "hinter",
-          "Katze",
-          "den"
+          "getrinkt",
+          "haben",
+          "viel",
+          "sind",
+          "Kaffee",
+          "getrunken",
+          "Wir"
         ],
         "correctOrder": [
-          "Die",
-          "Katze",
-          "sitzt",
-          "hinter",
-          "dem",
-          "Baum"
-        ]
+          "Wir",
+          "haben",
+          "viel",
+          "Kaffee",
+          "getrunken"
+        ],
+        "reviewOf": "past-five",
+        "reviewLand": "past-land",
+        "tip": "pastValleyQuestFive.description"
       },
       {
         "id": 14,
@@ -1097,13 +1213,15 @@
           "über dem Tisch",
           "unter den Tisch"
         ],
-        "answer": "unter dem Tisch"
+        "answer": "unter dem Tisch",
+        "tip": "placePrepositionsFour.questDescription"
       },
       {
         "id": 15,
         "type": "input",
         "question": "placePrepositionsFour.questTask15",
-        "correctAnswer": "in"
+        "correctAnswer": "in",
+        "tip": "placePrepositionsFour.questDescription"
       }
     ]
   },
@@ -1179,18 +1297,18 @@
         "translation-uz": "burchak"
       },
       {
-        "word": "die Kasse",
-        "translation-ru": "касса",
-        "translation-en": "checkout",
-        "translation-uk": "каса",
-        "translation-pl": "kasa",
-        "translation-es": "la caja",
-        "translation-fr": "la caisse",
-        "translation-ar": "الصندوق",
-        "translation-hi": "काउंटर",
-        "translation-ro": "casa de marcat",
-        "translation-tr": "kasa",
-        "translation-uz": "kassa"
+        "word": "das Schwimmbad",
+        "translation-ru": "бассейн",
+        "translation-en": "swimming pool",
+        "translation-uk": "басейн",
+        "translation-pl": "basen",
+        "translation-es": "la piscina",
+        "translation-fr": "la piscine",
+        "translation-tr": "yüzme havuzu",
+        "translation-ro": "piscina",
+        "translation-uz": "basseyn",
+        "translation-hi": "स्विमिंग पूल",
+        "translation-ar": "المسبح"
       }
     ],
     "tasks": [
@@ -1203,7 +1321,8 @@
           "am Park",
           "auf dem Park"
         ],
-        "answer": "im Park"
+        "answer": "im Park",
+        "tip": "placePrepositionsFive.questDescription"
       },
       {
         "id": 2,
@@ -1221,7 +1340,8 @@
           "spazieren",
           "im",
           "Park"
-        ]
+        ],
+        "tip": "placePrepositionsFive.questDescription"
       },
       {
         "id": 3,
@@ -1232,25 +1352,29 @@
           "in der Haltestelle",
           "auf die Haltestelle"
         ],
-        "answer": "an der Haltestelle"
+        "answer": "an der Haltestelle",
+        "tip": "placePrepositionsFive.questDescription"
       },
       {
         "id": 4,
         "type": "input",
         "question": "placePrepositionsFive.questTask4",
-        "correctAnswer": "an"
+        "correctAnswer": "an",
+        "tip": "placePrepositionsFive.questDescription"
       },
       {
         "id": 5,
         "type": "input",
         "question": "placePrepositionsFive.questTask5",
-        "correctAnswer": "im"
+        "correctAnswer": "im",
+        "tip": "placePrepositionsFive.questDescription"
       },
       {
         "id": 6,
         "type": "input",
         "question": "placePrepositionsFive.questTask6",
-        "correctAnswer": "am"
+        "correctAnswer": "am",
+        "tip": "placePrepositionsFive.questDescription"
       },
       {
         "id": 7,
@@ -1270,7 +1394,8 @@
           "sind",
           "im",
           "Schwimmbad"
-        ]
+        ],
+        "tip": "placePrepositionsFive.questDescription"
       },
       {
         "id": 8,
@@ -1281,7 +1406,8 @@
           "auf der Ecke",
           "unter der Ecke"
         ],
-        "answer": "an der Ecke"
+        "answer": "an der Ecke",
+        "tip": "placePrepositionsFive.questDescription"
       },
       {
         "id": 9,
@@ -1293,7 +1419,8 @@
           "im Supermarkt",
           "im Auto"
         ],
-        "answer": "am Auto"
+        "answer": "am Auto",
+        "tip": "placePrepositionsFive.questDescription"
       },
       {
         "id": 10,
@@ -1311,30 +1438,82 @@
           "sitzen",
           "im",
           "Café"
-        ]
+        ],
+        "tip": "placePrepositionsFive.questDescription"
       },
       {
         "id": 11,
-        "type": "input",
-        "question": "placePrepositionsFive.questTask11",
-        "correctAnswer": "an"
+        "type": "reorder",
+        "question": "placePrepositionsFour.questTask2",
+        "words": [
+          "ist",
+          "Bank",
+          "Die",
+          "der",
+          "neben",
+          "Apotheke",
+          "die"
+        ],
+        "correctOrder": [
+          "Die",
+          "Apotheke",
+          "ist",
+          "neben",
+          "der",
+          "Bank"
+        ],
+        "reviewOf": "place-prep-4",
+        "reviewLand": "place-prepositions",
+        "tip": "placePrepositionsFour.questDescription"
       },
       {
         "id": 12,
-        "type": "select",
-        "question": "placePrepositionsFive.questTask12",
-        "options": [
-          "neben dem Bett",
-          "neben das Bett",
-          "zwischen dem Bett"
+        "type": "reorder",
+        "question": "placePrepositionsTwo.questTask4",
+        "words": [
+          "hängt",
+          "Tisch",
+          "Die",
+          "dem",
+          "über",
+          "Lampe",
+          "den"
         ],
-        "answer": "neben dem Bett"
+        "correctOrder": [
+          "Die",
+          "Lampe",
+          "hängt",
+          "über",
+          "dem",
+          "Tisch"
+        ],
+        "reviewOf": "place-prep-2",
+        "reviewLand": "place-prepositions",
+        "tip": "placePrepositionsTwo.questDescription"
       },
       {
         "id": 13,
-        "type": "input",
-        "question": "placePrepositionsFive.questTask13",
-        "correctAnswer": "zwischen"
+        "type": "reorder",
+        "question": "a2Course.t43",
+        "words": [
+          "gekommt",
+          "gekommen",
+          "Habt",
+          "ihr",
+          "Seid",
+          "spät",
+          "gestern"
+        ],
+        "correctOrder": [
+          "Seid",
+          "ihr",
+          "gestern",
+          "spät",
+          "gekommen"
+        ],
+        "reviewOf": "past-two",
+        "reviewLand": "past-land",
+        "tip": "pastValleyQuestTwo.description"
       },
       {
         "id": 14,
@@ -1356,13 +1535,15 @@
           "vor",
           "dem",
           "Hotel"
-        ]
+        ],
+        "tip": "placePrepositionsFive.questDescription"
       },
       {
         "id": 15,
         "type": "input",
         "question": "placePrepositionsFive.questTask15",
-        "correctAnswer": "über"
+        "correctAnswer": "über",
+        "tip": "placePrepositionsFive.questDescription"
       }
     ]
   },
@@ -1424,20 +1605,6 @@
         "translation-uz": "kurtka"
       },
       {
-        "word": "die Brille",
-        "translation-ru": "очки",
-        "translation-en": "glasses",
-        "translation-uk": "окуляри",
-        "translation-pl": "okulary",
-        "translation-es": "las gafas",
-        "translation-fr": "les lunettes",
-        "translation-ar": "النظارة",
-        "translation-hi": "चश्मा",
-        "translation-ro": "ochelarii",
-        "translation-tr": "gözlük",
-        "translation-uz": "ko‘zoynak"
-      },
-      {
         "word": "der Bruder",
         "translation-ru": "брат",
         "translation-en": "brother",
@@ -1450,6 +1617,20 @@
         "translation-ro": "fratele",
         "translation-tr": "erkek kardeş",
         "translation-uz": "aka"
+      },
+      {
+        "word": "das Handy",
+        "translation-ru": "мобильный телефон",
+        "translation-en": "mobile phone",
+        "translation-uk": "мобільний телефон",
+        "translation-pl": "komórka",
+        "translation-es": "el móvil",
+        "translation-fr": "le portable",
+        "translation-tr": "cep telefonu",
+        "translation-ro": "mobilul",
+        "translation-uz": "mobil telefon",
+        "translation-hi": "मोबाइल",
+        "translation-ar": "الهاتف المحمول"
       }
     ],
     "tasks": [
@@ -1462,7 +1643,8 @@
           "Wohin liegt das Buch?",
           "Woher liegt das Buch?"
         ],
-        "answer": "Wo liegt das Buch?"
+        "answer": "Wo liegt das Buch?",
+        "tip": "placePrepositionsSix.questDescription"
       },
       {
         "id": 2,
@@ -1480,7 +1662,8 @@
           "ist",
           "deine",
           "Tasche"
-        ]
+        ],
+        "tip": "placePrepositionsSix.questDescription"
       },
       {
         "id": 3,
@@ -1491,7 +1674,8 @@
           "in meinen Zimmer",
           "in meiner Zimmer"
         ],
-        "answer": "in meinem Zimmer"
+        "answer": "in meinem Zimmer",
+        "tip": "placePrepositionsSix.questDescription"
       },
       {
         "id": 4,
@@ -1513,19 +1697,22 @@
           "in",
           "meiner",
           "Tasche"
-        ]
+        ],
+        "tip": "placePrepositionsSix.questDescription"
       },
       {
         "id": 5,
         "type": "input",
         "question": "placePrepositionsSix.questTask5",
-        "correctAnswer": "er"
+        "correctAnswer": "er",
+        "tip": "placePrepositionsSix.questDescription"
       },
       {
         "id": 6,
         "type": "input",
         "question": "placePrepositionsSix.questTask6",
-        "correctAnswer": "em"
+        "correctAnswer": "em",
+        "tip": "placePrepositionsSix.questDescription"
       },
       {
         "id": 7,
@@ -1537,7 +1724,8 @@
           "in der Küche",
           "im Auto"
         ],
-        "answer": "im Garten"
+        "answer": "im Garten",
+        "tip": "placePrepositionsSix.questDescription"
       },
       {
         "id": 8,
@@ -1548,7 +1736,8 @@
           "Wohin wohnt dein Bruder?",
           "Wo wohnst dein Bruder?"
         ],
-        "answer": "Wo wohnt dein Bruder?"
+        "answer": "Wo wohnt dein Bruder?",
+        "tip": "placePrepositionsSix.questDescription"
       },
       {
         "id": 9,
@@ -1570,42 +1759,85 @@
           "einer",
           "kleinen",
           "Wohnung"
-        ]
+        ],
+        "tip": "placePrepositionsSix.questDescription"
       },
       {
         "id": 10,
         "type": "input",
         "question": "placePrepositionsSix.questTask10",
-        "correctAnswer": "er"
+        "correctAnswer": "er",
+        "tip": "placePrepositionsSix.questDescription"
       },
       {
         "id": 11,
-        "type": "readAndAnswer",
-        "question": "placePrepositionsSix.questTask11",
-        "text": "Meine Brille liegt in meiner Tasche. Mein Buch liegt auf dem Bett.",
-        "options": [
-          "auf dem Bett",
-          "in meiner Tasche",
-          "unter dem Bett"
+        "type": "reorder",
+        "question": "placePrepositionsFive.questTask2",
+        "words": [
+          "spazieren",
+          "Park",
+          "Wir",
+          "im",
+          "den"
         ],
-        "answer": "auf dem Bett"
+        "correctOrder": [
+          "Wir",
+          "spazieren",
+          "im",
+          "Park"
+        ],
+        "reviewOf": "place-prep-5",
+        "reviewLand": "place-prepositions",
+        "tip": "placePrepositionsFive.questDescription"
       },
       {
         "id": 12,
-        "type": "input",
-        "question": "placePrepositionsSix.questTask12",
-        "correctAnswer": "im"
+        "type": "reorder",
+        "question": "placePrepositionsThree.questTask4",
+        "words": [
+          "ist",
+          "Haus",
+          "Der",
+          "dem",
+          "hinter",
+          "Garten",
+          "den"
+        ],
+        "correctOrder": [
+          "Der",
+          "Garten",
+          "ist",
+          "hinter",
+          "dem",
+          "Haus"
+        ],
+        "reviewOf": "place-prep-3",
+        "reviewLand": "place-prepositions",
+        "tip": "placePrepositionsThree.questDescription"
       },
       {
         "id": 13,
-        "type": "select",
-        "question": "placePrepositionsSix.questTask13",
-        "options": [
-          "Ich warte an der Kasse.",
-          "Ich warte in der Kasse.",
-          "Ich warte an die Kasse."
+        "type": "reorder",
+        "question": "a2Course.t44",
+        "words": [
+          "gestern",
+          "konnte",
+          "Ich",
+          "schlafe",
+          "kann",
+          "nicht",
+          "einschlafen"
         ],
-        "answer": "Ich warte an der Kasse."
+        "correctOrder": [
+          "Ich",
+          "konnte",
+          "gestern",
+          "nicht",
+          "einschlafen"
+        ],
+        "reviewOf": "past-simple-6",
+        "reviewLand": "past-simple",
+        "tip": "pastSimpleSix.questDescription"
       },
       {
         "id": 14,
@@ -1627,7 +1859,8 @@
           "neben",
           "der",
           "Tür"
-        ]
+        ],
+        "tip": "placePrepositionsSix.questDescription"
       },
       {
         "id": 15,
@@ -1638,7 +1871,536 @@
           "unter die Brücke",
           "über die Brücke"
         ],
-        "answer": "unter der Brücke"
+        "answer": "unter der Brücke",
+        "tip": "placePrepositionsSix.questDescription"
+      }
+    ]
+  },
+  {
+    "questId": "place-prep-9",
+    "title": "placePrepositionsExtraOne.questTitle",
+    "progress": "0/15",
+    "description": "placePrepositionsExtraOne.questDescription",
+    "conditions": {
+      "goal": "placePrepositionsExtraOne.questGoal",
+      "minCorrect": 15,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
+    "vocabulary": [
+      {
+        "word": "der Schrank",
+        "translation-ru": "шкаф",
+        "translation-en": "wardrobe, cupboard",
+        "translation-uk": "шафа",
+        "translation-pl": "szafa",
+        "translation-es": "el armario",
+        "translation-fr": "l’armoire",
+        "translation-tr": "dolap",
+        "translation-ro": "dulapul",
+        "translation-uz": "shkaf",
+        "translation-hi": "अलमारी",
+        "translation-ar": "الخزانة"
+      },
+      {
+        "word": "das Regal",
+        "translation-ru": "полка",
+        "translation-en": "shelf",
+        "translation-uk": "полиця",
+        "translation-pl": "regał",
+        "translation-es": "la estantería",
+        "translation-fr": "l’étagère",
+        "translation-tr": "raf",
+        "translation-ro": "raftul",
+        "translation-uz": "javon",
+        "translation-hi": "शेल्फ़",
+        "translation-ar": "الرف"
+      },
+      {
+        "word": "der Schreibtisch",
+        "translation-ru": "письменный стол",
+        "translation-en": "desk",
+        "translation-uk": "письмовий стіл",
+        "translation-pl": "biurko",
+        "translation-es": "el escritorio",
+        "translation-fr": "le bureau",
+        "translation-tr": "çalışma masası",
+        "translation-ro": "biroul",
+        "translation-uz": "yozuv stoli",
+        "translation-hi": "डेस्क",
+        "translation-ar": "المكتب"
+      },
+      {
+        "word": "das Bild",
+        "translation-ru": "картина",
+        "translation-en": "picture",
+        "translation-uk": "картина",
+        "translation-pl": "obraz",
+        "translation-es": "el cuadro",
+        "translation-fr": "le tableau",
+        "translation-tr": "resim",
+        "translation-ro": "tabloul",
+        "translation-uz": "rasm",
+        "translation-hi": "तस्वीर",
+        "translation-ar": "اللوحة"
+      },
+      {
+        "word": "die Katze",
+        "translation-ru": "кошка",
+        "translation-en": "cat",
+        "translation-uk": "кішка",
+        "translation-pl": "kot",
+        "translation-es": "el gato",
+        "translation-fr": "le chat",
+        "translation-tr": "kedi",
+        "translation-ro": "pisica",
+        "translation-uz": "mushuk",
+        "translation-hi": "बिल्ली",
+        "translation-ar": "القطة"
+      }
+    ],
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "placePrepositionsExtraOne.questTask1",
+        "options": [
+          "Die Katze schläft unter dem Bett.",
+          "Die Katze schläft unter das Bett.",
+          "Die Katze schläft unter den Bett."
+        ],
+        "answer": "Die Katze schläft unter dem Bett.",
+        "tip": "placePrepositionsExtraOne.questDescription"
+      },
+      {
+        "id": 2,
+        "type": "input",
+        "question": "placePrepositionsExtraOne.questTask2",
+        "correctAnswer": "dem",
+        "tip": "placePrepositionsExtraOne.questDescription"
+      },
+      {
+        "id": 3,
+        "type": "input",
+        "question": "placePrepositionsExtraOne.questTask3",
+        "correctAnswer": "über",
+        "tip": "placePrepositionsExtraOne.questDescription"
+      },
+      {
+        "id": 4,
+        "type": "reorder",
+        "question": "placePrepositionsExtraOne.questTask4",
+        "words": [
+          "Schrank",
+          "und",
+          "zwischen",
+          "dem",
+          "den",
+          "Tisch",
+          "Stuhl",
+          "steht",
+          "dem",
+          "Der"
+        ],
+        "correctOrder": [
+          "Der",
+          "Stuhl",
+          "steht",
+          "zwischen",
+          "dem",
+          "Schrank",
+          "und",
+          "dem",
+          "Tisch"
+        ],
+        "tip": "placePrepositionsExtraOne.questDescription"
+      },
+      {
+        "id": 5,
+        "type": "select",
+        "question": "placePrepositionsExtraOne.questTask5",
+        "options": [
+          "Die Tasche steht neben die Tür.",
+          "Die Tasche steht neben dem Tür.",
+          "Die Tasche steht neben der Tür."
+        ],
+        "answer": "Die Tasche steht neben der Tür.",
+        "tip": "placePrepositionsExtraOne.questDescription"
+      },
+      {
+        "id": 6,
+        "type": "input",
+        "question": "placePrepositionsExtraOne.questTask6",
+        "correctAnswer": "Schrank",
+        "tip": "placePrepositionsExtraOne.questDescription"
+      },
+      {
+        "id": 7,
+        "type": "readAndAnswer",
+        "question": "placePrepositionsExtraOne.questTask7",
+        "text": "Lena sucht ihr Handy. Es ist nicht auf dem Schreibtisch und nicht im Regal. Die Katze sitzt auf dem Bett. Unter der Katze liegt das Handy!",
+        "options": [
+          "im Regal",
+          "auf dem Schreibtisch",
+          "unter der Katze"
+        ],
+        "answer": "unter der Katze",
+        "tip": "placePrepositionsExtraOne.questDescription"
+      },
+      {
+        "id": 8,
+        "type": "input",
+        "question": "placePrepositionsExtraOne.questTask8",
+        "correctAnswer": "auf",
+        "tip": "placePrepositionsExtraOne.questDescription"
+      },
+      {
+        "id": 9,
+        "type": "input",
+        "question": "placePrepositionsExtraOne.questTask9",
+        "correctAnswer": "Hinter",
+        "tip": "placePrepositionsExtraOne.questDescription"
+      },
+      {
+        "id": 10,
+        "type": "reorder",
+        "question": "placePrepositionsExtraOne.questTask10",
+        "words": [
+          "dem",
+          "Sofa",
+          "vor",
+          "Teppich",
+          "Der",
+          "das",
+          "liegt"
+        ],
+        "correctOrder": [
+          "Der",
+          "Teppich",
+          "liegt",
+          "vor",
+          "dem",
+          "Sofa"
+        ],
+        "tip": "placePrepositionsExtraOne.questDescription"
+      },
+      {
+        "id": 11,
+        "type": "select",
+        "question": "placePrepositionsExtraOne.questTask11",
+        "options": [
+          "Meine Brille liegt auf der Regal.",
+          "Meine Brille liegt auf dem Regal.",
+          "Meine Brille liegt auf das Regal."
+        ],
+        "answer": "Meine Brille liegt auf dem Regal.",
+        "tip": "placePrepositionsExtraOne.questDescription"
+      },
+      {
+        "id": 12,
+        "type": "input",
+        "question": "placePrepositionsExtraOne.questTask12",
+        "correctAnswer": "neben",
+        "tip": "placePrepositionsExtraOne.questDescription"
+      },
+      {
+        "id": 13,
+        "type": "input",
+        "question": "placePrepositionsExtraOne.questTask13",
+        "correctAnswer": "Fenster",
+        "tip": "placePrepositionsExtraOne.questDescription"
+      },
+      {
+        "id": 14,
+        "type": "input",
+        "question": "placePrepositionsExtraOne.questTask14",
+        "correctAnswer": "gekauft",
+        "tip": "placePrepositionsExtraOne.questDescription"
+      },
+      {
+        "id": 15,
+        "type": "input",
+        "question": "placePrepositionsExtraOne.questTask15",
+        "correctAnswer": "waren",
+        "tip": "placePrepositionsExtraOne.questDescription"
+      }
+    ]
+  },
+  {
+    "questId": "place-prep-10",
+    "title": "placePrepositionsExtraTwo.questTitle",
+    "progress": "0/15",
+    "description": "placePrepositionsExtraTwo.questDescription",
+    "conditions": {
+      "goal": "placePrepositionsExtraTwo.questGoal",
+      "minCorrect": 15,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
+    "vocabulary": [
+      {
+        "word": "das Rathaus",
+        "translation-ru": "ратуша",
+        "translation-en": "town hall",
+        "translation-uk": "ратуша",
+        "translation-pl": "ratusz",
+        "translation-es": "el ayuntamiento",
+        "translation-fr": "la mairie",
+        "translation-tr": "belediye binası",
+        "translation-ro": "primăria",
+        "translation-uz": "shahar hokimiyati",
+        "translation-hi": "टाउन हॉल",
+        "translation-ar": "مبنى البلدية"
+      },
+      {
+        "word": "die Bäckerei",
+        "translation-ru": "пекарня",
+        "translation-en": "bakery",
+        "translation-uk": "пекарня",
+        "translation-pl": "piekarnia",
+        "translation-es": "la panadería",
+        "translation-fr": "la boulangerie",
+        "translation-tr": "fırın",
+        "translation-ro": "brutăria",
+        "translation-uz": "novvoyxona",
+        "translation-hi": "बेकरी",
+        "translation-ar": "المخبز"
+      },
+      {
+        "word": "der Parkplatz",
+        "translation-ru": "парковка",
+        "translation-en": "car park",
+        "translation-uk": "парковка",
+        "translation-pl": "parking",
+        "translation-es": "el aparcamiento",
+        "translation-fr": "le parking",
+        "translation-tr": "otopark",
+        "translation-ro": "parcarea",
+        "translation-uz": "avtoturargoh",
+        "translation-hi": "पार्किंग",
+        "translation-ar": "موقف السيارات"
+      },
+      {
+        "word": "die Schule",
+        "translation-ru": "школа",
+        "translation-en": "school",
+        "translation-uk": "школа",
+        "translation-pl": "szkoła",
+        "translation-es": "la escuela",
+        "translation-fr": "l’école",
+        "translation-tr": "okul",
+        "translation-ro": "școala",
+        "translation-uz": "maktab",
+        "translation-hi": "स्कूल",
+        "translation-ar": "المدرسة"
+      },
+      {
+        "word": "das Café",
+        "translation-ru": "кафе",
+        "translation-en": "café",
+        "translation-uk": "кафе",
+        "translation-pl": "kawiarnia",
+        "translation-es": "el café",
+        "translation-fr": "le café",
+        "translation-tr": "kafe",
+        "translation-ro": "cafeneaua",
+        "translation-uz": "kafe",
+        "translation-hi": "कैफ़े",
+        "translation-ar": "المقهى"
+      },
+      {
+        "word": "das Theater",
+        "translation-ru": "театр",
+        "translation-en": "theatre",
+        "translation-uk": "театр",
+        "translation-pl": "teatr",
+        "translation-es": "el teatro",
+        "translation-fr": "le théâtre",
+        "translation-tr": "tiyatro",
+        "translation-ro": "teatrul",
+        "translation-uz": "teatr",
+        "translation-hi": "थिएटर",
+        "translation-ar": "المسرح"
+      },
+      {
+        "word": "der Marktplatz",
+        "translation-ru": "рыночная площадь",
+        "translation-en": "market square",
+        "translation-uk": "ринкова площа",
+        "translation-pl": "rynek",
+        "translation-es": "la plaza del mercado",
+        "translation-fr": "la place du marché",
+        "translation-tr": "pazar meydanı",
+        "translation-ro": "piața",
+        "translation-uz": "bozor maydoni",
+        "translation-hi": "बाज़ार चौक",
+        "translation-ar": "ساحة السوق"
+      }
+    ],
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "placePrepositionsExtraTwo.questTask1",
+        "options": [
+          "Die Bäckerei ist neben der Schule.",
+          "Die Bäckerei ist neben die Schule.",
+          "Die Bäckerei ist neben dem Schule."
+        ],
+        "answer": "Die Bäckerei ist neben der Schule.",
+        "tip": "placePrepositionsExtraTwo.questDescription"
+      },
+      {
+        "id": 2,
+        "type": "input",
+        "question": "placePrepositionsExtraTwo.questTask2",
+        "correctAnswer": "am",
+        "tip": "placePrepositionsExtraTwo.questDescription"
+      },
+      {
+        "id": 3,
+        "type": "input",
+        "question": "placePrepositionsExtraTwo.questTask3",
+        "correctAnswer": "dem",
+        "tip": "placePrepositionsExtraTwo.questDescription"
+      },
+      {
+        "id": 4,
+        "type": "reorder",
+        "question": "placePrepositionsExtraTwo.questTask4",
+        "words": [
+          "Ecke",
+          "an",
+          "Café",
+          "ist",
+          "der",
+          "dem",
+          "Das"
+        ],
+        "correctOrder": [
+          "Das",
+          "Café",
+          "ist",
+          "an",
+          "der",
+          "Ecke"
+        ],
+        "tip": "placePrepositionsExtraTwo.questDescription"
+      },
+      {
+        "id": 5,
+        "type": "select",
+        "question": "placePrepositionsExtraTwo.questTask5",
+        "options": [
+          "Die Kinder spielen am Park.",
+          "Die Kinder spielen in Park.",
+          "Die Kinder spielen im Park."
+        ],
+        "answer": "Die Kinder spielen im Park.",
+        "tip": "placePrepositionsExtraTwo.questDescription"
+      },
+      {
+        "id": 6,
+        "type": "input",
+        "question": "placePrepositionsExtraTwo.questTask6",
+        "correctAnswer": "zwischen",
+        "tip": "placePrepositionsExtraTwo.questDescription"
+      },
+      {
+        "id": 7,
+        "type": "readAndAnswer",
+        "question": "placePrepositionsExtraTwo.questTask7",
+        "text": "Mia trifft Tom in der Stadt. Sie wartet vor dem Kino. Das Kino ist neben der Bäckerei, gegenüber vom Rathaus. Tom steht aber am Bahnhof!",
+        "options": [
+          "in der Bäckerei",
+          "am Bahnhof",
+          "vor dem Kino"
+        ],
+        "answer": "vor dem Kino",
+        "tip": "placePrepositionsExtraTwo.questDescription"
+      },
+      {
+        "id": 8,
+        "type": "input",
+        "question": "placePrepositionsExtraTwo.questTask8",
+        "correctAnswer": "Parkplatz",
+        "tip": "placePrepositionsExtraTwo.questDescription"
+      },
+      {
+        "id": 9,
+        "type": "input",
+        "question": "placePrepositionsExtraTwo.questTask9",
+        "correctAnswer": "der",
+        "tip": "placePrepositionsExtraTwo.questDescription"
+      },
+      {
+        "id": 10,
+        "type": "reorder",
+        "question": "placePrepositionsExtraTwo.questTask10",
+        "words": [
+          "das",
+          "Haltestelle",
+          "Café",
+          "dem",
+          "neben",
+          "Die",
+          "ist"
+        ],
+        "correctOrder": [
+          "Die",
+          "Haltestelle",
+          "ist",
+          "neben",
+          "dem",
+          "Café"
+        ],
+        "tip": "placePrepositionsExtraTwo.questDescription"
+      },
+      {
+        "id": 11,
+        "type": "select",
+        "question": "placePrepositionsExtraTwo.questTask11",
+        "options": [
+          "Meine Schwester arbeitet in der Bank.",
+          "Meine Schwester arbeitet im Bank.",
+          "Meine Schwester arbeitet in die Bank."
+        ],
+        "answer": "Meine Schwester arbeitet in der Bank.",
+        "tip": "placePrepositionsExtraTwo.questDescription"
+      },
+      {
+        "id": 12,
+        "type": "input",
+        "question": "placePrepositionsExtraTwo.questTask12",
+        "correctAnswer": "Wo",
+        "tip": "placePrepositionsExtraTwo.questDescription"
+      },
+      {
+        "id": 13,
+        "type": "input",
+        "question": "placePrepositionsExtraTwo.questTask13",
+        "correctAnswer": "Bäckerei",
+        "tip": "placePrepositionsExtraTwo.questDescription"
+      },
+      {
+        "id": 14,
+        "type": "input",
+        "question": "placePrepositionsExtraTwo.questTask14",
+        "correctAnswer": "gesessen",
+        "tip": "placePrepositionsExtraTwo.questDescription"
+      },
+      {
+        "id": 15,
+        "type": "input",
+        "question": "placePrepositionsExtraTwo.questTask15",
+        "correctAnswer": "Theater",
+        "tip": "placePrepositionsExtraTwo.questDescription"
       }
     ]
   },
@@ -1726,6 +2488,34 @@
         "translation-ro": "muzeul",
         "translation-tr": "müze",
         "translation-uz": "muzey"
+      },
+      {
+        "word": "der Mülleimer",
+        "translation-ru": "мусорное ведро",
+        "translation-en": "bin",
+        "translation-uk": "відро для сміття",
+        "translation-pl": "kosz na śmieci",
+        "translation-es": "el cubo de basura",
+        "translation-fr": "la poubelle",
+        "translation-tr": "çöp kovası",
+        "translation-ro": "coșul de gunoi",
+        "translation-uz": "axlat chelagi",
+        "translation-hi": "कूड़ेदान",
+        "translation-ar": "سلة المهملات"
+      },
+      {
+        "word": "die Fensterbank",
+        "translation-ru": "подоконник",
+        "translation-en": "windowsill",
+        "translation-uk": "підвіконня",
+        "translation-pl": "parapet",
+        "translation-es": "el alféizar",
+        "translation-fr": "le rebord de fenêtre",
+        "translation-tr": "pencere pervazı",
+        "translation-ro": "pervazul",
+        "translation-uz": "deraza tokchasi",
+        "translation-hi": "खिड़की की चौखट",
+        "translation-ar": "عتبة النافذة"
       }
     ],
     "tasks": [
@@ -1738,7 +2528,8 @@
           "vor dem Haus",
           "neben das Haus"
         ],
-        "answer": "hinter dem Haus"
+        "answer": "hinter dem Haus",
+        "tip": "placePrepositionsSeven.questDescription"
       },
       {
         "id": 2,
@@ -1760,13 +2551,15 @@
           "vor",
           "dem",
           "Laden"
-        ]
+        ],
+        "tip": "placePrepositionsSeven.questDescription"
       },
       {
         "id": 3,
         "type": "input",
         "question": "placePrepositionsSeven.questTask3",
-        "correctAnswer": "im"
+        "correctAnswer": "im",
+        "tip": "placePrepositionsSeven.questDescription"
       },
       {
         "id": 4,
@@ -1777,7 +2570,8 @@
           "Der Spiegel hängt über das Waschbecken.",
           "Der Spiegel hängt unter dem Waschbecken."
         ],
-        "answer": "Der Spiegel hängt über dem Waschbecken."
+        "answer": "Der Spiegel hängt über dem Waschbecken.",
+        "tip": "placePrepositionsSeven.questDescription"
       },
       {
         "id": 5,
@@ -1797,13 +2591,15 @@
           "an",
           "der",
           "Haltestelle"
-        ]
+        ],
+        "tip": "placePrepositionsSeven.questDescription"
       },
       {
         "id": 6,
         "type": "input",
         "question": "placePrepositionsSeven.questTask6",
-        "correctAnswer": "unter"
+        "correctAnswer": "unter",
+        "tip": "placePrepositionsSeven.questDescription"
       },
       {
         "id": 7,
@@ -1815,13 +2611,15 @@
           "Auf dem Sofa",
           "Hinter dem Sofa"
         ],
-        "answer": "Neben dem Sofa"
+        "answer": "Neben dem Sofa",
+        "tip": "placePrepositionsSeven.questDescription"
       },
       {
         "id": 8,
         "type": "input",
         "question": "placePrepositionsSeven.questTask8",
-        "correctAnswer": "dem"
+        "correctAnswer": "dem",
+        "tip": "placePrepositionsSeven.questDescription"
       },
       {
         "id": 9,
@@ -1832,7 +2630,8 @@
           "zwischen die Bank und die Post",
           "über der Bank und der Post"
         ],
-        "answer": "zwischen der Bank und der Post"
+        "answer": "zwischen der Bank und der Post",
+        "tip": "placePrepositionsSeven.questDescription"
       },
       {
         "id": 10,
@@ -1854,13 +2653,15 @@
           "auf",
           "der",
           "Fensterbank"
-        ]
+        ],
+        "tip": "placePrepositionsSeven.questDescription"
       },
       {
         "id": 11,
         "type": "input",
         "question": "placePrepositionsSeven.questTask11",
-        "correctAnswer": "vor"
+        "correctAnswer": "vor",
+        "tip": "placePrepositionsSeven.questDescription"
       },
       {
         "id": 12,
@@ -1872,7 +2673,8 @@
           "am Markt",
           "vor dem Hotel"
         ],
-        "answer": "hinter dem Hotel"
+        "answer": "hinter dem Hotel",
+        "tip": "placePrepositionsSeven.questDescription"
       },
       {
         "id": 13,
@@ -1883,7 +2685,8 @@
           "in der Tür",
           "unter der Tür"
         ],
-        "answer": "an der Tür"
+        "answer": "an der Tür",
+        "tip": "placePrepositionsSeven.questDescription"
       },
       {
         "id": 14,
@@ -1905,13 +2708,15 @@
           "unter",
           "dem",
           "Stuhl"
-        ]
+        ],
+        "tip": "placePrepositionsSeven.questDescription"
       },
       {
         "id": 15,
         "type": "input",
         "question": "placePrepositionsSeven.questTask15",
-        "correctAnswer": "neben"
+        "correctAnswer": "neben",
+        "tip": "placePrepositionsSeven.questDescription"
       }
     ]
   },
@@ -2011,7 +2816,8 @@
           "unter dem Balkon",
           "auf den Balkon"
         ],
-        "answer": "auf dem Balkon"
+        "answer": "auf dem Balkon",
+        "tip": "placePrepositionsEight.questDescription"
       },
       {
         "id": 2,
@@ -2031,30 +2837,34 @@
           "auf",
           "dem",
           "Balkon"
-        ]
+        ],
+        "tip": "placePrepositionsEight.questDescription"
       },
       {
         "id": 3,
         "type": "input",
         "question": "placePrepositionsEight.questTask3",
-        "correctAnswer": "hinter"
+        "correctAnswer": "hinter",
+        "tip": "placePrepositionsEight.questDescription"
       },
       {
         "id": 4,
         "type": "input",
         "question": "placePrepositionsEight.questTask4",
-        "correctAnswer": "unter"
+        "correctAnswer": "unter",
+        "tip": "placePrepositionsEight.questDescription"
       },
       {
         "id": 5,
         "type": "select",
-        "question": "placePrepositionsEight.questTask5",
+        "question": "a2Course.t45",
         "options": [
-          "neben mir",
-          "neben mich",
-          "neben ich"
+          "neben das Fenster",
+          "neben dem Fenster",
+          "neben der Fenster"
         ],
-        "answer": "neben mir"
+        "answer": "neben dem Fenster",
+        "tip": "placePrepositionsEight.questDescription"
       },
       {
         "id": 6,
@@ -2076,7 +2886,8 @@
           "über",
           "der",
           "Tür"
-        ]
+        ],
+        "tip": "placePrepositionsEight.questDescription"
       },
       {
         "id": 7,
@@ -2088,24 +2899,27 @@
           "im Café",
           "hinter dem Café"
         ],
-        "answer": "vor dem Café"
+        "answer": "vor dem Café",
+        "tip": "placePrepositionsEight.questDescription"
       },
       {
         "id": 8,
         "type": "input",
         "question": "placePrepositionsEight.questTask8",
-        "correctAnswer": "dem"
+        "correctAnswer": "dem",
+        "tip": "placePrepositionsEight.questDescription"
       },
       {
         "id": 9,
         "type": "select",
-        "question": "placePrepositionsEight.questTask9",
+        "question": "a2Course.t46",
         "options": [
-          "Ich lege das Buch auf den Tisch.",
-          "Ich lege das Buch auf dem Tisch.",
-          "Ich lege das Buch unter den Tisch."
+          "Die Katze liegt auf das Sofa.",
+          "Die Katze liegt auf den Sofa.",
+          "Die Katze liegt auf dem Sofa."
         ],
-        "answer": "Ich lege das Buch auf den Tisch."
+        "answer": "Die Katze liegt auf dem Sofa.",
+        "tip": "placePrepositionsEight.questDescription"
       },
       {
         "id": 10,
@@ -2116,7 +2930,8 @@
           "Das Buch liegt auf den Tisch.",
           "Das Buch liegt unter dem Tisch."
         ],
-        "answer": "Das Buch liegt auf dem Tisch."
+        "answer": "Das Buch liegt auf dem Tisch.",
+        "tip": "placePrepositionsEight.questDescription"
       },
       {
         "id": 11,
@@ -2138,13 +2953,15 @@
           "es",
           "einen",
           "Brunnen"
-        ]
+        ],
+        "tip": "placePrepositionsEight.questDescription"
       },
       {
         "id": 12,
         "type": "input",
         "question": "placePrepositionsEight.questTask12",
-        "correctAnswer": "zwischen"
+        "correctAnswer": "zwischen",
+        "tip": "placePrepositionsEight.questDescription"
       },
       {
         "id": 13,
@@ -2156,18 +2973,20 @@
           "neben dem Supermarkt",
           "im Supermarkt"
         ],
-        "answer": "hinter dem Supermarkt"
+        "answer": "hinter dem Supermarkt",
+        "tip": "placePrepositionsEight.questDescription"
       },
       {
         "id": 14,
         "type": "select",
-        "question": "placePrepositionsEight.questTask14",
+        "question": "a2Course.t47",
         "options": [
-          "Kannst du mir helfen?",
-          "Kannst du mich helfen?",
-          "Kannst du ich helfen?"
+          "Der Schlüssel hängt auf der Wand.",
+          "Der Schlüssel hängt an der Wand.",
+          "Der Schlüssel hängt an die Wand."
         ],
-        "answer": "Kannst du mir helfen?"
+        "answer": "Der Schlüssel hängt an der Wand.",
+        "tip": "placePrepositionsEight.questDescription"
       },
       {
         "id": 15,
@@ -2185,7 +3004,8 @@
           "wohnen",
           "in",
           "Deutschland"
-        ]
+        ],
+        "tip": "placePrepositionsEight.questDescription"
       }
     ]
   }

@@ -1,0 +1,2776 @@
+[
+  {
+    "questId": "question-gorge-one",
+    "title": "questionGorgeOne.questTitle",
+    "progress": "0/15",
+    "description": "questionGorgeOne.questDescription",
+    "conditions": {
+      "goal": "questionGorgeOne.questGoal",
+      "minCorrect": 15,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
+    "vocabulary": [
+      {
+        "word": "die Frage",
+        "translation-ru": "вопрос",
+        "translation-en": "question",
+        "translation-uk": "питання",
+        "translation-pl": "pytanie",
+        "translation-es": "la pregunta",
+        "translation-fr": "la question",
+        "translation-tr": "soru",
+        "translation-ro": "întrebarea",
+        "translation-uz": "savol",
+        "translation-hi": "सवाल",
+        "translation-ar": "السؤال"
+      },
+      {
+        "word": "die Antwort",
+        "translation-ru": "ответ",
+        "translation-en": "answer",
+        "translation-uk": "відповідь",
+        "translation-pl": "odpowiedź",
+        "translation-es": "la respuesta",
+        "translation-fr": "la réponse",
+        "translation-tr": "cevap",
+        "translation-ro": "răspunsul",
+        "translation-uz": "javob",
+        "translation-hi": "जवाब",
+        "translation-ar": "الجواب"
+      },
+      {
+        "word": "oder",
+        "translation-ru": "или",
+        "translation-en": "or",
+        "translation-uk": "або, чи",
+        "translation-pl": "albo, czy",
+        "translation-es": "o",
+        "translation-fr": "ou",
+        "translation-tr": "veya",
+        "translation-ro": "sau",
+        "translation-uz": "yoki",
+        "translation-hi": "या",
+        "translation-ar": "أو"
+      },
+      {
+        "word": "richtig",
+        "translation-ru": "правильно",
+        "translation-en": "right, correct",
+        "translation-uk": "правильно",
+        "translation-pl": "dobrze, poprawnie",
+        "translation-es": "correcto",
+        "translation-fr": "juste",
+        "translation-tr": "doğru",
+        "translation-ro": "corect",
+        "translation-uz": "to‘g‘ri",
+        "translation-hi": "सही",
+        "translation-ar": "صحيح"
+      },
+      {
+        "word": "falsch",
+        "translation-ru": "неправильно",
+        "translation-en": "wrong",
+        "translation-uk": "неправильно",
+        "translation-pl": "źle, błędnie",
+        "translation-es": "incorrecto",
+        "translation-fr": "faux",
+        "translation-tr": "yanlış",
+        "translation-ro": "greșit",
+        "translation-uz": "noto‘g‘ri",
+        "translation-hi": "ग़लत",
+        "translation-ar": "خطأ"
+      }
+    ],
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "questionGorgeOne.questTask1",
+        "options": [
+          "Du wohnst hier?",
+          "Wohnt du hier?",
+          "Wohnst du hier?"
+        ],
+        "answer": "Wohnst du hier?",
+        "tip": "questionGorgeOne.questDescription"
+      },
+      {
+        "id": 2,
+        "type": "input",
+        "question": "questionGorgeOne.questTask2",
+        "correctAnswer": "Ist",
+        "tip": "questionGorgeOne.questDescription"
+      },
+      {
+        "id": 3,
+        "type": "reorder",
+        "question": "questionGorgeOne.questTask3",
+        "words": [
+          "Lernst",
+          "Deutsch",
+          "lernt",
+          "Du",
+          "du"
+        ],
+        "correctOrder": [
+          "Lernst",
+          "du",
+          "Deutsch"
+        ],
+        "tip": "questionGorgeOne.questDescription"
+      },
+      {
+        "id": 4,
+        "type": "select",
+        "question": "questionGorgeOne.questTask4",
+        "options": [
+          "Ja, ich wohne hier.",
+          "Ja, ich wohnst hier.",
+          "Ja, wohne ich hier."
+        ],
+        "answer": "Ja, ich wohne hier.",
+        "tip": "questionGorgeOne.questDescription"
+      },
+      {
+        "id": 5,
+        "type": "input",
+        "question": "questionGorgeOne.questTask5",
+        "correctAnswer": "oder",
+        "tip": "questionGorgeOne.questDescription"
+      },
+      {
+        "id": 6,
+        "type": "select",
+        "question": "questionGorgeOne.questTask6",
+        "options": [
+          "Hat ihr einen Hund?",
+          "Habt ihr einen Hund?",
+          "Ihr habt einen Hund?"
+        ],
+        "answer": "Habt ihr einen Hund?",
+        "tip": "questionGorgeOne.questDescription"
+      },
+      {
+        "id": 7,
+        "type": "input",
+        "question": "questionGorgeOne.questTask7",
+        "correctAnswer": "Sind",
+        "tip": "questionGorgeOne.questDescription"
+      },
+      {
+        "id": 8,
+        "type": "select",
+        "question": "questionGorgeOne.questTask8",
+        "options": [
+          "Ist das richtig? Nein, das ist falsch.",
+          "Ist das richtig? Nein, das falsch ist.",
+          "Das ist richtig? Nein, ist das falsch."
+        ],
+        "answer": "Ist das richtig? Nein, das ist falsch.",
+        "tip": "questionGorgeOne.questDescription"
+      },
+      {
+        "id": 9,
+        "type": "readAndAnswer",
+        "question": "questionGorgeOne.questTask9",
+        "text": "Tom: Wohnst du in Berlin, Mia? Mia: Nein, ich wohne in Hamburg. Tom: Und arbeitest du in Hamburg? Mia: Ja, ich bin Lehrerin.",
+        "options": [
+          "in Hamburg",
+          "in Köln",
+          "in Berlin"
+        ],
+        "answer": "in Hamburg",
+        "tip": "questionGorgeOne.questDescription"
+      },
+      {
+        "id": 10,
+        "type": "input",
+        "question": "questionGorgeOne.questTask10",
+        "correctAnswer": "richtig",
+        "tip": "questionGorgeOne.questDescription"
+      },
+      {
+        "id": 11,
+        "type": "reorder",
+        "question": "questionGorgeOne.questTask11",
+        "words": [
+          "Hast",
+          "Antwort",
+          "du",
+          "hat",
+          "eine",
+          "Frage"
+        ],
+        "correctOrder": [
+          "Hast",
+          "du",
+          "eine",
+          "Frage"
+        ],
+        "tip": "questionGorgeOne.questDescription"
+      },
+      {
+        "id": 12,
+        "type": "input",
+        "question": "questionGorgeOne.questTask12",
+        "correctAnswer": "Ist",
+        "tip": "questionGorgeOne.questDescription"
+      },
+      {
+        "id": 13,
+        "type": "select",
+        "question": "questionGorgeOne.questTask13",
+        "options": [
+          "Der Tisch sind groß und der Stuhl ist klein.",
+          "Der Tisch ist groß und der Stuhl ist klein.",
+          "Der Tisch ist groß und der Stuhl bist klein."
+        ],
+        "answer": "Der Tisch ist groß und der Stuhl ist klein.",
+        "tip": "questionGorgeOne.questDescription"
+      },
+      {
+        "id": 14,
+        "type": "select",
+        "question": "questionGorgeOne.questTask14",
+        "options": [
+          "Wir lernt zusammen Deutsch.",
+          "Wir lernen zusammen Deutsch.",
+          "Wir lernst zusammen Deutsch."
+        ],
+        "answer": "Wir lernen zusammen Deutsch.",
+        "tip": "questionGorgeOne.questDescription"
+      },
+      {
+        "id": 15,
+        "type": "reorder",
+        "question": "questionGorgeOne.questTask15",
+        "words": [
+          "groß",
+          "klein",
+          "Küche",
+          "und",
+          "ist",
+          "Die",
+          "weiß",
+          "sind"
+        ],
+        "correctOrder": [
+          "Die",
+          "Küche",
+          "ist",
+          "groß",
+          "und",
+          "weiß"
+        ],
+        "tip": "questionGorgeOne.questDescription"
+      }
+    ]
+  },
+  {
+    "questId": "question-gorge-two",
+    "title": "questionGorgeTwo.questTitle",
+    "progress": "0/15",
+    "description": "questionGorgeTwo.questDescription",
+    "conditions": {
+      "goal": "questionGorgeTwo.questGoal",
+      "minCorrect": 15,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
+    "vocabulary": [
+      {
+        "word": "was",
+        "translation-ru": "что",
+        "translation-en": "what",
+        "translation-uk": "що",
+        "translation-pl": "co",
+        "translation-es": "qué",
+        "translation-fr": "quoi",
+        "translation-tr": "ne",
+        "translation-ro": "ce",
+        "translation-uz": "nima",
+        "translation-hi": "क्या",
+        "translation-ar": "ماذا"
+      },
+      {
+        "word": "wo",
+        "translation-ru": "где",
+        "translation-en": "where",
+        "translation-uk": "де",
+        "translation-pl": "gdzie",
+        "translation-es": "dónde",
+        "translation-fr": "où",
+        "translation-tr": "nerede",
+        "translation-ro": "unde",
+        "translation-uz": "qayerda",
+        "translation-hi": "कहाँ",
+        "translation-ar": "أين"
+      },
+      {
+        "word": "wie",
+        "translation-ru": "как",
+        "translation-en": "how",
+        "translation-uk": "як",
+        "translation-pl": "jak",
+        "translation-es": "cómo",
+        "translation-fr": "comment",
+        "translation-tr": "nasıl",
+        "translation-ro": "cum",
+        "translation-uz": "qanday",
+        "translation-hi": "कैसे",
+        "translation-ar": "كيف"
+      },
+      {
+        "word": "das Zimmer",
+        "translation-ru": "комната",
+        "translation-en": "room",
+        "translation-uk": "кімната",
+        "translation-pl": "pokój",
+        "translation-es": "la habitación",
+        "translation-fr": "la chambre",
+        "translation-tr": "oda",
+        "translation-ro": "camera",
+        "translation-uz": "xona",
+        "translation-hi": "कमरा",
+        "translation-ar": "الغرفة"
+      },
+      {
+        "word": "machen",
+        "translation-ru": "делать",
+        "translation-en": "to do, to make",
+        "translation-uk": "робити",
+        "translation-pl": "robić",
+        "translation-es": "hacer",
+        "translation-fr": "faire",
+        "translation-tr": "yapmak",
+        "translation-ro": "a face",
+        "translation-uz": "qilmoq",
+        "translation-hi": "करना",
+        "translation-ar": "يفعل"
+      }
+    ],
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "questionGorgeTwo.questTask1",
+        "options": [
+          "Woher ist die Küche?",
+          "Wo die Küche ist?",
+          "Wo ist die Küche?"
+        ],
+        "answer": "Wo ist die Küche?",
+        "tip": "questionGorgeTwo.questDescription"
+      },
+      {
+        "id": 2,
+        "type": "input",
+        "question": "questionGorgeTwo.questTask2",
+        "correctAnswer": "Was",
+        "tip": "questionGorgeTwo.questDescription"
+      },
+      {
+        "id": 3,
+        "type": "input",
+        "question": "questionGorgeTwo.questTask3",
+        "correctAnswer": "ist",
+        "tip": "questionGorgeTwo.questDescription"
+      },
+      {
+        "id": 4,
+        "type": "select",
+        "question": "questionGorgeTwo.questTask4",
+        "options": [
+          "Wo heißt dein Bruder?",
+          "Wie heißt dein Bruder?",
+          "Wie dein Bruder heißt?"
+        ],
+        "answer": "Wie heißt dein Bruder?",
+        "tip": "questionGorgeTwo.questDescription"
+      },
+      {
+        "id": 5,
+        "type": "reorder",
+        "question": "questionGorgeTwo.questTask5",
+        "words": [
+          "woher",
+          "du",
+          "arbeitet",
+          "Wo",
+          "arbeitest"
+        ],
+        "correctOrder": [
+          "Wo",
+          "arbeitest",
+          "du"
+        ],
+        "tip": "questionGorgeTwo.questDescription"
+      },
+      {
+        "id": 6,
+        "type": "select",
+        "question": "questionGorgeTwo.questTask6",
+        "options": [
+          "Woher kommen deine Eltern?",
+          "Woher kommt deine Eltern?",
+          "Wo kommen deine Eltern?"
+        ],
+        "answer": "Woher kommen deine Eltern?",
+        "tip": "questionGorgeTwo.questDescription"
+      },
+      {
+        "id": 7,
+        "type": "input",
+        "question": "questionGorgeTwo.questTask7",
+        "correctAnswer": "Wie",
+        "tip": "questionGorgeTwo.questDescription"
+      },
+      {
+        "id": 8,
+        "type": "select",
+        "question": "questionGorgeTwo.questTask8",
+        "options": [
+          "Was macht ihr heute?",
+          "Was machst ihr heute?",
+          "Was ihr macht heute?"
+        ],
+        "answer": "Was macht ihr heute?",
+        "tip": "questionGorgeTwo.questDescription"
+      },
+      {
+        "id": 9,
+        "type": "readAndAnswer",
+        "question": "questionGorgeTwo.questTask9",
+        "text": "Anna: Wo ist Lukas? Paul: Er ist in der Küche. Anna: Was macht er? Paul: Er trinkt Tee.",
+        "options": [
+          "im Café",
+          "in der Küche",
+          "im Zimmer"
+        ],
+        "answer": "in der Küche",
+        "tip": "questionGorgeTwo.questDescription"
+      },
+      {
+        "id": 10,
+        "type": "input",
+        "question": "questionGorgeTwo.questTask10",
+        "correctAnswer": "wohnt",
+        "tip": "questionGorgeTwo.questDescription"
+      },
+      {
+        "id": 11,
+        "type": "reorder",
+        "question": "questionGorgeTwo.questTask11",
+        "words": [
+          "und",
+          "wo",
+          "ist",
+          "sind",
+          "die",
+          "das",
+          "Lampe",
+          "wer",
+          "Buch",
+          "Wo",
+          "ist"
+        ],
+        "correctOrder": [
+          "Wo",
+          "ist",
+          "das",
+          "Buch",
+          "und",
+          "wo",
+          "ist",
+          "die",
+          "Lampe"
+        ],
+        "tip": "questionGorgeTwo.questDescription"
+      },
+      {
+        "id": 12,
+        "type": "input",
+        "question": "questionGorgeTwo.questTask12",
+        "correctAnswer": "Hast",
+        "tip": "questionGorgeTwo.questDescription"
+      },
+      {
+        "id": 13,
+        "type": "select",
+        "question": "questionGorgeTwo.questTask13",
+        "options": [
+          "Die Antwort ist falsch.",
+          "Die Antwort sind falsch.",
+          "Die Frage ist falsch Antwort."
+        ],
+        "answer": "Die Antwort ist falsch.",
+        "tip": "questionGorgeTwo.questDescription"
+      },
+      {
+        "id": 14,
+        "type": "select",
+        "question": "questionGorgeTwo.questTask14",
+        "options": [
+          "Spielen die Kinder Fußball?",
+          "Die Kinder spielen Fußball?",
+          "Spielt die Kinder Fußball?"
+        ],
+        "answer": "Spielen die Kinder Fußball?",
+        "tip": "questionGorgeTwo.questDescription"
+      },
+      {
+        "id": 15,
+        "type": "reorder",
+        "question": "questionGorgeTwo.questTask15",
+        "words": [
+          "Österreich",
+          "du",
+          "Kommst",
+          "aus",
+          "kommt",
+          "auch",
+          "woher"
+        ],
+        "correctOrder": [
+          "Kommst",
+          "du",
+          "auch",
+          "aus",
+          "Österreich"
+        ],
+        "tip": "questionGorgeTwo.questDescription"
+      }
+    ]
+  },
+  {
+    "questId": "question-gorge-three",
+    "title": "questionGorgeThree.questTitle",
+    "progress": "0/15",
+    "description": "questionGorgeThree.questDescription",
+    "conditions": {
+      "goal": "questionGorgeThree.questGoal",
+      "minCorrect": 15,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
+    "vocabulary": [
+      {
+        "word": "der Schrank",
+        "translation-ru": "шкаф",
+        "translation-en": "cupboard, wardrobe",
+        "translation-uk": "шафа",
+        "translation-pl": "szafa",
+        "translation-es": "el armario",
+        "translation-fr": "l’armoire",
+        "translation-tr": "dolap",
+        "translation-ro": "dulapul",
+        "translation-uz": "shkaf",
+        "translation-hi": "अलमारी",
+        "translation-ar": "الخزانة"
+      },
+      {
+        "word": "das Handy",
+        "translation-ru": "мобильный телефон",
+        "translation-en": "mobile phone",
+        "translation-uk": "мобільний телефон",
+        "translation-pl": "komórka",
+        "translation-es": "el móvil",
+        "translation-fr": "le portable",
+        "translation-tr": "cep telefonu",
+        "translation-ro": "mobilul",
+        "translation-uz": "mobil telefon",
+        "translation-hi": "मोबाइल फ़ोन",
+        "translation-ar": "الهاتف المحمول"
+      },
+      {
+        "word": "der Computer",
+        "translation-ru": "компьютер",
+        "translation-en": "computer",
+        "translation-uk": "комп’ютер",
+        "translation-pl": "komputer",
+        "translation-es": "el ordenador",
+        "translation-fr": "l’ordinateur",
+        "translation-tr": "bilgisayar",
+        "translation-ro": "calculatorul",
+        "translation-uz": "kompyuter",
+        "translation-hi": "कंप्यूटर",
+        "translation-ar": "الحاسوب"
+      },
+      {
+        "word": "schön",
+        "translation-ru": "красивый",
+        "translation-en": "beautiful, nice",
+        "translation-uk": "гарний",
+        "translation-pl": "ładny",
+        "translation-es": "bonito",
+        "translation-fr": "beau",
+        "translation-tr": "güzel",
+        "translation-ro": "frumos",
+        "translation-uz": "chiroyli",
+        "translation-hi": "सुंदर",
+        "translation-ar": "جميل"
+      },
+      {
+        "word": "alt",
+        "translation-ru": "старый",
+        "translation-en": "old",
+        "translation-uk": "старий",
+        "translation-pl": "stary",
+        "translation-es": "viejo",
+        "translation-fr": "vieux",
+        "translation-tr": "eski",
+        "translation-ro": "vechi",
+        "translation-uz": "eski",
+        "translation-hi": "पुराना",
+        "translation-ar": "قديم"
+      }
+    ],
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "questionGorgeThree.questTask1",
+        "options": [
+          "Wer ist das? Das ist ein Schrank.",
+          "Was ist das? Das ist eine Schrank.",
+          "Was ist das? Das ist ein Schrank."
+        ],
+        "answer": "Was ist das? Das ist ein Schrank.",
+        "tip": "questionGorgeThree.questDescription"
+      },
+      {
+        "id": 2,
+        "type": "input",
+        "question": "questionGorgeThree.questTask2",
+        "correctAnswer": "Handy",
+        "tip": "questionGorgeThree.questDescription"
+      },
+      {
+        "id": 3,
+        "type": "input",
+        "question": "questionGorgeThree.questTask3",
+        "correctAnswer": "Er",
+        "tip": "questionGorgeThree.questDescription"
+      },
+      {
+        "id": 4,
+        "type": "select",
+        "question": "questionGorgeThree.questTask4",
+        "options": [
+          "Das ist eine Lampe?",
+          "Ist das ein Lampe?",
+          "Ist das eine Lampe?"
+        ],
+        "answer": "Ist das eine Lampe?",
+        "tip": "questionGorgeThree.questDescription"
+      },
+      {
+        "id": 5,
+        "type": "reorder",
+        "question": "questionGorgeThree.questTask5",
+        "words": [
+          "Die",
+          "neu",
+          "alt",
+          "sind",
+          "schön",
+          "Tasche",
+          "aber",
+          "ist"
+        ],
+        "correctOrder": [
+          "Die",
+          "Tasche",
+          "ist",
+          "alt",
+          "aber",
+          "schön"
+        ],
+        "tip": "questionGorgeThree.questDescription"
+      },
+      {
+        "id": 6,
+        "type": "select",
+        "question": "questionGorgeThree.questTask6",
+        "options": [
+          "Wie ist das? Das ist Frau Schmidt.",
+          "Wer ist das? Das ist Frau Schmidt.",
+          "Was ist das? Das ist Frau Schmidt."
+        ],
+        "answer": "Wer ist das? Das ist Frau Schmidt.",
+        "tip": "questionGorgeThree.questDescription"
+      },
+      {
+        "id": 7,
+        "type": "input",
+        "question": "questionGorgeThree.questTask7",
+        "correctAnswer": "Er",
+        "tip": "questionGorgeThree.questDescription"
+      },
+      {
+        "id": 8,
+        "type": "select",
+        "question": "questionGorgeThree.questTask8",
+        "options": [
+          "Die Sofa ist sehr schön!",
+          "Das Sofa ist sehr schön!",
+          "Das Sofa sind sehr schön!"
+        ],
+        "answer": "Das Sofa ist sehr schön!",
+        "tip": "questionGorgeThree.questDescription"
+      },
+      {
+        "id": 9,
+        "type": "readAndAnswer",
+        "question": "questionGorgeThree.questTask9",
+        "text": "Das ist mein Zimmer. Hier ist mein Computer. Er ist alt. Und das ist mein Handy. Es ist neu und sehr schön. Lena",
+        "options": [
+          "klein und alt",
+          "neu und schön",
+          "alt"
+        ],
+        "answer": "neu und schön",
+        "tip": "questionGorgeThree.questDescription"
+      },
+      {
+        "id": 10,
+        "type": "input",
+        "question": "questionGorgeThree.questTask10",
+        "correctAnswer": "Was",
+        "tip": "questionGorgeThree.questDescription"
+      },
+      {
+        "id": 11,
+        "type": "reorder",
+        "question": "questionGorgeThree.questTask11",
+        "words": [
+          "er",
+          "ist",
+          "es",
+          "mein",
+          "Das",
+          "Computer",
+          "alt",
+          "sie",
+          "ist"
+        ],
+        "correctOrder": [
+          "Das",
+          "ist",
+          "mein",
+          "Computer",
+          "er",
+          "ist",
+          "alt"
+        ],
+        "tip": "questionGorgeThree.questDescription"
+      },
+      {
+        "id": 12,
+        "type": "input",
+        "question": "questionGorgeThree.questTask12",
+        "correctAnswer": "Wohnst",
+        "tip": "questionGorgeThree.questDescription"
+      },
+      {
+        "id": 13,
+        "type": "select",
+        "question": "questionGorgeThree.questTask13",
+        "options": [
+          "Was Paul macht?",
+          "Was macht Paul?",
+          "Wer macht Paul?"
+        ],
+        "answer": "Was macht Paul?",
+        "tip": "questionGorgeThree.questDescription"
+      },
+      {
+        "id": 14,
+        "type": "select",
+        "question": "questionGorgeThree.questTask14",
+        "options": [
+          "Die Antwort ist richtig?",
+          "Ist die Antwort richtig?",
+          "Ist richtig die Antwort?"
+        ],
+        "answer": "Ist die Antwort richtig?",
+        "tip": "questionGorgeThree.questDescription"
+      },
+      {
+        "id": 15,
+        "type": "reorder",
+        "question": "questionGorgeThree.questTask15",
+        "words": [
+          "geht",
+          "Lang",
+          "Frau",
+          "Ihnen",
+          "es",
+          "wer",
+          "Wie",
+          "dir"
+        ],
+        "correctOrder": [
+          "Wie",
+          "geht",
+          "es",
+          "Ihnen",
+          "Frau",
+          "Lang"
+        ],
+        "tip": "questionGorgeThree.questDescription"
+      }
+    ]
+  },
+  {
+    "questId": "question-gorge-four",
+    "title": "questionGorgeFour.questTitle",
+    "progress": "0/15",
+    "description": "questionGorgeFour.questDescription",
+    "conditions": {
+      "goal": "questionGorgeFour.questGoal",
+      "minCorrect": 15,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
+    "vocabulary": [
+      {
+        "word": "nicht",
+        "translation-ru": "не",
+        "translation-en": "not",
+        "translation-uk": "не",
+        "translation-pl": "nie",
+        "translation-es": "no",
+        "translation-fr": "ne… pas",
+        "translation-tr": "değil",
+        "translation-ro": "nu",
+        "translation-uz": "emas",
+        "translation-hi": "नहीं",
+        "translation-ar": "لا، ليس"
+      },
+      {
+        "word": "kalt",
+        "translation-ru": "холодный",
+        "translation-en": "cold",
+        "translation-uk": "холодний",
+        "translation-pl": "zimny",
+        "translation-es": "frío",
+        "translation-fr": "froid",
+        "translation-tr": "soğuk",
+        "translation-ro": "rece",
+        "translation-uz": "sovuq",
+        "translation-hi": "ठंडा",
+        "translation-ar": "بارد"
+      },
+      {
+        "word": "warm",
+        "translation-ru": "тёплый",
+        "translation-en": "warm",
+        "translation-uk": "теплий",
+        "translation-pl": "ciepły",
+        "translation-es": "cálido",
+        "translation-fr": "chaud",
+        "translation-tr": "ılık, sıcak",
+        "translation-ro": "cald",
+        "translation-uz": "iliq",
+        "translation-hi": "गर्म",
+        "translation-ar": "دافئ"
+      },
+      {
+        "word": "teuer",
+        "translation-ru": "дорогой",
+        "translation-en": "expensive",
+        "translation-uk": "дорогий",
+        "translation-pl": "drogi",
+        "translation-es": "caro",
+        "translation-fr": "cher",
+        "translation-tr": "pahalı",
+        "translation-ro": "scump",
+        "translation-uz": "qimmat",
+        "translation-hi": "महँगा",
+        "translation-ar": "غالٍ"
+      },
+      {
+        "word": "billig",
+        "translation-ru": "дешёвый",
+        "translation-en": "cheap",
+        "translation-uk": "дешевий",
+        "translation-pl": "tani",
+        "translation-es": "barato",
+        "translation-fr": "bon marché",
+        "translation-tr": "ucuz",
+        "translation-ro": "ieftin",
+        "translation-uz": "arzon",
+        "translation-hi": "सस्ता",
+        "translation-ar": "رخيص"
+      }
+    ],
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "questionGorgeFour.questTask1",
+        "options": [
+          "Ich bin müde nicht.",
+          "Ich nicht bin müde.",
+          "Ich bin nicht müde."
+        ],
+        "answer": "Ich bin nicht müde.",
+        "tip": "questionGorgeFour.questDescription"
+      },
+      {
+        "id": 2,
+        "type": "input",
+        "question": "questionGorgeFour.questTask2",
+        "correctAnswer": "nicht",
+        "tip": "questionGorgeFour.questDescription"
+      },
+      {
+        "id": 3,
+        "type": "select",
+        "question": "questionGorgeFour.questTask3",
+        "options": [
+          "Ich arbeite nicht heute nicht.",
+          "Ich nicht arbeite heute.",
+          "Ich arbeite heute nicht."
+        ],
+        "answer": "Ich arbeite heute nicht.",
+        "tip": "questionGorgeFour.questDescription"
+      },
+      {
+        "id": 4,
+        "type": "input",
+        "question": "questionGorgeFour.questTask4",
+        "correctAnswer": "kalt",
+        "tip": "questionGorgeFour.questDescription"
+      },
+      {
+        "id": 5,
+        "type": "reorder",
+        "question": "questionGorgeFour.questTask5",
+        "words": [
+          "wohnst",
+          "kein",
+          "Ich",
+          "Wien",
+          "in",
+          "wohne",
+          "nicht"
+        ],
+        "correctOrder": [
+          "Ich",
+          "wohne",
+          "nicht",
+          "in",
+          "Wien"
+        ],
+        "tip": "questionGorgeFour.questDescription"
+      },
+      {
+        "id": 6,
+        "type": "select",
+        "question": "questionGorgeFour.questTask6",
+        "options": [
+          "Das Sofa nicht ist teuer, es ist billig.",
+          "Das Sofa ist nicht teuer, es ist billig.",
+          "Das Sofa ist kein teuer, es ist billig."
+        ],
+        "answer": "Das Sofa ist nicht teuer, es ist billig.",
+        "tip": "questionGorgeFour.questDescription"
+      },
+      {
+        "id": 7,
+        "type": "input",
+        "question": "questionGorgeFour.questTask7",
+        "correctAnswer": "nicht",
+        "tip": "questionGorgeFour.questDescription"
+      },
+      {
+        "id": 8,
+        "type": "select",
+        "question": "questionGorgeFour.questTask8",
+        "options": [
+          "Das Zimmer ist nicht groß.",
+          "Das Zimmer ist groß nicht.",
+          "Das Zimmer nicht ist groß."
+        ],
+        "answer": "Das Zimmer ist nicht groß.",
+        "tip": "questionGorgeFour.questDescription"
+      },
+      {
+        "id": 9,
+        "type": "readAndAnswer",
+        "question": "questionGorgeFour.questTask9",
+        "text": "Nina: Was kostet die Lampe? Mann: Neunzig Euro. Nina: Neunzig? Das ist sehr teuer! Die Lampe ist nicht schön und nicht neu.",
+        "options": [
+          "Sie ist sehr teuer.",
+          "Sie ist neu.",
+          "Sie ist billig."
+        ],
+        "answer": "Sie ist sehr teuer.",
+        "tip": "questionGorgeFour.questDescription"
+      },
+      {
+        "id": 10,
+        "type": "input",
+        "question": "questionGorgeFour.questTask10",
+        "correctAnswer": "warm",
+        "tip": "questionGorgeFour.questDescription"
+      },
+      {
+        "id": 11,
+        "type": "reorder",
+        "question": "questionGorgeFour.questTask11",
+        "words": [
+          "arbeitet",
+          "kein",
+          "Wir",
+          "heute",
+          "arbeiten",
+          "nicht"
+        ],
+        "correctOrder": [
+          "Wir",
+          "arbeiten",
+          "heute",
+          "nicht"
+        ],
+        "tip": "questionGorgeFour.questDescription"
+      },
+      {
+        "id": 12,
+        "type": "input",
+        "question": "questionGorgeFour.questTask12",
+        "correctAnswer": "ist",
+        "tip": "questionGorgeFour.questDescription"
+      },
+      {
+        "id": 13,
+        "type": "select",
+        "question": "questionGorgeFour.questTask13",
+        "options": [
+          "Woher kommen Sie?",
+          "Wo kommen Sie?",
+          "Woher Sie kommen?"
+        ],
+        "answer": "Woher kommen Sie?",
+        "tip": "questionGorgeFour.questDescription"
+      },
+      {
+        "id": 14,
+        "type": "select",
+        "question": "questionGorgeFour.questTask14",
+        "options": [
+          "Der Schrank ist alt, aber schön.",
+          "Der Schrank sind alt, aber schön.",
+          "Die Schrank ist alt, aber schön."
+        ],
+        "answer": "Der Schrank ist alt, aber schön.",
+        "tip": "questionGorgeFour.questDescription"
+      },
+      {
+        "id": 15,
+        "type": "reorder",
+        "question": "questionGorgeFour.questTask15",
+        "words": [
+          "Habt",
+          "ihr",
+          "seid",
+          "heute",
+          "Zeit",
+          "hat"
+        ],
+        "correctOrder": [
+          "Habt",
+          "ihr",
+          "heute",
+          "Zeit"
+        ],
+        "tip": "questionGorgeFour.questDescription"
+      }
+    ]
+  },
+  {
+    "questId": "question-gorge-five",
+    "title": "questionGorgeFive.questTitle",
+    "progress": "0/15",
+    "description": "questionGorgeFive.questDescription",
+    "conditions": {
+      "goal": "questionGorgeFive.questGoal",
+      "minCorrect": 15,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
+    "vocabulary": [
+      {
+        "word": "kein",
+        "translation-ru": "никакой, не",
+        "translation-en": "no, not a",
+        "translation-uk": "жодний, не",
+        "translation-pl": "żaden, nie",
+        "translation-es": "ningún, no",
+        "translation-fr": "pas de",
+        "translation-tr": "hiç, yok",
+        "translation-ro": "niciun",
+        "translation-uz": "hech qanday",
+        "translation-hi": "कोई नहीं",
+        "translation-ar": "لا، ليس"
+      },
+      {
+        "word": "das Auto",
+        "translation-ru": "машина",
+        "translation-en": "car",
+        "translation-uk": "автомобіль",
+        "translation-pl": "samochód",
+        "translation-es": "el coche",
+        "translation-fr": "la voiture",
+        "translation-tr": "araba",
+        "translation-ro": "mașina",
+        "translation-uz": "mashina",
+        "translation-hi": "कार",
+        "translation-ar": "السيارة"
+      },
+      {
+        "word": "das Geld",
+        "translation-ru": "деньги",
+        "translation-en": "money",
+        "translation-uk": "гроші",
+        "translation-pl": "pieniądze",
+        "translation-es": "el dinero",
+        "translation-fr": "l’argent",
+        "translation-tr": "para",
+        "translation-ro": "banii",
+        "translation-uz": "pul",
+        "translation-hi": "पैसा",
+        "translation-ar": "المال"
+      },
+      {
+        "word": "der Garten",
+        "translation-ru": "сад",
+        "translation-en": "garden",
+        "translation-uk": "сад",
+        "translation-pl": "ogród",
+        "translation-es": "el jardín",
+        "translation-fr": "le jardin",
+        "translation-tr": "bahçe",
+        "translation-ro": "grădina",
+        "translation-uz": "bog‘",
+        "translation-hi": "बगीचा",
+        "translation-ar": "الحديقة"
+      },
+      {
+        "word": "die Kinder",
+        "translation-ru": "дети",
+        "translation-en": "children",
+        "translation-uk": "діти",
+        "translation-pl": "dzieci",
+        "translation-es": "los niños",
+        "translation-fr": "les enfants",
+        "translation-tr": "çocuklar",
+        "translation-ro": "copiii",
+        "translation-uz": "bolalar",
+        "translation-hi": "बच्चे",
+        "translation-ar": "الأطفال"
+      }
+    ],
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "questionGorgeFive.questTask1",
+        "options": [
+          "Das ist keine Tisch.",
+          "Das ist nicht ein Tisch.",
+          "Das ist kein Tisch."
+        ],
+        "answer": "Das ist kein Tisch.",
+        "tip": "questionGorgeFive.questDescription"
+      },
+      {
+        "id": 2,
+        "type": "input",
+        "question": "questionGorgeFive.questTask2",
+        "correctAnswer": "keine",
+        "tip": "questionGorgeFive.questDescription"
+      },
+      {
+        "id": 3,
+        "type": "input",
+        "question": "questionGorgeFive.questTask3",
+        "correctAnswer": "kein",
+        "tip": "questionGorgeFive.questDescription"
+      },
+      {
+        "id": 4,
+        "type": "select",
+        "question": "questionGorgeFive.questTask4",
+        "options": [
+          "Wir haben kein Hund.",
+          "Wir haben nicht einen Hund.",
+          "Wir haben keinen Hund."
+        ],
+        "answer": "Wir haben keinen Hund.",
+        "tip": "questionGorgeFive.questDescription"
+      },
+      {
+        "id": 5,
+        "type": "reorder",
+        "question": "questionGorgeFive.questTask5",
+        "words": [
+          "nicht",
+          "und",
+          "kein",
+          "Ich",
+          "keinen",
+          "habe",
+          "keine",
+          "Geld",
+          "Zeit"
+        ],
+        "correctOrder": [
+          "Ich",
+          "habe",
+          "keine",
+          "Zeit",
+          "und",
+          "kein",
+          "Geld"
+        ],
+        "tip": "questionGorgeFive.questDescription"
+      },
+      {
+        "id": 6,
+        "type": "select",
+        "question": "questionGorgeFive.questTask6",
+        "options": [
+          "Sie haben keine Kinder.",
+          "Sie haben nicht Kinder.",
+          "Sie haben keinen Kinder."
+        ],
+        "answer": "Sie haben keine Kinder.",
+        "tip": "questionGorgeFive.questDescription"
+      },
+      {
+        "id": 7,
+        "type": "input",
+        "question": "questionGorgeFive.questTask7",
+        "correctAnswer": "kein",
+        "tip": "questionGorgeFive.questDescription"
+      },
+      {
+        "id": 8,
+        "type": "select",
+        "question": "questionGorgeFive.questTask8",
+        "options": [
+          "Hast du nicht Frage?",
+          "Hast du keine Frage?",
+          "Hast du kein Frage?"
+        ],
+        "answer": "Hast du keine Frage?",
+        "tip": "questionGorgeFive.questDescription"
+      },
+      {
+        "id": 9,
+        "type": "readAndAnswer",
+        "question": "questionGorgeFive.questTask9",
+        "text": "Familie Schulz wohnt in Bremen. Sie haben einen Garten. Sie haben zwei Kinder und eine Katze. Aber sie haben kein Auto.",
+        "options": [
+          "eine Katze",
+          "ein Auto",
+          "einen Garten"
+        ],
+        "answer": "ein Auto",
+        "tip": "questionGorgeFive.questDescription"
+      },
+      {
+        "id": 10,
+        "type": "input",
+        "question": "questionGorgeFive.questTask10",
+        "correctAnswer": "kein",
+        "tip": "questionGorgeFive.questDescription"
+      },
+      {
+        "id": 11,
+        "type": "reorder",
+        "question": "questionGorgeFive.questTask11",
+        "words": [
+          "mein",
+          "keine",
+          "ist",
+          "nicht",
+          "Das",
+          "kein",
+          "Computer"
+        ],
+        "correctOrder": [
+          "Das",
+          "ist",
+          "nicht",
+          "mein",
+          "Computer"
+        ],
+        "tip": "questionGorgeFive.questDescription"
+      },
+      {
+        "id": 12,
+        "type": "input",
+        "question": "questionGorgeFive.questTask12",
+        "correctAnswer": "ist",
+        "tip": "questionGorgeFive.questDescription"
+      },
+      {
+        "id": 13,
+        "type": "select",
+        "question": "questionGorgeFive.questTask13",
+        "options": [
+          "Wer ist das auf dem Foto?",
+          "Wer das ist auf dem Foto?",
+          "Was ist das auf dem Foto?"
+        ],
+        "answer": "Wer ist das auf dem Foto?",
+        "tip": "questionGorgeFive.questDescription"
+      },
+      {
+        "id": 14,
+        "type": "select",
+        "question": "questionGorgeFive.questTask14",
+        "options": [
+          "Das Handy ist teuer und der Computer sind billig.",
+          "Das Handy ist teuer und der Computer ist billig.",
+          "Der Handy ist teuer und der Computer ist billig."
+        ],
+        "answer": "Das Handy ist teuer und der Computer ist billig.",
+        "tip": "questionGorgeFive.questDescription"
+      },
+      {
+        "id": 15,
+        "type": "reorder",
+        "question": "questionGorgeFive.questTask15",
+        "words": [
+          "so",
+          "gern",
+          "trinkst",
+          "Ich",
+          "nicht",
+          "kein",
+          "trinke",
+          "Tee"
+        ],
+        "correctOrder": [
+          "Ich",
+          "trinke",
+          "nicht",
+          "so",
+          "gern",
+          "Tee"
+        ],
+        "tip": "questionGorgeFive.questDescription"
+      }
+    ]
+  },
+  {
+    "questId": "question-gorge-six",
+    "title": "questionGorgeSix.questTitle",
+    "progress": "0/15",
+    "description": "questionGorgeSix.questDescription",
+    "conditions": {
+      "goal": "questionGorgeSix.questGoal",
+      "minCorrect": 15,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
+    "vocabulary": [
+      {
+        "word": "doch",
+        "translation-ru": "да нет же, наоборот",
+        "translation-en": "yes (contradicting)",
+        "translation-uk": "та ні ж, навпаки",
+        "translation-pl": "ależ tak",
+        "translation-es": "sí (que sí)",
+        "translation-fr": "si",
+        "translation-tr": "hayır, var / evet",
+        "translation-ro": "ba da",
+        "translation-uz": "yo‘q, aksincha",
+        "translation-hi": "हाँ (उल्टा जवाब)",
+        "translation-ar": "بلى"
+      },
+      {
+        "word": "das Fahrrad",
+        "translation-ru": "велосипед",
+        "translation-en": "bicycle",
+        "translation-uk": "велосипед",
+        "translation-pl": "rower",
+        "translation-es": "la bicicleta",
+        "translation-fr": "le vélo",
+        "translation-tr": "bisiklet",
+        "translation-ro": "bicicleta",
+        "translation-uz": "velosiped",
+        "translation-hi": "साइकिल",
+        "translation-ar": "الدراجة"
+      },
+      {
+        "word": "der Balkon",
+        "translation-ru": "балкон",
+        "translation-en": "balcony",
+        "translation-uk": "балкон",
+        "translation-pl": "balkon",
+        "translation-es": "el balcón",
+        "translation-fr": "le balcon",
+        "translation-tr": "balkon",
+        "translation-ro": "balconul",
+        "translation-uz": "balkon",
+        "translation-hi": "बालकनी",
+        "translation-ar": "الشرفة"
+      },
+      {
+        "word": "hell",
+        "translation-ru": "светлый",
+        "translation-en": "bright, light",
+        "translation-uk": "світлий",
+        "translation-pl": "jasny",
+        "translation-es": "luminoso",
+        "translation-fr": "clair",
+        "translation-tr": "aydınlık",
+        "translation-ro": "luminos",
+        "translation-uz": "yorug‘",
+        "translation-hi": "रोशन",
+        "translation-ar": "مضيء"
+      },
+      {
+        "word": "dunkel",
+        "translation-ru": "тёмный",
+        "translation-en": "dark",
+        "translation-uk": "темний",
+        "translation-pl": "ciemny",
+        "translation-es": "oscuro",
+        "translation-fr": "sombre",
+        "translation-tr": "karanlık",
+        "translation-ro": "întunecat",
+        "translation-uz": "qorong‘i",
+        "translation-hi": "अँधेरा",
+        "translation-ar": "مظلم"
+      }
+    ],
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "questionGorgeSix.questTask1",
+        "options": [
+          "Ich habe nicht Fahrrad.",
+          "Ich habe keine Fahrrad.",
+          "Ich habe kein Fahrrad."
+        ],
+        "answer": "Ich habe kein Fahrrad.",
+        "tip": "questionGorgeSix.questDescription"
+      },
+      {
+        "id": 2,
+        "type": "input",
+        "question": "questionGorgeSix.questTask2",
+        "correctAnswer": "nicht",
+        "tip": "questionGorgeSix.questDescription"
+      },
+      {
+        "id": 3,
+        "type": "input",
+        "question": "questionGorgeSix.questTask3",
+        "correctAnswer": "keinen",
+        "tip": "questionGorgeSix.questDescription"
+      },
+      {
+        "id": 4,
+        "type": "select",
+        "question": "questionGorgeSix.questTask4",
+        "options": [
+          "Hast du nicht Zeit? Doch!",
+          "Hast du keine Zeit? Ja!",
+          "Hast du keine Zeit? Doch!"
+        ],
+        "answer": "Hast du keine Zeit? Doch!",
+        "tip": "questionGorgeSix.questDescription"
+      },
+      {
+        "id": 5,
+        "type": "reorder",
+        "question": "questionGorgeSix.questTask5",
+        "words": [
+          "ist",
+          "kein",
+          "Das",
+          "mein",
+          "Fahrrad",
+          "keine",
+          "nicht"
+        ],
+        "correctOrder": [
+          "Das",
+          "ist",
+          "nicht",
+          "mein",
+          "Fahrrad"
+        ],
+        "tip": "questionGorgeSix.questDescription"
+      },
+      {
+        "id": 6,
+        "type": "select",
+        "question": "questionGorgeSix.questTask6",
+        "options": [
+          "Hast du nicht Hunger? Doch, ich habe Hunger!",
+          "Hast du keinen Hunger? Doch, ich habe Hunger!",
+          "Hast du keinen Hunger? Ja, ich habe Hunger!"
+        ],
+        "answer": "Hast du keinen Hunger? Doch, ich habe Hunger!",
+        "tip": "questionGorgeSix.questDescription"
+      },
+      {
+        "id": 7,
+        "type": "input",
+        "question": "questionGorgeSix.questTask7",
+        "correctAnswer": "hell",
+        "tip": "questionGorgeSix.questDescription"
+      },
+      {
+        "id": 8,
+        "type": "select",
+        "question": "questionGorgeSix.questTask8",
+        "options": [
+          "Das Auto ist nicht neu.",
+          "Das Auto ist keine neu.",
+          "Das Auto ist kein neu."
+        ],
+        "answer": "Das Auto ist nicht neu.",
+        "tip": "questionGorgeSix.questDescription"
+      },
+      {
+        "id": 9,
+        "type": "readAndAnswer",
+        "question": "questionGorgeSix.questTask9",
+        "text": "Lea: Max, du hast kein Fahrrad, oder? Max: Doch! Ich habe ein Fahrrad. Es ist nicht neu, aber es ist gut. Ich habe kein Auto.",
+        "options": [
+          "Ja, er hat ein Fahrrad.",
+          "Nein, er hat nur ein Auto.",
+          "Nein, er hat kein Fahrrad."
+        ],
+        "answer": "Ja, er hat ein Fahrrad.",
+        "tip": "questionGorgeSix.questDescription"
+      },
+      {
+        "id": 10,
+        "type": "input",
+        "question": "questionGorgeSix.questTask10",
+        "correctAnswer": "Doch",
+        "tip": "questionGorgeSix.questDescription"
+      },
+      {
+        "id": 11,
+        "type": "reorder",
+        "question": "questionGorgeSix.questTask11",
+        "words": [
+          "kein",
+          "nicht",
+          "haben",
+          "keinen",
+          "Balkon",
+          "Wir",
+          "und",
+          "Garten",
+          "keinen"
+        ],
+        "correctOrder": [
+          "Wir",
+          "haben",
+          "keinen",
+          "Garten",
+          "und",
+          "keinen",
+          "Balkon"
+        ],
+        "tip": "questionGorgeSix.questDescription"
+      },
+      {
+        "id": 12,
+        "type": "input",
+        "question": "questionGorgeSix.questTask12",
+        "correctAnswer": "haben",
+        "tip": "questionGorgeSix.questDescription"
+      },
+      {
+        "id": 13,
+        "type": "select",
+        "question": "questionGorgeSix.questTask13",
+        "options": [
+          "Das Sofa sind billig, aber schön.",
+          "Das Sofa ist billig, aber schön.",
+          "Das Sofa ist billig, aber schöne."
+        ],
+        "answer": "Das Sofa ist billig, aber schön.",
+        "tip": "questionGorgeSix.questDescription"
+      },
+      {
+        "id": 14,
+        "type": "select",
+        "question": "questionGorgeSix.questTask14",
+        "options": [
+          "Ich wohne nicht in Hamburg.",
+          "Ich wohne kein in Hamburg.",
+          "Ich nicht wohne in Hamburg."
+        ],
+        "answer": "Ich wohne nicht in Hamburg.",
+        "tip": "questionGorgeSix.questDescription"
+      },
+      {
+        "id": 15,
+        "type": "reorder",
+        "question": "questionGorgeSix.questTask15",
+        "words": [
+          "Die",
+          "Kinder",
+          "spielen",
+          "spielt",
+          "heute",
+          "nicht",
+          "kein"
+        ],
+        "correctOrder": [
+          "Die",
+          "Kinder",
+          "spielen",
+          "heute",
+          "nicht"
+        ],
+        "tip": "questionGorgeSix.questDescription"
+      }
+    ]
+  },
+  {
+    "questId": "question-gorge-seven",
+    "title": "questionGorgeSeven.questTitle",
+    "progress": "0/15",
+    "description": "questionGorgeSeven.questDescription",
+    "conditions": {
+      "goal": "questionGorgeSeven.questGoal",
+      "minCorrect": 15,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
+    "vocabulary": [
+      {
+        "word": "die Wohnung",
+        "translation-ru": "квартира",
+        "translation-en": "flat, apartment",
+        "translation-uk": "квартира",
+        "translation-pl": "mieszkanie",
+        "translation-es": "el piso",
+        "translation-fr": "l’appartement",
+        "translation-tr": "daire",
+        "translation-ro": "apartamentul",
+        "translation-uz": "kvartira",
+        "translation-hi": "फ़्लैट",
+        "translation-ar": "الشقة"
+      },
+      {
+        "word": "das Wohnzimmer",
+        "translation-ru": "гостиная",
+        "translation-en": "living room",
+        "translation-uk": "вітальня",
+        "translation-pl": "salon",
+        "translation-es": "el salón",
+        "translation-fr": "le salon",
+        "translation-tr": "oturma odası",
+        "translation-ro": "sufrageria",
+        "translation-uz": "mehmonxona",
+        "translation-hi": "बैठक",
+        "translation-ar": "غرفة المعيشة"
+      },
+      {
+        "word": "gemütlich",
+        "translation-ru": "уютный",
+        "translation-en": "cosy",
+        "translation-uk": "затишний",
+        "translation-pl": "przytulny",
+        "translation-es": "acogedor",
+        "translation-fr": "confortable",
+        "translation-tr": "rahat, sıcak",
+        "translation-ro": "confortabil",
+        "translation-uz": "shinam",
+        "translation-hi": "आरामदायक",
+        "translation-ar": "مريح"
+      },
+      {
+        "word": "laut",
+        "translation-ru": "громкий, шумный",
+        "translation-en": "loud, noisy",
+        "translation-uk": "гучний, галасливий",
+        "translation-pl": "głośny",
+        "translation-es": "ruidoso",
+        "translation-fr": "bruyant",
+        "translation-tr": "gürültülü",
+        "translation-ro": "zgomotos",
+        "translation-uz": "shovqinli",
+        "translation-hi": "शोर वाला",
+        "translation-ar": "صاخب"
+      },
+      {
+        "word": "ruhig",
+        "translation-ru": "тихий, спокойный",
+        "translation-en": "quiet",
+        "translation-uk": "тихий",
+        "translation-pl": "cichy",
+        "translation-es": "tranquilo",
+        "translation-fr": "calme",
+        "translation-tr": "sakin",
+        "translation-ro": "liniștit",
+        "translation-uz": "tinch",
+        "translation-hi": "शांत",
+        "translation-ar": "هادئ"
+      }
+    ],
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "questionGorgeSeven.questTask1",
+        "options": [
+          "Ist das dein Wohnung?",
+          "Das ist deine Wohnung?",
+          "Ist das deine Wohnung?"
+        ],
+        "answer": "Ist das deine Wohnung?",
+        "tip": "questionGorgeSeven.questDescription"
+      },
+      {
+        "id": 2,
+        "type": "input",
+        "question": "questionGorgeSeven.questTask2",
+        "correctAnswer": "gemütlich",
+        "tip": "questionGorgeSeven.questDescription"
+      },
+      {
+        "id": 3,
+        "type": "input",
+        "question": "questionGorgeSeven.questTask3",
+        "correctAnswer": "ist",
+        "tip": "questionGorgeSeven.questDescription"
+      },
+      {
+        "id": 4,
+        "type": "select",
+        "question": "questionGorgeSeven.questTask4",
+        "options": [
+          "Das Zimmer ist kein laut, es ist ruhig.",
+          "Das Zimmer ist nicht laut, sie ist ruhig.",
+          "Das Zimmer ist nicht laut, es ist ruhig."
+        ],
+        "answer": "Das Zimmer ist nicht laut, es ist ruhig.",
+        "tip": "questionGorgeSeven.questDescription"
+      },
+      {
+        "id": 5,
+        "type": "reorder",
+        "question": "questionGorgeSeven.questTask5",
+        "words": [
+          "Zimmer",
+          "das",
+          "kein",
+          "dein",
+          "ist",
+          "Zimmer",
+          "ist",
+          "nicht",
+          "keine",
+          "Das",
+          "mein"
+        ],
+        "correctOrder": [
+          "Das",
+          "ist",
+          "nicht",
+          "mein",
+          "Zimmer",
+          "das",
+          "ist",
+          "dein",
+          "Zimmer"
+        ],
+        "tip": "questionGorgeSeven.questDescription"
+      },
+      {
+        "id": 6,
+        "type": "select",
+        "question": "questionGorgeSeven.questTask6",
+        "options": [
+          "Habt ihr einen Balkon? Nein, wir haben keinen Balkon.",
+          "Ihr habt einen Balkon? Nein, wir haben kein Balkon.",
+          "Habt ihr einen Balkon? Nein, wir haben nicht Balkon."
+        ],
+        "answer": "Habt ihr einen Balkon? Nein, wir haben keinen Balkon.",
+        "tip": "questionGorgeSeven.questDescription"
+      },
+      {
+        "id": 7,
+        "type": "input",
+        "question": "questionGorgeSeven.questTask7",
+        "correctAnswer": "Sessel",
+        "tip": "questionGorgeSeven.questDescription"
+      },
+      {
+        "id": 8,
+        "type": "select",
+        "question": "questionGorgeSeven.questTask8",
+        "options": [
+          "Ist die Wohnung nicht teuer?",
+          "Ist die Wohnung keine teuer?",
+          "Ist die Wohnung kein teuer?"
+        ],
+        "answer": "Ist die Wohnung nicht teuer?",
+        "tip": "questionGorgeSeven.questDescription"
+      },
+      {
+        "id": 9,
+        "type": "readAndAnswer",
+        "question": "questionGorgeSeven.questTask9",
+        "text": "Das ist meine Wohnung. Sie ist nicht groß, aber gemütlich. Das Wohnzimmer ist hell. Das Zimmer ist ruhig. Einen Balkon habe ich nicht. Jonas",
+        "options": [
+          "dunkel und teuer",
+          "klein, aber gemütlich",
+          "groß und laut"
+        ],
+        "answer": "klein, aber gemütlich",
+        "tip": "questionGorgeSeven.questDescription"
+      },
+      {
+        "id": 10,
+        "type": "input",
+        "question": "questionGorgeSeven.questTask10",
+        "correctAnswer": "Doch",
+        "tip": "questionGorgeSeven.questDescription"
+      },
+      {
+        "id": 11,
+        "type": "reorder",
+        "question": "questionGorgeSeven.questTask11",
+        "words": [
+          "hell",
+          "dunkel",
+          "nicht",
+          "ist",
+          "groß",
+          "Wohnzimmer",
+          "Das",
+          "aber"
+        ],
+        "correctOrder": [
+          "Das",
+          "Wohnzimmer",
+          "ist",
+          "groß",
+          "aber",
+          "dunkel"
+        ],
+        "tip": "questionGorgeSeven.questDescription"
+      },
+      {
+        "id": 12,
+        "type": "input",
+        "question": "questionGorgeSeven.questTask12",
+        "correctAnswer": "Hast",
+        "tip": "questionGorgeSeven.questDescription"
+      },
+      {
+        "id": 13,
+        "type": "select",
+        "question": "questionGorgeSeven.questTask13",
+        "options": [
+          "Das ist nicht mein Auto.",
+          "Das ist nicht meine Auto.",
+          "Das ist kein mein Auto."
+        ],
+        "answer": "Das ist nicht mein Auto.",
+        "tip": "questionGorgeSeven.questDescription"
+      },
+      {
+        "id": 14,
+        "type": "select",
+        "question": "questionGorgeSeven.questTask14",
+        "options": [
+          "Wir haben keine Kinder.",
+          "Wir haben nicht Kinder.",
+          "Wir haben keinen Kinder."
+        ],
+        "answer": "Wir haben keine Kinder.",
+        "tip": "questionGorgeSeven.questDescription"
+      },
+      {
+        "id": 15,
+        "type": "reorder",
+        "question": "questionGorgeSeven.questTask15",
+        "words": [
+          "keine",
+          "Ich",
+          "Fragen",
+          "kein",
+          "habe",
+          "nicht"
+        ],
+        "correctOrder": [
+          "Ich",
+          "habe",
+          "keine",
+          "Fragen"
+        ],
+        "tip": "questionGorgeSeven.questDescription"
+      }
+    ]
+  },
+  {
+    "questId": "question-gorge-eight",
+    "title": "questionGorgeEight.questTitle",
+    "progress": "0/15",
+    "description": "questionGorgeEight.questDescription",
+    "conditions": {
+      "goal": "questionGorgeEight.questGoal",
+      "minCorrect": 15,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
+    "vocabulary": [
+      {
+        "word": "das Hobby",
+        "translation-ru": "хобби",
+        "translation-en": "hobby",
+        "translation-uk": "хобі",
+        "translation-pl": "hobby",
+        "translation-es": "el pasatiempo",
+        "translation-fr": "le loisir",
+        "translation-tr": "hobi",
+        "translation-ro": "hobby-ul",
+        "translation-uz": "xobbi",
+        "translation-hi": "शौक़",
+        "translation-ar": "الهواية"
+      },
+      {
+        "word": "schwimmen",
+        "translation-ru": "плавать",
+        "translation-en": "to swim",
+        "translation-uk": "плавати",
+        "translation-pl": "pływać",
+        "translation-es": "nadar",
+        "translation-fr": "nager",
+        "translation-tr": "yüzmek",
+        "translation-ro": "a înota",
+        "translation-uz": "suzmoq",
+        "translation-hi": "तैरना",
+        "translation-ar": "يسبح"
+      },
+      {
+        "word": "kochen",
+        "translation-ru": "готовить",
+        "translation-en": "to cook",
+        "translation-uk": "готувати",
+        "translation-pl": "gotować",
+        "translation-es": "cocinar",
+        "translation-fr": "cuisiner",
+        "translation-tr": "yemek yapmak",
+        "translation-ro": "a găti",
+        "translation-uz": "ovqat pishirmoq",
+        "translation-hi": "खाना बनाना",
+        "translation-ar": "يطبخ"
+      },
+      {
+        "word": "reisen",
+        "translation-ru": "путешествовать",
+        "translation-en": "to travel",
+        "translation-uk": "подорожувати",
+        "translation-pl": "podróżować",
+        "translation-es": "viajar",
+        "translation-fr": "voyager",
+        "translation-tr": "seyahat etmek",
+        "translation-ro": "a călători",
+        "translation-uz": "sayohat qilmoq",
+        "translation-hi": "यात्रा करना",
+        "translation-ar": "يسافر"
+      },
+      {
+        "word": "die Musik",
+        "translation-ru": "музыка",
+        "translation-en": "music",
+        "translation-uk": "музика",
+        "translation-pl": "muzyka",
+        "translation-es": "la música",
+        "translation-fr": "la musique",
+        "translation-tr": "müzik",
+        "translation-ro": "muzica",
+        "translation-uz": "musiqa",
+        "translation-hi": "संगीत",
+        "translation-ar": "الموسيقى"
+      }
+    ],
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "questionGorgeEight.questTask1",
+        "options": [
+          "Du hast ein Hobby?",
+          "Hat du ein Hobby?",
+          "Hast du ein Hobby?"
+        ],
+        "answer": "Hast du ein Hobby?",
+        "tip": "questionGorgeEight.questDescription"
+      },
+      {
+        "id": 2,
+        "type": "input",
+        "question": "questionGorgeEight.questTask2",
+        "correctAnswer": "gern",
+        "tip": "questionGorgeEight.questDescription"
+      },
+      {
+        "id": 3,
+        "type": "input",
+        "question": "questionGorgeEight.questTask3",
+        "correctAnswer": "Schwimmst",
+        "tip": "questionGorgeEight.questDescription"
+      },
+      {
+        "id": 4,
+        "type": "select",
+        "question": "questionGorgeEight.questTask4",
+        "options": [
+          "Nein, ich nicht koche gern.",
+          "Nein, ich koche kein gern.",
+          "Nein, ich koche nicht gern."
+        ],
+        "answer": "Nein, ich koche nicht gern.",
+        "tip": "questionGorgeEight.questDescription"
+      },
+      {
+        "id": 5,
+        "type": "reorder",
+        "question": "questionGorgeEight.questTask5",
+        "words": [
+          "Wir",
+          "nicht",
+          "reist",
+          "gern",
+          "reisen"
+        ],
+        "correctOrder": [
+          "Wir",
+          "reisen",
+          "gern"
+        ],
+        "tip": "questionGorgeEight.questDescription"
+      },
+      {
+        "id": 6,
+        "type": "select",
+        "question": "questionGorgeEight.questTask6",
+        "options": [
+          "Was ist die Musik? Sie ist laut!",
+          "Wie ist die Musik? Sie ist laut!",
+          "Wie ist die Musik? Er ist laut!"
+        ],
+        "answer": "Wie ist die Musik? Sie ist laut!",
+        "tip": "questionGorgeEight.questDescription"
+      },
+      {
+        "id": 7,
+        "type": "input",
+        "question": "questionGorgeEight.questTask7",
+        "correctAnswer": "kocht",
+        "tip": "questionGorgeEight.questDescription"
+      },
+      {
+        "id": 8,
+        "type": "select",
+        "question": "questionGorgeEight.questTask8",
+        "options": [
+          "Sie reisen viel?",
+          "Reisen Sie viel?",
+          "Reist Sie viel?"
+        ],
+        "answer": "Reisen Sie viel?",
+        "tip": "questionGorgeEight.questDescription"
+      },
+      {
+        "id": 9,
+        "type": "readAndAnswer",
+        "question": "questionGorgeEight.questTask9",
+        "text": "Ich heiße Ahmed und komme aus Ägypten. Mein Hobby ist Musik. Ich koche gern und ich reise gern. Aber ich schwimme nicht gern. Ich habe kein Auto, ich habe ein Fahrrad.",
+        "options": [
+          "schwimmen",
+          "reisen",
+          "kochen"
+        ],
+        "answer": "schwimmen",
+        "tip": "questionGorgeEight.questDescription"
+      },
+      {
+        "id": 10,
+        "type": "input",
+        "question": "questionGorgeEight.questTask10",
+        "correctAnswer": "Musik",
+        "tip": "questionGorgeEight.questDescription"
+      },
+      {
+        "id": 11,
+        "type": "reorder",
+        "question": "questionGorgeEight.questTask11",
+        "words": [
+          "Fußball",
+          "nein",
+          "du",
+          "schwimme",
+          "Spielst",
+          "kein",
+          "spielt",
+          "ich"
+        ],
+        "correctOrder": [
+          "Spielst",
+          "du",
+          "Fußball",
+          "nein",
+          "ich",
+          "schwimme"
+        ],
+        "tip": "questionGorgeEight.questDescription"
+      },
+      {
+        "id": 12,
+        "type": "input",
+        "question": "questionGorgeEight.questTask12",
+        "correctAnswer": "ist",
+        "tip": "questionGorgeEight.questDescription"
+      },
+      {
+        "id": 13,
+        "type": "select",
+        "question": "questionGorgeEight.questTask13",
+        "options": [
+          "Das Zimmer ist keine hell.",
+          "Das Zimmer ist nicht hell.",
+          "Das Zimmer ist kein hell."
+        ],
+        "answer": "Das Zimmer ist nicht hell.",
+        "tip": "questionGorgeEight.questDescription"
+      },
+      {
+        "id": 14,
+        "type": "select",
+        "question": "questionGorgeEight.questTask14",
+        "options": [
+          "Ist ruhig das Wohnzimmer?",
+          "Ist das Wohnzimmer ruhig?",
+          "Das Wohnzimmer ist ruhig ist?"
+        ],
+        "answer": "Ist das Wohnzimmer ruhig?",
+        "tip": "questionGorgeEight.questDescription"
+      },
+      {
+        "id": 15,
+        "type": "reorder",
+        "question": "questionGorgeEight.questTask15",
+        "words": [
+          "haben",
+          "Wir",
+          "kein",
+          "Wohnzimmer",
+          "keinen",
+          "nicht"
+        ],
+        "correctOrder": [
+          "Wir",
+          "haben",
+          "kein",
+          "Wohnzimmer"
+        ],
+        "tip": "questionGorgeEight.questDescription"
+      }
+    ]
+  },
+  {
+    "questId": "question-gorge-nine",
+    "title": "questionGorgeNine.questTitle",
+    "progress": "0/15",
+    "description": "questionGorgeNine.questDescription",
+    "conditions": {
+      "goal": "questionGorgeNine.questGoal",
+      "minCorrect": 15,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
+    "vocabulary": [
+      {
+        "word": "immer",
+        "translation-ru": "всегда",
+        "translation-en": "always",
+        "translation-uk": "завжди",
+        "translation-pl": "zawsze",
+        "translation-es": "siempre",
+        "translation-fr": "toujours",
+        "translation-tr": "her zaman",
+        "translation-ro": "mereu",
+        "translation-uz": "doim",
+        "translation-hi": "हमेशा",
+        "translation-ar": "دائمًا"
+      },
+      {
+        "word": "oft",
+        "translation-ru": "часто",
+        "translation-en": "often",
+        "translation-uk": "часто",
+        "translation-pl": "często",
+        "translation-es": "a menudo",
+        "translation-fr": "souvent",
+        "translation-tr": "sık sık",
+        "translation-ro": "des",
+        "translation-uz": "tez-tez",
+        "translation-hi": "अक्सर",
+        "translation-ar": "غالبًا"
+      },
+      {
+        "word": "manchmal",
+        "translation-ru": "иногда",
+        "translation-en": "sometimes",
+        "translation-uk": "іноді",
+        "translation-pl": "czasami",
+        "translation-es": "a veces",
+        "translation-fr": "parfois",
+        "translation-tr": "bazen",
+        "translation-ro": "uneori",
+        "translation-uz": "ba’zan",
+        "translation-hi": "कभी-कभी",
+        "translation-ar": "أحيانًا"
+      },
+      {
+        "word": "nie",
+        "translation-ru": "никогда",
+        "translation-en": "never",
+        "translation-uk": "ніколи",
+        "translation-pl": "nigdy",
+        "translation-es": "nunca",
+        "translation-fr": "jamais",
+        "translation-tr": "asla",
+        "translation-ro": "niciodată",
+        "translation-uz": "hech qachon",
+        "translation-hi": "कभी नहीं",
+        "translation-ar": "أبدًا"
+      },
+      {
+        "word": "wirklich",
+        "translation-ru": "действительно",
+        "translation-en": "really",
+        "translation-uk": "справді",
+        "translation-pl": "naprawdę",
+        "translation-es": "de verdad",
+        "translation-fr": "vraiment",
+        "translation-tr": "gerçekten",
+        "translation-ro": "cu adevărat",
+        "translation-uz": "haqiqatan",
+        "translation-hi": "सच में",
+        "translation-ar": "حقًا"
+      }
+    ],
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "questionGorgeNine.questTask1",
+        "options": [
+          "Kocht du oft?",
+          "Du kochst oft?",
+          "Kochst du oft?"
+        ],
+        "answer": "Kochst du oft?",
+        "tip": "questionGorgeNine.questDescription"
+      },
+      {
+        "id": 2,
+        "type": "input",
+        "question": "questionGorgeNine.questTask2",
+        "correctAnswer": "nie",
+        "tip": "questionGorgeNine.questDescription"
+      },
+      {
+        "id": 3,
+        "type": "input",
+        "question": "questionGorgeNine.questTask3",
+        "correctAnswer": "spielt",
+        "tip": "questionGorgeNine.questDescription"
+      },
+      {
+        "id": 4,
+        "type": "select",
+        "question": "questionGorgeNine.questTask4",
+        "options": [
+          "Ist das wirklich kein dein Handy?",
+          "Das ist wirklich nicht dein Handy ist?",
+          "Ist das wirklich nicht dein Handy?"
+        ],
+        "answer": "Ist das wirklich nicht dein Handy?",
+        "tip": "questionGorgeNine.questDescription"
+      },
+      {
+        "id": 5,
+        "type": "reorder",
+        "question": "questionGorgeNine.questTask5",
+        "words": [
+          "mit",
+          "trinke",
+          "Milch",
+          "Er",
+          "nie",
+          "Tee",
+          "trinkt",
+          "immer"
+        ],
+        "correctOrder": [
+          "Er",
+          "trinkt",
+          "immer",
+          "Tee",
+          "mit",
+          "Milch"
+        ],
+        "tip": "questionGorgeNine.questDescription"
+      },
+      {
+        "id": 6,
+        "type": "select",
+        "question": "questionGorgeNine.questTask6",
+        "options": [
+          "Wir haben keine Auto, aber ein Fahrrad.",
+          "Wir haben kein Auto, aber ein Fahrrad.",
+          "Wir haben nicht Auto, aber ein Fahrrad."
+        ],
+        "answer": "Wir haben kein Auto, aber ein Fahrrad.",
+        "tip": "questionGorgeNine.questDescription"
+      },
+      {
+        "id": 7,
+        "type": "input",
+        "question": "questionGorgeNine.questTask7",
+        "correctAnswer": "Oft",
+        "tip": "questionGorgeNine.questDescription"
+      },
+      {
+        "id": 8,
+        "type": "select",
+        "question": "questionGorgeNine.questTask8",
+        "options": [
+          "Kommen Sie nicht aus Österreich? Doch!",
+          "Kommen Sie kein aus Österreich? Doch!",
+          "Kommen Sie nicht aus Österreich? Ja!"
+        ],
+        "answer": "Kommen Sie nicht aus Österreich? Doch!",
+        "tip": "questionGorgeNine.questDescription"
+      },
+      {
+        "id": 9,
+        "type": "readAndAnswer",
+        "question": "questionGorgeNine.questTask9",
+        "text": "Ich bin Emma. Ich koche nie, ich habe keine Zeit. Ich trinke immer Kaffee mit Milch. Manchmal schwimme ich. Fußball spiele ich nicht.",
+        "options": [
+          "Sie trinkt Kaffee mit Milch.",
+          "Sie spielt Fußball.",
+          "Sie kocht."
+        ],
+        "answer": "Sie trinkt Kaffee mit Milch.",
+        "tip": "questionGorgeNine.questDescription"
+      },
+      {
+        "id": 10,
+        "type": "input",
+        "question": "questionGorgeNine.questTask10",
+        "correctAnswer": "wirklich",
+        "tip": "questionGorgeNine.questDescription"
+      },
+      {
+        "id": 11,
+        "type": "reorder",
+        "question": "questionGorgeNine.questTask11",
+        "words": [
+          "Manchmal",
+          "wir",
+          "nie",
+          "tanzt",
+          "tanzen",
+          "zusammen"
+        ],
+        "correctOrder": [
+          "Manchmal",
+          "tanzen",
+          "wir",
+          "zusammen"
+        ],
+        "tip": "questionGorgeNine.questDescription"
+      },
+      {
+        "id": 12,
+        "type": "input",
+        "question": "questionGorgeNine.questTask12",
+        "correctAnswer": "Reist",
+        "tip": "questionGorgeNine.questDescription"
+      },
+      {
+        "id": 13,
+        "type": "select",
+        "question": "questionGorgeNine.questTask13",
+        "options": [
+          "Die Wohnung ist ruhig und gemütlich.",
+          "Die Wohnung ist ruhig und gemütliche.",
+          "Die Wohnung sind ruhig und gemütlich."
+        ],
+        "answer": "Die Wohnung ist ruhig und gemütlich.",
+        "tip": "questionGorgeNine.questDescription"
+      },
+      {
+        "id": 14,
+        "type": "select",
+        "question": "questionGorgeNine.questTask14",
+        "options": [
+          "Wie alt bist du?",
+          "Was alt bist du?",
+          "Wie alt hast du?"
+        ],
+        "answer": "Wie alt bist du?",
+        "tip": "questionGorgeNine.questDescription"
+      },
+      {
+        "id": 15,
+        "type": "reorder",
+        "question": "questionGorgeNine.questTask15",
+        "words": [
+          "Die",
+          "kein",
+          "nicht",
+          "Musik",
+          "ist",
+          "sehr",
+          "laut"
+        ],
+        "correctOrder": [
+          "Die",
+          "Musik",
+          "ist",
+          "sehr",
+          "laut"
+        ],
+        "tip": "questionGorgeNine.questDescription"
+      }
+    ]
+  },
+  {
+    "questId": "question-gorge-ten",
+    "title": "questionGorgeTen.questTitle",
+    "progress": "0/15",
+    "description": "questionGorgeTen.questDescription",
+    "conditions": {
+      "goal": "questionGorgeTen.questGoal",
+      "minCorrect": 15,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
+    "vocabulary": [
+      {
+        "word": "leider",
+        "translation-ru": "к сожалению",
+        "translation-en": "unfortunately",
+        "translation-uk": "на жаль",
+        "translation-pl": "niestety",
+        "translation-es": "por desgracia",
+        "translation-fr": "malheureusement",
+        "translation-tr": "maalesef",
+        "translation-ro": "din păcate",
+        "translation-uz": "afsuski",
+        "translation-hi": "दुर्भाग्य से",
+        "translation-ar": "للأسف"
+      },
+      {
+        "word": "natürlich",
+        "translation-ru": "конечно",
+        "translation-en": "of course",
+        "translation-uk": "звичайно",
+        "translation-pl": "oczywiście",
+        "translation-es": "claro",
+        "translation-fr": "bien sûr",
+        "translation-tr": "tabii ki",
+        "translation-ro": "desigur",
+        "translation-uz": "albatta",
+        "translation-hi": "बेशक",
+        "translation-ar": "بالطبع"
+      },
+      {
+        "word": "vielleicht",
+        "translation-ru": "может быть",
+        "translation-en": "maybe",
+        "translation-uk": "можливо",
+        "translation-pl": "może",
+        "translation-es": "quizás",
+        "translation-fr": "peut-être",
+        "translation-tr": "belki",
+        "translation-ro": "poate",
+        "translation-uz": "balki",
+        "translation-hi": "शायद",
+        "translation-ar": "ربما"
+      },
+      {
+        "word": "das Problem",
+        "translation-ru": "проблема",
+        "translation-en": "problem",
+        "translation-uk": "проблема",
+        "translation-pl": "problem",
+        "translation-es": "el problema",
+        "translation-fr": "le problème",
+        "translation-tr": "sorun",
+        "translation-ro": "problema",
+        "translation-uz": "muammo",
+        "translation-hi": "समस्या",
+        "translation-ar": "المشكلة"
+      },
+      {
+        "word": "genau",
+        "translation-ru": "точно",
+        "translation-en": "exactly",
+        "translation-uk": "точно",
+        "translation-pl": "dokładnie",
+        "translation-es": "exactamente",
+        "translation-fr": "exactement",
+        "translation-tr": "aynen",
+        "translation-ro": "exact",
+        "translation-uz": "aynan",
+        "translation-hi": "बिल्कुल",
+        "translation-ar": "بالضبط"
+      }
+    ],
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "questionGorgeTen.questTask1",
+        "options": [
+          "Ich habe leider nicht Zeit.",
+          "Ich habe leider keinen Zeit.",
+          "Ich habe leider keine Zeit."
+        ],
+        "answer": "Ich habe leider keine Zeit.",
+        "tip": "questionGorgeTen.questDescription"
+      },
+      {
+        "id": 2,
+        "type": "input",
+        "question": "questionGorgeTen.questTask2",
+        "correctAnswer": "Wo",
+        "tip": "questionGorgeTen.questDescription"
+      },
+      {
+        "id": 3,
+        "type": "input",
+        "question": "questionGorgeTen.questTask3",
+        "correctAnswer": "kein",
+        "tip": "questionGorgeTen.questDescription"
+      },
+      {
+        "id": 4,
+        "type": "select",
+        "question": "questionGorgeTen.questTask4",
+        "options": [
+          "Kommst du? Nein vielleicht.",
+          "Du kommst? Vielleicht.",
+          "Kommst du? Vielleicht."
+        ],
+        "answer": "Kommst du? Vielleicht.",
+        "tip": "questionGorgeTen.questDescription"
+      },
+      {
+        "id": 5,
+        "type": "reorder",
+        "question": "questionGorgeTen.questTask5",
+        "words": [
+          "nicht",
+          "kein",
+          "habe",
+          "ich",
+          "Doch",
+          "Hunger",
+          "natürlich"
+        ],
+        "correctOrder": [
+          "Doch",
+          "natürlich",
+          "habe",
+          "ich",
+          "Hunger"
+        ],
+        "tip": "questionGorgeTen.questDescription"
+      },
+      {
+        "id": 6,
+        "type": "select",
+        "question": "questionGorgeTen.questTask6",
+        "options": [
+          "Wer das ist? Genau, das ist Herr Weber!",
+          "Was ist das? Genau, das ist Herr Weber!",
+          "Wer ist das? Genau, das ist Herr Weber!"
+        ],
+        "answer": "Wer ist das? Genau, das ist Herr Weber!",
+        "tip": "questionGorgeTen.questDescription"
+      },
+      {
+        "id": 7,
+        "type": "input",
+        "question": "questionGorgeTen.questTask7",
+        "correctAnswer": "Kocht",
+        "tip": "questionGorgeTen.questDescription"
+      },
+      {
+        "id": 8,
+        "type": "select",
+        "question": "questionGorgeTen.questTask8",
+        "options": [
+          "Das ist keinen Tisch mein.",
+          "Das ist nicht mein Tisch.",
+          "Das ist kein mein Tisch."
+        ],
+        "answer": "Das ist nicht mein Tisch.",
+        "tip": "questionGorgeTen.questDescription"
+      },
+      {
+        "id": 9,
+        "type": "readAndAnswer",
+        "question": "questionGorgeTen.questTask9",
+        "text": "Tom: Lena, hast du heute Zeit? Café? Lena: Leider nicht. Ich bin krank. Tom: Oh! Das ist nicht gut.",
+        "options": [
+          "Sie trinkt nie Kaffee.",
+          "Sie ist krank.",
+          "Sie hat kein Geld."
+        ],
+        "answer": "Sie ist krank.",
+        "tip": "questionGorgeTen.questDescription"
+      },
+      {
+        "id": 10,
+        "type": "input",
+        "question": "questionGorgeTen.questTask10",
+        "correctAnswer": "Natürlich",
+        "tip": "questionGorgeTen.questDescription"
+      },
+      {
+        "id": 11,
+        "type": "reorder",
+        "question": "questionGorgeTen.questTask11",
+        "words": [
+          "kommst",
+          "was",
+          "und",
+          "kommt",
+          "wo",
+          "ihr",
+          "Woher",
+          "ihr",
+          "hier",
+          "macht"
+        ],
+        "correctOrder": [
+          "Woher",
+          "kommt",
+          "ihr",
+          "und",
+          "was",
+          "macht",
+          "ihr",
+          "hier"
+        ],
+        "tip": "questionGorgeTen.questDescription"
+      },
+      {
+        "id": 12,
+        "type": "input",
+        "question": "questionGorgeTen.questTask12",
+        "correctAnswer": "Hast",
+        "tip": "questionGorgeTen.questDescription"
+      },
+      {
+        "id": 13,
+        "type": "select",
+        "question": "questionGorgeTen.questTask13",
+        "options": [
+          "Ich trinkst immer Kaffee mit Milch.",
+          "Ich trinke immer Kaffee mit Milch.",
+          "Ich trinke nie Kaffee mit Milch."
+        ],
+        "answer": "Ich trinke immer Kaffee mit Milch.",
+        "tip": "questionGorgeTen.questDescription"
+      },
+      {
+        "id": 14,
+        "type": "select",
+        "question": "questionGorgeTen.questTask14",
+        "options": [
+          "Der Stuhl ist nicht neu, aber schöne.",
+          "Der Stuhl ist nicht neu, aber schön.",
+          "Der Stuhl ist kein neu, aber schön."
+        ],
+        "answer": "Der Stuhl ist nicht neu, aber schön.",
+        "tip": "questionGorgeTen.questDescription"
+      },
+      {
+        "id": 15,
+        "type": "reorder",
+        "question": "questionGorgeTen.questTask15",
+        "words": [
+          "Tag",
+          "wie",
+          "wo",
+          "heißen",
+          "heißt",
+          "Guten",
+          "Sie"
+        ],
+        "correctOrder": [
+          "Guten",
+          "Tag",
+          "wie",
+          "heißen",
+          "Sie"
+        ],
+        "tip": "questionGorgeTen.questDescription"
+      }
+    ]
+  }
+]

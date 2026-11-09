@@ -5,7 +5,7 @@ import {getAuth} from 'firebase/auth'
 import {isWordInReview} from '../utils/wordReview.js'
 // --- 1) Импорты групп достижений ---
 import { overAchievment } from '../src/achieveGroup/overAllAchieve/overallAchievements.js'
-import { wordAchievementsGroup } from '../src/achieveGroup/wordGroup/wordAchievements.js'
+import { wordAchievementsGroup, explorerLandIds, adventureLandIds, landMasterIds } from '../src/achieveGroup/wordGroup/wordAchievements.js'
 import { groupedEasyModeAchievements } from '../src/achieveGroup/marathon/easyModeAchievment.js'
 import { groupedNormalModeAchievements } from '../src/achieveGroup/marathon/normalModeAchievement.js'
 import { groupedHardModeAchievements } from '../src/achieveGroup/marathon/hardModeAchievments.js'
@@ -557,18 +557,15 @@ export const useAchievementStore = defineStore('achievementStore', () => {
 			const isPerfect = p => Boolean(p?.success) && Number(p?.correctCount ?? 0) === Number(p?.requiredTasks ?? 0)
 			const countForId = id => entries.filter(p => isPerfect(p) && p.region === (id === 'eastPlain' ? 'east-plain' : id)).length
 
-			const locationGroup1Ids = groups.value.find(g => g.title === 'locationAchievementsCategory.title')?.achievements.map(a => a.id).filter(id => id !== 'explorer' && id !== 'FiveHearts') || []
-			const locationGroup2Ids = groups.value.find(g => g.title === 'locationAchievementsCategory2.title')?.achievements.map(a => a.id).filter(id => id !== 'adventures') || []
+			const landIds = groups.value.filter(g => g.category === 'locations')
+				.flatMap(g => g.achievements.map(a => a.id))
+				.filter(id => !landMasterIds.includes(id))
+			landIds.forEach(id => updateProgress(id, countForId(id)))
 
-			locationGroup1Ids.forEach(id => updateProgress(id, countForId(id)))
-			locationGroup2Ids.forEach(id => updateProgress(id, countForId(id)))
-
-			const completedLocations1 = locationGroup1Ids.reduce((acc, id) => acc + (countForId(id) >= (findById(id)?.targetProgress ?? 0) ? 1 : 0), 0)
-			updateProgress('explorer', completedLocations1)
-
-			const completedLocations2 = locationGroup2Ids.reduce((acc, id) => acc + (countForId(id) >= (findById(id)?.targetProgress ?? 0) ? 1 : 0), 0)
-			updateProgress('adventures', completedLocations2)
-			updateProgress('languageLands50', [...locationGroup1Ids, ...locationGroup2Ids].reduce((acc, id) => acc + countForId(id), 0))
+			const completedLands = ids => ids.reduce((acc, id) => acc + (countForId(id) >= (findById(id)?.targetProgress ?? 0) ? 1 : 0), 0)
+			updateProgress('explorer', completedLands(explorerLandIds))
+			updateProgress('adventures', completedLands(adventureLandIds))
+			updateProgress('languageLands50', [...explorerLandIds, ...adventureLandIds].reduce((acc, id) => acc + countForId(id), 0))
 
 			const fiveHeartsCount = entries.filter(p => Boolean(p?.success) && Number(p?.requiredTasks ?? 0) >= 10 && Number(p?.correctCount ?? 0) === Number(p?.requiredTasks ?? 0) && Number(p?.livesAtFinish ?? 0) >= 5).length
 			updateProgress('FiveHearts', fiveHeartsCount)

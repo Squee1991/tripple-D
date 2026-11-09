@@ -4,7 +4,7 @@ const fs = require('fs')
 
 // группа земли — раздел regions.js (beginner / elementary / intermediate), а не level: level бывает временно обнулён для тестов
 const src = fs.readFileSync('utils/regions.js', 'utf8')
-const groups = ['beginner', 'elementary', 'intermediate']
+const groups = ['beginner', 'pathfinder', 'elementary', 'intermediate', 'experience', 'wisdom']
 const lands = groups.flatMap((group, i) => {
   const start = src.indexOf(group + ':')
   const end = i + 1 < groups.length ? src.indexOf(groups[i + 1] + ':') : src.length

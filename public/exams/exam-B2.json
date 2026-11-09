@@ -1,248 +1,1692 @@
 {
   "level": "B2",
-  "modules": [
+  "language": "de",
+  "exams": [
     {
-      "id": "lesen-1",
-      "title": "Lesen",
-      "type": "multiple-choice",
-      "task": {
-        "text": "Kommentar: Wer Wohnraum wirklich gerechter verteilen will, darf nicht nur über Neubau reden. Viel wirksamer wäre es, Anreize für kleinere, effizientere Wohnungen zu setzen – etwa durch gestaffelte Nebenkosten oder Tauschprogramme für unterbelegte Wohnungen. Das ist unbequem, weil es Gewohnheiten hinterfragt. Aber solange Menschen allein in großzügigen Altbauwohnungen leben, während Familien kaum bezahlbare Optionen finden, bleibt der Markt verkrampft. Neubau ist nötig, löst aber das Verteilungsproblem nicht, wenn der vorhandene Bestand ungenutzt bleibt.",
-        "question": "Welches Hauptargument verwendet die Autorin?",
-        "options": [
-          "Kleinere, effizientere Wohnungen würden die Verteilung verbessern.",
-          "Mehr Parkplätze würden die Mieten senken.",
-          "Tourismus belebt den Wohnungsmarkt nachhaltig."
-        ],
-        "answer": "Kleinere, effizientere Wohnungen würden die Verteilung verbessern."
-      }
+      "exam_id": 1,
+      "theme": "Gemischter Test",
+      "icon": "🧩",
+      "modules": [
+        {
+          "id": "lesen-1",
+          "title": "Lesen",
+          "type": "multiple-choice",
+          "task": {
+            "text": "Kommentar: Wer Wohnraum wirklich gerechter verteilen will, darf nicht nur über Neubau reden. Viel wirksamer wäre es, Anreize für kleinere, effizientere Wohnungen zu setzen – etwa durch gestaffelte Nebenkosten oder Tauschprogramme für unterbelegte Wohnungen. Das ist unbequem, weil es Gewohnheiten hinterfragt. Aber solange Menschen allein in großzügigen Altbauwohnungen leben, während Familien kaum bezahlbare Optionen finden, bleibt der Markt verkrampft. Neubau ist nötig, löst aber das Verteilungsproblem nicht, wenn der vorhandene Bestand ungenutzt bleibt.",
+            "question": "Welches Hauptargument verwendet die Autorin?",
+            "options": [
+              "Kleinere, effizientere Wohnungen würden die Verteilung verbessern.",
+              "Mehr Parkplätze würden die Mieten senken.",
+              "Tourismus belebt den Wohnungsmarkt nachhaltig."
+            ],
+            "answer": "Kleinere, effizientere Wohnungen würden die Verteilung verbessern."
+          }
+        },
+        {
+          "id": "lesen-2",
+          "title": "Lesen",
+          "type": "multiple-choice",
+          "task": {
+            "text": "Studienzusammenfassung: In einem Pilotprojekt zur Vier-Tage-Woche stieg die Produktivität in den meisten Betrieben leicht an, während Krankmeldungen und Fluktuation sanken. Allerdings zeigte sich, dass die Effekte stark von der jeweiligen Organisation abhängen: Wo Prozesse bereits klar strukturiert und Ziele messbar waren, profitierten Teams deutlich. In Bereichen mit unklarem Erwartungsmanagement wurden Deadlines häufiger verfehlt.",
+            "question": "Welche Folgerung legt der Text nahe?",
+            "options": [
+              "Ein pauschales Modell ist wenig sinnvoll; Rahmenbedingungen sind entscheidend.",
+              "Die Vier-Tage-Woche funktioniert nur in der Industrie.",
+              "Die Vier-Tage-Woche führt generell zu geringerer Qualität."
+            ],
+            "answer": "Ein pauschales Modell ist wenig sinnvoll; Rahmenbedingungen sind entscheidend."
+          }
+        },
+        {
+          "id": "lesen-3",
+          "title": "Lesen",
+          "type": "multiple-choice",
+          "task": {
+            "text": "Unimitteilung: Die Fakultäten für Medien und Informatik werden zum kommenden Wintersemester zusammengelegt. Ziel ist es, Forschungsschwerpunkte zu bündeln und Drittmittel effizienter einzusetzen. Kritische Stimmen befürchten längere Wege für Studierende und eine Verwässerung spezieller Profile. Die Hochschulleitung betont dagegen, dass alle bestehenden Studiengänge erhalten bleiben; Änderungen betreffen vor allem Verwaltung und gemeinsame Labore.",
+            "question": "Warum erfolgt die Zusammenlegung laut Text?",
+            "options": [
+              "Um Forschung zu bündeln und Drittmittel effizienter zu nutzen",
+              "Um Studiengänge zu streichen",
+              "Weil die Gebäude renoviert werden"
+            ],
+            "answer": "Um Forschung zu bündeln und Drittmittel effizienter zu nutzen"
+          }
+        },
+        {
+          "id": "lesen-4",
+          "title": "Lesen",
+          "type": "multiple-choice",
+          "task": {
+            "text": "AGB-Änderung: Zum 1. Januar erhöht der Streamingdienst die Preise. Kundinnen und Kunden werden vier Wochen vorher per E-Mail informiert. Wer nicht zustimmt, kann den Vertrag innerhalb eines Monats nach Zugang der Mitteilung außerordentlich kündigen. Erfolgt keine Kündigung, gelten die neuen Preise als akzeptiert. Bereits gezahlte Jahresabos werden bis zum Laufzeitende nicht angepasst.",
+            "question": "Welche Rechte haben Kundinnen und Kunden?",
+            "options": [
+              "Sonderkündigungsrecht innerhalb eines Monats",
+              "Rückerstattung bereits gezahlter Jahresabos",
+              "Automatische Preisreduktion bei Nichtnutzung"
+            ],
+            "answer": "Sonderkündigungsrecht innerhalb eines Monats"
+          }
+        },
+        {
+          "id": "lesen-5",
+          "title": "Lesen",
+          "type": "multiple-choice",
+          "task": {
+            "text": "Ausstellungsrezension: Die Retrospektive würdigt die Künstlerin als Pionierin der Alltagsfotografie. Kuratorisch überzeugt die klare Chronologie, die Brüche ihres Lebens – Emigration, prekäre Jobs – werden jedoch nur angedeutet. Gerade diese biografischen Risse hätten dem glatten Bild mehr Kanten gegeben. Das Rahmenprogramm bleibt international, lässt aber lokale Perspektiven vermissen.",
+            "question": "Welche Kritik wird im Text geäußert?",
+            "options": [
+              "Biografische Brüche werden zu wenig beleuchtet.",
+              "Die Chronologie ist unverständlich.",
+              "Das Rahmenprogramm ist zu lokal ausgerichtet."
+            ],
+            "answer": "Biografische Brüche werden zu wenig beleuchtet."
+          }
+        },
+        {
+          "id": "hoeren-1",
+          "title": "Hören",
+          "type": "audio-choice",
+          "task": {
+            "text": "Teamleiterin: Wir bleiben beim hybriden Modell, aber Präsenztage sind künftig projektbezogen. Das heißt: Wenn eine Sprintplanung ansteht oder Kundentermine vor Ort sind, erwarten wir euch im Büro. Ansonsten entscheidet ihr selbst – wichtig ist, dass die Erreichbarkeit klar kommuniziert wird und Ergebnisse stimmen.",
+            "question": "Was ändert sich an den Präsenzzeiten?",
+            "options": [
+              "Sie richten sich nach Projekterfordernissen.",
+              "Es gibt feste Tage für alle.",
+              "Homeoffice ist nicht mehr erlaubt."
+            ],
+            "answer": "Sie richten sich nach Projekterfordernissen."
+          }
+        },
+        {
+          "id": "hoeren-2",
+          "title": "Hören",
+          "type": "audio-choice",
+          "task": {
+            "text": "Studierende: Ich wollte unbedingt ins Auslandssemester, aber die Partneruni hat kurzfristig die Zulassung verschoben. Statt abzusagen, habe ich ein Praktikum in einer NGO organisiert. Im Nachhinein war das Gold wert, weil ich jetzt weiß, in welchem Bereich ich wirklich arbeiten will.",
+            "question": "Wie bewertet die Sprecherin die Veränderung letztlich?",
+            "options": [
+              "Sie sieht den Nutzen der neuen Erfahrung.",
+              "Sie bereut ihre Entscheidung.",
+              "Sie will das Studium abbrechen."
+            ],
+            "answer": "Sie sieht den Nutzen der neuen Erfahrung."
+          }
+        },
+        {
+          "id": "hoeren-3",
+          "title": "Hören",
+          "type": "audio-choice",
+          "task": {
+            "text": "Radiobericht: Der Stadtrat lehnt die sofortige Einführung eines generellen Tempolimits ab, beauftragt aber die Verwaltung, für besonders belastete Viertel Pilotzonen zu planen. Damit reagiert er auf Kritik, ohne sich auf einen Schlag festzulegen.",
+            "question": "Welche Strategie verfolgt der Stadtrat?",
+            "options": [
+              "Schrittweise Einführung über Pilotzonen",
+              "Komplette Ablehnung ohne Alternative",
+              "Sofortige Umsetzung im gesamten Stadtgebiet"
+            ],
+            "answer": "Schrittweise Einführung über Pilotzonen"
+          }
+        },
+        {
+          "id": "hoeren-4",
+          "title": "Hören",
+          "type": "audio-choice",
+          "task": {
+            "text": "Konferenzankündigung: Unser Panel fragt, wie Künstliche Intelligenz in der Pflege helfen kann, ohne Beziehungen zu ersetzen. Beiträge aus Ethik, Technik und Praxis zeigen, dass Entlastung nur funktioniert, wenn Mitarbeitende mitgestalten und Daten transparent verarbeitet werden.",
+            "question": "Unter welcher Bedingung gilt KI als hilfreich?",
+            "options": [
+              "Wenn Mitarbeitende mitgestalten und Transparenz besteht",
+              "Wenn Personal vollständig ersetzt wird",
+              "Wenn nur Kosten gesenkt werden"
+            ],
+            "answer": "Wenn Mitarbeitende mitgestalten und Transparenz besteht"
+          }
+        },
+        {
+          "id": "hoeren-5",
+          "title": "Hören",
+          "type": "audio-choice",
+          "task": {
+            "text": "Flughafeninfo: Wegen Nebels werden Starts gebündelt, sobald die Sicht sich bessert. Reisende mit Anschlussflügen wenden sich bitte frühzeitig an die Airline; bei verpassten Verbindungen wird umgebucht.",
+            "question": "Was sollen Reisende mit Anschlussflügen tun?",
+            "options": [
+              "Sich frühzeitig an die Airline wenden",
+              "Am Gate warten, ohne etwas zu tun",
+              "Den Flug eigenständig stornieren"
+            ],
+            "answer": "Sich frühzeitig an die Airline wenden"
+          }
+        },
+        {
+          "id": "schreiben-1",
+          "title": "Schreiben",
+          "type": "text-input",
+          "task": {
+            "instruction": "Verfasse einen argumentativen Kommentar (mind. 140 Wörter): Sollten Städte autofreie Innenstädte einführen? Beziehe dich auf Wirtschaft, Umwelt und gesellschaftliche Teilhabe. Beziehe Gegenargumente ein und ziehe ein begründetes Fazit.",
+            "exampleAnswer": "Autofreie Innenstädte wirken auf den ersten Blick radikal, sind aber ein wirksames Mittel, um Lebensqualität zu steigern. Händlerinnen befürchten Umsatzverluste; tatsächlich zeigen Beispiele, dass Frequenz und Verweildauer zunehmen, wenn Plätze menschen- statt fahrzeuggerecht gestaltet werden. Lieferverkehr lässt sich zeitlich bündeln, Anwohner erhalten Durchfahrtsgenehmigungen. Umweltseitig sinken Lärm- und Emissionswerte deutlich, was Gesundheit und Tourismus zugutekommt. Kritisch ist die soziale Dimension: Wer schlecht angebunden ist, darf nicht ausgeschlossen werden. Dazu braucht es dichteren ÖPNV, regionale Buslinien und sichere Radwege. Richtig umgesetzt profitieren alle: Städte werden ruhiger, Aufenthaltsflächen entstehen, und der Handel gewinnt an Sichtbarkeit. Entscheidend ist, Maßnahmen mit Bürgerinnen und Bürgern zu planen, Ausnahmen transparent zu regeln und die Umstellung schrittweise zu evaluieren. Dann ist die autofreie Innenstadt keine Ideologie, sondern ein pragmatisches Stadtentwicklungsinstrument."
+          }
+        },
+        {
+          "id": "schreiben-2",
+          "title": "Schreiben",
+          "type": "text-input",
+          "task": {
+            "instruction": "Du hast einen Weiterbildungslehrgang gebucht, der hinter den zugesagten Standards zurückblieb. Verfasse eine formelle Beschwerde mit Bitte um teilweise Rückerstattung und konkreten Vorschlägen zur Qualitätsverbesserung (mind. 140 Wörter).",
+            "exampleAnswer": "Sehr geehrte Damen und Herren,\nich habe vom 3.–21. Juni am Lehrgang „Projektmanagement kompakt“ teilgenommen. Laut Ausschreibung sollten tägliche Praxisübungen und individuelles Feedback fest zum Konzept gehören. Tatsächlich fielen mehrere Übungen ersatzlos aus; die Rückmeldungen beschränkten sich auf allgemeine Hinweise. Da die erbrachte Leistung vom angekündigten Standard abwich, bitte ich um eine angemessene, teilweise Erstattung der Kursgebühr. Konstruktiv schlage ich vor, feste Feedback-Slots verbindlich in den Stundenplan aufzunehmen, digitale Materialien vorab bereitzustellen und ausgefallene Einheiten zeitnah per Video nachzuliefern. Ich schätze Ihr Institut und möchte es gern weiterempfehlen – dafür sind transparente Qualitätskriterien jedoch unerlässlich. Für Rückfragen stehe ich gern zur Verfügung.\nMit freundlichen Grüßen\nSvenja Richter"
+          }
+        },
+        {
+          "id": "schreiben-3",
+          "title": "Schreiben",
+          "type": "text-input",
+          "task": {
+            "instruction": "Schreibe einen Bericht (mind. 140 Wörter) für die interne Mitarbeitendenzeitung: Ein Pilotprojekt zur Vier-Tage-Woche wurde drei Monate getestet. Fasse die wichtigsten Ergebnisse zusammen und formuliere eine Empfehlung.",
+            "exampleAnswer": "Im dreimonatigen Pilotprojekt zur Vier-Tage-Woche nahmen 62 Mitarbeitende aus drei Abteilungen teil. Die Produktivität stieg laut Kennzahlen im Durchschnitt um 7 %, Krankentage sanken um 18 %. Besonders positiv wurde die bessere Konzentration an längeren, störungsarmen Arbeitstagen bewertet. Herausforderungen zeigten sich dort, wo Schnittstellen zu externen Partnern nicht synchronisiert waren. Deadlines wurden in zwei Fällen verfehlt, weil Freitage als Servicetage weggefallen sind. Empfehlung: Beibehaltung des Modells für Teams mit klar messbaren Zielen, ergänzt um rotierende Serviceteams und verbindliche Erreichbarkeitsfenster für Kundinnen und Kunden. Nach sechs Monaten sollte eine erneute Evaluation erfolgen."
+          }
+        },
+        {
+          "id": "schreiben-4",
+          "title": "Schreiben",
+          "type": "text-input",
+          "task": {
+            "instruction": "Bewirb dich per E-Mail als ehrenamtliche/r Mentor/in im Bildungsprojekt „Sprache & Beruf“. Betone Motivation, Erfahrungen und Verfügbarkeit; formeller Ton (mind. 140 Wörter).",
+            "exampleAnswer": "Sehr geehrtes Projektteam,\nmit großem Interesse bewerbe ich mich als Mentorin im Programm „Sprache & Beruf“. Seit zwei Jahren begleite ich Geflüchtete im Sprachtandem und habe dabei gelernt, Lernziele realistisch zu planen und berufsbezogene Situationen – etwa Telefonate oder Bewerbungsgespräche – gezielt zu trainieren. Besonders motiviert mich, dass Ihr Projekt Sprachförderung mit Berufsorientierung verbindet. Ich verfüge über C1-Deutschkenntnisse, arbeite strukturiert und wertschätzend und kann ab Oktober wöchentlich zwei Stunden anbieten, vorzugsweise am frühen Abend. Gern unterstütze ich auch bei der Materialerstellung. Über eine Einladung zum Kennenlernen freue ich mich.\nMit freundlichen Grüßen\nAliya Karim"
+          }
+        },
+        {
+          "id": "schreiben-5",
+          "title": "Schreiben",
+          "type": "text-input",
+          "task": {
+            "instruction": "Verfasse einen begründeten Vorschlag (170–210 Wörter) an die Stadtverwaltung: Wie kann die Innenstadt wiederbelebt werden, ohne kleine Läden zu verdrängen?",
+            "exampleAnswer": "Sehr geehrte Damen und Herren,\num die Innenstadt zu beleben, ohne kleine Läden zu benachteiligen, schlage ich ein Maßnahmenpaket vor. Erstens sollte es ein Förderprogramm für Zwischennutzungen geben, damit leere Flächen temporär von lokalen Initiativen, Pop-up-Stores oder Kulturprojekten genutzt werden können. Zweitens empfehle ich eine Miettransparenzplattform, auf der Eigentümerinnen und Eigentümer faire Konditionen veröffentlichen und Vermittlung erhalten. Drittens braucht es attraktivere Wege: mehr Sitzgelegenheiten, schattenspendende Begrünung und sichere Radspuren. Ergänzend könnten „lange Donnerstage“ mit Kultur und Kinderangeboten Besucher anziehen. Wichtig ist, Händlerinnen früh einzubinden und Wirkung regelmäßig zu messen: Frequenz, Aufenthaltsdauer, Leerstandsquote. So entsteht ein lebendiger Stadtraum, in dem Vielfalt wirtschaftlich bestehen kann.\nMit freundlichen Grüßen\nJonas Müller"
+          }
+        },
+        {
+          "id": "sprechen-1",
+          "title": "Sprechen",
+          "type": "speaking-prompt",
+          "task": {
+            "prompt": "Viele Unternehmen testen die Vier-Tage-Woche. Diskutieren Sie Chancen und Risiken für Wirtschaft und Mitarbeitende und formulieren Sie eine klare Empfehlung.",
+            "expectedTopics": [
+              "Produktivität",
+              "Gesundheit/Work-Life-Balance",
+              "Kundenerwartungen",
+              "Empfehlung"
+            ]
+          }
+        },
+        {
+          "id": "sprechen-2",
+          "title": "Sprechen",
+          "type": "speaking-prompt",
+          "task": {
+            "prompt": "Sollte der öffentliche Nahverkehr kostenlos sein? Legen Sie Pro- und Contra-Argumente dar und schlagen Sie einen realistischen Finanzierungsweg vor.",
+            "expectedTopics": [
+              "Mobilität",
+              "Soziale Teilhabe",
+              "Finanzierung",
+              "Kompromiss"
+            ]
+          }
+        },
+        {
+          "id": "sprechen-3",
+          "title": "Sprechen",
+          "type": "speaking-prompt",
+          "task": {
+            "prompt": "Berichten Sie von einem Konflikt in einem Team. Analysieren Sie Ursachen, beschreiben Sie den Lösungsprozess und reflektieren Sie, was Sie heute anders machen würden.",
+            "expectedTopics": [
+              "Konfliktanalyse",
+              "Mediation",
+              "Rollen/Kommunikation",
+              "Reflexion"
+            ]
+          }
+        },
+        {
+          "id": "sprechen-4",
+          "title": "Sprechen",
+          "type": "speaking-prompt",
+          "task": {
+            "prompt": "Algorithmen filtern unsere Informationen. Diskutieren Sie Chancen und Gefahren personalisierter Feeds und nennen Sie konkrete Strategien gegen Filterblasen.",
+            "expectedTopics": [
+              "Medienkompetenz",
+              "Datenschutz",
+              "Transparenz",
+              "Strategien"
+            ]
+          }
+        },
+        {
+          "id": "sprechen-5",
+          "title": "Sprechen",
+          "type": "speaking-prompt",
+          "task": {
+            "prompt": "Beschreiben Sie ein kulturelles Ereignis, das Ihre Sicht auf ein Thema verändert hat, und erläutern Sie die Wirkung auf Ihr Denken oder Handeln.",
+            "expectedTopics": [
+              "Ereignis",
+              "Interpretation",
+              "Wirkung",
+              "Übertrag auf Alltag"
+            ]
+          }
+        }
+      ]
     },
     {
-      "id": "lesen-2",
-      "title": "Lesen",
-      "type": "multiple-choice",
-      "task": {
-        "text": "Studienzusammenfassung: In einem Pilotprojekt zur Vier-Tage-Woche stieg die Produktivität in den meisten Betrieben leicht an, während Krankmeldungen und Fluktuation sanken. Allerdings zeigte sich, dass die Effekte stark von der jeweiligen Organisation abhängen: Wo Prozesse bereits klar strukturiert und Ziele messbar waren, profitierten Teams deutlich. In Bereichen mit unklarem Erwartungsmanagement wurden Deadlines häufiger verfehlt.",
-        "question": "Welche Folgerung legt der Text nahe?",
-        "options": [
-          "Ein pauschales Modell ist wenig sinnvoll; Rahmenbedingungen sind entscheidend.",
-          "Die Vier-Tage-Woche funktioniert nur in der Industrie.",
-          "Die Vier-Tage-Woche führt generell zu geringerer Qualität."
-        ],
-        "answer": "Ein pauschales Modell ist wenig sinnvoll; Rahmenbedingungen sind entscheidend."
-      }
+      "exam_id": 2,
+      "theme": "Arbeitswelt im Wandel",
+      "icon": "🌍",
+      "modules": [
+        {
+          "id": "lesen-1",
+          "title": "Lesen",
+          "type": "multiple-choice",
+          "task": {
+            "text": "Die Digitalisierung verändert die Arbeitswelt grundlegend. Während Routinetätigkeiten zunehmend von Software übernommen werden, steigt die Nachfrage nach Fachkräften, die komplexe Probleme lösen und kreativ denken können. Experten betonen daher, dass lebenslanges Lernen nicht länger eine Option, sondern eine Notwendigkeit sei. Unternehmen, die ihre Mitarbeitenden nicht weiterbilden, riskieren, im Wettbewerb zurückzufallen.",
+            "question": "Was betonen die Experten?",
+            "options": [
+              "Software wird alle Jobs ersetzen.",
+              "Lebenslanges Lernen ist notwendig.",
+              "Kreativität ist weniger wichtig geworden."
+            ],
+            "answer": "Lebenslanges Lernen ist notwendig."
+          }
+        },
+        {
+          "id": "lesen-2",
+          "title": "Lesen",
+          "type": "multiple-choice",
+          "task": {
+            "text": "Seit der Pandemie arbeiten viele Büroangestellte hybrid, also teils zu Hause, teils im Büro. Eine aktuelle Untersuchung zeigt jedoch, dass sich besonders jüngere Beschäftigte mehr Präsenz wünschen. Sie vermissen den informellen Austausch mit erfahrenen Kollegen, der für ihre berufliche Entwicklung wichtig ist.",
+            "question": "Warum wünschen sich jüngere Beschäftigte mehr Präsenz?",
+            "options": [
+              "Weil ihre Wohnungen zu klein sind",
+              "Weil sie den Austausch mit erfahrenen Kollegen vermissen",
+              "Weil sie im Büro mehr verdienen"
+            ],
+            "answer": "Weil sie den Austausch mit erfahrenen Kollegen vermissen"
+          }
+        },
+        {
+          "id": "lesen-3",
+          "title": "Lesen",
+          "type": "multiple-choice",
+          "task": {
+            "text": "In einigen Pilotprojekten haben Firmen die Vier-Tage-Woche bei vollem Lohn getestet. Die meisten berichten von gleichbleibender oder sogar gesteigerter Produktivität sowie weniger Krankmeldungen. Kritiker wenden allerdings ein, dass sich das Modell nicht auf alle Branchen übertragen lasse, etwa auf die Pflege oder den Einzelhandel.",
+            "question": "Was kritisieren die Gegner?",
+            "options": [
+              "Die Produktivität sinkt stark.",
+              "Das Modell passt nicht für alle Branchen.",
+              "Die Mitarbeiter werden öfter krank."
+            ],
+            "answer": "Das Modell passt nicht für alle Branchen."
+          }
+        },
+        {
+          "id": "lesen-4",
+          "title": "Lesen",
+          "type": "multiple-choice",
+          "task": {
+            "text": "Der Fachkräftemangel betrifft inzwischen fast alle Bereiche. Um Personal aus dem Ausland zu gewinnen, hat die Bundesregierung die Einwanderungsregeln vereinfacht. Dennoch bleiben Hürden bestehen: Die Anerkennung ausländischer Abschlüsse dauert oft monatelang.",
+            "question": "Welches Problem besteht trotz neuer Regeln?",
+            "options": [
+              "Die Anerkennung von Abschlüssen dauert lange.",
+              "Es gibt keine offenen Stellen.",
+              "Die Gehälter sind zu niedrig."
+            ],
+            "answer": "Die Anerkennung von Abschlüssen dauert lange."
+          }
+        },
+        {
+          "id": "lesen-5",
+          "title": "Lesen",
+          "type": "multiple-choice",
+          "task": {
+            "text": "Viele Arbeitnehmer leiden unter ständiger Erreichbarkeit. Einige Konzerne haben deshalb Regeln eingeführt: Nach 18 Uhr und am Wochenende werden keine dienstlichen E-Mails mehr weitergeleitet. Laut Befragungen fühlen sich die Beschäftigten dadurch deutlich entspannter.",
+            "question": "Welche Folge hatten die neuen Regeln?",
+            "options": [
+              "Die Beschäftigten fühlen sich entspannter.",
+              "Die Firmen verloren Kunden.",
+              "Die Arbeitszeit wurde länger."
+            ],
+            "answer": "Die Beschäftigten fühlen sich entspannter."
+          }
+        },
+        {
+          "id": "hoeren-1",
+          "title": "Hören",
+          "type": "audio-choice",
+          "task": {
+            "text": "In unserer Sendung spricht heute eine Personalberaterin: Viele Bewerber unterschätzen die Bedeutung von Soft Skills. Fachwissen kann man nachlernen, aber Teamfähigkeit und Kommunikationsstärke sind für Arbeitgeber oft das entscheidende Kriterium.",
+            "question": "Was ist laut der Beraterin oft entscheidend?",
+            "options": [
+              "Das Fachwissen",
+              "Soft Skills wie Teamfähigkeit",
+              "Die Abschlussnote"
+            ],
+            "answer": "Soft Skills wie Teamfähigkeit"
+          }
+        },
+        {
+          "id": "hoeren-2",
+          "title": "Hören",
+          "type": "audio-choice",
+          "task": {
+            "text": "Nach fünfzehn Jahren in der Bank habe ich mit Mitte vierzig noch eine Ausbildung zum Tischler gemacht. Finanziell war das ein Rückschritt, aber ich gehe jeden Morgen gern zur Arbeit. Das war es mir wert.",
+            "question": "Wie bewertet der Sprecher seinen Berufswechsel?",
+            "options": [
+              "Als Fehler",
+              "Als lohnend trotz weniger Geld",
+              "Als finanziell vorteilhaft"
+            ],
+            "answer": "Als lohnend trotz weniger Geld"
+          }
+        },
+        {
+          "id": "hoeren-3",
+          "title": "Hören",
+          "type": "audio-choice",
+          "task": {
+            "text": "Künstliche Intelligenz wird viele Berufe nicht abschaffen, sondern verändern. Wer lernt, mit diesen Werkzeugen umzugehen, wird im Vorteil sein, sagt der Arbeitsmarktforscher.",
+            "question": "Was sagt der Forscher über KI?",
+            "options": [
+              "Sie schafft viele Berufe ab.",
+              "Sie verändert Berufe.",
+              "Sie hat keinen Einfluss."
+            ],
+            "answer": "Sie verändert Berufe."
+          }
+        },
+        {
+          "id": "hoeren-4",
+          "title": "Hören",
+          "type": "audio-choice",
+          "task": {
+            "text": "Ich arbeite als Freelancerin im Grafikdesign. Die Freiheit ist toll, aber die Unsicherheit belastet mich. In manchen Monaten habe ich kaum Aufträge.",
+            "question": "Was belastet die Freelancerin?",
+            "options": [
+              "Die Unsicherheit",
+              "Die Kollegen",
+              "Die lange Anfahrt"
+            ],
+            "answer": "Die Unsicherheit"
+          }
+        },
+        {
+          "id": "hoeren-5",
+          "title": "Hören",
+          "type": "audio-choice",
+          "task": {
+            "text": "Laut einer neuen Umfrage würden über die Hälfte der Beschäftigten ihren Job wechseln, wenn sie anderswo mehr Flexibilität bekämen, selbst bei gleichem Gehalt.",
+            "question": "Wofür würden viele den Job wechseln?",
+            "options": [
+              "Für mehr Flexibilität",
+              "Für ein höheres Gehalt",
+              "Für einen Firmenwagen"
+            ],
+            "answer": "Für mehr Flexibilität"
+          }
+        },
+        {
+          "id": "schreiben-1",
+          "title": "Schreiben",
+          "type": "text-input",
+          "task": {
+            "instruction": "Ihr Arbeitgeber plant, das Homeoffice abzuschaffen. Schreiben Sie eine formelle E-Mail an die Geschäftsleitung, in der Sie Ihre Bedenken darlegen und einen Kompromiss vorschlagen.",
+            "exampleAnswer": "Sehr geehrte Damen und Herren, mit Bedauern habe ich von den Plänen erfahren, das Homeoffice abzuschaffen. In den letzten Jahren hat sich gezeigt, dass viele von uns zu Hause konzentrierter arbeiten und die Fahrtzeit sinnvoller nutzen können. Gleichzeitig verstehe ich den Wunsch nach mehr persönlichem Austausch. Ich möchte daher vorschlagen, zwei feste Bürotage pro Woche einzuführen und die übrigen Tage flexibel zu gestalten. So könnten beide Seiten profitieren. Mit freundlichen Grüßen, Daniel Ortega"
+          }
+        },
+        {
+          "id": "schreiben-2",
+          "title": "Schreiben",
+          "type": "text-input",
+          "task": {
+            "instruction": "Wird künstliche Intelligenz in Zukunft mehr Arbeitsplätze schaffen oder vernichten? Nehmen Sie Stellung und nennen Sie Argumente für beide Seiten.",
+            "exampleAnswer": "Die Frage, ob KI Arbeitsplätze schafft oder vernichtet, lässt sich nicht pauschal beantworten. Einerseits werden einfache, sich wiederholende Tätigkeiten zunehmend automatisiert, was vor allem in der Verwaltung zu Stellenabbau führen kann. Andererseits entstehen neue Berufe, etwa in der Datenanalyse oder der Entwicklung von KI-Systemen. Entscheidend wird sein, ob Politik und Unternehmen rechtzeitig in Weiterbildung investieren. Ich bin vorsichtig optimistisch, sofern niemand zurückgelassen wird."
+          }
+        },
+        {
+          "id": "sprechen-1",
+          "title": "Sprechen",
+          "type": "speaking-prompt",
+          "task": {
+            "prompt": "Wie wird sich die Arbeitswelt in den nächsten zwanzig Jahren verändern? Erläutern Sie Ihre Einschätzung anhand von Beispielen.",
+            "expectedTopics": [
+              "Technologie",
+              "Arbeitsmodelle",
+              "Chancen",
+              "Risiken"
+            ]
+          }
+        },
+        {
+          "id": "sprechen-2",
+          "title": "Sprechen",
+          "type": "speaking-prompt",
+          "task": {
+            "prompt": "Sollte die Vier-Tage-Woche gesetzlich eingeführt werden? Wägen Sie Vor- und Nachteile ab.",
+            "expectedTopics": [
+              "Produktivität",
+              "Gesundheit",
+              "Wirtschaft",
+              "Eigene Position"
+            ]
+          }
+        }
+      ]
     },
     {
-      "id": "lesen-3",
-      "title": "Lesen",
-      "type": "multiple-choice",
-      "task": {
-        "text": "Unimitteilung: Die Fakultäten für Medien und Informatik werden zum kommenden Wintersemester zusammengelegt. Ziel ist es, Forschungsschwerpunkte zu bündeln und Drittmittel effizienter einzusetzen. Kritische Stimmen befürchten längere Wege für Studierende und eine Verwässerung spezieller Profile. Die Hochschulleitung betont dagegen, dass alle bestehenden Studiengänge erhalten bleiben; Änderungen betreffen vor allem Verwaltung und gemeinsame Labore.",
-        "question": "Warum erfolgt die Zusammenlegung laut Text?",
-        "options": [
-          "Um Forschung zu bündeln und Drittmittel effizienter zu nutzen",
-          "Um Studiengänge zu streichen",
-          "Weil die Gebäude renoviert werden"
-        ],
-        "answer": "Um Forschung zu bündeln und Drittmittel effizienter zu nutzen"
-      }
+      "exam_id": 3,
+      "theme": "Wohnen und Stadtentwicklung",
+      "icon": "🏙️",
+      "modules": [
+        {
+          "id": "lesen-1",
+          "title": "Lesen",
+          "type": "multiple-choice",
+          "task": {
+            "text": "Der Wohnungsmarkt in deutschen Großstädten ist angespannt. Obwohl jedes Jahr Zehntausende neue Wohnungen entstehen, reicht das Angebot nicht aus. Ein Grund liegt darin, dass vor allem teure Eigentumswohnungen gebaut werden, während bezahlbarer Wohnraum knapp bleibt. Die Mietpreisbremse sollte gegensteuern, zeigt aber nach Ansicht vieler Fachleute nur begrenzte Wirkung.",
+            "question": "Was ist laut Text ein Grund für die Knappheit?",
+            "options": [
+              "Es werden gar keine Wohnungen gebaut.",
+              "Es entstehen vor allem teure Wohnungen.",
+              "Die Mietpreisbremse erhöht die Mieten."
+            ],
+            "answer": "Es entstehen vor allem teure Wohnungen."
+          }
+        },
+        {
+          "id": "lesen-2",
+          "title": "Lesen",
+          "type": "multiple-choice",
+          "task": {
+            "text": "Gentrifizierung beschreibt den Prozess, bei dem ehemals günstige Stadtviertel aufgewertet werden. Neue Cafés und renovierte Altbauten ziehen wohlhabendere Bewohner an, wodurch die Mieten steigen. Alteingesessene Mieter können sich ihre Wohnungen häufig nicht mehr leisten und müssen wegziehen.",
+            "question": "Welche Folge hat Gentrifizierung für alte Bewohner?",
+            "options": [
+              "Sie verdienen mehr.",
+              "Sie müssen oft wegziehen.",
+              "Ihre Mieten sinken."
+            ],
+            "answer": "Sie müssen oft wegziehen."
+          }
+        },
+        {
+          "id": "lesen-3",
+          "title": "Lesen",
+          "type": "multiple-choice",
+          "task": {
+            "text": "Die Stadt Kopenhagen gilt als Vorbild für fahrradfreundliche Stadtplanung. Breite Radwege, eigene Ampelphasen und Brücken nur für Radfahrer haben dazu geführt, dass dort mehr Menschen mit dem Rad zur Arbeit fahren als mit dem Auto. Deutsche Städte versuchen zunehmend, dieses Konzept zu übernehmen.",
+            "question": "Was hat in Kopenhagen zu mehr Radverkehr geführt?",
+            "options": [
+              "Höhere Benzinpreise",
+              "Eine gezielte Infrastruktur für Radfahrer",
+              "Ein Autoverbot"
+            ],
+            "answer": "Eine gezielte Infrastruktur für Radfahrer"
+          }
+        },
+        {
+          "id": "lesen-4",
+          "title": "Lesen",
+          "type": "multiple-choice",
+          "task": {
+            "text": "Immer mehr Menschen entscheiden sich für gemeinschaftliche Wohnformen wie Baugruppen oder Wohnprojekte. Dabei planen mehrere Haushalte gemeinsam ein Haus, teilen Gemeinschaftsräume und unterstützen sich im Alltag. Allerdings erfordern solche Projekte viel Zeit und Kompromissbereitschaft.",
+            "question": "Was erfordern gemeinschaftliche Wohnprojekte?",
+            "options": [
+              "Viel Geld vom Staat",
+              "Zeit und Kompromissbereitschaft",
+              "Eine Lage auf dem Land"
+            ],
+            "answer": "Zeit und Kompromissbereitschaft"
+          }
+        },
+        {
+          "id": "lesen-5",
+          "title": "Lesen",
+          "type": "multiple-choice",
+          "task": {
+            "text": "Während Großstädte wachsen, kämpfen viele ländliche Regionen mit Abwanderung. Schulen und Arztpraxen schließen, Busverbindungen werden eingestellt. Einige Gemeinden versuchen, mit schnellem Internet und Coworking-Räumen junge Familien zurückzugewinnen.",
+            "question": "Womit versuchen Gemeinden, Familien anzulocken?",
+            "options": [
+              "Mit kostenlosem Bauland",
+              "Mit schnellem Internet und Coworking",
+              "Mit neuen Autobahnen"
+            ],
+            "answer": "Mit schnellem Internet und Coworking"
+          }
+        },
+        {
+          "id": "hoeren-1",
+          "title": "Hören",
+          "type": "audio-choice",
+          "task": {
+            "text": "Wir haben über ein Jahr eine Wohnung gesucht. Bei den Besichtigungen standen oft fünfzig Leute vor der Tür. Am Ende haben wir nur über Bekannte etwas gefunden.",
+            "question": "Wie hat das Paar die Wohnung gefunden?",
+            "options": [
+              "Über eine Anzeige",
+              "Über Bekannte",
+              "Über einen Makler"
+            ],
+            "answer": "Über Bekannte"
+          }
+        },
+        {
+          "id": "hoeren-2",
+          "title": "Hören",
+          "type": "audio-choice",
+          "task": {
+            "text": "Die Stadt plant, den Marktplatz autofrei zu gestalten. Geschäftsinhaber befürchten Umsatzeinbußen, Anwohner freuen sich dagegen auf mehr Ruhe und Grünflächen.",
+            "question": "Was befürchten die Geschäftsinhaber?",
+            "options": [
+              "Mehr Lärm",
+              "Weniger Umsatz",
+              "Höhere Mieten"
+            ],
+            "answer": "Weniger Umsatz"
+          }
+        },
+        {
+          "id": "hoeren-3",
+          "title": "Hören",
+          "type": "audio-choice",
+          "task": {
+            "text": "Ich bin bewusst von München in eine Kleinstadt gezogen. Ich arbeite überwiegend remote und zahle jetzt für ein ganzes Haus weniger als früher für zwei Zimmer.",
+            "question": "Was ermöglicht dem Sprecher das Leben in der Kleinstadt?",
+            "options": [
+              "Ein Firmenwagen",
+              "Remote-Arbeit",
+              "Ein Erbe"
+            ],
+            "answer": "Remote-Arbeit"
+          }
+        },
+        {
+          "id": "hoeren-4",
+          "title": "Hören",
+          "type": "audio-choice",
+          "task": {
+            "text": "Ein Stadtplaner im Interview: Wir müssen Städte so bauen, dass alles Wichtige in fünfzehn Minuten zu Fuß oder mit dem Rad erreichbar ist.",
+            "question": "Was fordert der Stadtplaner?",
+            "options": [
+              "Mehr Parkhäuser",
+              "Kurze Wege im Alltag",
+              "Größere Wohnungen"
+            ],
+            "answer": "Kurze Wege im Alltag"
+          }
+        },
+        {
+          "id": "hoeren-5",
+          "title": "Hören",
+          "type": "audio-choice",
+          "task": {
+            "text": "Seit die Fabrik in ein Kulturzentrum umgebaut wurde, ist unser Viertel viel lebendiger geworden. Leider sind auch die Mieten deutlich gestiegen.",
+            "question": "Welche negative Folge nennt die Sprecherin?",
+            "options": [
+              "Mehr Lärm",
+              "Gestiegene Mieten",
+              "Weniger Geschäfte"
+            ],
+            "answer": "Gestiegene Mieten"
+          }
+        },
+        {
+          "id": "schreiben-1",
+          "title": "Schreiben",
+          "type": "text-input",
+          "task": {
+            "instruction": "In Ihrer Stadt soll ein großes Neubaugebiet auf einer Grünfläche entstehen. Schreiben Sie einen Beitrag für ein Bürgerforum, in dem Sie Stellung nehmen.",
+            "exampleAnswer": "Liebe Mitbürgerinnen und Mitbürger, die Pläne für das Neubaugebiet am Stadtrand werden kontrovers diskutiert. Einerseits brauchen wir dringend bezahlbaren Wohnraum, vor allem für junge Familien. Andererseits würde mit der Grünfläche ein wichtiges Naherholungsgebiet verloren gehen. Ich schlage vor, zunächst leerstehende Gebäude und Brachflächen zu nutzen und nur dann neu zu bauen, wenn genügend Grünflächen erhalten bleiben. Nur so lässt sich Wohnungsbau mit Lebensqualität verbinden."
+          }
+        },
+        {
+          "id": "schreiben-2",
+          "title": "Schreiben",
+          "type": "text-input",
+          "task": {
+            "instruction": "Sollte der Staat stärker in den Wohnungsmarkt eingreifen, zum Beispiel durch Mietobergrenzen? Erörtern Sie das Thema.",
+            "exampleAnswer": "Steigende Mieten belasten viele Haushalte, daher wird über staatliche Eingriffe diskutiert. Befürworter argumentieren, dass Mietobergrenzen Mieter schützen und Verdrängung verhindern. Kritiker warnen dagegen, dass Investoren dann weniger bauen und sich die Knappheit verschärft. Meiner Ansicht nach wäre es sinnvoller, den sozialen Wohnungsbau massiv auszubauen, als nur die Preise zu begrenzen."
+          }
+        },
+        {
+          "id": "sprechen-1",
+          "title": "Sprechen",
+          "type": "speaking-prompt",
+          "task": {
+            "prompt": "Wie stellen Sie sich die ideale Stadt der Zukunft vor? Beschreiben Sie Verkehr, Wohnen und Grünflächen.",
+            "expectedTopics": [
+              "Verkehr",
+              "Wohnen",
+              "Natur",
+              "Gemeinschaft"
+            ]
+          }
+        },
+        {
+          "id": "sprechen-2",
+          "title": "Sprechen",
+          "type": "speaking-prompt",
+          "task": {
+            "prompt": "Vergleichen Sie das Leben in der Großstadt mit dem Leben auf dem Land in Bezug auf Lebensqualität.",
+            "expectedTopics": [
+              "Infrastruktur",
+              "Kosten",
+              "Soziales Leben",
+              "Eigene Präferenz"
+            ]
+          }
+        }
+      ]
     },
     {
-      "id": "lesen-4",
-      "title": "Lesen",
-      "type": "multiple-choice",
-      "task": {
-        "text": "AGB-Änderung: Zum 1. Januar erhöht der Streamingdienst die Preise. Kundinnen und Kunden werden vier Wochen vorher per E-Mail informiert. Wer nicht zustimmt, kann den Vertrag innerhalb eines Monats nach Zugang der Mitteilung außerordentlich kündigen. Erfolgt keine Kündigung, gelten die neuen Preise als akzeptiert. Bereits gezahlte Jahresabos werden bis zum Laufzeitende nicht angepasst.",
-        "question": "Welche Rechte haben Kundinnen und Kunden?",
-        "options": [
-          "Sonderkündigungsrecht innerhalb eines Monats",
-          "Rückerstattung bereits gezahlter Jahresabos",
-          "Automatische Preisreduktion bei Nichtnutzung"
-        ],
-        "answer": "Sonderkündigungsrecht innerhalb eines Monats"
-      }
+      "exam_id": 4,
+      "theme": "Bildung und Persönlichkeit",
+      "icon": "📚",
+      "modules": [
+        {
+          "id": "lesen-1",
+          "title": "Lesen",
+          "type": "multiple-choice",
+          "task": {
+            "text": "Das deutsche Bildungssystem steht immer wieder in der Kritik, weil der Bildungserfolg stark von der sozialen Herkunft abhängt. Kinder aus Akademikerfamilien besuchen deutlich häufiger ein Gymnasium als Kinder, deren Eltern keinen Hochschulabschluss haben. Ganztagsschulen und frühe Sprachförderung sollen helfen, diese Unterschiede zu verringern.",
+            "question": "Was soll helfen, die Unterschiede zu verringern?",
+            "options": [
+              "Weniger Schulstunden",
+              "Ganztagsschulen und frühe Sprachförderung",
+              "Strengere Prüfungen"
+            ],
+            "answer": "Ganztagsschulen und frühe Sprachförderung"
+          }
+        },
+        {
+          "id": "lesen-2",
+          "title": "Lesen",
+          "type": "multiple-choice",
+          "task": {
+            "text": "Ein Auslandsjahr während der Schulzeit fördert nicht nur Sprachkenntnisse, sondern auch Selbstständigkeit und interkulturelle Kompetenz. Allerdings können sich viele Familien die Kosten von bis zu 15.000 Euro nicht leisten. Stipendien gibt es zwar, sie sind aber stark umkämpft.",
+            "question": "Was ist ein Problem bei Auslandsjahren?",
+            "options": [
+              "Sie bringen sprachlich wenig.",
+              "Sie sind für viele zu teuer.",
+              "Es gibt keine Stipendien."
+            ],
+            "answer": "Sie sind für viele zu teuer."
+          }
+        },
+        {
+          "id": "lesen-3",
+          "title": "Lesen",
+          "type": "multiple-choice",
+          "task": {
+            "text": "Immer mehr Hochschulen bieten Studiengänge vollständig online an. Befürworter loben die Flexibilität, besonders für Berufstätige und Eltern. Kritiker bemängeln, dass der persönliche Austausch und das Lernen in der Gruppe zu kurz kommen.",
+            "question": "Was bemängeln Kritiker an Online-Studiengängen?",
+            "options": [
+              "Die hohen Kosten",
+              "Den fehlenden persönlichen Austausch",
+              "Die schlechte Technik"
+            ],
+            "answer": "Den fehlenden persönlichen Austausch"
+          }
+        },
+        {
+          "id": "lesen-4",
+          "title": "Lesen",
+          "type": "multiple-choice",
+          "task": {
+            "text": "Psychologen unterscheiden zwischen einem statischen und einem dynamischen Selbstbild. Wer glaubt, dass Fähigkeiten angeboren und unveränderlich sind, gibt bei Misserfolgen schneller auf. Wer dagegen überzeugt ist, sich durch Übung verbessern zu können, sieht Fehler als Teil des Lernprozesses.",
+            "question": "Wie sehen Menschen mit dynamischem Selbstbild Fehler?",
+            "options": [
+              "Als Beweis für fehlendes Talent",
+              "Als Teil des Lernens",
+              "Als unwichtig"
+            ],
+            "answer": "Als Teil des Lernens"
+          }
+        },
+        {
+          "id": "lesen-5",
+          "title": "Lesen",
+          "type": "multiple-choice",
+          "task": {
+            "text": "Duale Ausbildungen verbinden praktische Arbeit im Betrieb mit theoretischem Unterricht in der Berufsschule. Dieses Modell gilt international als Erfolgsmodell und wird von mehreren Ländern nachgeahmt, da es die Jugendarbeitslosigkeit nachweislich senkt.",
+            "question": "Warum wird das duale System nachgeahmt?",
+            "options": [
+              "Weil es billig ist",
+              "Weil es die Jugendarbeitslosigkeit senkt",
+              "Weil es kürzer dauert"
+            ],
+            "answer": "Weil es die Jugendarbeitslosigkeit senkt"
+          }
+        },
+        {
+          "id": "hoeren-1",
+          "title": "Hören",
+          "type": "audio-choice",
+          "task": {
+            "text": "Ich habe mein Studium nach drei Semestern abgebrochen. Damals fühlte sich das wie ein Scheitern an, heute weiß ich, dass es die richtige Entscheidung war. Die Ausbildung zur Mediengestalterin passt viel besser zu mir.",
+            "question": "Wie sieht die Sprecherin ihren Studienabbruch heute?",
+            "options": [
+              "Als großen Fehler",
+              "Als richtige Entscheidung",
+              "Als peinlich"
+            ],
+            "answer": "Als richtige Entscheidung"
+          }
+        },
+        {
+          "id": "hoeren-2",
+          "title": "Hören",
+          "type": "audio-choice",
+          "task": {
+            "text": "Eine Lehrerin im Interview: Noten sagen wenig über die Persönlichkeit eines Kindes aus. Ich würde mir wünschen, dass wir mehr Wert auf Kreativität und soziale Kompetenz legen.",
+            "question": "Was wünscht sich die Lehrerin?",
+            "options": [
+              "Strengere Noten",
+              "Mehr Wert auf Kreativität und soziale Kompetenz",
+              "Mehr Hausaufgaben"
+            ],
+            "answer": "Mehr Wert auf Kreativität und soziale Kompetenz"
+          }
+        },
+        {
+          "id": "hoeren-3",
+          "title": "Hören",
+          "type": "audio-choice",
+          "task": {
+            "text": "Laut einer Studie lernen Menschen am effektivsten, wenn sie den Stoff jemand anderem erklären müssen. Dabei erkennen sie sofort, wo sie selbst noch Lücken haben.",
+            "question": "Warum ist Erklären so effektiv?",
+            "options": [
+              "Man erkennt eigene Lücken.",
+              "Man spart Zeit.",
+              "Man bekommt bessere Noten."
+            ],
+            "answer": "Man erkennt eigene Lücken."
+          }
+        },
+        {
+          "id": "hoeren-4",
+          "title": "Hören",
+          "type": "audio-choice",
+          "task": {
+            "text": "Mit siebzig habe ich angefangen, Italienisch zu lernen. Meine Enkel lachen manchmal, aber für mich ist das das beste Gedächtnistraining.",
+            "question": "Warum lernt die Seniorin Italienisch?",
+            "options": [
+              "Für eine Reise",
+              "Als Gedächtnistraining",
+              "Wegen der Enkel"
+            ],
+            "answer": "Als Gedächtnistraining"
+          }
+        },
+        {
+          "id": "hoeren-5",
+          "title": "Hören",
+          "type": "audio-choice",
+          "task": {
+            "text": "Die Universität führt ab dem Wintersemester ein Mentoring-Programm ein: Studierende höherer Semester begleiten Erstsemester im ersten Jahr.",
+            "question": "Wer begleitet die Erstsemester?",
+            "options": [
+              "Professoren",
+              "Studierende höherer Semester",
+              "Eltern"
+            ],
+            "answer": "Studierende höherer Semester"
+          }
+        },
+        {
+          "id": "schreiben-1",
+          "title": "Schreiben",
+          "type": "text-input",
+          "task": {
+            "instruction": "Ihre Schule oder Universität plant, Handys während des Unterrichts komplett zu verbieten. Schreiben Sie einen Kommentar für die Schülerzeitung.",
+            "exampleAnswer": "Das geplante Handyverbot sorgt für hitzige Diskussionen. Zweifellos lenken Smartphones ab und verleiten dazu, im Unterricht nebenbei zu chatten. Ein komplettes Verbot halte ich dennoch für zu streng. Handys können sinnvoll eingesetzt werden, etwa für Recherchen oder Lern-Apps. Statt eines Verbots wünsche ich mir klare Regeln: Im Unterricht bleiben die Geräte in der Tasche, außer die Lehrkraft erlaubt ihre Nutzung ausdrücklich."
+          }
+        },
+        {
+          "id": "schreiben-2",
+          "title": "Schreiben",
+          "type": "text-input",
+          "task": {
+            "instruction": "Sind Schulnoten ein gerechtes Mittel, um Leistung zu bewerten? Erörtern Sie die Frage.",
+            "exampleAnswer": "Schulnoten sollen Leistung vergleichbar machen, doch ob sie gerecht sind, ist umstritten. Für Noten spricht, dass sie eine schnelle Orientierung bieten und für Bewerbungen wichtig sind. Dagegen spricht, dass sie oft nur einen Moment abbilden und Faktoren wie Prüfungsangst nicht berücksichtigen. Ich plädiere dafür, Noten durch schriftliche Rückmeldungen zu ergänzen, die Stärken und Entwicklungsmöglichkeiten konkret beschreiben."
+          }
+        },
+        {
+          "id": "sprechen-1",
+          "title": "Sprechen",
+          "type": "speaking-prompt",
+          "task": {
+            "prompt": "Welche Erfahrung in Ihrer Ausbildung oder Ihrem Leben hat Ihre Persönlichkeit besonders geprägt? Erzählen Sie.",
+            "expectedTopics": [
+              "Situation",
+              "Herausforderung",
+              "Was Sie gelernt haben"
+            ]
+          }
+        },
+        {
+          "id": "sprechen-2",
+          "title": "Sprechen",
+          "type": "speaking-prompt",
+          "task": {
+            "prompt": "Sollte Bildung vollständig kostenlos sein, auch an privaten Hochschulen? Begründen Sie Ihre Meinung.",
+            "expectedTopics": [
+              "Chancengleichheit",
+              "Finanzierung",
+              "Qualität",
+              "Eigene Position"
+            ]
+          }
+        }
+      ]
     },
     {
-      "id": "lesen-5",
-      "title": "Lesen",
-      "type": "multiple-choice",
-      "task": {
-        "text": "Ausstellungsrezension: Die Retrospektive würdigt die Künstlerin als Pionierin der Alltagsfotografie. Kuratorisch überzeugt die klare Chronologie, die Brüche ihres Lebens – Emigration, prekäre Jobs – werden jedoch nur angedeutet. Gerade diese biografischen Risse hätten dem glatten Bild mehr Kanten gegeben. Das Rahmenprogramm bleibt international, lässt aber lokale Perspektiven vermissen.",
-        "question": "Welche Kritik wird im Text geäußert?",
-        "options": [
-          "Biografische Brüche werden zu wenig beleuchtet.",
-          "Die Chronologie ist unverständlich.",
-          "Das Rahmenprogramm ist zu lokal ausgerichtet."
-        ],
-        "answer": "Biografische Brüche werden zu wenig beleuchtet."
-      }
+      "exam_id": 5,
+      "theme": "Gesundheit und Psyche",
+      "icon": "🧠",
+      "modules": [
+        {
+          "id": "lesen-1",
+          "title": "Lesen",
+          "type": "multiple-choice",
+          "task": {
+            "text": "Psychische Erkrankungen sind mittlerweile eine der häufigsten Ursachen für längere Krankschreibungen in Deutschland. Fachleute führen dies nicht nur auf steigende Belastungen zurück, sondern auch darauf, dass das Thema weniger tabuisiert wird und Betroffene sich eher Hilfe suchen.",
+            "question": "Wie erklären Fachleute die steigenden Zahlen auch?",
+            "options": [
+              "Ärzte schreiben schneller krank.",
+              "Das Thema ist weniger tabu.",
+              "Die Menschen arbeiten weniger."
+            ],
+            "answer": "Das Thema ist weniger tabu."
+          }
+        },
+        {
+          "id": "lesen-2",
+          "title": "Lesen",
+          "type": "multiple-choice",
+          "task": {
+            "text": "Wer auf einen Therapieplatz wartet, braucht oft viel Geduld. In manchen Regionen beträgt die Wartezeit mehrere Monate. Krankenkassen bieten daher zunehmend digitale Programme an, die die Zeit bis zum Therapiebeginn überbrücken sollen, eine Therapie aber nicht ersetzen.",
+            "question": "Wozu dienen die digitalen Programme?",
+            "options": [
+              "Sie ersetzen die Therapie.",
+              "Sie überbrücken die Wartezeit.",
+              "Sie sind nur für Ärzte."
+            ],
+            "answer": "Sie überbrücken die Wartezeit."
+          }
+        },
+        {
+          "id": "lesen-3",
+          "title": "Lesen",
+          "type": "multiple-choice",
+          "task": {
+            "text": "Achtsamkeit ist zu einem regelrechten Trend geworden. Zahlreiche Apps versprechen weniger Stress durch tägliche Meditation. Studien bestätigen zwar positive Effekte, warnen aber davor, Achtsamkeit als Allheilmittel zu betrachten. Strukturelle Probleme wie Überlastung am Arbeitsplatz ließen sich dadurch nicht lösen.",
+            "question": "Wovor warnen die Studien?",
+            "options": [
+              "Vor zu viel Schlaf",
+              "Achtsamkeit als Allheilmittel zu sehen",
+              "Vor den Kosten der Apps"
+            ],
+            "answer": "Achtsamkeit als Allheilmittel zu sehen"
+          }
+        },
+        {
+          "id": "lesen-4",
+          "title": "Lesen",
+          "type": "multiple-choice",
+          "task": {
+            "text": "Einsamkeit wird inzwischen als ernstzunehmendes Gesundheitsrisiko eingestuft. Studien zeigen, dass dauerhaft isolierte Menschen ein erhöhtes Risiko für Herz-Kreislauf-Erkrankungen haben. Großbritannien hat deshalb sogar ein eigenes Ministerium für Einsamkeit eingerichtet.",
+            "question": "Welches Risiko haben dauerhaft einsame Menschen?",
+            "options": [
+              "Ein erhöhtes Risiko für Herzkrankheiten",
+              "Ein niedrigeres Einkommen",
+              "Mehr Allergien"
+            ],
+            "answer": "Ein erhöhtes Risiko für Herzkrankheiten"
+          }
+        },
+        {
+          "id": "lesen-5",
+          "title": "Lesen",
+          "type": "multiple-choice",
+          "task": {
+            "text": "Burnout entsteht meist schleichend. Erste Warnsignale sind anhaltende Erschöpfung, Schlafstörungen und das Gefühl, trotz großer Anstrengung nichts zu erreichen. Wer diese Anzeichen frühzeitig ernst nimmt, kann gegensteuern, bevor es zu einem Zusammenbruch kommt.",
+            "question": "Was ist laut Text ein frühes Warnsignal?",
+            "options": [
+              "Anhaltende Erschöpfung",
+              "Mehr Appetit",
+              "Bessere Laune"
+            ],
+            "answer": "Anhaltende Erschöpfung"
+          }
+        },
+        {
+          "id": "hoeren-1",
+          "title": "Hören",
+          "type": "audio-choice",
+          "task": {
+            "text": "Lange habe ich nicht gemerkt, wie erschöpft ich war. Erst als ich morgens nicht mehr aufstehen konnte, bin ich zum Arzt gegangen. Heute achte ich viel mehr auf Pausen.",
+            "question": "Wann ist die Sprecherin zum Arzt gegangen?",
+            "options": [
+              "Bei den ersten Kopfschmerzen",
+              "Als sie morgens nicht mehr aufstehen konnte",
+              "Nach dem Urlaub"
+            ],
+            "answer": "Als sie morgens nicht mehr aufstehen konnte"
+          }
+        },
+        {
+          "id": "hoeren-2",
+          "title": "Hören",
+          "type": "audio-choice",
+          "task": {
+            "text": "Eine Psychologin im Radio: Bewegung an der frischen Luft wirkt bei leichten depressiven Verstimmungen oft ähnlich gut wie Medikamente, ersetzt aber bei schweren Fällen keine Behandlung.",
+            "question": "Was sagt die Psychologin über Bewegung?",
+            "options": [
+              "Sie ersetzt jede Behandlung.",
+              "Sie hilft bei leichten Verstimmungen.",
+              "Sie ist schädlich."
+            ],
+            "answer": "Sie hilft bei leichten Verstimmungen."
+          }
+        },
+        {
+          "id": "hoeren-3",
+          "title": "Hören",
+          "type": "audio-choice",
+          "task": {
+            "text": "Unser Unternehmen bietet seit diesem Jahr eine anonyme psychologische Beratung für alle Mitarbeitenden an. Die Kosten trägt der Arbeitgeber.",
+            "question": "Wer zahlt die Beratung?",
+            "options": [
+              "Die Mitarbeitenden",
+              "Der Arbeitgeber",
+              "Die Krankenkasse"
+            ],
+            "answer": "Der Arbeitgeber"
+          }
+        },
+        {
+          "id": "hoeren-4",
+          "title": "Hören",
+          "type": "audio-choice",
+          "task": {
+            "text": "Seit ich abends keine Nachrichten mehr auf dem Handy lese, schlafe ich ruhiger. Die ständigen negativen Meldungen haben mich stärker belastet, als mir bewusst war.",
+            "question": "Was hat den Schlaf verbessert?",
+            "options": [
+              "Keine Nachrichten am Abend",
+              "Mehr Sport",
+              "Ein neues Bett"
+            ],
+            "answer": "Keine Nachrichten am Abend"
+          }
+        },
+        {
+          "id": "hoeren-5",
+          "title": "Hören",
+          "type": "audio-choice",
+          "task": {
+            "text": "Viele Studierende leiden unter Prüfungsangst. Die Universität bietet deshalb Workshops an, in denen man Entspannungstechniken und Strategien für die Prüfungsvorbereitung lernt.",
+            "question": "Was lernt man in den Workshops?",
+            "options": [
+              "Fremdsprachen",
+              "Entspannungstechniken und Prüfungsstrategien",
+              "Wissenschaftliches Schreiben"
+            ],
+            "answer": "Entspannungstechniken und Prüfungsstrategien"
+          }
+        },
+        {
+          "id": "schreiben-1",
+          "title": "Schreiben",
+          "type": "text-input",
+          "task": {
+            "instruction": "Ein Freund wirkt seit Wochen gestresst und zieht sich zurück. Schreiben Sie ihm einen einfühlsamen Brief, in dem Sie Ihre Sorge ausdrücken und Unterstützung anbieten.",
+            "exampleAnswer": "Lieber Felix, ich hoffe, du nimmst mir diesen Brief nicht übel. In letzter Zeit habe ich den Eindruck, dass es dir nicht gut geht. Du wirkst müde und wir sehen uns kaum noch. Ich mache mir ehrlich Sorgen um dich. Du musst mir nichts erklären, aber ich möchte, dass du weißt, dass ich für dich da bin. Wenn du magst, gehen wir am Wochenende spazieren und reden, oder ich helfe dir, einen Termin bei einer Beratungsstelle zu finden. Dein Jonas"
+          }
+        },
+        {
+          "id": "schreiben-2",
+          "title": "Schreiben",
+          "type": "text-input",
+          "task": {
+            "instruction": "Sollten Arbeitgeber mehr Verantwortung für die psychische Gesundheit ihrer Mitarbeitenden übernehmen? Nehmen Sie Stellung.",
+            "exampleAnswer": "Arbeit nimmt einen großen Teil unseres Lebens ein und kann die Psyche stark beeinflussen. Daher finde ich, dass Arbeitgeber durchaus Verantwortung tragen. Sie können für realistische Arbeitspensen, klare Erwartungen und eine offene Gesprächskultur sorgen. Zugleich darf die Verantwortung nicht allein beim Unternehmen liegen, denn private Faktoren spielen ebenfalls eine Rolle. Ideal wäre eine Kombination aus betrieblichen Angeboten und einer besseren Versorgung durch das Gesundheitssystem."
+          }
+        },
+        {
+          "id": "sprechen-1",
+          "title": "Sprechen",
+          "type": "speaking-prompt",
+          "task": {
+            "prompt": "Wie gehen Sie mit Druck und Stress um? Welche Strategien haben Sie entwickelt?",
+            "expectedTopics": [
+              "Auslöser",
+              "Strategien",
+              "Unterstützung durch andere"
+            ]
+          }
+        },
+        {
+          "id": "sprechen-2",
+          "title": "Sprechen",
+          "type": "speaking-prompt",
+          "task": {
+            "prompt": "Warum wird über psychische Gesundheit heute offener gesprochen als früher? Erläutern Sie mögliche Gründe und Folgen.",
+            "expectedTopics": [
+              "Gesellschaftlicher Wandel",
+              "Medien",
+              "Folgen für Betroffene"
+            ]
+          }
+        }
+      ]
     },
-
     {
-      "id": "hoeren-1",
-      "title": "Hören",
-      "type": "audio-choice",
-      "task": {
-        "text": "Teamleiterin: Wir bleiben beim hybriden Modell, aber Präsenztage sind künftig projektbezogen. Das heißt: Wenn eine Sprintplanung ansteht oder Kundentermine vor Ort sind, erwarten wir euch im Büro. Ansonsten entscheidet ihr selbst – wichtig ist, dass die Erreichbarkeit klar kommuniziert wird und Ergebnisse stimmen.",
-        "question": "Was ändert sich an den Präsenzzeiten?",
-        "options": [
-          "Sie richten sich nach Projekterfordernissen.",
-          "Es gibt feste Tage für alle.",
-          "Homeoffice ist nicht mehr erlaubt."
-        ],
-        "answer": "Sie richten sich nach Projekterfordernissen."
-      }
+      "exam_id": 6,
+      "theme": "Medien und Kultur",
+      "icon": "🎭",
+      "modules": [
+        {
+          "id": "lesen-1",
+          "title": "Lesen",
+          "type": "multiple-choice",
+          "task": {
+            "text": "Streamingdienste haben das Fernsehverhalten grundlegend verändert. Statt sich nach festen Sendezeiten zu richten, schauen viele Zuschauer Serien am Stück. Öffentlich-rechtliche Sender reagieren darauf, indem sie ihre Inhalte zunehmend zuerst in den Mediatheken veröffentlichen.",
+            "question": "Wie reagieren öffentlich-rechtliche Sender?",
+            "options": [
+              "Sie zeigen mehr Werbung.",
+              "Sie veröffentlichen Inhalte zuerst online.",
+              "Sie stellen den Betrieb ein."
+            ],
+            "answer": "Sie veröffentlichen Inhalte zuerst online."
+          }
+        },
+        {
+          "id": "lesen-2",
+          "title": "Lesen",
+          "type": "multiple-choice",
+          "task": {
+            "text": "Falschmeldungen verbreiten sich in sozialen Netzwerken oft schneller als seriöse Nachrichten, da sie häufig starke Emotionen auslösen. Medienpädagogen fordern deshalb, dass Medienkompetenz bereits in der Grundschule unterrichtet wird, damit Kinder lernen, Quellen kritisch zu prüfen.",
+            "question": "Warum verbreiten sich Falschmeldungen schnell?",
+            "options": [
+              "Weil sie kürzer sind",
+              "Weil sie starke Emotionen auslösen",
+              "Weil Zeitungen sie drucken"
+            ],
+            "answer": "Weil sie starke Emotionen auslösen"
+          }
+        },
+        {
+          "id": "lesen-3",
+          "title": "Lesen",
+          "type": "multiple-choice",
+          "task": {
+            "text": "Viele Theater kämpfen mit sinkenden Besucherzahlen, insbesondere bei jungen Menschen. Einige Häuser experimentieren daher mit neuen Formaten: Aufführungen an ungewöhnlichen Orten, interaktive Stücke oder vergünstigte Tickets für unter 27-Jährige.",
+            "question": "Was versuchen einige Theater?",
+            "options": [
+              "Die Preise für alle zu erhöhen",
+              "Neue Formate auszuprobieren",
+              "Nur noch Klassiker zu spielen"
+            ],
+            "answer": "Neue Formate auszuprobieren"
+          }
+        },
+        {
+          "id": "lesen-4",
+          "title": "Lesen",
+          "type": "multiple-choice",
+          "task": {
+            "text": "Die Zahl der Buchhandlungen ist in den letzten zwanzig Jahren deutlich gesunken. Dennoch erleben unabhängige Buchläden in manchen Städten eine Renaissance. Kunden schätzen die persönliche Beratung und Veranstaltungen wie Lesungen, die ein Onlinehändler nicht bieten kann.",
+            "question": "Was schätzen Kunden an unabhängigen Buchläden?",
+            "options": [
+              "Die niedrigen Preise",
+              "Persönliche Beratung und Lesungen",
+              "Die schnelle Lieferung"
+            ],
+            "answer": "Persönliche Beratung und Lesungen"
+          }
+        },
+        {
+          "id": "lesen-5",
+          "title": "Lesen",
+          "type": "multiple-choice",
+          "task": {
+            "text": "Die Debatte über kulturelle Aneignung wird zunehmend auch in Deutschland geführt. Kritiker werfen Künstlern vor, sich Elemente anderer Kulturen anzueignen, ohne deren Hintergrund zu respektieren. Andere halten dagegen, dass Kultur immer vom Austausch lebe.",
+            "question": "Was halten die Gegner der Kritik dagegen?",
+            "options": [
+              "Kultur lebt vom Austausch.",
+              "Künstler verdienen zu wenig.",
+              "Das Thema ist neu."
+            ],
+            "answer": "Kultur lebt vom Austausch."
+          }
+        },
+        {
+          "id": "hoeren-1",
+          "title": "Hören",
+          "type": "audio-choice",
+          "task": {
+            "text": "Ich habe vor einem Jahr meine Social-Media-Konten gelöscht. Anfangs hatte ich Angst, etwas zu verpassen, aber inzwischen lese ich wieder mehr Bücher und fühle mich ausgeglichener.",
+            "question": "Wie fühlt sich der Sprecher heute?",
+            "options": [
+              "Einsamer",
+              "Ausgeglichener",
+              "Gestresster"
+            ],
+            "answer": "Ausgeglichener"
+          }
+        },
+        {
+          "id": "hoeren-2",
+          "title": "Hören",
+          "type": "audio-choice",
+          "task": {
+            "text": "Eine Journalistin im Gespräch: Qualitätsjournalismus kostet Geld. Wenn niemand mehr für Nachrichten bezahlt, wird es auf Dauer keine unabhängige Recherche mehr geben.",
+            "question": "Wovor warnt die Journalistin?",
+            "options": [
+              "Vor zu vielen Zeitungen",
+              "Vor dem Ende unabhängiger Recherche",
+              "Vor teuren Abos"
+            ],
+            "answer": "Vor dem Ende unabhängiger Recherche"
+          }
+        },
+        {
+          "id": "hoeren-3",
+          "title": "Hören",
+          "type": "audio-choice",
+          "task": {
+            "text": "Das Filmfestival zeigt in diesem Jahr erstmals auch Produktionen, die komplett mit dem Smartphone gedreht wurden. Die Jury war von der Qualität überrascht.",
+            "question": "Was ist dieses Jahr neu?",
+            "options": [
+              "Filme vom Smartphone",
+              "Kostenlose Tickets",
+              "Eine neue Jury"
+            ],
+            "answer": "Filme vom Smartphone"
+          }
+        },
+        {
+          "id": "hoeren-4",
+          "title": "Hören",
+          "type": "audio-choice",
+          "task": {
+            "text": "Podcasts sind für mich wie Radio, nur dass ich selbst bestimme, wann und was ich höre. Am liebsten höre ich Wissenschaftspodcasts beim Joggen.",
+            "question": "Was gefällt der Sprecherin an Podcasts?",
+            "options": [
+              "Sie sind kostenlos.",
+              "Sie kann selbst bestimmen, wann sie hört.",
+              "Sie sind kurz."
+            ],
+            "answer": "Sie kann selbst bestimmen, wann sie hört."
+          }
+        },
+        {
+          "id": "hoeren-5",
+          "title": "Hören",
+          "type": "audio-choice",
+          "task": {
+            "text": "Museen setzen immer häufiger auf digitale Angebote. Mit Virtual-Reality-Brillen kann man zum Beispiel durch das antike Rom spazieren.",
+            "question": "Womit kann man durch das antike Rom spazieren?",
+            "options": [
+              "Mit einem Audioguide",
+              "Mit Virtual-Reality-Brillen",
+              "Mit einem Buch"
+            ],
+            "answer": "Mit Virtual-Reality-Brillen"
+          }
+        },
+        {
+          "id": "schreiben-1",
+          "title": "Schreiben",
+          "type": "text-input",
+          "task": {
+            "instruction": "Sie haben eine Theateraufführung, einen Film oder eine Ausstellung besucht. Schreiben Sie eine Rezension für ein Kulturmagazin.",
+            "exampleAnswer": "Am Samstag habe ich die Ausstellung Licht und Schatten im Stadtmuseum besucht. Gezeigt werden Fotografien aus dem Berlin der Zwanzigerjahre, die das Leben zwischen Glanz und Armut eindrucksvoll dokumentieren. Besonders gelungen finde ich die Kombination aus Bildern und originalen Tonaufnahmen. Etwas schade ist, dass die Begleittexte nur auf Deutsch verfügbar sind. Insgesamt eine sehenswerte Ausstellung, die ich allen Geschichtsinteressierten empfehlen kann."
+          }
+        },
+        {
+          "id": "schreiben-2",
+          "title": "Schreiben",
+          "type": "text-input",
+          "task": {
+            "instruction": "Sollten soziale Netzwerke stärker reguliert werden, um Falschmeldungen zu bekämpfen? Erörtern Sie das Thema.",
+            "exampleAnswer": "Falschmeldungen in sozialen Netzwerken können Wahlen beeinflussen und das Vertrauen in Institutionen untergraben. Daher halte ich eine gewisse Regulierung für notwendig, etwa die Pflicht, gemeldete Inhalte schnell zu prüfen. Gleichzeitig besteht die Gefahr, dass legitime Meinungen gelöscht werden und die Meinungsfreiheit leidet. Neben Gesetzen braucht es deshalb vor allem mehr Medienkompetenz, damit Nutzer selbst erkennen, was vertrauenswürdig ist."
+          }
+        },
+        {
+          "id": "sprechen-1",
+          "title": "Sprechen",
+          "type": "speaking-prompt",
+          "task": {
+            "prompt": "Welche Rolle spielen Medien in Ihrem Alltag? Wie hat sich Ihr Medienkonsum in den letzten Jahren verändert?",
+            "expectedTopics": [
+              "Mediennutzung früher und heute",
+              "Lieblingsmedien",
+              "Kritische Haltung"
+            ]
+          }
+        },
+        {
+          "id": "sprechen-2",
+          "title": "Sprechen",
+          "type": "speaking-prompt",
+          "task": {
+            "prompt": "Sollte der Staat Kultur wie Theater und Museen stärker finanziell fördern? Begründen Sie.",
+            "expectedTopics": [
+              "Bedeutung von Kultur",
+              "Finanzierung",
+              "Zugang für alle"
+            ]
+          }
+        }
+      ]
     },
     {
-      "id": "hoeren-2",
-      "title": "Hören",
-      "type": "audio-choice",
-      "task": {
-        "text": "Studierende: Ich wollte unbedingt ins Auslandssemester, aber die Partneruni hat kurzfristig die Zulassung verschoben. Statt abzusagen, habe ich ein Praktikum in einer NGO organisiert. Im Nachhinein war das Gold wert, weil ich jetzt weiß, in welchem Bereich ich wirklich arbeiten will.",
-        "question": "Wie bewertet die Sprecherin die Veränderung letztlich?",
-        "options": [
-          "Sie sieht den Nutzen der neuen Erfahrung.",
-          "Sie bereut ihre Entscheidung.",
-          "Sie will das Studium abbrechen."
-        ],
-        "answer": "Sie sieht den Nutzen der neuen Erfahrung."
-      }
+      "exam_id": 7,
+      "theme": "Konsum und Geld",
+      "icon": "💶",
+      "modules": [
+        {
+          "id": "lesen-1",
+          "title": "Lesen",
+          "type": "multiple-choice",
+          "task": {
+            "text": "Der Trend zum bargeldlosen Bezahlen setzt sich auch in Deutschland durch, wenn auch langsamer als in skandinavischen Ländern. Viele Deutsche schätzen Bargeld nach wie vor, weil sie damit ihre Ausgaben besser im Blick behalten und ihre Privatsphäre schützen können.",
+            "question": "Warum schätzen viele Deutsche Bargeld?",
+            "options": [
+              "Weil Karten nicht funktionieren",
+              "Wegen Kontrolle über Ausgaben und Privatsphäre",
+              "Weil es billiger ist"
+            ],
+            "answer": "Wegen Kontrolle über Ausgaben und Privatsphäre"
+          }
+        },
+        {
+          "id": "lesen-2",
+          "title": "Lesen",
+          "type": "multiple-choice",
+          "task": {
+            "text": "Fast Fashion ermöglicht es, ständig neue Kleidung zu niedrigen Preisen zu kaufen. Die ökologischen und sozialen Kosten sind jedoch enorm: hoher Wasserverbrauch, Chemikalien und schlechte Arbeitsbedingungen in den Produktionsländern. Secondhand-Plattformen gewinnen deshalb vor allem bei jungen Menschen an Beliebtheit.",
+            "question": "Was gewinnt bei jungen Menschen an Beliebtheit?",
+            "options": [
+              "Luxusmarken",
+              "Secondhand-Plattformen",
+              "Fast Fashion"
+            ],
+            "answer": "Secondhand-Plattformen"
+          }
+        },
+        {
+          "id": "lesen-3",
+          "title": "Lesen",
+          "type": "multiple-choice",
+          "task": {
+            "text": "Verbraucherschützer warnen vor dem Modell Jetzt kaufen, später bezahlen. Besonders junge Menschen verlieren dabei leicht den Überblick über ihre Ausgaben. Wer mehrere Ratenzahlungen gleichzeitig laufen hat, riskiert, in die Schuldenfalle zu geraten.",
+            "question": "Wovor warnen Verbraucherschützer?",
+            "options": [
+              "Vor Bargeld",
+              "Vor dem Verlust des Überblicks und Schulden",
+              "Vor zu niedrigen Preisen"
+            ],
+            "answer": "Vor dem Verlust des Überblicks und Schulden"
+          }
+        },
+        {
+          "id": "lesen-4",
+          "title": "Lesen",
+          "type": "multiple-choice",
+          "task": {
+            "text": "Die Inflation der letzten Jahre hat das Konsumverhalten verändert. Viele Haushalte greifen häufiger zu Eigenmarken der Supermärkte, verzichten auf Restaurantbesuche oder verschieben größere Anschaffungen. Besonders betroffen sind Familien mit niedrigem Einkommen.",
+            "question": "Wie haben viele Haushalte reagiert?",
+            "options": [
+              "Sie kaufen mehr Markenprodukte.",
+              "Sie greifen öfter zu Eigenmarken.",
+              "Sie gehen öfter essen."
+            ],
+            "answer": "Sie greifen öfter zu Eigenmarken."
+          }
+        },
+        {
+          "id": "lesen-5",
+          "title": "Lesen",
+          "type": "multiple-choice",
+          "task": {
+            "text": "Das Konzept der Kreislaufwirtschaft sieht vor, Produkte so zu gestalten, dass sie repariert, wiederverwendet und am Ende recycelt werden können. Die EU plant deshalb ein Recht auf Reparatur, das Hersteller verpflichtet, Ersatzteile über viele Jahre bereitzustellen.",
+            "question": "Was soll das Recht auf Reparatur bewirken?",
+            "options": [
+              "Hersteller müssen Ersatzteile bereitstellen.",
+              "Produkte werden billiger.",
+              "Reparaturen werden verboten."
+            ],
+            "answer": "Hersteller müssen Ersatzteile bereitstellen."
+          }
+        },
+        {
+          "id": "hoeren-1",
+          "title": "Hören",
+          "type": "audio-choice",
+          "task": {
+            "text": "Seit einem Jahr führe ich ein Haushaltsbuch. Ich war schockiert, wie viel Geld ich für Kleinigkeiten wie Kaffee unterwegs ausgegeben habe. Jetzt spare ich jeden Monat rund 150 Euro.",
+            "question": "Was hat die Sprecherin überrascht?",
+            "options": [
+              "Die hohe Miete",
+              "Die Ausgaben für Kleinigkeiten",
+              "Ihr niedriges Gehalt"
+            ],
+            "answer": "Die Ausgaben für Kleinigkeiten"
+          }
+        },
+        {
+          "id": "hoeren-2",
+          "title": "Hören",
+          "type": "audio-choice",
+          "task": {
+            "text": "Ein Finanzexperte rät: Legen Sie zuerst eine Notfallreserve von drei Monatsgehältern an, bevor Sie Geld in Aktien investieren.",
+            "question": "Was soll man zuerst tun?",
+            "options": [
+              "In Aktien investieren",
+              "Eine Notfallreserve anlegen",
+              "Einen Kredit aufnehmen"
+            ],
+            "answer": "Eine Notfallreserve anlegen"
+          }
+        },
+        {
+          "id": "hoeren-3",
+          "title": "Hören",
+          "type": "audio-choice",
+          "task": {
+            "text": "Ich kaufe fast alles gebraucht, von Möbeln bis zum Fahrrad. Das schont nicht nur die Umwelt, sondern auch meinen Geldbeutel.",
+            "question": "Welche zwei Vorteile nennt der Sprecher?",
+            "options": [
+              "Umwelt und Geld",
+              "Qualität und Design",
+              "Zeit und Komfort"
+            ],
+            "answer": "Umwelt und Geld"
+          }
+        },
+        {
+          "id": "hoeren-4",
+          "title": "Hören",
+          "type": "audio-choice",
+          "task": {
+            "text": "Immer mehr Supermärkte verkaufen Obst und Gemüse mit kleinen Schönheitsfehlern zu reduzierten Preisen, um Lebensmittelverschwendung zu verringern.",
+            "question": "Warum verkaufen Supermärkte dieses Obst günstiger?",
+            "options": [
+              "Um Verschwendung zu verringern",
+              "Weil es schlecht schmeckt",
+              "Weil es aus dem Ausland kommt"
+            ],
+            "answer": "Um Verschwendung zu verringern"
+          }
+        },
+        {
+          "id": "hoeren-5",
+          "title": "Hören",
+          "type": "audio-choice",
+          "task": {
+            "text": "Abonnements sind praktisch, aber gefährlich. Ich hatte zeitweise sieben Streaming- und App-Abos und habe die Hälfte davon kaum genutzt.",
+            "question": "Was war das Problem der Sprecherin?",
+            "options": [
+              "Zu wenige Abos",
+              "Viele kaum genutzte Abos",
+              "Zu langsames Internet"
+            ],
+            "answer": "Viele kaum genutzte Abos"
+          }
+        },
+        {
+          "id": "schreiben-1",
+          "title": "Schreiben",
+          "type": "text-input",
+          "task": {
+            "instruction": "Sie haben ein teures Gerät gekauft, das nach kurzer Zeit kaputtgegangen ist. Der Händler verweigert die Reparatur. Schreiben Sie eine formelle Beschwerde und berufen Sie sich auf Ihre Rechte.",
+            "exampleAnswer": "Sehr geehrte Damen und Herren, am 12. Januar habe ich in Ihrer Filiale eine Kaffeemaschine zum Preis von 399 Euro erworben. Bereits nach sechs Wochen funktioniert das Gerät nicht mehr. Ihr Mitarbeiter hat eine Reparatur mit dem Hinweis abgelehnt, der Schaden sei selbst verursacht. Ich weise darauf hin, dass mir innerhalb der gesetzlichen Gewährleistung eine Reparatur oder ein Ersatz zusteht. Ich fordere Sie daher auf, das Gerät innerhalb von 14 Tagen zu reparieren oder zu ersetzen. Mit freundlichen Grüßen, Claudia Meyer"
+          }
+        },
+        {
+          "id": "schreiben-2",
+          "title": "Schreiben",
+          "type": "text-input",
+          "task": {
+            "instruction": "Macht Konsum glücklich? Erörtern Sie die Frage und beziehen Sie eigene Beobachtungen ein.",
+            "exampleAnswer": "Kurzfristig kann ein neuer Kauf durchaus Freude bereiten, doch dieses Gefühl hält meist nicht lange an. Studien zeigen, dass Erlebnisse wie Reisen oder gemeinsame Zeit mit Freunden nachhaltiger glücklich machen als materielle Dinge. Natürlich trägt eine gewisse finanzielle Sicherheit zur Zufriedenheit bei. Ich selbst habe festgestellt, dass ich bewusster und seltener einkaufe und dafür mehr Geld für Erlebnisse ausgebe. Das macht mich zufriedener."
+          }
+        },
+        {
+          "id": "sprechen-1",
+          "title": "Sprechen",
+          "type": "speaking-prompt",
+          "task": {
+            "prompt": "Wie gehen Sie mit Geld um? Sparen Sie gezielt oder geben Sie lieber spontan aus?",
+            "expectedTopics": [
+              "Sparverhalten",
+              "Größere Anschaffungen",
+              "Tipps"
+            ]
+          }
+        },
+        {
+          "id": "sprechen-2",
+          "title": "Sprechen",
+          "type": "speaking-prompt",
+          "task": {
+            "prompt": "Wie könnte nachhaltiger Konsum im Alltag gefördert werden? Nennen Sie konkrete Maßnahmen.",
+            "expectedTopics": [
+              "Politik",
+              "Unternehmen",
+              "Verbraucher",
+              "Eigene Beispiele"
+            ]
+          }
+        }
+      ]
     },
     {
-      "id": "hoeren-3",
-      "title": "Hören",
-      "type": "audio-choice",
-      "task": {
-        "text": "Radiobericht: Der Stadtrat lehnt die sofortige Einführung eines generellen Tempolimits ab, beauftragt aber die Verwaltung, für besonders belastete Viertel Pilotzonen zu planen. Damit reagiert er auf Kritik, ohne sich auf einen Schlag festzulegen.",
-        "question": "Welche Strategie verfolgt der Stadtrat?",
-        "options": [
-          "Schrittweise Einführung über Pilotzonen",
-          "Komplette Ablehnung ohne Alternative",
-          "Sofortige Umsetzung im gesamten Stadtgebiet"
-        ],
-        "answer": "Schrittweise Einführung über Pilotzonen"
-      }
-    },
-    {
-      "id": "hoeren-4",
-      "title": "Hören",
-      "type": "audio-choice",
-      "task": {
-        "text": "Konferenzankündigung: Unser Panel fragt, wie Künstliche Intelligenz in der Pflege helfen kann, ohne Beziehungen zu ersetzen. Beiträge aus Ethik, Technik und Praxis zeigen, dass Entlastung nur funktioniert, wenn Mitarbeitende mitgestalten und Daten transparent verarbeitet werden.",
-        "question": "Unter welcher Bedingung gilt KI als hilfreich?",
-        "options": [
-          "Wenn Mitarbeitende mitgestalten und Transparenz besteht",
-          "Wenn Personal vollständig ersetzt wird",
-          "Wenn nur Kosten gesenkt werden"
-        ],
-        "answer": "Wenn Mitarbeitende mitgestalten und Transparenz besteht"
-      }
-    },
-    {
-      "id": "hoeren-5",
-      "title": "Hören",
-      "type": "audio-choice",
-      "task": {
-        "text": "Flughafeninfo: Wegen Nebels werden Starts gebündelt, sobald die Sicht sich bessert. Reisende mit Anschlussflügen wenden sich bitte frühzeitig an die Airline; bei verpassten Verbindungen wird umgebucht.",
-        "question": "Was sollen Reisende mit Anschlussflügen tun?",
-        "options": [
-          "Sich frühzeitig an die Airline wenden",
-          "Am Gate warten, ohne etwas zu tun",
-          "Den Flug eigenständig stornieren"
-        ],
-        "answer": "Sich frühzeitig an die Airline wenden"
-      }
-    },
-
-    {
-      "id": "schreiben-1",
-      "title": "Schreiben",
-      "type": "text-input",
-      "task": {
-        "instruction": "Verfasse einen argumentativen Kommentar (mind. 140 Wörter): Sollten Städte autofreie Innenstädte einführen? Beziehe dich auf Wirtschaft, Umwelt und gesellschaftliche Teilhabe. Beziehe Gegenargumente ein und ziehe ein begründetes Fazit.",
-        "exampleAnswer": "Autofreie Innenstädte wirken auf den ersten Blick radikal, sind aber ein wirksames Mittel, um Lebensqualität zu steigern. Händlerinnen befürchten Umsatzverluste; tatsächlich zeigen Beispiele, dass Frequenz und Verweildauer zunehmen, wenn Plätze menschen- statt fahrzeuggerecht gestaltet werden. Lieferverkehr lässt sich zeitlich bündeln, Anwohner erhalten Durchfahrtsgenehmigungen. Umweltseitig sinken Lärm- und Emissionswerte deutlich, was Gesundheit und Tourismus zugutekommt. Kritisch ist die soziale Dimension: Wer schlecht angebunden ist, darf nicht ausgeschlossen werden. Dazu braucht es dichteren ÖPNV, regionale Buslinien und sichere Radwege. Richtig umgesetzt profitieren alle: Städte werden ruhiger, Aufenthaltsflächen entstehen, und der Handel gewinnt an Sichtbarkeit. Entscheidend ist, Maßnahmen mit Bürgerinnen und Bürgern zu planen, Ausnahmen transparent zu regeln und die Umstellung schrittweise zu evaluieren. Dann ist die autofreie Innenstadt keine Ideologie, sondern ein pragmatisches Stadtentwicklungsinstrument."
-      }
-    },
-    {
-      "id": "schreiben-2",
-      "title": "Schreiben",
-      "type": "text-input",
-      "task": {
-        "instruction": "Du hast einen Weiterbildungslehrgang gebucht, der hinter den zugesagten Standards zurückblieb. Verfasse eine formelle Beschwerde mit Bitte um teilweise Rückerstattung und konkreten Vorschlägen zur Qualitätsverbesserung (mind. 140 Wörter).",
-        "exampleAnswer": "Sehr geehrte Damen und Herren,\nich habe vom 3.–21. Juni am Lehrgang „Projektmanagement kompakt“ teilgenommen. Laut Ausschreibung sollten tägliche Praxisübungen und individuelles Feedback fest zum Konzept gehören. Tatsächlich fielen mehrere Übungen ersatzlos aus; die Rückmeldungen beschränkten sich auf allgemeine Hinweise. Da die erbrachte Leistung vom angekündigten Standard abwich, bitte ich um eine angemessene, teilweise Erstattung der Kursgebühr. Konstruktiv schlage ich vor, feste Feedback-Slots verbindlich in den Stundenplan aufzunehmen, digitale Materialien vorab bereitzustellen und ausgefallene Einheiten zeitnah per Video nachzuliefern. Ich schätze Ihr Institut und möchte es gern weiterempfehlen – dafür sind transparente Qualitätskriterien jedoch unerlässlich. Für Rückfragen stehe ich gern zur Verfügung.\nMit freundlichen Grüßen\nSvenja Richter"
-      }
-    },
-    {
-      "id": "schreiben-3",
-      "title": "Schreiben",
-      "type": "text-input",
-      "task": {
-        "instruction": "Schreibe einen Bericht (mind. 140 Wörter) für die interne Mitarbeitendenzeitung: Ein Pilotprojekt zur Vier-Tage-Woche wurde drei Monate getestet. Fasse die wichtigsten Ergebnisse zusammen und formuliere eine Empfehlung.",
-        "exampleAnswer": "Im dreimonatigen Pilotprojekt zur Vier-Tage-Woche nahmen 62 Mitarbeitende aus drei Abteilungen teil. Die Produktivität stieg laut Kennzahlen im Durchschnitt um 7 %, Krankentage sanken um 18 %. Besonders positiv wurde die bessere Konzentration an längeren, störungsarmen Arbeitstagen bewertet. Herausforderungen zeigten sich dort, wo Schnittstellen zu externen Partnern nicht synchronisiert waren. Deadlines wurden in zwei Fällen verfehlt, weil Freitage als Servicetage weggefallen sind. Empfehlung: Beibehaltung des Modells für Teams mit klar messbaren Zielen, ergänzt um rotierende Serviceteams und verbindliche Erreichbarkeitsfenster für Kundinnen und Kunden. Nach sechs Monaten sollte eine erneute Evaluation erfolgen."
-      }
-    },
-    {
-      "id": "schreiben-4",
-      "title": "Schreiben",
-      "type": "text-input",
-      "task": {
-        "instruction": "Bewirb dich per E-Mail als ehrenamtliche/r Mentor/in im Bildungsprojekt „Sprache & Beruf“. Betone Motivation, Erfahrungen und Verfügbarkeit; formeller Ton (mind. 140 Wörter).",
-        "exampleAnswer": "Sehr geehrtes Projektteam,\nmit großem Interesse bewerbe ich mich als Mentorin im Programm „Sprache & Beruf“. Seit zwei Jahren begleite ich Geflüchtete im Sprachtandem und habe dabei gelernt, Lernziele realistisch zu planen und berufsbezogene Situationen – etwa Telefonate oder Bewerbungsgespräche – gezielt zu trainieren. Besonders motiviert mich, dass Ihr Projekt Sprachförderung mit Berufsorientierung verbindet. Ich verfüge über C1-Deutschkenntnisse, arbeite strukturiert und wertschätzend und kann ab Oktober wöchentlich zwei Stunden anbieten, vorzugsweise am frühen Abend. Gern unterstütze ich auch bei der Materialerstellung. Über eine Einladung zum Kennenlernen freue ich mich.\nMit freundlichen Grüßen\nAliya Karim"
-      }
-    },
-    {
-      "id": "schreiben-5",
-      "title": "Schreiben",
-      "type": "text-input",
-      "task": {
-        "instruction": "Verfasse einen begründeten Vorschlag (170–210 Wörter) an die Stadtverwaltung: Wie kann die Innenstadt wiederbelebt werden, ohne kleine Läden zu verdrängen?",
-        "exampleAnswer": "Sehr geehrte Damen und Herren,\num die Innenstadt zu beleben, ohne kleine Läden zu benachteiligen, schlage ich ein Maßnahmenpaket vor. Erstens sollte es ein Förderprogramm für Zwischennutzungen geben, damit leere Flächen temporär von lokalen Initiativen, Pop-up-Stores oder Kulturprojekten genutzt werden können. Zweitens empfehle ich eine Miettransparenzplattform, auf der Eigentümerinnen und Eigentümer faire Konditionen veröffentlichen und Vermittlung erhalten. Drittens braucht es attraktivere Wege: mehr Sitzgelegenheiten, schattenspendende Begrünung und sichere Radspuren. Ergänzend könnten „lange Donnerstage“ mit Kultur und Kinderangeboten Besucher anziehen. Wichtig ist, Händlerinnen früh einzubinden und Wirkung regelmäßig zu messen: Frequenz, Aufenthaltsdauer, Leerstandsquote. So entsteht ein lebendiger Stadtraum, in dem Vielfalt wirtschaftlich bestehen kann.\nMit freundlichen Grüßen\nJonas Müller"
-      }
-    },
-
-    {
-      "id": "sprechen-1",
-      "title": "Sprechen",
-      "type": "speaking-prompt",
-      "task": {
-        "prompt": "Viele Unternehmen testen die Vier-Tage-Woche. Diskutieren Sie Chancen und Risiken für Wirtschaft und Mitarbeitende und formulieren Sie eine klare Empfehlung.",
-        "expectedTopics": ["Produktivität", "Gesundheit/Work-Life-Balance", "Kundenerwartungen", "Empfehlung"]
-      }
-    },
-    {
-      "id": "sprechen-2",
-      "title": "Sprechen",
-      "type": "speaking-prompt",
-      "task": {
-        "prompt": "Sollte der öffentliche Nahverkehr kostenlos sein? Legen Sie Pro- und Contra-Argumente dar und schlagen Sie einen realistischen Finanzierungsweg vor.",
-        "expectedTopics": ["Mobilität", "Soziale Teilhabe", "Finanzierung", "Kompromiss"]
-      }
-    },
-    {
-      "id": "sprechen-3",
-      "title": "Sprechen",
-      "type": "speaking-prompt",
-      "task": {
-        "prompt": "Berichten Sie von einem Konflikt in einem Team. Analysieren Sie Ursachen, beschreiben Sie den Lösungsprozess und reflektieren Sie, was Sie heute anders machen würden.",
-        "expectedTopics": ["Konfliktanalyse", "Mediation", "Rollen/Kommunikation", "Reflexion"]
-      }
-    },
-    {
-      "id": "sprechen-4",
-      "title": "Sprechen",
-      "type": "speaking-prompt",
-      "task": {
-        "prompt": "Algorithmen filtern unsere Informationen. Diskutieren Sie Chancen und Gefahren personalisierter Feeds und nennen Sie konkrete Strategien gegen Filterblasen.",
-        "expectedTopics": ["Medienkompetenz", "Datenschutz", "Transparenz", "Strategien"]
-      }
-    },
-    {
-      "id": "sprechen-5",
-      "title": "Sprechen",
-      "type": "speaking-prompt",
-      "task": {
-        "prompt": "Beschreiben Sie ein kulturelles Ereignis, das Ihre Sicht auf ein Thema verändert hat, und erläutern Sie die Wirkung auf Ihr Denken oder Handeln.",
-        "expectedTopics": ["Ereignis", "Interpretation", "Wirkung", "Übertrag auf Alltag"]
-      }
+      "exam_id": 8,
+      "theme": "Wissenschaft und Technik",
+      "icon": "🔬",
+      "modules": [
+        {
+          "id": "lesen-1",
+          "title": "Lesen",
+          "type": "multiple-choice",
+          "task": {
+            "text": "Künstliche Intelligenz wird zunehmend in der Medizin eingesetzt, etwa bei der Auswertung von Röntgenbildern. In Studien erkannten bestimmte Programme Tumore teilweise genauer als erfahrene Ärzte. Experten betonen jedoch, dass die endgültige Diagnose weiterhin von Menschen gestellt werden sollte.",
+            "question": "Was betonen die Experten?",
+            "options": [
+              "KI sollte allein entscheiden.",
+              "Die Diagnose sollte beim Menschen bleiben.",
+              "Röntgenbilder sind überflüssig."
+            ],
+            "answer": "Die Diagnose sollte beim Menschen bleiben."
+          }
+        },
+        {
+          "id": "lesen-2",
+          "title": "Lesen",
+          "type": "multiple-choice",
+          "task": {
+            "text": "Der Ausbau erneuerbarer Energien schreitet voran, doch ein zentrales Problem bleibt die Speicherung. Wind- und Sonnenenergie stehen nicht konstant zur Verfügung. Forscher arbeiten daher an leistungsfähigeren Batterien und an der Nutzung von Wasserstoff als Energiespeicher.",
+            "question": "Was ist das zentrale Problem?",
+            "options": [
+              "Die Speicherung von Energie",
+              "Zu wenig Wind",
+              "Die hohen Löhne"
+            ],
+            "answer": "Die Speicherung von Energie"
+          }
+        },
+        {
+          "id": "lesen-3",
+          "title": "Lesen",
+          "type": "multiple-choice",
+          "task": {
+            "text": "Mit der Genschere CRISPR lassen sich Gene gezielt verändern. Die Technik eröffnet große Chancen, etwa bei der Behandlung von Erbkrankheiten. Gleichzeitig wirft sie ethische Fragen auf, insbesondere wenn Eingriffe in das Erbgut von Embryonen an kommende Generationen weitergegeben würden.",
+            "question": "Wann entstehen besonders ethische Fragen?",
+            "options": [
+              "Bei der Behandlung von Pflanzen",
+              "Bei Eingriffen ins Erbgut von Embryonen",
+              "Bei der Herstellung von Medikamenten"
+            ],
+            "answer": "Bei Eingriffen ins Erbgut von Embryonen"
+          }
+        },
+        {
+          "id": "lesen-4",
+          "title": "Lesen",
+          "type": "multiple-choice",
+          "task": {
+            "text": "Bürgerwissenschaft, auch Citizen Science genannt, bezieht Laien in Forschungsprojekte ein. Freiwillige zählen zum Beispiel Vögel, messen Luftqualität oder werten Fotos von Galaxien aus. So können Wissenschaftler riesige Datenmengen sammeln, die sie allein nie bewältigen könnten.",
+            "question": "Was ist der Vorteil von Citizen Science?",
+            "options": [
+              "Forscher sparen Gehälter.",
+              "Man kann große Datenmengen sammeln.",
+              "Die Ergebnisse sind schneller veröffentlicht."
+            ],
+            "answer": "Man kann große Datenmengen sammeln."
+          }
+        },
+        {
+          "id": "lesen-5",
+          "title": "Lesen",
+          "type": "multiple-choice",
+          "task": {
+            "text": "Autonome Fahrzeuge sollen den Straßenverkehr sicherer machen, da die meisten Unfälle auf menschliches Versagen zurückgehen. Ungeklärt ist jedoch, wer im Falle eines Unfalls haftet: der Hersteller, der Softwareentwickler oder der Besitzer des Fahrzeugs.",
+            "question": "Welche Frage ist noch ungeklärt?",
+            "options": [
+              "Wie schnell die Autos fahren",
+              "Wer bei einem Unfall haftet",
+              "Wie viel die Autos kosten"
+            ],
+            "answer": "Wer bei einem Unfall haftet"
+          }
+        },
+        {
+          "id": "hoeren-1",
+          "title": "Hören",
+          "type": "audio-choice",
+          "task": {
+            "text": "Eine Wissenschaftsjournalistin erklärt: Viele Menschen misstrauen der Forschung, weil sich Ergebnisse manchmal ändern. Dabei ist genau das ein Zeichen dafür, dass Wissenschaft funktioniert.",
+            "question": "Was ist laut Journalistin ein Zeichen funktionierender Wissenschaft?",
+            "options": [
+              "Dass Ergebnisse sich ändern können",
+              "Dass alle Forscher einig sind",
+              "Dass Studien teuer sind"
+            ],
+            "answer": "Dass Ergebnisse sich ändern können"
+          }
+        },
+        {
+          "id": "hoeren-2",
+          "title": "Hören",
+          "type": "audio-choice",
+          "task": {
+            "text": "Ich arbeite in einem Labor, das an biologisch abbaubaren Kunststoffen forscht. Unser Ziel ist ein Material, das sich im Meer innerhalb weniger Monate vollständig zersetzt.",
+            "question": "Woran forscht das Labor?",
+            "options": [
+              "An neuen Medikamenten",
+              "An abbaubaren Kunststoffen",
+              "An Solarzellen"
+            ],
+            "answer": "An abbaubaren Kunststoffen"
+          }
+        },
+        {
+          "id": "hoeren-3",
+          "title": "Hören",
+          "type": "audio-choice",
+          "task": {
+            "text": "Die Raumfahrtagentur meldet, dass die Sonde nach sieben Jahren Flug erfolgreich ihr Ziel erreicht hat. Erste Bilder werden in den nächsten Tagen erwartet.",
+            "question": "Wann erwartet man erste Bilder?",
+            "options": [
+              "Heute Abend",
+              "In den nächsten Tagen",
+              "In sieben Jahren"
+            ],
+            "answer": "In den nächsten Tagen"
+          }
+        },
+        {
+          "id": "hoeren-4",
+          "title": "Hören",
+          "type": "audio-choice",
+          "task": {
+            "text": "Smart-Home-Geräte machen das Leben bequemer, aber sie sammeln auch viele Daten. Ich habe bei meinem Sprachassistenten deshalb das Mikrofon die meiste Zeit ausgeschaltet.",
+            "question": "Warum schaltet der Sprecher das Mikrofon aus?",
+            "options": [
+              "Wegen des Stromverbrauchs",
+              "Wegen der Datensammlung",
+              "Weil es zu laut ist"
+            ],
+            "answer": "Wegen der Datensammlung"
+          }
+        },
+        {
+          "id": "hoeren-5",
+          "title": "Hören",
+          "type": "audio-choice",
+          "task": {
+            "text": "Forschende haben herausgefunden, dass schon zwanzig Minuten in der Natur den Stresshormonspiegel messbar senken.",
+            "question": "Was senkt laut Studie den Stress?",
+            "options": [
+              "Zwanzig Minuten in der Natur",
+              "Zwei Stunden Sport",
+              "Eine Tasse Tee"
+            ],
+            "answer": "Zwanzig Minuten in der Natur"
+          }
+        },
+        {
+          "id": "schreiben-1",
+          "title": "Schreiben",
+          "type": "text-input",
+          "task": {
+            "instruction": "Ihre Stadt möchte Videokameras mit Gesichtserkennung an öffentlichen Plätzen einsetzen. Schreiben Sie einen Leserbrief, in dem Sie Chancen und Risiken abwägen und Ihre Position begründen.",
+            "exampleAnswer": "Sehr geehrte Redaktion, die geplante Einführung von Kameras mit Gesichtserkennung wirft wichtige Fragen auf. Zweifellos könnte die Technik helfen, Straftaten aufzuklären und gesuchte Personen schneller zu finden. Doch der Preis dafür ist hoch: Jeder Bürger würde ohne Anlass erfasst, und Fehler der Software könnten Unschuldige treffen. Ich halte diesen Eingriff in die Privatsphäre für unverhältnismäßig. Statt flächendeckender Überwachung sollte die Stadt in mehr Polizeipräsenz und bessere Beleuchtung investieren. Mit freundlichen Grüßen, Henrik Lorenz"
+          }
+        },
+        {
+          "id": "schreiben-2",
+          "title": "Schreiben",
+          "type": "text-input",
+          "task": {
+            "instruction": "Sollte die Forschung an künstlicher Intelligenz stärker gesetzlich begrenzt werden? Erörtern Sie Pro und Contra.",
+            "exampleAnswer": "Künstliche Intelligenz entwickelt sich rasant und verändert viele Lebensbereiche. Befürworter strenger Regeln verweisen auf Risiken wie Desinformation, Diskriminierung durch fehlerhafte Daten oder den Verlust von Arbeitsplätzen. Gegner argumentieren, dass zu strenge Gesetze Innovation bremsen und Forschung ins Ausland verlagern. Ich halte klare Regeln für Anwendungen mit hohem Risiko für sinnvoll, ohne die Grundlagenforschung pauschal einzuschränken."
+          }
+        },
+        {
+          "id": "sprechen-1",
+          "title": "Sprechen",
+          "type": "speaking-prompt",
+          "task": {
+            "prompt": "Welche technische Erfindung hat Ihr Leben am meisten verändert? Begründen Sie Ihre Wahl.",
+            "expectedTopics": [
+              "Erfindung",
+              "Veränderungen im Alltag",
+              "Mögliche Nachteile"
+            ]
+          }
+        },
+        {
+          "id": "sprechen-2",
+          "title": "Sprechen",
+          "type": "speaking-prompt",
+          "task": {
+            "prompt": "Sollte man Wissenschaftlern bei Fragen wie Klimaschutz oder Gesundheit mehr Einfluss auf politische Entscheidungen geben? Nehmen Sie Stellung.",
+            "expectedTopics": [
+              "Expertenwissen",
+              "Demokratie",
+              "Beispiele",
+              "Eigene Position"
+            ]
+          }
+        }
+      ]
     }
   ]
 }

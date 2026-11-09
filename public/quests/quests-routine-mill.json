@@ -1,0 +1,2782 @@
+[
+  {
+    "questId": "routine-mill-one",
+    "title": "routineMillOne.questTitle",
+    "progress": "0/15",
+    "description": "routineMillOne.questDescription",
+    "conditions": {
+      "goal": "routineMillOne.questGoal",
+      "minCorrect": 15,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
+    "vocabulary": [
+      {
+        "word": "aufstehen",
+        "translation-ru": "вставать",
+        "translation-en": "to get up",
+        "translation-uk": "вставати",
+        "translation-pl": "wstawać",
+        "translation-es": "levantarse",
+        "translation-fr": "se lever",
+        "translation-tr": "kalkmak",
+        "translation-ro": "a se scula",
+        "translation-uz": "turmoq",
+        "translation-hi": "उठना",
+        "translation-ar": "يقوم من النوم"
+      },
+      {
+        "word": "aufwachen",
+        "translation-ru": "просыпаться",
+        "translation-en": "to wake up",
+        "translation-uk": "прокидатися",
+        "translation-pl": "budzić się",
+        "translation-es": "despertarse",
+        "translation-fr": "se réveiller",
+        "translation-tr": "uyanmak",
+        "translation-ro": "a se trezi",
+        "translation-uz": "uyg‘onmoq",
+        "translation-hi": "जागना",
+        "translation-ar": "يستيقظ"
+      },
+      {
+        "word": "der Wecker",
+        "translation-ru": "будильник",
+        "translation-en": "alarm clock",
+        "translation-uk": "будильник",
+        "translation-pl": "budzik",
+        "translation-es": "el despertador",
+        "translation-fr": "le réveil",
+        "translation-tr": "çalar saat",
+        "translation-ro": "ceasul deșteptător",
+        "translation-uz": "budilnik",
+        "translation-hi": "अलार्म घड़ी",
+        "translation-ar": "المنبه"
+      },
+      {
+        "word": "klingeln",
+        "translation-ru": "звонить, звенеть",
+        "translation-en": "to ring",
+        "translation-uk": "дзвонити",
+        "translation-pl": "dzwonić",
+        "translation-es": "sonar",
+        "translation-fr": "sonner",
+        "translation-tr": "çalmak",
+        "translation-ro": "a suna",
+        "translation-uz": "jiringlamoq",
+        "translation-hi": "बजना",
+        "translation-ar": "يرن"
+      },
+      {
+        "word": "müde",
+        "translation-ru": "усталый, сонный",
+        "translation-en": "tired",
+        "translation-uk": "втомлений",
+        "translation-pl": "zmęczony",
+        "translation-es": "cansado",
+        "translation-fr": "fatigué",
+        "translation-tr": "yorgun",
+        "translation-ro": "obosit",
+        "translation-uz": "charchagan",
+        "translation-hi": "थका हुआ",
+        "translation-ar": "متعب"
+      }
+    ],
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "routineMillOne.questTask1",
+        "options": [
+          "Ich aufstehe um sieben Uhr.",
+          "Ich stehe auf um sieben Uhr auf.",
+          "Ich stehe um sieben Uhr auf."
+        ],
+        "answer": "Ich stehe um sieben Uhr auf.",
+        "tip": "routineMillOne.questDescription"
+      },
+      {
+        "id": 2,
+        "type": "input",
+        "question": "routineMillOne.questTask2",
+        "correctAnswer": "auf",
+        "tip": "routineMillOne.questDescription"
+      },
+      {
+        "id": 3,
+        "type": "input",
+        "question": "routineMillOne.questTask3",
+        "correctAnswer": "stehst",
+        "tip": "routineMillOne.questDescription"
+      },
+      {
+        "id": 4,
+        "type": "select",
+        "question": "routineMillOne.questTask4",
+        "options": [
+          "Der Wecker klingelt um sechs Uhr.",
+          "Der Wecker klingelt am sechs Uhr.",
+          "Der Wecker klingeln um sechs Uhr."
+        ],
+        "answer": "Der Wecker klingelt um sechs Uhr.",
+        "tip": "routineMillOne.questDescription"
+      },
+      {
+        "id": 5,
+        "type": "reorder",
+        "question": "routineMillOne.questTask5",
+        "words": [
+          "aufstehen",
+          "spät",
+          "stehen",
+          "auf",
+          "Sonntag",
+          "Am",
+          "steht",
+          "wir"
+        ],
+        "correctOrder": [
+          "Am",
+          "Sonntag",
+          "stehen",
+          "wir",
+          "spät",
+          "auf"
+        ],
+        "tip": "routineMillOne.questDescription"
+      },
+      {
+        "id": 6,
+        "type": "select",
+        "question": "routineMillOne.questTask6",
+        "options": [
+          "Wachst du auf um acht Uhr?",
+          "Wachst du um acht Uhr auf?",
+          "Aufwachst du um acht Uhr?"
+        ],
+        "answer": "Wachst du um acht Uhr auf?",
+        "tip": "routineMillOne.questDescription"
+      },
+      {
+        "id": 7,
+        "type": "input",
+        "question": "routineMillOne.questTask7",
+        "correctAnswer": "müde",
+        "tip": "routineMillOne.questDescription"
+      },
+      {
+        "id": 8,
+        "type": "select",
+        "question": "routineMillOne.questTask8",
+        "options": [
+          "Die Kinder stehen um sieben Uhr auf.",
+          "Die Kinder stehen auf um sieben Uhr.",
+          "Die Kinder steht um sieben Uhr auf."
+        ],
+        "answer": "Die Kinder stehen um sieben Uhr auf.",
+        "tip": "routineMillOne.questDescription"
+      },
+      {
+        "id": 9,
+        "type": "readAndAnswer",
+        "question": "routineMillOne.questTask9",
+        "text": "Der Wecker klingelt um sechs Uhr. Lisa wacht auf, aber sie ist sehr müde. Sie steht um sieben Uhr auf und trinkt Kaffee.",
+        "options": [
+          "um sieben Uhr",
+          "um acht Uhr",
+          "um sechs Uhr"
+        ],
+        "answer": "um sieben Uhr",
+        "tip": "routineMillOne.questDescription"
+      },
+      {
+        "id": 10,
+        "type": "input",
+        "question": "routineMillOne.questTask10",
+        "correctAnswer": "Wecker",
+        "tip": "routineMillOne.questDescription"
+      },
+      {
+        "id": 11,
+        "type": "reorder",
+        "question": "routineMillOne.questTask11",
+        "words": [
+          "stehe",
+          "Ich",
+          "früh",
+          "kein",
+          "aufstehe",
+          "nicht",
+          "auf"
+        ],
+        "correctOrder": [
+          "Ich",
+          "stehe",
+          "nicht",
+          "früh",
+          "auf"
+        ],
+        "tip": "routineMillOne.questDescription"
+      },
+      {
+        "id": 12,
+        "type": "input",
+        "question": "routineMillOne.questTask12",
+        "correctAnswer": "Am",
+        "tip": "routineMillOne.questDescription"
+      },
+      {
+        "id": 13,
+        "type": "select",
+        "question": "routineMillOne.questTask13",
+        "options": [
+          "Der Unterricht beginnt am zehn Uhr.",
+          "Der Unterricht beginnt um zehn Uhr.",
+          "Der Unterricht beginnen um zehn Uhr."
+        ],
+        "answer": "Der Unterricht beginnt um zehn Uhr.",
+        "tip": "routineMillOne.questDescription"
+      },
+      {
+        "id": 14,
+        "type": "select",
+        "question": "routineMillOne.questTask14",
+        "options": [
+          "Ihre Sohn ist Student.",
+          "Ihr Sohn ist Student.",
+          "Ihren Sohn ist Student."
+        ],
+        "answer": "Ihr Sohn ist Student.",
+        "tip": "routineMillOne.questDescription"
+      },
+      {
+        "id": 15,
+        "type": "reorder",
+        "question": "routineMillOne.questTask15",
+        "words": [
+          "es",
+          "um",
+          "Winter",
+          "früh",
+          "ist",
+          "Im",
+          "dunkel",
+          "am"
+        ],
+        "correctOrder": [
+          "Im",
+          "Winter",
+          "ist",
+          "es",
+          "früh",
+          "dunkel"
+        ],
+        "tip": "routineMillOne.questDescription"
+      }
+    ]
+  },
+  {
+    "questId": "routine-mill-two",
+    "title": "routineMillTwo.questTitle",
+    "progress": "0/15",
+    "description": "routineMillTwo.questDescription",
+    "conditions": {
+      "goal": "routineMillTwo.questGoal",
+      "minCorrect": 15,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
+    "vocabulary": [
+      {
+        "word": "einkaufen",
+        "translation-ru": "делать покупки",
+        "translation-en": "to go shopping",
+        "translation-uk": "робити покупки",
+        "translation-pl": "robić zakupy",
+        "translation-es": "hacer la compra",
+        "translation-fr": "faire les courses",
+        "translation-tr": "alışveriş yapmak",
+        "translation-ro": "a face cumpărături",
+        "translation-uz": "xarid qilmoq",
+        "translation-hi": "ख़रीदारी करना",
+        "translation-ar": "يتسوق"
+      },
+      {
+        "word": "aufräumen",
+        "translation-ru": "убирать, наводить порядок",
+        "translation-en": "to tidy up",
+        "translation-uk": "прибирати",
+        "translation-pl": "sprzątać",
+        "translation-es": "ordenar",
+        "translation-fr": "ranger",
+        "translation-tr": "toplamak",
+        "translation-ro": "a face ordine",
+        "translation-uz": "yig‘ishtirmoq",
+        "translation-hi": "साफ़-सफ़ाई करना",
+        "translation-ar": "يرتب"
+      },
+      {
+        "word": "putzen",
+        "translation-ru": "чистить, мыть",
+        "translation-en": "to clean",
+        "translation-uk": "чистити, мити",
+        "translation-pl": "czyścić, sprzątać",
+        "translation-es": "limpiar",
+        "translation-fr": "nettoyer",
+        "translation-tr": "temizlemek",
+        "translation-ro": "a curăța",
+        "translation-uz": "tozalamoq",
+        "translation-hi": "साफ़ करना",
+        "translation-ar": "ينظف"
+      },
+      {
+        "word": "das Bad",
+        "translation-ru": "ванная",
+        "translation-en": "bathroom",
+        "translation-uk": "ванна кімната",
+        "translation-pl": "łazienka",
+        "translation-es": "el baño",
+        "translation-fr": "la salle de bains",
+        "translation-tr": "banyo",
+        "translation-ro": "baia",
+        "translation-uz": "hammom",
+        "translation-hi": "बाथरूम",
+        "translation-ar": "الحمام"
+      },
+      {
+        "word": "die Hausaufgabe",
+        "translation-ru": "домашнее задание",
+        "translation-en": "homework",
+        "translation-uk": "домашнє завдання",
+        "translation-pl": "zadanie domowe",
+        "translation-es": "los deberes",
+        "translation-fr": "les devoirs",
+        "translation-tr": "ev ödevi",
+        "translation-ro": "tema",
+        "translation-uz": "uy vazifasi",
+        "translation-hi": "गृहकार्य",
+        "translation-ar": "الواجب المنزلي"
+      }
+    ],
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "routineMillTwo.questTask1",
+        "options": [
+          "Am Samstag ich kaufe ein.",
+          "Am Samstag einkaufe ich.",
+          "Am Samstag kaufe ich ein."
+        ],
+        "answer": "Am Samstag kaufe ich ein.",
+        "tip": "routineMillTwo.questDescription"
+      },
+      {
+        "id": 2,
+        "type": "input",
+        "question": "routineMillTwo.questTask2",
+        "correctAnswer": "auf",
+        "tip": "routineMillTwo.questDescription"
+      },
+      {
+        "id": 3,
+        "type": "input",
+        "question": "routineMillTwo.questTask3",
+        "correctAnswer": "räumen",
+        "tip": "routineMillTwo.questDescription"
+      },
+      {
+        "id": 4,
+        "type": "select",
+        "question": "routineMillTwo.questTask4",
+        "options": [
+          "Putzt du den Bad?",
+          "Putzt du das Bad?",
+          "Putzst du das Bad?"
+        ],
+        "answer": "Putzt du das Bad?",
+        "tip": "routineMillTwo.questDescription"
+      },
+      {
+        "id": 5,
+        "type": "reorder",
+        "question": "routineMillTwo.questTask5",
+        "words": [
+          "kauft",
+          "einkauft",
+          "kaufen",
+          "ein",
+          "Samstag",
+          "Mama",
+          "am"
+        ],
+        "correctOrder": [
+          "Mama",
+          "kauft",
+          "am",
+          "Samstag",
+          "ein"
+        ],
+        "tip": "routineMillTwo.questDescription"
+      },
+      {
+        "id": 6,
+        "type": "select",
+        "question": "routineMillTwo.questTask6",
+        "options": [
+          "Wann machst du die Hausaufgabe?",
+          "Wann machst du der Hausaufgabe?",
+          "Wann du machst die Hausaufgabe?"
+        ],
+        "answer": "Wann machst du die Hausaufgabe?",
+        "tip": "routineMillTwo.questDescription"
+      },
+      {
+        "id": 7,
+        "type": "input",
+        "question": "routineMillTwo.questTask7",
+        "correctAnswer": "auf",
+        "tip": "routineMillTwo.questDescription"
+      },
+      {
+        "id": 8,
+        "type": "select",
+        "question": "routineMillTwo.questTask8",
+        "options": [
+          "Ich kaufe heute nicht ein.",
+          "Ich einkaufe heute nicht.",
+          "Ich kaufe heute ein nicht."
+        ],
+        "answer": "Ich kaufe heute nicht ein.",
+        "tip": "routineMillTwo.questDescription"
+      },
+      {
+        "id": 9,
+        "type": "readAndAnswer",
+        "question": "routineMillTwo.questTask9",
+        "text": "Am Samstag hat Paul viel Arbeit. Am Morgen räumt er die Wohnung auf. Am Nachmittag kauft er ein. Abends putzt er das Bad. Er ist sehr müde.",
+        "options": [
+          "Er arbeitet im Büro.",
+          "Er räumt auf und kauft ein.",
+          "Er sieht fern."
+        ],
+        "answer": "Er räumt auf und kauft ein.",
+        "tip": "routineMillTwo.questDescription"
+      },
+      {
+        "id": 10,
+        "type": "input",
+        "question": "routineMillTwo.questTask10",
+        "correctAnswer": "Hausaufgabe",
+        "tip": "routineMillTwo.questDescription"
+      },
+      {
+        "id": 11,
+        "type": "reorder",
+        "question": "routineMillTwo.questTask11",
+        "words": [
+          "den",
+          "Bad",
+          "putzt",
+          "putzen",
+          "das",
+          "Wer",
+          "Papa"
+        ],
+        "correctOrder": [
+          "Wer",
+          "putzt",
+          "das",
+          "Bad",
+          "Papa"
+        ],
+        "tip": "routineMillTwo.questDescription"
+      },
+      {
+        "id": 12,
+        "type": "input",
+        "question": "routineMillTwo.questTask12",
+        "correctAnswer": "Stehst",
+        "tip": "routineMillTwo.questDescription"
+      },
+      {
+        "id": 13,
+        "type": "select",
+        "question": "routineMillTwo.questTask13",
+        "options": [
+          "Der Wecker klingelt um fünf Uhr.",
+          "Der Wecker klingelt am fünf Uhr.",
+          "Der Wecker klingeln um fünf Uhr."
+        ],
+        "answer": "Der Wecker klingelt um fünf Uhr.",
+        "tip": "routineMillTwo.questDescription"
+      },
+      {
+        "id": 14,
+        "type": "select",
+        "question": "routineMillTwo.questTask14",
+        "options": [
+          "Im April ist Frühling.",
+          "Am April ist Frühling.",
+          "Um April ist Frühling."
+        ],
+        "answer": "Im April ist Frühling.",
+        "tip": "routineMillTwo.questDescription"
+      },
+      {
+        "id": 15,
+        "type": "reorder",
+        "question": "routineMillTwo.questTask15",
+        "words": [
+          "Training",
+          "Dienstagabend",
+          "Am",
+          "ich",
+          "hat",
+          "habe",
+          "im"
+        ],
+        "correctOrder": [
+          "Am",
+          "Dienstagabend",
+          "habe",
+          "ich",
+          "Training"
+        ],
+        "tip": "routineMillTwo.questDescription"
+      }
+    ]
+  },
+  {
+    "questId": "routine-mill-three",
+    "title": "routineMillThree.questTitle",
+    "progress": "0/15",
+    "description": "routineMillThree.questDescription",
+    "conditions": {
+      "goal": "routineMillThree.questGoal",
+      "minCorrect": 15,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
+    "vocabulary": [
+      {
+        "word": "anrufen",
+        "translation-ru": "звонить (по телефону)",
+        "translation-en": "to call (phone)",
+        "translation-uk": "дзвонити (по телефону)",
+        "translation-pl": "dzwonić (telefonicznie)",
+        "translation-es": "llamar (por teléfono)",
+        "translation-fr": "appeler (téléphoner)",
+        "translation-tr": "telefon etmek",
+        "translation-ro": "a suna (la telefon)",
+        "translation-uz": "qo‘ng‘iroq qilmoq",
+        "translation-hi": "फ़ोन करना",
+        "translation-ar": "يتصل هاتفيًا"
+      },
+      {
+        "word": "fernsehen",
+        "translation-ru": "смотреть телевизор",
+        "translation-en": "to watch TV",
+        "translation-uk": "дивитися телевізор",
+        "translation-pl": "oglądać telewizję",
+        "translation-es": "ver la tele",
+        "translation-fr": "regarder la télé",
+        "translation-tr": "televizyon izlemek",
+        "translation-ro": "a se uita la televizor",
+        "translation-uz": "televizor ko‘rmoq",
+        "translation-hi": "टीवी देखना",
+        "translation-ar": "يشاهد التلفاز"
+      },
+      {
+        "word": "die Sendung",
+        "translation-ru": "передача",
+        "translation-en": "TV programme",
+        "translation-uk": "передача",
+        "translation-pl": "program",
+        "translation-es": "el programa",
+        "translation-fr": "l’émission",
+        "translation-tr": "program",
+        "translation-ro": "emisiunea",
+        "translation-uz": "ko‘rsatuv",
+        "translation-hi": "कार्यक्रम",
+        "translation-ar": "البرنامج"
+      },
+      {
+        "word": "die Nachrichten",
+        "translation-ru": "новости",
+        "translation-en": "the news",
+        "translation-uk": "новини",
+        "translation-pl": "wiadomości",
+        "translation-es": "las noticias",
+        "translation-fr": "les informations",
+        "translation-tr": "haberler",
+        "translation-ro": "știrile",
+        "translation-uz": "yangiliklar",
+        "translation-hi": "समाचार",
+        "translation-ar": "الأخبار"
+      },
+      {
+        "word": "oft",
+        "translation-ru": "часто",
+        "translation-en": "often",
+        "translation-uk": "часто",
+        "translation-pl": "często",
+        "translation-es": "a menudo",
+        "translation-fr": "souvent",
+        "translation-tr": "sık sık",
+        "translation-ro": "des",
+        "translation-uz": "tez-tez",
+        "translation-hi": "अक्सर",
+        "translation-ar": "غالبًا"
+      }
+    ],
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "routineMillThree.questTask1",
+        "options": [
+          "Ich anrufe meine Mutter.",
+          "Ich rufe an meine Mutter.",
+          "Ich rufe meine Mutter an."
+        ],
+        "answer": "Ich rufe meine Mutter an.",
+        "tip": "routineMillThree.questDescription"
+      },
+      {
+        "id": 2,
+        "type": "input",
+        "question": "routineMillThree.questTask2",
+        "correctAnswer": "fern",
+        "tip": "routineMillThree.questDescription"
+      },
+      {
+        "id": 3,
+        "type": "input",
+        "question": "routineMillThree.questTask3",
+        "correctAnswer": "Rufst",
+        "tip": "routineMillThree.questDescription"
+      },
+      {
+        "id": 4,
+        "type": "select",
+        "question": "routineMillThree.questTask4",
+        "options": [
+          "Am Abend sieht wir die Nachrichten.",
+          "Am Abend wir sehen die Nachrichten.",
+          "Am Abend sehen wir die Nachrichten."
+        ],
+        "answer": "Am Abend sehen wir die Nachrichten.",
+        "tip": "routineMillThree.questDescription"
+      },
+      {
+        "id": 5,
+        "type": "reorder",
+        "question": "routineMillThree.questTask5",
+        "words": [
+          "ihr",
+          "an",
+          "anruft",
+          "ruft",
+          "Sie",
+          "Bruder",
+          "ihren"
+        ],
+        "correctOrder": [
+          "Sie",
+          "ruft",
+          "ihren",
+          "Bruder",
+          "an"
+        ],
+        "tip": "routineMillThree.questDescription"
+      },
+      {
+        "id": 6,
+        "type": "select",
+        "question": "routineMillThree.questTask6",
+        "options": [
+          "Fernsiehst du oft?",
+          "Siehst du oft fern?",
+          "Sehst du oft fern?"
+        ],
+        "answer": "Siehst du oft fern?",
+        "tip": "routineMillThree.questDescription"
+      },
+      {
+        "id": 7,
+        "type": "input",
+        "question": "routineMillThree.questTask7",
+        "correctAnswer": "Sendung",
+        "tip": "routineMillThree.questDescription"
+      },
+      {
+        "id": 8,
+        "type": "select",
+        "question": "routineMillThree.questTask8",
+        "options": [
+          "Wir fernsehen nicht.",
+          "Wir sehen nicht fern.",
+          "Wir sehen fern nicht."
+        ],
+        "answer": "Wir sehen nicht fern.",
+        "tip": "routineMillThree.questDescription"
+      },
+      {
+        "id": 9,
+        "type": "readAndAnswer",
+        "question": "routineMillThree.questTask9",
+        "text": "Max sieht am Abend fern. Die Sendung ist nicht gut. Er ruft seinen Freund Leo an. Leo sieht auch fern, aber er sieht die Nachrichten.",
+        "options": [
+          "seine Mutter",
+          "seinen Freund",
+          "seinen Bruder"
+        ],
+        "answer": "seinen Freund",
+        "tip": "routineMillThree.questDescription"
+      },
+      {
+        "id": 10,
+        "type": "input",
+        "question": "routineMillThree.questTask10",
+        "correctAnswer": "Nachrichten",
+        "tip": "routineMillThree.questDescription"
+      },
+      {
+        "id": 11,
+        "type": "reorder",
+        "question": "routineMillThree.questTask11",
+        "words": [
+          "anrufst",
+          "du",
+          "heute",
+          "Rufst",
+          "die",
+          "an",
+          "kein",
+          "Oma"
+        ],
+        "correctOrder": [
+          "Rufst",
+          "du",
+          "heute",
+          "die",
+          "Oma",
+          "an"
+        ],
+        "tip": "routineMillThree.questDescription"
+      },
+      {
+        "id": 12,
+        "type": "input",
+        "question": "routineMillThree.questTask12",
+        "correctAnswer": "kaufen",
+        "tip": "routineMillThree.questDescription"
+      },
+      {
+        "id": 13,
+        "type": "select",
+        "question": "routineMillThree.questTask13",
+        "options": [
+          "Sie aufwacht um sechs Uhr.",
+          "Sie wacht um sechs Uhr auf.",
+          "Sie wacht auf um sechs Uhr."
+        ],
+        "answer": "Sie wacht um sechs Uhr auf.",
+        "tip": "routineMillThree.questDescription"
+      },
+      {
+        "id": 14,
+        "type": "select",
+        "question": "routineMillThree.questTask14",
+        "options": [
+          "Aufräumst du die Küche?",
+          "Räumst du die Küche auf?",
+          "Räumst du auf die Küche?"
+        ],
+        "answer": "Räumst du die Küche auf?",
+        "tip": "routineMillThree.questDescription"
+      },
+      {
+        "id": 15,
+        "type": "reorder",
+        "question": "routineMillThree.questTask15",
+        "words": [
+          "müde",
+          "sehr",
+          "er",
+          "ist",
+          "am",
+          "Morgens",
+          "sind"
+        ],
+        "correctOrder": [
+          "Morgens",
+          "ist",
+          "er",
+          "sehr",
+          "müde"
+        ],
+        "tip": "routineMillThree.questDescription"
+      }
+    ]
+  },
+  {
+    "questId": "routine-mill-four",
+    "title": "routineMillFour.questTitle",
+    "progress": "0/15",
+    "description": "routineMillFour.questDescription",
+    "conditions": {
+      "goal": "routineMillFour.questGoal",
+      "minCorrect": 15,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
+    "vocabulary": [
+      {
+        "word": "abfahren",
+        "translation-ru": "отправляться, уезжать",
+        "translation-en": "to depart",
+        "translation-uk": "відправлятися",
+        "translation-pl": "odjeżdżać",
+        "translation-es": "salir (vehículo)",
+        "translation-fr": "partir",
+        "translation-tr": "kalkmak (araç)",
+        "translation-ro": "a pleca",
+        "translation-uz": "jo‘nab ketmoq",
+        "translation-hi": "रवाना होना",
+        "translation-ar": "يغادر"
+      },
+      {
+        "word": "ankommen",
+        "translation-ru": "прибывать, приезжать",
+        "translation-en": "to arrive",
+        "translation-uk": "прибувати",
+        "translation-pl": "przyjeżdżać",
+        "translation-es": "llegar",
+        "translation-fr": "arriver",
+        "translation-tr": "varmak",
+        "translation-ro": "a sosi",
+        "translation-uz": "yetib kelmoq",
+        "translation-hi": "पहुँचना",
+        "translation-ar": "يصل"
+      },
+      {
+        "word": "mitkommen",
+        "translation-ru": "идти вместе",
+        "translation-en": "to come along",
+        "translation-uk": "іти разом",
+        "translation-pl": "iść razem",
+        "translation-es": "venir también",
+        "translation-fr": "venir avec",
+        "translation-tr": "birlikte gelmek",
+        "translation-ro": "a veni cu cineva",
+        "translation-uz": "birga bormoq",
+        "translation-hi": "साथ चलना",
+        "translation-ar": "يأتي معنا"
+      },
+      {
+        "word": "der Bahnhof",
+        "translation-ru": "вокзал",
+        "translation-en": "station",
+        "translation-uk": "вокзал",
+        "translation-pl": "dworzec",
+        "translation-es": "la estación",
+        "translation-fr": "la gare",
+        "translation-tr": "tren istasyonu",
+        "translation-ro": "gara",
+        "translation-uz": "vokzal",
+        "translation-hi": "रेलवे स्टेशन",
+        "translation-ar": "محطة القطار"
+      },
+      {
+        "word": "pünktlich",
+        "translation-ru": "вовремя, пунктуальный",
+        "translation-en": "on time",
+        "translation-uk": "вчасно",
+        "translation-pl": "punktualnie",
+        "translation-es": "puntual",
+        "translation-fr": "à l’heure",
+        "translation-tr": "zamanında",
+        "translation-ro": "punctual",
+        "translation-uz": "o‘z vaqtida",
+        "translation-hi": "समय पर",
+        "translation-ar": "في الموعد"
+      }
+    ],
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "routineMillFour.questTask1",
+        "options": [
+          "Der Zug abfährt um acht Uhr.",
+          "Der Zug fahrt um acht Uhr ab.",
+          "Der Zug fährt um acht Uhr ab."
+        ],
+        "answer": "Der Zug fährt um acht Uhr ab.",
+        "tip": "routineMillFour.questDescription"
+      },
+      {
+        "id": 2,
+        "type": "input",
+        "question": "routineMillFour.questTask2",
+        "correctAnswer": "an",
+        "tip": "routineMillFour.questDescription"
+      },
+      {
+        "id": 3,
+        "type": "input",
+        "question": "routineMillFour.questTask3",
+        "correctAnswer": "Kommst",
+        "tip": "routineMillFour.questDescription"
+      },
+      {
+        "id": 4,
+        "type": "select",
+        "question": "routineMillFour.questTask4",
+        "options": [
+          "Der Bus ankommt pünktlich.",
+          "Der Bus kommt an pünktlich.",
+          "Der Bus kommt pünktlich an."
+        ],
+        "answer": "Der Bus kommt pünktlich an.",
+        "tip": "routineMillFour.questDescription"
+      },
+      {
+        "id": 5,
+        "type": "reorder",
+        "question": "routineMillFour.questTask5",
+        "words": [
+          "mitkomme",
+          "Ja",
+          "mit",
+          "kommst",
+          "ich",
+          "komme"
+        ],
+        "correctOrder": [
+          "Ja",
+          "ich",
+          "komme",
+          "mit"
+        ],
+        "tip": "routineMillFour.questDescription"
+      },
+      {
+        "id": 6,
+        "type": "select",
+        "question": "routineMillFour.questTask6",
+        "options": [
+          "Um wie viel Uhr abfährt dein Zug?",
+          "Um wie viel Uhr fährt dein Zug ab?",
+          "Um wie viel Uhr fahrt dein Zug ab?"
+        ],
+        "answer": "Um wie viel Uhr fährt dein Zug ab?",
+        "tip": "routineMillFour.questDescription"
+      },
+      {
+        "id": 7,
+        "type": "input",
+        "question": "routineMillFour.questTask7",
+        "correctAnswer": "Bahnhof",
+        "tip": "routineMillFour.questDescription"
+      },
+      {
+        "id": 8,
+        "type": "select",
+        "question": "routineMillFour.questTask8",
+        "options": [
+          "Der Zug kommt nicht pünktlich an.",
+          "Der Zug ankommt nicht pünktlich.",
+          "Der Zug kommt an nicht pünktlich."
+        ],
+        "answer": "Der Zug kommt nicht pünktlich an.",
+        "tip": "routineMillFour.questDescription"
+      },
+      {
+        "id": 9,
+        "type": "readAndAnswer",
+        "question": "routineMillFour.questTask9",
+        "text": "Lena fährt am Freitag Zug. Der Zug fährt um neun Uhr in Berlin ab. Er kommt um zwei Uhr in München an. Ihre Schwester kommt nicht mit, sie hat keine Zeit.",
+        "options": [
+          "um zwei Uhr",
+          "am Freitag um neun",
+          "um neun Uhr"
+        ],
+        "answer": "um zwei Uhr",
+        "tip": "routineMillFour.questDescription"
+      },
+      {
+        "id": 10,
+        "type": "input",
+        "question": "routineMillFour.questTask10",
+        "correctAnswer": "pünktlich",
+        "tip": "routineMillFour.questDescription"
+      },
+      {
+        "id": 11,
+        "type": "reorder",
+        "question": "routineMillFour.questTask11",
+        "words": [
+          "Bus",
+          "sechs",
+          "abfährt",
+          "fahrt",
+          "ab",
+          "Der",
+          "um",
+          "fährt",
+          "Uhr"
+        ],
+        "correctOrder": [
+          "Der",
+          "Bus",
+          "fährt",
+          "um",
+          "sechs",
+          "Uhr",
+          "ab"
+        ],
+        "tip": "routineMillFour.questDescription"
+      },
+      {
+        "id": 12,
+        "type": "input",
+        "question": "routineMillFour.questTask12",
+        "correctAnswer": "ruft",
+        "tip": "routineMillFour.questDescription"
+      },
+      {
+        "id": 13,
+        "type": "select",
+        "question": "routineMillFour.questTask13",
+        "options": [
+          "Die Kinder räumen ihr Zimmer auf.",
+          "Die Kinder räumt ihr Zimmer auf.",
+          "Die Kinder aufräumen ihr Zimmer."
+        ],
+        "answer": "Die Kinder räumen ihr Zimmer auf.",
+        "tip": "routineMillFour.questDescription"
+      },
+      {
+        "id": 14,
+        "type": "select",
+        "question": "routineMillFour.questTask14",
+        "options": [
+          "Er sieht die Nachrichten.",
+          "Er seht die Nachrichten.",
+          "Er sieht der Nachrichten."
+        ],
+        "answer": "Er sieht die Nachrichten.",
+        "tip": "routineMillFour.questDescription"
+      },
+      {
+        "id": 15,
+        "type": "reorder",
+        "question": "routineMillFour.questTask15",
+        "words": [
+          "Wann",
+          "kaufst",
+          "kauft",
+          "du",
+          "ein",
+          "einkaufst"
+        ],
+        "correctOrder": [
+          "Wann",
+          "kaufst",
+          "du",
+          "ein"
+        ],
+        "tip": "routineMillFour.questDescription"
+      }
+    ]
+  },
+  {
+    "questId": "routine-mill-five",
+    "title": "routineMillFive.questTitle",
+    "progress": "0/15",
+    "description": "routineMillFive.questDescription",
+    "conditions": {
+      "goal": "routineMillFive.questGoal",
+      "minCorrect": 15,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
+    "vocabulary": [
+      {
+        "word": "anfangen",
+        "translation-ru": "начинать",
+        "translation-en": "to begin",
+        "translation-uk": "починати",
+        "translation-pl": "zaczynać",
+        "translation-es": "empezar",
+        "translation-fr": "commencer",
+        "translation-tr": "başlamak",
+        "translation-ro": "a începe",
+        "translation-uz": "boshlamoq",
+        "translation-hi": "शुरू करना",
+        "translation-ar": "يبدأ"
+      },
+      {
+        "word": "aufmachen",
+        "translation-ru": "открывать",
+        "translation-en": "to open",
+        "translation-uk": "відчиняти",
+        "translation-pl": "otwierać",
+        "translation-es": "abrir",
+        "translation-fr": "ouvrir",
+        "translation-tr": "açmak",
+        "translation-ro": "a deschide",
+        "translation-uz": "ochmoq",
+        "translation-hi": "खोलना",
+        "translation-ar": "يفتح"
+      },
+      {
+        "word": "zumachen",
+        "translation-ru": "закрывать",
+        "translation-en": "to close",
+        "translation-uk": "зачиняти",
+        "translation-pl": "zamykać",
+        "translation-es": "cerrar",
+        "translation-fr": "fermer",
+        "translation-tr": "kapatmak",
+        "translation-ro": "a închide",
+        "translation-uz": "yopmoq",
+        "translation-hi": "बंद करना",
+        "translation-ar": "يغلق"
+      },
+      {
+        "word": "einschlafen",
+        "translation-ru": "засыпать",
+        "translation-en": "to fall asleep",
+        "translation-uk": "засинати",
+        "translation-pl": "zasypiać",
+        "translation-es": "dormirse",
+        "translation-fr": "s’endormir",
+        "translation-tr": "uykuya dalmak",
+        "translation-ro": "a adormi",
+        "translation-uz": "uxlab qolmoq",
+        "translation-hi": "सो जाना",
+        "translation-ar": "يغفو"
+      },
+      {
+        "word": "das Fenster",
+        "translation-ru": "окно",
+        "translation-en": "window",
+        "translation-uk": "вікно",
+        "translation-pl": "okno",
+        "translation-es": "la ventana",
+        "translation-fr": "la fenêtre",
+        "translation-tr": "pencere",
+        "translation-ro": "fereastra",
+        "translation-uz": "deraza",
+        "translation-hi": "खिड़की",
+        "translation-ar": "النافذة"
+      }
+    ],
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "routineMillFive.questTask1",
+        "options": [
+          "Der Film anfängt um acht Uhr.",
+          "Der Film fangt um acht Uhr an.",
+          "Der Film fängt um acht Uhr an."
+        ],
+        "answer": "Der Film fängt um acht Uhr an.",
+        "tip": "routineMillFive.questDescription"
+      },
+      {
+        "id": 2,
+        "type": "input",
+        "question": "routineMillFive.questTask2",
+        "correctAnswer": "auf",
+        "tip": "routineMillFive.questDescription"
+      },
+      {
+        "id": 3,
+        "type": "input",
+        "question": "routineMillFive.questTask3",
+        "correctAnswer": "zu",
+        "tip": "routineMillFive.questDescription"
+      },
+      {
+        "id": 4,
+        "type": "select",
+        "question": "routineMillFive.questTask4",
+        "options": [
+          "Das Kind schlaft schnell ein.",
+          "Das Kind einschläft schnell.",
+          "Das Kind schläft schnell ein."
+        ],
+        "answer": "Das Kind schläft schnell ein.",
+        "tip": "routineMillFive.questDescription"
+      },
+      {
+        "id": 5,
+        "type": "reorder",
+        "question": "routineMillFive.questTask5",
+        "words": [
+          "Arbeit",
+          "Wann",
+          "anfängt",
+          "an",
+          "fängt",
+          "fangt",
+          "die"
+        ],
+        "correctOrder": [
+          "Wann",
+          "fängt",
+          "die",
+          "Arbeit",
+          "an"
+        ],
+        "tip": "routineMillFive.questDescription"
+      },
+      {
+        "id": 6,
+        "type": "select",
+        "question": "routineMillFive.questTask6",
+        "options": [
+          "Machst du bitte das Fenster zu?",
+          "Machst du bitte das Fenster auf zu?",
+          "Zumachst du bitte das Fenster?"
+        ],
+        "answer": "Machst du bitte das Fenster zu?",
+        "tip": "routineMillFive.questDescription"
+      },
+      {
+        "id": 7,
+        "type": "input",
+        "question": "routineMillFive.questTask7",
+        "correctAnswer": "fängt",
+        "tip": "routineMillFive.questDescription"
+      },
+      {
+        "id": 8,
+        "type": "select",
+        "question": "routineMillFive.questTask8",
+        "options": [
+          "Ich schlafe ein nicht, ich bin nicht müde.",
+          "Ich schlafe nicht ein, ich bin nicht müde.",
+          "Ich einschlafe nicht, ich bin nicht müde."
+        ],
+        "answer": "Ich schlafe nicht ein, ich bin nicht müde.",
+        "tip": "routineMillFive.questDescription"
+      },
+      {
+        "id": 9,
+        "type": "readAndAnswer",
+        "question": "routineMillFive.questTask9",
+        "text": "Das Café macht um sieben Uhr auf. Um acht Uhr fängt die Arbeit an. Am Abend macht das Café um zehn Uhr zu. Am Sonntag ist es zu.",
+        "options": [
+          "um acht Uhr",
+          "um zehn Uhr",
+          "um sieben Uhr"
+        ],
+        "answer": "um zehn Uhr",
+        "tip": "routineMillFive.questDescription"
+      },
+      {
+        "id": 10,
+        "type": "input",
+        "question": "routineMillFive.questTask10",
+        "correctAnswer": "Fenster",
+        "tip": "routineMillFive.questDescription"
+      },
+      {
+        "id": 11,
+        "type": "reorder",
+        "question": "routineMillFive.questTask11",
+        "words": [
+          "Laden",
+          "zu",
+          "Uhr",
+          "aufmachen",
+          "machen",
+          "den",
+          "um",
+          "Wir",
+          "auf",
+          "neun"
+        ],
+        "correctOrder": [
+          "Wir",
+          "machen",
+          "den",
+          "Laden",
+          "um",
+          "neun",
+          "Uhr",
+          "auf"
+        ],
+        "tip": "routineMillFive.questDescription"
+      },
+      {
+        "id": 12,
+        "type": "input",
+        "question": "routineMillFive.questTask12",
+        "correctAnswer": "kommt",
+        "tip": "routineMillFive.questDescription"
+      },
+      {
+        "id": 13,
+        "type": "select",
+        "question": "routineMillFive.questTask13",
+        "options": [
+          "Kommt ihr mit?",
+          "Mitkommt ihr?",
+          "Kommst ihr mit?"
+        ],
+        "answer": "Kommt ihr mit?",
+        "tip": "routineMillFive.questDescription"
+      },
+      {
+        "id": 14,
+        "type": "select",
+        "question": "routineMillFive.questTask14",
+        "options": [
+          "Anrufst du oft deine Oma?",
+          "Rufst du oft deine Oma an?",
+          "Rufst du oft deinen Oma an?"
+        ],
+        "answer": "Rufst du oft deine Oma an?",
+        "tip": "routineMillFive.questDescription"
+      },
+      {
+        "id": 15,
+        "type": "reorder",
+        "question": "routineMillFive.questTask15",
+        "words": [
+          "ist",
+          "sehr",
+          "Die",
+          "gut",
+          "der",
+          "Sendung",
+          "sind"
+        ],
+        "correctOrder": [
+          "Die",
+          "Sendung",
+          "ist",
+          "sehr",
+          "gut"
+        ],
+        "tip": "routineMillFive.questDescription"
+      }
+    ]
+  },
+  {
+    "questId": "routine-mill-six",
+    "title": "routineMillSix.questTitle",
+    "progress": "0/15",
+    "description": "routineMillSix.questDescription",
+    "conditions": {
+      "goal": "routineMillSix.questGoal",
+      "minCorrect": 15,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
+    "vocabulary": [
+      {
+        "word": "der Zug",
+        "translation-ru": "поезд",
+        "translation-en": "train",
+        "translation-uk": "потяг",
+        "translation-pl": "pociąg",
+        "translation-es": "el tren",
+        "translation-fr": "le train",
+        "translation-tr": "tren",
+        "translation-ro": "trenul",
+        "translation-uz": "poyezd",
+        "translation-hi": "ट्रेन",
+        "translation-ar": "القطار"
+      },
+      {
+        "word": "zurückkommen",
+        "translation-ru": "возвращаться",
+        "translation-en": "to come back",
+        "translation-uk": "повертатися",
+        "translation-pl": "wracać",
+        "translation-es": "volver",
+        "translation-fr": "revenir",
+        "translation-tr": "geri gelmek",
+        "translation-ro": "a se întoarce",
+        "translation-uz": "qaytib kelmoq",
+        "translation-hi": "लौटना",
+        "translation-ar": "يعود"
+      },
+      {
+        "word": "heute",
+        "translation-ru": "сегодня",
+        "translation-en": "today",
+        "translation-uk": "сьогодні",
+        "translation-pl": "dzisiaj",
+        "translation-es": "hoy",
+        "translation-fr": "aujourd’hui",
+        "translation-tr": "bugün",
+        "translation-ro": "azi",
+        "translation-uz": "bugun",
+        "translation-hi": "आज",
+        "translation-ar": "اليوم"
+      },
+      {
+        "word": "doch",
+        "translation-ru": "да нет же, наоборот",
+        "translation-en": "yes (contradicting)",
+        "translation-uk": "та ні ж",
+        "translation-pl": "ależ tak",
+        "translation-es": "sí (que sí)",
+        "translation-fr": "si",
+        "translation-tr": "evet, var",
+        "translation-ro": "ba da",
+        "translation-uz": "yo‘q, aksincha",
+        "translation-hi": "हाँ (उल्टा जवाब)",
+        "translation-ar": "بلى"
+      },
+      {
+        "word": "das Licht",
+        "translation-ru": "свет",
+        "translation-en": "light",
+        "translation-uk": "світло",
+        "translation-pl": "światło",
+        "translation-es": "la luz",
+        "translation-fr": "la lumière",
+        "translation-tr": "ışık",
+        "translation-ro": "lumina",
+        "translation-uz": "chiroq, yorug‘lik",
+        "translation-hi": "रोशनी",
+        "translation-ar": "الضوء"
+      },
+      {
+        "word": "zurück",
+        "translation-ru": "обратно, назад",
+        "translation-en": "back",
+        "translation-uk": "назад",
+        "translation-pl": "z powrotem",
+        "translation-es": "de vuelta",
+        "translation-fr": "de retour",
+        "translation-tr": "geri",
+        "translation-ro": "înapoi",
+        "translation-uz": "qaytib",
+        "translation-hi": "वापस",
+        "translation-ar": "عائد"
+      }
+    ],
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "routineMillSix.questTask1",
+        "options": [
+          "Aufstehst du früh?",
+          "Stehst du auf früh?",
+          "Stehst du früh auf?"
+        ],
+        "answer": "Stehst du früh auf?",
+        "tip": "routineMillSix.questDescription"
+      },
+      {
+        "id": 2,
+        "type": "input",
+        "question": "routineMillSix.questTask2",
+        "correctAnswer": "an",
+        "tip": "routineMillSix.questDescription"
+      },
+      {
+        "id": 3,
+        "type": "input",
+        "question": "routineMillSix.questTask3",
+        "correctAnswer": "ruft",
+        "tip": "routineMillSix.questDescription"
+      },
+      {
+        "id": 4,
+        "type": "select",
+        "question": "routineMillSix.questTask4",
+        "options": [
+          "Kommst du mit nicht? Doch, ich komme mit!",
+          "Kommst du nicht mit? Ja, ich komme mit!",
+          "Kommst du nicht mit? Doch, ich komme mit!"
+        ],
+        "answer": "Kommst du nicht mit? Doch, ich komme mit!",
+        "tip": "routineMillSix.questDescription"
+      },
+      {
+        "id": 5,
+        "type": "reorder",
+        "question": "routineMillSix.questTask5",
+        "words": [
+          "kommt",
+          "Wann",
+          "zurückkommst",
+          "zurück",
+          "du",
+          "kommst"
+        ],
+        "correctOrder": [
+          "Wann",
+          "kommst",
+          "du",
+          "zurück"
+        ],
+        "tip": "routineMillSix.questDescription"
+      },
+      {
+        "id": 6,
+        "type": "select",
+        "question": "routineMillSix.questTask6",
+        "options": [
+          "Heute aufräume ich nicht.",
+          "Heute räume ich nicht auf.",
+          "Heute räume ich auf nicht."
+        ],
+        "answer": "Heute räume ich nicht auf.",
+        "tip": "routineMillSix.questDescription"
+      },
+      {
+        "id": 7,
+        "type": "input",
+        "question": "routineMillSix.questTask7",
+        "correctAnswer": "Licht",
+        "tip": "routineMillSix.questDescription"
+      },
+      {
+        "id": 8,
+        "type": "select",
+        "question": "routineMillSix.questTask8",
+        "options": [
+          "Fährt der Zug nicht ab?",
+          "Abfährt der Zug nicht?",
+          "Fährt der Zug ab nicht?"
+        ],
+        "answer": "Fährt der Zug nicht ab?",
+        "tip": "routineMillSix.questDescription"
+      },
+      {
+        "id": 9,
+        "type": "readAndAnswer",
+        "question": "routineMillSix.questTask9",
+        "text": "Anna: Kommst du heute mit? Der Film fängt um acht Uhr an. Tim: Leider nicht. Ich räume mein Zimmer auf und rufe meine Mutter an.",
+        "options": [
+          "Er räumt auf und ruft an.",
+          "Er sieht fern.",
+          "Er ist krank."
+        ],
+        "answer": "Er räumt auf und ruft an.",
+        "tip": "routineMillSix.questDescription"
+      },
+      {
+        "id": 10,
+        "type": "input",
+        "question": "routineMillSix.questTask10",
+        "correctAnswer": "zurück",
+        "tip": "routineMillSix.questDescription"
+      },
+      {
+        "id": 11,
+        "type": "reorder",
+        "question": "routineMillSix.questTask11",
+        "words": [
+          "sehst",
+          "du",
+          "fernsiehst",
+          "Siehst",
+          "nicht",
+          "heute",
+          "fern"
+        ],
+        "correctOrder": [
+          "Siehst",
+          "du",
+          "heute",
+          "nicht",
+          "fern"
+        ],
+        "tip": "routineMillSix.questDescription"
+      },
+      {
+        "id": 12,
+        "type": "input",
+        "question": "routineMillSix.questTask12",
+        "correctAnswer": "macht",
+        "tip": "routineMillSix.questDescription"
+      },
+      {
+        "id": 13,
+        "type": "select",
+        "question": "routineMillSix.questTask13",
+        "options": [
+          "Der Bus abfährt pünktlich.",
+          "Der Bus fährt pünktlich ab.",
+          "Der Bus fahrt pünktlich ab."
+        ],
+        "answer": "Der Bus fährt pünktlich ab.",
+        "tip": "routineMillSix.questDescription"
+      },
+      {
+        "id": 14,
+        "type": "select",
+        "question": "routineMillSix.questTask14",
+        "options": [
+          "Wann fängt das Konzert an?",
+          "Wann fangt das Konzert an?",
+          "Wann anfängt das Konzert?"
+        ],
+        "answer": "Wann fängt das Konzert an?",
+        "tip": "routineMillSix.questDescription"
+      },
+      {
+        "id": 15,
+        "type": "reorder",
+        "question": "routineMillSix.questTask15",
+        "words": [
+          "Kind",
+          "Das",
+          "schläft",
+          "acht",
+          "um",
+          "schlaft",
+          "Uhr",
+          "einschläft",
+          "ein"
+        ],
+        "correctOrder": [
+          "Das",
+          "Kind",
+          "schläft",
+          "um",
+          "acht",
+          "Uhr",
+          "ein"
+        ],
+        "tip": "routineMillSix.questDescription"
+      }
+    ]
+  },
+  {
+    "questId": "routine-mill-seven",
+    "title": "routineMillSeven.questTitle",
+    "progress": "0/15",
+    "description": "routineMillSeven.questDescription",
+    "conditions": {
+      "goal": "routineMillSeven.questGoal",
+      "minCorrect": 15,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
+    "vocabulary": [
+      {
+        "word": "der Alltag",
+        "translation-ru": "будни, повседневность",
+        "translation-en": "everyday life",
+        "translation-uk": "будні",
+        "translation-pl": "codzienność",
+        "translation-es": "el día a día",
+        "translation-fr": "le quotidien",
+        "translation-tr": "gündelik hayat",
+        "translation-ro": "viața de zi cu zi",
+        "translation-uz": "kundalik hayot",
+        "translation-hi": "रोज़मर्रा",
+        "translation-ar": "الحياة اليومية"
+      },
+      {
+        "word": "das Büro",
+        "translation-ru": "офис",
+        "translation-en": "office",
+        "translation-uk": "офіс",
+        "translation-pl": "biuro",
+        "translation-es": "la oficina",
+        "translation-fr": "le bureau",
+        "translation-tr": "ofis",
+        "translation-ro": "biroul",
+        "translation-uz": "ofis",
+        "translation-hi": "दफ़्तर",
+        "translation-ar": "المكتب"
+      },
+      {
+        "word": "die Pause",
+        "translation-ru": "перерыв",
+        "translation-en": "break",
+        "translation-uk": "перерва",
+        "translation-pl": "przerwa",
+        "translation-es": "el descanso",
+        "translation-fr": "la pause",
+        "translation-tr": "mola",
+        "translation-ro": "pauza",
+        "translation-uz": "tanaffus",
+        "translation-hi": "विराम",
+        "translation-ar": "الاستراحة"
+      },
+      {
+        "word": "normal",
+        "translation-ru": "обычный, нормальный",
+        "translation-en": "normal",
+        "translation-uk": "звичайний",
+        "translation-pl": "zwykły",
+        "translation-es": "normal",
+        "translation-fr": "normal",
+        "translation-tr": "normal",
+        "translation-ro": "obișnuit",
+        "translation-uz": "oddiy",
+        "translation-hi": "सामान्य",
+        "translation-ar": "عادي"
+      },
+      {
+        "word": "zuerst",
+        "translation-ru": "сначала",
+        "translation-en": "first",
+        "translation-uk": "спочатку",
+        "translation-pl": "najpierw",
+        "translation-es": "primero",
+        "translation-fr": "d’abord",
+        "translation-tr": "önce",
+        "translation-ro": "mai întâi",
+        "translation-uz": "avval",
+        "translation-hi": "पहले",
+        "translation-ar": "أولًا"
+      }
+    ],
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "routineMillSeven.questTask1",
+        "options": [
+          "Um sieben Uhr klingeln der Wecker.",
+          "Um sieben Uhr der Wecker klingelt.",
+          "Um sieben Uhr klingelt der Wecker."
+        ],
+        "answer": "Um sieben Uhr klingelt der Wecker.",
+        "tip": "routineMillSeven.questDescription"
+      },
+      {
+        "id": 2,
+        "type": "input",
+        "question": "routineMillSeven.questTask2",
+        "correctAnswer": "Büro",
+        "tip": "routineMillSeven.questDescription"
+      },
+      {
+        "id": 3,
+        "type": "input",
+        "question": "routineMillSeven.questTask3",
+        "correctAnswer": "Pause",
+        "tip": "routineMillSeven.questDescription"
+      },
+      {
+        "id": 4,
+        "type": "select",
+        "question": "routineMillSeven.questTask4",
+        "options": [
+          "Um elf Uhr einschlafe ich.",
+          "Um elf Uhr ich schlafe ein.",
+          "Um elf Uhr schlafe ich ein."
+        ],
+        "answer": "Um elf Uhr schlafe ich ein.",
+        "tip": "routineMillSeven.questDescription"
+      },
+      {
+        "id": 5,
+        "type": "reorder",
+        "question": "routineMillSeven.questTask5",
+        "words": [
+          "meine",
+          "sehr",
+          "sind",
+          "normal",
+          "Tag",
+          "Mein",
+          "ist"
+        ],
+        "correctOrder": [
+          "Mein",
+          "Tag",
+          "ist",
+          "sehr",
+          "normal"
+        ],
+        "tip": "routineMillSeven.questDescription"
+      },
+      {
+        "id": 6,
+        "type": "select",
+        "question": "routineMillSeven.questTask6",
+        "options": [
+          "Zuerst trinke ich Kaffee.",
+          "Zuerst trinkst ich Kaffee.",
+          "Zuerst ich trinke Kaffee."
+        ],
+        "answer": "Zuerst trinke ich Kaffee.",
+        "tip": "routineMillSeven.questDescription"
+      },
+      {
+        "id": 7,
+        "type": "input",
+        "question": "routineMillSeven.questTask7",
+        "correctAnswer": "ein",
+        "tip": "routineMillSeven.questDescription"
+      },
+      {
+        "id": 8,
+        "type": "select",
+        "question": "routineMillSeven.questTask8",
+        "options": [
+          "Der Alltag ist oft schwer.",
+          "Die Alltag ist oft schwer.",
+          "Der Alltag sind oft schwer."
+        ],
+        "answer": "Der Alltag ist oft schwer.",
+        "tip": "routineMillSeven.questDescription"
+      },
+      {
+        "id": 9,
+        "type": "readAndAnswer",
+        "question": "routineMillSeven.questTask9",
+        "text": "Karl steht um sechs Uhr auf. Um acht Uhr fängt er im Büro an. Um zwölf Uhr macht er Pause und isst. Um fünf Uhr kommt er zurück und kauft ein.",
+        "options": [
+          "Er kauft ein.",
+          "Er macht Pause.",
+          "Er steht auf."
+        ],
+        "answer": "Er macht Pause.",
+        "tip": "routineMillSeven.questDescription"
+      },
+      {
+        "id": 10,
+        "type": "input",
+        "question": "routineMillSeven.questTask10",
+        "correctAnswer": "Pause",
+        "tip": "routineMillSeven.questDescription"
+      },
+      {
+        "id": 11,
+        "type": "reorder",
+        "question": "routineMillSeven.questTask11",
+        "words": [
+          "dann",
+          "ich",
+          "ich",
+          "aufräume",
+          "liest",
+          "auf",
+          "räume",
+          "Zuerst",
+          "lese"
+        ],
+        "correctOrder": [
+          "Zuerst",
+          "räume",
+          "ich",
+          "auf",
+          "dann",
+          "lese",
+          "ich"
+        ],
+        "tip": "routineMillSeven.questDescription"
+      },
+      {
+        "id": 12,
+        "type": "input",
+        "question": "routineMillSeven.questTask12",
+        "correctAnswer": "Kommst",
+        "tip": "routineMillSeven.questDescription"
+      },
+      {
+        "id": 13,
+        "type": "select",
+        "question": "routineMillSeven.questTask13",
+        "options": [
+          "Er macht das Fenster auf.",
+          "Er macht auf das Fenster.",
+          "Er aufmacht das Fenster."
+        ],
+        "answer": "Er macht das Fenster auf.",
+        "tip": "routineMillSeven.questDescription"
+      },
+      {
+        "id": 14,
+        "type": "select",
+        "question": "routineMillSeven.questTask14",
+        "options": [
+          "Ich stehe nicht um sechs Uhr auf.",
+          "Ich stehe um sechs Uhr nicht auf auf.",
+          "Ich aufstehe nicht um sechs Uhr."
+        ],
+        "answer": "Ich stehe nicht um sechs Uhr auf.",
+        "tip": "routineMillSeven.questDescription"
+      },
+      {
+        "id": 15,
+        "type": "reorder",
+        "question": "routineMillSeven.questTask15",
+        "words": [
+          "heute",
+          "Kommt",
+          "mit",
+          "kommst",
+          "ihr",
+          "mitkommt"
+        ],
+        "correctOrder": [
+          "Kommt",
+          "ihr",
+          "heute",
+          "mit"
+        ],
+        "tip": "routineMillSeven.questDescription"
+      }
+    ]
+  },
+  {
+    "questId": "routine-mill-eight",
+    "title": "routineMillEight.questTitle",
+    "progress": "0/15",
+    "description": "routineMillEight.questDescription",
+    "conditions": {
+      "goal": "routineMillEight.questGoal",
+      "minCorrect": 15,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
+    "vocabulary": [
+      {
+        "word": "vorhaben",
+        "translation-ru": "планировать, собираться",
+        "translation-en": "to plan",
+        "translation-uk": "планувати",
+        "translation-pl": "planować",
+        "translation-es": "tener planeado",
+        "translation-fr": "prévoir",
+        "translation-tr": "planlamak",
+        "translation-ro": "a plănui",
+        "translation-uz": "rejalashtirmoq",
+        "translation-hi": "योजना बनाना",
+        "translation-ar": "يخطط"
+      },
+      {
+        "word": "einladen",
+        "translation-ru": "приглашать",
+        "translation-en": "to invite",
+        "translation-uk": "запрошувати",
+        "translation-pl": "zapraszać",
+        "translation-es": "invitar",
+        "translation-fr": "inviter",
+        "translation-tr": "davet etmek",
+        "translation-ro": "a invita",
+        "translation-uz": "taklif qilmoq",
+        "translation-hi": "बुलाना",
+        "translation-ar": "يدعو"
+      },
+      {
+        "word": "abholen",
+        "translation-ru": "забирать, встречать",
+        "translation-en": "to pick up",
+        "translation-uk": "забирати, зустрічати",
+        "translation-pl": "odbierać",
+        "translation-es": "recoger",
+        "translation-fr": "aller chercher",
+        "translation-tr": "almaya gitmek",
+        "translation-ro": "a lua pe cineva",
+        "translation-uz": "olib ketmoq",
+        "translation-hi": "लेने जाना",
+        "translation-ar": "يصطحب"
+      },
+      {
+        "word": "der Ausflug",
+        "translation-ru": "поездка, вылазка",
+        "translation-en": "trip, outing",
+        "translation-uk": "екскурсія, поїздка",
+        "translation-pl": "wycieczka",
+        "translation-es": "la excursión",
+        "translation-fr": "l’excursion",
+        "translation-tr": "gezi",
+        "translation-ro": "excursia",
+        "translation-uz": "sayohat",
+        "translation-hi": "सैर",
+        "translation-ar": "الرحلة"
+      },
+      {
+        "word": "zusammen",
+        "translation-ru": "вместе",
+        "translation-en": "together",
+        "translation-uk": "разом",
+        "translation-pl": "razem",
+        "translation-es": "juntos",
+        "translation-fr": "ensemble",
+        "translation-tr": "birlikte",
+        "translation-ro": "împreună",
+        "translation-uz": "birga",
+        "translation-hi": "साथ में",
+        "translation-ar": "معًا"
+      }
+    ],
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "routineMillEight.questTask1",
+        "options": [
+          "Was vorhast du am Samstag?",
+          "Was hast du vor am Samstag?",
+          "Was hast du am Samstag vor?"
+        ],
+        "answer": "Was hast du am Samstag vor?",
+        "tip": "routineMillEight.questDescription"
+      },
+      {
+        "id": 2,
+        "type": "input",
+        "question": "routineMillEight.questTask2",
+        "correctAnswer": "ein",
+        "tip": "routineMillEight.questDescription"
+      },
+      {
+        "id": 3,
+        "type": "input",
+        "question": "routineMillEight.questTask3",
+        "correctAnswer": "hole",
+        "tip": "routineMillEight.questDescription"
+      },
+      {
+        "id": 4,
+        "type": "select",
+        "question": "routineMillEight.questTask4",
+        "options": [
+          "Am Sonntag wir machen einen Ausflug.",
+          "Am Sonntag machen wir ein Ausflug.",
+          "Am Sonntag machen wir einen Ausflug."
+        ],
+        "answer": "Am Sonntag machen wir einen Ausflug.",
+        "tip": "routineMillEight.questDescription"
+      },
+      {
+        "id": 5,
+        "type": "reorder",
+        "question": "routineMillEight.questTask5",
+        "words": [
+          "Wir",
+          "zusammenkochen",
+          "kocht",
+          "zusammen",
+          "kochen"
+        ],
+        "correctOrder": [
+          "Wir",
+          "kochen",
+          "zusammen"
+        ],
+        "tip": "routineMillEight.questDescription"
+      },
+      {
+        "id": 6,
+        "type": "select",
+        "question": "routineMillEight.questTask6",
+        "options": [
+          "Einlädst du Anna?",
+          "Lädst du Anna ein?",
+          "Ladest du Anna ein?"
+        ],
+        "answer": "Lädst du Anna ein?",
+        "tip": "routineMillEight.questDescription"
+      },
+      {
+        "id": 7,
+        "type": "input",
+        "question": "routineMillEight.questTask7",
+        "correctAnswer": "Ausflug",
+        "tip": "routineMillEight.questDescription"
+      },
+      {
+        "id": 8,
+        "type": "select",
+        "question": "routineMillEight.questTask8",
+        "options": [
+          "Am Sonntag vorhabe ich viel.",
+          "Am Sonntag habe ich viel vor.",
+          "Am Sonntag habe ich vor viel."
+        ],
+        "answer": "Am Sonntag habe ich viel vor.",
+        "tip": "routineMillEight.questDescription"
+      },
+      {
+        "id": 9,
+        "type": "readAndAnswer",
+        "question": "routineMillEight.questTask9",
+        "text": "Am Samstag hat Mia viel vor. Ihre Oma kommt um elf Uhr an. Mia holt ihre Oma ab. Am Abend lädt sie ihre Freunde ein und sie kochen zusammen.",
+        "options": [
+          "ihre Oma",
+          "ihren Bruder",
+          "ihre Freunde"
+        ],
+        "answer": "ihre Oma",
+        "tip": "routineMillEight.questDescription"
+      },
+      {
+        "id": 10,
+        "type": "input",
+        "question": "routineMillEight.questTask10",
+        "correctAnswer": "zusammen",
+        "tip": "routineMillEight.questDescription"
+      },
+      {
+        "id": 11,
+        "type": "reorder",
+        "question": "routineMillEight.questTask11",
+        "words": [
+          "holt",
+          "die",
+          "ab",
+          "Wer",
+          "abholt",
+          "holen",
+          "Kinder"
+        ],
+        "correctOrder": [
+          "Wer",
+          "holt",
+          "die",
+          "Kinder",
+          "ab"
+        ],
+        "tip": "routineMillEight.questDescription"
+      },
+      {
+        "id": 12,
+        "type": "input",
+        "question": "routineMillEight.questTask12",
+        "correctAnswer": "kaufe",
+        "tip": "routineMillEight.questDescription"
+      },
+      {
+        "id": 13,
+        "type": "select",
+        "question": "routineMillEight.questTask13",
+        "options": [
+          "Wann fahrt der Zug ab?",
+          "Wann fährt der Zug ab?",
+          "Wann abfährt der Zug?"
+        ],
+        "answer": "Wann fährt der Zug ab?",
+        "tip": "routineMillEight.questDescription"
+      },
+      {
+        "id": 14,
+        "type": "select",
+        "question": "routineMillEight.questTask14",
+        "options": [
+          "Um zwölf Uhr hat wir Pause.",
+          "Um zwölf Uhr haben wir Pause.",
+          "Um zwölf Uhr wir haben Pause."
+        ],
+        "answer": "Um zwölf Uhr haben wir Pause.",
+        "tip": "routineMillEight.questDescription"
+      },
+      {
+        "id": 15,
+        "type": "reorder",
+        "question": "routineMillEight.questTask15",
+        "words": [
+          "nicht",
+          "du",
+          "Kommst",
+          "zurück",
+          "Ja",
+          "zurückkommst",
+          "Doch"
+        ],
+        "correctOrder": [
+          "Kommst",
+          "du",
+          "nicht",
+          "zurück",
+          "Doch"
+        ],
+        "tip": "routineMillEight.questDescription"
+      }
+    ]
+  },
+  {
+    "questId": "routine-mill-nine",
+    "title": "routineMillNine.questTitle",
+    "progress": "0/15",
+    "description": "routineMillNine.questDescription",
+    "conditions": {
+      "goal": "routineMillNine.questGoal",
+      "minCorrect": 15,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
+    "vocabulary": [
+      {
+        "word": "später",
+        "translation-ru": "позже",
+        "translation-en": "later",
+        "translation-uk": "пізніше",
+        "translation-pl": "później",
+        "translation-es": "más tarde",
+        "translation-fr": "plus tard",
+        "translation-tr": "daha sonra",
+        "translation-ro": "mai târziu",
+        "translation-uz": "keyinroq",
+        "translation-hi": "बाद में",
+        "translation-ar": "لاحقًا"
+      },
+      {
+        "word": "jetzt",
+        "translation-ru": "сейчас",
+        "translation-en": "now",
+        "translation-uk": "зараз",
+        "translation-pl": "teraz",
+        "translation-es": "ahora",
+        "translation-fr": "maintenant",
+        "translation-tr": "şimdi",
+        "translation-ro": "acum",
+        "translation-uz": "hozir",
+        "translation-hi": "अभी",
+        "translation-ar": "الآن"
+      },
+      {
+        "word": "schnell",
+        "translation-ru": "быстро",
+        "translation-en": "quickly",
+        "translation-uk": "швидко",
+        "translation-pl": "szybko",
+        "translation-es": "rápido",
+        "translation-fr": "vite",
+        "translation-tr": "çabuk",
+        "translation-ro": "repede",
+        "translation-uz": "tez",
+        "translation-hi": "जल्दी",
+        "translation-ar": "بسرعة"
+      },
+      {
+        "word": "der Laden",
+        "translation-ru": "магазин, лавка",
+        "translation-en": "shop",
+        "translation-uk": "крамниця",
+        "translation-pl": "sklep",
+        "translation-es": "la tienda",
+        "translation-fr": "le magasin",
+        "translation-tr": "dükkân",
+        "translation-ro": "magazinul",
+        "translation-uz": "do‘kon",
+        "translation-hi": "दुकान",
+        "translation-ar": "المتجر"
+      },
+      {
+        "word": "das Konzert",
+        "translation-ru": "концерт",
+        "translation-en": "concert",
+        "translation-uk": "концерт",
+        "translation-pl": "koncert",
+        "translation-es": "el concierto",
+        "translation-fr": "le concert",
+        "translation-tr": "konser",
+        "translation-ro": "concertul",
+        "translation-uz": "konsert",
+        "translation-hi": "संगीत समारोह",
+        "translation-ar": "الحفلة الموسيقية"
+      }
+    ],
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "routineMillNine.questTask1",
+        "options": [
+          "Jetzt aufräume ich die Küche.",
+          "Jetzt ich räume die Küche auf.",
+          "Jetzt räume ich die Küche auf."
+        ],
+        "answer": "Jetzt räume ich die Küche auf.",
+        "tip": "routineMillNine.questDescription"
+      },
+      {
+        "id": 2,
+        "type": "input",
+        "question": "routineMillNine.questTask2",
+        "correctAnswer": "an",
+        "tip": "routineMillNine.questDescription"
+      },
+      {
+        "id": 3,
+        "type": "input",
+        "question": "routineMillNine.questTask3",
+        "correctAnswer": "macht",
+        "tip": "routineMillNine.questDescription"
+      },
+      {
+        "id": 4,
+        "type": "select",
+        "question": "routineMillNine.questTask4",
+        "options": [
+          "Das Konzert anfängt um acht Uhr.",
+          "Das Konzert fangt um acht Uhr an.",
+          "Das Konzert fängt um acht Uhr an."
+        ],
+        "answer": "Das Konzert fängt um acht Uhr an.",
+        "tip": "routineMillNine.questDescription"
+      },
+      {
+        "id": 5,
+        "type": "reorder",
+        "question": "routineMillNine.questTask5",
+        "words": [
+          "ein",
+          "Er",
+          "einschläft",
+          "schnell",
+          "schlaft",
+          "schläft"
+        ],
+        "correctOrder": [
+          "Er",
+          "schläft",
+          "schnell",
+          "ein"
+        ],
+        "tip": "routineMillNine.questDescription"
+      },
+      {
+        "id": 6,
+        "type": "select",
+        "question": "routineMillNine.questTask6",
+        "options": [
+          "Kommst du mit heute?",
+          "Kommst du heute mit?",
+          "Mitkommst du heute?"
+        ],
+        "answer": "Kommst du heute mit?",
+        "tip": "routineMillNine.questDescription"
+      },
+      {
+        "id": 7,
+        "type": "input",
+        "question": "routineMillNine.questTask7",
+        "correctAnswer": "Jetzt",
+        "tip": "routineMillNine.questDescription"
+      },
+      {
+        "id": 8,
+        "type": "select",
+        "question": "routineMillNine.questTask8",
+        "options": [
+          "Wir kaufen später ein.",
+          "Wir einkaufen später.",
+          "Wir kaufen ein später."
+        ],
+        "answer": "Wir kaufen später ein.",
+        "tip": "routineMillNine.questDescription"
+      },
+      {
+        "id": 9,
+        "type": "readAndAnswer",
+        "question": "routineMillNine.questTask9",
+        "text": "Nick wacht um sechs Uhr auf, aber er steht um sieben Uhr auf. Sein Bus fährt um acht Uhr ab. Abends kauft er ein und ruft seine Schwester an.",
+        "options": [
+          "um sieben Uhr",
+          "um acht Uhr",
+          "um sechs Uhr"
+        ],
+        "answer": "um sieben Uhr",
+        "tip": "routineMillNine.questDescription"
+      },
+      {
+        "id": 10,
+        "type": "input",
+        "question": "routineMillNine.questTask10",
+        "correctAnswer": "Laden",
+        "tip": "routineMillNine.questDescription"
+      },
+      {
+        "id": 11,
+        "type": "reorder",
+        "question": "routineMillNine.questTask11",
+        "words": [
+          "Lädst",
+          "ein",
+          "ladest",
+          "deine",
+          "einlädst",
+          "du",
+          "Eltern"
+        ],
+        "correctOrder": [
+          "Lädst",
+          "du",
+          "deine",
+          "Eltern",
+          "ein"
+        ],
+        "tip": "routineMillNine.questDescription"
+      },
+      {
+        "id": 12,
+        "type": "input",
+        "question": "routineMillNine.questTask12",
+        "correctAnswer": "Unsere",
+        "tip": "routineMillNine.questDescription"
+      },
+      {
+        "id": 13,
+        "type": "select",
+        "question": "routineMillNine.questTask13",
+        "options": [
+          "Er sieht einen Film.",
+          "Er sieht ein Film.",
+          "Er seht einen Film."
+        ],
+        "answer": "Er sieht einen Film.",
+        "tip": "routineMillNine.questDescription"
+      },
+      {
+        "id": 14,
+        "type": "select",
+        "question": "routineMillNine.questTask14",
+        "options": [
+          "Am Dienstagmorgen arbeite ich.",
+          "Am Dienstagmorgen ich arbeite.",
+          "Im Dienstagmorgen arbeite ich."
+        ],
+        "answer": "Am Dienstagmorgen arbeite ich.",
+        "tip": "routineMillNine.questDescription"
+      },
+      {
+        "id": 15,
+        "type": "reorder",
+        "question": "routineMillNine.questTask15",
+        "words": [
+          "Fährst",
+          "fährt",
+          "Berlin",
+          "du",
+          "nach",
+          "fahrst"
+        ],
+        "correctOrder": [
+          "Fährst",
+          "du",
+          "nach",
+          "Berlin"
+        ],
+        "tip": "routineMillNine.questDescription"
+      }
+    ]
+  },
+  {
+    "questId": "routine-mill-ten",
+    "title": "routineMillTen.questTitle",
+    "progress": "0/15",
+    "description": "routineMillTen.questDescription",
+    "conditions": {
+      "goal": "routineMillTen.questGoal",
+      "minCorrect": 15,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
+    "vocabulary": [
+      {
+        "word": "früh",
+        "translation-ru": "рано",
+        "translation-en": "early",
+        "translation-uk": "рано",
+        "translation-pl": "wcześnie",
+        "translation-es": "temprano",
+        "translation-fr": "tôt",
+        "translation-tr": "erken",
+        "translation-ro": "devreme",
+        "translation-uz": "erta",
+        "translation-hi": "जल्दी",
+        "translation-ar": "مبكرًا"
+      },
+      {
+        "word": "spät",
+        "translation-ru": "поздно",
+        "translation-en": "late",
+        "translation-uk": "пізно",
+        "translation-pl": "późno",
+        "translation-es": "tarde",
+        "translation-fr": "tard",
+        "translation-tr": "geç",
+        "translation-ro": "târziu",
+        "translation-uz": "kech",
+        "translation-hi": "देर से",
+        "translation-ar": "متأخرًا"
+      },
+      {
+        "word": "langweilig",
+        "translation-ru": "скучный",
+        "translation-en": "boring",
+        "translation-uk": "нудний",
+        "translation-pl": "nudny",
+        "translation-es": "aburrido",
+        "translation-fr": "ennuyeux",
+        "translation-tr": "sıkıcı",
+        "translation-ro": "plictisitor",
+        "translation-uz": "zerikarli",
+        "translation-hi": "उबाऊ",
+        "translation-ar": "ممل"
+      },
+      {
+        "word": "interessant",
+        "translation-ru": "интересный",
+        "translation-en": "interesting",
+        "translation-uk": "цікавий",
+        "translation-pl": "ciekawy",
+        "translation-es": "interesante",
+        "translation-fr": "intéressant",
+        "translation-tr": "ilginç",
+        "translation-ro": "interesant",
+        "translation-uz": "qiziqarli",
+        "translation-hi": "दिलचस्प",
+        "translation-ar": "مثير للاهتمام"
+      },
+      {
+        "word": "der Film",
+        "translation-ru": "фильм",
+        "translation-en": "film",
+        "translation-uk": "фільм",
+        "translation-pl": "film",
+        "translation-es": "la película",
+        "translation-fr": "le film",
+        "translation-tr": "film",
+        "translation-ro": "filmul",
+        "translation-uz": "film",
+        "translation-hi": "फ़िल्म",
+        "translation-ar": "الفيلم"
+      }
+    ],
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "routineMillTen.questTask1",
+        "options": [
+          "Am Samstag ich stehe spät auf.",
+          "Am Samstag aufstehe ich spät.",
+          "Am Samstag stehe ich spät auf."
+        ],
+        "answer": "Am Samstag stehe ich spät auf.",
+        "tip": "routineMillTen.questDescription"
+      },
+      {
+        "id": 2,
+        "type": "input",
+        "question": "routineMillTen.questTask2",
+        "correctAnswer": "ein",
+        "tip": "routineMillTen.questDescription"
+      },
+      {
+        "id": 3,
+        "type": "input",
+        "question": "routineMillTen.questTask3",
+        "correctAnswer": "Kaufst",
+        "tip": "routineMillTen.questDescription"
+      },
+      {
+        "id": 4,
+        "type": "select",
+        "question": "routineMillTen.questTask4",
+        "options": [
+          "Der Film sind interessant.",
+          "Die Film ist interessant.",
+          "Der Film ist interessant."
+        ],
+        "answer": "Der Film ist interessant.",
+        "tip": "routineMillTen.questDescription"
+      },
+      {
+        "id": 5,
+        "type": "reorder",
+        "question": "routineMillTen.questTask5",
+        "words": [
+          "ihr",
+          "anruft",
+          "ihren",
+          "Vater",
+          "Sie",
+          "an",
+          "ruft"
+        ],
+        "correctOrder": [
+          "Sie",
+          "ruft",
+          "ihren",
+          "Vater",
+          "an"
+        ],
+        "tip": "routineMillTen.questDescription"
+      },
+      {
+        "id": 6,
+        "type": "select",
+        "question": "routineMillTen.questTask6",
+        "options": [
+          "Der Zug kommt an spät.",
+          "Der Zug ankommt spät.",
+          "Der Zug kommt spät an."
+        ],
+        "answer": "Der Zug kommt spät an.",
+        "tip": "routineMillTen.questDescription"
+      },
+      {
+        "id": 7,
+        "type": "input",
+        "question": "routineMillTen.questTask7",
+        "correctAnswer": "laden",
+        "tip": "routineMillTen.questDescription"
+      },
+      {
+        "id": 8,
+        "type": "select",
+        "question": "routineMillTen.questTask8",
+        "options": [
+          "Er abholt seine Tochter nicht.",
+          "Er holt seine Tochter nicht ab.",
+          "Er holt seine Tochter ab nicht."
+        ],
+        "answer": "Er holt seine Tochter nicht ab.",
+        "tip": "routineMillTen.questDescription"
+      },
+      {
+        "id": 9,
+        "type": "readAndAnswer",
+        "question": "routineMillTen.questTask9",
+        "text": "Am Freitag sieht Eva lange fern. Der Film ist interessant und sie schläft spät ein. Am Samstag klingelt der Wecker früh. Eva ist sehr müde.",
+        "options": [
+          "Sie fährt ab.",
+          "Sie schläft spät ein.",
+          "Sie kauft ein."
+        ],
+        "answer": "Sie schläft spät ein.",
+        "tip": "routineMillTen.questDescription"
+      },
+      {
+        "id": 10,
+        "type": "input",
+        "question": "routineMillTen.questTask10",
+        "correctAnswer": "früh",
+        "tip": "routineMillTen.questDescription"
+      },
+      {
+        "id": 11,
+        "type": "reorder",
+        "question": "routineMillTen.questTask11",
+        "words": [
+          "am",
+          "ihr",
+          "vorhabt",
+          "habt",
+          "Was",
+          "hast",
+          "vor",
+          "Abend"
+        ],
+        "correctOrder": [
+          "Was",
+          "habt",
+          "ihr",
+          "am",
+          "Abend",
+          "vor"
+        ],
+        "tip": "routineMillTen.questDescription"
+      },
+      {
+        "id": 12,
+        "type": "input",
+        "question": "routineMillTen.questTask12",
+        "correctAnswer": "Im",
+        "tip": "routineMillTen.questDescription"
+      },
+      {
+        "id": 13,
+        "type": "select",
+        "question": "routineMillTen.questTask13",
+        "options": [
+          "Ihre Tochter arbeitest in Hamburg.",
+          "Ihre Tochter arbeitet in Hamburg.",
+          "Ihr Tochter arbeitet in Hamburg."
+        ],
+        "answer": "Ihre Tochter arbeitet in Hamburg.",
+        "tip": "routineMillTen.questDescription"
+      },
+      {
+        "id": 14,
+        "type": "select",
+        "question": "routineMillTen.questTask14",
+        "options": [
+          "Nimmst du ein Kaffee?",
+          "Nimmst du einen Kaffee?",
+          "Nehmst du einen Kaffee?"
+        ],
+        "answer": "Nimmst du einen Kaffee?",
+        "tip": "routineMillTen.questDescription"
+      },
+      {
+        "id": 15,
+        "type": "reorder",
+        "question": "routineMillTen.questTask15",
+        "words": [
+          "es",
+          "Uhr",
+          "ist",
+          "Es",
+          "ist",
+          "sind",
+          "um",
+          "Wie",
+          "spät",
+          "neun"
+        ],
+        "correctOrder": [
+          "Wie",
+          "spät",
+          "ist",
+          "es",
+          "Es",
+          "ist",
+          "neun",
+          "Uhr"
+        ],
+        "tip": "routineMillTen.questDescription"
+      }
+    ]
+  }
+]

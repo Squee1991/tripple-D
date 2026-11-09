@@ -1,0 +1,120 @@
+// Дороги направлений (direction-prepositions): 2 практических квеста перед «Контрольным»
+// порядок переводов: ru en uk pl es fr tr ro uz hi ar
+module.exports = {
+	file: 'direction-prepositions',
+	ns: 'directionPrepositionsExtra',
+	ids: ['direction-prep-9', 'direction-prep-10'],
+	before: 'direction-prep-8',
+	quests: [
+		{
+			title: ['Поездка к бабушке', 'A trip to Grandma', 'Поїздка до бабусі', 'Wyjazd do babci', 'Un viaje a casa de la abuela', 'Un voyage chez mamie', 'Büyükanneye yolculuk', 'O călătorie la bunica', 'Buvinikiga safar', 'दादी के पास सफ़र', 'رحلة إلى الجدة'],
+			desc: [
+				'Практика без новой грамматики. Куда: zu + человек или место (zur Oma, zum Bahnhof), nach + город, страна, nach Hause. Где: bei (bei der Oma). На чём: mit + Dativ (mit dem Zug). После zu, bei, mit, aus, von всегда Dativ.',
+				'Practice without new grammar. Where to: zu + person or place (zur Oma, zum Bahnhof), nach + town, country, nach Hause. Where: bei (bei der Oma). How: mit + dative (mit dem Zug). zu, bei, mit, aus, von are always followed by the dative.',
+				'Практика без нової граматики. Куди: zu + людина чи місце (zur Oma, zum Bahnhof), nach + місто, країна, nach Hause. Де: bei (bei der Oma). Чим: mit + Dativ (mit dem Zug). Після zu, bei, mit, aus, von завжди Dativ.',
+				'Ćwiczenie bez nowej gramatyki. Dokąd: zu + osoba lub miejsce (zur Oma, zum Bahnhof), nach + miasto, kraj, nach Hause. Gdzie: bei (bei der Oma). Czym: mit + celownik (mit dem Zug). Po zu, bei, mit, aus, von zawsze celownik.',
+				'Práctica sin gramática nueva. Adónde: zu + persona o lugar (zur Oma, zum Bahnhof), nach + ciudad, país, nach Hause. Dónde: bei (bei der Oma). Cómo: mit + dativo (mit dem Zug). Después de zu, bei, mit, aus, von siempre dativo.',
+				'Entraînement sans nouvelle grammaire. Où aller : zu + personne ou lieu (zur Oma, zum Bahnhof), nach + ville, pays, nach Hause. Où : bei (bei der Oma). Comment : mit + datif (mit dem Zug). Après zu, bei, mit, aus, von, toujours le datif.',
+				'Yeni dilbilgisi olmadan pratik. Nereye: zu + kişi ya da yer (zur Oma, zum Bahnhof), nach + şehir, ülke, nach Hause. Nerede: bei (bei der Oma). Neyle: mit + Dativ (mit dem Zug). zu, bei, mit, aus, von’dan sonra her zaman Dativ.',
+				'Exercițiu fără gramatică nouă. Încotro: zu + persoană sau loc (zur Oma, zum Bahnhof), nach + oraș, țară, nach Hause. Unde: bei (bei der Oma). Cu ce: mit + dativ (mit dem Zug). După zu, bei, mit, aus, von mereu dativ.',
+				'Yangi grammatikasiz mashq. Qayerga: zu + odam yoki joy (zur Oma, zum Bahnhof), nach + shahar, mamlakat, nach Hause. Qayerda: bei (bei der Oma). Nimada: mit + Dativ (mit dem Zug). zu, bei, mit, aus, von dan keyin doim Dativ.',
+				'बिना नए व्याकरण का अभ्यास। कहाँ जाना: zu + व्यक्ति या जगह (zur Oma, zum Bahnhof), nach + शहर, देश, nach Hause. कहाँ: bei (bei der Oma)। किससे: mit + Dativ (mit dem Zug)। zu, bei, mit, aus, von के बाद हमेशा Dativ.',
+				'تدريب بلا قواعد جديدة. إلى أين: zu + شخص أو مكان (zur Oma و zum Bahnhof)، nach + مدينة أو بلد و nach Hause. أين: bei (bei der Oma). بماذا: mit + Dativ (mit dem Zug). بعد zu و bei و mit و aus و von دائمًا Dativ.'
+			],
+			vocab: [
+				['der Bahnhof', 'вокзал', 'station', 'вокзал', 'dworzec', 'la estación', 'la gare', 'gar', 'gara', 'vokzal', 'स्टेशन', 'المحطة'],
+				['die Fahrkarte', 'билет', 'ticket', 'квиток', 'bilet', 'el billete', 'le billet', 'bilet', 'biletul', 'chipta', 'टिकट', 'التذكرة'],
+				['das Dorf', 'деревня', 'village', 'село', 'wieś', 'el pueblo', 'le village', 'köy', 'satul', 'qishloq', 'गाँव', 'القرية'],
+				['der Opa', 'дедушка', 'grandpa', 'дідусь', 'dziadek', 'el abuelo', 'papi', 'dede', 'bunicul', 'bobo', 'दादा', 'الجد'],
+				['der Koffer', 'чемодан', 'suitcase', 'валіза', 'walizka', 'la maleta', 'la valise', 'bavul', 'valiza', 'chamadon', 'सूटकेस', 'الحقيبة']
+			],
+			tasks: [
+				['tr', ['В субботу мы едем к бабушке.', 'On Saturday we are going to Grandma’s.', 'У суботу ми їдемо до бабусі.', 'W sobotę jedziemy do babci.', 'El sábado vamos a casa de la abuela.', 'Samedi, nous allons chez mamie.', 'Cumartesi büyükanneme gidiyoruz.', 'Sâmbătă mergem la bunica.', 'Shanba kuni buvinikiga boramiz.', 'शनिवार को हम दादी के पास जा रहे हैं।', 'يوم السبت نذهب إلى الجدة.'],
+					['Am Samstag fahren wir zur Oma.', 'Am Samstag fahren wir zum Oma.', 'Am Samstag fahren wir nach Oma.'], 'Am Samstag fahren wir zur Oma.'],
+				['gw', ['Бабушка едет в город на трамвае', 'Grandma goes into town by tram', 'Бабуся їде в місто трамваєм', 'Babcia jedzie do miasta tramwajem', 'La abuela va a la ciudad en tranvía', 'Mamie va en ville en tram', 'Büyükanne şehre tramvayla gidiyor', 'Bunica merge în oraș cu tramvaiul', 'Buvi shaharga tramvayda boradi', 'दादी ट्राम से शहर जाती हैं', 'تذهب الجدة إلى المدينة بالترام'],
+					'Oma fährt ___ der Straßenbahn in die Stadt.', 'mit'],
+				['gw', ['Сначала мы идём на вокзал', 'First we go to the station', 'Спочатку ми йдемо на вокзал', 'Najpierw idziemy na dworzec', 'Primero vamos a la estación', 'D’abord, nous allons à la gare', 'Önce gara gidiyoruz', 'Mai întâi mergem la gară', 'Avval vokzalga boramiz', 'पहले हम स्टेशन जाते हैं', 'أولًا نذهب إلى المحطة'],
+					'Zuerst gehen wir ___ Bahnhof.', 'zum'],
+				['ro', ['Бабушка живёт в маленькой деревне', 'Grandma lives in a small village', 'Бабуся живе в маленькому селі', 'Babcia mieszka w małej wsi', 'La abuela vive en un pueblo pequeño', 'Mamie habite dans un petit village', 'Büyükanne küçük bir köyde yaşıyor', 'Bunica locuiește într-un sat mic', 'Buvi kichik qishloqda yashaydi', 'दादी एक छोटे गाँव में रहती हैं', 'تعيش الجدة في قرية صغيرة'],
+					'Oma wohnt in einem kleinen Dorf', ['nach']],
+				['ok', ['Неделю мы живём у бабушки с дедушкой.', 'We are staying with Grandma and Grandpa for a week.', 'Тиждень ми живемо в бабусі й дідуся.', 'Przez tydzień mieszkamy u dziadków.', 'Pasamos una semana en casa de los abuelos.', 'Nous restons une semaine chez papi et mamie.', 'Bir hafta büyükannemlerde kalıyoruz.', 'Stăm o săptămână la bunici.', 'Bir hafta bobo-buvinikida yashaymiz.', 'हम एक हफ़्ता दादा-दादी के यहाँ रहते हैं।', 'نقيم أسبوعًا عند الجد والجدة.'],
+					['Wir wohnen eine Woche bei Oma und Opa.', 'Wir wohnen eine Woche zu Oma und Opa.', 'Wir wohnen eine Woche bei die Oma und Opa.'], 'Wir wohnen eine Woche bei Oma und Opa.'],
+				['gw', ['Дедушка забирает нас с вокзала', 'Grandpa picks us up from the station', 'Дідусь забирає нас з вокзалу', 'Dziadek odbiera nas z dworca', 'El abuelo nos recoge en la estación', 'Papi vient nous chercher à la gare', 'Dede bizi garda karşılıyor', 'Bunicul ne ia de la gară', 'Bobom bizni vokzaldan olib ketadi', 'दादा हमें स्टेशन से लेते हैं', 'الجد يأخذنا من المحطة'],
+					'Opa holt uns ___ Bahnhof ab.', 'vom'],
+				['rd', ['Как семья едет к бабушке?', 'How does the family travel to Grandma?', 'Як сім’я їде до бабусі?', 'Czym rodzina jedzie do babci?', '¿Cómo viaja la familia a casa de la abuela?', 'Comment la famille va-t-elle chez mamie ?', 'Aile büyükanneye nasıl gidiyor?', 'Cu ce merge familia la bunica?', 'Oila buvinikiga nimada boradi?', 'परिवार दादी के पास कैसे जाता है?', 'كيف تسافر العائلة إلى الجدة؟'],
+					'Familie Schulz fährt im Sommer zur Oma. Oma wohnt in einem Dorf bei München. Sie fahren mit dem Zug nach München. Dort holt Opa sie mit dem Auto vom Bahnhof ab.', ['mit dem Zug und dem Auto', 'mit dem Flugzeug', 'mit dem Fahrrad'], 'mit dem Zug und dem Auto'],
+				['gw', ['Летом мы летим в Австрию', 'In summer we are flying to Austria', 'Улітку ми летимо до Австрії', 'Latem lecimy do Austrii', 'En verano volamos a Austria', 'En été, nous prenons l’avion pour l’Autriche', 'Yazın Avusturya’ya uçuyoruz', 'Vara zburăm în Austria', 'Yozda Avstriyaga uchamiz', 'गर्मियों में हम ऑस्ट्रिया उड़ेंगे', 'في الصيف نسافر جوًا إلى النمسا'],
+					'Im Sommer fliegen wir ___ Österreich.', 'nach'],
+				['gw', ['Я беру чемодан из шкафа', 'I take the suitcase out of the wardrobe', 'Я беру валізу з шафи', 'Wyjmuję walizkę z szafy', 'Saco la maleta del armario', 'Je sors la valise de l’armoire', 'Bavulu dolaptan alıyorum', 'Scot valiza din dulap', 'Chamadonni shkafdan olaman', 'मैं अलमारी से सूटकेस निकालता हूँ', 'آخذ الحقيبة من الخزانة'],
+					'Ich nehme den Koffer ___ dem Schrank.', 'aus'],
+				['ro', ['Вечером мы едем домой', 'In the evening we go home', 'Увечері ми їдемо додому', 'Wieczorem jedziemy do domu', 'Por la noche volvemos a casa', 'Le soir, nous rentrons à la maison', 'Akşam eve gidiyoruz', 'Seara mergem acasă', 'Kechqurun uyga boramiz', 'शाम को हम घर जाते हैं', 'في المساء نذهب إلى البيت'],
+					'Am Abend fahren wir nach Hause', ['zu']],
+				['ok', ['Билет я покупаю на вокзале.', 'I buy the ticket at the station.', 'Квиток я купую на вокзалі.', 'Bilet kupuję na dworcu.', 'Compro el billete en la estación.', 'J’achète le billet à la gare.', 'Bileti garda alıyorum.', 'Biletul îl cumpăr la gară.', 'Chiptani vokzalda olaman.', 'टिकट मैं स्टेशन पर ख़रीदता हूँ।', 'أشتري التذكرة في المحطة.'],
+					['Die Fahrkarte kaufe ich am Bahnhof.', 'Die Fahrkarte kaufe ich zum Bahnhof.', 'Die Fahrkarte kaufe ich im Bahnhof gekauft.'], 'Die Fahrkarte kaufe ich am Bahnhof.'],
+				['gw', ['Я еду к дедушке на велосипеде', 'I ride my bike to Grandpa’s', 'Я їду до дідуся на велосипеді', 'Jadę do dziadka rowerem', 'Voy a casa del abuelo en bici', 'Je vais chez papi à vélo', 'Dedeme bisikletle gidiyorum', 'Merg la bunicul cu bicicleta', 'Bobomnikiga velosipedda boraman', 'मैं साइकिल से दादा के पास जाता हूँ', 'أذهب إلى جدي بالدراجة'],
+					'Ich fahre mit dem Fahrrad ___ Opa.', 'zu'],
+				['gw', ['Письмо от бабушки лежит на столе', 'The letter from Grandma is on the table', 'Лист від бабусі лежить на столі', 'List od babci leży na stole', 'La carta de la abuela está en la mesa', 'La lettre de mamie est sur la table', 'Büyükannemden gelen mektup masada', 'Scrisoarea de la bunica e pe masă', 'Buvimdan kelgan xat stol ustida', 'दादी की चिट्ठी मेज़ पर है', 'رسالة الجدة على الطاولة'],
+					'Der Brief ___ Oma liegt auf dem Tisch.', 'von'],
+				['gw', ['Чемодан стоит рядом с дверью', 'The suitcase is next to the door', 'Валіза стоїть біля дверей', 'Walizka stoi obok drzwi', 'La maleta está al lado de la puerta', 'La valise est à côté de la porte', 'Bavul kapının yanında', 'Valiza stă lângă ușă', 'Chamadon eshik yonida turibdi', 'सूटकेस दरवाज़े के पास है', 'الحقيبة بجانب الباب'],
+					'Der Koffer steht neben ___ Tür.', 'der'],
+				['gv', ['Мы купили бабушке цветы', 'We bought Grandma flowers', 'Ми купили бабусі квіти', 'Kupiliśmy babci kwiaty', 'Le compramos flores a la abuela', 'Nous avons acheté des fleurs à mamie', 'Büyükanneye çiçek aldık', 'I-am cumpărat bunicii flori', 'Buvimga gul sotib oldik', 'हमने दादी के लिए फूल ख़रीदे', 'اشترينا للجدة زهورًا'],
+					'Wir haben Oma Blumen ___.', 'gekauft']
+			]
+		},
+		{
+			title: ['Мой день', 'My day', 'Мій день', 'Mój dzień', 'Mi día', 'Ma journée', 'Benim günüm', 'Ziua mea', 'Mening kunim', 'मेरा दिन', 'يومي'],
+			desc: [
+				'Практика без новой грамматики. Три вопроса: Wohin? (zum Arzt, zur Arbeit, nach Hause), Wo? (beim Arzt, bei der Arbeit, zu Hause), Woher? (vom Arzt, von der Arbeit, aus dem Haus). zu + dem = zum, zu + der = zur, bei + dem = beim, von + dem = vom.',
+				'Practice without new grammar. Three questions: Wohin? (zum Arzt, zur Arbeit, nach Hause), Wo? (beim Arzt, bei der Arbeit, zu Hause), Woher? (vom Arzt, von der Arbeit, aus dem Haus). zu + dem = zum, zu + der = zur, bei + dem = beim, von + dem = vom.',
+				'Практика без нової граматики. Три питання: Wohin? (zum Arzt, zur Arbeit, nach Hause), Wo? (beim Arzt, bei der Arbeit, zu Hause), Woher? (vom Arzt, von der Arbeit, aus dem Haus). zu + dem = zum, zu + der = zur, bei + dem = beim, von + dem = vom.',
+				'Ćwiczenie bez nowej gramatyki. Trzy pytania: Wohin? (zum Arzt, zur Arbeit, nach Hause), Wo? (beim Arzt, bei der Arbeit, zu Hause), Woher? (vom Arzt, von der Arbeit, aus dem Haus). zu + dem = zum, zu + der = zur, bei + dem = beim, von + dem = vom.',
+				'Práctica sin gramática nueva. Tres preguntas: Wohin? (zum Arzt, zur Arbeit, nach Hause), Wo? (beim Arzt, bei der Arbeit, zu Hause), Woher? (vom Arzt, von der Arbeit, aus dem Haus). zu + dem = zum, zu + der = zur, bei + dem = beim, von + dem = vom.',
+				'Entraînement sans nouvelle grammaire. Trois questions : Wohin? (zum Arzt, zur Arbeit, nach Hause), Wo? (beim Arzt, bei der Arbeit, zu Hause), Woher? (vom Arzt, von der Arbeit, aus dem Haus). zu + dem = zum, zu + der = zur, bei + dem = beim, von + dem = vom.',
+				'Yeni dilbilgisi olmadan pratik. Üç soru: Wohin? (zum Arzt, zur Arbeit, nach Hause), Wo? (beim Arzt, bei der Arbeit, zu Hause), Woher? (vom Arzt, von der Arbeit, aus dem Haus). zu + dem = zum, zu + der = zur, bei + dem = beim, von + dem = vom.',
+				'Exercițiu fără gramatică nouă. Trei întrebări: Wohin? (zum Arzt, zur Arbeit, nach Hause), Wo? (beim Arzt, bei der Arbeit, zu Hause), Woher? (vom Arzt, von der Arbeit, aus dem Haus). zu + dem = zum, zu + der = zur, bei + dem = beim, von + dem = vom.',
+				'Yangi grammatikasiz mashq. Uchta savol: Wohin? (zum Arzt, zur Arbeit, nach Hause), Wo? (beim Arzt, bei der Arbeit, zu Hause), Woher? (vom Arzt, von der Arbeit, aus dem Haus). zu + dem = zum, zu + der = zur, bei + dem = beim, von + dem = vom.',
+				'बिना नए व्याकरण का अभ्यास। तीन सवाल: Wohin? (zum Arzt, zur Arbeit, nach Hause), Wo? (beim Arzt, bei der Arbeit, zu Hause), Woher? (vom Arzt, von der Arbeit, aus dem Haus)। zu + dem = zum, zu + der = zur, bei + dem = beim, von + dem = vom.',
+				'تدريب بلا قواعد جديدة. ثلاثة أسئلة: Wohin? (zum Arzt و zur Arbeit و nach Hause) و Wo? (beim Arzt و bei der Arbeit و zu Hause) و Woher? (vom Arzt و von der Arbeit و aus dem Haus). zu + dem = zum و zu + der = zur و bei + dem = beim و von + dem = vom.'
+			],
+			vocab: [
+				['die Arbeit', 'работа', 'work', 'робота', 'praca', 'el trabajo', 'le travail', 'iş', 'munca', 'ish', 'काम', 'العمل'],
+				['der Supermarkt', 'супермаркет', 'supermarket', 'супермаркет', 'supermarket', 'el supermercado', 'le supermarché', 'süpermarket', 'supermarketul', 'supermarket', 'सुपरमार्केट', 'السوبرماركت'],
+				['der Kindergarten', 'детский сад', 'nursery, kindergarten', 'дитячий садок', 'przedszkole', 'la guardería', 'la maternelle', 'anaokulu', 'grădinița', 'bolalar bog‘chasi', 'किंडरगार्टन', 'الروضة'],
+				['die Freundin', 'подруга', 'friend (female)', 'подруга', 'przyjaciółka', 'la amiga', 'l’amie', 'kız arkadaş', 'prietena', 'dugona', 'सहेली', 'الصديقة'],
+				['das Büro', 'офис', 'office', 'офіс', 'biuro', 'la oficina', 'le bureau', 'ofis', 'biroul', 'ofis', 'दफ़्तर', 'المكتب']
+			],
+			tasks: [
+				['tr', ['Утром я еду на работу на автобусе.', 'In the morning I go to work by bus.', 'Уранці я їду на роботу автобусом.', 'Rano jadę do pracy autobusem.', 'Por la mañana voy al trabajo en autobús.', 'Le matin, je vais au travail en bus.', 'Sabah işe otobüsle gidiyorum.', 'Dimineața merg la muncă cu autobuzul.', 'Ertalab ishga avtobusda boraman.', 'सुबह मैं बस से काम पर जाता हूँ।', 'في الصباح أذهب إلى العمل بالحافلة.'],
+					['Am Morgen fahre ich mit dem Bus zur Arbeit.', 'Am Morgen fahre ich mit dem Bus zum Arbeit.', 'Am Morgen fahre ich mit den Bus zur Arbeit.'], 'Am Morgen fahre ich mit dem Bus zur Arbeit.'],
+				['gw', ['Сначала я отвожу сына в детский сад', 'First I take my son to the nursery', 'Спочатку я відвожу сина в дитячий садок', 'Najpierw zawożę syna do przedszkola', 'Primero llevo a mi hijo a la guardería', 'D’abord, j’emmène mon fils à la maternelle', 'Önce oğlumu anaokuluna götürüyorum', 'Mai întâi îmi duc fiul la grădiniță', 'Avval o‘g‘limni bog‘chaga olib boraman', 'पहले मैं बेटे को किंडरगार्टन ले जाता हूँ', 'أولًا آخذ ابني إلى الروضة'],
+					'Zuerst bringe ich meinen Sohn ___ Kindergarten.', 'zum'],
+				['gw', ['В обед я в офисе', 'At lunchtime I am in the office', 'В обід я в офісі', 'W południe jestem w biurze', 'A mediodía estoy en la oficina', 'À midi, je suis au bureau', 'Öğlen ofisteyim', 'La prânz sunt la birou', 'Tushlikda ofisdaman', 'दोपहर में मैं दफ़्तर में हूँ', 'في الظهيرة أنا في المكتب'],
+					'Am Mittag bin ich ___ Büro.', 'im'],
+				['ro', ['После работы я иду в супермаркет', 'After work I go to the supermarket', 'Після роботи я йду в супермаркет', 'Po pracy idę do supermarketu', 'Después del trabajo voy al supermercado', 'Après le travail, je vais au supermarché', 'İşten sonra süpermarkete gidiyorum', 'După muncă merg la supermarket', 'Ishdan keyin supermarketga boraman', 'काम के बाद मैं सुपरमार्केट जाता हूँ', 'بعد العمل أذهب إلى السوبرماركت'],
+					'Nach der Arbeit gehe ich zum Supermarkt', ['nach']],
+				['ok', ['Вечером я у подруги.', 'In the evening I am at my friend’s.', 'Увечері я в подруги.', 'Wieczorem jestem u przyjaciółki.', 'Por la noche estoy en casa de mi amiga.', 'Le soir, je suis chez mon amie.', 'Akşam kız arkadaşımdayım.', 'Seara sunt la prietena mea.', 'Kechqurun dugonamnikidaman.', 'शाम को मैं सहेली के यहाँ हूँ।', 'في المساء أكون عند صديقتي.'],
+					['Am Abend bin ich bei meiner Freundin.', 'Am Abend bin ich zu meiner Freundin.', 'Am Abend bin ich bei meine Freundin.'], 'Am Abend bin ich bei meiner Freundin.'],
+				['gw', ['Я прихожу с работы в шесть', 'I come home from work at six', 'Я приходжу з роботи о шостій', 'Wracam z pracy o szóstej', 'Vuelvo del trabajo a las seis', 'Je rentre du travail à six heures', 'İşten altıda geliyorum', 'Vin de la muncă la șase', 'Ishdan soat oltida kelaman', 'मैं छह बजे काम से आता हूँ', 'أعود من العمل في السادسة'],
+					'Ich komme um sechs ___ der Arbeit.', 'von'],
+				['rd', ['Где Анна в обед?', 'Where is Anna at lunchtime?', 'Де Анна в обід?', 'Gdzie jest Anna w południe?', '¿Dónde está Anna a mediodía?', 'Où est Anna à midi ?', 'Anna öğlen nerede?', 'Unde e Anna la prânz?', 'Anna tushlikda qayerda?', 'अन्ना दोपहर में कहाँ है?', 'أين آنا في الظهيرة؟'],
+					'Anna steht um sechs auf. Sie fährt mit dem Fahrrad zur Arbeit. Am Mittag ist sie beim Arzt, denn sie hat einen Termin. Am Abend kommt sie müde nach Hause.', ['beim Arzt', 'im Büro', 'zu Hause'], 'beim Arzt'],
+				['gw', ['В выходные я дома', 'At the weekend I am at home', 'На вихідних я вдома', 'W weekend jestem w domu', 'El fin de semana estoy en casa', 'Le week-end, je suis à la maison', 'Hafta sonu evdeyim', 'În weekend sunt acasă', 'Dam olish kunlari uydaman', 'वीकेंड पर मैं घर पर हूँ', 'في عطلة نهاية الأسبوع أنا في البيت'],
+					'Am Wochenende bin ich zu ___.', 'Hause'],
+				['gw', ['Мама забирает дочь из школы', 'Mum picks up her daughter from school', 'Мама забирає доньку зі школи', 'Mama odbiera córkę ze szkoły', 'Mamá recoge a su hija en el colegio', 'Maman va chercher sa fille à l’école', 'Annem kızını okuldan alıyor', 'Mama își ia fiica de la școală', 'Onam qizini maktabdan olib keladi', 'माँ बेटी को स्कूल से लाती है', 'الأم تأخذ ابنتها من المدرسة'],
+					'Mama holt die Tochter ___ der Schule ab.', 'von'],
+				['ro', ['Я иду с коллегой в кафе', 'I go to the café with my colleague', 'Я йду з колегою в кафе', 'Idę z kolegą do kawiarni', 'Voy al café con mi compañero', 'Je vais au café avec mon collègue', 'İş arkadaşımla kafeye gidiyorum', 'Merg cu colegul la cafenea', 'Hamkasbim bilan kafega boraman', 'मैं सहकर्मी के साथ कैफ़े जाता हूँ', 'أذهب مع زميلي إلى المقهى'],
+					'Ich gehe mit meinem Kollegen ins Café', ['meinen']],
+				['ok', ['Мой брат работает у врача.', 'My brother works at a doctor’s practice.', 'Мій брат працює в лікаря.', 'Mój brat pracuje u lekarza.', 'Mi hermano trabaja en una consulta médica.', 'Mon frère travaille chez un médecin.', 'Erkek kardeşim bir doktorun yanında çalışıyor.', 'Fratele meu lucrează la un medic.', 'Akam shifokor yonida ishlaydi.', 'मेरा भाई एक डॉक्टर के यहाँ काम करता है।', 'أخي يعمل عند طبيب.'],
+					['Mein Bruder arbeitet bei einem Arzt.', 'Mein Bruder arbeitet zu einem Arzt.', 'Mein Bruder arbeitet bei einen Arzt.'], 'Mein Bruder arbeitet bei einem Arzt.'],
+				['gw', ['Ты идёшь домой?', 'Are you going home?', 'Ти йдеш додому?', 'Idziesz do domu?', '¿Te vas a casa?', 'Tu rentres à la maison ?', 'Eve mi gidiyorsun?', 'Mergi acasă?', 'Uyga ketyapsanmi?', 'क्या तुम घर जा रहे हो?', 'هل تذهب إلى البيت؟'],
+					'Gehst du ___ Hause?', 'nach'],
+				['gw', ['Он выходит из офиса', 'He comes out of the office', 'Він виходить з офісу', 'Wychodzi z biura', 'Sale de la oficina', 'Il sort du bureau', 'Ofisten çıkıyor', 'Iese din birou', 'U ofisdan chiqyapti', 'वह दफ़्तर से बाहर आता है', 'يخرج من المكتب'],
+					'Er kommt ___ dem Büro.', 'aus'],
+				['gv', ['Утром я выпил кофе', 'In the morning I drank a coffee', 'Уранці я випив каву', 'Rano wypiłem kawę', 'Por la mañana me tomé un café', 'Le matin, j’ai bu un café', 'Sabah bir kahve içtim', 'Dimineața am băut o cafea', 'Ertalab qahva ichdim', 'सुबह मैंने कॉफ़ी पी', 'في الصباح شربت قهوة'],
+					'Am Morgen habe ich einen Kaffee ___.', 'getrunken'],
+				['gw', ['Сумка лежит под столом', 'The bag is under the table', 'Сумка лежить під столом', 'Torba leży pod stołem', 'La bolsa está debajo de la mesa', 'Le sac est sous la table', 'Çanta masanın altında', 'Geanta e sub masă', 'Sumka stol tagida', 'बैग मेज़ के नीचे है', 'الحقيبة تحت الطاولة'],
+					'Die Tasche liegt ___ dem Tisch.', 'unter']
+			]
+		}
+	]
+}

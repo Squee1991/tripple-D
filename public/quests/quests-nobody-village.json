@@ -1,0 +1,2590 @@
+[
+  {
+    "questId": "nobody-village-one",
+    "title": "nobodyVillageOne.questTitle",
+    "progress": "0/15",
+    "description": "nobodyVillageOne.questDescription",
+    "conditions": {
+      "goal": "nobodyVillageOne.questGoal",
+      "minCorrect": 15,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
+    "vocabulary": [
+      {
+        "word": "jemand",
+        "translation-ru": "кто-то",
+        "translation-en": "someone",
+        "translation-uk": "хтось",
+        "translation-pl": "ktoś",
+        "translation-es": "alguien",
+        "translation-fr": "quelqu’un",
+        "translation-tr": "biri",
+        "translation-ro": "cineva",
+        "translation-uz": "kimdir",
+        "translation-hi": "कोई",
+        "translation-ar": "شخص ما"
+      },
+      {
+        "word": "niemand",
+        "translation-ru": "никто",
+        "translation-en": "no one",
+        "translation-uk": "ніхто",
+        "translation-pl": "nikt",
+        "translation-es": "nadie",
+        "translation-fr": "personne",
+        "translation-tr": "kimse",
+        "translation-ro": "nimeni",
+        "translation-uz": "hech kim",
+        "translation-hi": "कोई नहीं",
+        "translation-ar": "لا أحد"
+      },
+      {
+        "word": "klopfen",
+        "translation-ru": "стучать",
+        "translation-en": "to knock",
+        "translation-uk": "стукати",
+        "translation-pl": "pukać",
+        "translation-es": "llamar a la puerta",
+        "translation-fr": "frapper",
+        "translation-tr": "kapıyı çalmak",
+        "translation-ro": "a bate",
+        "translation-uz": "taqillatmoq",
+        "translation-hi": "खटखटाना",
+        "translation-ar": "يطرق"
+      },
+      {
+        "word": "die Tür",
+        "translation-ru": "дверь",
+        "translation-en": "door",
+        "translation-uk": "двері",
+        "translation-pl": "drzwi",
+        "translation-es": "la puerta",
+        "translation-fr": "la porte",
+        "translation-tr": "kapı",
+        "translation-ro": "ușa",
+        "translation-uz": "eshik",
+        "translation-hi": "दरवाज़ा",
+        "translation-ar": "الباب"
+      },
+      {
+        "word": "die Antwort",
+        "translation-ru": "ответ",
+        "translation-en": "answer",
+        "translation-uk": "відповідь",
+        "translation-pl": "odpowiedź",
+        "translation-es": "la respuesta",
+        "translation-fr": "la réponse",
+        "translation-tr": "cevap",
+        "translation-ro": "răspunsul",
+        "translation-uz": "javob",
+        "translation-hi": "जवाब",
+        "translation-ar": "الجواب"
+      },
+      {
+        "word": "die Komödie",
+        "translation-ru": "комедия",
+        "translation-en": "comedy",
+        "translation-uk": "комедія",
+        "translation-pl": "komedia",
+        "translation-es": "la comedia",
+        "translation-fr": "la comédie",
+        "translation-tr": "komedi",
+        "translation-ro": "comedia",
+        "translation-uz": "komediya",
+        "translation-hi": "कॉमेडी",
+        "translation-ar": "الكوميديا"
+      }
+    ],
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "nobodyVillageOne.questTask1",
+        "options": [
+          "Niemand klopft an die Tür.",
+          "Jemand klopfen an die Tür.",
+          "Jemand klopft an die Tür."
+        ],
+        "answer": "Jemand klopft an die Tür.",
+        "tip": "nobodyVillageOne.questDescription"
+      },
+      {
+        "id": 2,
+        "type": "input",
+        "question": "nobodyVillageOne.questTask2",
+        "correctAnswer": "Niemand",
+        "tip": "nobodyVillageOne.questDescription"
+      },
+      {
+        "id": 3,
+        "type": "input",
+        "question": "nobodyVillageOne.questTask3",
+        "correctAnswer": "jemand",
+        "tip": "nobodyVillageOne.questDescription"
+      },
+      {
+        "id": 4,
+        "type": "reorder",
+        "question": "nobodyVillageOne.questTask4",
+        "words": [
+          "nicht",
+          "Antwort",
+          "Niemand",
+          "die",
+          "weiß"
+        ],
+        "correctOrder": [
+          "Niemand",
+          "weiß",
+          "die",
+          "Antwort"
+        ],
+        "tip": "nobodyVillageOne.questDescription"
+      },
+      {
+        "id": 5,
+        "type": "select",
+        "question": "nobodyVillageOne.questTask5",
+        "options": [
+          "Hat mich jemand anrufen?",
+          "Hat mich jemand angerufen?",
+          "Hat mich niemand nicht angerufen?"
+        ],
+        "answer": "Hat mich jemand angerufen?",
+        "tip": "nobodyVillageOne.questDescription"
+      },
+      {
+        "id": 6,
+        "type": "input",
+        "question": "nobodyVillageOne.questTask6",
+        "correctAnswer": "Niemand",
+        "tip": "nobodyVillageOne.questDescription"
+      },
+      {
+        "id": 7,
+        "type": "readAndAnswer",
+        "question": "nobodyVillageOne.questTask7",
+        "text": "Es ist zehn Uhr abends. Jemand klopft an die Tür. Anna fragt: „Wer ist da?“ Aber niemand antwortet. Dann sieht sie eine Katze vor der Tür.",
+        "options": [
+          "einen Hund",
+          "eine Katze",
+          "einen Mann"
+        ],
+        "answer": "eine Katze",
+        "tip": "nobodyVillageOne.questDescription"
+      },
+      {
+        "id": 8,
+        "type": "input",
+        "question": "nobodyVillageOne.questTask8",
+        "correctAnswer": "jemand",
+        "tip": "nobodyVillageOne.questDescription"
+      },
+      {
+        "id": 9,
+        "type": "reorder",
+        "question": "nobodyVillageOne.questTask10",
+        "words": [
+          "vergessen",
+          "seine",
+          "hat",
+          "Jemand",
+          "Niemand",
+          "Tasche"
+        ],
+        "correctOrder": [
+          "Jemand",
+          "hat",
+          "seine",
+          "Tasche",
+          "vergessen"
+        ],
+        "tip": "nobodyVillageOne.questDescription"
+      },
+      {
+        "id": 10,
+        "type": "select",
+        "question": "nobodyVillageOne.questTask11",
+        "options": [
+          "Hier niemand raucht.",
+          "Hier raucht niemand.",
+          "Hier raucht niemand nicht."
+        ],
+        "answer": "Hier raucht niemand.",
+        "tip": "nobodyVillageOne.questDescription"
+      },
+      {
+        "id": 11,
+        "type": "input",
+        "question": "choiceCrossingEight.questTask9",
+        "correctAnswer": "sind",
+        "tip": "choiceCrossingEight.questDescription",
+        "reviewOf": "choice-crossing-eight",
+        "reviewLand": "choice-crossing"
+      },
+      {
+        "id": 12,
+        "type": "input",
+        "question": "choiceCrossingFive.questTask12",
+        "correctAnswer": "Film",
+        "tip": "choiceCrossingFive.questDescription",
+        "reviewOf": "choice-crossing-five",
+        "reviewLand": "choice-crossing"
+      },
+      {
+        "id": 13,
+        "type": "input",
+        "question": "choiceCrossingTwo.questTask13",
+        "correctAnswer": "Hemd",
+        "tip": "choiceCrossingTwo.questDescription",
+        "reviewOf": "choice-crossing-two",
+        "reviewLand": "choice-crossing"
+      },
+      {
+        "id": 14,
+        "type": "input",
+        "question": "nobodyVillageOne.questTask14",
+        "correctAnswer": "diese",
+        "tip": "nobodyVillageOne.questDescription"
+      },
+      {
+        "id": 15,
+        "type": "input",
+        "question": "nobodyVillageOne.questTask15",
+        "correctAnswer": "solltest",
+        "tip": "nobodyVillageOne.questDescription"
+      }
+    ]
+  },
+  {
+    "questId": "nobody-village-two",
+    "title": "nobodyVillageTwo.questTitle",
+    "progress": "0/15",
+    "description": "nobodyVillageTwo.questDescription",
+    "conditions": {
+      "goal": "nobodyVillageTwo.questGoal",
+      "minCorrect": 15,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
+    "vocabulary": [
+      {
+        "word": "etwas",
+        "translation-ru": "что-то",
+        "translation-en": "something",
+        "translation-uk": "щось",
+        "translation-pl": "coś",
+        "translation-es": "algo",
+        "translation-fr": "quelque chose",
+        "translation-tr": "bir şey",
+        "translation-ro": "ceva",
+        "translation-uz": "nimadir",
+        "translation-hi": "कुछ",
+        "translation-ar": "شيء ما"
+      },
+      {
+        "word": "nichts",
+        "translation-ru": "ничего",
+        "translation-en": "nothing",
+        "translation-uk": "нічого",
+        "translation-pl": "nic",
+        "translation-es": "nada",
+        "translation-fr": "rien",
+        "translation-tr": "hiçbir şey",
+        "translation-ro": "nimic",
+        "translation-uz": "hech narsa",
+        "translation-hi": "कुछ नहीं",
+        "translation-ar": "لا شيء"
+      },
+      {
+        "word": "der Hunger",
+        "translation-ru": "голод",
+        "translation-en": "hunger",
+        "translation-uk": "голод",
+        "translation-pl": "głód",
+        "translation-es": "el hambre",
+        "translation-fr": "la faim",
+        "translation-tr": "açlık",
+        "translation-ro": "foamea",
+        "translation-uz": "ochlik",
+        "translation-hi": "भूख",
+        "translation-ar": "الجوع"
+      },
+      {
+        "word": "das Geräusch",
+        "translation-ru": "шум, звук",
+        "translation-en": "noise",
+        "translation-uk": "шум, звук",
+        "translation-pl": "dźwięk, hałas",
+        "translation-es": "el ruido",
+        "translation-fr": "le bruit",
+        "translation-tr": "ses",
+        "translation-ro": "zgomotul",
+        "translation-uz": "tovush",
+        "translation-hi": "आवाज़",
+        "translation-ar": "الصوت"
+      },
+      {
+        "word": "vergessen",
+        "translation-ru": "забывать",
+        "translation-en": "to forget",
+        "translation-uk": "забувати",
+        "translation-pl": "zapominać",
+        "translation-es": "olvidar",
+        "translation-fr": "oublier",
+        "translation-tr": "unutmak",
+        "translation-ro": "a uita",
+        "translation-uz": "unutmoq",
+        "translation-hi": "भूलना",
+        "translation-ar": "ينسى"
+      }
+    ],
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "nobodyVillageTwo.questTask1",
+        "options": [
+          "Ich möchte etwas trinke.",
+          "Ich möchte nichts trinken.",
+          "Ich möchte etwas trinken."
+        ],
+        "answer": "Ich möchte etwas trinken.",
+        "tip": "nobodyVillageTwo.questDescription"
+      },
+      {
+        "id": 2,
+        "type": "input",
+        "question": "nobodyVillageTwo.questTask2",
+        "correctAnswer": "nichts",
+        "tip": "nobodyVillageTwo.questDescription"
+      },
+      {
+        "id": 3,
+        "type": "input",
+        "question": "nobodyVillageTwo.questTask3",
+        "correctAnswer": "etwas",
+        "tip": "nobodyVillageTwo.questDescription"
+      },
+      {
+        "id": 4,
+        "type": "reorder",
+        "question": "nobodyVillageTwo.questTask4",
+        "words": [
+          "gekauft",
+          "nicht",
+          "nichts",
+          "Wir",
+          "haben"
+        ],
+        "correctOrder": [
+          "Wir",
+          "haben",
+          "nichts",
+          "gekauft"
+        ],
+        "tip": "nobodyVillageTwo.questDescription"
+      },
+      {
+        "id": 5,
+        "type": "select",
+        "question": "nobodyVillageTwo.questTask5",
+        "options": [
+          "Hörst etwas du?",
+          "Hörst du etwas?",
+          "Hörst du nichts etwas?"
+        ],
+        "answer": "Hörst du etwas?",
+        "tip": "nobodyVillageTwo.questDescription"
+      },
+      {
+        "id": 6,
+        "type": "input",
+        "question": "nobodyVillageTwo.questTask6",
+        "correctAnswer": "nichts",
+        "tip": "nobodyVillageTwo.questDescription"
+      },
+      {
+        "id": 7,
+        "type": "readAndAnswer",
+        "question": "nobodyVillageTwo.questTask7",
+        "text": "Paul kommt nach Hause. Er hat Hunger, aber im Kühlschrank ist nichts. Er ruft seine Freundin an: „Bringst du bitte etwas zu essen mit?“",
+        "options": [
+          "nichts",
+          "eine Pizza",
+          "etwas zu essen"
+        ],
+        "answer": "nichts",
+        "tip": "nobodyVillageTwo.questDescription"
+      },
+      {
+        "id": 8,
+        "type": "input",
+        "question": "nobodyVillageTwo.questTask8",
+        "correctAnswer": "nichts",
+        "tip": "nobodyVillageTwo.questDescription"
+      },
+      {
+        "id": 9,
+        "type": "reorder",
+        "question": "nobodyVillageTwo.questTask10",
+        "words": [
+          "Ich",
+          "dich",
+          "nichts",
+          "etwas",
+          "habe",
+          "für"
+        ],
+        "correctOrder": [
+          "Ich",
+          "habe",
+          "etwas",
+          "für",
+          "dich"
+        ],
+        "tip": "nobodyVillageTwo.questDescription"
+      },
+      {
+        "id": 10,
+        "type": "select",
+        "question": "nobodyVillageTwo.questTask11",
+        "options": [
+          "Danke, ich nichts brauche.",
+          "Danke, ich brauche nichts.",
+          "Danke, ich brauche nicht."
+        ],
+        "answer": "Danke, ich brauche nichts.",
+        "tip": "nobodyVillageTwo.questDescription"
+      },
+      {
+        "id": 11,
+        "type": "input",
+        "question": "nobodyVillageOne.questTask9",
+        "correctAnswer": "antwortet",
+        "tip": "nobodyVillageOne.questDescription",
+        "reviewOf": "nobody-village-one",
+        "reviewLand": "nobody-village"
+      },
+      {
+        "id": 12,
+        "type": "input",
+        "question": "choiceCrossingSix.questTask12",
+        "correctAnswer": "Den",
+        "tip": "choiceCrossingSix.questDescription",
+        "reviewOf": "choice-crossing-six",
+        "reviewLand": "choice-crossing"
+      },
+      {
+        "id": 13,
+        "type": "input",
+        "question": "choiceCrossingThree.questTask13",
+        "correctAnswer": "dieser",
+        "tip": "choiceCrossingThree.questDescription",
+        "reviewOf": "choice-crossing-three",
+        "reviewLand": "choice-crossing"
+      },
+      {
+        "id": 14,
+        "type": "input",
+        "question": "nobodyVillageTwo.questTask14",
+        "correctAnswer": "ein",
+        "tip": "nobodyVillageTwo.questDescription"
+      },
+      {
+        "id": 15,
+        "type": "input",
+        "question": "nobodyVillageTwo.questTask15",
+        "correctAnswer": "mehr",
+        "tip": "nobodyVillageTwo.questDescription"
+      }
+    ]
+  },
+  {
+    "questId": "nobody-village-three",
+    "title": "nobodyVillageThree.questTitle",
+    "progress": "0/15",
+    "description": "nobodyVillageThree.questDescription",
+    "conditions": {
+      "goal": "nobodyVillageThree.questGoal",
+      "minCorrect": 15,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
+    "vocabulary": [
+      {
+        "word": "alles",
+        "translation-ru": "всё",
+        "translation-en": "everything",
+        "translation-uk": "усе",
+        "translation-pl": "wszystko",
+        "translation-es": "todo",
+        "translation-fr": "tout",
+        "translation-tr": "her şey",
+        "translation-ro": "totul",
+        "translation-uz": "hammasi",
+        "translation-hi": "सब कुछ",
+        "translation-ar": "كل شيء"
+      },
+      {
+        "word": "viel",
+        "translation-ru": "много",
+        "translation-en": "much, a lot",
+        "translation-uk": "багато",
+        "translation-pl": "dużo",
+        "translation-es": "mucho",
+        "translation-fr": "beaucoup",
+        "translation-tr": "çok",
+        "translation-ro": "mult",
+        "translation-uz": "ko‘p",
+        "translation-hi": "बहुत",
+        "translation-ar": "كثير"
+      },
+      {
+        "word": "wenig",
+        "translation-ru": "мало",
+        "translation-en": "little",
+        "translation-uk": "мало",
+        "translation-pl": "mało",
+        "translation-es": "poco",
+        "translation-fr": "peu",
+        "translation-tr": "az",
+        "translation-ro": "puțin",
+        "translation-uz": "kam",
+        "translation-hi": "कम",
+        "translation-ar": "قليل"
+      },
+      {
+        "word": "verstehen",
+        "translation-ru": "понимать",
+        "translation-en": "to understand",
+        "translation-uk": "розуміти",
+        "translation-pl": "rozumieć",
+        "translation-es": "entender",
+        "translation-fr": "comprendre",
+        "translation-tr": "anlamak",
+        "translation-ro": "a înțelege",
+        "translation-uz": "tushunmoq",
+        "translation-hi": "समझना",
+        "translation-ar": "يفهم"
+      },
+      {
+        "word": "fertig",
+        "translation-ru": "готовый",
+        "translation-en": "ready, finished",
+        "translation-uk": "готовий",
+        "translation-pl": "gotowy",
+        "translation-es": "listo",
+        "translation-fr": "prêt, fini",
+        "translation-tr": "hazır",
+        "translation-ro": "gata",
+        "translation-uz": "tayyor",
+        "translation-hi": "तैयार",
+        "translation-ar": "جاهز"
+      },
+      {
+        "word": "das Geschäft",
+        "translation-ru": "магазин",
+        "translation-en": "shop",
+        "translation-uk": "магазин",
+        "translation-pl": "sklep",
+        "translation-es": "la tienda",
+        "translation-fr": "le magasin",
+        "translation-tr": "mağaza",
+        "translation-ro": "magazinul",
+        "translation-uz": "do‘kon",
+        "translation-hi": "दुकान",
+        "translation-ar": "المتجر"
+      }
+    ],
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "nobodyVillageThree.questTask1",
+        "options": [
+          "Ich habe alle verstanden.",
+          "Ich habe alles verstehen.",
+          "Ich habe alles verstanden."
+        ],
+        "answer": "Ich habe alles verstanden.",
+        "tip": "nobodyVillageThree.questDescription"
+      },
+      {
+        "id": 2,
+        "type": "input",
+        "question": "nobodyVillageThree.questTask2",
+        "correctAnswer": "Alles",
+        "tip": "nobodyVillageThree.questDescription"
+      },
+      {
+        "id": 3,
+        "type": "input",
+        "question": "nobodyVillageThree.questTask3",
+        "correctAnswer": "wenig",
+        "tip": "nobodyVillageThree.questDescription"
+      },
+      {
+        "id": 4,
+        "type": "reorder",
+        "question": "nobodyVillageThree.questTask4",
+        "words": [
+          "über",
+          "viel",
+          "Er",
+          "viele",
+          "Berlin",
+          "weiß"
+        ],
+        "correctOrder": [
+          "Er",
+          "weiß",
+          "viel",
+          "über",
+          "Berlin"
+        ],
+        "tip": "nobodyVillageThree.questDescription"
+      },
+      {
+        "id": 5,
+        "type": "select",
+        "question": "nobodyVillageThree.questTask5",
+        "options": [
+          "Alle sind schon da.",
+          "Alle ist schon da.",
+          "Alles sind schon da."
+        ],
+        "answer": "Alle sind schon da.",
+        "tip": "nobodyVillageThree.questDescription"
+      },
+      {
+        "id": 6,
+        "type": "input",
+        "question": "nobodyVillageThree.questTask6",
+        "correctAnswer": "fertig",
+        "tip": "nobodyVillageThree.questDescription"
+      },
+      {
+        "id": 7,
+        "type": "readAndAnswer",
+        "question": "nobodyVillageThree.questTask7",
+        "text": "Morgen hat Sara Geburtstag. Sie hat schon alles gekauft: Kuchen, Saft und Blumen. Alle Freunde kommen. Sie hat noch viel Arbeit, aber wenig Zeit.",
+        "options": [
+          "die Freunde angerufen",
+          "alles gekauft",
+          "den Kuchen gegessen"
+        ],
+        "answer": "alles gekauft",
+        "tip": "nobodyVillageThree.questDescription"
+      },
+      {
+        "id": 8,
+        "type": "input",
+        "question": "nobodyVillageThree.questTask8",
+        "correctAnswer": "alles",
+        "tip": "nobodyVillageThree.questDescription"
+      },
+      {
+        "id": 9,
+        "type": "reorder",
+        "question": "nobodyVillageThree.questTask10",
+        "words": [
+          "trinken",
+          "viele",
+          "Wir",
+          "Wasser",
+          "viel"
+        ],
+        "correctOrder": [
+          "Wir",
+          "trinken",
+          "viel",
+          "Wasser"
+        ],
+        "tip": "nobodyVillageThree.questDescription"
+      },
+      {
+        "id": 10,
+        "type": "select",
+        "question": "nobodyVillageThree.questTask11",
+        "options": [
+          "Ist das alles?",
+          "Ist alles das?",
+          "Ist das alle?"
+        ],
+        "answer": "Ist das alles?",
+        "tip": "nobodyVillageThree.questDescription"
+      },
+      {
+        "id": 11,
+        "type": "input",
+        "question": "nobodyVillageTwo.questTask9",
+        "correctAnswer": "brauche",
+        "tip": "nobodyVillageTwo.questDescription",
+        "reviewOf": "nobody-village-two",
+        "reviewLand": "nobody-village"
+      },
+      {
+        "id": 12,
+        "type": "input",
+        "question": "choiceCrossingSeven.questTask12",
+        "correctAnswer": "Dieser",
+        "tip": "choiceCrossingSeven.questDescription",
+        "reviewOf": "choice-crossing-seven",
+        "reviewLand": "choice-crossing"
+      },
+      {
+        "id": 13,
+        "type": "input",
+        "question": "choiceCrossingFour.questTask13",
+        "correctAnswer": "Alle",
+        "tip": "choiceCrossingFour.questDescription",
+        "reviewOf": "choice-crossing-four",
+        "reviewLand": "choice-crossing"
+      },
+      {
+        "id": 14,
+        "type": "input",
+        "question": "nobodyVillageThree.questTask14",
+        "correctAnswer": "jeden",
+        "tip": "nobodyVillageThree.questDescription"
+      },
+      {
+        "id": 15,
+        "type": "input",
+        "question": "nobodyVillageThree.questTask15",
+        "correctAnswer": "durfte",
+        "tip": "nobodyVillageThree.questDescription"
+      }
+    ]
+  },
+  {
+    "questId": "nobody-village-four",
+    "title": "nobodyVillageFour.questTitle",
+    "progress": "0/15",
+    "description": "nobodyVillageFour.questDescription",
+    "conditions": {
+      "goal": "nobodyVillageFour.questGoal",
+      "minCorrect": 15,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
+    "vocabulary": [
+      {
+        "word": "man",
+        "translation-ru": "люди вообще (безличное)",
+        "translation-en": "one, people (impersonal)",
+        "translation-uk": "люди взагалі (безособове)",
+        "translation-pl": "się (bezosobowo)",
+        "translation-es": "se, uno",
+        "translation-fr": "on",
+        "translation-tr": "insan (genel)",
+        "translation-ro": "se (impersonal)",
+        "translation-uz": "kishi (umumiy)",
+        "translation-hi": "लोग (आम तौर पर)",
+        "translation-ar": "المرء"
+      },
+      {
+        "word": "rauchen",
+        "translation-ru": "курить",
+        "translation-en": "to smoke",
+        "translation-uk": "курити",
+        "translation-pl": "palić",
+        "translation-es": "fumar",
+        "translation-fr": "fumer",
+        "translation-tr": "sigara içmek",
+        "translation-ro": "a fuma",
+        "translation-uz": "chekmoq",
+        "translation-hi": "सिगरेट पीना",
+        "translation-ar": "يدخّن"
+      },
+      {
+        "word": "parken",
+        "translation-ru": "парковаться",
+        "translation-en": "to park",
+        "translation-uk": "паркуватися",
+        "translation-pl": "parkować",
+        "translation-es": "aparcar",
+        "translation-fr": "se garer",
+        "translation-tr": "park etmek",
+        "translation-ro": "a parca",
+        "translation-uz": "mashinani qo‘ymoq",
+        "translation-hi": "पार्क करना",
+        "translation-ar": "يركن"
+      },
+      {
+        "word": "erlaubt",
+        "translation-ru": "разрешено",
+        "translation-en": "allowed",
+        "translation-uk": "дозволено",
+        "translation-pl": "dozwolone",
+        "translation-es": "permitido",
+        "translation-fr": "permis",
+        "translation-tr": "izinli",
+        "translation-ro": "permis",
+        "translation-uz": "ruxsat etilgan",
+        "translation-hi": "इजाज़त है",
+        "translation-ar": "مسموح"
+      },
+      {
+        "word": "das Schild",
+        "translation-ru": "табличка, знак",
+        "translation-en": "sign",
+        "translation-uk": "табличка, знак",
+        "translation-pl": "tabliczka, znak",
+        "translation-es": "el cartel",
+        "translation-fr": "le panneau",
+        "translation-tr": "tabela",
+        "translation-ro": "semnul",
+        "translation-uz": "belgi",
+        "translation-hi": "बोर्ड, चिह्न",
+        "translation-ar": "اللافتة"
+      },
+      {
+        "word": "aufpassen auf",
+        "translation-ru": "присматривать за",
+        "translation-en": "to look after",
+        "translation-uk": "наглядати за",
+        "translation-pl": "pilnować",
+        "translation-es": "cuidar de",
+        "translation-fr": "surveiller",
+        "translation-tr": "göz kulak olmak",
+        "translation-ro": "a avea grijă de",
+        "translation-uz": "qarab turmoq",
+        "translation-hi": "ध्यान रखना",
+        "translation-ar": "يعتني بـ"
+      }
+    ],
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "nobodyVillageFour.questTask1",
+        "options": [
+          "Hier man darf nicht rauchen.",
+          "Hier darfst man nicht rauchen.",
+          "Hier darf man nicht rauchen."
+        ],
+        "answer": "Hier darf man nicht rauchen.",
+        "tip": "nobodyVillageFour.questDescription"
+      },
+      {
+        "id": 2,
+        "type": "input",
+        "question": "nobodyVillageFour.questTask2",
+        "correctAnswer": "man",
+        "tip": "nobodyVillageFour.questDescription"
+      },
+      {
+        "id": 3,
+        "type": "input",
+        "question": "nobodyVillageFour.questTask3",
+        "correctAnswer": "parken",
+        "tip": "nobodyVillageFour.questDescription"
+      },
+      {
+        "id": 4,
+        "type": "reorder",
+        "question": "nobodyVillageFour.questTask4",
+        "words": [
+          "Deutsch",
+          "In",
+          "sprechen",
+          "man",
+          "spricht",
+          "Deutschland"
+        ],
+        "correctOrder": [
+          "In",
+          "Deutschland",
+          "spricht",
+          "man",
+          "Deutsch"
+        ],
+        "tip": "nobodyVillageFour.questDescription"
+      },
+      {
+        "id": 5,
+        "type": "select",
+        "question": "nobodyVillageFour.questTask5",
+        "options": [
+          "Was man kann hier machen?",
+          "Was kann man hier machen?",
+          "Was können man hier machen?"
+        ],
+        "answer": "Was kann man hier machen?",
+        "tip": "nobodyVillageFour.questDescription"
+      },
+      {
+        "id": 6,
+        "type": "input",
+        "question": "nobodyVillageFour.questTask6",
+        "correctAnswer": "sagt",
+        "tip": "nobodyVillageFour.questDescription"
+      },
+      {
+        "id": 7,
+        "type": "readAndAnswer",
+        "question": "nobodyVillageFour.questTask7",
+        "text": "Im Park steht ein Schild: Hier darf man nicht Fahrrad fahren. Hunde sind erlaubt, aber man muss gut auf sie aufpassen.",
+        "options": [
+          "Fahrrad fahren",
+          "spazieren gehen",
+          "mit dem Hund gehen"
+        ],
+        "answer": "Fahrrad fahren",
+        "tip": "nobodyVillageFour.questDescription"
+      },
+      {
+        "id": 8,
+        "type": "input",
+        "question": "nobodyVillageFour.questTask8",
+        "correctAnswer": "erlaubt",
+        "tip": "nobodyVillageFour.questDescription"
+      },
+      {
+        "id": 9,
+        "type": "reorder",
+        "question": "nobodyVillageFour.questTask10",
+        "words": [
+          "Das",
+          "wissen",
+          "müssen",
+          "muss",
+          "man"
+        ],
+        "correctOrder": [
+          "Das",
+          "muss",
+          "man",
+          "wissen"
+        ],
+        "tip": "nobodyVillageFour.questDescription"
+      },
+      {
+        "id": 10,
+        "type": "select",
+        "question": "nobodyVillageFour.questTask11",
+        "options": [
+          "Auf dem Schild steht: Hier dürfen man nicht parken.",
+          "Auf dem Schild steht: Hier darf man nicht parken.",
+          "Auf dem Schild steht: Hier darf man nicht parkt."
+        ],
+        "answer": "Auf dem Schild steht: Hier darf man nicht parken.",
+        "tip": "nobodyVillageFour.questDescription"
+      },
+      {
+        "id": 11,
+        "type": "input",
+        "question": "nobodyVillageThree.questTask9",
+        "correctAnswer": "schlafe",
+        "tip": "nobodyVillageThree.questDescription",
+        "reviewOf": "nobody-village-three",
+        "reviewLand": "nobody-village"
+      },
+      {
+        "id": 12,
+        "type": "input",
+        "question": "choiceCrossingEight.questTask12",
+        "correctAnswer": "jeden",
+        "tip": "choiceCrossingEight.questDescription",
+        "reviewOf": "choice-crossing-eight",
+        "reviewLand": "choice-crossing"
+      },
+      {
+        "id": 13,
+        "type": "input",
+        "question": "choiceCrossingFive.questTask13",
+        "correctAnswer": "Geschenk",
+        "tip": "choiceCrossingFive.questDescription",
+        "reviewOf": "choice-crossing-five",
+        "reviewLand": "choice-crossing"
+      },
+      {
+        "id": 14,
+        "type": "input",
+        "question": "nobodyVillageFour.questTask14",
+        "correctAnswer": "sollte",
+        "tip": "nobodyVillageFour.questDescription"
+      },
+      {
+        "id": 15,
+        "type": "input",
+        "question": "nobodyVillageFour.questTask15",
+        "correctAnswer": "schneller",
+        "tip": "nobodyVillageFour.questDescription"
+      }
+    ]
+  },
+  {
+    "questId": "nobody-village-five",
+    "title": "nobodyVillageFive.questTitle",
+    "progress": "0/15",
+    "description": "nobodyVillageFive.questDescription",
+    "conditions": {
+      "goal": "nobodyVillageFive.questGoal",
+      "minCorrect": 15,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
+    "vocabulary": [
+      {
+        "word": "der Stift",
+        "translation-ru": "ручка",
+        "translation-en": "pen",
+        "translation-uk": "ручка",
+        "translation-pl": "długopis",
+        "translation-es": "el bolígrafo",
+        "translation-fr": "le stylo",
+        "translation-tr": "kalem",
+        "translation-ro": "pixul",
+        "translation-uz": "ruchka",
+        "translation-hi": "पेन",
+        "translation-ar": "القلم"
+      },
+      {
+        "word": "die Tüte",
+        "translation-ru": "пакет",
+        "translation-en": "bag (plastic, paper)",
+        "translation-uk": "пакет",
+        "translation-pl": "torebka",
+        "translation-es": "la bolsa",
+        "translation-fr": "le sac",
+        "translation-tr": "poşet",
+        "translation-ro": "punga",
+        "translation-uz": "paket",
+        "translation-hi": "थैली",
+        "translation-ar": "الكيس"
+      },
+      {
+        "word": "der Regenschirm",
+        "translation-ru": "зонт",
+        "translation-en": "umbrella",
+        "translation-uk": "парасолька",
+        "translation-pl": "parasol",
+        "translation-es": "el paraguas",
+        "translation-fr": "le parapluie",
+        "translation-tr": "şemsiye",
+        "translation-ro": "umbrela",
+        "translation-uz": "soyabon",
+        "translation-hi": "छाता",
+        "translation-ar": "المظلة"
+      },
+      {
+        "word": "das Ladegerät",
+        "translation-ru": "зарядное устройство",
+        "translation-en": "charger",
+        "translation-uk": "зарядний пристрій",
+        "translation-pl": "ładowarka",
+        "translation-es": "el cargador",
+        "translation-fr": "le chargeur",
+        "translation-tr": "şarj aleti",
+        "translation-ro": "încărcătorul",
+        "translation-uz": "quvvatlagich",
+        "translation-hi": "चार्जर",
+        "translation-ar": "الشاحن"
+      },
+      {
+        "word": "leihen",
+        "translation-ru": "одалживать",
+        "translation-en": "to lend",
+        "translation-uk": "позичати",
+        "translation-pl": "pożyczać",
+        "translation-es": "prestar",
+        "translation-fr": "prêter",
+        "translation-tr": "ödünç vermek",
+        "translation-ro": "a împrumuta",
+        "translation-uz": "qarzga bermoq",
+        "translation-hi": "उधार देना",
+        "translation-ar": "يُعير"
+      },
+      {
+        "word": "der Geldautomat",
+        "translation-ru": "банкомат",
+        "translation-en": "cash machine",
+        "translation-uk": "банкомат",
+        "translation-pl": "bankomat",
+        "translation-es": "el cajero automático",
+        "translation-fr": "le distributeur de billets",
+        "translation-tr": "bankamatik",
+        "translation-ro": "bancomatul",
+        "translation-uz": "bankomat",
+        "translation-hi": "एटीएम",
+        "translation-ar": "الصراف الآلي"
+      }
+    ],
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "nobodyVillageFive.questTask1",
+        "options": [
+          "Hast du einen Stift? Ja, ich habe eins.",
+          "Hast du einen Stift? Ja, ich habe einer.",
+          "Hast du einen Stift? Ja, ich habe einen."
+        ],
+        "answer": "Hast du einen Stift? Ja, ich habe einen.",
+        "tip": "nobodyVillageFive.questDescription"
+      },
+      {
+        "id": 2,
+        "type": "input",
+        "question": "nobodyVillageFive.questTask2",
+        "correctAnswer": "eine",
+        "tip": "nobodyVillageFive.questDescription"
+      },
+      {
+        "id": 3,
+        "type": "input",
+        "question": "nobodyVillageFive.questTask3",
+        "correctAnswer": "keinen",
+        "tip": "nobodyVillageFive.questDescription"
+      },
+      {
+        "id": 4,
+        "type": "reorder",
+        "question": "nobodyVillageFive.questTask4",
+        "words": [
+          "keins",
+          "dabei",
+          "keinen",
+          "Ich",
+          "habe"
+        ],
+        "correctOrder": [
+          "Ich",
+          "habe",
+          "keins",
+          "dabei"
+        ],
+        "tip": "nobodyVillageFive.questDescription"
+      },
+      {
+        "id": 5,
+        "type": "select",
+        "question": "nobodyVillageFive.questTask5",
+        "options": [
+          "Leihst du mir einen Schirm? Ich habe keinen.",
+          "Leihst du mir einen Schirm? Ich habe keins.",
+          "Leihst du mir einen Schirm? Ich habe keiner."
+        ],
+        "answer": "Leihst du mir einen Schirm? Ich habe keinen.",
+        "tip": "nobodyVillageFive.questDescription"
+      },
+      {
+        "id": 6,
+        "type": "input",
+        "question": "nobodyVillageFive.questTask6",
+        "correctAnswer": "einer",
+        "tip": "nobodyVillageFive.questDescription"
+      },
+      {
+        "id": 7,
+        "type": "readAndAnswer",
+        "question": "nobodyVillageFive.questTask7",
+        "text": "Lisa will ein Foto machen, aber ihr Handy ist leer. Ein Ladegerät hat sie nicht. Sie fragt Tom: „Hast du eins?“ Tom sagt: „Ja, ich habe eins im Auto.“",
+        "options": [
+          "im Auto",
+          "in der Tasche",
+          "zu Hause"
+        ],
+        "answer": "im Auto",
+        "tip": "nobodyVillageFive.questDescription"
+      },
+      {
+        "id": 8,
+        "type": "input",
+        "question": "nobodyVillageFive.questTask8",
+        "correctAnswer": "einer",
+        "tip": "nobodyVillageFive.questDescription"
+      },
+      {
+        "id": 9,
+        "type": "reorder",
+        "question": "nobodyVillageFive.questTask10",
+        "words": [
+          "Platz?",
+          "keinen",
+          "keiner",
+          "sehe",
+          "freien",
+          "Einen",
+          "Ich"
+        ],
+        "correctOrder": [
+          "Einen",
+          "freien",
+          "Platz?",
+          "Ich",
+          "sehe",
+          "keinen"
+        ],
+        "tip": "nobodyVillageFive.questDescription"
+      },
+      {
+        "id": 10,
+        "type": "select",
+        "question": "nobodyVillageFive.questTask11",
+        "options": [
+          "Gibt es Äpfel? Ja, hier sind welche.",
+          "Gibt es Äpfel? Ja, hier sind keins.",
+          "Gibt es Äpfel? Ja, hier sind eine."
+        ],
+        "answer": "Gibt es Äpfel? Ja, hier sind welche.",
+        "tip": "nobodyVillageFive.questDescription"
+      },
+      {
+        "id": 11,
+        "type": "input",
+        "question": "nobodyVillageFour.questTask9",
+        "correctAnswer": "kauft",
+        "tip": "nobodyVillageFour.questDescription",
+        "reviewOf": "nobody-village-four",
+        "reviewLand": "nobody-village"
+      },
+      {
+        "id": 12,
+        "type": "input",
+        "question": "nobodyVillageOne.questTask12",
+        "correctAnswer": "niemand",
+        "tip": "nobodyVillageOne.questDescription",
+        "reviewOf": "nobody-village-one",
+        "reviewLand": "nobody-village"
+      },
+      {
+        "id": 13,
+        "type": "input",
+        "question": "choiceCrossingSix.questTask13",
+        "correctAnswer": "Die",
+        "tip": "choiceCrossingSix.questDescription",
+        "reviewOf": "choice-crossing-six",
+        "reviewLand": "choice-crossing"
+      },
+      {
+        "id": 14,
+        "type": "input",
+        "question": "nobodyVillageFive.questTask14",
+        "correctAnswer": "diesen",
+        "tip": "nobodyVillageFive.questDescription"
+      },
+      {
+        "id": 15,
+        "type": "input",
+        "question": "nobodyVillageFive.questTask15",
+        "correctAnswer": "leihen",
+        "tip": "nobodyVillageFive.questDescription"
+      }
+    ]
+  },
+  {
+    "questId": "nobody-village-six",
+    "title": "nobodyVillageSix.questTitle",
+    "progress": "0/15",
+    "description": "nobodyVillageSix.questDescription",
+    "conditions": {
+      "goal": "nobodyVillageSix.questGoal",
+      "minCorrect": 15,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
+    "vocabulary": [
+      {
+        "word": "der Schlüssel",
+        "translation-ru": "ключ",
+        "translation-en": "key",
+        "translation-uk": "ключ",
+        "translation-pl": "klucz",
+        "translation-es": "la llave",
+        "translation-fr": "la clé",
+        "translation-tr": "anahtar",
+        "translation-ro": "cheia",
+        "translation-uz": "kalit",
+        "translation-hi": "चाबी",
+        "translation-ar": "المفتاح"
+      },
+      {
+        "word": "das Handy",
+        "translation-ru": "мобильный телефон",
+        "translation-en": "mobile phone",
+        "translation-uk": "мобільний телефон",
+        "translation-pl": "komórka",
+        "translation-es": "el móvil",
+        "translation-fr": "le portable",
+        "translation-tr": "cep telefonu",
+        "translation-ro": "mobilul",
+        "translation-uz": "mobil telefon",
+        "translation-hi": "मोबाइल",
+        "translation-ar": "الهاتف المحمول"
+      },
+      {
+        "word": "die Jacke",
+        "translation-ru": "куртка",
+        "translation-en": "jacket",
+        "translation-uk": "куртка",
+        "translation-pl": "kurtka",
+        "translation-es": "la chaqueta",
+        "translation-fr": "la veste",
+        "translation-tr": "ceket",
+        "translation-ro": "geaca",
+        "translation-uz": "kurtka",
+        "translation-hi": "जैकेट",
+        "translation-ar": "السترة"
+      },
+      {
+        "word": "gehören",
+        "translation-ru": "принадлежать",
+        "translation-en": "to belong",
+        "translation-uk": "належати",
+        "translation-pl": "należeć",
+        "translation-es": "pertenecer",
+        "translation-fr": "appartenir",
+        "translation-tr": "ait olmak",
+        "translation-ro": "a aparține",
+        "translation-uz": "tegishli bo‘lmoq",
+        "translation-hi": "का होना",
+        "translation-ar": "ينتمي"
+      },
+      {
+        "word": "das Fahrrad",
+        "translation-ru": "велосипед",
+        "translation-en": "bicycle",
+        "translation-uk": "велосипед",
+        "translation-pl": "rower",
+        "translation-es": "la bicicleta",
+        "translation-fr": "le vélo",
+        "translation-tr": "bisiklet",
+        "translation-ro": "bicicleta",
+        "translation-uz": "velosiped",
+        "translation-hi": "साइकिल",
+        "translation-ar": "الدراجة"
+      },
+      {
+        "word": "der Flur",
+        "translation-ru": "коридор",
+        "translation-en": "hallway",
+        "translation-uk": "коридор",
+        "translation-pl": "korytarz",
+        "translation-es": "el pasillo",
+        "translation-fr": "le couloir",
+        "translation-tr": "koridor",
+        "translation-ro": "holul",
+        "translation-uz": "yo‘lak",
+        "translation-hi": "गलियारा",
+        "translation-ar": "الممر"
+      }
+    ],
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "nobodyVillageSix.questTask1",
+        "options": [
+          "Ist das dein Schlüssel? Ja, das ist meine.",
+          "Ist das dein Schlüssel? Ja, das ist mein.",
+          "Ist das dein Schlüssel? Ja, das ist meiner."
+        ],
+        "answer": "Ist das dein Schlüssel? Ja, das ist meiner.",
+        "tip": "nobodyVillageSix.questDescription"
+      },
+      {
+        "id": 2,
+        "type": "input",
+        "question": "nobodyVillageSix.questTask2",
+        "correctAnswer": "meine",
+        "tip": "nobodyVillageSix.questDescription"
+      },
+      {
+        "id": 3,
+        "type": "input",
+        "question": "nobodyVillageSix.questTask3",
+        "correctAnswer": "meins",
+        "tip": "nobodyVillageSix.questDescription"
+      },
+      {
+        "id": 4,
+        "type": "reorder",
+        "question": "nobodyVillageSix.questTask4",
+        "words": [
+          "deins",
+          "als",
+          "Fahrrad",
+          "dein",
+          "Mein",
+          "neuer",
+          "ist"
+        ],
+        "correctOrder": [
+          "Mein",
+          "Fahrrad",
+          "ist",
+          "neuer",
+          "als",
+          "deins"
+        ],
+        "tip": "nobodyVillageSix.questDescription"
+      },
+      {
+        "id": 5,
+        "type": "select",
+        "question": "nobodyVillageSix.questTask5",
+        "options": [
+          "Ist das ihre Tasche? Ja, das ist ihrer.",
+          "Ist das ihre Tasche? Ja, das ist ihr.",
+          "Ist das ihre Tasche? Ja, das ist ihre."
+        ],
+        "answer": "Ist das ihre Tasche? Ja, das ist ihre.",
+        "tip": "nobodyVillageSix.questDescription"
+      },
+      {
+        "id": 6,
+        "type": "input",
+        "question": "nobodyVillageSix.questTask6",
+        "correctAnswer": "deins",
+        "tip": "nobodyVillageSix.questDescription"
+      },
+      {
+        "id": 7,
+        "type": "readAndAnswer",
+        "question": "nobodyVillageSix.questTask7",
+        "text": "Nach der Party liegen drei Jacken im Flur. Die blaue gehört Max, die rote gehört Lena. Die schwarze ist meine.",
+        "options": [
+          "mir",
+          "Max",
+          "Lena"
+        ],
+        "answer": "Max",
+        "tip": "nobodyVillageSix.questDescription"
+      },
+      {
+        "id": 8,
+        "type": "input",
+        "question": "nobodyVillageSix.questTask8",
+        "correctAnswer": "seins",
+        "tip": "nobodyVillageSix.questDescription"
+      },
+      {
+        "id": 9,
+        "type": "reorder",
+        "question": "nobodyVillageSix.questTask10",
+        "words": [
+          "nicht",
+          "meiner",
+          "ist",
+          "Das",
+          "ist",
+          "deiner",
+          "deine",
+          "das"
+        ],
+        "correctOrder": [
+          "Das",
+          "ist",
+          "nicht",
+          "meiner",
+          "das",
+          "ist",
+          "deiner"
+        ],
+        "tip": "nobodyVillageSix.questDescription"
+      },
+      {
+        "id": 10,
+        "type": "select",
+        "question": "nobodyVillageSix.questTask11",
+        "options": [
+          "Ist das deine Brille? Nein, meiner ist im Auto.",
+          "Ist das deine Brille? Nein, meine ist im Auto.",
+          "Ist das deine Brille? Nein, mein ist im Auto."
+        ],
+        "answer": "Ist das deine Brille? Nein, meine ist im Auto.",
+        "tip": "nobodyVillageSix.questDescription"
+      },
+      {
+        "id": 11,
+        "type": "input",
+        "question": "nobodyVillageFive.questTask9",
+        "correctAnswer": "leihe",
+        "tip": "nobodyVillageFive.questDescription",
+        "reviewOf": "nobody-village-five",
+        "reviewLand": "nobody-village"
+      },
+      {
+        "id": 12,
+        "type": "input",
+        "question": "nobodyVillageTwo.questTask12",
+        "correctAnswer": "etwas",
+        "tip": "nobodyVillageTwo.questDescription",
+        "reviewOf": "nobody-village-two",
+        "reviewLand": "nobody-village"
+      },
+      {
+        "id": 13,
+        "type": "input",
+        "question": "choiceCrossingSeven.questTask13",
+        "correctAnswer": "Stand",
+        "tip": "choiceCrossingSeven.questDescription",
+        "reviewOf": "choice-crossing-seven",
+        "reviewLand": "choice-crossing"
+      },
+      {
+        "id": 14,
+        "type": "input",
+        "question": "nobodyVillageSix.questTask14",
+        "correctAnswer": "geben",
+        "tip": "nobodyVillageSix.questDescription"
+      },
+      {
+        "id": 15,
+        "type": "input",
+        "question": "nobodyVillageSix.questTask15",
+        "correctAnswer": "wärmer",
+        "tip": "nobodyVillageSix.questDescription"
+      }
+    ]
+  },
+  {
+    "questId": "nobody-village-seven",
+    "title": "nobodyVillageSeven.questTitle",
+    "progress": "0/15",
+    "description": "nobodyVillageSeven.questDescription",
+    "conditions": {
+      "goal": "nobodyVillageSeven.questGoal",
+      "minCorrect": 15,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
+    "vocabulary": [
+      {
+        "word": "das Fundbüro",
+        "translation-ru": "бюро находок",
+        "translation-en": "lost property office",
+        "translation-uk": "бюро знахідок",
+        "translation-pl": "biuro rzeczy znalezionych",
+        "translation-es": "la oficina de objetos perdidos",
+        "translation-fr": "le bureau des objets trouvés",
+        "translation-tr": "kayıp eşya bürosu",
+        "translation-ro": "biroul de obiecte pierdute",
+        "translation-uz": "topilmalar byurosi",
+        "translation-hi": "खोया-पाया दफ़्तर",
+        "translation-ar": "مكتب المفقودات"
+      },
+      {
+        "word": "verlieren",
+        "translation-ru": "терять",
+        "translation-en": "to lose",
+        "translation-uk": "губити",
+        "translation-pl": "gubić",
+        "translation-es": "perder",
+        "translation-fr": "perdre",
+        "translation-tr": "kaybetmek",
+        "translation-ro": "a pierde",
+        "translation-uz": "yo‘qotmoq",
+        "translation-hi": "खोना",
+        "translation-ar": "يفقد"
+      },
+      {
+        "word": "der Geldbeutel",
+        "translation-ru": "кошелёк",
+        "translation-en": "wallet, purse",
+        "translation-uk": "гаманець",
+        "translation-pl": "portfel",
+        "translation-es": "el monedero",
+        "translation-fr": "le porte-monnaie",
+        "translation-tr": "cüzdan",
+        "translation-ro": "portofelul",
+        "translation-uz": "hamyon",
+        "translation-hi": "बटुआ",
+        "translation-ar": "المحفظة"
+      },
+      {
+        "word": "abholen",
+        "translation-ru": "забирать",
+        "translation-en": "to pick up",
+        "translation-uk": "забирати",
+        "translation-pl": "odbierać",
+        "translation-es": "recoger",
+        "translation-fr": "récupérer",
+        "translation-tr": "almak (gidip)",
+        "translation-ro": "a ridica",
+        "translation-uz": "olib ketmoq",
+        "translation-hi": "ले जाना",
+        "translation-ar": "يستلم"
+      },
+      {
+        "word": "schwarz",
+        "translation-ru": "чёрный",
+        "translation-en": "black",
+        "translation-uk": "чорний",
+        "translation-pl": "czarny",
+        "translation-es": "negro",
+        "translation-fr": "noir",
+        "translation-tr": "siyah",
+        "translation-ro": "negru",
+        "translation-uz": "qora",
+        "translation-hi": "काला",
+        "translation-ar": "أسود"
+      },
+      {
+        "word": "der Schirm",
+        "translation-ru": "зонт",
+        "translation-en": "umbrella",
+        "translation-uk": "парасолька",
+        "translation-pl": "parasol",
+        "translation-es": "el paraguas",
+        "translation-fr": "le parapluie",
+        "translation-tr": "şemsiye",
+        "translation-ro": "umbrela",
+        "translation-uz": "soyabon",
+        "translation-hi": "छाता",
+        "translation-ar": "المظلة"
+      }
+    ],
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "nobodyVillageSeven.questTask1",
+        "options": [
+          "Ich habe meinen Geldbeutel verliert.",
+          "Ich habe mein Geldbeutel verloren.",
+          "Ich habe meinen Geldbeutel verloren."
+        ],
+        "answer": "Ich habe meinen Geldbeutel verloren.",
+        "tip": "nobodyVillageSeven.questDescription"
+      },
+      {
+        "id": 2,
+        "type": "input",
+        "question": "nobodyVillageSeven.questTask2",
+        "correctAnswer": "jemand",
+        "tip": "nobodyVillageSeven.questDescription"
+      },
+      {
+        "id": 3,
+        "type": "input",
+        "question": "nobodyVillageSeven.questTask3",
+        "correctAnswer": "nichts",
+        "tip": "nobodyVillageSeven.questDescription"
+      },
+      {
+        "id": 4,
+        "type": "reorder",
+        "question": "nobodyVillageSeven.questTask4",
+        "words": [
+          "das",
+          "Fundbüro",
+          "der",
+          "Wo",
+          "ist"
+        ],
+        "correctOrder": [
+          "Wo",
+          "ist",
+          "das",
+          "Fundbüro"
+        ],
+        "tip": "nobodyVillageSeven.questDescription"
+      },
+      {
+        "id": 5,
+        "type": "select",
+        "question": "nobodyVillageSeven.questTask5",
+        "options": [
+          "Ist das Ihr Geldbeutel? Nein, meine ist schwarz.",
+          "Ist das Ihr Geldbeutel? Nein, mein ist schwarz.",
+          "Ist das Ihr Geldbeutel? Nein, meiner ist schwarz."
+        ],
+        "answer": "Ist das Ihr Geldbeutel? Nein, meiner ist schwarz.",
+        "tip": "nobodyVillageSeven.questDescription"
+      },
+      {
+        "id": 6,
+        "type": "input",
+        "question": "nobodyVillageSeven.questTask6",
+        "correctAnswer": "abholen",
+        "tip": "nobodyVillageSeven.questDescription"
+      },
+      {
+        "id": 7,
+        "type": "readAndAnswer",
+        "question": "nobodyVillageSeven.questTask7",
+        "text": "Herr Roth ruft im Fundbüro an. Er hat im Bus seinen Regenschirm verloren. Die Frau sagt: „Wir haben heute drei Schirme bekommen. Ist Ihrer blau?“ „Nein, meiner ist schwarz.“",
+        "options": [
+          "ein schwarzer",
+          "ein roter",
+          "ein blauer"
+        ],
+        "answer": "ein schwarzer",
+        "tip": "nobodyVillageSeven.questDescription"
+      },
+      {
+        "id": 8,
+        "type": "input",
+        "question": "nobodyVillageSeven.questTask8",
+        "correctAnswer": "Niemand",
+        "tip": "nobodyVillageSeven.questDescription"
+      },
+      {
+        "id": 9,
+        "type": "reorder",
+        "question": "nobodyVillageSeven.questTask10",
+        "words": [
+          "Hier",
+          "man",
+          "nichts",
+          "finden",
+          "kann",
+          "etwas"
+        ],
+        "correctOrder": [
+          "Hier",
+          "kann",
+          "man",
+          "etwas",
+          "finden"
+        ],
+        "tip": "nobodyVillageSeven.questDescription"
+      },
+      {
+        "id": 10,
+        "type": "select",
+        "question": "nobodyVillageSeven.questTask11",
+        "options": [
+          "Haben Sie einen Schirm gefunden? Ja, wir haben eins.",
+          "Haben Sie einen Schirm gefunden? Ja, wir haben einen.",
+          "Haben Sie einen Schirm gefunden? Ja, wir haben einer."
+        ],
+        "answer": "Haben Sie einen Schirm gefunden? Ja, wir haben einen.",
+        "tip": "nobodyVillageSeven.questDescription"
+      },
+      {
+        "id": 11,
+        "type": "input",
+        "question": "nobodyVillageSix.questTask9",
+        "correctAnswer": "gehören",
+        "tip": "nobodyVillageSix.questDescription",
+        "reviewOf": "nobody-village-six",
+        "reviewLand": "nobody-village"
+      },
+      {
+        "id": 12,
+        "type": "input",
+        "question": "nobodyVillageThree.questTask12",
+        "correctAnswer": "wenig",
+        "tip": "nobodyVillageThree.questDescription",
+        "reviewOf": "nobody-village-three",
+        "reviewLand": "nobody-village"
+      },
+      {
+        "id": 13,
+        "type": "input",
+        "question": "choiceCrossingEight.questTask13",
+        "correctAnswer": "Balkon",
+        "tip": "choiceCrossingEight.questDescription",
+        "reviewOf": "choice-crossing-eight",
+        "reviewLand": "choice-crossing"
+      },
+      {
+        "id": 14,
+        "type": "input",
+        "question": "nobodyVillageSeven.questTask14",
+        "correctAnswer": "welchem",
+        "tip": "nobodyVillageSeven.questDescription"
+      },
+      {
+        "id": 15,
+        "type": "input",
+        "question": "nobodyVillageSeven.questTask15",
+        "correctAnswer": "konnte",
+        "tip": "nobodyVillageSeven.questDescription"
+      }
+    ]
+  },
+  {
+    "questId": "nobody-village-eight",
+    "title": "nobodyVillageEight.questTitle",
+    "progress": "0/15",
+    "description": "nobodyVillageEight.questDescription",
+    "conditions": {
+      "goal": "nobodyVillageEight.questGoal",
+      "minCorrect": 15,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
+    "vocabulary": [
+      {
+        "word": "leise",
+        "translation-ru": "тихий, тихо",
+        "translation-en": "quiet",
+        "translation-uk": "тихий, тихо",
+        "translation-pl": "cicho",
+        "translation-es": "en voz baja",
+        "translation-fr": "doucement",
+        "translation-tr": "sessiz",
+        "translation-ro": "încet",
+        "translation-uz": "sekin",
+        "translation-hi": "धीमा",
+        "translation-ar": "هادئ"
+      },
+      {
+        "word": "laut",
+        "translation-ru": "громкий, громко",
+        "translation-en": "loud",
+        "translation-uk": "гучний, голосно",
+        "translation-pl": "głośno",
+        "translation-es": "alto",
+        "translation-fr": "fort",
+        "translation-tr": "yüksek sesli",
+        "translation-ro": "tare",
+        "translation-uz": "baland",
+        "translation-hi": "तेज़",
+        "translation-ar": "عالٍ"
+      },
+      {
+        "word": "die Einladung",
+        "translation-ru": "приглашение",
+        "translation-en": "invitation",
+        "translation-uk": "запрошення",
+        "translation-pl": "zaproszenie",
+        "translation-es": "la invitación",
+        "translation-fr": "l’invitation",
+        "translation-tr": "davet",
+        "translation-ro": "invitația",
+        "translation-uz": "taklif",
+        "translation-hi": "न्योता",
+        "translation-ar": "الدعوة"
+      },
+      {
+        "word": "mitbringen",
+        "translation-ru": "приносить с собой",
+        "translation-en": "to bring along",
+        "translation-uk": "приносити з собою",
+        "translation-pl": "przynosić",
+        "translation-es": "traer",
+        "translation-fr": "apporter",
+        "translation-tr": "yanında getirmek",
+        "translation-ro": "a aduce",
+        "translation-uz": "olib kelmoq",
+        "translation-hi": "साथ लाना",
+        "translation-ar": "يُحضر معه"
+      },
+      {
+        "word": "der Saft",
+        "translation-ru": "сок",
+        "translation-en": "juice",
+        "translation-uk": "сік",
+        "translation-pl": "sok",
+        "translation-es": "el zumo",
+        "translation-fr": "le jus",
+        "translation-tr": "meyve suyu",
+        "translation-ro": "sucul",
+        "translation-uz": "sharbat",
+        "translation-hi": "जूस",
+        "translation-ar": "العصير"
+      }
+    ],
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "nobodyVillageEight.questTask1",
+        "options": [
+          "Hat niemand Saft mitgebracht?",
+          "Hat jemand Saft mitbringen?",
+          "Hat jemand Saft mitgebracht?"
+        ],
+        "answer": "Hat jemand Saft mitgebracht?",
+        "tip": "nobodyVillageEight.questDescription"
+      },
+      {
+        "id": 2,
+        "type": "input",
+        "question": "nobodyVillageEight.questTask2",
+        "correctAnswer": "mitbringen",
+        "tip": "nobodyVillageEight.questDescription"
+      },
+      {
+        "id": 3,
+        "type": "input",
+        "question": "nobodyVillageEight.questTask3",
+        "correctAnswer": "laut",
+        "tip": "nobodyVillageEight.questDescription"
+      },
+      {
+        "id": 4,
+        "type": "reorder",
+        "question": "nobodyVillageEight.questTask4",
+        "words": [
+          "sich",
+          "alles",
+          "Hier",
+          "alle",
+          "kennen"
+        ],
+        "correctOrder": [
+          "Hier",
+          "kennen",
+          "sich",
+          "alle"
+        ],
+        "tip": "nobodyVillageEight.questDescription"
+      },
+      {
+        "id": 5,
+        "type": "select",
+        "question": "nobodyVillageEight.questTask5",
+        "options": [
+          "Vielen Dank für euren Einladung!",
+          "Vielen Dank für euer Einladung!",
+          "Vielen Dank für eure Einladung!"
+        ],
+        "answer": "Vielen Dank für eure Einladung!",
+        "tip": "nobodyVillageEight.questDescription"
+      },
+      {
+        "id": 6,
+        "type": "input",
+        "question": "nobodyVillageEight.questTask6",
+        "correctAnswer": "leise",
+        "tip": "nobodyVillageEight.questDescription"
+      },
+      {
+        "id": 7,
+        "type": "readAndAnswer",
+        "question": "nobodyVillageEight.questTask7",
+        "text": "Am Samstag feiern die Nachbarn eine Party. Alle bringen etwas mit: Max bringt Saft, Eva einen Kuchen. Niemand bringt Musik mit, aber Tom hat eine Gitarre.",
+        "options": [
+          "eine Gitarre",
+          "einen Kuchen",
+          "Saft"
+        ],
+        "answer": "einen Kuchen",
+        "tip": "nobodyVillageEight.questDescription"
+      },
+      {
+        "id": 8,
+        "type": "input",
+        "question": "nobodyVillageEight.questTask8",
+        "correctAnswer": "deins",
+        "tip": "nobodyVillageEight.questDescription"
+      },
+      {
+        "id": 9,
+        "type": "reorder",
+        "question": "nobodyVillageEight.questTask10",
+        "words": [
+          "Wir",
+          "haben",
+          "nicht",
+          "gehört",
+          "nichts"
+        ],
+        "correctOrder": [
+          "Wir",
+          "haben",
+          "nichts",
+          "gehört"
+        ],
+        "tip": "nobodyVillageEight.questDescription"
+      },
+      {
+        "id": 10,
+        "type": "select",
+        "question": "nobodyVillageEight.questTask11",
+        "options": [
+          "Hast du einen Teller für mich? Ja, hier ist einer.",
+          "Hast du einen Teller für mich? Ja, hier ist eins.",
+          "Hast du einen Teller für mich? Ja, hier ist eine."
+        ],
+        "answer": "Hast du einen Teller für mich? Ja, hier ist einer.",
+        "tip": "nobodyVillageEight.questDescription"
+      },
+      {
+        "id": 11,
+        "type": "input",
+        "question": "nobodyVillageSeven.questTask9",
+        "correctAnswer": "verloren",
+        "tip": "nobodyVillageSeven.questDescription",
+        "reviewOf": "nobody-village-seven",
+        "reviewLand": "nobody-village"
+      },
+      {
+        "id": 12,
+        "type": "input",
+        "question": "nobodyVillageFour.questTask12",
+        "correctAnswer": "man",
+        "tip": "nobodyVillageFour.questDescription",
+        "reviewOf": "nobody-village-four",
+        "reviewLand": "nobody-village"
+      },
+      {
+        "id": 13,
+        "type": "input",
+        "question": "nobodyVillageOne.questTask13",
+        "correctAnswer": "Jemand",
+        "tip": "nobodyVillageOne.questDescription",
+        "reviewOf": "nobody-village-one",
+        "reviewLand": "nobody-village"
+      },
+      {
+        "id": 14,
+        "type": "input",
+        "question": "nobodyVillageEight.questTask14",
+        "correctAnswer": "einen",
+        "tip": "nobodyVillageEight.questDescription"
+      },
+      {
+        "id": 15,
+        "type": "input",
+        "question": "nobodyVillageEight.questTask15",
+        "correctAnswer": "würden",
+        "tip": "nobodyVillageEight.questDescription"
+      }
+    ]
+  },
+  {
+    "questId": "nobody-village-nine",
+    "title": "nobodyVillageNine.questTitle",
+    "progress": "0/15",
+    "description": "nobodyVillageNine.questDescription",
+    "conditions": {
+      "goal": "nobodyVillageNine.questGoal",
+      "minCorrect": 15,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
+    "vocabulary": [
+      {
+        "word": "der Koffer",
+        "translation-ru": "чемодан",
+        "translation-en": "suitcase",
+        "translation-uk": "валіза",
+        "translation-pl": "walizka",
+        "translation-es": "la maleta",
+        "translation-fr": "la valise",
+        "translation-tr": "bavul",
+        "translation-ro": "valiza",
+        "translation-uz": "chamadon",
+        "translation-hi": "सूटकेस",
+        "translation-ar": "الحقيبة"
+      },
+      {
+        "word": "das Ticket",
+        "translation-ru": "билет",
+        "translation-en": "ticket",
+        "translation-uk": "квиток",
+        "translation-pl": "bilet",
+        "translation-es": "el billete",
+        "translation-fr": "le billet",
+        "translation-tr": "bilet",
+        "translation-ro": "biletul",
+        "translation-uz": "chipta",
+        "translation-hi": "टिकट",
+        "translation-ar": "التذكرة"
+      },
+      {
+        "word": "der Pass",
+        "translation-ru": "паспорт",
+        "translation-en": "passport",
+        "translation-uk": "паспорт",
+        "translation-pl": "paszport",
+        "translation-es": "el pasaporte",
+        "translation-fr": "le passeport",
+        "translation-tr": "pasaport",
+        "translation-ro": "pașaportul",
+        "translation-uz": "pasport",
+        "translation-hi": "पासपोर्ट",
+        "translation-ar": "جواز السفر"
+      },
+      {
+        "word": "die Reise",
+        "translation-ru": "поездка",
+        "translation-en": "trip",
+        "translation-uk": "подорож",
+        "translation-pl": "podróż",
+        "translation-es": "el viaje",
+        "translation-fr": "le voyage",
+        "translation-tr": "yolculuk",
+        "translation-ro": "călătoria",
+        "translation-uz": "safar",
+        "translation-hi": "यात्रा",
+        "translation-ar": "الرحلة"
+      },
+      {
+        "word": "bereit",
+        "translation-ru": "готовый",
+        "translation-en": "ready",
+        "translation-uk": "готовий",
+        "translation-pl": "gotowy",
+        "translation-es": "preparado",
+        "translation-fr": "prêt",
+        "translation-tr": "hazır",
+        "translation-ro": "pregătit",
+        "translation-uz": "tayyor",
+        "translation-hi": "तैयार",
+        "translation-ar": "مستعد"
+      },
+      {
+        "word": "der Automat",
+        "translation-ru": "автомат",
+        "translation-en": "machine",
+        "translation-uk": "автомат",
+        "translation-pl": "automat",
+        "translation-es": "la máquina",
+        "translation-fr": "le distributeur",
+        "translation-tr": "otomat",
+        "translation-ro": "automatul",
+        "translation-uz": "avtomat",
+        "translation-hi": "मशीन",
+        "translation-ar": "الآلة"
+      }
+    ],
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "nobodyVillageNine.questTask1",
+        "options": [
+          "Hat jemand mein Pass gesehen?",
+          "Hat niemand meinen Pass gesehen?",
+          "Hat jemand meinen Pass gesehen?"
+        ],
+        "answer": "Hat jemand meinen Pass gesehen?",
+        "tip": "nobodyVillageNine.questDescription"
+      },
+      {
+        "id": 2,
+        "type": "input",
+        "question": "nobodyVillageNine.questTask2",
+        "correctAnswer": "nichts",
+        "tip": "nobodyVillageNine.questDescription"
+      },
+      {
+        "id": 3,
+        "type": "input",
+        "question": "nobodyVillageNine.questTask3",
+        "correctAnswer": "alles",
+        "tip": "nobodyVillageNine.questDescription"
+      },
+      {
+        "id": 4,
+        "type": "reorder",
+        "question": "nobodyVillageNine.questTask4",
+        "words": [
+          "Automaten",
+          "Bahnhof",
+          "man",
+          "am",
+          "Am",
+          "Tickets",
+          "kaufen",
+          "kauft"
+        ],
+        "correctOrder": [
+          "Am",
+          "Bahnhof",
+          "kauft",
+          "man",
+          "Tickets",
+          "am",
+          "Automaten"
+        ],
+        "tip": "nobodyVillageNine.questDescription"
+      },
+      {
+        "id": 5,
+        "type": "select",
+        "question": "nobodyVillageNine.questTask5",
+        "options": [
+          "Hast du ein Ticket? Ja, ich habe einen.",
+          "Hast du ein Ticket? Ja, ich habe einer.",
+          "Hast du ein Ticket? Ja, ich habe eins."
+        ],
+        "answer": "Hast du ein Ticket? Ja, ich habe eins.",
+        "tip": "nobodyVillageNine.questDescription"
+      },
+      {
+        "id": 6,
+        "type": "input",
+        "question": "nobodyVillageNine.questTask6",
+        "correctAnswer": "meiner",
+        "tip": "nobodyVillageNine.questDescription"
+      },
+      {
+        "id": 7,
+        "type": "readAndAnswer",
+        "question": "nobodyVillageNine.questTask7",
+        "text": "Familie Schulz fährt in den Urlaub. Alles ist im Auto, aber niemand findet die Tickets. Dann sagt die Tochter: „Ich habe sie! Sie sind in meiner Tasche.“",
+        "options": [
+          "bei der Tochter",
+          "bei niemandem",
+          "beim Vater"
+        ],
+        "answer": "bei der Tochter",
+        "tip": "nobodyVillageNine.questDescription"
+      },
+      {
+        "id": 8,
+        "type": "input",
+        "question": "nobodyVillageNine.questTask8",
+        "correctAnswer": "Niemand",
+        "tip": "nobodyVillageNine.questDescription"
+      },
+      {
+        "id": 9,
+        "type": "input",
+        "question": "nobodyVillageNine.questTask9",
+        "correctAnswer": "etwas",
+        "tip": "nobodyVillageNine.questDescription"
+      },
+      {
+        "id": 10,
+        "type": "reorder",
+        "question": "nobodyVillageNine.questTask10",
+        "words": [
+          "Am",
+          "müssen",
+          "früh",
+          "Flughafen",
+          "sein",
+          "muss",
+          "man"
+        ],
+        "correctOrder": [
+          "Am",
+          "Flughafen",
+          "muss",
+          "man",
+          "früh",
+          "sein"
+        ],
+        "tip": "nobodyVillageNine.questDescription"
+      },
+      {
+        "id": 11,
+        "type": "select",
+        "question": "nobodyVillageNine.questTask11",
+        "options": [
+          "Im Zimmer nichts ist mehr.",
+          "Im Zimmer ist nichts mehr.",
+          "Im Zimmer ist nicht mehr nichts."
+        ],
+        "answer": "Im Zimmer ist nichts mehr.",
+        "tip": "nobodyVillageNine.questDescription"
+      },
+      {
+        "id": 12,
+        "type": "input",
+        "question": "nobodyVillageNine.questTask12",
+        "correctAnswer": "einen",
+        "tip": "nobodyVillageNine.questDescription"
+      },
+      {
+        "id": 13,
+        "type": "input",
+        "question": "nobodyVillageNine.questTask13",
+        "correctAnswer": "alle",
+        "tip": "nobodyVillageNine.questDescription"
+      },
+      {
+        "id": 14,
+        "type": "input",
+        "question": "nobodyVillageNine.questTask14",
+        "correctAnswer": "hatte",
+        "tip": "nobodyVillageNine.questDescription"
+      },
+      {
+        "id": 15,
+        "type": "input",
+        "question": "nobodyVillageNine.questTask15",
+        "correctAnswer": "Auto",
+        "tip": "nobodyVillageNine.questDescription"
+      }
+    ]
+  },
+  {
+    "questId": "nobody-village-ten",
+    "title": "nobodyVillageTen.questTitle",
+    "progress": "0/15",
+    "description": "nobodyVillageTen.questDescription",
+    "conditions": {
+      "goal": "nobodyVillageTen.questGoal",
+      "minCorrect": 15,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
+    "vocabulary": [
+      {
+        "word": "der Ausweis",
+        "translation-ru": "удостоверение личности",
+        "translation-en": "ID card",
+        "translation-uk": "посвідчення особи",
+        "translation-pl": "dowód osobisty",
+        "translation-es": "el documento de identidad",
+        "translation-fr": "la carte d’identité",
+        "translation-tr": "kimlik kartı",
+        "translation-ro": "buletinul",
+        "translation-uz": "shaxsiy guvohnoma",
+        "translation-hi": "पहचान पत्र",
+        "translation-ar": "بطاقة الهوية"
+      },
+      {
+        "word": "die Nachricht",
+        "translation-ru": "сообщение",
+        "translation-en": "message",
+        "translation-uk": "повідомлення",
+        "translation-pl": "wiadomość",
+        "translation-es": "el mensaje",
+        "translation-fr": "le message",
+        "translation-tr": "mesaj",
+        "translation-ro": "mesajul",
+        "translation-uz": "xabar",
+        "translation-hi": "संदेश",
+        "translation-ar": "الرسالة"
+      },
+      {
+        "word": "die Hilfe",
+        "translation-ru": "помощь",
+        "translation-en": "help",
+        "translation-uk": "допомога",
+        "translation-pl": "pomoc",
+        "translation-es": "la ayuda",
+        "translation-fr": "l’aide",
+        "translation-tr": "yardım",
+        "translation-ro": "ajutorul",
+        "translation-uz": "yordam",
+        "translation-hi": "मदद",
+        "translation-ar": "المساعدة"
+      },
+      {
+        "word": "das Problem",
+        "translation-ru": "проблема",
+        "translation-en": "problem",
+        "translation-uk": "проблема",
+        "translation-pl": "problem",
+        "translation-es": "el problema",
+        "translation-fr": "le problème",
+        "translation-tr": "sorun",
+        "translation-ro": "problema",
+        "translation-uz": "muammo",
+        "translation-hi": "समस्या",
+        "translation-ar": "المشكلة"
+      },
+      {
+        "word": "fragen",
+        "translation-ru": "спрашивать",
+        "translation-en": "to ask",
+        "translation-uk": "питати",
+        "translation-pl": "pytać",
+        "translation-es": "preguntar",
+        "translation-fr": "demander",
+        "translation-tr": "sormak",
+        "translation-ro": "a întreba",
+        "translation-uz": "so‘ramoq",
+        "translation-hi": "पूछना",
+        "translation-ar": "يسأل"
+      },
+      {
+        "word": "die Ordnung",
+        "translation-ru": "порядок",
+        "translation-en": "order",
+        "translation-uk": "порядок",
+        "translation-pl": "porządek",
+        "translation-es": "el orden",
+        "translation-fr": "l’ordre",
+        "translation-tr": "düzen",
+        "translation-ro": "ordinea",
+        "translation-uz": "tartib",
+        "translation-hi": "व्यवस्था",
+        "translation-ar": "النظام"
+      }
+    ],
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "nobodyVillageTen.questTask1",
+        "options": [
+          "Spricht hier niemand nicht Deutsch?",
+          "Sprechen hier jemand Deutsch?",
+          "Spricht hier jemand Deutsch?"
+        ],
+        "answer": "Spricht hier jemand Deutsch?",
+        "tip": "nobodyVillageTen.questDescription"
+      },
+      {
+        "id": 2,
+        "type": "input",
+        "question": "nobodyVillageTen.questTask2",
+        "correctAnswer": "niemand",
+        "tip": "nobodyVillageTen.questDescription"
+      },
+      {
+        "id": 3,
+        "type": "input",
+        "question": "nobodyVillageTen.questTask3",
+        "correctAnswer": "nichts",
+        "tip": "nobodyVillageTen.questDescription"
+      },
+      {
+        "id": 4,
+        "type": "reorder",
+        "question": "nobodyVillageTen.questTask4",
+        "words": [
+          "Wo",
+          "Hilfe",
+          "hier",
+          "man",
+          "können",
+          "bekommen",
+          "kann"
+        ],
+        "correctOrder": [
+          "Wo",
+          "kann",
+          "man",
+          "hier",
+          "Hilfe",
+          "bekommen"
+        ],
+        "tip": "nobodyVillageTen.questDescription"
+      },
+      {
+        "id": 5,
+        "type": "select",
+        "question": "nobodyVillageTen.questTask5",
+        "options": [
+          "Ist alles in Ordnung? Nein, wir haben ein Probleme.",
+          "Ist alle in Ordnung? Nein, wir haben ein Problem.",
+          "Ist alles in Ordnung? Nein, wir haben ein Problem."
+        ],
+        "answer": "Ist alles in Ordnung? Nein, wir haben ein Problem.",
+        "tip": "nobodyVillageTen.questDescription"
+      },
+      {
+        "id": 6,
+        "type": "input",
+        "question": "nobodyVillageTen.questTask6",
+        "correctAnswer": "deinen",
+        "tip": "nobodyVillageTen.questDescription"
+      },
+      {
+        "id": 7,
+        "type": "readAndAnswer",
+        "question": "nobodyVillageTen.questTask7",
+        "text": "Im Kurs fragt die Lehrerin: „Hat jemand eine Frage?“ Niemand sagt etwas. Dann fragt Ali: „Wie schreibt man Fundbüro?“ Alle lachen, aber die Lehrerin hilft ihm gern.",
+        "options": [
+          "wann der Kurs beginnt",
+          "wie man ein Wort schreibt",
+          "wo das Fundbüro ist"
+        ],
+        "answer": "wie man ein Wort schreibt",
+        "tip": "nobodyVillageTen.questDescription"
+      },
+      {
+        "id": 8,
+        "type": "input",
+        "question": "nobodyVillageTen.questTask8",
+        "correctAnswer": "fragen",
+        "tip": "nobodyVillageTen.questDescription"
+      },
+      {
+        "id": 9,
+        "type": "input",
+        "question": "nobodyVillageTen.questTask9",
+        "correctAnswer": "wartet",
+        "tip": "nobodyVillageTen.questDescription"
+      },
+      {
+        "id": 10,
+        "type": "reorder",
+        "question": "nobodyVillageTen.questTask10",
+        "words": [
+          "keiner",
+          "ich",
+          "Danke",
+          "keinen",
+          "brauche"
+        ],
+        "correctOrder": [
+          "Danke",
+          "ich",
+          "brauche",
+          "keinen"
+        ],
+        "tip": "nobodyVillageTen.questDescription"
+      },
+      {
+        "id": 11,
+        "type": "select",
+        "question": "nobodyVillageTen.questTask11",
+        "options": [
+          "Ist das dein Handy? Nein, meins ist in der Tasche.",
+          "Ist das dein Handy? Nein, mein ist in der Tasche.",
+          "Ist das dein Handy? Nein, meiner ist in der Tasche."
+        ],
+        "answer": "Ist das dein Handy? Nein, meins ist in der Tasche.",
+        "tip": "nobodyVillageTen.questDescription"
+      },
+      {
+        "id": 12,
+        "type": "input",
+        "question": "nobodyVillageTen.questTask12",
+        "correctAnswer": "alles",
+        "tip": "nobodyVillageTen.questDescription"
+      },
+      {
+        "id": 13,
+        "type": "input",
+        "question": "nobodyVillageTen.questTask13",
+        "correctAnswer": "Problem",
+        "tip": "nobodyVillageTen.questDescription"
+      },
+      {
+        "id": 14,
+        "type": "input",
+        "question": "nobodyVillageTen.questTask14",
+        "correctAnswer": "konnte",
+        "tip": "nobodyVillageTen.questDescription"
+      },
+      {
+        "id": 15,
+        "type": "input",
+        "question": "nobodyVillageTen.questTask15",
+        "correctAnswer": "größte",
+        "tip": "nobodyVillageTen.questDescription"
+      }
+    ]
+  }
+]

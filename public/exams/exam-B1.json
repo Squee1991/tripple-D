@@ -1,208 +1,1687 @@
 {
   "level": "B1",
-  "modules": [
+  "language": "de",
+  "exams": [
     {
-      "id": "lesen-1",
-      "title": "Lesen",
-      "type": "multiple-choice",
-      "task": {
-        "text": "Liebe Kundin, lieber Kunde,\nunsere Filiale in der Hauptstraße ist ab dem 15. Juni geschlossen. Ab dem 20. Juni finden Sie uns in der Bahnhofstraße 12 mit erweiterten Öffnungszeiten.",
-        "question": "Wann öffnet die neue Filiale?",
-        "options": ["Am 15. Juni", "Am 20. Juni", "Am 12. Juni"],
-        "answer": "Am 20. Juni"
-      }
+      "exam_id": 1,
+      "theme": "Gemischter Test",
+      "icon": "🧩",
+      "modules": [
+        {
+          "id": "lesen-1",
+          "title": "Lesen",
+          "type": "multiple-choice",
+          "task": {
+            "text": "Liebe Kundin, lieber Kunde,\nunsere Filiale in der Hauptstraße ist ab dem 15. Juni geschlossen. Ab dem 20. Juni finden Sie uns in der Bahnhofstraße 12 mit erweiterten Öffnungszeiten.",
+            "question": "Wann öffnet die neue Filiale?",
+            "options": [
+              "Am 15. Juni",
+              "Am 20. Juni",
+              "Am 12. Juni"
+            ],
+            "answer": "Am 20. Juni"
+          }
+        },
+        {
+          "id": "lesen-2",
+          "title": "Lesen",
+          "type": "multiple-choice",
+          "task": {
+            "text": "Ich habe letzten Sommer an einem Sprachkurs in Wien teilgenommen. Die Lehrer waren freundlich, und die Atmosphäre war sehr angenehm. Nur das Essen in der Kantine hat mir nicht so gut geschmeckt.",
+            "question": "Was hat der Person nicht gefallen?",
+            "options": [
+              "Die Lehrer",
+              "Die Atmosphäre",
+              "Das Essen"
+            ],
+            "answer": "Das Essen"
+          }
+        },
+        {
+          "id": "lesen-3",
+          "title": "Lesen",
+          "type": "multiple-choice",
+          "task": {
+            "text": "Das Konzert beginnt um 19 Uhr. Bitte erscheinen Sie spätestens 15 Minuten vorher, da nach Beginn kein Einlass mehr möglich ist.",
+            "question": "Wann muss man spätestens da sein?",
+            "options": [
+              "Um 18 Uhr",
+              "Um 19 Uhr",
+              "Um 18:45 Uhr"
+            ],
+            "answer": "Um 18:45 Uhr"
+          }
+        },
+        {
+          "id": "lesen-4",
+          "title": "Lesen",
+          "type": "multiple-choice",
+          "task": {
+            "text": "Online-Kommentar: Die Lieferung war schnell und das Produkt gut verpackt. Leider war der Kundendienst schwer zu erreichen und wenig hilfreich.",
+            "question": "Was war negativ an der Erfahrung?",
+            "options": [
+              "Die Lieferung",
+              "Der Kundendienst",
+              "Die Verpackung"
+            ],
+            "answer": "Der Kundendienst"
+          }
+        },
+        {
+          "id": "lesen-5",
+          "title": "Lesen",
+          "type": "multiple-choice",
+          "task": {
+            "text": "Wegen Bauarbeiten ist die Linie U3 zwischen Hauptbahnhof und Westkreuz vom 3. bis 10. August gesperrt. Bitte nutzen Sie Ersatzbusse.",
+            "question": "Wie kommt man in dieser Zeit vom Hauptbahnhof nach Westkreuz?",
+            "options": [
+              "Mit dem Auto",
+              "Mit der U3",
+              "Mit dem Ersatzbus"
+            ],
+            "answer": "Mit dem Ersatzbus"
+          }
+        },
+        {
+          "id": "hoeren-1",
+          "title": "Hören",
+          "type": "audio-choice",
+          "task": {
+            "text": "Ich habe meine neue Stelle vor zwei Wochen angefangen. Die Aufgaben sind interessant, aber ich brauche morgens fast eine Stunde zur Arbeit.",
+            "question": "Was gefällt der Person nicht?",
+            "options": [
+              "Die Aufgaben",
+              "Der Arbeitsweg",
+              "Die Kollegen"
+            ],
+            "answer": "Der Arbeitsweg"
+          }
+        },
+        {
+          "id": "hoeren-2",
+          "title": "Hören",
+          "type": "audio-choice",
+          "task": {
+            "text": "Wir wollten grillen, aber dann hat es stark geregnet. Also sind wir spontan ins Kino gegangen.",
+            "question": "Was haben sie letztendlich gemacht?",
+            "options": [
+              "Gegrillt",
+              "Fern gesehen",
+              "Kino besucht"
+            ],
+            "answer": "Kino besucht"
+          }
+        },
+        {
+          "id": "hoeren-3",
+          "title": "Hören",
+          "type": "audio-choice",
+          "task": {
+            "text": "Ich wollte ein Fahrrad kaufen, aber das Modell, das ich mir ausgesucht hatte, war ausverkauft.",
+            "question": "Warum hat die Person kein Fahrrad gekauft?",
+            "options": [
+              "Es war zu teuer",
+              "Es war ausverkauft",
+              "Sie hatte keine Zeit"
+            ],
+            "answer": "Es war ausverkauft"
+          }
+        },
+        {
+          "id": "hoeren-4",
+          "title": "Hören",
+          "type": "audio-choice",
+          "task": {
+            "text": "In den Nachrichten: Die A7 ist nach einem Unfall zwischen Fulda und Kassel gesperrt. Autofahrer werden gebeten, die Umleitung zu nutzen.",
+            "question": "Was wird den Autofahrern empfohlen?",
+            "options": [
+              "Langsamer fahren",
+              "Andere Route wählen",
+              "Warten"
+            ],
+            "answer": "Andere Route wählen"
+          }
+        },
+        {
+          "id": "hoeren-5",
+          "title": "Hören",
+          "type": "audio-choice",
+          "task": {
+            "text": "Ich habe gestern mein Portemonnaie verloren, aber ein netter Mann hat es gefunden und zur Polizei gebracht.",
+            "question": "Was ist mit dem Portemonnaie passiert?",
+            "options": [
+              "Es wurde gefunden",
+              "Es ist noch weg",
+              "Es wurde gestohlen"
+            ],
+            "answer": "Es wurde gefunden"
+          }
+        },
+        {
+          "id": "schreiben-1",
+          "title": "Schreiben",
+          "type": "text-input",
+          "task": {
+            "instruction": "Du hast in einem Hotel übernachtet, aber es gab Probleme. Schreib eine Beschwerde an das Hotelmanagement (mind. 80 Wörter).",
+            "exampleAnswer": "Sehr geehrte Damen und Herren, ich war vom 10. bis 12. Juni Gast in Ihrem Hotel. Leider war das Zimmer nicht sauber und der Fernseher funktionierte nicht. Ich bitte Sie um eine Stellungnahme oder einen Preisnachlass. Mit freundlichen Grüßen, Martin Scholz"
+          }
+        },
+        {
+          "id": "schreiben-2",
+          "title": "Schreiben",
+          "type": "text-input",
+          "task": {
+            "instruction": "Du möchtest einen Sprachkurs besuchen. Schreib eine E-Mail an die Sprachschule und erkundige dich nach Kursbeginn, Preis und Dauer.",
+            "exampleAnswer": "Sehr geehrte Damen und Herren, ich interessiere mich für Ihren Deutschkurs. Können Sie mir bitte mitteilen, wann der nächste Kurs beginnt, wie lange er dauert und was er kostet? Vielen Dank im Voraus! Mit freundlichen Grüßen, Jana Becker"
+          }
+        },
+        {
+          "id": "schreiben-3",
+          "title": "Schreiben",
+          "type": "text-input",
+          "task": {
+            "instruction": "Du konntest an einer Geburtstagsfeier nicht teilnehmen. Schreib deinem Freund/deiner Freundin eine Nachricht und erkläre warum.",
+            "exampleAnswer": "Hallo Lisa, es tut mir leid, dass ich gestern nicht zu deiner Party kommen konnte. Ich war krank und musste zu Hause bleiben. Ich hoffe, du hattest einen schönen Tag. Wir holen das bald nach! Liebe Grüße, Tom"
+          }
+        },
+        {
+          "id": "schreiben-4",
+          "title": "Schreiben",
+          "type": "text-input",
+          "task": {
+            "instruction": "Schreib einem Freund oder einer Freundin über deine neue Wohnung. Beschreib sie und lade ihn/sie ein.",
+            "exampleAnswer": "Hallo Max! Ich bin letzte Woche umgezogen. Meine neue Wohnung ist hell und ruhig, mit einem schönen Balkon. Ich wohne jetzt in der Blumenstraße 5. Komm mich bald mal besuchen! Viele Grüße, Laura"
+          }
+        },
+        {
+          "id": "schreiben-5",
+          "title": "Schreiben",
+          "type": "text-input",
+          "task": {
+            "instruction": "Du hast bei einem Online-Shop ein defektes Gerät erhalten. Schreib eine Reklamation mit Bitte um Rückgabe oder Umtausch.",
+            "exampleAnswer": "Sehr geehrter Kundenservice, ich habe letzte Woche bei Ihnen einen Wasserkocher bestellt. Leider funktioniert das Gerät nicht richtig – es schaltet sich nicht automatisch aus. Ich bitte Sie um einen Austausch oder eine Rückerstattung. Vielen Dank!"
+          }
+        },
+        {
+          "id": "sprechen-1",
+          "title": "Sprechen",
+          "type": "speaking-prompt",
+          "task": {
+            "prompt": "Erzähl von einer Reise oder einem Ausflug, den du gemacht hast. Warum war es besonders?",
+            "expectedTopics": [
+              "Reiseerlebnis",
+              "Ort",
+              "Gefühle"
+            ]
+          }
+        },
+        {
+          "id": "sprechen-2",
+          "title": "Sprechen",
+          "type": "speaking-prompt",
+          "task": {
+            "prompt": "Was ist für dich wichtiger: viel Geld oder Freizeit? Begründe deine Meinung.",
+            "expectedTopics": [
+              "Werte",
+              "Begründung",
+              "Vergleich"
+            ]
+          }
+        },
+        {
+          "id": "sprechen-3",
+          "title": "Sprechen",
+          "type": "speaking-prompt",
+          "task": {
+            "prompt": "Beschreib deinen Alltag: Was machst du unter der Woche, was am Wochenende?",
+            "expectedTopics": [
+              "Tagesablauf",
+              "Freizeit",
+              "Vergleich"
+            ]
+          }
+        },
+        {
+          "id": "sprechen-4",
+          "title": "Sprechen",
+          "type": "speaking-prompt",
+          "task": {
+            "prompt": "Wie informierst du dich über aktuelle Ereignisse? Zeitung, Internet, Fernsehen?",
+            "expectedTopics": [
+              "Medien",
+              "Information",
+              "Vorlieben"
+            ]
+          }
+        },
+        {
+          "id": "sprechen-5",
+          "title": "Sprechen",
+          "type": "speaking-prompt",
+          "task": {
+            "prompt": "Erzähl von einer Situation, in der du jemandem geholfen hast oder dir geholfen wurde.",
+            "expectedTopics": [
+              "Erfahrung",
+              "Hilfe",
+              "Reaktion"
+            ]
+          }
+        }
+      ]
     },
     {
-      "id": "lesen-2",
-      "title": "Lesen",
-      "type": "multiple-choice",
-      "task": {
-        "text": "Ich habe letzten Sommer an einem Sprachkurs in Wien teilgenommen. Die Lehrer waren freundlich, und die Atmosphäre war sehr angenehm. Nur das Essen in der Kantine hat mir nicht so gut geschmeckt.",
-        "question": "Was hat der Person nicht gefallen?",
-        "options": ["Die Lehrer", "Die Atmosphäre", "Das Essen"],
-        "answer": "Das Essen"
-      }
+      "exam_id": 2,
+      "theme": "Arbeit und Beruf",
+      "icon": "💼",
+      "modules": [
+        {
+          "id": "lesen-1",
+          "title": "Lesen",
+          "type": "multiple-choice",
+          "task": {
+            "text": "Für unser junges Team in Frankfurt suchen wir eine Bürokauffrau oder einen Bürokaufmann in Teilzeit. Sie organisieren Termine, beantworten Kundenanfragen und unterstützen die Buchhaltung. Gute Englischkenntnisse sind erwünscht. Wir bieten flexible Arbeitszeiten und die Möglichkeit, einen Tag pro Woche im Homeoffice zu arbeiten.",
+            "question": "Was bietet die Firma?",
+            "options": [
+              "Ein hohes Gehalt",
+              "Flexible Arbeitszeiten und Homeoffice",
+              "Einen Firmenwagen"
+            ],
+            "answer": "Flexible Arbeitszeiten und Homeoffice"
+          }
+        },
+        {
+          "id": "lesen-2",
+          "title": "Lesen",
+          "type": "multiple-choice",
+          "task": {
+            "text": "Nach meiner Ausbildung zur Köchin habe ich fünf Jahre in einem Hotel gearbeitet. Die Arbeit hat mir Spaß gemacht, aber die Arbeitszeiten am Abend und am Wochenende waren sehr anstrengend. Deshalb arbeite ich jetzt in einer Schulkantine. Dort verdiene ich etwas weniger, habe aber mehr Zeit für meine Familie.",
+            "question": "Warum hat die Köchin die Stelle gewechselt?",
+            "options": [
+              "Sie wollte mehr verdienen.",
+              "Die Arbeitszeiten im Hotel waren zu anstrengend.",
+              "Das Hotel hat geschlossen."
+            ],
+            "answer": "Die Arbeitszeiten im Hotel waren zu anstrengend."
+          }
+        },
+        {
+          "id": "lesen-3",
+          "title": "Lesen",
+          "type": "multiple-choice",
+          "task": {
+            "text": "Liebe Kolleginnen und Kollegen, ab dem 1. März gilt eine neue Regelung für den Urlaub: Urlaubsanträge müssen mindestens vier Wochen vorher über das Online-Portal gestellt werden. Anträge auf Papier werden nicht mehr akzeptiert. Bei Fragen wenden Sie sich bitte an die Personalabteilung.",
+            "question": "Wie muss man Urlaub jetzt beantragen?",
+            "options": [
+              "Auf Papier beim Chef",
+              "Online, mindestens vier Wochen vorher",
+              "Telefonisch bei der Personalabteilung"
+            ],
+            "answer": "Online, mindestens vier Wochen vorher"
+          }
+        },
+        {
+          "id": "lesen-4",
+          "title": "Lesen",
+          "type": "multiple-choice",
+          "task": {
+            "text": "Immer mehr junge Menschen in Deutschland entscheiden sich nach der Schule für eine Ausbildung statt für ein Studium. Ein Grund ist, dass sie schon während der Ausbildung Geld verdienen. Außerdem suchen viele Betriebe dringend Fachkräfte, sodass die Chancen auf eine feste Stelle sehr gut sind.",
+            "question": "Warum wählen viele junge Menschen eine Ausbildung?",
+            "options": [
+              "Weil das Studium zu schwer ist",
+              "Weil sie Geld verdienen und gute Jobchancen haben",
+              "Weil die Eltern es wollen"
+            ],
+            "answer": "Weil sie Geld verdienen und gute Jobchancen haben"
+          }
+        },
+        {
+          "id": "lesen-5",
+          "title": "Lesen",
+          "type": "multiple-choice",
+          "task": {
+            "text": "Bewerbungstipps: Schicken Sie Ihre Unterlagen vollständig und ohne Fehler. Informieren Sie sich vor dem Vorstellungsgespräch über die Firma. Kommen Sie pünktlich und bereiten Sie eigene Fragen vor, zum Beispiel zu den Aufgaben oder zum Team.",
+            "question": "Was soll man vor dem Vorstellungsgespräch machen?",
+            "options": [
+              "Sich über die Firma informieren",
+              "Nach dem Gehalt fragen",
+              "Den Lebenslauf neu schreiben"
+            ],
+            "answer": "Sich über die Firma informieren"
+          }
+        },
+        {
+          "id": "hoeren-1",
+          "title": "Hören",
+          "type": "audio-choice",
+          "task": {
+            "text": "Guten Tag, hier spricht Sabine Kraus von der Firma Medtech. Vielen Dank für Ihre Bewerbung. Wir möchten Sie gern zu einem Vorstellungsgespräch einladen, und zwar am Dienstag um zehn Uhr. Bitte rufen Sie mich zurück, wenn der Termin nicht passt.",
+            "question": "Warum ruft Frau Kraus an?",
+            "options": [
+              "Sie sagt ab.",
+              "Sie lädt zu einem Gespräch ein.",
+              "Sie braucht weitere Unterlagen."
+            ],
+            "answer": "Sie lädt zu einem Gespräch ein."
+          }
+        },
+        {
+          "id": "hoeren-2",
+          "title": "Hören",
+          "type": "audio-choice",
+          "task": {
+            "text": "Ich habe lange als Ingenieur gearbeitet, aber vor zwei Jahren habe ich mich selbstständig gemacht. Jetzt habe ich ein kleines Café. Ich arbeite mehr als früher, aber ich bin mein eigener Chef und das ist mir wichtig.",
+            "question": "Was ist für den Mann wichtig?",
+            "options": [
+              "Viel Geld zu verdienen",
+              "Sein eigener Chef zu sein",
+              "Wenig zu arbeiten"
+            ],
+            "answer": "Sein eigener Chef zu sein"
+          }
+        },
+        {
+          "id": "hoeren-3",
+          "title": "Hören",
+          "type": "audio-choice",
+          "task": {
+            "text": "Achtung an alle Mitarbeiter: Wegen Bauarbeiten ist der Parkplatz hinter dem Gebäude ab Montag zwei Wochen gesperrt. Bitte nutzen Sie das Parkhaus am Bahnhof. Die Firma übernimmt die Kosten.",
+            "question": "Wer bezahlt das Parkhaus?",
+            "options": [
+              "Die Mitarbeiter",
+              "Die Firma",
+              "Die Stadt"
+            ],
+            "answer": "Die Firma"
+          }
+        },
+        {
+          "id": "hoeren-4",
+          "title": "Hören",
+          "type": "audio-choice",
+          "task": {
+            "text": "In meinem Team arbeiten Leute aus sechs Ländern. Am Anfang gab es manchmal Missverständnisse, aber inzwischen lernen wir viel voneinander. Unsere Besprechungen sind auf Englisch und Deutsch.",
+            "question": "Wie war es am Anfang im Team?",
+            "options": [
+              "Es gab manchmal Missverständnisse.",
+              "Alles war perfekt.",
+              "Niemand hat gesprochen."
+            ],
+            "answer": "Es gab manchmal Missverständnisse."
+          }
+        },
+        {
+          "id": "hoeren-5",
+          "title": "Hören",
+          "type": "audio-choice",
+          "task": {
+            "text": "Viele Arbeitnehmer wünschen sich eine Vier-Tage-Woche. In einer Umfrage sagten 70 Prozent, dass sie dafür auch weniger verdienen würden.",
+            "question": "Was würden viele Arbeitnehmer akzeptieren?",
+            "options": [
+              "Mehr Arbeit",
+              "Weniger Gehalt",
+              "Längere Arbeitstage"
+            ],
+            "answer": "Weniger Gehalt"
+          }
+        },
+        {
+          "id": "schreiben-1",
+          "title": "Schreiben",
+          "type": "text-input",
+          "task": {
+            "instruction": "Sie haben eine Stellenanzeige gelesen. Schreiben Sie eine kurze Bewerbung: Warum interessiert Sie die Stelle, welche Erfahrungen haben Sie und wann können Sie anfangen?",
+            "exampleAnswer": "Sehr geehrte Frau Kraus, mit großem Interesse habe ich Ihre Anzeige gelesen. Ich habe drei Jahre als Verkäuferin gearbeitet und kenne mich gut mit Kundenberatung aus. Ich arbeite gern im Team und spreche Deutsch, Englisch und Russisch. Ich könnte ab dem 1. Mai anfangen. Über eine Einladung zu einem Gespräch freue ich mich. Mit freundlichen Grüßen, Irina Sokolova"
+          }
+        },
+        {
+          "id": "schreiben-2",
+          "title": "Schreiben",
+          "type": "text-input",
+          "task": {
+            "instruction": "Ist es besser, viele Jahre bei einer Firma zu bleiben oder oft den Job zu wechseln? Schreiben Sie Ihre Meinung mit Gründen.",
+            "exampleAnswer": "Ich finde, beides hat Vorteile. Wenn man lange bei einer Firma bleibt, hat man Sicherheit und kennt die Kollegen gut. Wenn man den Job wechselt, lernt man neue Dinge und verdient oft mehr. Für mich ist ein Wechsel alle fünf Jahre ideal, weil man dann genug Erfahrung sammelt."
+          }
+        },
+        {
+          "id": "sprechen-1",
+          "title": "Sprechen",
+          "type": "speaking-prompt",
+          "task": {
+            "prompt": "Beschreiben Sie Ihren Traumjob. Was müssten Sie dort machen und warum passt er zu Ihnen?",
+            "expectedTopics": [
+              "Beruf",
+              "Aufgaben",
+              "Eigene Stärken",
+              "Arbeitsbedingungen"
+            ]
+          }
+        },
+        {
+          "id": "sprechen-2",
+          "title": "Sprechen",
+          "type": "speaking-prompt",
+          "task": {
+            "prompt": "Was ist Ihnen bei einer Arbeitsstelle wichtiger: ein hohes Gehalt oder nette Kollegen? Begründen Sie.",
+            "expectedTopics": [
+              "Eigene Meinung",
+              "Gründe",
+              "Beispiel"
+            ]
+          }
+        }
+      ]
     },
     {
-      "id": "lesen-3",
-      "title": "Lesen",
-      "type": "multiple-choice",
-      "task": {
-        "text": "Das Konzert beginnt um 19 Uhr. Bitte erscheinen Sie spätestens 15 Minuten vorher, da nach Beginn kein Einlass mehr möglich ist.",
-        "question": "Wann muss man spätestens da sein?",
-        "options": ["Um 18 Uhr", "Um 19 Uhr", "Um 18:45 Uhr"],
-        "answer": "Um 18:45 Uhr"
-      }
+      "exam_id": 3,
+      "theme": "Bildung und Sprachenlernen",
+      "icon": "🎓",
+      "modules": [
+        {
+          "id": "lesen-1",
+          "title": "Lesen",
+          "type": "multiple-choice",
+          "task": {
+            "text": "Die Volkshochschule bietet im Herbst neue Abendkurse an: Spanisch für Anfänger, Business-Englisch und einen Integrationskurs Deutsch. Die Kurse finden zweimal pro Woche statt. Wer sich bis Ende August anmeldet, bekommt zehn Prozent Rabatt.",
+            "question": "Wie bekommt man Rabatt?",
+            "options": [
+              "Wenn man zwei Kurse bucht",
+              "Wenn man sich bis Ende August anmeldet",
+              "Wenn man Student ist"
+            ],
+            "answer": "Wenn man sich bis Ende August anmeldet"
+          }
+        },
+        {
+          "id": "lesen-2",
+          "title": "Lesen",
+          "type": "multiple-choice",
+          "task": {
+            "text": "Ich lerne seit einem Jahr Deutsch. Am meisten hilft mir, dass ich jeden Tag deutsche Podcasts höre. Grammatik finde ich langweilig, aber ich weiß, dass sie wichtig ist. Deshalb mache ich jeden Abend zehn Minuten Übungen in einer App.",
+            "question": "Was hilft der Person am meisten?",
+            "options": [
+              "Grammatikübungen",
+              "Podcasts auf Deutsch",
+              "Ein Sprachkurs"
+            ],
+            "answer": "Podcasts auf Deutsch"
+          }
+        },
+        {
+          "id": "lesen-3",
+          "title": "Lesen",
+          "type": "multiple-choice",
+          "task": {
+            "text": "Ein Tandempartner ist eine gute Möglichkeit, eine Sprache zu üben. Man trifft sich mit einer Person, die die eigene Sprache lernen möchte. Die Hälfte der Zeit spricht man die eine Sprache, die andere Hälfte die andere. So lernen beide und es kostet nichts.",
+            "question": "Was ist ein Vorteil eines Tandems?",
+            "options": [
+              "Es ist kostenlos.",
+              "Man bekommt ein Zertifikat.",
+              "Man hat einen Lehrer."
+            ],
+            "answer": "Es ist kostenlos."
+          }
+        },
+        {
+          "id": "lesen-4",
+          "title": "Lesen",
+          "type": "multiple-choice",
+          "task": {
+            "text": "In Deutschland gehen Kinder meistens vier Jahre in die Grundschule. Danach entscheiden Eltern und Lehrer, welche weiterführende Schule das Kind besucht. Diese frühe Entscheidung wird oft kritisiert.",
+            "question": "Was wird oft kritisiert?",
+            "options": [
+              "Die lange Grundschulzeit",
+              "Die frühe Entscheidung über die Schule",
+              "Die vielen Ferien"
+            ],
+            "answer": "Die frühe Entscheidung über die Schule"
+          }
+        },
+        {
+          "id": "lesen-5",
+          "title": "Lesen",
+          "type": "multiple-choice",
+          "task": {
+            "text": "Hinweis für Prüfungsteilnehmer: Bitte erscheinen Sie 30 Minuten vor Beginn der Prüfung. Bringen Sie Ihren Ausweis mit. Handys müssen ausgeschaltet in der Tasche bleiben. Wer zu spät kommt, kann nicht teilnehmen.",
+            "question": "Was passiert, wenn man zu spät kommt?",
+            "options": [
+              "Man darf nicht teilnehmen.",
+              "Man bekommt weniger Zeit.",
+              "Man muss zahlen."
+            ],
+            "answer": "Man darf nicht teilnehmen."
+          }
+        },
+        {
+          "id": "hoeren-1",
+          "title": "Hören",
+          "type": "audio-choice",
+          "task": {
+            "text": "Hallo, ich rufe wegen des Deutschkurses B1 an. Ist noch ein Platz frei? Ja, im Kurs am Vormittag gibt es noch zwei Plätze. Der Abendkurs ist leider schon voll.",
+            "question": "Welcher Kurs ist voll?",
+            "options": [
+              "Der Vormittagskurs",
+              "Der Abendkurs",
+              "Beide Kurse"
+            ],
+            "answer": "Der Abendkurs"
+          }
+        },
+        {
+          "id": "hoeren-2",
+          "title": "Hören",
+          "type": "audio-choice",
+          "task": {
+            "text": "Als ich nach Deutschland gekommen bin, habe ich fast nichts verstanden. Ich habe dann einen Intensivkurs gemacht, fünf Tage pro Woche. Nach sechs Monaten konnte ich mich schon gut unterhalten.",
+            "question": "Wie intensiv war der Kurs?",
+            "options": [
+              "Ein Tag pro Woche",
+              "Drei Tage pro Woche",
+              "Fünf Tage pro Woche"
+            ],
+            "answer": "Fünf Tage pro Woche"
+          }
+        },
+        {
+          "id": "hoeren-3",
+          "title": "Hören",
+          "type": "audio-choice",
+          "task": {
+            "text": "Studien zeigen, dass man Vokabeln besser behält, wenn man sie in kleinen Portionen und regelmäßig wiederholt. Zehn Minuten jeden Tag sind effektiver als zwei Stunden am Wochenende.",
+            "question": "Wie lernt man Vokabeln am besten?",
+            "options": [
+              "Zwei Stunden am Wochenende",
+              "Jeden Tag ein bisschen",
+              "Nur vor der Prüfung"
+            ],
+            "answer": "Jeden Tag ein bisschen"
+          }
+        },
+        {
+          "id": "hoeren-4",
+          "title": "Hören",
+          "type": "audio-choice",
+          "task": {
+            "text": "Mein Sohn macht dieses Jahr Abitur. Danach möchte er erst ein Jahr im Ausland arbeiten und dann Informatik studieren.",
+            "question": "Was möchte der Sohn nach dem Abitur zuerst machen?",
+            "options": [
+              "Sofort studieren",
+              "Im Ausland arbeiten",
+              "Eine Ausbildung machen"
+            ],
+            "answer": "Im Ausland arbeiten"
+          }
+        },
+        {
+          "id": "hoeren-5",
+          "title": "Hören",
+          "type": "audio-choice",
+          "task": {
+            "text": "Liebe Kursteilnehmer, die Prüfungsergebnisse bekommen Sie in etwa sechs Wochen per Post. Online können Sie sie leider nicht sehen.",
+            "question": "Wie bekommt man die Ergebnisse?",
+            "options": [
+              "Per E-Mail",
+              "Per Post",
+              "Online"
+            ],
+            "answer": "Per Post"
+          }
+        },
+        {
+          "id": "schreiben-1",
+          "title": "Schreiben",
+          "type": "text-input",
+          "task": {
+            "instruction": "Sie möchten einen Deutschkurs besuchen. Schreiben Sie eine E-Mail an die Sprachschule: Ihr Niveau, Ihre Ziele und Fragen zu Kurszeiten und Kosten.",
+            "exampleAnswer": "Sehr geehrte Damen und Herren, ich lerne seit zwei Jahren Deutsch und habe ungefähr das Niveau A2. Ich möchte im nächsten Jahr die B1-Prüfung machen, weil ich eine Ausbildung beginnen möchte. Gibt es bei Ihnen Abendkurse? Wie viel kostet ein Kurs und wie lange dauert er? Mit freundlichen Grüßen, Ahmed Rahimi"
+          }
+        },
+        {
+          "id": "schreiben-2",
+          "title": "Schreiben",
+          "type": "text-input",
+          "task": {
+            "instruction": "Wie lernt man eine Fremdsprache am besten? Schreiben Sie Ihre Meinung und Ihre Erfahrungen.",
+            "exampleAnswer": "Meiner Meinung nach lernt man eine Sprache am besten, wenn man sie jeden Tag benutzt. Ich höre Musik, sehe Serien auf Deutsch und spreche mit Kollegen. Ein Kurs ist auch wichtig, weil man dort die Grammatik richtig lernt. Am schwierigsten finde ich das Sprechen am Telefon."
+          }
+        },
+        {
+          "id": "sprechen-1",
+          "title": "Sprechen",
+          "type": "speaking-prompt",
+          "task": {
+            "prompt": "Erzählen Sie, wie Sie Deutsch lernen. Was funktioniert gut und was ist schwierig?",
+            "expectedTopics": [
+              "Lernmethoden",
+              "Erfolge",
+              "Schwierigkeiten",
+              "Pläne"
+            ]
+          }
+        },
+        {
+          "id": "sprechen-2",
+          "title": "Sprechen",
+          "type": "speaking-prompt",
+          "task": {
+            "prompt": "Vergleichen Sie das Schulsystem in Ihrem Land mit dem in Deutschland. Was ist ähnlich, was ist anders?",
+            "expectedTopics": [
+              "Schuljahre",
+              "Prüfungen",
+              "Eigene Meinung"
+            ]
+          }
+        }
+      ]
     },
     {
-      "id": "lesen-4",
-      "title": "Lesen",
-      "type": "multiple-choice",
-      "task": {
-        "text": "Online-Kommentar: Die Lieferung war schnell und das Produkt gut verpackt. Leider war der Kundendienst schwer zu erreichen und wenig hilfreich.",
-        "question": "Was war negativ an der Erfahrung?",
-        "options": ["Die Lieferung", "Der Kundendienst", "Die Verpackung"],
-        "answer": "Der Kundendienst"
-      }
+      "exam_id": 4,
+      "theme": "Gesundheit und Lebensstil",
+      "icon": "🥗",
+      "modules": [
+        {
+          "id": "lesen-1",
+          "title": "Lesen",
+          "type": "multiple-choice",
+          "task": {
+            "text": "Viele Menschen sitzen bei der Arbeit acht Stunden oder länger. Ärzte empfehlen, jede Stunde kurz aufzustehen und sich zu bewegen. Schon fünf Minuten Gehen können Rückenschmerzen verhindern und helfen, sich besser zu konzentrieren.",
+            "question": "Was empfehlen Ärzte?",
+            "options": [
+              "Jede Stunde kurz aufzustehen",
+              "Mehr Kaffee zu trinken",
+              "Länger Pause zu machen"
+            ],
+            "answer": "Jede Stunde kurz aufzustehen"
+          }
+        },
+        {
+          "id": "lesen-2",
+          "title": "Lesen",
+          "type": "multiple-choice",
+          "task": {
+            "text": "Seit einem halben Jahr esse ich kaum noch Fleisch. Ich habe nicht nur abgenommen, sondern fühle mich auch fitter. Am Anfang war es schwer, neue Rezepte zu finden, aber inzwischen koche ich sehr gern vegetarisch.",
+            "question": "Was war am Anfang schwierig?",
+            "options": [
+              "Kein Fleisch zu essen",
+              "Neue Rezepte zu finden",
+              "Gemüse zu kaufen"
+            ],
+            "answer": "Neue Rezepte zu finden"
+          }
+        },
+        {
+          "id": "lesen-3",
+          "title": "Lesen",
+          "type": "multiple-choice",
+          "task": {
+            "text": "Die Krankenkasse Gesund Plus übernimmt ab sofort die Kosten für zwei Präventionskurse pro Jahr, zum Beispiel Yoga, Rückenschule oder Kurse zur Stressbewältigung. Die Teilnahmebestätigung muss innerhalb von drei Monaten eingereicht werden.",
+            "question": "Was muss man innerhalb von drei Monaten machen?",
+            "options": [
+              "Den Kurs bezahlen",
+              "Die Teilnahmebestätigung einreichen",
+              "Einen Arzt besuchen"
+            ],
+            "answer": "Die Teilnahmebestätigung einreichen"
+          }
+        },
+        {
+          "id": "lesen-4",
+          "title": "Lesen",
+          "type": "multiple-choice",
+          "task": {
+            "text": "Schlaf ist wichtiger, als viele denken. Wer regelmäßig weniger als sechs Stunden schläft, wird öfter krank. Experten raten, vor dem Schlafengehen das Handy wegzulegen, weil das Licht des Bildschirms den Schlaf stört.",
+            "question": "Warum soll man das Handy vor dem Schlafen weglegen?",
+            "options": [
+              "Weil es zu laut ist",
+              "Weil das Licht den Schlaf stört",
+              "Weil es teuer ist"
+            ],
+            "answer": "Weil das Licht den Schlaf stört"
+          }
+        },
+        {
+          "id": "lesen-5",
+          "title": "Lesen",
+          "type": "multiple-choice",
+          "task": {
+            "text": "Fitnessstudio Aktiv: Probetraining kostenlos! Mitgliedschaft ab 29 € im Monat, Mindestlaufzeit sechs Monate. Kündigung vier Wochen vor Vertragsende.",
+            "question": "Wie lange muss man mindestens Mitglied sein?",
+            "options": [
+              "Einen Monat",
+              "Vier Wochen",
+              "Sechs Monate"
+            ],
+            "answer": "Sechs Monate"
+          }
+        },
+        {
+          "id": "hoeren-1",
+          "title": "Hören",
+          "type": "audio-choice",
+          "task": {
+            "text": "Ich hatte lange Probleme mit Stress. Mein Arzt hat mir empfohlen, Sport zu machen. Jetzt gehe ich dreimal pro Woche joggen und schlafe viel besser.",
+            "question": "Was hat sich verbessert?",
+            "options": [
+              "Der Schlaf",
+              "Das Gewicht",
+              "Die Ernährung"
+            ],
+            "answer": "Der Schlaf"
+          }
+        },
+        {
+          "id": "hoeren-2",
+          "title": "Hören",
+          "type": "audio-choice",
+          "task": {
+            "text": "Guten Tag, ich brauche einen Termin für eine Impfung. Leider sind diese Woche alle Termine vergeben. Ich kann Ihnen Montag in einer Woche anbieten.",
+            "question": "Wann kann die Person kommen?",
+            "options": [
+              "Morgen",
+              "Am Montag nächste Woche",
+              "Diese Woche noch"
+            ],
+            "answer": "Am Montag nächste Woche"
+          }
+        },
+        {
+          "id": "hoeren-3",
+          "title": "Hören",
+          "type": "audio-choice",
+          "task": {
+            "text": "Ein Experte im Radio: Zucker steckt nicht nur in Süßigkeiten, sondern auch in vielen Fertigprodukten wie Ketchup oder Brot. Lesen Sie deshalb beim Einkaufen die Zutatenliste.",
+            "question": "Was rät der Experte?",
+            "options": [
+              "Keine Süßigkeiten zu essen",
+              "Die Zutatenliste zu lesen",
+              "Selbst Brot zu backen"
+            ],
+            "answer": "Die Zutatenliste zu lesen"
+          }
+        },
+        {
+          "id": "hoeren-4",
+          "title": "Hören",
+          "type": "audio-choice",
+          "task": {
+            "text": "Ich arbeite im Schichtdienst und es fällt mir schwer, regelmäßig zu essen. Ich versuche jetzt, mein Essen am Vortag vorzubereiten.",
+            "question": "Was ist das Problem der Person?",
+            "options": [
+              "Sie isst zu viel.",
+              "Sie kann nicht regelmäßig essen.",
+              "Sie kocht nicht gern."
+            ],
+            "answer": "Sie kann nicht regelmäßig essen."
+          }
+        },
+        {
+          "id": "hoeren-5",
+          "title": "Hören",
+          "type": "audio-choice",
+          "task": {
+            "text": "Wegen der starken Hitze bitten Ärzte vor allem ältere Menschen, viel zu trinken und mittags nicht nach draußen zu gehen.",
+            "question": "Wann sollen ältere Menschen drinnen bleiben?",
+            "options": [
+              "Morgens",
+              "Mittags",
+              "Abends"
+            ],
+            "answer": "Mittags"
+          }
+        },
+        {
+          "id": "schreiben-1",
+          "title": "Schreiben",
+          "type": "text-input",
+          "task": {
+            "instruction": "Ein Freund möchte gesünder leben, weiß aber nicht wie. Schreiben Sie ihm eine E-Mail mit drei konkreten Tipps.",
+            "exampleAnswer": "Lieber Tim, ich finde es super, dass du gesünder leben möchtest! Erstens: Fahr mit dem Rad zur Arbeit, das ist gut für die Fitness. Zweitens: Koch öfter selbst und kauf weniger Fertigessen. Drittens: Geh früher ins Bett und lass das Handy im Wohnzimmer. Viel Erfolg! Deine Nina"
+          }
+        },
+        {
+          "id": "schreiben-2",
+          "title": "Schreiben",
+          "type": "text-input",
+          "task": {
+            "instruction": "Sollte ungesundes Essen wie Fast Food teurer werden? Schreiben Sie Ihre Meinung mit Argumenten.",
+            "exampleAnswer": "Ich finde, eine Steuer auf Fast Food ist keine schlechte Idee. Viele Menschen essen zu viel Zucker und Fett, und die Krankheiten kosten viel Geld. Andererseits sollte jeder selbst entscheiden, was er isst. Besser wäre es, gesundes Essen billiger zu machen und in Schulen mehr über Ernährung zu lernen."
+          }
+        },
+        {
+          "id": "sprechen-1",
+          "title": "Sprechen",
+          "type": "speaking-prompt",
+          "task": {
+            "prompt": "Was tun Sie gegen Stress? Erzählen Sie von Ihren Erfahrungen.",
+            "expectedTopics": [
+              "Ursachen von Stress",
+              "Strategien",
+              "Was hilft am meisten"
+            ]
+          }
+        },
+        {
+          "id": "sprechen-2",
+          "title": "Sprechen",
+          "type": "speaking-prompt",
+          "task": {
+            "prompt": "Ist ein gesunder Lebensstil teuer? Nennen Sie Beispiele und Ihre Meinung.",
+            "expectedTopics": [
+              "Ernährung",
+              "Sport",
+              "Kosten",
+              "Eigene Meinung"
+            ]
+          }
+        }
+      ]
     },
     {
-      "id": "lesen-5",
-      "title": "Lesen",
-      "type": "multiple-choice",
-      "task": {
-        "text": "Wegen Bauarbeiten ist die Linie U3 zwischen Hauptbahnhof und Westkreuz vom 3. bis 10. August gesperrt. Bitte nutzen Sie Ersatzbusse.",
-        "question": "Wie kommt man in dieser Zeit vom Hauptbahnhof nach Westkreuz?",
-        "options": ["Mit dem Auto", "Mit der U3", "Mit dem Ersatzbus"],
-        "answer": "Mit dem Ersatzbus"
-      }
+      "exam_id": 5,
+      "theme": "Umwelt und Stadtleben",
+      "icon": "🌳",
+      "modules": [
+        {
+          "id": "lesen-1",
+          "title": "Lesen",
+          "type": "multiple-choice",
+          "task": {
+            "text": "Ab dem nächsten Jahr dürfen in der Innenstadt nur noch Autos fahren, die bestimmte Abgaswerte erfüllen. Die Stadt will so die Luftqualität verbessern. Für Anwohner gibt es eine Übergangszeit von sechs Monaten.",
+            "question": "Warum führt die Stadt die neue Regel ein?",
+            "options": [
+              "Um Parkplätze zu schaffen",
+              "Um die Luft zu verbessern",
+              "Um Geld zu verdienen"
+            ],
+            "answer": "Um die Luft zu verbessern"
+          }
+        },
+        {
+          "id": "lesen-2",
+          "title": "Lesen",
+          "type": "multiple-choice",
+          "task": {
+            "text": "Seit wir aufs Land gezogen sind, brauchen wir zwei Autos. In der Stadt sind wir alles mit dem Fahrrad oder der Straßenbahn gefahren. Dafür haben wir jetzt einen großen Garten und es ist viel ruhiger.",
+            "question": "Was ist ein Nachteil des Lebens auf dem Land?",
+            "options": [
+              "Es ist zu laut.",
+              "Man braucht Autos.",
+              "Es gibt keinen Garten."
+            ],
+            "answer": "Man braucht Autos."
+          }
+        },
+        {
+          "id": "lesen-3",
+          "title": "Lesen",
+          "type": "multiple-choice",
+          "task": {
+            "text": "Mülltrennung: Papier gehört in die blaue Tonne, Verpackungen aus Plastik und Metall in die gelbe Tonne, Essensreste in die braune Tonne. Glas bringen Sie bitte zum Container an der Ecke.",
+            "question": "Wohin gehören Essensreste?",
+            "options": [
+              "In die blaue Tonne",
+              "In die gelbe Tonne",
+              "In die braune Tonne"
+            ],
+            "answer": "In die braune Tonne"
+          }
+        },
+        {
+          "id": "lesen-4",
+          "title": "Lesen",
+          "type": "multiple-choice",
+          "task": {
+            "text": "Immer mehr Städte legen Gemeinschaftsgärten an. Dort bauen Nachbarn zusammen Gemüse an. Viele sagen, dass sie so nicht nur frisches Essen bekommen, sondern auch neue Menschen kennenlernen.",
+            "question": "Was ist laut Text ein weiterer Vorteil der Gärten?",
+            "options": [
+              "Man spart Steuern.",
+              "Man lernt neue Leute kennen.",
+              "Man bekommt eine Wohnung."
+            ],
+            "answer": "Man lernt neue Leute kennen."
+          }
+        },
+        {
+          "id": "lesen-5",
+          "title": "Lesen",
+          "type": "multiple-choice",
+          "task": {
+            "text": "Mieten in Großstädten steigen seit Jahren. In München zahlt man für eine kleine Wohnung oft mehr als 1.200 Euro. Viele junge Familien ziehen deshalb in Orte außerhalb der Stadt und pendeln.",
+            "question": "Was machen viele junge Familien?",
+            "options": [
+              "Sie ziehen ins Zentrum.",
+              "Sie ziehen aus der Stadt und pendeln.",
+              "Sie kaufen Häuser in der Stadt."
+            ],
+            "answer": "Sie ziehen aus der Stadt und pendeln."
+          }
+        },
+        {
+          "id": "hoeren-1",
+          "title": "Hören",
+          "type": "audio-choice",
+          "task": {
+            "text": "Ich versuche, weniger Plastik zu benutzen. Zum Einkaufen nehme ich immer eigene Taschen mit und Obst kaufe ich auf dem Markt ohne Verpackung.",
+            "question": "Wo kauft die Person Obst?",
+            "options": [
+              "Im Supermarkt",
+              "Auf dem Markt",
+              "Online"
+            ],
+            "answer": "Auf dem Markt"
+          }
+        },
+        {
+          "id": "hoeren-2",
+          "title": "Hören",
+          "type": "audio-choice",
+          "task": {
+            "text": "Liebe Bürgerinnen und Bürger, am Samstag findet die große Aktion Saubere Stadt statt. Treffpunkt ist um neun Uhr am Rathaus. Handschuhe und Müllsäcke bekommen Sie vor Ort.",
+            "question": "Was bekommt man vor Ort?",
+            "options": [
+              "Essen und Getränke",
+              "Handschuhe und Müllsäcke",
+              "Eine Urkunde"
+            ],
+            "answer": "Handschuhe und Müllsäcke"
+          }
+        },
+        {
+          "id": "hoeren-3",
+          "title": "Hören",
+          "type": "audio-choice",
+          "task": {
+            "text": "In unserer Straße gibt es jetzt Carsharing. Wir haben unser Auto verkauft und sparen jeden Monat über 200 Euro.",
+            "question": "Was hat die Familie gemacht?",
+            "options": [
+              "Ein neues Auto gekauft",
+              "Ihr Auto verkauft",
+              "Ein Fahrrad gekauft"
+            ],
+            "answer": "Ihr Auto verkauft"
+          }
+        },
+        {
+          "id": "hoeren-4",
+          "title": "Hören",
+          "type": "audio-choice",
+          "task": {
+            "text": "Wegen der Trockenheit bittet die Stadt alle Bürger, ihren Garten nur abends zu gießen und keine Autos mit Wasser aus dem Schlauch zu waschen.",
+            "question": "Wann soll man den Garten gießen?",
+            "options": [
+              "Morgens",
+              "Mittags",
+              "Abends"
+            ],
+            "answer": "Abends"
+          }
+        },
+        {
+          "id": "hoeren-5",
+          "title": "Hören",
+          "type": "audio-choice",
+          "task": {
+            "text": "Mich stört in der Großstadt vor allem der Lärm. Nachts höre ich die Autos und manchmal kann ich nicht schlafen.",
+            "question": "Was stört die Person?",
+            "options": [
+              "Der Lärm",
+              "Die Mieten",
+              "Die Luft"
+            ],
+            "answer": "Der Lärm"
+          }
+        },
+        {
+          "id": "schreiben-1",
+          "title": "Schreiben",
+          "type": "text-input",
+          "task": {
+            "instruction": "In Ihrem Wohnviertel soll ein Park einem Parkhaus weichen. Schreiben Sie einen Leserbrief an die Lokalzeitung und begründen Sie Ihre Meinung.",
+            "exampleAnswer": "Sehr geehrte Damen und Herren, mit großer Sorge habe ich gelesen, dass der Lindenpark einem Parkhaus weichen soll. Der Park ist der einzige grüne Ort in unserem Viertel. Kinder spielen dort und ältere Menschen gehen spazieren. Statt eines Parkhauses brauchen wir bessere Busverbindungen. Ich hoffe, dass die Stadt ihre Pläne noch einmal überdenkt. Mit freundlichen Grüßen, Paula Hartmann"
+          }
+        },
+        {
+          "id": "schreiben-2",
+          "title": "Schreiben",
+          "type": "text-input",
+          "task": {
+            "instruction": "Leben Sie lieber in der Stadt oder auf dem Land? Schreiben Sie über Vor- und Nachteile.",
+            "exampleAnswer": "Ich lebe lieber in der Stadt. Dort gibt es viele Geschäfte, Kinos und gute Verbindungen mit Bus und Bahn. Ein Nachteil sind die hohen Mieten und der Lärm. Auf dem Land ist es ruhiger und die Luft ist besser, aber man braucht fast immer ein Auto."
+          }
+        },
+        {
+          "id": "sprechen-1",
+          "title": "Sprechen",
+          "type": "speaking-prompt",
+          "task": {
+            "prompt": "Was tun Sie persönlich für die Umwelt? Was könnten Sie noch besser machen?",
+            "expectedTopics": [
+              "Alltag",
+              "Verkehr",
+              "Konsum",
+              "Pläne"
+            ]
+          }
+        },
+        {
+          "id": "sprechen-2",
+          "title": "Sprechen",
+          "type": "speaking-prompt",
+          "task": {
+            "prompt": "Beschreiben Sie den Ort, in dem Sie wohnen. Was gefällt Ihnen und was würden Sie ändern?",
+            "expectedTopics": [
+              "Beschreibung",
+              "Vorteile",
+              "Verbesserungsvorschläge"
+            ]
+          }
+        }
+      ]
     },
-
     {
-      "id": "hoeren-1",
-      "title": "Hören",
-      "type": "audio-choice",
-      "task": {
-        "text": "Ich habe meine neue Stelle vor zwei Wochen angefangen. Die Aufgaben sind interessant, aber ich brauche morgens fast eine Stunde zur Arbeit.",
-        "question": "Was gefällt der Person nicht?",
-        "options": ["Die Aufgaben", "Der Arbeitsweg", "Die Kollegen"],
-        "answer": "Der Arbeitsweg"
-      }
+      "exam_id": 6,
+      "theme": "Medien und Technik",
+      "icon": "📱",
+      "modules": [
+        {
+          "id": "lesen-1",
+          "title": "Lesen",
+          "type": "multiple-choice",
+          "task": {
+            "text": "Eine neue Studie zeigt: Jugendliche zwischen 12 und 19 Jahren verbringen durchschnittlich mehr als vier Stunden pro Tag am Smartphone. Am häufigsten nutzen sie Messenger und Videoplattformen. Klassisches Fernsehen spielt für sie kaum noch eine Rolle.",
+            "question": "Was nutzen Jugendliche am häufigsten?",
+            "options": [
+              "Das Fernsehen",
+              "Messenger und Videoplattformen",
+              "Online-Zeitungen"
+            ],
+            "answer": "Messenger und Videoplattformen"
+          }
+        },
+        {
+          "id": "lesen-2",
+          "title": "Lesen",
+          "type": "multiple-choice",
+          "task": {
+            "text": "Ich habe mir vor einem Monat eine Smartwatch gekauft. Sie zählt meine Schritte und erinnert mich daran, genug zu trinken. Manchmal nerven mich die vielen Benachrichtigungen, deshalb habe ich einige ausgeschaltet.",
+            "question": "Was nervt die Person?",
+            "options": [
+              "Der Preis",
+              "Die vielen Benachrichtigungen",
+              "Der Akku"
+            ],
+            "answer": "Die vielen Benachrichtigungen"
+          }
+        },
+        {
+          "id": "lesen-3",
+          "title": "Lesen",
+          "type": "multiple-choice",
+          "task": {
+            "text": "Achtung, Betrug: Zurzeit verschicken Kriminelle E-Mails, die aussehen, als kämen sie von Ihrer Bank. Sie werden gebeten, auf einen Link zu klicken und Ihr Passwort einzugeben. Ihre Bank wird Sie niemals per E-Mail nach Ihrem Passwort fragen.",
+            "question": "Was sollte man bei solchen E-Mails nicht tun?",
+            "options": [
+              "Die Bank anrufen",
+              "Auf den Link klicken",
+              "Die E-Mail löschen"
+            ],
+            "answer": "Auf den Link klicken"
+          }
+        },
+        {
+          "id": "lesen-4",
+          "title": "Lesen",
+          "type": "multiple-choice",
+          "task": {
+            "text": "Unsere Bibliothek bietet jetzt auch E-Books an. Mit Ihrem Bibliotheksausweis können Sie bis zu fünf E-Books gleichzeitig für drei Wochen ausleihen. Die App ist kostenlos.",
+            "question": "Wie viele E-Books kann man gleichzeitig ausleihen?",
+            "options": [
+              "Drei",
+              "Fünf",
+              "Zehn"
+            ],
+            "answer": "Fünf"
+          }
+        },
+        {
+          "id": "lesen-5",
+          "title": "Lesen",
+          "type": "multiple-choice",
+          "task": {
+            "text": "Früher habe ich jeden Morgen die Zeitung gelesen. Heute lese ich die Nachrichten auf dem Tablet. Das ist praktisch, aber ich vermisse manchmal das Gefühl von Papier.",
+            "question": "Was vermisst die Person?",
+            "options": [
+              "Die Nachrichten",
+              "Das Gefühl von Papier",
+              "Das Tablet"
+            ],
+            "answer": "Das Gefühl von Papier"
+          }
+        },
+        {
+          "id": "hoeren-1",
+          "title": "Hören",
+          "type": "audio-choice",
+          "task": {
+            "text": "Kundenservice, guten Tag. Mein Internet funktioniert seit gestern nicht. Haben Sie den Router schon neu gestartet? Ja, aber es hat nicht geholfen. Dann schicken wir Ihnen morgen einen Techniker.",
+            "question": "Was passiert morgen?",
+            "options": [
+              "Ein Techniker kommt.",
+              "Ein neuer Router kommt per Post.",
+              "Das Internet geht automatisch wieder."
+            ],
+            "answer": "Ein Techniker kommt."
+          }
+        },
+        {
+          "id": "hoeren-2",
+          "title": "Hören",
+          "type": "audio-choice",
+          "task": {
+            "text": "Ich arbeite viel am Computer, deshalb mache ich am Wochenende einen digitalen Detox. Samstag und Sonntag bleibt das Handy aus.",
+            "question": "Was macht die Person am Wochenende?",
+            "options": [
+              "Sie arbeitet am Computer.",
+              "Sie benutzt kein Handy.",
+              "Sie kauft ein neues Handy."
+            ],
+            "answer": "Sie benutzt kein Handy."
+          }
+        },
+        {
+          "id": "hoeren-3",
+          "title": "Hören",
+          "type": "audio-choice",
+          "task": {
+            "text": "In den Nachrichten: Ab nächstem Jahr sollen alle neuen Handys in der EU denselben Ladeanschluss haben. Das soll Elektroschrott reduzieren.",
+            "question": "Was ist das Ziel der Regel?",
+            "options": [
+              "Handys billiger zu machen",
+              "Weniger Elektroschrott",
+              "Schnelleres Laden"
+            ],
+            "answer": "Weniger Elektroschrott"
+          }
+        },
+        {
+          "id": "hoeren-4",
+          "title": "Hören",
+          "type": "audio-choice",
+          "task": {
+            "text": "Meine Oma ist 80 und macht jetzt Videoanrufe mit uns. Mein Bruder hat ihr gezeigt, wie das funktioniert.",
+            "question": "Wer hat der Oma geholfen?",
+            "options": [
+              "Der Bruder",
+              "Die Mutter",
+              "Ein Nachbar"
+            ],
+            "answer": "Der Bruder"
+          }
+        },
+        {
+          "id": "hoeren-5",
+          "title": "Hören",
+          "type": "audio-choice",
+          "task": {
+            "text": "Viele Eltern machen sich Sorgen, weil ihre Kinder zu viel Zeit mit Computerspielen verbringen. Experten empfehlen klare Regeln, zum Beispiel feste Spielzeiten.",
+            "question": "Was empfehlen Experten?",
+            "options": [
+              "Spiele zu verbieten",
+              "Klare Regeln",
+              "Neue Computer"
+            ],
+            "answer": "Klare Regeln"
+          }
+        },
+        {
+          "id": "schreiben-1",
+          "title": "Schreiben",
+          "type": "text-input",
+          "task": {
+            "instruction": "Sie haben ein Handy online gekauft, aber es funktioniert nicht richtig. Schreiben Sie eine Reklamation: Was ist das Problem und was erwarten Sie?",
+            "exampleAnswer": "Sehr geehrte Damen und Herren, am 5. Oktober habe ich bei Ihnen ein Smartphone bestellt (Bestellnummer 88231). Leider schaltet es sich immer wieder von selbst aus und der Akku ist nach zwei Stunden leer. Ich bitte Sie, mir ein neues Gerät zu schicken oder das Geld zurückzuerstatten. Mit freundlichen Grüßen, Tomasz Wójcik"
+          }
+        },
+        {
+          "id": "schreiben-2",
+          "title": "Schreiben",
+          "type": "text-input",
+          "task": {
+            "instruction": "Sollten Kinder unter 12 Jahren ein eigenes Smartphone haben? Schreiben Sie Ihre Meinung mit Gründen.",
+            "exampleAnswer": "Ich denke, Kinder unter 12 brauchen nicht unbedingt ein eigenes Smartphone. Sie sollten lieber draußen spielen und Freunde treffen. Andererseits kann ein einfaches Handy praktisch sein, damit die Eltern das Kind erreichen können. Wichtig sind klare Regeln und Kontrolle durch die Eltern."
+          }
+        },
+        {
+          "id": "sprechen-1",
+          "title": "Sprechen",
+          "type": "speaking-prompt",
+          "task": {
+            "prompt": "Wie nutzen Sie Medien im Alltag? Welche Apps oder Geräte sind für Sie besonders wichtig?",
+            "expectedTopics": [
+              "Geräte",
+              "Apps",
+              "Zeit pro Tag",
+              "Vor- und Nachteile"
+            ]
+          }
+        },
+        {
+          "id": "sprechen-2",
+          "title": "Sprechen",
+          "type": "speaking-prompt",
+          "task": {
+            "prompt": "Woher bekommen Sie Ihre Nachrichten? Vertrauen Sie den Informationen im Internet?",
+            "expectedTopics": [
+              "Quellen",
+              "Vertrauen",
+              "Falschnachrichten"
+            ]
+          }
+        }
+      ]
     },
     {
-      "id": "hoeren-2",
-      "title": "Hören",
-      "type": "audio-choice",
-      "task": {
-        "text": "Wir wollten grillen, aber dann hat es stark geregnet. Also sind wir spontan ins Kino gegangen.",
-        "question": "Was haben sie letztendlich gemacht?",
-        "options": ["Gegrillt", "Fern gesehen", "Kino besucht"],
-        "answer": "Kino besucht"
-      }
+      "exam_id": 7,
+      "theme": "Beziehungen und Gesellschaft",
+      "icon": "🤝",
+      "modules": [
+        {
+          "id": "lesen-1",
+          "title": "Lesen",
+          "type": "multiple-choice",
+          "task": {
+            "text": "Immer mehr Menschen in Deutschland leben allein. In Großstädten wie Berlin besteht schon fast jeder zweite Haushalt aus nur einer Person. Gründe sind unter anderem, dass Menschen später heiraten und länger leben.",
+            "question": "Was ist laut Text ein Grund für mehr Single-Haushalte?",
+            "options": [
+              "Menschen heiraten später.",
+              "Wohnungen sind billiger.",
+              "Familien sind größer."
+            ],
+            "answer": "Menschen heiraten später."
+          }
+        },
+        {
+          "id": "lesen-2",
+          "title": "Lesen",
+          "type": "multiple-choice",
+          "task": {
+            "text": "Ich engagiere mich seit drei Jahren ehrenamtlich bei der Tafel. Wir sammeln Lebensmittel, die Supermärkte nicht mehr verkaufen, und geben sie an Menschen mit wenig Geld weiter. Die Arbeit ist anstrengend, aber sie gibt mir sehr viel.",
+            "question": "Was macht die Tafel?",
+            "options": [
+              "Sie verkauft Lebensmittel.",
+              "Sie gibt Lebensmittel an Bedürftige weiter.",
+              "Sie kocht in Restaurants."
+            ],
+            "answer": "Sie gibt Lebensmittel an Bedürftige weiter."
+          }
+        },
+        {
+          "id": "lesen-3",
+          "title": "Lesen",
+          "type": "multiple-choice",
+          "task": {
+            "text": "Nachbarschaftsfest am 20. Juli im Hof! Jeder bringt etwas zu essen mit, Getränke organisiert der Mieterverein. Für Kinder gibt es eine Hüpfburg. Bei Regen findet das Fest im Gemeinschaftsraum statt.",
+            "question": "Was passiert bei Regen?",
+            "options": [
+              "Das Fest fällt aus.",
+              "Das Fest ist im Gemeinschaftsraum.",
+              "Das Fest wird verschoben."
+            ],
+            "answer": "Das Fest ist im Gemeinschaftsraum."
+          }
+        },
+        {
+          "id": "lesen-4",
+          "title": "Lesen",
+          "type": "multiple-choice",
+          "task": {
+            "text": "Meine beste Freundin wohnt seit zwei Jahren in Kanada. Wegen der Zeitverschiebung ist es nicht leicht, Kontakt zu halten. Wir schreiben uns trotzdem fast jeden Tag und telefonieren jeden Sonntag.",
+            "question": "Was ist schwierig an der Freundschaft?",
+            "options": [
+              "Die Kosten",
+              "Die Zeitverschiebung",
+              "Die Sprache"
+            ],
+            "answer": "Die Zeitverschiebung"
+          }
+        },
+        {
+          "id": "lesen-5",
+          "title": "Lesen",
+          "type": "multiple-choice",
+          "task": {
+            "text": "Mehrgenerationenhäuser bringen Jung und Alt zusammen. Ältere Menschen passen zum Beispiel auf Kinder auf, Jugendliche helfen Senioren beim Einkaufen oder mit dem Computer.",
+            "question": "Wobei helfen Jugendliche den Senioren?",
+            "options": [
+              "Beim Kochen",
+              "Beim Einkaufen und am Computer",
+              "Bei der Gartenarbeit"
+            ],
+            "answer": "Beim Einkaufen und am Computer"
+          }
+        },
+        {
+          "id": "hoeren-1",
+          "title": "Hören",
+          "type": "audio-choice",
+          "task": {
+            "text": "Wir sind vor einem Monat umgezogen und kennen noch niemanden. Gestern haben wir bei den Nachbarn geklingelt und uns vorgestellt. Sie haben uns gleich zum Kaffee eingeladen.",
+            "question": "Was haben die Nachbarn gemacht?",
+            "options": [
+              "Sie haben sich beschwert.",
+              "Sie haben zum Kaffee eingeladen.",
+              "Sie haben nicht geöffnet."
+            ],
+            "answer": "Sie haben zum Kaffee eingeladen."
+          }
+        },
+        {
+          "id": "hoeren-2",
+          "title": "Hören",
+          "type": "audio-choice",
+          "task": {
+            "text": "Mein Mann und ich teilen uns die Hausarbeit. Er kocht und ich kümmere mich um die Wäsche. Einkaufen gehen wir zusammen.",
+            "question": "Was macht der Mann?",
+            "options": [
+              "Er wäscht die Wäsche.",
+              "Er kocht.",
+              "Er geht allein einkaufen."
+            ],
+            "answer": "Er kocht."
+          }
+        },
+        {
+          "id": "hoeren-3",
+          "title": "Hören",
+          "type": "audio-choice",
+          "task": {
+            "text": "Eine Umfrage zeigt: Für 80 Prozent der Deutschen ist die Familie das Wichtigste im Leben, noch vor Arbeit und Freizeit.",
+            "question": "Was ist für die meisten Deutschen am wichtigsten?",
+            "options": [
+              "Die Arbeit",
+              "Die Familie",
+              "Die Freizeit"
+            ],
+            "answer": "Die Familie"
+          }
+        },
+        {
+          "id": "hoeren-4",
+          "title": "Hören",
+          "type": "audio-choice",
+          "task": {
+            "text": "Wir suchen noch Freiwillige für unser Sprachcafé. Jeden Mittwochabend treffen sich hier Deutsche und Neuankömmlinge, um sich zu unterhalten.",
+            "question": "Wofür sucht man Freiwillige?",
+            "options": [
+              "Für ein Sprachcafé",
+              "Für ein Sportfest",
+              "Für eine Bibliothek"
+            ],
+            "answer": "Für ein Sprachcafé"
+          }
+        },
+        {
+          "id": "hoeren-5",
+          "title": "Hören",
+          "type": "audio-choice",
+          "task": {
+            "text": "Ich hatte Streit mit meinem Kollegen, weil er meine Idee als seine präsentiert hat. Wir haben dann offen darüber gesprochen und jetzt ist alles wieder gut.",
+            "question": "Wie wurde der Streit gelöst?",
+            "options": [
+              "Durch ein offenes Gespräch",
+              "Durch den Chef",
+              "Gar nicht"
+            ],
+            "answer": "Durch ein offenes Gespräch"
+          }
+        },
+        {
+          "id": "schreiben-1",
+          "title": "Schreiben",
+          "type": "text-input",
+          "task": {
+            "instruction": "Ein Freund hat Ihnen bei Ihrem Umzug geholfen. Schreiben Sie ihm eine Nachricht: Bedanken Sie sich, erzählen Sie von der neuen Wohnung und laden Sie ihn ein.",
+            "exampleAnswer": "Lieber Stefan, noch einmal vielen Dank für deine Hilfe am Samstag! Ohne dich hätten wir das nie an einem Tag geschafft. Die neue Wohnung gefällt uns sehr, besonders der Balkon mit Blick auf den Park. Nächsten Freitag machen wir eine kleine Einweihungsparty und wir würden uns freuen, wenn du kommst. Liebe Grüße, Marta"
+          }
+        },
+        {
+          "id": "schreiben-2",
+          "title": "Schreiben",
+          "type": "text-input",
+          "task": {
+            "instruction": "Ist es heute schwieriger als früher, echte Freunde zu finden? Schreiben Sie Ihre Meinung.",
+            "exampleAnswer": "Ich glaube, es ist heute einerseits leichter, andererseits schwerer, Freunde zu finden. Durch soziale Medien hat man viele Kontakte, aber oft sind das keine echten Freundschaften. Viele Menschen haben wenig Zeit, weil sie viel arbeiten. Echte Freunde findet man meiner Meinung nach am besten über gemeinsame Hobbys."
+          }
+        },
+        {
+          "id": "sprechen-1",
+          "title": "Sprechen",
+          "type": "speaking-prompt",
+          "task": {
+            "prompt": "Was bedeutet Freundschaft für Sie? Erzählen Sie von einer wichtigen Freundschaft.",
+            "expectedTopics": [
+              "Eigene Definition",
+              "Beispiel",
+              "Wie man Kontakt hält"
+            ]
+          }
+        },
+        {
+          "id": "sprechen-2",
+          "title": "Sprechen",
+          "type": "speaking-prompt",
+          "task": {
+            "prompt": "Würden Sie sich ehrenamtlich engagieren? Wo und warum?",
+            "expectedTopics": [
+              "Bereich",
+              "Gründe",
+              "Zeit"
+            ]
+          }
+        }
+      ]
     },
     {
-      "id": "hoeren-3",
-      "title": "Hören",
-      "type": "audio-choice",
-      "task": {
-        "text": "Ich wollte ein Fahrrad kaufen, aber das Modell, das ich mir ausgesucht hatte, war ausverkauft.",
-        "question": "Warum hat die Person kein Fahrrad gekauft?",
-        "options": ["Es war zu teuer", "Es war ausverkauft", "Sie hatte keine Zeit"],
-        "answer": "Es war ausverkauft"
-      }
-    },
-    {
-      "id": "hoeren-4",
-      "title": "Hören",
-      "type": "audio-choice",
-      "task": {
-        "text": "In den Nachrichten: Die A7 ist nach einem Unfall zwischen Fulda und Kassel gesperrt. Autofahrer werden gebeten, die Umleitung zu nutzen.",
-        "question": "Was wird den Autofahrern empfohlen?",
-        "options": ["Langsamer fahren", "Andere Route wählen", "Warten"],
-        "answer": "Andere Route wählen"
-      }
-    },
-    {
-      "id": "hoeren-5",
-      "title": "Hören",
-      "type": "audio-choice",
-      "task": {
-        "text": "Ich habe gestern mein Portemonnaie verloren, aber ein netter Mann hat es gefunden und zur Polizei gebracht.",
-        "question": "Was ist mit dem Portemonnaie passiert?",
-        "options": ["Es wurde gefunden", "Es ist noch weg", "Es wurde gestohlen"],
-        "answer": "Es wurde gefunden"
-      }
-    },
-
-    {
-      "id": "schreiben-1",
-      "title": "Schreiben",
-      "type": "text-input",
-      "task": {
-        "instruction": "Du hast in einem Hotel übernachtet, aber es gab Probleme. Schreib eine Beschwerde an das Hotelmanagement (mind. 80 Wörter).",
-        "exampleAnswer": "Sehr geehrte Damen und Herren, ich war vom 10. bis 12. Juni Gast in Ihrem Hotel. Leider war das Zimmer nicht sauber und der Fernseher funktionierte nicht. Ich bitte Sie um eine Stellungnahme oder einen Preisnachlass. Mit freundlichen Grüßen, Martin Scholz"
-      }
-    },
-    {
-      "id": "schreiben-2",
-      "title": "Schreiben",
-      "type": "text-input",
-      "task": {
-        "instruction": "Du möchtest einen Sprachkurs besuchen. Schreib eine E-Mail an die Sprachschule und erkundige dich nach Kursbeginn, Preis und Dauer.",
-        "exampleAnswer": "Sehr geehrte Damen und Herren, ich interessiere mich für Ihren Deutschkurs. Können Sie mir bitte mitteilen, wann der nächste Kurs beginnt, wie lange er dauert und was er kostet? Vielen Dank im Voraus! Mit freundlichen Grüßen, Jana Becker"
-      }
-    },
-    {
-      "id": "schreiben-3",
-      "title": "Schreiben",
-      "type": "text-input",
-      "task": {
-        "instruction": "Du konntest an einer Geburtstagsfeier nicht teilnehmen. Schreib deinem Freund/deiner Freundin eine Nachricht und erkläre warum.",
-        "exampleAnswer": "Hallo Lisa, es tut mir leid, dass ich gestern nicht zu deiner Party kommen konnte. Ich war krank und musste zu Hause bleiben. Ich hoffe, du hattest einen schönen Tag. Wir holen das bald nach! Liebe Grüße, Tom"
-      }
-    },
-    {
-      "id": "schreiben-4",
-      "title": "Schreiben",
-      "type": "text-input",
-      "task": {
-        "instruction": "Schreib einem Freund oder einer Freundin über deine neue Wohnung. Beschreib sie und lade ihn/sie ein.",
-        "exampleAnswer": "Hallo Max! Ich bin letzte Woche umgezogen. Meine neue Wohnung ist hell und ruhig, mit einem schönen Balkon. Ich wohne jetzt in der Blumenstraße 5. Komm mich bald mal besuchen! Viele Grüße, Laura"
-      }
-    },
-    {
-      "id": "schreiben-5",
-      "title": "Schreiben",
-      "type": "text-input",
-      "task": {
-        "instruction": "Du hast bei einem Online-Shop ein defektes Gerät erhalten. Schreib eine Reklamation mit Bitte um Rückgabe oder Umtausch.",
-        "exampleAnswer": "Sehr geehrter Kundenservice, ich habe letzte Woche bei Ihnen einen Wasserkocher bestellt. Leider funktioniert das Gerät nicht richtig – es schaltet sich nicht automatisch aus. Ich bitte Sie um einen Austausch oder eine Rückerstattung. Vielen Dank!"
-      }
-    },
-
-    {
-      "id": "sprechen-1",
-      "title": "Sprechen",
-      "type": "speaking-prompt",
-      "task": {
-        "prompt": "Erzähl von einer Reise oder einem Ausflug, den du gemacht hast. Warum war es besonders?",
-        "expectedTopics": ["Reiseerlebnis", "Ort", "Gefühle"]
-      }
-    },
-    {
-      "id": "sprechen-2",
-      "title": "Sprechen",
-      "type": "speaking-prompt",
-      "task": {
-        "prompt": "Was ist für dich wichtiger: viel Geld oder Freizeit? Begründe deine Meinung.",
-        "expectedTopics": ["Werte", "Begründung", "Vergleich"]
-      }
-    },
-    {
-      "id": "sprechen-3",
-      "title": "Sprechen",
-      "type": "speaking-prompt",
-      "task": {
-        "prompt": "Beschreib deinen Alltag: Was machst du unter der Woche, was am Wochenende?",
-        "expectedTopics": ["Tagesablauf", "Freizeit", "Vergleich"]
-      }
-    },
-    {
-      "id": "sprechen-4",
-      "title": "Sprechen",
-      "type": "speaking-prompt",
-      "task": {
-        "prompt": "Wie informierst du dich über aktuelle Ereignisse? Zeitung, Internet, Fernsehen?",
-        "expectedTopics": ["Medien", "Information", "Vorlieben"]
-      }
-    },
-    {
-      "id": "sprechen-5",
-      "title": "Sprechen",
-      "type": "speaking-prompt",
-      "task": {
-        "prompt": "Erzähl von einer Situation, in der du jemandem geholfen hast oder dir geholfen wurde.",
-        "expectedTopics": ["Erfahrung", "Hilfe", "Reaktion"]
-      }
+      "exam_id": 8,
+      "theme": "Ämter und Behörden",
+      "icon": "🏛️",
+      "modules": [
+        {
+          "id": "lesen-1",
+          "title": "Lesen",
+          "type": "multiple-choice",
+          "task": {
+            "text": "Wer in Deutschland umzieht, muss sich innerhalb von zwei Wochen beim Bürgeramt anmelden. Dafür braucht man den Personalausweis oder Reisepass und eine Bestätigung vom Vermieter. Einen Termin kann man online buchen.",
+            "question": "Was braucht man für die Anmeldung?",
+            "options": [
+              "Einen Arbeitsvertrag",
+              "Ausweis und Bestätigung vom Vermieter",
+              "Einen Mietvertrag und ein Foto"
+            ],
+            "answer": "Ausweis und Bestätigung vom Vermieter"
+          }
+        },
+        {
+          "id": "lesen-2",
+          "title": "Lesen",
+          "type": "multiple-choice",
+          "task": {
+            "text": "Sehr geehrte Frau Yilmaz, Ihr Antrag auf Kindergeld ist noch nicht vollständig. Bitte schicken Sie uns bis zum 15. März die Geburtsurkunde Ihres Kindes. Andernfalls können wir Ihren Antrag nicht bearbeiten.",
+            "question": "Was soll Frau Yilmaz schicken?",
+            "options": [
+              "Ihren Pass",
+              "Die Geburtsurkunde des Kindes",
+              "Ihre Steuererklärung"
+            ],
+            "answer": "Die Geburtsurkunde des Kindes"
+          }
+        },
+        {
+          "id": "lesen-3",
+          "title": "Lesen",
+          "type": "multiple-choice",
+          "task": {
+            "text": "Das Bürgeramt Mitte ist wegen Umbauarbeiten vom 1. bis 14. August geschlossen. In dringenden Fällen wenden Sie sich bitte an das Bürgeramt Nord. Bereits gebuchte Termine werden automatisch verschoben.",
+            "question": "Was passiert mit gebuchten Terminen?",
+            "options": [
+              "Sie werden gelöscht.",
+              "Sie werden automatisch verschoben.",
+              "Man muss sie selbst ändern."
+            ],
+            "answer": "Sie werden automatisch verschoben."
+          }
+        },
+        {
+          "id": "lesen-4",
+          "title": "Lesen",
+          "type": "multiple-choice",
+          "task": {
+            "text": "Die Steuererklärung ist jedes Jahr bis zum 31. Juli abzugeben. Wer einen Steuerberater nutzt, hat mehr Zeit. Viele Arbeitnehmer bekommen nach der Erklärung Geld vom Finanzamt zurück.",
+            "question": "Wer hat mehr Zeit für die Steuererklärung?",
+            "options": [
+              "Alle Arbeitnehmer",
+              "Wer einen Steuerberater hat",
+              "Wer wenig verdient"
+            ],
+            "answer": "Wer einen Steuerberater hat"
+          }
+        },
+        {
+          "id": "lesen-5",
+          "title": "Lesen",
+          "type": "multiple-choice",
+          "task": {
+            "text": "Um einen Führerschein aus einem Nicht-EU-Land umzuschreiben, müssen Sie in vielen Fällen eine theoretische und praktische Prüfung machen. Der Antrag muss innerhalb von sechs Monaten nach der Anmeldung gestellt werden.",
+            "question": "Bis wann muss man den Antrag stellen?",
+            "options": [
+              "Innerhalb von sechs Monaten",
+              "Innerhalb eines Jahres",
+              "Sofort nach der Ankunft"
+            ],
+            "answer": "Innerhalb von sechs Monaten"
+          }
+        },
+        {
+          "id": "hoeren-1",
+          "title": "Hören",
+          "type": "audio-choice",
+          "task": {
+            "text": "Bürgeramt, guten Tag. Ich möchte einen neuen Reisepass beantragen. Bitte bringen Sie ein aktuelles biometrisches Foto und Ihren alten Pass mit. Die Gebühr beträgt etwa 70 Euro.",
+            "question": "Was soll die Person mitbringen?",
+            "options": [
+              "Ein Foto und den alten Pass",
+              "Eine Geburtsurkunde",
+              "Den Mietvertrag"
+            ],
+            "answer": "Ein Foto und den alten Pass"
+          }
+        },
+        {
+          "id": "hoeren-2",
+          "title": "Hören",
+          "type": "audio-choice",
+          "task": {
+            "text": "Ich war heute beim Ausländeramt. Ich musste fast drei Stunden warten, obwohl ich einen Termin hatte. Am Ende hat aber alles geklappt.",
+            "question": "Was war das Problem?",
+            "options": [
+              "Die lange Wartezeit",
+              "Ein fehlendes Dokument",
+              "Der Termin war falsch."
+            ],
+            "answer": "Die lange Wartezeit"
+          }
+        },
+        {
+          "id": "hoeren-3",
+          "title": "Hören",
+          "type": "audio-choice",
+          "task": {
+            "text": "Bitte ziehen Sie eine Nummer am Automaten und warten Sie, bis Ihre Nummer auf dem Bildschirm erscheint.",
+            "question": "Was soll man zuerst tun?",
+            "options": [
+              "Eine Nummer ziehen",
+              "Ein Formular ausfüllen",
+              "Zum Schalter gehen"
+            ],
+            "answer": "Eine Nummer ziehen"
+          }
+        },
+        {
+          "id": "hoeren-4",
+          "title": "Hören",
+          "type": "audio-choice",
+          "task": {
+            "text": "Mein Antrag auf Wohngeld wurde abgelehnt, weil mein Einkommen zu hoch ist. Ich habe jetzt Widerspruch eingelegt.",
+            "question": "Warum wurde der Antrag abgelehnt?",
+            "options": [
+              "Das Einkommen ist zu hoch.",
+              "Die Wohnung ist zu groß.",
+              "Ein Dokument fehlte."
+            ],
+            "answer": "Das Einkommen ist zu hoch."
+          }
+        },
+        {
+          "id": "hoeren-5",
+          "title": "Hören",
+          "type": "audio-choice",
+          "task": {
+            "text": "Seit Anfang des Jahres können viele Anträge online gestellt werden, zum Beispiel die Ummeldung des Autos. Dafür braucht man aber einen Ausweis mit Online-Funktion.",
+            "question": "Was braucht man für Online-Anträge?",
+            "options": [
+              "Einen Ausweis mit Online-Funktion",
+              "Eine Kreditkarte",
+              "Einen Termin"
+            ],
+            "answer": "Einen Ausweis mit Online-Funktion"
+          }
+        },
+        {
+          "id": "schreiben-1",
+          "title": "Schreiben",
+          "type": "text-input",
+          "task": {
+            "instruction": "Sie haben einen Brief vom Amt bekommen, verstehen aber nicht alles. Schreiben Sie eine E-Mail an die Behörde und bitten Sie um Erklärung und einen Termin.",
+            "exampleAnswer": "Sehr geehrte Damen und Herren, ich habe am 2. Mai einen Brief von Ihnen bekommen (Aktenzeichen 45-221). Leider verstehe ich nicht genau, welche Unterlagen ich noch schicken muss. Könnten Sie mir das bitte erklären? Gern würde ich auch persönlich vorbeikommen. Haben Sie nächste Woche einen Termin frei? Mit freundlichen Grüßen, Lina Haddad"
+          }
+        },
+        {
+          "id": "schreiben-2",
+          "title": "Schreiben",
+          "type": "text-input",
+          "task": {
+            "instruction": "Sollten alle Behördengänge online möglich sein? Schreiben Sie Ihre Meinung.",
+            "exampleAnswer": "Ich finde, möglichst viele Behördengänge sollten online möglich sein. Das spart Zeit, weil man nicht stundenlang warten muss. Allerdings gibt es Menschen, die kein Internet haben oder unsicher mit Technik sind, zum Beispiel ältere Leute. Deshalb sollte es immer auch die Möglichkeit geben, persönlich hinzugehen."
+          }
+        },
+        {
+          "id": "sprechen-1",
+          "title": "Sprechen",
+          "type": "speaking-prompt",
+          "task": {
+            "prompt": "Erzählen Sie von einer Erfahrung mit einer Behörde in Deutschland oder in Ihrem Land.",
+            "expectedTopics": [
+              "Welche Behörde",
+              "Was war das Anliegen",
+              "Wie lief es",
+              "Tipp für andere"
+            ]
+          }
+        },
+        {
+          "id": "sprechen-2",
+          "title": "Sprechen",
+          "type": "speaking-prompt",
+          "task": {
+            "prompt": "Welche Tipps würden Sie Menschen geben, die neu nach Deutschland kommen? Nennen Sie die wichtigsten Schritte.",
+            "expectedTopics": [
+              "Anmeldung",
+              "Bankkonto",
+              "Versicherung",
+              "Sprachkurs"
+            ]
+          }
+        }
+      ]
     }
   ]
 }

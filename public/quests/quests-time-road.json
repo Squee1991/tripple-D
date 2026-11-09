@@ -1,0 +1,2562 @@
+[
+  {
+    "questId": "time-road-one",
+    "title": "timeRoadOne.questTitle",
+    "progress": "0/15",
+    "description": "timeRoadOne.questDescription",
+    "conditions": {
+      "goal": "timeRoadOne.questGoal",
+      "minCorrect": 15,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
+    "vocabulary": [
+      {
+        "word": "umziehen",
+        "translation-ru": "переезжать",
+        "translation-en": "to move house",
+        "translation-uk": "переїжджати",
+        "translation-pl": "przeprowadzać się",
+        "translation-es": "mudarse",
+        "translation-fr": "déménager",
+        "translation-tr": "taşınmak",
+        "translation-ro": "a se muta",
+        "translation-uz": "ko‘chib o‘tmoq",
+        "translation-hi": "घर बदलना",
+        "translation-ar": "ينتقل"
+      },
+      {
+        "word": "heiraten",
+        "translation-ru": "жениться, выходить замуж",
+        "translation-en": "to get married",
+        "translation-uk": "одружуватися",
+        "translation-pl": "brać ślub",
+        "translation-es": "casarse",
+        "translation-fr": "se marier",
+        "translation-tr": "evlenmek",
+        "translation-ro": "a se căsători",
+        "translation-uz": "turmush qurmoq",
+        "translation-hi": "शादी करना",
+        "translation-ar": "يتزوج"
+      },
+      {
+        "word": "kennenlernen",
+        "translation-ru": "знакомиться",
+        "translation-en": "to get to know",
+        "translation-uk": "знайомитися",
+        "translation-pl": "poznawać",
+        "translation-es": "conocer",
+        "translation-fr": "faire la connaissance",
+        "translation-tr": "tanışmak",
+        "translation-ro": "a cunoaște",
+        "translation-uz": "tanishmoq",
+        "translation-hi": "परिचय होना",
+        "translation-ar": "يتعرّف"
+      },
+      {
+        "word": "das Studium",
+        "translation-ru": "учёба (в вузе)",
+        "translation-en": "studies",
+        "translation-uk": "навчання (у виші)",
+        "translation-pl": "studia",
+        "translation-es": "los estudios",
+        "translation-fr": "les études",
+        "translation-tr": "üniversite eğitimi",
+        "translation-ro": "studiile",
+        "translation-uz": "o‘qish (oliy)",
+        "translation-hi": "पढ़ाई",
+        "translation-ar": "الدراسة الجامعية"
+      },
+      {
+        "word": "anfangen",
+        "translation-ru": "начинать",
+        "translation-en": "to begin",
+        "translation-uk": "починати",
+        "translation-pl": "zaczynać",
+        "translation-es": "empezar",
+        "translation-fr": "commencer",
+        "translation-tr": "başlamak",
+        "translation-ro": "a începe",
+        "translation-uz": "boshlamoq",
+        "translation-hi": "शुरू करना",
+        "translation-ar": "يبدأ"
+      },
+      {
+        "word": "spannend",
+        "translation-ru": "захватывающий",
+        "translation-en": "exciting",
+        "translation-uk": "захопливий",
+        "translation-pl": "wciągający",
+        "translation-es": "emocionante",
+        "translation-fr": "passionnant",
+        "translation-tr": "heyecanlı",
+        "translation-ro": "captivant",
+        "translation-uz": "qiziqarli",
+        "translation-hi": "रोमांचक",
+        "translation-ar": "مشوّق"
+      }
+    ],
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "timeRoadOne.questTask1",
+        "options": [
+          "Ich bin vor zwei Jahre nach Deutschland gekommen.",
+          "Ich bin zwei Jahren vor nach Deutschland gekommen.",
+          "Ich bin vor zwei Jahren nach Deutschland gekommen."
+        ],
+        "answer": "Ich bin vor zwei Jahren nach Deutschland gekommen.",
+        "tip": "timeRoadOne.questDescription"
+      },
+      {
+        "id": 2,
+        "type": "input",
+        "question": "timeRoadOne.questTask2",
+        "correctAnswer": "Woche",
+        "tip": "timeRoadOne.questDescription"
+      },
+      {
+        "id": 3,
+        "type": "input",
+        "question": "timeRoadOne.questTask3",
+        "correctAnswer": "Jahr",
+        "tip": "timeRoadOne.questDescription"
+      },
+      {
+        "id": 4,
+        "type": "reorder",
+        "question": "timeRoadOne.questTask4",
+        "words": [
+          "Monate",
+          "vor",
+          "Monaten",
+          "kennengelernt",
+          "Ich",
+          "habe",
+          "drei",
+          "sie"
+        ],
+        "correctOrder": [
+          "Ich",
+          "habe",
+          "sie",
+          "vor",
+          "drei",
+          "Monaten",
+          "kennengelernt"
+        ],
+        "tip": "timeRoadOne.questDescription"
+      },
+      {
+        "id": 5,
+        "type": "select",
+        "question": "timeRoadOne.questTask5",
+        "options": [
+          "Der Film hat vor zehn Minuten angefangt.",
+          "Der Film hat vor zehn Minuten angefangen.",
+          "Der Film hat vor zehn Minute angefangen."
+        ],
+        "answer": "Der Film hat vor zehn Minuten angefangen.",
+        "tip": "timeRoadOne.questDescription"
+      },
+      {
+        "id": 6,
+        "type": "input",
+        "question": "timeRoadOne.questTask6",
+        "correctAnswer": "Stunde",
+        "tip": "timeRoadOne.questDescription"
+      },
+      {
+        "id": 7,
+        "type": "readAndAnswer",
+        "question": "timeRoadOne.questTask7",
+        "text": "Ich heiße Ali. Ich bin vor drei Jahren nach Hamburg gekommen. Vor einem Jahr habe ich mein Studium angefangen. Vor zwei Wochen habe ich eine Wohnung gefunden.",
+        "options": [
+          "vor zwei Wochen",
+          "vor einem Jahr",
+          "vor drei Jahren"
+        ],
+        "answer": "vor einem Jahr",
+        "tip": "timeRoadOne.questDescription"
+      },
+      {
+        "id": 8,
+        "type": "input",
+        "question": "timeRoadOne.questTask8",
+        "correctAnswer": "Tagen",
+        "tip": "timeRoadOne.questDescription"
+      },
+      {
+        "id": 9,
+        "type": "input",
+        "question": "timeRoadOne.questTask9",
+        "correctAnswer": "angefangen",
+        "tip": "timeRoadOne.questDescription"
+      },
+      {
+        "id": 10,
+        "type": "reorder",
+        "question": "timeRoadOne.questTask10",
+        "words": [
+          "umgezogen",
+          "haben",
+          "vor",
+          "sind",
+          "Wir",
+          "zwei",
+          "Monaten"
+        ],
+        "correctOrder": [
+          "Wir",
+          "sind",
+          "vor",
+          "zwei",
+          "Monaten",
+          "umgezogen"
+        ],
+        "tip": "timeRoadOne.questDescription"
+      },
+      {
+        "id": 11,
+        "type": "select",
+        "question": "timeRoadOne.questTask11",
+        "options": [
+          "Er hat vor einer Minute anrufen.",
+          "Er hat vor einer Minute angerufen.",
+          "Er hat vor eine Minute angerufen."
+        ],
+        "answer": "Er hat vor einer Minute angerufen.",
+        "tip": "timeRoadOne.questDescription"
+      },
+      {
+        "id": 12,
+        "type": "input",
+        "question": "timeRoadOne.questTask12",
+        "correctAnswer": "siebte",
+        "tip": "timeRoadOne.questDescription"
+      },
+      {
+        "id": 13,
+        "type": "input",
+        "question": "timeRoadOne.questTask13",
+        "correctAnswer": "fünf",
+        "tip": "timeRoadOne.questDescription"
+      },
+      {
+        "id": 14,
+        "type": "input",
+        "question": "timeRoadOne.questTask14",
+        "correctAnswer": "gespielt",
+        "tip": "timeRoadOne.questDescription"
+      },
+      {
+        "id": 15,
+        "type": "input",
+        "question": "timeRoadOne.questTask15",
+        "correctAnswer": "spannendes",
+        "tip": "timeRoadOne.questDescription"
+      }
+    ]
+  },
+  {
+    "questId": "time-road-two",
+    "title": "timeRoadTwo.questTitle",
+    "progress": "0/15",
+    "description": "timeRoadTwo.questDescription",
+    "conditions": {
+      "goal": "timeRoadTwo.questGoal",
+      "minCorrect": 15,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
+    "vocabulary": [
+      {
+        "word": "seit",
+        "translation-ru": "с, уже (о времени)",
+        "translation-en": "since, for",
+        "translation-uk": "з, уже (про час)",
+        "translation-pl": "od (o czasie)",
+        "translation-es": "desde",
+        "translation-fr": "depuis",
+        "translation-tr": "-den beri",
+        "translation-ro": "de, din",
+        "translation-uz": "beri",
+        "translation-hi": "से (समय)",
+        "translation-ar": "منذ"
+      },
+      {
+        "word": "warten",
+        "translation-ru": "ждать",
+        "translation-en": "to wait",
+        "translation-uk": "чекати",
+        "translation-pl": "czekać",
+        "translation-es": "esperar",
+        "translation-fr": "attendre",
+        "translation-tr": "beklemek",
+        "translation-ro": "a aștepta",
+        "translation-uz": "kutmoq",
+        "translation-hi": "इंतज़ार करना",
+        "translation-ar": "ينتظر"
+      },
+      {
+        "word": "kennen",
+        "translation-ru": "знать (кого-то)",
+        "translation-en": "to know (someone)",
+        "translation-uk": "знати (когось)",
+        "translation-pl": "znać",
+        "translation-es": "conocer",
+        "translation-fr": "connaître",
+        "translation-tr": "tanımak",
+        "translation-ro": "a cunoaște",
+        "translation-uz": "tanimoq",
+        "translation-hi": "जानना",
+        "translation-ar": "يعرف"
+      },
+      {
+        "word": "verheiratet",
+        "translation-ru": "женат, замужем",
+        "translation-en": "married",
+        "translation-uk": "одружений",
+        "translation-pl": "żonaty, zamężna",
+        "translation-es": "casado",
+        "translation-fr": "marié",
+        "translation-tr": "evli",
+        "translation-ro": "căsătorit",
+        "translation-uz": "uylangan, turmushga chiqqan",
+        "translation-hi": "शादीशुदा",
+        "translation-ar": "متزوج"
+      },
+      {
+        "word": "die Firma",
+        "translation-ru": "фирма",
+        "translation-en": "company",
+        "translation-uk": "фірма",
+        "translation-pl": "firma",
+        "translation-es": "la empresa",
+        "translation-fr": "l’entreprise",
+        "translation-tr": "şirket",
+        "translation-ro": "firma",
+        "translation-uz": "firma",
+        "translation-hi": "कंपनी",
+        "translation-ar": "الشركة"
+      }
+    ],
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "timeRoadTwo.questTask1",
+        "options": [
+          "Ich wohne seit drei Jahre in Berlin.",
+          "Ich wohne vor drei Jahren in Berlin.",
+          "Ich wohne seit drei Jahren in Berlin."
+        ],
+        "answer": "Ich wohne seit drei Jahren in Berlin.",
+        "tip": "timeRoadTwo.questDescription"
+      },
+      {
+        "id": 2,
+        "type": "input",
+        "question": "timeRoadTwo.questTask2",
+        "correctAnswer": "Stunde",
+        "tip": "timeRoadTwo.questDescription"
+      },
+      {
+        "id": 3,
+        "type": "input",
+        "question": "timeRoadTwo.questTask3",
+        "correctAnswer": "wann",
+        "tip": "timeRoadTwo.questDescription"
+      },
+      {
+        "id": 4,
+        "type": "reorder",
+        "question": "timeRoadTwo.questTask4",
+        "words": [
+          "Wir",
+          "Jahren",
+          "seit",
+          "vor",
+          "zehn",
+          "kennen",
+          "uns"
+        ],
+        "correctOrder": [
+          "Wir",
+          "kennen",
+          "uns",
+          "seit",
+          "zehn",
+          "Jahren"
+        ],
+        "tip": "timeRoadTwo.questDescription"
+      },
+      {
+        "id": 5,
+        "type": "select",
+        "question": "timeRoadTwo.questTask5",
+        "options": [
+          "Sie arbeitet seit im Mai in der Firma.",
+          "Sie arbeitet seit Mai in der Firma.",
+          "Sie arbeitet vor Mai in der Firma."
+        ],
+        "answer": "Sie arbeitet seit Mai in der Firma.",
+        "tip": "timeRoadTwo.questDescription"
+      },
+      {
+        "id": 6,
+        "type": "input",
+        "question": "timeRoadTwo.questTask6",
+        "correctAnswer": "verheiratet",
+        "tip": "timeRoadTwo.questDescription"
+      },
+      {
+        "id": 7,
+        "type": "readAndAnswer",
+        "question": "timeRoadTwo.questTask7",
+        "text": "Tom lernt seit zwei Jahren Deutsch. Seit einem Monat besucht er einen Kurs in Köln. Vor einer Woche hat er eine Prüfung geschrieben.",
+        "options": [
+          "seit zwei Jahren",
+          "seit einer Woche",
+          "seit einem Monat"
+        ],
+        "answer": "seit zwei Jahren",
+        "tip": "timeRoadTwo.questDescription"
+      },
+      {
+        "id": 8,
+        "type": "input",
+        "question": "timeRoadTwo.questTask8",
+        "correctAnswer": "gestern",
+        "tip": "timeRoadTwo.questDescription"
+      },
+      {
+        "id": 9,
+        "type": "input",
+        "question": "timeRoadTwo.questTask9",
+        "correctAnswer": "lerne",
+        "tip": "timeRoadTwo.questDescription"
+      },
+      {
+        "id": 10,
+        "type": "reorder",
+        "question": "timeRoadTwo.questTask10",
+        "words": [
+          "läuft",
+          "Der",
+          "Wochen",
+          "vor",
+          "seit",
+          "Kurs",
+          "zwei"
+        ],
+        "correctOrder": [
+          "Der",
+          "Kurs",
+          "läuft",
+          "seit",
+          "zwei",
+          "Wochen"
+        ],
+        "tip": "timeRoadTwo.questDescription"
+      },
+      {
+        "id": 11,
+        "type": "select",
+        "question": "timeRoadTwo.questTask11",
+        "options": [
+          "Ich bin seit zehn Minute hier.",
+          "Ich bin seit zehn Minuten hier.",
+          "Ich bin vor zehn Minuten hier."
+        ],
+        "answer": "Ich bin seit zehn Minuten hier.",
+        "tip": "timeRoadTwo.questDescription"
+      },
+      {
+        "id": 12,
+        "type": "input",
+        "question": "timeRoadTwo.questTask12",
+        "correctAnswer": "Tagen",
+        "tip": "timeRoadTwo.questDescription"
+      },
+      {
+        "id": 13,
+        "type": "input",
+        "question": "timeRoadTwo.questTask13",
+        "correctAnswer": "neunten",
+        "tip": "timeRoadTwo.questDescription"
+      },
+      {
+        "id": 14,
+        "type": "input",
+        "question": "timeRoadTwo.questTask14",
+        "correctAnswer": "ziehen",
+        "tip": "timeRoadTwo.questDescription"
+      },
+      {
+        "id": 15,
+        "type": "input",
+        "question": "timeRoadTwo.questTask15",
+        "correctAnswer": "meine",
+        "tip": "timeRoadTwo.questDescription"
+      }
+    ]
+  },
+  {
+    "questId": "time-road-three",
+    "title": "timeRoadThree.questTitle",
+    "progress": "0/15",
+    "description": "timeRoadThree.questDescription",
+    "conditions": {
+      "goal": "timeRoadThree.questGoal",
+      "minCorrect": 15,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
+    "vocabulary": [
+      {
+        "word": "bleiben",
+        "translation-ru": "оставаться",
+        "translation-en": "to stay",
+        "translation-uk": "залишатися",
+        "translation-pl": "zostawać",
+        "translation-es": "quedarse",
+        "translation-fr": "rester",
+        "translation-tr": "kalmak",
+        "translation-ro": "a rămâne",
+        "translation-uz": "qolmoq",
+        "translation-hi": "रुकना",
+        "translation-ar": "يبقى"
+      },
+      {
+        "word": "mieten",
+        "translation-ru": "снимать, арендовать",
+        "translation-en": "to rent",
+        "translation-uk": "орендувати",
+        "translation-pl": "wynajmować",
+        "translation-es": "alquilar",
+        "translation-fr": "louer",
+        "translation-tr": "kiralamak",
+        "translation-ro": "a închiria",
+        "translation-uz": "ijaraga olmoq",
+        "translation-hi": "किराए पर लेना",
+        "translation-ar": "يستأجر"
+      },
+      {
+        "word": "das Ausland",
+        "translation-ru": "заграница",
+        "translation-en": "abroad",
+        "translation-uk": "закордон",
+        "translation-pl": "zagranica",
+        "translation-es": "el extranjero",
+        "translation-fr": "l’étranger",
+        "translation-tr": "yurt dışı",
+        "translation-ro": "străinătatea",
+        "translation-uz": "chet el",
+        "translation-hi": "विदेश",
+        "translation-ar": "الخارج"
+      },
+      {
+        "word": "packen",
+        "translation-ru": "упаковывать",
+        "translation-en": "to pack",
+        "translation-uk": "пакувати",
+        "translation-pl": "pakować",
+        "translation-es": "hacer la maleta",
+        "translation-fr": "faire les bagages",
+        "translation-tr": "bavul hazırlamak",
+        "translation-ro": "a împacheta",
+        "translation-uz": "joylamoq",
+        "translation-hi": "सामान बाँधना",
+        "translation-ar": "يحزم"
+      },
+      {
+        "word": "buchen",
+        "translation-ru": "бронировать",
+        "translation-en": "to book",
+        "translation-uk": "бронювати",
+        "translation-pl": "rezerwować",
+        "translation-es": "reservar",
+        "translation-fr": "réserver",
+        "translation-tr": "rezervasyon yapmak",
+        "translation-ro": "a rezerva",
+        "translation-uz": "band qilmoq",
+        "translation-hi": "बुक करना",
+        "translation-ar": "يحجز"
+      }
+    ],
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "timeRoadThree.questTask1",
+        "options": [
+          "Wir fahren seit zwei Wochen nach Italien.",
+          "Wir fahren für zwei Wochen in Italien.",
+          "Wir fahren für zwei Wochen nach Italien."
+        ],
+        "answer": "Wir fahren für zwei Wochen nach Italien.",
+        "tip": "timeRoadThree.questDescription"
+      },
+      {
+        "id": 2,
+        "type": "input",
+        "question": "timeRoadThree.questTask2",
+        "correctAnswer": "Monat",
+        "tip": "timeRoadThree.questDescription"
+      },
+      {
+        "id": 3,
+        "type": "input",
+        "question": "timeRoadThree.questTask3",
+        "correctAnswer": "lange",
+        "tip": "timeRoadThree.questDescription"
+      },
+      {
+        "id": 4,
+        "type": "reorder",
+        "question": "timeRoadThree.questTask4",
+        "words": [
+          "Auto",
+          "Tage",
+          "für",
+          "miete",
+          "Ich",
+          "Tagen",
+          "drei",
+          "ein"
+        ],
+        "correctOrder": [
+          "Ich",
+          "miete",
+          "ein",
+          "Auto",
+          "für",
+          "drei",
+          "Tage"
+        ],
+        "tip": "timeRoadThree.questDescription"
+      },
+      {
+        "id": 5,
+        "type": "select",
+        "question": "timeRoadThree.questTask5",
+        "options": [
+          "Sie geht für ein Jahr ins Ausland.",
+          "Sie geht seit einem Jahr ins Ausland.",
+          "Sie geht für einem Jahr ins Ausland."
+        ],
+        "answer": "Sie geht für ein Jahr ins Ausland.",
+        "tip": "timeRoadThree.questDescription"
+      },
+      {
+        "id": 6,
+        "type": "input",
+        "question": "timeRoadThree.questTask6",
+        "correctAnswer": "Woche",
+        "tip": "timeRoadThree.questDescription"
+      },
+      {
+        "id": 7,
+        "type": "readAndAnswer",
+        "question": "timeRoadThree.questTask7",
+        "text": "Eva wohnt seit vier Jahren in Leipzig. Im Sommer fährt sie für drei Wochen nach Spanien. Ihre Freundin bleibt für eine Woche bei ihr.",
+        "options": [
+          "seit vier Jahren",
+          "für drei Wochen",
+          "für eine Woche"
+        ],
+        "answer": "für drei Wochen",
+        "tip": "timeRoadThree.questDescription"
+      },
+      {
+        "id": 8,
+        "type": "input",
+        "question": "timeRoadThree.questTask8",
+        "correctAnswer": "Tage",
+        "tip": "timeRoadThree.questDescription"
+      },
+      {
+        "id": 9,
+        "type": "input",
+        "question": "timeRoadThree.questTask9",
+        "correctAnswer": "bleiben",
+        "tip": "timeRoadThree.questDescription"
+      },
+      {
+        "id": 10,
+        "type": "reorder",
+        "question": "timeRoadThree.questTask10",
+        "words": [
+          "seit",
+          "zwei",
+          "Ausland",
+          "für",
+          "Mein",
+          "arbeitet",
+          "Bruder",
+          "im",
+          "Jahren"
+        ],
+        "correctOrder": [
+          "Mein",
+          "Bruder",
+          "arbeitet",
+          "seit",
+          "zwei",
+          "Jahren",
+          "im",
+          "Ausland"
+        ],
+        "tip": "timeRoadThree.questDescription"
+      },
+      {
+        "id": 11,
+        "type": "select",
+        "question": "timeRoadThree.questTask11",
+        "options": [
+          "Wir buchen ein Zimmer für eine Nacht.",
+          "Wir buchen ein Zimmer seit einer Nacht.",
+          "Wir buchen ein Zimmer für einer Nacht."
+        ],
+        "answer": "Wir buchen ein Zimmer für eine Nacht.",
+        "tip": "timeRoadThree.questDescription"
+      },
+      {
+        "id": 12,
+        "type": "input",
+        "question": "timeRoadThree.questTask12",
+        "correctAnswer": "einem",
+        "tip": "timeRoadThree.questDescription"
+      },
+      {
+        "id": 13,
+        "type": "input",
+        "question": "timeRoadThree.questTask13",
+        "correctAnswer": "Wochen",
+        "tip": "timeRoadThree.questDescription"
+      },
+      {
+        "id": 14,
+        "type": "input",
+        "question": "timeRoadThree.questTask14",
+        "correctAnswer": "gepackt",
+        "tip": "timeRoadThree.questDescription"
+      },
+      {
+        "id": 15,
+        "type": "input",
+        "question": "timeRoadThree.questTask15",
+        "correctAnswer": "Tasche",
+        "tip": "timeRoadThree.questDescription"
+      }
+    ]
+  },
+  {
+    "questId": "time-road-four",
+    "title": "timeRoadFour.questTitle",
+    "progress": "0/15",
+    "description": "timeRoadFour.questDescription",
+    "conditions": {
+      "goal": "timeRoadFour.questGoal",
+      "minCorrect": 15,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
+    "vocabulary": [
+      {
+        "word": "das Essen",
+        "translation-ru": "еда",
+        "translation-en": "meal, food",
+        "translation-uk": "їжа",
+        "translation-pl": "jedzenie",
+        "translation-es": "la comida",
+        "translation-fr": "le repas",
+        "translation-tr": "yemek",
+        "translation-ro": "mâncarea",
+        "translation-uz": "ovqat",
+        "translation-hi": "खाना",
+        "translation-ar": "الطعام"
+      },
+      {
+        "word": "die Arbeit",
+        "translation-ru": "работа",
+        "translation-en": "work",
+        "translation-uk": "робота",
+        "translation-pl": "praca",
+        "translation-es": "el trabajo",
+        "translation-fr": "le travail",
+        "translation-tr": "iş",
+        "translation-ro": "munca",
+        "translation-uz": "ish",
+        "translation-hi": "काम",
+        "translation-ar": "العمل"
+      },
+      {
+        "word": "der Unterricht",
+        "translation-ru": "урок, занятия",
+        "translation-en": "lesson, class",
+        "translation-uk": "урок, заняття",
+        "translation-pl": "lekcja, zajęcia",
+        "translation-es": "la clase",
+        "translation-fr": "le cours",
+        "translation-tr": "ders",
+        "translation-ro": "ora, lecția",
+        "translation-uz": "dars",
+        "translation-hi": "क्लास",
+        "translation-ar": "الدرس"
+      },
+      {
+        "word": "duschen",
+        "translation-ru": "принимать душ",
+        "translation-en": "to shower",
+        "translation-uk": "приймати душ",
+        "translation-pl": "brać prysznic",
+        "translation-es": "ducharse",
+        "translation-fr": "se doucher",
+        "translation-tr": "duş almak",
+        "translation-ro": "a face duș",
+        "translation-uz": "dush qabul qilmoq",
+        "translation-hi": "नहाना",
+        "translation-ar": "يستحم"
+      },
+      {
+        "word": "zurückkommen",
+        "translation-ru": "возвращаться",
+        "translation-en": "to come back",
+        "translation-uk": "повертатися",
+        "translation-pl": "wracać",
+        "translation-es": "volver",
+        "translation-fr": "revenir",
+        "translation-tr": "geri gelmek",
+        "translation-ro": "a se întoarce",
+        "translation-uz": "qaytib kelmoq",
+        "translation-hi": "वापस आना",
+        "translation-ar": "يعود"
+      }
+    ],
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "timeRoadFour.questTask1",
+        "options": [
+          "Ich komme vor einer Stunde zurück.",
+          "Ich komme in eine Stunde zurück.",
+          "Ich komme in einer Stunde zurück."
+        ],
+        "answer": "Ich komme in einer Stunde zurück.",
+        "tip": "timeRoadFour.questDescription"
+      },
+      {
+        "id": 2,
+        "type": "input",
+        "question": "timeRoadFour.questTask2",
+        "correctAnswer": "Arbeit",
+        "tip": "timeRoadFour.questDescription"
+      },
+      {
+        "id": 3,
+        "type": "input",
+        "question": "timeRoadFour.questTask3",
+        "correctAnswer": "Essen",
+        "tip": "timeRoadFour.questDescription"
+      },
+      {
+        "id": 4,
+        "type": "reorder",
+        "question": "timeRoadFour.questTask4",
+        "words": [
+          "in",
+          "Urlaub",
+          "Der",
+          "Wochen",
+          "zwei",
+          "vor",
+          "beginnt"
+        ],
+        "correctOrder": [
+          "Der",
+          "Urlaub",
+          "beginnt",
+          "in",
+          "zwei",
+          "Wochen"
+        ],
+        "tip": "timeRoadFour.questDescription"
+      },
+      {
+        "id": 5,
+        "type": "select",
+        "question": "timeRoadFour.questTask5",
+        "options": [
+          "Nach den Unterricht trinken wir Kaffee.",
+          "Nach dem Unterricht trinken wir Kaffee.",
+          "Nach dem Unterricht wir trinken Kaffee."
+        ],
+        "answer": "Nach dem Unterricht trinken wir Kaffee.",
+        "tip": "timeRoadFour.questDescription"
+      },
+      {
+        "id": 6,
+        "type": "input",
+        "question": "timeRoadFour.questTask6",
+        "correctAnswer": "Tagen",
+        "tip": "timeRoadFour.questDescription"
+      },
+      {
+        "id": 7,
+        "type": "readAndAnswer",
+        "question": "timeRoadFour.questTask7",
+        "text": "Paul steht um sieben Uhr auf. Vor dem Frühstück duscht er. Nach dem Frühstück fährt er zur Arbeit. In einer Woche hat er Urlaub.",
+        "options": [
+          "er duscht",
+          "er hat Urlaub",
+          "er fährt zur Arbeit"
+        ],
+        "answer": "er duscht",
+        "tip": "timeRoadFour.questDescription"
+      },
+      {
+        "id": 8,
+        "type": "input",
+        "question": "timeRoadFour.questTask8",
+        "correctAnswer": "Minuten",
+        "tip": "timeRoadFour.questDescription"
+      },
+      {
+        "id": 9,
+        "type": "input",
+        "question": "timeRoadFour.questTask9",
+        "correctAnswer": "trinke",
+        "tip": "timeRoadFour.questDescription"
+      },
+      {
+        "id": 10,
+        "type": "reorder",
+        "question": "timeRoadFour.questTask10",
+        "words": [
+          "Vor",
+          "dem",
+          "den",
+          "ich",
+          "Schlafen",
+          "lese"
+        ],
+        "correctOrder": [
+          "Vor",
+          "dem",
+          "Schlafen",
+          "lese",
+          "ich"
+        ],
+        "tip": "timeRoadFour.questDescription"
+      },
+      {
+        "id": 11,
+        "type": "select",
+        "question": "timeRoadFour.questTask11",
+        "options": [
+          "In ein Jahr ziehen wir um.",
+          "In einem Jahr ziehen wir um.",
+          "In einem Jahr wir ziehen um."
+        ],
+        "answer": "In einem Jahr ziehen wir um.",
+        "tip": "timeRoadFour.questDescription"
+      },
+      {
+        "id": 12,
+        "type": "input",
+        "question": "timeRoadFour.questTask12",
+        "correctAnswer": "Woche",
+        "tip": "timeRoadFour.questDescription"
+      },
+      {
+        "id": 13,
+        "type": "input",
+        "question": "timeRoadFour.questTask13",
+        "correctAnswer": "Monaten",
+        "tip": "timeRoadFour.questDescription"
+      },
+      {
+        "id": 14,
+        "type": "input",
+        "question": "timeRoadFour.questTask14",
+        "correctAnswer": "nach",
+        "tip": "timeRoadFour.questDescription"
+      },
+      {
+        "id": 15,
+        "type": "input",
+        "question": "timeRoadFour.questTask15",
+        "correctAnswer": "rufe",
+        "tip": "timeRoadFour.questDescription"
+      }
+    ]
+  },
+  {
+    "questId": "time-road-five",
+    "title": "timeRoadFive.questTitle",
+    "progress": "0/15",
+    "description": "timeRoadFive.questDescription",
+    "conditions": {
+      "goal": "timeRoadFive.questGoal",
+      "minCorrect": 15,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
+    "vocabulary": [
+      {
+        "word": "geöffnet",
+        "translation-ru": "открыто",
+        "translation-en": "open",
+        "translation-uk": "відчинено",
+        "translation-pl": "otwarte",
+        "translation-es": "abierto",
+        "translation-fr": "ouvert",
+        "translation-tr": "açık",
+        "translation-ro": "deschis",
+        "translation-uz": "ochiq",
+        "translation-hi": "खुला",
+        "translation-ar": "مفتوح"
+      },
+      {
+        "word": "die Ferien",
+        "translation-ru": "каникулы",
+        "translation-en": "holidays",
+        "translation-uk": "канікули",
+        "translation-pl": "wakacje, ferie",
+        "translation-es": "las vacaciones",
+        "translation-fr": "les vacances",
+        "translation-tr": "tatil",
+        "translation-ro": "vacanța",
+        "translation-uz": "ta’til",
+        "translation-hi": "छुट्टियाँ",
+        "translation-ar": "العطلة"
+      },
+      {
+        "word": "der Feierabend",
+        "translation-ru": "конец рабочего дня",
+        "translation-en": "end of the working day",
+        "translation-uk": "кінець робочого дня",
+        "translation-pl": "koniec pracy",
+        "translation-es": "el fin de la jornada",
+        "translation-fr": "la fin de la journée de travail",
+        "translation-tr": "mesai bitimi",
+        "translation-ro": "sfârșitul programului",
+        "translation-uz": "ish kunining oxiri",
+        "translation-hi": "काम ख़त्म होने का समय",
+        "translation-ar": "نهاية الدوام"
+      },
+      {
+        "word": "gültig",
+        "translation-ru": "действительный",
+        "translation-en": "valid",
+        "translation-uk": "дійсний",
+        "translation-pl": "ważny",
+        "translation-es": "válido",
+        "translation-fr": "valable",
+        "translation-tr": "geçerli",
+        "translation-ro": "valabil",
+        "translation-uz": "amal qiladigan",
+        "translation-hi": "मान्य",
+        "translation-ar": "صالح"
+      },
+      {
+        "word": "das Angebot",
+        "translation-ru": "предложение, акция",
+        "translation-en": "offer",
+        "translation-uk": "пропозиція, акція",
+        "translation-pl": "oferta",
+        "translation-es": "la oferta",
+        "translation-fr": "l’offre",
+        "translation-tr": "teklif, kampanya",
+        "translation-ro": "oferta",
+        "translation-uz": "taklif, aksiya",
+        "translation-hi": "ऑफ़र",
+        "translation-ar": "العرض"
+      }
+    ],
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "timeRoadFive.questTask1",
+        "options": [
+          "Ab Montag arbeite ich in einem neue Büro.",
+          "Ab Montag ich arbeite in einem neuen Büro.",
+          "Ab Montag arbeite ich in einem neuen Büro."
+        ],
+        "answer": "Ab Montag arbeite ich in einem neuen Büro.",
+        "tip": "timeRoadFive.questDescription"
+      },
+      {
+        "id": 2,
+        "type": "input",
+        "question": "timeRoadFive.questTask2",
+        "correctAnswer": "Montag",
+        "tip": "timeRoadFive.questDescription"
+      },
+      {
+        "id": 3,
+        "type": "input",
+        "question": "timeRoadFive.questTask3",
+        "correctAnswer": "bis",
+        "tip": "timeRoadFive.questDescription"
+      },
+      {
+        "id": 4,
+        "type": "reorder",
+        "question": "timeRoadFive.questTask4",
+        "words": [
+          "Uhr",
+          "ist",
+          "Post",
+          "sechs",
+          "bis",
+          "neun",
+          "geöffnet",
+          "ab",
+          "Die",
+          "von"
+        ],
+        "correctOrder": [
+          "Die",
+          "Post",
+          "ist",
+          "von",
+          "neun",
+          "bis",
+          "sechs",
+          "Uhr",
+          "geöffnet"
+        ],
+        "tip": "timeRoadFive.questDescription"
+      },
+      {
+        "id": 5,
+        "type": "select",
+        "question": "timeRoadFive.questTask5",
+        "options": [
+          "Das Angebot ist bis Freitag gültig.",
+          "Das Angebot gültig ist bis Freitag.",
+          "Das Angebot ist ab Freitag gültig."
+        ],
+        "answer": "Das Angebot ist bis Freitag gültig.",
+        "tip": "timeRoadFive.questDescription"
+      },
+      {
+        "id": 6,
+        "type": "input",
+        "question": "timeRoadFive.questTask6",
+        "correctAnswer": "Ab",
+        "tip": "timeRoadFive.questDescription"
+      },
+      {
+        "id": 7,
+        "type": "readAndAnswer",
+        "question": "timeRoadFive.questTask7",
+        "text": "Das Schwimmbad ist von Montag bis Freitag von acht bis zwanzig Uhr geöffnet. Am Samstag ist es nur bis vierzehn Uhr offen. Ab dem ersten Juli gibt es ein neues Angebot.",
+        "options": [
+          "bis vierzehn Uhr",
+          "bis acht Uhr",
+          "bis zwanzig Uhr"
+        ],
+        "answer": "bis vierzehn Uhr",
+        "tip": "timeRoadFive.questDescription"
+      },
+      {
+        "id": 8,
+        "type": "input",
+        "question": "timeRoadFive.questTask8",
+        "correctAnswer": "Feierabend",
+        "tip": "timeRoadFive.questDescription"
+      },
+      {
+        "id": 9,
+        "type": "input",
+        "question": "timeRoadFive.questTask9",
+        "correctAnswer": "ist",
+        "tip": "timeRoadFive.questDescription"
+      },
+      {
+        "id": 10,
+        "type": "reorder",
+        "question": "timeRoadFive.questTask10",
+        "words": [
+          "bis",
+          "Uhr",
+          "ab",
+          "warten",
+          "Wir",
+          "acht"
+        ],
+        "correctOrder": [
+          "Wir",
+          "warten",
+          "bis",
+          "acht",
+          "Uhr"
+        ],
+        "tip": "timeRoadFive.questDescription"
+      },
+      {
+        "id": 11,
+        "type": "select",
+        "question": "timeRoadFive.questTask11",
+        "options": [
+          "Vom neunten bis zum zwölften bin ich in Paris.",
+          "Vom neunten bis zum zwölften ich bin in Paris.",
+          "Von neunten bis zu zwölften bin ich in Paris."
+        ],
+        "answer": "Vom neunten bis zum zwölften bin ich in Paris.",
+        "tip": "timeRoadFive.questDescription"
+      },
+      {
+        "id": 12,
+        "type": "input",
+        "question": "timeRoadFive.questTask12",
+        "correctAnswer": "Stunde",
+        "tip": "timeRoadFive.questDescription"
+      },
+      {
+        "id": 13,
+        "type": "input",
+        "question": "timeRoadFive.questTask13",
+        "correctAnswer": "Monate",
+        "tip": "timeRoadFive.questDescription"
+      },
+      {
+        "id": 14,
+        "type": "input",
+        "question": "timeRoadFive.questTask14",
+        "correctAnswer": "Woche",
+        "tip": "timeRoadFive.questDescription"
+      },
+      {
+        "id": 15,
+        "type": "input",
+        "question": "timeRoadFive.questTask15",
+        "correctAnswer": "angefangen",
+        "tip": "timeRoadFive.questDescription"
+      }
+    ]
+  },
+  {
+    "questId": "time-road-six",
+    "title": "timeRoadSix.questTitle",
+    "progress": "0/15",
+    "description": "timeRoadSix.questDescription",
+    "conditions": {
+      "goal": "timeRoadSix.questGoal",
+      "minCorrect": 15,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
+    "vocabulary": [
+      {
+        "word": "zuerst",
+        "translation-ru": "сначала",
+        "translation-en": "first",
+        "translation-uk": "спочатку",
+        "translation-pl": "najpierw",
+        "translation-es": "primero",
+        "translation-fr": "d’abord",
+        "translation-tr": "önce",
+        "translation-ro": "întâi",
+        "translation-uz": "avval",
+        "translation-hi": "पहले",
+        "translation-ar": "أولًا"
+      },
+      {
+        "word": "danach",
+        "translation-ru": "после этого",
+        "translation-en": "after that",
+        "translation-uk": "після цього",
+        "translation-pl": "potem, po tym",
+        "translation-es": "después",
+        "translation-fr": "après",
+        "translation-tr": "ondan sonra",
+        "translation-ro": "după aceea",
+        "translation-uz": "shundan keyin",
+        "translation-hi": "उसके बाद",
+        "translation-ar": "بعد ذلك"
+      },
+      {
+        "word": "später",
+        "translation-ru": "позже",
+        "translation-en": "later",
+        "translation-uk": "пізніше",
+        "translation-pl": "później",
+        "translation-es": "más tarde",
+        "translation-fr": "plus tard",
+        "translation-tr": "daha sonra",
+        "translation-ro": "mai târziu",
+        "translation-uz": "keyinroq",
+        "translation-hi": "बाद में",
+        "translation-ar": "لاحقًا"
+      },
+      {
+        "word": "der Schluss",
+        "translation-ru": "конец",
+        "translation-en": "end",
+        "translation-uk": "кінець",
+        "translation-pl": "koniec",
+        "translation-es": "el final",
+        "translation-fr": "la fin",
+        "translation-tr": "son",
+        "translation-ro": "sfârșitul",
+        "translation-uz": "oxir",
+        "translation-hi": "अंत",
+        "translation-ar": "النهاية"
+      },
+      {
+        "word": "aufräumen",
+        "translation-ru": "убирать",
+        "translation-en": "to tidy up",
+        "translation-uk": "прибирати",
+        "translation-pl": "sprzątać",
+        "translation-es": "ordenar",
+        "translation-fr": "ranger",
+        "translation-tr": "toplamak",
+        "translation-ro": "a face ordine",
+        "translation-uz": "yig‘ishtirmoq",
+        "translation-hi": "साफ़-सफ़ाई करना",
+        "translation-ar": "يرتّب"
+      },
+      {
+        "word": "der Spaziergang",
+        "translation-ru": "прогулка",
+        "translation-en": "walk",
+        "translation-uk": "прогулянка",
+        "translation-pl": "spacer",
+        "translation-es": "el paseo",
+        "translation-fr": "la promenade",
+        "translation-tr": "yürüyüş",
+        "translation-ro": "plimbarea",
+        "translation-uz": "sayr",
+        "translation-hi": "सैर",
+        "translation-ar": "النزهة"
+      }
+    ],
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "timeRoadSix.questTask1",
+        "options": [
+          "Zuerst ich frühstücke, dann ich gehe zur Arbeit.",
+          "Zuerst frühstücke ich, dann ich gehe zur Arbeit.",
+          "Zuerst frühstücke ich, dann gehe ich zur Arbeit."
+        ],
+        "answer": "Zuerst frühstücke ich, dann gehe ich zur Arbeit.",
+        "tip": "timeRoadSix.questDescription"
+      },
+      {
+        "id": 2,
+        "type": "input",
+        "question": "timeRoadSix.questTask2",
+        "correctAnswer": "Danach",
+        "tip": "timeRoadSix.questDescription"
+      },
+      {
+        "id": 3,
+        "type": "input",
+        "question": "timeRoadSix.questTask3",
+        "correctAnswer": "Schluss",
+        "tip": "timeRoadSix.questDescription"
+      },
+      {
+        "id": 4,
+        "type": "reorder",
+        "question": "timeRoadSix.questTask4",
+        "words": [
+          "an",
+          "dich",
+          "rufen",
+          "Später",
+          "ich",
+          "rufe"
+        ],
+        "correctOrder": [
+          "Später",
+          "rufe",
+          "ich",
+          "dich",
+          "an"
+        ],
+        "tip": "timeRoadSix.questDescription"
+      },
+      {
+        "id": 5,
+        "type": "select",
+        "question": "timeRoadSix.questTask5",
+        "options": [
+          "Zuerst wir kaufen Lebensmittel.",
+          "Zuerst kaufen Lebensmittel wir.",
+          "Zuerst kaufen wir Lebensmittel."
+        ],
+        "answer": "Zuerst kaufen wir Lebensmittel.",
+        "tip": "timeRoadSix.questDescription"
+      },
+      {
+        "id": 6,
+        "type": "input",
+        "question": "timeRoadSix.questTask6",
+        "correctAnswer": "gehen",
+        "tip": "timeRoadSix.questDescription"
+      },
+      {
+        "id": 7,
+        "type": "readAndAnswer",
+        "question": "timeRoadSix.questTask7",
+        "text": "Am Samstag hat Mia viel zu tun. Zuerst räumt sie die Wohnung auf. Danach kauft sie ein. Später trifft sie Freunde, und zum Schluss sieht sie einen Film.",
+        "options": [
+          "sie räumt auf",
+          "sie sieht einen Film",
+          "sie kauft ein"
+        ],
+        "answer": "sie sieht einen Film",
+        "tip": "timeRoadSix.questDescription"
+      },
+      {
+        "id": 8,
+        "type": "input",
+        "question": "timeRoadSix.questTask8",
+        "correctAnswer": "zuerst",
+        "tip": "timeRoadSix.questDescription"
+      },
+      {
+        "id": 9,
+        "type": "input",
+        "question": "timeRoadSix.questTask9",
+        "correctAnswer": "räume",
+        "tip": "timeRoadSix.questDescription"
+      },
+      {
+        "id": 10,
+        "type": "reorder",
+        "question": "timeRoadSix.questTask10",
+        "words": [
+          "Schluss",
+          "Zum",
+          "trinken",
+          "Tee",
+          "trinkt",
+          "wir"
+        ],
+        "correctOrder": [
+          "Zum",
+          "Schluss",
+          "trinken",
+          "wir",
+          "Tee"
+        ],
+        "tip": "timeRoadSix.questDescription"
+      },
+      {
+        "id": 11,
+        "type": "select",
+        "question": "timeRoadSix.questTask11",
+        "options": [
+          "Dann fährt nach Hause er.",
+          "Dann fährt er nach Hause.",
+          "Dann er fährt nach Hause."
+        ],
+        "answer": "Dann fährt er nach Hause.",
+        "tip": "timeRoadSix.questDescription"
+      },
+      {
+        "id": 12,
+        "type": "input",
+        "question": "timeRoadSix.questTask12",
+        "correctAnswer": "ab",
+        "tip": "timeRoadSix.questDescription"
+      },
+      {
+        "id": 13,
+        "type": "input",
+        "question": "timeRoadSix.questTask13",
+        "correctAnswer": "Nach",
+        "tip": "timeRoadSix.questDescription"
+      },
+      {
+        "id": 14,
+        "type": "input",
+        "question": "timeRoadSix.questTask14",
+        "correctAnswer": "Minuten",
+        "tip": "timeRoadSix.questDescription"
+      },
+      {
+        "id": 15,
+        "type": "input",
+        "question": "timeRoadSix.questTask15",
+        "correctAnswer": "getanzt",
+        "tip": "timeRoadSix.questDescription"
+      }
+    ]
+  },
+  {
+    "questId": "time-road-seven",
+    "title": "timeRoadSeven.questTitle",
+    "progress": "0/15",
+    "description": "timeRoadSeven.questDescription",
+    "conditions": {
+      "goal": "timeRoadSeven.questGoal",
+      "minCorrect": 15,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
+    "vocabulary": [
+      {
+        "word": "die Stelle",
+        "translation-ru": "место работы, должность",
+        "translation-en": "job, position",
+        "translation-uk": "посада, місце роботи",
+        "translation-pl": "posada, praca",
+        "translation-es": "el puesto",
+        "translation-fr": "le poste",
+        "translation-tr": "iş yeri, pozisyon",
+        "translation-ro": "postul",
+        "translation-uz": "lavozim",
+        "translation-hi": "नौकरी, पद",
+        "translation-ar": "الوظيفة"
+      },
+      {
+        "word": "der Kollege",
+        "translation-ru": "коллега",
+        "translation-en": "colleague",
+        "translation-uk": "колега",
+        "translation-pl": "kolega",
+        "translation-es": "el compañero de trabajo",
+        "translation-fr": "le collègue",
+        "translation-tr": "iş arkadaşı",
+        "translation-ro": "colegul",
+        "translation-uz": "hamkasb",
+        "translation-hi": "सहकर्मी",
+        "translation-ar": "الزميل"
+      },
+      {
+        "word": "die Pause",
+        "translation-ru": "перерыв",
+        "translation-en": "break",
+        "translation-uk": "перерва",
+        "translation-pl": "przerwa",
+        "translation-es": "la pausa",
+        "translation-fr": "la pause",
+        "translation-tr": "mola",
+        "translation-ro": "pauza",
+        "translation-uz": "tanaffus",
+        "translation-hi": "ब्रेक",
+        "translation-ar": "الاستراحة"
+      },
+      {
+        "word": "die Bewerbung",
+        "translation-ru": "заявление о приёме на работу",
+        "translation-en": "job application",
+        "translation-uk": "заява про прийом на роботу",
+        "translation-pl": "podanie o pracę",
+        "translation-es": "la solicitud de empleo",
+        "translation-fr": "la candidature",
+        "translation-tr": "iş başvurusu",
+        "translation-ro": "cererea de angajare",
+        "translation-uz": "ishga ariza",
+        "translation-hi": "नौकरी की अर्ज़ी",
+        "translation-ar": "طلب التوظيف"
+      },
+      {
+        "word": "der Chef",
+        "translation-ru": "начальник",
+        "translation-en": "boss",
+        "translation-uk": "начальник",
+        "translation-pl": "szef",
+        "translation-es": "el jefe",
+        "translation-fr": "le chef",
+        "translation-tr": "patron",
+        "translation-ro": "șeful",
+        "translation-uz": "boshliq",
+        "translation-hi": "बॉस",
+        "translation-ar": "المدير"
+      },
+      {
+        "word": "das Meeting",
+        "translation-ru": "встреча, совещание",
+        "translation-en": "meeting",
+        "translation-uk": "зустріч, нарада",
+        "translation-pl": "spotkanie",
+        "translation-es": "la reunión",
+        "translation-fr": "la réunion",
+        "translation-tr": "toplantı",
+        "translation-ro": "ședința",
+        "translation-uz": "yig‘ilish",
+        "translation-hi": "बैठक",
+        "translation-ar": "الاجتماع"
+      }
+    ],
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "timeRoadSeven.questTask1",
+        "options": [
+          "Ich arbeite seit im März hier.",
+          "Ich arbeite vor März hier.",
+          "Ich arbeite seit März hier."
+        ],
+        "answer": "Ich arbeite seit März hier.",
+        "tip": "timeRoadSeven.questDescription"
+      },
+      {
+        "id": 2,
+        "type": "input",
+        "question": "timeRoadSeven.questTask2",
+        "correctAnswer": "Bewerbung",
+        "tip": "timeRoadSeven.questDescription"
+      },
+      {
+        "id": 3,
+        "type": "input",
+        "question": "timeRoadSeven.questTask3",
+        "correctAnswer": "ersten",
+        "tip": "timeRoadSeven.questDescription"
+      },
+      {
+        "id": 4,
+        "type": "reorder",
+        "question": "timeRoadSeven.questTask4",
+        "words": [
+          "bis",
+          "eins",
+          "von",
+          "ab",
+          "halb",
+          "Die",
+          "zwölf",
+          "Pause",
+          "ist"
+        ],
+        "correctOrder": [
+          "Die",
+          "Pause",
+          "ist",
+          "von",
+          "zwölf",
+          "bis",
+          "halb",
+          "eins"
+        ],
+        "tip": "timeRoadSeven.questDescription"
+      },
+      {
+        "id": 5,
+        "type": "select",
+        "question": "timeRoadSeven.questTask5",
+        "options": [
+          "Mein Kollege arbeitet für zehn Jahren hier.",
+          "Mein Kollege arbeitet seit zehn Jahre hier.",
+          "Mein Kollege arbeitet seit zehn Jahren hier."
+        ],
+        "answer": "Mein Kollege arbeitet seit zehn Jahren hier.",
+        "tip": "timeRoadSeven.questDescription"
+      },
+      {
+        "id": 6,
+        "type": "input",
+        "question": "timeRoadSeven.questTask6",
+        "correctAnswer": "Pause",
+        "tip": "timeRoadSeven.questDescription"
+      },
+      {
+        "id": 7,
+        "type": "readAndAnswer",
+        "question": "timeRoadSeven.questTask7",
+        "text": "Sara hat vor zwei Monaten eine neue Stelle gefunden. Sie arbeitet von Montag bis Donnerstag, am Freitag hat sie frei. In einem Jahr möchte sie einen Kurs machen.",
+        "options": [
+          "vor zwei Monaten",
+          "am Freitag",
+          "in einem Jahr"
+        ],
+        "answer": "vor zwei Monaten",
+        "tip": "timeRoadSeven.questDescription"
+      },
+      {
+        "id": 8,
+        "type": "input",
+        "question": "timeRoadSeven.questTask8",
+        "correctAnswer": "bis",
+        "tip": "timeRoadSeven.questDescription"
+      },
+      {
+        "id": 9,
+        "type": "input",
+        "question": "timeRoadSeven.questTask9",
+        "correctAnswer": "lese",
+        "tip": "timeRoadSeven.questDescription"
+      },
+      {
+        "id": 10,
+        "type": "reorder",
+        "question": "timeRoadSeven.questTask10",
+        "words": [
+          "an",
+          "vor",
+          "neue",
+          "In",
+          "ich",
+          "fange",
+          "Arbeit",
+          "Woche",
+          "einer",
+          "die"
+        ],
+        "correctOrder": [
+          "In",
+          "einer",
+          "Woche",
+          "fange",
+          "ich",
+          "die",
+          "neue",
+          "Arbeit",
+          "an"
+        ],
+        "tip": "timeRoadSeven.questDescription"
+      },
+      {
+        "id": 11,
+        "type": "select",
+        "question": "timeRoadSeven.questTask11",
+        "options": [
+          "Ich suche seit drei Monate eine Stelle.",
+          "Ich suche seit drei Monaten eine Stelle.",
+          "Ich suche vor drei Monaten eine Stelle."
+        ],
+        "answer": "Ich suche seit drei Monaten eine Stelle.",
+        "tip": "timeRoadSeven.questDescription"
+      },
+      {
+        "id": 12,
+        "type": "input",
+        "question": "timeRoadSeven.questTask12",
+        "correctAnswer": "fünfzehnten",
+        "tip": "timeRoadSeven.questDescription"
+      },
+      {
+        "id": 13,
+        "type": "input",
+        "question": "timeRoadSeven.questTask13",
+        "correctAnswer": "esse",
+        "tip": "timeRoadSeven.questDescription"
+      },
+      {
+        "id": 14,
+        "type": "input",
+        "question": "timeRoadSeven.questTask14",
+        "correctAnswer": "geschickt",
+        "tip": "timeRoadSeven.questDescription"
+      },
+      {
+        "id": 15,
+        "type": "input",
+        "question": "timeRoadSeven.questTask15",
+        "correctAnswer": "hat",
+        "tip": "timeRoadSeven.questDescription"
+      }
+    ]
+  },
+  {
+    "questId": "time-road-eight",
+    "title": "timeRoadEight.questTitle",
+    "progress": "0/15",
+    "description": "timeRoadEight.questDescription",
+    "conditions": {
+      "goal": "timeRoadEight.questGoal",
+      "minCorrect": 15,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
+    "vocabulary": [
+      {
+        "word": "der Strand",
+        "translation-ru": "пляж",
+        "translation-en": "beach",
+        "translation-uk": "пляж",
+        "translation-pl": "plaża",
+        "translation-es": "la playa",
+        "translation-fr": "la plage",
+        "translation-tr": "plaj",
+        "translation-ro": "plaja",
+        "translation-uz": "plyaj",
+        "translation-hi": "समुद्र तट",
+        "translation-ar": "الشاطئ"
+      },
+      {
+        "word": "das Meer",
+        "translation-ru": "море",
+        "translation-en": "sea",
+        "translation-uk": "море",
+        "translation-pl": "morze",
+        "translation-es": "el mar",
+        "translation-fr": "la mer",
+        "translation-tr": "deniz",
+        "translation-ro": "marea",
+        "translation-uz": "dengiz",
+        "translation-hi": "समुद्र",
+        "translation-ar": "البحر"
+      },
+      {
+        "word": "die Ferienwohnung",
+        "translation-ru": "квартира для отдыха",
+        "translation-en": "holiday flat",
+        "translation-uk": "квартира для відпочинку",
+        "translation-pl": "mieszkanie wakacyjne",
+        "translation-es": "el apartamento de vacaciones",
+        "translation-fr": "la location de vacances",
+        "translation-tr": "tatil evi",
+        "translation-ro": "apartamentul de vacanță",
+        "translation-uz": "dam olish kvartirasi",
+        "translation-hi": "छुट्टियों का फ़्लैट",
+        "translation-ar": "شقة العطلة"
+      },
+      {
+        "word": "der Flughafen",
+        "translation-ru": "аэропорт",
+        "translation-en": "airport",
+        "translation-uk": "аеропорт",
+        "translation-pl": "lotnisko",
+        "translation-es": "el aeropuerto",
+        "translation-fr": "l’aéroport",
+        "translation-tr": "havalimanı",
+        "translation-ro": "aeroportul",
+        "translation-uz": "aeroport",
+        "translation-hi": "हवाई अड्डा",
+        "translation-ar": "المطار"
+      },
+      {
+        "word": "die Sonne",
+        "translation-ru": "солнце",
+        "translation-en": "sun",
+        "translation-uk": "сонце",
+        "translation-pl": "słońce",
+        "translation-es": "el sol",
+        "translation-fr": "le soleil",
+        "translation-tr": "güneş",
+        "translation-ro": "soarele",
+        "translation-uz": "quyosh",
+        "translation-hi": "सूरज",
+        "translation-ar": "الشمس"
+      }
+    ],
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "timeRoadEight.questTask1",
+        "options": [
+          "In drei Tage fliegen wir ans Meer.",
+          "Vor drei Tagen fliegen wir ans Meer.",
+          "In drei Tagen fliegen wir ans Meer."
+        ],
+        "answer": "In drei Tagen fliegen wir ans Meer.",
+        "tip": "timeRoadEight.questDescription"
+      },
+      {
+        "id": 2,
+        "type": "input",
+        "question": "timeRoadEight.questTask2",
+        "correctAnswer": "Wochen",
+        "tip": "timeRoadEight.questDescription"
+      },
+      {
+        "id": 3,
+        "type": "input",
+        "question": "timeRoadEight.questTask3",
+        "correctAnswer": "seit",
+        "tip": "timeRoadEight.questDescription"
+      },
+      {
+        "id": 4,
+        "type": "reorder",
+        "question": "timeRoadEight.questTask4",
+        "words": [
+          "Strand",
+          "Nach",
+          "vor",
+          "wir",
+          "an",
+          "gehen",
+          "dem",
+          "den",
+          "Frühstück"
+        ],
+        "correctOrder": [
+          "Nach",
+          "dem",
+          "Frühstück",
+          "gehen",
+          "wir",
+          "an",
+          "den",
+          "Strand"
+        ],
+        "tip": "timeRoadEight.questDescription"
+      },
+      {
+        "id": 5,
+        "type": "select",
+        "question": "timeRoadEight.questTask5",
+        "options": [
+          "Das Flugzeug fliegt in zwei Stunde ab.",
+          "Das Flugzeug fliegt vor zwei Stunden ab.",
+          "Das Flugzeug fliegt in zwei Stunden ab."
+        ],
+        "answer": "Das Flugzeug fliegt in zwei Stunden ab.",
+        "tip": "timeRoadEight.questDescription"
+      },
+      {
+        "id": 6,
+        "type": "input",
+        "question": "timeRoadEight.questTask6",
+        "correctAnswer": "Sonne",
+        "tip": "timeRoadEight.questDescription"
+      },
+      {
+        "id": 7,
+        "type": "readAndAnswer",
+        "question": "timeRoadEight.questTask7",
+        "text": "Familie Berg ist seit einer Woche am Meer. Sie bleibt noch für zehn Tage. Vor zwei Tagen hat es geregnet, aber heute scheint die Sonne.",
+        "options": [
+          "zwei Tage",
+          "zehn Tage",
+          "eine Woche"
+        ],
+        "answer": "zehn Tage",
+        "tip": "timeRoadEight.questDescription"
+      },
+      {
+        "id": 8,
+        "type": "input",
+        "question": "timeRoadEight.questTask8",
+        "correctAnswer": "Tagen",
+        "tip": "timeRoadEight.questDescription"
+      },
+      {
+        "id": 9,
+        "type": "input",
+        "question": "timeRoadEight.questTask9",
+        "correctAnswer": "schwimmen",
+        "tip": "timeRoadEight.questDescription"
+      },
+      {
+        "id": 10,
+        "type": "reorder",
+        "question": "timeRoadEight.questTask10",
+        "words": [
+          "am",
+          "ist",
+          "Der",
+          "Strand",
+          "ab",
+          "Laden",
+          "neun",
+          "offen",
+          "Uhr",
+          "bis"
+        ],
+        "correctOrder": [
+          "Der",
+          "Laden",
+          "am",
+          "Strand",
+          "ist",
+          "bis",
+          "neun",
+          "Uhr",
+          "offen"
+        ],
+        "tip": "timeRoadEight.questDescription"
+      },
+      {
+        "id": 11,
+        "type": "select",
+        "question": "timeRoadEight.questTask11",
+        "options": [
+          "Zuerst fahren wir zum Flughafen.",
+          "Zuerst fahren wir zu Flughafen.",
+          "Zuerst wir fahren zum Flughafen."
+        ],
+        "answer": "Zuerst fahren wir zum Flughafen.",
+        "tip": "timeRoadEight.questDescription"
+      },
+      {
+        "id": 12,
+        "type": "input",
+        "question": "timeRoadEight.questTask12",
+        "correctAnswer": "bis",
+        "tip": "timeRoadEight.questDescription"
+      },
+      {
+        "id": 13,
+        "type": "input",
+        "question": "timeRoadEight.questTask13",
+        "correctAnswer": "Flug",
+        "tip": "timeRoadEight.questDescription"
+      },
+      {
+        "id": 14,
+        "type": "input",
+        "question": "timeRoadEight.questTask14",
+        "correctAnswer": "wird",
+        "tip": "timeRoadEight.questDescription"
+      },
+      {
+        "id": 15,
+        "type": "input",
+        "question": "timeRoadEight.questTask15",
+        "correctAnswer": "kleinen",
+        "tip": "timeRoadEight.questDescription"
+      }
+    ]
+  },
+  {
+    "questId": "time-road-nine",
+    "title": "timeRoadNine.questTitle",
+    "progress": "0/15",
+    "description": "timeRoadNine.questDescription",
+    "conditions": {
+      "goal": "timeRoadNine.questGoal",
+      "minCorrect": 15,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
+    "vocabulary": [
+      {
+        "word": "der Nachbar",
+        "translation-ru": "сосед",
+        "translation-en": "neighbour",
+        "translation-uk": "сусід",
+        "translation-pl": "sąsiad",
+        "translation-es": "el vecino",
+        "translation-fr": "le voisin",
+        "translation-tr": "komşu",
+        "translation-ro": "vecinul",
+        "translation-uz": "qo‘shni",
+        "translation-hi": "पड़ोसी",
+        "translation-ar": "الجار"
+      },
+      {
+        "word": "die Prüfung",
+        "translation-ru": "экзамен",
+        "translation-en": "exam",
+        "translation-uk": "іспит",
+        "translation-pl": "egzamin",
+        "translation-es": "el examen",
+        "translation-fr": "l’examen",
+        "translation-tr": "sınav",
+        "translation-ro": "examenul",
+        "translation-uz": "imtihon",
+        "translation-hi": "परीक्षा",
+        "translation-ar": "الامتحان"
+      },
+      {
+        "word": "der Sommer",
+        "translation-ru": "лето",
+        "translation-en": "summer",
+        "translation-uk": "літо",
+        "translation-pl": "lato",
+        "translation-es": "el verano",
+        "translation-fr": "l’été",
+        "translation-tr": "yaz",
+        "translation-ro": "vara",
+        "translation-uz": "yoz",
+        "translation-hi": "गरमी का मौसम",
+        "translation-ar": "الصيف"
+      },
+      {
+        "word": "die Schule",
+        "translation-ru": "школа",
+        "translation-en": "school",
+        "translation-uk": "школа",
+        "translation-pl": "szkoła",
+        "translation-es": "la escuela",
+        "translation-fr": "l’école",
+        "translation-tr": "okul",
+        "translation-ro": "școala",
+        "translation-uz": "maktab",
+        "translation-hi": "स्कूल",
+        "translation-ar": "المدرسة"
+      },
+      {
+        "word": "zurück",
+        "translation-ru": "обратно, назад",
+        "translation-en": "back",
+        "translation-uk": "назад",
+        "translation-pl": "z powrotem",
+        "translation-es": "de vuelta",
+        "translation-fr": "de retour",
+        "translation-tr": "geri",
+        "translation-ro": "înapoi",
+        "translation-uz": "qaytib",
+        "translation-hi": "वापस",
+        "translation-ar": "عائد"
+      },
+      {
+        "word": "joggen",
+        "translation-ru": "бегать трусцой",
+        "translation-en": "to jog",
+        "translation-uk": "бігати підтюпцем",
+        "translation-pl": "biegać",
+        "translation-es": "hacer footing",
+        "translation-fr": "faire du jogging",
+        "translation-tr": "koşu yapmak",
+        "translation-ro": "a face jogging",
+        "translation-uz": "yugurmoq",
+        "translation-hi": "जॉगिंग करना",
+        "translation-ar": "يهرول"
+      }
+    ],
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "timeRoadNine.questTask1",
+        "options": [
+          "Mein Nachbar wohnt seit zwanzig Jahre hier.",
+          "Mein Nachbar wohnt vor zwanzig Jahren hier.",
+          "Mein Nachbar wohnt seit zwanzig Jahren hier."
+        ],
+        "answer": "Mein Nachbar wohnt seit zwanzig Jahren hier.",
+        "tip": "timeRoadNine.questDescription"
+      },
+      {
+        "id": 2,
+        "type": "input",
+        "question": "timeRoadNine.questTask2",
+        "correctAnswer": "Monat",
+        "tip": "timeRoadNine.questDescription"
+      },
+      {
+        "id": 3,
+        "type": "input",
+        "question": "timeRoadNine.questTask3",
+        "correctAnswer": "Vor",
+        "tip": "timeRoadNine.questDescription"
+      },
+      {
+        "id": 4,
+        "type": "reorder",
+        "question": "timeRoadNine.questTask4",
+        "words": [
+          "für",
+          "Oma",
+          "Monat",
+          "seit",
+          "zu",
+          "Sommer",
+          "Im",
+          "einen",
+          "wir",
+          "fahren"
+        ],
+        "correctOrder": [
+          "Im",
+          "Sommer",
+          "fahren",
+          "wir",
+          "für",
+          "einen",
+          "Monat",
+          "zu",
+          "Oma"
+        ],
+        "tip": "timeRoadNine.questDescription"
+      },
+      {
+        "id": 5,
+        "type": "select",
+        "question": "timeRoadNine.questTask5",
+        "options": [
+          "Nach der Schule die Kinder spielen im Garten.",
+          "Nach die Schule spielen die Kinder im Garten.",
+          "Nach der Schule spielen die Kinder im Garten."
+        ],
+        "answer": "Nach der Schule spielen die Kinder im Garten.",
+        "tip": "timeRoadNine.questDescription"
+      },
+      {
+        "id": 6,
+        "type": "input",
+        "question": "timeRoadNine.questTask6",
+        "correctAnswer": "morgen",
+        "tip": "timeRoadNine.questDescription"
+      },
+      {
+        "id": 7,
+        "type": "readAndAnswer",
+        "question": "timeRoadNine.questTask7",
+        "text": "Lukas wohnt seit sechs Jahren in Bonn. Vor drei Monaten hat er geheiratet. Ab Juli arbeitet er in Köln. Zuerst fährt er mit dem Zug, später möchte er ein Auto kaufen.",
+        "options": [
+          "ab Juli",
+          "seit sechs Jahren",
+          "vor drei Monaten"
+        ],
+        "answer": "ab Juli",
+        "tip": "timeRoadNine.questDescription"
+      },
+      {
+        "id": 8,
+        "type": "input",
+        "question": "timeRoadNine.questTask8",
+        "correctAnswer": "bis",
+        "tip": "timeRoadNine.questDescription"
+      },
+      {
+        "id": 9,
+        "type": "input",
+        "question": "timeRoadNine.questTask9",
+        "correctAnswer": "gehen",
+        "tip": "timeRoadNine.questDescription"
+      },
+      {
+        "id": 10,
+        "type": "reorder",
+        "question": "timeRoadNine.questTask10",
+        "words": [
+          "Er",
+          "vor",
+          "halben",
+          "wartet",
+          "Stunde",
+          "seit",
+          "einer"
+        ],
+        "correctOrder": [
+          "Er",
+          "wartet",
+          "seit",
+          "einer",
+          "halben",
+          "Stunde"
+        ],
+        "tip": "timeRoadNine.questDescription"
+      },
+      {
+        "id": 11,
+        "type": "select",
+        "question": "timeRoadNine.questTask11",
+        "options": [
+          "Wir sind vor drei Jahre nach Prag gefahren.",
+          "Wir sind vor drei Jahren nach Prag gefahren.",
+          "Wir sind seit drei Jahren nach Prag gefahren."
+        ],
+        "answer": "Wir sind vor drei Jahren nach Prag gefahren.",
+        "tip": "timeRoadNine.questDescription"
+      },
+      {
+        "id": 12,
+        "type": "input",
+        "question": "timeRoadNine.questTask12",
+        "correctAnswer": "Prüfung",
+        "tip": "timeRoadNine.questDescription"
+      },
+      {
+        "id": 13,
+        "type": "input",
+        "question": "timeRoadNine.questTask13",
+        "correctAnswer": "dann",
+        "tip": "timeRoadNine.questDescription"
+      },
+      {
+        "id": 14,
+        "type": "input",
+        "question": "timeRoadNine.questTask14",
+        "correctAnswer": "gesehen",
+        "tip": "timeRoadNine.questDescription"
+      },
+      {
+        "id": 15,
+        "type": "input",
+        "question": "timeRoadNine.questTask15",
+        "correctAnswer": "Sommer",
+        "tip": "timeRoadNine.questDescription"
+      }
+    ]
+  },
+  {
+    "questId": "time-road-ten",
+    "title": "timeRoadTen.questTitle",
+    "progress": "0/15",
+    "description": "timeRoadTen.questDescription",
+    "conditions": {
+      "goal": "timeRoadTen.questGoal",
+      "minCorrect": 15,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
+    "vocabulary": [
+      {
+        "word": "der Umzug",
+        "translation-ru": "переезд",
+        "translation-en": "move (house)",
+        "translation-uk": "переїзд",
+        "translation-pl": "przeprowadzka",
+        "translation-es": "la mudanza",
+        "translation-fr": "le déménagement",
+        "translation-tr": "taşınma",
+        "translation-ro": "mutarea",
+        "translation-uz": "ko‘chish",
+        "translation-hi": "घर बदलना",
+        "translation-ar": "الانتقال"
+      },
+      {
+        "word": "das Praktikum",
+        "translation-ru": "стажировка",
+        "translation-en": "internship",
+        "translation-uk": "стажування",
+        "translation-pl": "praktyka, staż",
+        "translation-es": "las prácticas",
+        "translation-fr": "le stage",
+        "translation-tr": "staj",
+        "translation-ro": "stagiul",
+        "translation-uz": "amaliyot",
+        "translation-hi": "इंटर्नशिप",
+        "translation-ar": "التدريب العملي"
+      },
+      {
+        "word": "der Vertrag",
+        "translation-ru": "договор",
+        "translation-en": "contract",
+        "translation-uk": "договір",
+        "translation-pl": "umowa",
+        "translation-es": "el contrato",
+        "translation-fr": "le contrat",
+        "translation-tr": "sözleşme",
+        "translation-ro": "contractul",
+        "translation-uz": "shartnoma",
+        "translation-hi": "अनुबंध",
+        "translation-ar": "العقد"
+      },
+      {
+        "word": "der Besuch",
+        "translation-ru": "гости, визит",
+        "translation-en": "visit, visitors",
+        "translation-uk": "гості, візит",
+        "translation-pl": "goście, wizyta",
+        "translation-es": "la visita",
+        "translation-fr": "la visite",
+        "translation-tr": "misafir, ziyaret",
+        "translation-ro": "vizita, musafirii",
+        "translation-uz": "mehmonlar, tashrif",
+        "translation-hi": "मेहमान",
+        "translation-ar": "الزيارة"
+      },
+      {
+        "word": "die Freizeit",
+        "translation-ru": "свободное время",
+        "translation-en": "free time",
+        "translation-uk": "вільний час",
+        "translation-pl": "czas wolny",
+        "translation-es": "el tiempo libre",
+        "translation-fr": "le temps libre",
+        "translation-tr": "boş zaman",
+        "translation-ro": "timpul liber",
+        "translation-uz": "bo‘sh vaqt",
+        "translation-hi": "ख़ाली समय",
+        "translation-ar": "وقت الفراغ"
+      }
+    ],
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "timeRoadTen.questTask1",
+        "options": [
+          "Ich mache vor dem ersten April ein Praktikum.",
+          "Ich mache seit den ersten April ein Praktikum.",
+          "Ich mache seit dem ersten April ein Praktikum."
+        ],
+        "answer": "Ich mache seit dem ersten April ein Praktikum.",
+        "tip": "timeRoadTen.questDescription"
+      },
+      {
+        "id": 2,
+        "type": "input",
+        "question": "timeRoadTen.questTask2",
+        "correctAnswer": "Jahr",
+        "tip": "timeRoadTen.questDescription"
+      },
+      {
+        "id": 3,
+        "type": "input",
+        "question": "timeRoadTen.questTask3",
+        "correctAnswer": "Wochen",
+        "tip": "timeRoadTen.questDescription"
+      },
+      {
+        "id": 4,
+        "type": "reorder",
+        "question": "timeRoadTen.questTask4",
+        "words": [
+          "Vor",
+          "Monat",
+          "Besuch",
+          "wir",
+          "haben",
+          "Monaten",
+          "bekommen",
+          "einem"
+        ],
+        "correctOrder": [
+          "Vor",
+          "einem",
+          "Monat",
+          "haben",
+          "wir",
+          "Besuch",
+          "bekommen"
+        ],
+        "tip": "timeRoadTen.questDescription"
+      },
+      {
+        "id": 5,
+        "type": "select",
+        "question": "timeRoadTen.questTask5",
+        "options": [
+          "Nach die Arbeit habe ich wenig Freizeit.",
+          "Nach der Arbeit ich habe wenig Freizeit.",
+          "Nach der Arbeit habe ich wenig Freizeit."
+        ],
+        "answer": "Nach der Arbeit habe ich wenig Freizeit.",
+        "tip": "timeRoadTen.questDescription"
+      },
+      {
+        "id": 6,
+        "type": "input",
+        "question": "timeRoadTen.questTask6",
+        "correctAnswer": "Von",
+        "tip": "timeRoadTen.questDescription"
+      },
+      {
+        "id": 7,
+        "type": "readAndAnswer",
+        "question": "timeRoadTen.questTask7",
+        "text": "Nina hat vor einem Jahr ihr Studium beendet. Seit Januar macht sie ein Praktikum. Das Praktikum ist für sechs Monate. Danach möchte sie für ein Jahr ins Ausland gehen.",
+        "options": [
+          "seit Januar",
+          "für sechs Monate",
+          "für ein Jahr"
+        ],
+        "answer": "für sechs Monate",
+        "tip": "timeRoadTen.questDescription"
+      },
+      {
+        "id": 8,
+        "type": "input",
+        "question": "timeRoadTen.questTask8",
+        "correctAnswer": "seit",
+        "tip": "timeRoadTen.questDescription"
+      },
+      {
+        "id": 9,
+        "type": "input",
+        "question": "timeRoadTen.questTask9",
+        "correctAnswer": "beginnt",
+        "tip": "timeRoadTen.questDescription"
+      },
+      {
+        "id": 10,
+        "type": "reorder",
+        "question": "timeRoadTen.questTask10",
+        "words": [
+          "fahren",
+          "wir",
+          "packen",
+          "packt",
+          "Zuerst",
+          "wir",
+          "dann"
+        ],
+        "correctOrder": [
+          "Zuerst",
+          "packen",
+          "wir",
+          "dann",
+          "fahren",
+          "wir"
+        ],
+        "tip": "timeRoadTen.questDescription"
+      },
+      {
+        "id": 11,
+        "type": "select",
+        "question": "timeRoadTen.questTask11",
+        "options": [
+          "Die Bibliothek ist von zehn bis achtzehn Uhr geöffnet.",
+          "Die Bibliothek ist von zehn zu achtzehn Uhr geöffnet.",
+          "Die Bibliothek ist ab zehn bis achtzehn Uhr geöffnet."
+        ],
+        "answer": "Die Bibliothek ist von zehn bis achtzehn Uhr geöffnet.",
+        "tip": "timeRoadTen.questDescription"
+      },
+      {
+        "id": 12,
+        "type": "input",
+        "question": "timeRoadTen.questTask12",
+        "correctAnswer": "Urlaub",
+        "tip": "timeRoadTen.questDescription"
+      },
+      {
+        "id": 13,
+        "type": "input",
+        "question": "timeRoadTen.questTask13",
+        "correctAnswer": "nächste",
+        "tip": "timeRoadTen.questDescription"
+      },
+      {
+        "id": 14,
+        "type": "input",
+        "question": "timeRoadTen.questTask14",
+        "correctAnswer": "gezogen",
+        "tip": "timeRoadTen.questDescription"
+      },
+      {
+        "id": 15,
+        "type": "input",
+        "question": "timeRoadTen.questTask15",
+        "correctAnswer": "Vertrag",
+        "tip": "timeRoadTen.questDescription"
+      }
+    ]
+  }
+]

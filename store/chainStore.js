@@ -231,6 +231,13 @@ export const userChainStore = defineStore('chain', () => {
 		await saveLivesToRoot()
 	}
 
+	// результат итогового теста уровня: последняя попытка, на прохождение ничего не влияет
+	async function saveLocationTest(level, result) {
+		const userRef = await getUserRef()
+		if (!userRef) return
+		await setDoc(userRef, {locationTests: {[level]: result}}, {merge: true})
+	}
+
 	async function loadProgressFromFirebase() {
 		const userRef = await getUserRef()
 		if (!userRef) return
@@ -647,6 +654,8 @@ export const userChainStore = defineStore('chain', () => {
 		regionQuests,
 		addLife,
 		loadProgressFromFirebase,
+		saveLocationTest,
+		normalizeSpeechText,
 		loadQuest,
 		choose,
 		handleReorderWord,

@@ -352,7 +352,7 @@ const getCategoryStatus = (group) => {
   }
 }
 
-const ARE_ALL_TOPICS_UNLOCKED = false
+const ARE_ALL_TOPICS_UNLOCKED = true // TODO: временно для проверки, вернуть false перед релизом
 
 const isTopicUnlocked = (key) => {
   if (ARE_ALL_TOPICS_UNLOCKED || authStore.isPremium) return true

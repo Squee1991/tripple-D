@@ -1,0 +1,2693 @@
+[
+  {
+    "questId": "comparison-hills-one",
+    "title": "comparisonHillsOne.questTitle",
+    "progress": "0/15",
+    "description": "comparisonHillsOne.questDescription",
+    "conditions": {
+      "goal": "comparisonHillsOne.questGoal",
+      "minCorrect": 15,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
+    "vocabulary": [
+      {
+        "word": "schnell",
+        "translation-ru": "быстрый",
+        "translation-en": "fast",
+        "translation-uk": "швидкий",
+        "translation-pl": "szybki",
+        "translation-es": "rápido",
+        "translation-fr": "rapide",
+        "translation-tr": "hızlı",
+        "translation-ro": "rapid",
+        "translation-uz": "tez",
+        "translation-hi": "तेज़",
+        "translation-ar": "سريع"
+      },
+      {
+        "word": "langsam",
+        "translation-ru": "медленный",
+        "translation-en": "slow",
+        "translation-uk": "повільний",
+        "translation-pl": "wolny",
+        "translation-es": "lento",
+        "translation-fr": "lent",
+        "translation-tr": "yavaş",
+        "translation-ro": "încet",
+        "translation-uz": "sekin",
+        "translation-hi": "धीमा",
+        "translation-ar": "بطيء"
+      },
+      {
+        "word": "billig",
+        "translation-ru": "дешёвый",
+        "translation-en": "cheap",
+        "translation-uk": "дешевий",
+        "translation-pl": "tani",
+        "translation-es": "barato",
+        "translation-fr": "bon marché",
+        "translation-tr": "ucuz",
+        "translation-ro": "ieftin",
+        "translation-uz": "arzon",
+        "translation-hi": "सस्ता",
+        "translation-ar": "رخيص"
+      },
+      {
+        "word": "klein",
+        "translation-ru": "маленький",
+        "translation-en": "small",
+        "translation-uk": "маленький",
+        "translation-pl": "mały",
+        "translation-es": "pequeño",
+        "translation-fr": "petit",
+        "translation-tr": "küçük",
+        "translation-ro": "mic",
+        "translation-uz": "kichik",
+        "translation-hi": "छोटा",
+        "translation-ar": "صغير"
+      },
+      {
+        "word": "schön",
+        "translation-ru": "красивый",
+        "translation-en": "beautiful",
+        "translation-uk": "гарний",
+        "translation-pl": "ładny",
+        "translation-es": "bonito",
+        "translation-fr": "beau",
+        "translation-tr": "güzel",
+        "translation-ro": "frumos",
+        "translation-uz": "chiroyli",
+        "translation-hi": "सुंदर",
+        "translation-ar": "جميل"
+      }
+    ],
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "comparisonHillsOne.questTask1",
+        "options": [
+          "Der Zug ist schnell.",
+          "Der Zug ist langsamer.",
+          "Der Zug ist schneller."
+        ],
+        "answer": "Der Zug ist schneller.",
+        "tip": "comparisonHillsOne.questDescription"
+      },
+      {
+        "id": 2,
+        "type": "input",
+        "question": "comparisonHillsOne.questTask2",
+        "correctAnswer": "langsamer",
+        "tip": "comparisonHillsOne.questDescription"
+      },
+      {
+        "id": 3,
+        "type": "select",
+        "question": "comparisonHillsOne.questTask3",
+        "options": [
+          "Diese Tasche ist schöner.",
+          "Diese Tasche ist billig.",
+          "Diese Tasche ist billiger."
+        ],
+        "answer": "Diese Tasche ist billiger.",
+        "tip": "comparisonHillsOne.questDescription"
+      },
+      {
+        "id": 4,
+        "type": "reorder",
+        "question": "comparisonHillsOne.questTask4",
+        "words": [
+          "klein",
+          "kleiner",
+          "Meine",
+          "ist",
+          "Wohnung"
+        ],
+        "correctOrder": [
+          "Meine",
+          "Wohnung",
+          "ist",
+          "kleiner"
+        ],
+        "tip": "comparisonHillsOne.questDescription"
+      },
+      {
+        "id": 5,
+        "type": "input",
+        "question": "comparisonHillsOne.questTask5",
+        "correctAnswer": "schöner",
+        "tip": "comparisonHillsOne.questDescription"
+      },
+      {
+        "id": 6,
+        "type": "select",
+        "question": "comparisonHillsOne.questTask6",
+        "options": [
+          "Der Bus ist schneller.",
+          "Der Bus ist langsamer.",
+          "Der Bus ist langsam."
+        ],
+        "answer": "Der Bus ist langsamer.",
+        "tip": "comparisonHillsOne.questDescription"
+      },
+      {
+        "id": 7,
+        "type": "readAndAnswer",
+        "question": "comparisonHillsOne.questTask7",
+        "text": "Tom fährt mit dem Fahrrad. Lisa fährt mit dem Auto. Das Auto ist schneller.",
+        "options": [
+          "der Bus",
+          "das Auto",
+          "das Fahrrad"
+        ],
+        "answer": "das Auto",
+        "tip": "comparisonHillsOne.questDescription"
+      },
+      {
+        "id": 8,
+        "type": "input",
+        "question": "comparisonHillsOne.questTask8",
+        "correctAnswer": "billiger",
+        "tip": "comparisonHillsOne.questDescription"
+      },
+      {
+        "id": 9,
+        "type": "select",
+        "question": "comparisonHillsOne.questTask10",
+        "options": [
+          "Geh langsamer!",
+          "Geh schneller!",
+          "Geh langsam!"
+        ],
+        "answer": "Geh langsamer!",
+        "tip": "comparisonHillsOne.questDescription"
+      },
+      {
+        "id": 10,
+        "type": "input",
+        "question": "comparisonHillsOne.questTask11",
+        "correctAnswer": "langsamer",
+        "tip": "comparisonHillsOne.questDescription"
+      },
+      {
+        "id": 11,
+        "type": "select",
+        "question": "requestsLandSix.questTask1",
+        "options": [
+          "Konnten Sie mir helfen?",
+          "Könnten Sie mir helfen?",
+          "Könnten Sie mich helfen?"
+        ],
+        "answer": "Könnten Sie mir helfen?",
+        "tip": "requestsLandSix.questDescription",
+        "reviewOf": "requests-6",
+        "reviewLand": "requests-land"
+      },
+      {
+        "id": 12,
+        "type": "select",
+        "question": "requestsLandFive.questTask1",
+        "options": [
+          "Kannst du mich helfen?",
+          "Kann du mir helfen?",
+          "Kannst du mir helfen?"
+        ],
+        "answer": "Kannst du mir helfen?",
+        "tip": "requestsLandFive.questDescription",
+        "reviewOf": "requests-5",
+        "reviewLand": "requests-land"
+      },
+      {
+        "id": 13,
+        "type": "select",
+        "question": "requestsLandFour.questTask1",
+        "options": [
+          "Aufmach die Tür!",
+          "Mach die Tür auf!",
+          "Mach auf die Tür!"
+        ],
+        "answer": "Mach die Tür auf!",
+        "tip": "requestsLandFour.questDescription",
+        "reviewOf": "requests-4",
+        "reviewLand": "requests-land"
+      },
+      {
+        "id": 14,
+        "type": "input",
+        "question": "comparisonHillsOne.questTask14",
+        "correctAnswer": "war",
+        "tip": "comparisonHillsOne.questDescription"
+      },
+      {
+        "id": 15,
+        "type": "input",
+        "question": "comparisonHillsOne.questTask15",
+        "correctAnswer": "Hilf",
+        "tip": "comparisonHillsOne.questDescription"
+      }
+    ]
+  },
+  {
+    "questId": "comparison-hills-two",
+    "title": "comparisonHillsTwo.questTitle",
+    "progress": "0/15",
+    "description": "comparisonHillsTwo.questDescription",
+    "conditions": {
+      "goal": "comparisonHillsTwo.questGoal",
+      "minCorrect": 15,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
+    "vocabulary": [
+      {
+        "word": "jung",
+        "translation-ru": "молодой",
+        "translation-en": "young",
+        "translation-uk": "молодий",
+        "translation-pl": "młody",
+        "translation-es": "joven",
+        "translation-fr": "jeune",
+        "translation-tr": "genç",
+        "translation-ro": "tânăr",
+        "translation-uz": "yosh",
+        "translation-hi": "जवान",
+        "translation-ar": "شاب"
+      },
+      {
+        "word": "warm",
+        "translation-ru": "тёплый",
+        "translation-en": "warm",
+        "translation-uk": "теплий",
+        "translation-pl": "ciepły",
+        "translation-es": "cálido",
+        "translation-fr": "chaud",
+        "translation-tr": "sıcak",
+        "translation-ro": "cald",
+        "translation-uz": "iliq",
+        "translation-hi": "गर्म",
+        "translation-ar": "دافئ"
+      },
+      {
+        "word": "lang",
+        "translation-ru": "длинный",
+        "translation-en": "long",
+        "translation-uk": "довгий",
+        "translation-pl": "długi",
+        "translation-es": "largo",
+        "translation-fr": "long",
+        "translation-tr": "uzun",
+        "translation-ro": "lung",
+        "translation-uz": "uzun",
+        "translation-hi": "लंबा",
+        "translation-ar": "طويل"
+      },
+      {
+        "word": "kurz",
+        "translation-ru": "короткий",
+        "translation-en": "short",
+        "translation-uk": "короткий",
+        "translation-pl": "krótki",
+        "translation-es": "corto",
+        "translation-fr": "court",
+        "translation-tr": "kısa",
+        "translation-ro": "scurt",
+        "translation-uz": "qisqa",
+        "translation-hi": "छोटा",
+        "translation-ar": "قصير"
+      },
+      {
+        "word": "stark",
+        "translation-ru": "сильный",
+        "translation-en": "strong",
+        "translation-uk": "сильний",
+        "translation-pl": "silny",
+        "translation-es": "fuerte",
+        "translation-fr": "fort",
+        "translation-tr": "güçlü",
+        "translation-ro": "puternic",
+        "translation-uz": "kuchli",
+        "translation-hi": "मज़बूत",
+        "translation-ar": "قوي"
+      }
+    ],
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "comparisonHillsTwo.questTask1",
+        "options": [
+          "Mein Bruder ist jünger.",
+          "Mein Bruder ist alt.",
+          "Mein Bruder ist älter."
+        ],
+        "answer": "Mein Bruder ist älter.",
+        "tip": "comparisonHillsTwo.questDescription"
+      },
+      {
+        "id": 2,
+        "type": "input",
+        "question": "comparisonHillsTwo.questTask2",
+        "correctAnswer": "jünger",
+        "tip": "comparisonHillsTwo.questDescription"
+      },
+      {
+        "id": 3,
+        "type": "input",
+        "question": "comparisonHillsTwo.questTask3",
+        "correctAnswer": "wärmer",
+        "tip": "comparisonHillsTwo.questDescription"
+      },
+      {
+        "id": 4,
+        "type": "reorder",
+        "question": "comparisonHillsTwo.questTask4",
+        "words": [
+          "Im",
+          "kalt",
+          "kälter",
+          "es",
+          "Winter",
+          "ist"
+        ],
+        "correctOrder": [
+          "Im",
+          "Winter",
+          "ist",
+          "es",
+          "kälter"
+        ],
+        "tip": "comparisonHillsTwo.questDescription"
+      },
+      {
+        "id": 5,
+        "type": "select",
+        "question": "comparisonHillsTwo.questTask5",
+        "options": [
+          "Dieses Haus ist kleiner.",
+          "Dieses Haus ist größer.",
+          "Dieses Haus ist groß."
+        ],
+        "answer": "Dieses Haus ist größer.",
+        "tip": "comparisonHillsTwo.questDescription"
+      },
+      {
+        "id": 6,
+        "type": "input",
+        "question": "comparisonHillsTwo.questTask6",
+        "correctAnswer": "länger",
+        "tip": "comparisonHillsTwo.questDescription"
+      },
+      {
+        "id": 7,
+        "type": "input",
+        "question": "comparisonHillsTwo.questTask7",
+        "correctAnswer": "kürzer",
+        "tip": "comparisonHillsTwo.questDescription"
+      },
+      {
+        "id": 8,
+        "type": "readAndAnswer",
+        "question": "comparisonHillsTwo.questTask8",
+        "text": "Max ist 10 Jahre alt. Paul ist 12 Jahre alt. Paul ist älter.",
+        "options": [
+          "Paul",
+          "Max und Paul",
+          "Max"
+        ],
+        "answer": "Paul",
+        "tip": "comparisonHillsTwo.questDescription"
+      },
+      {
+        "id": 9,
+        "type": "reorder",
+        "question": "comparisonHillsTwo.questTask10",
+        "words": [
+          "Mein",
+          "alt",
+          "älter",
+          "Vater",
+          "ist"
+        ],
+        "correctOrder": [
+          "Mein",
+          "Vater",
+          "ist",
+          "älter"
+        ],
+        "tip": "comparisonHillsTwo.questDescription"
+      },
+      {
+        "id": 10,
+        "type": "input",
+        "question": "comparisonHillsTwo.questTask11",
+        "correctAnswer": "stärker",
+        "tip": "comparisonHillsTwo.questDescription"
+      },
+      {
+        "id": 11,
+        "type": "reorder",
+        "question": "comparisonHillsOne.questTask9",
+        "words": [
+          "Haus",
+          "schön",
+          "Dieses",
+          "schöner",
+          "ist"
+        ],
+        "correctOrder": [
+          "Dieses",
+          "Haus",
+          "ist",
+          "schöner"
+        ],
+        "tip": "comparisonHillsOne.questDescription",
+        "reviewOf": "comparison-hills-one",
+        "reviewLand": "comparison-hills"
+      },
+      {
+        "id": 12,
+        "type": "select",
+        "question": "requestsLandSeven.questTask1",
+        "options": [
+          "Ich möchte ein Kaffee.",
+          "Ich möchte einen Kaffee.",
+          "Ich möchten einen Kaffee."
+        ],
+        "answer": "Ich möchte einen Kaffee.",
+        "tip": "requestsLandSeven.questDescription",
+        "reviewOf": "requests-7",
+        "reviewLand": "requests-land"
+      },
+      {
+        "id": 13,
+        "type": "reorder",
+        "question": "requestsLandSix.questTask2",
+        "words": [
+          "Könnten",
+          "Fenster",
+          "Sie",
+          "das",
+          "öffnen",
+          "konnten"
+        ],
+        "correctOrder": [
+          "Könnten",
+          "Sie",
+          "das",
+          "Fenster",
+          "öffnen"
+        ],
+        "tip": "requestsLandSix.questDescription",
+        "reviewOf": "requests-6",
+        "reviewLand": "requests-land"
+      },
+      {
+        "id": 14,
+        "type": "input",
+        "question": "comparisonHillsTwo.questTask14",
+        "correctAnswer": "hatte",
+        "tip": "comparisonHillsTwo.questDescription"
+      },
+      {
+        "id": 15,
+        "type": "input",
+        "question": "comparisonHillsTwo.questTask15",
+        "correctAnswer": "Kommen",
+        "tip": "comparisonHillsTwo.questDescription"
+      }
+    ]
+  },
+  {
+    "questId": "comparison-hills-three",
+    "title": "comparisonHillsThree.questTitle",
+    "progress": "0/15",
+    "description": "comparisonHillsThree.questDescription",
+    "conditions": {
+      "goal": "comparisonHillsThree.questGoal",
+      "minCorrect": 15,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
+    "vocabulary": [
+      {
+        "word": "besser",
+        "translation-ru": "лучше",
+        "translation-en": "better",
+        "translation-uk": "краще",
+        "translation-pl": "lepiej",
+        "translation-es": "mejor",
+        "translation-fr": "mieux",
+        "translation-tr": "daha iyi",
+        "translation-ro": "mai bine",
+        "translation-uz": "yaxshiroq",
+        "translation-hi": "बेहतर",
+        "translation-ar": "أفضل"
+      },
+      {
+        "word": "mehr",
+        "translation-ru": "больше",
+        "translation-en": "more",
+        "translation-uk": "більше",
+        "translation-pl": "więcej",
+        "translation-es": "más",
+        "translation-fr": "plus",
+        "translation-tr": "daha çok",
+        "translation-ro": "mai mult",
+        "translation-uz": "ko‘proq",
+        "translation-hi": "ज़्यादा",
+        "translation-ar": "أكثر"
+      },
+      {
+        "word": "lieber",
+        "translation-ru": "охотнее, больше нравится",
+        "translation-en": "rather, prefer",
+        "translation-uk": "охочіше, більше подобається",
+        "translation-pl": "chętniej, wolę",
+        "translation-es": "preferir, con más gusto",
+        "translation-fr": "plutôt, préférer",
+        "translation-tr": "tercihen, daha çok sevmek",
+        "translation-ro": "mai degrabă, prefer",
+        "translation-uz": "afzal ko‘rib",
+        "translation-hi": "ज़्यादा पसंद से",
+        "translation-ar": "يفضّل"
+      },
+      {
+        "word": "hoch",
+        "translation-ru": "высокий",
+        "translation-en": "high",
+        "translation-uk": "високий",
+        "translation-pl": "wysoki",
+        "translation-es": "alto",
+        "translation-fr": "haut",
+        "translation-tr": "yüksek",
+        "translation-ro": "înalt",
+        "translation-uz": "baland",
+        "translation-hi": "ऊँचा",
+        "translation-ar": "عالٍ"
+      },
+      {
+        "word": "teuer",
+        "translation-ru": "дорогой",
+        "translation-en": "expensive",
+        "translation-uk": "дорогий",
+        "translation-pl": "drogi",
+        "translation-es": "caro",
+        "translation-fr": "cher",
+        "translation-tr": "pahalı",
+        "translation-ro": "scump",
+        "translation-uz": "qimmat",
+        "translation-hi": "महँगा",
+        "translation-ar": "غالٍ"
+      },
+      {
+        "word": "der Berg",
+        "translation-ru": "гора",
+        "translation-en": "mountain",
+        "translation-uk": "гора",
+        "translation-pl": "góra",
+        "translation-es": "la montaña",
+        "translation-fr": "la montagne",
+        "translation-tr": "dağ",
+        "translation-ro": "muntele",
+        "translation-uz": "tog‘",
+        "translation-hi": "पहाड़",
+        "translation-ar": "الجبل"
+      },
+      {
+        "word": "verdienen",
+        "translation-ru": "зарабатывать",
+        "translation-en": "to earn",
+        "translation-uk": "заробляти",
+        "translation-pl": "zarabiać",
+        "translation-es": "ganar (dinero)",
+        "translation-fr": "gagner (de l’argent)",
+        "translation-tr": "kazanmak",
+        "translation-ro": "a câștiga",
+        "translation-uz": "pul topmoq",
+        "translation-hi": "कमाना",
+        "translation-ar": "يكسب"
+      },
+      {
+        "word": "trainieren",
+        "translation-ru": "тренироваться",
+        "translation-en": "to train",
+        "translation-uk": "тренуватися",
+        "translation-pl": "trenować",
+        "translation-es": "entrenar",
+        "translation-fr": "s’entraîner",
+        "translation-tr": "antrenman yapmak",
+        "translation-ro": "a se antrena",
+        "translation-uz": "mashq qilmoq",
+        "translation-hi": "अभ्यास करना",
+        "translation-ar": "يتدرب"
+      },
+      {
+        "word": "das Tennis",
+        "translation-ru": "теннис",
+        "translation-en": "tennis",
+        "translation-uk": "теніс",
+        "translation-pl": "tenis",
+        "translation-es": "el tenis",
+        "translation-fr": "le tennis",
+        "translation-tr": "tenis",
+        "translation-ro": "tenisul",
+        "translation-uz": "tennis",
+        "translation-hi": "टेनिस",
+        "translation-ar": "التنس"
+      }
+    ],
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "comparisonHillsThree.questTask1",
+        "options": [
+          "Kaffee ist besser als Tee.",
+          "Tee ist so gut wie Kaffee.",
+          "Tee ist besser als Kaffee."
+        ],
+        "answer": "Tee ist besser als Kaffee.",
+        "tip": "comparisonHillsThree.questDescription"
+      },
+      {
+        "id": 2,
+        "type": "input",
+        "question": "comparisonHillsThree.questTask2",
+        "correctAnswer": "als",
+        "tip": "comparisonHillsThree.questDescription"
+      },
+      {
+        "id": 3,
+        "type": "input",
+        "question": "comparisonHillsThree.questTask3",
+        "correctAnswer": "mehr",
+        "tip": "comparisonHillsThree.questDescription"
+      },
+      {
+        "id": 4,
+        "type": "reorder",
+        "question": "comparisonHillsThree.questTask4",
+        "words": [
+          "als",
+          "größer",
+          "Berlin",
+          "wie",
+          "München",
+          "ist"
+        ],
+        "correctOrder": [
+          "Berlin",
+          "ist",
+          "größer",
+          "als",
+          "München"
+        ],
+        "tip": "comparisonHillsThree.questDescription"
+      },
+      {
+        "id": 5,
+        "type": "select",
+        "question": "comparisonHillsThree.questTask5",
+        "options": [
+          "Dieser Berg ist höher.",
+          "Dieser Berg ist kleiner.",
+          "Dieser Berg ist hoch."
+        ],
+        "answer": "Dieser Berg ist höher.",
+        "tip": "comparisonHillsThree.questDescription"
+      },
+      {
+        "id": 6,
+        "type": "input",
+        "question": "comparisonHillsThree.questTask6",
+        "correctAnswer": "teurer",
+        "tip": "comparisonHillsThree.questDescription"
+      },
+      {
+        "id": 7,
+        "type": "readAndAnswer",
+        "question": "comparisonHillsThree.questTask7",
+        "text": "Anna spielt gut Tennis. Ihre Schwester spielt besser. Sie trainiert jeden Tag.",
+        "options": [
+          "Annas Bruder",
+          "Annas Schwester",
+          "Anna"
+        ],
+        "answer": "Annas Schwester",
+        "tip": "comparisonHillsThree.questDescription"
+      },
+      {
+        "id": 8,
+        "type": "input",
+        "question": "comparisonHillsThree.questTask8",
+        "correctAnswer": "als",
+        "tip": "comparisonHillsThree.questDescription"
+      },
+      {
+        "id": 9,
+        "type": "input",
+        "question": "comparisonHillsThree.questTask10",
+        "correctAnswer": "länger",
+        "tip": "comparisonHillsThree.questDescription"
+      },
+      {
+        "id": 10,
+        "type": "reorder",
+        "question": "comparisonHillsThree.questTask11",
+        "words": [
+          "mit",
+          "fahre",
+          "Ich",
+          "lieber",
+          "U-Bahn",
+          "gern",
+          "der"
+        ],
+        "correctOrder": [
+          "Ich",
+          "fahre",
+          "lieber",
+          "mit",
+          "der",
+          "U-Bahn"
+        ],
+        "tip": "comparisonHillsThree.questDescription"
+      },
+      {
+        "id": 11,
+        "type": "select",
+        "question": "comparisonHillsTwo.questTask9",
+        "options": [
+          "Er ist jünger.",
+          "Er ist stärker.",
+          "Er ist stark."
+        ],
+        "answer": "Er ist stärker.",
+        "tip": "comparisonHillsTwo.questDescription",
+        "reviewOf": "comparison-hills-two",
+        "reviewLand": "comparison-hills"
+      },
+      {
+        "id": 12,
+        "type": "readAndAnswer",
+        "question": "comparisonHillsOne.questTask13",
+        "text": "Das blaue Handy kostet 200 Euro. Das rote Handy kostet 150 Euro. Das rote Handy ist billiger.",
+        "options": [
+          "das blaue Handy",
+          "das rote Handy",
+          "das schwarze Handy"
+        ],
+        "answer": "das rote Handy",
+        "tip": "comparisonHillsOne.questDescription",
+        "reviewOf": "comparison-hills-one",
+        "reviewLand": "comparison-hills"
+      },
+      {
+        "id": 13,
+        "type": "select",
+        "question": "comparisonHillsOne.questTask1",
+        "options": [
+          "Der Zug ist schnell.",
+          "Der Zug ist langsamer.",
+          "Der Zug ist schneller."
+        ],
+        "answer": "Der Zug ist schneller.",
+        "tip": "comparisonHillsOne.questDescription",
+        "reviewOf": "comparison-hills-one",
+        "reviewLand": "comparison-hills"
+      },
+      {
+        "id": 14,
+        "type": "input",
+        "question": "comparisonHillsThree.questTask14",
+        "correctAnswer": "meiner",
+        "tip": "comparisonHillsThree.questDescription"
+      },
+      {
+        "id": 15,
+        "type": "input",
+        "question": "comparisonHillsThree.questTask15",
+        "correctAnswer": "konnten",
+        "tip": "comparisonHillsThree.questDescription"
+      }
+    ]
+  },
+  {
+    "questId": "comparison-hills-four",
+    "title": "comparisonHillsFour.questTitle",
+    "progress": "0/15",
+    "description": "comparisonHillsFour.questDescription",
+    "conditions": {
+      "goal": "comparisonHillsFour.questGoal",
+      "minCorrect": 15,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
+    "vocabulary": [
+      {
+        "word": "gleich",
+        "translation-ru": "одинаковый",
+        "translation-en": "the same",
+        "translation-uk": "однаковий",
+        "translation-pl": "taki sam",
+        "translation-es": "igual",
+        "translation-fr": "pareil",
+        "translation-tr": "aynı",
+        "translation-ro": "la fel",
+        "translation-uz": "bir xil",
+        "translation-hi": "एक जैसा",
+        "translation-ar": "متساوٍ"
+      },
+      {
+        "word": "der Zwilling",
+        "translation-ru": "близнец",
+        "translation-en": "twin",
+        "translation-uk": "близнюк",
+        "translation-pl": "bliźniak",
+        "translation-es": "el gemelo",
+        "translation-fr": "le jumeau",
+        "translation-tr": "ikiz",
+        "translation-ro": "geamănul",
+        "translation-uz": "egizak",
+        "translation-hi": "जुड़वाँ",
+        "translation-ar": "التوأم"
+      },
+      {
+        "word": "schwer",
+        "translation-ru": "тяжёлый, трудный",
+        "translation-en": "heavy, difficult",
+        "translation-uk": "важкий",
+        "translation-pl": "ciężki, trudny",
+        "translation-es": "pesado, difícil",
+        "translation-fr": "lourd, difficile",
+        "translation-tr": "ağır, zor",
+        "translation-ro": "greu",
+        "translation-uz": "og‘ir, qiyin",
+        "translation-hi": "भारी, कठिन",
+        "translation-ar": "ثقيل، صعب"
+      },
+      {
+        "word": "leicht",
+        "translation-ru": "лёгкий",
+        "translation-en": "light, easy",
+        "translation-uk": "легкий",
+        "translation-pl": "lekki, łatwy",
+        "translation-es": "ligero, fácil",
+        "translation-fr": "léger, facile",
+        "translation-tr": "hafif, kolay",
+        "translation-ro": "ușor",
+        "translation-uz": "yengil, oson",
+        "translation-hi": "हल्का, आसान",
+        "translation-ar": "خفيف، سهل"
+      },
+      {
+        "word": "wiegen",
+        "translation-ru": "весить",
+        "translation-en": "to weigh",
+        "translation-uk": "важити",
+        "translation-pl": "ważyć",
+        "translation-es": "pesar",
+        "translation-fr": "peser",
+        "translation-tr": "tartmak",
+        "translation-ro": "a cântări",
+        "translation-uz": "og‘irlikda bo‘lmoq",
+        "translation-hi": "वज़न होना",
+        "translation-ar": "يزن"
+      }
+    ],
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "comparisonHillsFour.questTask1",
+        "options": [
+          "Ich bin nicht so groß wie mein Vater.",
+          "Ich bin größer als mein Vater.",
+          "Ich bin so groß wie mein Vater."
+        ],
+        "answer": "Ich bin so groß wie mein Vater.",
+        "tip": "comparisonHillsFour.questDescription"
+      },
+      {
+        "id": 2,
+        "type": "input",
+        "question": "comparisonHillsFour.questTask2",
+        "correctAnswer": "wie",
+        "tip": "comparisonHillsFour.questDescription"
+      },
+      {
+        "id": 3,
+        "type": "input",
+        "question": "comparisonHillsFour.questTask3",
+        "correctAnswer": "so",
+        "tip": "comparisonHillsFour.questDescription"
+      },
+      {
+        "id": 4,
+        "type": "reorder",
+        "question": "comparisonHillsFour.questTask4",
+        "words": [
+          "ich",
+          "stark",
+          "Bruder",
+          "Mein",
+          "so",
+          "wie",
+          "als",
+          "ist"
+        ],
+        "correctOrder": [
+          "Mein",
+          "Bruder",
+          "ist",
+          "so",
+          "stark",
+          "wie",
+          "ich"
+        ],
+        "tip": "comparisonHillsFour.questDescription"
+      },
+      {
+        "id": 5,
+        "type": "select",
+        "question": "comparisonHillsFour.questTask5",
+        "options": [
+          "Der Tee ist nicht so heiß wie der Kaffee.",
+          "Der Tee ist so heiß wie der Kaffee.",
+          "Der Tee ist heißer als der Kaffee."
+        ],
+        "answer": "Der Tee ist so heiß wie der Kaffee.",
+        "tip": "comparisonHillsFour.questDescription"
+      },
+      {
+        "id": 6,
+        "type": "input",
+        "question": "comparisonHillsFour.questTask6",
+        "correctAnswer": "gleich",
+        "tip": "comparisonHillsFour.questDescription"
+      },
+      {
+        "id": 7,
+        "type": "readAndAnswer",
+        "question": "comparisonHillsFour.questTask7",
+        "text": "Lena ist 1,70 Meter groß. Ihre Mutter ist auch 1,70 Meter groß.",
+        "options": [
+          "Sie sind gleich groß.",
+          "Lenas Mutter",
+          "Lena"
+        ],
+        "answer": "Sie sind gleich groß.",
+        "tip": "comparisonHillsFour.questDescription"
+      },
+      {
+        "id": 8,
+        "type": "input",
+        "question": "comparisonHillsFour.questTask8",
+        "correctAnswer": "leichter",
+        "tip": "comparisonHillsFour.questDescription"
+      },
+      {
+        "id": 9,
+        "type": "input",
+        "question": "comparisonHillsFour.questTask10",
+        "correctAnswer": "wie",
+        "tip": "comparisonHillsFour.questDescription"
+      },
+      {
+        "id": 10,
+        "type": "reorder",
+        "question": "comparisonHillsFour.questTask11",
+        "words": [
+          "Test",
+          "Prüfung",
+          "als",
+          "nicht",
+          "wie",
+          "die",
+          "Der",
+          "so",
+          "ist",
+          "schwer"
+        ],
+        "correctOrder": [
+          "Der",
+          "Test",
+          "ist",
+          "nicht",
+          "so",
+          "schwer",
+          "wie",
+          "die",
+          "Prüfung"
+        ],
+        "tip": "comparisonHillsFour.questDescription"
+      },
+      {
+        "id": 11,
+        "type": "select",
+        "question": "comparisonHillsThree.questTask9",
+        "options": [
+          "Ich lese mehr.",
+          "Ich lese lieber.",
+          "Ich lese gern."
+        ],
+        "answer": "Ich lese lieber.",
+        "tip": "comparisonHillsThree.questDescription",
+        "reviewOf": "comparison-hills-three",
+        "reviewLand": "comparison-hills"
+      },
+      {
+        "id": 12,
+        "type": "readAndAnswer",
+        "question": "comparisonHillsTwo.questTask13",
+        "text": "Im Juli sind es 30 Grad. Im Mai sind es 20 Grad. Im Juli ist es wärmer.",
+        "options": [
+          "im Juli",
+          "im Mai",
+          "im Januar"
+        ],
+        "answer": "im Juli",
+        "tip": "comparisonHillsTwo.questDescription",
+        "reviewOf": "comparison-hills-two",
+        "reviewLand": "comparison-hills"
+      },
+      {
+        "id": 13,
+        "type": "select",
+        "question": "comparisonHillsTwo.questTask1",
+        "options": [
+          "Mein Bruder ist jünger.",
+          "Mein Bruder ist alt.",
+          "Mein Bruder ist älter."
+        ],
+        "answer": "Mein Bruder ist älter.",
+        "tip": "comparisonHillsTwo.questDescription",
+        "reviewOf": "comparison-hills-two",
+        "reviewLand": "comparison-hills"
+      },
+      {
+        "id": 14,
+        "type": "input",
+        "question": "comparisonHillsFour.questTask14",
+        "correctAnswer": "Könnten",
+        "tip": "comparisonHillsFour.questDescription"
+      },
+      {
+        "id": 15,
+        "type": "input",
+        "question": "comparisonHillsFour.questTask15",
+        "correctAnswer": "gekauft",
+        "tip": "comparisonHillsFour.questDescription"
+      }
+    ]
+  },
+  {
+    "questId": "comparison-hills-five",
+    "title": "comparisonHillsFive.questTitle",
+    "progress": "0/15",
+    "description": "comparisonHillsFive.questDescription",
+    "conditions": {
+      "goal": "comparisonHillsFive.questGoal",
+      "minCorrect": 15,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
+    "vocabulary": [
+      {
+        "word": "am besten",
+        "translation-ru": "лучше всего",
+        "translation-en": "best",
+        "translation-uk": "найкраще",
+        "translation-pl": "najlepiej",
+        "translation-es": "lo mejor",
+        "translation-fr": "le mieux",
+        "translation-tr": "en iyi",
+        "translation-ro": "cel mai bine",
+        "translation-uz": "eng yaxshi",
+        "translation-hi": "सबसे अच्छा",
+        "translation-ar": "الأفضل"
+      },
+      {
+        "word": "am liebsten",
+        "translation-ru": "больше всего нравится",
+        "translation-en": "most of all (like)",
+        "translation-uk": "найбільше подобається",
+        "translation-pl": "najchętniej",
+        "translation-es": "lo que más me gusta",
+        "translation-fr": "de préférence",
+        "translation-tr": "en çok (sevmek)",
+        "translation-ro": "cel mai mult îmi place",
+        "translation-uz": "eng ko‘p yoqadi",
+        "translation-hi": "सबसे ज़्यादा पसंद",
+        "translation-ar": "الأحب"
+      },
+      {
+        "word": "am meisten",
+        "translation-ru": "больше всего",
+        "translation-en": "the most",
+        "translation-uk": "найбільше",
+        "translation-pl": "najwięcej",
+        "translation-es": "lo que más",
+        "translation-fr": "le plus",
+        "translation-tr": "en çok",
+        "translation-ro": "cel mai mult",
+        "translation-uz": "eng ko‘p",
+        "translation-hi": "सबसे ज़्यादा",
+        "translation-ar": "الأكثر"
+      },
+      {
+        "word": "die Sekunde",
+        "translation-ru": "секунда",
+        "translation-en": "second",
+        "translation-uk": "секунда",
+        "translation-pl": "sekunda",
+        "translation-es": "el segundo",
+        "translation-fr": "la seconde",
+        "translation-tr": "saniye",
+        "translation-ro": "secunda",
+        "translation-uz": "soniya",
+        "translation-hi": "सेकंड",
+        "translation-ar": "الثانية"
+      },
+      {
+        "word": "genauso",
+        "translation-ru": "точно так же",
+        "translation-en": "just as",
+        "translation-uk": "так само",
+        "translation-pl": "tak samo",
+        "translation-es": "igual de",
+        "translation-fr": "tout aussi",
+        "translation-tr": "aynı şekilde",
+        "translation-ro": "la fel de",
+        "translation-uz": "xuddi shunday",
+        "translation-hi": "बिल्कुल उतना ही",
+        "translation-ar": "بالقدر نفسه"
+      }
+    ],
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "comparisonHillsFive.questTask1",
+        "options": [
+          "Im Winter ist es am wärmsten.",
+          "Im Sommer ist es wärmer.",
+          "Im Sommer ist es am wärmsten."
+        ],
+        "answer": "Im Sommer ist es am wärmsten.",
+        "tip": "comparisonHillsFive.questDescription"
+      },
+      {
+        "id": 2,
+        "type": "input",
+        "question": "comparisonHillsFive.questTask2",
+        "correctAnswer": "schnellsten",
+        "tip": "comparisonHillsFive.questDescription"
+      },
+      {
+        "id": 3,
+        "type": "input",
+        "question": "comparisonHillsFive.questTask3",
+        "correctAnswer": "liebsten",
+        "tip": "comparisonHillsFive.questDescription"
+      },
+      {
+        "id": 4,
+        "type": "reorder",
+        "question": "comparisonHillsFive.questTask4",
+        "words": [
+          "am",
+          "besten",
+          "besser",
+          "Anna",
+          "singt"
+        ],
+        "correctOrder": [
+          "Anna",
+          "singt",
+          "am",
+          "besten"
+        ],
+        "tip": "comparisonHillsFive.questDescription"
+      },
+      {
+        "id": 5,
+        "type": "select",
+        "question": "comparisonHillsFive.questTask5",
+        "options": [
+          "Im Winter ist es am kältesten.",
+          "Im Sommer ist es am kältesten.",
+          "Im Winter ist es kälter."
+        ],
+        "answer": "Im Winter ist es am kältesten.",
+        "tip": "comparisonHillsFive.questDescription"
+      },
+      {
+        "id": 6,
+        "type": "input",
+        "question": "comparisonHillsFive.questTask6",
+        "correctAnswer": "ältesten",
+        "tip": "comparisonHillsFive.questDescription"
+      },
+      {
+        "id": 7,
+        "type": "readAndAnswer",
+        "question": "comparisonHillsFive.questTask7",
+        "text": "Tim läuft 100 Meter in 14 Sekunden, Ben in 13 Sekunden und Ali in 12 Sekunden.",
+        "options": [
+          "Ali",
+          "Tim",
+          "Ben"
+        ],
+        "answer": "Ali",
+        "tip": "comparisonHillsFive.questDescription"
+      },
+      {
+        "id": 8,
+        "type": "input",
+        "question": "comparisonHillsFive.questTask8",
+        "correctAnswer": "meisten",
+        "tip": "comparisonHillsFive.questDescription"
+      },
+      {
+        "id": 9,
+        "type": "input",
+        "question": "comparisonHillsFive.questTask10",
+        "correctAnswer": "größten",
+        "tip": "comparisonHillsFive.questDescription"
+      },
+      {
+        "id": 10,
+        "type": "reorder",
+        "question": "comparisonHillsFive.questTask11",
+        "words": [
+          "besten",
+          "besser",
+          "lerne",
+          "am",
+          "Ich",
+          "Morgen",
+          "am"
+        ],
+        "correctOrder": [
+          "Ich",
+          "lerne",
+          "am",
+          "besten",
+          "am",
+          "Morgen"
+        ],
+        "tip": "comparisonHillsFive.questDescription"
+      },
+      {
+        "id": 11,
+        "type": "select",
+        "question": "comparisonHillsFour.questTask9",
+        "options": [
+          "Hier ist es genauso kalt wie in Berlin.",
+          "Hier ist es nicht so kalt wie in Berlin.",
+          "Hier ist es kälter als in Berlin."
+        ],
+        "answer": "Hier ist es genauso kalt wie in Berlin.",
+        "tip": "comparisonHillsFour.questDescription",
+        "reviewOf": "comparison-hills-four",
+        "reviewLand": "comparison-hills"
+      },
+      {
+        "id": 12,
+        "type": "select",
+        "question": "comparisonHillsOne.questTask12",
+        "options": [
+          "Mein Auto ist klein.",
+          "Mein Auto ist kleiner.",
+          "Mein Auto ist schöner."
+        ],
+        "answer": "Mein Auto ist kleiner.",
+        "tip": "comparisonHillsOne.questDescription",
+        "reviewOf": "comparison-hills-one",
+        "reviewLand": "comparison-hills"
+      },
+      {
+        "id": 13,
+        "type": "select",
+        "question": "comparisonHillsThree.questTask1",
+        "options": [
+          "Kaffee ist besser als Tee.",
+          "Tee ist so gut wie Kaffee.",
+          "Tee ist besser als Kaffee."
+        ],
+        "answer": "Tee ist besser als Kaffee.",
+        "tip": "comparisonHillsThree.questDescription",
+        "reviewOf": "comparison-hills-three",
+        "reviewLand": "comparison-hills"
+      },
+      {
+        "id": 14,
+        "type": "input",
+        "question": "comparisonHillsFive.questTask14",
+        "correctAnswer": "bin",
+        "tip": "comparisonHillsFive.questDescription"
+      },
+      {
+        "id": 15,
+        "type": "input",
+        "question": "comparisonHillsFive.questTask15",
+        "correctAnswer": "mussten",
+        "tip": "comparisonHillsFive.questDescription"
+      }
+    ]
+  },
+  {
+    "questId": "comparison-hills-six",
+    "title": "comparisonHillsSix.questTitle",
+    "progress": "0/15",
+    "description": "comparisonHillsSix.questDescription",
+    "conditions": {
+      "goal": "comparisonHillsSix.questGoal",
+      "minCorrect": 15,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
+    "vocabulary": [
+      {
+        "word": "der Fluss",
+        "translation-ru": "река",
+        "translation-en": "river",
+        "translation-uk": "річка",
+        "translation-pl": "rzeka",
+        "translation-es": "el río",
+        "translation-fr": "le fleuve",
+        "translation-tr": "nehir",
+        "translation-ro": "râul",
+        "translation-uz": "daryo",
+        "translation-hi": "नदी",
+        "translation-ar": "النهر"
+      },
+      {
+        "word": "das Gebäude",
+        "translation-ru": "здание",
+        "translation-en": "building",
+        "translation-uk": "будівля",
+        "translation-pl": "budynek",
+        "translation-es": "el edificio",
+        "translation-fr": "le bâtiment",
+        "translation-tr": "bina",
+        "translation-ro": "clădirea",
+        "translation-uz": "bino",
+        "translation-hi": "इमारत",
+        "translation-ar": "المبنى"
+      },
+      {
+        "word": "die Stadt",
+        "translation-ru": "город",
+        "translation-en": "city, town",
+        "translation-uk": "місто",
+        "translation-pl": "miasto",
+        "translation-es": "la ciudad",
+        "translation-fr": "la ville",
+        "translation-tr": "şehir",
+        "translation-ro": "orașul",
+        "translation-uz": "shahar",
+        "translation-hi": "शहर",
+        "translation-ar": "المدينة"
+      },
+      {
+        "word": "die Jahreszeit",
+        "translation-ru": "время года",
+        "translation-en": "season",
+        "translation-uk": "пора року",
+        "translation-pl": "pora roku",
+        "translation-es": "la estación",
+        "translation-fr": "la saison",
+        "translation-tr": "mevsim",
+        "translation-ro": "anotimpul",
+        "translation-uz": "fasl",
+        "translation-hi": "मौसम (ऋतु)",
+        "translation-ar": "فصل السنة"
+      },
+      {
+        "word": "der Juli",
+        "translation-ru": "июль",
+        "translation-en": "July",
+        "translation-uk": "липень",
+        "translation-pl": "lipiec",
+        "translation-es": "julio",
+        "translation-fr": "juillet",
+        "translation-tr": "temmuz",
+        "translation-ro": "iulie",
+        "translation-uz": "iyul",
+        "translation-hi": "जुलाई",
+        "translation-ar": "يوليو"
+      }
+    ],
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "comparisonHillsSix.questTask1",
+        "options": [
+          "Das ist ein schneller Zug.",
+          "Das ist der langsamste Zug.",
+          "Das ist der schnellste Zug."
+        ],
+        "answer": "Das ist der schnellste Zug.",
+        "tip": "comparisonHillsSix.questDescription"
+      },
+      {
+        "id": 2,
+        "type": "input",
+        "question": "comparisonHillsSix.questTask2",
+        "correctAnswer": "höchste",
+        "tip": "comparisonHillsSix.questDescription"
+      },
+      {
+        "id": 3,
+        "type": "input",
+        "question": "comparisonHillsSix.questTask3",
+        "correctAnswer": "größte",
+        "tip": "comparisonHillsSix.questDescription"
+      },
+      {
+        "id": 4,
+        "type": "reorder",
+        "question": "comparisonHillsSix.questTask4",
+        "words": [
+          "Straße",
+          "schönste",
+          "schönere",
+          "Das",
+          "die",
+          "ist"
+        ],
+        "correctOrder": [
+          "Das",
+          "ist",
+          "die",
+          "schönste",
+          "Straße"
+        ],
+        "tip": "comparisonHillsSix.questDescription"
+      },
+      {
+        "id": 5,
+        "type": "select",
+        "question": "comparisonHillsSix.questTask5",
+        "options": [
+          "Das ist ein gutes Restaurant.",
+          "Das ist das teuerste Restaurant.",
+          "Das ist das beste Restaurant."
+        ],
+        "answer": "Das ist das beste Restaurant.",
+        "tip": "comparisonHillsSix.questDescription"
+      },
+      {
+        "id": 6,
+        "type": "input",
+        "question": "comparisonHillsSix.questTask6",
+        "correctAnswer": "längste",
+        "tip": "comparisonHillsSix.questDescription"
+      },
+      {
+        "id": 7,
+        "type": "readAndAnswer",
+        "question": "comparisonHillsSix.questTask7",
+        "text": "Die Zugspitze ist 2962 Meter hoch. Sie ist der höchste Berg in Deutschland.",
+        "options": [
+          "der Feldberg",
+          "die Zugspitze",
+          "der Brocken"
+        ],
+        "answer": "die Zugspitze",
+        "tip": "comparisonHillsSix.questDescription"
+      },
+      {
+        "id": 8,
+        "type": "input",
+        "question": "comparisonHillsSix.questTask8",
+        "correctAnswer": "älteste",
+        "tip": "comparisonHillsSix.questDescription"
+      },
+      {
+        "id": 9,
+        "type": "input",
+        "question": "comparisonHillsSix.questTask10",
+        "correctAnswer": "wärmste",
+        "tip": "comparisonHillsSix.questDescription"
+      },
+      {
+        "id": 10,
+        "type": "reorder",
+        "question": "comparisonHillsSix.questTask11",
+        "words": [
+          "gute",
+          "ist",
+          "Das",
+          "Freundin",
+          "meine",
+          "beste"
+        ],
+        "correctOrder": [
+          "Das",
+          "ist",
+          "meine",
+          "beste",
+          "Freundin"
+        ],
+        "tip": "comparisonHillsSix.questDescription"
+      },
+      {
+        "id": 11,
+        "type": "select",
+        "question": "comparisonHillsFive.questTask9",
+        "options": [
+          "Welche Jahreszeit magst du nicht?",
+          "Welche Jahreszeit magst du am liebsten?",
+          "Welche Jahreszeit magst du lieber?"
+        ],
+        "answer": "Welche Jahreszeit magst du am liebsten?",
+        "tip": "comparisonHillsFive.questDescription",
+        "reviewOf": "comparison-hills-five",
+        "reviewLand": "comparison-hills"
+      },
+      {
+        "id": 12,
+        "type": "select",
+        "question": "comparisonHillsTwo.questTask12",
+        "options": [
+          "Der Rock ist kürzer.",
+          "Der Rock ist länger.",
+          "Der Rock ist kurz."
+        ],
+        "answer": "Der Rock ist kürzer.",
+        "tip": "comparisonHillsTwo.questDescription",
+        "reviewOf": "comparison-hills-two",
+        "reviewLand": "comparison-hills"
+      },
+      {
+        "id": 13,
+        "type": "select",
+        "question": "comparisonHillsFour.questTask1",
+        "options": [
+          "Ich bin nicht so groß wie mein Vater.",
+          "Ich bin größer als mein Vater.",
+          "Ich bin so groß wie mein Vater."
+        ],
+        "answer": "Ich bin so groß wie mein Vater.",
+        "tip": "comparisonHillsFour.questDescription",
+        "reviewOf": "comparison-hills-four",
+        "reviewLand": "comparison-hills"
+      },
+      {
+        "id": 14,
+        "type": "input",
+        "question": "comparisonHillsSix.questTask14",
+        "correctAnswer": "Kommt",
+        "tip": "comparisonHillsSix.questDescription"
+      },
+      {
+        "id": 15,
+        "type": "input",
+        "question": "comparisonHillsSix.questTask15",
+        "correctAnswer": "dem",
+        "tip": "comparisonHillsSix.questDescription"
+      }
+    ]
+  },
+  {
+    "questId": "comparison-hills-seven",
+    "title": "comparisonHillsSeven.questTitle",
+    "progress": "0/15",
+    "description": "comparisonHillsSeven.questDescription",
+    "conditions": {
+      "goal": "comparisonHillsSeven.questGoal",
+      "minCorrect": 15,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
+    "vocabulary": [
+      {
+        "word": "die Jacke",
+        "translation-ru": "куртка",
+        "translation-en": "jacket",
+        "translation-uk": "куртка",
+        "translation-pl": "kurtka",
+        "translation-es": "la chaqueta",
+        "translation-fr": "la veste",
+        "translation-tr": "ceket",
+        "translation-ro": "geaca",
+        "translation-uz": "kurtka",
+        "translation-hi": "जैकेट",
+        "translation-ar": "السترة"
+      },
+      {
+        "word": "der Pullover",
+        "translation-ru": "свитер",
+        "translation-en": "jumper",
+        "translation-uk": "светр",
+        "translation-pl": "sweter",
+        "translation-es": "el jersey",
+        "translation-fr": "le pull",
+        "translation-tr": "kazak",
+        "translation-ro": "puloverul",
+        "translation-uz": "sviter",
+        "translation-hi": "स्वेटर",
+        "translation-ar": "الكنزة"
+      },
+      {
+        "word": "die Hose",
+        "translation-ru": "брюки",
+        "translation-en": "trousers",
+        "translation-uk": "штани",
+        "translation-pl": "spodnie",
+        "translation-es": "el pantalón",
+        "translation-fr": "le pantalon",
+        "translation-tr": "pantolon",
+        "translation-ro": "pantalonii",
+        "translation-uz": "shim",
+        "translation-hi": "पैंट",
+        "translation-ar": "البنطال"
+      },
+      {
+        "word": "der Rock",
+        "translation-ru": "юбка",
+        "translation-en": "skirt",
+        "translation-uk": "спідниця",
+        "translation-pl": "spódnica",
+        "translation-es": "la falda",
+        "translation-fr": "la jupe",
+        "translation-tr": "etek",
+        "translation-ro": "fusta",
+        "translation-uz": "yubka",
+        "translation-hi": "स्कर्ट",
+        "translation-ar": "التنورة"
+      },
+      {
+        "word": "groß",
+        "translation-ru": "большой",
+        "translation-en": "big",
+        "translation-uk": "великий",
+        "translation-pl": "duży",
+        "translation-es": "grande",
+        "translation-fr": "grand",
+        "translation-tr": "büyük",
+        "translation-ro": "mare",
+        "translation-uz": "katta",
+        "translation-hi": "बड़ा",
+        "translation-ar": "كبير"
+      },
+      {
+        "word": "berühmt",
+        "translation-ru": "знаменитый",
+        "translation-en": "famous",
+        "translation-uk": "відомий",
+        "translation-pl": "sławny",
+        "translation-es": "famoso",
+        "translation-fr": "célèbre",
+        "translation-tr": "ünlü",
+        "translation-ro": "celebru",
+        "translation-uz": "mashhur",
+        "translation-hi": "प्रसिद्ध",
+        "translation-ar": "مشهور"
+      },
+      {
+        "word": "andere",
+        "translation-ru": "другой",
+        "translation-en": "other",
+        "translation-uk": "інший",
+        "translation-pl": "inny",
+        "translation-es": "otro",
+        "translation-fr": "autre",
+        "translation-tr": "diğer",
+        "translation-ro": "alt",
+        "translation-uz": "boshqa",
+        "translation-hi": "दूसरा",
+        "translation-ar": "آخر"
+      }
+    ],
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "comparisonHillsSeven.questTask1",
+        "options": [
+          "Die Jacke ist teurer wie der Pullover.",
+          "Die Jacke ist teuer als der Pullover.",
+          "Die Jacke ist teurer als der Pullover."
+        ],
+        "answer": "Die Jacke ist teurer als der Pullover.",
+        "tip": "comparisonHillsSeven.questDescription"
+      },
+      {
+        "id": 2,
+        "type": "input",
+        "question": "comparisonHillsSeven.questTask2",
+        "correctAnswer": "länger",
+        "tip": "comparisonHillsSeven.questDescription"
+      },
+      {
+        "id": 3,
+        "type": "input",
+        "question": "comparisonHillsSeven.questTask3",
+        "correctAnswer": "wie",
+        "tip": "comparisonHillsSeven.questDescription"
+      },
+      {
+        "id": 4,
+        "type": "reorder",
+        "question": "comparisonHillsSeven.questTask4",
+        "words": [
+          "ist",
+          "warmer",
+          "wärmer",
+          "Pullover",
+          "Der",
+          "blaue"
+        ],
+        "correctOrder": [
+          "Der",
+          "blaue",
+          "Pullover",
+          "ist",
+          "wärmer"
+        ],
+        "tip": "comparisonHillsSeven.questDescription"
+      },
+      {
+        "id": 5,
+        "type": "select",
+        "question": "comparisonHillsSeven.questTask5",
+        "options": [
+          "Ich brauche eine großere Größe.",
+          "Ich brauche eine mehr groß Größe.",
+          "Ich brauche eine größere Größe."
+        ],
+        "answer": "Ich brauche eine größere Größe.",
+        "tip": "comparisonHillsSeven.questDescription"
+      },
+      {
+        "id": 6,
+        "type": "input",
+        "question": "comparisonHillsSeven.questTask6",
+        "correctAnswer": "kürzer",
+        "tip": "comparisonHillsSeven.questDescription"
+      },
+      {
+        "id": 7,
+        "type": "readAndAnswer",
+        "question": "comparisonHillsSeven.questTask7",
+        "text": "Mia sucht eine Jacke. Die schwarze Jacke ist billiger, aber die rote ist wärmer. Im Winter ist es sehr kalt, deshalb kauft sie die rote Jacke.",
+        "options": [
+          "Sie ist wärmer.",
+          "Sie ist kürzer.",
+          "Sie ist billiger."
+        ],
+        "answer": "Sie ist wärmer.",
+        "tip": "comparisonHillsSeven.questDescription"
+      },
+      {
+        "id": 8,
+        "type": "input",
+        "question": "comparisonHillsSeven.questTask8",
+        "correctAnswer": "größer",
+        "tip": "comparisonHillsSeven.questDescription"
+      },
+      {
+        "id": 9,
+        "type": "reorder",
+        "question": "comparisonHillsSeven.questTask10",
+        "words": [
+          "Jacke",
+          "Der",
+          "weicher",
+          "wie",
+          "die",
+          "ist",
+          "Pullover",
+          "als"
+        ],
+        "correctOrder": [
+          "Der",
+          "Pullover",
+          "ist",
+          "weicher",
+          "als",
+          "die",
+          "Jacke"
+        ],
+        "tip": "comparisonHillsSeven.questDescription"
+      },
+      {
+        "id": 10,
+        "type": "select",
+        "question": "comparisonHillsSeven.questTask11",
+        "options": [
+          "Dieser Rock gefällt mir mehr gut.",
+          "Dieser Rock gefällt mir besser.",
+          "Dieser Rock gefällt mir guter."
+        ],
+        "answer": "Dieser Rock gefällt mir besser.",
+        "tip": "comparisonHillsSeven.questDescription"
+      },
+      {
+        "id": 11,
+        "type": "select",
+        "question": "comparisonHillsSix.questTask9",
+        "options": [
+          "Das ist das berühmteste Museum.",
+          "Das ist das kleinste Museum.",
+          "Das ist ein berühmtes Museum."
+        ],
+        "answer": "Das ist das berühmteste Museum.",
+        "tip": "comparisonHillsSix.questDescription",
+        "reviewOf": "comparison-hills-six",
+        "reviewLand": "comparison-hills"
+      },
+      {
+        "id": 12,
+        "type": "select",
+        "question": "comparisonHillsThree.questTask12",
+        "options": [
+          "Mein neues Handy ist besser als das alte.",
+          "Mein neues Handy ist so gut wie das alte.",
+          "Mein altes Handy ist besser als das neue."
+        ],
+        "answer": "Mein neues Handy ist besser als das alte.",
+        "tip": "comparisonHillsThree.questDescription",
+        "reviewOf": "comparison-hills-three",
+        "reviewLand": "comparison-hills"
+      },
+      {
+        "id": 13,
+        "type": "select",
+        "question": "comparisonHillsFive.questTask1",
+        "options": [
+          "Im Winter ist es am wärmsten.",
+          "Im Sommer ist es wärmer.",
+          "Im Sommer ist es am wärmsten."
+        ],
+        "answer": "Im Sommer ist es am wärmsten.",
+        "tip": "comparisonHillsFive.questDescription",
+        "reviewOf": "comparison-hills-five",
+        "reviewLand": "comparison-hills"
+      },
+      {
+        "id": 14,
+        "type": "input",
+        "question": "comparisonHillsSeven.questTask14",
+        "correctAnswer": "anprobieren",
+        "tip": "comparisonHillsSeven.questDescription"
+      },
+      {
+        "id": 15,
+        "type": "input",
+        "question": "comparisonHillsSeven.questTask15",
+        "correctAnswer": "mir",
+        "tip": "comparisonHillsSeven.questDescription"
+      }
+    ]
+  },
+  {
+    "questId": "comparison-hills-eight",
+    "title": "comparisonHillsEight.questTitle",
+    "progress": "0/15",
+    "description": "comparisonHillsEight.questDescription",
+    "conditions": {
+      "goal": "comparisonHillsEight.questGoal",
+      "minCorrect": 15,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
+    "vocabulary": [
+      {
+        "word": "die Straße",
+        "translation-ru": "улица",
+        "translation-en": "street",
+        "translation-uk": "вулиця",
+        "translation-pl": "ulica",
+        "translation-es": "la calle",
+        "translation-fr": "la rue",
+        "translation-tr": "cadde, sokak",
+        "translation-ro": "strada",
+        "translation-uz": "ko‘cha",
+        "translation-hi": "सड़क",
+        "translation-ar": "الشارع"
+      },
+      {
+        "word": "der Platz",
+        "translation-ru": "площадь",
+        "translation-en": "square",
+        "translation-uk": "площа",
+        "translation-pl": "plac",
+        "translation-es": "la plaza",
+        "translation-fr": "la place",
+        "translation-tr": "meydan",
+        "translation-ro": "piața",
+        "translation-uz": "maydon",
+        "translation-hi": "चौक",
+        "translation-ar": "الساحة"
+      },
+      {
+        "word": "das Restaurant",
+        "translation-ru": "ресторан",
+        "translation-en": "restaurant",
+        "translation-uk": "ресторан",
+        "translation-pl": "restauracja",
+        "translation-es": "el restaurante",
+        "translation-fr": "le restaurant",
+        "translation-tr": "restoran",
+        "translation-ro": "restaurantul",
+        "translation-uz": "restoran",
+        "translation-hi": "रेस्टोरेंट",
+        "translation-ar": "المطعم"
+      },
+      {
+        "word": "alt",
+        "translation-ru": "старый",
+        "translation-en": "old",
+        "translation-uk": "старий",
+        "translation-pl": "stary",
+        "translation-es": "viejo",
+        "translation-fr": "vieux",
+        "translation-tr": "eski, yaşlı",
+        "translation-ro": "vechi",
+        "translation-uz": "eski",
+        "translation-hi": "पुराना",
+        "translation-ar": "قديم"
+      },
+      {
+        "word": "der Februar",
+        "translation-ru": "февраль",
+        "translation-en": "february",
+        "translation-uk": "лютий",
+        "translation-pl": "luty",
+        "translation-es": "febrero",
+        "translation-fr": "février",
+        "translation-tr": "şubat",
+        "translation-ro": "februarie",
+        "translation-uz": "fevral",
+        "translation-hi": "फ़रवरी",
+        "translation-ar": "فبراير"
+      }
+    ],
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "comparisonHillsEight.questTask1",
+        "options": [
+          "Das ist die ruhigere Straße in der Stadt.",
+          "Das ist die am ruhigsten Straße in der Stadt.",
+          "Das ist die ruhigste Straße in der Stadt."
+        ],
+        "answer": "Das ist die ruhigste Straße in der Stadt.",
+        "tip": "comparisonHillsEight.questDescription"
+      },
+      {
+        "id": 2,
+        "type": "input",
+        "question": "comparisonHillsEight.questTask2",
+        "correctAnswer": "älteste",
+        "tip": "comparisonHillsEight.questDescription"
+      },
+      {
+        "id": 3,
+        "type": "input",
+        "question": "comparisonHillsEight.questTask3",
+        "correctAnswer": "wärmsten",
+        "tip": "comparisonHillsEight.questDescription"
+      },
+      {
+        "id": 4,
+        "type": "reorder",
+        "question": "comparisonHillsEight.questTask4",
+        "words": [
+          "besten",
+          "mir",
+          "beste",
+          "gefällt",
+          "Der",
+          "am",
+          "Platz"
+        ],
+        "correctOrder": [
+          "Der",
+          "Platz",
+          "gefällt",
+          "mir",
+          "am",
+          "besten"
+        ],
+        "tip": "comparisonHillsEight.questDescription"
+      },
+      {
+        "id": 5,
+        "type": "select",
+        "question": "comparisonHillsEight.questTask5",
+        "options": [
+          "Das ist das am teuersten Restaurant.",
+          "Das ist das teuerer Restaurant.",
+          "Das ist das teuerste Restaurant."
+        ],
+        "answer": "Das ist das teuerste Restaurant.",
+        "tip": "comparisonHillsEight.questDescription"
+      },
+      {
+        "id": 6,
+        "type": "input",
+        "question": "comparisonHillsEight.questTask6",
+        "correctAnswer": "höchste",
+        "tip": "comparisonHillsEight.questDescription"
+      },
+      {
+        "id": 7,
+        "type": "readAndAnswer",
+        "question": "comparisonHillsEight.questTask7",
+        "text": "Tom wohnt in München. Er sagt: „Der Marienplatz ist am schönsten. Dort ist auch das beste Café der Stadt. Am liebsten sitze ich dort am Sonntag.“",
+        "options": [
+          "das Restaurant",
+          "der Marienplatz",
+          "der Turm"
+        ],
+        "answer": "der Marienplatz",
+        "tip": "comparisonHillsEight.questDescription"
+      },
+      {
+        "id": 8,
+        "type": "input",
+        "question": "comparisonHillsEight.questTask8",
+        "correctAnswer": "liebsten",
+        "tip": "comparisonHillsEight.questDescription"
+      },
+      {
+        "id": 9,
+        "type": "reorder",
+        "question": "comparisonHillsEight.questTask10",
+        "words": [
+          "beste",
+          "Das",
+          "das",
+          "guteste",
+          "ist",
+          "in",
+          "Stadt",
+          "der",
+          "Restaurant"
+        ],
+        "correctOrder": [
+          "Das",
+          "ist",
+          "das",
+          "beste",
+          "Restaurant",
+          "in",
+          "der",
+          "Stadt"
+        ],
+        "tip": "comparisonHillsEight.questDescription"
+      },
+      {
+        "id": 10,
+        "type": "select",
+        "question": "comparisonHillsEight.questTask11",
+        "options": [
+          "Der Februar ist am kältesten.",
+          "Der Februar ist am kaltesten.",
+          "Der Februar ist am kälteste."
+        ],
+        "answer": "Der Februar ist am kältesten.",
+        "tip": "comparisonHillsEight.questDescription"
+      },
+      {
+        "id": 11,
+        "type": "input",
+        "question": "comparisonHillsSeven.questTask9",
+        "correctAnswer": "so",
+        "tip": "comparisonHillsSeven.questDescription",
+        "reviewOf": "comparison-hills-seven",
+        "reviewLand": "comparison-hills"
+      },
+      {
+        "id": 12,
+        "type": "select",
+        "question": "comparisonHillsFour.questTask12",
+        "options": [
+          "Ich bin größer als mein Bruder.",
+          "Mein Bruder ist größer als ich.",
+          "Mein Bruder ist so groß wie ich."
+        ],
+        "answer": "Mein Bruder ist größer als ich.",
+        "tip": "comparisonHillsFour.questDescription",
+        "reviewOf": "comparison-hills-four",
+        "reviewLand": "comparison-hills"
+      },
+      {
+        "id": 13,
+        "type": "select",
+        "question": "comparisonHillsSix.questTask1",
+        "options": [
+          "Das ist ein schneller Zug.",
+          "Das ist der langsamste Zug.",
+          "Das ist der schnellste Zug."
+        ],
+        "answer": "Das ist der schnellste Zug.",
+        "tip": "comparisonHillsSix.questDescription",
+        "reviewOf": "comparison-hills-six",
+        "reviewLand": "comparison-hills"
+      },
+      {
+        "id": 14,
+        "type": "input",
+        "question": "comparisonHillsEight.questTask14",
+        "correctAnswer": "war",
+        "tip": "comparisonHillsEight.questDescription"
+      },
+      {
+        "id": 15,
+        "type": "input",
+        "question": "comparisonHillsEight.questTask15",
+        "correctAnswer": "zu",
+        "tip": "comparisonHillsEight.questDescription"
+      }
+    ]
+  },
+  {
+    "questId": "comparison-hills-nine",
+    "title": "comparisonHillsNine.questTitle",
+    "progress": "0/15",
+    "description": "comparisonHillsNine.questDescription",
+    "conditions": {
+      "goal": "comparisonHillsNine.questGoal",
+      "minCorrect": 15,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
+    "vocabulary": [
+      {
+        "word": "müde",
+        "translation-ru": "уставший",
+        "translation-en": "tired",
+        "translation-uk": "втомлений",
+        "translation-pl": "zmęczony",
+        "translation-es": "cansado",
+        "translation-fr": "fatigué",
+        "translation-tr": "yorgun",
+        "translation-ro": "obosit",
+        "translation-uz": "charchagan",
+        "translation-hi": "थका हुआ",
+        "translation-ar": "متعب"
+      },
+      {
+        "word": "die Katze",
+        "translation-ru": "кошка",
+        "translation-en": "cat",
+        "translation-uk": "кішка",
+        "translation-pl": "kot",
+        "translation-es": "el gato",
+        "translation-fr": "le chat",
+        "translation-tr": "kedi",
+        "translation-ro": "pisica",
+        "translation-uz": "mushuk",
+        "translation-hi": "बिल्ली",
+        "translation-ar": "القطة"
+      },
+      {
+        "word": "das Kleid",
+        "translation-ru": "платье",
+        "translation-en": "dress",
+        "translation-uk": "сукня",
+        "translation-pl": "sukienka",
+        "translation-es": "el vestido",
+        "translation-fr": "la robe",
+        "translation-tr": "elbise",
+        "translation-ro": "rochia",
+        "translation-uz": "ko‘ylak",
+        "translation-hi": "ड्रेस",
+        "translation-ar": "الفستان"
+      },
+      {
+        "word": "der Tag",
+        "translation-ru": "день",
+        "translation-en": "day",
+        "translation-uk": "день",
+        "translation-pl": "dzień",
+        "translation-es": "el día",
+        "translation-fr": "le jour",
+        "translation-tr": "gün",
+        "translation-ro": "ziua",
+        "translation-uz": "kun",
+        "translation-hi": "दिन",
+        "translation-ar": "اليوم"
+      },
+      {
+        "word": "morgens",
+        "translation-ru": "по утрам",
+        "translation-en": "in the morning",
+        "translation-uk": "вранці",
+        "translation-pl": "rano",
+        "translation-es": "por la mañana",
+        "translation-fr": "le matin",
+        "translation-tr": "sabahları",
+        "translation-ro": "dimineața",
+        "translation-uz": "ertalablari",
+        "translation-hi": "सुबह को",
+        "translation-ar": "صباحًا"
+      }
+    ],
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "comparisonHillsNine.questTask1",
+        "options": [
+          "Mein Bruder ist so alt wie ich.",
+          "Mein Bruder ist älter als ich.",
+          "Mein Bruder ist jünger als ich."
+        ],
+        "answer": "Mein Bruder ist jünger als ich.",
+        "tip": "comparisonHillsNine.questDescription"
+      },
+      {
+        "id": 2,
+        "type": "input",
+        "question": "comparisonHillsNine.questTask2",
+        "correctAnswer": "kälter",
+        "tip": "comparisonHillsNine.questDescription"
+      },
+      {
+        "id": 3,
+        "type": "input",
+        "question": "comparisonHillsNine.questTask3",
+        "correctAnswer": "wie",
+        "tip": "comparisonHillsNine.questDescription"
+      },
+      {
+        "id": 4,
+        "type": "reorder",
+        "question": "comparisonHillsNine.questTask4",
+        "words": [
+          "lieber",
+          "Kaffee",
+          "morgens",
+          "Am",
+          "ich",
+          "trinke",
+          "liebsten"
+        ],
+        "correctOrder": [
+          "Am",
+          "liebsten",
+          "trinke",
+          "ich",
+          "morgens",
+          "Kaffee"
+        ],
+        "tip": "comparisonHillsNine.questDescription"
+      },
+      {
+        "id": 5,
+        "type": "select",
+        "question": "comparisonHillsNine.questTask5",
+        "options": [
+          "Das ist das teuerste Hotel.",
+          "Das ist ein billiges Hotel.",
+          "Das ist das billigste Hotel."
+        ],
+        "answer": "Das ist das billigste Hotel.",
+        "tip": "comparisonHillsNine.questDescription"
+      },
+      {
+        "id": 6,
+        "type": "input",
+        "question": "comparisonHillsNine.questTask6",
+        "correctAnswer": "größer",
+        "tip": "comparisonHillsNine.questDescription"
+      },
+      {
+        "id": 7,
+        "type": "readAndAnswer",
+        "question": "comparisonHillsNine.questTask7",
+        "text": "Paul hat drei Katzen, Lisa hat zwei Katzen und Ben hat fünf Katzen.",
+        "options": [
+          "Ben",
+          "Lisa",
+          "Paul"
+        ],
+        "answer": "Ben",
+        "tip": "comparisonHillsNine.questDescription"
+      },
+      {
+        "id": 8,
+        "type": "input",
+        "question": "comparisonHillsNine.questTask8",
+        "correctAnswer": "besser",
+        "tip": "comparisonHillsNine.questDescription"
+      },
+      {
+        "id": 9,
+        "type": "select",
+        "question": "comparisonHillsNine.questTask9",
+        "options": [
+          "Hier ist es am wärmsten.",
+          "Hier ist es am kältesten.",
+          "Hier ist es wärmer."
+        ],
+        "answer": "Hier ist es am wärmsten.",
+        "tip": "comparisonHillsNine.questDescription"
+      },
+      {
+        "id": 10,
+        "type": "input",
+        "question": "comparisonHillsNine.questTask10",
+        "correctAnswer": "so",
+        "tip": "comparisonHillsNine.questDescription"
+      },
+      {
+        "id": 11,
+        "type": "reorder",
+        "question": "comparisonHillsNine.questTask11",
+        "words": [
+          "das",
+          "Der",
+          "ist",
+          "wie",
+          "schneller",
+          "Auto",
+          "Zug",
+          "als"
+        ],
+        "correctOrder": [
+          "Der",
+          "Zug",
+          "ist",
+          "schneller",
+          "als",
+          "das",
+          "Auto"
+        ],
+        "tip": "comparisonHillsNine.questDescription"
+      },
+      {
+        "id": 12,
+        "type": "select",
+        "question": "comparisonHillsNine.questTask12",
+        "options": [
+          "Im Sommer sind die Tage am kürzesten.",
+          "Im Winter sind die Tage am kürzesten.",
+          "Im Winter sind die Tage länger."
+        ],
+        "answer": "Im Winter sind die Tage am kürzesten.",
+        "tip": "comparisonHillsNine.questDescription"
+      },
+      {
+        "id": 13,
+        "type": "readAndAnswer",
+        "question": "comparisonHillsNine.questTask13",
+        "text": "Das rote Kleid kostet 50 Euro, das blaue 40 Euro und das grüne 60 Euro.",
+        "options": [
+          "das grüne Kleid",
+          "das blaue Kleid",
+          "das rote Kleid"
+        ],
+        "answer": "das grüne Kleid",
+        "tip": "comparisonHillsNine.questDescription"
+      },
+      {
+        "id": 14,
+        "type": "input",
+        "question": "comparisonHillsNine.questTask14",
+        "correctAnswer": "längste",
+        "tip": "comparisonHillsNine.questDescription"
+      },
+      {
+        "id": 15,
+        "type": "input",
+        "question": "comparisonHillsNine.questTask15",
+        "correctAnswer": "liebsten",
+        "tip": "comparisonHillsNine.questDescription"
+      }
+    ]
+  },
+  {
+    "questId": "comparison-hills-ten",
+    "title": "comparisonHillsTen.questTitle",
+    "progress": "0/15",
+    "description": "comparisonHillsTen.questDescription",
+    "conditions": {
+      "goal": "comparisonHillsTen.questGoal",
+      "minCorrect": 15,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
+    "vocabulary": [
+      {
+        "word": "gesund",
+        "translation-ru": "здоровый, полезный",
+        "translation-en": "healthy",
+        "translation-uk": "здоровий, корисний",
+        "translation-pl": "zdrowy",
+        "translation-es": "sano",
+        "translation-fr": "sain",
+        "translation-tr": "sağlıklı",
+        "translation-ro": "sănătos",
+        "translation-uz": "sog‘lom, foydali",
+        "translation-hi": "स्वस्थ, सेहतमंद",
+        "translation-ar": "صحي"
+      },
+      {
+        "word": "lauter",
+        "translation-ru": "громче",
+        "translation-en": "louder",
+        "translation-uk": "голосніше",
+        "translation-pl": "głośniej",
+        "translation-es": "más alto",
+        "translation-fr": "plus fort",
+        "translation-tr": "daha yüksek sesle",
+        "translation-ro": "mai tare",
+        "translation-uz": "balandroq",
+        "translation-hi": "ज़्यादा ज़ोर से",
+        "translation-ar": "بصوت أعلى"
+      },
+      {
+        "word": "die Stadt",
+        "translation-ru": "город",
+        "translation-en": "city",
+        "translation-uk": "місто",
+        "translation-pl": "miasto",
+        "translation-es": "la ciudad",
+        "translation-fr": "la ville",
+        "translation-tr": "şehir",
+        "translation-ro": "orașul",
+        "translation-uz": "shahar",
+        "translation-hi": "शहर",
+        "translation-ar": "المدينة"
+      },
+      {
+        "word": "das Kind",
+        "translation-ru": "ребёнок",
+        "translation-en": "child",
+        "translation-uk": "дитина",
+        "translation-pl": "dziecko",
+        "translation-es": "el niño",
+        "translation-fr": "l’enfant",
+        "translation-tr": "çocuk",
+        "translation-ro": "copilul",
+        "translation-uz": "bola",
+        "translation-hi": "बच्चा",
+        "translation-ar": "الطفل"
+      },
+      {
+        "word": "unser",
+        "translation-ru": "наш",
+        "translation-en": "our",
+        "translation-uk": "наш",
+        "translation-pl": "nasz",
+        "translation-es": "nuestro",
+        "translation-fr": "notre",
+        "translation-tr": "bizim",
+        "translation-ro": "nostru",
+        "translation-uz": "bizning",
+        "translation-hi": "हमारा",
+        "translation-ar": "لنا"
+      }
+    ],
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "comparisonHillsTen.questTask1",
+        "options": [
+          "Unser Haus ist neuer als euer Haus.",
+          "Unser Haus ist so alt wie euer Haus.",
+          "Unser Haus ist älter als euer Haus."
+        ],
+        "answer": "Unser Haus ist älter als euer Haus.",
+        "tip": "comparisonHillsTen.questDescription"
+      },
+      {
+        "id": 2,
+        "type": "input",
+        "question": "comparisonHillsTen.questTask2",
+        "correctAnswer": "stärker",
+        "tip": "comparisonHillsTen.questDescription"
+      },
+      {
+        "id": 3,
+        "type": "input",
+        "question": "comparisonHillsTen.questTask3",
+        "correctAnswer": "beste",
+        "tip": "comparisonHillsTen.questDescription"
+      },
+      {
+        "id": 4,
+        "type": "input",
+        "question": "comparisonHillsTen.questTask4",
+        "correctAnswer": "gegangen",
+        "tip": "comparisonHillsTen.questDescription"
+      },
+      {
+        "id": 5,
+        "type": "select",
+        "question": "comparisonHillsTen.questTask5",
+        "options": [
+          "Im Winter schwimme ich am liebsten.",
+          "Im Sommer schwimme ich lieber.",
+          "Im Sommer schwimme ich am liebsten."
+        ],
+        "answer": "Im Sommer schwimme ich am liebsten.",
+        "tip": "comparisonHillsTen.questDescription"
+      },
+      {
+        "id": 6,
+        "type": "input",
+        "question": "comparisonHillsTen.questTask6",
+        "correctAnswer": "war",
+        "tip": "comparisonHillsTen.questDescription"
+      },
+      {
+        "id": 7,
+        "type": "readAndAnswer",
+        "question": "comparisonHillsTen.questTask7",
+        "text": "Lisa wohnt in Hamburg. Hamburg ist größer als Köln, aber Berlin ist am größten.",
+        "options": [
+          "Köln",
+          "Berlin",
+          "Hamburg"
+        ],
+        "answer": "Berlin",
+        "tip": "comparisonHillsTen.questDescription"
+      },
+      {
+        "id": 8,
+        "type": "input",
+        "question": "comparisonHillsTen.questTask8",
+        "correctAnswer": "dem",
+        "tip": "comparisonHillsTen.questDescription"
+      },
+      {
+        "id": 9,
+        "type": "reorder",
+        "question": "comparisonHillsTen.questTask9",
+        "words": [
+          "langsamer",
+          "Sie",
+          "Sprich",
+          "langsam",
+          "Sprechen",
+          "bitte"
+        ],
+        "correctOrder": [
+          "Sprechen",
+          "Sie",
+          "bitte",
+          "langsamer"
+        ],
+        "tip": "comparisonHillsTen.questDescription"
+      },
+      {
+        "id": 10,
+        "type": "input",
+        "question": "comparisonHillsTen.questTask10",
+        "correctAnswer": "wie",
+        "tip": "comparisonHillsTen.questDescription"
+      },
+      {
+        "id": 11,
+        "type": "input",
+        "question": "comparisonHillsTen.questTask11",
+        "correctAnswer": "ist",
+        "tip": "comparisonHillsTen.questDescription"
+      },
+      {
+        "id": 12,
+        "type": "select",
+        "question": "comparisonHillsTen.questTask12",
+        "options": [
+          "Könnten Sie bitte lauter sprechen?",
+          "Könnten Sie bitte langsamer sprechen?",
+          "Könnten Sie bitte leiser sprechen?"
+        ],
+        "answer": "Könnten Sie bitte lauter sprechen?",
+        "tip": "comparisonHillsTen.questDescription"
+      },
+      {
+        "id": 13,
+        "type": "readAndAnswer",
+        "question": "comparisonHillsTen.questTask13",
+        "text": "Mein Bruder ist 20, meine Schwester ist 17 und ich bin 15. Ich bin am jüngsten.",
+        "options": [
+          "ich",
+          "mein Bruder",
+          "meine Schwester"
+        ],
+        "answer": "mein Bruder",
+        "tip": "comparisonHillsTen.questDescription"
+      },
+      {
+        "id": 14,
+        "type": "input",
+        "question": "comparisonHillsTen.questTask14",
+        "correctAnswer": "wollte",
+        "tip": "comparisonHillsTen.questDescription"
+      },
+      {
+        "id": 15,
+        "type": "input",
+        "question": "comparisonHillsTen.questTask15",
+        "correctAnswer": "schönste",
+        "tip": "comparisonHillsTen.questDescription"
+      }
+    ]
+  }
+]

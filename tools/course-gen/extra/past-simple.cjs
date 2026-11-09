@@ -1,0 +1,120 @@
+// Долина прошлого (past-simple): 2 практических квеста перед «Повторением»
+// порядок переводов: ru en uk pl es fr tr ro uz hi ar
+module.exports = {
+	file: 'past-simple',
+	ns: 'pastSimpleExtra',
+	ids: ['past-simple-9', 'past-simple-10'],
+	before: 'past-simple-7',
+	quests: [
+		{
+			title: ['Вчерашний вечер', 'Last night', 'Учорашній вечір', 'Wczorajszy wieczór', 'Anoche', 'Hier soir', 'Dün akşam', 'Aseară', 'Kechagi oqshom', 'कल की शाम', 'مساء أمس'],
+			desc: [
+				'Практика без новой грамматики. sein в прошлом: ich war, du warst, er war, wir waren, ihr wart, sie waren. haben в прошлом: ich hatte, du hattest, er hatte, wir hatten, ihr hattet, sie hatten. Gestern war ich müde. Wir hatten keine Zeit.',
+				'Practice without new grammar. sein in the past: ich war, du warst, er war, wir waren, ihr wart, sie waren. haben in the past: ich hatte, du hattest, er hatte, wir hatten, ihr hattet, sie hatten. Gestern war ich müde. Wir hatten keine Zeit.',
+				'Практика без нової граматики. sein у минулому: ich war, du warst, er war, wir waren, ihr wart, sie waren. haben у минулому: ich hatte, du hattest, er hatte, wir hatten, ihr hattet, sie hatten. Gestern war ich müde. Wir hatten keine Zeit.',
+				'Ćwiczenie bez nowej gramatyki. sein w przeszłości: ich war, du warst, er war, wir waren, ihr wart, sie waren. haben w przeszłości: ich hatte, du hattest, er hatte, wir hatten, ihr hattet, sie hatten. Gestern war ich müde. Wir hatten keine Zeit.',
+				'Práctica sin gramática nueva. sein en pasado: ich war, du warst, er war, wir waren, ihr wart, sie waren. haben en pasado: ich hatte, du hattest, er hatte, wir hatten, ihr hattet, sie hatten. Gestern war ich müde. Wir hatten keine Zeit.',
+				'Entraînement sans nouvelle grammaire. sein au passé : ich war, du warst, er war, wir waren, ihr wart, sie waren. haben au passé : ich hatte, du hattest, er hatte, wir hatten, ihr hattet, sie hatten. Gestern war ich müde. Wir hatten keine Zeit.',
+				'Yeni dilbilgisi olmadan pratik. Geçmişte sein: ich war, du warst, er war, wir waren, ihr wart, sie waren. Geçmişte haben: ich hatte, du hattest, er hatte, wir hatten, ihr hattet, sie hatten. Gestern war ich müde. Wir hatten keine Zeit.',
+				'Exercițiu fără gramatică nouă. sein la trecut: ich war, du warst, er war, wir waren, ihr wart, sie waren. haben la trecut: ich hatte, du hattest, er hatte, wir hatten, ihr hattet, sie hatten. Gestern war ich müde. Wir hatten keine Zeit.',
+				'Yangi grammatikasiz mashq. O‘tgan zamonda sein: ich war, du warst, er war, wir waren, ihr wart, sie waren. O‘tgan zamonda haben: ich hatte, du hattest, er hatte, wir hatten, ihr hattet, sie hatten. Gestern war ich müde. Wir hatten keine Zeit.',
+				'बिना नए व्याकरण का अभ्यास। भूतकाल में sein: ich war, du warst, er war, wir waren, ihr wart, sie waren. भूतकाल में haben: ich hatte, du hattest, er hatte, wir hatten, ihr hattet, sie hatten. Gestern war ich müde. Wir hatten keine Zeit.',
+				'تدريب بلا قواعد جديدة. sein في الماضي: ich war و du warst و er war و wir waren و ihr wart و sie waren. haben في الماضي: ich hatte و du hattest و er hatte و wir hatten و ihr hattet و sie hatten. Gestern war ich müde. Wir hatten keine Zeit.'
+			],
+			vocab: [
+				['das Konzert', 'концерт', 'concert', 'концерт', 'koncert', 'el concierto', 'le concert', 'konser', 'concertul', 'konsert', 'कॉन्सर्ट', 'الحفلة الموسيقية'],
+				['voll', 'полный', 'full', 'повний', 'pełny', 'lleno', 'plein', 'dolu', 'plin', 'to‘la', 'भरा हुआ', 'ممتلئ'],
+				['der Hunger', 'голод', 'hunger', 'голод', 'głód', 'el hambre', 'la faim', 'açlık', 'foamea', 'ochlik', 'भूख', 'الجوع'],
+				['toll', 'классный, отличный', 'great', 'чудовий', 'świetny', 'genial', 'super', 'harika', 'grozav', 'ajoyib', 'शानदार', 'رائع'],
+				['spät', 'поздно', 'late', 'пізно', 'późno', 'tarde', 'tard', 'geç', 'târziu', 'kech', 'देर', 'متأخر']
+			],
+			tasks: [
+				['tr', ['Вчера вечером мы были на концерте.', 'Last night we were at a concert.', 'Учора ввечері ми були на концерті.', 'Wczoraj wieczorem byliśmy na koncercie.', 'Anoche estuvimos en un concierto.', 'Hier soir, nous étions à un concert.', 'Dün akşam bir konserdeydik.', 'Aseară am fost la un concert.', 'Kecha kechqurun konsertda edik.', 'कल शाम हम कॉन्सर्ट में थे।', 'مساء أمس كنا في حفلة موسيقية.'],
+					['Gestern Abend waren wir im Konzert.', 'Gestern Abend war wir im Konzert.', 'Gestern Abend hatten wir im Konzert.'], 'Gestern Abend waren wir im Konzert.'],
+				['gv', ['Зал был полный', 'The hall was full', 'Зал був повний', 'Sala była pełna', 'La sala estaba llena', 'La salle était pleine', 'Salon doluydu', 'Sala era plină', 'Zal to‘la edi', 'हॉल भरा हुआ था', 'كانت القاعة ممتلئة'],
+					'Der Saal ___ voll.', 'war'],
+				['gv', ['После концерта у нас был голод', 'After the concert we were hungry', 'Після концерту ми були голодні', 'Po koncercie byliśmy głodni', 'Después del concierto teníamos hambre', 'Après le concert, nous avions faim', 'Konserden sonra açtık', 'După concert ne era foame', 'Konsertdan keyin qornimiz och edi', 'कॉन्सर्ट के बाद हमें भूख लगी थी', 'بعد الحفلة كنا جائعين'],
+					'Nach dem Konzert ___ wir Hunger.', 'hatten'],
+				['ro', ['Музыка была отличная', 'The music was great', 'Музика була чудова', 'Muzyka była świetna', 'La música era genial', 'La musique était super', 'Müzik harikaydı', 'Muzica a fost grozavă', 'Musiqa ajoyib edi', 'संगीत शानदार था', 'كانت الموسيقى رائعة'],
+					'Die Musik war toll', ['hatte']],
+				['ok', ['Ты вчера был дома?', 'Were you at home yesterday?', 'Ти вчора був удома?', 'Byłeś wczoraj w domu?', '¿Estuviste ayer en casa?', 'Tu étais à la maison hier ?', 'Dün evde miydin?', 'Ai fost ieri acasă?', 'Kecha uyda edingmi?', 'क्या तुम कल घर पर थे?', 'هل كنت في البيت أمس؟'],
+					['Warst du gestern zu Hause?', 'Warest du gestern zu Hause?', 'Wart du gestern zu Hause?'], 'Warst du gestern zu Hause?'],
+				['gv', ['У меня не было билета', 'I didn’t have a ticket', 'У мене не було квитка', 'Nie miałem biletu', 'No tenía entrada', 'Je n’avais pas de billet', 'Biletim yoktu', 'N-aveam bilet', 'Chiptam yo‘q edi', 'मेरे पास टिकट नहीं था', 'لم تكن معي تذكرة'],
+					'Ich ___ keine Karte.', 'hatte'],
+				['rd', ['Почему Ян поздно пришёл домой?', 'Why did Jan come home late?', 'Чому Ян пізно прийшов додому?', 'Dlaczego Jan późno wrócił do domu?', '¿Por qué llegó Jan tarde a casa?', 'Pourquoi Jan est-il rentré tard ?', 'Jan eve neden geç geldi?', 'De ce a venit Jan târziu acasă?', 'Yan nega uyga kech keldi?', 'यान घर देर से क्यों आया?', 'لماذا عاد يان إلى البيت متأخرًا؟'],
+					'Gestern war Jan mit Freunden im Konzert. Das Konzert war sehr lang, und danach hatten alle Hunger. Sie waren noch im Restaurant. Erst um Mitternacht war Jan zu Hause.', ['Er war noch im Restaurant.', 'Er hatte keinen Bus.', 'Er war krank.'], 'Er war noch im Restaurant.'],
+				['gv', ['Вы вчера были в кино?', 'Were you at the cinema yesterday?', 'Ви вчора були в кіно?', 'Byliście wczoraj w kinie?', '¿Estuvisteis ayer en el cine?', 'Vous étiez au cinéma hier ?', 'Dün sinemada mıydınız?', 'Ați fost ieri la cinema?', 'Kecha kinoda edingizmi?', 'क्या तुम लोग कल सिनेमा में थे?', 'هل كنتم في السينما أمس؟'],
+					'___ ihr gestern im Kino?', 'Wart'],
+				['gv', ['Было уже поздно', 'It was already late', 'Було вже пізно', 'Było już późno', 'Ya era tarde', 'Il était déjà tard', 'Artık geç olmuştu', 'Era deja târziu', 'Allaqachon kech edi', 'पहले ही देर हो चुकी थी', 'كان الوقت متأخرًا'],
+					'Es ___ schon spät.', 'war'],
+				['ro', ['У моей сестры был день рождения', 'It was my sister’s birthday', 'У моєї сестри був день народження', 'Moja siostra miała urodziny', 'Mi hermana tenía cumpleaños', 'C’était l’anniversaire de ma sœur', 'Kız kardeşimin doğum günüydü', 'Sora mea avea ziua de naștere', 'Singlimning tug‘ilgan kuni edi', 'मेरी बहन का जन्मदिन था', 'كان عيد ميلاد أختي'],
+					'Meine Schwester hatte Geburtstag', ['war']],
+				['ok', ['Гости были очень весёлые.', 'The guests were very cheerful.', 'Гості були дуже веселі.', 'Goście byli bardzo weseli.', 'Los invitados estaban muy alegres.', 'Les invités étaient très joyeux.', 'Misafirler çok neşeliydi.', 'Oaspeții erau foarte veseli.', 'Mehmonlar juda quvnoq edi.', 'मेहमान बहुत ख़ुश थे।', 'كان الضيوف مرحين جدًا.'],
+					['Die Gäste waren sehr lustig.', 'Die Gäste war sehr lustig.', 'Die Gäste hatten sehr lustig.'], 'Die Gäste waren sehr lustig.'],
+				['gv', ['У тебя было время?', 'Did you have time?', 'У тебе був час?', 'Miałeś czas?', '¿Tenías tiempo?', 'Tu avais le temps ?', 'Vaktin var mıydı?', 'Aveai timp?', 'Vaqting bormidi?', 'क्या तुम्हारे पास समय था?', 'هل كان لديك وقت؟'],
+					'___ du Zeit?', 'Hattest'],
+				['gv', ['Мы были очень уставшими', 'We were very tired', 'Ми були дуже втомлені', 'Byliśmy bardzo zmęczeni', 'Estábamos muy cansados', 'Nous étions très fatigués', 'Çok yorgunduk', 'Eram foarte obosiți', 'Biz juda charchagan edik', 'हम बहुत थके हुए थे', 'كنا متعبين جدًا'],
+					'Wir ___ sehr müde.', 'waren'],
+				['gw', ['Мы пошли с друзьями в ресторан', 'We went to a restaurant with friends', 'Ми пішли з друзями в ресторан', 'Poszliśmy z przyjaciółmi do restauracji', 'Fuimos con amigos a un restaurante', 'Nous sommes allés au restaurant avec des amis', 'Arkadaşlarla restorana gittik', 'Am mers cu prietenii la restaurant', 'Do‘stlar bilan restoranga bordik', 'हम दोस्तों के साथ रेस्टोरेंट गए', 'ذهبنا مع الأصدقاء إلى مطعم'],
+					'Wir sind mit Freunden ins Restaurant ___.', 'gegangen'],
+				['gw', ['Концерт был в центре города', 'The concert was in the town centre', 'Концерт був у центрі міста', 'Koncert był w centrum miasta', 'El concierto fue en el centro', 'Le concert était au centre-ville', 'Konser şehir merkezindeydi', 'Concertul a fost în centrul orașului', 'Konsert shahar markazida edi', 'कॉन्सर्ट शहर के बीच में था', 'كانت الحفلة في وسط المدينة'],
+					'Das Konzert war ___ Zentrum.', 'im']
+			]
+		},
+		{
+			title: ['Когда я был маленьким', 'When I was little', 'Коли я був малим', 'Kiedy byłem mały', 'Cuando era pequeño', 'Quand j’étais petit', 'Ben küçükken', 'Când eram mic', 'Kichkinaligimda', 'जब मैं छोटा था', 'عندما كنت صغيرًا'],
+			desc: [
+				'Практика без новой грамматики. Модальные глаголы в прошлом: konnte (мог), musste (должен был), wollte (хотел), durfte (было можно), sollte (нужно было). Без умлаута! Модальный глагол на втором месте, второй глагол в конце: Ich durfte nicht fernsehen.',
+				'Practice without new grammar. Modal verbs in the past: konnte (could), musste (had to), wollte (wanted), durfte (was allowed), sollte (was supposed to). No umlaut! The modal verb is in second place, the other verb at the end: Ich durfte nicht fernsehen.',
+				'Практика без нової граматики. Модальні дієслова в минулому: konnte (міг), musste (мусив), wollte (хотів), durfte (було можна), sollte (треба було). Без умлауту! Модальне дієслово на другому місці, друге дієслово в кінці: Ich durfte nicht fernsehen.',
+				'Ćwiczenie bez nowej gramatyki. Czasowniki modalne w przeszłości: konnte (mógł), musste (musiał), wollte (chciał), durfte (wolno było), sollte (miał). Bez umlautu! Czasownik modalny na drugim miejscu, drugi czasownik na końcu: Ich durfte nicht fernsehen.',
+				'Práctica sin gramática nueva. Verbos modales en pasado: konnte (podía), musste (tenía que), wollte (quería), durfte (podía, tenía permiso), sollte (debía). ¡Sin diéresis! El modal en segundo lugar y el otro verbo al final: Ich durfte nicht fernsehen.',
+				'Entraînement sans nouvelle grammaire. Les verbes de modalité au passé : konnte (pouvait), musste (devait), wollte (voulait), durfte (avait le droit), sollte (était censé). Sans umlaut ! Le verbe de modalité en deuxième position, l’autre verbe à la fin : Ich durfte nicht fernsehen.',
+				'Yeni dilbilgisi olmadan pratik. Geçmişte kip fiilleri: konnte (-ebildi), musste (zorundaydı), wollte (istedi), durfte (izinliydi), sollte (yapması gerekiyordu). Umlaut yok! Kip fiili ikinci yerde, diğer fiil sonda: Ich durfte nicht fernsehen.',
+				'Exercițiu fără gramatică nouă. Verbele modale la trecut: konnte (putea), musste (trebuia), wollte (voia), durfte (avea voie), sollte (trebuia, i se spusese). Fără umlaut! Verbul modal pe locul doi, celălalt verb la final: Ich durfte nicht fernsehen.',
+				'Yangi grammatikasiz mashq. O‘tgan zamonda modal fe’llar: konnte (qila olardi), musste (majbur edi), wollte (xohlardi), durfte (ruxsat bor edi), sollte (kerak edi). Umlautsiz! Modal fe’l ikkinchi o‘rinda, ikkinchi fe’l oxirida: Ich durfte nicht fernsehen.',
+				'बिना नए व्याकरण का अभ्यास। भूतकाल में मोडल क्रियाएँ: konnte (सकता था), musste (करना पड़ा), wollte (चाहता था), durfte (इजाज़त थी), sollte (करना था)। उम्लाउट नहीं! मोडल क्रिया दूसरे स्थान पर, दूसरी क्रिया अंत में: Ich durfte nicht fernsehen.',
+				'تدريب بلا قواعد جديدة. الأفعال الناقصة في الماضي: konnte (استطاع) و musste (اضطر) و wollte (أراد) و durfte (سُمح له) و sollte (كان عليه). بلا أوملاوت! الفعل الناقص في المكان الثاني والفعل الآخر في النهاية: Ich durfte nicht fernsehen.'
+			],
+			vocab: [
+				['die Kindheit', 'детство', 'childhood', 'дитинство', 'dzieciństwo', 'la infancia', 'l’enfance', 'çocukluk', 'copilăria', 'bolalik', 'बचपन', 'الطفولة'],
+				['das Dorf', 'деревня', 'village', 'село', 'wieś', 'el pueblo', 'le village', 'köy', 'satul', 'qishloq', 'गाँव', 'القرية'],
+				['die Süßigkeiten', 'сладости', 'sweets', 'солодощі', 'słodycze', 'los dulces', 'les sucreries', 'tatlılar', 'dulciurile', 'shirinliklar', 'मिठाइयाँ', 'الحلويات'],
+				['allein', 'один, сам', 'alone', 'сам, один', 'sam', 'solo', 'seul', 'yalnız', 'singur', 'yolg‘iz', 'अकेले', 'وحده'],
+				['der Pilot', 'пилот', 'pilot', 'пілот', 'pilot', 'el piloto', 'le pilote', 'pilot', 'pilotul', 'uchuvchi', 'पायलट', 'الطيار']
+			],
+			tasks: [
+				['tr', ['В детстве я хотел стать пилотом.', 'As a child I wanted to become a pilot.', 'У дитинстві я хотів стати пілотом.', 'W dzieciństwie chciałem zostać pilotem.', 'De niño quería ser piloto.', 'Enfant, je voulais devenir pilote.', 'Çocukken pilot olmak istiyordum.', 'În copilărie voiam să devin pilot.', 'Bolaligimda uchuvchi bo‘lishni xohlardim.', 'बचपन में मैं पायलट बनना चाहता था।', 'في طفولتي أردت أن أصبح طيارًا.'],
+					['Als Kind wollte ich Pilot werden.', 'Als Kind wollte ich werden Pilot.', 'Als Kind willte ich Pilot werden.'], 'Als Kind wollte ich Pilot werden.'],
+				['gv', ['Нам нельзя было есть много сладкого', 'We weren’t allowed to eat a lot of sweets', 'Нам не можна було їсти багато солодкого', 'Nie wolno nam było jeść dużo słodyczy', 'No podíamos comer muchos dulces', 'Nous n’avions pas le droit de manger beaucoup de sucreries', 'Çok tatlı yememize izin yoktu', 'Nu aveam voie să mâncăm multe dulciuri', 'Bizga ko‘p shirinlik yeyish mumkin emas edi', 'हमें बहुत मिठाई खाने की इजाज़त नहीं थी', 'لم يكن مسموحًا لنا أكل الكثير من الحلويات'],
+					'Wir ___ nicht viele Süßigkeiten essen.', 'durften'],
+				['gv', ['Я должен был каждый день помогать маме', 'I had to help my mother every day', 'Я мусив щодня допомагати мамі', 'Musiałem codziennie pomagać mamie', 'Tenía que ayudar a mi madre cada día', 'Je devais aider ma mère tous les jours', 'Her gün anneme yardım etmek zorundaydım', 'Trebuia să o ajut pe mama în fiecare zi', 'Har kuni onamga yordam berishim kerak edi', 'मुझे हर दिन माँ की मदद करनी पड़ती थी', 'كان عليّ أن أساعد أمي كل يوم'],
+					'Ich ___ jeden Tag meiner Mutter helfen.', 'musste'],
+				['ro', ['Мой брат уже мог читать в пять лет', 'My brother could already read at five', 'Мій брат уже вмів читати в п’ять років', 'Mój brat umiał już czytać w wieku pięciu lat', 'Mi hermano ya sabía leer con cinco años', 'Mon frère savait déjà lire à cinq ans', 'Erkek kardeşim beş yaşında okuyabiliyordu', 'Fratele meu știa deja să citească la cinci ani', 'Akam besh yoshida o‘qiy olardi', 'मेरा भाई पाँच साल की उम्र में पढ़ सकता था', 'كان أخي يستطيع القراءة في الخامسة'],
+					'Mein Bruder konnte mit fünf schon lesen', ['könnte']],
+				['ok', ['Ты мог в детстве плавать?', 'Could you swim as a child?', 'Ти вмів у дитинстві плавати?', 'Umiałeś pływać w dzieciństwie?', '¿Sabías nadar de niño?', 'Tu savais nager quand tu étais enfant ?', 'Çocukken yüzebiliyor muydun?', 'Știai să înoți în copilărie?', 'Bolaligingda suza olarmiding?', 'क्या तुम बचपन में तैर सकते थे?', 'هل كنت تستطيع السباحة في طفولتك؟'],
+					['Konntest du als Kind schwimmen?', 'Kanntest du als Kind schwimmen?', 'Konntest du als Kind schwimmst?'], 'Konntest du als Kind schwimmen?'],
+				['gv', ['Наш дом был очень маленьким', 'Our house was very small', 'Наш будинок був дуже маленький', 'Nasz dom był bardzo mały', 'Nuestra casa era muy pequeña', 'Notre maison était très petite', 'Evimiz çok küçüktü', 'Casa noastră era foarte mică', 'Uyimiz juda kichik edi', 'हमारा घर बहुत छोटा था', 'كان بيتنا صغيرًا جدًا'],
+					'Unser Haus ___ sehr klein.', 'war'],
+				['rd', ['Что Анне было нельзя в детстве?', 'What wasn’t Anna allowed to do as a child?', 'Чого Анні не можна було в дитинстві?', 'Czego Annie nie wolno było w dzieciństwie?', '¿Qué no podía hacer Anna de niña?', 'Qu’est-ce qu’Anna n’avait pas le droit de faire enfant ?', 'Anna’nın çocukken neye izni yoktu?', 'Ce nu avea voie Anna să facă în copilărie?', 'Annaga bolaligida nima mumkin emas edi?', 'अन्ना को बचपन में क्या करने की इजाज़त नहीं थी?', 'ما الذي لم يكن مسموحًا لآنا في طفولتها؟'],
+					'Anna erzählt: „Früher war ich oft im Dorf. Ich durfte nicht allein in die Stadt fahren. Ich musste um sieben Uhr zu Hause sein. Aber ich konnte jeden Tag im Garten spielen.“', ['allein in die Stadt fahren', 'im Garten spielen', 'zu Hause sein'], 'allein in die Stadt fahren'],
+				['gv', ['Он хотел собаку', 'He wanted a dog', 'Він хотів собаку', 'Chciał psa', 'Quería un perro', 'Il voulait un chien', 'Bir köpek istiyordu', 'Voia un câine', 'U it xohlardi', 'वह कुत्ता चाहता था', 'كان يريد كلبًا'],
+					'Er ___ einen Hund haben.', 'wollte'],
+				['gv', ['Мне нужно было убрать комнату', 'I was supposed to tidy my room', 'Мені треба було прибрати кімнату', 'Miałem posprzątać pokój', 'Tenía que ordenar mi habitación', 'Je devais ranger ma chambre', 'Odamı toplamam gerekiyordu', 'Trebuia să-mi fac ordine în cameră', 'Xonamni yig‘ishtirishim kerak edi', 'मुझे अपना कमरा साफ़ करना था', 'كان عليّ ترتيب غرفتي'],
+					'Ich ___ mein Zimmer aufräumen.', 'sollte'],
+				['ro', ['Нам нельзя было долго смотреть телевизор', 'We weren’t allowed to watch TV for long', 'Нам не можна було довго дивитися телевізор', 'Nie wolno nam było długo oglądać telewizji', 'No podíamos ver la tele mucho tiempo', 'Nous n’avions pas le droit de regarder longtemps la télé', 'Uzun süre televizyon izlememize izin yoktu', 'Nu aveam voie să ne uităm mult la televizor', 'Bizga uzoq televizor ko‘rish mumkin emas edi', 'हमें देर तक टीवी देखने की इजाज़त नहीं थी', 'لم يكن مسموحًا لنا مشاهدة التلفاز طويلًا'],
+					'Wir durften nicht lange fernsehen', ['dürften']],
+				['ok', ['Почему ты не смог прийти?', 'Why couldn’t you come?', 'Чому ти не зміг прийти?', 'Dlaczego nie mogłeś przyjść?', '¿Por qué no pudiste venir?', 'Pourquoi n’as-tu pas pu venir ?', 'Neden gelemedin?', 'De ce n-ai putut veni?', 'Nega kela olmading?', 'तुम क्यों नहीं आ सके?', 'لماذا لم تستطع المجيء؟'],
+					['Warum konntest du nicht kommen?', 'Warum konntest du nicht kommst?', 'Warum kanntest du nicht kommen?'], 'Warum konntest du nicht kommen?'],
+				['gv', ['Дети должны были в восемь быть в кровати', 'The children had to be in bed at eight', 'Діти мусили о восьмій бути в ліжку', 'Dzieci musiały o ósmej być w łóżku', 'Los niños tenían que estar en la cama a las ocho', 'Les enfants devaient être au lit à huit heures', 'Çocuklar saat sekizde yatakta olmak zorundaydı', 'Copiii trebuiau să fie în pat la opt', 'Bolalar soat sakkizda to‘shakda bo‘lishlari kerak edi', 'बच्चों को आठ बजे बिस्तर में होना पड़ता था', 'كان على الأطفال أن يكونوا في السرير في الثامنة'],
+					'Die Kinder ___ um acht Uhr im Bett sein.', 'mussten'],
+				['gw', ['Я хотел пойти с тобой, но не смог', 'I wanted to go with you, but I couldn’t', 'Я хотів піти з тобою, але не зміг', 'Chciałem pójść z tobą, ale nie mogłem', 'Quería ir contigo, pero no pude', 'Je voulais venir avec toi, mais je n’ai pas pu', 'Seninle gitmek istedim ama gidemedim', 'Voiam să merg cu tine, dar n-am putut', 'Sen bilan bormoqchi edim, lekin bora olmadim', 'मैं तुम्हारे साथ जाना चाहता था, पर नहीं जा सका', 'أردت الذهاب معك لكنني لم أستطع'],
+					'Ich wollte mit dir gehen, ___ ich konnte nicht.', 'aber'],
+				['gv', ['В детстве у меня была кошка', 'As a child I had a cat', 'У дитинстві в мене була кішка', 'W dzieciństwie miałem kota', 'De niño tenía un gato', 'Enfant, j’avais un chat', 'Çocukken bir kedim vardı', 'În copilărie aveam o pisică', 'Bolaligimda mushugim bor edi', 'बचपन में मेरे पास एक बिल्ली थी', 'في طفولتي كانت لديّ قطة'],
+					'Als Kind ___ ich eine Katze.', 'hatte'],
+				['gw', ['Мы часто ездили к бабушке на поезде', 'We often went to Grandma’s by train', 'Ми часто їздили до бабусі потягом', 'Często jeździliśmy do babci pociągiem', 'A menudo íbamos a casa de la abuela en tren', 'Nous allions souvent chez mamie en train', 'Sık sık büyükanneye trenle giderdik', 'Mergeam des la bunica cu trenul', 'Biz tez-tez buvinikiga poyezdda borardik', 'हम अक्सर ट्रेन से दादी के पास जाते थे', 'كنا نذهب كثيرًا إلى الجدة بالقطار'],
+					'Wir sind oft mit dem Zug ___ Oma gefahren.', 'zur']
+			]
+		}
+	]
+}

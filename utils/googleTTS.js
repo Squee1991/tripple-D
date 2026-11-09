@@ -12,7 +12,7 @@ export function stopSpeech() {
         currentController = null;
     }
 }
-export async function getSpeechAudio(text, lang = 'de-DE') {
+export async function getSpeechAudio(text, lang = 'de-DE', speakingRate = 1.0) {
     const apiKey = import.meta.env.VITE_GOOGLE_TTS_KEY;
     stopSpeech();
     let voiceName = 'de-DE-Wavenet-A';
@@ -35,7 +35,7 @@ export async function getSpeechAudio(text, lang = 'de-DE') {
                 body: JSON.stringify({
                     input: { text },
                     voice: { languageCode: lang, name: voiceName, ssmlGender: 'FEMALE' },
-                    audioConfig: { audioEncoding: 'MP3', speakingRate: 1.0 }
+                    audioConfig: { audioEncoding: 'MP3', speakingRate }
                 })
             }
         );

@@ -1,0 +1,2838 @@
+[
+  {
+    "questId": "family-tree-one",
+    "title": "familyTreeOne.questTitle",
+    "progress": "0/15",
+    "description": "familyTreeOne.questDescription",
+    "conditions": {
+      "goal": "familyTreeOne.questGoal",
+      "minCorrect": 15,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
+    "vocabulary": [
+      {
+        "word": "mein",
+        "translation-ru": "мой",
+        "translation-en": "my",
+        "translation-uk": "мій",
+        "translation-pl": "mój",
+        "translation-es": "mi",
+        "translation-fr": "mon",
+        "translation-tr": "benim",
+        "translation-ro": "meu",
+        "translation-uz": "mening",
+        "translation-hi": "मेरा",
+        "translation-ar": "لي"
+      },
+      {
+        "word": "dein",
+        "translation-ru": "твой",
+        "translation-en": "your",
+        "translation-uk": "твій",
+        "translation-pl": "twój",
+        "translation-es": "tu",
+        "translation-fr": "ton",
+        "translation-tr": "senin",
+        "translation-ro": "tău",
+        "translation-uz": "sening",
+        "translation-hi": "तुम्हारा",
+        "translation-ar": "لك"
+      },
+      {
+        "word": "die Familie",
+        "translation-ru": "семья",
+        "translation-en": "family",
+        "translation-uk": "родина",
+        "translation-pl": "rodzina",
+        "translation-es": "la familia",
+        "translation-fr": "la famille",
+        "translation-tr": "aile",
+        "translation-ro": "familia",
+        "translation-uz": "oila",
+        "translation-hi": "परिवार",
+        "translation-ar": "العائلة"
+      },
+      {
+        "word": "das Zimmer",
+        "translation-ru": "комната",
+        "translation-en": "room",
+        "translation-uk": "кімната",
+        "translation-pl": "pokój",
+        "translation-es": "la habitación",
+        "translation-fr": "la chambre",
+        "translation-tr": "oda",
+        "translation-ro": "camera",
+        "translation-uz": "xona",
+        "translation-hi": "कमरा",
+        "translation-ar": "الغرفة"
+      },
+      {
+        "word": "der Schlüssel",
+        "translation-ru": "ключ",
+        "translation-en": "key",
+        "translation-uk": "ключ",
+        "translation-pl": "klucz",
+        "translation-es": "la llave",
+        "translation-fr": "la clé",
+        "translation-tr": "anahtar",
+        "translation-ro": "cheia",
+        "translation-uz": "kalit",
+        "translation-hi": "चाबी",
+        "translation-ar": "المفتاح"
+      }
+    ],
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "familyTreeOne.questTask1",
+        "options": [
+          "Das ist mein Mutter.",
+          "Das ist meinen Mutter.",
+          "Das ist meine Mutter."
+        ],
+        "answer": "Das ist meine Mutter.",
+        "tip": "familyTreeOne.questDescription"
+      },
+      {
+        "id": 2,
+        "type": "input",
+        "question": "familyTreeOne.questTask2",
+        "correctAnswer": "dein",
+        "tip": "familyTreeOne.questDescription"
+      },
+      {
+        "id": 3,
+        "type": "input",
+        "question": "familyTreeOne.questTask3",
+        "correctAnswer": "meine",
+        "tip": "familyTreeOne.questDescription"
+      },
+      {
+        "id": 4,
+        "type": "select",
+        "question": "familyTreeOne.questTask4",
+        "options": [
+          "Dein Zimmer ist sehr schön.",
+          "Deinen Zimmer ist sehr schön.",
+          "Deine Zimmer ist sehr schön."
+        ],
+        "answer": "Dein Zimmer ist sehr schön.",
+        "tip": "familyTreeOne.questDescription"
+      },
+      {
+        "id": 5,
+        "type": "reorder",
+        "question": "familyTreeOne.questTask5",
+        "words": [
+          "Familie",
+          "mein",
+          "groß",
+          "Meine",
+          "deine",
+          "ist"
+        ],
+        "correctOrder": [
+          "Meine",
+          "Familie",
+          "ist",
+          "groß"
+        ],
+        "tip": "familyTreeOne.questDescription"
+      },
+      {
+        "id": 6,
+        "type": "select",
+        "question": "familyTreeOne.questTask6",
+        "options": [
+          "Wo ist deinen Schwester?",
+          "Wo ist deine Schwester?",
+          "Wo ist dein Schwester?"
+        ],
+        "answer": "Wo ist deine Schwester?",
+        "tip": "familyTreeOne.questDescription"
+      },
+      {
+        "id": 7,
+        "type": "input",
+        "question": "familyTreeOne.questTask7",
+        "correctAnswer": "Mein",
+        "tip": "familyTreeOne.questDescription"
+      },
+      {
+        "id": 8,
+        "type": "select",
+        "question": "familyTreeOne.questTask8",
+        "options": [
+          "Das ist nicht mein Schlüssel.",
+          "Das ist kein mein Schlüssel.",
+          "Das ist nicht meine Schlüssel."
+        ],
+        "answer": "Das ist nicht mein Schlüssel.",
+        "tip": "familyTreeOne.questDescription"
+      },
+      {
+        "id": 9,
+        "type": "readAndAnswer",
+        "question": "familyTreeOne.questTask9",
+        "text": "Lea: Ist das dein Zimmer, Tom? Tom: Nein, das ist nicht mein Zimmer. Hier wohnt Paul. Mein Zimmer ist klein und hell.",
+        "options": [
+          "Paul",
+          "Lea",
+          "Tom"
+        ],
+        "answer": "Paul",
+        "tip": "familyTreeOne.questDescription"
+      },
+      {
+        "id": 10,
+        "type": "input",
+        "question": "familyTreeOne.questTask10",
+        "correctAnswer": "deine",
+        "tip": "familyTreeOne.questDescription"
+      },
+      {
+        "id": 11,
+        "type": "reorder",
+        "question": "familyTreeOne.questTask11",
+        "words": [
+          "Kinder",
+          "Deine",
+          "sehr",
+          "dein",
+          "deinen",
+          "sind",
+          "nett"
+        ],
+        "correctOrder": [
+          "Deine",
+          "Kinder",
+          "sind",
+          "sehr",
+          "nett"
+        ],
+        "tip": "familyTreeOne.questDescription"
+      },
+      {
+        "id": 12,
+        "type": "input",
+        "question": "familyTreeOne.questTask12",
+        "correctAnswer": "liest",
+        "tip": "familyTreeOne.questDescription"
+      },
+      {
+        "id": 13,
+        "type": "select",
+        "question": "familyTreeOne.questTask13",
+        "options": [
+          "Esst du Suppe?",
+          "Isst du Suppe?",
+          "Esse du Suppe?"
+        ],
+        "answer": "Isst du Suppe?",
+        "tip": "familyTreeOne.questDescription"
+      },
+      {
+        "id": 14,
+        "type": "select",
+        "question": "familyTreeOne.questTask14",
+        "options": [
+          "Wir kaufen ein Tisch.",
+          "Wir kaufen einen Tisch.",
+          "Wir kaufen einer Tisch."
+        ],
+        "answer": "Wir kaufen einen Tisch.",
+        "tip": "familyTreeOne.questDescription"
+      },
+      {
+        "id": 15,
+        "type": "reorder",
+        "question": "familyTreeOne.questTask15",
+        "words": [
+          "Englisch",
+          "Französisch",
+          "und",
+          "spricht",
+          "Sie",
+          "sprichst",
+          "sprecht"
+        ],
+        "correctOrder": [
+          "Sie",
+          "spricht",
+          "Englisch",
+          "und",
+          "Französisch"
+        ],
+        "tip": "familyTreeOne.questDescription"
+      }
+    ]
+  },
+  {
+    "questId": "family-tree-two",
+    "title": "familyTreeTwo.questTitle",
+    "progress": "0/15",
+    "description": "familyTreeTwo.questDescription",
+    "conditions": {
+      "goal": "familyTreeTwo.questGoal",
+      "minCorrect": 15,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
+    "vocabulary": [
+      {
+        "word": "sein",
+        "translation-ru": "его",
+        "translation-en": "his",
+        "translation-uk": "його",
+        "translation-pl": "jego",
+        "translation-es": "su (de él)",
+        "translation-fr": "son, sa (à lui)",
+        "translation-tr": "onun (erkek)",
+        "translation-ro": "al lui",
+        "translation-uz": "uning (erkak)",
+        "translation-hi": "उसका (पुरुष का)",
+        "translation-ar": "له"
+      },
+      {
+        "word": "ihr",
+        "translation-ru": "её",
+        "translation-en": "her",
+        "translation-uk": "її",
+        "translation-pl": "jej",
+        "translation-es": "su (de ella)",
+        "translation-fr": "son, sa (à elle)",
+        "translation-tr": "onun (kadın)",
+        "translation-ro": "al ei",
+        "translation-uz": "uning (ayol)",
+        "translation-hi": "उसका (स्त्री का)",
+        "translation-ar": "لها"
+      },
+      {
+        "word": "der Sohn",
+        "translation-ru": "сын",
+        "translation-en": "son",
+        "translation-uk": "син",
+        "translation-pl": "syn",
+        "translation-es": "el hijo",
+        "translation-fr": "le fils",
+        "translation-tr": "oğul",
+        "translation-ro": "fiul",
+        "translation-uz": "o‘g‘il",
+        "translation-hi": "बेटा",
+        "translation-ar": "الابن"
+      },
+      {
+        "word": "die Tochter",
+        "translation-ru": "дочь",
+        "translation-en": "daughter",
+        "translation-uk": "донька",
+        "translation-pl": "córka",
+        "translation-es": "la hija",
+        "translation-fr": "la fille",
+        "translation-tr": "kız evlat",
+        "translation-ro": "fiica",
+        "translation-uz": "qiz",
+        "translation-hi": "बेटी",
+        "translation-ar": "الابنة"
+      },
+      {
+        "word": "die Tasche",
+        "translation-ru": "сумка",
+        "translation-en": "bag",
+        "translation-uk": "сумка",
+        "translation-pl": "torba",
+        "translation-es": "el bolso",
+        "translation-fr": "le sac",
+        "translation-tr": "çanta",
+        "translation-ro": "geanta",
+        "translation-uz": "sumka",
+        "translation-hi": "बैग",
+        "translation-ar": "الحقيبة"
+      }
+    ],
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "familyTreeTwo.questTask1",
+        "options": [
+          "Das ist Tom und seine Hund.",
+          "Das ist Tom und ihr Hund.",
+          "Das ist Tom und sein Hund."
+        ],
+        "answer": "Das ist Tom und sein Hund.",
+        "tip": "familyTreeTwo.questDescription"
+      },
+      {
+        "id": 2,
+        "type": "input",
+        "question": "familyTreeTwo.questTask2",
+        "correctAnswer": "ihre",
+        "tip": "familyTreeTwo.questDescription"
+      },
+      {
+        "id": 3,
+        "type": "input",
+        "question": "familyTreeTwo.questTask3",
+        "correctAnswer": "Sein",
+        "tip": "familyTreeTwo.questDescription"
+      },
+      {
+        "id": 4,
+        "type": "select",
+        "question": "familyTreeTwo.questTask4",
+        "options": [
+          "Ihren Tochter wohnt in Wien.",
+          "Ihre Tochter wohnt in Wien.",
+          "Ihr Tochter wohnt in Wien."
+        ],
+        "answer": "Ihre Tochter wohnt in Wien.",
+        "tip": "familyTreeTwo.questDescription"
+      },
+      {
+        "id": 5,
+        "type": "reorder",
+        "question": "familyTreeTwo.questTask5",
+        "words": [
+          "ihre",
+          "sucht",
+          "Tasche",
+          "sein",
+          "Paul",
+          "seine"
+        ],
+        "correctOrder": [
+          "Paul",
+          "sucht",
+          "seine",
+          "Tasche"
+        ],
+        "tip": "familyTreeTwo.questDescription"
+      },
+      {
+        "id": 6,
+        "type": "select",
+        "question": "familyTreeTwo.questTask6",
+        "options": [
+          "Wo ist ihr Schlüssel?",
+          "Wo ist ihren Schlüssel?",
+          "Wo ist ihre Schlüssel?"
+        ],
+        "answer": "Wo ist ihr Schlüssel?",
+        "tip": "familyTreeTwo.questDescription"
+      },
+      {
+        "id": 7,
+        "type": "input",
+        "question": "familyTreeTwo.questTask7",
+        "correctAnswer": "Seine",
+        "tip": "familyTreeTwo.questDescription"
+      },
+      {
+        "id": 8,
+        "type": "select",
+        "question": "familyTreeTwo.questTask8",
+        "options": [
+          "Lisa und ihre Eltern",
+          "Lisa und seine Eltern",
+          "Lisa und ihr Eltern"
+        ],
+        "answer": "Lisa und ihre Eltern",
+        "tip": "familyTreeTwo.questDescription"
+      },
+      {
+        "id": 9,
+        "type": "readAndAnswer",
+        "question": "familyTreeTwo.questTask9",
+        "text": "Maria hat zwei Kinder. Ihr Sohn heißt Leo, er wohnt in Berlin. Ihre Tochter heißt Mia, sie wohnt in Köln. Leo hat eine Katze. Seine Katze heißt Mimi.",
+        "options": [
+          "in Wien",
+          "in Berlin",
+          "in Köln"
+        ],
+        "answer": "in Berlin",
+        "tip": "familyTreeTwo.questDescription"
+      },
+      {
+        "id": 10,
+        "type": "input",
+        "question": "familyTreeTwo.questTask10",
+        "correctAnswer": "seine",
+        "tip": "familyTreeTwo.questDescription"
+      },
+      {
+        "id": 11,
+        "type": "reorder",
+        "question": "familyTreeTwo.questTask11",
+        "words": [
+          "Bruder",
+          "Köln",
+          "Schwester",
+          "seine",
+          "wohnen",
+          "und",
+          "sein",
+          "ihre",
+          "Ihr",
+          "in"
+        ],
+        "correctOrder": [
+          "Ihr",
+          "Bruder",
+          "und",
+          "ihre",
+          "Schwester",
+          "wohnen",
+          "in",
+          "Köln"
+        ],
+        "tip": "familyTreeTwo.questDescription"
+      },
+      {
+        "id": 12,
+        "type": "input",
+        "question": "familyTreeTwo.questTask12",
+        "correctAnswer": "Spricht",
+        "tip": "familyTreeTwo.questDescription"
+      },
+      {
+        "id": 13,
+        "type": "select",
+        "question": "familyTreeTwo.questTask13",
+        "options": [
+          "Mein Vater fährt Auto.",
+          "Mein Vater fahrt Auto.",
+          "Meine Vater fährt Auto."
+        ],
+        "answer": "Mein Vater fährt Auto.",
+        "tip": "familyTreeTwo.questDescription"
+      },
+      {
+        "id": 14,
+        "type": "select",
+        "question": "familyTreeTwo.questTask14",
+        "options": [
+          "Ist das deine Tasche?",
+          "Ist das dein Tasche?",
+          "Ist das deinen Tasche?"
+        ],
+        "answer": "Ist das deine Tasche?",
+        "tip": "familyTreeTwo.questDescription"
+      },
+      {
+        "id": 15,
+        "type": "reorder",
+        "question": "familyTreeTwo.questTask15",
+        "words": [
+          "Bruder",
+          "Mein",
+          "lange",
+          "meine",
+          "schläft",
+          "schlaft"
+        ],
+        "correctOrder": [
+          "Mein",
+          "Bruder",
+          "schläft",
+          "lange"
+        ],
+        "tip": "familyTreeTwo.questDescription"
+      }
+    ]
+  },
+  {
+    "questId": "family-tree-three",
+    "title": "familyTreeThree.questTitle",
+    "progress": "0/15",
+    "description": "familyTreeThree.questDescription",
+    "conditions": {
+      "goal": "familyTreeThree.questGoal",
+      "minCorrect": 15,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
+    "vocabulary": [
+      {
+        "word": "unser",
+        "translation-ru": "наш",
+        "translation-en": "our",
+        "translation-uk": "наш",
+        "translation-pl": "nasz",
+        "translation-es": "nuestro",
+        "translation-fr": "notre",
+        "translation-tr": "bizim",
+        "translation-ro": "nostru",
+        "translation-uz": "bizning",
+        "translation-hi": "हमारा",
+        "translation-ar": "لنا"
+      },
+      {
+        "word": "euer",
+        "translation-ru": "ваш (вас много)",
+        "translation-en": "your (plural)",
+        "translation-uk": "ваш (вас багато)",
+        "translation-pl": "wasz",
+        "translation-es": "vuestro",
+        "translation-fr": "votre (pluriel)",
+        "translation-tr": "sizin (çoğul)",
+        "translation-ro": "vostru",
+        "translation-uz": "sizlarning",
+        "translation-hi": "तुम सबका",
+        "translation-ar": "لكم"
+      },
+      {
+        "word": "Ihr",
+        "translation-ru": "Ваш (вежливо)",
+        "translation-en": "your (formal)",
+        "translation-uk": "Ваш (ввічливо)",
+        "translation-pl": "Pana/Pani",
+        "translation-es": "su (de usted)",
+        "translation-fr": "votre (poli)",
+        "translation-tr": "sizin (resmî)",
+        "translation-ro": "dumneavoastră",
+        "translation-uz": "Sizning",
+        "translation-hi": "आपका",
+        "translation-ar": "لحضرتك"
+      },
+      {
+        "word": "das Haus",
+        "translation-ru": "дом",
+        "translation-en": "house",
+        "translation-uk": "будинок",
+        "translation-pl": "dom",
+        "translation-es": "la casa",
+        "translation-fr": "la maison",
+        "translation-tr": "ev",
+        "translation-ro": "casa",
+        "translation-uz": "uy",
+        "translation-hi": "घर",
+        "translation-ar": "البيت"
+      },
+      {
+        "word": "der Garten",
+        "translation-ru": "сад",
+        "translation-en": "garden",
+        "translation-uk": "сад",
+        "translation-pl": "ogród",
+        "translation-es": "el jardín",
+        "translation-fr": "le jardin",
+        "translation-tr": "bahçe",
+        "translation-ro": "grădina",
+        "translation-uz": "bog‘",
+        "translation-hi": "बगीचा",
+        "translation-ar": "الحديقة"
+      }
+    ],
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "familyTreeThree.questTask1",
+        "options": [
+          "Unsere Haus ist klein.",
+          "Unseren Haus ist klein.",
+          "Unser Haus ist klein."
+        ],
+        "answer": "Unser Haus ist klein.",
+        "tip": "familyTreeThree.questDescription"
+      },
+      {
+        "id": 2,
+        "type": "input",
+        "question": "familyTreeThree.questTask2",
+        "correctAnswer": "euer",
+        "tip": "familyTreeThree.questDescription"
+      },
+      {
+        "id": 3,
+        "type": "input",
+        "question": "familyTreeThree.questTask3",
+        "correctAnswer": "Ihr",
+        "tip": "familyTreeThree.questDescription"
+      },
+      {
+        "id": 4,
+        "type": "select",
+        "question": "familyTreeThree.questTask4",
+        "options": [
+          "Euer Katze ist sehr nett.",
+          "Euere Katze ist sehr nett.",
+          "Eure Katze ist sehr nett."
+        ],
+        "answer": "Eure Katze ist sehr nett.",
+        "tip": "familyTreeThree.questDescription"
+      },
+      {
+        "id": 5,
+        "type": "reorder",
+        "question": "familyTreeThree.questTask5",
+        "words": [
+          "Unser",
+          "euer",
+          "groß",
+          "unsere",
+          "schön",
+          "Garten",
+          "und",
+          "ist"
+        ],
+        "correctOrder": [
+          "Unser",
+          "Garten",
+          "ist",
+          "groß",
+          "und",
+          "schön"
+        ],
+        "tip": "familyTreeThree.questDescription"
+      },
+      {
+        "id": 6,
+        "type": "select",
+        "question": "familyTreeThree.questTask6",
+        "options": [
+          "Die Kinder und seine Eltern.",
+          "Die Kinder und ihre Eltern.",
+          "Die Kinder und ihr Eltern."
+        ],
+        "answer": "Die Kinder und ihre Eltern.",
+        "tip": "familyTreeThree.questDescription"
+      },
+      {
+        "id": 7,
+        "type": "input",
+        "question": "familyTreeThree.questTask7",
+        "correctAnswer": "Unsere",
+        "tip": "familyTreeThree.questDescription"
+      },
+      {
+        "id": 8,
+        "type": "select",
+        "question": "familyTreeThree.questTask8",
+        "options": [
+          "Ist Ihre Haus neu, Frau Lang?",
+          "Ist Ihr Haus neu, Frau Lang?",
+          "Ist Ihren Haus neu, Frau Lang?"
+        ],
+        "answer": "Ist Ihr Haus neu, Frau Lang?",
+        "tip": "familyTreeThree.questDescription"
+      },
+      {
+        "id": 9,
+        "type": "readAndAnswer",
+        "question": "familyTreeThree.questTask9",
+        "text": "Wir wohnen in einer Wohnung. Unsere Wohnung ist hell, aber wir haben keinen Garten. Unsere Nachbarn Herr und Frau Weber haben ein Haus. Ihr Garten ist sehr groß.",
+        "options": [
+          "niemand",
+          "die Webers",
+          "wir"
+        ],
+        "answer": "die Webers",
+        "tip": "familyTreeThree.questDescription"
+      },
+      {
+        "id": 10,
+        "type": "input",
+        "question": "familyTreeThree.questTask10",
+        "correctAnswer": "Euer",
+        "tip": "familyTreeThree.questDescription"
+      },
+      {
+        "id": 11,
+        "type": "reorder",
+        "question": "familyTreeThree.questTask11",
+        "words": [
+          "eure",
+          "Wo",
+          "sind",
+          "euer",
+          "euere",
+          "Kinder"
+        ],
+        "correctOrder": [
+          "Wo",
+          "sind",
+          "eure",
+          "Kinder"
+        ],
+        "tip": "familyTreeThree.questDescription"
+      },
+      {
+        "id": 12,
+        "type": "input",
+        "question": "familyTreeThree.questTask12",
+        "correctAnswer": "Ihr",
+        "tip": "familyTreeThree.questDescription"
+      },
+      {
+        "id": 13,
+        "type": "select",
+        "question": "familyTreeThree.questTask13",
+        "options": [
+          "Ist das deine Stift?",
+          "Ist das dein Stift?",
+          "Ist das deinen Stift?"
+        ],
+        "answer": "Ist das dein Stift?",
+        "tip": "familyTreeThree.questDescription"
+      },
+      {
+        "id": 14,
+        "type": "select",
+        "question": "familyTreeThree.questTask14",
+        "options": [
+          "Sein Tochter liest ein Buch.",
+          "Seine Tochter liest ein Buch.",
+          "Seine Tochter lest ein Buch."
+        ],
+        "answer": "Seine Tochter liest ein Buch.",
+        "tip": "familyTreeThree.questDescription"
+      },
+      {
+        "id": 15,
+        "type": "reorder",
+        "question": "familyTreeThree.questTask15",
+        "words": [
+          "Wien",
+          "in",
+          "wohnt",
+          "Familie",
+          "wohnen",
+          "Meine",
+          "mein"
+        ],
+        "correctOrder": [
+          "Meine",
+          "Familie",
+          "wohnt",
+          "in",
+          "Wien"
+        ],
+        "tip": "familyTreeThree.questDescription"
+      }
+    ]
+  },
+  {
+    "questId": "family-tree-four",
+    "title": "familyTreeFour.questTitle",
+    "progress": "0/15",
+    "description": "familyTreeFour.questDescription",
+    "conditions": {
+      "goal": "familyTreeFour.questGoal",
+      "minCorrect": 15,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
+    "vocabulary": [
+      {
+        "word": "der Onkel",
+        "translation-ru": "дядя",
+        "translation-en": "uncle",
+        "translation-uk": "дядько",
+        "translation-pl": "wujek",
+        "translation-es": "el tío",
+        "translation-fr": "l’oncle",
+        "translation-tr": "amca, dayı",
+        "translation-ro": "unchiul",
+        "translation-uz": "amaki, tog‘a",
+        "translation-hi": "चाचा, मामा",
+        "translation-ar": "العم، الخال"
+      },
+      {
+        "word": "die Tante",
+        "translation-ru": "тётя",
+        "translation-en": "aunt",
+        "translation-uk": "тітка",
+        "translation-pl": "ciocia",
+        "translation-es": "la tía",
+        "translation-fr": "la tante",
+        "translation-tr": "teyze, hala",
+        "translation-ro": "mătușa",
+        "translation-uz": "xola, amma",
+        "translation-hi": "चाची, मौसी",
+        "translation-ar": "العمة، الخالة"
+      },
+      {
+        "word": "der Hund",
+        "translation-ru": "собака",
+        "translation-en": "dog",
+        "translation-uk": "собака",
+        "translation-pl": "pies",
+        "translation-es": "el perro",
+        "translation-fr": "le chien",
+        "translation-tr": "köpek",
+        "translation-ro": "câinele",
+        "translation-uz": "it",
+        "translation-hi": "कुत्ता",
+        "translation-ar": "الكلب"
+      },
+      {
+        "word": "lieben",
+        "translation-ru": "любить",
+        "translation-en": "to love",
+        "translation-uk": "любити",
+        "translation-pl": "kochać",
+        "translation-es": "amar, querer",
+        "translation-fr": "aimer",
+        "translation-tr": "sevmek",
+        "translation-ro": "a iubi",
+        "translation-uz": "sevmoq",
+        "translation-hi": "प्यार करना",
+        "translation-ar": "يحب"
+      },
+      {
+        "word": "vermissen",
+        "translation-ru": "скучать",
+        "translation-en": "to miss",
+        "translation-uk": "сумувати",
+        "translation-pl": "tęsknić",
+        "translation-es": "echar de menos",
+        "translation-fr": "manquer à quelqu’un",
+        "translation-tr": "özlemek",
+        "translation-ro": "a-i fi dor",
+        "translation-uz": "sog‘inmoq",
+        "translation-hi": "याद आना",
+        "translation-ar": "يشتاق"
+      }
+    ],
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "familyTreeFour.questTask1",
+        "options": [
+          "Ich suche meine Schlüssel.",
+          "Ich suche mein Schlüssel.",
+          "Ich suche meinen Schlüssel."
+        ],
+        "answer": "Ich suche meinen Schlüssel.",
+        "tip": "familyTreeFour.questDescription"
+      },
+      {
+        "id": 2,
+        "type": "input",
+        "question": "familyTreeFour.questTask2",
+        "correctAnswer": "seinen",
+        "tip": "familyTreeFour.questDescription"
+      },
+      {
+        "id": 3,
+        "type": "input",
+        "question": "familyTreeFour.questTask3",
+        "correctAnswer": "deinen",
+        "tip": "familyTreeFour.questDescription"
+      },
+      {
+        "id": 4,
+        "type": "select",
+        "question": "familyTreeFour.questTask4",
+        "options": [
+          "Sie besucht ihren Tante.",
+          "Sie besucht seine Tante.",
+          "Sie besucht ihre Tante."
+        ],
+        "answer": "Sie besucht ihre Tante.",
+        "tip": "familyTreeFour.questDescription"
+      },
+      {
+        "id": 5,
+        "type": "reorder",
+        "question": "familyTreeFour.questTask5",
+        "words": [
+          "meinen",
+          "Ich",
+          "Familie",
+          "mein",
+          "liebe",
+          "meine"
+        ],
+        "correctOrder": [
+          "Ich",
+          "liebe",
+          "meine",
+          "Familie"
+        ],
+        "tip": "familyTreeFour.questDescription"
+      },
+      {
+        "id": 6,
+        "type": "select",
+        "question": "familyTreeFour.questTask6",
+        "options": [
+          "Wir vermisst unseren Opa.",
+          "Wir vermissen unseren Opa.",
+          "Wir vermissen unser Opa."
+        ],
+        "answer": "Wir vermissen unseren Opa.",
+        "tip": "familyTreeFour.questDescription"
+      },
+      {
+        "id": 7,
+        "type": "input",
+        "question": "familyTreeFour.questTask7",
+        "correctAnswer": "deinen",
+        "tip": "familyTreeFour.questDescription"
+      },
+      {
+        "id": 8,
+        "type": "select",
+        "question": "familyTreeFour.questTask8",
+        "options": [
+          "Er liebt seine Tochter.",
+          "Er liebt ihre Tochter.",
+          "Er liebt seinen Tochter."
+        ],
+        "answer": "Er liebt seine Tochter.",
+        "tip": "familyTreeFour.questDescription"
+      },
+      {
+        "id": 9,
+        "type": "readAndAnswer",
+        "question": "familyTreeFour.questTask9",
+        "text": "Lena sucht ihren Hund. Er heißt Bello. Sie fragt ihre Nachbarin. Die Nachbarin sieht den Hund im Garten. Lena ist glücklich.",
+        "options": [
+          "ihren Hund",
+          "ihre Katze",
+          "ihre Nachbarin"
+        ],
+        "answer": "ihren Hund",
+        "tip": "familyTreeFour.questDescription"
+      },
+      {
+        "id": 10,
+        "type": "input",
+        "question": "familyTreeFour.questTask10",
+        "correctAnswer": "meine",
+        "tip": "familyTreeFour.questDescription"
+      },
+      {
+        "id": 11,
+        "type": "reorder",
+        "question": "familyTreeFour.questTask11",
+        "words": [
+          "eueren",
+          "euer",
+          "Seht",
+          "euren",
+          "ihr",
+          "Lehrer"
+        ],
+        "correctOrder": [
+          "Seht",
+          "ihr",
+          "euren",
+          "Lehrer"
+        ],
+        "tip": "familyTreeFour.questDescription"
+      },
+      {
+        "id": 12,
+        "type": "input",
+        "question": "familyTreeFour.questTask12",
+        "correctAnswer": "ist",
+        "tip": "familyTreeFour.questDescription"
+      },
+      {
+        "id": 13,
+        "type": "select",
+        "question": "familyTreeFour.questTask13",
+        "options": [
+          "Anna und ihr Bruder.",
+          "Anna und sein Bruder.",
+          "Anna und ihre Bruder."
+        ],
+        "answer": "Anna und ihr Bruder.",
+        "tip": "familyTreeFour.questDescription"
+      },
+      {
+        "id": 14,
+        "type": "select",
+        "question": "familyTreeFour.questTask14",
+        "options": [
+          "Ist das Ihre Tasche?",
+          "Ist das Ihr Tasche?",
+          "Ist das ihre Taschen?"
+        ],
+        "answer": "Ist das Ihre Tasche?",
+        "tip": "familyTreeFour.questDescription"
+      },
+      {
+        "id": 15,
+        "type": "reorder",
+        "question": "familyTreeFour.questTask15",
+        "words": [
+          "Wo",
+          "ist",
+          "unser",
+          "euer",
+          "Garten",
+          "eure"
+        ],
+        "correctOrder": [
+          "Wo",
+          "ist",
+          "euer",
+          "Garten"
+        ],
+        "tip": "familyTreeFour.questDescription"
+      }
+    ]
+  },
+  {
+    "questId": "family-tree-five",
+    "title": "familyTreeFive.questTitle",
+    "progress": "0/15",
+    "description": "familyTreeFive.questDescription",
+    "conditions": {
+      "goal": "familyTreeFive.questGoal",
+      "minCorrect": 15,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
+    "vocabulary": [
+      {
+        "word": "die Großeltern",
+        "translation-ru": "бабушка и дедушка",
+        "translation-en": "grandparents",
+        "translation-uk": "бабуся й дідусь",
+        "translation-pl": "dziadkowie",
+        "translation-es": "los abuelos",
+        "translation-fr": "les grands-parents",
+        "translation-tr": "büyükanne ve büyükbaba",
+        "translation-ro": "bunicii",
+        "translation-uz": "buvi va buva",
+        "translation-hi": "दादा-दादी",
+        "translation-ar": "الجدّان"
+      },
+      {
+        "word": "der Enkel",
+        "translation-ru": "внук",
+        "translation-en": "grandson",
+        "translation-uk": "онук",
+        "translation-pl": "wnuk",
+        "translation-es": "el nieto",
+        "translation-fr": "le petit-fils",
+        "translation-tr": "torun",
+        "translation-ro": "nepotul",
+        "translation-uz": "nevara",
+        "translation-hi": "पोता",
+        "translation-ar": "الحفيد"
+      },
+      {
+        "word": "der Cousin",
+        "translation-ru": "двоюродный брат",
+        "translation-en": "cousin",
+        "translation-uk": "двоюрідний брат",
+        "translation-pl": "kuzyn",
+        "translation-es": "el primo",
+        "translation-fr": "le cousin",
+        "translation-tr": "kuzen",
+        "translation-ro": "vărul",
+        "translation-uz": "amakivachcha",
+        "translation-hi": "चचेरा भाई",
+        "translation-ar": "ابن العم"
+      },
+      {
+        "word": "die Geschwister",
+        "translation-ru": "братья и сёстры",
+        "translation-en": "siblings",
+        "translation-uk": "брати й сестри",
+        "translation-pl": "rodzeństwo",
+        "translation-es": "los hermanos",
+        "translation-fr": "les frères et sœurs",
+        "translation-tr": "kardeşler",
+        "translation-ro": "frații",
+        "translation-uz": "aka-uka, opa-singillar",
+        "translation-hi": "भाई-बहन",
+        "translation-ar": "الإخوة"
+      },
+      {
+        "word": "verheiratet",
+        "translation-ru": "женат, замужем",
+        "translation-en": "married",
+        "translation-uk": "одружений",
+        "translation-pl": "żonaty, zamężna",
+        "translation-es": "casado",
+        "translation-fr": "marié",
+        "translation-tr": "evli",
+        "translation-ro": "căsătorit",
+        "translation-uz": "uylangan",
+        "translation-hi": "शादीशुदा",
+        "translation-ar": "متزوج"
+      },
+      {
+        "word": "ledig",
+        "translation-ru": "холостой, незамужняя",
+        "translation-en": "single",
+        "translation-uk": "неодружений, незаміжня",
+        "translation-pl": "wolny, stanu wolnego",
+        "translation-es": "soltero",
+        "translation-fr": "célibataire",
+        "translation-tr": "bekâr",
+        "translation-ro": "necăsătorit",
+        "translation-uz": "bo‘ydoq",
+        "translation-hi": "अविवाहित",
+        "translation-ar": "أعزب"
+      }
+    ],
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "familyTreeFive.questTask1",
+        "options": [
+          "Hat du Geschwister?",
+          "Hast du Geschwistern?",
+          "Hast du Geschwister?"
+        ],
+        "answer": "Hast du Geschwister?",
+        "tip": "familyTreeFive.questDescription"
+      },
+      {
+        "id": 2,
+        "type": "input",
+        "question": "familyTreeFive.questTask2",
+        "correctAnswer": "Großeltern",
+        "tip": "familyTreeFive.questDescription"
+      },
+      {
+        "id": 3,
+        "type": "input",
+        "question": "familyTreeFive.questTask3",
+        "correctAnswer": "verheiratet",
+        "tip": "familyTreeFive.questDescription"
+      },
+      {
+        "id": 4,
+        "type": "select",
+        "question": "familyTreeFive.questTask4",
+        "options": [
+          "Ihre Enkel ist sehr klein.",
+          "Ihren Enkel ist sehr klein.",
+          "Ihr Enkel ist sehr klein."
+        ],
+        "answer": "Ihr Enkel ist sehr klein.",
+        "tip": "familyTreeFive.questDescription"
+      },
+      {
+        "id": 5,
+        "type": "reorder",
+        "question": "familyTreeFive.questTask5",
+        "words": [
+          "in",
+          "Mein",
+          "meinen",
+          "Hamburg",
+          "Cousin",
+          "meine",
+          "wohnt"
+        ],
+        "correctOrder": [
+          "Mein",
+          "Cousin",
+          "wohnt",
+          "in",
+          "Hamburg"
+        ],
+        "tip": "familyTreeFive.questDescription"
+      },
+      {
+        "id": 6,
+        "type": "select",
+        "question": "familyTreeFive.questTask6",
+        "options": [
+          "Bist du verheiratet? Nein, ich bin ledig.",
+          "Hast du verheiratet? Nein, ich bin ledig.",
+          "Bist du verheiratet? Nein, ich bin kein ledig."
+        ],
+        "answer": "Bist du verheiratet? Nein, ich bin ledig.",
+        "tip": "familyTreeFive.questDescription"
+      },
+      {
+        "id": 7,
+        "type": "input",
+        "question": "familyTreeFive.questTask7",
+        "correctAnswer": "eine",
+        "tip": "familyTreeFive.questDescription"
+      },
+      {
+        "id": 8,
+        "type": "select",
+        "question": "familyTreeFive.questTask8",
+        "options": [
+          "Oma liebt seine Enkel.",
+          "Oma liebt ihre Enkel.",
+          "Oma liebt ihren Enkel."
+        ],
+        "answer": "Oma liebt ihre Enkel.",
+        "tip": "familyTreeFive.questDescription"
+      },
+      {
+        "id": 9,
+        "type": "readAndAnswer",
+        "question": "familyTreeFive.questTask9",
+        "text": "Helga ist siebzig. Sie ist verheiratet, ihr Mann heißt Karl. Sie haben eine Tochter und einen Sohn. Ihre Tochter hat zwei Kinder, ihr Sohn hat ein Kind. Helga liebt ihre drei Enkel.",
+        "options": [
+          "eins",
+          "drei",
+          "zwei"
+        ],
+        "answer": "drei",
+        "tip": "familyTreeFive.questDescription"
+      },
+      {
+        "id": 10,
+        "type": "input",
+        "question": "familyTreeFive.questTask10",
+        "correctAnswer": "Cousine",
+        "tip": "familyTreeFive.questDescription"
+      },
+      {
+        "id": 11,
+        "type": "reorder",
+        "question": "familyTreeFive.questTask11",
+        "words": [
+          "keine",
+          "keinen",
+          "haben",
+          "Wir",
+          "kein",
+          "Geschwister"
+        ],
+        "correctOrder": [
+          "Wir",
+          "haben",
+          "keine",
+          "Geschwister"
+        ],
+        "tip": "familyTreeFive.questDescription"
+      },
+      {
+        "id": 12,
+        "type": "input",
+        "question": "familyTreeFive.questTask12",
+        "correctAnswer": "vermisse",
+        "tip": "familyTreeFive.questDescription"
+      },
+      {
+        "id": 13,
+        "type": "select",
+        "question": "familyTreeFive.questTask13",
+        "options": [
+          "Er sucht seine Tasche.",
+          "Er sucht sein Tasche.",
+          "Er sucht seinen Tasche."
+        ],
+        "answer": "Er sucht seine Tasche.",
+        "tip": "familyTreeFive.questDescription"
+      },
+      {
+        "id": 14,
+        "type": "select",
+        "question": "familyTreeFive.questTask14",
+        "options": [
+          "Eure Haus ist sehr groß!",
+          "Euer Haus ist sehr groß!",
+          "Euer Haus sind sehr groß!"
+        ],
+        "answer": "Euer Haus ist sehr groß!",
+        "tip": "familyTreeFive.questDescription"
+      },
+      {
+        "id": 15,
+        "type": "reorder",
+        "question": "familyTreeFive.questTask15",
+        "words": [
+          "unsere",
+          "Großeltern",
+          "unser",
+          "Wir",
+          "besuchen",
+          "unseren"
+        ],
+        "correctOrder": [
+          "Wir",
+          "besuchen",
+          "unsere",
+          "Großeltern"
+        ],
+        "tip": "familyTreeFive.questDescription"
+      }
+    ]
+  },
+  {
+    "questId": "family-tree-six",
+    "title": "familyTreeSix.questTitle",
+    "progress": "0/15",
+    "description": "familyTreeSix.questDescription",
+    "conditions": {
+      "goal": "familyTreeSix.questGoal",
+      "minCorrect": 15,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
+    "vocabulary": [
+      {
+        "word": "die Jacke",
+        "translation-ru": "куртка",
+        "translation-en": "jacket",
+        "translation-uk": "куртка",
+        "translation-pl": "kurtka",
+        "translation-es": "la chaqueta",
+        "translation-fr": "la veste",
+        "translation-tr": "ceket",
+        "translation-ro": "geaca",
+        "translation-uz": "kurtka",
+        "translation-hi": "जैकेट",
+        "translation-ar": "السترة"
+      },
+      {
+        "word": "die Brille",
+        "translation-ru": "очки",
+        "translation-en": "glasses",
+        "translation-uk": "окуляри",
+        "translation-pl": "okulary",
+        "translation-es": "las gafas",
+        "translation-fr": "les lunettes",
+        "translation-tr": "gözlük",
+        "translation-ro": "ochelarii",
+        "translation-uz": "ko‘zoynak",
+        "translation-hi": "चश्मा",
+        "translation-ar": "النظارة"
+      },
+      {
+        "word": "der Regenschirm",
+        "translation-ru": "зонт",
+        "translation-en": "umbrella",
+        "translation-uk": "парасолька",
+        "translation-pl": "parasol",
+        "translation-es": "el paraguas",
+        "translation-fr": "le parapluie",
+        "translation-tr": "şemsiye",
+        "translation-ro": "umbrela",
+        "translation-uz": "soyabon",
+        "translation-hi": "छाता",
+        "translation-ar": "المظلة"
+      },
+      {
+        "word": "das Spielzeug",
+        "translation-ru": "игрушка",
+        "translation-en": "toy",
+        "translation-uk": "іграшка",
+        "translation-pl": "zabawka",
+        "translation-es": "el juguete",
+        "translation-fr": "le jouet",
+        "translation-tr": "oyuncak",
+        "translation-ro": "jucăria",
+        "translation-uz": "o‘yinchoq",
+        "translation-hi": "खिलौना",
+        "translation-ar": "اللعبة"
+      },
+      {
+        "word": "verheiratet",
+        "translation-ru": "женат, замужем",
+        "translation-en": "married",
+        "translation-uk": "одружений",
+        "translation-pl": "żonaty, zamężna",
+        "translation-es": "casado",
+        "translation-fr": "marié",
+        "translation-tr": "evli",
+        "translation-ro": "căsătorit",
+        "translation-uz": "uylangan",
+        "translation-hi": "शादीशुदा",
+        "translation-ar": "متزوج"
+      }
+    ],
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "familyTreeSix.questTask1",
+        "options": [
+          "Ist das dein Jacke? Nein, ihre.",
+          "Ist das deine Jacke? Nein, ihr.",
+          "Ist das deine Jacke? Nein, ihre."
+        ],
+        "answer": "Ist das deine Jacke? Nein, ihre.",
+        "tip": "familyTreeSix.questDescription"
+      },
+      {
+        "id": 2,
+        "type": "input",
+        "question": "familyTreeSix.questTask2",
+        "correctAnswer": "meine",
+        "tip": "familyTreeSix.questDescription"
+      },
+      {
+        "id": 3,
+        "type": "input",
+        "question": "familyTreeSix.questTask3",
+        "correctAnswer": "sein",
+        "tip": "familyTreeSix.questDescription"
+      },
+      {
+        "id": 4,
+        "type": "select",
+        "question": "familyTreeSix.questTask4",
+        "options": [
+          "Das ist seine Spielzeug.",
+          "Das ist ihr Spielzeug.",
+          "Das ist sein Spielzeug."
+        ],
+        "answer": "Das ist sein Spielzeug.",
+        "tip": "familyTreeSix.questDescription"
+      },
+      {
+        "id": 5,
+        "type": "reorder",
+        "question": "familyTreeSix.questTask5",
+        "words": [
+          "eure",
+          "Das",
+          "unseren",
+          "ist",
+          "nicht",
+          "euer",
+          "Regenschirm",
+          "unser"
+        ],
+        "correctOrder": [
+          "Das",
+          "ist",
+          "unser",
+          "Regenschirm",
+          "nicht",
+          "euer"
+        ],
+        "tip": "familyTreeSix.questDescription"
+      },
+      {
+        "id": 6,
+        "type": "select",
+        "question": "familyTreeSix.questTask6",
+        "options": [
+          "Deine Jacke ist rot und mein ist blau.",
+          "Deine Jacke ist rot und meine ist blau.",
+          "Dein Jacke ist rot und meine ist blau."
+        ],
+        "answer": "Deine Jacke ist rot und meine ist blau.",
+        "tip": "familyTreeSix.questDescription"
+      },
+      {
+        "id": 7,
+        "type": "input",
+        "question": "familyTreeSix.questTask7",
+        "correctAnswer": "euer",
+        "tip": "familyTreeSix.questDescription"
+      },
+      {
+        "id": 8,
+        "type": "select",
+        "question": "familyTreeSix.questTask8",
+        "options": [
+          "Das ist ihre Brille.",
+          "Das ist ihr Brille.",
+          "Das ist seine Brille."
+        ],
+        "answer": "Das ist ihre Brille.",
+        "tip": "familyTreeSix.questDescription"
+      },
+      {
+        "id": 9,
+        "type": "readAndAnswer",
+        "question": "familyTreeSix.questTask9",
+        "text": "Mama: Die rote Jacke ist meine. Papa: Und die blaue Jacke ist meine! Oma: Ist das meine Brille? Mama: Ja, das ist deine Brille.",
+        "options": [
+          "Papa",
+          "Oma",
+          "Mama"
+        ],
+        "answer": "Papa",
+        "tip": "familyTreeSix.questDescription"
+      },
+      {
+        "id": 10,
+        "type": "input",
+        "question": "familyTreeSix.questTask10",
+        "correctAnswer": "Ihr",
+        "tip": "familyTreeSix.questDescription"
+      },
+      {
+        "id": 11,
+        "type": "reorder",
+        "question": "familyTreeSix.questTask11",
+        "words": [
+          "seine",
+          "Brille",
+          "Ihre",
+          "ihr",
+          "ist",
+          "hier"
+        ],
+        "correctOrder": [
+          "Ihre",
+          "Brille",
+          "ist",
+          "hier"
+        ],
+        "tip": "familyTreeSix.questDescription"
+      },
+      {
+        "id": 12,
+        "type": "input",
+        "question": "familyTreeSix.questTask12",
+        "correctAnswer": "Bist",
+        "tip": "familyTreeSix.questDescription"
+      },
+      {
+        "id": 13,
+        "type": "select",
+        "question": "familyTreeSix.questTask13",
+        "options": [
+          "Ich besuche meine Cousin.",
+          "Ich besuche meinen Cousin.",
+          "Ich besuche mein Cousin."
+        ],
+        "answer": "Ich besuche meinen Cousin.",
+        "tip": "familyTreeSix.questDescription"
+      },
+      {
+        "id": 14,
+        "type": "select",
+        "question": "familyTreeSix.questTask14",
+        "options": [
+          "Sie liebt ihre Großeltern.",
+          "Sie liebt ihren Großeltern.",
+          "Sie liebt seine Großeltern."
+        ],
+        "answer": "Sie liebt ihre Großeltern.",
+        "tip": "familyTreeSix.questDescription"
+      },
+      {
+        "id": 15,
+        "type": "reorder",
+        "question": "familyTreeSix.questTask15",
+        "words": [
+          "Er",
+          "sucht",
+          "seinen",
+          "seine",
+          "Sohn",
+          "sein"
+        ],
+        "correctOrder": [
+          "Er",
+          "sucht",
+          "seinen",
+          "Sohn"
+        ],
+        "tip": "familyTreeSix.questDescription"
+      }
+    ]
+  },
+  {
+    "questId": "family-tree-seven",
+    "title": "familyTreeSeven.questTitle",
+    "progress": "0/15",
+    "description": "familyTreeSeven.questDescription",
+    "conditions": {
+      "goal": "familyTreeSeven.questGoal",
+      "minCorrect": 15,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
+    "vocabulary": [
+      {
+        "word": "das Foto",
+        "translation-ru": "фото",
+        "translation-en": "photo",
+        "translation-uk": "фото",
+        "translation-pl": "zdjęcie",
+        "translation-es": "la foto",
+        "translation-fr": "la photo",
+        "translation-tr": "fotoğraf",
+        "translation-ro": "fotografia",
+        "translation-uz": "surat",
+        "translation-hi": "फ़ोटो",
+        "translation-ar": "الصورة"
+      },
+      {
+        "word": "links",
+        "translation-ru": "слева",
+        "translation-en": "on the left",
+        "translation-uk": "ліворуч",
+        "translation-pl": "po lewej",
+        "translation-es": "a la izquierda",
+        "translation-fr": "à gauche",
+        "translation-tr": "solda",
+        "translation-ro": "în stânga",
+        "translation-uz": "chapda",
+        "translation-hi": "बाईं ओर",
+        "translation-ar": "على اليسار"
+      },
+      {
+        "word": "rechts",
+        "translation-ru": "справа",
+        "translation-en": "on the right",
+        "translation-uk": "праворуч",
+        "translation-pl": "po prawej",
+        "translation-es": "a la derecha",
+        "translation-fr": "à droite",
+        "translation-tr": "sağda",
+        "translation-ro": "în dreapta",
+        "translation-uz": "o‘ngda",
+        "translation-hi": "दाईं ओर",
+        "translation-ar": "على اليمين"
+      },
+      {
+        "word": "jung",
+        "translation-ru": "молодой",
+        "translation-en": "young",
+        "translation-uk": "молодий",
+        "translation-pl": "młody",
+        "translation-es": "joven",
+        "translation-fr": "jeune",
+        "translation-tr": "genç",
+        "translation-ro": "tânăr",
+        "translation-uz": "yosh",
+        "translation-hi": "जवान",
+        "translation-ar": "شاب"
+      },
+      {
+        "word": "lustig",
+        "translation-ru": "весёлый, смешной",
+        "translation-en": "funny",
+        "translation-uk": "веселий, смішний",
+        "translation-pl": "zabawny",
+        "translation-es": "divertido",
+        "translation-fr": "drôle",
+        "translation-tr": "komik",
+        "translation-ro": "amuzant",
+        "translation-uz": "quvnoq",
+        "translation-hi": "मज़ेदार",
+        "translation-ar": "مضحك"
+      },
+      {
+        "word": "das Familienfoto",
+        "translation-ru": "семейное фото",
+        "translation-en": "family photo",
+        "translation-uk": "родинне фото",
+        "translation-pl": "zdjęcie rodzinne",
+        "translation-es": "la foto de familia",
+        "translation-fr": "la photo de famille",
+        "translation-tr": "aile fotoğrafı",
+        "translation-ro": "fotografia de familie",
+        "translation-uz": "oilaviy surat",
+        "translation-hi": "पारिवारिक फ़ोटो",
+        "translation-ar": "صورة عائلية"
+      },
+      {
+        "word": "die Mitte",
+        "translation-ru": "середина",
+        "translation-en": "middle",
+        "translation-uk": "середина",
+        "translation-pl": "środek",
+        "translation-es": "el centro, la mitad",
+        "translation-fr": "le milieu",
+        "translation-tr": "orta",
+        "translation-ro": "mijlocul",
+        "translation-uz": "o‘rta",
+        "translation-hi": "बीच",
+        "translation-ar": "المنتصف"
+      }
+    ],
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "familyTreeSeven.questTask1",
+        "options": [
+          "Das ist unseren Familienfoto.",
+          "Das ist unsere Familienfoto.",
+          "Das ist unser Familienfoto."
+        ],
+        "answer": "Das ist unser Familienfoto.",
+        "tip": "familyTreeSeven.questDescription"
+      },
+      {
+        "id": 2,
+        "type": "input",
+        "question": "familyTreeSeven.questTask2",
+        "correctAnswer": "Links",
+        "tip": "familyTreeSeven.questDescription"
+      },
+      {
+        "id": 3,
+        "type": "input",
+        "question": "familyTreeSeven.questTask3",
+        "correctAnswer": "Seine",
+        "tip": "familyTreeSeven.questDescription"
+      },
+      {
+        "id": 4,
+        "type": "select",
+        "question": "familyTreeSeven.questTask4",
+        "options": [
+          "Rechts ist mein Oma, sie ist sehr lustig.",
+          "Rechts ist meine Oma, er ist sehr lustig.",
+          "Rechts ist meine Oma, sie ist sehr lustig."
+        ],
+        "answer": "Rechts ist meine Oma, sie ist sehr lustig.",
+        "tip": "familyTreeSeven.questDescription"
+      },
+      {
+        "id": 5,
+        "type": "reorder",
+        "question": "familyTreeSeven.questTask5",
+        "words": [
+          "sehr",
+          "ihr",
+          "jung",
+          "noch",
+          "Kinder",
+          "seine",
+          "Ihre",
+          "sind"
+        ],
+        "correctOrder": [
+          "Ihre",
+          "Kinder",
+          "sind",
+          "noch",
+          "sehr",
+          "jung"
+        ],
+        "tip": "familyTreeSeven.questDescription"
+      },
+      {
+        "id": 6,
+        "type": "select",
+        "question": "familyTreeSeven.questTask6",
+        "options": [
+          "Wer ist das? Ist das dein Vater?",
+          "Was ist das? Ist das dein Vater?",
+          "Wer ist das? Ist das deinen Vater?"
+        ],
+        "answer": "Wer ist das? Ist das dein Vater?",
+        "tip": "familyTreeSeven.questDescription"
+      },
+      {
+        "id": 7,
+        "type": "input",
+        "question": "familyTreeSeven.questTask7",
+        "correctAnswer": "lustig",
+        "tip": "familyTreeSeven.questDescription"
+      },
+      {
+        "id": 8,
+        "type": "select",
+        "question": "familyTreeSeven.questTask8",
+        "options": [
+          "Deine Tante ist sehr jung!",
+          "Deine Tante sind sehr jung!",
+          "Dein Tante ist sehr jung!"
+        ],
+        "answer": "Deine Tante ist sehr jung!",
+        "tip": "familyTreeSeven.questDescription"
+      },
+      {
+        "id": 9,
+        "type": "readAndAnswer",
+        "question": "familyTreeSeven.questTask9",
+        "text": "Das ist mein Familienfoto. Links ist mein Opa, rechts ist meine Oma. In der Mitte sind meine Eltern. Mein Bruder ist nicht auf dem Foto, er ist in Amerika.",
+        "options": [
+          "mein Bruder",
+          "meine Oma",
+          "mein Opa"
+        ],
+        "answer": "meine Oma",
+        "tip": "familyTreeSeven.questDescription"
+      },
+      {
+        "id": 10,
+        "type": "input",
+        "question": "familyTreeSeven.questTask10",
+        "correctAnswer": "Foto",
+        "tip": "familyTreeSeven.questDescription"
+      },
+      {
+        "id": 11,
+        "type": "reorder",
+        "question": "familyTreeSeven.questTask11",
+        "words": [
+          "und",
+          "mein",
+          "Frau",
+          "ihre",
+          "meinen",
+          "Bruder",
+          "sind",
+          "Links",
+          "seine"
+        ],
+        "correctOrder": [
+          "Links",
+          "sind",
+          "mein",
+          "Bruder",
+          "und",
+          "seine",
+          "Frau"
+        ],
+        "tip": "familyTreeSeven.questDescription"
+      },
+      {
+        "id": 12,
+        "type": "input",
+        "question": "familyTreeSeven.questTask12",
+        "correctAnswer": "Ist",
+        "tip": "familyTreeSeven.questDescription"
+      },
+      {
+        "id": 13,
+        "type": "select",
+        "question": "familyTreeSeven.questTask13",
+        "options": [
+          "Ich habe zwei Cousins.",
+          "Ich habe zwei Cousinsen.",
+          "Ich habe zwei Cousin."
+        ],
+        "answer": "Ich habe zwei Cousins.",
+        "tip": "familyTreeSeven.questDescription"
+      },
+      {
+        "id": 14,
+        "type": "select",
+        "question": "familyTreeSeven.questTask14",
+        "options": [
+          "Das ist nicht mein Regenschirm, das ist dein Regenschirm.",
+          "Das ist nicht meinen Regenschirm, das ist dein Regenschirm.",
+          "Das ist kein mein Regenschirm, das ist dein Regenschirm."
+        ],
+        "answer": "Das ist nicht mein Regenschirm, das ist dein Regenschirm.",
+        "tip": "familyTreeSeven.questDescription"
+      },
+      {
+        "id": 15,
+        "type": "reorder",
+        "question": "familyTreeSeven.questTask15",
+        "words": [
+          "sind",
+          "Meine",
+          "verheiratet",
+          "ist",
+          "Großeltern",
+          "mein"
+        ],
+        "correctOrder": [
+          "Meine",
+          "Großeltern",
+          "sind",
+          "verheiratet"
+        ],
+        "tip": "familyTreeSeven.questDescription"
+      }
+    ]
+  },
+  {
+    "questId": "family-tree-eight",
+    "title": "familyTreeEight.questTitle",
+    "progress": "0/15",
+    "description": "familyTreeEight.questDescription",
+    "conditions": {
+      "goal": "familyTreeEight.questGoal",
+      "minCorrect": 15,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
+    "vocabulary": [
+      {
+        "word": "der Gast, die Gäste",
+        "translation-ru": "гость, гости",
+        "translation-en": "guest, guests",
+        "translation-uk": "гість, гості",
+        "translation-pl": "gość, goście",
+        "translation-es": "el invitado, los invitados",
+        "translation-fr": "l’invité, les invités",
+        "translation-tr": "misafir, misafirler",
+        "translation-ro": "musafirul, musafirii",
+        "translation-uz": "mehmon, mehmonlar",
+        "translation-hi": "मेहमान",
+        "translation-ar": "الضيف، الضيوف"
+      },
+      {
+        "word": "willkommen",
+        "translation-ru": "добро пожаловать",
+        "translation-en": "welcome",
+        "translation-uk": "ласкаво просимо",
+        "translation-pl": "witamy",
+        "translation-es": "bienvenido",
+        "translation-fr": "bienvenue",
+        "translation-tr": "hoş geldiniz",
+        "translation-ro": "bine ați venit",
+        "translation-uz": "xush kelibsiz",
+        "translation-hi": "स्वागत है",
+        "translation-ar": "أهلًا وسهلًا"
+      },
+      {
+        "word": "das Wohnzimmer",
+        "translation-ru": "гостиная",
+        "translation-en": "living room",
+        "translation-uk": "вітальня",
+        "translation-pl": "salon",
+        "translation-es": "el salón",
+        "translation-fr": "le salon",
+        "translation-tr": "oturma odası",
+        "translation-ro": "sufrageria",
+        "translation-uz": "mehmonxona",
+        "translation-hi": "बैठक",
+        "translation-ar": "غرفة المعيشة"
+      },
+      {
+        "word": "die Küche",
+        "translation-ru": "кухня",
+        "translation-en": "kitchen",
+        "translation-uk": "кухня",
+        "translation-pl": "kuchnia",
+        "translation-es": "la cocina",
+        "translation-fr": "la cuisine",
+        "translation-tr": "mutfak",
+        "translation-ro": "bucătăria",
+        "translation-uz": "oshxona",
+        "translation-hi": "रसोई",
+        "translation-ar": "المطبخ"
+      },
+      {
+        "word": "schön",
+        "translation-ru": "красивый",
+        "translation-en": "beautiful",
+        "translation-uk": "гарний",
+        "translation-pl": "ładny",
+        "translation-es": "bonito",
+        "translation-fr": "beau",
+        "translation-tr": "güzel",
+        "translation-ro": "frumos",
+        "translation-uz": "chiroyli",
+        "translation-hi": "सुंदर",
+        "translation-ar": "جميل"
+      }
+    ],
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "familyTreeEight.questTask1",
+        "options": [
+          "Willkommen! Das ist mein Frau.",
+          "Willkommen! Das ist meinen Frau.",
+          "Willkommen! Das ist meine Frau."
+        ],
+        "answer": "Willkommen! Das ist meine Frau.",
+        "tip": "familyTreeEight.questDescription"
+      },
+      {
+        "id": 2,
+        "type": "input",
+        "question": "familyTreeEight.questTask2",
+        "correctAnswer": "Unsere",
+        "tip": "familyTreeEight.questDescription"
+      },
+      {
+        "id": 3,
+        "type": "input",
+        "question": "familyTreeEight.questTask3",
+        "correctAnswer": "Ihre",
+        "tip": "familyTreeEight.questDescription"
+      },
+      {
+        "id": 4,
+        "type": "select",
+        "question": "familyTreeEight.questTask4",
+        "options": [
+          "Unser Wohnzimmer sind groß und hell.",
+          "Unsere Wohnzimmer ist groß und hell.",
+          "Unser Wohnzimmer ist groß und hell."
+        ],
+        "answer": "Unser Wohnzimmer ist groß und hell.",
+        "tip": "familyTreeEight.questDescription"
+      },
+      {
+        "id": 5,
+        "type": "reorder",
+        "question": "familyTreeEight.questTask5",
+        "words": [
+          "unser",
+          "ist",
+          "Küche",
+          "Das",
+          "er",
+          "ist",
+          "neu",
+          "sie",
+          "unsere"
+        ],
+        "correctOrder": [
+          "Das",
+          "ist",
+          "unsere",
+          "Küche",
+          "sie",
+          "ist",
+          "neu"
+        ],
+        "tip": "familyTreeEight.questDescription"
+      },
+      {
+        "id": 6,
+        "type": "select",
+        "question": "familyTreeEight.questTask6",
+        "options": [
+          "Sein Haus ist sehr schön, Herr Weber!",
+          "Ihr Haus ist sehr schön, Herr Weber!",
+          "Ihre Haus ist sehr schön, Herr Weber!"
+        ],
+        "answer": "Ihr Haus ist sehr schön, Herr Weber!",
+        "tip": "familyTreeEight.questDescription"
+      },
+      {
+        "id": 7,
+        "type": "input",
+        "question": "familyTreeEight.questTask7",
+        "correctAnswer": "Gäste",
+        "tip": "familyTreeEight.questDescription"
+      },
+      {
+        "id": 8,
+        "type": "select",
+        "question": "familyTreeEight.questTask8",
+        "options": [
+          "Das ist unseren Sohn und sein Hund.",
+          "Das ist unser Sohn und sein Hund.",
+          "Das ist unser Sohn und ihr Hund."
+        ],
+        "answer": "Das ist unser Sohn und sein Hund.",
+        "tip": "familyTreeEight.questDescription"
+      },
+      {
+        "id": 9,
+        "type": "readAndAnswer",
+        "question": "familyTreeEight.questTask9",
+        "text": "Herr Hoffmann: Willkommen! Das ist meine Frau Julia. Unsere Tochter Lisa ist hier. Unser Sohn Max ist nicht hier, er wohnt jetzt in Leipzig. Und das ist unser Hund.",
+        "options": [
+          "in Leipzig",
+          "in Berlin",
+          "hier"
+        ],
+        "answer": "in Leipzig",
+        "tip": "familyTreeEight.questDescription"
+      },
+      {
+        "id": 10,
+        "type": "input",
+        "question": "familyTreeEight.questTask10",
+        "correctAnswer": "schön",
+        "tip": "familyTreeEight.questDescription"
+      },
+      {
+        "id": 11,
+        "type": "reorder",
+        "question": "familyTreeEight.questTask11",
+        "words": [
+          "das",
+          "ist",
+          "Haus",
+          "Willkommen",
+          "unsere",
+          "unseren",
+          "unser"
+        ],
+        "correctOrder": [
+          "Willkommen",
+          "das",
+          "ist",
+          "unser",
+          "Haus"
+        ],
+        "tip": "familyTreeEight.questDescription"
+      },
+      {
+        "id": 12,
+        "type": "input",
+        "question": "familyTreeEight.questTask12",
+        "correctAnswer": "Ist",
+        "tip": "familyTreeEight.questDescription"
+      },
+      {
+        "id": 13,
+        "type": "select",
+        "question": "familyTreeEight.questTask13",
+        "options": [
+          "Rechts ist meinen Opa.",
+          "Rechts ist mein Opa.",
+          "Rechts ist meine Opa."
+        ],
+        "answer": "Rechts ist mein Opa.",
+        "tip": "familyTreeEight.questDescription"
+      },
+      {
+        "id": 14,
+        "type": "select",
+        "question": "familyTreeEight.questTask14",
+        "options": [
+          "Deinen Bruder ist sehr lustig!",
+          "Dein Bruder ist sehr lustig!",
+          "Deine Bruder ist sehr lustig!"
+        ],
+        "answer": "Dein Bruder ist sehr lustig!",
+        "tip": "familyTreeEight.questDescription"
+      },
+      {
+        "id": 15,
+        "type": "reorder",
+        "question": "familyTreeEight.questTask15",
+        "words": [
+          "ist",
+          "Spielzeug",
+          "das",
+          "ist",
+          "nicht",
+          "mein",
+          "Das",
+          "seine",
+          "Spielzeug",
+          "kein",
+          "sein"
+        ],
+        "correctOrder": [
+          "Das",
+          "ist",
+          "nicht",
+          "mein",
+          "Spielzeug",
+          "das",
+          "ist",
+          "sein",
+          "Spielzeug"
+        ],
+        "tip": "familyTreeEight.questDescription"
+      }
+    ]
+  },
+  {
+    "questId": "family-tree-nine",
+    "title": "familyTreeNine.questTitle",
+    "progress": "0/15",
+    "description": "familyTreeNine.questDescription",
+    "conditions": {
+      "goal": "familyTreeNine.questGoal",
+      "minCorrect": 15,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
+    "vocabulary": [
+      {
+        "word": "der Mann",
+        "translation-ru": "муж; мужчина",
+        "translation-en": "husband; man",
+        "translation-uk": "чоловік",
+        "translation-pl": "mąż; mężczyzna",
+        "translation-es": "el marido; el hombre",
+        "translation-fr": "le mari; l’homme",
+        "translation-tr": "koca; adam",
+        "translation-ro": "soțul; bărbatul",
+        "translation-uz": "er; erkak",
+        "translation-hi": "पति; आदमी",
+        "translation-ar": "الزوج؛ الرجل"
+      },
+      {
+        "word": "die Frau",
+        "translation-ru": "жена; женщина",
+        "translation-en": "wife; woman",
+        "translation-uk": "дружина; жінка",
+        "translation-pl": "żona; kobieta",
+        "translation-es": "la mujer; la esposa",
+        "translation-fr": "la femme; l’épouse",
+        "translation-tr": "karı; kadın",
+        "translation-ro": "soția; femeia",
+        "translation-uz": "xotin; ayol",
+        "translation-hi": "पत्नी; महिला",
+        "translation-ar": "الزوجة؛ المرأة"
+      },
+      {
+        "word": "das Baby",
+        "translation-ru": "малыш",
+        "translation-en": "baby",
+        "translation-uk": "немовля",
+        "translation-pl": "niemowlę",
+        "translation-es": "el bebé",
+        "translation-fr": "le bébé",
+        "translation-tr": "bebek",
+        "translation-ro": "bebelușul",
+        "translation-uz": "chaqaloq",
+        "translation-hi": "शिशु",
+        "translation-ar": "الرضيع"
+      },
+      {
+        "word": "der Geburtstag",
+        "translation-ru": "день рождения",
+        "translation-en": "birthday",
+        "translation-uk": "день народження",
+        "translation-pl": "urodziny",
+        "translation-es": "el cumpleaños",
+        "translation-fr": "l’anniversaire",
+        "translation-tr": "doğum günü",
+        "translation-ro": "ziua de naștere",
+        "translation-uz": "tug‘ilgan kun",
+        "translation-hi": "जन्मदिन",
+        "translation-ar": "عيد الميلاد"
+      },
+      {
+        "word": "zusammen",
+        "translation-ru": "вместе",
+        "translation-en": "together",
+        "translation-uk": "разом",
+        "translation-pl": "razem",
+        "translation-es": "juntos",
+        "translation-fr": "ensemble",
+        "translation-tr": "birlikte",
+        "translation-ro": "împreună",
+        "translation-uz": "birga",
+        "translation-hi": "एक साथ",
+        "translation-ar": "معًا"
+      },
+      {
+        "word": "feiern",
+        "translation-ru": "праздновать",
+        "translation-en": "to celebrate",
+        "translation-uk": "святкувати",
+        "translation-pl": "świętować",
+        "translation-es": "celebrar",
+        "translation-fr": "fêter",
+        "translation-tr": "kutlamak",
+        "translation-ro": "a sărbători",
+        "translation-uz": "nishonlamoq",
+        "translation-hi": "जश्न मनाना",
+        "translation-ar": "يحتفل"
+      },
+      {
+        "word": "süß",
+        "translation-ru": "сладкий",
+        "translation-en": "sweet",
+        "translation-uk": "солодкий",
+        "translation-pl": "słodki",
+        "translation-es": "dulce",
+        "translation-fr": "sucré",
+        "translation-tr": "tatlı",
+        "translation-ro": "dulce",
+        "translation-uz": "shirin",
+        "translation-hi": "मीठा",
+        "translation-ar": "حلو"
+      },
+      {
+        "word": "kennen",
+        "translation-ru": "знать",
+        "translation-en": "to know",
+        "translation-uk": "знати",
+        "translation-pl": "znać",
+        "translation-es": "conocer",
+        "translation-fr": "connaître",
+        "translation-tr": "tanımak / bilmek",
+        "translation-ro": "a cunoaște",
+        "translation-uz": "tanimoq",
+        "translation-hi": "जानना",
+        "translation-ar": "يعرف"
+      }
+    ],
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "familyTreeNine.questTask1",
+        "options": [
+          "Sein Mann ist Koch.",
+          "Ihre Mann ist Koch.",
+          "Ihr Mann ist Koch."
+        ],
+        "answer": "Ihr Mann ist Koch.",
+        "tip": "familyTreeNine.questDescription"
+      },
+      {
+        "id": 2,
+        "type": "input",
+        "question": "familyTreeNine.questTask2",
+        "correctAnswer": "Seine",
+        "tip": "familyTreeNine.questDescription"
+      },
+      {
+        "id": 3,
+        "type": "input",
+        "question": "familyTreeNine.questTask3",
+        "correctAnswer": "Habt",
+        "tip": "familyTreeNine.questDescription"
+      },
+      {
+        "id": 4,
+        "type": "select",
+        "question": "familyTreeNine.questTask4",
+        "options": [
+          "Mein Schwester hat heute Geburtstag.",
+          "Meine Schwester ist heute Geburtstag.",
+          "Meine Schwester hat heute Geburtstag."
+        ],
+        "answer": "Meine Schwester hat heute Geburtstag.",
+        "tip": "familyTreeNine.questDescription"
+      },
+      {
+        "id": 5,
+        "type": "reorder",
+        "question": "familyTreeNine.questTask5",
+        "words": [
+          "zusammen",
+          "Unsere",
+          "unser",
+          "feiern",
+          "feiert",
+          "Freunde"
+        ],
+        "correctOrder": [
+          "Unsere",
+          "Freunde",
+          "feiern",
+          "zusammen"
+        ],
+        "tip": "familyTreeNine.questDescription"
+      },
+      {
+        "id": 6,
+        "type": "select",
+        "question": "familyTreeNine.questTask6",
+        "options": [
+          "Euer Baby sind sehr süß!",
+          "Euer Baby ist sehr süß!",
+          "Eure Baby ist sehr süß!"
+        ],
+        "answer": "Euer Baby ist sehr süß!",
+        "tip": "familyTreeNine.questDescription"
+      },
+      {
+        "id": 7,
+        "type": "input",
+        "question": "familyTreeNine.questTask7",
+        "correctAnswer": "meinen",
+        "tip": "familyTreeNine.questDescription"
+      },
+      {
+        "id": 8,
+        "type": "select",
+        "question": "familyTreeNine.questTask8",
+        "options": [
+          "Seine Eltern wohnen zusammen.",
+          "Seinen Eltern wohnen zusammen.",
+          "Sein Eltern wohnen zusammen."
+        ],
+        "answer": "Seine Eltern wohnen zusammen.",
+        "tip": "familyTreeNine.questDescription"
+      },
+      {
+        "id": 9,
+        "type": "readAndAnswer",
+        "question": "familyTreeNine.questTask9",
+        "text": "Lena und ihr Mann haben ein Baby. Es heißt Emil. Heute hat Emil Geburtstag, er ist ein Jahr alt. Seine Großeltern sind auch hier. Alle feiern zusammen.",
+        "options": [
+          "heute",
+          "nicht heute",
+          "morgen"
+        ],
+        "answer": "heute",
+        "tip": "familyTreeNine.questDescription"
+      },
+      {
+        "id": 10,
+        "type": "input",
+        "question": "familyTreeNine.questTask10",
+        "correctAnswer": "Baby",
+        "tip": "familyTreeNine.questDescription"
+      },
+      {
+        "id": 11,
+        "type": "reorder",
+        "question": "familyTreeNine.questTask11",
+        "words": [
+          "Kennst",
+          "seine",
+          "ihre",
+          "seinen",
+          "du",
+          "Frau"
+        ],
+        "correctOrder": [
+          "Kennst",
+          "du",
+          "seine",
+          "Frau"
+        ],
+        "tip": "familyTreeNine.questDescription"
+      },
+      {
+        "id": 12,
+        "type": "input",
+        "question": "familyTreeNine.questTask12",
+        "correctAnswer": "Sind",
+        "tip": "familyTreeNine.questDescription"
+      },
+      {
+        "id": 13,
+        "type": "select",
+        "question": "familyTreeNine.questTask13",
+        "options": [
+          "Links ist meine Tante.",
+          "Links ist meinen Tante.",
+          "Links ist mein Tante."
+        ],
+        "answer": "Links ist meine Tante.",
+        "tip": "familyTreeNine.questDescription"
+      },
+      {
+        "id": 14,
+        "type": "select",
+        "question": "familyTreeNine.questTask14",
+        "options": [
+          "Er isst seine Suppe.",
+          "Er isst seinen Suppe.",
+          "Er esst seine Suppe."
+        ],
+        "answer": "Er isst seine Suppe.",
+        "tip": "familyTreeNine.questDescription"
+      },
+      {
+        "id": 15,
+        "type": "reorder",
+        "question": "familyTreeNine.questTask15",
+        "words": [
+          "kaufen",
+          "Wir",
+          "einen",
+          "für",
+          "kauft",
+          "ein",
+          "Geschenk",
+          "Mama"
+        ],
+        "correctOrder": [
+          "Wir",
+          "kaufen",
+          "ein",
+          "Geschenk",
+          "für",
+          "Mama"
+        ],
+        "tip": "familyTreeNine.questDescription"
+      }
+    ]
+  },
+  {
+    "questId": "family-tree-ten",
+    "title": "familyTreeTen.questTitle",
+    "progress": "0/15",
+    "description": "familyTreeTen.questDescription",
+    "conditions": {
+      "goal": "familyTreeTen.questGoal",
+      "minCorrect": 15,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
+    "vocabulary": [
+      {
+        "word": "die Hochzeit",
+        "translation-ru": "свадьба",
+        "translation-en": "wedding",
+        "translation-uk": "весілля",
+        "translation-pl": "ślub, wesele",
+        "translation-es": "la boda",
+        "translation-fr": "le mariage",
+        "translation-tr": "düğün",
+        "translation-ro": "nunta",
+        "translation-uz": "to‘y",
+        "translation-hi": "शादी",
+        "translation-ar": "الزفاف"
+      },
+      {
+        "word": "die Nichte",
+        "translation-ru": "племянница",
+        "translation-en": "niece",
+        "translation-uk": "племінниця",
+        "translation-pl": "siostrzenica, bratanica",
+        "translation-es": "la sobrina",
+        "translation-fr": "la nièce",
+        "translation-tr": "yeğen (kız)",
+        "translation-ro": "nepoata (de frate)",
+        "translation-uz": "jiyan (qiz)",
+        "translation-hi": "भतीजी",
+        "translation-ar": "ابنة الأخ"
+      },
+      {
+        "word": "die Cousine",
+        "translation-ru": "двоюродная сестра",
+        "translation-en": "cousin (female)",
+        "translation-uk": "двоюрідна сестра",
+        "translation-pl": "kuzynka",
+        "translation-es": "la prima",
+        "translation-fr": "la cousine",
+        "translation-tr": "kuzen (kız)",
+        "translation-ro": "verișoara",
+        "translation-uz": "amakivachcha (qiz)",
+        "translation-hi": "चचेरी बहन",
+        "translation-ar": "ابنة العم"
+      },
+      {
+        "word": "ähnlich",
+        "translation-ru": "похожий",
+        "translation-en": "similar",
+        "translation-uk": "схожий",
+        "translation-pl": "podobny",
+        "translation-es": "parecido",
+        "translation-fr": "semblable",
+        "translation-tr": "benzer",
+        "translation-ro": "asemănător",
+        "translation-uz": "o‘xshash",
+        "translation-hi": "मिलता-जुलता",
+        "translation-ar": "شبيه"
+      },
+      {
+        "word": "die Mutter",
+        "translation-ru": "мама",
+        "translation-en": "mother",
+        "translation-uk": "мама",
+        "translation-pl": "mama",
+        "translation-es": "la madre",
+        "translation-fr": "la mère",
+        "translation-tr": "anne",
+        "translation-ro": "mama",
+        "translation-uz": "ona",
+        "translation-hi": "माँ",
+        "translation-ar": "الأم"
+      }
+    ],
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "familyTreeTen.questTask1",
+        "options": [
+          "Meine Bruder hat heute Hochzeit.",
+          "Mein Bruder ist heute Hochzeit.",
+          "Mein Bruder hat heute Hochzeit."
+        ],
+        "answer": "Mein Bruder hat heute Hochzeit.",
+        "tip": "familyTreeTen.questDescription"
+      },
+      {
+        "id": 2,
+        "type": "input",
+        "question": "familyTreeTen.questTask2",
+        "correctAnswer": "Seine",
+        "tip": "familyTreeTen.questDescription"
+      },
+      {
+        "id": 3,
+        "type": "input",
+        "question": "familyTreeTen.questTask3",
+        "correctAnswer": "unseren",
+        "tip": "familyTreeTen.questDescription"
+      },
+      {
+        "id": 4,
+        "type": "select",
+        "question": "familyTreeTen.questTask4",
+        "options": [
+          "Du und deine Mutter, ihr sind sehr ähnlich.",
+          "Du und dein Mutter, ihr seid sehr ähnlich.",
+          "Du und deine Mutter, ihr seid sehr ähnlich."
+        ],
+        "answer": "Du und deine Mutter, ihr seid sehr ähnlich.",
+        "tip": "familyTreeTen.questDescription"
+      },
+      {
+        "id": 5,
+        "type": "reorder",
+        "question": "familyTreeTen.questTask5",
+        "words": [
+          "euer",
+          "eueren",
+          "eure",
+          "Wo",
+          "Geschenke",
+          "sind"
+        ],
+        "correctOrder": [
+          "Wo",
+          "sind",
+          "eure",
+          "Geschenke"
+        ],
+        "tip": "familyTreeTen.questDescription"
+      },
+      {
+        "id": 6,
+        "type": "select",
+        "question": "familyTreeTen.questTask6",
+        "options": [
+          "Ist das Ihren Tochter, Frau Becker?",
+          "Ist das Ihr Tochter, Frau Becker?",
+          "Ist das Ihre Tochter, Frau Becker?"
+        ],
+        "answer": "Ist das Ihre Tochter, Frau Becker?",
+        "tip": "familyTreeTen.questDescription"
+      },
+      {
+        "id": 7,
+        "type": "input",
+        "question": "familyTreeTen.questTask7",
+        "correctAnswer": "hat",
+        "tip": "familyTreeTen.questDescription"
+      },
+      {
+        "id": 8,
+        "type": "select",
+        "question": "familyTreeTen.questTask8",
+        "options": [
+          "Unsere Kinder ist ähnlich.",
+          "Unsere Kinder sind ähnlich.",
+          "Unser Kinder sind ähnlich."
+        ],
+        "answer": "Unsere Kinder sind ähnlich.",
+        "tip": "familyTreeTen.questDescription"
+      },
+      {
+        "id": 9,
+        "type": "readAndAnswer",
+        "question": "familyTreeTen.questTask9",
+        "text": "Heute heiraten Tom und Sara. Ihre Eltern sind hier, seine Eltern auch. Seine Schwester ist hier, ihr Mann auch. Ihre Kinder tanzen viel.",
+        "options": [
+          "niemand",
+          "die Familie",
+          "nur die Eltern"
+        ],
+        "answer": "die Familie",
+        "tip": "familyTreeTen.questDescription"
+      },
+      {
+        "id": 10,
+        "type": "input",
+        "question": "familyTreeTen.questTask10",
+        "correctAnswer": "Hochzeit",
+        "tip": "familyTreeTen.questDescription"
+      },
+      {
+        "id": 11,
+        "type": "reorder",
+        "question": "familyTreeTen.questTask11",
+        "words": [
+          "Tochter",
+          "meine",
+          "mein",
+          "ihr",
+          "und",
+          "Ihre",
+          "sind",
+          "Freunde",
+          "Sohn"
+        ],
+        "correctOrder": [
+          "Ihre",
+          "Tochter",
+          "und",
+          "mein",
+          "Sohn",
+          "sind",
+          "Freunde"
+        ],
+        "tip": "familyTreeTen.questDescription"
+      },
+      {
+        "id": 12,
+        "type": "input",
+        "question": "familyTreeTen.questTask12",
+        "correctAnswer": "Siehst",
+        "tip": "familyTreeTen.questDescription"
+      },
+      {
+        "id": 13,
+        "type": "select",
+        "question": "familyTreeTen.questTask13",
+        "options": [
+          "Unsere Oma lest die Zeitung.",
+          "Unsere Oma liest die Zeitung.",
+          "Unser Oma liest die Zeitung."
+        ],
+        "answer": "Unsere Oma liest die Zeitung.",
+        "tip": "familyTreeTen.questDescription"
+      },
+      {
+        "id": 14,
+        "type": "select",
+        "question": "familyTreeTen.questTask14",
+        "options": [
+          "Brauchst ihr euren Schlüssel?",
+          "Braucht ihr euren Schlüssel?",
+          "Braucht ihr euer Schlüssel?"
+        ],
+        "answer": "Braucht ihr euren Schlüssel?",
+        "tip": "familyTreeTen.questDescription"
+      },
+      {
+        "id": 15,
+        "type": "reorder",
+        "question": "familyTreeTen.questTask15",
+        "words": [
+          "Schwester",
+          "Spanisch",
+          "spricht",
+          "sprecht",
+          "Meine",
+          "mein"
+        ],
+        "correctOrder": [
+          "Meine",
+          "Schwester",
+          "spricht",
+          "Spanisch"
+        ],
+        "tip": "familyTreeTen.questDescription"
+      }
+    ]
+  }
+]

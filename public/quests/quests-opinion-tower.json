@@ -1,0 +1,2587 @@
+[
+  {
+    "questId": "opinion-tower-one",
+    "title": "opinionTowerOne.questTitle",
+    "progress": "0/15",
+    "description": "opinionTowerOne.questDescription",
+    "conditions": {
+      "goal": "opinionTowerOne.questGoal",
+      "minCorrect": 15,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
+    "vocabulary": [
+      {
+        "word": "finden",
+        "translation-ru": "считать (по мнению)",
+        "translation-en": "to think, find",
+        "translation-uk": "вважати",
+        "translation-pl": "uważać",
+        "translation-es": "parecer, opinar",
+        "translation-fr": "trouver",
+        "translation-tr": "bulmak, düşünmek",
+        "translation-ro": "a considera",
+        "translation-uz": "deb hisoblamoq",
+        "translation-hi": "लगना, मानना",
+        "translation-ar": "يرى"
+      },
+      {
+        "word": "glauben",
+        "translation-ru": "полагать, думать",
+        "translation-en": "to believe, think",
+        "translation-uk": "гадати",
+        "translation-pl": "sądzić",
+        "translation-es": "creer",
+        "translation-fr": "croire",
+        "translation-tr": "sanmak",
+        "translation-ro": "a crede",
+        "translation-uz": "deb o‘ylamoq",
+        "translation-hi": "सोचना, मानना",
+        "translation-ar": "يعتقد"
+      },
+      {
+        "word": "unmöglich",
+        "translation-ru": "невозможный",
+        "translation-en": "impossible",
+        "translation-uk": "неможливий",
+        "translation-pl": "niemożliwy",
+        "translation-es": "imposible",
+        "translation-fr": "impossible",
+        "translation-tr": "imkânsız",
+        "translation-ro": "imposibil",
+        "translation-uz": "imkonsiz",
+        "translation-hi": "नामुमकिन",
+        "translation-ar": "مستحيل"
+      },
+      {
+        "word": "ungesund",
+        "translation-ru": "вредный для здоровья",
+        "translation-en": "unhealthy",
+        "translation-uk": "шкідливий для здоров’я",
+        "translation-pl": "niezdrowy",
+        "translation-es": "poco saludable",
+        "translation-fr": "mauvais pour la santé",
+        "translation-tr": "sağlıksız",
+        "translation-ro": "nesănătos",
+        "translation-uz": "sog‘liqqa zararli",
+        "translation-hi": "सेहत के लिए बुरा",
+        "translation-ar": "غير صحي"
+      },
+      {
+        "word": "die Pünktlichkeit",
+        "translation-ru": "пунктуальность",
+        "translation-en": "punctuality",
+        "translation-uk": "пунктуальність",
+        "translation-pl": "punktualność",
+        "translation-es": "la puntualidad",
+        "translation-fr": "la ponctualité",
+        "translation-tr": "dakiklik",
+        "translation-ro": "punctualitatea",
+        "translation-uz": "vaqtga rioya qilish",
+        "translation-hi": "समय की पाबंदी",
+        "translation-ar": "الالتزام بالمواعيد"
+      },
+      {
+        "word": "erwarten",
+        "translation-ru": "ожидать",
+        "translation-en": "to expect",
+        "translation-uk": "очікувати",
+        "translation-pl": "oczekiwać",
+        "translation-es": "esperar",
+        "translation-fr": "attendre",
+        "translation-tr": "beklemek",
+        "translation-ro": "a aștepta",
+        "translation-uz": "kutmoq",
+        "translation-hi": "उम्मीद करना",
+        "translation-ar": "يتوقع"
+      }
+    ],
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "opinionTowerOne.questTask1",
+        "options": [
+          "Ich finde, dass der Film ist interessant.",
+          "Ich finde, dass ist der Film interessant.",
+          "Ich finde, dass der Film interessant ist."
+        ],
+        "answer": "Ich finde, dass der Film interessant ist.",
+        "tip": "opinionTowerOne.questDescription"
+      },
+      {
+        "id": 2,
+        "type": "input",
+        "question": "opinionTowerOne.questTask2",
+        "correctAnswer": "kommt",
+        "tip": "opinionTowerOne.questDescription"
+      },
+      {
+        "id": 3,
+        "type": "input",
+        "question": "opinionTowerOne.questTask3",
+        "correctAnswer": "dass",
+        "tip": "opinionTowerOne.questDescription"
+      },
+      {
+        "id": 4,
+        "type": "reorder",
+        "question": "opinionTowerOne.questTask4",
+        "words": [
+          "ist",
+          "wenn",
+          "eine",
+          "dass",
+          "Idee",
+          "Ich",
+          "denke",
+          "gute",
+          "das"
+        ],
+        "correctOrder": [
+          "Ich",
+          "denke",
+          "dass",
+          "das",
+          "eine",
+          "gute",
+          "Idee",
+          "ist"
+        ],
+        "tip": "opinionTowerOne.questDescription"
+      },
+      {
+        "id": 5,
+        "type": "select",
+        "question": "opinionTowerOne.questTask5",
+        "options": [
+          "Ich finde, dass die Wohnung ist zu teuer.",
+          "Ich finde, die Wohnung ist zu teuer.",
+          "Ich finde, die Wohnung zu teuer ist."
+        ],
+        "answer": "Ich finde, die Wohnung ist zu teuer.",
+        "tip": "opinionTowerOne.questDescription"
+      },
+      {
+        "id": 6,
+        "type": "input",
+        "question": "opinionTowerOne.questTask6",
+        "correctAnswer": "regnet",
+        "tip": "opinionTowerOne.questDescription"
+      },
+      {
+        "id": 7,
+        "type": "readAndAnswer",
+        "question": "opinionTowerOne.questTask7",
+        "text": "Anna und Ben waren gestern im Kino. Anna findet, dass der Film zu lang war. Ben glaubt, dass es der beste Film des Jahres ist.",
+        "options": [
+          "Er war zu kurz.",
+          "Er war zu lang.",
+          "Er war der beste Film des Jahres."
+        ],
+        "answer": "Er war zu lang.",
+        "tip": "opinionTowerOne.questDescription"
+      },
+      {
+        "id": 8,
+        "type": "input",
+        "question": "opinionTowerOne.questTask8",
+        "correctAnswer": "findest",
+        "tip": "opinionTowerOne.questDescription"
+      },
+      {
+        "id": 9,
+        "type": "reorder",
+        "question": "opinionTowerOne.questTask10",
+        "words": [
+          "ist",
+          "weil",
+          "dass",
+          "glaube",
+          "Ich",
+          "er",
+          "müde"
+        ],
+        "correctOrder": [
+          "Ich",
+          "glaube",
+          "dass",
+          "er",
+          "müde",
+          "ist"
+        ],
+        "tip": "opinionTowerOne.questDescription"
+      },
+      {
+        "id": 10,
+        "type": "select",
+        "question": "opinionTowerOne.questTask11",
+        "options": [
+          "Was findest du die neue Lehrerin?",
+          "Wie findest du die neue Lehrerin?",
+          "Wie findet du die neue Lehrerin?"
+        ],
+        "answer": "Wie findest du die neue Lehrerin?",
+        "tip": "opinionTowerOne.questDescription"
+      },
+      {
+        "id": 11,
+        "type": "input",
+        "question": "wordForgeEight.questTask9",
+        "correctAnswer": "Schlaf",
+        "tip": "wordForgeEight.questDescription",
+        "reviewOf": "word-forge-eight",
+        "reviewLand": "word-forge"
+      },
+      {
+        "id": 12,
+        "type": "input",
+        "question": "wordForgeFive.questTask12",
+        "correctAnswer": "ungesund",
+        "tip": "wordForgeFive.questDescription",
+        "reviewOf": "word-forge-five",
+        "reviewLand": "word-forge"
+      },
+      {
+        "id": 13,
+        "type": "input",
+        "question": "wordForgeTwo.questTask13",
+        "correctAnswer": "Pünktlichkeit",
+        "tip": "wordForgeTwo.questDescription",
+        "reviewOf": "word-forge-two",
+        "reviewLand": "word-forge"
+      },
+      {
+        "id": 14,
+        "type": "input",
+        "question": "opinionTowerOne.questTask14",
+        "correctAnswer": "desto",
+        "tip": "opinionTowerOne.questDescription"
+      },
+      {
+        "id": 15,
+        "type": "input",
+        "question": "opinionTowerOne.questTask15",
+        "correctAnswer": "über",
+        "tip": "opinionTowerOne.questDescription"
+      }
+    ]
+  },
+  {
+    "questId": "opinion-tower-two",
+    "title": "opinionTowerTwo.questTitle",
+    "progress": "0/15",
+    "description": "opinionTowerTwo.questDescription",
+    "conditions": {
+      "goal": "opinionTowerTwo.questGoal",
+      "minCorrect": 15,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
+    "vocabulary": [
+      {
+        "word": "die Meinung",
+        "translation-ru": "мнение",
+        "translation-en": "opinion",
+        "translation-uk": "думка",
+        "translation-pl": "opinia",
+        "translation-es": "la opinión",
+        "translation-fr": "l’avis",
+        "translation-tr": "fikir, görüş",
+        "translation-ro": "părerea",
+        "translation-uz": "fikr",
+        "translation-hi": "राय",
+        "translation-ar": "الرأي"
+      },
+      {
+        "word": "meiner Meinung nach",
+        "translation-ru": "по-моему",
+        "translation-en": "in my opinion",
+        "translation-uk": "на мою думку",
+        "translation-pl": "moim zdaniem",
+        "translation-es": "en mi opinión",
+        "translation-fr": "à mon avis",
+        "translation-tr": "bence",
+        "translation-ro": "după părerea mea",
+        "translation-uz": "menimcha",
+        "translation-hi": "मेरी राय में",
+        "translation-ar": "في رأيي"
+      },
+      {
+        "word": "das Forum",
+        "translation-ru": "форум",
+        "translation-en": "forum",
+        "translation-uk": "форум",
+        "translation-pl": "forum",
+        "translation-es": "el foro",
+        "translation-fr": "le forum",
+        "translation-tr": "forum",
+        "translation-ro": "forumul",
+        "translation-uz": "forum",
+        "translation-hi": "फ़ोरम",
+        "translation-ar": "المنتدى"
+      },
+      {
+        "word": "meinen",
+        "translation-ru": "считать, иметь в виду",
+        "translation-en": "to think, mean",
+        "translation-uk": "вважати, мати на увазі",
+        "translation-pl": "uważać, mieć na myśli",
+        "translation-es": "opinar, querer decir",
+        "translation-fr": "penser, vouloir dire",
+        "translation-tr": "düşünmek, kastetmek",
+        "translation-ro": "a crede, a vrea să spui",
+        "translation-uz": "fikrda bo‘lmoq",
+        "translation-hi": "सोचना, मतलब होना",
+        "translation-ar": "يقصد"
+      },
+      {
+        "word": "man",
+        "translation-ru": "люди вообще (безличное)",
+        "translation-en": "one, people (impersonal)",
+        "translation-uk": "люди взагалі (безособове)",
+        "translation-pl": "się (bezosobowo)",
+        "translation-es": "se, uno",
+        "translation-fr": "on",
+        "translation-tr": "insan (genel)",
+        "translation-ro": "se (impersonal)",
+        "translation-uz": "kishi (umumiy)",
+        "translation-hi": "लोग (आम तौर पर)",
+        "translation-ar": "المرء"
+      }
+    ],
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "opinionTowerTwo.questTask1",
+        "options": [
+          "Meine Meinung nach ist das zu teuer.",
+          "Meiner Meinung nach das ist zu teuer.",
+          "Meiner Meinung nach ist das zu teuer."
+        ],
+        "answer": "Meiner Meinung nach ist das zu teuer.",
+        "tip": "opinionTowerTwo.questDescription"
+      },
+      {
+        "id": 2,
+        "type": "input",
+        "question": "opinionTowerTwo.questTask2",
+        "correctAnswer": "Meiner",
+        "tip": "opinionTowerTwo.questDescription"
+      },
+      {
+        "id": 3,
+        "type": "input",
+        "question": "opinionTowerTwo.questTask3",
+        "correctAnswer": "ist",
+        "tip": "opinionTowerTwo.questDescription"
+      },
+      {
+        "id": 4,
+        "type": "reorder",
+        "question": "opinionTowerTwo.questTask4",
+        "words": [
+          "Ich",
+          "Meiner",
+          "brauchen",
+          "bin",
+          "Zeit",
+          "wir",
+          "dass",
+          "mehr",
+          "der",
+          "Meinung"
+        ],
+        "correctOrder": [
+          "Ich",
+          "bin",
+          "der",
+          "Meinung",
+          "dass",
+          "wir",
+          "mehr",
+          "Zeit",
+          "brauchen"
+        ],
+        "tip": "opinionTowerTwo.questDescription"
+      },
+      {
+        "id": 5,
+        "type": "select",
+        "question": "opinionTowerTwo.questTask5",
+        "options": [
+          "Meiner Meinung sollten wir nach mit dem Zug fahren.",
+          "Meiner Meinung nach sollten wir mit dem Zug fahren.",
+          "Meiner Meinung nach wir sollten mit dem Zug fahren."
+        ],
+        "answer": "Meiner Meinung nach sollten wir mit dem Zug fahren.",
+        "tip": "opinionTowerTwo.questDescription"
+      },
+      {
+        "id": 6,
+        "type": "input",
+        "question": "opinionTowerTwo.questTask6",
+        "correctAnswer": "meinst",
+        "tip": "opinionTowerTwo.questDescription"
+      },
+      {
+        "id": 7,
+        "type": "readAndAnswer",
+        "question": "opinionTowerTwo.questTask7",
+        "text": "Im Forum fragt Lisa: „Was ist eure Meinung? Braucht man in der Stadt ein Auto?“ Tom schreibt: „Meiner Meinung nach braucht man in der Stadt kein Auto. Ich fahre immer mit dem Fahrrad.“",
+        "options": [
+          "In der Stadt braucht man kein Auto.",
+          "Fahrräder sind zu teuer.",
+          "Ein Auto ist sehr wichtig."
+        ],
+        "answer": "In der Stadt braucht man kein Auto.",
+        "tip": "opinionTowerTwo.questDescription"
+      },
+      {
+        "id": 8,
+        "type": "input",
+        "question": "opinionTowerTwo.questTask8",
+        "correctAnswer": "Meinung",
+        "tip": "opinionTowerTwo.questDescription"
+      },
+      {
+        "id": 9,
+        "type": "reorder",
+        "question": "opinionTowerTwo.questTask10",
+        "words": [
+          "Restaurant",
+          "Meiner",
+          "besser",
+          "nach",
+          "Meine",
+          "ist",
+          "Meinung",
+          "dieses"
+        ],
+        "correctOrder": [
+          "Meiner",
+          "Meinung",
+          "nach",
+          "ist",
+          "dieses",
+          "Restaurant",
+          "besser"
+        ],
+        "tip": "opinionTowerTwo.questDescription"
+      },
+      {
+        "id": 10,
+        "type": "select",
+        "question": "opinionTowerTwo.questTask11",
+        "options": [
+          "Was ist deinen Meinung?",
+          "Was ist deine Meinung?",
+          "Was ist dein Meinung?"
+        ],
+        "answer": "Was ist deine Meinung?",
+        "tip": "opinionTowerTwo.questDescription"
+      },
+      {
+        "id": 11,
+        "type": "input",
+        "question": "opinionTowerOne.questTask9",
+        "correctAnswer": "dass",
+        "tip": "opinionTowerOne.questDescription",
+        "reviewOf": "opinion-tower-one",
+        "reviewLand": "opinion-tower"
+      },
+      {
+        "id": 12,
+        "type": "input",
+        "question": "wordForgeSix.questTask12",
+        "correctAnswer": "Miete",
+        "tip": "wordForgeSix.questDescription",
+        "reviewOf": "word-forge-six",
+        "reviewLand": "word-forge"
+      },
+      {
+        "id": 13,
+        "type": "input",
+        "question": "wordForgeThree.questTask13",
+        "correctAnswer": "sonnig",
+        "tip": "wordForgeThree.questDescription",
+        "reviewOf": "word-forge-three",
+        "reviewLand": "word-forge"
+      },
+      {
+        "id": 14,
+        "type": "input",
+        "question": "opinionTowerTwo.questTask14",
+        "correctAnswer": "findest",
+        "tip": "opinionTowerTwo.questDescription"
+      },
+      {
+        "id": 15,
+        "type": "input",
+        "question": "opinionTowerTwo.questTask15",
+        "correctAnswer": "noch",
+        "tip": "opinionTowerTwo.questDescription"
+      }
+    ]
+  },
+  {
+    "questId": "opinion-tower-three",
+    "title": "opinionTowerThree.questTitle",
+    "progress": "0/15",
+    "description": "opinionTowerThree.questDescription",
+    "conditions": {
+      "goal": "opinionTowerThree.questGoal",
+      "minCorrect": 15,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
+    "vocabulary": [
+      {
+        "word": "recht haben",
+        "translation-ru": "быть правым",
+        "translation-en": "to be right",
+        "translation-uk": "мати рацію",
+        "translation-pl": "mieć rację",
+        "translation-es": "tener razón",
+        "translation-fr": "avoir raison",
+        "translation-tr": "haklı olmak",
+        "translation-ro": "a avea dreptate",
+        "translation-uz": "haq bo‘lmoq",
+        "translation-hi": "सही होना",
+        "translation-ar": "يكون على حق"
+      },
+      {
+        "word": "stimmen",
+        "translation-ru": "быть верным (о словах)",
+        "translation-en": "to be true",
+        "translation-uk": "бути правдою",
+        "translation-pl": "zgadzać się (o faktach)",
+        "translation-es": "ser cierto",
+        "translation-fr": "être vrai",
+        "translation-tr": "doğru olmak",
+        "translation-ro": "a fi adevărat",
+        "translation-uz": "to‘g‘ri bo‘lmoq",
+        "translation-hi": "सच होना",
+        "translation-ar": "يكون صحيحًا"
+      },
+      {
+        "word": "der Bote",
+        "translation-ru": "курьер",
+        "translation-en": "messenger",
+        "translation-uk": "кур’єр",
+        "translation-pl": "posłaniec",
+        "translation-es": "el mensajero",
+        "translation-fr": "le messager",
+        "translation-tr": "kurye",
+        "translation-ro": "curierul",
+        "translation-uz": "kuryer",
+        "translation-hi": "संदेशवाहक",
+        "translation-ar": "الساعي"
+      },
+      {
+        "word": "die Meinung",
+        "translation-ru": "мнение",
+        "translation-en": "opinion",
+        "translation-uk": "думка",
+        "translation-pl": "opinia",
+        "translation-es": "la opinión",
+        "translation-fr": "l’avis",
+        "translation-tr": "fikir, görüş",
+        "translation-ro": "părerea",
+        "translation-uz": "fikr",
+        "translation-hi": "राय",
+        "translation-ar": "الرأي"
+      },
+      {
+        "word": "unfreundlich",
+        "translation-ru": "неприветливый, грубый",
+        "translation-en": "unfriendly",
+        "translation-uk": "неприязний, грубий",
+        "translation-pl": "nieuprzejmy",
+        "translation-es": "antipático",
+        "translation-fr": "désagréable",
+        "translation-tr": "kaba, soğuk",
+        "translation-ro": "neprietenos",
+        "translation-uz": "qo‘pol, xushmuomala emas",
+        "translation-hi": "रूखा",
+        "translation-ar": "غير ودود"
+      }
+    ],
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "opinionTowerThree.questTask1",
+        "options": [
+          "Da bist du recht.",
+          "Da hast du richtig.",
+          "Da hast du recht."
+        ],
+        "answer": "Da hast du recht.",
+        "tip": "opinionTowerThree.questDescription"
+      },
+      {
+        "id": 2,
+        "type": "input",
+        "question": "opinionTowerThree.questTask2",
+        "correctAnswer": "stimmt",
+        "tip": "opinionTowerThree.questDescription"
+      },
+      {
+        "id": 3,
+        "type": "input",
+        "question": "opinionTowerThree.questTask3",
+        "correctAnswer": "deiner",
+        "tip": "opinionTowerThree.questDescription"
+      },
+      {
+        "id": 4,
+        "type": "reorder",
+        "question": "opinionTowerThree.questTask4",
+        "words": [
+          "ich",
+          "Das",
+          "kein",
+          "nicht",
+          "finde"
+        ],
+        "correctOrder": [
+          "Das",
+          "finde",
+          "ich",
+          "nicht"
+        ],
+        "tip": "opinionTowerThree.questDescription"
+      },
+      {
+        "id": 5,
+        "type": "select",
+        "question": "opinionTowerThree.questTask5",
+        "options": [
+          "Das stimmt nicht.",
+          "Das nicht stimmt.",
+          "Das stimmt kein."
+        ],
+        "answer": "Das stimmt nicht.",
+        "tip": "opinionTowerThree.questDescription"
+      },
+      {
+        "id": 6,
+        "type": "input",
+        "question": "opinionTowerThree.questTask6",
+        "correctAnswer": "aber",
+        "tip": "opinionTowerThree.questDescription"
+      },
+      {
+        "id": 7,
+        "type": "readAndAnswer",
+        "question": "opinionTowerThree.questTask7",
+        "text": "Mia: „Ich finde, wir sollten am Samstag ans Meer fahren.“ Paul: „Da hast du recht, aber das Wetter wird schlecht.“ Mia: „Das stimmt. Dann gehen wir ins Museum.“",
+        "options": [
+          "ins Kino",
+          "ins Museum",
+          "ans Meer"
+        ],
+        "answer": "ins Museum",
+        "tip": "opinionTowerThree.questDescription"
+      },
+      {
+        "id": 8,
+        "type": "input",
+        "question": "opinionTowerThree.questTask8",
+        "correctAnswer": "haben",
+        "tip": "opinionTowerThree.questDescription"
+      },
+      {
+        "id": 9,
+        "type": "reorder",
+        "question": "opinionTowerThree.questTask10",
+        "words": [
+          "du",
+          "bist",
+          "hast",
+          "Da",
+          "recht",
+          "nicht"
+        ],
+        "correctOrder": [
+          "Da",
+          "hast",
+          "du",
+          "nicht",
+          "recht"
+        ],
+        "tip": "opinionTowerThree.questDescription"
+      },
+      {
+        "id": 10,
+        "type": "select",
+        "question": "opinionTowerThree.questTask11",
+        "options": [
+          "Du hast recht, das ist eine gute Idee.",
+          "Du hast recht, das eine gute Idee ist.",
+          "Du bist recht, das ist eine gute Idee."
+        ],
+        "answer": "Du hast recht, das ist eine gute Idee.",
+        "tip": "opinionTowerThree.questDescription"
+      },
+      {
+        "id": 11,
+        "type": "input",
+        "question": "opinionTowerTwo.questTask9",
+        "correctAnswer": "nach",
+        "tip": "opinionTowerTwo.questDescription",
+        "reviewOf": "opinion-tower-two",
+        "reviewLand": "opinion-tower"
+      },
+      {
+        "id": 12,
+        "type": "input",
+        "question": "wordForgeSeven.questTask12",
+        "correctAnswer": "unfreundlich",
+        "tip": "wordForgeSeven.questDescription",
+        "reviewOf": "word-forge-seven",
+        "reviewLand": "word-forge"
+      },
+      {
+        "id": 13,
+        "type": "input",
+        "question": "wordForgeFour.questTask13",
+        "correctAnswer": "machbar",
+        "tip": "wordForgeFour.questDescription",
+        "reviewOf": "word-forge-four",
+        "reviewLand": "word-forge"
+      },
+      {
+        "id": 14,
+        "type": "input",
+        "question": "opinionTowerThree.questTask14",
+        "correctAnswer": "ist",
+        "tip": "opinionTowerThree.questDescription"
+      },
+      {
+        "id": 15,
+        "type": "input",
+        "question": "opinionTowerThree.questTask15",
+        "correctAnswer": "frische",
+        "tip": "opinionTowerThree.questDescription"
+      }
+    ]
+  },
+  {
+    "questId": "opinion-tower-four",
+    "title": "opinionTowerFour.questTitle",
+    "progress": "0/15",
+    "description": "opinionTowerFour.questDescription",
+    "conditions": {
+      "goal": "opinionTowerFour.questGoal",
+      "minCorrect": 15,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
+    "vocabulary": [
+      {
+        "word": "wohl",
+        "translation-ru": "наверное, видимо",
+        "translation-en": "probably",
+        "translation-uk": "мабуть, певно",
+        "translation-pl": "pewnie, chyba",
+        "translation-es": "seguramente",
+        "translation-fr": "sans doute",
+        "translation-tr": "herhalde",
+        "translation-ro": "pesemne",
+        "translation-uz": "shekilli",
+        "translation-hi": "शायद, लगता है",
+        "translation-ar": "لعلّ"
+      },
+      {
+        "word": "stimmen",
+        "translation-ru": "быть верным (о словах)",
+        "translation-en": "to be true",
+        "translation-uk": "бути правдою",
+        "translation-pl": "zgadzać się (o faktach)",
+        "translation-es": "ser cierto",
+        "translation-fr": "être vrai",
+        "translation-tr": "doğru olmak",
+        "translation-ro": "a fi adevărat",
+        "translation-uz": "to‘g‘ri bo‘lmoq",
+        "translation-hi": "सच होना",
+        "translation-ar": "يكون صحيحًا"
+      },
+      {
+        "word": "die Meinung",
+        "translation-ru": "мнение",
+        "translation-en": "opinion",
+        "translation-uk": "думка",
+        "translation-pl": "opinia",
+        "translation-es": "la opinión",
+        "translation-fr": "l’avis",
+        "translation-tr": "fikir, görüş",
+        "translation-ro": "părerea",
+        "translation-uz": "fikr",
+        "translation-hi": "राय",
+        "translation-ar": "الرأي"
+      },
+      {
+        "word": "unfreundlich",
+        "translation-ru": "неприветливый, грубый",
+        "translation-en": "unfriendly",
+        "translation-uk": "неприязний, грубий",
+        "translation-pl": "nieuprzejmy",
+        "translation-es": "antipático",
+        "translation-fr": "désagréable",
+        "translation-tr": "kaba, soğuk",
+        "translation-ro": "neprietenos",
+        "translation-uz": "qo‘pol, xushmuomala emas",
+        "translation-hi": "रूखा",
+        "translation-ar": "غير ودود"
+      },
+      {
+        "word": "die Pünktlichkeit",
+        "translation-ru": "пунктуальность",
+        "translation-en": "punctuality",
+        "translation-uk": "пунктуальність",
+        "translation-pl": "punktualność",
+        "translation-es": "la puntualidad",
+        "translation-fr": "la ponctualité",
+        "translation-tr": "dakiklik",
+        "translation-ro": "punctualitatea",
+        "translation-uz": "vaqtga rioya qilish",
+        "translation-hi": "समय की पाबंदी",
+        "translation-ar": "الالتزام بالمواعيد"
+      }
+    ],
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "opinionTowerFour.questTask1",
+        "options": [
+          "Er ist wohl krank sein.",
+          "Er wird wohl krank ist.",
+          "Er wird wohl krank sein."
+        ],
+        "answer": "Er wird wohl krank sein.",
+        "tip": "opinionTowerFour.questDescription"
+      },
+      {
+        "id": 2,
+        "type": "input",
+        "question": "opinionTowerFour.questTask2",
+        "correctAnswer": "sein",
+        "tip": "opinionTowerFour.questDescription"
+      },
+      {
+        "id": 3,
+        "type": "input",
+        "question": "opinionTowerFour.questTask3",
+        "correctAnswer": "wird",
+        "tip": "opinionTowerFour.questDescription"
+      },
+      {
+        "id": 4,
+        "type": "reorder",
+        "question": "opinionTowerFour.questTask4",
+        "words": [
+          "sein",
+          "zu",
+          "werden",
+          "Sie",
+          "schon",
+          "Hause",
+          "wird",
+          "wohl"
+        ],
+        "correctOrder": [
+          "Sie",
+          "werden",
+          "wohl",
+          "schon",
+          "zu",
+          "Hause",
+          "sein"
+        ],
+        "tip": "opinionTowerFour.questDescription"
+      },
+      {
+        "id": 5,
+        "type": "select",
+        "question": "opinionTowerFour.questTask5",
+        "options": [
+          "Der Bus werden wohl zu spät kommen.",
+          "Der Bus wird wohl zu spät kommen.",
+          "Der Bus wird wohl zu spät kommt."
+        ],
+        "answer": "Der Bus wird wohl zu spät kommen.",
+        "tip": "opinionTowerFour.questDescription"
+      },
+      {
+        "id": 6,
+        "type": "input",
+        "question": "opinionTowerFour.questTask6",
+        "correctAnswer": "wohl",
+        "tip": "opinionTowerFour.questDescription"
+      },
+      {
+        "id": 7,
+        "type": "readAndAnswer",
+        "question": "opinionTowerFour.questTask7",
+        "text": "Es klingelt. Mama sagt: „Das wird wohl Oma sein. Sie wollte heute kommen.“ Aber vor der Tür steht Onkel Max.",
+        "options": [
+          "Onkel Max",
+          "der Nachbar",
+          "Oma"
+        ],
+        "answer": "Onkel Max",
+        "tip": "opinionTowerFour.questDescription"
+      },
+      {
+        "id": 8,
+        "type": "input",
+        "question": "opinionTowerFour.questTask8",
+        "correctAnswer": "wirst",
+        "tip": "opinionTowerFour.questDescription"
+      },
+      {
+        "id": 9,
+        "type": "reorder",
+        "question": "opinionTowerFour.questTask10",
+        "words": [
+          "wird",
+          "wohl",
+          "Sie",
+          "sein",
+          "Oma",
+          "ist",
+          "bei",
+          "ihrer"
+        ],
+        "correctOrder": [
+          "Sie",
+          "wird",
+          "wohl",
+          "bei",
+          "ihrer",
+          "Oma",
+          "sein"
+        ],
+        "tip": "opinionTowerFour.questDescription"
+      },
+      {
+        "id": 10,
+        "type": "select",
+        "question": "opinionTowerFour.questTask11",
+        "options": [
+          "Der Schlüssel wird wohl in die Küche liegen.",
+          "Der Schlüssel wird wohl in der Küche liegen.",
+          "Der Schlüssel wird wohl in der Küche liegt."
+        ],
+        "answer": "Der Schlüssel wird wohl in der Küche liegen.",
+        "tip": "opinionTowerFour.questDescription"
+      },
+      {
+        "id": 11,
+        "type": "input",
+        "question": "opinionTowerThree.questTask9",
+        "correctAnswer": "nicht",
+        "tip": "opinionTowerThree.questDescription",
+        "reviewOf": "opinion-tower-three",
+        "reviewLand": "opinion-tower"
+      },
+      {
+        "id": 12,
+        "type": "input",
+        "question": "wordForgeEight.questTask12",
+        "correctAnswer": "Pünktlichkeit",
+        "tip": "wordForgeEight.questDescription",
+        "reviewOf": "word-forge-eight",
+        "reviewLand": "word-forge"
+      },
+      {
+        "id": 13,
+        "type": "input",
+        "question": "wordForgeFive.questTask13",
+        "correctAnswer": "unfreundlich",
+        "tip": "wordForgeFive.questDescription",
+        "reviewOf": "word-forge-five",
+        "reviewLand": "word-forge"
+      },
+      {
+        "id": 14,
+        "type": "input",
+        "question": "opinionTowerFour.questTask14",
+        "correctAnswer": "Meinung",
+        "tip": "opinionTowerFour.questDescription"
+      },
+      {
+        "id": 15,
+        "type": "input",
+        "question": "opinionTowerFour.questTask15",
+        "correctAnswer": "fahren",
+        "tip": "opinionTowerFour.questDescription"
+      }
+    ]
+  },
+  {
+    "questId": "opinion-tower-five",
+    "title": "opinionTowerFive.questTitle",
+    "progress": "0/15",
+    "description": "opinionTowerFive.questDescription",
+    "conditions": {
+      "goal": "opinionTowerFive.questGoal",
+      "minCorrect": 15,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
+    "vocabulary": [
+      {
+        "word": "wahrscheinlich",
+        "translation-ru": "вероятно",
+        "translation-en": "probably",
+        "translation-uk": "ймовірно",
+        "translation-pl": "prawdopodobnie",
+        "translation-es": "probablemente",
+        "translation-fr": "probablement",
+        "translation-tr": "muhtemelen",
+        "translation-ro": "probabil",
+        "translation-uz": "ehtimol",
+        "translation-hi": "संभवतः",
+        "translation-ar": "على الأرجح"
+      },
+      {
+        "word": "bestimmt",
+        "translation-ru": "наверняка, точно",
+        "translation-en": "surely, certainly",
+        "translation-uk": "напевно, точно",
+        "translation-pl": "na pewno",
+        "translation-es": "sin duda",
+        "translation-fr": "sûrement",
+        "translation-tr": "kesinlikle",
+        "translation-ro": "cu siguranță",
+        "translation-uz": "albatta",
+        "translation-hi": "ज़रूर",
+        "translation-ar": "بالتأكيد"
+      },
+      {
+        "word": "sicher",
+        "translation-ru": "уверенный",
+        "translation-en": "sure",
+        "translation-uk": "впевнений",
+        "translation-pl": "pewny",
+        "translation-es": "seguro",
+        "translation-fr": "sûr",
+        "translation-tr": "emin",
+        "translation-ro": "sigur",
+        "translation-uz": "amin, ishonchli",
+        "translation-hi": "निश्चित",
+        "translation-ar": "متأكد"
+      },
+      {
+        "word": "wohl",
+        "translation-ru": "наверное, видимо",
+        "translation-en": "probably",
+        "translation-uk": "мабуть, певно",
+        "translation-pl": "pewnie, chyba",
+        "translation-es": "seguramente",
+        "translation-fr": "sans doute",
+        "translation-tr": "herhalde",
+        "translation-ro": "pesemne",
+        "translation-uz": "shekilli",
+        "translation-hi": "शायद, लगता है",
+        "translation-ar": "لعلّ"
+      },
+      {
+        "word": "die Lage",
+        "translation-ru": "расположение",
+        "translation-en": "location",
+        "translation-uk": "розташування",
+        "translation-pl": "położenie",
+        "translation-es": "la ubicación",
+        "translation-fr": "la situation",
+        "translation-tr": "konum",
+        "translation-ro": "amplasarea",
+        "translation-uz": "joylashuv",
+        "translation-hi": "जगह",
+        "translation-ar": "الموقع"
+      }
+    ],
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "opinionTowerFive.questTask1",
+        "options": [
+          "Er kommt bestimmen.",
+          "Er bestimmt kommt.",
+          "Er kommt bestimmt."
+        ],
+        "answer": "Er kommt bestimmt.",
+        "tip": "opinionTowerFive.questDescription"
+      },
+      {
+        "id": 2,
+        "type": "input",
+        "question": "opinionTowerFive.questTask2",
+        "correctAnswer": "Vielleicht",
+        "tip": "opinionTowerFive.questDescription"
+      },
+      {
+        "id": 3,
+        "type": "input",
+        "question": "opinionTowerFive.questTask3",
+        "correctAnswer": "wahrscheinlich",
+        "tip": "opinionTowerFive.questDescription"
+      },
+      {
+        "id": 4,
+        "type": "reorder",
+        "question": "opinionTowerFive.questTask4",
+        "words": [
+          "bin",
+          "ob",
+          "die",
+          "du",
+          "Prüfung",
+          "bestehst",
+          "dass",
+          "Ich",
+          "sicher"
+        ],
+        "correctOrder": [
+          "Ich",
+          "bin",
+          "sicher",
+          "dass",
+          "du",
+          "die",
+          "Prüfung",
+          "bestehst"
+        ],
+        "tip": "opinionTowerFive.questDescription"
+      },
+      {
+        "id": 5,
+        "type": "select",
+        "question": "opinionTowerFive.questTask5",
+        "options": [
+          "Ich bin nicht sicher, ob er kommt.",
+          "Ich bin nicht sicher, wenn er kommt.",
+          "Ich bin nicht sicher, ob kommt er."
+        ],
+        "answer": "Ich bin nicht sicher, ob er kommt.",
+        "tip": "opinionTowerFive.questDescription"
+      },
+      {
+        "id": 6,
+        "type": "input",
+        "question": "opinionTowerFive.questTask6",
+        "correctAnswer": "bestimmt",
+        "tip": "opinionTowerFive.questDescription"
+      },
+      {
+        "id": 7,
+        "type": "readAndAnswer",
+        "question": "opinionTowerFive.questTask7",
+        "text": "Morgen hat Jan eine Prüfung. Er ist nicht sicher, ob er alles weiß. Seine Freundin sagt: „Du hast viel gelernt. Du bestehst bestimmt!“",
+        "options": [
+          "Er besteht bestimmt.",
+          "Er hat zu wenig gelernt.",
+          "Er besteht wahrscheinlich nicht."
+        ],
+        "answer": "Er besteht bestimmt.",
+        "tip": "opinionTowerFive.questDescription"
+      },
+      {
+        "id": 8,
+        "type": "input",
+        "question": "opinionTowerFive.questTask8",
+        "correctAnswer": "ob",
+        "tip": "opinionTowerFive.questDescription"
+      },
+      {
+        "id": 9,
+        "type": "reorder",
+        "question": "opinionTowerFive.questTask10",
+        "words": [
+          "kommen",
+          "ob",
+          "später",
+          "Wir",
+          "wahrscheinlich"
+        ],
+        "correctOrder": [
+          "Wir",
+          "kommen",
+          "wahrscheinlich",
+          "später"
+        ],
+        "tip": "opinionTowerFive.questDescription"
+      },
+      {
+        "id": 10,
+        "type": "select",
+        "question": "opinionTowerFive.questTask11",
+        "options": [
+          "Ich bin sicher, dass ihr das Geschenk gefällt.",
+          "Ich bin sicher, dass das Geschenk gefällt ihr.",
+          "Ich bin sicher, dass ihr das Geschenk gefallen."
+        ],
+        "answer": "Ich bin sicher, dass ihr das Geschenk gefällt.",
+        "tip": "opinionTowerFive.questDescription"
+      },
+      {
+        "id": 11,
+        "type": "input",
+        "question": "opinionTowerFour.questTask9",
+        "correctAnswer": "haben",
+        "tip": "opinionTowerFour.questDescription",
+        "reviewOf": "opinion-tower-four",
+        "reviewLand": "opinion-tower"
+      },
+      {
+        "id": 12,
+        "type": "input",
+        "question": "opinionTowerOne.questTask12",
+        "correctAnswer": "solltest",
+        "tip": "opinionTowerOne.questDescription",
+        "reviewOf": "opinion-tower-one",
+        "reviewLand": "opinion-tower"
+      },
+      {
+        "id": 13,
+        "type": "input",
+        "question": "wordForgeSix.questTask13",
+        "correctAnswer": "unpünktlich",
+        "tip": "wordForgeSix.questDescription",
+        "reviewOf": "word-forge-six",
+        "reviewLand": "word-forge"
+      },
+      {
+        "id": 14,
+        "type": "input",
+        "question": "opinionTowerFive.questTask14",
+        "correctAnswer": "sein",
+        "tip": "opinionTowerFive.questDescription"
+      },
+      {
+        "id": 15,
+        "type": "input",
+        "question": "opinionTowerFive.questTask15",
+        "correctAnswer": "der",
+        "tip": "opinionTowerFive.questDescription"
+      }
+    ]
+  },
+  {
+    "questId": "opinion-tower-six",
+    "title": "opinionTowerSix.questTitle",
+    "progress": "0/15",
+    "description": "opinionTowerSix.questDescription",
+    "conditions": {
+      "goal": "opinionTowerSix.questGoal",
+      "minCorrect": 15,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
+    "vocabulary": [
+      {
+        "word": "der Vorteil",
+        "translation-ru": "преимущество, плюс",
+        "translation-en": "advantage",
+        "translation-uk": "перевага",
+        "translation-pl": "zaleta",
+        "translation-es": "la ventaja",
+        "translation-fr": "l’avantage",
+        "translation-tr": "avantaj",
+        "translation-ro": "avantajul",
+        "translation-uz": "afzallik",
+        "translation-hi": "फ़ायदा",
+        "translation-ar": "الميزة"
+      },
+      {
+        "word": "der Nachteil",
+        "translation-ru": "недостаток, минус",
+        "translation-en": "disadvantage",
+        "translation-uk": "недолік",
+        "translation-pl": "wada",
+        "translation-es": "la desventaja",
+        "translation-fr": "l’inconvénient",
+        "translation-tr": "dezavantaj",
+        "translation-ro": "dezavantajul",
+        "translation-uz": "kamchilik",
+        "translation-hi": "नुक़सान",
+        "translation-ar": "العيب"
+      },
+      {
+        "word": "einerseits… andererseits",
+        "translation-ru": "с одной стороны… с другой стороны",
+        "translation-en": "on the one hand… on the other hand",
+        "translation-uk": "з одного боку… з іншого боку",
+        "translation-pl": "z jednej strony… z drugiej strony",
+        "translation-es": "por un lado… por otro lado",
+        "translation-fr": "d’un côté… de l’autre",
+        "translation-tr": "bir yandan… öte yandan",
+        "translation-ro": "pe de o parte… pe de altă parte",
+        "translation-uz": "bir tomondan… ikkinchi tomondan",
+        "translation-hi": "एक ओर… दूसरी ओर",
+        "translation-ar": "من جهة… ومن جهة أخرى"
+      },
+      {
+        "word": "das Forum",
+        "translation-ru": "форум",
+        "translation-en": "forum",
+        "translation-uk": "форум",
+        "translation-pl": "forum",
+        "translation-es": "el foro",
+        "translation-fr": "le forum",
+        "translation-tr": "forum",
+        "translation-ro": "forumul",
+        "translation-uz": "forum",
+        "translation-hi": "फ़ोरम",
+        "translation-ar": "المنتدى"
+      },
+      {
+        "word": "die Meinung",
+        "translation-ru": "мнение",
+        "translation-en": "opinion",
+        "translation-uk": "думка",
+        "translation-pl": "opinia",
+        "translation-es": "la opinión",
+        "translation-fr": "l’avis",
+        "translation-tr": "fikir, görüş",
+        "translation-ro": "părerea",
+        "translation-uz": "fikr",
+        "translation-hi": "राय",
+        "translation-ar": "الرأي"
+      }
+    ],
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "opinionTowerSix.questTask1",
+        "options": [
+          "Ein Vorteil ist, dass die Wohnung liegt im Zentrum.",
+          "Ein Vorteil ist, dass liegt die Wohnung im Zentrum.",
+          "Ein Vorteil ist, dass die Wohnung im Zentrum liegt."
+        ],
+        "answer": "Ein Vorteil ist, dass die Wohnung im Zentrum liegt.",
+        "tip": "opinionTowerSix.questDescription"
+      },
+      {
+        "id": 2,
+        "type": "input",
+        "question": "opinionTowerSix.questTask2",
+        "correctAnswer": "Nachteil",
+        "tip": "opinionTowerSix.questDescription"
+      },
+      {
+        "id": 3,
+        "type": "input",
+        "question": "opinionTowerSix.questTask3",
+        "correctAnswer": "Einerseits",
+        "tip": "opinionTowerSix.questDescription"
+      },
+      {
+        "id": 4,
+        "type": "reorder",
+        "question": "opinionTowerSix.questTask4",
+        "words": [
+          "Zeit",
+          "wenig",
+          "Einerseits",
+          "Andererseits",
+          "ich",
+          "habe"
+        ],
+        "correctOrder": [
+          "Andererseits",
+          "habe",
+          "ich",
+          "wenig",
+          "Zeit"
+        ],
+        "tip": "opinionTowerSix.questDescription"
+      },
+      {
+        "id": 5,
+        "type": "select",
+        "question": "opinionTowerSix.questTask5",
+        "options": [
+          "Einerseits die Stadt ist schön, andererseits sie ist sehr laut.",
+          "Einerseits ist die Stadt schön, andererseits sie ist sehr laut.",
+          "Einerseits ist die Stadt schön, andererseits ist sie sehr laut."
+        ],
+        "answer": "Einerseits ist die Stadt schön, andererseits ist sie sehr laut.",
+        "tip": "opinionTowerSix.questDescription"
+      },
+      {
+        "id": 6,
+        "type": "input",
+        "question": "opinionTowerSix.questTask6",
+        "correctAnswer": "Vorteil",
+        "tip": "opinionTowerSix.questDescription"
+      },
+      {
+        "id": 7,
+        "type": "readAndAnswer",
+        "question": "opinionTowerSix.questTask7",
+        "text": "Forum: Ich wohne seit einem Jahr auf dem Land. Ein Vorteil ist, dass es hier sehr ruhig ist. Ein Nachteil ist, dass der Bus nur zweimal am Tag fährt. Trotzdem gefällt es mir hier. Lena",
+        "options": [
+          "Es gibt keine Bäckerei.",
+          "Der Bus fährt nur zweimal am Tag.",
+          "Es ist sehr laut."
+        ],
+        "answer": "Der Bus fährt nur zweimal am Tag.",
+        "tip": "opinionTowerSix.questDescription"
+      },
+      {
+        "id": 8,
+        "type": "input",
+        "question": "opinionTowerSix.questTask8",
+        "correctAnswer": "Andererseits",
+        "tip": "opinionTowerSix.questDescription"
+      },
+      {
+        "id": 9,
+        "type": "reorder",
+        "question": "opinionTowerSix.questTask10",
+        "words": [
+          "dass",
+          "Vorteil",
+          "ist",
+          "ist",
+          "Ein",
+          "ruhig",
+          "hier",
+          "Nachteil",
+          "es"
+        ],
+        "correctOrder": [
+          "Ein",
+          "Vorteil",
+          "ist",
+          "dass",
+          "es",
+          "hier",
+          "ruhig",
+          "ist"
+        ],
+        "tip": "opinionTowerSix.questDescription"
+      },
+      {
+        "id": 10,
+        "type": "select",
+        "question": "opinionTowerSix.questTask11",
+        "options": [
+          "Ein Nachteil ist, dass ich nicht Auto habe.",
+          "Ein Nachteil ist, dass ich kein Auto habe.",
+          "Ein Nachteil ist, dass ich habe kein Auto."
+        ],
+        "answer": "Ein Nachteil ist, dass ich kein Auto habe.",
+        "tip": "opinionTowerSix.questDescription"
+      },
+      {
+        "id": 11,
+        "type": "input",
+        "question": "opinionTowerFive.questTask9",
+        "correctAnswer": "Vielleicht",
+        "tip": "opinionTowerFive.questDescription",
+        "reviewOf": "opinion-tower-five",
+        "reviewLand": "opinion-tower"
+      },
+      {
+        "id": 12,
+        "type": "input",
+        "question": "opinionTowerTwo.questTask12",
+        "correctAnswer": "kommt",
+        "tip": "opinionTowerTwo.questDescription",
+        "reviewOf": "opinion-tower-two",
+        "reviewLand": "opinion-tower"
+      },
+      {
+        "id": 13,
+        "type": "input",
+        "question": "wordForgeSeven.questTask13",
+        "correctAnswer": "Lösung",
+        "tip": "wordForgeSeven.questDescription",
+        "reviewOf": "word-forge-seven",
+        "reviewLand": "word-forge"
+      },
+      {
+        "id": 14,
+        "type": "input",
+        "question": "opinionTowerSix.questTask14",
+        "correctAnswer": "sicher",
+        "tip": "opinionTowerSix.questDescription"
+      },
+      {
+        "id": 15,
+        "type": "input",
+        "question": "opinionTowerSix.questTask15",
+        "correctAnswer": "ist",
+        "tip": "opinionTowerSix.questDescription"
+      }
+    ]
+  },
+  {
+    "questId": "opinion-tower-seven",
+    "title": "opinionTowerSeven.questTitle",
+    "progress": "0/15",
+    "description": "opinionTowerSeven.questDescription",
+    "conditions": {
+      "goal": "opinionTowerSeven.questGoal",
+      "minCorrect": 15,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
+    "vocabulary": [
+      {
+        "word": "das Land",
+        "translation-ru": "деревня, сельская местность",
+        "translation-en": "the country(side)",
+        "translation-uk": "село",
+        "translation-pl": "wieś",
+        "translation-es": "el campo",
+        "translation-fr": "la campagne",
+        "translation-tr": "kırsal",
+        "translation-ro": "satul, la țară",
+        "translation-uz": "qishloq",
+        "translation-hi": "गाँव, देहात",
+        "translation-ar": "الريف"
+      },
+      {
+        "word": "die Natur",
+        "translation-ru": "природа",
+        "translation-en": "nature",
+        "translation-uk": "природа",
+        "translation-pl": "przyroda",
+        "translation-es": "la naturaleza",
+        "translation-fr": "la nature",
+        "translation-tr": "doğa",
+        "translation-ro": "natura",
+        "translation-uz": "tabiat",
+        "translation-hi": "प्रकृति",
+        "translation-ar": "الطبيعة"
+      },
+      {
+        "word": "der Vorteil",
+        "translation-ru": "преимущество",
+        "translation-en": "advantage",
+        "translation-uk": "перевага",
+        "translation-pl": "zaleta",
+        "translation-es": "la ventaja",
+        "translation-fr": "l’avantage",
+        "translation-tr": "avantaj",
+        "translation-ro": "avantajul",
+        "translation-uz": "afzallik",
+        "translation-hi": "फ़ायदा",
+        "translation-ar": "الميزة"
+      },
+      {
+        "word": "der Nachteil",
+        "translation-ru": "недостаток",
+        "translation-en": "disadvantage",
+        "translation-uk": "недолік",
+        "translation-pl": "wada",
+        "translation-es": "la desventaja",
+        "translation-fr": "l’inconvénient",
+        "translation-tr": "dezavantaj",
+        "translation-ro": "dezavantajul",
+        "translation-uz": "kamchilik",
+        "translation-hi": "नुक़सान",
+        "translation-ar": "العيب"
+      },
+      {
+        "word": "ruhig",
+        "translation-ru": "тихий, спокойный",
+        "translation-en": "quiet",
+        "translation-uk": "тихий",
+        "translation-pl": "cichy",
+        "translation-es": "tranquilo",
+        "translation-fr": "calme",
+        "translation-tr": "sakin",
+        "translation-ro": "liniștit",
+        "translation-uz": "tinch",
+        "translation-hi": "शांत",
+        "translation-ar": "هادئ"
+      },
+      {
+        "word": "aufwachsen",
+        "translation-ru": "вырастать",
+        "translation-en": "to grow up",
+        "translation-uk": "виростати",
+        "translation-pl": "dorastać",
+        "translation-es": "crecer",
+        "translation-fr": "grandir",
+        "translation-tr": "büyümek",
+        "translation-ro": "a crește",
+        "translation-uz": "ulg‘aymoq",
+        "translation-hi": "बड़ा होना",
+        "translation-ar": "ينشأ"
+      }
+    ],
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "opinionTowerSeven.questTask1",
+        "options": [
+          "Ich finde, dass ist das Leben auf dem Land ruhiger.",
+          "Ich finde, dass das Leben auf dem Land ist ruhiger.",
+          "Ich finde, dass das Leben auf dem Land ruhiger ist."
+        ],
+        "answer": "Ich finde, dass das Leben auf dem Land ruhiger ist.",
+        "tip": "opinionTowerSeven.questDescription"
+      },
+      {
+        "id": 2,
+        "type": "input",
+        "question": "opinionTowerSeven.questTask2",
+        "correctAnswer": "ist",
+        "tip": "opinionTowerSeven.questDescription"
+      },
+      {
+        "id": 3,
+        "type": "input",
+        "question": "opinionTowerSeven.questTask3",
+        "correctAnswer": "Vorteil",
+        "tip": "opinionTowerSeven.questDescription"
+      },
+      {
+        "id": 4,
+        "type": "reorder",
+        "question": "opinionTowerSeven.questTask4",
+        "words": [
+          "näher",
+          "ist",
+          "bist",
+          "alles",
+          "in",
+          "Stadt",
+          "Du",
+          "der",
+          "hast",
+          "recht"
+        ],
+        "correctOrder": [
+          "Du",
+          "hast",
+          "recht",
+          "in",
+          "der",
+          "Stadt",
+          "ist",
+          "alles",
+          "näher"
+        ],
+        "tip": "opinionTowerSeven.questDescription"
+      },
+      {
+        "id": 5,
+        "type": "select",
+        "question": "opinionTowerSeven.questTask5",
+        "options": [
+          "Einerseits die Stadt ist interessant, andererseits sie ist teuer.",
+          "Einerseits ist die Stadt interessant, andererseits sie ist teuer.",
+          "Einerseits ist die Stadt interessant, andererseits ist sie teuer."
+        ],
+        "answer": "Einerseits ist die Stadt interessant, andererseits ist sie teuer.",
+        "tip": "opinionTowerSeven.questDescription"
+      },
+      {
+        "id": 6,
+        "type": "input",
+        "question": "opinionTowerSeven.questTask6",
+        "correctAnswer": "dass",
+        "tip": "opinionTowerSeven.questDescription"
+      },
+      {
+        "id": 7,
+        "type": "readAndAnswer",
+        "question": "opinionTowerSeven.questTask7",
+        "text": "Paul wohnt in Berlin. Er sagt: „Einerseits liebe ich die Stadt, denn hier gibt es Kinos und Cafés. Andererseits ist es oft zu laut. Meine Schwester wohnt auf dem Land. Ein Nachteil dort ist, dass der Bus nur zweimal am Tag fährt.“",
+        "options": [
+          "Der Bus fährt selten.",
+          "Es gibt zu viele Cafés.",
+          "Es ist zu laut."
+        ],
+        "answer": "Der Bus fährt selten.",
+        "tip": "opinionTowerSeven.questDescription"
+      },
+      {
+        "id": 8,
+        "type": "input",
+        "question": "opinionTowerSeven.questTask8",
+        "correctAnswer": "Nachteil",
+        "tip": "opinionTowerSeven.questDescription"
+      },
+      {
+        "id": 9,
+        "type": "reorder",
+        "question": "opinionTowerSeven.questTask10",
+        "words": [
+          "Leute",
+          "Meinung",
+          "besser",
+          "für",
+          "Meiner",
+          "dass",
+          "die",
+          "junge",
+          "ist",
+          "nach",
+          "Stadt"
+        ],
+        "correctOrder": [
+          "Meiner",
+          "Meinung",
+          "nach",
+          "ist",
+          "die",
+          "Stadt",
+          "besser",
+          "für",
+          "junge",
+          "Leute"
+        ],
+        "tip": "opinionTowerSeven.questDescription"
+      },
+      {
+        "id": 10,
+        "type": "select",
+        "question": "opinionTowerSeven.questTask11",
+        "options": [
+          "Du hast nicht recht, auf dem Land es gibt auch Arbeit.",
+          "Du hast nicht recht, auf dem Land gibt es auch Arbeit.",
+          "Du bist nicht recht, auf dem Land gibt es auch Arbeit."
+        ],
+        "answer": "Du hast nicht recht, auf dem Land gibt es auch Arbeit.",
+        "tip": "opinionTowerSeven.questDescription"
+      },
+      {
+        "id": 11,
+        "type": "input",
+        "question": "opinionTowerSix.questTask9",
+        "correctAnswer": "dass",
+        "tip": "opinionTowerSix.questDescription",
+        "reviewOf": "opinion-tower-six",
+        "reviewLand": "opinion-tower"
+      },
+      {
+        "id": 12,
+        "type": "input",
+        "question": "opinionTowerThree.questTask12",
+        "correctAnswer": "ganz",
+        "tip": "opinionTowerThree.questDescription",
+        "reviewOf": "opinion-tower-three",
+        "reviewLand": "opinion-tower"
+      },
+      {
+        "id": 13,
+        "type": "input",
+        "question": "wordForgeEight.questTask13",
+        "correctAnswer": "bewegen",
+        "tip": "wordForgeEight.questDescription",
+        "reviewOf": "word-forge-eight",
+        "reviewLand": "word-forge"
+      },
+      {
+        "id": 14,
+        "type": "input",
+        "question": "opinionTowerSeven.questTask14",
+        "correctAnswer": "hätte",
+        "tip": "opinionTowerSeven.questDescription"
+      },
+      {
+        "id": 15,
+        "type": "input",
+        "question": "opinionTowerSeven.questTask15",
+        "correctAnswer": "der",
+        "tip": "opinionTowerSeven.questDescription"
+      }
+    ]
+  },
+  {
+    "questId": "opinion-tower-eight",
+    "title": "opinionTowerEight.questTitle",
+    "progress": "0/15",
+    "description": "opinionTowerEight.questDescription",
+    "conditions": {
+      "goal": "opinionTowerEight.questGoal",
+      "minCorrect": 15,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
+    "vocabulary": [
+      {
+        "word": "die Zukunft",
+        "translation-ru": "будущее",
+        "translation-en": "future",
+        "translation-uk": "майбутнє",
+        "translation-pl": "przyszłość",
+        "translation-es": "el futuro",
+        "translation-fr": "l’avenir",
+        "translation-tr": "gelecek",
+        "translation-ro": "viitorul",
+        "translation-uz": "kelajak",
+        "translation-hi": "भविष्य",
+        "translation-ar": "المستقبل"
+      },
+      {
+        "word": "wahrscheinlich",
+        "translation-ru": "вероятно",
+        "translation-en": "probably",
+        "translation-uk": "імовірно",
+        "translation-pl": "prawdopodobnie",
+        "translation-es": "probablemente",
+        "translation-fr": "probablement",
+        "translation-tr": "muhtemelen",
+        "translation-ro": "probabil",
+        "translation-uz": "ehtimol",
+        "translation-hi": "संभवतः",
+        "translation-ar": "على الأرجح"
+      },
+      {
+        "word": "bestimmt",
+        "translation-ru": "наверняка, точно",
+        "translation-en": "certainly",
+        "translation-uk": "напевно",
+        "translation-pl": "na pewno",
+        "translation-es": "seguro",
+        "translation-fr": "sûrement",
+        "translation-tr": "kesinlikle",
+        "translation-ro": "sigur",
+        "translation-uz": "albatta",
+        "translation-hi": "ज़रूर",
+        "translation-ar": "بالتأكيد"
+      },
+      {
+        "word": "das Spiel",
+        "translation-ru": "игра, матч",
+        "translation-en": "game, match",
+        "translation-uk": "гра, матч",
+        "translation-pl": "mecz",
+        "translation-es": "el partido",
+        "translation-fr": "le match",
+        "translation-tr": "maç",
+        "translation-ro": "meciul",
+        "translation-uz": "o‘yin",
+        "translation-hi": "मैच",
+        "translation-ar": "المباراة"
+      },
+      {
+        "word": "wohl",
+        "translation-ru": "наверное, видимо",
+        "translation-en": "probably",
+        "translation-uk": "мабуть, певно",
+        "translation-pl": "pewnie, chyba",
+        "translation-es": "seguramente",
+        "translation-fr": "sans doute",
+        "translation-tr": "herhalde",
+        "translation-ro": "pesemne",
+        "translation-uz": "shekilli",
+        "translation-hi": "शायद, लगता है",
+        "translation-ar": "لعلّ"
+      }
+    ],
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "opinionTowerEight.questTask1",
+        "options": [
+          "Am Wochenende wird es wohl schneit.",
+          "Am Wochenende es wird wohl schneien.",
+          "Am Wochenende wird es wohl schneien."
+        ],
+        "answer": "Am Wochenende wird es wohl schneien.",
+        "tip": "opinionTowerEight.questDescription"
+      },
+      {
+        "id": 2,
+        "type": "input",
+        "question": "opinionTowerEight.questTask2",
+        "correctAnswer": "Vielleicht",
+        "tip": "opinionTowerEight.questDescription"
+      },
+      {
+        "id": 3,
+        "type": "input",
+        "question": "opinionTowerEight.questTask3",
+        "correctAnswer": "sein",
+        "tip": "opinionTowerEight.questDescription"
+      },
+      {
+        "id": 4,
+        "type": "reorder",
+        "question": "opinionTowerEight.questTask4",
+        "words": [
+          "kommt",
+          "Ich",
+          "wenn",
+          "er",
+          "zum",
+          "ob",
+          "weiß",
+          "Spiel",
+          "nicht"
+        ],
+        "correctOrder": [
+          "Ich",
+          "weiß",
+          "nicht",
+          "ob",
+          "er",
+          "zum",
+          "Spiel",
+          "kommt"
+        ],
+        "tip": "opinionTowerEight.questDescription"
+      },
+      {
+        "id": 5,
+        "type": "select",
+        "question": "opinionTowerEight.questTask5",
+        "options": [
+          "Das bestimmt wird ein guter Tag.",
+          "Das wird bestimmt ein gutes Tag.",
+          "Das wird bestimmt ein guter Tag."
+        ],
+        "answer": "Das wird bestimmt ein guter Tag.",
+        "tip": "opinionTowerEight.questDescription"
+      },
+      {
+        "id": 6,
+        "type": "input",
+        "question": "opinionTowerEight.questTask6",
+        "correctAnswer": "wahrscheinlich",
+        "tip": "opinionTowerEight.questDescription"
+      },
+      {
+        "id": 7,
+        "type": "readAndAnswer",
+        "question": "opinionTowerEight.questTask7",
+        "text": "Tim wartet auf Lisa. Sie kommt nicht. Tim sagt: „Sie wird wohl noch krank sein. Gestern hatte sie Fieber. Vielleicht ruft sie später an. Ich weiß nicht, ob sie morgen kommt.“",
+        "options": [
+          "Sie ist im Urlaub.",
+          "Sie ist wahrscheinlich noch krank.",
+          "Sie hat keine Lust."
+        ],
+        "answer": "Sie ist wahrscheinlich noch krank.",
+        "tip": "opinionTowerEight.questDescription"
+      },
+      {
+        "id": 8,
+        "type": "input",
+        "question": "opinionTowerEight.questTask8",
+        "correctAnswer": "wirst",
+        "tip": "opinionTowerEight.questDescription"
+      },
+      {
+        "id": 9,
+        "type": "reorder",
+        "question": "opinionTowerEight.questTask10",
+        "words": [
+          "fahren",
+          "In",
+          "Zukunft",
+          "ob",
+          "der",
+          "wahrscheinlich",
+          "Auto",
+          "weniger",
+          "wir"
+        ],
+        "correctOrder": [
+          "In",
+          "der",
+          "Zukunft",
+          "fahren",
+          "wir",
+          "wahrscheinlich",
+          "weniger",
+          "Auto"
+        ],
+        "tip": "opinionTowerEight.questDescription"
+      },
+      {
+        "id": 10,
+        "type": "select",
+        "question": "opinionTowerEight.questTask11",
+        "options": [
+          "Er wird wohl müde sein.",
+          "Er wird wohl müde sind.",
+          "Er wird wohl müde ist."
+        ],
+        "answer": "Er wird wohl müde sein.",
+        "tip": "opinionTowerEight.questDescription"
+      },
+      {
+        "id": 11,
+        "type": "input",
+        "question": "opinionTowerSeven.questTask9",
+        "correctAnswer": "stimmt",
+        "tip": "opinionTowerSeven.questDescription",
+        "reviewOf": "opinion-tower-seven",
+        "reviewLand": "opinion-tower"
+      },
+      {
+        "id": 12,
+        "type": "input",
+        "question": "opinionTowerFour.questTask12",
+        "correctAnswer": "werden",
+        "tip": "opinionTowerFour.questDescription",
+        "reviewOf": "opinion-tower-four",
+        "reviewLand": "opinion-tower"
+      },
+      {
+        "id": 13,
+        "type": "input",
+        "question": "opinionTowerOne.questTask13",
+        "correctAnswer": "ist",
+        "tip": "opinionTowerOne.questDescription",
+        "reviewOf": "opinion-tower-one",
+        "reviewLand": "opinion-tower"
+      },
+      {
+        "id": 14,
+        "type": "input",
+        "question": "opinionTowerEight.questTask14",
+        "correctAnswer": "hast",
+        "tip": "opinionTowerEight.questDescription"
+      },
+      {
+        "id": 15,
+        "type": "input",
+        "question": "opinionTowerEight.questTask15",
+        "correctAnswer": "wäre",
+        "tip": "opinionTowerEight.questDescription"
+      }
+    ]
+  },
+  {
+    "questId": "opinion-tower-nine",
+    "title": "opinionTowerNine.questTitle",
+    "progress": "0/15",
+    "description": "opinionTowerNine.questDescription",
+    "conditions": {
+      "goal": "opinionTowerNine.questGoal",
+      "minCorrect": 15,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
+    "vocabulary": [
+      {
+        "word": "der Stau",
+        "translation-ru": "пробка",
+        "translation-en": "traffic jam",
+        "translation-uk": "затор",
+        "translation-pl": "korek",
+        "translation-es": "el atasco",
+        "translation-fr": "l’embouteillage",
+        "translation-tr": "trafik sıkışıklığı",
+        "translation-ro": "ambuteiajul",
+        "translation-uz": "tirbandlik",
+        "translation-hi": "जाम",
+        "translation-ar": "الازدحام المروري"
+      },
+      {
+        "word": "der Vorteil",
+        "translation-ru": "преимущество, плюс",
+        "translation-en": "advantage",
+        "translation-uk": "перевага",
+        "translation-pl": "zaleta",
+        "translation-es": "la ventaja",
+        "translation-fr": "l’avantage",
+        "translation-tr": "avantaj",
+        "translation-ro": "avantajul",
+        "translation-uz": "afzallik",
+        "translation-hi": "फ़ायदा",
+        "translation-ar": "الميزة"
+      },
+      {
+        "word": "wahrscheinlich",
+        "translation-ru": "вероятно",
+        "translation-en": "probably",
+        "translation-uk": "ймовірно",
+        "translation-pl": "prawdopodobnie",
+        "translation-es": "probablemente",
+        "translation-fr": "probablement",
+        "translation-tr": "muhtemelen",
+        "translation-ro": "probabil",
+        "translation-uz": "ehtimol",
+        "translation-hi": "संभवतः",
+        "translation-ar": "على الأرجح"
+      },
+      {
+        "word": "wohl",
+        "translation-ru": "наверное, видимо",
+        "translation-en": "probably",
+        "translation-uk": "мабуть, певно",
+        "translation-pl": "pewnie, chyba",
+        "translation-es": "seguramente",
+        "translation-fr": "sans doute",
+        "translation-tr": "herhalde",
+        "translation-ro": "pesemne",
+        "translation-uz": "shekilli",
+        "translation-hi": "शायद, लगता है",
+        "translation-ar": "لعلّ"
+      },
+      {
+        "word": "die Meinung",
+        "translation-ru": "мнение",
+        "translation-en": "opinion",
+        "translation-uk": "думка",
+        "translation-pl": "opinia",
+        "translation-es": "la opinión",
+        "translation-fr": "l’avis",
+        "translation-tr": "fikir, görüş",
+        "translation-ro": "părerea",
+        "translation-uz": "fikr",
+        "translation-hi": "राय",
+        "translation-ar": "الرأي"
+      }
+    ],
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "opinionTowerNine.questTask1",
+        "options": [
+          "Meiner Meinung nach bist du recht.",
+          "Meiner Meinung nach du hast recht.",
+          "Meiner Meinung nach hast du recht."
+        ],
+        "answer": "Meiner Meinung nach hast du recht.",
+        "tip": "opinionTowerNine.questDescription"
+      },
+      {
+        "id": 2,
+        "type": "input",
+        "question": "opinionTowerNine.questTask2",
+        "correctAnswer": "kommt",
+        "tip": "opinionTowerNine.questDescription"
+      },
+      {
+        "id": 3,
+        "type": "input",
+        "question": "opinionTowerNine.questTask3",
+        "correctAnswer": "stimmt",
+        "tip": "opinionTowerNine.questDescription"
+      },
+      {
+        "id": 4,
+        "type": "reorder",
+        "question": "opinionTowerNine.questTask4",
+        "words": [
+          "sein",
+          "wird",
+          "schon",
+          "Zug",
+          "Sie",
+          "im",
+          "ist",
+          "wohl"
+        ],
+        "correctOrder": [
+          "Sie",
+          "wird",
+          "wohl",
+          "schon",
+          "im",
+          "Zug",
+          "sein"
+        ],
+        "tip": "opinionTowerNine.questDescription"
+      },
+      {
+        "id": 5,
+        "type": "select",
+        "question": "opinionTowerNine.questTask5",
+        "options": [
+          "Ich bin sicher, dass wir pünktlich kommen an.",
+          "Ich bin sicher, ob wir pünktlich ankommen.",
+          "Ich bin sicher, dass wir pünktlich ankommen."
+        ],
+        "answer": "Ich bin sicher, dass wir pünktlich ankommen.",
+        "tip": "opinionTowerNine.questDescription"
+      },
+      {
+        "id": 6,
+        "type": "input",
+        "question": "opinionTowerNine.questTask6",
+        "correctAnswer": "Einerseits",
+        "tip": "opinionTowerNine.questDescription"
+      },
+      {
+        "id": 7,
+        "type": "readAndAnswer",
+        "question": "opinionTowerNine.questTask7",
+        "text": "Ben: „Was meinst du, sehen wir den Film heute?“ Lisa: „Ich weiß nicht. Er ist wahrscheinlich gut, aber ich bin sehr müde. Vielleicht morgen?“",
+        "options": [
+          "vielleicht morgen",
+          "nie",
+          "heute Abend"
+        ],
+        "answer": "vielleicht morgen",
+        "tip": "opinionTowerNine.questDescription"
+      },
+      {
+        "id": 8,
+        "type": "input",
+        "question": "opinionTowerNine.questTask8",
+        "correctAnswer": "Wie",
+        "tip": "opinionTowerNine.questDescription"
+      },
+      {
+        "id": 9,
+        "type": "select",
+        "question": "opinionTowerNine.questTask9",
+        "options": [
+          "Er wird wohl keinen Hunger haben.",
+          "Er wird wohl keine Hunger haben.",
+          "Er wird wohl keinen Hunger hat."
+        ],
+        "answer": "Er wird wohl keinen Hunger haben.",
+        "tip": "opinionTowerNine.questDescription"
+      },
+      {
+        "id": 10,
+        "type": "input",
+        "question": "opinionTowerNine.questTask10",
+        "correctAnswer": "ist",
+        "tip": "opinionTowerNine.questDescription"
+      },
+      {
+        "id": 11,
+        "type": "reorder",
+        "question": "opinionTowerNine.questTask11",
+        "words": [
+          "Meine",
+          "meiner",
+          "meine",
+          "sind",
+          "Meinung",
+          "Eltern",
+          "nicht"
+        ],
+        "correctOrder": [
+          "Meine",
+          "Eltern",
+          "sind",
+          "nicht",
+          "meiner",
+          "Meinung"
+        ],
+        "tip": "opinionTowerNine.questDescription"
+      },
+      {
+        "id": 12,
+        "type": "select",
+        "question": "opinionTowerNine.questTask12",
+        "options": [
+          "Vielleicht kommt ich später.",
+          "Vielleicht komme ich später.",
+          "Vielleicht ich komme später."
+        ],
+        "answer": "Vielleicht komme ich später.",
+        "tip": "opinionTowerNine.questDescription"
+      },
+      {
+        "id": 13,
+        "type": "readAndAnswer",
+        "question": "opinionTowerNine.questTask13",
+        "text": "Herr Braun schreibt: „Ich fahre jeden Tag mit dem Auto zur Arbeit. Einerseits ist das schnell, andererseits stehe ich oft im Stau. Meiner Meinung nach sollte es mehr Busse geben.“",
+        "options": [
+          "mehr Busse",
+          "mehr Straßen",
+          "mehr Autos"
+        ],
+        "answer": "mehr Busse",
+        "tip": "opinionTowerNine.questDescription"
+      },
+      {
+        "id": 14,
+        "type": "input",
+        "question": "opinionTowerNine.questTask14",
+        "correctAnswer": "solltest",
+        "tip": "opinionTowerNine.questDescription"
+      },
+      {
+        "id": 15,
+        "type": "input",
+        "question": "opinionTowerNine.questTask15",
+        "correctAnswer": "meinen",
+        "tip": "opinionTowerNine.questDescription"
+      }
+    ]
+  },
+  {
+    "questId": "opinion-tower-ten",
+    "title": "opinionTowerTen.questTitle",
+    "progress": "0/15",
+    "description": "opinionTowerTen.questDescription",
+    "conditions": {
+      "goal": "opinionTowerTen.questGoal",
+      "minCorrect": 15,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
+    "vocabulary": [
+      {
+        "word": "die Wahrheit",
+        "translation-ru": "правда",
+        "translation-en": "truth",
+        "translation-uk": "правда",
+        "translation-pl": "prawda",
+        "translation-es": "la verdad",
+        "translation-fr": "la vérité",
+        "translation-tr": "gerçek",
+        "translation-ro": "adevărul",
+        "translation-uz": "haqiqat",
+        "translation-hi": "सच",
+        "translation-ar": "الحقيقة"
+      },
+      {
+        "word": "wahrscheinlich",
+        "translation-ru": "вероятно",
+        "translation-en": "probably",
+        "translation-uk": "ймовірно",
+        "translation-pl": "prawdopodobnie",
+        "translation-es": "probablemente",
+        "translation-fr": "probablement",
+        "translation-tr": "muhtemelen",
+        "translation-ro": "probabil",
+        "translation-uz": "ehtimol",
+        "translation-hi": "संभवतः",
+        "translation-ar": "على الأرجح"
+      },
+      {
+        "word": "wohl",
+        "translation-ru": "наверное, видимо",
+        "translation-en": "probably",
+        "translation-uk": "мабуть, певно",
+        "translation-pl": "pewnie, chyba",
+        "translation-es": "seguramente",
+        "translation-fr": "sans doute",
+        "translation-tr": "herhalde",
+        "translation-ro": "pesemne",
+        "translation-uz": "shekilli",
+        "translation-hi": "शायद, लगता है",
+        "translation-ar": "لعلّ"
+      },
+      {
+        "word": "die Meinung",
+        "translation-ru": "мнение",
+        "translation-en": "opinion",
+        "translation-uk": "думка",
+        "translation-pl": "opinia",
+        "translation-es": "la opinión",
+        "translation-fr": "l’avis",
+        "translation-tr": "fikir, görüş",
+        "translation-ro": "părerea",
+        "translation-uz": "fikr",
+        "translation-hi": "राय",
+        "translation-ar": "الرأي"
+      },
+      {
+        "word": "das Forum",
+        "translation-ru": "форум",
+        "translation-en": "forum",
+        "translation-uk": "форум",
+        "translation-pl": "forum",
+        "translation-es": "el foro",
+        "translation-fr": "le forum",
+        "translation-tr": "forum",
+        "translation-ro": "forumul",
+        "translation-uz": "forum",
+        "translation-hi": "फ़ोरम",
+        "translation-ar": "المنتدى"
+      }
+    ],
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "opinionTowerTen.questTask1",
+        "options": [
+          "Ich glaube, er hätte gekommen, wenn er Zeit gehabt hätte.",
+          "Ich glaube, er wäre gekommen, wenn er Zeit gehabt wäre.",
+          "Ich glaube, er wäre gekommen, wenn er Zeit gehabt hätte."
+        ],
+        "answer": "Ich glaube, er wäre gekommen, wenn er Zeit gehabt hätte.",
+        "tip": "opinionTowerTen.questDescription"
+      },
+      {
+        "id": 2,
+        "type": "input",
+        "question": "opinionTowerTen.questTask2",
+        "correctAnswer": "desto",
+        "tip": "opinionTowerTen.questDescription"
+      },
+      {
+        "id": 3,
+        "type": "input",
+        "question": "opinionTowerTen.questTask3",
+        "correctAnswer": "nach",
+        "tip": "opinionTowerTen.questDescription"
+      },
+      {
+        "id": 4,
+        "type": "input",
+        "question": "opinionTowerTen.questTask4",
+        "correctAnswer": "wird",
+        "tip": "opinionTowerTen.questDescription"
+      },
+      {
+        "id": 5,
+        "type": "select",
+        "question": "opinionTowerTen.questTask5",
+        "options": [
+          "Ich finde, dass Kinder nicht nur lernen, sondern auch sollten spielen.",
+          "Ich finde, dass Kinder sollten nicht nur lernen, sondern auch spielen.",
+          "Ich finde, dass Kinder nicht nur lernen, sondern auch spielen sollten."
+        ],
+        "answer": "Ich finde, dass Kinder nicht nur lernen, sondern auch spielen sollten.",
+        "tip": "opinionTowerTen.questDescription"
+      },
+      {
+        "id": 6,
+        "type": "input",
+        "question": "opinionTowerTen.questTask6",
+        "correctAnswer": "an",
+        "tip": "opinionTowerTen.questDescription"
+      },
+      {
+        "id": 7,
+        "type": "readAndAnswer",
+        "question": "opinionTowerTen.questTask7",
+        "text": "Forum: Sollte man in einer großen Stadt wohnen? Maria: „Einerseits gibt es in der Stadt viele Kinos und Restaurants, andererseits ist das Leben dort teuer. Ich wohne lieber auf dem Land, weil es dort ruhig ist.“",
+        "options": [
+          "am Meer",
+          "nicht in der Stadt",
+          "in der Stadt"
+        ],
+        "answer": "nicht in der Stadt",
+        "tip": "opinionTowerTen.questDescription"
+      },
+      {
+        "id": 8,
+        "type": "input",
+        "question": "opinionTowerTen.questTask8",
+        "correctAnswer": "frisches",
+        "tip": "opinionTowerTen.questDescription"
+      },
+      {
+        "id": 9,
+        "type": "reorder",
+        "question": "opinionTowerTen.questTask9",
+        "words": [
+          "davon",
+          "weiß",
+          "er",
+          "sicher",
+          "daran",
+          "bin",
+          "Ich",
+          "dass"
+        ],
+        "correctOrder": [
+          "Ich",
+          "bin",
+          "sicher",
+          "dass",
+          "er",
+          "davon",
+          "weiß"
+        ],
+        "tip": "opinionTowerTen.questDescription"
+      },
+      {
+        "id": 10,
+        "type": "input",
+        "question": "opinionTowerTen.questTask10",
+        "correctAnswer": "hättest",
+        "tip": "opinionTowerTen.questDescription"
+      },
+      {
+        "id": 11,
+        "type": "input",
+        "question": "opinionTowerTen.questTask11",
+        "correctAnswer": "der",
+        "tip": "opinionTowerTen.questDescription"
+      },
+      {
+        "id": 12,
+        "type": "select",
+        "question": "opinionTowerTen.questTask12",
+        "options": [
+          "Sie wohnt wahrscheinlich nicht in Berlin, sondern in München.",
+          "Sie wohnt wahrscheinlich nicht in Berlin, oder in München.",
+          "Sie wohnt wahrscheinlich nicht in Berlin, aber in München."
+        ],
+        "answer": "Sie wohnt wahrscheinlich nicht in Berlin, sondern in München.",
+        "tip": "opinionTowerTen.questDescription"
+      },
+      {
+        "id": 13,
+        "type": "readAndAnswer",
+        "question": "opinionTowerTen.questTask13",
+        "text": "Liebe Frau Weber, vielen Dank für Ihre E-Mail. Ich bin sicher, dass der Kurs mir helfen wird. Leider kann ich erst am Montag kommen, weil ich bis Freitag arbeiten muss. Mit freundlichen Grüßen, Tom Becker",
+        "options": [
+          "weil der Kurs zu teuer ist",
+          "weil er bis Freitag arbeiten muss",
+          "weil er krank ist"
+        ],
+        "answer": "weil er bis Freitag arbeiten muss",
+        "tip": "opinionTowerTen.questDescription"
+      },
+      {
+        "id": 14,
+        "type": "input",
+        "question": "opinionTowerTen.questTask14",
+        "correctAnswer": "wäre",
+        "tip": "opinionTowerTen.questDescription"
+      },
+      {
+        "id": 15,
+        "type": "input",
+        "question": "opinionTowerTen.questTask15",
+        "correctAnswer": "des",
+        "tip": "opinionTowerTen.questDescription"
+      }
+    ]
+  }
+]

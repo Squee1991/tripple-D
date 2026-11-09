@@ -1,0 +1,2552 @@
+[
+  {
+    "questId": "calendar-valley-one",
+    "title": "calendarValleyOne.questTitle",
+    "progress": "0/15",
+    "description": "calendarValleyOne.questDescription",
+    "conditions": {
+      "goal": "calendarValleyOne.questGoal",
+      "minCorrect": 15,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
+    "vocabulary": [
+      {
+        "word": "der Stock",
+        "translation-ru": "этаж",
+        "translation-en": "floor",
+        "translation-uk": "поверх",
+        "translation-pl": "piętro",
+        "translation-es": "la planta",
+        "translation-fr": "l’étage",
+        "translation-tr": "kat",
+        "translation-ro": "etajul",
+        "translation-uz": "qavat",
+        "translation-hi": "मंज़िल",
+        "translation-ar": "الطابق"
+      },
+      {
+        "word": "die Klasse",
+        "translation-ru": "класс",
+        "translation-en": "class, year",
+        "translation-uk": "клас",
+        "translation-pl": "klasa",
+        "translation-es": "la clase",
+        "translation-fr": "la classe",
+        "translation-tr": "sınıf",
+        "translation-ro": "clasa",
+        "translation-uz": "sinf",
+        "translation-hi": "कक्षा",
+        "translation-ar": "الصف"
+      },
+      {
+        "word": "der Platz",
+        "translation-ru": "место",
+        "translation-en": "place",
+        "translation-uk": "місце",
+        "translation-pl": "miejsce",
+        "translation-es": "el puesto",
+        "translation-fr": "la place",
+        "translation-tr": "yer, sıra",
+        "translation-ro": "locul",
+        "translation-uz": "o‘rin",
+        "translation-hi": "स्थान",
+        "translation-ar": "المركز"
+      },
+      {
+        "word": "die Reihe",
+        "translation-ru": "ряд",
+        "translation-en": "row",
+        "translation-uk": "ряд",
+        "translation-pl": "rząd",
+        "translation-es": "la fila",
+        "translation-fr": "le rang",
+        "translation-tr": "sıra",
+        "translation-ro": "rândul",
+        "translation-uz": "qator",
+        "translation-hi": "पंक्ति",
+        "translation-ar": "الصف"
+      },
+      {
+        "word": "die Straße",
+        "translation-ru": "улица",
+        "translation-en": "street",
+        "translation-uk": "вулиця",
+        "translation-pl": "ulica",
+        "translation-es": "la calle",
+        "translation-fr": "la rue",
+        "translation-tr": "cadde",
+        "translation-ro": "strada",
+        "translation-uz": "ko‘cha",
+        "translation-hi": "सड़क",
+        "translation-ar": "الشارع"
+      },
+      {
+        "word": "die Deutschstunde",
+        "translation-ru": "урок немецкого",
+        "translation-en": "German lesson",
+        "translation-uk": "урок німецької",
+        "translation-pl": "lekcja niemieckiego",
+        "translation-es": "la clase de alemán",
+        "translation-fr": "le cours d’allemand",
+        "translation-tr": "Almanca dersi",
+        "translation-ro": "ora de germană",
+        "translation-uz": "nemis tili darsi",
+        "translation-hi": "जर्मन की कक्षा",
+        "translation-ar": "درس الألمانية"
+      },
+      {
+        "word": "die Lektion",
+        "translation-ru": "урок (в учебнике)",
+        "translation-en": "lesson",
+        "translation-uk": "урок (у підручнику)",
+        "translation-pl": "lekcja",
+        "translation-es": "la lección",
+        "translation-fr": "la leçon",
+        "translation-tr": "ders",
+        "translation-ro": "lecția",
+        "translation-uz": "dars",
+        "translation-hi": "पाठ",
+        "translation-ar": "الدرس"
+      }
+    ],
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "calendarValleyOne.questTask1",
+        "options": [
+          "Wir wohnen im dreiten Stock.",
+          "Wir wohnen im drei Stock.",
+          "Wir wohnen im dritten Stock."
+        ],
+        "answer": "Wir wohnen im dritten Stock.",
+        "tip": "calendarValleyOne.questDescription"
+      },
+      {
+        "id": 2,
+        "type": "input",
+        "question": "calendarValleyOne.questTask2",
+        "correctAnswer": "erste",
+        "tip": "calendarValleyOne.questDescription"
+      },
+      {
+        "id": 3,
+        "type": "input",
+        "question": "calendarValleyOne.questTask3",
+        "correctAnswer": "zweite",
+        "tip": "calendarValleyOne.questDescription"
+      },
+      {
+        "id": 4,
+        "type": "reorder",
+        "question": "calendarValleyOne.questTask4",
+        "words": [
+          "fünfte",
+          "in",
+          "fünften",
+          "Klasse",
+          "Mein",
+          "Sohn",
+          "der",
+          "ist"
+        ],
+        "correctOrder": [
+          "Mein",
+          "Sohn",
+          "ist",
+          "in",
+          "der",
+          "fünften",
+          "Klasse"
+        ],
+        "tip": "calendarValleyOne.questDescription"
+      },
+      {
+        "id": 5,
+        "type": "select",
+        "question": "calendarValleyOne.questTask5",
+        "options": [
+          "Er ist auf dem sieben Platz.",
+          "Er ist auf dem siebten Platz.",
+          "Er ist auf dem siebte Platz."
+        ],
+        "answer": "Er ist auf dem siebten Platz.",
+        "tip": "calendarValleyOne.questDescription"
+      },
+      {
+        "id": 6,
+        "type": "input",
+        "question": "calendarValleyOne.questTask6",
+        "correctAnswer": "achten",
+        "tip": "calendarValleyOne.questDescription"
+      },
+      {
+        "id": 7,
+        "type": "readAndAnswer",
+        "question": "calendarValleyOne.questTask7",
+        "text": "Tim wohnt in einem großen Haus. Seine Oma wohnt im ersten Stock, Tim wohnt im vierten Stock. Im zehnten Stock ist ein Café.",
+        "options": [
+          "im zehnten Stock",
+          "im vierten Stock",
+          "im ersten Stock"
+        ],
+        "answer": "im vierten Stock",
+        "tip": "calendarValleyOne.questDescription"
+      },
+      {
+        "id": 8,
+        "type": "input",
+        "question": "calendarValleyOne.questTask8",
+        "correctAnswer": "zweites",
+        "tip": "calendarValleyOne.questDescription"
+      },
+      {
+        "id": 9,
+        "type": "input",
+        "question": "calendarValleyOne.questTask9",
+        "correctAnswer": "ersten",
+        "tip": "calendarValleyOne.questDescription"
+      },
+      {
+        "id": 10,
+        "type": "reorder",
+        "question": "calendarValleyOne.questTask10",
+        "words": [
+          "Mal",
+          "das",
+          "ist",
+          "Das",
+          "dreite",
+          "dritte"
+        ],
+        "correctOrder": [
+          "Das",
+          "ist",
+          "das",
+          "dritte",
+          "Mal"
+        ],
+        "tip": "calendarValleyOne.questDescription"
+      },
+      {
+        "id": 11,
+        "type": "select",
+        "question": "calendarValleyOne.questTask11",
+        "options": [
+          "Die zehn Lektion ist am schwersten.",
+          "Die zehnte Lektion ist am schwersten.",
+          "Die zehnste Lektion ist am schwersten."
+        ],
+        "answer": "Die zehnte Lektion ist am schwersten.",
+        "tip": "calendarValleyOne.questDescription"
+      },
+      {
+        "id": 12,
+        "type": "input",
+        "question": "calendarValleyOne.questTask12",
+        "correctAnswer": "sechsten",
+        "tip": "calendarValleyOne.questDescription"
+      },
+      {
+        "id": 13,
+        "type": "input",
+        "question": "calendarValleyOne.questTask13",
+        "correctAnswer": "neunten",
+        "tip": "calendarValleyOne.questDescription"
+      },
+      {
+        "id": 14,
+        "type": "input",
+        "question": "calendarValleyOne.questTask14",
+        "correctAnswer": "Mantel",
+        "tip": "calendarValleyOne.questDescription"
+      },
+      {
+        "id": 15,
+        "type": "input",
+        "question": "calendarValleyOne.questTask15",
+        "correctAnswer": "Auto",
+        "tip": "calendarValleyOne.questDescription"
+      }
+    ]
+  },
+  {
+    "questId": "calendar-valley-two",
+    "title": "calendarValleyTwo.questTitle",
+    "progress": "0/15",
+    "description": "calendarValleyTwo.questDescription",
+    "conditions": {
+      "goal": "calendarValleyTwo.questGoal",
+      "minCorrect": 15,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
+    "vocabulary": [
+      {
+        "word": "der Geburtstag",
+        "translation-ru": "день рождения",
+        "translation-en": "birthday",
+        "translation-uk": "день народження",
+        "translation-pl": "urodziny",
+        "translation-es": "el cumpleaños",
+        "translation-fr": "l’anniversaire",
+        "translation-tr": "doğum günü",
+        "translation-ro": "ziua de naștere",
+        "translation-uz": "tug‘ilgan kun",
+        "translation-hi": "जन्मदिन",
+        "translation-ar": "عيد الميلاد"
+      },
+      {
+        "word": "feiern",
+        "translation-ru": "праздновать",
+        "translation-en": "to celebrate",
+        "translation-uk": "святкувати",
+        "translation-pl": "świętować",
+        "translation-es": "celebrar",
+        "translation-fr": "fêter",
+        "translation-tr": "kutlamak",
+        "translation-ro": "a sărbători",
+        "translation-uz": "nishonlamoq",
+        "translation-hi": "मनाना",
+        "translation-ar": "يحتفل"
+      },
+      {
+        "word": "das Jahr",
+        "translation-ru": "год",
+        "translation-en": "year",
+        "translation-uk": "рік",
+        "translation-pl": "rok",
+        "translation-es": "el año",
+        "translation-fr": "l’année",
+        "translation-tr": "yıl",
+        "translation-ro": "anul",
+        "translation-uz": "yil",
+        "translation-hi": "साल",
+        "translation-ar": "السنة"
+      },
+      {
+        "word": "der Tag",
+        "translation-ru": "день",
+        "translation-en": "day",
+        "translation-uk": "день",
+        "translation-pl": "dzień",
+        "translation-es": "el día",
+        "translation-fr": "le jour",
+        "translation-tr": "gün",
+        "translation-ro": "ziua",
+        "translation-uz": "kun",
+        "translation-hi": "दिन",
+        "translation-ar": "اليوم"
+      },
+      {
+        "word": "das Jubiläum",
+        "translation-ru": "юбилей",
+        "translation-en": "anniversary",
+        "translation-uk": "ювілей",
+        "translation-pl": "jubileusz",
+        "translation-es": "el aniversario",
+        "translation-fr": "l’anniversaire, le jubilé",
+        "translation-tr": "yıl dönümü",
+        "translation-ro": "aniversarea",
+        "translation-uz": "yubiley",
+        "translation-hi": "वर्षगाँठ",
+        "translation-ar": "الذكرى السنوية"
+      }
+    ],
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "calendarValleyTwo.questTask1",
+        "options": [
+          "Das ist sein zwanzig Geburtstag.",
+          "Das ist sein zwanzigter Geburtstag.",
+          "Das ist sein zwanzigster Geburtstag."
+        ],
+        "answer": "Das ist sein zwanzigster Geburtstag.",
+        "tip": "calendarValleyTwo.questDescription"
+      },
+      {
+        "id": 2,
+        "type": "input",
+        "question": "calendarValleyTwo.questTask2",
+        "correctAnswer": "dreißigsten",
+        "tip": "calendarValleyTwo.questDescription"
+      },
+      {
+        "id": 3,
+        "type": "input",
+        "question": "calendarValleyTwo.questTask3",
+        "correctAnswer": "einundzwanzigste",
+        "tip": "calendarValleyTwo.questDescription"
+      },
+      {
+        "id": 4,
+        "type": "reorder",
+        "question": "calendarValleyTwo.questTask4",
+        "words": [
+          "Das",
+          "hunderte",
+          "Mal",
+          "hundertste",
+          "ist",
+          "das"
+        ],
+        "correctOrder": [
+          "Das",
+          "ist",
+          "das",
+          "hundertste",
+          "Mal"
+        ],
+        "tip": "calendarValleyTwo.questDescription"
+      },
+      {
+        "id": 5,
+        "type": "select",
+        "question": "calendarValleyTwo.questTask5",
+        "options": [
+          "Die Firma feiert das fünfzig Jubiläum.",
+          "Die Firma feiert das fünfzigste Jubiläum.",
+          "Die Firma feiert das fünfzigte Jubiläum."
+        ],
+        "answer": "Die Firma feiert das fünfzigste Jubiläum.",
+        "tip": "calendarValleyTwo.questDescription"
+      },
+      {
+        "id": 6,
+        "type": "input",
+        "question": "calendarValleyTwo.questTask6",
+        "correctAnswer": "fünfundzwanzigstes",
+        "tip": "calendarValleyTwo.questDescription"
+      },
+      {
+        "id": 7,
+        "type": "readAndAnswer",
+        "question": "calendarValleyTwo.questTask7",
+        "text": "Am Samstag feiert Oma ihren achtzigsten Geburtstag. Die ganze Familie kommt. Für Opa ist es schon das sechzigste Fest mit Oma.",
+        "options": [
+          "den achtzigsten",
+          "den zwanzigsten",
+          "den sechzigsten"
+        ],
+        "answer": "den achtzigsten",
+        "tip": "calendarValleyTwo.questDescription"
+      },
+      {
+        "id": 8,
+        "type": "input",
+        "question": "calendarValleyTwo.questTask8",
+        "correctAnswer": "vierzigste",
+        "tip": "calendarValleyTwo.questDescription"
+      },
+      {
+        "id": 9,
+        "type": "input",
+        "question": "calendarValleyTwo.questTask9",
+        "correctAnswer": "sechzigsten",
+        "tip": "calendarValleyTwo.questDescription"
+      },
+      {
+        "id": 10,
+        "type": "reorder",
+        "question": "calendarValleyTwo.questTask10",
+        "words": [
+          "Wir",
+          "Geburtstag",
+          "fünfundzwanzigten",
+          "den",
+          "feiern",
+          "fünfundzwanzigsten"
+        ],
+        "correctOrder": [
+          "Wir",
+          "feiern",
+          "den",
+          "fünfundzwanzigsten",
+          "Geburtstag"
+        ],
+        "tip": "calendarValleyTwo.questDescription"
+      },
+      {
+        "id": 11,
+        "type": "select",
+        "question": "calendarValleyTwo.questTask11",
+        "options": [
+          "Das ist das ersten und das letzte Mal!",
+          "Das ist das erste und das letzte Mal!",
+          "Das ist das einste und das letzte Mal!"
+        ],
+        "answer": "Das ist das erste und das letzte Mal!",
+        "tip": "calendarValleyTwo.questDescription"
+      },
+      {
+        "id": 12,
+        "type": "input",
+        "question": "calendarValleyTwo.questTask12",
+        "correctAnswer": "zweiten",
+        "tip": "calendarValleyTwo.questDescription"
+      },
+      {
+        "id": 13,
+        "type": "input",
+        "question": "calendarValleyTwo.questTask13",
+        "correctAnswer": "dritte",
+        "tip": "calendarValleyTwo.questDescription"
+      },
+      {
+        "id": 14,
+        "type": "input",
+        "question": "calendarValleyTwo.questTask14",
+        "correctAnswer": "gefeiert",
+        "tip": "calendarValleyTwo.questDescription"
+      },
+      {
+        "id": 15,
+        "type": "input",
+        "question": "calendarValleyTwo.questTask15",
+        "correctAnswer": "Tasche",
+        "tip": "calendarValleyTwo.questDescription"
+      }
+    ]
+  },
+  {
+    "questId": "calendar-valley-three",
+    "title": "calendarValleyThree.questTitle",
+    "progress": "0/15",
+    "description": "calendarValleyThree.questDescription",
+    "conditions": {
+      "goal": "calendarValleyThree.questGoal",
+      "minCorrect": 15,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
+    "vocabulary": [
+      {
+        "word": "das Datum",
+        "translation-ru": "дата",
+        "translation-en": "date",
+        "translation-uk": "дата",
+        "translation-pl": "data",
+        "translation-es": "la fecha",
+        "translation-fr": "la date",
+        "translation-tr": "tarih",
+        "translation-ro": "data",
+        "translation-uz": "sana",
+        "translation-hi": "तारीख़",
+        "translation-ar": "التاريخ"
+      },
+      {
+        "word": "der Wievielte",
+        "translation-ru": "какое число",
+        "translation-en": "which date",
+        "translation-uk": "яке число",
+        "translation-pl": "którego",
+        "translation-es": "qué día del mes",
+        "translation-fr": "le combien",
+        "translation-tr": "ayın kaçı",
+        "translation-ro": "a câta zi",
+        "translation-uz": "nechanchi sana",
+        "translation-hi": "कौन-सी तारीख़",
+        "translation-ar": "أي يوم من الشهر"
+      },
+      {
+        "word": "der Januar",
+        "translation-ru": "январь",
+        "translation-en": "January",
+        "translation-uk": "січень",
+        "translation-pl": "styczeń",
+        "translation-es": "enero",
+        "translation-fr": "janvier",
+        "translation-tr": "ocak",
+        "translation-ro": "ianuarie",
+        "translation-uz": "yanvar",
+        "translation-hi": "जनवरी",
+        "translation-ar": "يناير"
+      },
+      {
+        "word": "der Dezember",
+        "translation-ru": "декабрь",
+        "translation-en": "December",
+        "translation-uk": "грудень",
+        "translation-pl": "grudzień",
+        "translation-es": "diciembre",
+        "translation-fr": "décembre",
+        "translation-tr": "aralık",
+        "translation-ro": "decembrie",
+        "translation-uz": "dekabr",
+        "translation-hi": "दिसंबर",
+        "translation-ar": "ديسمبر"
+      },
+      {
+        "word": "der Monat",
+        "translation-ru": "месяц",
+        "translation-en": "month",
+        "translation-uk": "місяць",
+        "translation-pl": "miesiąc",
+        "translation-es": "el mes",
+        "translation-fr": "le mois",
+        "translation-tr": "ay",
+        "translation-ro": "luna",
+        "translation-uz": "oy",
+        "translation-hi": "महीना",
+        "translation-ar": "الشهر"
+      },
+      {
+        "word": "übermorgen",
+        "translation-ru": "послезавтра",
+        "translation-en": "the day after tomorrow",
+        "translation-uk": "післязавтра",
+        "translation-pl": "pojutrze",
+        "translation-es": "pasado mañana",
+        "translation-fr": "après-demain",
+        "translation-tr": "yarından sonra",
+        "translation-ro": "poimâine",
+        "translation-uz": "indinga",
+        "translation-hi": "परसों",
+        "translation-ar": "بعد غد"
+      }
+    ],
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "calendarValleyThree.questTask1",
+        "options": [
+          "Heute ist der drei Mai.",
+          "Heute ist am dritten Mai.",
+          "Heute ist der dritte Mai."
+        ],
+        "answer": "Heute ist der dritte Mai.",
+        "tip": "calendarValleyThree.questDescription"
+      },
+      {
+        "id": 2,
+        "type": "input",
+        "question": "calendarValleyThree.questTask2",
+        "correctAnswer": "Wievielte",
+        "tip": "calendarValleyThree.questDescription"
+      },
+      {
+        "id": 3,
+        "type": "input",
+        "question": "calendarValleyThree.questTask3",
+        "correctAnswer": "erste",
+        "tip": "calendarValleyThree.questDescription"
+      },
+      {
+        "id": 4,
+        "type": "reorder",
+        "question": "calendarValleyThree.questTask4",
+        "words": [
+          "vierundzwanzigste",
+          "der",
+          "Morgen",
+          "am",
+          "Dezember",
+          "ist"
+        ],
+        "correctOrder": [
+          "Morgen",
+          "ist",
+          "der",
+          "vierundzwanzigste",
+          "Dezember"
+        ],
+        "tip": "calendarValleyThree.questDescription"
+      },
+      {
+        "id": 5,
+        "type": "select",
+        "question": "calendarValleyThree.questTask5",
+        "options": [
+          "Welches Datum ist heute?",
+          "Welche Datum ist heute?",
+          "Welcher Datum ist heute?"
+        ],
+        "answer": "Welches Datum ist heute?",
+        "tip": "calendarValleyThree.questDescription"
+      },
+      {
+        "id": 6,
+        "type": "input",
+        "question": "calendarValleyThree.questTask6",
+        "correctAnswer": "zehnte",
+        "tip": "calendarValleyThree.questDescription"
+      },
+      {
+        "id": 7,
+        "type": "readAndAnswer",
+        "question": "calendarValleyThree.questTask7",
+        "text": "Lisa fragt: „Der Wievielte ist heute?“ Ben sagt: „Morgen ist der vierzehnte Juni, also ist heute der dreizehnte.“",
+        "options": [
+          "der zwölfte Juni",
+          "der dreizehnte Juni",
+          "der vierzehnte Juni"
+        ],
+        "answer": "der dreizehnte Juni",
+        "tip": "calendarValleyThree.questDescription"
+      },
+      {
+        "id": 8,
+        "type": "input",
+        "question": "calendarValleyThree.questTask8",
+        "correctAnswer": "einunddreißigste",
+        "tip": "calendarValleyThree.questDescription"
+      },
+      {
+        "id": 9,
+        "type": "input",
+        "question": "calendarValleyThree.questTask9",
+        "correctAnswer": "Monat",
+        "tip": "calendarValleyThree.questDescription"
+      },
+      {
+        "id": 10,
+        "type": "reorder",
+        "question": "calendarValleyThree.questTask10",
+        "words": [
+          "der",
+          "fünfzehn",
+          "ist",
+          "Heute",
+          "August",
+          "fünfzehnte"
+        ],
+        "correctOrder": [
+          "Heute",
+          "ist",
+          "der",
+          "fünfzehnte",
+          "August"
+        ],
+        "tip": "calendarValleyThree.questDescription"
+      },
+      {
+        "id": 11,
+        "type": "select",
+        "question": "calendarValleyThree.questTask11",
+        "options": [
+          "Heute ist der zweite Februar.",
+          "Heute ist die zweite Februar.",
+          "Heute ist der zweiten Februar."
+        ],
+        "answer": "Heute ist der zweite Februar.",
+        "tip": "calendarValleyThree.questDescription"
+      },
+      {
+        "id": 12,
+        "type": "input",
+        "question": "calendarValleyThree.questTask12",
+        "correctAnswer": "siebten",
+        "tip": "calendarValleyThree.questDescription"
+      },
+      {
+        "id": 13,
+        "type": "input",
+        "question": "calendarValleyThree.questTask13",
+        "correctAnswer": "vierzigster",
+        "tip": "calendarValleyThree.questDescription"
+      },
+      {
+        "id": 14,
+        "type": "input",
+        "question": "calendarValleyThree.questTask14",
+        "correctAnswer": "fahre",
+        "tip": "calendarValleyThree.questDescription"
+      },
+      {
+        "id": 15,
+        "type": "input",
+        "question": "calendarValleyThree.questTask15",
+        "correctAnswer": "Jacke",
+        "tip": "calendarValleyThree.questDescription"
+      }
+    ]
+  },
+  {
+    "questId": "calendar-valley-four",
+    "title": "calendarValleyFour.questTitle",
+    "progress": "0/15",
+    "description": "calendarValleyFour.questDescription",
+    "conditions": {
+      "goal": "calendarValleyFour.questGoal",
+      "minCorrect": 15,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
+    "vocabulary": [
+      {
+        "word": "der Termin",
+        "translation-ru": "встреча, приём",
+        "translation-en": "appointment",
+        "translation-uk": "зустріч, запис",
+        "translation-pl": "termin, wizyta",
+        "translation-es": "la cita",
+        "translation-fr": "le rendez-vous",
+        "translation-tr": "randevu",
+        "translation-ro": "programarea",
+        "translation-uz": "uchrashuv",
+        "translation-hi": "अपॉइंटमेंट",
+        "translation-ar": "الموعد"
+      },
+      {
+        "word": "die Hochzeit",
+        "translation-ru": "свадьба",
+        "translation-en": "wedding",
+        "translation-uk": "весілля",
+        "translation-pl": "ślub",
+        "translation-es": "la boda",
+        "translation-fr": "le mariage",
+        "translation-tr": "düğün",
+        "translation-ro": "nunta",
+        "translation-uz": "to‘y",
+        "translation-hi": "शादी",
+        "translation-ar": "العرس"
+      },
+      {
+        "word": "geboren",
+        "translation-ru": "родился",
+        "translation-en": "born",
+        "translation-uk": "народжений",
+        "translation-pl": "urodzony",
+        "translation-es": "nacido",
+        "translation-fr": "né",
+        "translation-tr": "doğmuş",
+        "translation-ro": "născut",
+        "translation-uz": "tug‘ilgan",
+        "translation-hi": "पैदा हुआ",
+        "translation-ar": "مولود"
+      },
+      {
+        "word": "der Urlaub",
+        "translation-ru": "отпуск",
+        "translation-en": "holiday",
+        "translation-uk": "відпустка",
+        "translation-pl": "urlop",
+        "translation-es": "las vacaciones",
+        "translation-fr": "les vacances",
+        "translation-tr": "tatil",
+        "translation-ro": "concediul",
+        "translation-uz": "ta’til",
+        "translation-hi": "छुट्टी",
+        "translation-ar": "الإجازة"
+      },
+      {
+        "word": "der Juli",
+        "translation-ru": "июль",
+        "translation-en": "July",
+        "translation-uk": "липень",
+        "translation-pl": "lipiec",
+        "translation-es": "julio",
+        "translation-fr": "juillet",
+        "translation-tr": "temmuz",
+        "translation-ro": "iulie",
+        "translation-uz": "iyul",
+        "translation-hi": "जुलाई",
+        "translation-ar": "يوليو"
+      }
+    ],
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "calendarValleyFour.questTask1",
+        "options": [
+          "Ich habe im vierten April Geburtstag.",
+          "Ich habe am vierte April Geburtstag.",
+          "Ich habe am vierten April Geburtstag."
+        ],
+        "answer": "Ich habe am vierten April Geburtstag.",
+        "tip": "calendarValleyFour.questDescription"
+      },
+      {
+        "id": 2,
+        "type": "input",
+        "question": "calendarValleyFour.questTask2",
+        "correctAnswer": "dritten",
+        "tip": "calendarValleyFour.questDescription"
+      },
+      {
+        "id": 3,
+        "type": "input",
+        "question": "calendarValleyFour.questTask3",
+        "correctAnswer": "Wann",
+        "tip": "calendarValleyFour.questDescription"
+      },
+      {
+        "id": 4,
+        "type": "reorder",
+        "question": "calendarValleyFour.questTask4",
+        "words": [
+          "zwanzigsten",
+          "bin",
+          "Ich",
+          "geboren",
+          "Juli",
+          "zwanzigste",
+          "am"
+        ],
+        "correctOrder": [
+          "Ich",
+          "bin",
+          "am",
+          "zwanzigsten",
+          "Juli",
+          "geboren"
+        ],
+        "tip": "calendarValleyFour.questDescription"
+      },
+      {
+        "id": 5,
+        "type": "select",
+        "question": "calendarValleyFour.questTask5",
+        "options": [
+          "Der Urlaub ist vom erste bis zum fünfzehnte August.",
+          "Der Urlaub ist vom ersten bis zum fünfzehnten August.",
+          "Der Urlaub ist von ersten bis zu fünfzehnten August."
+        ],
+        "answer": "Der Urlaub ist vom ersten bis zum fünfzehnten August.",
+        "tip": "calendarValleyFour.questDescription"
+      },
+      {
+        "id": 6,
+        "type": "input",
+        "question": "calendarValleyFour.questTask6",
+        "correctAnswer": "neunten",
+        "tip": "calendarValleyFour.questDescription"
+      },
+      {
+        "id": 7,
+        "type": "readAndAnswer",
+        "question": "calendarValleyFour.questTask7",
+        "text": "Anna hat vom zwölften bis zum dreißigsten Juli Urlaub. Am zwanzigsten Juli hat ihr Bruder Hochzeit. Am ersten August arbeitet sie wieder.",
+        "options": [
+          "am zwölften Juli",
+          "am ersten August",
+          "am zwanzigsten Juli"
+        ],
+        "answer": "am zwölften Juli",
+        "tip": "calendarValleyFour.questDescription"
+      },
+      {
+        "id": 8,
+        "type": "input",
+        "question": "calendarValleyFour.questTask8",
+        "correctAnswer": "zweiundzwanzigsten",
+        "tip": "calendarValleyFour.questDescription"
+      },
+      {
+        "id": 9,
+        "type": "input",
+        "question": "calendarValleyFour.questTask9",
+        "correctAnswer": "ersten",
+        "tip": "calendarValleyFour.questDescription"
+      },
+      {
+        "id": 10,
+        "type": "reorder",
+        "question": "calendarValleyFour.questTask10",
+        "words": [
+          "Mai",
+          "ist",
+          "zehnten",
+          "Kurs",
+          "Der",
+          "fünften",
+          "zum",
+          "am",
+          "vom",
+          "bis"
+        ],
+        "correctOrder": [
+          "Der",
+          "Kurs",
+          "ist",
+          "vom",
+          "fünften",
+          "bis",
+          "zum",
+          "zehnten",
+          "Mai"
+        ],
+        "tip": "calendarValleyFour.questDescription"
+      },
+      {
+        "id": 11,
+        "type": "select",
+        "question": "calendarValleyFour.questTask11",
+        "options": [
+          "Im siebten März haben wir eine Prüfung.",
+          "Am siebten März haben wir eine Prüfung.",
+          "Am siebte März haben wir eine Prüfung."
+        ],
+        "answer": "Am siebten März haben wir eine Prüfung.",
+        "tip": "calendarValleyFour.questDescription"
+      },
+      {
+        "id": 12,
+        "type": "input",
+        "question": "calendarValleyFour.questTask12",
+        "correctAnswer": "elfte",
+        "tip": "calendarValleyFour.questDescription"
+      },
+      {
+        "id": 13,
+        "type": "input",
+        "question": "calendarValleyFour.questTask13",
+        "correctAnswer": "achte",
+        "tip": "calendarValleyFour.questDescription"
+      },
+      {
+        "id": 14,
+        "type": "input",
+        "question": "calendarValleyFour.questTask14",
+        "correctAnswer": "gefahren",
+        "tip": "calendarValleyFour.questDescription"
+      },
+      {
+        "id": 15,
+        "type": "input",
+        "question": "calendarValleyFour.questTask15",
+        "correctAnswer": "werden",
+        "tip": "calendarValleyFour.questDescription"
+      }
+    ]
+  },
+  {
+    "questId": "calendar-valley-five",
+    "title": "calendarValleyFive.questTitle",
+    "progress": "0/15",
+    "description": "calendarValleyFive.questDescription",
+    "conditions": {
+      "goal": "calendarValleyFive.questGoal",
+      "minCorrect": 15,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
+    "vocabulary": [
+      {
+        "word": "die Uhr",
+        "translation-ru": "часы, час (о времени)",
+        "translation-en": "clock, o’clock",
+        "translation-uk": "годинник, година",
+        "translation-pl": "zegar, godzina",
+        "translation-es": "el reloj, la hora",
+        "translation-fr": "la montre, l’heure",
+        "translation-tr": "saat",
+        "translation-ro": "ceasul, ora",
+        "translation-uz": "soat",
+        "translation-hi": "घड़ी, बजे",
+        "translation-ar": "الساعة"
+      },
+      {
+        "word": "die Minute",
+        "translation-ru": "минута",
+        "translation-en": "minute",
+        "translation-uk": "хвилина",
+        "translation-pl": "minuta",
+        "translation-es": "el minuto",
+        "translation-fr": "la minute",
+        "translation-tr": "dakika",
+        "translation-ro": "minutul",
+        "translation-uz": "daqiqa",
+        "translation-hi": "मिनट",
+        "translation-ar": "الدقيقة"
+      },
+      {
+        "word": "die Stunde",
+        "translation-ru": "час (длительность)",
+        "translation-en": "hour",
+        "translation-uk": "година (тривалість)",
+        "translation-pl": "godzina (czas trwania)",
+        "translation-es": "la hora (duración)",
+        "translation-fr": "l’heure (durée)",
+        "translation-tr": "saat (süre)",
+        "translation-ro": "ora (durată)",
+        "translation-uz": "soat (davomiylik)",
+        "translation-hi": "घंटा",
+        "translation-ar": "الساعة (مدة)"
+      },
+      {
+        "word": "pünktlich",
+        "translation-ru": "пунктуальный, вовремя",
+        "translation-en": "punctual, on time",
+        "translation-uk": "пунктуальний, вчасно",
+        "translation-pl": "punktualny",
+        "translation-es": "puntual",
+        "translation-fr": "ponctuel, à l’heure",
+        "translation-tr": "dakik",
+        "translation-ro": "punctual",
+        "translation-uz": "o‘z vaqtida",
+        "translation-hi": "समय का पाबंद",
+        "translation-ar": "دقيق في المواعيد"
+      },
+      {
+        "word": "dauern",
+        "translation-ru": "длиться",
+        "translation-en": "to last",
+        "translation-uk": "тривати",
+        "translation-pl": "trwać",
+        "translation-es": "durar",
+        "translation-fr": "durer",
+        "translation-tr": "sürmek",
+        "translation-ro": "a dura",
+        "translation-uz": "davom etmoq",
+        "translation-hi": "चलना, लगना",
+        "translation-ar": "يستغرق"
+      }
+    ],
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "calendarValleyFive.questTask1",
+        "options": [
+          "Wie spät hat es?",
+          "Wie viel spät ist es?",
+          "Wie spät ist es?"
+        ],
+        "answer": "Wie spät ist es?",
+        "tip": "calendarValleyFive.questDescription"
+      },
+      {
+        "id": 2,
+        "type": "input",
+        "question": "calendarValleyFive.questTask2",
+        "correctAnswer": "Uhr",
+        "tip": "calendarValleyFive.questDescription"
+      },
+      {
+        "id": 3,
+        "type": "input",
+        "question": "calendarValleyFive.questTask3",
+        "correctAnswer": "Uhr",
+        "tip": "calendarValleyFive.questDescription"
+      },
+      {
+        "id": 4,
+        "type": "reorder",
+        "question": "calendarValleyFive.questTask4",
+        "words": [
+          "Zug",
+          "am",
+          "Uhr",
+          "vierzehn",
+          "zwanzig",
+          "ab",
+          "um",
+          "Der",
+          "fährt"
+        ],
+        "correctOrder": [
+          "Der",
+          "Zug",
+          "fährt",
+          "um",
+          "vierzehn",
+          "Uhr",
+          "zwanzig",
+          "ab"
+        ],
+        "tip": "calendarValleyFive.questDescription"
+      },
+      {
+        "id": 5,
+        "type": "select",
+        "question": "calendarValleyFive.questTask5",
+        "options": [
+          "Der Unterricht beginnt um acht Uhr.",
+          "Der Unterricht beginnt um acht Uhren.",
+          "Der Unterricht beginnt am acht Uhr."
+        ],
+        "answer": "Der Unterricht beginnt um acht Uhr.",
+        "tip": "calendarValleyFive.questDescription"
+      },
+      {
+        "id": 6,
+        "type": "input",
+        "question": "calendarValleyFive.questTask6",
+        "correctAnswer": "fünfundvierzig",
+        "tip": "calendarValleyFive.questDescription"
+      },
+      {
+        "id": 7,
+        "type": "readAndAnswer",
+        "question": "calendarValleyFive.questTask7",
+        "text": "Olga nimmt den Zug um neun Uhr fünfzehn. Um elf Uhr dreißig ist sie bei Oma. Um siebzehn Uhr fährt sie wieder nach Hause.",
+        "options": [
+          "um elf Uhr dreißig",
+          "um siebzehn Uhr",
+          "um neun Uhr fünfzehn"
+        ],
+        "answer": "um elf Uhr dreißig",
+        "tip": "calendarValleyFive.questDescription"
+      },
+      {
+        "id": 8,
+        "type": "input",
+        "question": "calendarValleyFive.questTask8",
+        "correctAnswer": "Stunden",
+        "tip": "calendarValleyFive.questDescription"
+      },
+      {
+        "id": 9,
+        "type": "input",
+        "question": "calendarValleyFive.questTask9",
+        "correctAnswer": "Minuten",
+        "tip": "calendarValleyFive.questDescription"
+      },
+      {
+        "id": 10,
+        "type": "reorder",
+        "question": "calendarValleyFive.questTask10",
+        "words": [
+          "Uhren",
+          "offen",
+          "bis",
+          "Uhr",
+          "ist",
+          "Laden",
+          "Der",
+          "zwanzig"
+        ],
+        "correctOrder": [
+          "Der",
+          "Laden",
+          "ist",
+          "bis",
+          "zwanzig",
+          "Uhr",
+          "offen"
+        ],
+        "tip": "calendarValleyFive.questDescription"
+      },
+      {
+        "id": 11,
+        "type": "select",
+        "question": "calendarValleyFive.questTask11",
+        "options": [
+          "Er kommt immer pünktlich.",
+          "Er kommt immer pünktlichen.",
+          "Er immer kommt pünktlich."
+        ],
+        "answer": "Er kommt immer pünktlich.",
+        "tip": "calendarValleyFive.questDescription"
+      },
+      {
+        "id": 12,
+        "type": "input",
+        "question": "calendarValleyFive.questTask12",
+        "correctAnswer": "zwanzigste",
+        "tip": "calendarValleyFive.questDescription"
+      },
+      {
+        "id": 13,
+        "type": "input",
+        "question": "calendarValleyFive.questTask13",
+        "correctAnswer": "sechsten",
+        "tip": "calendarValleyFive.questDescription"
+      },
+      {
+        "id": 14,
+        "type": "input",
+        "question": "calendarValleyFive.questTask14",
+        "correctAnswer": "gegangen",
+        "tip": "calendarValleyFive.questDescription"
+      },
+      {
+        "id": 15,
+        "type": "input",
+        "question": "calendarValleyFive.questTask15",
+        "correctAnswer": "Uhr",
+        "tip": "calendarValleyFive.questDescription"
+      }
+    ]
+  },
+  {
+    "questId": "calendar-valley-six",
+    "title": "calendarValleySix.questTitle",
+    "progress": "0/15",
+    "description": "calendarValleySix.questDescription",
+    "conditions": {
+      "goal": "calendarValleySix.questGoal",
+      "minCorrect": 15,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
+    "vocabulary": [
+      {
+        "word": "halb",
+        "translation-ru": "половина",
+        "translation-en": "half",
+        "translation-uk": "пів",
+        "translation-pl": "wpół",
+        "translation-es": "y media",
+        "translation-fr": "et demie",
+        "translation-tr": "buçuk",
+        "translation-ro": "jumătate",
+        "translation-uz": "yarim",
+        "translation-hi": "आधा",
+        "translation-ar": "نصف"
+      },
+      {
+        "word": "das Viertel",
+        "translation-ru": "четверть",
+        "translation-en": "quarter",
+        "translation-uk": "чверть",
+        "translation-pl": "kwadrans",
+        "translation-es": "el cuarto",
+        "translation-fr": "le quart",
+        "translation-tr": "çeyrek",
+        "translation-ro": "sfertul",
+        "translation-uz": "chorak",
+        "translation-hi": "पौना, सवा",
+        "translation-ar": "الربع"
+      },
+      {
+        "word": "der Mittag",
+        "translation-ru": "полдень",
+        "translation-en": "midday",
+        "translation-uk": "полудень",
+        "translation-pl": "południe",
+        "translation-es": "el mediodía",
+        "translation-fr": "le midi",
+        "translation-tr": "öğle",
+        "translation-ro": "prânzul",
+        "translation-uz": "tush",
+        "translation-hi": "दोपहर",
+        "translation-ar": "الظهر"
+      },
+      {
+        "word": "der Wecker",
+        "translation-ru": "будильник",
+        "translation-en": "alarm clock",
+        "translation-uk": "будильник",
+        "translation-pl": "budzik",
+        "translation-es": "el despertador",
+        "translation-fr": "le réveil",
+        "translation-tr": "çalar saat",
+        "translation-ro": "ceasul deșteptător",
+        "translation-uz": "budilnik",
+        "translation-hi": "अलार्म घड़ी",
+        "translation-ar": "المنبّه"
+      },
+      {
+        "word": "früh",
+        "translation-ru": "рано",
+        "translation-en": "early",
+        "translation-uk": "рано",
+        "translation-pl": "wcześnie",
+        "translation-es": "temprano",
+        "translation-fr": "tôt",
+        "translation-tr": "erken",
+        "translation-ro": "devreme",
+        "translation-uz": "erta",
+        "translation-hi": "जल्दी",
+        "translation-ar": "باكرًا"
+      }
+    ],
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "calendarValleySix.questTask1",
+        "options": [
+          "Es ist halb drei.",
+          "Es ist halbe vier.",
+          "Es ist halb vier."
+        ],
+        "answer": "Es ist halb vier.",
+        "tip": "calendarValleySix.questDescription"
+      },
+      {
+        "id": 2,
+        "type": "input",
+        "question": "calendarValleySix.questTask2",
+        "correctAnswer": "nach",
+        "tip": "calendarValleySix.questDescription"
+      },
+      {
+        "id": 3,
+        "type": "input",
+        "question": "calendarValleySix.questTask3",
+        "correctAnswer": "vor",
+        "tip": "calendarValleySix.questDescription"
+      },
+      {
+        "id": 4,
+        "type": "reorder",
+        "question": "calendarValleySix.questTask4",
+        "words": [
+          "am",
+          "Mittag",
+          "zu",
+          "essen",
+          "zwölf",
+          "Wir",
+          "Uhr",
+          "um"
+        ],
+        "correctOrder": [
+          "Wir",
+          "essen",
+          "um",
+          "zwölf",
+          "Uhr",
+          "zu",
+          "Mittag"
+        ],
+        "tip": "calendarValleySix.questDescription"
+      },
+      {
+        "id": 5,
+        "type": "select",
+        "question": "calendarValleySix.questTask5",
+        "options": [
+          "Der Wecker klingelt um halbe sieben.",
+          "Der Wecker klingelt am halb sieben.",
+          "Der Wecker klingelt um halb sieben."
+        ],
+        "answer": "Der Wecker klingelt um halb sieben.",
+        "tip": "calendarValleySix.questDescription"
+      },
+      {
+        "id": 6,
+        "type": "input",
+        "question": "calendarValleySix.questTask6",
+        "correctAnswer": "vor",
+        "tip": "calendarValleySix.questDescription"
+      },
+      {
+        "id": 7,
+        "type": "readAndAnswer",
+        "question": "calendarValleySix.questTask7",
+        "text": "Max steht um halb sieben auf. Um Viertel nach sieben geht er aus dem Haus. Die Schule beginnt um acht Uhr, aber Max ist schon um Viertel vor acht da.",
+        "options": [
+          "um Viertel vor acht",
+          "um Viertel nach sieben",
+          "um halb sieben"
+        ],
+        "answer": "um Viertel nach sieben",
+        "tip": "calendarValleySix.questDescription"
+      },
+      {
+        "id": 8,
+        "type": "input",
+        "question": "calendarValleySix.questTask8",
+        "correctAnswer": "nach",
+        "tip": "calendarValleySix.questDescription"
+      },
+      {
+        "id": 9,
+        "type": "input",
+        "question": "calendarValleySix.questTask9",
+        "correctAnswer": "stehe",
+        "tip": "calendarValleySix.questDescription"
+      },
+      {
+        "id": 10,
+        "type": "reorder",
+        "question": "calendarValleySix.questTask10",
+        "words": [
+          "uns",
+          "treffen",
+          "Wir",
+          "neun",
+          "halb",
+          "halbe",
+          "um"
+        ],
+        "correctOrder": [
+          "Wir",
+          "treffen",
+          "uns",
+          "um",
+          "halb",
+          "neun"
+        ],
+        "tip": "calendarValleySix.questDescription"
+      },
+      {
+        "id": 11,
+        "type": "select",
+        "question": "calendarValleySix.questTask11",
+        "options": [
+          "Wir essen um Viertel vor elf.",
+          "Wir essen um Viertel nach elf.",
+          "Wir essen um Viertel nach zwölf."
+        ],
+        "answer": "Wir essen um Viertel nach elf.",
+        "tip": "calendarValleySix.questDescription"
+      },
+      {
+        "id": 12,
+        "type": "input",
+        "question": "calendarValleySix.questTask12",
+        "correctAnswer": "vierzig",
+        "tip": "calendarValleySix.questDescription"
+      },
+      {
+        "id": 13,
+        "type": "input",
+        "question": "calendarValleySix.questTask13",
+        "correctAnswer": "zehnten",
+        "tip": "calendarValleySix.questDescription"
+      },
+      {
+        "id": 14,
+        "type": "input",
+        "question": "calendarValleySix.questTask14",
+        "correctAnswer": "stehe",
+        "tip": "calendarValleySix.questDescription"
+      },
+      {
+        "id": 15,
+        "type": "input",
+        "question": "calendarValleySix.questTask15",
+        "correctAnswer": "frisches",
+        "tip": "calendarValleySix.questDescription"
+      }
+    ]
+  },
+  {
+    "questId": "calendar-valley-seven",
+    "title": "calendarValleySeven.questTitle",
+    "progress": "0/15",
+    "description": "calendarValleySeven.questDescription",
+    "conditions": {
+      "goal": "calendarValleySeven.questGoal",
+      "minCorrect": 15,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
+    "vocabulary": [
+      {
+        "word": "die Praxis",
+        "translation-ru": "врачебный кабинет, практика",
+        "translation-en": "doctor’s surgery",
+        "translation-uk": "приймальня лікаря",
+        "translation-pl": "gabinet lekarski",
+        "translation-es": "la consulta",
+        "translation-fr": "le cabinet médical",
+        "translation-tr": "muayenehane",
+        "translation-ro": "cabinetul medical",
+        "translation-uz": "shifokor xonasi",
+        "translation-hi": "क्लिनिक",
+        "translation-ar": "العيادة"
+      },
+      {
+        "word": "die Sprechstunde",
+        "translation-ru": "приёмные часы",
+        "translation-en": "office hours",
+        "translation-uk": "години прийому",
+        "translation-pl": "godziny przyjęć",
+        "translation-es": "el horario de consulta",
+        "translation-fr": "les heures de consultation",
+        "translation-tr": "muayene saatleri",
+        "translation-ro": "programul de consultații",
+        "translation-uz": "qabul soatlari",
+        "translation-hi": "मिलने का समय",
+        "translation-ar": "ساعات الاستقبال"
+      },
+      {
+        "word": "krank",
+        "translation-ru": "больной",
+        "translation-en": "ill",
+        "translation-uk": "хворий",
+        "translation-pl": "chory",
+        "translation-es": "enfermo",
+        "translation-fr": "malade",
+        "translation-tr": "hasta",
+        "translation-ro": "bolnav",
+        "translation-uz": "kasal",
+        "translation-hi": "बीमार",
+        "translation-ar": "مريض"
+      },
+      {
+        "word": "der Rücken",
+        "translation-ru": "спина",
+        "translation-en": "back",
+        "translation-uk": "спина",
+        "translation-pl": "plecy",
+        "translation-es": "la espalda",
+        "translation-fr": "le dos",
+        "translation-tr": "sırt",
+        "translation-ro": "spatele",
+        "translation-uz": "bel",
+        "translation-hi": "पीठ",
+        "translation-ar": "الظهر"
+      },
+      {
+        "word": "frei",
+        "translation-ru": "свободный",
+        "translation-en": "free",
+        "translation-uk": "вільний",
+        "translation-pl": "wolny",
+        "translation-es": "libre",
+        "translation-fr": "libre",
+        "translation-tr": "boş",
+        "translation-ro": "liber",
+        "translation-uz": "bo‘sh",
+        "translation-hi": "खाली",
+        "translation-ar": "متاح"
+      }
+    ],
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "calendarValleySeven.questTask1",
+        "options": [
+          "Kann ich am Montag einen Termin bekomme?",
+          "Kann ich im Montag einen Termin bekommen?",
+          "Kann ich am Montag einen Termin bekommen?"
+        ],
+        "answer": "Kann ich am Montag einen Termin bekommen?",
+        "tip": "calendarValleySeven.questDescription"
+      },
+      {
+        "id": 2,
+        "type": "input",
+        "question": "calendarValleySeven.questTask2",
+        "correctAnswer": "bis",
+        "tip": "calendarValleySeven.questDescription"
+      },
+      {
+        "id": 3,
+        "type": "input",
+        "question": "calendarValleySeven.questTask3",
+        "correctAnswer": "fünfzehnten",
+        "tip": "calendarValleySeven.questDescription"
+      },
+      {
+        "id": 4,
+        "type": "reorder",
+        "question": "calendarValleySeven.questTask4",
+        "words": [
+          "halb",
+          "Zeit",
+          "Mittwoch",
+          "im",
+          "zehn",
+          "Haben",
+          "um",
+          "Sie",
+          "am"
+        ],
+        "correctOrder": [
+          "Haben",
+          "Sie",
+          "am",
+          "Mittwoch",
+          "um",
+          "halb",
+          "zehn",
+          "Zeit"
+        ],
+        "tip": "calendarValleySeven.questDescription"
+      },
+      {
+        "id": 5,
+        "type": "select",
+        "question": "calendarValleySeven.questTask5",
+        "options": [
+          "Ich brauche im Donnerstag einen Termin.",
+          "Ich brauche an Donnerstag einen Termin.",
+          "Ich brauche am Donnerstag einen Termin."
+        ],
+        "answer": "Ich brauche am Donnerstag einen Termin.",
+        "tip": "calendarValleySeven.questDescription"
+      },
+      {
+        "id": 6,
+        "type": "input",
+        "question": "calendarValleySeven.questTask6",
+        "correctAnswer": "Rücken",
+        "tip": "calendarValleySeven.questDescription"
+      },
+      {
+        "id": 7,
+        "type": "readAndAnswer",
+        "question": "calendarValleySeven.questTask7",
+        "text": "Frau Klein ruft in der Praxis an. Sie ist krank. Die Ärztin hat am Dienstag keine Zeit, aber am Mittwoch um Viertel nach zehn ist ein Termin frei.",
+        "options": [
+          "am Mittwoch um Viertel nach zehn",
+          "am Mittwoch um halb zehn",
+          "am Dienstag um zehn Uhr"
+        ],
+        "answer": "am Mittwoch um Viertel nach zehn",
+        "tip": "calendarValleySeven.questDescription"
+      },
+      {
+        "id": 8,
+        "type": "input",
+        "question": "calendarValleySeven.questTask8",
+        "correctAnswer": "frei",
+        "tip": "calendarValleySeven.questDescription"
+      },
+      {
+        "id": 9,
+        "type": "input",
+        "question": "calendarValleySeven.questTask9",
+        "correctAnswer": "kommen",
+        "tip": "calendarValleySeven.questDescription"
+      },
+      {
+        "id": 10,
+        "type": "reorder",
+        "question": "calendarValleySeven.questTask10",
+        "words": [
+          "bleibe",
+          "Hause",
+          "Ich",
+          "bleiben",
+          "krank",
+          "zu",
+          "heute",
+          "bin",
+          "und"
+        ],
+        "correctOrder": [
+          "Ich",
+          "bin",
+          "heute",
+          "krank",
+          "und",
+          "bleibe",
+          "zu",
+          "Hause"
+        ],
+        "tip": "calendarValleySeven.questDescription"
+      },
+      {
+        "id": 11,
+        "type": "select",
+        "question": "calendarValleySeven.questTask11",
+        "options": [
+          "Die Praxis ist bis sechsten Uhr offen.",
+          "Die Praxis ist bis sechs Uhr offen.",
+          "Die Praxis ist bis sechs Uhren offen."
+        ],
+        "answer": "Die Praxis ist bis sechs Uhr offen.",
+        "tip": "calendarValleySeven.questDescription"
+      },
+      {
+        "id": 12,
+        "type": "input",
+        "question": "calendarValleySeven.questTask12",
+        "correctAnswer": "vor",
+        "tip": "calendarValleySeven.questDescription"
+      },
+      {
+        "id": 13,
+        "type": "input",
+        "question": "calendarValleySeven.questTask13",
+        "correctAnswer": "zweite",
+        "tip": "calendarValleySeven.questDescription"
+      },
+      {
+        "id": 14,
+        "type": "input",
+        "question": "calendarValleySeven.questTask14",
+        "correctAnswer": "gegangen",
+        "tip": "calendarValleySeven.questDescription"
+      },
+      {
+        "id": 15,
+        "type": "input",
+        "question": "calendarValleySeven.questTask15",
+        "correctAnswer": "mir",
+        "tip": "calendarValleySeven.questDescription"
+      }
+    ]
+  },
+  {
+    "questId": "calendar-valley-eight",
+    "title": "calendarValleyEight.questTitle",
+    "progress": "0/15",
+    "description": "calendarValleyEight.questDescription",
+    "conditions": {
+      "goal": "calendarValleyEight.questGoal",
+      "minCorrect": 15,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
+    "vocabulary": [
+      {
+        "word": "der Fahrplan",
+        "translation-ru": "расписание",
+        "translation-en": "timetable",
+        "translation-uk": "розклад",
+        "translation-pl": "rozkład jazdy",
+        "translation-es": "el horario",
+        "translation-fr": "l’horaire",
+        "translation-tr": "tarife",
+        "translation-ro": "mersul",
+        "translation-uz": "jadval",
+        "translation-hi": "समय-सारणी",
+        "translation-ar": "جدول المواعيد"
+      },
+      {
+        "word": "die Abfahrt",
+        "translation-ru": "отправление",
+        "translation-en": "departure",
+        "translation-uk": "відправлення",
+        "translation-pl": "odjazd",
+        "translation-es": "la salida",
+        "translation-fr": "le départ",
+        "translation-tr": "kalkış",
+        "translation-ro": "plecarea",
+        "translation-uz": "jo‘nash",
+        "translation-hi": "प्रस्थान",
+        "translation-ar": "المغادرة"
+      },
+      {
+        "word": "die Ankunft",
+        "translation-ru": "прибытие",
+        "translation-en": "arrival",
+        "translation-uk": "прибуття",
+        "translation-pl": "przyjazd",
+        "translation-es": "la llegada",
+        "translation-fr": "l’arrivée",
+        "translation-tr": "varış",
+        "translation-ro": "sosirea",
+        "translation-uz": "yetib kelish",
+        "translation-hi": "आगमन",
+        "translation-ar": "الوصول"
+      },
+      {
+        "word": "das Gleis",
+        "translation-ru": "путь (на вокзале)",
+        "translation-en": "platform, track",
+        "translation-uk": "колія",
+        "translation-pl": "tor",
+        "translation-es": "la vía",
+        "translation-fr": "la voie",
+        "translation-tr": "peron",
+        "translation-ro": "linia",
+        "translation-uz": "yo‘l (vokzalda)",
+        "translation-hi": "प्लेटफ़ॉर्म",
+        "translation-ar": "الرصيف"
+      },
+      {
+        "word": "die Verspätung",
+        "translation-ru": "опоздание",
+        "translation-en": "delay",
+        "translation-uk": "запізнення",
+        "translation-pl": "opóźnienie",
+        "translation-es": "el retraso",
+        "translation-fr": "le retard",
+        "translation-tr": "gecikme",
+        "translation-ro": "întârzierea",
+        "translation-uz": "kechikish",
+        "translation-hi": "देरी",
+        "translation-ar": "التأخير"
+      }
+    ],
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "calendarValleyEight.questTask1",
+        "options": [
+          "Der Zug fährt am sieben Uhr fünf von Gleis drei ab.",
+          "Der Zug abfährt um sieben Uhr fünf von Gleis drei.",
+          "Der Zug fährt um sieben Uhr fünf von Gleis drei ab."
+        ],
+        "answer": "Der Zug fährt um sieben Uhr fünf von Gleis drei ab.",
+        "tip": "calendarValleyEight.questDescription"
+      },
+      {
+        "id": 2,
+        "type": "input",
+        "question": "calendarValleyEight.questTask2",
+        "correctAnswer": "Ankunft",
+        "tip": "calendarValleyEight.questDescription"
+      },
+      {
+        "id": 3,
+        "type": "input",
+        "question": "calendarValleyEight.questTask3",
+        "correctAnswer": "Verspätung",
+        "tip": "calendarValleyEight.questDescription"
+      },
+      {
+        "id": 4,
+        "type": "reorder",
+        "question": "calendarValleyEight.questTask4",
+        "words": [
+          "den",
+          "dem",
+          "Schau",
+          "Fahrplan",
+          "auf"
+        ],
+        "correctOrder": [
+          "Schau",
+          "auf",
+          "den",
+          "Fahrplan"
+        ],
+        "tip": "calendarValleyEight.questDescription"
+      },
+      {
+        "id": 5,
+        "type": "select",
+        "question": "calendarValleyEight.questTask5",
+        "options": [
+          "Die Abfahrt ist am halb eins.",
+          "Die Abfahrt ist um halbe eins.",
+          "Die Abfahrt ist um halb eins."
+        ],
+        "answer": "Die Abfahrt ist um halb eins.",
+        "tip": "calendarValleyEight.questDescription"
+      },
+      {
+        "id": 6,
+        "type": "input",
+        "question": "calendarValleyEight.questTask6",
+        "correctAnswer": "zwölften",
+        "tip": "calendarValleyEight.questDescription"
+      },
+      {
+        "id": 7,
+        "type": "readAndAnswer",
+        "question": "calendarValleyEight.questTask7",
+        "text": "Der Zug nach Berlin fährt um Viertel nach acht von Gleis vier ab. Heute hat er zehn Minuten Verspätung. Die Ankunft in Berlin ist um elf Uhr.",
+        "options": [
+          "von Gleis elf",
+          "von Gleis vier",
+          "von Gleis acht"
+        ],
+        "answer": "von Gleis vier",
+        "tip": "calendarValleyEight.questDescription"
+      },
+      {
+        "id": 8,
+        "type": "input",
+        "question": "calendarValleyEight.questTask8",
+        "correctAnswer": "dritte",
+        "tip": "calendarValleyEight.questDescription"
+      },
+      {
+        "id": 9,
+        "type": "input",
+        "question": "calendarValleyEight.questTask9",
+        "correctAnswer": "fährt",
+        "tip": "calendarValleyEight.questDescription"
+      },
+      {
+        "id": 10,
+        "type": "reorder",
+        "question": "calendarValleyEight.questTask10",
+        "words": [
+          "um",
+          "fünf",
+          "Wir",
+          "kommen",
+          "vor",
+          "an",
+          "sieben",
+          "nach"
+        ],
+        "correctOrder": [
+          "Wir",
+          "kommen",
+          "um",
+          "fünf",
+          "nach",
+          "sieben",
+          "an"
+        ],
+        "tip": "calendarValleyEight.questDescription"
+      },
+      {
+        "id": 11,
+        "type": "select",
+        "question": "calendarValleyEight.questTask11",
+        "options": [
+          "Der erste Zug fährt um fünf Uhr zehn.",
+          "Der einste Zug fährt um fünf Uhr zehn.",
+          "Der erster Zug fährt um fünf Uhr zehn."
+        ],
+        "answer": "Der erste Zug fährt um fünf Uhr zehn.",
+        "tip": "calendarValleyEight.questDescription"
+      },
+      {
+        "id": 12,
+        "type": "input",
+        "question": "calendarValleyEight.questTask12",
+        "correctAnswer": "Praxis",
+        "tip": "calendarValleyEight.questDescription"
+      },
+      {
+        "id": 13,
+        "type": "input",
+        "question": "calendarValleyEight.questTask13",
+        "correctAnswer": "zwanzigster",
+        "tip": "calendarValleyEight.questDescription"
+      },
+      {
+        "id": 14,
+        "type": "input",
+        "question": "calendarValleyEight.questTask14",
+        "correctAnswer": "kommen",
+        "tip": "calendarValleyEight.questDescription"
+      },
+      {
+        "id": 15,
+        "type": "input",
+        "question": "calendarValleyEight.questTask15",
+        "correctAnswer": "hat",
+        "tip": "calendarValleyEight.questDescription"
+      }
+    ]
+  },
+  {
+    "questId": "calendar-valley-nine",
+    "title": "calendarValleyNine.questTitle",
+    "progress": "0/15",
+    "description": "calendarValleyNine.questDescription",
+    "conditions": {
+      "goal": "calendarValleyNine.questGoal",
+      "minCorrect": 15,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
+    "vocabulary": [
+      {
+        "word": "der Kalender",
+        "translation-ru": "календарь",
+        "translation-en": "calendar",
+        "translation-uk": "календар",
+        "translation-pl": "kalendarz",
+        "translation-es": "el calendario",
+        "translation-fr": "le calendrier",
+        "translation-tr": "takvim",
+        "translation-ro": "calendarul",
+        "translation-uz": "taqvim",
+        "translation-hi": "कैलेंडर",
+        "translation-ar": "التقويم"
+      },
+      {
+        "word": "die Woche",
+        "translation-ru": "неделя",
+        "translation-en": "week",
+        "translation-uk": "тиждень",
+        "translation-pl": "tydzień",
+        "translation-es": "la semana",
+        "translation-fr": "la semaine",
+        "translation-tr": "hafta",
+        "translation-ro": "săptămâna",
+        "translation-uz": "hafta",
+        "translation-hi": "हफ़्ता",
+        "translation-ar": "الأسبوع"
+      },
+      {
+        "word": "das Wochenende",
+        "translation-ru": "выходные",
+        "translation-en": "weekend",
+        "translation-uk": "вихідні",
+        "translation-pl": "weekend",
+        "translation-es": "el fin de semana",
+        "translation-fr": "le week-end",
+        "translation-tr": "hafta sonu",
+        "translation-ro": "weekendul",
+        "translation-uz": "dam olish kunlari",
+        "translation-hi": "सप्ताहांत",
+        "translation-ar": "عطلة نهاية الأسبوع"
+      },
+      {
+        "word": "spät",
+        "translation-ru": "поздно",
+        "translation-en": "late",
+        "translation-uk": "пізно",
+        "translation-pl": "późno",
+        "translation-es": "tarde",
+        "translation-fr": "tard",
+        "translation-tr": "geç",
+        "translation-ro": "târziu",
+        "translation-uz": "kech",
+        "translation-hi": "देर",
+        "translation-ar": "متأخر"
+      },
+      {
+        "word": "der Besucher",
+        "translation-ru": "посетитель",
+        "translation-en": "visitor",
+        "translation-uk": "відвідувач",
+        "translation-pl": "gość, odwiedzający",
+        "translation-es": "el visitante",
+        "translation-fr": "le visiteur",
+        "translation-tr": "ziyaretçi",
+        "translation-ro": "vizitatorul",
+        "translation-uz": "tashrif buyuruvchi",
+        "translation-hi": "आगंतुक",
+        "translation-ar": "الزائر"
+      }
+    ],
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "calendarValleyNine.questTask1",
+        "options": [
+          "Mein Geburtstag ist im zwölften Oktober.",
+          "Mein Geburtstag ist am zwölfte Oktober.",
+          "Mein Geburtstag ist am zwölften Oktober."
+        ],
+        "answer": "Mein Geburtstag ist am zwölften Oktober.",
+        "tip": "calendarValleyNine.questDescription"
+      },
+      {
+        "id": 2,
+        "type": "input",
+        "question": "calendarValleyNine.questTask2",
+        "correctAnswer": "Kalender",
+        "tip": "calendarValleyNine.questDescription"
+      },
+      {
+        "id": 3,
+        "type": "input",
+        "question": "calendarValleyNine.questTask3",
+        "correctAnswer": "halb",
+        "tip": "calendarValleyNine.questDescription"
+      },
+      {
+        "id": 4,
+        "type": "reorder",
+        "question": "calendarValleyNine.questTask4",
+        "words": [
+          "Geburtstag",
+          "Wochenende",
+          "wir",
+          "zwanzigsten",
+          "Am",
+          "den",
+          "zwanzigste",
+          "feiern"
+        ],
+        "correctOrder": [
+          "Am",
+          "Wochenende",
+          "feiern",
+          "wir",
+          "den",
+          "zwanzigsten",
+          "Geburtstag"
+        ],
+        "tip": "calendarValleyNine.questDescription"
+      },
+      {
+        "id": 5,
+        "type": "select",
+        "question": "calendarValleyNine.questTask5",
+        "options": [
+          "Das Treffen ist am acht Uhr abends.",
+          "Das Treffen ist um achten Uhr abends.",
+          "Das Treffen ist um acht Uhr abends."
+        ],
+        "answer": "Das Treffen ist um acht Uhr abends.",
+        "tip": "calendarValleyNine.questDescription"
+      },
+      {
+        "id": 6,
+        "type": "input",
+        "question": "calendarValleyNine.questTask6",
+        "correctAnswer": "dritte",
+        "tip": "calendarValleyNine.questDescription"
+      },
+      {
+        "id": 7,
+        "type": "readAndAnswer",
+        "question": "calendarValleyNine.questTask7",
+        "text": "Lena hat am sechsten Juni Geburtstag. Die Party beginnt um halb acht. Ihr Bruder arbeitet bis halb zehn, er kommt erst um zehn Uhr.",
+        "options": [
+          "um halb acht",
+          "um halb zehn",
+          "um zehn Uhr"
+        ],
+        "answer": "um halb acht",
+        "tip": "calendarValleyNine.questDescription"
+      },
+      {
+        "id": 8,
+        "type": "input",
+        "question": "calendarValleyNine.questTask8",
+        "correctAnswer": "nach",
+        "tip": "calendarValleyNine.questDescription"
+      },
+      {
+        "id": 9,
+        "type": "input",
+        "question": "calendarValleyNine.questTask9",
+        "correctAnswer": "kommt",
+        "tip": "calendarValleyNine.questDescription"
+      },
+      {
+        "id": 10,
+        "type": "reorder",
+        "question": "calendarValleyNine.questTask10",
+        "words": [
+          "Wir",
+          "Viertel",
+          "treffen",
+          "im",
+          "nach",
+          "um",
+          "uns",
+          "neun",
+          "am",
+          "Montag"
+        ],
+        "correctOrder": [
+          "Wir",
+          "treffen",
+          "uns",
+          "am",
+          "Montag",
+          "um",
+          "Viertel",
+          "nach",
+          "neun"
+        ],
+        "tip": "calendarValleyNine.questDescription"
+      },
+      {
+        "id": 11,
+        "type": "select",
+        "question": "calendarValleyNine.questTask11",
+        "options": [
+          "Das ist mein ersten Arbeitstag.",
+          "Das ist mein erster Arbeitstag.",
+          "Das ist mein erste Arbeitstag."
+        ],
+        "answer": "Das ist mein erster Arbeitstag.",
+        "tip": "calendarValleyNine.questDescription"
+      },
+      {
+        "id": 12,
+        "type": "input",
+        "question": "calendarValleyNine.questTask12",
+        "correctAnswer": "bis",
+        "tip": "calendarValleyNine.questDescription"
+      },
+      {
+        "id": 13,
+        "type": "input",
+        "question": "calendarValleyNine.questTask13",
+        "correctAnswer": "hundertste",
+        "tip": "calendarValleyNine.questDescription"
+      },
+      {
+        "id": 14,
+        "type": "input",
+        "question": "calendarValleyNine.questTask14",
+        "correctAnswer": "geschlafen",
+        "tip": "calendarValleyNine.questDescription"
+      },
+      {
+        "id": 15,
+        "type": "input",
+        "question": "calendarValleyNine.questTask15",
+        "correctAnswer": "Wochenende",
+        "tip": "calendarValleyNine.questDescription"
+      }
+    ]
+  },
+  {
+    "questId": "calendar-valley-ten",
+    "title": "calendarValleyTen.questTitle",
+    "progress": "0/15",
+    "description": "calendarValleyTen.questDescription",
+    "conditions": {
+      "goal": "calendarValleyTen.questGoal",
+      "minCorrect": 15,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
+    "vocabulary": [
+      {
+        "word": "der Ausflug",
+        "translation-ru": "экскурсия, поездка",
+        "translation-en": "trip, outing",
+        "translation-uk": "екскурсія, поїздка",
+        "translation-pl": "wycieczka",
+        "translation-es": "la excursión",
+        "translation-fr": "l’excursion",
+        "translation-tr": "gezi",
+        "translation-ro": "excursia",
+        "translation-uz": "sayohat",
+        "translation-hi": "सैर",
+        "translation-ar": "الرحلة"
+      },
+      {
+        "word": "der Treffpunkt",
+        "translation-ru": "место встречи",
+        "translation-en": "meeting point",
+        "translation-uk": "місце зустрічі",
+        "translation-pl": "miejsce spotkania",
+        "translation-es": "el punto de encuentro",
+        "translation-fr": "le point de rendez-vous",
+        "translation-tr": "buluşma yeri",
+        "translation-ro": "punctul de întâlnire",
+        "translation-uz": "uchrashuv joyi",
+        "translation-hi": "मिलने की जगह",
+        "translation-ar": "نقطة اللقاء"
+      },
+      {
+        "word": "die Party",
+        "translation-ru": "вечеринка",
+        "translation-en": "party",
+        "translation-uk": "вечірка",
+        "translation-pl": "impreza",
+        "translation-es": "la fiesta",
+        "translation-fr": "la fête",
+        "translation-tr": "parti",
+        "translation-ro": "petrecerea",
+        "translation-uz": "ziyofat",
+        "translation-hi": "पार्टी",
+        "translation-ar": "الحفلة"
+      },
+      {
+        "word": "das Konzert",
+        "translation-ru": "концерт",
+        "translation-en": "concert",
+        "translation-uk": "концерт",
+        "translation-pl": "koncert",
+        "translation-es": "el concierto",
+        "translation-fr": "le concert",
+        "translation-tr": "konser",
+        "translation-ro": "concertul",
+        "translation-uz": "konsert",
+        "translation-hi": "संगीत कार्यक्रम",
+        "translation-ar": "الحفل الموسيقي"
+      },
+      {
+        "word": "die Flasche",
+        "translation-ru": "бутылка",
+        "translation-en": "bottle",
+        "translation-uk": "пляшка",
+        "translation-pl": "butelka",
+        "translation-es": "la botella",
+        "translation-fr": "la bouteille",
+        "translation-tr": "şişe",
+        "translation-ro": "sticla",
+        "translation-uz": "shisha",
+        "translation-hi": "बोतल",
+        "translation-ar": "الزجاجة"
+      },
+      {
+        "word": "der September",
+        "translation-ru": "сентябрь",
+        "translation-en": "september",
+        "translation-uk": "вересень",
+        "translation-pl": "wrzesień",
+        "translation-es": "septiembre",
+        "translation-fr": "septembre",
+        "translation-tr": "eylül",
+        "translation-ro": "septembrie",
+        "translation-uz": "sentyabr",
+        "translation-hi": "सितंबर",
+        "translation-ar": "سبتمبر"
+      }
+    ],
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "calendarValleyTen.questTask1",
+        "options": [
+          "Das Konzert ist am neunundzwanzigste August um acht Uhr abends.",
+          "Das Konzert ist im neunundzwanzigsten August um acht Uhr abends.",
+          "Das Konzert ist am neunundzwanzigsten August um acht Uhr abends."
+        ],
+        "answer": "Das Konzert ist am neunundzwanzigsten August um acht Uhr abends.",
+        "tip": "calendarValleyTen.questDescription"
+      },
+      {
+        "id": 2,
+        "type": "input",
+        "question": "calendarValleyTen.questTask2",
+        "correctAnswer": "vor",
+        "tip": "calendarValleyTen.questDescription"
+      },
+      {
+        "id": 3,
+        "type": "input",
+        "question": "calendarValleyTen.questTask3",
+        "correctAnswer": "Treffpunkt",
+        "tip": "calendarValleyTen.questDescription"
+      },
+      {
+        "id": 4,
+        "type": "reorder",
+        "question": "calendarValleyTen.questTask4",
+        "words": [
+          "Die",
+          "fängt",
+          "elf",
+          "halb",
+          "um",
+          "halbe",
+          "an",
+          "Party"
+        ],
+        "correctOrder": [
+          "Die",
+          "Party",
+          "fängt",
+          "um",
+          "halb",
+          "elf",
+          "an"
+        ],
+        "tip": "calendarValleyTen.questDescription"
+      },
+      {
+        "id": 5,
+        "type": "select",
+        "question": "calendarValleyTen.questTask5",
+        "options": [
+          "Heute ist der dreißigsten September.",
+          "Heute ist der dreißigte September.",
+          "Heute ist der dreißigste September."
+        ],
+        "answer": "Heute ist der dreißigste September.",
+        "tip": "calendarValleyTen.questDescription"
+      },
+      {
+        "id": 6,
+        "type": "input",
+        "question": "calendarValleyTen.questTask6",
+        "correctAnswer": "zweite",
+        "tip": "calendarValleyTen.questDescription"
+      },
+      {
+        "id": 7,
+        "type": "readAndAnswer",
+        "question": "calendarValleyTen.questTask7",
+        "text": "Unser Ausflug ist am achten Mai. Treffpunkt ist um Viertel nach sieben am Bahnhof. Der Zug fährt um halb acht. Um sechs Uhr abends sind wir wieder zu Hause.",
+        "options": [
+          "um sechs Uhr",
+          "um halb acht",
+          "um Viertel nach sieben"
+        ],
+        "answer": "um halb acht",
+        "tip": "calendarValleyTen.questDescription"
+      },
+      {
+        "id": 8,
+        "type": "input",
+        "question": "calendarValleyTen.questTask8",
+        "correctAnswer": "vor",
+        "tip": "calendarValleyTen.questDescription"
+      },
+      {
+        "id": 9,
+        "type": "input",
+        "question": "calendarValleyTen.questTask9",
+        "correctAnswer": "dauert",
+        "tip": "calendarValleyTen.questDescription"
+      },
+      {
+        "id": 10,
+        "type": "reorder",
+        "question": "calendarValleyTen.questTask10",
+        "words": [
+          "Mai",
+          "Bruder",
+          "dreißigste",
+          "ist",
+          "dreißigsten",
+          "Mein",
+          "geboren",
+          "am"
+        ],
+        "correctOrder": [
+          "Mein",
+          "Bruder",
+          "ist",
+          "am",
+          "dreißigsten",
+          "Mai",
+          "geboren"
+        ],
+        "tip": "calendarValleyTen.questDescription"
+      },
+      {
+        "id": 11,
+        "type": "select",
+        "question": "calendarValleyTen.questTask11",
+        "options": [
+          "Er kommt jeden Tag um Viertel nach acht.",
+          "Er kommt jeden Tag am Viertel nach acht.",
+          "Er kommt jeden Tag um Viertel nach neun."
+        ],
+        "answer": "Er kommt jeden Tag um Viertel nach acht.",
+        "tip": "calendarValleyTen.questDescription"
+      },
+      {
+        "id": 12,
+        "type": "input",
+        "question": "calendarValleyTen.questTask12",
+        "correctAnswer": "einundzwanzigste",
+        "tip": "calendarValleyTen.questDescription"
+      },
+      {
+        "id": 13,
+        "type": "input",
+        "question": "calendarValleyTen.questTask13",
+        "correctAnswer": "auf",
+        "tip": "calendarValleyTen.questDescription"
+      },
+      {
+        "id": 14,
+        "type": "input",
+        "question": "calendarValleyTen.questTask14",
+        "correctAnswer": "gegangen",
+        "tip": "calendarValleyTen.questDescription"
+      },
+      {
+        "id": 15,
+        "type": "input",
+        "question": "calendarValleyTen.questTask15",
+        "correctAnswer": "Tag",
+        "tip": "calendarValleyTen.questDescription"
+      }
+    ]
+  }
+]

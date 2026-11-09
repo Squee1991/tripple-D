@@ -1,0 +1,2616 @@
+[
+  {
+    "questId": "hero-square-one",
+    "title": "heroSquareOne.questTitle",
+    "progress": "0/15",
+    "description": "heroSquareOne.questDescription",
+    "conditions": {
+      "goal": "heroSquareOne.questGoal",
+      "minCorrect": 15,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
+    "vocabulary": [
+      {
+        "word": "der Junge",
+        "translation-ru": "мальчик",
+        "translation-en": "boy",
+        "translation-uk": "хлопчик",
+        "translation-pl": "chłopiec",
+        "translation-es": "el niño, el chico",
+        "translation-fr": "le garçon",
+        "translation-tr": "oğlan",
+        "translation-ro": "băiatul",
+        "translation-uz": "o‘g‘il bola",
+        "translation-hi": "लड़का",
+        "translation-ar": "الولد"
+      },
+      {
+        "word": "der Kollege",
+        "translation-ru": "коллега",
+        "translation-en": "colleague",
+        "translation-uk": "колега",
+        "translation-pl": "kolega",
+        "translation-es": "el compañero de trabajo",
+        "translation-fr": "le collègue",
+        "translation-tr": "iş arkadaşı",
+        "translation-ro": "colegul",
+        "translation-uz": "hamkasb",
+        "translation-hi": "सहकर्मी",
+        "translation-ar": "الزميل"
+      },
+      {
+        "word": "der Kunde",
+        "translation-ru": "клиент, покупатель",
+        "translation-en": "customer",
+        "translation-uk": "клієнт, покупець",
+        "translation-pl": "klient",
+        "translation-es": "el cliente",
+        "translation-fr": "le client",
+        "translation-tr": "müşteri",
+        "translation-ro": "clientul",
+        "translation-uz": "mijoz",
+        "translation-hi": "ग्राहक",
+        "translation-ar": "الزبون"
+      },
+      {
+        "word": "der Löwe",
+        "translation-ru": "лев",
+        "translation-en": "lion",
+        "translation-uk": "лев",
+        "translation-pl": "lew",
+        "translation-es": "el león",
+        "translation-fr": "le lion",
+        "translation-tr": "aslan",
+        "translation-ro": "leul",
+        "translation-uz": "sher",
+        "translation-hi": "शेर",
+        "translation-ar": "الأسد"
+      },
+      {
+        "word": "loben",
+        "translation-ru": "хвалить",
+        "translation-en": "to praise",
+        "translation-uk": "хвалити",
+        "translation-pl": "chwalić",
+        "translation-es": "elogiar",
+        "translation-fr": "féliciter, louer",
+        "translation-tr": "övmek",
+        "translation-ro": "a lăuda",
+        "translation-uz": "maqtamoq",
+        "translation-hi": "तारीफ़ करना",
+        "translation-ar": "يمدح"
+      },
+      {
+        "word": "begrüßen",
+        "translation-ru": "приветствовать",
+        "translation-en": "to greet",
+        "translation-uk": "вітати",
+        "translation-pl": "witać",
+        "translation-es": "saludar",
+        "translation-fr": "accueillir, saluer",
+        "translation-tr": "selamlamak",
+        "translation-ro": "a saluta",
+        "translation-uz": "salomlashmoq",
+        "translation-hi": "स्वागत करना",
+        "translation-ar": "يرحّب"
+      },
+      {
+        "word": "die Mitte",
+        "translation-ru": "середина",
+        "translation-en": "middle",
+        "translation-uk": "середина",
+        "translation-pl": "środek",
+        "translation-es": "el centro, la mitad",
+        "translation-fr": "le milieu",
+        "translation-tr": "orta",
+        "translation-ro": "mijlocul",
+        "translation-uz": "o‘rta",
+        "translation-hi": "बीच",
+        "translation-ar": "المنتصف"
+      }
+    ],
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "heroSquareOne.questTask1",
+        "options": [
+          "Ich sehe den Junge.",
+          "Ich sehe der Junge.",
+          "Ich sehe den Jungen."
+        ],
+        "answer": "Ich sehe den Jungen.",
+        "tip": "heroSquareOne.questDescription"
+      },
+      {
+        "id": 2,
+        "type": "input",
+        "question": "heroSquareOne.questTask2",
+        "correctAnswer": "Kollegen",
+        "tip": "heroSquareOne.questDescription"
+      },
+      {
+        "id": 3,
+        "type": "input",
+        "question": "heroSquareOne.questTask3",
+        "correctAnswer": "Kunden",
+        "tip": "heroSquareOne.questDescription"
+      },
+      {
+        "id": 4,
+        "type": "reorder",
+        "question": "heroSquareOne.questTask4",
+        "words": [
+          "Kollegen",
+          "Kollege",
+          "Wir",
+          "begrüßen",
+          "neuen",
+          "den"
+        ],
+        "correctOrder": [
+          "Wir",
+          "begrüßen",
+          "den",
+          "neuen",
+          "Kollegen"
+        ],
+        "tip": "heroSquareOne.questDescription"
+      },
+      {
+        "id": 5,
+        "type": "select",
+        "question": "heroSquareOne.questTask5",
+        "options": [
+          "Der Lehrer lobt dem Jungen.",
+          "Der Lehrer lobt den Jungen.",
+          "Der Lehrer lobt den Junge."
+        ],
+        "answer": "Der Lehrer lobt den Jungen.",
+        "tip": "heroSquareOne.questDescription"
+      },
+      {
+        "id": 6,
+        "type": "input",
+        "question": "heroSquareOne.questTask6",
+        "correctAnswer": "Löwen",
+        "tip": "heroSquareOne.questDescription"
+      },
+      {
+        "id": 7,
+        "type": "readAndAnswer",
+        "question": "heroSquareOne.questTask7",
+        "text": "Heute hat Herr Klein einen neuen Kollegen. Er zeigt dem Kollegen das Büro. Am Nachmittag kommt ein Kunde. Der neue Kollege spricht lange mit dem Kunden.",
+        "options": [
+          "die Chefin",
+          "der neue Kollege",
+          "Herr Klein"
+        ],
+        "answer": "der neue Kollege",
+        "tip": "heroSquareOne.questDescription"
+      },
+      {
+        "id": 8,
+        "type": "input",
+        "question": "heroSquareOne.questTask8",
+        "correctAnswer": "Jungen",
+        "tip": "heroSquareOne.questDescription"
+      },
+      {
+        "id": 9,
+        "type": "reorder",
+        "question": "heroSquareOne.questTask10",
+        "words": [
+          "ein",
+          "Kollegen",
+          "meinen",
+          "Geschenk",
+          "kaufe",
+          "Ich",
+          "Kollege",
+          "für"
+        ],
+        "correctOrder": [
+          "Ich",
+          "kaufe",
+          "ein",
+          "Geschenk",
+          "für",
+          "meinen",
+          "Kollegen"
+        ],
+        "tip": "heroSquareOne.questDescription"
+      },
+      {
+        "id": 10,
+        "type": "select",
+        "question": "heroSquareOne.questTask11",
+        "options": [
+          "Wir warten auf dem Kunden.",
+          "Wir warten auf den Kunden.",
+          "Wir warten auf den Kunde."
+        ],
+        "answer": "Wir warten auf den Kunden.",
+        "tip": "heroSquareOne.questDescription"
+      },
+      {
+        "id": 11,
+        "type": "input",
+        "question": "ownerCastleEight.questTask9",
+        "correctAnswer": "des",
+        "tip": "ownerCastleEight.questDescription",
+        "reviewOf": "owner-castle-eight",
+        "reviewLand": "owner-castle"
+      },
+      {
+        "id": 12,
+        "type": "input",
+        "question": "ownerCastleFive.questTask12",
+        "correctAnswer": "meiner",
+        "tip": "ownerCastleFive.questDescription",
+        "reviewOf": "owner-castle-five",
+        "reviewLand": "owner-castle"
+      },
+      {
+        "id": 13,
+        "type": "input",
+        "question": "ownerCastleTwo.questTask13",
+        "correctAnswer": "der",
+        "tip": "ownerCastleTwo.questDescription",
+        "reviewOf": "owner-castle-two",
+        "reviewLand": "owner-castle"
+      },
+      {
+        "id": 14,
+        "type": "input",
+        "question": "heroSquareOne.questTask14",
+        "correctAnswer": "meines",
+        "tip": "heroSquareOne.questDescription"
+      },
+      {
+        "id": 15,
+        "type": "input",
+        "question": "heroSquareOne.questTask15",
+        "correctAnswer": "hätte",
+        "tip": "heroSquareOne.questDescription"
+      }
+    ]
+  },
+  {
+    "questId": "hero-square-two",
+    "title": "heroSquareTwo.questTitle",
+    "progress": "0/15",
+    "description": "heroSquareTwo.questDescription",
+    "conditions": {
+      "goal": "heroSquareTwo.questGoal",
+      "minCorrect": 15,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
+    "vocabulary": [
+      {
+        "word": "der Mensch",
+        "translation-ru": "человек",
+        "translation-en": "person, human being",
+        "translation-uk": "людина",
+        "translation-pl": "człowiek",
+        "translation-es": "la persona",
+        "translation-fr": "l’être humain, la personne",
+        "translation-tr": "insan",
+        "translation-ro": "omul",
+        "translation-uz": "inson",
+        "translation-hi": "इंसान",
+        "translation-ar": "الإنسان"
+      },
+      {
+        "word": "der Nachbar",
+        "translation-ru": "сосед",
+        "translation-en": "neighbour",
+        "translation-uk": "сусід",
+        "translation-pl": "sąsiad",
+        "translation-es": "el vecino",
+        "translation-fr": "le voisin",
+        "translation-tr": "komşu",
+        "translation-ro": "vecinul",
+        "translation-uz": "qo‘shni",
+        "translation-hi": "पड़ोसी",
+        "translation-ar": "الجار"
+      },
+      {
+        "word": "der Herr",
+        "translation-ru": "господин",
+        "translation-en": "Mr, gentleman",
+        "translation-uk": "пан",
+        "translation-pl": "pan",
+        "translation-es": "el señor",
+        "translation-fr": "monsieur",
+        "translation-tr": "bey",
+        "translation-ro": "domnul",
+        "translation-uz": "janob",
+        "translation-hi": "साहब, श्रीमान",
+        "translation-ar": "السيد"
+      },
+      {
+        "word": "der Bär",
+        "translation-ru": "медведь",
+        "translation-en": "bear",
+        "translation-uk": "ведмідь",
+        "translation-pl": "niedźwiedź",
+        "translation-es": "el oso",
+        "translation-fr": "l’ours",
+        "translation-tr": "ayı",
+        "translation-ro": "ursul",
+        "translation-uz": "ayiq",
+        "translation-hi": "भालू",
+        "translation-ar": "الدب"
+      },
+      {
+        "word": "der Wald",
+        "translation-ru": "лес",
+        "translation-en": "forest",
+        "translation-uk": "ліс",
+        "translation-pl": "las",
+        "translation-es": "el bosque",
+        "translation-fr": "la forêt",
+        "translation-tr": "orman",
+        "translation-ro": "pădurea",
+        "translation-uz": "o‘rmon",
+        "translation-hi": "जंगल",
+        "translation-ar": "الغابة"
+      }
+    ],
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "heroSquareTwo.questTask1",
+        "options": [
+          "Ich kenne Herren Braun.",
+          "Ich kenne Herr Braun.",
+          "Ich kenne Herrn Braun."
+        ],
+        "answer": "Ich kenne Herrn Braun.",
+        "tip": "heroSquareTwo.questDescription"
+      },
+      {
+        "id": 2,
+        "type": "input",
+        "question": "heroSquareTwo.questTask2",
+        "correctAnswer": "Nachbarn",
+        "tip": "heroSquareTwo.questDescription"
+      },
+      {
+        "id": 3,
+        "type": "input",
+        "question": "heroSquareTwo.questTask3",
+        "correctAnswer": "Menschen",
+        "tip": "heroSquareTwo.questDescription"
+      },
+      {
+        "id": 4,
+        "type": "reorder",
+        "question": "heroSquareTwo.questTask4",
+        "words": [
+          "Ich",
+          "an",
+          "Weber",
+          "Herr",
+          "morgen",
+          "rufe",
+          "Herrn"
+        ],
+        "correctOrder": [
+          "Ich",
+          "rufe",
+          "Herrn",
+          "Weber",
+          "morgen",
+          "an"
+        ],
+        "tip": "heroSquareTwo.questDescription"
+      },
+      {
+        "id": 5,
+        "type": "select",
+        "question": "heroSquareTwo.questTask5",
+        "options": [
+          "Sie spricht oft mit den Nachbar.",
+          "Sie spricht oft mit dem Nachbarn.",
+          "Sie spricht oft mit dem Nachbar."
+        ],
+        "answer": "Sie spricht oft mit dem Nachbarn.",
+        "tip": "heroSquareTwo.questDescription"
+      },
+      {
+        "id": 6,
+        "type": "input",
+        "question": "heroSquareTwo.questTask6",
+        "correctAnswer": "Bären",
+        "tip": "heroSquareTwo.questDescription"
+      },
+      {
+        "id": 7,
+        "type": "readAndAnswer",
+        "question": "heroSquareTwo.questTask7",
+        "text": "Frau Lang wohnt seit zehn Jahren in diesem Haus. Sie kennt jeden Nachbarn. Wenn Herr Ott im Urlaub ist, nimmt sie seine Post. Danach gibt sie Herrn Ott die Post. Sie ist ein freundlicher Mensch.",
+        "options": [
+          "Herrn Ott",
+          "ihrer Freundin",
+          "ihrem Sohn"
+        ],
+        "answer": "Herrn Ott",
+        "tip": "heroSquareTwo.questDescription"
+      },
+      {
+        "id": 8,
+        "type": "input",
+        "question": "heroSquareTwo.questTask8",
+        "correctAnswer": "Herrn",
+        "tip": "heroSquareTwo.questDescription"
+      },
+      {
+        "id": 9,
+        "type": "reorder",
+        "question": "heroSquareTwo.questTask10",
+        "words": [
+          "fahren",
+          "Viele",
+          "Bus",
+          "Mensch",
+          "mit",
+          "Menschen",
+          "dem"
+        ],
+        "correctOrder": [
+          "Viele",
+          "Menschen",
+          "fahren",
+          "mit",
+          "dem",
+          "Bus"
+        ],
+        "tip": "heroSquareTwo.questDescription"
+      },
+      {
+        "id": 10,
+        "type": "select",
+        "question": "heroSquareTwo.questTask11",
+        "options": [
+          "Wir danken den Herrn Müller.",
+          "Wir danken Herrn Müller.",
+          "Wir danken Herr Müller."
+        ],
+        "answer": "Wir danken Herrn Müller.",
+        "tip": "heroSquareTwo.questDescription"
+      },
+      {
+        "id": 11,
+        "type": "input",
+        "question": "heroSquareOne.questTask9",
+        "correctAnswer": "Kunden",
+        "tip": "heroSquareOne.questDescription",
+        "reviewOf": "hero-square-one",
+        "reviewLand": "hero-square"
+      },
+      {
+        "id": 12,
+        "type": "input",
+        "question": "ownerCastleSix.questTask12",
+        "correctAnswer": "des",
+        "tip": "ownerCastleSix.questDescription",
+        "reviewOf": "owner-castle-six",
+        "reviewLand": "owner-castle"
+      },
+      {
+        "id": 13,
+        "type": "input",
+        "question": "ownerCastleThree.questTask13",
+        "correctAnswer": "einer",
+        "tip": "ownerCastleThree.questDescription",
+        "reviewOf": "owner-castle-three",
+        "reviewLand": "owner-castle"
+      },
+      {
+        "id": 14,
+        "type": "input",
+        "question": "heroSquareTwo.questTask14",
+        "correctAnswer": "wäre",
+        "tip": "heroSquareTwo.questDescription"
+      },
+      {
+        "id": 15,
+        "type": "input",
+        "question": "heroSquareTwo.questTask15",
+        "correctAnswer": "des",
+        "tip": "heroSquareTwo.questDescription"
+      }
+    ]
+  },
+  {
+    "questId": "hero-square-three",
+    "title": "heroSquareThree.questTitle",
+    "progress": "0/15",
+    "description": "heroSquareThree.questDescription",
+    "conditions": {
+      "goal": "heroSquareThree.questGoal",
+      "minCorrect": 15,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
+    "vocabulary": [
+      {
+        "word": "der Student",
+        "translation-ru": "студент",
+        "translation-en": "student",
+        "translation-uk": "студент",
+        "translation-pl": "student",
+        "translation-es": "el estudiante",
+        "translation-fr": "l’étudiant",
+        "translation-tr": "üniversite öğrencisi",
+        "translation-ro": "studentul",
+        "translation-uz": "talaba",
+        "translation-hi": "छात्र",
+        "translation-ar": "الطالب"
+      },
+      {
+        "word": "der Polizist",
+        "translation-ru": "полицейский",
+        "translation-en": "police officer",
+        "translation-uk": "поліцейський",
+        "translation-pl": "policjant",
+        "translation-es": "el policía",
+        "translation-fr": "le policier",
+        "translation-tr": "polis memuru",
+        "translation-ro": "polițistul",
+        "translation-uz": "politsiyachi",
+        "translation-hi": "पुलिसवाला",
+        "translation-ar": "الشرطي"
+      },
+      {
+        "word": "der Tourist",
+        "translation-ru": "турист",
+        "translation-en": "tourist",
+        "translation-uk": "турист",
+        "translation-pl": "turysta",
+        "translation-es": "el turista",
+        "translation-fr": "le touriste",
+        "translation-tr": "turist",
+        "translation-ro": "turistul",
+        "translation-uz": "sayyoh",
+        "translation-hi": "पर्यटक",
+        "translation-ar": "السائح"
+      },
+      {
+        "word": "der Praktikant",
+        "translation-ru": "практикант, стажёр",
+        "translation-en": "intern",
+        "translation-uk": "практикант, стажист",
+        "translation-pl": "praktykant",
+        "translation-es": "el becario",
+        "translation-fr": "le stagiaire",
+        "translation-tr": "stajyer",
+        "translation-ro": "stagiarul",
+        "translation-uz": "amaliyotchi",
+        "translation-hi": "इंटर्न",
+        "translation-ar": "المتدرب"
+      },
+      {
+        "word": "der Präsident",
+        "translation-ru": "президент",
+        "translation-en": "president",
+        "translation-uk": "президент",
+        "translation-pl": "prezydent",
+        "translation-es": "el presidente",
+        "translation-fr": "le président",
+        "translation-tr": "cumhurbaşkanı, başkan",
+        "translation-ro": "președintele",
+        "translation-uz": "prezident",
+        "translation-hi": "राष्ट्रपति",
+        "translation-ar": "الرئيس"
+      },
+      {
+        "word": "der Journalist",
+        "translation-ru": "журналист",
+        "translation-en": "journalist",
+        "translation-uk": "журналіст",
+        "translation-pl": "dziennikarz",
+        "translation-es": "el periodista",
+        "translation-fr": "le journaliste",
+        "translation-tr": "gazeteci",
+        "translation-ro": "jurnalistul",
+        "translation-uz": "jurnalist",
+        "translation-hi": "पत्रकार",
+        "translation-ar": "الصحفي"
+      }
+    ],
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "heroSquareThree.questTask1",
+        "options": [
+          "Ich habe den Polizist gefragt.",
+          "Ich habe dem Polizisten gefragt.",
+          "Ich habe den Polizisten gefragt."
+        ],
+        "answer": "Ich habe den Polizisten gefragt.",
+        "tip": "heroSquareThree.questDescription"
+      },
+      {
+        "id": 2,
+        "type": "input",
+        "question": "heroSquareThree.questTask2",
+        "correctAnswer": "Studenten",
+        "tip": "heroSquareThree.questDescription"
+      },
+      {
+        "id": 3,
+        "type": "input",
+        "question": "heroSquareThree.questTask3",
+        "correctAnswer": "Touristen",
+        "tip": "heroSquareThree.questDescription"
+      },
+      {
+        "id": 4,
+        "type": "reorder",
+        "question": "heroSquareThree.questTask4",
+        "words": [
+          "einen",
+          "sucht",
+          "Die",
+          "Praktikant",
+          "Praktikanten",
+          "Firma"
+        ],
+        "correctOrder": [
+          "Die",
+          "Firma",
+          "sucht",
+          "einen",
+          "Praktikanten"
+        ],
+        "tip": "heroSquareThree.questDescription"
+      },
+      {
+        "id": 5,
+        "type": "select",
+        "question": "heroSquareThree.questTask5",
+        "options": [
+          "Der Journalist stellt dem Präsidenten eine Frage.",
+          "Der Journalisten stellt dem Präsidenten eine Frage.",
+          "Der Journalist stellt dem Präsident eine Frage."
+        ],
+        "answer": "Der Journalist stellt dem Präsidenten eine Frage.",
+        "tip": "heroSquareThree.questDescription"
+      },
+      {
+        "id": 6,
+        "type": "input",
+        "question": "heroSquareThree.questTask6",
+        "correctAnswer": "Touristen",
+        "tip": "heroSquareThree.questDescription"
+      },
+      {
+        "id": 7,
+        "type": "readAndAnswer",
+        "question": "heroSquareThree.questTask7",
+        "text": "Paul ist Student in Hamburg. Im Sommer möchte er arbeiten. Eine Firma schreibt: „Wir suchen einen Praktikanten für drei Monate.“ Paul ruft an und bekommt die Stelle.",
+        "options": [
+          "zwei Wochen",
+          "drei Monate",
+          "ein Jahr"
+        ],
+        "answer": "drei Monate",
+        "tip": "heroSquareThree.questDescription"
+      },
+      {
+        "id": 8,
+        "type": "input",
+        "question": "heroSquareThree.questTask8",
+        "correctAnswer": "Polizisten",
+        "tip": "heroSquareThree.questDescription"
+      },
+      {
+        "id": 9,
+        "type": "reorder",
+        "question": "heroSquareThree.questTask10",
+        "words": [
+          "hilft",
+          "Tourist",
+          "Polizist",
+          "Der",
+          "Touristen",
+          "dem"
+        ],
+        "correctOrder": [
+          "Der",
+          "Polizist",
+          "hilft",
+          "dem",
+          "Touristen"
+        ],
+        "tip": "heroSquareThree.questDescription"
+      },
+      {
+        "id": 10,
+        "type": "select",
+        "question": "heroSquareThree.questTask11",
+        "options": [
+          "Wir haben den Präsidenten gesehen.",
+          "Wir haben der Präsidenten gesehen.",
+          "Wir haben den Präsident gesehen."
+        ],
+        "answer": "Wir haben den Präsidenten gesehen.",
+        "tip": "heroSquareThree.questDescription"
+      },
+      {
+        "id": 11,
+        "type": "input",
+        "question": "heroSquareTwo.questTask9",
+        "correctAnswer": "Nachbarn",
+        "tip": "heroSquareTwo.questDescription",
+        "reviewOf": "hero-square-two",
+        "reviewLand": "hero-square"
+      },
+      {
+        "id": 12,
+        "type": "input",
+        "question": "ownerCastleSeven.questTask12",
+        "correctAnswer": "des",
+        "tip": "ownerCastleSeven.questDescription",
+        "reviewOf": "owner-castle-seven",
+        "reviewLand": "owner-castle"
+      },
+      {
+        "id": 13,
+        "type": "input",
+        "question": "ownerCastleFour.questTask13",
+        "correctAnswer": "Saras",
+        "tip": "ownerCastleFour.questDescription",
+        "reviewOf": "owner-castle-four",
+        "reviewLand": "owner-castle"
+      },
+      {
+        "id": 14,
+        "type": "input",
+        "question": "heroSquareThree.questTask14",
+        "correctAnswer": "trotz",
+        "tip": "heroSquareThree.questDescription"
+      },
+      {
+        "id": 15,
+        "type": "input",
+        "question": "heroSquareThree.questTask15",
+        "correctAnswer": "wäre",
+        "tip": "heroSquareThree.questDescription"
+      }
+    ]
+  },
+  {
+    "questId": "hero-square-four",
+    "title": "heroSquareFour.questTitle",
+    "progress": "0/15",
+    "description": "heroSquareFour.questDescription",
+    "conditions": {
+      "goal": "heroSquareFour.questGoal",
+      "minCorrect": 15,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
+    "vocabulary": [
+      {
+        "word": "der Name",
+        "translation-ru": "имя, название",
+        "translation-en": "name",
+        "translation-uk": "ім’я, назва",
+        "translation-pl": "imię, nazwa",
+        "translation-es": "el nombre",
+        "translation-fr": "le nom",
+        "translation-tr": "isim, ad",
+        "translation-ro": "numele",
+        "translation-uz": "ism, nom",
+        "translation-hi": "नाम",
+        "translation-ar": "الاسم"
+      },
+      {
+        "word": "der Geburtstag",
+        "translation-ru": "день рождения",
+        "translation-en": "birthday",
+        "translation-uk": "день народження",
+        "translation-pl": "urodziny",
+        "translation-es": "el cumpleaños",
+        "translation-fr": "l’anniversaire",
+        "translation-tr": "doğum günü",
+        "translation-ro": "ziua de naștere",
+        "translation-uz": "tug‘ilgan kun",
+        "translation-hi": "जन्मदिन",
+        "translation-ar": "عيد الميلاد"
+      },
+      {
+        "word": "die Karte",
+        "translation-ru": "открытка",
+        "translation-en": "card",
+        "translation-uk": "листівка",
+        "translation-pl": "kartka",
+        "translation-es": "la tarjeta",
+        "translation-fr": "la carte",
+        "translation-tr": "kart",
+        "translation-ro": "felicitarea",
+        "translation-uz": "otkritka",
+        "translation-hi": "कार्ड",
+        "translation-ar": "البطاقة"
+      },
+      {
+        "word": "wegen",
+        "translation-ru": "из-за",
+        "translation-en": "because of",
+        "translation-uk": "через",
+        "translation-pl": "z powodu",
+        "translation-es": "por, a causa de",
+        "translation-fr": "à cause de",
+        "translation-tr": "yüzünden",
+        "translation-ro": "din cauza",
+        "translation-uz": "sababli",
+        "translation-hi": "की वजह से",
+        "translation-ar": "بسبب"
+      },
+      {
+        "word": "die Krankheit",
+        "translation-ru": "болезнь",
+        "translation-en": "illness",
+        "translation-uk": "хвороба",
+        "translation-pl": "choroba",
+        "translation-es": "la enfermedad",
+        "translation-fr": "la maladie",
+        "translation-tr": "hastalık",
+        "translation-ro": "boala",
+        "translation-uz": "kasallik",
+        "translation-hi": "बीमारी",
+        "translation-ar": "المرض"
+      }
+    ],
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "heroSquareFour.questTask1",
+        "options": [
+          "Das ist das Auto der Kollege.",
+          "Das ist das Auto des Kollegens.",
+          "Das ist das Auto des Kollegen."
+        ],
+        "answer": "Das ist das Auto des Kollegen.",
+        "tip": "heroSquareFour.questDescription"
+      },
+      {
+        "id": 2,
+        "type": "input",
+        "question": "heroSquareFour.questTask2",
+        "correctAnswer": "Studenten",
+        "tip": "heroSquareFour.questDescription"
+      },
+      {
+        "id": 3,
+        "type": "input",
+        "question": "heroSquareFour.questTask3",
+        "correctAnswer": "Namen",
+        "tip": "heroSquareFour.questDescription"
+      },
+      {
+        "id": 4,
+        "type": "reorder",
+        "question": "heroSquareFour.questTask4",
+        "words": [
+          "Jungen",
+          "Tasche",
+          "Die",
+          "blau",
+          "ist",
+          "Junges",
+          "des"
+        ],
+        "correctOrder": [
+          "Die",
+          "Tasche",
+          "des",
+          "Jungen",
+          "ist",
+          "blau"
+        ],
+        "tip": "heroSquareFour.questDescription"
+      },
+      {
+        "id": 5,
+        "type": "select",
+        "question": "heroSquareFour.questTask5",
+        "options": [
+          "Ich kenne seines Namens nicht.",
+          "Ich kenne seinen Namen nicht.",
+          "Ich kenne seinen Name nicht."
+        ],
+        "answer": "Ich kenne seinen Namen nicht.",
+        "tip": "heroSquareFour.questDescription"
+      },
+      {
+        "id": 6,
+        "type": "input",
+        "question": "heroSquareFour.questTask6",
+        "correctAnswer": "Nachbarn",
+        "tip": "heroSquareFour.questDescription"
+      },
+      {
+        "id": 7,
+        "type": "readAndAnswer",
+        "question": "heroSquareFour.questTask7",
+        "text": "Am Geburtstag des Kollegen gab es Kuchen im Büro. Alle schrieben ihren Namen auf eine Karte. Nur Tim vergaß, seinen Namen zu schreiben.",
+        "options": [
+          "Tim",
+          "die Chefin",
+          "der Kollege"
+        ],
+        "answer": "Tim",
+        "tip": "heroSquareFour.questDescription"
+      },
+      {
+        "id": 8,
+        "type": "input",
+        "question": "heroSquareFour.questTask8",
+        "correctAnswer": "des",
+        "tip": "heroSquareFour.questDescription"
+      },
+      {
+        "id": 9,
+        "type": "reorder",
+        "question": "heroSquareFour.questTask10",
+        "words": [
+          "feiern",
+          "Wir",
+          "Kunden",
+          "des",
+          "Kundes",
+          "den",
+          "Geburtstag"
+        ],
+        "correctOrder": [
+          "Wir",
+          "feiern",
+          "den",
+          "Geburtstag",
+          "des",
+          "Kunden"
+        ],
+        "tip": "heroSquareFour.questDescription"
+      },
+      {
+        "id": 10,
+        "type": "select",
+        "question": "heroSquareFour.questTask11",
+        "options": [
+          "Das ist die Idee den Studenten.",
+          "Das ist die Idee des Studenten.",
+          "Das ist die Idee des Studentes."
+        ],
+        "answer": "Das ist die Idee des Studenten.",
+        "tip": "heroSquareFour.questDescription"
+      },
+      {
+        "id": 11,
+        "type": "input",
+        "question": "heroSquareThree.questTask9",
+        "correctAnswer": "Studenten",
+        "tip": "heroSquareThree.questDescription",
+        "reviewOf": "hero-square-three",
+        "reviewLand": "hero-square"
+      },
+      {
+        "id": 12,
+        "type": "input",
+        "question": "ownerCastleEight.questTask12",
+        "correctAnswer": "der",
+        "tip": "ownerCastleEight.questDescription",
+        "reviewOf": "owner-castle-eight",
+        "reviewLand": "owner-castle"
+      },
+      {
+        "id": 13,
+        "type": "input",
+        "question": "ownerCastleFive.questTask13",
+        "correctAnswer": "der",
+        "tip": "ownerCastleFive.questDescription",
+        "reviewOf": "owner-castle-five",
+        "reviewLand": "owner-castle"
+      },
+      {
+        "id": 14,
+        "type": "input",
+        "question": "heroSquareFour.questTask14",
+        "correctAnswer": "die",
+        "tip": "heroSquareFour.questDescription"
+      },
+      {
+        "id": 15,
+        "type": "input",
+        "question": "heroSquareFour.questTask15",
+        "correctAnswer": "gehabt",
+        "tip": "heroSquareFour.questDescription"
+      }
+    ]
+  },
+  {
+    "questId": "hero-square-five",
+    "title": "heroSquareFive.questTitle",
+    "progress": "0/15",
+    "description": "heroSquareFive.questDescription",
+    "conditions": {
+      "goal": "heroSquareFive.questGoal",
+      "minCorrect": 15,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
+    "vocabulary": [
+      {
+        "word": "der Held",
+        "translation-ru": "герой",
+        "translation-en": "hero",
+        "translation-uk": "герой",
+        "translation-pl": "bohater",
+        "translation-es": "el héroe",
+        "translation-fr": "le héros",
+        "translation-tr": "kahraman",
+        "translation-ro": "eroul",
+        "translation-uz": "qahramon",
+        "translation-hi": "नायक, हीरो",
+        "translation-ar": "البطل"
+      },
+      {
+        "word": "der Affe",
+        "translation-ru": "обезьяна",
+        "translation-en": "monkey",
+        "translation-uk": "мавпа",
+        "translation-pl": "małpa",
+        "translation-es": "el mono",
+        "translation-fr": "le singe",
+        "translation-tr": "maymun",
+        "translation-ro": "maimuța",
+        "translation-uz": "maymun",
+        "translation-hi": "बंदर",
+        "translation-ar": "القرد"
+      },
+      {
+        "word": "der Experte",
+        "translation-ru": "эксперт",
+        "translation-en": "expert",
+        "translation-uk": "експерт",
+        "translation-pl": "ekspert",
+        "translation-es": "el experto",
+        "translation-fr": "l’expert",
+        "translation-tr": "uzman",
+        "translation-ro": "expertul",
+        "translation-uz": "mutaxassis",
+        "translation-hi": "विशेषज्ञ",
+        "translation-ar": "الخبير"
+      },
+      {
+        "word": "der Biologe",
+        "translation-ru": "биолог",
+        "translation-en": "biologist",
+        "translation-uk": "біолог",
+        "translation-pl": "biolog",
+        "translation-es": "el biólogo",
+        "translation-fr": "le biologiste",
+        "translation-tr": "biyolog",
+        "translation-ro": "biologul",
+        "translation-uz": "biolog",
+        "translation-hi": "जीवविज्ञानी",
+        "translation-ar": "عالم الأحياء"
+      },
+      {
+        "word": "retten",
+        "translation-ru": "спасать",
+        "translation-en": "to save, to rescue",
+        "translation-uk": "рятувати",
+        "translation-pl": "ratować",
+        "translation-es": "salvar",
+        "translation-fr": "sauver",
+        "translation-tr": "kurtarmak",
+        "translation-ro": "a salva",
+        "translation-uz": "qutqarmoq",
+        "translation-hi": "बचाना",
+        "translation-ar": "ينقذ"
+      },
+      {
+        "word": "springen",
+        "translation-ru": "прыгать",
+        "translation-en": "to jump",
+        "translation-uk": "стрибати",
+        "translation-pl": "skakać",
+        "translation-es": "saltar",
+        "translation-fr": "sauter",
+        "translation-tr": "atlamak",
+        "translation-ro": "a sări",
+        "translation-uz": "sakramoq",
+        "translation-hi": "कूदना",
+        "translation-ar": "يقفز"
+      },
+      {
+        "word": "buchstabieren",
+        "translation-ru": "произносить по буквам",
+        "translation-en": "to spell",
+        "translation-uk": "вимовляти по літерах",
+        "translation-pl": "przeliterować",
+        "translation-es": "deletrear",
+        "translation-fr": "épeler",
+        "translation-tr": "harf harf söylemek",
+        "translation-ro": "a silabisi",
+        "translation-uz": "harflab aytmoq",
+        "translation-hi": "स्पेलिंग बताना",
+        "translation-ar": "يتهجّى"
+      }
+    ],
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "heroSquareFive.questTask1",
+        "options": [
+          "Den Jungen spielt mit seinem Freund.",
+          "Der Jungen spielt mit seinem Freund.",
+          "Der Junge spielt mit seinem Freund."
+        ],
+        "answer": "Der Junge spielt mit seinem Freund.",
+        "tip": "heroSquareFive.questDescription"
+      },
+      {
+        "id": 2,
+        "type": "input",
+        "question": "heroSquareFive.questTask2",
+        "correctAnswer": "Held",
+        "tip": "heroSquareFive.questDescription"
+      },
+      {
+        "id": 3,
+        "type": "input",
+        "question": "heroSquareFive.questTask3",
+        "correctAnswer": "Helden",
+        "tip": "heroSquareFive.questDescription"
+      },
+      {
+        "id": 4,
+        "type": "reorder",
+        "question": "heroSquareFive.questTask4",
+        "words": [
+          "erklärt",
+          "das",
+          "Problem",
+          "Experten",
+          "Der",
+          "Experte"
+        ],
+        "correctOrder": [
+          "Der",
+          "Experte",
+          "erklärt",
+          "das",
+          "Problem"
+        ],
+        "tip": "heroSquareFive.questDescription"
+      },
+      {
+        "id": 5,
+        "type": "select",
+        "question": "heroSquareFive.questTask5",
+        "options": [
+          "Wir haben den Experten gefragt.",
+          "Wir haben der Experte gefragt.",
+          "Wir haben den Experte gefragt."
+        ],
+        "answer": "Wir haben den Experten gefragt.",
+        "tip": "heroSquareFive.questDescription"
+      },
+      {
+        "id": 6,
+        "type": "input",
+        "question": "heroSquareFive.questTask6",
+        "correctAnswer": "Affen",
+        "tip": "heroSquareFive.questDescription"
+      },
+      {
+        "id": 7,
+        "type": "readAndAnswer",
+        "question": "heroSquareFive.questTask7",
+        "text": "Ein Junge fiel in den See. Ein Mann sprang ins Wasser und rettete den Jungen. Jetzt ist der Mann ein Held. Die Zeitung schreibt über den Helden.",
+        "options": [
+          "den Jungen",
+          "seinen Sohn",
+          "einen Hund"
+        ],
+        "answer": "den Jungen",
+        "tip": "heroSquareFive.questDescription"
+      },
+      {
+        "id": 8,
+        "type": "input",
+        "question": "heroSquareFive.questTask8",
+        "correctAnswer": "Biologe",
+        "tip": "heroSquareFive.questDescription"
+      },
+      {
+        "id": 9,
+        "type": "reorder",
+        "question": "heroSquareFive.questTask10",
+        "words": [
+          "wartet",
+          "Kollegen",
+          "Kunden",
+          "den",
+          "Kunde",
+          "Der",
+          "auf"
+        ],
+        "correctOrder": [
+          "Der",
+          "Kunde",
+          "wartet",
+          "auf",
+          "den",
+          "Kollegen"
+        ],
+        "tip": "heroSquareFive.questDescription"
+      },
+      {
+        "id": 10,
+        "type": "select",
+        "question": "heroSquareFive.questTask11",
+        "options": [
+          "Die Jungen gehen zur Schule.",
+          "Die Jungens gehen zur Schule.",
+          "Die Junge gehen zur Schule."
+        ],
+        "answer": "Die Jungen gehen zur Schule.",
+        "tip": "heroSquareFive.questDescription"
+      },
+      {
+        "id": 11,
+        "type": "input",
+        "question": "heroSquareFour.questTask9",
+        "correctAnswer": "Namen",
+        "tip": "heroSquareFour.questDescription",
+        "reviewOf": "hero-square-four",
+        "reviewLand": "hero-square"
+      },
+      {
+        "id": 12,
+        "type": "input",
+        "question": "heroSquareOne.questTask12",
+        "correctAnswer": "Jungen",
+        "tip": "heroSquareOne.questDescription",
+        "reviewOf": "hero-square-one",
+        "reviewLand": "hero-square"
+      },
+      {
+        "id": 13,
+        "type": "input",
+        "question": "ownerCastleSix.questTask13",
+        "correctAnswer": "des",
+        "tip": "ownerCastleSix.questDescription",
+        "reviewOf": "owner-castle-six",
+        "reviewLand": "owner-castle"
+      },
+      {
+        "id": 14,
+        "type": "input",
+        "question": "heroSquareFive.questTask14",
+        "correctAnswer": "meines",
+        "tip": "heroSquareFive.questDescription"
+      },
+      {
+        "id": 15,
+        "type": "input",
+        "question": "heroSquareFive.questTask15",
+        "correctAnswer": "würde",
+        "tip": "heroSquareFive.questDescription"
+      }
+    ]
+  },
+  {
+    "questId": "hero-square-six",
+    "title": "heroSquareSix.questTitle",
+    "progress": "0/15",
+    "description": "heroSquareSix.questDescription",
+    "conditions": {
+      "goal": "heroSquareSix.questGoal",
+      "minCorrect": 15,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
+    "vocabulary": [
+      {
+        "word": "der Ausweis",
+        "translation-ru": "удостоверение личности",
+        "translation-en": "ID card",
+        "translation-uk": "посвідчення особи",
+        "translation-pl": "dowód osobisty",
+        "translation-es": "el carné de identidad",
+        "translation-fr": "la carte d’identité",
+        "translation-tr": "kimlik kartı",
+        "translation-ro": "buletinul",
+        "translation-uz": "shaxsiy guvohnoma",
+        "translation-hi": "पहचान पत्र",
+        "translation-ar": "بطاقة الهوية"
+      },
+      {
+        "word": "verlieren",
+        "translation-ru": "терять",
+        "translation-en": "to lose",
+        "translation-uk": "губити",
+        "translation-pl": "gubić",
+        "translation-es": "perder",
+        "translation-fr": "perdre",
+        "translation-tr": "kaybetmek",
+        "translation-ro": "a pierde",
+        "translation-uz": "yo‘qotmoq",
+        "translation-hi": "खोना",
+        "translation-ar": "يفقد"
+      },
+      {
+        "word": "die Polizei",
+        "translation-ru": "полиция",
+        "translation-en": "police",
+        "translation-uk": "поліція",
+        "translation-pl": "policja",
+        "translation-es": "la policía",
+        "translation-fr": "la police",
+        "translation-tr": "polis",
+        "translation-ro": "poliția",
+        "translation-uz": "politsiya",
+        "translation-hi": "पुलिस",
+        "translation-ar": "الشرطة"
+      },
+      {
+        "word": "die Kälte",
+        "translation-ru": "холод",
+        "translation-en": "cold",
+        "translation-uk": "холод",
+        "translation-pl": "zimno",
+        "translation-es": "el frío",
+        "translation-fr": "le froid",
+        "translation-tr": "soğuk",
+        "translation-ro": "frigul",
+        "translation-uz": "sovuq",
+        "translation-hi": "ठंड",
+        "translation-ar": "البرد"
+      },
+      {
+        "word": "der Polizist",
+        "translation-ru": "полицейский",
+        "translation-en": "police officer",
+        "translation-uk": "поліцейський",
+        "translation-pl": "policjant",
+        "translation-es": "el policía",
+        "translation-fr": "le policier",
+        "translation-tr": "polis memuru",
+        "translation-ro": "polițistul",
+        "translation-uz": "politsiyachi",
+        "translation-hi": "पुलिसवाला",
+        "translation-ar": "الشرطي"
+      }
+    ],
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "heroSquareSix.questTask1",
+        "options": [
+          "Der neue Kollegen half sofort dem Kunden.",
+          "Der neue Kollege half sofort dem Kunde.",
+          "Der neue Kollege half sofort dem Kunden."
+        ],
+        "answer": "Der neue Kollege half sofort dem Kunden.",
+        "tip": "heroSquareSix.questDescription"
+      },
+      {
+        "id": 2,
+        "type": "input",
+        "question": "heroSquareSix.questTask2",
+        "correctAnswer": "Polizisten",
+        "tip": "heroSquareSix.questDescription"
+      },
+      {
+        "id": 3,
+        "type": "input",
+        "question": "heroSquareSix.questTask3",
+        "correctAnswer": "Touristen",
+        "tip": "heroSquareSix.questDescription"
+      },
+      {
+        "id": 4,
+        "type": "reorder",
+        "question": "heroSquareSix.questTask4",
+        "words": [
+          "Praktikanten",
+          "neuen",
+          "Braun",
+          "Praktikant",
+          "Herr",
+          "den",
+          "begrüßt"
+        ],
+        "correctOrder": [
+          "Herr",
+          "Braun",
+          "begrüßt",
+          "den",
+          "neuen",
+          "Praktikanten"
+        ],
+        "tip": "heroSquareSix.questDescription"
+      },
+      {
+        "id": 5,
+        "type": "select",
+        "question": "heroSquareSix.questTask5",
+        "options": [
+          "Das ist die Tasche von Herr Schulz.",
+          "Das ist die Tasche von Herrn Schulzen.",
+          "Das ist die Tasche von Herrn Schulz."
+        ],
+        "answer": "Das ist die Tasche von Herrn Schulz.",
+        "tip": "heroSquareSix.questDescription"
+      },
+      {
+        "id": 6,
+        "type": "input",
+        "question": "heroSquareSix.questTask6",
+        "correctAnswer": "Name",
+        "tip": "heroSquareSix.questDescription"
+      },
+      {
+        "id": 7,
+        "type": "readAndAnswer",
+        "question": "heroSquareSix.questTask7",
+        "text": "Im Büro gibt es einen neuen Praktikanten. Er heißt Jonas und ist Student. Am ersten Tag zeigt ihm eine Kollegin alles. Am Nachmittag spricht Jonas allein mit einem Kunden. Der Chef lobt den Praktikanten.",
+        "options": [
+          "mit einem Polizisten",
+          "mit einem Kunden",
+          "mit dem Chef"
+        ],
+        "answer": "mit einem Kunden",
+        "tip": "heroSquareSix.questDescription"
+      },
+      {
+        "id": 8,
+        "type": "input",
+        "question": "heroSquareSix.questTask8",
+        "correctAnswer": "Mensch",
+        "tip": "heroSquareSix.questDescription"
+      },
+      {
+        "id": 9,
+        "type": "reorder",
+        "question": "heroSquareSix.questTask10",
+        "words": [
+          "Namen",
+          "kann",
+          "lesen",
+          "den",
+          "Ich",
+          "nicht",
+          "Kunden",
+          "Kundes",
+          "des"
+        ],
+        "correctOrder": [
+          "Ich",
+          "kann",
+          "den",
+          "Namen",
+          "des",
+          "Kunden",
+          "nicht",
+          "lesen"
+        ],
+        "tip": "heroSquareSix.questDescription"
+      },
+      {
+        "id": 10,
+        "type": "select",
+        "question": "heroSquareSix.questTask11",
+        "options": [
+          "Wir haben dem Nachbarn eingeladen.",
+          "Wir haben den Nachbarn eingeladen.",
+          "Wir haben den Nachbar eingeladen."
+        ],
+        "answer": "Wir haben den Nachbarn eingeladen.",
+        "tip": "heroSquareSix.questDescription"
+      },
+      {
+        "id": 11,
+        "type": "input",
+        "question": "heroSquareFive.questTask9",
+        "correctAnswer": "Biologen",
+        "tip": "heroSquareFive.questDescription",
+        "reviewOf": "hero-square-five",
+        "reviewLand": "hero-square"
+      },
+      {
+        "id": 12,
+        "type": "input",
+        "question": "heroSquareTwo.questTask12",
+        "correctAnswer": "Herrn",
+        "tip": "heroSquareTwo.questDescription",
+        "reviewOf": "hero-square-two",
+        "reviewLand": "hero-square"
+      },
+      {
+        "id": 13,
+        "type": "input",
+        "question": "ownerCastleSeven.questTask13",
+        "correctAnswer": "Bruder",
+        "tip": "ownerCastleSeven.questDescription",
+        "reviewOf": "owner-castle-seven",
+        "reviewLand": "owner-castle"
+      },
+      {
+        "id": 14,
+        "type": "input",
+        "question": "heroSquareSix.questTask14",
+        "correctAnswer": "habe",
+        "tip": "heroSquareSix.questDescription"
+      },
+      {
+        "id": 15,
+        "type": "input",
+        "question": "heroSquareSix.questTask15",
+        "correctAnswer": "der",
+        "tip": "heroSquareSix.questDescription"
+      }
+    ]
+  },
+  {
+    "questId": "hero-square-seven",
+    "title": "heroSquareSeven.questTitle",
+    "progress": "0/15",
+    "description": "heroSquareSeven.questDescription",
+    "conditions": {
+      "goal": "heroSquareSeven.questGoal",
+      "minCorrect": 15,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
+    "vocabulary": [
+      {
+        "word": "der Patient",
+        "translation-ru": "пациент",
+        "translation-en": "patient",
+        "translation-uk": "пацієнт",
+        "translation-pl": "pacjent",
+        "translation-es": "el paciente",
+        "translation-fr": "le patient",
+        "translation-tr": "hasta",
+        "translation-ro": "pacientul",
+        "translation-uz": "bemor",
+        "translation-hi": "मरीज़",
+        "translation-ar": "المريض"
+      },
+      {
+        "word": "das Krankenhaus",
+        "translation-ru": "больница",
+        "translation-en": "hospital",
+        "translation-uk": "лікарня",
+        "translation-pl": "szpital",
+        "translation-es": "el hospital",
+        "translation-fr": "l’hôpital",
+        "translation-tr": "hastane",
+        "translation-ro": "spitalul",
+        "translation-uz": "kasalxona",
+        "translation-hi": "अस्पताल",
+        "translation-ar": "المستشفى"
+      },
+      {
+        "word": "die Krankenschwester",
+        "translation-ru": "медсестра",
+        "translation-en": "nurse",
+        "translation-uk": "медсестра",
+        "translation-pl": "pielęgniarka",
+        "translation-es": "la enfermera",
+        "translation-fr": "l’infirmière",
+        "translation-tr": "hemşire",
+        "translation-ro": "asistenta",
+        "translation-uz": "hamshira",
+        "translation-hi": "नर्स",
+        "translation-ar": "الممرضة"
+      },
+      {
+        "word": "besuchen",
+        "translation-ru": "навещать",
+        "translation-en": "to visit",
+        "translation-uk": "відвідувати",
+        "translation-pl": "odwiedzać",
+        "translation-es": "visitar",
+        "translation-fr": "rendre visite",
+        "translation-tr": "ziyaret etmek",
+        "translation-ro": "a vizita",
+        "translation-uz": "ziyorat qilmoq",
+        "translation-hi": "मिलने जाना",
+        "translation-ar": "يزور"
+      },
+      {
+        "word": "das Medikament",
+        "translation-ru": "лекарство",
+        "translation-en": "medicine",
+        "translation-uk": "ліки",
+        "translation-pl": "lek",
+        "translation-es": "el medicamento",
+        "translation-fr": "le médicament",
+        "translation-tr": "ilaç",
+        "translation-ro": "medicamentul",
+        "translation-uz": "dori",
+        "translation-hi": "दवा",
+        "translation-ar": "الدواء"
+      }
+    ],
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "heroSquareSeven.questTask1",
+        "options": [
+          "Die Krankenschwester gibt den Patient das Medikament.",
+          "Die Krankenschwester gibt dem Patient das Medikament.",
+          "Die Krankenschwester gibt dem Patienten das Medikament."
+        ],
+        "answer": "Die Krankenschwester gibt dem Patienten das Medikament.",
+        "tip": "heroSquareSeven.questDescription"
+      },
+      {
+        "id": 2,
+        "type": "input",
+        "question": "heroSquareSeven.questTask2",
+        "correctAnswer": "Kollegen",
+        "tip": "heroSquareSeven.questDescription"
+      },
+      {
+        "id": 3,
+        "type": "input",
+        "question": "heroSquareSeven.questTask3",
+        "correctAnswer": "Patient",
+        "tip": "heroSquareSeven.questDescription"
+      },
+      {
+        "id": 4,
+        "type": "reorder",
+        "question": "heroSquareSeven.questTask4",
+        "words": [
+          "mit",
+          "Herr",
+          "Schulz",
+          "Herrn",
+          "Der",
+          "lange",
+          "Arzt",
+          "spricht"
+        ],
+        "correctOrder": [
+          "Der",
+          "Arzt",
+          "spricht",
+          "lange",
+          "mit",
+          "Herrn",
+          "Schulz"
+        ],
+        "tip": "heroSquareSeven.questDescription"
+      },
+      {
+        "id": 5,
+        "type": "select",
+        "question": "heroSquareSeven.questTask5",
+        "options": [
+          "Ich habe die Krankenschwester nach dem Patient gefragt.",
+          "Ich habe die Krankenschwester nach den Patient gefragt.",
+          "Ich habe die Krankenschwester nach dem Patienten gefragt."
+        ],
+        "answer": "Ich habe die Krankenschwester nach dem Patienten gefragt.",
+        "tip": "heroSquareSeven.questDescription"
+      },
+      {
+        "id": 6,
+        "type": "input",
+        "question": "heroSquareSeven.questTask6",
+        "correctAnswer": "Patienten",
+        "tip": "heroSquareSeven.questDescription"
+      },
+      {
+        "id": 7,
+        "type": "readAndAnswer",
+        "question": "heroSquareSeven.questTask7",
+        "text": "Petra arbeitet in einem Büro. Ihr Kollege Max ist seit einer Woche im Krankenhaus. Heute besucht Petra den Kollegen und bringt ihm Blumen. Die Krankenschwester sagt, dass es dem Patienten schon besser geht.",
+        "options": [
+          "ihren Kollegen Max",
+          "einen Studenten",
+          "ihren Nachbarn"
+        ],
+        "answer": "ihren Kollegen Max",
+        "tip": "heroSquareSeven.questDescription"
+      },
+      {
+        "id": 8,
+        "type": "input",
+        "question": "heroSquareSeven.questTask8",
+        "correctAnswer": "Nachbar",
+        "tip": "heroSquareSeven.questDescription"
+      },
+      {
+        "id": 9,
+        "type": "reorder",
+        "question": "heroSquareSeven.questTask10",
+        "words": [
+          "Die",
+          "bringt",
+          "Student",
+          "Studenten",
+          "Wasser",
+          "Krankenschwester",
+          "dem"
+        ],
+        "correctOrder": [
+          "Die",
+          "Krankenschwester",
+          "bringt",
+          "dem",
+          "Studenten",
+          "Wasser"
+        ],
+        "tip": "heroSquareSeven.questDescription"
+      },
+      {
+        "id": 10,
+        "type": "select",
+        "question": "heroSquareSeven.questTask11",
+        "options": [
+          "Wir warten auf dem Herrn Doktor Lang.",
+          "Wir warten auf Herrn Doktor Lang.",
+          "Wir warten auf Herr Doktor Lang."
+        ],
+        "answer": "Wir warten auf Herrn Doktor Lang.",
+        "tip": "heroSquareSeven.questDescription"
+      },
+      {
+        "id": 11,
+        "type": "input",
+        "question": "heroSquareSix.questTask9",
+        "correctAnswer": "Jungen",
+        "tip": "heroSquareSix.questDescription",
+        "reviewOf": "hero-square-six",
+        "reviewLand": "hero-square"
+      },
+      {
+        "id": 12,
+        "type": "input",
+        "question": "heroSquareThree.questTask12",
+        "correctAnswer": "Praktikanten",
+        "tip": "heroSquareThree.questDescription",
+        "reviewOf": "hero-square-three",
+        "reviewLand": "hero-square"
+      },
+      {
+        "id": 13,
+        "type": "input",
+        "question": "ownerCastleEight.questTask13",
+        "correctAnswer": "Trotz",
+        "tip": "ownerCastleEight.questDescription",
+        "reviewOf": "owner-castle-eight",
+        "reviewLand": "owner-castle"
+      },
+      {
+        "id": 14,
+        "type": "input",
+        "question": "heroSquareSeven.questTask14",
+        "correctAnswer": "der",
+        "tip": "heroSquareSeven.questDescription"
+      },
+      {
+        "id": 15,
+        "type": "input",
+        "question": "heroSquareSeven.questTask15",
+        "correctAnswer": "wäre",
+        "tip": "heroSquareSeven.questDescription"
+      }
+    ]
+  },
+  {
+    "questId": "hero-square-eight",
+    "title": "heroSquareEight.questTitle",
+    "progress": "0/15",
+    "description": "heroSquareEight.questDescription",
+    "conditions": {
+      "goal": "heroSquareEight.questGoal",
+      "minCorrect": 15,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
+    "vocabulary": [
+      {
+        "word": "der Elefant",
+        "translation-ru": "слон",
+        "translation-en": "elephant",
+        "translation-uk": "слон",
+        "translation-pl": "słoń",
+        "translation-es": "el elefante",
+        "translation-fr": "l’éléphant",
+        "translation-tr": "fil",
+        "translation-ro": "elefantul",
+        "translation-uz": "fil",
+        "translation-hi": "हाथी",
+        "translation-ar": "الفيل"
+      },
+      {
+        "word": "der Zoo",
+        "translation-ru": "зоопарк",
+        "translation-en": "zoo",
+        "translation-uk": "зоопарк",
+        "translation-pl": "zoo",
+        "translation-es": "el zoo",
+        "translation-fr": "le zoo",
+        "translation-tr": "hayvanat bahçesi",
+        "translation-ro": "grădina zoologică",
+        "translation-uz": "hayvonot bog‘i",
+        "translation-hi": "चिड़ियाघर",
+        "translation-ar": "حديقة الحيوان"
+      },
+      {
+        "word": "füttern",
+        "translation-ru": "кормить",
+        "translation-en": "to feed",
+        "translation-uk": "годувати",
+        "translation-pl": "karmić",
+        "translation-es": "dar de comer",
+        "translation-fr": "nourrir",
+        "translation-tr": "beslemek",
+        "translation-ro": "a hrăni",
+        "translation-uz": "boqmoq",
+        "translation-hi": "खिलाना",
+        "translation-ar": "يطعم"
+      },
+      {
+        "word": "der Käfig",
+        "translation-ru": "клетка",
+        "translation-en": "cage",
+        "translation-uk": "клітка",
+        "translation-pl": "klatka",
+        "translation-es": "la jaula",
+        "translation-fr": "la cage",
+        "translation-tr": "kafes",
+        "translation-ro": "cușca",
+        "translation-uz": "qafas",
+        "translation-hi": "पिंजरा",
+        "translation-ar": "القفص"
+      },
+      {
+        "word": "der Tierpfleger",
+        "translation-ru": "смотритель животных",
+        "translation-en": "zookeeper",
+        "translation-uk": "доглядач тварин",
+        "translation-pl": "opiekun zwierząt",
+        "translation-es": "el cuidador",
+        "translation-fr": "le soigneur",
+        "translation-tr": "hayvan bakıcısı",
+        "translation-ro": "îngrijitorul",
+        "translation-uz": "hayvon parvarishchisi",
+        "translation-hi": "जानवरों का रखवाला",
+        "translation-ar": "حارس الحيوانات"
+      },
+      {
+        "word": "fotografieren",
+        "translation-ru": "фотографировать",
+        "translation-en": "to take photos",
+        "translation-uk": "фотографувати",
+        "translation-pl": "fotografować",
+        "translation-es": "fotografiar",
+        "translation-fr": "photographier",
+        "translation-tr": "fotoğraf çekmek",
+        "translation-ro": "a fotografia",
+        "translation-uz": "suratga olmoq",
+        "translation-hi": "फ़ोटो खींचना",
+        "translation-ar": "يصوّر"
+      },
+      {
+        "word": "fressen",
+        "translation-ru": "жрать / пожирать",
+        "translation-en": "to eat / devour",
+        "translation-uk": "жерти",
+        "translation-pl": "żreć",
+        "translation-es": "devorar / comer",
+        "translation-fr": "dévorer / manger",
+        "translation-tr": "yemek / tıkınmak",
+        "translation-ro": "a mânca",
+        "translation-uz": "yemoq",
+        "translation-hi": "खाना",
+        "translation-ar": "يلتهم"
+      }
+    ],
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "heroSquareEight.questTask1",
+        "options": [
+          "Die Kinder füttern den Elefant.",
+          "Die Kinder füttern dem Elefanten.",
+          "Die Kinder füttern den Elefanten."
+        ],
+        "answer": "Die Kinder füttern den Elefanten.",
+        "tip": "heroSquareEight.questDescription"
+      },
+      {
+        "id": 2,
+        "type": "input",
+        "question": "heroSquareEight.questTask2",
+        "correctAnswer": "Löwen",
+        "tip": "heroSquareEight.questDescription"
+      },
+      {
+        "id": 3,
+        "type": "input",
+        "question": "heroSquareEight.questTask3",
+        "correctAnswer": "Bär",
+        "tip": "heroSquareEight.questDescription"
+      },
+      {
+        "id": 4,
+        "type": "reorder",
+        "question": "heroSquareEight.questTask4",
+        "words": [
+          "die",
+          "Affe",
+          "Wir",
+          "Affen",
+          "fotografieren"
+        ],
+        "correctOrder": [
+          "Wir",
+          "fotografieren",
+          "die",
+          "Affen"
+        ],
+        "tip": "heroSquareEight.questDescription"
+      },
+      {
+        "id": 5,
+        "type": "select",
+        "question": "heroSquareEight.questTask5",
+        "options": [
+          "Der Käfig der Löwe ist sehr groß.",
+          "Der Käfig des Löwes ist sehr groß.",
+          "Der Käfig des Löwen ist sehr groß."
+        ],
+        "answer": "Der Käfig des Löwen ist sehr groß.",
+        "tip": "heroSquareEight.questDescription"
+      },
+      {
+        "id": 6,
+        "type": "input",
+        "question": "heroSquareEight.questTask6",
+        "correctAnswer": "Elefanten",
+        "tip": "heroSquareEight.questDescription"
+      },
+      {
+        "id": 7,
+        "type": "readAndAnswer",
+        "question": "heroSquareEight.questTask7",
+        "text": "Mila ist mit ihrem Opa im Zoo. Zuerst sehen sie den Löwen, dann füttern sie die Affen. Am meisten liebt Mila den kleinen Elefanten. Der Tierpfleger erzählt ihr viel über den Elefanten.",
+        "options": [
+          "die Affen",
+          "den kleinen Elefanten",
+          "den Löwen"
+        ],
+        "answer": "den kleinen Elefanten",
+        "tip": "heroSquareEight.questDescription"
+      },
+      {
+        "id": 8,
+        "type": "input",
+        "question": "heroSquareEight.questTask8",
+        "correctAnswer": "spielen",
+        "tip": "heroSquareEight.questDescription"
+      },
+      {
+        "id": 9,
+        "type": "reorder",
+        "question": "heroSquareEight.questTask10",
+        "words": [
+          "Tierpfleger",
+          "Der",
+          "liebt",
+          "Elefanten",
+          "Elefant",
+          "seinen"
+        ],
+        "correctOrder": [
+          "Der",
+          "Tierpfleger",
+          "liebt",
+          "seinen",
+          "Elefanten"
+        ],
+        "tip": "heroSquareEight.questDescription"
+      },
+      {
+        "id": 10,
+        "type": "select",
+        "question": "heroSquareEight.questTask11",
+        "options": [
+          "Der Löwe frisst Fleisch.",
+          "Den Löwen frisst Fleisch.",
+          "Der Löwen frisst Fleisch."
+        ],
+        "answer": "Der Löwe frisst Fleisch.",
+        "tip": "heroSquareEight.questDescription"
+      },
+      {
+        "id": 11,
+        "type": "input",
+        "question": "heroSquareSeven.questTask9",
+        "correctAnswer": "Patienten",
+        "tip": "heroSquareSeven.questDescription",
+        "reviewOf": "hero-square-seven",
+        "reviewLand": "hero-square"
+      },
+      {
+        "id": 12,
+        "type": "input",
+        "question": "heroSquareFour.questTask12",
+        "correctAnswer": "Herrn",
+        "tip": "heroSquareFour.questDescription",
+        "reviewOf": "hero-square-four",
+        "reviewLand": "hero-square"
+      },
+      {
+        "id": 13,
+        "type": "input",
+        "question": "heroSquareOne.questTask13",
+        "correctAnswer": "Löwen",
+        "tip": "heroSquareOne.questDescription",
+        "reviewOf": "hero-square-one",
+        "reviewLand": "hero-square"
+      },
+      {
+        "id": 14,
+        "type": "input",
+        "question": "heroSquareEight.questTask14",
+        "correctAnswer": "um",
+        "tip": "heroSquareEight.questDescription"
+      },
+      {
+        "id": 15,
+        "type": "input",
+        "question": "heroSquareEight.questTask15",
+        "correctAnswer": "war",
+        "tip": "heroSquareEight.questDescription"
+      }
+    ]
+  },
+  {
+    "questId": "hero-square-nine",
+    "title": "heroSquareNine.questTitle",
+    "progress": "0/15",
+    "description": "heroSquareNine.questDescription",
+    "conditions": {
+      "goal": "heroSquareNine.questGoal",
+      "minCorrect": 15,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
+    "vocabulary": [
+      {
+        "word": "das Praktikum",
+        "translation-ru": "практика, стажировка",
+        "translation-en": "internship",
+        "translation-uk": "практика, стажування",
+        "translation-pl": "praktyka, staż",
+        "translation-es": "las prácticas",
+        "translation-fr": "le stage",
+        "translation-tr": "staj",
+        "translation-ro": "stagiul",
+        "translation-uz": "amaliyot",
+        "translation-hi": "इंटर्नशिप",
+        "translation-ar": "التدريب العملي"
+      },
+      {
+        "word": "die Banane",
+        "translation-ru": "банан",
+        "translation-en": "banana",
+        "translation-uk": "банан",
+        "translation-pl": "banan",
+        "translation-es": "el plátano",
+        "translation-fr": "la banane",
+        "translation-tr": "muz",
+        "translation-ro": "banana",
+        "translation-uz": "banan",
+        "translation-hi": "केला",
+        "translation-ar": "الموز"
+      },
+      {
+        "word": "wegnehmen",
+        "translation-ru": "отнимать, забирать",
+        "translation-en": "to take away",
+        "translation-uk": "відбирати",
+        "translation-pl": "zabierać",
+        "translation-es": "quitar",
+        "translation-fr": "prendre, enlever",
+        "translation-tr": "elinden almak",
+        "translation-ro": "a lua",
+        "translation-uz": "tortib olmoq",
+        "translation-hi": "छीन लेना",
+        "translation-ar": "يأخذ من"
+      },
+      {
+        "word": "geehrt",
+        "translation-ru": "уважаемый",
+        "translation-en": "dear (formal)",
+        "translation-uk": "шановний",
+        "translation-pl": "szanowny",
+        "translation-es": "estimado",
+        "translation-fr": "cher",
+        "translation-tr": "sayın",
+        "translation-ro": "stimat",
+        "translation-uz": "hurmatli",
+        "translation-hi": "आदरणीय",
+        "translation-ar": "المحترم"
+      },
+      {
+        "word": "der Affe",
+        "translation-ru": "обезьяна",
+        "translation-en": "monkey",
+        "translation-uk": "мавпа",
+        "translation-pl": "małpa",
+        "translation-es": "el mono",
+        "translation-fr": "le singe",
+        "translation-tr": "maymun",
+        "translation-ro": "maimuța",
+        "translation-uz": "maymun",
+        "translation-hi": "बंदर",
+        "translation-ar": "القرد"
+      }
+    ],
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "heroSquareNine.questTask1",
+        "options": [
+          "Kennst du dieser Mensch?",
+          "Kennst du diesen Mensch?",
+          "Kennst du diesen Menschen?"
+        ],
+        "answer": "Kennst du diesen Menschen?",
+        "tip": "heroSquareNine.questDescription"
+      },
+      {
+        "id": 2,
+        "type": "input",
+        "question": "heroSquareNine.questTask2",
+        "correctAnswer": "Kollegen",
+        "tip": "heroSquareNine.questDescription"
+      },
+      {
+        "id": 3,
+        "type": "input",
+        "question": "heroSquareNine.questTask3",
+        "correctAnswer": "Jungen",
+        "tip": "heroSquareNine.questDescription"
+      },
+      {
+        "id": 4,
+        "type": "reorder",
+        "question": "heroSquareNine.questTask4",
+        "words": [
+          "Bahnhof",
+          "fragen",
+          "Polizisten",
+          "dem",
+          "Wir",
+          "nach",
+          "Polizist",
+          "den"
+        ],
+        "correctOrder": [
+          "Wir",
+          "fragen",
+          "den",
+          "Polizisten",
+          "nach",
+          "dem",
+          "Bahnhof"
+        ],
+        "tip": "heroSquareNine.questDescription"
+      },
+      {
+        "id": 5,
+        "type": "select",
+        "question": "heroSquareNine.questTask5",
+        "options": [
+          "Im Hotel sind viele Tourist.",
+          "Im Hotel sind viele Touristens.",
+          "Im Hotel sind viele Touristen."
+        ],
+        "answer": "Im Hotel sind viele Touristen.",
+        "tip": "heroSquareNine.questDescription"
+      },
+      {
+        "id": 6,
+        "type": "input",
+        "question": "heroSquareNine.questTask6",
+        "correctAnswer": "Herr",
+        "tip": "heroSquareNine.questDescription"
+      },
+      {
+        "id": 7,
+        "type": "readAndAnswer",
+        "question": "heroSquareNine.questTask7",
+        "text": "Herr Roth ist Arzt. Jeden Morgen kommt ein Student zu ihm, denn der Student macht ein Praktikum. Herr Roth erklärt dem Studenten viel. Am Ende des Praktikums schenkt der Student Herrn Roth ein Buch.",
+        "options": [
+          "ein Buch",
+          "einen Kuchen",
+          "Blumen"
+        ],
+        "answer": "ein Buch",
+        "tip": "heroSquareNine.questDescription"
+      },
+      {
+        "id": 8,
+        "type": "input",
+        "question": "heroSquareNine.questTask8",
+        "correctAnswer": "Bären",
+        "tip": "heroSquareNine.questDescription"
+      },
+      {
+        "id": 9,
+        "type": "input",
+        "question": "heroSquareNine.questTask9",
+        "correctAnswer": "Name",
+        "tip": "heroSquareNine.questDescription"
+      },
+      {
+        "id": 10,
+        "type": "reorder",
+        "question": "heroSquareNine.questTask10",
+        "words": [
+          "Ich",
+          "für",
+          "danke",
+          "Kunde",
+          "den",
+          "Brief",
+          "dem",
+          "Kunden"
+        ],
+        "correctOrder": [
+          "Ich",
+          "danke",
+          "dem",
+          "Kunden",
+          "für",
+          "den",
+          "Brief"
+        ],
+        "tip": "heroSquareNine.questDescription"
+      },
+      {
+        "id": 11,
+        "type": "select",
+        "question": "heroSquareNine.questTask11",
+        "options": [
+          "Das ist das Büro der Präsident.",
+          "Das ist das Büro des Präsidenten.",
+          "Das ist das Büro des Präsidents."
+        ],
+        "answer": "Das ist das Büro des Präsidenten.",
+        "tip": "heroSquareNine.questDescription"
+      },
+      {
+        "id": 12,
+        "type": "input",
+        "question": "heroSquareNine.questTask12",
+        "correctAnswer": "Nachbar",
+        "tip": "heroSquareNine.questDescription"
+      },
+      {
+        "id": 13,
+        "type": "input",
+        "question": "heroSquareNine.questTask13",
+        "correctAnswer": "Studenten",
+        "tip": "heroSquareNine.questDescription"
+      },
+      {
+        "id": 14,
+        "type": "input",
+        "question": "heroSquareNine.questTask14",
+        "correctAnswer": "Experten",
+        "tip": "heroSquareNine.questDescription"
+      },
+      {
+        "id": 15,
+        "type": "input",
+        "question": "heroSquareNine.questTask15",
+        "correctAnswer": "Touristen",
+        "tip": "heroSquareNine.questDescription"
+      }
+    ]
+  },
+  {
+    "questId": "hero-square-ten",
+    "title": "heroSquareTen.questTitle",
+    "progress": "0/15",
+    "description": "heroSquareTen.questDescription",
+    "conditions": {
+      "goal": "heroSquareTen.questGoal",
+      "minCorrect": 15,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
+    "vocabulary": [
+      {
+        "word": "untersuchen",
+        "translation-ru": "обследовать, осматривать",
+        "translation-en": "to examine",
+        "translation-uk": "обстежувати",
+        "translation-pl": "badać",
+        "translation-es": "examinar",
+        "translation-fr": "examiner",
+        "translation-tr": "muayene etmek",
+        "translation-ro": "a examina",
+        "translation-uz": "tekshirmoq",
+        "translation-hi": "जाँच करना",
+        "translation-ar": "يفحص"
+      },
+      {
+        "word": "wählen",
+        "translation-ru": "выбирать, голосовать",
+        "translation-en": "to choose, to vote",
+        "translation-uk": "обирати",
+        "translation-pl": "wybierać",
+        "translation-es": "elegir, votar",
+        "translation-fr": "choisir, élire",
+        "translation-tr": "seçmek",
+        "translation-ro": "a alege",
+        "translation-uz": "saylamoq",
+        "translation-hi": "चुनना",
+        "translation-ar": "ينتخب"
+      },
+      {
+        "word": "der Held",
+        "translation-ru": "герой",
+        "translation-en": "hero",
+        "translation-uk": "герой",
+        "translation-pl": "bohater",
+        "translation-es": "el héroe",
+        "translation-fr": "le héros",
+        "translation-tr": "kahraman",
+        "translation-ro": "eroul",
+        "translation-uz": "qahramon",
+        "translation-hi": "नायक, हीरो",
+        "translation-ar": "البطل"
+      },
+      {
+        "word": "der Präsident",
+        "translation-ru": "президент",
+        "translation-en": "president",
+        "translation-uk": "президент",
+        "translation-pl": "prezydent",
+        "translation-es": "el presidente",
+        "translation-fr": "le président",
+        "translation-tr": "cumhurbaşkanı, başkan",
+        "translation-ro": "președintele",
+        "translation-uz": "prezident",
+        "translation-hi": "राष्ट्रपति",
+        "translation-ar": "الرئيس"
+      },
+      {
+        "word": "wegen",
+        "translation-ru": "из-за",
+        "translation-en": "because of",
+        "translation-uk": "через",
+        "translation-pl": "z powodu",
+        "translation-es": "por, a causa de",
+        "translation-fr": "à cause de",
+        "translation-tr": "yüzünden",
+        "translation-ro": "din cauza",
+        "translation-uz": "sababli",
+        "translation-hi": "की वजह से",
+        "translation-ar": "بسبب"
+      }
+    ],
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "heroSquareTen.questTask1",
+        "options": [
+          "Ich habe Herr Braun angerufen, aber er hat nicht geantwortet.",
+          "Ich habe Herrn Braun angeruft, aber er hat nicht geantwortet.",
+          "Ich habe Herrn Braun angerufen, aber er hat nicht geantwortet."
+        ],
+        "answer": "Ich habe Herrn Braun angerufen, aber er hat nicht geantwortet.",
+        "tip": "heroSquareTen.questDescription"
+      },
+      {
+        "id": 2,
+        "type": "input",
+        "question": "heroSquareTen.questTask2",
+        "correctAnswer": "wäre",
+        "tip": "heroSquareTen.questDescription"
+      },
+      {
+        "id": 3,
+        "type": "input",
+        "question": "heroSquareTen.questTask3",
+        "correctAnswer": "der",
+        "tip": "heroSquareTen.questDescription"
+      },
+      {
+        "id": 4,
+        "type": "reorder",
+        "question": "heroSquareTen.questTask4",
+        "words": [
+          "Der",
+          "untersucht",
+          "den",
+          "Junge",
+          "Jungen",
+          "Arzt"
+        ],
+        "correctOrder": [
+          "Der",
+          "Arzt",
+          "untersucht",
+          "den",
+          "Jungen"
+        ],
+        "tip": "heroSquareTen.questDescription"
+      },
+      {
+        "id": 5,
+        "type": "select",
+        "question": "heroSquareTen.questTask5",
+        "options": [
+          "Wenn wir früher losgefahren wären, wären wir den Zug nicht verpasst.",
+          "Wenn wir früher losgefahren hätten, hätten wir den Zug nicht verpasst.",
+          "Wenn wir früher losgefahren wären, hätten wir den Zug nicht verpasst."
+        ],
+        "answer": "Wenn wir früher losgefahren wären, hätten wir den Zug nicht verpasst.",
+        "tip": "heroSquareTen.questDescription"
+      },
+      {
+        "id": 6,
+        "type": "input",
+        "question": "heroSquareTen.questTask6",
+        "correctAnswer": "Praktikanten",
+        "tip": "heroSquareTen.questDescription"
+      },
+      {
+        "id": 7,
+        "type": "readAndAnswer",
+        "question": "heroSquareTen.questTask7",
+        "text": "Gestern war Lisa im Museum. Ein Tourist fragte sie nach dem Weg zum Bahnhof. Lisa erklärte dem Touristen den Weg. Wegen des Regens nahm der Tourist dann ein Taxi.",
+        "options": [
+          "Der Weg war weit.",
+          "Das Wetter war schlecht.",
+          "Er war müde."
+        ],
+        "answer": "Das Wetter war schlecht.",
+        "tip": "heroSquareTen.questDescription"
+      },
+      {
+        "id": 8,
+        "type": "input",
+        "question": "heroSquareTen.questTask8",
+        "correctAnswer": "stellt",
+        "tip": "heroSquareTen.questDescription"
+      },
+      {
+        "id": 9,
+        "type": "input",
+        "question": "heroSquareTen.questTask9",
+        "correctAnswer": "dass",
+        "tip": "heroSquareTen.questDescription"
+      },
+      {
+        "id": 10,
+        "type": "reorder",
+        "question": "heroSquareTen.questTask10",
+        "words": [
+          "Menschen",
+          "Präsident",
+          "Präsidenten",
+          "wurde",
+          "vielen",
+          "Der",
+          "gewählt",
+          "von"
+        ],
+        "correctOrder": [
+          "Der",
+          "Präsident",
+          "wurde",
+          "von",
+          "vielen",
+          "Menschen",
+          "gewählt"
+        ],
+        "tip": "heroSquareTen.questDescription"
+      },
+      {
+        "id": 11,
+        "type": "select",
+        "question": "heroSquareTen.questTask11",
+        "options": [
+          "Ich wünschte, ich wäre ein Held.",
+          "Ich wünschte, ich wäre einen Helden.",
+          "Ich wünschte, ich bin ein Held."
+        ],
+        "answer": "Ich wünschte, ich wäre ein Held.",
+        "tip": "heroSquareTen.questDescription"
+      },
+      {
+        "id": 12,
+        "type": "input",
+        "question": "heroSquareTen.questTask12",
+        "correctAnswer": "dem",
+        "tip": "heroSquareTen.questDescription"
+      },
+      {
+        "id": 13,
+        "type": "input",
+        "question": "heroSquareTen.questTask13",
+        "correctAnswer": "Herrn",
+        "tip": "heroSquareTen.questDescription"
+      },
+      {
+        "id": 14,
+        "type": "input",
+        "question": "heroSquareTen.questTask14",
+        "correctAnswer": "stärker",
+        "tip": "heroSquareTen.questDescription"
+      },
+      {
+        "id": 15,
+        "type": "input",
+        "question": "heroSquareTen.questTask15",
+        "correctAnswer": "Studenten",
+        "tip": "heroSquareTen.questDescription"
+      }
+    ]
+  }
+]

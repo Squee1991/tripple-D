@@ -57,20 +57,6 @@
         "translation-uz": "ob-havo"
       },
       {
-        "word": "kalt",
-        "translation-ru": "холодно",
-        "translation-en": "cold",
-        "translation-uk": "холодно",
-        "translation-pl": "zimno",
-        "translation-es": "frío",
-        "translation-fr": "froid",
-        "translation-ar": "بارد",
-        "translation-hi": "ठंडा",
-        "translation-ro": "frig",
-        "translation-tr": "soğuk",
-        "translation-uz": "sovuq"
-      },
-      {
         "word": "der Urlaub",
         "translation-ru": "отпуск",
         "translation-en": "holiday",
@@ -83,6 +69,20 @@
         "translation-ro": "concediul",
         "translation-tr": "tatil",
         "translation-uz": "ta’til"
+      },
+      {
+        "word": "ihr",
+        "translation-ru": "вы (вы все)",
+        "translation-en": "you (plural)",
+        "translation-uk": "ви (усі)",
+        "translation-pl": "wy",
+        "translation-es": "vosotros",
+        "translation-fr": "vous (pluriel)",
+        "translation-tr": "siz (çoğul)",
+        "translation-ro": "voi",
+        "translation-uz": "sizlar",
+        "translation-hi": "तुम सब",
+        "translation-ar": "أنتم"
       }
     ],
     "tasks": [
@@ -95,7 +95,8 @@
           "ich bin zu Hause",
           "ich hatte zu Hause"
         ],
-        "answer": "ich war zu Hause"
+        "answer": "ich war zu Hause",
+        "tip": "pastSimple.questDescription"
       },
       {
         "id": 2,
@@ -115,25 +116,29 @@
           "wir",
           "im",
           "Kino"
-        ]
+        ],
+        "tip": "pastSimple.questDescription"
       },
       {
         "id": 3,
         "type": "input",
         "question": "pastSimple.questTask3",
-        "correctAnswer": "warst"
+        "correctAnswer": "Warst",
+        "tip": "pastSimple.questDescription"
       },
       {
         "id": 4,
         "type": "input",
         "question": "pastSimple.questTask4",
-        "correctAnswer": "war"
+        "correctAnswer": "war",
+        "tip": "pastSimple.questDescription"
       },
       {
         "id": 5,
         "type": "input",
         "question": "pastSimple.questTask5",
-        "correctAnswer": "waren"
+        "correctAnswer": "waren",
+        "tip": "pastSimple.questDescription"
       },
       {
         "id": 6,
@@ -144,7 +149,8 @@
           "Wo waren ihr?",
           "Wo wart du?"
         ],
-        "answer": "Wo wart ihr?"
+        "answer": "Wo wart ihr?",
+        "tip": "pastSimple.questDescription"
       },
       {
         "id": 7,
@@ -156,13 +162,15 @@
           "im Park",
           "zu Hause"
         ],
-        "answer": "im Kino"
+        "answer": "im Kino",
+        "tip": "pastSimple.questDescription"
       },
       {
         "id": 8,
         "type": "input",
         "question": "pastSimple.questTask8",
-        "correctAnswer": "war"
+        "correctAnswer": "war",
+        "tip": "pastSimple.questDescription"
       },
       {
         "id": 9,
@@ -182,59 +190,95 @@
           "waren",
           "beim",
           "Arzt"
-        ]
+        ],
+        "tip": "pastSimple.questDescription"
       },
       {
         "id": 10,
         "type": "select",
-        "question": "pastSimple.questTask10",
+        "question": "a2Course.t12",
         "options": [
-          "Ich war bei der Arbeit.",
-          "Ich waren bei der Arbeit.",
-          "Ich warst bei der Arbeit."
+          "Ich waren im Büro.",
+          "Ich war im Büro.",
+          "Ich warst im Büro."
         ],
-        "answer": "Ich war bei der Arbeit."
+        "answer": "Ich war im Büro.",
+        "tip": "pastSimple.questDescription"
       },
       {
         "id": 11,
-        "type": "input",
-        "question": "pastSimple.questTask11",
-        "correctAnswer": "waren"
+        "type": "reorder",
+        "question": "a2Course.t1",
+        "words": [
+          "ihr",
+          "auf",
+          "seine",
+          "Julia",
+          "Sonntag",
+          "Am",
+          "räumt",
+          "aufräumt",
+          "Zimmer"
+        ],
+        "correctOrder": [
+          "Am",
+          "Sonntag",
+          "räumt",
+          "Julia",
+          "ihr",
+          "Zimmer",
+          "auf"
+        ],
+        "reviewOf": "routine-mill-two",
+        "reviewLand": "routine-mill",
+        "tip": "routineMillTwo.questDescription"
       },
       {
         "id": 12,
-        "type": "select",
-        "question": "pastSimple.questTask12",
-        "options": [
-          "Gestern war es kalt.",
-          "Gestern ist es kalt.",
-          "Gestern waren es kalt."
-        ],
-        "answer": "Gestern war es kalt."
+        "type": "input",
+        "question": "a2Course.t2",
+        "correctAnswer": "macht",
+        "reviewOf": "routine-mill-five",
+        "reviewLand": "routine-mill",
+        "tip": "routineMillFive.questDescription"
       },
       {
         "id": 13,
-        "type": "readAndAnswer",
-        "question": "pastSimple.questTask13",
-        "text": "Am Wochenende waren wir in Hamburg. Das Wetter war schön.",
-        "options": [
-          "in Hamburg",
-          "in Berlin",
-          "in München"
+        "type": "reorder",
+        "question": "a2Course.t3",
+        "words": [
+          "holst",
+          "abholen",
+          "ab",
+          "Kannst",
+          "uns",
+          "morgen",
+          "du"
         ],
-        "answer": "in Hamburg"
+        "correctOrder": [
+          "Kannst",
+          "du",
+          "uns",
+          "morgen",
+          "abholen"
+        ],
+        "reviewOf": "power-pass-six",
+        "reviewLand": "power-pass",
+        "tip": "powerPassSix.questDescription"
       },
       {
         "id": 14,
         "type": "input",
         "question": "pastSimple.questTask14",
-        "correctAnswer": "am"
+        "correctAnswer": "am",
+        "tip": "pastSimple.questDescription"
       },
       {
         "id": 15,
         "type": "input",
         "question": "pastSimple.questTask15",
-        "correctAnswer": "zum"
+        "correctAnswer": "zum",
+        "tip": "pastSimple.questDescription"
       }
     ]
   },
@@ -310,18 +354,32 @@
         "translation-uz": "bosh og‘rig‘i"
       },
       {
-        "word": "der Hund",
-        "translation-ru": "собака",
-        "translation-en": "dog",
-        "translation-uk": "собака",
-        "translation-pl": "pies",
-        "translation-es": "el perro",
-        "translation-fr": "le chien",
-        "translation-ar": "الكلب",
-        "translation-hi": "कुत्ता",
-        "translation-ro": "câinele",
-        "translation-tr": "köpek",
-        "translation-uz": "it"
+        "word": "der Unterricht",
+        "translation-ru": "урок, занятия",
+        "translation-en": "lesson, class",
+        "translation-uk": "урок, заняття",
+        "translation-pl": "lekcja, zajęcia",
+        "translation-es": "la clase",
+        "translation-fr": "le cours",
+        "translation-tr": "ders",
+        "translation-ro": "ora, lecția",
+        "translation-uz": "dars",
+        "translation-hi": "क्लास",
+        "translation-ar": "الدرس"
+      },
+      {
+        "word": "letzte",
+        "translation-ru": "последний, прошлый",
+        "translation-en": "last",
+        "translation-uk": "останній, минулий",
+        "translation-pl": "ostatni, zeszły",
+        "translation-es": "último, pasado",
+        "translation-fr": "dernier",
+        "translation-tr": "son, geçen",
+        "translation-ro": "ultimul, trecut",
+        "translation-uz": "oxirgi, o‘tgan",
+        "translation-hi": "पिछला",
+        "translation-ar": "الماضي، الأخير"
       }
     ],
     "tasks": [
@@ -334,7 +392,8 @@
           "ich habe Zeit",
           "ich war Zeit"
         ],
-        "answer": "ich hatte Zeit"
+        "answer": "ich hatte Zeit",
+        "tip": "pastSimpleTwo.questDescription"
       },
       {
         "id": 2,
@@ -354,36 +413,41 @@
           "ich",
           "keine",
           "Zeit"
-        ]
+        ],
+        "tip": "pastSimpleTwo.questDescription"
       },
       {
         "id": 3,
         "type": "input",
         "question": "pastSimpleTwo.questTask3",
-        "correctAnswer": "hattest"
+        "correctAnswer": "Hattest",
+        "tip": "pastSimpleTwo.questDescription"
       },
       {
         "id": 4,
         "type": "input",
         "question": "pastSimpleTwo.questTask4",
-        "correctAnswer": "hatten"
+        "correctAnswer": "hatten",
+        "tip": "pastSimpleTwo.questDescription"
       },
       {
         "id": 5,
         "type": "input",
         "question": "pastSimpleTwo.questTask5",
-        "correctAnswer": "hatte"
+        "correctAnswer": "hatte",
+        "tip": "pastSimpleTwo.questDescription"
       },
       {
         "id": 6,
         "type": "select",
-        "question": "pastSimpleTwo.questTask6",
+        "question": "a2Course.t13",
         "options": [
-          "Meine Eltern hatten eine große Wohnung.",
-          "Meine Eltern hattet eine große Wohnung.",
-          "Meine Eltern hat eine große Wohnung."
+          "Meine Eltern hattet eine Wohnung in Berlin.",
+          "Meine Eltern hatten eine Wohnung in Berlin.",
+          "Meine Eltern hatte eine Wohnung in Berlin."
         ],
-        "answer": "Meine Eltern hatten eine große Wohnung."
+        "answer": "Meine Eltern hatten eine Wohnung in Berlin.",
+        "tip": "pastSimpleTwo.questDescription"
       },
       {
         "id": 7,
@@ -395,13 +459,15 @@
           "Seine Frau",
           "Sein Bruder"
         ],
-        "answer": "Tom"
+        "answer": "Tom",
+        "tip": "pastSimpleTwo.questDescription"
       },
       {
         "id": 8,
         "type": "input",
         "question": "pastSimpleTwo.questTask8",
-        "correctAnswer": "hattet"
+        "correctAnswer": "Hattet",
+        "tip": "pastSimpleTwo.questDescription"
       },
       {
         "id": 9,
@@ -417,7 +483,8 @@
           "Ich",
           "hatte",
           "Kopfschmerzen"
-        ]
+        ],
+        "tip": "pastSimpleTwo.questDescription"
       },
       {
         "id": 10,
@@ -428,48 +495,63 @@
           "wir hattet Unterricht",
           "wir waren Unterricht"
         ],
-        "answer": "wir hatten Unterricht"
+        "answer": "wir hatten Unterricht",
+        "tip": "pastSimpleTwo.questDescription"
       },
       {
         "id": 11,
-        "type": "input",
-        "question": "pastSimpleTwo.questTask11",
-        "correctAnswer": "war"
+        "type": "reorder",
+        "question": "pastSimple.questTask2",
+        "words": [
+          "waren",
+          "Kino",
+          "Gestern",
+          "im",
+          "wir",
+          "sind"
+        ],
+        "correctOrder": [
+          "Gestern",
+          "waren",
+          "wir",
+          "im",
+          "Kino"
+        ],
+        "reviewOf": "past-simple-1",
+        "reviewLand": "past-simple",
+        "tip": "pastSimple.questDescription"
       },
       {
         "id": 12,
-        "type": "select",
-        "question": "pastSimpleTwo.questTask12",
-        "options": [
-          "Wir waren im Park.",
-          "Wir war im Park.",
-          "Wir hatten im Park."
-        ],
-        "answer": "Wir waren im Park."
+        "type": "input",
+        "question": "a2Course.t4",
+        "correctAnswer": "mag",
+        "reviewOf": "hearty-inn-one",
+        "reviewLand": "hearty-inn",
+        "tip": "heartyInnOne.questDescription"
       },
       {
         "id": 13,
-        "type": "readAndAnswer",
-        "question": "pastSimpleTwo.questTask13",
-        "text": "Als Kind hatte ich einen Hund. Er hieß Bello.",
-        "options": [
-          "einen Hund",
-          "eine Katze",
-          "einen Vogel"
-        ],
-        "answer": "einen Hund"
+        "type": "input",
+        "question": "a2Course.t5",
+        "correctAnswer": "süß",
+        "reviewOf": "hearty-inn-three",
+        "reviewLand": "hearty-inn",
+        "tip": "heartyInnThree.questDescription"
       },
       {
         "id": 14,
         "type": "input",
-        "question": "pastSimpleTwo.questTask14",
-        "correctAnswer": "durch"
+        "question": "a2Course.t61",
+        "correctAnswer": "waren",
+        "tip": "pastSimpleTwo.questDescription"
       },
       {
         "id": 15,
         "type": "input",
         "question": "pastSimpleTwo.questTask15",
-        "correctAnswer": "auf"
+        "correctAnswer": "auf",
+        "tip": "pastSimpleTwo.questDescription"
       }
     ]
   },
@@ -557,6 +639,20 @@
         "translation-ro": "vacanța",
         "translation-tr": "okul tatili",
         "translation-uz": "ta’til"
+      },
+      {
+        "word": "der Stress",
+        "translation-ru": "стресс",
+        "translation-en": "stress",
+        "translation-uk": "стрес",
+        "translation-pl": "stres",
+        "translation-es": "el estrés",
+        "translation-fr": "le stress",
+        "translation-tr": "stres",
+        "translation-ro": "stresul",
+        "translation-uz": "stress",
+        "translation-hi": "तनाव",
+        "translation-ar": "التوتر"
       }
     ],
     "tasks": [
@@ -569,7 +665,8 @@
           "Gestern hatte ich müde.",
           "Gestern bin ich müde."
         ],
-        "answer": "Gestern war ich müde."
+        "answer": "Gestern war ich müde.",
+        "tip": "pastSimpleThree.questDescription"
       },
       {
         "id": 2,
@@ -580,19 +677,22 @@
           "Gestern war ich Stress.",
           "Gestern habe ich Stress."
         ],
-        "answer": "Gestern hatte ich Stress."
+        "answer": "Gestern hatte ich Stress.",
+        "tip": "pastSimpleThree.questDescription"
       },
       {
         "id": 3,
         "type": "input",
         "question": "pastSimpleThree.questTask3",
-        "correctAnswer": "warst"
+        "correctAnswer": "warst",
+        "tip": "pastSimpleThree.questDescription"
       },
       {
         "id": 4,
         "type": "input",
         "question": "pastSimpleThree.questTask4",
-        "correctAnswer": "hattest"
+        "correctAnswer": "Hattest",
+        "tip": "pastSimpleThree.questDescription"
       },
       {
         "id": 5,
@@ -614,7 +714,8 @@
           "wir",
           "in",
           "Wien"
-        ]
+        ],
+        "tip": "pastSimpleThree.questDescription"
       },
       {
         "id": 6,
@@ -636,7 +737,8 @@
           "wir",
           "ein",
           "Auto"
-        ]
+        ],
+        "tip": "pastSimpleThree.questDescription"
       },
       {
         "id": 7,
@@ -648,19 +750,22 @@
           "Bauchschmerzen",
           "Husten und Schnupfen"
         ],
-        "answer": "Fieber und Kopfschmerzen"
+        "answer": "Fieber und Kopfschmerzen",
+        "tip": "pastSimpleThree.questDescription"
       },
       {
         "id": 8,
         "type": "input",
         "question": "pastSimpleThree.questTask8",
-        "correctAnswer": "war"
+        "correctAnswer": "war",
+        "tip": "pastSimpleThree.questDescription"
       },
       {
         "id": 9,
         "type": "input",
         "question": "pastSimpleThree.questTask9",
-        "correctAnswer": "hatten"
+        "correctAnswer": "hatten",
+        "tip": "pastSimpleThree.questDescription"
       },
       {
         "id": 10,
@@ -671,53 +776,68 @@
           "nächste Woche",
           "diese Woche"
         ],
-        "answer": "letzte Woche"
+        "answer": "letzte Woche",
+        "tip": "pastSimpleThree.questDescription"
       },
       {
         "id": 11,
-        "type": "select",
-        "question": "pastSimpleThree.questTask11",
-        "options": [
-          "Waren Sie zufrieden?",
-          "Hatten Sie zufrieden?",
-          "Wart Sie zufrieden?"
+        "type": "reorder",
+        "question": "pastSimpleTwo.questTask2",
+        "words": [
+          "hatte",
+          "Zeit",
+          "Gestern",
+          "keine",
+          "ich",
+          "war"
         ],
-        "answer": "Waren Sie zufrieden?"
+        "correctOrder": [
+          "Gestern",
+          "hatte",
+          "ich",
+          "keine",
+          "Zeit"
+        ],
+        "reviewOf": "past-simple-2",
+        "reviewLand": "past-simple",
+        "tip": "pastSimpleTwo.questDescription"
       },
       {
         "id": 12,
-        "type": "readAndAnswer",
-        "question": "pastSimpleThree.questTask12",
-        "text": "Letzten Sommer waren wir am Meer. Wir hatten ein kleines Hotel.",
-        "options": [
-          "am Meer",
-          "in den Bergen",
-          "in der Stadt"
-        ],
-        "answer": "am Meer"
+        "type": "input",
+        "question": "a2Course.t6",
+        "correctAnswer": "trägt",
+        "reviewOf": "dress-bazaar-one",
+        "reviewLand": "dress-bazaar",
+        "tip": "dressBazaarOne.questDescription"
       },
       {
         "id": 13,
         "type": "input",
-        "question": "pastSimpleThree.questTask13",
-        "correctAnswer": "hatte"
+        "question": "a2Course.t7",
+        "correctAnswer": "sie",
+        "reviewOf": "dress-bazaar-six",
+        "reviewLand": "dress-bazaar",
+        "tip": "dressBazaarSix.questDescription"
       },
       {
         "id": 14,
         "type": "input",
         "question": "pastSimpleThree.questTask14",
-        "correctAnswer": "vor"
+        "correctAnswer": "Vor",
+        "tip": "pastSimpleThree.questDescription"
       },
       {
         "id": 15,
         "type": "select",
-        "question": "pastSimpleThree.questTask15",
+        "question": "a2Course.t14",
         "options": [
-          "mit dem Bus",
-          "mit den Bus",
-          "zum Bus"
+          "letzten Woche",
+          "letzter Woche",
+          "letzte Woche"
         ],
-        "answer": "mit dem Bus"
+        "answer": "letzte Woche",
+        "tip": "pastSimpleThree.questDescription"
       }
     ]
   },
@@ -817,7 +937,8 @@
           "ich kann",
           "ich musste"
         ],
-        "answer": "ich konnte"
+        "answer": "ich konnte",
+        "tip": "pastSimpleFour.questDescription"
       },
       {
         "id": 2,
@@ -837,19 +958,22 @@
           "ich",
           "nicht",
           "kommen"
-        ]
+        ],
+        "tip": "pastSimpleFour.questDescription"
       },
       {
         "id": 3,
         "type": "input",
         "question": "pastSimpleFour.questTask3",
-        "correctAnswer": "musste"
+        "correctAnswer": "musste",
+        "tip": "pastSimpleFour.questDescription"
       },
       {
         "id": 4,
         "type": "input",
         "question": "pastSimpleFour.questTask4",
-        "correctAnswer": "konnten"
+        "correctAnswer": "konnten",
+        "tip": "pastSimpleFour.questDescription"
       },
       {
         "id": 5,
@@ -860,13 +984,15 @@
           "Kannst du ihm helfen?",
           "Konnte du ihm helfen?"
         ],
-        "answer": "Konntest du ihm helfen?"
+        "answer": "Konntest du ihm helfen?",
+        "tip": "pastSimpleFour.questDescription"
       },
       {
         "id": 6,
         "type": "input",
         "question": "pastSimpleFour.questTask6",
-        "correctAnswer": "musste"
+        "correctAnswer": "musste",
+        "tip": "pastSimpleFour.questDescription"
       },
       {
         "id": 7,
@@ -878,7 +1004,8 @@
           "früh aufstehen",
           "einkaufen gehen"
         ],
-        "answer": "lange arbeiten"
+        "answer": "lange arbeiten",
+        "tip": "pastSimpleFour.questDescription"
       },
       {
         "id": 8,
@@ -896,13 +1023,15 @@
           "mussten",
           "früh",
           "aufstehen"
-        ]
+        ],
+        "tip": "pastSimpleFour.questDescription"
       },
       {
         "id": 9,
         "type": "input",
         "question": "pastSimpleFour.questTask9",
-        "correctAnswer": "konntet"
+        "correctAnswer": "Konntet",
+        "tip": "pastSimpleFour.questDescription"
       },
       {
         "id": 10,
@@ -913,48 +1042,49 @@
           "wir müssen warten",
           "wir konnten warten"
         ],
-        "answer": "wir mussten warten"
+        "answer": "wir mussten warten",
+        "tip": "pastSimpleFour.questDescription"
       },
       {
         "id": 11,
-        "type": "select",
-        "question": "pastSimpleFour.questTask11",
-        "options": [
-          "Ich konnte den Schlüssel nicht finden.",
-          "Ich konnte den Schlüssel finden nicht.",
-          "Ich kann den Schlüssel nicht finden."
-        ],
-        "answer": "Ich konnte den Schlüssel nicht finden."
+        "type": "input",
+        "question": "pastSimpleThree.questTask3",
+        "correctAnswer": "warst",
+        "reviewOf": "past-simple-3",
+        "reviewLand": "past-simple",
+        "tip": "pastSimpleThree.questDescription"
       },
       {
         "id": 12,
         "type": "input",
-        "question": "pastSimpleFour.questTask12",
-        "correctAnswer": "mussten"
+        "question": "pastSimple.questTask3",
+        "correctAnswer": "Warst",
+        "reviewOf": "past-simple-1",
+        "reviewLand": "past-simple",
+        "tip": "pastSimple.questDescription"
       },
       {
         "id": 13,
-        "type": "readAndAnswer",
-        "question": "pastSimpleFour.questTask13",
-        "text": "Am Samstag konnte Anna nicht schwimmen gehen. Sie musste ihrer Mutter helfen.",
-        "options": [
-          "ihrer Mutter",
-          "ihrem Bruder",
-          "ihrer Freundin"
-        ],
-        "answer": "ihrer Mutter"
+        "type": "input",
+        "question": "a2Course.t8",
+        "correctAnswer": "gefällt",
+        "reviewOf": "dress-bazaar-three",
+        "reviewLand": "dress-bazaar",
+        "tip": "dressBazaarThree.questDescription"
       },
       {
         "id": 14,
         "type": "input",
         "question": "pastSimpleFour.questTask14",
-        "correctAnswer": "hatte"
+        "correctAnswer": "hatte",
+        "tip": "pastSimpleFour.questDescription"
       },
       {
         "id": 15,
         "type": "input",
         "question": "pastSimpleFour.questTask15",
-        "correctAnswer": "waren"
+        "correctAnswer": "waren",
+        "tip": "pastSimpleFour.questDescription"
       }
     ]
   },
@@ -1054,47 +1184,51 @@
           "ich will",
           "ich wollen"
         ],
-        "answer": "ich wollte"
+        "answer": "ich wollte",
+        "tip": "pastSimpleFive.questDescription"
       },
       {
         "id": 2,
         "type": "reorder",
-        "question": "pastSimpleFive.questTask2",
+        "question": "a2Course.t15",
         "words": [
-          "wollte",
-          "Auto",
-          "Ich",
+          "kaufte",
+          "will",
           "ein",
-          "neues",
+          "Ich",
+          "wollte",
           "kaufen",
-          "will"
+          "Auto"
         ],
         "correctOrder": [
           "Ich",
           "wollte",
           "ein",
-          "neues",
           "Auto",
           "kaufen"
-        ]
+        ],
+        "tip": "pastSimpleFive.questDescription"
       },
       {
         "id": 3,
         "type": "input",
         "question": "pastSimpleFive.questTask3",
-        "correctAnswer": "durfte"
+        "correctAnswer": "durfte",
+        "tip": "pastSimpleFive.questDescription"
       },
       {
         "id": 4,
         "type": "input",
         "question": "pastSimpleFive.questTask4",
-        "correctAnswer": "solltest"
+        "correctAnswer": "solltest",
+        "tip": "pastSimpleFive.questDescription"
       },
       {
         "id": 5,
         "type": "input",
         "question": "pastSimpleFive.questTask5",
-        "correctAnswer": "wollten"
+        "correctAnswer": "wollten",
+        "tip": "pastSimpleFive.questDescription"
       },
       {
         "id": 6,
@@ -1105,7 +1239,8 @@
           "Ich solltest Brot mitbringen.",
           "Ich sollen Brot mitbringen."
         ],
-        "answer": "Ich sollte Brot mitbringen."
+        "answer": "Ich sollte Brot mitbringen.",
+        "tip": "pastSimpleFive.questDescription"
       },
       {
         "id": 7,
@@ -1117,13 +1252,15 @@
           "Lehrer",
           "Arzt"
         ],
-        "answer": "Pilot"
+        "answer": "Pilot",
+        "tip": "pastSimpleFive.questDescription"
       },
       {
         "id": 8,
         "type": "input",
         "question": "pastSimpleFive.questTask8",
-        "correctAnswer": "wollten"
+        "correctAnswer": "wollten",
+        "tip": "pastSimpleFive.questDescription"
       },
       {
         "id": 9,
@@ -1145,7 +1282,8 @@
           "zur",
           "Party",
           "gehen"
-        ]
+        ],
+        "tip": "pastSimpleFive.questDescription"
       },
       {
         "id": 10,
@@ -1156,42 +1294,56 @@
           "wir dürfen spielen",
           "wir wollten spielen"
         ],
-        "answer": "wir durften spielen"
+        "answer": "wir durften spielen",
+        "tip": "pastSimpleFive.questDescription"
       },
       {
         "id": 11,
-        "type": "select",
-        "question": "pastSimpleFive.questTask11",
-        "options": [
-          "Was wolltest du sagen?",
-          "Was willst du sagen?",
-          "Was wollte du sagen?"
+        "type": "reorder",
+        "question": "pastSimpleFour.questTask2",
+        "words": [
+          "konnte",
+          "kommen",
+          "Gestern",
+          "nicht",
+          "ich",
+          "kann"
         ],
-        "answer": "Was wolltest du sagen?"
+        "correctOrder": [
+          "Gestern",
+          "konnte",
+          "ich",
+          "nicht",
+          "kommen"
+        ],
+        "reviewOf": "past-simple-4",
+        "reviewLand": "past-simple",
+        "tip": "pastSimpleFour.questDescription"
       },
       {
         "id": 12,
         "type": "input",
-        "question": "pastSimpleFive.questTask12",
-        "correctAnswer": "sollte"
+        "question": "pastSimpleTwo.questTask3",
+        "correctAnswer": "Hattest",
+        "reviewOf": "past-simple-2",
+        "reviewLand": "past-simple",
+        "tip": "pastSimpleTwo.questDescription"
       },
       {
         "id": 13,
-        "type": "readAndAnswer",
-        "question": "pastSimpleFive.questTask13",
-        "text": "Ich sollte heute einkaufen, aber ich wollte lieber schlafen.",
-        "options": [
-          "einkaufen",
-          "schlafen",
-          "arbeiten"
-        ],
-        "answer": "einkaufen"
+        "type": "input",
+        "question": "a2Course.t9",
+        "correctAnswer": "dürft",
+        "reviewOf": "power-pass-five",
+        "reviewLand": "power-pass",
+        "tip": "powerPassFive.questDescription"
       },
       {
         "id": 14,
         "type": "input",
         "question": "pastSimpleFive.questTask14",
-        "correctAnswer": "konnte"
+        "correctAnswer": "konnte",
+        "tip": "pastSimpleFive.questDescription"
       },
       {
         "id": 15,
@@ -1202,7 +1354,8 @@
           "Wir musste warten.",
           "Wir müssen warten."
         ],
-        "answer": "Wir mussten warten."
+        "answer": "Wir mussten warten.",
+        "tip": "pastSimpleFive.questDescription"
       }
     ]
   },
@@ -1250,20 +1403,6 @@
         "translation-uz": "to‘lamoq"
       },
       {
-        "word": "rauchen",
-        "translation-ru": "курить",
-        "translation-en": "to smoke",
-        "translation-uk": "курити",
-        "translation-pl": "palić",
-        "translation-es": "fumar",
-        "translation-fr": "fumer",
-        "translation-ar": "يدخن",
-        "translation-hi": "धूम्रपान करना",
-        "translation-ro": "a fuma",
-        "translation-tr": "sigara içmek",
-        "translation-uz": "chekmoq"
-      },
-      {
         "word": "schwimmen",
         "translation-ru": "плавать",
         "translation-en": "to swim",
@@ -1278,18 +1417,32 @@
         "translation-uz": "suzmoq"
       },
       {
-        "word": "früher",
-        "translation-ru": "раньше",
-        "translation-en": "in the past",
-        "translation-uk": "раніше",
-        "translation-pl": "dawniej",
-        "translation-es": "antes",
-        "translation-fr": "avant",
-        "translation-ar": "في الماضي",
-        "translation-hi": "पहले",
-        "translation-ro": "înainte",
-        "translation-tr": "eskiden",
-        "translation-uz": "ilgari"
+        "word": "bis",
+        "translation-ru": "пока не, до тех пор пока",
+        "translation-en": "until",
+        "translation-uk": "доки не",
+        "translation-pl": "aż, dopóki nie",
+        "translation-es": "hasta que",
+        "translation-fr": "jusqu’à ce que",
+        "translation-tr": "…e kadar",
+        "translation-ro": "până când",
+        "translation-uz": "…guncha",
+        "translation-hi": "जब तक",
+        "translation-ar": "حتى"
+      },
+      {
+        "word": "meinen",
+        "translation-ru": "считать / иметь в виду",
+        "translation-en": "to mean / think",
+        "translation-uk": "вважати / мати на увазі",
+        "translation-pl": "uważać / mieć na myśli",
+        "translation-es": "pensar / querer decir",
+        "translation-fr": "penser / vouloir dire",
+        "translation-tr": "düşünmek / demek istemek",
+        "translation-ro": "a crede / a vrea să spună",
+        "translation-uz": "o'ylamoq / nazarda tutmoq",
+        "translation-hi": "सोचना / मतलब होना",
+        "translation-ar": "يعتقد / يعني"
       }
     ],
     "tasks": [
@@ -1309,7 +1462,8 @@
           "musste",
           "gestern",
           "arbeiten"
-        ]
+        ],
+        "tip": "pastSimpleSix.questDescription"
       },
       {
         "id": 2,
@@ -1329,7 +1483,8 @@
           "ins",
           "Kino",
           "gehen"
-        ]
+        ],
+        "tip": "pastSimpleSix.questDescription"
       },
       {
         "id": 3,
@@ -1340,19 +1495,22 @@
           "Wir konnten kommen nicht.",
           "Wir nicht konnten kommen."
         ],
-        "answer": "Wir konnten nicht kommen."
+        "answer": "Wir konnten nicht kommen.",
+        "tip": "pastSimpleSix.questDescription"
       },
       {
         "id": 4,
         "type": "input",
         "question": "pastSimpleSix.questTask4",
-        "correctAnswer": "wollte"
+        "correctAnswer": "wollte",
+        "tip": "pastSimpleSix.questDescription"
       },
       {
         "id": 5,
         "type": "input",
         "question": "pastSimpleSix.questTask5",
-        "correctAnswer": "durfte"
+        "correctAnswer": "durfte",
+        "tip": "pastSimpleSix.questDescription"
       },
       {
         "id": 6,
@@ -1376,7 +1534,8 @@
           "den",
           "Bus",
           "warten"
-        ]
+        ],
+        "tip": "pastSimpleSix.questDescription"
       },
       {
         "id": 7,
@@ -1388,13 +1547,15 @@
           "zum Kurs",
           "zur Arbeit"
         ],
-        "answer": "zum Arzt"
+        "answer": "zum Arzt",
+        "tip": "pastSimpleSix.questDescription"
       },
       {
         "id": 8,
         "type": "input",
         "question": "pastSimpleSix.questTask8",
-        "correctAnswer": "mussten"
+        "correctAnswer": "Mussten",
+        "tip": "pastSimpleSix.questDescription"
       },
       {
         "id": 9,
@@ -1405,7 +1566,8 @@
           "ich konnte schwimme",
           "ich kann schwimmen"
         ],
-        "answer": "ich konnte schwimmen"
+        "answer": "ich konnte schwimmen",
+        "tip": "pastSimpleSix.questDescription"
       },
       {
         "id": 10,
@@ -1416,55 +1578,592 @@
           "Er wollte werden Arzt.",
           "Er will Arzt werden."
         ],
-        "answer": "Er wollte Arzt werden."
+        "answer": "Er wollte Arzt werden.",
+        "tip": "pastSimpleSix.questDescription"
       },
       {
         "id": 11,
-        "type": "input",
-        "question": "pastSimpleSix.questTask11",
-        "correctAnswer": "mussten"
+        "type": "reorder",
+        "question": "a2Course.t11",
+        "words": [
+          "hatte",
+          "warst",
+          "du",
+          "Hattest",
+          "Arbeit",
+          "gestern",
+          "viel"
+        ],
+        "correctOrder": [
+          "Hattest",
+          "du",
+          "gestern",
+          "viel",
+          "Arbeit"
+        ],
+        "reviewOf": "past-simple-2",
+        "reviewLand": "past-simple",
+        "tip": "pastSimpleTwo.questDescription"
       },
       {
         "id": 12,
-        "type": "reorder",
-        "question": "pastSimpleSix.questTask12",
-        "words": [
-          "Durfte",
-          "rauchen",
-          "man",
-          "hier",
-          "darf"
-        ],
-        "correctOrder": [
-          "Durfte",
-          "man",
-          "hier",
-          "rauchen"
-        ]
+        "type": "input",
+        "question": "pastSimpleThree.questTask4",
+        "correctAnswer": "Hattest",
+        "reviewOf": "past-simple-3",
+        "reviewLand": "past-simple",
+        "tip": "pastSimpleThree.questDescription"
       },
       {
         "id": 13,
-        "type": "readAndAnswer",
-        "question": "pastSimpleSix.questTask13",
-        "text": "Früher durften wir im Park nicht Fußball spielen. Heute ist das erlaubt.",
-        "options": [
-          "Fußball spielen",
-          "schwimmen",
-          "Rad fahren"
-        ],
-        "answer": "Fußball spielen"
+        "type": "input",
+        "question": "a2Course.t10",
+        "correctAnswer": "Tasse",
+        "reviewOf": "hearty-inn-five",
+        "reviewLand": "hearty-inn",
+        "tip": "heartyInnFive.questDescription"
       },
       {
         "id": 14,
         "type": "input",
         "question": "pastSimpleSix.questTask14",
-        "correctAnswer": "hatten"
+        "correctAnswer": "hatten",
+        "tip": "pastSimpleSix.questDescription"
       },
       {
         "id": 15,
         "type": "input",
         "question": "pastSimpleSix.questTask15",
-        "correctAnswer": "bis"
+        "correctAnswer": "bis",
+        "tip": "pastSimpleSix.questDescription"
+      }
+    ]
+  },
+  {
+    "questId": "past-simple-9",
+    "title": "pastSimpleExtraOne.questTitle",
+    "progress": "0/15",
+    "description": "pastSimpleExtraOne.questDescription",
+    "conditions": {
+      "goal": "pastSimpleExtraOne.questGoal",
+      "minCorrect": 15,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
+    "vocabulary": [
+      {
+        "word": "das Konzert",
+        "translation-ru": "концерт",
+        "translation-en": "concert",
+        "translation-uk": "концерт",
+        "translation-pl": "koncert",
+        "translation-es": "el concierto",
+        "translation-fr": "le concert",
+        "translation-tr": "konser",
+        "translation-ro": "concertul",
+        "translation-uz": "konsert",
+        "translation-hi": "कॉन्सर्ट",
+        "translation-ar": "الحفلة الموسيقية"
+      },
+      {
+        "word": "voll",
+        "translation-ru": "полный",
+        "translation-en": "full",
+        "translation-uk": "повний",
+        "translation-pl": "pełny",
+        "translation-es": "lleno",
+        "translation-fr": "plein",
+        "translation-tr": "dolu",
+        "translation-ro": "plin",
+        "translation-uz": "to‘la",
+        "translation-hi": "भरा हुआ",
+        "translation-ar": "ممتلئ"
+      },
+      {
+        "word": "der Hunger",
+        "translation-ru": "голод",
+        "translation-en": "hunger",
+        "translation-uk": "голод",
+        "translation-pl": "głód",
+        "translation-es": "el hambre",
+        "translation-fr": "la faim",
+        "translation-tr": "açlık",
+        "translation-ro": "foamea",
+        "translation-uz": "ochlik",
+        "translation-hi": "भूख",
+        "translation-ar": "الجوع"
+      },
+      {
+        "word": "toll",
+        "translation-ru": "классный, отличный",
+        "translation-en": "great",
+        "translation-uk": "чудовий",
+        "translation-pl": "świetny",
+        "translation-es": "genial",
+        "translation-fr": "super",
+        "translation-tr": "harika",
+        "translation-ro": "grozav",
+        "translation-uz": "ajoyib",
+        "translation-hi": "शानदार",
+        "translation-ar": "رائع"
+      },
+      {
+        "word": "spät",
+        "translation-ru": "поздно",
+        "translation-en": "late",
+        "translation-uk": "пізно",
+        "translation-pl": "późno",
+        "translation-es": "tarde",
+        "translation-fr": "tard",
+        "translation-tr": "geç",
+        "translation-ro": "târziu",
+        "translation-uz": "kech",
+        "translation-hi": "देर",
+        "translation-ar": "متأخر"
+      },
+      {
+        "word": "der Saal",
+        "translation-ru": "зал",
+        "translation-en": "hall",
+        "translation-uk": "зала",
+        "translation-pl": "sala",
+        "translation-es": "la sala",
+        "translation-fr": "la salle",
+        "translation-tr": "salon",
+        "translation-ro": "sala",
+        "translation-uz": "zal",
+        "translation-hi": "हॉल",
+        "translation-ar": "القاعة"
+      },
+      {
+        "word": "das Zentrum",
+        "translation-ru": "центр",
+        "translation-en": "centre",
+        "translation-uk": "центр",
+        "translation-pl": "centrum",
+        "translation-es": "el centro",
+        "translation-fr": "le centre",
+        "translation-tr": "merkez",
+        "translation-ro": "centrul",
+        "translation-uz": "markaz",
+        "translation-hi": "केंद्र",
+        "translation-ar": "المركز"
+      }
+    ],
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "pastSimpleExtraOne.questTask1",
+        "options": [
+          "Gestern Abend waren wir im Konzert.",
+          "Gestern Abend war wir im Konzert.",
+          "Gestern Abend hatten wir im Konzert."
+        ],
+        "answer": "Gestern Abend waren wir im Konzert.",
+        "tip": "pastSimpleExtraOne.questDescription"
+      },
+      {
+        "id": 2,
+        "type": "input",
+        "question": "pastSimpleExtraOne.questTask2",
+        "correctAnswer": "war",
+        "tip": "pastSimpleExtraOne.questDescription"
+      },
+      {
+        "id": 3,
+        "type": "input",
+        "question": "pastSimpleExtraOne.questTask3",
+        "correctAnswer": "hatten",
+        "tip": "pastSimpleExtraOne.questDescription"
+      },
+      {
+        "id": 4,
+        "type": "reorder",
+        "question": "pastSimpleExtraOne.questTask4",
+        "words": [
+          "war",
+          "hatte",
+          "toll",
+          "Musik",
+          "Die"
+        ],
+        "correctOrder": [
+          "Die",
+          "Musik",
+          "war",
+          "toll"
+        ],
+        "tip": "pastSimpleExtraOne.questDescription"
+      },
+      {
+        "id": 5,
+        "type": "select",
+        "question": "pastSimpleExtraOne.questTask5",
+        "options": [
+          "Warest du gestern zu Hause?",
+          "Wart du gestern zu Hause?",
+          "Warst du gestern zu Hause?"
+        ],
+        "answer": "Warst du gestern zu Hause?",
+        "tip": "pastSimpleExtraOne.questDescription"
+      },
+      {
+        "id": 6,
+        "type": "input",
+        "question": "pastSimpleExtraOne.questTask6",
+        "correctAnswer": "hatte",
+        "tip": "pastSimpleExtraOne.questDescription"
+      },
+      {
+        "id": 7,
+        "type": "readAndAnswer",
+        "question": "pastSimpleExtraOne.questTask7",
+        "text": "Gestern war Jan mit Freunden im Konzert. Das Konzert war sehr lang, und danach hatten alle Hunger. Sie waren noch im Restaurant. Erst um Mitternacht war Jan zu Hause.",
+        "options": [
+          "Er war krank.",
+          "Er hatte keinen Bus.",
+          "Er war noch im Restaurant."
+        ],
+        "answer": "Er war noch im Restaurant.",
+        "tip": "pastSimpleExtraOne.questDescription"
+      },
+      {
+        "id": 8,
+        "type": "input",
+        "question": "pastSimpleExtraOne.questTask8",
+        "correctAnswer": "Wart",
+        "tip": "pastSimpleExtraOne.questDescription"
+      },
+      {
+        "id": 9,
+        "type": "input",
+        "question": "pastSimpleExtraOne.questTask9",
+        "correctAnswer": "war",
+        "tip": "pastSimpleExtraOne.questDescription"
+      },
+      {
+        "id": 10,
+        "type": "reorder",
+        "question": "pastSimpleExtraOne.questTask10",
+        "words": [
+          "Geburtstag",
+          "hatte",
+          "Meine",
+          "war",
+          "Schwester"
+        ],
+        "correctOrder": [
+          "Meine",
+          "Schwester",
+          "hatte",
+          "Geburtstag"
+        ],
+        "tip": "pastSimpleExtraOne.questDescription"
+      },
+      {
+        "id": 11,
+        "type": "select",
+        "question": "pastSimpleExtraOne.questTask11",
+        "options": [
+          "Die Gäste hatten sehr lustig.",
+          "Die Gäste waren sehr lustig.",
+          "Die Gäste war sehr lustig."
+        ],
+        "answer": "Die Gäste waren sehr lustig.",
+        "tip": "pastSimpleExtraOne.questDescription"
+      },
+      {
+        "id": 12,
+        "type": "input",
+        "question": "pastSimpleExtraOne.questTask12",
+        "correctAnswer": "Hattest",
+        "tip": "pastSimpleExtraOne.questDescription"
+      },
+      {
+        "id": 13,
+        "type": "input",
+        "question": "pastSimpleExtraOne.questTask13",
+        "correctAnswer": "waren",
+        "tip": "pastSimpleExtraOne.questDescription"
+      },
+      {
+        "id": 14,
+        "type": "input",
+        "question": "a2Course.t62",
+        "correctAnswer": "waren",
+        "tip": "pastSimpleExtraOne.questDescription"
+      },
+      {
+        "id": 15,
+        "type": "input",
+        "question": "pastSimpleExtraOne.questTask15",
+        "correctAnswer": "im",
+        "tip": "pastSimpleExtraOne.questDescription"
+      }
+    ]
+  },
+  {
+    "questId": "past-simple-10",
+    "title": "pastSimpleExtraTwo.questTitle",
+    "progress": "0/15",
+    "description": "pastSimpleExtraTwo.questDescription",
+    "conditions": {
+      "goal": "pastSimpleExtraTwo.questGoal",
+      "minCorrect": 15,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
+    "vocabulary": [
+      {
+        "word": "das Dorf",
+        "translation-ru": "деревня",
+        "translation-en": "village",
+        "translation-uk": "село",
+        "translation-pl": "wieś",
+        "translation-es": "el pueblo",
+        "translation-fr": "le village",
+        "translation-tr": "köy",
+        "translation-ro": "satul",
+        "translation-uz": "qishloq",
+        "translation-hi": "गाँव",
+        "translation-ar": "القرية"
+      },
+      {
+        "word": "die Süßigkeiten",
+        "translation-ru": "сладости",
+        "translation-en": "sweets",
+        "translation-uk": "солодощі",
+        "translation-pl": "słodycze",
+        "translation-es": "los dulces",
+        "translation-fr": "les sucreries",
+        "translation-tr": "tatlılar",
+        "translation-ro": "dulciurile",
+        "translation-uz": "shirinliklar",
+        "translation-hi": "मिठाइयाँ",
+        "translation-ar": "الحلويات"
+      },
+      {
+        "word": "allein",
+        "translation-ru": "один, сам",
+        "translation-en": "alone",
+        "translation-uk": "сам, один",
+        "translation-pl": "sam",
+        "translation-es": "solo",
+        "translation-fr": "seul",
+        "translation-tr": "yalnız",
+        "translation-ro": "singur",
+        "translation-uz": "yolg‘iz",
+        "translation-hi": "अकेले",
+        "translation-ar": "وحده"
+      },
+      {
+        "word": "der Pilot",
+        "translation-ru": "пилот",
+        "translation-en": "pilot",
+        "translation-uk": "пілот",
+        "translation-pl": "pilot",
+        "translation-es": "el piloto",
+        "translation-fr": "le pilote",
+        "translation-tr": "pilot",
+        "translation-ro": "pilotul",
+        "translation-uz": "uchuvchi",
+        "translation-hi": "पायलट",
+        "translation-ar": "الطيار"
+      },
+      {
+        "word": "als",
+        "translation-ru": "когда (один раз в прошлом)",
+        "translation-en": "when (once in the past)",
+        "translation-uk": "коли (один раз у минулому)",
+        "translation-pl": "kiedy (raz w przeszłości)",
+        "translation-es": "cuando (una vez en el pasado)",
+        "translation-fr": "quand (une fois au passé)",
+        "translation-tr": "-dığında (geçmişte bir kez)",
+        "translation-ro": "când (o dată în trecut)",
+        "translation-uz": "qachonki (o‘tmishda bir marta)",
+        "translation-hi": "जब (अतीत में एक बार)",
+        "translation-ar": "عندما (مرة في الماضي)"
+      },
+      {
+        "word": "erzähln",
+        "translation-ru": "рассказывать",
+        "translation-en": "to tell / narrate",
+        "translation-uk": "розповідати",
+        "translation-pl": "opowiadać",
+        "translation-es": "contar / narrar",
+        "translation-fr": "raconter",
+        "translation-tr": "anlatmak",
+        "translation-ro": "a povesti",
+        "translation-uz": "hikoya qilmoq",
+        "translation-hi": "बताना",
+        "translation-ar": "يحكي"
+      }
+    ],
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "pastSimpleExtraTwo.questTask1",
+        "options": [
+          "Als Kind wollte ich Pilot werden.",
+          "Als Kind wollte ich werden Pilot.",
+          "Als Kind willte ich Pilot werden."
+        ],
+        "answer": "Als Kind wollte ich Pilot werden.",
+        "tip": "pastSimpleExtraTwo.questDescription"
+      },
+      {
+        "id": 2,
+        "type": "input",
+        "question": "pastSimpleExtraTwo.questTask2",
+        "correctAnswer": "durften",
+        "tip": "pastSimpleExtraTwo.questDescription"
+      },
+      {
+        "id": 3,
+        "type": "input",
+        "question": "a2Course.t63",
+        "correctAnswer": "musste",
+        "tip": "pastSimpleExtraTwo.questDescription"
+      },
+      {
+        "id": 4,
+        "type": "reorder",
+        "question": "pastSimpleExtraTwo.questTask4",
+        "words": [
+          "konnte",
+          "lesen",
+          "fünf",
+          "Bruder",
+          "mit",
+          "schon",
+          "könnte",
+          "Mein"
+        ],
+        "correctOrder": [
+          "Mein",
+          "Bruder",
+          "konnte",
+          "mit",
+          "fünf",
+          "schon",
+          "lesen"
+        ],
+        "tip": "pastSimpleExtraTwo.questDescription"
+      },
+      {
+        "id": 5,
+        "type": "select",
+        "question": "pastSimpleExtraTwo.questTask5",
+        "options": [
+          "Konntest du als Kind schwimmst?",
+          "Kanntest du als Kind schwimmen?",
+          "Konntest du als Kind schwimmen?"
+        ],
+        "answer": "Konntest du als Kind schwimmen?",
+        "tip": "pastSimpleExtraTwo.questDescription"
+      },
+      {
+        "id": 6,
+        "type": "input",
+        "question": "pastSimpleExtraTwo.questTask6",
+        "correctAnswer": "war",
+        "tip": "pastSimpleExtraTwo.questDescription"
+      },
+      {
+        "id": 7,
+        "type": "readAndAnswer",
+        "question": "pastSimpleExtraTwo.questTask7",
+        "text": "Anna erzählt: „Früher war ich oft im Dorf. Ich durfte nicht allein in die Stadt fahren. Ich musste um sieben Uhr zu Hause sein. Aber ich konnte jeden Tag im Garten spielen.“",
+        "options": [
+          "zu Hause sein",
+          "im Garten spielen",
+          "allein in die Stadt fahren"
+        ],
+        "answer": "allein in die Stadt fahren",
+        "tip": "pastSimpleExtraTwo.questDescription"
+      },
+      {
+        "id": 8,
+        "type": "input",
+        "question": "pastSimpleExtraTwo.questTask8",
+        "correctAnswer": "wollte",
+        "tip": "pastSimpleExtraTwo.questDescription"
+      },
+      {
+        "id": 9,
+        "type": "input",
+        "question": "pastSimpleExtraTwo.questTask9",
+        "correctAnswer": "sollte",
+        "tip": "pastSimpleExtraTwo.questDescription"
+      },
+      {
+        "id": 10,
+        "type": "reorder",
+        "question": "pastSimpleExtraTwo.questTask10",
+        "words": [
+          "dürften",
+          "fernsehen",
+          "lange",
+          "nicht",
+          "Wir",
+          "durften"
+        ],
+        "correctOrder": [
+          "Wir",
+          "durften",
+          "nicht",
+          "lange",
+          "fernsehen"
+        ],
+        "tip": "pastSimpleExtraTwo.questDescription"
+      },
+      {
+        "id": 11,
+        "type": "select",
+        "question": "pastSimpleExtraTwo.questTask11",
+        "options": [
+          "Warum konntest du nicht kommen?",
+          "Warum kanntest du nicht kommen?",
+          "Warum konntest du nicht kommst?"
+        ],
+        "answer": "Warum konntest du nicht kommen?",
+        "tip": "pastSimpleExtraTwo.questDescription"
+      },
+      {
+        "id": 12,
+        "type": "input",
+        "question": "pastSimpleExtraTwo.questTask12",
+        "correctAnswer": "mussten",
+        "tip": "pastSimpleExtraTwo.questDescription"
+      },
+      {
+        "id": 13,
+        "type": "input",
+        "question": "pastSimpleExtraTwo.questTask13",
+        "correctAnswer": "aber",
+        "tip": "pastSimpleExtraTwo.questDescription"
+      },
+      {
+        "id": 14,
+        "type": "input",
+        "question": "pastSimpleExtraTwo.questTask14",
+        "correctAnswer": "hatte",
+        "tip": "pastSimpleExtraTwo.questDescription"
+      },
+      {
+        "id": 15,
+        "type": "input",
+        "question": "a2Course.t64",
+        "correctAnswer": "musstet",
+        "tip": "pastSimpleExtraTwo.questDescription"
       }
     ]
   },
@@ -1559,25 +2258,29 @@
         "id": 1,
         "type": "input",
         "question": "pastSimpleSeven.questTask1",
-        "correctAnswer": "war"
+        "correctAnswer": "war",
+        "tip": "pastSimpleSeven.questDescription"
       },
       {
         "id": 2,
         "type": "input",
         "question": "pastSimpleSeven.questTask2",
-        "correctAnswer": "hatten"
+        "correctAnswer": "hatten",
+        "tip": "pastSimpleSeven.questDescription"
       },
       {
         "id": 3,
         "type": "input",
         "question": "pastSimpleSeven.questTask3",
-        "correctAnswer": "musste"
+        "correctAnswer": "musste",
+        "tip": "pastSimpleSeven.questDescription"
       },
       {
         "id": 4,
         "type": "input",
         "question": "pastSimpleSeven.questTask4",
-        "correctAnswer": "konntest"
+        "correctAnswer": "Konntest",
+        "tip": "pastSimpleSeven.questDescription"
       },
       {
         "id": 5,
@@ -1588,7 +2291,8 @@
           "Gestern hatte Sonntag.",
           "Gestern waren Sonntag."
         ],
-        "answer": "Gestern war Sonntag."
+        "answer": "Gestern war Sonntag.",
+        "tip": "pastSimpleSeven.questDescription"
       },
       {
         "id": 6,
@@ -1606,7 +2310,8 @@
           "wart",
           "ihr",
           "gestern"
-        ]
+        ],
+        "tip": "pastSimpleSeven.questDescription"
       },
       {
         "id": 7,
@@ -1618,7 +2323,8 @@
           "Englisch",
           "Französisch"
         ],
-        "answer": "Spanisch"
+        "answer": "Spanisch",
+        "tip": "pastSimpleSeven.questDescription"
       },
       {
         "id": 8,
@@ -1629,13 +2335,15 @@
           "wir wollen schlafen",
           "wir sollten schlafen"
         ],
-        "answer": "wir wollten schlafen"
+        "answer": "wir wollten schlafen",
+        "tip": "pastSimpleSeven.questDescription"
       },
       {
         "id": 9,
         "type": "input",
         "question": "pastSimpleSeven.questTask9",
-        "correctAnswer": "durftest"
+        "correctAnswer": "durftest",
+        "tip": "pastSimpleSeven.questDescription"
       },
       {
         "id": 10,
@@ -1646,7 +2354,8 @@
           "Ich war kein Geld.",
           "Ich hatte keine Geld."
         ],
-        "answer": "Ich hatte kein Geld."
+        "answer": "Ich hatte kein Geld.",
+        "tip": "pastSimpleSeven.questDescription"
       },
       {
         "id": 11,
@@ -1664,13 +2373,15 @@
           "sollten",
           "Deutsch",
           "sprechen"
-        ]
+        ],
+        "tip": "pastSimpleSeven.questDescription"
       },
       {
         "id": 12,
         "type": "input",
         "question": "pastSimpleSeven.questTask12",
-        "correctAnswer": "war"
+        "correctAnswer": "war",
+        "tip": "pastSimpleSeven.questDescription"
       },
       {
         "id": 13,
@@ -1682,13 +2393,15 @@
           "am Morgen",
           "am Mittag"
         ],
-        "answer": "am Abend"
+        "answer": "am Abend",
+        "tip": "pastSimpleSeven.questDescription"
       },
       {
         "id": 14,
         "type": "input",
         "question": "pastSimpleSeven.questTask14",
-        "correctAnswer": "konnten"
+        "correctAnswer": "konnten",
+        "tip": "pastSimpleSeven.questDescription"
       },
       {
         "id": 15,
@@ -1699,7 +2412,8 @@
           "er hatte beim Arzt",
           "er war zum Arzt"
         ],
-        "answer": "er war beim Arzt"
+        "answer": "er war beim Arzt",
+        "tip": "pastSimpleSeven.questDescription"
       }
     ]
   },
@@ -1787,6 +2501,34 @@
         "translation-ro": "pizza",
         "translation-tr": "pizza",
         "translation-uz": "pitsa"
+      },
+      {
+        "word": "kalt",
+        "translation-ru": "холодно",
+        "translation-en": "cold",
+        "translation-uk": "холодно",
+        "translation-pl": "zimno",
+        "translation-es": "frío",
+        "translation-fr": "froid",
+        "translation-ar": "بارد",
+        "translation-hi": "ठंडा",
+        "translation-ro": "frig",
+        "translation-tr": "soğuk",
+        "translation-uz": "sovuq"
+      },
+      {
+        "word": "früher",
+        "translation-ru": "раньше",
+        "translation-en": "in the past",
+        "translation-uk": "раніше",
+        "translation-pl": "dawniej",
+        "translation-es": "antes",
+        "translation-fr": "avant",
+        "translation-ar": "في الماضي",
+        "translation-hi": "पहले",
+        "translation-ro": "înainte",
+        "translation-tr": "eskiden",
+        "translation-uz": "ilgari"
       }
     ],
     "tasks": [
@@ -1794,13 +2536,15 @@
         "id": 1,
         "type": "input",
         "question": "pastSimpleEight.questTask1",
-        "correctAnswer": "warst"
+        "correctAnswer": "warst",
+        "tip": "pastSimpleEight.questDescription"
       },
       {
         "id": 2,
         "type": "input",
         "question": "pastSimpleEight.questTask2",
-        "correctAnswer": "hatte"
+        "correctAnswer": "hatte",
+        "tip": "pastSimpleEight.questDescription"
       },
       {
         "id": 3,
@@ -1811,85 +2555,95 @@
           "Ich kann nicht schlafen.",
           "Ich konnte schlafen nicht."
         ],
-        "answer": "Ich konnte nicht schlafen."
+        "answer": "Ich konnte nicht schlafen.",
+        "tip": "pastSimpleEight.questDescription"
       },
       {
         "id": 4,
         "type": "input",
         "question": "pastSimpleEight.questTask4",
-        "correctAnswer": "wollten"
+        "correctAnswer": "wollten",
+        "tip": "pastSimpleEight.questDescription"
       },
       {
         "id": 5,
         "type": "reorder",
-        "question": "pastSimpleEight.questTask5",
+        "question": "a2Course.t16",
         "words": [
-          "musste",
-          "Arzt",
+          "lange",
           "Gestern",
-          "zum",
+          "musste",
           "ich",
+          "arbeite",
+          "arbeiten",
           "muss"
         ],
         "correctOrder": [
           "Gestern",
           "musste",
           "ich",
-          "zum",
-          "Arzt"
-        ]
+          "lange",
+          "arbeiten"
+        ],
+        "tip": "pastSimpleEight.questDescription"
       },
       {
         "id": 6,
         "type": "readAndAnswer",
-        "question": "pastSimpleEight.questTask6",
-        "text": "Am Samstag war ich mit meiner Familie im Zoo. Wir hatten viel Spaß.",
+        "question": "a2Course.t17",
+        "text": "Am Samstag war ich im Zoo. Wir hatten viel Spaß. Am Sonntag war ich zu Hause.",
         "options": [
-          "mit meiner Familie",
-          "mit meinen Freunden",
-          "mit meinem Bruder"
+          "im Büro",
+          "zu Hause",
+          "im Zoo"
         ],
-        "answer": "mit meiner Familie"
+        "answer": "im Zoo",
+        "tip": "pastSimpleEight.questDescription"
       },
       {
         "id": 7,
         "type": "select",
-        "question": "pastSimpleEight.questTask7",
+        "question": "a2Course.t18",
         "options": [
-          "Ich habe Brot gekauft.",
-          "Ich bin Brot gekauft.",
-          "Ich habe Brot gekaufen."
+          "Ich musste Brot gekauft.",
+          "Ich musste Brot kaufen.",
+          "Ich muss Brot kaufen."
         ],
-        "answer": "Ich habe Brot gekauft."
+        "answer": "Ich musste Brot kaufen.",
+        "tip": "pastSimpleEight.questDescription"
       },
       {
         "id": 8,
         "type": "select",
-        "question": "pastSimpleEight.questTask8",
+        "question": "a2Course.t19",
         "options": [
-          "Wir sind nach Berlin gefahren.",
-          "Wir haben nach Berlin gefahren.",
-          "Wir sind nach Berlin gefahrt."
+          "Wir war in Berlin.",
+          "Wir waren in Berlin.",
+          "Wir wart in Berlin."
         ],
-        "answer": "Wir sind nach Berlin gefahren."
+        "answer": "Wir waren in Berlin.",
+        "tip": "pastSimpleEight.questDescription"
       },
       {
         "id": 9,
         "type": "input",
-        "question": "pastSimpleEight.questTask9",
-        "correctAnswer": "unter"
+        "question": "a2Course.t20",
+        "correctAnswer": "konnte",
+        "tip": "pastSimpleEight.questDescription"
       },
       {
         "id": 10,
         "type": "input",
-        "question": "pastSimpleEight.questTask10",
-        "correctAnswer": "beim"
+        "question": "a2Course.t21",
+        "correctAnswer": "durftest",
+        "tip": "pastSimpleEight.questDescription"
       },
       {
         "id": 11,
         "type": "input",
         "question": "pastSimpleEight.questTask11",
-        "correctAnswer": "im"
+        "correctAnswer": "im",
+        "tip": "pastSimpleEight.questDescription"
       },
       {
         "id": 12,
@@ -1900,13 +2654,15 @@
           "wir dürfen nicht",
           "wir wollten nicht"
         ],
-        "answer": "wir durften nicht"
+        "answer": "wir durften nicht",
+        "tip": "pastSimpleEight.questDescription"
       },
       {
         "id": 13,
         "type": "input",
         "question": "pastSimpleEight.questTask13",
-        "correctAnswer": "war"
+        "correctAnswer": "war",
+        "tip": "pastSimpleEight.questDescription"
       },
       {
         "id": 14,
@@ -1918,7 +2674,8 @@
           "in Köln",
           "in Hamburg"
         ],
-        "answer": "in Berlin"
+        "answer": "in Berlin",
+        "tip": "pastSimpleEight.questDescription"
       },
       {
         "id": 15,
@@ -1936,7 +2693,8 @@
           "hatten",
           "kein",
           "Internet"
-        ]
+        ],
+        "tip": "pastSimpleEight.questDescription"
       }
     ]
   }

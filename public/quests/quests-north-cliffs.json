@@ -1,4 +1,4 @@
- [
+[
   {
     "questId": "reise-hotel-1",
     "title": "questsNorthCliffsFirstQuests.title",
@@ -181,6 +181,34 @@
         "translation-ro": "Cazare / Check-in",
         "translation-tr": "Giriş işlemi",
         "translation-uz": "Kirishni ro'yxatdan o'tkazish"
+      },
+      {
+        "word": "inklusive",
+        "translation-ru": "включая",
+        "translation-en": "included",
+        "translation-uk": "включно",
+        "translation-pl": "w cenie",
+        "translation-es": "incluido",
+        "translation-fr": "inclus",
+        "translation-tr": "dahil",
+        "translation-ro": "inclus",
+        "translation-uz": "ichida",
+        "translation-hi": "सहित",
+        "translation-ar": "شامل"
+      },
+      {
+        "word": "der Check-out",
+        "translation-ru": "Выезд / Регистрация выезда",
+        "translation-en": "Check-out",
+        "translation-uk": "Виїзд / Реєстрація виїзду",
+        "translation-pl": "Wymeldowanie",
+        "translation-es": "Salida / Check-out",
+        "translation-fr": "Départ / Règlement de la note",
+        "translation-tr": "Çıkış işlemi",
+        "translation-ro": "Decazare / Check-out",
+        "translation-uz": "Chiqishni rasmiylashtirish",
+        "translation-hi": "चेक-आउट",
+        "translation-ar": "تسجيل المغادرة"
       }
     ],
     "tasks": [
@@ -396,20 +424,6 @@
         "translation-uz": "Wi-Fi"
       },
       {
-        "word": "das Passwort",
-        "translation-ru": "Пароль",
-        "translation-en": "Password",
-        "translation-uk": "Пароль",
-        "translation-pl": "Hasło",
-        "translation-es": "Contraseña",
-        "translation-fr": "Mot de passe",
-        "translation-ar": "كلمة المرور",
-        "translation-hi": "पासवर्ड",
-        "translation-ro": "Parolă",
-        "translation-tr": "Şifre / Parola",
-        "translation-uz": "Parol"
-      },
-      {
         "word": "die Rechnung",
         "translation-ru": "Счёт / Чек",
         "translation-en": "Bill / Invoice",
@@ -480,20 +494,6 @@
         "translation-uz": "Karta"
       },
       {
-        "word": "bar",
-        "translation-ru": "Наличными",
-        "translation-en": "In cash",
-        "translation-uk": "Готівкою",
-        "translation-pl": "Gotówką",
-        "translation-es": "En efectivo",
-        "translation-fr": "En espèces / En liquide",
-        "translation-ar": "نقداً",
-        "translation-hi": "नकद",
-        "translation-ro": "În numerar / Cash",
-        "translation-tr": "Nakit",
-        "translation-uz": "Naqd"
-      },
-      {
         "word": "auschecken",
         "translation-ru": "Выселяться / Выезжать из отеля",
         "translation-en": "To check out",
@@ -548,6 +548,20 @@
         "translation-ro": "Liniștit",
         "translation-tr": "Sessiz / Sakin",
         "translation-uz": "Tinch / Sokin"
+      },
+      {
+        "word": "das WLAN-Passwort",
+        "translation-ru": "пароль от вайфая",
+        "translation-en": "WiFi password",
+        "translation-uk": "пароль від вайфаю",
+        "translation-pl": "hasło do Wi-Fi",
+        "translation-es": "la contraseña del wifi",
+        "translation-fr": "le mot de passe wifi",
+        "translation-tr": "Wi-Fi şifresi",
+        "translation-ro": "parola de wifi",
+        "translation-uz": "Wi-Fi paroli",
+        "translation-hi": "वाई-फ़ाई पासवर्ड",
+        "translation-ar": "كلمة مرور الواي فاي"
       }
     ],
     "tasks": [
@@ -1578,6 +1592,20 @@
         "translation-ro": "Atenție",
         "translation-tr": "Dikkat",
         "translation-uz": "Diqqat"
+      },
+      {
+        "word": "bar",
+        "translation-ru": "Наличными",
+        "translation-en": "In cash",
+        "translation-uk": "Готівкою",
+        "translation-pl": "Gotówką",
+        "translation-es": "En efectivo",
+        "translation-fr": "En espèces / En liquide",
+        "translation-ar": "نقداً",
+        "translation-hi": "नकद",
+        "translation-ro": "În numerar / Cash",
+        "translation-tr": "Nakit",
+        "translation-uz": "Naqd"
       }
     ],
     "tasks": [
@@ -2451,11 +2479,11 @@
         "text": "Achtung: Das WLAN funktioniert nicht. Bitte nicht stören.",
         "question": "questsNorthCliffsSeventhQuests.questFourteen",
         "options": [
-          "questsNorthCliffsSeventhQuests.questFourteenFirstOption",
-          "questsNorthCliffsSeventhQuests.questFourteenSecondOption",
-          "questsNorthCliffsSeventhQuests.questFourteenThirdOption"
+          "questsNorthCliffsSixthQuests.questFourteenFirstOption",
+          "questsNorthCliffsSixthQuests.questFourteenSecondOption",
+          "questsNorthCliffsSixthQuests.questFourteenThirdOption"
         ],
-        "answer": "questsNorthCliffsSeventhQuests.questFourteenFirstOption"
+        "answer": "questsNorthCliffsSixthQuests.questFourteenFirstOption"
       },
       {
         "id": 15,
@@ -2960,6 +2988,20 @@
         "translation-ro": "A căuta",
         "translation-tr": "Aramak",
         "translation-uz": "Qidirmoq"
+      },
+      {
+        "word": "die Minute",
+        "translation-ru": "минута",
+        "translation-en": "minute",
+        "translation-uk": "хвилина",
+        "translation-pl": "minuta",
+        "translation-es": "el minuto",
+        "translation-fr": "la minute",
+        "translation-tr": "dakika",
+        "translation-ro": "minutul",
+        "translation-uz": "daqiqa",
+        "translation-hi": "मिनट",
+        "translation-ar": "الدقيقة"
       }
     ],
     "tasks": [
@@ -3133,16 +3175,14 @@
         "type": "reorder",
         "question": "questsNorthCliffsNinthQuests.questFourteen",
         "words": [
-          "Bahnsteig",
-          "der",
-          "ist",
           "Wo",
-          "3"
+          "ist",
+          "3",
+          "Bahnsteig"
         ],
         "correctOrder": [
           "Wo",
           "ist",
-          "der",
           "Bahnsteig",
           "3"
         ]
@@ -3310,6 +3350,20 @@
         "translation-ro": "A începe",
         "translation-tr": "Başlamak",
         "translation-uz": "Boshlamoq / Boshlanmoq"
+      },
+      {
+        "word": "das Boarding",
+        "translation-ru": "посадка",
+        "translation-en": "boarding",
+        "translation-uk": "посадка",
+        "translation-pl": "wejście na pokład",
+        "translation-es": "el embarque",
+        "translation-fr": "l’embarquement",
+        "translation-tr": "biniş",
+        "translation-ro": "îmbarcarea",
+        "translation-uz": "samolyotga chiqish",
+        "translation-hi": "बोर्डिंग",
+        "translation-ar": "الصعود إلى الطائرة"
       }
     ],
     "tasks": [
@@ -3362,16 +3416,14 @@
         "type": "reorder",
         "question": "questsNorthCliffsTenthQuests.questFive",
         "words": [
-          "ist",
-          "das",
-          "Gate",
+          "A12",
           "Wo",
-          "A12"
+          "Gate",
+          "ist"
         ],
         "correctOrder": [
           "Wo",
           "ist",
-          "das",
           "Gate",
           "A12"
         ]
@@ -3681,7 +3733,7 @@
         "type": "speechToText",
         "question": "questsNorthCliffsEleventhQuests.questThird",
         "text": "Ich bezahle mit Karte.",
-          "answer": "Ich bezahle mit Karte."
+        "answer": "Ich bezahle mit Karte."
       },
       {
         "id": 4,
@@ -4028,16 +4080,14 @@
         "type": "reorder",
         "question": "questsNorthCliffsTwelfthQuests.questSix",
         "words": [
-          "ist",
-          "Bahnsteig",
-          "der",
           "Wo",
-          "2"
+          "2",
+          "Bahnsteig",
+          "ist"
         ],
         "correctOrder": [
           "Wo",
           "ist",
-          "der",
           "Bahnsteig",
           "2"
         ]

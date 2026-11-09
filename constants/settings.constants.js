@@ -50,7 +50,8 @@ export const SETTINGS_GROUPS_CONFIG = [
         id: 'language',
         titleKey: 'settingsGroup.language',
         items: [
-            { key: 'lang', labelKey: 'cabinetToggle.language', type: 'button' }
+            { key: 'lang', labelKey: 'cabinetToggle.language', type: 'button' },
+            { key: 'germanLevel', labelKey: 'levelPicker.settingsLabel', type: 'button' }
         ]
     }
 ]

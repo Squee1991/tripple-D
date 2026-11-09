@@ -1,0 +1,2623 @@
+[
+  {
+    "questId": "nuance-bridge-one",
+    "title": "nuanceBridgeOne.questTitle",
+    "progress": "0/15",
+    "description": "nuanceBridgeOne.questDescription",
+    "conditions": {
+      "goal": "nuanceBridgeOne.questGoal",
+      "minCorrect": 15,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
+    "vocabulary": [
+      {
+        "word": "zwar",
+        "translation-ru": "хоть и, правда",
+        "translation-en": "true, admittedly",
+        "translation-uk": "хоч і, щоправда",
+        "translation-pl": "wprawdzie",
+        "translation-es": "es cierto que",
+        "translation-fr": "certes",
+        "translation-tr": "gerçi",
+        "translation-ro": "ce-i drept",
+        "translation-uz": "to‘g‘ri",
+        "translation-hi": "हालाँकि",
+        "translation-ar": "صحيح أن"
+      },
+      {
+        "word": "kennen",
+        "translation-ru": "знать",
+        "translation-en": "to know",
+        "translation-uk": "знати",
+        "translation-pl": "znać",
+        "translation-es": "conocer",
+        "translation-fr": "connaître",
+        "translation-tr": "tanımak / bilmek",
+        "translation-ro": "a cunoaște",
+        "translation-uz": "tanimoq",
+        "translation-hi": "जानना",
+        "translation-ar": "يعرف"
+      },
+      {
+        "word": "lange",
+        "translation-ru": "долго",
+        "translation-en": "for a long time",
+        "translation-uk": "довго",
+        "translation-pl": "długo",
+        "translation-es": "mucho tiempo",
+        "translation-fr": "longtemps",
+        "translation-tr": "uzun süre",
+        "translation-ro": "mult timp",
+        "translation-uz": "uzoq",
+        "translation-hi": "देर तक",
+        "translation-ar": "طويلًا"
+      },
+      {
+        "word": "müde",
+        "translation-ru": "усталый",
+        "translation-en": "tired",
+        "translation-uk": "втомлений",
+        "translation-pl": "zmęczony",
+        "translation-es": "cansado",
+        "translation-fr": "fatigué",
+        "translation-tr": "yorgun",
+        "translation-ro": "obosit",
+        "translation-uz": "charchagan",
+        "translation-hi": "थका हुआ",
+        "translation-ar": "متعب"
+      },
+      {
+        "word": "wohnen",
+        "translation-ru": "жить / проживать",
+        "translation-en": "to live / reside",
+        "translation-uk": "жити / мешкати",
+        "translation-pl": "mieszkać",
+        "translation-es": "vivir / residir",
+        "translation-fr": "habiter",
+        "translation-tr": "ikamet etmek / oturmak",
+        "translation-ro": "a locui",
+        "translation-uz": "yashamoq / istiqomat qilmoq",
+        "translation-hi": "रहना",
+        "translation-ar": "يسكن"
+      }
+    ],
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "nuanceBridgeOne.questTask1",
+        "options": [
+          "Das Auto ist zwar alt, oder es fährt gut.",
+          "Das Auto ist alt zwar, aber es fährt gut.",
+          "Das Auto ist zwar alt, aber es fährt gut."
+        ],
+        "answer": "Das Auto ist zwar alt, aber es fährt gut.",
+        "tip": "nuanceBridgeOne.questDescription"
+      },
+      {
+        "id": 2,
+        "type": "input",
+        "question": "nuanceBridgeOne.questTask2",
+        "correctAnswer": "zwar",
+        "tip": "nuanceBridgeOne.questDescription"
+      },
+      {
+        "id": 3,
+        "type": "input",
+        "question": "nuanceBridgeOne.questTask3",
+        "correctAnswer": "aber",
+        "tip": "nuanceBridgeOne.questDescription"
+      },
+      {
+        "id": 4,
+        "type": "reorder",
+        "question": "nuanceBridgeOne.questTask4",
+        "words": [
+          "oder",
+          "zwar",
+          "aber",
+          "interessant",
+          "Der",
+          "Film",
+          "lang",
+          "ist"
+        ],
+        "correctOrder": [
+          "Der",
+          "Film",
+          "ist",
+          "zwar",
+          "lang",
+          "aber",
+          "interessant"
+        ],
+        "tip": "nuanceBridgeOne.questDescription"
+      },
+      {
+        "id": 5,
+        "type": "select",
+        "question": "nuanceBridgeOne.questTask5",
+        "options": [
+          "Ich zwar wohne in Berlin, aber ich arbeite in Hamburg.",
+          "Ich wohne zwar in Berlin, aber ich arbeite in Hamburg.",
+          "Ich wohne zwar in Berlin, oder ich arbeite in Hamburg."
+        ],
+        "answer": "Ich wohne zwar in Berlin, aber ich arbeite in Hamburg.",
+        "tip": "nuanceBridgeOne.questDescription"
+      },
+      {
+        "id": 6,
+        "type": "input",
+        "question": "nuanceBridgeOne.questTask6",
+        "correctAnswer": "aber",
+        "tip": "nuanceBridgeOne.questDescription"
+      },
+      {
+        "id": 7,
+        "type": "readAndAnswer",
+        "question": "nuanceBridgeOne.questTask7",
+        "text": "Tim fährt heute mit dem Zug. Der Zug ist zwar teuer, aber er ist schnell. Das Auto ist zwar billiger, aber es dauert zu lange.",
+        "options": [
+          "Das Auto ist kaputt.",
+          "Der Zug ist schnell.",
+          "Der Zug ist billig."
+        ],
+        "answer": "Der Zug ist schnell.",
+        "tip": "nuanceBridgeOne.questDescription"
+      },
+      {
+        "id": 8,
+        "type": "input",
+        "question": "nuanceBridgeOne.questTask8",
+        "correctAnswer": "zwar",
+        "tip": "nuanceBridgeOne.questDescription"
+      },
+      {
+        "id": 9,
+        "type": "reorder",
+        "question": "nuanceBridgeOne.questTask10",
+        "words": [
+          "stark",
+          "sondern",
+          "zwar",
+          "ist",
+          "Er",
+          "klein",
+          "aber"
+        ],
+        "correctOrder": [
+          "Er",
+          "ist",
+          "zwar",
+          "klein",
+          "aber",
+          "stark"
+        ],
+        "tip": "nuanceBridgeOne.questDescription"
+      },
+      {
+        "id": 10,
+        "type": "select",
+        "question": "nuanceBridgeOne.questTask11",
+        "options": [
+          "Der Kurs zwar ist schwer, aber er gefällt mir.",
+          "Der Kurs ist zwar schwer, aber er gefällt mir.",
+          "Der Kurs ist zwar schwer, aber er gefalle mir."
+        ],
+        "answer": "Der Kurs ist zwar schwer, aber er gefällt mir.",
+        "tip": "nuanceBridgeOne.questDescription"
+      },
+      {
+        "id": 11,
+        "type": "input",
+        "question": "linkHarborEight.questTask9",
+        "correctAnswer": "rief",
+        "tip": "linkHarborEight.questDescription",
+        "reviewOf": "link-harbor-eight",
+        "reviewLand": "link-harbor"
+      },
+      {
+        "id": 12,
+        "type": "input",
+        "question": "linkHarborFive.questTask12",
+        "correctAnswer": "anzurufen",
+        "tip": "linkHarborFive.questDescription",
+        "reviewOf": "link-harbor-five",
+        "reviewLand": "link-harbor"
+      },
+      {
+        "id": 13,
+        "type": "input",
+        "question": "linkHarborTwo.questTask13",
+        "correctAnswer": "oder",
+        "tip": "linkHarborTwo.questDescription",
+        "reviewOf": "link-harbor-two",
+        "reviewLand": "link-harbor"
+      },
+      {
+        "id": 14,
+        "type": "input",
+        "question": "nuanceBridgeOne.questTask14",
+        "correctAnswer": "noch",
+        "tip": "nuanceBridgeOne.questDescription"
+      },
+      {
+        "id": 15,
+        "type": "input",
+        "question": "nuanceBridgeOne.questTask15",
+        "correctAnswer": "desto",
+        "tip": "nuanceBridgeOne.questDescription"
+      }
+    ]
+  },
+  {
+    "questId": "nuance-bridge-two",
+    "title": "nuanceBridgeTwo.questTitle",
+    "progress": "0/15",
+    "description": "nuanceBridgeTwo.questDescription",
+    "conditions": {
+      "goal": "nuanceBridgeTwo.questGoal",
+      "minCorrect": 15,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
+    "vocabulary": [
+      {
+        "word": "sowohl… als auch",
+        "translation-ru": "как…, так и",
+        "translation-en": "both… and",
+        "translation-uk": "як…, так і",
+        "translation-pl": "zarówno…, jak i",
+        "translation-es": "tanto… como",
+        "translation-fr": "aussi bien… que",
+        "translation-tr": "hem… hem",
+        "translation-ro": "atât…, cât și",
+        "translation-uz": "ham…, ham",
+        "translation-hi": "…और… दोनों",
+        "translation-ar": "كل من… و"
+      },
+      {
+        "word": "zwar",
+        "translation-ru": "хоть и, правда",
+        "translation-en": "true, admittedly",
+        "translation-uk": "хоч і, щоправда",
+        "translation-pl": "wprawdzie",
+        "translation-es": "es cierto que",
+        "translation-fr": "certes",
+        "translation-tr": "gerçi",
+        "translation-ro": "ce-i drept",
+        "translation-uz": "to‘g‘ri",
+        "translation-hi": "हालाँकि",
+        "translation-ar": "صحيح أن"
+      },
+      {
+        "word": "der Preis",
+        "translation-ru": "цена",
+        "translation-en": "price",
+        "translation-uk": "ціна",
+        "translation-pl": "cena",
+        "translation-es": "el precio",
+        "translation-fr": "le prix",
+        "translation-tr": "fiyat",
+        "translation-ro": "prețul",
+        "translation-uz": "narx",
+        "translation-hi": "क़ीमत",
+        "translation-ar": "السعر"
+      },
+      {
+        "word": "das Brot",
+        "translation-ru": "хлеб",
+        "translation-en": "bread",
+        "translation-uk": "хліб",
+        "translation-pl": "chleb",
+        "translation-es": "el pan",
+        "translation-fr": "le pain",
+        "translation-tr": "ekmek",
+        "translation-ro": "pâinea",
+        "translation-uz": "non",
+        "translation-hi": "ब्रेड",
+        "translation-ar": "الخبز"
+      },
+      {
+        "word": "Englisch",
+        "translation-ru": "английский язык",
+        "translation-en": "English",
+        "translation-uk": "англійська мова",
+        "translation-pl": "angielski",
+        "translation-es": "el inglés",
+        "translation-fr": "l’anglais",
+        "translation-tr": "İngilizce",
+        "translation-ro": "engleza",
+        "translation-uz": "ingliz tili",
+        "translation-hi": "अंग्रेज़ी",
+        "translation-ar": "الإنجليزية"
+      }
+    ],
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "nuanceBridgeTwo.questTask1",
+        "options": [
+          "Ich spreche sowohl Deutsch als noch Englisch.",
+          "Ich spreche sowohl Deutsch oder auch Englisch.",
+          "Ich spreche sowohl Deutsch als auch Englisch."
+        ],
+        "answer": "Ich spreche sowohl Deutsch als auch Englisch.",
+        "tip": "nuanceBridgeTwo.questDescription"
+      },
+      {
+        "id": 2,
+        "type": "input",
+        "question": "nuanceBridgeTwo.questTask2",
+        "correctAnswer": "sowohl",
+        "tip": "nuanceBridgeTwo.questDescription"
+      },
+      {
+        "id": 3,
+        "type": "input",
+        "question": "nuanceBridgeTwo.questTask3",
+        "correctAnswer": "als",
+        "tip": "nuanceBridgeTwo.questDescription"
+      },
+      {
+        "id": 4,
+        "type": "reorder",
+        "question": "nuanceBridgeTwo.questTask4",
+        "words": [
+          "Hunde",
+          "Ich",
+          "oder",
+          "als",
+          "Katzen",
+          "auch",
+          "mag",
+          "sowohl"
+        ],
+        "correctOrder": [
+          "Ich",
+          "mag",
+          "sowohl",
+          "Katzen",
+          "als",
+          "auch",
+          "Hunde"
+        ],
+        "tip": "nuanceBridgeTwo.questDescription"
+      },
+      {
+        "id": 5,
+        "type": "select",
+        "question": "nuanceBridgeTwo.questTask5",
+        "options": [
+          "Sowohl Anna als noch Tim kommen.",
+          "Sowohl Anna als auch Tim kommen.",
+          "Sowohl Anna oder auch Tim kommen."
+        ],
+        "answer": "Sowohl Anna als auch Tim kommen.",
+        "tip": "nuanceBridgeTwo.questDescription"
+      },
+      {
+        "id": 6,
+        "type": "input",
+        "question": "nuanceBridgeTwo.questTask6",
+        "correctAnswer": "auch",
+        "tip": "nuanceBridgeTwo.questDescription"
+      },
+      {
+        "id": 7,
+        "type": "readAndAnswer",
+        "question": "nuanceBridgeTwo.questTask7",
+        "text": "Das Hotel ist neu. Es gibt sowohl ein Restaurant als auch ein Café. Das Frühstück ist im Preis.",
+        "options": [
+          "ein Restaurant und ein Café",
+          "nur ein Café",
+          "nur ein Restaurant"
+        ],
+        "answer": "ein Restaurant und ein Café",
+        "tip": "nuanceBridgeTwo.questDescription"
+      },
+      {
+        "id": 8,
+        "type": "input",
+        "question": "nuanceBridgeTwo.questTask8",
+        "correctAnswer": "als",
+        "tip": "nuanceBridgeTwo.questDescription"
+      },
+      {
+        "id": 9,
+        "type": "reorder",
+        "question": "nuanceBridgeTwo.questTask10",
+        "words": [
+          "auch",
+          "Sie",
+          "tanzen",
+          "sowohl",
+          "noch",
+          "singen",
+          "kann",
+          "als"
+        ],
+        "correctOrder": [
+          "Sie",
+          "kann",
+          "sowohl",
+          "singen",
+          "als",
+          "auch",
+          "tanzen"
+        ],
+        "tip": "nuanceBridgeTwo.questDescription"
+      },
+      {
+        "id": 10,
+        "type": "select",
+        "question": "nuanceBridgeTwo.questTask11",
+        "options": [
+          "Mein Bruder kocht gut sowohl als schnell auch.",
+          "Mein Bruder kocht sowohl gut als auch schnell.",
+          "Mein Bruder kocht sowohl gut oder auch schnell."
+        ],
+        "answer": "Mein Bruder kocht sowohl gut als auch schnell.",
+        "tip": "nuanceBridgeTwo.questDescription"
+      },
+      {
+        "id": 11,
+        "type": "input",
+        "question": "nuanceBridgeOne.questTask9",
+        "correctAnswer": "zwar",
+        "tip": "nuanceBridgeOne.questDescription",
+        "reviewOf": "nuance-bridge-one",
+        "reviewLand": "nuance-bridge"
+      },
+      {
+        "id": 12,
+        "type": "input",
+        "question": "linkHarborSix.questTask12",
+        "correctAnswer": "bis",
+        "tip": "linkHarborSix.questDescription",
+        "reviewOf": "link-harbor-six",
+        "reviewLand": "link-harbor"
+      },
+      {
+        "id": 13,
+        "type": "input",
+        "question": "linkHarborThree.questTask13",
+        "correctAnswer": "weder",
+        "tip": "linkHarborThree.questDescription",
+        "reviewOf": "link-harbor-three",
+        "reviewLand": "link-harbor"
+      },
+      {
+        "id": 14,
+        "type": "input",
+        "question": "nuanceBridgeTwo.questTask14",
+        "correctAnswer": "gehen",
+        "tip": "nuanceBridgeTwo.questDescription"
+      },
+      {
+        "id": 15,
+        "type": "input",
+        "question": "nuanceBridgeTwo.questTask15",
+        "correctAnswer": "auf",
+        "tip": "nuanceBridgeTwo.questDescription"
+      }
+    ]
+  },
+  {
+    "questId": "nuance-bridge-three",
+    "title": "nuanceBridgeThree.questTitle",
+    "progress": "0/15",
+    "description": "nuanceBridgeThree.questDescription",
+    "conditions": {
+      "goal": "nuanceBridgeThree.questGoal",
+      "minCorrect": 15,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
+    "vocabulary": [
+      {
+        "word": "indem",
+        "translation-ru": "тем, что",
+        "translation-en": "by (doing)",
+        "translation-uk": "тим, що",
+        "translation-pl": "przez to, że",
+        "translation-es": "haciendo, mediante",
+        "translation-fr": "en faisant",
+        "translation-tr": "…arak",
+        "translation-ro": "prin faptul că",
+        "translation-uz": "…ib, orqali",
+        "translation-hi": "करके",
+        "translation-ar": "عن طريق"
+      },
+      {
+        "word": "das Radio",
+        "translation-ru": "радио",
+        "translation-en": "radio",
+        "translation-uk": "радіо",
+        "translation-pl": "radio",
+        "translation-es": "la radio",
+        "translation-fr": "la radio",
+        "translation-tr": "radyo",
+        "translation-ro": "radioul",
+        "translation-uz": "radio",
+        "translation-hi": "रेडियो",
+        "translation-ar": "الراديو"
+      },
+      {
+        "word": "zwar",
+        "translation-ru": "хоть и, правда",
+        "translation-en": "true, admittedly",
+        "translation-uk": "хоч і, щоправда",
+        "translation-pl": "wprawdzie",
+        "translation-es": "es cierto que",
+        "translation-fr": "certes",
+        "translation-tr": "gerçi",
+        "translation-ro": "ce-i drept",
+        "translation-uz": "to‘g‘ri",
+        "translation-hi": "हालाँकि",
+        "translation-ar": "صحيح أن"
+      },
+      {
+        "word": "üben",
+        "translation-ru": "упражняться",
+        "translation-en": "to practise",
+        "translation-uk": "вправлятися",
+        "translation-pl": "ćwiczyć",
+        "translation-es": "practicar",
+        "translation-fr": "s’entraîner",
+        "translation-tr": "alıştırma yapmak",
+        "translation-ro": "a exersa",
+        "translation-uz": "mashq qilmoq",
+        "translation-hi": "अभ्यास करना",
+        "translation-ar": "يتدرب"
+      },
+      {
+        "word": "man",
+        "translation-ru": "люди вообще (безличное)",
+        "translation-en": "one, people (impersonal)",
+        "translation-uk": "люди взагалі (безособове)",
+        "translation-pl": "się (bezosobowo)",
+        "translation-es": "se, uno",
+        "translation-fr": "on",
+        "translation-tr": "insan (genel)",
+        "translation-ro": "se (impersonal)",
+        "translation-uz": "kishi (umumiy)",
+        "translation-hi": "लोग (आम तौर पर)",
+        "translation-ar": "المرء"
+      }
+    ],
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "nuanceBridgeThree.questTask1",
+        "options": [
+          "Ich lerne Wörter, indem ich lese viel.",
+          "Ich lerne Wörter, indem lese ich viel.",
+          "Ich lerne Wörter, indem ich viel lese."
+        ],
+        "answer": "Ich lerne Wörter, indem ich viel lese.",
+        "tip": "nuanceBridgeThree.questDescription"
+      },
+      {
+        "id": 2,
+        "type": "input",
+        "question": "nuanceBridgeThree.questTask2",
+        "correctAnswer": "indem",
+        "tip": "nuanceBridgeThree.questDescription"
+      },
+      {
+        "id": 3,
+        "type": "input",
+        "question": "nuanceBridgeThree.questTask3",
+        "correctAnswer": "kocht",
+        "tip": "nuanceBridgeThree.questDescription"
+      },
+      {
+        "id": 4,
+        "type": "reorder",
+        "question": "nuanceBridgeThree.questTask4",
+        "words": [
+          "ich",
+          "spreche",
+          "mit",
+          "übe",
+          "Ich",
+          "um",
+          "Freunden",
+          "indem"
+        ],
+        "correctOrder": [
+          "Ich",
+          "übe",
+          "indem",
+          "ich",
+          "mit",
+          "Freunden",
+          "spreche"
+        ],
+        "tip": "nuanceBridgeThree.questDescription"
+      },
+      {
+        "id": 5,
+        "type": "select",
+        "question": "nuanceBridgeThree.questTask5",
+        "options": [
+          "Man bleibt gesund, indem man viel Sport macht.",
+          "Man bleibt gesund, indem macht man viel Sport.",
+          "Man bleibt gesund, indem man macht viel Sport."
+        ],
+        "answer": "Man bleibt gesund, indem man viel Sport macht.",
+        "tip": "nuanceBridgeThree.questDescription"
+      },
+      {
+        "id": 6,
+        "type": "input",
+        "question": "nuanceBridgeThree.questTask6",
+        "correctAnswer": "indem",
+        "tip": "nuanceBridgeThree.questDescription"
+      },
+      {
+        "id": 7,
+        "type": "readAndAnswer",
+        "question": "nuanceBridgeThree.questTask7",
+        "text": "Lisa lernt neue Wörter, indem sie kleine Karten schreibt. Jeden Abend liest sie die Karten. So vergisst sie die Wörter nicht.",
+        "options": [
+          "Sie fragt ihre Lehrerin.",
+          "Sie schreibt Karten.",
+          "Sie sieht Filme."
+        ],
+        "answer": "Sie schreibt Karten.",
+        "tip": "nuanceBridgeThree.questDescription"
+      },
+      {
+        "id": 8,
+        "type": "input",
+        "question": "nuanceBridgeThree.questTask8",
+        "correctAnswer": "singt",
+        "tip": "nuanceBridgeThree.questDescription"
+      },
+      {
+        "id": 9,
+        "type": "reorder",
+        "question": "nuanceBridgeThree.questTask10",
+        "words": [
+          "indem",
+          "um",
+          "Radio",
+          "lernt",
+          "Sie",
+          "hört",
+          "sie"
+        ],
+        "correctOrder": [
+          "Sie",
+          "lernt",
+          "indem",
+          "sie",
+          "Radio",
+          "hört"
+        ],
+        "tip": "nuanceBridgeThree.questDescription"
+      },
+      {
+        "id": 10,
+        "type": "select",
+        "question": "nuanceBridgeThree.questTask11",
+        "options": [
+          "Er hat Arbeit gefunden, indem er in der Zeitung gesucht hat.",
+          "Er hat Arbeit gefunden, indem hat er in der Zeitung gesucht.",
+          "Er hat Arbeit gefunden, indem er hat in der Zeitung gesucht."
+        ],
+        "answer": "Er hat Arbeit gefunden, indem er in der Zeitung gesucht hat.",
+        "tip": "nuanceBridgeThree.questDescription"
+      },
+      {
+        "id": 11,
+        "type": "input",
+        "question": "nuanceBridgeTwo.questTask9",
+        "correctAnswer": "sowohl",
+        "tip": "nuanceBridgeTwo.questDescription",
+        "reviewOf": "nuance-bridge-two",
+        "reviewLand": "nuance-bridge"
+      },
+      {
+        "id": 12,
+        "type": "input",
+        "question": "linkHarborSeven.questTask12",
+        "correctAnswer": "weder",
+        "tip": "linkHarborSeven.questDescription",
+        "reviewOf": "link-harbor-seven",
+        "reviewLand": "link-harbor"
+      },
+      {
+        "id": 13,
+        "type": "input",
+        "question": "linkHarborFour.questTask13",
+        "correctAnswer": "interessanter",
+        "tip": "linkHarborFour.questDescription",
+        "reviewOf": "link-harbor-four",
+        "reviewLand": "link-harbor"
+      },
+      {
+        "id": 14,
+        "type": "input",
+        "question": "nuanceBridgeThree.questTask14",
+        "correctAnswer": "sowohl",
+        "tip": "nuanceBridgeThree.questDescription"
+      },
+      {
+        "id": 15,
+        "type": "input",
+        "question": "nuanceBridgeThree.questTask15",
+        "correctAnswer": "aber",
+        "tip": "nuanceBridgeThree.questDescription"
+      }
+    ]
+  },
+  {
+    "questId": "nuance-bridge-four",
+    "title": "nuanceBridgeFour.questTitle",
+    "progress": "0/15",
+    "description": "nuanceBridgeFour.questDescription",
+    "conditions": {
+      "goal": "nuanceBridgeFour.questGoal",
+      "minCorrect": 15,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
+    "vocabulary": [
+      {
+        "word": "bis",
+        "translation-ru": "пока не, до",
+        "translation-en": "until",
+        "translation-uk": "доки не, до",
+        "translation-pl": "dopóki nie, aż",
+        "translation-es": "hasta que",
+        "translation-fr": "jusqu’à ce que",
+        "translation-tr": "…e kadar",
+        "translation-ro": "până când",
+        "translation-uz": "…guncha",
+        "translation-hi": "जब तक",
+        "translation-ar": "حتى"
+      },
+      {
+        "word": "indem",
+        "translation-ru": "тем, что",
+        "translation-en": "by (doing)",
+        "translation-uk": "тим, що",
+        "translation-pl": "przez to, że",
+        "translation-es": "haciendo, mediante",
+        "translation-fr": "en faisant",
+        "translation-tr": "…arak",
+        "translation-ro": "prin faptul că",
+        "translation-uz": "…ib, orqali",
+        "translation-hi": "करके",
+        "translation-ar": "عن طريق"
+      },
+      {
+        "word": "das Ende",
+        "translation-ru": "конец",
+        "translation-en": "end",
+        "translation-uk": "кінець",
+        "translation-pl": "koniec",
+        "translation-es": "el final",
+        "translation-fr": "la fin",
+        "translation-tr": "son",
+        "translation-ro": "sfârșitul",
+        "translation-uz": "oxir",
+        "translation-hi": "अंत",
+        "translation-ar": "النهاية"
+      },
+      {
+        "word": "man",
+        "translation-ru": "люди вообще (безличное)",
+        "translation-en": "one, people (impersonal)",
+        "translation-uk": "люди взагалі (безособове)",
+        "translation-pl": "się (bezosobowo)",
+        "translation-es": "se, uno",
+        "translation-fr": "on",
+        "translation-tr": "insan (genel)",
+        "translation-ro": "se (impersonal)",
+        "translation-uz": "kishi (umumiy)",
+        "translation-hi": "लोग (आम तौर पर)",
+        "translation-ar": "المرء"
+      },
+      {
+        "word": "einschlafen",
+        "translation-ru": "засыпать",
+        "translation-en": "to fall asleep",
+        "translation-uk": "засинати",
+        "translation-pl": "zasnąć",
+        "translation-es": "quedarse dormido",
+        "translation-fr": "s'endormir",
+        "translation-tr": "uykuya dalmak",
+        "translation-ro": "a adormi",
+        "translation-uz": "uxlab qolmoq",
+        "translation-hi": "सो जाना",
+        "translation-ar": "ينام / يغط في النوم"
+      }
+    ],
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "nuanceBridgeFour.questTask1",
+        "options": [
+          "Wir warten, bis kommt der Bus.",
+          "Wir warten, bis der Bus kommen.",
+          "Wir warten, bis der Bus kommt."
+        ],
+        "answer": "Wir warten, bis der Bus kommt.",
+        "tip": "nuanceBridgeFour.questDescription"
+      },
+      {
+        "id": 2,
+        "type": "input",
+        "question": "nuanceBridgeFour.questTask2",
+        "correctAnswer": "bis",
+        "tip": "nuanceBridgeFour.questDescription"
+      },
+      {
+        "id": 3,
+        "type": "input",
+        "question": "nuanceBridgeFour.questTask3",
+        "correctAnswer": "ist",
+        "tip": "nuanceBridgeFour.questDescription"
+      },
+      {
+        "id": 4,
+        "type": "reorder",
+        "question": "nuanceBridgeFour.questTask4",
+        "words": [
+          "er",
+          "arbeitet",
+          "Er",
+          "ist",
+          "müde",
+          "um",
+          "bis"
+        ],
+        "correctOrder": [
+          "Er",
+          "arbeitet",
+          "bis",
+          "er",
+          "müde",
+          "ist"
+        ],
+        "tip": "nuanceBridgeFour.questDescription"
+      },
+      {
+        "id": 5,
+        "type": "select",
+        "question": "nuanceBridgeFour.questTask5",
+        "options": [
+          "Ich lerne, bis verstehe ich alles.",
+          "Ich lerne, bis ich alles verstehe.",
+          "Ich lerne, bis ich verstehe alles."
+        ],
+        "answer": "Ich lerne, bis ich alles verstehe.",
+        "tip": "nuanceBridgeFour.questDescription"
+      },
+      {
+        "id": 6,
+        "type": "input",
+        "question": "nuanceBridgeFour.questTask6",
+        "correctAnswer": "bis",
+        "tip": "nuanceBridgeFour.questDescription"
+      },
+      {
+        "id": 7,
+        "type": "readAndAnswer",
+        "question": "nuanceBridgeFour.questTask7",
+        "text": "Die Kinder spielen im Park. Sie bleiben dort, bis es dunkel wird. Dann gehen sie nach Hause und essen zu Abend.",
+        "options": [
+          "wenn es dunkel wird",
+          "um zwölf Uhr",
+          "nach dem Frühstück"
+        ],
+        "answer": "wenn es dunkel wird",
+        "tip": "nuanceBridgeFour.questDescription"
+      },
+      {
+        "id": 8,
+        "type": "input",
+        "question": "nuanceBridgeFour.questTask8",
+        "correctAnswer": "anruft",
+        "tip": "nuanceBridgeFour.questDescription"
+      },
+      {
+        "id": 9,
+        "type": "reorder",
+        "question": "nuanceBridgeFour.questTask10",
+        "words": [
+          "Wir",
+          "spielen",
+          "um",
+          "regnet",
+          "bis",
+          "es"
+        ],
+        "correctOrder": [
+          "Wir",
+          "spielen",
+          "bis",
+          "es",
+          "regnet"
+        ],
+        "tip": "nuanceBridgeFour.questDescription"
+      },
+      {
+        "id": 10,
+        "type": "select",
+        "question": "nuanceBridgeFour.questTask11",
+        "options": [
+          "Ich habe gelesen, bis bin ich eingeschlafen.",
+          "Ich habe gelesen, bis ich eingeschlafen bin.",
+          "Ich habe gelesen, bis ich bin eingeschlafen."
+        ],
+        "answer": "Ich habe gelesen, bis ich eingeschlafen bin.",
+        "tip": "nuanceBridgeFour.questDescription"
+      },
+      {
+        "id": 11,
+        "type": "input",
+        "question": "nuanceBridgeThree.questTask9",
+        "correctAnswer": "indem",
+        "tip": "nuanceBridgeThree.questDescription",
+        "reviewOf": "nuance-bridge-three",
+        "reviewLand": "nuance-bridge"
+      },
+      {
+        "id": 12,
+        "type": "input",
+        "question": "linkHarborEight.questTask12",
+        "correctAnswer": "bis",
+        "tip": "linkHarborEight.questDescription",
+        "reviewOf": "link-harbor-eight",
+        "reviewLand": "link-harbor"
+      },
+      {
+        "id": 13,
+        "type": "input",
+        "question": "linkHarborFive.questTask13",
+        "correctAnswer": "arbeiten",
+        "tip": "linkHarborFive.questDescription",
+        "reviewOf": "link-harbor-five",
+        "reviewLand": "link-harbor"
+      },
+      {
+        "id": 14,
+        "type": "input",
+        "question": "nuanceBridgeFour.questTask14",
+        "correctAnswer": "indem",
+        "tip": "nuanceBridgeFour.questDescription"
+      },
+      {
+        "id": 15,
+        "type": "input",
+        "question": "nuanceBridgeFour.questTask15",
+        "correctAnswer": "sowohl",
+        "tip": "nuanceBridgeFour.questDescription"
+      }
+    ]
+  },
+  {
+    "questId": "nuance-bridge-five",
+    "title": "nuanceBridgeFive.questTitle",
+    "progress": "0/15",
+    "description": "nuanceBridgeFive.questDescription",
+    "conditions": {
+      "goal": "nuanceBridgeFive.questGoal",
+      "minCorrect": 15,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
+    "vocabulary": [
+      {
+        "word": "worden",
+        "translation-ru": "было сделано (форма пассива)",
+        "translation-en": "been (passive form)",
+        "translation-uk": "було зроблено (форма пасиву)",
+        "translation-pl": "zostało zrobione (forma strony biernej)",
+        "translation-es": "sido (forma pasiva)",
+        "translation-fr": "été (forme passive)",
+        "translation-tr": "yapıldı (edilgen biçim)",
+        "translation-ro": "a fost (formă pasivă)",
+        "translation-uz": "qilingan (majhul shakl)",
+        "translation-hi": "किया गया (कर्मवाच्य रूप)",
+        "translation-ar": "تم (صيغة المبني للمجهول)"
+      },
+      {
+        "word": "zwar",
+        "translation-ru": "хоть и, правда",
+        "translation-en": "true, admittedly",
+        "translation-uk": "хоч і, щоправда",
+        "translation-pl": "wprawdzie",
+        "translation-es": "es cierto que",
+        "translation-fr": "certes",
+        "translation-tr": "gerçi",
+        "translation-ro": "ce-i drept",
+        "translation-uz": "to‘g‘ri",
+        "translation-hi": "हालाँकि",
+        "translation-ar": "صحيح أن"
+      },
+      {
+        "word": "die Werkstatt",
+        "translation-ru": "мастерская",
+        "translation-en": "workshop, garage",
+        "translation-uk": "майстерня",
+        "translation-pl": "warsztat",
+        "translation-es": "el taller",
+        "translation-fr": "l’atelier, le garage",
+        "translation-tr": "atölye",
+        "translation-ro": "atelierul",
+        "translation-uz": "ustaxona",
+        "translation-hi": "वर्कशॉप",
+        "translation-ar": "الورشة"
+      },
+      {
+        "word": "abholen",
+        "translation-ru": "забирать / заходить за кем-то",
+        "translation-en": "to pick up / fetch",
+        "translation-uk": "забирати",
+        "translation-pl": "odebrać / przyjść po",
+        "translation-es": "recoger / ir a buscar",
+        "translation-fr": "aller chercher / récupérer",
+        "translation-tr": "gidip almak / karşılamak",
+        "translation-ro": "a ridica / a lua",
+        "translation-uz": "olib ketmoq",
+        "translation-hi": "लेने जाना",
+        "translation-ar": "يجلب / يستلم"
+      },
+      {
+        "word": "bringen",
+        "translation-ru": "приносить",
+        "translation-en": "to bring",
+        "translation-uk": "приносити",
+        "translation-pl": "przynosić",
+        "translation-es": "traer",
+        "translation-fr": "apporter",
+        "translation-tr": "getirmek",
+        "translation-ro": "a aduce",
+        "translation-uz": "keltirmoq",
+        "translation-hi": "लाना",
+        "translation-ar": "يجلب"
+      }
+    ],
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "nuanceBridgeFive.questTask1",
+        "options": [
+          "Das Auto hat repariert worden.",
+          "Das Auto ist repariert geworden.",
+          "Das Auto ist repariert worden."
+        ],
+        "answer": "Das Auto ist repariert worden.",
+        "tip": "nuanceBridgeFive.questDescription"
+      },
+      {
+        "id": 2,
+        "type": "input",
+        "question": "nuanceBridgeFive.questTask2",
+        "correctAnswer": "worden",
+        "tip": "nuanceBridgeFive.questDescription"
+      },
+      {
+        "id": 3,
+        "type": "input",
+        "question": "nuanceBridgeFive.questTask3",
+        "correctAnswer": "ist",
+        "tip": "nuanceBridgeFive.questDescription"
+      },
+      {
+        "id": 4,
+        "type": "reorder",
+        "question": "nuanceBridgeFive.questTask4",
+        "words": [
+          "1900",
+          "Haus",
+          "gebaut",
+          "worden",
+          "geworden",
+          "Das",
+          "ist"
+        ],
+        "correctOrder": [
+          "Das",
+          "Haus",
+          "ist",
+          "1900",
+          "gebaut",
+          "worden"
+        ],
+        "tip": "nuanceBridgeFive.questDescription"
+      },
+      {
+        "id": 5,
+        "type": "select",
+        "question": "nuanceBridgeFive.questTask5",
+        "options": [
+          "Die Kinder sind abgeholt worden.",
+          "Die Kinder haben abgeholt worden.",
+          "Die Kinder ist abgeholt worden."
+        ],
+        "answer": "Die Kinder sind abgeholt worden.",
+        "tip": "nuanceBridgeFive.questDescription"
+      },
+      {
+        "id": 6,
+        "type": "input",
+        "question": "nuanceBridgeFive.questTask6",
+        "correctAnswer": "worden",
+        "tip": "nuanceBridgeFive.questDescription"
+      },
+      {
+        "id": 7,
+        "type": "readAndAnswer",
+        "question": "nuanceBridgeFive.questTask7",
+        "text": "Tims Fahrrad war kaputt. Am Montag hat er es in die Werkstatt gebracht. Jetzt ist es repariert worden, und es fährt wieder gut.",
+        "options": [
+          "Es ist repariert worden.",
+          "Es ist gekauft worden.",
+          "Es ist verkauft worden."
+        ],
+        "answer": "Es ist repariert worden.",
+        "tip": "nuanceBridgeFive.questDescription"
+      },
+      {
+        "id": 8,
+        "type": "input",
+        "question": "nuanceBridgeFive.questTask8",
+        "correctAnswer": "ist",
+        "tip": "nuanceBridgeFive.questDescription"
+      },
+      {
+        "id": 9,
+        "type": "reorder",
+        "question": "nuanceBridgeFive.questTask10",
+        "words": [
+          "ist",
+          "geworden",
+          "worden",
+          "Mir",
+          "geholfen"
+        ],
+        "correctOrder": [
+          "Mir",
+          "ist",
+          "geholfen",
+          "worden"
+        ],
+        "tip": "nuanceBridgeFive.questDescription"
+      },
+      {
+        "id": 10,
+        "type": "select",
+        "question": "nuanceBridgeFive.questTask11",
+        "options": [
+          "Die Karten sind gekauft worden.",
+          "Die Karten haben gekauft worden.",
+          "Die Karten sind gekauft geworden."
+        ],
+        "answer": "Die Karten sind gekauft worden.",
+        "tip": "nuanceBridgeFive.questDescription"
+      },
+      {
+        "id": 11,
+        "type": "input",
+        "question": "nuanceBridgeFour.questTask9",
+        "correctAnswer": "bis",
+        "tip": "nuanceBridgeFour.questDescription",
+        "reviewOf": "nuance-bridge-four",
+        "reviewLand": "nuance-bridge"
+      },
+      {
+        "id": 12,
+        "type": "reorder",
+        "question": "nuanceBridgeOne.questTask12",
+        "words": [
+          "lecker",
+          "Suppe",
+          "Die",
+          "oder",
+          "heiß",
+          "zwar",
+          "ist",
+          "aber"
+        ],
+        "correctOrder": [
+          "Die",
+          "Suppe",
+          "ist",
+          "zwar",
+          "heiß",
+          "aber",
+          "lecker"
+        ],
+        "tip": "nuanceBridgeOne.questDescription",
+        "reviewOf": "nuance-bridge-one",
+        "reviewLand": "nuance-bridge"
+      },
+      {
+        "id": 13,
+        "type": "input",
+        "question": "linkHarborSix.questTask13",
+        "correctAnswer": "Sobald",
+        "tip": "linkHarborSix.questDescription",
+        "reviewOf": "link-harbor-six",
+        "reviewLand": "link-harbor"
+      },
+      {
+        "id": 14,
+        "type": "input",
+        "question": "nuanceBridgeFive.questTask14",
+        "correctAnswer": "wurde",
+        "tip": "nuanceBridgeFive.questDescription"
+      },
+      {
+        "id": 15,
+        "type": "input",
+        "question": "nuanceBridgeFive.questTask15",
+        "correctAnswer": "bis",
+        "tip": "nuanceBridgeFive.questDescription"
+      }
+    ]
+  },
+  {
+    "questId": "nuance-bridge-six",
+    "title": "nuanceBridgeSix.questTitle",
+    "progress": "0/15",
+    "description": "nuanceBridgeSix.questDescription",
+    "conditions": {
+      "goal": "nuanceBridgeSix.questGoal",
+      "minCorrect": 15,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
+    "vocabulary": [
+      {
+        "word": "gebraucht",
+        "translation-ru": "подержанный",
+        "translation-en": "used, second-hand",
+        "translation-uk": "вживаний",
+        "translation-pl": "używany",
+        "translation-es": "usado",
+        "translation-fr": "d’occasion",
+        "translation-tr": "ikinci el",
+        "translation-ro": "second-hand",
+        "translation-uz": "ishlatilgan",
+        "translation-hi": "पुराना, इस्तेमाल किया हुआ",
+        "translation-ar": "مستعمل"
+      },
+      {
+        "word": "lachend",
+        "translation-ru": "смеющийся",
+        "translation-en": "laughing",
+        "translation-uk": "усміхнений",
+        "translation-pl": "śmiejący się",
+        "translation-es": "que ríe",
+        "translation-fr": "qui rit",
+        "translation-tr": "gülen",
+        "translation-ro": "care râde",
+        "translation-uz": "kulayotgan",
+        "translation-hi": "हँसता हुआ",
+        "translation-ar": "ضاحك"
+      },
+      {
+        "word": "schlafend",
+        "translation-ru": "спящий",
+        "translation-en": "sleeping",
+        "translation-uk": "сплячий",
+        "translation-pl": "śpiący",
+        "translation-es": "que duerme",
+        "translation-fr": "qui dort",
+        "translation-tr": "uyuyan",
+        "translation-ro": "care doarme",
+        "translation-uz": "uxlayotgan",
+        "translation-hi": "सोता हुआ",
+        "translation-ar": "نائم"
+      },
+      {
+        "word": "gebrauchen",
+        "translation-ru": "употреблять / пользоваться",
+        "translation-en": "to use / utilize",
+        "translation-uk": "вживати / використовувати",
+        "translation-pl": "używać",
+        "translation-es": "usar / emplear",
+        "translation-fr": "utiliser",
+        "translation-tr": "kullanmak",
+        "translation-ro": "a utiliza",
+        "translation-uz": "ishlatmoq",
+        "translation-hi": "उपयोग करना",
+        "translation-ar": "يستخدم"
+      },
+      {
+        "word": "singend",
+        "translation-ru": "поющий",
+        "translation-en": "singing",
+        "translation-uk": "співаючий",
+        "translation-pl": "śpiewający",
+        "translation-es": "que canta",
+        "translation-fr": "qui chante",
+        "translation-tr": "şarkı söyleyen",
+        "translation-ro": "care cântă",
+        "translation-uz": "kuylayotgan",
+        "translation-hi": "गाता हुआ",
+        "translation-ar": "مغنٍ"
+      }
+    ],
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "nuanceBridgeSix.questTask1",
+        "options": [
+          "das gekochter Ei",
+          "das kochen Ei",
+          "das gekochte Ei"
+        ],
+        "answer": "das gekochte Ei",
+        "tip": "nuanceBridgeSix.questDescription"
+      },
+      {
+        "id": 2,
+        "type": "input",
+        "question": "nuanceBridgeSix.questTask2",
+        "correctAnswer": "geöffnete",
+        "tip": "nuanceBridgeSix.questDescription"
+      },
+      {
+        "id": 3,
+        "type": "input",
+        "question": "nuanceBridgeSix.questTask3",
+        "correctAnswer": "gebrauchtes",
+        "tip": "nuanceBridgeSix.questDescription"
+      },
+      {
+        "id": 4,
+        "type": "reorder",
+        "question": "nuanceBridgeSix.questTask4",
+        "words": [
+          "Garten",
+          "im",
+          "lachende",
+          "lachen",
+          "Das",
+          "spielt",
+          "Kind"
+        ],
+        "correctOrder": [
+          "Das",
+          "lachende",
+          "Kind",
+          "spielt",
+          "im",
+          "Garten"
+        ],
+        "tip": "nuanceBridgeSix.questDescription"
+      },
+      {
+        "id": 5,
+        "type": "select",
+        "question": "nuanceBridgeSix.questTask5",
+        "options": [
+          "Ich esse den gekochte Reis.",
+          "Ich esse den kochen Reis.",
+          "Ich esse den gekochten Reis."
+        ],
+        "answer": "Ich esse den gekochten Reis.",
+        "tip": "nuanceBridgeSix.questDescription"
+      },
+      {
+        "id": 6,
+        "type": "input",
+        "question": "nuanceBridgeSix.questTask6",
+        "correctAnswer": "geschlossene",
+        "tip": "nuanceBridgeSix.questDescription"
+      },
+      {
+        "id": 7,
+        "type": "readAndAnswer",
+        "question": "nuanceBridgeSix.questTask7",
+        "text": "Anna sucht ein Fahrrad. Ein neues Fahrrad ist zu teuer. Deshalb kauft sie ein gebrauchtes Fahrrad von ihrem Nachbarn.",
+        "options": [
+          "ein neues Auto",
+          "ein gebrauchtes Fahrrad",
+          "ein neues Fahrrad"
+        ],
+        "answer": "ein gebrauchtes Fahrrad",
+        "tip": "nuanceBridgeSix.questDescription"
+      },
+      {
+        "id": 8,
+        "type": "input",
+        "question": "nuanceBridgeSix.questTask8",
+        "correctAnswer": "schlafende",
+        "tip": "nuanceBridgeSix.questDescription"
+      },
+      {
+        "id": 9,
+        "type": "reorder",
+        "question": "nuanceBridgeSix.questTask10",
+        "words": [
+          "repariert",
+          "Er",
+          "das",
+          "Fahrrad",
+          "gebrauchter",
+          "gebrauchte"
+        ],
+        "correctOrder": [
+          "Er",
+          "repariert",
+          "das",
+          "gebrauchte",
+          "Fahrrad"
+        ],
+        "tip": "nuanceBridgeSix.questDescription"
+      },
+      {
+        "id": 10,
+        "type": "select",
+        "question": "nuanceBridgeSix.questTask11",
+        "options": [
+          "Die gesingte Frau ist meine Mutter.",
+          "Die singende Frau ist meine Mutter.",
+          "Die singen Frau ist meine Mutter."
+        ],
+        "answer": "Die singende Frau ist meine Mutter.",
+        "tip": "nuanceBridgeSix.questDescription"
+      },
+      {
+        "id": 11,
+        "type": "input",
+        "question": "nuanceBridgeFive.questTask9",
+        "correctAnswer": "worden",
+        "tip": "nuanceBridgeFive.questDescription",
+        "reviewOf": "nuance-bridge-five",
+        "reviewLand": "nuance-bridge"
+      },
+      {
+        "id": 12,
+        "type": "reorder",
+        "question": "nuanceBridgeTwo.questTask12",
+        "words": [
+          "Wir",
+          "sowohl",
+          "Äpfel",
+          "als",
+          "oder",
+          "kaufen",
+          "Tomaten",
+          "auch"
+        ],
+        "correctOrder": [
+          "Wir",
+          "kaufen",
+          "sowohl",
+          "Äpfel",
+          "als",
+          "auch",
+          "Tomaten"
+        ],
+        "tip": "nuanceBridgeTwo.questDescription",
+        "reviewOf": "nuance-bridge-two",
+        "reviewLand": "nuance-bridge"
+      },
+      {
+        "id": 13,
+        "type": "input",
+        "question": "linkHarborSeven.questTask13",
+        "correctAnswer": "Je",
+        "tip": "linkHarborSeven.questDescription",
+        "reviewOf": "link-harbor-seven",
+        "reviewLand": "link-harbor"
+      },
+      {
+        "id": 14,
+        "type": "input",
+        "question": "nuanceBridgeSix.questTask14",
+        "correctAnswer": "worden",
+        "tip": "nuanceBridgeSix.questDescription"
+      },
+      {
+        "id": 15,
+        "type": "input",
+        "question": "nuanceBridgeSix.questTask15",
+        "correctAnswer": "zwar",
+        "tip": "nuanceBridgeSix.questDescription"
+      }
+    ]
+  },
+  {
+    "questId": "nuance-bridge-seven",
+    "title": "nuanceBridgeSeven.questTitle",
+    "progress": "0/15",
+    "description": "nuanceBridgeSeven.questDescription",
+    "conditions": {
+      "goal": "nuanceBridgeSeven.questGoal",
+      "minCorrect": 15,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
+    "vocabulary": [
+      {
+        "word": "brauchen nicht zu",
+        "translation-ru": "не нужно",
+        "translation-en": "no need to",
+        "translation-uk": "не треба",
+        "translation-pl": "nie trzeba",
+        "translation-es": "no hace falta",
+        "translation-fr": "pas besoin de",
+        "translation-tr": "gerek yok",
+        "translation-ro": "nu trebuie",
+        "translation-uz": "kerak emas",
+        "translation-hi": "ज़रूरत नहीं",
+        "translation-ar": "لا داعي"
+      },
+      {
+        "word": "gebraucht",
+        "translation-ru": "подержанный",
+        "translation-en": "used, second-hand",
+        "translation-uk": "вживаний",
+        "translation-pl": "używany",
+        "translation-es": "usado",
+        "translation-fr": "d’occasion",
+        "translation-tr": "ikinci el",
+        "translation-ro": "second-hand",
+        "translation-uz": "ishlatilgan",
+        "translation-hi": "पुराना, इस्तेमाल किया हुआ",
+        "translation-ar": "مستعمل"
+      },
+      {
+        "word": "worden",
+        "translation-ru": "было сделано (форма пассива)",
+        "translation-en": "been (passive form)",
+        "translation-uk": "було зроблено (форма пасиву)",
+        "translation-pl": "zostało zrobione (forma strony biernej)",
+        "translation-es": "sido (forma pasiva)",
+        "translation-fr": "été (forme passive)",
+        "translation-tr": "yapıldı (edilgen biçim)",
+        "translation-ro": "a fost (formă pasivă)",
+        "translation-uz": "qilingan (majhul shakl)",
+        "translation-hi": "किया गया (कर्मवाच्य रूप)",
+        "translation-ar": "تم (صيغة المبني للمجهول)"
+      },
+      {
+        "word": "indem",
+        "translation-ru": "тем, что",
+        "translation-en": "by (doing)",
+        "translation-uk": "тим, що",
+        "translation-pl": "przez to, że",
+        "translation-es": "haciendo, mediante",
+        "translation-fr": "en faisant",
+        "translation-tr": "…arak",
+        "translation-ro": "prin faptul că",
+        "translation-uz": "…ib, orqali",
+        "translation-hi": "करके",
+        "translation-ar": "عن طريق"
+      },
+      {
+        "word": "sparen",
+        "translation-ru": "экономить, копить",
+        "translation-en": "to save (money)",
+        "translation-uk": "заощаджувати",
+        "translation-pl": "oszczędzać",
+        "translation-es": "ahorrar",
+        "translation-fr": "économiser",
+        "translation-tr": "biriktirmek",
+        "translation-ro": "a economisi",
+        "translation-uz": "tejamoq",
+        "translation-hi": "बचत करना",
+        "translation-ar": "يوفّر"
+      }
+    ],
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "nuanceBridgeSeven.questTask1",
+        "options": [
+          "Du brauchst zu nicht kommen.",
+          "Du brauchst nicht kommen zu.",
+          "Du brauchst nicht zu kommen."
+        ],
+        "answer": "Du brauchst nicht zu kommen.",
+        "tip": "nuanceBridgeSeven.questDescription"
+      },
+      {
+        "id": 2,
+        "type": "input",
+        "question": "nuanceBridgeSeven.questTask2",
+        "correctAnswer": "zu",
+        "tip": "nuanceBridgeSeven.questDescription"
+      },
+      {
+        "id": 3,
+        "type": "input",
+        "question": "nuanceBridgeSeven.questTask3",
+        "correctAnswer": "braucht",
+        "tip": "nuanceBridgeSeven.questDescription"
+      },
+      {
+        "id": 4,
+        "type": "reorder",
+        "question": "nuanceBridgeSeven.questTask4",
+        "words": [
+          "zu",
+          "müssen",
+          "bezahlen",
+          "nicht",
+          "Sie",
+          "brauchen"
+        ],
+        "correctOrder": [
+          "Sie",
+          "brauchen",
+          "nicht",
+          "zu",
+          "bezahlen"
+        ],
+        "tip": "nuanceBridgeSeven.questDescription"
+      },
+      {
+        "id": 5,
+        "type": "select",
+        "question": "nuanceBridgeSeven.questTask5",
+        "options": [
+          "Wir brauchen nicht früh zu aufstehen.",
+          "Wir brauchen zu nicht früh aufstehen.",
+          "Wir brauchen nicht früh aufzustehen."
+        ],
+        "answer": "Wir brauchen nicht früh aufzustehen.",
+        "tip": "nuanceBridgeSeven.questDescription"
+      },
+      {
+        "id": 6,
+        "type": "input",
+        "question": "nuanceBridgeSeven.questTask6",
+        "correctAnswer": "haben",
+        "tip": "nuanceBridgeSeven.questDescription"
+      },
+      {
+        "id": 7,
+        "type": "readAndAnswer",
+        "question": "nuanceBridgeSeven.questTask7",
+        "text": "Lena hat morgen frei. Sie braucht nicht zu arbeiten und nicht früh aufzustehen. Sie geht mit ihrer Freundin ins Kino.",
+        "options": [
+          "Nein, sie hat frei.",
+          "Ja, am Abend.",
+          "Ja, am Morgen."
+        ],
+        "answer": "Nein, sie hat frei.",
+        "tip": "nuanceBridgeSeven.questDescription"
+      },
+      {
+        "id": 8,
+        "type": "input",
+        "question": "nuanceBridgeSeven.questTask8",
+        "correctAnswer": "zu",
+        "tip": "nuanceBridgeSeven.questDescription"
+      },
+      {
+        "id": 9,
+        "type": "reorder",
+        "question": "nuanceBridgeSeven.questTask10",
+        "words": [
+          "Du",
+          "keine",
+          "musst",
+          "zu",
+          "kaufen",
+          "brauchst",
+          "Karte"
+        ],
+        "correctOrder": [
+          "Du",
+          "brauchst",
+          "keine",
+          "Karte",
+          "zu",
+          "kaufen"
+        ],
+        "tip": "nuanceBridgeSeven.questDescription"
+      },
+      {
+        "id": 10,
+        "type": "select",
+        "question": "nuanceBridgeSeven.questTask11",
+        "options": [
+          "Ihr braucht zu kein Essen mitbringen.",
+          "Ihr braucht kein Essen mitzubringen.",
+          "Ihr braucht kein Essen zu mitbringen."
+        ],
+        "answer": "Ihr braucht kein Essen mitzubringen.",
+        "tip": "nuanceBridgeSeven.questDescription"
+      },
+      {
+        "id": 11,
+        "type": "input",
+        "question": "nuanceBridgeSix.questTask9",
+        "correctAnswer": "gekauften",
+        "tip": "nuanceBridgeSix.questDescription",
+        "reviewOf": "nuance-bridge-six",
+        "reviewLand": "nuance-bridge"
+      },
+      {
+        "id": 12,
+        "type": "reorder",
+        "question": "nuanceBridgeThree.questTask12",
+        "words": [
+          "sparen",
+          "kochen",
+          "indem",
+          "Wir",
+          "um",
+          "zu",
+          "wir",
+          "Hause"
+        ],
+        "correctOrder": [
+          "Wir",
+          "sparen",
+          "indem",
+          "wir",
+          "zu",
+          "Hause",
+          "kochen"
+        ],
+        "tip": "nuanceBridgeThree.questDescription",
+        "reviewOf": "nuance-bridge-three",
+        "reviewLand": "nuance-bridge"
+      },
+      {
+        "id": 13,
+        "type": "input",
+        "question": "linkHarborEight.questTask13",
+        "correctAnswer": "gewöhnt",
+        "tip": "linkHarborEight.questDescription",
+        "reviewOf": "link-harbor-eight",
+        "reviewLand": "link-harbor"
+      },
+      {
+        "id": 14,
+        "type": "input",
+        "question": "nuanceBridgeSeven.questTask14",
+        "correctAnswer": "gebrauchtes",
+        "tip": "nuanceBridgeSeven.questDescription"
+      },
+      {
+        "id": 15,
+        "type": "input",
+        "question": "nuanceBridgeSeven.questTask15",
+        "correctAnswer": "worden",
+        "tip": "nuanceBridgeSeven.questDescription"
+      }
+    ]
+  },
+  {
+    "questId": "nuance-bridge-eight",
+    "title": "nuanceBridgeEight.questTitle",
+    "progress": "0/15",
+    "description": "nuanceBridgeEight.questDescription",
+    "conditions": {
+      "goal": "nuanceBridgeEight.questGoal",
+      "minCorrect": 15,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
+    "vocabulary": [
+      {
+        "word": "irgendwo",
+        "translation-ru": "где-то",
+        "translation-en": "somewhere",
+        "translation-uk": "десь",
+        "translation-pl": "gdzieś",
+        "translation-es": "en algún sitio",
+        "translation-fr": "quelque part",
+        "translation-tr": "bir yerde",
+        "translation-ro": "undeva",
+        "translation-uz": "qayerdadir",
+        "translation-hi": "कहीं",
+        "translation-ar": "في مكان ما"
+      },
+      {
+        "word": "irgendwann",
+        "translation-ru": "когда-нибудь",
+        "translation-en": "some day",
+        "translation-uk": "колись",
+        "translation-pl": "kiedyś",
+        "translation-es": "algún día",
+        "translation-fr": "un jour",
+        "translation-tr": "bir gün",
+        "translation-ro": "cândva",
+        "translation-uz": "qachondir",
+        "translation-hi": "कभी",
+        "translation-ar": "يومًا ما"
+      },
+      {
+        "word": "irgendetwas",
+        "translation-ru": "что-нибудь",
+        "translation-en": "something",
+        "translation-uk": "щось",
+        "translation-pl": "coś",
+        "translation-es": "algo",
+        "translation-fr": "quelque chose",
+        "translation-tr": "bir şey",
+        "translation-ro": "ceva",
+        "translation-uz": "nimadir",
+        "translation-hi": "कुछ",
+        "translation-ar": "شيئًا ما"
+      },
+      {
+        "word": "irgendjemand",
+        "translation-ru": "кто-нибудь",
+        "translation-en": "someone",
+        "translation-uk": "хтось",
+        "translation-pl": "ktoś",
+        "translation-es": "alguien",
+        "translation-fr": "quelqu’un",
+        "translation-tr": "birisi",
+        "translation-ro": "cineva",
+        "translation-uz": "kimdir",
+        "translation-hi": "कोई",
+        "translation-ar": "شخص ما"
+      },
+      {
+        "word": "irgendwie",
+        "translation-ru": "как-нибудь",
+        "translation-en": "somehow",
+        "translation-uk": "якось",
+        "translation-pl": "jakoś",
+        "translation-es": "de alguna manera",
+        "translation-fr": "d’une façon ou d’une autre",
+        "translation-tr": "bir şekilde",
+        "translation-ro": "cumva",
+        "translation-uz": "qandaydir",
+        "translation-hi": "किसी तरह",
+        "translation-ar": "بطريقة ما"
+      },
+      {
+        "word": "schaffen",
+        "translation-ru": "создавать / творить",
+        "translation-en": "to create",
+        "translation-uk": "створювати",
+        "translation-pl": "tworzyć",
+        "translation-es": "crear",
+        "translation-fr": "créer",
+        "translation-tr": "yaratmak / meydana getirmek",
+        "translation-ro": "a crea",
+        "translation-uz": "yaratmoq",
+        "translation-hi": "बनाना",
+        "translation-ar": "يخلق"
+      }
+    ],
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "nuanceBridgeEight.questTask1",
+        "options": [
+          "Ich habe das Wort irgend gesehen.",
+          "Ich habe irgendwo das Wort sehen.",
+          "Ich habe das Wort irgendwo gesehen."
+        ],
+        "answer": "Ich habe das Wort irgendwo gesehen.",
+        "tip": "nuanceBridgeEight.questDescription"
+      },
+      {
+        "id": 2,
+        "type": "input",
+        "question": "nuanceBridgeEight.questTask2",
+        "correctAnswer": "Irgendwann",
+        "tip": "nuanceBridgeEight.questDescription"
+      },
+      {
+        "id": 3,
+        "type": "input",
+        "question": "nuanceBridgeEight.questTask3",
+        "correctAnswer": "irgendetwas",
+        "tip": "nuanceBridgeEight.questDescription"
+      },
+      {
+        "id": 4,
+        "type": "reorder",
+        "question": "nuanceBridgeEight.questTask4",
+        "words": [
+          "vergessen",
+          "seine",
+          "irgendwo",
+          "Irgendjemand",
+          "Tasche",
+          "hat"
+        ],
+        "correctOrder": [
+          "Irgendjemand",
+          "hat",
+          "seine",
+          "Tasche",
+          "vergessen"
+        ],
+        "tip": "nuanceBridgeEight.questDescription"
+      },
+      {
+        "id": 5,
+        "type": "select",
+        "question": "nuanceBridgeEight.questTask5",
+        "options": [
+          "Er sollt sehr reich sein.",
+          "Er soll sehr reich ist.",
+          "Er soll sehr reich sein."
+        ],
+        "answer": "Er soll sehr reich sein.",
+        "tip": "nuanceBridgeEight.questDescription"
+      },
+      {
+        "id": 6,
+        "type": "input",
+        "question": "nuanceBridgeEight.questTask6",
+        "correctAnswer": "soll",
+        "tip": "nuanceBridgeEight.questDescription"
+      },
+      {
+        "id": 7,
+        "type": "readAndAnswer",
+        "question": "nuanceBridgeEight.questTask7",
+        "text": "In unserer Straße gibt es ein neues Restaurant. Es soll sehr gut sein. Irgendwann möchte ich dort essen.",
+        "options": [
+          "Es ist sehr alt.",
+          "Es soll gut sein.",
+          "Es ist geschlossen."
+        ],
+        "answer": "Es soll gut sein.",
+        "tip": "nuanceBridgeEight.questDescription"
+      },
+      {
+        "id": 8,
+        "type": "input",
+        "question": "nuanceBridgeEight.questTask8",
+        "correctAnswer": "irgendwie",
+        "tip": "nuanceBridgeEight.questDescription"
+      },
+      {
+        "id": 9,
+        "type": "reorder",
+        "question": "nuanceBridgeEight.questTask10",
+        "words": [
+          "spreche",
+          "Irgendwann",
+          "ich",
+          "Deutsch",
+          "irgendwo",
+          "gut"
+        ],
+        "correctOrder": [
+          "Irgendwann",
+          "spreche",
+          "ich",
+          "gut",
+          "Deutsch"
+        ],
+        "tip": "nuanceBridgeEight.questDescription"
+      },
+      {
+        "id": 10,
+        "type": "select",
+        "question": "nuanceBridgeEight.questTask11",
+        "options": [
+          "Morgen soll es regnen.",
+          "Morgen sollt es regnen.",
+          "Morgen soll es regnet."
+        ],
+        "answer": "Morgen soll es regnen.",
+        "tip": "nuanceBridgeEight.questDescription"
+      },
+      {
+        "id": 11,
+        "type": "input",
+        "question": "nuanceBridgeSeven.questTask9",
+        "correctAnswer": "brauche",
+        "tip": "nuanceBridgeSeven.questDescription",
+        "reviewOf": "nuance-bridge-seven",
+        "reviewLand": "nuance-bridge"
+      },
+      {
+        "id": 12,
+        "type": "reorder",
+        "question": "nuanceBridgeFour.questTask12",
+        "words": [
+          "sie",
+          "ist",
+          "bis",
+          "um",
+          "warte",
+          "Ich",
+          "fertig"
+        ],
+        "correctOrder": [
+          "Ich",
+          "warte",
+          "bis",
+          "sie",
+          "fertig",
+          "ist"
+        ],
+        "tip": "nuanceBridgeFour.questDescription",
+        "reviewOf": "nuance-bridge-four",
+        "reviewLand": "nuance-bridge"
+      },
+      {
+        "id": 13,
+        "type": "input",
+        "question": "nuanceBridgeOne.questTask13",
+        "correctAnswer": "aber",
+        "tip": "nuanceBridgeOne.questDescription",
+        "reviewOf": "nuance-bridge-one",
+        "reviewLand": "nuance-bridge"
+      },
+      {
+        "id": 14,
+        "type": "input",
+        "question": "nuanceBridgeEight.questTask14",
+        "correctAnswer": "braucht",
+        "tip": "nuanceBridgeEight.questDescription"
+      },
+      {
+        "id": 15,
+        "type": "input",
+        "question": "nuanceBridgeEight.questTask15",
+        "correctAnswer": "lachende",
+        "tip": "nuanceBridgeEight.questDescription"
+      }
+    ]
+  },
+  {
+    "questId": "nuance-bridge-nine",
+    "title": "nuanceBridgeNine.questTitle",
+    "progress": "0/15",
+    "description": "nuanceBridgeNine.questDescription",
+    "conditions": {
+      "goal": "nuanceBridgeNine.questGoal",
+      "minCorrect": 15,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
+    "vocabulary": [
+      {
+        "word": "dick",
+        "translation-ru": "толстый",
+        "translation-en": "thick",
+        "translation-uk": "товстий",
+        "translation-pl": "gruby",
+        "translation-es": "grueso",
+        "translation-fr": "épais",
+        "translation-tr": "kalın",
+        "translation-ro": "gros",
+        "translation-uz": "qalin",
+        "translation-hi": "मोटा",
+        "translation-ar": "سميك"
+      },
+      {
+        "word": "lösen",
+        "translation-ru": "решать / освобождать",
+        "translation-en": "to solve / loosen",
+        "translation-uk": "вирішувати",
+        "translation-pl": "rozwiązywać",
+        "translation-es": "resolver / soltar",
+        "translation-fr": "résoudre",
+        "translation-tr": "çözmek",
+        "translation-ro": "a rezolva",
+        "translation-uz": "yechmoq",
+        "translation-hi": "हल करना",
+        "translation-ar": "يحل"
+      },
+      {
+        "word": "irgendwo",
+        "translation-ru": "где-то",
+        "translation-en": "somewhere",
+        "translation-uk": "десь",
+        "translation-pl": "gdzieś",
+        "translation-es": "en algún sitio",
+        "translation-fr": "quelque part",
+        "translation-tr": "bir yerde",
+        "translation-ro": "undeva",
+        "translation-uz": "qayerdadir",
+        "translation-hi": "कहीं",
+        "translation-ar": "في مكان ما"
+      },
+      {
+        "word": "gebrauchen",
+        "translation-ru": "употреблять / пользоваться",
+        "translation-en": "to use / utilize",
+        "translation-uk": "вживати / використовувати",
+        "translation-pl": "używać",
+        "translation-es": "usar / emplear",
+        "translation-fr": "utiliser",
+        "translation-tr": "kullanmak",
+        "translation-ro": "a utiliza",
+        "translation-uz": "ishlatmoq",
+        "translation-hi": "उपयोग करना",
+        "translation-ar": "يستخدم"
+      },
+      {
+        "word": "gebraucht",
+        "translation-ru": "подержанный",
+        "translation-en": "used, second-hand",
+        "translation-uk": "вживаний",
+        "translation-pl": "używany",
+        "translation-es": "usado",
+        "translation-fr": "d’occasion",
+        "translation-tr": "ikinci el",
+        "translation-ro": "second-hand",
+        "translation-uz": "ishlatilgan",
+        "translation-hi": "पुराना, इस्तेमाल किया हुआ",
+        "translation-ar": "مستعمل"
+      }
+    ],
+    "tasks": [
+      {
+        "id": 1,
+        "type": "input",
+        "question": "nuanceBridgeNine.questTask1",
+        "correctAnswer": "aber",
+        "tip": "nuanceBridgeNine.questDescription"
+      },
+      {
+        "id": 2,
+        "type": "input",
+        "question": "nuanceBridgeNine.questTask2",
+        "correctAnswer": "sowohl",
+        "tip": "nuanceBridgeNine.questDescription"
+      },
+      {
+        "id": 3,
+        "type": "input",
+        "question": "nuanceBridgeNine.questTask3",
+        "correctAnswer": "indem",
+        "tip": "nuanceBridgeNine.questDescription"
+      },
+      {
+        "id": 4,
+        "type": "input",
+        "question": "nuanceBridgeNine.questTask4",
+        "correctAnswer": "bis",
+        "tip": "nuanceBridgeNine.questDescription"
+      },
+      {
+        "id": 5,
+        "type": "input",
+        "question": "nuanceBridgeNine.questTask5",
+        "correctAnswer": "worden",
+        "tip": "nuanceBridgeNine.questDescription"
+      },
+      {
+        "id": 6,
+        "type": "input",
+        "question": "nuanceBridgeNine.questTask6",
+        "correctAnswer": "gebrauchte",
+        "tip": "nuanceBridgeNine.questDescription"
+      },
+      {
+        "id": 7,
+        "type": "input",
+        "question": "nuanceBridgeNine.questTask7",
+        "correctAnswer": "brauchst",
+        "tip": "nuanceBridgeNine.questDescription"
+      },
+      {
+        "id": 8,
+        "type": "input",
+        "question": "nuanceBridgeNine.questTask8",
+        "correctAnswer": "irgendwo",
+        "tip": "nuanceBridgeNine.questDescription"
+      },
+      {
+        "id": 9,
+        "type": "input",
+        "question": "nuanceBridgeNine.questTask9",
+        "correctAnswer": "soll",
+        "tip": "nuanceBridgeNine.questDescription"
+      },
+      {
+        "id": 10,
+        "type": "reorder",
+        "question": "nuanceBridgeNine.questTask10",
+        "words": [
+          "Das",
+          "klein",
+          "Zimmer",
+          "sondern",
+          "aber",
+          "schön",
+          "ist",
+          "zwar"
+        ],
+        "correctOrder": [
+          "Das",
+          "Zimmer",
+          "ist",
+          "zwar",
+          "klein",
+          "aber",
+          "schön"
+        ],
+        "tip": "nuanceBridgeNine.questDescription"
+      },
+      {
+        "id": 11,
+        "type": "reorder",
+        "question": "nuanceBridgeNine.questTask11",
+        "words": [
+          "auch",
+          "Er",
+          "sowohl",
+          "oder",
+          "Suppe",
+          "Fleisch",
+          "kocht",
+          "als"
+        ],
+        "correctOrder": [
+          "Er",
+          "kocht",
+          "sowohl",
+          "Suppe",
+          "als",
+          "auch",
+          "Fleisch"
+        ],
+        "tip": "nuanceBridgeNine.questDescription"
+      },
+      {
+        "id": 12,
+        "type": "reorder",
+        "question": "nuanceBridgeNine.questTask12",
+        "words": [
+          "geworden",
+          "Fenster",
+          "ist",
+          "worden",
+          "Das",
+          "repariert"
+        ],
+        "correctOrder": [
+          "Das",
+          "Fenster",
+          "ist",
+          "repariert",
+          "worden"
+        ],
+        "tip": "nuanceBridgeNine.questDescription"
+      },
+      {
+        "id": 13,
+        "type": "select",
+        "question": "nuanceBridgeNine.questTask13",
+        "options": [
+          "Man kann Geld sparen, indem man zu Hause isst.",
+          "Man kann Geld sparen, indem isst man zu Hause.",
+          "Man kann Geld sparen, indem man isst zu Hause."
+        ],
+        "answer": "Man kann Geld sparen, indem man zu Hause isst.",
+        "tip": "nuanceBridgeNine.questDescription"
+      },
+      {
+        "id": 14,
+        "type": "select",
+        "question": "nuanceBridgeNine.questTask14",
+        "options": [
+          "Ihr braucht nicht zu warten.",
+          "Ihr braucht zu nicht warten.",
+          "Ihr braucht nicht warten zu."
+        ],
+        "answer": "Ihr braucht nicht zu warten.",
+        "tip": "nuanceBridgeNine.questDescription"
+      },
+      {
+        "id": 15,
+        "type": "readAndAnswer",
+        "question": "nuanceBridgeNine.questTask15",
+        "text": "Tim braucht ein Handy. Ein neues Handy ist zwar schön, aber teuer. Deshalb kauft er ein gebrauchtes Handy. Das ist auch gut.",
+        "options": [
+          "Es ist zu teuer.",
+          "Es ist zu klein.",
+          "Es ist kaputt."
+        ],
+        "answer": "Es ist zu teuer.",
+        "tip": "nuanceBridgeNine.questDescription"
+      }
+    ]
+  },
+  {
+    "questId": "nuance-bridge-ten",
+    "title": "nuanceBridgeTen.questTitle",
+    "progress": "0/15",
+    "description": "nuanceBridgeTen.questDescription",
+    "conditions": {
+      "goal": "nuanceBridgeTen.questGoal",
+      "minCorrect": 15,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
+    "vocabulary": [
+      {
+        "word": "irgendjemand",
+        "translation-ru": "кто-нибудь",
+        "translation-en": "someone",
+        "translation-uk": "хтось",
+        "translation-pl": "ktoś",
+        "translation-es": "alguien",
+        "translation-fr": "quelqu’un",
+        "translation-tr": "birisi",
+        "translation-ro": "cineva",
+        "translation-uz": "kimdir",
+        "translation-hi": "कोई",
+        "translation-ar": "شخص ما"
+      },
+      {
+        "word": "singend",
+        "translation-ru": "поющий",
+        "translation-en": "singing",
+        "translation-uk": "співаючий",
+        "translation-pl": "śpiewający",
+        "translation-es": "que canta",
+        "translation-fr": "qui chante",
+        "translation-tr": "şarkı söyleyen",
+        "translation-ro": "care cântă",
+        "translation-uz": "kuylayotgan",
+        "translation-hi": "गाता हुआ",
+        "translation-ar": "مغنٍ"
+      },
+      {
+        "word": "worden",
+        "translation-ru": "было сделано (форма пассива)",
+        "translation-en": "been (passive form)",
+        "translation-uk": "було зроблено (форма пасиву)",
+        "translation-pl": "zostało zrobione (forma strony biernej)",
+        "translation-es": "sido (forma pasiva)",
+        "translation-fr": "été (forme passive)",
+        "translation-tr": "yapıldı (edilgen biçim)",
+        "translation-ro": "a fost (formă pasivă)",
+        "translation-uz": "qilingan (majhul shakl)",
+        "translation-hi": "किया गया (कर्मवाच्य रूप)",
+        "translation-ar": "تم (صيغة المبني للمجهول)"
+      },
+      {
+        "word": "indem",
+        "translation-ru": "тем, что",
+        "translation-en": "by (doing)",
+        "translation-uk": "тим, що",
+        "translation-pl": "przez to, że",
+        "translation-es": "haciendo, mediante",
+        "translation-fr": "en faisant",
+        "translation-tr": "…arak",
+        "translation-ro": "prin faptul că",
+        "translation-uz": "…ib, orqali",
+        "translation-hi": "करके",
+        "translation-ar": "عن طريق"
+      },
+      {
+        "word": "zwar",
+        "translation-ru": "хоть и, правда",
+        "translation-en": "true, admittedly",
+        "translation-uk": "хоч і, щоправда",
+        "translation-pl": "wprawdzie",
+        "translation-es": "es cierto que",
+        "translation-fr": "certes",
+        "translation-tr": "gerçi",
+        "translation-ro": "ce-i drept",
+        "translation-uz": "to‘g‘ri",
+        "translation-hi": "हालाँकि",
+        "translation-ar": "صحيح أن"
+      }
+    ],
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "nuanceBridgeTen.questTask1",
+        "options": [
+          "Die Stadt ist zwar klein, oder sehr schön.",
+          "Die Stadt zwar ist klein, aber sehr schön.",
+          "Die Stadt ist zwar klein, aber sehr schön."
+        ],
+        "answer": "Die Stadt ist zwar klein, aber sehr schön.",
+        "tip": "nuanceBridgeTen.questDescription"
+      },
+      {
+        "id": 2,
+        "type": "input",
+        "question": "nuanceBridgeTen.questTask2",
+        "correctAnswer": "als",
+        "tip": "nuanceBridgeTen.questDescription"
+      },
+      {
+        "id": 3,
+        "type": "input",
+        "question": "nuanceBridgeTen.questTask3",
+        "correctAnswer": "aufräume",
+        "tip": "nuanceBridgeTen.questDescription"
+      },
+      {
+        "id": 4,
+        "type": "input",
+        "question": "nuanceBridgeTen.questTask4",
+        "correctAnswer": "bist",
+        "tip": "nuanceBridgeTen.questDescription"
+      },
+      {
+        "id": 5,
+        "type": "input",
+        "question": "nuanceBridgeTen.questTask5",
+        "correctAnswer": "worden",
+        "tip": "nuanceBridgeTen.questDescription"
+      },
+      {
+        "id": 6,
+        "type": "input",
+        "question": "nuanceBridgeTen.questTask6",
+        "correctAnswer": "singende",
+        "tip": "nuanceBridgeTen.questDescription"
+      },
+      {
+        "id": 7,
+        "type": "input",
+        "question": "nuanceBridgeTen.questTask7",
+        "correctAnswer": "zu",
+        "tip": "nuanceBridgeTen.questDescription"
+      },
+      {
+        "id": 8,
+        "type": "input",
+        "question": "nuanceBridgeTen.questTask8",
+        "correctAnswer": "Irgendjemand",
+        "tip": "nuanceBridgeTen.questDescription"
+      },
+      {
+        "id": 9,
+        "type": "input",
+        "question": "nuanceBridgeTen.questTask9",
+        "correctAnswer": "soll",
+        "tip": "nuanceBridgeTen.questDescription"
+      },
+      {
+        "id": 10,
+        "type": "reorder",
+        "question": "nuanceBridgeTen.questTask10",
+        "words": [
+          "aber",
+          "helfe",
+          "habe",
+          "zwar",
+          "oder",
+          "wenig",
+          "ich",
+          "Ich",
+          "dir",
+          "Zeit"
+        ],
+        "correctOrder": [
+          "Ich",
+          "habe",
+          "zwar",
+          "wenig",
+          "Zeit",
+          "aber",
+          "ich",
+          "helfe",
+          "dir"
+        ],
+        "tip": "nuanceBridgeTen.questDescription"
+      },
+      {
+        "id": 11,
+        "type": "reorder",
+        "question": "nuanceBridgeTen.questTask11",
+        "words": [
+          "ist",
+          "geworden",
+          "Brief",
+          "Der",
+          "worden",
+          "geschrieben",
+          "gestern"
+        ],
+        "correctOrder": [
+          "Der",
+          "Brief",
+          "ist",
+          "gestern",
+          "geschrieben",
+          "worden"
+        ],
+        "tip": "nuanceBridgeTen.questDescription"
+      },
+      {
+        "id": 12,
+        "type": "reorder",
+        "question": "nuanceBridgeTen.questTask12",
+        "words": [
+          "indem",
+          "Sie",
+          "viel",
+          "lernt",
+          "liest",
+          "um",
+          "sie"
+        ],
+        "correctOrder": [
+          "Sie",
+          "lernt",
+          "indem",
+          "sie",
+          "viel",
+          "liest"
+        ],
+        "tip": "nuanceBridgeTen.questDescription"
+      },
+      {
+        "id": 13,
+        "type": "input",
+        "question": "nuanceBridgeTen.questTask13",
+        "correctAnswer": "hätte",
+        "tip": "nuanceBridgeTen.questDescription"
+      },
+      {
+        "id": 14,
+        "type": "input",
+        "question": "nuanceBridgeTen.questTask14",
+        "correctAnswer": "des",
+        "tip": "nuanceBridgeTen.questDescription"
+      },
+      {
+        "id": 15,
+        "type": "readAndAnswer",
+        "question": "nuanceBridgeTen.questTask15",
+        "text": "Mia hat eine neue Wohnung. Die Küche ist zwar klein, aber sie ist schon repariert worden. Mia braucht also nichts zu machen. Sie wartet nur, bis ihre Möbel kommen.",
+        "options": [
+          "Die Küche reparieren.",
+          "Nur auf die Möbel warten.",
+          "Eine neue Wohnung suchen."
+        ],
+        "answer": "Nur auf die Möbel warten.",
+        "tip": "nuanceBridgeTen.questDescription"
+      }
+    ]
+  }
+]

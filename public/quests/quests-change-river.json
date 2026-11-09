@@ -1,0 +1,2858 @@
+[
+  {
+    "questId": "change-river-one",
+    "title": "changeRiverOne.questTitle",
+    "progress": "0/15",
+    "description": "changeRiverOne.questDescription",
+    "conditions": {
+      "goal": "changeRiverOne.questGoal",
+      "minCorrect": 15,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
+    "vocabulary": [
+      {
+        "word": "fahren",
+        "translation-ru": "ехать",
+        "translation-en": "to drive, to go (by vehicle)",
+        "translation-uk": "їхати",
+        "translation-pl": "jechać",
+        "translation-es": "ir (en vehículo), conducir",
+        "translation-fr": "aller (en véhicule), conduire",
+        "translation-tr": "gitmek (araçla), sürmek",
+        "translation-ro": "a merge (cu un vehicul)",
+        "translation-uz": "yurmoq (transportda)",
+        "translation-hi": "गाड़ी से जाना",
+        "translation-ar": "يذهب بمركبة"
+      },
+      {
+        "word": "schlafen",
+        "translation-ru": "спать",
+        "translation-en": "to sleep",
+        "translation-uk": "спати",
+        "translation-pl": "spać",
+        "translation-es": "dormir",
+        "translation-fr": "dormir",
+        "translation-tr": "uyumak",
+        "translation-ro": "a dormi",
+        "translation-uz": "uxlamoq",
+        "translation-hi": "सोना",
+        "translation-ar": "ينام"
+      },
+      {
+        "word": "laufen",
+        "translation-ru": "бегать, идти пешком",
+        "translation-en": "to run, to walk",
+        "translation-uk": "бігати, йти пішки",
+        "translation-pl": "biegać, iść",
+        "translation-es": "correr, andar",
+        "translation-fr": "courir, marcher",
+        "translation-tr": "koşmak, yürümek",
+        "translation-ro": "a alerga, a merge pe jos",
+        "translation-uz": "yugurmoq, piyoda yurmoq",
+        "translation-hi": "दौड़ना, पैदल चलना",
+        "translation-ar": "يركض، يمشي"
+      },
+      {
+        "word": "der Zug",
+        "translation-ru": "поезд",
+        "translation-en": "train",
+        "translation-uk": "потяг",
+        "translation-pl": "pociąg",
+        "translation-es": "el tren",
+        "translation-fr": "le train",
+        "translation-tr": "tren",
+        "translation-ro": "trenul",
+        "translation-uz": "poyezd",
+        "translation-hi": "ट्रेन",
+        "translation-ar": "القطار"
+      },
+      {
+        "word": "lange",
+        "translation-ru": "долго",
+        "translation-en": "for a long time",
+        "translation-uk": "довго",
+        "translation-pl": "długo",
+        "translation-es": "mucho tiempo",
+        "translation-fr": "longtemps",
+        "translation-tr": "uzun süre",
+        "translation-ro": "mult timp",
+        "translation-uz": "uzoq",
+        "translation-hi": "देर तक",
+        "translation-ar": "طويلًا"
+      },
+      {
+        "word": "der Park",
+        "translation-ru": "парк",
+        "translation-en": "park",
+        "translation-uk": "парк",
+        "translation-pl": "park",
+        "translation-es": "el parque",
+        "translation-fr": "le parc",
+        "translation-tr": "park",
+        "translation-ro": "parcul",
+        "translation-uz": "bog‘",
+        "translation-hi": "पार्क",
+        "translation-ar": "الحديقة العامة"
+      },
+      {
+        "word": "schnell",
+        "translation-ru": "быстро",
+        "translation-en": "fast",
+        "translation-uk": "швидко",
+        "translation-pl": "szybko",
+        "translation-es": "rápido",
+        "translation-fr": "vite",
+        "translation-tr": "hızlı",
+        "translation-ro": "repede",
+        "translation-uz": "tez",
+        "translation-hi": "तेज़",
+        "translation-ar": "بسرعة"
+      },
+      {
+        "word": "das Ticket",
+        "translation-ru": "билет",
+        "translation-en": "ticket",
+        "translation-uk": "квиток",
+        "translation-pl": "bilet",
+        "translation-es": "el billete",
+        "translation-fr": "le billet",
+        "translation-tr": "bilet",
+        "translation-ro": "biletul",
+        "translation-uz": "chipta",
+        "translation-hi": "टिकट",
+        "translation-ar": "التذكرة"
+      }
+    ],
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "changeRiverOne.questTask1",
+        "options": [
+          "Fahrst du Fahrrad?",
+          "Fährt du Fahrrad?",
+          "Fährst du Fahrrad?"
+        ],
+        "answer": "Fährst du Fahrrad?",
+        "tip": "changeRiverOne.questDescription"
+      },
+      {
+        "id": 2,
+        "type": "input",
+        "question": "changeRiverOne.questTask2",
+        "correctAnswer": "fährt",
+        "tip": "changeRiverOne.questDescription"
+      },
+      {
+        "id": 3,
+        "type": "input",
+        "question": "changeRiverOne.questTask3",
+        "correctAnswer": "schläft",
+        "tip": "changeRiverOne.questDescription"
+      },
+      {
+        "id": 4,
+        "type": "select",
+        "question": "changeRiverOne.questTask4",
+        "options": [
+          "Du schläfst lange.",
+          "Du schläft lange.",
+          "Du schlafst lange."
+        ],
+        "answer": "Du schläfst lange.",
+        "tip": "changeRiverOne.questDescription"
+      },
+      {
+        "id": 5,
+        "type": "reorder",
+        "question": "changeRiverOne.questTask5",
+        "words": [
+          "läuft",
+          "lauft",
+          "Park",
+          "Anna",
+          "laufen",
+          "im"
+        ],
+        "correctOrder": [
+          "Anna",
+          "läuft",
+          "im",
+          "Park"
+        ],
+        "tip": "changeRiverOne.questDescription"
+      },
+      {
+        "id": 6,
+        "type": "select",
+        "question": "changeRiverOne.questTask6",
+        "options": [
+          "Wir fähren Zug.",
+          "Wir fahren Zug.",
+          "Wir fährt Zug."
+        ],
+        "answer": "Wir fahren Zug.",
+        "tip": "changeRiverOne.questDescription"
+      },
+      {
+        "id": 7,
+        "type": "input",
+        "question": "changeRiverOne.questTask7",
+        "correctAnswer": "läufst",
+        "tip": "changeRiverOne.questDescription"
+      },
+      {
+        "id": 8,
+        "type": "select",
+        "question": "changeRiverOne.questTask8",
+        "options": [
+          "Schlaft ihr lange?",
+          "Schläfst ihr lange?",
+          "Schläft ihr lange?"
+        ],
+        "answer": "Schlaft ihr lange?",
+        "tip": "changeRiverOne.questDescription"
+      },
+      {
+        "id": 9,
+        "type": "readAndAnswer",
+        "question": "changeRiverOne.questTask9",
+        "text": "Paul wohnt in Köln, aber er arbeitet in Bonn. Er fährt Zug. Anna läuft, sie arbeitet hier. Das Kind schläft lange.",
+        "options": [
+          "Er fährt Zug.",
+          "Er fährt Auto.",
+          "Er läuft."
+        ],
+        "answer": "Er fährt Zug.",
+        "tip": "changeRiverOne.questDescription"
+      },
+      {
+        "id": 10,
+        "type": "input",
+        "question": "changeRiverOne.questTask10",
+        "correctAnswer": "schlafe",
+        "tip": "changeRiverOne.questDescription"
+      },
+      {
+        "id": 11,
+        "type": "reorder",
+        "question": "changeRiverOne.questTask11",
+        "words": [
+          "lange",
+          "Wie",
+          "das",
+          "schlaft",
+          "schläfst",
+          "schläft",
+          "Kind"
+        ],
+        "correctOrder": [
+          "Wie",
+          "lange",
+          "schläft",
+          "das",
+          "Kind"
+        ],
+        "tip": "changeRiverOne.questDescription"
+      },
+      {
+        "id": 12,
+        "type": "input",
+        "question": "changeRiverOne.questTask12",
+        "correctAnswer": "ein",
+        "tip": "changeRiverOne.questDescription"
+      },
+      {
+        "id": 13,
+        "type": "select",
+        "question": "changeRiverOne.questTask13",
+        "options": [
+          "Wir brauchen ein Liter Saft.",
+          "Wir brauchen einen Liter Saft.",
+          "Wir braucht einen Liter Saft."
+        ],
+        "answer": "Wir brauchen einen Liter Saft.",
+        "tip": "changeRiverOne.questDescription"
+      },
+      {
+        "id": 14,
+        "type": "select",
+        "question": "changeRiverOne.questTask14",
+        "options": [
+          "Arbeitest ihr heute?",
+          "Arbeitet ihr heute?",
+          "Arbeiten ihr heute?"
+        ],
+        "answer": "Arbeitet ihr heute?",
+        "tip": "changeRiverOne.questDescription"
+      },
+      {
+        "id": 15,
+        "type": "reorder",
+        "question": "changeRiverOne.questTask15",
+        "words": [
+          "ihr",
+          "Oma",
+          "die",
+          "besucht",
+          "Wen",
+          "wer",
+          "besuchst"
+        ],
+        "correctOrder": [
+          "Wen",
+          "besucht",
+          "ihr",
+          "die",
+          "Oma"
+        ],
+        "tip": "changeRiverOne.questDescription"
+      }
+    ]
+  },
+  {
+    "questId": "change-river-two",
+    "title": "changeRiverTwo.questTitle",
+    "progress": "0/15",
+    "description": "changeRiverTwo.questDescription",
+    "conditions": {
+      "goal": "changeRiverTwo.questGoal",
+      "minCorrect": 15,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
+    "vocabulary": [
+      {
+        "word": "essen",
+        "translation-ru": "есть, кушать",
+        "translation-en": "to eat",
+        "translation-uk": "їсти",
+        "translation-pl": "jeść",
+        "translation-es": "comer",
+        "translation-fr": "manger",
+        "translation-tr": "yemek",
+        "translation-ro": "a mânca",
+        "translation-uz": "yemoq",
+        "translation-hi": "खाना",
+        "translation-ar": "يأكل"
+      },
+      {
+        "word": "sprechen",
+        "translation-ru": "говорить",
+        "translation-en": "to speak",
+        "translation-uk": "говорити",
+        "translation-pl": "mówić",
+        "translation-es": "hablar",
+        "translation-fr": "parler",
+        "translation-tr": "konuşmak",
+        "translation-ro": "a vorbi",
+        "translation-uz": "gapirmoq",
+        "translation-hi": "बोलना",
+        "translation-ar": "يتكلم"
+      },
+      {
+        "word": "treffen",
+        "translation-ru": "встречать",
+        "translation-en": "to meet",
+        "translation-uk": "зустрічати",
+        "translation-pl": "spotykać",
+        "translation-es": "encontrarse con",
+        "translation-fr": "rencontrer",
+        "translation-tr": "buluşmak",
+        "translation-ro": "a întâlni",
+        "translation-uz": "uchrashmoq",
+        "translation-hi": "मिलना",
+        "translation-ar": "يلتقي"
+      },
+      {
+        "word": "Spanisch",
+        "translation-ru": "испанский язык",
+        "translation-en": "Spanish",
+        "translation-uk": "іспанська мова",
+        "translation-pl": "hiszpański",
+        "translation-es": "el español",
+        "translation-fr": "l’espagnol",
+        "translation-tr": "İspanyolca",
+        "translation-ro": "spaniola",
+        "translation-uz": "ispan tili",
+        "translation-hi": "स्पेनिश",
+        "translation-ar": "الإسبانية"
+      },
+      {
+        "word": "das Mittagessen",
+        "translation-ru": "обед",
+        "translation-en": "lunch",
+        "translation-uk": "обід",
+        "translation-pl": "obiad",
+        "translation-es": "el almuerzo",
+        "translation-fr": "le déjeuner",
+        "translation-tr": "öğle yemeği",
+        "translation-ro": "prânzul",
+        "translation-uz": "tushlik",
+        "translation-hi": "दोपहर का खाना",
+        "translation-ar": "الغداء"
+      }
+    ],
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "changeRiverTwo.questTask1",
+        "options": [
+          "Isst du ein Apfel?",
+          "Esst du einen Apfel?",
+          "Isst du einen Apfel?"
+        ],
+        "answer": "Isst du einen Apfel?",
+        "tip": "changeRiverTwo.questDescription"
+      },
+      {
+        "id": 2,
+        "type": "input",
+        "question": "changeRiverTwo.questTask2",
+        "correctAnswer": "spricht",
+        "tip": "changeRiverTwo.questDescription"
+      },
+      {
+        "id": 3,
+        "type": "input",
+        "question": "changeRiverTwo.questTask3",
+        "correctAnswer": "Triffst",
+        "tip": "changeRiverTwo.questDescription"
+      },
+      {
+        "id": 4,
+        "type": "select",
+        "question": "changeRiverTwo.questTask4",
+        "options": [
+          "Er essen Brot mit Käse.",
+          "Er isst Brot mit Käse.",
+          "Er esst Brot mit Käse."
+        ],
+        "answer": "Er isst Brot mit Käse.",
+        "tip": "changeRiverTwo.questDescription"
+      },
+      {
+        "id": 5,
+        "type": "reorder",
+        "question": "changeRiverTwo.questTask5",
+        "words": [
+          "isst",
+          "essen",
+          "Mittagessen",
+          "esst",
+          "Wir",
+          "zusammen"
+        ],
+        "correctOrder": [
+          "Wir",
+          "essen",
+          "zusammen",
+          "Mittagessen"
+        ],
+        "tip": "changeRiverTwo.questDescription"
+      },
+      {
+        "id": 6,
+        "type": "select",
+        "question": "changeRiverTwo.questTask6",
+        "options": [
+          "Sprichst du Deutsch?",
+          "Spricht du Deutsch?",
+          "Sprechst du Deutsch?"
+        ],
+        "answer": "Sprichst du Deutsch?",
+        "tip": "changeRiverTwo.questDescription"
+      },
+      {
+        "id": 7,
+        "type": "input",
+        "question": "changeRiverTwo.questTask7",
+        "correctAnswer": "trifft",
+        "tip": "changeRiverTwo.questDescription"
+      },
+      {
+        "id": 8,
+        "type": "select",
+        "question": "changeRiverTwo.questTask8",
+        "options": [
+          "Was esst ihr?",
+          "Was essen ihr?",
+          "Was isst ihr?"
+        ],
+        "answer": "Was esst ihr?",
+        "tip": "changeRiverTwo.questDescription"
+      },
+      {
+        "id": 9,
+        "type": "readAndAnswer",
+        "question": "changeRiverTwo.questTask9",
+        "text": "Carlos kommt aus Spanien. Er spricht Spanisch und Englisch. Deutsch spricht er nicht so gut. Heute trifft er Anna, sie spricht Deutsch.",
+        "options": [
+          "Deutsch und Spanisch",
+          "Spanisch und Englisch",
+          "nur Deutsch"
+        ],
+        "answer": "Spanisch und Englisch",
+        "tip": "changeRiverTwo.questDescription"
+      },
+      {
+        "id": 10,
+        "type": "input",
+        "question": "changeRiverTwo.questTask10",
+        "correctAnswer": "isst",
+        "tip": "changeRiverTwo.questDescription"
+      },
+      {
+        "id": 11,
+        "type": "reorder",
+        "question": "changeRiverTwo.questTask11",
+        "words": [
+          "keinen",
+          "kein",
+          "sprecht",
+          "spricht",
+          "Er",
+          "Englisch"
+        ],
+        "correctOrder": [
+          "Er",
+          "spricht",
+          "kein",
+          "Englisch"
+        ],
+        "tip": "changeRiverTwo.questDescription"
+      },
+      {
+        "id": 12,
+        "type": "input",
+        "question": "changeRiverTwo.questTask12",
+        "correctAnswer": "schläft",
+        "tip": "changeRiverTwo.questDescription"
+      },
+      {
+        "id": 13,
+        "type": "select",
+        "question": "changeRiverTwo.questTask13",
+        "options": [
+          "Fährst du Auto?",
+          "Fahrst du Auto?",
+          "Fährt du Auto?"
+        ],
+        "answer": "Fährst du Auto?",
+        "tip": "changeRiverTwo.questDescription"
+      },
+      {
+        "id": 14,
+        "type": "select",
+        "question": "changeRiverTwo.questTask14",
+        "options": [
+          "Ich brauche ein Kilo Kartoffeln.",
+          "Ich brauche einen Kilo Kartoffeln.",
+          "Ich brauche ein Kilo die Kartoffeln."
+        ],
+        "answer": "Ich brauche ein Kilo Kartoffeln.",
+        "tip": "changeRiverTwo.questDescription"
+      },
+      {
+        "id": 15,
+        "type": "reorder",
+        "question": "changeRiverTwo.questTask15",
+        "words": [
+          "kostet",
+          "Was",
+          "Käse",
+          "kosten",
+          "der",
+          "den"
+        ],
+        "correctOrder": [
+          "Was",
+          "kostet",
+          "der",
+          "Käse"
+        ],
+        "tip": "changeRiverTwo.questDescription"
+      }
+    ]
+  },
+  {
+    "questId": "change-river-three",
+    "title": "changeRiverThree.questTitle",
+    "progress": "0/15",
+    "description": "changeRiverThree.questDescription",
+    "conditions": {
+      "goal": "changeRiverThree.questGoal",
+      "minCorrect": 15,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
+    "vocabulary": [
+      {
+        "word": "lesen",
+        "translation-ru": "читать",
+        "translation-en": "to read",
+        "translation-uk": "читати",
+        "translation-pl": "czytać",
+        "translation-es": "leer",
+        "translation-fr": "lire",
+        "translation-tr": "okumak",
+        "translation-ro": "a citi",
+        "translation-uz": "o‘qimoq",
+        "translation-hi": "पढ़ना",
+        "translation-ar": "يقرأ"
+      },
+      {
+        "word": "sehen",
+        "translation-ru": "видеть",
+        "translation-en": "to see",
+        "translation-uk": "бачити",
+        "translation-pl": "widzieć",
+        "translation-es": "ver",
+        "translation-fr": "voir",
+        "translation-tr": "görmek",
+        "translation-ro": "a vedea",
+        "translation-uz": "ko‘rmoq",
+        "translation-hi": "देखना",
+        "translation-ar": "يرى"
+      },
+      {
+        "word": "fernsehen",
+        "translation-ru": "смотреть телевизор",
+        "translation-en": "to watch TV",
+        "translation-uk": "дивитися телевізор",
+        "translation-pl": "oglądać telewizję",
+        "translation-es": "ver la tele",
+        "translation-fr": "regarder la télé",
+        "translation-tr": "televizyon izlemek",
+        "translation-ro": "a se uita la televizor",
+        "translation-uz": "televizor ko‘rmoq",
+        "translation-hi": "टीवी देखना",
+        "translation-ar": "يشاهد التلفاز"
+      },
+      {
+        "word": "die Zeitung",
+        "translation-ru": "газета",
+        "translation-en": "newspaper",
+        "translation-uk": "газета",
+        "translation-pl": "gazeta",
+        "translation-es": "el periódico",
+        "translation-fr": "le journal",
+        "translation-tr": "gazete",
+        "translation-ro": "ziarul",
+        "translation-uz": "gazeta",
+        "translation-hi": "अख़बार",
+        "translation-ar": "الجريدة"
+      },
+      {
+        "word": "der Film",
+        "translation-ru": "фильм",
+        "translation-en": "film",
+        "translation-uk": "фільм",
+        "translation-pl": "film",
+        "translation-es": "la película",
+        "translation-fr": "le film",
+        "translation-tr": "film",
+        "translation-ro": "filmul",
+        "translation-uz": "film",
+        "translation-hi": "फ़िल्म",
+        "translation-ar": "الفيلم"
+      }
+    ],
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "changeRiverThree.questTask1",
+        "options": [
+          "Sie lest die Zeitung.",
+          "Sie liesst die Zeitung.",
+          "Sie liest die Zeitung."
+        ],
+        "answer": "Sie liest die Zeitung.",
+        "tip": "changeRiverThree.questDescription"
+      },
+      {
+        "id": 2,
+        "type": "input",
+        "question": "changeRiverThree.questTask2",
+        "correctAnswer": "Siehst",
+        "tip": "changeRiverThree.questDescription"
+      },
+      {
+        "id": 3,
+        "type": "input",
+        "question": "changeRiverThree.questTask3",
+        "correctAnswer": "liest",
+        "tip": "changeRiverThree.questDescription"
+      },
+      {
+        "id": 4,
+        "type": "select",
+        "question": "changeRiverThree.questTask4",
+        "options": [
+          "Papa fernsieht.",
+          "Papa seht fern.",
+          "Papa sieht fern."
+        ],
+        "answer": "Papa sieht fern.",
+        "tip": "changeRiverThree.questDescription"
+      },
+      {
+        "id": 5,
+        "type": "reorder",
+        "question": "changeRiverThree.questTask5",
+        "words": [
+          "sehen",
+          "ein",
+          "sieht",
+          "Wir",
+          "Film",
+          "einen"
+        ],
+        "correctOrder": [
+          "Wir",
+          "sehen",
+          "einen",
+          "Film"
+        ],
+        "tip": "changeRiverThree.questDescription"
+      },
+      {
+        "id": 6,
+        "type": "select",
+        "question": "changeRiverThree.questTask6",
+        "options": [
+          "Liesst du die Zeitung?",
+          "Liest du die Zeitung?",
+          "Lest du die Zeitung?"
+        ],
+        "answer": "Liest du die Zeitung?",
+        "tip": "changeRiverThree.questDescription"
+      },
+      {
+        "id": 7,
+        "type": "input",
+        "question": "changeRiverThree.questTask7",
+        "correctAnswer": "Seht",
+        "tip": "changeRiverThree.questDescription"
+      },
+      {
+        "id": 8,
+        "type": "select",
+        "question": "changeRiverThree.questTask8",
+        "options": [
+          "Anna siehst die Katze.",
+          "Anna sieht die Katze.",
+          "Anna seht die Katze."
+        ],
+        "answer": "Anna sieht die Katze.",
+        "tip": "changeRiverThree.questDescription"
+      },
+      {
+        "id": 9,
+        "type": "readAndAnswer",
+        "question": "changeRiverThree.questTask9",
+        "text": "Am Abend liest Lena ein Buch. Max liest nicht gern. Er sieht fern, er sieht einen Film. Oma liest die Zeitung.",
+        "options": [
+          "Er liest die Zeitung.",
+          "Er sieht fern.",
+          "Er liest ein Buch."
+        ],
+        "answer": "Er sieht fern.",
+        "tip": "changeRiverThree.questDescription"
+      },
+      {
+        "id": 10,
+        "type": "input",
+        "question": "changeRiverThree.questTask10",
+        "correctAnswer": "Film",
+        "tip": "changeRiverThree.questDescription"
+      },
+      {
+        "id": 11,
+        "type": "reorder",
+        "question": "changeRiverThree.questTask11",
+        "words": [
+          "es",
+          "Kind",
+          "lest",
+          "liest",
+          "Das",
+          "nicht",
+          "fern",
+          "kein",
+          "sieht"
+        ],
+        "correctOrder": [
+          "Das",
+          "Kind",
+          "liest",
+          "nicht",
+          "es",
+          "sieht",
+          "fern"
+        ],
+        "tip": "changeRiverThree.questDescription"
+      },
+      {
+        "id": 12,
+        "type": "input",
+        "question": "changeRiverThree.questTask12",
+        "correctAnswer": "isst",
+        "tip": "changeRiverThree.questDescription"
+      },
+      {
+        "id": 13,
+        "type": "select",
+        "question": "changeRiverThree.questTask13",
+        "options": [
+          "Sie sprecht Englisch.",
+          "Sie spricht Englisch.",
+          "Sie sprichst Englisch."
+        ],
+        "answer": "Sie spricht Englisch.",
+        "tip": "changeRiverThree.questDescription"
+      },
+      {
+        "id": 14,
+        "type": "select",
+        "question": "changeRiverThree.questTask14",
+        "options": [
+          "Laufst du jeden Tag?",
+          "Läufst du jeden Tag?",
+          "Läuft du jeden Tag?"
+        ],
+        "answer": "Läufst du jeden Tag?",
+        "tip": "changeRiverThree.questDescription"
+      },
+      {
+        "id": 15,
+        "type": "reorder",
+        "question": "changeRiverThree.questTask15",
+        "words": [
+          "Café",
+          "im",
+          "Anna",
+          "treffe",
+          "trifft",
+          "Ich",
+          "triffst"
+        ],
+        "correctOrder": [
+          "Ich",
+          "treffe",
+          "Anna",
+          "im",
+          "Café"
+        ],
+        "tip": "changeRiverThree.questDescription"
+      }
+    ]
+  },
+  {
+    "questId": "change-river-four",
+    "title": "changeRiverFour.questTitle",
+    "progress": "0/15",
+    "description": "changeRiverFour.questDescription",
+    "conditions": {
+      "goal": "changeRiverFour.questGoal",
+      "minCorrect": 15,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
+    "vocabulary": [
+      {
+        "word": "nehmen",
+        "translation-ru": "брать",
+        "translation-en": "to take",
+        "translation-uk": "брати",
+        "translation-pl": "brać",
+        "translation-es": "tomar, coger",
+        "translation-fr": "prendre",
+        "translation-tr": "almak",
+        "translation-ro": "a lua",
+        "translation-uz": "olmoq",
+        "translation-hi": "लेना",
+        "translation-ar": "يأخذ"
+      },
+      {
+        "word": "geben",
+        "translation-ru": "давать",
+        "translation-en": "to give",
+        "translation-uk": "давати",
+        "translation-pl": "dawać",
+        "translation-es": "dar",
+        "translation-fr": "donner",
+        "translation-tr": "vermek",
+        "translation-ro": "a da",
+        "translation-uz": "bermoq",
+        "translation-hi": "देना",
+        "translation-ar": "يعطي"
+      },
+      {
+        "word": "wissen",
+        "translation-ru": "знать",
+        "translation-en": "to know",
+        "translation-uk": "знати",
+        "translation-pl": "wiedzieć",
+        "translation-es": "saber",
+        "translation-fr": "savoir",
+        "translation-tr": "bilmek",
+        "translation-ro": "a ști",
+        "translation-uz": "bilmoq",
+        "translation-hi": "जानना",
+        "translation-ar": "يعرف"
+      },
+      {
+        "word": "der Bus",
+        "translation-ru": "автобус",
+        "translation-en": "bus",
+        "translation-uk": "автобус",
+        "translation-pl": "autobus",
+        "translation-es": "el autobús",
+        "translation-fr": "le bus",
+        "translation-tr": "otobüs",
+        "translation-ro": "autobuzul",
+        "translation-uz": "avtobus",
+        "translation-hi": "बस",
+        "translation-ar": "الحافلة"
+      },
+      {
+        "word": "die Adresse",
+        "translation-ru": "адрес",
+        "translation-en": "address",
+        "translation-uk": "адреса",
+        "translation-pl": "adres",
+        "translation-es": "la dirección",
+        "translation-fr": "l’adresse",
+        "translation-tr": "adres",
+        "translation-ro": "adresa",
+        "translation-uz": "manzil",
+        "translation-hi": "पता",
+        "translation-ar": "العنوان"
+      },
+      {
+        "word": "das Abendessen",
+        "translation-ru": "ужин",
+        "translation-en": "dinner",
+        "translation-uk": "вечеря",
+        "translation-pl": "kolacja",
+        "translation-es": "la cena",
+        "translation-fr": "le dîner",
+        "translation-tr": "akşam yemeği",
+        "translation-ro": "cina",
+        "translation-uz": "kechki ovqat",
+        "translation-hi": "रात का खाना",
+        "translation-ar": "العشاء"
+      }
+    ],
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "changeRiverFour.questTask1",
+        "options": [
+          "Nimmt du den Bus?",
+          "Nehmst du den Bus?",
+          "Nimmst du den Bus?"
+        ],
+        "answer": "Nimmst du den Bus?",
+        "tip": "changeRiverFour.questDescription"
+      },
+      {
+        "id": 2,
+        "type": "input",
+        "question": "changeRiverFour.questTask2",
+        "correctAnswer": "nimmt",
+        "tip": "changeRiverFour.questDescription"
+      },
+      {
+        "id": 3,
+        "type": "input",
+        "question": "changeRiverFour.questTask3",
+        "correctAnswer": "weiß",
+        "tip": "changeRiverFour.questDescription"
+      },
+      {
+        "id": 4,
+        "type": "select",
+        "question": "changeRiverFour.questTask4",
+        "options": [
+          "Wisst du die Adresse?",
+          "Weißst du die Adresse?",
+          "Weißt du die Adresse?"
+        ],
+        "answer": "Weißt du die Adresse?",
+        "tip": "changeRiverFour.questDescription"
+      },
+      {
+        "id": 5,
+        "type": "reorder",
+        "question": "changeRiverFour.questTask5",
+        "words": [
+          "gebt",
+          "Mama",
+          "Banane",
+          "einen",
+          "gibt",
+          "eine"
+        ],
+        "correctOrder": [
+          "Mama",
+          "gibt",
+          "eine",
+          "Banane"
+        ],
+        "tip": "changeRiverFour.questDescription"
+      },
+      {
+        "id": 6,
+        "type": "select",
+        "question": "changeRiverFour.questTask6",
+        "options": [
+          "Er wisst die Adresse nicht.",
+          "Er weiß die Adresse nicht.",
+          "Er weißt die Adresse nicht."
+        ],
+        "answer": "Er weiß die Adresse nicht.",
+        "tip": "changeRiverFour.questDescription"
+      },
+      {
+        "id": 7,
+        "type": "input",
+        "question": "changeRiverFour.questTask7",
+        "correctAnswer": "gibt",
+        "tip": "changeRiverFour.questDescription"
+      },
+      {
+        "id": 8,
+        "type": "select",
+        "question": "changeRiverFour.questTask8",
+        "options": [
+          "Wir nehmen den Bus.",
+          "Wir nehmt den Bus.",
+          "Wir nimmt den Bus."
+        ],
+        "answer": "Wir nehmen den Bus.",
+        "tip": "changeRiverFour.questDescription"
+      },
+      {
+        "id": 9,
+        "type": "readAndAnswer",
+        "question": "changeRiverFour.questTask9",
+        "text": "Tim nimmt den Bus. Er besucht Lea, aber er weiß die Adresse nicht. Er fragt einen Mann. Der Mann weiß es auch nicht.",
+        "options": [
+          "Er weiß die Adresse nicht.",
+          "Er hat kein Handy.",
+          "Er nimmt kein Taxi."
+        ],
+        "answer": "Er weiß die Adresse nicht.",
+        "tip": "changeRiverFour.questDescription"
+      },
+      {
+        "id": 10,
+        "type": "input",
+        "question": "changeRiverFour.questTask10",
+        "correctAnswer": "Bus",
+        "tip": "changeRiverFour.questDescription"
+      },
+      {
+        "id": 11,
+        "type": "reorder",
+        "question": "changeRiverFour.questTask11",
+        "words": [
+          "wisst",
+          "weiß",
+          "Wissen",
+          "die",
+          "Sie",
+          "Adresse"
+        ],
+        "correctOrder": [
+          "Wissen",
+          "Sie",
+          "die",
+          "Adresse"
+        ],
+        "tip": "changeRiverFour.questDescription"
+      },
+      {
+        "id": 12,
+        "type": "input",
+        "question": "changeRiverFour.questTask12",
+        "correctAnswer": "liest",
+        "tip": "changeRiverFour.questDescription"
+      },
+      {
+        "id": 13,
+        "type": "select",
+        "question": "changeRiverFour.questTask13",
+        "options": [
+          "Er trifft einen Freund.",
+          "Er trefft einen Freund.",
+          "Er trifft ein Freund."
+        ],
+        "answer": "Er trifft einen Freund.",
+        "tip": "changeRiverFour.questDescription"
+      },
+      {
+        "id": 14,
+        "type": "select",
+        "question": "changeRiverFour.questTask14",
+        "options": [
+          "Siehst du den Zug?",
+          "Sehst du den Zug?",
+          "Siehst du der Zug?"
+        ],
+        "answer": "Siehst du den Zug?",
+        "tip": "changeRiverFour.questDescription"
+      },
+      {
+        "id": 15,
+        "type": "reorder",
+        "question": "changeRiverFour.questTask15",
+        "words": [
+          "er",
+          "Was",
+          "isst",
+          "Abendessen",
+          "essen",
+          "zum",
+          "esst"
+        ],
+        "correctOrder": [
+          "Was",
+          "isst",
+          "er",
+          "zum",
+          "Abendessen"
+        ],
+        "tip": "changeRiverFour.questDescription"
+      }
+    ]
+  },
+  {
+    "questId": "change-river-five",
+    "title": "changeRiverFive.questTitle",
+    "progress": "0/15",
+    "description": "changeRiverFive.questDescription",
+    "conditions": {
+      "goal": "changeRiverFive.questGoal",
+      "minCorrect": 15,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
+    "vocabulary": [
+      {
+        "word": "das Taxi",
+        "translation-ru": "такси",
+        "translation-en": "taxi",
+        "translation-uk": "таксі",
+        "translation-pl": "taksówka",
+        "translation-es": "el taxi",
+        "translation-fr": "le taxi",
+        "translation-tr": "taksi",
+        "translation-ro": "taxiul",
+        "translation-uz": "taksi",
+        "translation-hi": "टैक्सी",
+        "translation-ar": "سيارة الأجرة"
+      },
+      {
+        "word": "das Buch",
+        "translation-ru": "книга",
+        "translation-en": "book",
+        "translation-uk": "книжка",
+        "translation-pl": "książka",
+        "translation-es": "el libro",
+        "translation-fr": "le livre",
+        "translation-tr": "kitap",
+        "translation-ro": "cartea",
+        "translation-uz": "kitob",
+        "translation-hi": "किताब",
+        "translation-ar": "الكتاب"
+      },
+      {
+        "word": "das Abendessen",
+        "translation-ru": "ужин",
+        "translation-en": "dinner",
+        "translation-uk": "вечеря",
+        "translation-pl": "kolacja",
+        "translation-es": "la cena",
+        "translation-fr": "le dîner",
+        "translation-tr": "akşam yemeği",
+        "translation-ro": "cina",
+        "translation-uz": "kechki ovqat",
+        "translation-hi": "रात का खाना",
+        "translation-ar": "العشاء"
+      },
+      {
+        "word": "gern",
+        "translation-ru": "охотно, с удовольствием",
+        "translation-en": "gladly, like to",
+        "translation-uk": "охоче",
+        "translation-pl": "chętnie",
+        "translation-es": "con gusto",
+        "translation-fr": "volontiers",
+        "translation-tr": "severek",
+        "translation-ro": "cu plăcere",
+        "translation-uz": "jon deb",
+        "translation-hi": "ख़ुशी से",
+        "translation-ar": "بكل سرور"
+      },
+      {
+        "word": "zusammen",
+        "translation-ru": "вместе",
+        "translation-en": "together",
+        "translation-uk": "разом",
+        "translation-pl": "razem",
+        "translation-es": "juntos",
+        "translation-fr": "ensemble",
+        "translation-tr": "birlikte",
+        "translation-ro": "împreună",
+        "translation-uz": "birga",
+        "translation-hi": "एक साथ",
+        "translation-ar": "معًا"
+      }
+    ],
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "changeRiverFive.questTask1",
+        "options": [
+          "Wir nimmen ein Taxi.",
+          "Wir nimmt ein Taxi.",
+          "Wir nehmen ein Taxi."
+        ],
+        "answer": "Wir nehmen ein Taxi.",
+        "tip": "changeRiverFive.questDescription"
+      },
+      {
+        "id": 2,
+        "type": "input",
+        "question": "changeRiverFive.questTask2",
+        "correctAnswer": "Esst",
+        "tip": "changeRiverFive.questDescription"
+      },
+      {
+        "id": 3,
+        "type": "input",
+        "question": "changeRiverFive.questTask3",
+        "correctAnswer": "lesen",
+        "tip": "changeRiverFive.questDescription"
+      },
+      {
+        "id": 4,
+        "type": "select",
+        "question": "changeRiverFive.questTask4",
+        "options": [
+          "Fährt ihr Zug?",
+          "Fährst ihr Zug?",
+          "Fahrt ihr Zug?"
+        ],
+        "answer": "Fahrt ihr Zug?",
+        "tip": "changeRiverFive.questDescription"
+      },
+      {
+        "id": 5,
+        "type": "reorder",
+        "question": "changeRiverFive.questTask5",
+        "words": [
+          "er",
+          "sieht",
+          "Ich",
+          "seht",
+          "liest",
+          "lese",
+          "fern",
+          "und"
+        ],
+        "correctOrder": [
+          "Ich",
+          "lese",
+          "und",
+          "er",
+          "sieht",
+          "fern"
+        ],
+        "tip": "changeRiverFive.questDescription"
+      },
+      {
+        "id": 6,
+        "type": "select",
+        "question": "changeRiverFive.questTask6",
+        "options": [
+          "Du isst, aber wir essen nicht.",
+          "Du isst, aber wir isst nicht.",
+          "Du esst, aber wir essen nicht."
+        ],
+        "answer": "Du isst, aber wir essen nicht.",
+        "tip": "changeRiverFive.questDescription"
+      },
+      {
+        "id": 7,
+        "type": "input",
+        "question": "changeRiverFive.questTask7",
+        "correctAnswer": "sehen",
+        "tip": "changeRiverFive.questDescription"
+      },
+      {
+        "id": 8,
+        "type": "select",
+        "question": "changeRiverFive.questTask8",
+        "options": [
+          "Wissen ihr die Antwort?",
+          "Wisst ihr die Antwort?",
+          "Weißt ihr die Antwort?"
+        ],
+        "answer": "Wisst ihr die Antwort?",
+        "tip": "changeRiverFive.questDescription"
+      },
+      {
+        "id": 9,
+        "type": "readAndAnswer",
+        "question": "changeRiverFive.questTask9",
+        "text": "Wir essen zusammen Abendessen. Papa isst Fleisch, Mama und ich essen Fisch. Mein Bruder isst nicht, er schläft schon.",
+        "options": [
+          "Mama",
+          "der Bruder",
+          "Papa"
+        ],
+        "answer": "der Bruder",
+        "tip": "changeRiverFive.questDescription"
+      },
+      {
+        "id": 10,
+        "type": "input",
+        "question": "changeRiverFive.questTask10",
+        "correctAnswer": "Abendessen",
+        "tip": "changeRiverFive.questDescription"
+      },
+      {
+        "id": 11,
+        "type": "reorder",
+        "question": "changeRiverFive.questTask11",
+        "words": [
+          "nicht",
+          "Deutsch",
+          "sprechst",
+          "sprecht",
+          "aber",
+          "Ihr",
+          "sprich",
+          "sie"
+        ],
+        "correctOrder": [
+          "Ihr",
+          "sprecht",
+          "Deutsch",
+          "aber",
+          "sie",
+          "nicht"
+        ],
+        "tip": "changeRiverFive.questDescription"
+      },
+      {
+        "id": 12,
+        "type": "input",
+        "question": "changeRiverFive.questTask12",
+        "correctAnswer": "weiß",
+        "tip": "changeRiverFive.questDescription"
+      },
+      {
+        "id": 13,
+        "type": "select",
+        "question": "changeRiverFive.questTask13",
+        "options": [
+          "Sie liest ein Buch.",
+          "Sie liest einen Buch.",
+          "Sie lest ein Buch."
+        ],
+        "answer": "Sie liest ein Buch.",
+        "tip": "changeRiverFive.questDescription"
+      },
+      {
+        "id": 14,
+        "type": "select",
+        "question": "changeRiverFive.questTask14",
+        "options": [
+          "Nehmst du ein Taxi?",
+          "Nimmst du ein Taxi?",
+          "Nimmst du einen Taxi?"
+        ],
+        "answer": "Nimmst du ein Taxi?",
+        "tip": "changeRiverFive.questDescription"
+      },
+      {
+        "id": 15,
+        "type": "reorder",
+        "question": "changeRiverFive.questTask15",
+        "words": [
+          "ein",
+          "Buch",
+          "einen",
+          "Er",
+          "gibt",
+          "gebt"
+        ],
+        "correctOrder": [
+          "Er",
+          "gibt",
+          "ein",
+          "Buch"
+        ],
+        "tip": "changeRiverFive.questDescription"
+      }
+    ]
+  },
+  {
+    "questId": "change-river-six",
+    "title": "changeRiverSix.questTitle",
+    "progress": "0/15",
+    "description": "changeRiverSix.questDescription",
+    "conditions": {
+      "goal": "changeRiverSix.questGoal",
+      "minCorrect": 15,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
+    "vocabulary": [
+      {
+        "word": "der Brief",
+        "translation-ru": "письмо",
+        "translation-en": "letter",
+        "translation-uk": "лист",
+        "translation-pl": "list",
+        "translation-es": "la carta",
+        "translation-fr": "la lettre",
+        "translation-tr": "mektup",
+        "translation-ro": "scrisoarea",
+        "translation-uz": "xat",
+        "translation-hi": "चिट्ठी",
+        "translation-ar": "الرسالة"
+      },
+      {
+        "word": "der Salat",
+        "translation-ru": "салат",
+        "translation-en": "salad",
+        "translation-uk": "салат",
+        "translation-pl": "sałatka",
+        "translation-es": "la ensalada",
+        "translation-fr": "la salade",
+        "translation-tr": "salata",
+        "translation-ro": "salata",
+        "translation-uz": "salat",
+        "translation-hi": "सलाद",
+        "translation-ar": "السلطة"
+      },
+      {
+        "word": "der Tee",
+        "translation-ru": "чай",
+        "translation-en": "tea",
+        "translation-uk": "чай",
+        "translation-pl": "herbata",
+        "translation-es": "el té",
+        "translation-fr": "le thé",
+        "translation-tr": "çay",
+        "translation-ro": "ceaiul",
+        "translation-uz": "choy",
+        "translation-hi": "चाय",
+        "translation-ar": "الشاي"
+      },
+      {
+        "word": "das Fahrrad",
+        "translation-ru": "велосипед",
+        "translation-en": "bicycle",
+        "translation-uk": "велосипед",
+        "translation-pl": "rower",
+        "translation-es": "la bicicleta",
+        "translation-fr": "le vélo",
+        "translation-tr": "bisiklet",
+        "translation-ro": "bicicleta",
+        "translation-uz": "velosiped",
+        "translation-hi": "साइकिल",
+        "translation-ar": "الدراجة"
+      },
+      {
+        "word": "jetzt",
+        "translation-ru": "сейчас",
+        "translation-en": "now",
+        "translation-uk": "зараз",
+        "translation-pl": "teraz",
+        "translation-es": "ahora",
+        "translation-fr": "maintenant",
+        "translation-tr": "şimdi",
+        "translation-ro": "acum",
+        "translation-uz": "hozir",
+        "translation-hi": "अब",
+        "translation-ar": "الآن"
+      },
+      {
+        "word": "die Suppe",
+        "translation-ru": "суп",
+        "translation-en": "soup",
+        "translation-uk": "суп",
+        "translation-pl": "zupa",
+        "translation-es": "la sopa",
+        "translation-fr": "la soupe",
+        "translation-tr": "çorba",
+        "translation-ro": "supa",
+        "translation-uz": "sho‘rva",
+        "translation-hi": "सूप",
+        "translation-ar": "الحساء"
+      }
+    ],
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "changeRiverSix.questTask1",
+        "options": [
+          "Er isst ein Salat.",
+          "Er esst einen Salat.",
+          "Er isst einen Salat."
+        ],
+        "answer": "Er isst einen Salat.",
+        "tip": "changeRiverSix.questDescription"
+      },
+      {
+        "id": 2,
+        "type": "input",
+        "question": "changeRiverSix.questTask2",
+        "correctAnswer": "den",
+        "tip": "changeRiverSix.questDescription"
+      },
+      {
+        "id": 3,
+        "type": "input",
+        "question": "changeRiverSix.questTask3",
+        "correctAnswer": "Nimmst",
+        "tip": "changeRiverSix.questDescription"
+      },
+      {
+        "id": 4,
+        "type": "select",
+        "question": "changeRiverSix.questTask4",
+        "options": [
+          "Sehst du das Fahrrad?",
+          "Siehst du den Fahrrad?",
+          "Siehst du das Fahrrad?"
+        ],
+        "answer": "Siehst du das Fahrrad?",
+        "tip": "changeRiverSix.questDescription"
+      },
+      {
+        "id": 5,
+        "type": "reorder",
+        "question": "changeRiverSix.questTask5",
+        "words": [
+          "einen",
+          "Jetzt",
+          "esst",
+          "isst",
+          "und",
+          "Salat",
+          "Suppe",
+          "er"
+        ],
+        "correctOrder": [
+          "Jetzt",
+          "isst",
+          "er",
+          "Suppe",
+          "und",
+          "Salat"
+        ],
+        "tip": "changeRiverSix.questDescription"
+      },
+      {
+        "id": 6,
+        "type": "select",
+        "question": "changeRiverSix.questTask6",
+        "options": [
+          "Er hat nicht Fahrrad.",
+          "Er hat kein Fahrrad.",
+          "Er hat keinen Fahrrad."
+        ],
+        "answer": "Er hat kein Fahrrad.",
+        "tip": "changeRiverSix.questDescription"
+      },
+      {
+        "id": 7,
+        "type": "input",
+        "question": "changeRiverSix.questTask7",
+        "correctAnswer": "lese",
+        "tip": "changeRiverSix.questDescription"
+      },
+      {
+        "id": 8,
+        "type": "select",
+        "question": "changeRiverSix.questTask8",
+        "options": [
+          "Sie nimmt das Fahrrad.",
+          "Sie nimmt den Fahrrad.",
+          "Sie nehmt das Fahrrad."
+        ],
+        "answer": "Sie nimmt das Fahrrad.",
+        "tip": "changeRiverSix.questDescription"
+      },
+      {
+        "id": 9,
+        "type": "readAndAnswer",
+        "question": "changeRiverSix.questTask9",
+        "text": "Im Café. Tom nimmt einen Kaffee und einen Kuchen. Lisa isst keinen Kuchen. Sie nimmt einen Tee und einen Salat. Tom liest die Zeitung.",
+        "options": [
+          "einen Tee und einen Salat",
+          "einen Kuchen",
+          "einen Kaffee"
+        ],
+        "answer": "einen Tee und einen Salat",
+        "tip": "changeRiverSix.questDescription"
+      },
+      {
+        "id": 10,
+        "type": "input",
+        "question": "changeRiverSix.questTask10",
+        "correctAnswer": "jetzt",
+        "tip": "changeRiverSix.questDescription"
+      },
+      {
+        "id": 11,
+        "type": "reorder",
+        "question": "changeRiverSix.questTask11",
+        "words": [
+          "der",
+          "du",
+          "Siehst",
+          "sehst",
+          "den",
+          "Bus"
+        ],
+        "correctOrder": [
+          "Siehst",
+          "du",
+          "den",
+          "Bus"
+        ],
+        "tip": "changeRiverSix.questDescription"
+      },
+      {
+        "id": 12,
+        "type": "input",
+        "question": "changeRiverSix.questTask12",
+        "correctAnswer": "esst",
+        "tip": "changeRiverSix.questDescription"
+      },
+      {
+        "id": 13,
+        "type": "select",
+        "question": "changeRiverSix.questTask13",
+        "options": [
+          "Weißst du die Antwort?",
+          "Weißt du die Antwort?",
+          "Wisst du die Antwort?"
+        ],
+        "answer": "Weißt du die Antwort?",
+        "tip": "changeRiverSix.questDescription"
+      },
+      {
+        "id": 14,
+        "type": "select",
+        "question": "changeRiverSix.questTask14",
+        "options": [
+          "Ihr nehmt ein Taxi.",
+          "Ihr nimmt ein Taxi.",
+          "Ihr nehmt einen Taxi."
+        ],
+        "answer": "Ihr nehmt ein Taxi.",
+        "tip": "changeRiverSix.questDescription"
+      },
+      {
+        "id": 15,
+        "type": "reorder",
+        "question": "changeRiverSix.questTask15",
+        "words": [
+          "Papa",
+          "isst",
+          "und",
+          "die",
+          "schläft",
+          "Kinder",
+          "esst",
+          "schlafen"
+        ],
+        "correctOrder": [
+          "Papa",
+          "isst",
+          "und",
+          "die",
+          "Kinder",
+          "schlafen"
+        ],
+        "tip": "changeRiverSix.questDescription"
+      }
+    ]
+  },
+  {
+    "questId": "change-river-seven",
+    "title": "changeRiverSeven.questTitle",
+    "progress": "0/15",
+    "description": "changeRiverSeven.questDescription",
+    "conditions": {
+      "goal": "changeRiverSeven.questGoal",
+      "minCorrect": 15,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
+    "vocabulary": [
+      {
+        "word": "das Wochenende",
+        "translation-ru": "выходные",
+        "translation-en": "weekend",
+        "translation-uk": "вихідні",
+        "translation-pl": "weekend",
+        "translation-es": "el fin de semana",
+        "translation-fr": "le week-end",
+        "translation-tr": "hafta sonu",
+        "translation-ro": "weekendul",
+        "translation-uz": "dam olish kunlari",
+        "translation-hi": "सप्ताहांत",
+        "translation-ar": "عطلة نهاية الأسبوع"
+      },
+      {
+        "word": "das Frühstück",
+        "translation-ru": "завтрак",
+        "translation-en": "breakfast",
+        "translation-uk": "сніданок",
+        "translation-pl": "śniadanie",
+        "translation-es": "el desayuno",
+        "translation-fr": "le petit-déjeuner",
+        "translation-tr": "kahvaltı",
+        "translation-ro": "micul dejun",
+        "translation-uz": "nonushta",
+        "translation-hi": "नाश्ता",
+        "translation-ar": "الفطور"
+      },
+      {
+        "word": "der See",
+        "translation-ru": "озеро",
+        "translation-en": "lake",
+        "translation-uk": "озеро",
+        "translation-pl": "jezioro",
+        "translation-es": "el lago",
+        "translation-fr": "le lac",
+        "translation-tr": "göl",
+        "translation-ro": "lacul",
+        "translation-uz": "ko‘l",
+        "translation-hi": "झील",
+        "translation-ar": "البحيرة"
+      },
+      {
+        "word": "das Spiel",
+        "translation-ru": "игра",
+        "translation-en": "game",
+        "translation-uk": "гра",
+        "translation-pl": "gra",
+        "translation-es": "el juego",
+        "translation-fr": "le jeu",
+        "translation-tr": "oyun",
+        "translation-ro": "jocul",
+        "translation-uz": "o‘yin",
+        "translation-hi": "खेल",
+        "translation-ar": "اللعبة"
+      },
+      {
+        "word": "müde",
+        "translation-ru": "усталый",
+        "translation-en": "tired",
+        "translation-uk": "втомлений",
+        "translation-pl": "zmęczony",
+        "translation-es": "cansado",
+        "translation-fr": "fatigué",
+        "translation-tr": "yorgun",
+        "translation-ro": "obosit",
+        "translation-uz": "charchagan",
+        "translation-hi": "थका हुआ",
+        "translation-ar": "متعب"
+      },
+      {
+        "word": "zu Hause",
+        "translation-ru": "дома",
+        "translation-en": "at home",
+        "translation-uk": "вдома",
+        "translation-pl": "w domu",
+        "translation-es": "en casa",
+        "translation-fr": "à la maison",
+        "translation-tr": "evde",
+        "translation-ro": "acasă",
+        "translation-uz": "uyda",
+        "translation-hi": "घर पर",
+        "translation-ar": "في البيت"
+      }
+    ],
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "changeRiverSeven.questTask1",
+        "options": [
+          "Heute ist Wochenende. Das Kind schläfst lange.",
+          "Heute ist Wochenende. Das Kind schlaft lange.",
+          "Heute ist Wochenende. Das Kind schläft lange."
+        ],
+        "answer": "Heute ist Wochenende. Das Kind schläft lange.",
+        "tip": "changeRiverSeven.questDescription"
+      },
+      {
+        "id": 2,
+        "type": "input",
+        "question": "changeRiverSeven.questTask2",
+        "correctAnswer": "liest",
+        "tip": "changeRiverSeven.questDescription"
+      },
+      {
+        "id": 3,
+        "type": "input",
+        "question": "changeRiverSeven.questTask3",
+        "correctAnswer": "fährt",
+        "tip": "changeRiverSeven.questDescription"
+      },
+      {
+        "id": 4,
+        "type": "select",
+        "question": "changeRiverSeven.questTask4",
+        "options": [
+          "Was isst ihr zum Frühstück?",
+          "Was essen ihr zum Frühstück?",
+          "Was esst ihr zum Frühstück?"
+        ],
+        "answer": "Was esst ihr zum Frühstück?",
+        "tip": "changeRiverSeven.questDescription"
+      },
+      {
+        "id": 5,
+        "type": "reorder",
+        "question": "changeRiverSeven.questTask5",
+        "words": [
+          "ist",
+          "seht",
+          "müde",
+          "sie",
+          "sieht",
+          "sind",
+          "Oma",
+          "fern"
+        ],
+        "correctOrder": [
+          "Oma",
+          "sieht",
+          "fern",
+          "sie",
+          "ist",
+          "müde"
+        ],
+        "tip": "changeRiverSeven.questDescription"
+      },
+      {
+        "id": 6,
+        "type": "select",
+        "question": "changeRiverSeven.questTask6",
+        "options": [
+          "Wir spielen ein Spiel.",
+          "Wir spielt ein Spiel.",
+          "Wir spielen einen Spiel."
+        ],
+        "answer": "Wir spielen ein Spiel.",
+        "tip": "changeRiverSeven.questDescription"
+      },
+      {
+        "id": 7,
+        "type": "input",
+        "question": "changeRiverSeven.questTask7",
+        "correctAnswer": "Nimmst",
+        "tip": "changeRiverSeven.questDescription"
+      },
+      {
+        "id": 8,
+        "type": "select",
+        "question": "changeRiverSeven.questTask8",
+        "options": [
+          "Der Bruder läuft im Park.",
+          "Der Bruder läufst im Park.",
+          "Der Bruder lauft im Park."
+        ],
+        "answer": "Der Bruder läuft im Park.",
+        "tip": "changeRiverSeven.questDescription"
+      },
+      {
+        "id": 9,
+        "type": "readAndAnswer",
+        "question": "changeRiverSeven.questTask9",
+        "text": "Am Wochenende ist die Familie zu Hause. Papa liest ein Buch. Oma sieht einen Film. Mama und Lea fahren Fahrrad. Max schläft lange.",
+        "options": [
+          "Max",
+          "Mama und Lea",
+          "Papa"
+        ],
+        "answer": "Mama und Lea",
+        "tip": "changeRiverSeven.questDescription"
+      },
+      {
+        "id": 10,
+        "type": "input",
+        "question": "changeRiverSeven.questTask10",
+        "correctAnswer": "Frühstück",
+        "tip": "changeRiverSeven.questDescription"
+      },
+      {
+        "id": 11,
+        "type": "reorder",
+        "question": "changeRiverSeven.questTask11",
+        "words": [
+          "nein",
+          "nicht",
+          "laufe",
+          "läufst",
+          "lauft",
+          "müde",
+          "du",
+          "Bist",
+          "ich"
+        ],
+        "correctOrder": [
+          "Bist",
+          "du",
+          "nicht",
+          "müde",
+          "nein",
+          "ich",
+          "laufe"
+        ],
+        "tip": "changeRiverSeven.questDescription"
+      },
+      {
+        "id": 12,
+        "type": "input",
+        "question": "changeRiverSeven.questTask12",
+        "correctAnswer": "Seht",
+        "tip": "changeRiverSeven.questDescription"
+      },
+      {
+        "id": 13,
+        "type": "select",
+        "question": "changeRiverSeven.questTask13",
+        "options": [
+          "Sie isst einen Salat.",
+          "Sie isst ein Salat.",
+          "Sie esst einen Salat."
+        ],
+        "answer": "Sie isst einen Salat.",
+        "tip": "changeRiverSeven.questDescription"
+      },
+      {
+        "id": 14,
+        "type": "select",
+        "question": "changeRiverSeven.questTask14",
+        "options": [
+          "Liest du den Brief?",
+          "Lest du den Brief?",
+          "Liest du der Brief?"
+        ],
+        "answer": "Liest du den Brief?",
+        "tip": "changeRiverSeven.questDescription"
+      },
+      {
+        "id": 15,
+        "type": "reorder",
+        "question": "changeRiverSeven.questTask15",
+        "words": [
+          "wisst",
+          "Wir",
+          "Adresse",
+          "nicht",
+          "wissen",
+          "die",
+          "weiß"
+        ],
+        "correctOrder": [
+          "Wir",
+          "wissen",
+          "die",
+          "Adresse",
+          "nicht"
+        ],
+        "tip": "changeRiverSeven.questDescription"
+      }
+    ]
+  },
+  {
+    "questId": "change-river-eight",
+    "title": "changeRiverEight.questTitle",
+    "progress": "0/15",
+    "description": "changeRiverEight.questDescription",
+    "conditions": {
+      "goal": "changeRiverEight.questGoal",
+      "minCorrect": 15,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
+    "vocabulary": [
+      {
+        "word": "das Wort",
+        "translation-ru": "слово",
+        "translation-en": "word",
+        "translation-uk": "слово",
+        "translation-pl": "słowo",
+        "translation-es": "la palabra",
+        "translation-fr": "le mot",
+        "translation-tr": "kelime",
+        "translation-ro": "cuvântul",
+        "translation-uz": "so‘z",
+        "translation-hi": "शब्द",
+        "translation-ar": "الكلمة"
+      },
+      {
+        "word": "Arabisch",
+        "translation-ru": "арабский язык",
+        "translation-en": "Arabic",
+        "translation-uk": "арабська мова",
+        "translation-pl": "arabski",
+        "translation-es": "el árabe",
+        "translation-fr": "l’arabe",
+        "translation-tr": "Arapça",
+        "translation-ro": "araba",
+        "translation-uz": "arab tili",
+        "translation-hi": "अरबी",
+        "translation-ar": "العربية"
+      },
+      {
+        "word": "Französisch",
+        "translation-ru": "французский язык",
+        "translation-en": "French",
+        "translation-uk": "французька мова",
+        "translation-pl": "francuski",
+        "translation-es": "el francés",
+        "translation-fr": "le français",
+        "translation-tr": "Fransızca",
+        "translation-ro": "franceza",
+        "translation-uz": "fransuz tili",
+        "translation-hi": "फ़्रेंच",
+        "translation-ar": "الفرنسية"
+      },
+      {
+        "word": "ein bisschen",
+        "translation-ru": "немного",
+        "translation-en": "a little",
+        "translation-uk": "трохи",
+        "translation-pl": "trochę",
+        "translation-es": "un poco",
+        "translation-fr": "un peu",
+        "translation-tr": "biraz",
+        "translation-ro": "puțin",
+        "translation-uz": "biroz",
+        "translation-hi": "थोड़ा",
+        "translation-ar": "قليلًا"
+      },
+      {
+        "word": "gut",
+        "translation-ru": "хорошо",
+        "translation-en": "good, well",
+        "translation-uk": "добре",
+        "translation-pl": "dobrze",
+        "translation-es": "bien",
+        "translation-fr": "bien",
+        "translation-tr": "iyi",
+        "translation-ro": "bine",
+        "translation-uz": "yaxshi",
+        "translation-hi": "अच्छा",
+        "translation-ar": "جيد"
+      },
+      {
+        "word": "sitzen",
+        "translation-ru": "сидеть",
+        "translation-en": "to sit",
+        "translation-uk": "сидіти",
+        "translation-pl": "siedzieć",
+        "translation-es": "estar sentado",
+        "translation-fr": "être assis",
+        "translation-tr": "oturmak",
+        "translation-ro": "a sta jos",
+        "translation-uz": "o‘tirmoq",
+        "translation-hi": "बैठना",
+        "translation-ar": "يجلس"
+      },
+      {
+        "word": "schwer",
+        "translation-ru": "трудный, тяжёлый",
+        "translation-en": "difficult, heavy",
+        "translation-uk": "важкий",
+        "translation-pl": "trudny, ciężki",
+        "translation-es": "difícil, pesado",
+        "translation-fr": "difficile, lourd",
+        "translation-tr": "zor, ağır",
+        "translation-ro": "greu",
+        "translation-uz": "qiyin, og‘ir",
+        "translation-hi": "कठिन, भारी",
+        "translation-ar": "صعب، ثقيل"
+      }
+    ],
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "changeRiverEight.questTask1",
+        "options": [
+          "Sprechst du Französisch?",
+          "Spricht du Französisch?",
+          "Sprichst du Französisch?"
+        ],
+        "answer": "Sprichst du Französisch?",
+        "tip": "changeRiverEight.questDescription"
+      },
+      {
+        "id": 2,
+        "type": "input",
+        "question": "changeRiverEight.questTask2",
+        "correctAnswer": "bisschen",
+        "tip": "changeRiverEight.questDescription"
+      },
+      {
+        "id": 3,
+        "type": "input",
+        "question": "changeRiverEight.questTask3",
+        "correctAnswer": "Weißt",
+        "tip": "changeRiverEight.questDescription"
+      },
+      {
+        "id": 4,
+        "type": "select",
+        "question": "changeRiverEight.questTask4",
+        "options": [
+          "Wir spricht Deutsch und Englisch.",
+          "Wir sprichen Deutsch und Englisch.",
+          "Wir sprechen Deutsch und Englisch."
+        ],
+        "answer": "Wir sprechen Deutsch und Englisch.",
+        "tip": "changeRiverEight.questDescription"
+      },
+      {
+        "id": 5,
+        "type": "reorder",
+        "question": "changeRiverEight.questTask5",
+        "words": [
+          "nimmst",
+          "ich",
+          "Was",
+          "nimmt",
+          "nehmst",
+          "Tee",
+          "nehme",
+          "du"
+        ],
+        "correctOrder": [
+          "Was",
+          "nimmst",
+          "du",
+          "ich",
+          "nehme",
+          "Tee"
+        ],
+        "tip": "changeRiverEight.questDescription"
+      },
+      {
+        "id": 6,
+        "type": "select",
+        "question": "changeRiverEight.questTask6",
+        "options": [
+          "Ihr spricht gut Deutsch!",
+          "Ihr sprecht gut Deutsch!",
+          "Ihr sprich gut Deutsch!"
+        ],
+        "answer": "Ihr sprecht gut Deutsch!",
+        "tip": "changeRiverEight.questDescription"
+      },
+      {
+        "id": 7,
+        "type": "input",
+        "question": "changeRiverEight.questTask7",
+        "correctAnswer": "liest",
+        "tip": "changeRiverEight.questDescription"
+      },
+      {
+        "id": 8,
+        "type": "select",
+        "question": "changeRiverEight.questTask8",
+        "options": [
+          "Ich wisse das Wort nicht.",
+          "Ich weiß das Wort nicht.",
+          "Ich weißt das Wort nicht."
+        ],
+        "answer": "Ich weiß das Wort nicht.",
+        "tip": "changeRiverEight.questDescription"
+      },
+      {
+        "id": 9,
+        "type": "readAndAnswer",
+        "question": "changeRiverEight.questTask9",
+        "text": "Im Sprachcafé sitzen Ahmed, Sophie und Ken. Ahmed spricht Arabisch und ein bisschen Deutsch. Sophie kommt aus Frankreich, sie spricht Französisch. Ken liest ein Buch auf Deutsch.",
+        "options": [
+          "Sophie",
+          "Ken",
+          "Ahmed"
+        ],
+        "answer": "Sophie",
+        "tip": "changeRiverEight.questDescription"
+      },
+      {
+        "id": 10,
+        "type": "input",
+        "question": "changeRiverEight.questTask10",
+        "correctAnswer": "Wort",
+        "tip": "changeRiverEight.questDescription"
+      },
+      {
+        "id": 11,
+        "type": "reorder",
+        "question": "changeRiverEight.questTask11",
+        "words": [
+          "spricht",
+          "sehr",
+          "Französisch",
+          "Sie",
+          "sprecht",
+          "sprechen",
+          "gut"
+        ],
+        "correctOrder": [
+          "Sie",
+          "spricht",
+          "sehr",
+          "gut",
+          "Französisch"
+        ],
+        "tip": "changeRiverEight.questDescription"
+      },
+      {
+        "id": 12,
+        "type": "input",
+        "question": "changeRiverEight.questTask12",
+        "correctAnswer": "fährt",
+        "tip": "changeRiverEight.questDescription"
+      },
+      {
+        "id": 13,
+        "type": "select",
+        "question": "changeRiverEight.questTask13",
+        "options": [
+          "Das Kind schläfst am Wochenende lange.",
+          "Das Kind schläft am Wochenende lange.",
+          "Das Kind schlaft am Wochenende lange."
+        ],
+        "answer": "Das Kind schläft am Wochenende lange.",
+        "tip": "changeRiverEight.questDescription"
+      },
+      {
+        "id": 14,
+        "type": "select",
+        "question": "changeRiverEight.questTask14",
+        "options": [
+          "Er nimmt den Fahrrad.",
+          "Er nimmt das Fahrrad.",
+          "Er nehmt das Fahrrad."
+        ],
+        "answer": "Er nimmt das Fahrrad.",
+        "tip": "changeRiverEight.questDescription"
+      },
+      {
+        "id": 15,
+        "type": "reorder",
+        "question": "changeRiverEight.questTask15",
+        "words": [
+          "essen",
+          "Wir",
+          "zusammen",
+          "Frühstück",
+          "esst",
+          "isst"
+        ],
+        "correctOrder": [
+          "Wir",
+          "essen",
+          "zusammen",
+          "Frühstück"
+        ],
+        "tip": "changeRiverEight.questDescription"
+      }
+    ]
+  },
+  {
+    "questId": "change-river-nine",
+    "title": "changeRiverNine.questTitle",
+    "progress": "0/15",
+    "description": "changeRiverNine.questDescription",
+    "conditions": {
+      "goal": "changeRiverNine.questGoal",
+      "minCorrect": 15,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
+    "vocabulary": [
+      {
+        "word": "das Auto",
+        "translation-ru": "машина",
+        "translation-en": "car",
+        "translation-uk": "автомобіль",
+        "translation-pl": "samochód",
+        "translation-es": "el coche",
+        "translation-fr": "la voiture",
+        "translation-tr": "araba",
+        "translation-ro": "mașina",
+        "translation-uz": "mashina",
+        "translation-hi": "कार",
+        "translation-ar": "السيارة"
+      },
+      {
+        "word": "schnell",
+        "translation-ru": "быстро, быстрый",
+        "translation-en": "fast",
+        "translation-uk": "швидко",
+        "translation-pl": "szybko",
+        "translation-es": "rápido",
+        "translation-fr": "vite",
+        "translation-tr": "hızlı",
+        "translation-ro": "repede",
+        "translation-uz": "tez",
+        "translation-hi": "तेज़",
+        "translation-ar": "سريع"
+      },
+      {
+        "word": "langsam",
+        "translation-ru": "медленно",
+        "translation-en": "slowly",
+        "translation-uk": "повільно",
+        "translation-pl": "powoli",
+        "translation-es": "despacio",
+        "translation-fr": "lentement",
+        "translation-tr": "yavaş",
+        "translation-ro": "încet",
+        "translation-uz": "sekin",
+        "translation-hi": "धीरे",
+        "translation-ar": "ببطء"
+      },
+      {
+        "word": "die Suppe",
+        "translation-ru": "суп",
+        "translation-en": "soup",
+        "translation-uk": "суп",
+        "translation-pl": "zupa",
+        "translation-es": "la sopa",
+        "translation-fr": "la soupe",
+        "translation-tr": "çorba",
+        "translation-ro": "supa",
+        "translation-uz": "sho‘rva",
+        "translation-hi": "सूप",
+        "translation-ar": "الحساء"
+      },
+      {
+        "word": "das Wort",
+        "translation-ru": "слово",
+        "translation-en": "word",
+        "translation-uk": "слово",
+        "translation-pl": "słowo",
+        "translation-es": "la palabra",
+        "translation-fr": "le mot",
+        "translation-tr": "kelime",
+        "translation-ro": "cuvântul",
+        "translation-uz": "so‘z",
+        "translation-hi": "शब्द",
+        "translation-ar": "الكلمة"
+      }
+    ],
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "changeRiverNine.questTask1",
+        "options": [
+          "Er fährst schnell Auto.",
+          "Er fahrt schnell Auto.",
+          "Er fährt schnell Auto."
+        ],
+        "answer": "Er fährt schnell Auto.",
+        "tip": "changeRiverNine.questDescription"
+      },
+      {
+        "id": 2,
+        "type": "input",
+        "question": "changeRiverNine.questTask2",
+        "correctAnswer": "isst",
+        "tip": "changeRiverNine.questDescription"
+      },
+      {
+        "id": 3,
+        "type": "input",
+        "question": "changeRiverNine.questTask3",
+        "correctAnswer": "sieht",
+        "tip": "changeRiverNine.questDescription"
+      },
+      {
+        "id": 4,
+        "type": "select",
+        "question": "changeRiverNine.questTask4",
+        "options": [
+          "Du sprechst zu schnell!",
+          "Du spricht zu schnell!",
+          "Du sprichst zu schnell!"
+        ],
+        "answer": "Du sprichst zu schnell!",
+        "tip": "changeRiverNine.questDescription"
+      },
+      {
+        "id": 5,
+        "type": "reorder",
+        "question": "changeRiverNine.questTask5",
+        "words": [
+          "und",
+          "Brot",
+          "Er",
+          "nehmt",
+          "nimmst",
+          "nimmt",
+          "Suppe"
+        ],
+        "correctOrder": [
+          "Er",
+          "nimmt",
+          "Suppe",
+          "und",
+          "Brot"
+        ],
+        "tip": "changeRiverNine.questDescription"
+      },
+      {
+        "id": 6,
+        "type": "select",
+        "question": "changeRiverNine.questTask6",
+        "options": [
+          "Wisst Sie das Wort?",
+          "Wissen Sie das Wort?",
+          "Weiß Sie das Wort?"
+        ],
+        "answer": "Wissen Sie das Wort?",
+        "tip": "changeRiverNine.questDescription"
+      },
+      {
+        "id": 7,
+        "type": "input",
+        "question": "changeRiverNine.questTask7",
+        "correctAnswer": "läuft",
+        "tip": "changeRiverNine.questDescription"
+      },
+      {
+        "id": 8,
+        "type": "select",
+        "question": "changeRiverNine.questTask8",
+        "options": [
+          "Triffst du die Oma?",
+          "Trifft du die Oma?",
+          "Treffst du die Oma?"
+        ],
+        "answer": "Triffst du die Oma?",
+        "tip": "changeRiverNine.questDescription"
+      },
+      {
+        "id": 9,
+        "type": "readAndAnswer",
+        "question": "changeRiverNine.questTask9",
+        "text": "Papa fährt schnell Auto. Opa fährt langsam. Mama fährt nicht Auto, sie nimmt den Bus. Lena fährt Fahrrad.",
+        "options": [
+          "Opa",
+          "Mama",
+          "Papa"
+        ],
+        "answer": "Opa",
+        "tip": "changeRiverNine.questDescription"
+      },
+      {
+        "id": 10,
+        "type": "input",
+        "question": "changeRiverNine.questTask10",
+        "correctAnswer": "Suppe",
+        "tip": "changeRiverNine.questDescription"
+      },
+      {
+        "id": 11,
+        "type": "reorder",
+        "question": "changeRiverNine.questTask11",
+        "words": [
+          "Sie",
+          "sehr",
+          "spricht",
+          "sprich",
+          "sprechen",
+          "langsam"
+        ],
+        "correctOrder": [
+          "Sie",
+          "sprechen",
+          "sehr",
+          "langsam"
+        ],
+        "tip": "changeRiverNine.questDescription"
+      },
+      {
+        "id": 12,
+        "type": "input",
+        "question": "changeRiverNine.questTask12",
+        "correctAnswer": "spricht",
+        "tip": "changeRiverNine.questDescription"
+      },
+      {
+        "id": 13,
+        "type": "select",
+        "question": "changeRiverNine.questTask13",
+        "options": [
+          "Esst ihr zusammen Frühstück?",
+          "Essen ihr zusammen Frühstück?",
+          "Isst ihr zusammen Frühstück?"
+        ],
+        "answer": "Esst ihr zusammen Frühstück?",
+        "tip": "changeRiverNine.questDescription"
+      },
+      {
+        "id": 14,
+        "type": "select",
+        "question": "changeRiverNine.questTask14",
+        "options": [
+          "Ich brauche eine Tüte.",
+          "Ich brauche ein Tüte.",
+          "Ich brauche einen Tüte."
+        ],
+        "answer": "Ich brauche eine Tüte.",
+        "tip": "changeRiverNine.questDescription"
+      },
+      {
+        "id": 15,
+        "type": "reorder",
+        "question": "changeRiverNine.questTask15",
+        "words": [
+          "Ein",
+          "danke",
+          "bitte",
+          "bisschen",
+          "Kaffee",
+          "einen"
+        ],
+        "correctOrder": [
+          "Ein",
+          "bisschen",
+          "Kaffee",
+          "bitte"
+        ],
+        "tip": "changeRiverNine.questDescription"
+      }
+    ]
+  },
+  {
+    "questId": "change-river-ten",
+    "title": "changeRiverTen.questTitle",
+    "progress": "0/15",
+    "description": "changeRiverTen.questDescription",
+    "conditions": {
+      "goal": "changeRiverTen.questGoal",
+      "minCorrect": 15,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
+    "vocabulary": [
+      {
+        "word": "die Reise",
+        "translation-ru": "поездка",
+        "translation-en": "trip, journey",
+        "translation-uk": "подорож",
+        "translation-pl": "podróż",
+        "translation-es": "el viaje",
+        "translation-fr": "le voyage",
+        "translation-tr": "yolculuk",
+        "translation-ro": "călătoria",
+        "translation-uz": "sayohat",
+        "translation-hi": "यात्रा",
+        "translation-ar": "الرحلة"
+      },
+      {
+        "word": "der Koffer",
+        "translation-ru": "чемодан",
+        "translation-en": "suitcase",
+        "translation-uk": "валіза",
+        "translation-pl": "walizka",
+        "translation-es": "la maleta",
+        "translation-fr": "la valise",
+        "translation-tr": "bavul",
+        "translation-ro": "valiza",
+        "translation-uz": "chamadon",
+        "translation-hi": "सूटकेस",
+        "translation-ar": "الحقيبة"
+      },
+      {
+        "word": "das Geschenk",
+        "translation-ru": "подарок",
+        "translation-en": "present",
+        "translation-uk": "подарунок",
+        "translation-pl": "prezent",
+        "translation-es": "el regalo",
+        "translation-fr": "le cadeau",
+        "translation-tr": "hediye",
+        "translation-ro": "cadoul",
+        "translation-uz": "sovg‘a",
+        "translation-hi": "उपहार",
+        "translation-ar": "الهدية"
+      },
+      {
+        "word": "die Nachricht",
+        "translation-ru": "сообщение, новость",
+        "translation-en": "message, news",
+        "translation-uk": "повідомлення",
+        "translation-pl": "wiadomość",
+        "translation-es": "el mensaje",
+        "translation-fr": "le message",
+        "translation-tr": "mesaj, haber",
+        "translation-ro": "mesajul",
+        "translation-uz": "xabar",
+        "translation-hi": "संदेश",
+        "translation-ar": "الرسالة، الخبر"
+      },
+      {
+        "word": "heute",
+        "translation-ru": "сегодня",
+        "translation-en": "today",
+        "translation-uk": "сьогодні",
+        "translation-pl": "dzisiaj",
+        "translation-es": "hoy",
+        "translation-fr": "aujourd’hui",
+        "translation-tr": "bugün",
+        "translation-ro": "azi",
+        "translation-uz": "bugun",
+        "translation-hi": "आज",
+        "translation-ar": "اليوم"
+      }
+    ],
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "changeRiverTen.questTask1",
+        "options": [
+          "Nehmst du den Koffer?",
+          "Nimmst du der Koffer?",
+          "Nimmst du den Koffer?"
+        ],
+        "answer": "Nimmst du den Koffer?",
+        "tip": "changeRiverTen.questDescription"
+      },
+      {
+        "id": 2,
+        "type": "input",
+        "question": "changeRiverTen.questTask2",
+        "correctAnswer": "liest",
+        "tip": "changeRiverTen.questDescription"
+      },
+      {
+        "id": 3,
+        "type": "input",
+        "question": "changeRiverTen.questTask3",
+        "correctAnswer": "fahren",
+        "tip": "changeRiverTen.questDescription"
+      },
+      {
+        "id": 4,
+        "type": "select",
+        "question": "changeRiverTen.questTask4",
+        "options": [
+          "Mama gibt einen Geschenk.",
+          "Mama gebt ein Geschenk.",
+          "Mama gibt ein Geschenk."
+        ],
+        "answer": "Mama gibt ein Geschenk.",
+        "tip": "changeRiverTen.questDescription"
+      },
+      {
+        "id": 5,
+        "type": "reorder",
+        "question": "changeRiverTen.questTask5",
+        "words": [
+          "wisst",
+          "weiß",
+          "die",
+          "Weißt",
+          "Nachricht",
+          "du"
+        ],
+        "correctOrder": [
+          "Weißt",
+          "du",
+          "die",
+          "Nachricht"
+        ],
+        "tip": "changeRiverTen.questDescription"
+      },
+      {
+        "id": 6,
+        "type": "select",
+        "question": "changeRiverTen.questTask6",
+        "options": [
+          "Schlafst ihr im Zug?",
+          "Schläft ihr im Zug?",
+          "Schlaft ihr im Zug?"
+        ],
+        "answer": "Schlaft ihr im Zug?",
+        "tip": "changeRiverTen.questDescription"
+      },
+      {
+        "id": 7,
+        "type": "input",
+        "question": "changeRiverTen.questTask7",
+        "correctAnswer": "Siehst",
+        "tip": "changeRiverTen.questDescription"
+      },
+      {
+        "id": 8,
+        "type": "select",
+        "question": "changeRiverTen.questTask8",
+        "options": [
+          "Anna isst Suppe und Paul essen Fisch.",
+          "Anna isst Suppe und Paul isst Fisch.",
+          "Anna esst Suppe und Paul esst Fisch."
+        ],
+        "answer": "Anna isst Suppe und Paul isst Fisch.",
+        "tip": "changeRiverTen.questDescription"
+      },
+      {
+        "id": 9,
+        "type": "readAndAnswer",
+        "question": "changeRiverTen.questTask9",
+        "text": "Jonas macht heute eine Reise. Er nimmt einen Koffer und ein Buch. Im Zug liest er und schläft ein bisschen. Er spricht kein Deutsch? Doch, er spricht gut Deutsch!",
+        "options": [
+          "ein Fahrrad",
+          "einen Koffer und ein Buch",
+          "nur ein Buch"
+        ],
+        "answer": "einen Koffer und ein Buch",
+        "tip": "changeRiverTen.questDescription"
+      },
+      {
+        "id": 10,
+        "type": "input",
+        "question": "changeRiverTen.questTask10",
+        "correctAnswer": "Reise",
+        "tip": "changeRiverTen.questDescription"
+      },
+      {
+        "id": 11,
+        "type": "reorder",
+        "question": "changeRiverTen.questTask11",
+        "words": [
+          "nicht",
+          "es",
+          "weißt",
+          "weiß",
+          "Er",
+          "wisst",
+          "fragt",
+          "er"
+        ],
+        "correctOrder": [
+          "Er",
+          "weiß",
+          "es",
+          "nicht",
+          "er",
+          "fragt"
+        ],
+        "tip": "changeRiverTen.questDescription"
+      },
+      {
+        "id": 12,
+        "type": "input",
+        "question": "changeRiverTen.questTask12",
+        "correctAnswer": "schläfst",
+        "tip": "changeRiverTen.questDescription"
+      },
+      {
+        "id": 13,
+        "type": "select",
+        "question": "changeRiverTen.questTask13",
+        "options": [
+          "Wir treffen Freunden im Café.",
+          "Wir treffen Freunde im Café.",
+          "Wir trifft Freunde im Café."
+        ],
+        "answer": "Wir treffen Freunde im Café.",
+        "tip": "changeRiverTen.questDescription"
+      },
+      {
+        "id": 14,
+        "type": "select",
+        "question": "changeRiverTen.questTask14",
+        "options": [
+          "Ich habe nicht Koffer.",
+          "Ich habe keinen Koffer.",
+          "Ich habe kein Koffer."
+        ],
+        "answer": "Ich habe keinen Koffer.",
+        "tip": "changeRiverTen.questDescription"
+      },
+      {
+        "id": 15,
+        "type": "reorder",
+        "question": "changeRiverTen.questTask15",
+        "words": [
+          "kostet",
+          "Reise",
+          "die",
+          "den",
+          "Was",
+          "kosten"
+        ],
+        "correctOrder": [
+          "Was",
+          "kostet",
+          "die",
+          "Reise"
+        ],
+        "tip": "changeRiverTen.questDescription"
+      }
+    ]
+  }
+]

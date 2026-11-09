@@ -71,20 +71,6 @@
         "translation-uz": "Firma / Kompaniya"
       },
       {
-        "word": "das Büro",
-        "translation-ru": "Офис / Кабинет",
-        "translation-en": "Office",
-        "translation-uk": "Офіс / Кабінет",
-        "translation-pl": "Biuro",
-        "translation-es": "Oficina / Despacho",
-        "translation-fr": "Bureau",
-        "translation-ar": "مكتب",
-        "translation-hi": "कार्यालय / दफ़्तर",
-        "translation-ro": "Birou",
-        "translation-tr": "Ofis / Büro",
-        "translation-uz": "Ofis / Idora"
-      },
-      {
         "word": "suchen",
         "translation-ru": "Искать",
         "translation-en": "To search / To look for",
@@ -146,7 +132,11 @@
         "id": 1,
         "type": "select",
         "question": "masterLandsFirstQuest.questOne",
-        "options": ["arbeiten", "machen", "gehen"],
+        "options": [
+          "arbeiten",
+          "machen",
+          "gehen"
+        ],
         "answer": "arbeiten"
       },
       {
@@ -160,29 +150,61 @@
         "id": 3,
         "type": "select",
         "question": "masterLandsFirstQuest.questThree",
-        "options": ["der Beruf", "die Arbeit", "das Büro"],
+        "options": [
+          "der Beruf",
+          "die Arbeit",
+          "das Büro"
+        ],
         "answer": "der Beruf"
       },
       {
         "id": 4,
         "type": "reorder",
         "question": "masterLandsFirstQuest.questFour",
-        "words": ["ich", "arbeite", "heute", "bin"],
-        "correctOrder": ["ich", "arbeite", "heute"]
+        "words": [
+          "heute",
+          "Ich",
+          "bin",
+          "arbeite"
+        ],
+        "correctOrder": [
+          "Ich",
+          "arbeite",
+          "heute"
+        ]
       },
       {
         "id": 5,
         "type": "select",
         "question": "masterLandsFirstQuest.questFive",
-        "options": ["die Firma", "die Schule", "das Krankenhaus"],
+        "options": [
+          "die Firma",
+          "die Schule",
+          "das Krankenhaus"
+        ],
         "answer": "die Firma"
       },
       {
         "id": 6,
         "type": "reorder",
         "question": "masterLandsFirstQuest.questSix",
-        "words": ["lange", "arbeite", "bis", "heute", "Uhr", "ich", "18"],
-        "correctOrder": ["ich", "arbeite", "heute", "bis" , "18" , "Uhr"]
+        "words": [
+          "lange",
+          "Uhr",
+          "Ich",
+          "heute",
+          "18",
+          "arbeite",
+          "bis"
+        ],
+        "correctOrder": [
+          "Ich",
+          "arbeite",
+          "heute",
+          "bis",
+          "18",
+          "Uhr"
+        ]
       },
       {
         "id": 7,
@@ -201,7 +223,11 @@
         "id": 9,
         "type": "select",
         "question": "masterLandsFirstQuest.questNine",
-        "options": ["Ich suche Arbeit", "Ich finde Arbeit", "Ich arbeite suchen"],
+        "options": [
+          "Ich suche Arbeit",
+          "Ich finde Arbeit",
+          "Ich arbeite suchen"
+        ],
         "answer": "Ich suche Arbeit"
       },
       {
@@ -214,22 +240,51 @@
         "id": 11,
         "type": "reorder",
         "question": "masterLandsFirstQuest.questEleven",
-        "words": ["Zeit", "ich", "keine", "habe", "kein"],
-        "correctOrder": ["ich", "habe", "keine", "Zeit"]
+        "words": [
+          "Ich",
+          "kein",
+          "keine",
+          "habe",
+          "Zeit"
+        ],
+        "correctOrder": [
+          "Ich",
+          "habe",
+          "keine",
+          "Zeit"
+        ]
       },
       {
         "id": 12,
         "type": "select",
         "question": "masterLandsFirstQuest.questTwelve",
-        "options": ["heute", "morgen", "gestern"],
+        "options": [
+          "heute",
+          "morgen",
+          "gestern"
+        ],
         "answer": "heute"
       },
       {
         "id": 13,
         "type": "reorder",
         "question": "masterLandsFirstQuest.questThirteen",
-        "words": ["nicht" ,"arbeiten", "muss", "habe", "heute" ,"ich", "kann"],
-        "correctOrder": ["ich", "kann", "heute", "nicht", "arbeiten"]
+        "words": [
+          "habe",
+          "nicht",
+          "arbeiten",
+          "Ich",
+          "heute",
+          "kann",
+          "muss"
+        ],
+        "correctOrder": [
+          "Ich",
+          "kann",
+          "heute",
+          "nicht",
+          "arbeiten"
+        ]
       },
       {
         "id": 14,
@@ -242,8 +297,8 @@
         "id": 15,
         "type": "speechToText",
         "question": "masterLandsFirstQuest.questFifteen",
-        "text": "Ich arbeite bei einer Firma",
-        "answer": "Ich arbeite bei einer Firma"
+        "text": "Ich suche Arbeit bei einer Firma",
+        "answer": "Ich suche Arbeit bei einer Firma"
       }
     ]
   },
@@ -373,34 +428,6 @@
         "translation-ro": "Mâine",
         "translation-tr": "Yarın",
         "translation-uz": "Ertaga"
-      },
-      {
-        "word": "gestern",
-        "translation-ru": "Вчера",
-        "translation-en": "Yesterday",
-        "translation-uk": "Вчора",
-        "translation-pl": "Wczoraj",
-        "translation-es": "Ayer",
-        "translation-fr": "Hier",
-        "translation-ar": "أمس / البارحة",
-        "translation-hi": "कल (बीता हुआ)",
-        "translation-ro": "Ieri",
-        "translation-tr": "Dün",
-        "translation-uz": "Kecha"
-      },
-      {
-        "word": "aber",
-        "translation-ru": "Но / Однако",
-        "translation-en": "But / However",
-        "translation-uk": "Але / Проте",
-        "translation-pl": "Ale / Lecz",
-        "translation-es": "Pero",
-        "translation-fr": "Mais",
-        "translation-ar": "لكن",
-        "translation-hi": "लेकिन / पर",
-        "translation-ro": "Dar / Însă",
-        "translation-tr": "Ama / Fakat",
-        "translation-uz": "Ammo / Lekin"
       }
     ],
     "tasks": [
@@ -408,7 +435,11 @@
         "id": 1,
         "type": "select",
         "question": "masterLandsSecondQuest.questOne",
-        "options": ["das Büro", "das Haus", "die Arbeit"],
+        "options": [
+          "das Büro",
+          "das Haus",
+          "die Arbeit"
+        ],
         "answer": "das Büro"
       },
       {
@@ -422,21 +453,40 @@
         "id": 3,
         "type": "select",
         "question": "masterLandsSecondQuest.questThree",
-        "options": ["zu Hause", "im Büro", "in der Firma"],
+        "options": [
+          "zu Hause",
+          "im Büro",
+          "in der Firma"
+        ],
         "answer": "zu Hause"
       },
       {
         "id": 4,
         "type": "reorder",
         "question": "masterLandsSecondQuest.questFour",
-        "words": ["arbeite", "ich", "zu", "Hause", "bin"],
-        "correctOrder": ["ich", "arbeite", "zu", "Hause"]
+        "words": [
+          "Hause",
+          "bin",
+          "zu",
+          "Ich",
+          "arbeite"
+        ],
+        "correctOrder": [
+          "Ich",
+          "arbeite",
+          "zu",
+          "Hause"
+        ]
       },
       {
         "id": 5,
         "type": "select",
         "question": "masterLandsSecondQuest.questFive",
-        "options": ["Wo arbeitest du?", "Was arbeitest du?", "Wie arbeitest du?"],
+        "options": [
+          "Wo arbeitest du?",
+          "Was arbeitest du?",
+          "Wie arbeitest du?"
+        ],
         "answer": "Wo arbeitest du?"
       },
       {
@@ -449,8 +499,19 @@
         "id": 7,
         "type": "reorder",
         "question": "masterLandsSecondQuest.questSeven",
-        "words": ["im", "Büro", "arbeite", "ich", "zu"],
-        "correctOrder": ["ich", "arbeite", "im", "Büro"]
+        "words": [
+          "arbeite",
+          "Büro",
+          "Ich",
+          "zu",
+          "im"
+        ],
+        "correctOrder": [
+          "Ich",
+          "arbeite",
+          "im",
+          "Büro"
+        ]
       },
       {
         "id": 8,
@@ -463,7 +524,11 @@
         "id": 9,
         "type": "select",
         "question": "masterLandsSecondQuest.questNine",
-        "options": ["Ich arbeite nicht im Büro", "Ich nicht arbeite Büro", "Ich arbeite Büro nicht"],
+        "options": [
+          "Ich arbeite nicht im Büro",
+          "Ich nicht arbeite Büro",
+          "Ich arbeite Büro nicht"
+        ],
         "answer": "Ich arbeite nicht im Büro"
       },
       {
@@ -476,22 +541,52 @@
         "id": 11,
         "type": "reorder",
         "question": "masterLandsSecondQuest.questEleven",
-        "words": ["ins", "Büro", "gehe", "ich", "zu"],
-        "correctOrder": ["ich", "gehe", "ins", "Büro"]
+        "words": [
+          "ins",
+          "zu",
+          "gehe",
+          "Ich",
+          "Büro"
+        ],
+        "correctOrder": [
+          "Ich",
+          "gehe",
+          "ins",
+          "Büro"
+        ]
       },
       {
         "id": 12,
         "type": "select",
         "question": "masterLandsSecondQuest.questTwelve",
-        "options": ["heute", "morgen", "gestern"],
+        "options": [
+          "heute",
+          "morgen",
+          "gestern"
+        ],
         "answer": "heute"
       },
       {
         "id": 13,
         "type": "reorder",
         "question": "masterLandsSecondQuest.questThirteen",
-        "words": ["arbeite", "ich", "heute", "zu", "Hause", "aber" , "ins", "bin"],
-        "correctOrder": ["heute", "arbeite", "ich", "zu", "Hause"]
+        "words": [
+          "Hause",
+          "Heute",
+          "zu",
+          "arbeite",
+          "ich",
+          "ins",
+          "bin",
+          "aber"
+        ],
+        "correctOrder": [
+          "Heute",
+          "arbeite",
+          "ich",
+          "zu",
+          "Hause"
+        ]
       },
       {
         "id": 14,
@@ -504,8 +599,22 @@
         "id": 15,
         "type": "reorder",
         "question": "masterLandsSecondQuest.questFifteen",
-        "words": ["morgen", "arbeite", "ich", "im", "Büro", "zu" , "ins"],
-        "correctOrder": ["morgen", "arbeite", "ich", "im", "Büro"]
+        "words": [
+          "Büro",
+          "arbeite",
+          "Morgen",
+          "im",
+          "ins",
+          "ich",
+          "zu"
+        ],
+        "correctOrder": [
+          "Morgen",
+          "arbeite",
+          "ich",
+          "im",
+          "Büro"
+        ]
       }
     ]
   },
@@ -581,20 +690,6 @@
         "translation-uz": "Jamoa"
       },
       {
-        "word": "der Kunde",
-        "translation-ru": "Клиент / Заказчик",
-        "translation-en": "Customer / Client (male)",
-        "translation-uk": "Клієнт / Покупець",
-        "translation-pl": "Klient",
-        "translation-es": "Cliente",
-        "translation-fr": "Client",
-        "translation-ar": "عميل / زبون",
-        "translation-hi": "ग्राहक (पुरुष)",
-        "translation-ro": "Client",
-        "translation-tr": "Müşteri (erkek)",
-        "translation-uz": "Mijoz (erkak)"
-      },
-      {
         "word": "beschäftigt",
         "translation-ru": "Занят / Занятой",
         "translation-en": "Busy / Occupied",
@@ -663,6 +758,20 @@
         "translation-ro": "A fi prezent / A fi de față",
         "translation-tr": "Burada olmak / Var olmak",
         "translation-uz": "Shu yerda bo'lmoq / Mavjud bo'lmoq"
+      },
+      {
+        "word": "gerade",
+        "translation-ru": "только что",
+        "translation-en": "just",
+        "translation-uk": "щойно",
+        "translation-pl": "właśnie",
+        "translation-es": "justo",
+        "translation-fr": "juste",
+        "translation-tr": "az önce",
+        "translation-ro": "tocmai",
+        "translation-uz": "hozirgina",
+        "translation-hi": "अभी अभी",
+        "translation-ar": "للتو"
       }
     ],
     "tasks": [
@@ -670,7 +779,11 @@
         "id": 1,
         "type": "select",
         "question": "masterLandsThirdQuests.questOne",
-        "options": ["der Kollege", "der Kunde", "der Chef"],
+        "options": [
+          "der Kollege",
+          "der Kunde",
+          "der Chef"
+        ],
         "answer": "der Kollege"
       },
       {
@@ -684,36 +797,70 @@
         "id": 3,
         "type": "select",
         "question": "masterLandsThirdQuests.questThree",
-        "options": ["die Kollegin", "die Chefin", "die Kundin"],
+        "options": [
+          "die Kollegin",
+          "die Chefin",
+          "die Kundin"
+        ],
         "answer": "die Kollegin"
       },
       {
         "id": 4,
         "type": "reorder",
         "question": "masterLandsThirdQuests.questFour",
-        "words": ["Kollegin", "meine", "gerade", "ist", "beschäftigt", "mein"],
-        "correctOrder": ["meine", "Kollegin", "ist", "gerade", "beschäftigt"]
+        "words": [
+          "gerade",
+          "ist",
+          "Meine",
+          "mein",
+          "beschäftigt",
+          "Kollegin"
+        ],
+        "correctOrder": [
+          "Meine",
+          "Kollegin",
+          "ist",
+          "gerade",
+          "beschäftigt"
+        ]
       },
       {
         "id": 5,
         "type": "select",
         "question": "masterLandsThirdQuests.questFive",
-        "options": ["das Team", "das Büro", "der Beruf"],
+        "options": [
+          "das Team",
+          "das Büro",
+          "der Beruf"
+        ],
         "answer": "das Team"
       },
       {
         "id": 6,
         "type": "select",
         "question": "masterLandsThirdQuests.questSix",
-        "options": ["Ich arbeite im Team", "Ich arbeite bei Team", "Ich arbeite in Team"],
+        "options": [
+          "Ich arbeite im Team",
+          "Ich arbeite bei Team",
+          "Ich arbeite in Team"
+        ],
         "answer": "Ich arbeite im Team"
       },
       {
         "id": 7,
         "type": "reorder",
         "question": "masterLandsThirdQuests.questSeven",
-        "words": ["zusammen", "arbeiten", "wir", "sind"],
-        "correctOrder": ["wir", "arbeiten", "zusammen"]
+        "words": [
+          "Wir",
+          "zusammen",
+          "sind",
+          "arbeiten"
+        ],
+        "correctOrder": [
+          "Wir",
+          "arbeiten",
+          "zusammen"
+        ]
       },
       {
         "id": 8,
@@ -726,36 +873,71 @@
         "id": 9,
         "type": "select",
         "question": "masterLandsThirdQuests.questNine",
-        "options": ["Der Kollege hilft mir", "Der Kollege helfen mir", "Der hilft Kollege mir"],
+        "options": [
+          "Der Kollege hilft mir",
+          "Der Kollege helfen mir",
+          "Der hilft Kollege mir"
+        ],
         "answer": "Der Kollege hilft mir"
       },
       {
         "id": 10,
         "type": "select",
         "question": "masterLandsThirdQuests.quesTen",
-        "options": ["Ich arbeite allein", "Wir arbeiten zusammen", "Ich arbeite im Team"],
+        "options": [
+          "Ich arbeite allein",
+          "Wir arbeiten zusammen",
+          "Ich arbeite im Team"
+        ],
         "answer": "Ich arbeite allein"
       },
       {
         "id": 11,
         "type": "reorder",
         "question": "masterLandsThirdQuests.quesEleven",
-        "words": ["heute", "mir", "hilft", "meine", "Kollegin", "mich"],
-        "correctOrder": ["meine", "Kollegin", "hilft", "mir", "heute"]
+        "words": [
+          "hilft",
+          "Meine",
+          "Kollegin",
+          "heute",
+          "mich",
+          "mir"
+        ],
+        "correctOrder": [
+          "Meine",
+          "Kollegin",
+          "hilft",
+          "mir",
+          "heute"
+        ]
       },
       {
         "id": 12,
         "type": "select",
         "question": "masterLandsThirdQuests.quesTwelve",
-        "options": ["der Chef", "der Kunde", "der Kollege"],
+        "options": [
+          "der Chef",
+          "der Kunde",
+          "der Kollege"
+        ],
         "answer": "der Chef"
       },
       {
         "id": 13,
         "type": "reorder",
         "question": "masterLandsThirdQuests.quesThirteen",
-        "words": ["Chef", "Der", "ist", "hier"],
-        "correctOrder": ["Der", "Chef", "ist", "hier"]
+        "words": [
+          "Chef",
+          "Der",
+          "ist",
+          "hier"
+        ],
+        "correctOrder": [
+          "Der",
+          "Chef",
+          "ist",
+          "hier"
+        ]
       },
       {
         "id": 14,
@@ -901,20 +1083,6 @@
         "translation-uz": "Hozir / Endi"
       },
       {
-        "word": "weiterarbeiten",
-        "translation-ru": "Продолжать работать",
-        "translation-en": "To continue working",
-        "translation-uk": "Продовжувати працювати",
-        "translation-pl": "Pracować dalej / Kontynuować pracę",
-        "translation-es": "Seguir trabajando / Continuar trabajando",
-        "translation-fr": "Continuer à travailler",
-        "translation-ar": "يواصل العمل / يستمر في العمل",
-        "translation-hi": "काम जारी रखना",
-        "translation-ro": "A continua lucrul",
-        "translation-tr": "Çalışmaya devam etmek",
-        "translation-uz": "Ishlashda davom etmoq"
-      },
-      {
         "word": "wann",
         "translation-ru": "Когда",
         "translation-en": "When",
@@ -934,7 +1102,11 @@
         "id": 1,
         "type": "select",
         "question": "masterLandsFourthQuests.questOne",
-        "options": ["die Zeit", "die Arbeit", "der Beruf"],
+        "options": [
+          "die Zeit",
+          "die Arbeit",
+          "der Beruf"
+        ],
         "answer": "die Zeit"
       },
       {
@@ -948,29 +1120,65 @@
         "id": 3,
         "type": "select",
         "question": "masterLandsFourthQuests.questThree",
-        "options": ["beginnen", "machen", "enden"],
+        "options": [
+          "beginnen",
+          "machen",
+          "enden"
+        ],
         "answer": "beginnen"
       },
       {
         "id": 4,
         "type": "reorder",
         "question": "masterLandsFourthQuests.questFour",
-        "words": ["Uhr", "8", "um", "Arbeit", "meine", "beginne", "ich", "in"],
-        "correctOrder": ["ich", "beginne", "meine", "Arbeit", "um", "8", "Uhr"]
+        "words": [
+          "Uhr",
+          "um",
+          "beginne",
+          "Ich",
+          "Arbeit",
+          "8",
+          "in",
+          "meine"
+        ],
+        "correctOrder": [
+          "Ich",
+          "beginne",
+          "meine",
+          "Arbeit",
+          "um",
+          "8",
+          "Uhr"
+        ]
       },
       {
         "id": 5,
         "type": "select",
         "question": "masterLandsFourthQuests.questFive",
-        "options": ["die Pause", "die Zeit", "der Feierabend"],
+        "options": [
+          "die Pause",
+          "die Zeit",
+          "der Feierabend"
+        ],
         "answer": "die Pause"
       },
       {
         "id": 6,
         "type": "reorder",
         "question": "masterLandsFourthQuests.questSix",
-        "words": ["Pause", "eine", "mache", "ich", "ein"],
-        "correctOrder": ["ich", "mache", "eine", "Pause"]
+        "words": [
+          "eine",
+          "Pause",
+          "ein",
+          "Ich",
+          "mache"
+        ],
+        "correctOrder": [
+          "Ich",
+          "mache",
+          "eine",
+          "Pause"
+        ]
       },
       {
         "id": 7,
@@ -994,7 +1202,11 @@
         "id": 9,
         "type": "select",
         "question": "masterLandsFourthQuests.questNine",
-        "options": ["Ich beginne um acht", "Ich beginne in acht", "Ich beginne acht"],
+        "options": [
+          "Ich beginne um acht",
+          "Ich beginne in acht",
+          "Ich beginne acht"
+        ],
         "answer": "Ich beginne um acht"
       },
       {
@@ -1007,7 +1219,11 @@
         "id": 11,
         "type": "select",
         "question": "masterLandsFourthQuests.questEleven",
-        "options": ["Feierabend machen", "Arbeit enden", "Pause machen"],
+        "options": [
+          "Feierabend machen",
+          "Arbeit enden",
+          "Pause machen"
+        ],
         "answer": "Feierabend machen"
       },
       {
@@ -1020,8 +1236,26 @@
         "id": 13,
         "type": "reorder",
         "question": "masterLandsFourthQuests.questThirteen",
-        "words": ["Feierabend", "im", "ich", "mache", "um", "sechzehn", "Uhr", "heute", "in"],
-        "correctOrder": ["ich", "mache", "heute", "um", "sechzehn", "Uhr", "Feierabend"]
+        "words": [
+          "sechzehn",
+          "mache",
+          "heute",
+          "in",
+          "Uhr",
+          "um",
+          "Ich",
+          "im",
+          "Feierabend"
+        ],
+        "correctOrder": [
+          "Ich",
+          "mache",
+          "heute",
+          "um",
+          "sechzehn",
+          "Uhr",
+          "Feierabend"
+        ]
       },
       {
         "id": 14,
@@ -1137,62 +1371,6 @@
         "translation-ro": "Gata / Terminat",
         "translation-tr": "Hazır / Bitmiş",
         "translation-uz": "Tayyor / Bajarilgan"
-      },
-      {
-        "word": "langsam",
-        "translation-ru": "Медленный / Медленно",
-        "translation-en": "Slow / Slowly",
-        "translation-uk": "Повільний / Повільно",
-        "translation-pl": "Powolny / Powoli",
-        "translation-es": "Lento / Despacio",
-        "translation-fr": "Lent / Lentement",
-        "translation-ar": "بطيء / ببطء",
-        "translation-hi": "धीमा / धीरे",
-        "translation-ro": "Lent / Încet",
-        "translation-tr": "Yavaş / Yavaşça",
-        "translation-uz": "Sekin"
-      },
-      {
-        "word": "melden",
-        "translation-ru": "Сообщать / Давать о себе знать",
-        "translation-en": "To report / To get in touch",
-        "translation-uk": "Повідомляти / Зголошуватися",
-        "translation-pl": "Zgłaszać / Kontaktować się",
-        "translation-es": "Avisar / Reportar / Ponerse en contacto",
-        "translation-fr": "Signaler / Contacter",
-        "translation-ar": "يبلغ / يعلن",
-        "translation-hi": "सूचित करना / संपर्क करना",
-        "translation-ro": "A anunța / A contacta",
-        "translation-tr": "Bildirmek / İletişime geçmek",
-        "translation-uz": "Xabar bermoq / Bog'lanmoq"
-      },
-      {
-        "word": "hören",
-        "translation-ru": "Слышать / Слушать",
-        "translation-en": "To hear / To listen",
-        "translation-uk": "Чути / Слухати",
-        "translation-pl": "Słyszeć / Słuchać",
-        "translation-es": "Oír / Escuchar",
-        "translation-fr": "Entendre / Écouter",
-        "translation-ar": "يسمع",
-        "translation-hi": "सुनना",
-        "translation-ro": "A auzi / A asculta",
-        "translation-tr": "Duymak / Dinlemek",
-        "translation-uz": "Eshitmoq / Tinglamoq"
-      },
-      {
-        "word": "sagen",
-        "translation-ru": "Сказать / Говорить",
-        "translation-en": "To say / To tell",
-        "translation-uk": "Казати / Говорити",
-        "translation-pl": "Mówić / Powiedzieć",
-        "translation-es": "Decir",
-        "translation-fr": "Dire",
-        "translation-ar": "يقول",
-        "translation-hi": "कहना / बोलना",
-        "translation-ro": "A spune / A zice",
-        "translation-tr": "Söylemek",
-        "translation-uz": "Aytmoq / Demoq"
       }
     ],
     "tasks": [
@@ -1200,7 +1378,11 @@
         "id": 1,
         "type": "select",
         "question": "masterLandsFifthQuests.questOne",
-        "options": ["die Aufgabe", "die Pause", "die Zeit"],
+        "options": [
+          "die Aufgabe",
+          "die Pause",
+          "die Zeit"
+        ],
         "answer": "die Aufgabe"
       },
       {
@@ -1214,36 +1396,66 @@
         "id": 3,
         "type": "select",
         "question": "masterLandsFifthQuests.questThree",
-        "options": ["zeigen", "sagen", "hören"],
+        "options": [
+          "zeigen",
+          "sagen",
+          "hören"
+        ],
         "answer": "zeigen"
       },
       {
         "id": 4,
         "type": "reorder",
         "question": "masterLandsFifthQuests.questFour",
-        "words": [ "Sie", "können", "mir", "das", "zeigen"],
-        "correctOrder": ["können", "Sie", "mir", "das", "zeigen"]
+        "words": [
+          "mir",
+          "das",
+          "zeigen",
+          "Können",
+          "Sie"
+        ],
+        "correctOrder": [
+          "Können",
+          "Sie",
+          "mir",
+          "das",
+          "zeigen"
+        ]
       },
       {
         "id": 5,
         "type": "select",
         "question": "masterLandsFifthQuests.questFive",
-        "options": ["helfen", "gehen", "melden"],
+        "options": [
+          "helfen",
+          "gehen",
+          "melden"
+        ],
         "answer": "helfen"
       },
       {
         "id": 6,
         "type": "speechToText",
         "question": "masterLandsFifthQuests.questSix",
-        "text": "ich helfe dir",
-        "answer": "ich helfe dir"
+        "text": "Ich helfe dir",
+        "answer": "Ich helfe dir"
       },
       {
         "id": 7,
         "type": "reorder",
         "question": "masterLandsFifthQuests.questSeven",
-        "words": ["kann", "ich", "helfen", "Ihnen"],
-        "correctOrder": ["ich", "kann", "Ihnen", "helfen"]
+        "words": [
+          "Ich",
+          "Ihnen",
+          "helfen",
+          "kann"
+        ],
+        "correctOrder": [
+          "Ich",
+          "kann",
+          "Ihnen",
+          "helfen"
+        ]
       },
       {
         "id": 8,
@@ -1256,21 +1468,40 @@
         "id": 9,
         "type": "select",
         "question": "masterLandsFifthQuests.questNine",
-        "options": ["dringend", "langsam", "fertig"],
+        "options": [
+          "dringend",
+          "langsam",
+          "fertig"
+        ],
         "answer": "dringend"
       },
       {
         "id": 10,
         "type": "reorder",
         "question": "masterLandsFifthQuests.questTen",
-        "words": [ "Aufgabe","Diese",  "dringend", "ist", "dieser"],
-        "correctOrder": ["Diese", "Aufgabe", "ist", "dringend"]
+        "words": [
+          "Aufgabe",
+          "Diese",
+          "dringend",
+          "ist",
+          "dieser"
+        ],
+        "correctOrder": [
+          "Diese",
+          "Aufgabe",
+          "ist",
+          "dringend"
+        ]
       },
       {
         "id": 11,
         "type": "select",
         "question": "masterLandsFifthQuests.questEleven",
-        "options": ["fertig", "frei", "neu"],
+        "options": [
+          "fertig",
+          "frei",
+          "neu"
+        ],
         "answer": "fertig"
       },
       {
@@ -1283,15 +1514,29 @@
         "id": 13,
         "type": "select",
         "question": "masterLandsFifthQuests.questThirteen",
-        "options": ["erklären", "arbeiten", "sagen"],
+        "options": [
+          "erklären",
+          "arbeiten",
+          "sagen"
+        ],
         "answer": "erklären"
       },
       {
         "id": 14,
         "type": "reorder",
         "question": "masterLandsFifthQuests.questFourteen",
-        "words": ["Sie", "können", "erklären", "das"],
-        "correctOrder": ["können", "Sie", "das", "erklären"]
+        "words": [
+          "erklären",
+          "Können",
+          "Sie",
+          "das"
+        ],
+        "correctOrder": [
+          "Können",
+          "Sie",
+          "das",
+          "erklären"
+        ]
       },
       {
         "id": 15,
@@ -1463,7 +1708,11 @@
         "id": 1,
         "type": "select",
         "question": "masterLandsSixthQuests.questOne",
-        "options": ["das Werkzeug", "die Pause", "das Büro"],
+        "options": [
+          "das Werkzeug",
+          "die Pause",
+          "das Büro"
+        ],
         "answer": "das Werkzeug"
       },
       {
@@ -1477,21 +1726,33 @@
         "id": 3,
         "type": "select",
         "question": "masterLandsSixthQuests.questThree",
-        "options": ["der Gabelstapler", "der Bericht", "die Firma"],
+        "options": [
+          "der Gabelstapler",
+          "der Bericht",
+          "die Firma"
+        ],
         "answer": "der Gabelstapler"
       },
       {
         "id": 4,
         "type": "select",
         "question": "masterLandsSixthQuests.questFour",
-        "options": ["der Hubwagen", "der Tisch", "die Tasche"],
+        "options": [
+          "der Hubwagen",
+          "der Tisch",
+          "die Tasche"
+        ],
         "answer": "der Hubwagen"
       },
       {
         "id": 5,
         "type": "select",
         "question": "masterLandsSixthQuests.questFive",
-        "options": ["die Schutzkleidung", "der Anzug", "die Jacke"],
+        "options": [
+          "die Schutzkleidung",
+          "der Anzug",
+          "die Jacke"
+        ],
         "answer": "die Schutzkleidung"
       },
       {
@@ -1505,14 +1766,22 @@
         "id": 7,
         "type": "select",
         "question": "masterLandsSixthQuests.questSeven",
-        "options": ["das Lager", "das Haus", "der Platz"],
+        "options": [
+          "das Lager",
+          "das Haus",
+          "der Platz"
+        ],
         "answer": "das Lager"
       },
       {
         "id": 8,
         "type": "select",
         "question": "masterLandsSixthQuests.questEight",
-        "options": ["die Palette", "die Zeit", "die Firma"],
+        "options": [
+          "die Palette",
+          "die Zeit",
+          "die Firma"
+        ],
         "answer": "die Palette"
       },
       {
@@ -1533,7 +1802,11 @@
         "id": 11,
         "type": "select",
         "question": "masterLandsSixthQuests.questEleven",
-        "options": ["die Ware", "der Sack", "die Tasche"],
+        "options": [
+          "die Ware",
+          "der Sack",
+          "die Tasche"
+        ],
         "answer": "die Ware"
       },
       {
@@ -1638,20 +1911,6 @@
         "translation-uz": "Juda kech"
       },
       {
-        "word": "zu früh",
-        "translation-ru": "Слишком рано",
-        "translation-en": "Too early",
-        "translation-uk": "Занадто рано",
-        "translation-pl": "Za wcześnie",
-        "translation-es": "Demasiado temprano",
-        "translation-fr": "Trop tôt",
-        "translation-ar": "مبكراً جداً",
-        "translation-hi": "बहुत जल्दी",
-        "translation-ro": "Prea devreme",
-        "translation-tr": "Çok erken",
-        "translation-uz": "Juda erta"
-      },
-      {
         "word": "warten",
         "translation-ru": "Ждать",
         "translation-en": "To wait",
@@ -1706,20 +1965,6 @@
         "translation-ro": "Întotdeauna / Mereu",
         "translation-tr": "Her zaman / Hep",
         "translation-uz": "Har doim / Doimo"
-      },
-      {
-        "word": "manchmal",
-        "translation-ru": "Иногда",
-        "translation-en": "Sometimes",
-        "translation-uk": "Іноді",
-        "translation-pl": "Czasami / Czasem",
-        "translation-es": "A veces",
-        "translation-fr": "Parfois",
-        "translation-ar": "أحياناً",
-        "translation-hi": "कभी-कभी",
-        "translation-ro": "Uneori / Câteodată",
-        "translation-tr": "Bazen",
-        "translation-uz": "Ba'zan / Gohida"
       }
     ],
     "tasks": [
@@ -1727,7 +1972,11 @@
         "id": 1,
         "type": "select",
         "question": "masterLandsSeventhQuests.questOne",
-        "options": ["der Termin", "die Pause", "das Lager"],
+        "options": [
+          "der Termin",
+          "die Pause",
+          "das Lager"
+        ],
         "answer": "der Termin"
       },
       {
@@ -1741,21 +1990,40 @@
         "id": 3,
         "type": "select",
         "question": "masterLandsSeventhQuests.questThree",
-        "options": ["pünktlich", "fertig", "krank"],
+        "options": [
+          "pünktlich",
+          "fertig",
+          "krank"
+        ],
         "answer": "pünktlich"
       },
       {
         "id": 4,
         "type": "reorder",
         "question": "masterLandsSeventhQuests.questFour",
-        "words": ["immer", "pünktlich", "Ich", "komme", "manchmal"],
-        "correctOrder": ["Ich", "komme", "immer", "pünktlich"]
+        "words": [
+          "immer",
+          "pünktlich",
+          "Ich",
+          "komme",
+          "manchmal"
+        ],
+        "correctOrder": [
+          "Ich",
+          "komme",
+          "immer",
+          "pünktlich"
+        ]
       },
       {
         "id": 5,
         "type": "select",
         "question": "masterLandsSeventhQuests.questFive",
-        "options": ["morgen", "heute", "gestern"],
+        "options": [
+          "morgen",
+          "heute",
+          "gestern"
+        ],
         "answer": "morgen"
       },
       {
@@ -1768,8 +2036,19 @@
         "id": 7,
         "type": "reorder",
         "question": "masterLandsSeventhQuests.questSeven",
-        "words": ["LKW", "der", "wann", "kommt","die"],
-        "correctOrder": ["wann", "kommt", "der", "LKW"]
+        "words": [
+          "Wann",
+          "die",
+          "LKW",
+          "der",
+          "kommt"
+        ],
+        "correctOrder": [
+          "Wann",
+          "kommt",
+          "der",
+          "LKW"
+        ]
       },
       {
         "id": 8,
@@ -1786,7 +2065,11 @@
         "id": 9,
         "type": "select",
         "question": "masterLandsSeventhQuests.questNine",
-        "options": ["zu spät", "zu früh", "sofort"],
+        "options": [
+          "zu spät",
+          "zu früh",
+          "sofort"
+        ],
         "answer": "zu spät"
       },
       {
@@ -1799,22 +2082,50 @@
         "id": 11,
         "type": "reorder",
         "question": "masterLandsSeventhQuests.questEleven",
-        "words": ["Minuten", "spät", "ich", "zehn", "komme", "zu"],
-        "correctOrder": ["ich", "komme", "zehn", "Minuten", "zu", "spät"]
+        "words": [
+          "spät",
+          "zehn",
+          "komme",
+          "zu",
+          "Ich",
+          "Minuten"
+        ],
+        "correctOrder": [
+          "Ich",
+          "komme",
+          "zehn",
+          "Minuten",
+          "zu",
+          "spät"
+        ]
       },
       {
         "id": 12,
         "type": "select",
         "question": "masterLandsSeventhQuests.questTwelve",
-        "options": ["warten", "suchen", "bringen"],
+        "options": [
+          "warten",
+          "suchen",
+          "bringen"
+        ],
         "answer": "warten"
       },
       {
         "id": 13,
         "type": "reorder",
         "question": "masterLandsSeventhQuests.questThirteen",
-        "words": ["hier", "Sie", "bitte", "Warten"],
-        "correctOrder": ["Warten", "Sie", "bitte", "hier"]
+        "words": [
+          "hier",
+          "Sie",
+          "bitte",
+          "Warten"
+        ],
+        "correctOrder": [
+          "Warten",
+          "Sie",
+          "bitte",
+          "hier"
+        ]
       },
       {
         "id": 14,
@@ -1827,8 +2138,8 @@
         "id": 15,
         "type": "speechToText",
         "question": "masterLandsSeventhQuests.questFifteen",
-        "text": "ich bin pünktlich",
-        "answer": "ich bin pünktlich"
+        "text": "Ich bin pünktlich",
+        "answer": "Ich bin pünktlich"
       }
     ]
   },
@@ -1932,20 +2243,6 @@
         "translation-uz": "Bo'sh"
       },
       {
-        "word": "leicht",
-        "translation-ru": "Лёгкий / Легко",
-        "translation-en": "Light / Easy",
-        "translation-uk": "Легкий / Легко",
-        "translation-pl": "Lekki / Łatwy",
-        "translation-es": "Ligero / Fácil",
-        "translation-fr": "Léger / Facile",
-        "translation-ar": "خفيف / سهل",
-        "translation-hi": "हल्का / आसान",
-        "translation-ro": "Ușor",
-        "translation-tr": "Hafif / Kolay",
-        "translation-uz": "Yengil / Oson"
-      },
-      {
         "word": "sollen",
         "translation-ru": "Быть должным / Следует",
         "translation-en": "Should / Ought to / Supposed to",
@@ -1958,34 +2255,6 @@
         "translation-ro": "A trebui / A fi de datorie să",
         "translation-tr": "-meli / Gerekmek",
         "translation-uz": "Kerak bo'lmoq / Shart bo'lmoq"
-      },
-      {
-        "word": "holen",
-        "translation-ru": "Приносить / Доставать / Забирать",
-        "translation-en": "To fetch / To get",
-        "translation-uk": "Приносити / Діставати",
-        "translation-pl": "Przynosić / Brać",
-        "translation-es": "Traer / Ir a buscar",
-        "translation-fr": "Aller chercher / Chercher",
-        "translation-ar": "يحضر / يجلب",
-        "translation-hi": "ले आना / जाकर लाना",
-        "translation-ro": "A aduce / A lua",
-        "translation-tr": "Alıp getirmek / Getirmek",
-        "translation-uz": "Olib kelmoq / Bormoq va olib kelmoq"
-      },
-      {
-        "word": "einfach",
-        "translation-ru": "Простой / Просто",
-        "translation-en": "Simple / Simply / Just",
-        "translation-uk": "Простий / Просто",
-        "translation-pl": "Prosty / Po prostu",
-        "translation-es": "Simple / Fácil / Simplemente",
-        "translation-fr": "Simple / Facile / Simplement",
-        "translation-ar": "بسيط / ببساطة",
-        "translation-hi": "सरल / साधारण",
-        "translation-ro": "Simplu",
-        "translation-tr": "Basit / Sade",
-        "translation-uz": "Oddiy / Oson"
       }
     ],
     "tasks": [
@@ -1993,7 +2262,11 @@
         "id": 1,
         "type": "select",
         "question": "masterLandsEightQuests.questOne",
-        "options": ["laden", "laufen", "lesen"],
+        "options": [
+          "laden",
+          "laufen",
+          "lesen"
+        ],
         "answer": "laden"
       },
       {
@@ -2007,21 +2280,39 @@
         "id": 3,
         "type": "select",
         "question": "masterLandsEightQuests.questThree",
-        "options": ["abladen", "anrufen", "aufstehen"],
+        "options": [
+          "abladen",
+          "anrufen",
+          "aufstehen"
+        ],
         "answer": "abladen"
       },
       {
         "id": 4,
         "type": "reorder",
         "question": "masterLandsEightQuests.questFour",
-        "words": ["soll", "Wo", "abladen", "ich"],
-        "correctOrder": ["Wo", "soll", "ich", "abladen"]
+        "words": [
+          "soll",
+          "Wo",
+          "abladen",
+          "ich"
+        ],
+        "correctOrder": [
+          "Wo",
+          "soll",
+          "ich",
+          "abladen"
+        ]
       },
       {
         "id": 5,
         "type": "select",
         "question": "masterLandsEightQuests.questFive",
-        "options": ["schwer", "leicht", "klein"],
+        "options": [
+          "schwer",
+          "leicht",
+          "klein"
+        ],
         "answer": "schwer"
       },
       {
@@ -2034,14 +2325,31 @@
         "id": 7,
         "type": "reorder",
         "question": "masterLandsEightQuests.questSeven",
-        "words": ["zu", "Vorsicht", "schwer", "ist", "einfach", "das"],
-        "correctOrder": ["Vorsicht", "das", "ist", "zu", "schwer"]
+        "words": [
+          "zu",
+          "Vorsicht",
+          "schwer",
+          "ist",
+          "einfach",
+          "das"
+        ],
+        "correctOrder": [
+          "Vorsicht",
+          "das",
+          "ist",
+          "zu",
+          "schwer"
+        ]
       },
       {
         "id": 8,
         "type": "select",
         "question": "masterLandsEightQuests.questEight",
-        "options": ["voll", "leer", "neu"],
+        "options": [
+          "voll",
+          "leer",
+          "neu"
+        ],
         "answer": "voll"
       },
       {
@@ -2054,7 +2362,11 @@
         "id": 10,
         "type": "select",
         "question": "masterLandsEightQuests.questTen",
-        "options": ["heben", "helfen", "holen"],
+        "options": [
+          "heben",
+          "helfen",
+          "holen"
+        ],
         "answer": "heben"
       },
       {
@@ -2081,15 +2393,30 @@
         "id": 14,
         "type": "select",
         "question": "masterLandsEightQuests.questFourteen",
-        "options": ["leer", "voll", "leicht"],
+        "options": [
+          "leer",
+          "voll",
+          "leicht"
+        ],
         "answer": "leer"
       },
       {
         "id": 15,
         "type": "reorder",
         "question": "masterLandsEightQuests.questFifteen",
-        "words": ["ist", "Paket", "leer", "Dieses" , "dieser"],
-        "correctOrder": ["Dieses", "Paket", "ist", "leer"]
+        "words": [
+          "ist",
+          "Paket",
+          "leer",
+          "Dieses",
+          "dieser"
+        ],
+        "correctOrder": [
+          "Dieses",
+          "Paket",
+          "ist",
+          "leer"
+        ]
       }
     ]
   },
@@ -2193,20 +2520,6 @@
         "translation-uz": "Kasal / Bemor"
       },
       {
-        "word": "müde",
-        "translation-ru": "Уставший",
-        "translation-en": "Tired",
-        "translation-uk": "Втомлений",
-        "translation-pl": "Zmęczony",
-        "translation-es": "Cansado",
-        "translation-fr": "Fatigué",
-        "translation-ar": "متعب / مجهد",
-        "translation-hi": "थका हुआ",
-        "translation-ro": "Obosit",
-        "translation-tr": "Yorgun",
-        "translation-uz": "Charchagan"
-      },
-      {
         "word": "bekommen",
         "translation-ru": "Получать",
         "translation-en": "To receive / To get",
@@ -2254,7 +2567,11 @@
         "id": 1,
         "type": "select",
         "question": "masterLandsNineQuests.questOne",
-        "options": ["das Geld", "die Arbeit", "der Termin"],
+        "options": [
+          "das Geld",
+          "die Arbeit",
+          "der Termin"
+        ],
         "answer": "das Geld"
       },
       {
@@ -2268,21 +2585,39 @@
         "id": 3,
         "type": "select",
         "question": "masterLandsNineQuests.questThree",
-        "options": ["der Feierabend", "die Aufgabe", "das Werkzeug"],
+        "options": [
+          "der Feierabend",
+          "die Aufgabe",
+          "das Werkzeug"
+        ],
         "answer": "der Feierabend"
       },
       {
         "id": 4,
         "type": "reorder",
         "question": "masterLandsNineQuests.questFour",
-        "words": ["Feierabend", "jetzt", "habe", "Ich"],
-        "correctOrder": ["Ich", "habe", "jetzt", "Feierabend"]
+        "words": [
+          "Feierabend",
+          "jetzt",
+          "habe",
+          "Ich"
+        ],
+        "correctOrder": [
+          "Ich",
+          "habe",
+          "jetzt",
+          "Feierabend"
+        ]
       },
       {
         "id": 5,
         "type": "select",
         "question": "masterLandsNineQuests.questFive",
-        "options": ["krank", "müde", "fertig"],
+        "options": [
+          "krank",
+          "müde",
+          "fertig"
+        ],
         "answer": "krank"
       },
       {
@@ -2295,8 +2630,18 @@
         "id": 7,
         "type": "reorder",
         "question": "masterLandsNineQuests.questSeven",
-        "words": ["zum", "muss", "Ich", "Arzt"],
-        "correctOrder": ["Ich", "muss", "zum", "Arzt"]
+        "words": [
+          "zum",
+          "muss",
+          "Ich",
+          "Arzt"
+        ],
+        "correctOrder": [
+          "Ich",
+          "muss",
+          "zum",
+          "Arzt"
+        ]
       },
       {
         "id": 8,
@@ -2309,7 +2654,11 @@
         "id": 9,
         "type": "select",
         "question": "masterLandsNineQuests.questNine",
-        "options": ["das Wochenende", "die Woche", "Feierabend"],
+        "options": [
+          "das Wochenende",
+          "die Woche",
+          "Feierabend"
+        ],
         "answer": "das Wochenende"
       },
       {
@@ -2322,22 +2671,46 @@
         "id": 11,
         "type": "select",
         "question": "masterLandsNineQuests.questEleven",
-        "options": ["der Urlaub", "die Arbeit", "das Geld"],
+        "options": [
+          "der Urlaub",
+          "die Arbeit",
+          "das Geld"
+        ],
         "answer": "der Urlaub"
       },
       {
         "id": 12,
         "type": "reorder",
         "question": "masterLandsNineQuests.questTwelve",
-        "words": ["Urlaub", "brauche", "Ich"],
-        "correctOrder": ["Ich", "brauche", "Urlaub"]
+        "words": [
+          "Urlaub",
+          "brauche",
+          "Ich"
+        ],
+        "correctOrder": [
+          "Ich",
+          "brauche",
+          "Urlaub"
+        ]
       },
       {
         "id": 13,
         "type": "reorder",
         "question": "masterLandsNineQuests.questThirteen",
-        "words": ["das", "Geld", "ich", "heute", "Bekomme"],
-        "correctOrder": ["Bekomme", "ich", "heute", "das", "Geld"]
+        "words": [
+          "das",
+          "Geld",
+          "ich",
+          "heute",
+          "Bekomme"
+        ],
+        "correctOrder": [
+          "Bekomme",
+          "ich",
+          "heute",
+          "das",
+          "Geld"
+        ]
       },
       {
         "id": 14,
@@ -2350,8 +2723,8 @@
         "id": 15,
         "type": "speechToText",
         "question": "masterLandsNineQuests.questFifteen",
-        "text": "Ich brauche heute frei",
-        "answer": "Ich brauche heute frei"
+        "text": "Ich habe heute frei",
+        "answer": "Ich habe heute frei"
       }
     ]
   },
@@ -2441,34 +2814,6 @@
         "translation-uz": "Kurak"
       },
       {
-        "word": "der Besen",
-        "translation-ru": "Метла / Веник",
-        "translation-en": "Broom",
-        "translation-uk": "Мітла / Віник",
-        "translation-pl": "Miotła",
-        "translation-es": "Escoba",
-        "translation-fr": "Balai",
-        "translation-ar": "مكنسة",
-        "translation-hi": "झाड़ू",
-        "translation-ro": "Mătură",
-        "translation-tr": "Süpürge",
-        "translation-uz": "Supurgi"
-      },
-      {
-        "word": "der Eimer",
-        "translation-ru": "Ведро",
-        "translation-en": "Bucket / Pail",
-        "translation-uk": "Відро",
-        "translation-pl": "Wiadro",
-        "translation-es": "Cubo / Balde",
-        "translation-fr": "Seau",
-        "translation-ar": "دلو / سطل",
-        "translation-hi": "बाल्टी",
-        "translation-ro": "Găleată",
-        "translation-tr": "Kova",
-        "translation-uz": "Chelak"
-      },
-      {
         "word": "der Arbeitsplatz",
         "translation-ru": "Рабочее место",
         "translation-en": "Workplace / Workstation",
@@ -2516,7 +2861,11 @@
         "id": 1,
         "type": "select",
         "question": "masterLandsTenQuests.questOne",
-        "options": ["der Hammer", "die Schaufel", "die Leiter"],
+        "options": [
+          "der Hammer",
+          "die Schaufel",
+          "die Leiter"
+        ],
         "answer": "der Hammer"
       },
       {
@@ -2530,21 +2879,39 @@
         "id": 3,
         "type": "select",
         "question": "masterLandsTenQuests.questThree",
-        "options": ["der Schraubenzieher", "der Eimer", "der Besen"],
+        "options": [
+          "der Schraubenzieher",
+          "der Eimer",
+          "der Besen"
+        ],
         "answer": "der Schraubenzieher"
       },
       {
         "id": 4,
         "type": "reorder",
         "question": "masterLandsTenQuests.questFour",
-        "words": ["der", "Wo", "Schraubenzieher", "ist"],
-        "correctOrder": ["Wo", "ist", "der", "Schraubenzieher"]
+        "words": [
+          "der",
+          "Wo",
+          "Schraubenzieher",
+          "ist"
+        ],
+        "correctOrder": [
+          "Wo",
+          "ist",
+          "der",
+          "Schraubenzieher"
+        ]
       },
       {
         "id": 5,
         "type": "select",
         "question": "masterLandsTenQuests.questFive",
-        "options": ["die Leiter", "die Weste", "der Helm"],
+        "options": [
+          "die Leiter",
+          "die Weste",
+          "der Helm"
+        ],
         "answer": "die Leiter"
       },
       {
@@ -2557,21 +2924,40 @@
         "id": 7,
         "type": "reorder",
         "question": "masterLandsTenQuests.questSeven",
-        "words": ["hierher", "Leiter", "die", "Bring" , "der"],
-        "correctOrder": ["Bring", "die", "Leiter", "hierher"]
+        "words": [
+          "hierher",
+          "Leiter",
+          "die",
+          "Bring",
+          "der"
+        ],
+        "correctOrder": [
+          "Bring",
+          "die",
+          "Leiter",
+          "hierher"
+        ]
       },
       {
         "id": 8,
         "type": "select",
         "question": "masterLandsTenQuests.questEight",
-        "options": ["die Leiter", "die Weste", "die Bohrmaschine"],
+        "options": [
+          "die Leiter",
+          "die Weste",
+          "die Bohrmaschine"
+        ],
         "answer": "die Bohrmaschine"
       },
       {
         "id": 9,
         "type": "select",
         "question": "masterLandsTenQuests.questNine",
-        "options": ["die Schaufel", "der Besen", "der Eimer"],
+        "options": [
+          "die Schaufel",
+          "der Besen",
+          "der Eimer"
+        ],
         "answer": "die Schaufel"
       },
       {
@@ -2584,15 +2970,31 @@
         "id": 11,
         "type": "select",
         "question": "masterLandsTenQuests.questEleven",
-        "options": ["sauber machen", "kaputt machen", "Pause machen"],
+        "options": [
+          "sauber machen",
+          "kaputt machen",
+          "Pause machen"
+        ],
         "answer": "sauber machen"
       },
       {
         "id": 12,
         "type": "reorder",
         "question": "masterLandsTenQuests.questTwelve",
-        "words": ["sauber", "müssen", "hier", "machen", "Wir"],
-        "correctOrder": ["Wir", "müssen", "hier", "sauber", "machen"]
+        "words": [
+          "sauber",
+          "müssen",
+          "hier",
+          "machen",
+          "Wir"
+        ],
+        "correctOrder": [
+          "Wir",
+          "müssen",
+          "hier",
+          "sauber",
+          "machen"
+        ]
       },
       {
         "id": 13,
@@ -2609,7 +3011,7 @@
         "answer": "Arbeitsplatz aufräumen"
       },
       {
-        "id": 14,
+        "id": 15,
         "type": "speechToText",
         "question": "masterLandsTenQuests.questFifteen",
         "text": "Arbeitsplatz sauber machen",
@@ -2757,20 +3159,6 @@
         "translation-ro": "Atenție!",
         "translation-tr": "Dikkat!",
         "translation-uz": "Diqqat!"
-      },
-      {
-        "word": "später",
-        "translation-ru": "Позже / Потом",
-        "translation-en": "Later",
-        "translation-uk": "Пізніше / Потім",
-        "translation-pl": "Później",
-        "translation-es": "Más tarde / Después",
-        "translation-fr": "Plus tard",
-        "translation-ar": "لاحقاً / بعدين",
-        "translation-hi": "बाद में",
-        "translation-ro": "Mai târziu",
-        "translation-tr": "Daha sonra / Sonra",
-        "translation-uz": "Keyinroq / Keyin"
       }
     ],
     "tasks": [
@@ -2778,8 +3166,12 @@
         "id": 1,
         "type": "select",
         "question": "masterLandsElevenQuests.questOne",
-        "options": ["Langsam", "Schnell", "Später"],
-        "answer": "Schnell"
+        "options": [
+          "langsam",
+          "schnell",
+          "später"
+        ],
+        "answer": "schnell"
       },
       {
         "id": 2,
@@ -2792,21 +3184,41 @@
         "id": 3,
         "type": "select",
         "question": "masterLandsElevenQuests.questThree",
-        "options": ["tragen", "schlafen", "suchen"],
+        "options": [
+          "tragen",
+          "schlafen",
+          "suchen"
+        ],
         "answer": "tragen"
       },
       {
         "id": 4,
         "type": "reorder",
         "question": "masterLandsElevenQuests.questFour",
-        "words": ["tragen", "Hilf", "das", "mir"],
-        "correctOrder": ["Hilf", "mir", "das", "tragen"]
+        "words": [
+          "tragen",
+          "Hilf",
+          "zu",
+          "das",
+          "mir"
+        ],
+        "correctOrder": [
+          "Hilf",
+          "mir",
+          "das",
+          "zu",
+          "tragen"
+        ]
       },
       {
         "id": 5,
         "type": "select",
         "question": "masterLandsElevenQuests.questFive",
-        "options": ["finden", "suchen", "bringen"],
+        "options": [
+          "finden",
+          "suchen",
+          "bringen"
+        ],
         "answer": "suchen"
       },
       {
@@ -2819,8 +3231,20 @@
         "id": 7,
         "type": "reorder",
         "question": "masterLandsElevenQuests.questSeven",
-        "words": ["nicht", "Ich", "finden", "kann", "das"],
-        "correctOrder": ["Ich", "kann", "das", "nicht", "finden"]
+        "words": [
+          "nicht",
+          "Ich",
+          "finden",
+          "kann",
+          "das"
+        ],
+        "correctOrder": [
+          "Ich",
+          "kann",
+          "das",
+          "nicht",
+          "finden"
+        ]
       },
       {
         "id": 8,
@@ -2833,7 +3257,11 @@
         "id": 9,
         "type": "select",
         "question": "masterLandsElevenQuests.questNine",
-        "options": ["Vorsicht", "gefährlich", "Egal"],
+        "options": [
+          "Vorsicht",
+          "gefährlich",
+          "Egal"
+        ],
         "answer": "gefährlich"
       },
       {
@@ -2860,21 +3288,37 @@
         "id": 13,
         "type": "select",
         "question": "masterLandsElevenQuests.questThirteen",
-        "options": ["die Gefahr", "die Hilfe", "die Pause"],
+        "options": [
+          "die Gefahr",
+          "die Hilfe",
+          "die Pause"
+        ],
         "answer": "die Gefahr"
       },
       {
         "id": 14,
         "type": "reorder",
         "question": "masterLandsElevenQuests.questFourteen",
-        "words": ["ist","Lebensgefahr", "Hier"],
-        "correctOrder": ["Hier", "ist", "Lebensgefahr"]
+        "words": [
+          "ist",
+          "Lebensgefahr",
+          "Hier"
+        ],
+        "correctOrder": [
+          "Hier",
+          "ist",
+          "Lebensgefahr"
+        ]
       },
       {
-        "id": 14,
+        "id": 15,
         "type": "select",
         "question": "masterLandsElevenQuests.questFifteen",
-        "options": ["die Sicherheit", "die Arbeit", "die Pause"],
+        "options": [
+          "die Sicherheit",
+          "die Arbeit",
+          "die Pause"
+        ],
         "answer": "die Sicherheit"
       }
     ]
@@ -2921,20 +3365,6 @@
         "translation-ro": "Metru",
         "translation-tr": "Metre",
         "translation-uz": "Metr"
-      },
-      {
-        "word": "das Kilo",
-        "translation-ru": "Килограмм",
-        "translation-en": "Kilo / Kilogram",
-        "translation-uk": "Кілограм / Кіло",
-        "translation-pl": "Kilogram / Kilo",
-        "translation-es": "Kilo / Kilogramo",
-        "translation-fr": "Kilo / Kilogramme",
-        "translation-ar": "كيلو / كيلوغرام",
-        "translation-hi": "किलो / किलोग्राम",
-        "translation-ro": "Kilogram / Kil",
-        "translation-tr": "Kilo / Kilogram",
-        "translation-uz": "Kilo / Kilogramm"
       },
       {
         "word": "der Sack",
@@ -3082,7 +3512,11 @@
         "id": 1,
         "type": "select",
         "question": "masterLandsTwelveQuests.questOne",
-        "options": ["das Stück", "der Meter", "das Kilo"],
+        "options": [
+          "das Stück",
+          "der Meter",
+          "das Kilo"
+        ],
         "answer": "das Stück"
       },
       {
@@ -3100,21 +3534,41 @@
         "id": 3,
         "type": "select",
         "question": "masterLandsTwelveQuests.questThree",
-        "options": ["der Sack", "der Meter", "das Stück"],
+        "options": [
+          "der Sack",
+          "der Meter",
+          "das Stück"
+        ],
         "answer": "der Meter"
       },
       {
         "id": 4,
         "type": "reorder",
         "question": "masterLandsTwelveQuests.questFour",
-        "words": ["lang", "Meter", "drei", "Das", "ist"],
-        "correctOrder": ["Das", "ist", "drei", "Meter", "lang"]
+        "words": [
+          "lang",
+          "Meter",
+          "drei",
+          "Das",
+          "ist"
+        ],
+        "correctOrder": [
+          "Das",
+          "ist",
+          "drei",
+          "Meter",
+          "lang"
+        ]
       },
       {
         "id": 5,
         "type": "select",
         "question": "masterLandsTwelveQuests.questFive",
-        "options": ["die Menge", "die Arbeit", "die Zeit"],
+        "options": [
+          "die Menge",
+          "die Arbeit",
+          "die Zeit"
+        ],
         "answer": "die Menge"
       },
       {
@@ -3128,15 +3582,25 @@
         "id": 7,
         "type": "reorder",
         "question": "masterLandsTwelveQuests.questSeven",
-        "words": ["Säcke", "Bring", "zwei", "noch"],
-        "correctOrder": ["Bring", "noch", "zwei", "Säcke"]
+        "words": [
+          "Säcke",
+          "Bring",
+          "zwei",
+          "noch"
+        ],
+        "correctOrder": [
+          "Bring",
+          "noch",
+          "zwei",
+          "Säcke"
+        ]
       },
       {
         "id": 8,
         "type": "speechToText",
         "question": "masterLandsTwelveQuests.questEight",
-        "text": "Welche Menge? Die Menge ist Zwei",
-        "answer": "Welche Menge? Die Menge ist Zwei",
+        "text": "Welche Menge? Die Menge ist zwei",
+        "answer": "Welche Menge? Die Menge ist zwei",
         "accept": [
           "Welche Menge? Die Menge ist Zwei",
           "Welche Menge? Die Menge ist 2"
@@ -3146,7 +3610,11 @@
         "id": 9,
         "type": "select",
         "question": "masterLandsTwelveQuests.questNine",
-        "options": ["zuerst", "dann", "später"],
+        "options": [
+          "zuerst",
+          "dann",
+          "später"
+        ],
         "answer": "zuerst"
       },
       {
@@ -3170,15 +3638,32 @@
         "id": 12,
         "type": "select",
         "question": "masterLandsTwelveQuests.questTwelve",
-        "options": ["die Hälfte", "alles", "nichts"],
+        "options": [
+          "die Hälfte",
+          "alles",
+          "nichts"
+        ],
         "answer": "die Hälfte"
       },
       {
         "id": 13,
         "type": "reorder",
         "question": "masterLandsTwelveQuests.questThirteen",
-        "words": ["Hälfte", "die", "nur", "Wir", "brauchen", "der"],
-        "correctOrder": ["Wir", "brauchen", "nur", "die", "Hälfte"]
+        "words": [
+          "Hälfte",
+          "die",
+          "nur",
+          "Wir",
+          "brauchen",
+          "der"
+        ],
+        "correctOrder": [
+          "Wir",
+          "brauchen",
+          "nur",
+          "die",
+          "Hälfte"
+        ]
       },
       {
         "id": 14,
@@ -3286,34 +3771,6 @@
         "translation-uz": "Soliq toifasi"
       },
       {
-        "word": "die Steuernummer",
-        "translation-ru": "Налоговый номер / ИНН",
-        "translation-en": "Tax number / Tax ID",
-        "translation-uk": "Податковий номер / ІПН",
-        "translation-pl": "Numer identyfikacji podatkowej (NIP)",
-        "translation-es": "Número de identificación fiscal",
-        "translation-fr": "Numéro fiscal",
-        "translation-ar": "الرقم الضريبي",
-        "translation-hi": "टैक्स नंबर / पैन/कर संख्या",
-        "translation-ro": "Număr de identificare fiscală",
-        "translation-tr": "Vergi numarası",
-        "translation-uz": "Soliq to'lovchining identifikatsiya raqami (STIR)"
-      },
-      {
-        "word": "die Krankenkasse",
-        "translation-ru": "Больничная касса / Медицинская страховка",
-        "translation-en": "Health insurance / Health fund",
-        "translation-uk": "Лікарняна каса / Медичне страхування",
-        "translation-pl": "Kasa chorych / Ubezpieczenie zdrowotne",
-        "translation-es": "Seguro de enfermedad / Caja de salud",
-        "translation-fr": "Caisse d'assurance maladie",
-        "translation-ar": "التأمين الصحي / صندوق التأمين الصحي",
-        "translation-hi": "स्वास्थ्य बीमा कोष",
-        "translation-ro": "Casă de asigurări de sănătate",
-        "translation-tr": "Sağlık sigortası fonu",
-        "translation-uz": "Tibbiy sug'urta jamg'armasi"
-      },
-      {
         "word": "zahlen",
         "translation-ru": "Платить / Оплачивать",
         "translation-en": "To pay",
@@ -3326,34 +3783,6 @@
         "translation-ro": "A plăti",
         "translation-tr": "Ödemek",
         "translation-uz": "To'lamoq"
-      },
-      {
-        "word": "die Gebühr",
-        "translation-ru": "Сбор / Пошлина / Взнос",
-        "translation-en": "Fee / Charge",
-        "translation-uk": "Збір / Мито / Плата",
-        "translation-pl": "Opłata",
-        "translation-es": "Tasa / Cuota / Tarifa",
-        "translation-fr": "Frais / Taxe / Redevance",
-        "translation-ar": "رسوم",
-        "translation-hi": "शुल्क / फीस",
-        "translation-ro": "Taxă / Comision",
-        "translation-tr": "Harç / Ücret",
-        "translation-uz": "To'lov / Boj"
-      },
-      {
-        "word": "der Preis",
-        "translation-ru": "Цена",
-        "translation-en": "Price",
-        "translation-uk": "Ціна",
-        "translation-pl": "Cena",
-        "translation-es": "Precio",
-        "translation-fr": "Prix",
-        "translation-ar": "سعر / ثمن",
-        "translation-hi": "दाम / मूल्य",
-        "translation-ro": "Preț",
-        "translation-tr": "Fiyat",
-        "translation-uz": "Narx"
       }
     ],
     "tasks": [
@@ -3379,21 +3808,38 @@
         "id": 3,
         "type": "select",
         "question": "masterLandsThirteenQuests.questThree",
-        "options": ["das Geld", "das Team", "das Büro"],
+        "options": [
+          "das Geld",
+          "das Team",
+          "das Büro"
+        ],
         "answer": "das Geld"
       },
       {
         "id": 4,
         "type": "reorder",
         "question": "masterLandsThirteenQuests.questFour",
-        "words": ["bekomme", "ich", "Geld" , "bekommen"],
-        "correctOrder": ["ich", "bekomme", "Geld"]
+        "words": [
+          "bekommen",
+          "bekomme",
+          "Geld",
+          "Ich"
+        ],
+        "correctOrder": [
+          "Ich",
+          "bekomme",
+          "Geld"
+        ]
       },
       {
         "id": 5,
         "type": "select",
         "question": "masterLandsThirteenQuests.questFive",
-        "options": ["der Vertrag", "der Termin", "der Beruf"],
+        "options": [
+          "der Vertrag",
+          "der Termin",
+          "der Beruf"
+        ],
         "answer": "der Vertrag"
       },
       {
@@ -3407,8 +3853,20 @@
         "id": 7,
         "type": "reorder",
         "question": "masterLandsThirteenQuests.questSeven",
-        "words": ["habe", "ich", "einen", "Vertrag", "mache", "eine"],
-        "correctOrder": ["ich", "habe", "einen", "Vertrag"]
+        "words": [
+          "Ich",
+          "Vertrag",
+          "einen",
+          "mache",
+          "eine",
+          "habe"
+        ],
+        "correctOrder": [
+          "Ich",
+          "habe",
+          "einen",
+          "Vertrag"
+        ]
       },
       {
         "id": 8,
@@ -3445,21 +3903,43 @@
         "id": 12,
         "type": "select",
         "question": "masterLandsThirteenQuests.questTwelve",
-        "options": ["die Steuern", "die Gebühren", "die Preise"],
+        "options": [
+          "die Steuern",
+          "die Gebühren",
+          "die Preise"
+        ],
         "answer": "die Steuern"
       },
       {
         "id": 13,
         "type": "reorder",
         "question": "masterLandsThirteenQuests.questThirteen",
-        "words": ["ich", "zahle", "Steuern", "in", "Deutschland", "mache", "im"],
-        "correctOrder": ["ich", "zahle", "Steuern", "in", "Deutschland"]
+        "words": [
+          "mache",
+          "Steuern",
+          "im",
+          "Deutschland",
+          "Ich",
+          "zahle",
+          "in"
+        ],
+        "correctOrder": [
+          "Ich",
+          "zahle",
+          "Steuern",
+          "in",
+          "Deutschland"
+        ]
       },
       {
         "id": 14,
         "type": "select",
         "question": "masterLandsThirteenQuests.questFourteen",
-        "options": ["die Steuerklasse", "die Steuernummer", "die Krankenkasse"],
+        "options": [
+          "die Steuerklasse",
+          "die Steuernummer",
+          "die Krankenkasse"
+        ],
         "answer": "die Steuerklasse"
       },
       {
@@ -3487,7 +3967,7 @@
     },
     "rewards": {
       "points": 10,
-      "xp":10
+      "xp": 10
     },
     "vocabulary": [
       {
@@ -3561,34 +4041,6 @@
         "translation-uz": "Xabardor qilmoq / Ma'lumot bermoq"
       },
       {
-        "word": "die Apotheke",
-        "translation-ru": "Аптека",
-        "translation-en": "Pharmacy / Chemist",
-        "translation-uk": "Аптека",
-        "translation-pl": "Apteka",
-        "translation-es": "Farmacia",
-        "translation-fr": "Pharmacie",
-        "translation-ar": "صيدلية",
-        "translation-hi": "दवाखाना / फ़ार्मेसी",
-        "translation-ro": "Farmacie",
-        "translation-tr": "Eczane",
-        "translation-uz": "Dorixona"
-      },
-      {
-        "word": "die Rechnung",
-        "translation-ru": "Счёт (к оплате) / Чек",
-        "translation-en": "Invoice / Bill",
-        "translation-uk": "Рахунок / Чек",
-        "translation-pl": "Rachunek / Faktura",
-        "translation-es": "Factura / Cuenta",
-        "translation-fr": "Facture / Addition",
-        "translation-ar": "فاتورة / حساب",
-        "translation-hi": "बिल / रसीद",
-        "translation-ro": "Factură / Notă de plată",
-        "translation-tr": "Fatura / Hesap",
-        "translation-uz": "Hisob-kitob / Faktura"
-      },
-      {
         "word": "der Tag",
         "translation-ru": "День",
         "translation-en": "Day",
@@ -3629,6 +4081,20 @@
         "translation-ro": "Deoarece / Pentru că",
         "translation-tr": "Çünkü / -dığı için",
         "translation-uz": "Chunki"
+      },
+      {
+        "word": "die Krankenkasse",
+        "translation-ru": "медицинская страховка",
+        "translation-en": "health insurance",
+        "translation-uk": "медичне страхування",
+        "translation-pl": "kasa chorych",
+        "translation-es": "el seguro médico",
+        "translation-fr": "la caisse maladie",
+        "translation-tr": "sağlık sigortası",
+        "translation-ro": "casa de asigurări",
+        "translation-uz": "tibbiy sug‘urta",
+        "translation-hi": "स्वास्थ्य बीमा",
+        "translation-ar": "التأمين الصحي"
       }
     ],
     "tasks": [
@@ -3665,15 +4131,42 @@
         "id": 4,
         "type": "reorder",
         "question": "masterLandsFourteenQuests.questFour",
-        "words": ["muss", "ich", "zum", "Arzt", "gehen", "bin"],
-        "correctOrder": ["ich", "muss", "zum", "Arzt", "gehen"]
+        "words": [
+          "zum",
+          "Ich",
+          "Arzt",
+          "gehen",
+          "bin",
+          "muss"
+        ],
+        "correctOrder": [
+          "Ich",
+          "muss",
+          "zum",
+          "Arzt",
+          "gehen"
+        ]
       },
       {
         "id": 5,
         "type": "reorder",
         "question": "masterLandsFourteenQuests.questFive",
-        "words": ["ich", "melde", "mich", "heute", "krank", "du", "ist"],
-        "correctOrder": ["ich", "melde", "mich", "heute", "krank"]
+        "words": [
+          "mich",
+          "krank",
+          "du",
+          "heute",
+          "ist",
+          "Ich",
+          "melde"
+        ],
+        "correctOrder": [
+          "Ich",
+          "melde",
+          "mich",
+          "heute",
+          "krank"
+        ]
       },
       {
         "id": 6,
@@ -3697,8 +4190,20 @@
         "id": 8,
         "type": "reorder",
         "question": "masterLandsFourteenQuests.questEight",
-        "words": ["hier", "ist", "meine", "Krankschreibung", "das", "sind"],
-        "correctOrder": ["hier", "ist", "meine", "Krankschreibung"]
+        "words": [
+          "das",
+          "Hier",
+          "ist",
+          "sind",
+          "Krankschreibung",
+          "meine"
+        ],
+        "correctOrder": [
+          "Hier",
+          "ist",
+          "meine",
+          "Krankschreibung"
+        ]
       },
       {
         "id": 9,
@@ -3711,8 +4216,22 @@
         "id": 10,
         "type": "reorder",
         "question": "masterLandsFourteenQuests.questTen",
-        "words": ["wie", "lange", "sind", "Sie", "krankgeschrieben", "heute", "du"],
-        "correctOrder": ["wie", "lange", "sind", "Sie", "krankgeschrieben"]
+        "words": [
+          "krankgeschrieben",
+          "heute",
+          "Wie",
+          "du",
+          "lange",
+          "sind",
+          "Sie"
+        ],
+        "correctOrder": [
+          "Wie",
+          "lange",
+          "sind",
+          "Sie",
+          "krankgeschrieben"
+        ]
       },
       {
         "id": 11,
@@ -3740,8 +4259,21 @@
         "id": 13,
         "type": "reorder",
         "question": "masterLandsFourteenQuests.questThirteen",
-        "words": ["ich", "bin", "drei", "Tage", "krankgeschrieben", "habe"],
-        "correctOrder": ["ich", "bin", "drei", "Tage", "krankgeschrieben"]
+        "words": [
+          "Ich",
+          "habe",
+          "bin",
+          "drei",
+          "krankgeschrieben",
+          "Tage"
+        ],
+        "correctOrder": [
+          "Ich",
+          "bin",
+          "drei",
+          "Tage",
+          "krankgeschrieben"
+        ]
       },
       {
         "id": 14,

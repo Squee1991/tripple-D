@@ -153,6 +153,20 @@
         "translation-ro": "Sâmbătă",
         "translation-tr": "Cumartesi",
         "translation-uz": "Shanba"
+      },
+      {
+        "word": "die Hauptstraße",
+        "translation-ru": "главная улица",
+        "translation-en": "main street",
+        "translation-uk": "головна вулиця",
+        "translation-pl": "główna ulica",
+        "translation-es": "la calle principal",
+        "translation-fr": "la rue principale",
+        "translation-tr": "ana cadde",
+        "translation-ro": "strada principală",
+        "translation-uz": "bosh ko‘cha",
+        "translation-hi": "मुख्य सड़क",
+        "translation-ar": "الشارع الرئيسي"
       }
     ],
     "tasks": [
@@ -852,6 +866,34 @@
         "translation-ro": "Loc / Locație",
         "translation-tr": "Yer / Mekan",
         "translation-uz": "Joy / Makon"
+      },
+      {
+        "word": "dekorieren",
+        "translation-ru": "украшать",
+        "translation-en": "to decorate",
+        "translation-uk": "прикрашати",
+        "translation-pl": "dekorować",
+        "translation-es": "decorar",
+        "translation-fr": "décorer",
+        "translation-tr": "süslemek",
+        "translation-ro": "a decora",
+        "translation-uz": "bezamoq",
+        "translation-hi": "सजाना",
+        "translation-ar": "يزين"
+      },
+      {
+        "word": "der Raum",
+        "translation-ru": "Комната / Помещение",
+        "translation-en": "Room / Space",
+        "translation-uk": "Кімната / Приміщення",
+        "translation-pl": "Pokój / Pomieszczenie",
+        "translation-es": "Habitación / Sala / Espacio",
+        "translation-fr": "Pièce / Salle",
+        "translation-tr": "Oda / Mekan",
+        "translation-ro": "Încăpere / Cameră / Spațiu",
+        "translation-uz": "Xona / Bino",
+        "translation-hi": "कमरा / स्थान",
+        "translation-ar": "غرفة / قاعة"
       }
     ],
     "tasks": [
@@ -1534,34 +1576,6 @@
         "translation-uz": "Yangi yil"
       },
       {
-        "word": "die Besserung",
-        "translation-ru": "Выздоровление / Улучшение",
-        "translation-en": "Recovery / Improvement",
-        "translation-uk": "Одужання / Покращення",
-        "translation-pl": "Poprawa (zdrowia)",
-        "translation-es": "Recuperación / Mejoría",
-        "translation-fr": "Rétablissement / Amélioration",
-        "translation-ar": "شفاء / تحسن",
-        "translation-hi": "सुधार / स्वास्थ्य लाभ",
-        "translation-ro": "Însănătoșire / Îmbunătățire",
-        "translation-tr": "İyileşme / Düzelme",
-        "translation-uz": "Tuzalish / Yaxshilanish"
-      },
-      {
-        "word": "die Reise",
-        "translation-ru": "Поездка / Путешествие",
-        "translation-en": "Trip / Journey",
-        "translation-uk": "Поїздка / Подорож",
-        "translation-pl": "Podróż",
-        "translation-es": "Viaje",
-        "translation-fr": "Voyage",
-        "translation-ar": "رحلة / سفر",
-        "translation-hi": "यात्रा / सफ़र",
-        "translation-ro": "Călătorie",
-        "translation-tr": "Seyahat / Yolculuk",
-        "translation-uz": "Sayohat / Safar"
-      },
-      {
         "word": "alles Gute",
         "translation-ru": "Всего наилучшего / Всего доброго",
         "translation-en": "All the best",
@@ -1593,8 +1607,16 @@
         "id": 2,
         "type": "reorder",
         "question": "questsStormCoastsFifthQuests.questTwo",
-        "words": ["Ich", "gern", "komme"],
-        "correctOrder": ["Ich", "komme", "gern"]
+        "words": [
+          "Ich",
+          "gern",
+          "komme"
+        ],
+        "correctOrder": [
+          "Ich",
+          "komme",
+          "gern"
+        ]
       },
       {
         "id": 3,
@@ -1905,6 +1927,34 @@
         "translation-ro": "Aprilie",
         "translation-tr": "Nisan",
         "translation-uz": "Aprel"
+      },
+      {
+        "word": "die E-Mail",
+        "translation-ru": "электронное письмо",
+        "translation-en": "email",
+        "translation-uk": "електронний лист",
+        "translation-pl": "e-mail",
+        "translation-es": "el correo electrónico",
+        "translation-fr": "l’e-mail",
+        "translation-tr": "e-posta",
+        "translation-ro": "e-mailul",
+        "translation-uz": "elektron xat",
+        "translation-hi": "ईमेल",
+        "translation-ar": "البريد الإلكتروني"
+      },
+      {
+        "word": "schreiben",
+        "translation-ru": "писать",
+        "translation-en": "to write",
+        "translation-uk": "писати",
+        "translation-pl": "pisać",
+        "translation-es": "escribir",
+        "translation-fr": "écrire",
+        "translation-tr": "yazmak",
+        "translation-ro": "a scrie",
+        "translation-uz": "yozmoq",
+        "translation-hi": "लिखना",
+        "translation-ar": "يكتب"
       }
     ],
     "tasks": [
@@ -1936,19 +1986,19 @@
         "question": "questsStormCoastsSixQuests.questThird",
         "words": [
           "ist",
-          "Party",
           "Die",
+          "3.",
+          "April",
           "am",
-          "April.",
-          "3"
+          "Party"
         ],
         "correctOrder": [
           "Die",
           "Party",
           "ist",
           "am",
-          "3",
-          "April."
+          "3.",
+          "April"
         ]
       },
       {
@@ -2270,6 +2320,34 @@
         "translation-ro": "Vegetarian",
         "translation-tr": "Vejetaryen",
         "translation-uz": "Vegetarian"
+      },
+      {
+        "word": "der Snack",
+        "translation-ru": "Закуска / Перекус",
+        "translation-en": "Snack",
+        "translation-uk": "Закуска / Перекус",
+        "translation-pl": "Przekąska",
+        "translation-es": "Aperitivo / Snack",
+        "translation-fr": "En-cas / Snack",
+        "translation-tr": "Atıştırmalık",
+        "translation-ro": "Gustare",
+        "translation-uz": "Yengil tamaddi / Snek",
+        "translation-hi": "नाश्ता / स्नैक",
+        "translation-ar": "وجبة خفيفة / تسالي"
+      },
+      {
+        "word": "die Chips",
+        "translation-ru": "Чипсы",
+        "translation-en": "Crisps / Potato chips",
+        "translation-uk": "Чіпси",
+        "translation-pl": "Chipsy",
+        "translation-es": "Patatas fritas / Chips",
+        "translation-fr": "Chips",
+        "translation-tr": "Cips",
+        "translation-ro": "Chipsuri",
+        "translation-uz": "Chips",
+        "translation-hi": "चिप्स",
+        "translation-ar": "رقائق البطاطس / شيبس"
       }
     ],
     "tasks": [
@@ -2361,18 +2439,18 @@
         "question": "questsStormCoastsSevenQuests.questSeven",
         "words": [
           "Ich",
-          "Salate",
-          "und",
-          "Getränke",
           "bringe",
-          "mit"
+          "mit",
+          "Nüsse",
+          "und",
+          "Getränke"
         ],
         "correctOrder": [
           "Ich",
           "bringe",
-          "Salate",
-          "und",
           "Getränke",
+          "und",
+          "Nüsse",
           "mit"
         ]
       },
@@ -2472,21 +2550,6 @@
           "Zucker",
           "oder",
           "ohne"
-        ]
-      },
-      {
-        "id": 16,
-        "type": "reorder",
-        "question": "questsStormCoastsSevenQuests.questSixteen",
-        "words": [
-          "esse",
-          "vegetarisch",
-          "Ich"
-        ],
-        "correctOrder": [
-          "Ich",
-          "esse",
-          "vegetarisch"
         ]
       }
     ]
@@ -2591,20 +2654,6 @@
         "translation-uz": "Sekin / Past (ovoz)"
       },
       {
-        "word": "laut",
-        "translation-ru": "Громкий / Громко",
-        "translation-en": "Loud",
-        "translation-uk": "Голосний / Гучно",
-        "translation-pl": "Głośny / Głośno",
-        "translation-es": "Alto / Ruidoso",
-        "translation-fr": "Fort / Bruyant",
-        "translation-ar": "عالٍ / صاخب",
-        "translation-hi": "ज़ोरदार / तेज़",
-        "translation-ro": "Tare / Zgomotos",
-        "translation-tr": "Yüksek sesli / Gürültülü",
-        "translation-uz": "Baland (ovoz)"
-      },
-      {
         "word": "tanzen",
         "translation-ru": "Танцевать",
         "translation-en": "To dance",
@@ -2687,6 +2736,34 @@
         "translation-ro": "A se termina / A sfârși",
         "translation-tr": "Bitmek / Sona ermek",
         "translation-uz": "Tugamoq / Yakunlanmoq"
+      },
+      {
+        "word": "das Fest",
+        "translation-ru": "праздник",
+        "translation-en": "celebration, party",
+        "translation-uk": "свято",
+        "translation-pl": "święto, przyjęcie",
+        "translation-es": "la fiesta",
+        "translation-fr": "la fête",
+        "translation-tr": "kutlama",
+        "translation-ro": "sărbătoarea",
+        "translation-uz": "bayram",
+        "translation-hi": "उत्सव",
+        "translation-ar": "الحفل"
+      },
+      {
+        "word": "die Kostümparty",
+        "translation-ru": "костюмированная вечеринка",
+        "translation-en": "costume party",
+        "translation-uk": "костюмована вечірка",
+        "translation-pl": "impreza przebierana",
+        "translation-es": "la fiesta de disfraces",
+        "translation-fr": "la fête costumée",
+        "translation-tr": "kostüm partisi",
+        "translation-ro": "petrecerea costumată",
+        "translation-uz": "kostyumli ziyofat",
+        "translation-hi": "कॉस्ट्यूम पार्टी",
+        "translation-ar": "حفلة تنكرية"
       }
     ],
     "tasks": [
