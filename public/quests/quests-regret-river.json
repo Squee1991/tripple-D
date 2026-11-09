@@ -1,0 +1,2581 @@
+[
+  {
+    "questId": "regret-river-one",
+    "title": "regretRiverOne.questTitle",
+    "progress": "0/15",
+    "description": "regretRiverOne.questDescription",
+    "conditions": {
+      "goal": "regretRiverOne.questGoal",
+      "minCorrect": 15,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
+    "vocabulary": [
+      {
+        "word": "der Fehler",
+        "translation-ru": "ошибка",
+        "translation-en": "mistake",
+        "translation-uk": "помилка",
+        "translation-pl": "błąd",
+        "translation-es": "el error",
+        "translation-fr": "l’erreur",
+        "translation-tr": "hata",
+        "translation-ro": "greșeala",
+        "translation-uz": "xato",
+        "translation-hi": "ग़लती",
+        "translation-ar": "الخطأ"
+      },
+      {
+        "word": "sprechen",
+        "translation-ru": "говорить",
+        "translation-en": "to speak",
+        "translation-uk": "говорити",
+        "translation-pl": "mówić",
+        "translation-es": "hablar",
+        "translation-fr": "parler",
+        "translation-tr": "konuşmak",
+        "translation-ro": "a vorbi",
+        "translation-uz": "gapirmoq",
+        "translation-hi": "बोलना",
+        "translation-ar": "يتكلم"
+      },
+      {
+        "word": "anrufen",
+        "translation-ru": "звонить",
+        "translation-en": "to call",
+        "translation-uk": "дзвонити",
+        "translation-pl": "dzwonić",
+        "translation-es": "llamar",
+        "translation-fr": "appeler",
+        "translation-tr": "aramak",
+        "translation-ro": "a suna",
+        "translation-uz": "qo'ng'iroq qilmoq",
+        "translation-hi": "फोन करना",
+        "translation-ar": "يتصل"
+      },
+      {
+        "word": "gestern",
+        "translation-ru": "вчера",
+        "translation-en": "yesterday",
+        "translation-uk": "вчора",
+        "translation-pl": "wczoraj",
+        "translation-es": "ayer",
+        "translation-fr": "hier",
+        "translation-tr": "dün",
+        "translation-ro": "ieri",
+        "translation-uz": "kecha",
+        "translation-hi": "कल",
+        "translation-ar": "أمس"
+      },
+      {
+        "word": "schwimmen",
+        "translation-ru": "плавать",
+        "translation-en": "to swim",
+        "translation-uk": "плавати",
+        "translation-pl": "pływać",
+        "translation-es": "nadar",
+        "translation-fr": "nager",
+        "translation-tr": "yüzmek",
+        "translation-ro": "a înota",
+        "translation-uz": "suzmoq",
+        "translation-hi": "तैरना",
+        "translation-ar": "يسبح"
+      }
+    ],
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "regretRiverOne.questTask1",
+        "options": [
+          "Ich würde dich angerufen.",
+          "Ich hätte dich anrufen.",
+          "Ich hätte dich angerufen."
+        ],
+        "answer": "Ich hätte dich angerufen.",
+        "tip": "regretRiverOne.questDescription"
+      },
+      {
+        "id": 2,
+        "type": "input",
+        "question": "regretRiverOne.questTask2",
+        "correctAnswer": "hätten",
+        "tip": "regretRiverOne.questDescription"
+      },
+      {
+        "id": 3,
+        "type": "input",
+        "question": "regretRiverOne.questTask3",
+        "correctAnswer": "gekauft",
+        "tip": "regretRiverOne.questDescription"
+      },
+      {
+        "id": 4,
+        "type": "reorder",
+        "question": "regretRiverOne.questTask4",
+        "words": [
+          "würde",
+          "geholfen",
+          "Ich",
+          "dir",
+          "hätte"
+        ],
+        "correctOrder": [
+          "Ich",
+          "hätte",
+          "dir",
+          "geholfen"
+        ],
+        "tip": "regretRiverOne.questDescription"
+      },
+      {
+        "id": 5,
+        "type": "select",
+        "question": "regretRiverOne.questTask5",
+        "options": [
+          "Hättest du es ihm sagen?",
+          "Hättest du es ihm gesagt?",
+          "Würdest du es ihm gesagt?"
+        ],
+        "answer": "Hättest du es ihm gesagt?",
+        "tip": "regretRiverOne.questDescription"
+      },
+      {
+        "id": 6,
+        "type": "input",
+        "question": "regretRiverOne.questTask6",
+        "correctAnswer": "hätten",
+        "tip": "regretRiverOne.questDescription"
+      },
+      {
+        "id": 7,
+        "type": "readAndAnswer",
+        "question": "regretRiverOne.questTask7",
+        "text": "Gestern hatte Tom Geburtstag. Lisa hat es vergessen. Sie sagt: „Ich hätte ihm gern ein Geschenk gekauft. Das war ein Fehler.“",
+        "options": [
+          "ihren Termin",
+          "Toms Geburtstag",
+          "das Geschenk"
+        ],
+        "answer": "Toms Geburtstag",
+        "tip": "regretRiverOne.questDescription"
+      },
+      {
+        "id": 8,
+        "type": "input",
+        "question": "regretRiverOne.questTask8",
+        "correctAnswer": "gegessen",
+        "tip": "regretRiverOne.questDescription"
+      },
+      {
+        "id": 9,
+        "type": "reorder",
+        "question": "regretRiverOne.questTask10",
+        "words": [
+          "gesehen",
+          "den",
+          "hätten",
+          "Wir",
+          "würden",
+          "Film"
+        ],
+        "correctOrder": [
+          "Wir",
+          "hätten",
+          "den",
+          "Film",
+          "gesehen"
+        ],
+        "tip": "regretRiverOne.questDescription"
+      },
+      {
+        "id": 10,
+        "type": "select",
+        "question": "regretRiverOne.questTask11",
+        "options": [
+          "Ich würde den Lehrer gefragt.",
+          "Ich hätte den Lehrer gefragt.",
+          "Ich hätte den Lehrer fragen."
+        ],
+        "answer": "Ich hätte den Lehrer gefragt.",
+        "tip": "regretRiverOne.questDescription"
+      },
+      {
+        "id": 11,
+        "type": "input",
+        "question": "wishIslandEight.questTask9",
+        "correctAnswer": "Könnten",
+        "tip": "wishIslandEight.questDescription",
+        "reviewOf": "wish-island-eight",
+        "reviewLand": "wish-island"
+      },
+      {
+        "id": 12,
+        "type": "input",
+        "question": "wishIslandFive.questTask12",
+        "correctAnswer": "hätte",
+        "tip": "wishIslandFive.questDescription",
+        "reviewOf": "wish-island-five",
+        "reviewLand": "wish-island"
+      },
+      {
+        "id": 13,
+        "type": "input",
+        "question": "wishIslandTwo.questTask13",
+        "correctAnswer": "wäre",
+        "tip": "wishIslandTwo.questDescription",
+        "reviewOf": "wish-island-two",
+        "reviewLand": "wish-island"
+      },
+      {
+        "id": 14,
+        "type": "input",
+        "question": "regretRiverOne.questTask14",
+        "correctAnswer": "hätten",
+        "tip": "regretRiverOne.questDescription"
+      },
+      {
+        "id": 15,
+        "type": "input",
+        "question": "regretRiverOne.questTask15",
+        "correctAnswer": "zu",
+        "tip": "regretRiverOne.questDescription"
+      }
+    ]
+  },
+  {
+    "questId": "regret-river-two",
+    "title": "regretRiverTwo.questTitle",
+    "progress": "0/15",
+    "description": "regretRiverTwo.questDescription",
+    "conditions": {
+      "goal": "regretRiverTwo.questGoal",
+      "minCorrect": 15,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
+    "vocabulary": [
+      {
+        "word": "früher",
+        "translation-ru": "раньше",
+        "translation-en": "earlier",
+        "translation-uk": "раніше",
+        "translation-pl": "wcześniej",
+        "translation-es": "antes",
+        "translation-fr": "plus tôt",
+        "translation-tr": "daha erken",
+        "translation-ro": "mai devreme",
+        "translation-uz": "ertaroq",
+        "translation-hi": "पहले",
+        "translation-ar": "أبكر"
+      },
+      {
+        "word": "der Regen",
+        "translation-ru": "дождь",
+        "translation-en": "rain",
+        "translation-uk": "дощ",
+        "translation-pl": "deszcz",
+        "translation-es": "la lluvia",
+        "translation-fr": "la pluie",
+        "translation-tr": "yağmur",
+        "translation-ro": "ploaia",
+        "translation-uz": "yomg‘ir",
+        "translation-hi": "बारिश",
+        "translation-ar": "المطر"
+      },
+      {
+        "word": "was",
+        "translation-ru": "что",
+        "translation-en": "what",
+        "translation-uk": "що",
+        "translation-pl": "co",
+        "translation-es": "qué",
+        "translation-fr": "quoi",
+        "translation-tr": "ne",
+        "translation-ro": "ce",
+        "translation-uz": "nima",
+        "translation-hi": "क्या",
+        "translation-ar": "ماذا"
+      },
+      {
+        "word": "aufstehen",
+        "translation-ru": "вставать",
+        "translation-en": "to get up / stand up",
+        "translation-uk": "вставати",
+        "translation-pl": "wstawać",
+        "translation-es": "levantarse",
+        "translation-fr": "se lever",
+        "translation-tr": "ayağa kalkmak / uyanmak",
+        "translation-ro": "a se scula",
+        "translation-uz": "turmoq",
+        "translation-hi": "उठना",
+        "translation-ar": "ينهض"
+      },
+      {
+        "word": "ihr",
+        "translation-ru": "вы (вы все)",
+        "translation-en": "you (plural)",
+        "translation-uk": "ви (усі)",
+        "translation-pl": "wy",
+        "translation-es": "vosotros",
+        "translation-fr": "vous (pluriel)",
+        "translation-tr": "siz (çoğul)",
+        "translation-ro": "voi",
+        "translation-uz": "sizlar",
+        "translation-hi": "तुम सब",
+        "translation-ar": "أنتم"
+      }
+    ],
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "regretRiverTwo.questTask1",
+        "options": [
+          "Ich würde gekommen.",
+          "Ich hätte gekommen.",
+          "Ich wäre gekommen."
+        ],
+        "answer": "Ich wäre gekommen.",
+        "tip": "regretRiverTwo.questDescription"
+      },
+      {
+        "id": 2,
+        "type": "input",
+        "question": "regretRiverTwo.questTask2",
+        "correctAnswer": "wären",
+        "tip": "regretRiverTwo.questDescription"
+      },
+      {
+        "id": 3,
+        "type": "input",
+        "question": "regretRiverTwo.questTask3",
+        "correctAnswer": "gefahren",
+        "tip": "regretRiverTwo.questDescription"
+      },
+      {
+        "id": 4,
+        "type": "reorder",
+        "question": "regretRiverTwo.questTask4",
+        "words": [
+          "Wärst",
+          "Hättest",
+          "gegangen",
+          "Kino",
+          "du",
+          "ins"
+        ],
+        "correctOrder": [
+          "Wärst",
+          "du",
+          "ins",
+          "Kino",
+          "gegangen"
+        ],
+        "tip": "regretRiverTwo.questDescription"
+      },
+      {
+        "id": 5,
+        "type": "select",
+        "question": "regretRiverTwo.questTask5",
+        "options": [
+          "Er wäre früher aufstehen.",
+          "Er wäre früher aufgestanden.",
+          "Er hätte früher aufgestanden."
+        ],
+        "answer": "Er wäre früher aufgestanden.",
+        "tip": "regretRiverTwo.questDescription"
+      },
+      {
+        "id": 6,
+        "type": "input",
+        "question": "regretRiverTwo.questTask6",
+        "correctAnswer": "wärt",
+        "tip": "regretRiverTwo.questDescription"
+      },
+      {
+        "id": 7,
+        "type": "readAndAnswer",
+        "question": "regretRiverTwo.questTask7",
+        "text": "Am Samstag hat es den ganzen Tag geregnet. Max sagt: „Ohne den Regen wären wir ans Meer gefahren. So sind wir zu Hause geblieben.“",
+        "options": [
+          "Sie sind zu Hause geblieben.",
+          "Sie sind ins Kino gegangen.",
+          "Sie sind ans Meer gefahren."
+        ],
+        "answer": "Sie sind zu Hause geblieben.",
+        "tip": "regretRiverTwo.questDescription"
+      },
+      {
+        "id": 8,
+        "type": "input",
+        "question": "regretRiverTwo.questTask8",
+        "correctAnswer": "geblieben",
+        "tip": "regretRiverTwo.questDescription"
+      },
+      {
+        "id": 9,
+        "type": "reorder",
+        "question": "regretRiverTwo.questTask10",
+        "words": [
+          "Wir",
+          "hätten",
+          "gegangen",
+          "wären",
+          "spazieren"
+        ],
+        "correctOrder": [
+          "Wir",
+          "wären",
+          "spazieren",
+          "gegangen"
+        ],
+        "tip": "regretRiverTwo.questDescription"
+      },
+      {
+        "id": 10,
+        "type": "select",
+        "question": "regretRiverTwo.questTask11",
+        "options": [
+          "Sie wären pünktlich ankommen.",
+          "Sie wären pünktlich angekommen.",
+          "Sie hätten pünktlich angekommen."
+        ],
+        "answer": "Sie wären pünktlich angekommen.",
+        "tip": "regretRiverTwo.questDescription"
+      },
+      {
+        "id": 11,
+        "type": "input",
+        "question": "regretRiverOne.questTask9",
+        "correctAnswer": "Hättest",
+        "tip": "regretRiverOne.questDescription",
+        "reviewOf": "regret-river-one",
+        "reviewLand": "regret-river"
+      },
+      {
+        "id": 12,
+        "type": "input",
+        "question": "wishIslandSix.questTask12",
+        "correctAnswer": "hätte",
+        "tip": "wishIslandSix.questDescription",
+        "reviewOf": "wish-island-six",
+        "reviewLand": "wish-island"
+      },
+      {
+        "id": 13,
+        "type": "input",
+        "question": "wishIslandThree.questTask13",
+        "correctAnswer": "wärst",
+        "tip": "wishIslandThree.questDescription",
+        "reviewOf": "wish-island-three",
+        "reviewLand": "wish-island"
+      },
+      {
+        "id": 14,
+        "type": "input",
+        "question": "regretRiverTwo.questTask14",
+        "correctAnswer": "das",
+        "tip": "regretRiverTwo.questDescription"
+      },
+      {
+        "id": 15,
+        "type": "input",
+        "question": "regretRiverTwo.questTask15",
+        "correctAnswer": "wurde",
+        "tip": "regretRiverTwo.questDescription"
+      }
+    ]
+  },
+  {
+    "questId": "regret-river-three",
+    "title": "regretRiverThree.questTitle",
+    "progress": "0/15",
+    "description": "regretRiverThree.questDescription",
+    "conditions": {
+      "goal": "regretRiverThree.questGoal",
+      "minCorrect": 15,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
+    "vocabulary": [
+      {
+        "word": "gewusst",
+        "translation-ru": "знал (Partizip от wissen)",
+        "translation-en": "known (participle of wissen)",
+        "translation-uk": "знав (Partizip від wissen)",
+        "translation-pl": "wiedział (Partizip od wissen)",
+        "translation-es": "sabido (participio de wissen)",
+        "translation-fr": "su (participe de wissen)",
+        "translation-tr": "bilmiş (wissen’in Partizip’i)",
+        "translation-ro": "știut (participiul lui wissen)",
+        "translation-uz": "bilgan (wissen dan Partizip)",
+        "translation-hi": "जाना (wissen का Partizip)",
+        "translation-ar": "عَلِم (اسم مفعول wissen)"
+      },
+      {
+        "word": "verpassen",
+        "translation-ru": "пропустить, опоздать на",
+        "translation-en": "to miss",
+        "translation-uk": "пропустити, запізнитися на",
+        "translation-pl": "przegapić, spóźnić się na",
+        "translation-es": "perder (el tren)",
+        "translation-fr": "rater",
+        "translation-tr": "kaçırmak",
+        "translation-ro": "a pierde, a rata",
+        "translation-uz": "o‘tkazib yubormoq",
+        "translation-hi": "छूट जाना",
+        "translation-ar": "يفوّت"
+      },
+      {
+        "word": "trotzdem",
+        "translation-ru": "всё равно, несмотря на это",
+        "translation-en": "anyway, nevertheless",
+        "translation-uk": "усе одно, попри це",
+        "translation-pl": "mimo to",
+        "translation-es": "aun así",
+        "translation-fr": "quand même",
+        "translation-tr": "yine de",
+        "translation-ro": "totuși",
+        "translation-uz": "baribir",
+        "translation-hi": "फिर भी",
+        "translation-ar": "ومع ذلك"
+      },
+      {
+        "word": "bringen",
+        "translation-ru": "приносить",
+        "translation-en": "to bring",
+        "translation-uk": "приносити",
+        "translation-pl": "przynosić",
+        "translation-es": "traer",
+        "translation-fr": "apporter",
+        "translation-tr": "getirmek",
+        "translation-ro": "a aduce",
+        "translation-uz": "olib kelmoq",
+        "translation-hi": "लाना",
+        "translation-ar": "يحضر"
+      },
+      {
+        "word": "früher",
+        "translation-ru": "раньше",
+        "translation-en": "in the past, earlier",
+        "translation-uk": "раніше",
+        "translation-pl": "dawniej",
+        "translation-es": "antes",
+        "translation-fr": "autrefois",
+        "translation-tr": "eskiden",
+        "translation-ro": "înainte",
+        "translation-uz": "ilgari",
+        "translation-hi": "पहले",
+        "translation-ar": "في الماضي"
+      }
+    ],
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "regretRiverThree.questTask1",
+        "options": [
+          "Wenn ich das gewusst hätte, hätte ich gekommen.",
+          "Wenn ich das gewusst habe, wäre ich gekommen.",
+          "Wenn ich das gewusst hätte, wäre ich gekommen."
+        ],
+        "answer": "Wenn ich das gewusst hätte, wäre ich gekommen.",
+        "tip": "regretRiverThree.questDescription"
+      },
+      {
+        "id": 2,
+        "type": "input",
+        "question": "regretRiverThree.questTask2",
+        "correctAnswer": "hätte",
+        "tip": "regretRiverThree.questDescription"
+      },
+      {
+        "id": 3,
+        "type": "input",
+        "question": "regretRiverThree.questTask3",
+        "correctAnswer": "wären",
+        "tip": "regretRiverThree.questDescription"
+      },
+      {
+        "id": 4,
+        "type": "reorder",
+        "question": "regretRiverThree.questTask4",
+        "words": [
+          "hättest",
+          "gekommen",
+          "wäre",
+          "du",
+          "Wenn",
+          "hast",
+          "ich",
+          "angerufen"
+        ],
+        "correctOrder": [
+          "Wenn",
+          "du",
+          "angerufen",
+          "hättest",
+          "wäre",
+          "ich",
+          "gekommen"
+        ],
+        "tip": "regretRiverThree.questDescription"
+      },
+      {
+        "id": 5,
+        "type": "select",
+        "question": "regretRiverThree.questTask5",
+        "options": [
+          "Wenn es geregnet hätte, wären wir zu Hause geblieben.",
+          "Wenn es geregnet hat, wären wir zu Hause geblieben.",
+          "Wenn es geregnet hätte, hätten wir zu Hause geblieben."
+        ],
+        "answer": "Wenn es geregnet hätte, wären wir zu Hause geblieben.",
+        "tip": "regretRiverThree.questDescription"
+      },
+      {
+        "id": 6,
+        "type": "input",
+        "question": "regretRiverThree.questTask6",
+        "correctAnswer": "hätte",
+        "tip": "regretRiverThree.questDescription"
+      },
+      {
+        "id": 7,
+        "type": "readAndAnswer",
+        "question": "regretRiverThree.questTask7",
+        "text": "Tim hat den Zug verpasst, weil er zu spät aufgestanden ist. Er sagt: „Wenn ich den Wecker gestellt hätte, hätte ich den Zug erreicht.“",
+        "options": [
+          "Er hatte kein Ticket.",
+          "Er ist zu spät aufgestanden.",
+          "Der Zug war zu früh."
+        ],
+        "answer": "Er ist zu spät aufgestanden.",
+        "tip": "regretRiverThree.questDescription"
+      },
+      {
+        "id": 8,
+        "type": "input",
+        "question": "regretRiverThree.questTask8",
+        "correctAnswer": "gesagt",
+        "tip": "regretRiverThree.questDescription"
+      },
+      {
+        "id": 9,
+        "type": "reorder",
+        "question": "regretRiverThree.questTask10",
+        "words": [
+          "er",
+          "wäre",
+          "ist",
+          "gesehen",
+          "gekommen",
+          "Wenn",
+          "früher",
+          "er",
+          "uns",
+          "hätte"
+        ],
+        "correctOrder": [
+          "Wenn",
+          "er",
+          "früher",
+          "gekommen",
+          "wäre",
+          "hätte",
+          "er",
+          "uns",
+          "gesehen"
+        ],
+        "tip": "regretRiverThree.questDescription"
+      },
+      {
+        "id": 10,
+        "type": "select",
+        "question": "regretRiverThree.questTask11",
+        "options": [
+          "Wenn ich den Schlüssel nicht vergessen hätte, hätte ich die Tür geöffnet.",
+          "Wenn ich den Schlüssel nicht vergessen habe, hätte ich die Tür geöffnet.",
+          "Wenn ich den Schlüssel nicht vergessen hätte, wäre ich die Tür geöffnet."
+        ],
+        "answer": "Wenn ich den Schlüssel nicht vergessen hätte, hätte ich die Tür geöffnet.",
+        "tip": "regretRiverThree.questDescription"
+      },
+      {
+        "id": 11,
+        "type": "input",
+        "question": "regretRiverTwo.questTask9",
+        "correctAnswer": "Wärst",
+        "tip": "regretRiverTwo.questDescription",
+        "reviewOf": "regret-river-two",
+        "reviewLand": "regret-river"
+      },
+      {
+        "id": 12,
+        "type": "input",
+        "question": "wishIslandSeven.questTask12",
+        "correctAnswer": "könntest",
+        "tip": "wishIslandSeven.questDescription",
+        "reviewOf": "wish-island-seven",
+        "reviewLand": "wish-island"
+      },
+      {
+        "id": 13,
+        "type": "input",
+        "question": "wishIslandFour.questTask13",
+        "correctAnswer": "Könnten",
+        "tip": "wishIslandFour.questDescription",
+        "reviewOf": "wish-island-four",
+        "reviewLand": "wish-island"
+      },
+      {
+        "id": 14,
+        "type": "input",
+        "question": "regretRiverThree.questTask14",
+        "correctAnswer": "trotzdem",
+        "tip": "regretRiverThree.questDescription"
+      },
+      {
+        "id": 15,
+        "type": "input",
+        "question": "regretRiverThree.questTask15",
+        "correctAnswer": "um",
+        "tip": "regretRiverThree.questDescription"
+      }
+    ]
+  },
+  {
+    "questId": "regret-river-four",
+    "title": "regretRiverFour.questTitle",
+    "progress": "0/15",
+    "description": "regretRiverFour.questDescription",
+    "conditions": {
+      "goal": "regretRiverFour.questGoal",
+      "minCorrect": 15,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
+    "vocabulary": [
+      {
+        "word": "die Wahrheit",
+        "translation-ru": "правда",
+        "translation-en": "truth",
+        "translation-uk": "правда",
+        "translation-pl": "prawda",
+        "translation-es": "la verdad",
+        "translation-fr": "la vérité",
+        "translation-tr": "gerçek",
+        "translation-ro": "adevărul",
+        "translation-uz": "haqiqat",
+        "translation-hi": "सच",
+        "translation-ar": "الحقيقة"
+      },
+      {
+        "word": "das Konzert",
+        "translation-ru": "концерт",
+        "translation-en": "concert",
+        "translation-uk": "концерт",
+        "translation-pl": "koncert",
+        "translation-es": "el concierto",
+        "translation-fr": "le concert",
+        "translation-tr": "konser",
+        "translation-ro": "concertul",
+        "translation-uz": "konsert",
+        "translation-hi": "संगीत कार्यक्रम",
+        "translation-ar": "الحفلة الموسيقية"
+      },
+      {
+        "word": "Amerika",
+        "translation-ru": "Америка",
+        "translation-en": "America",
+        "translation-uk": "Америка",
+        "translation-pl": "Ameryka",
+        "translation-es": "América",
+        "translation-fr": "l’Amérique",
+        "translation-tr": "Amerika",
+        "translation-ro": "America",
+        "translation-uz": "Amerika",
+        "translation-hi": "अमेरिका",
+        "translation-ar": "أمريكا"
+      },
+      {
+        "word": "damals",
+        "translation-ru": "тогда, в то время",
+        "translation-en": "back then",
+        "translation-uk": "тоді",
+        "translation-pl": "wtedy",
+        "translation-es": "en aquel entonces",
+        "translation-fr": "à l’époque",
+        "translation-tr": "o zamanlar",
+        "translation-ro": "pe atunci",
+        "translation-uz": "o paytda",
+        "translation-hi": "उस समय",
+        "translation-ar": "في ذلك الوقت"
+      },
+      {
+        "word": "die Chance",
+        "translation-ru": "шанс",
+        "translation-en": "chance",
+        "translation-uk": "шанс",
+        "translation-pl": "szansa",
+        "translation-es": "la oportunidad",
+        "translation-fr": "la chance",
+        "translation-tr": "şans",
+        "translation-ro": "șansa",
+        "translation-uz": "imkoniyat",
+        "translation-hi": "मौक़ा",
+        "translation-ar": "الفرصة"
+      }
+    ],
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "regretRiverFour.questTask1",
+        "options": [
+          "Ich wünschte, ich hätte mehr lernen.",
+          "Ich wünschte, ich habe mehr gelernt.",
+          "Ich wünschte, ich hätte mehr gelernt."
+        ],
+        "answer": "Ich wünschte, ich hätte mehr gelernt.",
+        "tip": "regretRiverFour.questDescription"
+      },
+      {
+        "id": 2,
+        "type": "input",
+        "question": "regretRiverFour.questTask2",
+        "correctAnswer": "wäre",
+        "tip": "regretRiverFour.questDescription"
+      },
+      {
+        "id": 3,
+        "type": "input",
+        "question": "regretRiverFour.questTask3",
+        "correctAnswer": "gekauft",
+        "tip": "regretRiverFour.questDescription"
+      },
+      {
+        "id": 4,
+        "type": "reorder",
+        "question": "regretRiverFour.questTask4",
+        "words": [
+          "hätte",
+          "wünschte",
+          "Ich",
+          "angerufen",
+          "dich",
+          "habe",
+          "ich"
+        ],
+        "correctOrder": [
+          "Ich",
+          "wünschte",
+          "ich",
+          "hätte",
+          "dich",
+          "angerufen"
+        ],
+        "tip": "regretRiverFour.questDescription"
+      },
+      {
+        "id": 5,
+        "type": "select",
+        "question": "regretRiverFour.questTask5",
+        "options": [
+          "Ich wünschte, du bist beim Konzert gewesen.",
+          "Ich wünschte, du wärst beim Konzert gewesen.",
+          "Ich wünschte, du hättest beim Konzert gewesen."
+        ],
+        "answer": "Ich wünschte, du wärst beim Konzert gewesen.",
+        "tip": "regretRiverFour.questDescription"
+      },
+      {
+        "id": 6,
+        "type": "input",
+        "question": "regretRiverFour.questTask6",
+        "correctAnswer": "gesagt",
+        "tip": "regretRiverFour.questDescription"
+      },
+      {
+        "id": 7,
+        "type": "readAndAnswer",
+        "question": "regretRiverFour.questTask7",
+        "text": "Opa erzählt: „Als ich jung war, hatte ich die Chance, in Amerika zu arbeiten. Aber ich bin hier geblieben. Ich wünschte, ich wäre damals gefahren.“",
+        "options": [
+          "Er ist nicht nach Amerika gefahren.",
+          "Er hat in Amerika gearbeitet.",
+          "Er war in Amerika."
+        ],
+        "answer": "Er ist nicht nach Amerika gefahren.",
+        "tip": "regretRiverFour.questDescription"
+      },
+      {
+        "id": 8,
+        "type": "input",
+        "question": "regretRiverFour.questTask8",
+        "correctAnswer": "wären",
+        "tip": "regretRiverFour.questDescription"
+      },
+      {
+        "id": 9,
+        "type": "reorder",
+        "question": "regretRiverFour.questTask10",
+        "words": [
+          "Ich",
+          "wünschte",
+          "hätte",
+          "gekommen",
+          "sie",
+          "wäre"
+        ],
+        "correctOrder": [
+          "Ich",
+          "wünschte",
+          "sie",
+          "wäre",
+          "gekommen"
+        ],
+        "tip": "regretRiverFour.questDescription"
+      },
+      {
+        "id": 10,
+        "type": "select",
+        "question": "regretRiverFour.questTask11",
+        "options": [
+          "Ich wünschte, ich hätte den Film sehen.",
+          "Ich wünschte, ich hätte den Film gesehen.",
+          "Ich wünschte, ich wäre den Film gesehen."
+        ],
+        "answer": "Ich wünschte, ich hätte den Film gesehen.",
+        "tip": "regretRiverFour.questDescription"
+      },
+      {
+        "id": 11,
+        "type": "input",
+        "question": "regretRiverThree.questTask9",
+        "correctAnswer": "hätten",
+        "tip": "regretRiverThree.questDescription",
+        "reviewOf": "regret-river-three",
+        "reviewLand": "regret-river"
+      },
+      {
+        "id": 12,
+        "type": "input",
+        "question": "wishIslandEight.questTask12",
+        "correctAnswer": "Rat",
+        "tip": "wishIslandEight.questDescription",
+        "reviewOf": "wish-island-eight",
+        "reviewLand": "wish-island"
+      },
+      {
+        "id": 13,
+        "type": "input",
+        "question": "wishIslandFive.questTask13",
+        "correctAnswer": "könnte",
+        "tip": "wishIslandFive.questDescription",
+        "reviewOf": "wish-island-five",
+        "reviewLand": "wish-island"
+      },
+      {
+        "id": 14,
+        "type": "input",
+        "question": "regretRiverFour.questTask14",
+        "correctAnswer": "dem",
+        "tip": "regretRiverFour.questDescription"
+      },
+      {
+        "id": 15,
+        "type": "input",
+        "question": "regretRiverFour.questTask15",
+        "correctAnswer": "werden",
+        "tip": "regretRiverFour.questDescription"
+      }
+    ]
+  },
+  {
+    "questId": "regret-river-five",
+    "title": "regretRiverFive.questTitle",
+    "progress": "0/15",
+    "description": "regretRiverFive.questDescription",
+    "conditions": {
+      "goal": "regretRiverFive.questGoal",
+      "minCorrect": 15,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
+    "vocabulary": [
+      {
+        "word": "damals",
+        "translation-ru": "тогда, в то время",
+        "translation-en": "back then",
+        "translation-uk": "тоді",
+        "translation-pl": "wtedy",
+        "translation-es": "en aquel entonces",
+        "translation-fr": "à l’époque",
+        "translation-tr": "o zamanlar",
+        "translation-ro": "pe atunci",
+        "translation-uz": "o paytda",
+        "translation-hi": "उस समय",
+        "translation-ar": "في ذلك الوقت"
+      },
+      {
+        "word": "genug",
+        "translation-ru": "достаточно",
+        "translation-en": "enough",
+        "translation-uk": "досить",
+        "translation-pl": "dość",
+        "translation-es": "suficiente",
+        "translation-fr": "assez",
+        "translation-tr": "yeterli",
+        "translation-ro": "destul",
+        "translation-uz": "yetarli",
+        "translation-hi": "काफ़ी",
+        "translation-ar": "كافٍ"
+      },
+      {
+        "word": "nachdem",
+        "translation-ru": "после того как",
+        "translation-en": "after (conjunction)",
+        "translation-uk": "після того як",
+        "translation-pl": "po tym, jak",
+        "translation-es": "después de que",
+        "translation-fr": "après que",
+        "translation-tr": "-dıktan sonra",
+        "translation-ro": "după ce",
+        "translation-uz": "…gandan keyin",
+        "translation-hi": "…के बाद",
+        "translation-ar": "بعد أن"
+      },
+      {
+        "word": "lieber",
+        "translation-ru": "охотнее, больше нравится",
+        "translation-en": "rather, prefer",
+        "translation-uk": "охочіше, більше подобається",
+        "translation-pl": "chętniej, wolę",
+        "translation-es": "preferir, con más gusto",
+        "translation-fr": "plutôt, préférer",
+        "translation-tr": "tercihen, daha çok sevmek",
+        "translation-ro": "mai degrabă, prefer",
+        "translation-uz": "afzal ko‘rib",
+        "translation-hi": "ज़्यादा पसंद से",
+        "translation-ar": "يفضّل"
+      },
+      {
+        "word": "frühstücken",
+        "translation-ru": "завтракать",
+        "translation-en": "to eat breakfast",
+        "translation-uk": "снідати",
+        "translation-pl": "jeść śniadanie",
+        "translation-es": "desayunar",
+        "translation-fr": "petit-déjeuner",
+        "translation-tr": "kahvaltı yapmak",
+        "translation-ro": "a lua micul dejun",
+        "translation-uz": "nonushta qilmoq",
+        "translation-hi": "नाश्ता करना",
+        "translation-ar": "يتناول الفطور"
+      }
+    ],
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "regretRiverFive.questTask1",
+        "options": [
+          "Wenn ich damals Zeit gehabt hätte, würde ich gekommen.",
+          "Wenn ich damals Zeit hätte, wäre ich gekommen.",
+          "Wenn ich damals Zeit gehabt hätte, wäre ich gekommen."
+        ],
+        "answer": "Wenn ich damals Zeit gehabt hätte, wäre ich gekommen.",
+        "tip": "regretRiverFive.questDescription"
+      },
+      {
+        "id": 2,
+        "type": "input",
+        "question": "regretRiverFive.questTask2",
+        "correctAnswer": "würde",
+        "tip": "regretRiverFive.questDescription"
+      },
+      {
+        "id": 3,
+        "type": "input",
+        "question": "regretRiverFive.questTask3",
+        "correctAnswer": "wäre",
+        "tip": "regretRiverFive.questDescription"
+      },
+      {
+        "id": 4,
+        "type": "reorder",
+        "question": "regretRiverFive.questTask4",
+        "words": [
+          "ich",
+          "gewesen",
+          "ich",
+          "würde",
+          "Fußball",
+          "spielen",
+          "wäre",
+          "Wenn",
+          "jünger"
+        ],
+        "correctOrder": [
+          "Wenn",
+          "ich",
+          "jünger",
+          "wäre",
+          "würde",
+          "ich",
+          "Fußball",
+          "spielen"
+        ],
+        "tip": "regretRiverFive.questDescription"
+      },
+      {
+        "id": 5,
+        "type": "select",
+        "question": "regretRiverFive.questTask5",
+        "options": [
+          "Gestern wäre ich gern ins Kino gegangen.",
+          "Gestern hätte ich gern ins Kino gegangen.",
+          "Gestern würde ich gern ins Kino gehen."
+        ],
+        "answer": "Gestern wäre ich gern ins Kino gegangen.",
+        "tip": "regretRiverFive.questDescription"
+      },
+      {
+        "id": 6,
+        "type": "input",
+        "question": "regretRiverFive.questTask6",
+        "correctAnswer": "wäre",
+        "tip": "regretRiverFive.questDescription"
+      },
+      {
+        "id": 7,
+        "type": "readAndAnswer",
+        "question": "regretRiverFive.questTask7",
+        "text": "Lena sagt: „Letztes Jahr hatte ich keine Zeit. Wenn ich Zeit gehabt hätte, wäre ich nach Spanien gefahren. Jetzt habe ich Zeit. Wenn ich genug Geld hätte, würde ich sofort fahren.“",
+        "options": [
+          "genug Geld",
+          "ein Visum",
+          "mehr Zeit"
+        ],
+        "answer": "genug Geld",
+        "tip": "regretRiverFive.questDescription"
+      },
+      {
+        "id": 8,
+        "type": "input",
+        "question": "regretRiverFive.questTask8",
+        "correctAnswer": "hätte",
+        "tip": "regretRiverFive.questDescription"
+      },
+      {
+        "id": 9,
+        "type": "reorder",
+        "question": "regretRiverFive.questTask10",
+        "words": [
+          "ich",
+          "gelesen",
+          "würde",
+          "hätte",
+          "Gestern",
+          "lieber"
+        ],
+        "correctOrder": [
+          "Gestern",
+          "hätte",
+          "ich",
+          "lieber",
+          "gelesen"
+        ],
+        "tip": "regretRiverFive.questDescription"
+      },
+      {
+        "id": 10,
+        "type": "select",
+        "question": "regretRiverFive.questTask11",
+        "options": [
+          "Wenn ich gestern dort gewesen wäre, hätte ich dich gesehen.",
+          "Wenn ich gestern dort gewesen wäre, würde ich dich gesehen.",
+          "Wenn ich gestern dort wäre, hätte ich dich gesehen."
+        ],
+        "answer": "Wenn ich gestern dort gewesen wäre, hätte ich dich gesehen.",
+        "tip": "regretRiverFive.questDescription"
+      },
+      {
+        "id": 11,
+        "type": "input",
+        "question": "regretRiverFour.questTask9",
+        "correctAnswer": "mitgenommen",
+        "tip": "regretRiverFour.questDescription",
+        "reviewOf": "regret-river-four",
+        "reviewLand": "regret-river"
+      },
+      {
+        "id": 12,
+        "type": "input",
+        "question": "regretRiverOne.questTask12",
+        "correctAnswer": "gemacht",
+        "tip": "regretRiverOne.questDescription",
+        "reviewOf": "regret-river-one",
+        "reviewLand": "regret-river"
+      },
+      {
+        "id": 13,
+        "type": "input",
+        "question": "wishIslandSix.questTask13",
+        "correctAnswer": "ist",
+        "tip": "wishIslandSix.questDescription",
+        "reviewOf": "wish-island-six",
+        "reviewLand": "wish-island"
+      },
+      {
+        "id": 14,
+        "type": "input",
+        "question": "regretRiverFive.questTask14",
+        "correctAnswer": "zu",
+        "tip": "regretRiverFive.questDescription"
+      },
+      {
+        "id": 15,
+        "type": "input",
+        "question": "regretRiverFive.questTask15",
+        "correctAnswer": "Nachdem",
+        "tip": "regretRiverFive.questDescription"
+      }
+    ]
+  },
+  {
+    "questId": "regret-river-six",
+    "title": "regretRiverSix.questTitle",
+    "progress": "0/15",
+    "description": "regretRiverSix.questDescription",
+    "conditions": {
+      "goal": "regretRiverSix.questGoal",
+      "minCorrect": 15,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
+    "vocabulary": [
+      {
+        "word": "gewesen",
+        "translation-ru": "был, было (Partizip от sein)",
+        "translation-en": "been (participle of sein)",
+        "translation-uk": "був, було (Partizip від sein)",
+        "translation-pl": "był (Partizip od sein)",
+        "translation-es": "sido (participio de sein)",
+        "translation-fr": "été (participe de sein)",
+        "translation-tr": "olmuş (sein’in Partizip’i)",
+        "translation-ro": "fost (participiul lui sein)",
+        "translation-uz": "bo‘lgan (sein dan Partizip)",
+        "translation-hi": "रहा (sein का Partizip)",
+        "translation-ar": "كان (اسم مفعول sein)"
+      },
+      {
+        "word": "richtig",
+        "translation-ru": "правильно, правильный",
+        "translation-en": "right, correct",
+        "translation-uk": "правильно",
+        "translation-pl": "dobrze, poprawnie",
+        "translation-es": "correcto",
+        "translation-fr": "juste, correct",
+        "translation-tr": "doğru",
+        "translation-ro": "corect",
+        "translation-uz": "to‘g‘ri",
+        "translation-hi": "सही",
+        "translation-ar": "صحيح"
+      },
+      {
+        "word": "andere",
+        "translation-ru": "другой",
+        "translation-en": "other",
+        "translation-uk": "інший",
+        "translation-pl": "inny",
+        "translation-es": "otro",
+        "translation-fr": "autre",
+        "translation-tr": "diğer",
+        "translation-ro": "alt",
+        "translation-uz": "boshqa",
+        "translation-hi": "दूसरा",
+        "translation-ar": "آخر"
+      },
+      {
+        "word": "etwas",
+        "translation-ru": "что-то",
+        "translation-en": "something",
+        "translation-uk": "щось",
+        "translation-pl": "coś",
+        "translation-es": "algo",
+        "translation-fr": "quelque chose",
+        "translation-tr": "bir şey",
+        "translation-ro": "ceva",
+        "translation-uz": "nimadir",
+        "translation-hi": "कुछ",
+        "translation-ar": "شيء ما"
+      },
+      {
+        "word": "die Freunde",
+        "translation-ru": "друзья",
+        "translation-en": "friends",
+        "translation-uk": "друзі",
+        "translation-pl": "przyjaciele",
+        "translation-es": "los amigos",
+        "translation-fr": "les amis",
+        "translation-tr": "arkadaşlar",
+        "translation-ro": "prietenii",
+        "translation-uz": "do‘stlar",
+        "translation-hi": "दोस्त",
+        "translation-ar": "الأصدقاء"
+      }
+    ],
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "regretRiverSix.questTask1",
+        "options": [
+          "Das hätte schön gewesen.",
+          "Das würde schön gewesen.",
+          "Das wäre schön gewesen."
+        ],
+        "answer": "Das wäre schön gewesen.",
+        "tip": "regretRiverSix.questDescription"
+      },
+      {
+        "id": 2,
+        "type": "input",
+        "question": "regretRiverSix.questTask2",
+        "correctAnswer": "wäre",
+        "tip": "regretRiverSix.questDescription"
+      },
+      {
+        "id": 3,
+        "type": "input",
+        "question": "regretRiverSix.questTask3",
+        "correctAnswer": "hätte",
+        "tip": "regretRiverSix.questDescription"
+      },
+      {
+        "id": 4,
+        "type": "reorder",
+        "question": "regretRiverSix.questTask4",
+        "words": [
+          "gewesen",
+          "Fehler",
+          "hätte",
+          "Das",
+          "ein",
+          "wäre"
+        ],
+        "correctOrder": [
+          "Das",
+          "wäre",
+          "ein",
+          "Fehler",
+          "gewesen"
+        ],
+        "tip": "regretRiverSix.questDescription"
+      },
+      {
+        "id": 5,
+        "type": "select",
+        "question": "regretRiverSix.questTask5",
+        "options": [
+          "Ohne dich wäre ich die Prüfung nicht bestanden.",
+          "Ohne dich hätte ich die Prüfung nicht bestehen.",
+          "Ohne dich hätte ich die Prüfung nicht bestanden."
+        ],
+        "answer": "Ohne dich hätte ich die Prüfung nicht bestanden.",
+        "tip": "regretRiverSix.questDescription"
+      },
+      {
+        "id": 6,
+        "type": "input",
+        "question": "regretRiverSix.questTask6",
+        "correctAnswer": "wären",
+        "tip": "regretRiverSix.questDescription"
+      },
+      {
+        "id": 7,
+        "type": "readAndAnswer",
+        "question": "regretRiverSix.questTask7",
+        "text": "Anna hatte zwei Angebote. Sie hat die Stelle in Hamburg gewählt. Heute sagt sie: „Wenn ich nach München gegangen wäre, hätte ich mehr Geld gehabt. Aber hier habe ich viele Freunde. Ich habe alles richtig gemacht.“",
+        "options": [
+          "Sie weiß es nicht.",
+          "Ja, sie ist zufrieden.",
+          "Nein, sie ist traurig."
+        ],
+        "answer": "Ja, sie ist zufrieden.",
+        "tip": "regretRiverSix.questDescription"
+      },
+      {
+        "id": 8,
+        "type": "input",
+        "question": "regretRiverSix.questTask8",
+        "correctAnswer": "geholfen",
+        "tip": "regretRiverSix.questDescription"
+      },
+      {
+        "id": 9,
+        "type": "reorder",
+        "question": "regretRiverSix.questTask10",
+        "words": [
+          "wir",
+          "Karte",
+          "gefunden",
+          "hätten",
+          "Ohne",
+          "nicht",
+          "Weg",
+          "wären",
+          "den"
+        ],
+        "correctOrder": [
+          "Ohne",
+          "Karte",
+          "hätten",
+          "wir",
+          "den",
+          "Weg",
+          "nicht",
+          "gefunden"
+        ],
+        "tip": "regretRiverSix.questDescription"
+      },
+      {
+        "id": 10,
+        "type": "select",
+        "question": "regretRiverSix.questTask11",
+        "options": [
+          "Es wäre besser gewesen, zu Hause bleiben zu.",
+          "Es wäre besser gewesen, zu Hause zu bleiben.",
+          "Es hätte besser gewesen, zu Hause zu bleiben."
+        ],
+        "answer": "Es wäre besser gewesen, zu Hause zu bleiben.",
+        "tip": "regretRiverSix.questDescription"
+      },
+      {
+        "id": 11,
+        "type": "input",
+        "question": "regretRiverFive.questTask9",
+        "correctAnswer": "würde",
+        "tip": "regretRiverFive.questDescription",
+        "reviewOf": "regret-river-five",
+        "reviewLand": "regret-river"
+      },
+      {
+        "id": 12,
+        "type": "input",
+        "question": "regretRiverTwo.questTask12",
+        "correctAnswer": "gegangen",
+        "tip": "regretRiverTwo.questDescription",
+        "reviewOf": "regret-river-two",
+        "reviewLand": "regret-river"
+      },
+      {
+        "id": 13,
+        "type": "input",
+        "question": "wishIslandSeven.questTask13",
+        "correctAnswer": "wäre",
+        "tip": "wishIslandSeven.questDescription",
+        "reviewOf": "wish-island-seven",
+        "reviewLand": "wish-island"
+      },
+      {
+        "id": 14,
+        "type": "input",
+        "question": "regretRiverSix.questTask14",
+        "correctAnswer": "dem",
+        "tip": "regretRiverSix.questDescription"
+      },
+      {
+        "id": 15,
+        "type": "input",
+        "question": "regretRiverSix.questTask15",
+        "correctAnswer": "wurde",
+        "tip": "regretRiverSix.questDescription"
+      }
+    ]
+  },
+  {
+    "questId": "regret-river-seven",
+    "title": "regretRiverSeven.questTitle",
+    "progress": "0/15",
+    "description": "regretRiverSeven.questDescription",
+    "conditions": {
+      "goal": "regretRiverSeven.questGoal",
+      "minCorrect": 15,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
+    "vocabulary": [
+      {
+        "word": "die Einladung",
+        "translation-ru": "приглашение",
+        "translation-en": "invitation",
+        "translation-uk": "запрошення",
+        "translation-pl": "zaproszenie",
+        "translation-es": "la invitación",
+        "translation-fr": "l’invitation",
+        "translation-tr": "davet",
+        "translation-ro": "invitația",
+        "translation-uz": "taklifnoma",
+        "translation-hi": "निमंत्रण",
+        "translation-ar": "الدعوة"
+      },
+      {
+        "word": "verpassen",
+        "translation-ru": "пропустить, упустить",
+        "translation-en": "to miss",
+        "translation-uk": "пропустити",
+        "translation-pl": "przegapić",
+        "translation-es": "perderse",
+        "translation-fr": "rater",
+        "translation-tr": "kaçırmak",
+        "translation-ro": "a rata",
+        "translation-uz": "o‘tkazib yubormoq",
+        "translation-hi": "छूट जाना",
+        "translation-ar": "يفوّت"
+      },
+      {
+        "word": "tanzen",
+        "translation-ru": "танцевать",
+        "translation-en": "to dance",
+        "translation-uk": "танцювати",
+        "translation-pl": "tańczyć",
+        "translation-es": "bailar",
+        "translation-fr": "danser",
+        "translation-tr": "dans etmek",
+        "translation-ro": "a dansa",
+        "translation-uz": "raqsga tushmoq",
+        "translation-hi": "नाचना",
+        "translation-ar": "يرقص"
+      },
+      {
+        "word": "schade",
+        "translation-ru": "жаль",
+        "translation-en": "a pity",
+        "translation-uk": "шкода",
+        "translation-pl": "szkoda",
+        "translation-es": "qué pena",
+        "translation-fr": "dommage",
+        "translation-tr": "yazık",
+        "translation-ro": "păcat",
+        "translation-uz": "afsus",
+        "translation-hi": "अफ़सोस",
+        "translation-ar": "للأسف"
+      },
+      {
+        "word": "die Nachricht",
+        "translation-ru": "сообщение",
+        "translation-en": "message",
+        "translation-uk": "повідомлення",
+        "translation-pl": "wiadomość",
+        "translation-es": "el mensaje",
+        "translation-fr": "le message",
+        "translation-tr": "mesaj",
+        "translation-ro": "mesajul",
+        "translation-uz": "xabar",
+        "translation-hi": "संदेश",
+        "translation-ar": "الرسالة"
+      },
+      {
+        "word": "wunderbar",
+        "translation-ru": "чудесный",
+        "translation-en": "wonderful",
+        "translation-uk": "чудовий",
+        "translation-pl": "wspaniały",
+        "translation-es": "maravilloso",
+        "translation-fr": "merveilleux",
+        "translation-tr": "harika",
+        "translation-ro": "minunat",
+        "translation-uz": "ajoyib",
+        "translation-hi": "अद्भुत",
+        "translation-ar": "رائع"
+      }
+    ],
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "regretRiverSeven.questTask1",
+        "options": [
+          "Wenn ich die Nachricht gelesen hätte, hätte ich gekommen.",
+          "Wenn ich die Nachricht gelesen wäre, wäre ich gekommen.",
+          "Wenn ich die Nachricht gelesen hätte, wäre ich gekommen."
+        ],
+        "answer": "Wenn ich die Nachricht gelesen hätte, wäre ich gekommen.",
+        "tip": "regretRiverSeven.questDescription"
+      },
+      {
+        "id": 2,
+        "type": "input",
+        "question": "regretRiverSeven.questTask2",
+        "correctAnswer": "getanzt",
+        "tip": "regretRiverSeven.questDescription"
+      },
+      {
+        "id": 3,
+        "type": "input",
+        "question": "regretRiverSeven.questTask3",
+        "correctAnswer": "wäre",
+        "tip": "regretRiverSeven.questDescription"
+      },
+      {
+        "id": 4,
+        "type": "reorder",
+        "question": "regretRiverSeven.questTask4",
+        "words": [
+          "die",
+          "verpasst",
+          "Party",
+          "Schade",
+          "haben",
+          "wäre",
+          "wir"
+        ],
+        "correctOrder": [
+          "Schade",
+          "wir",
+          "haben",
+          "die",
+          "Party",
+          "verpasst"
+        ],
+        "tip": "regretRiverSeven.questDescription"
+      },
+      {
+        "id": 5,
+        "type": "select",
+        "question": "regretRiverSeven.questTask5",
+        "options": [
+          "Ich wäre dich angerufen, aber mein Handy war leer.",
+          "Ich hätte dich anrufen, aber mein Handy war leer.",
+          "Ich hätte dich angerufen, aber mein Handy war leer."
+        ],
+        "answer": "Ich hätte dich angerufen, aber mein Handy war leer.",
+        "tip": "regretRiverSeven.questDescription"
+      },
+      {
+        "id": 6,
+        "type": "input",
+        "question": "regretRiverSeven.questTask6",
+        "correctAnswer": "wäre",
+        "tip": "regretRiverSeven.questDescription"
+      },
+      {
+        "id": 7,
+        "type": "readAndAnswer",
+        "question": "regretRiverSeven.questTask7",
+        "text": "Am Samstag hatte Jonas eine Party. Lisa hat die Einladung nicht gesehen, weil sie in einer alten E-Mail war. Sie sagt: „Wenn ich die Einladung gesehen hätte, wäre ich gekommen. Ich hätte so gern getanzt!“",
+        "options": [
+          "Sie hat die Einladung nicht gesehen.",
+          "Sie wollte nicht tanzen.",
+          "Sie war krank."
+        ],
+        "answer": "Sie hat die Einladung nicht gesehen.",
+        "tip": "regretRiverSeven.questDescription"
+      },
+      {
+        "id": 8,
+        "type": "input",
+        "question": "regretRiverSeven.questTask8",
+        "correctAnswer": "hätte",
+        "tip": "regretRiverSeven.questDescription"
+      },
+      {
+        "id": 9,
+        "type": "reorder",
+        "question": "regretRiverSeven.questTask10",
+        "words": [
+          "gebacken",
+          "ich",
+          "ich",
+          "einen",
+          "Wenn",
+          "wäre",
+          "hätte",
+          "Kuchen",
+          "gewusst",
+          "das",
+          "hätte"
+        ],
+        "correctOrder": [
+          "Wenn",
+          "ich",
+          "das",
+          "gewusst",
+          "hätte",
+          "hätte",
+          "ich",
+          "einen",
+          "Kuchen",
+          "gebacken"
+        ],
+        "tip": "regretRiverSeven.questDescription"
+      },
+      {
+        "id": 10,
+        "type": "select",
+        "question": "regretRiverSeven.questTask11",
+        "options": [
+          "Ich wünschte, ich wäre damals mit euch gehen.",
+          "Ich wünschte, ich wäre damals mit euch gegangen.",
+          "Ich wünschte, ich hätte damals mit euch gegangen."
+        ],
+        "answer": "Ich wünschte, ich wäre damals mit euch gegangen.",
+        "tip": "regretRiverSeven.questDescription"
+      },
+      {
+        "id": 11,
+        "type": "input",
+        "question": "regretRiverSix.questTask9",
+        "correctAnswer": "wäre",
+        "tip": "regretRiverSix.questDescription",
+        "reviewOf": "regret-river-six",
+        "reviewLand": "regret-river"
+      },
+      {
+        "id": 12,
+        "type": "input",
+        "question": "regretRiverThree.questTask12",
+        "correctAnswer": "wären",
+        "tip": "regretRiverThree.questDescription",
+        "reviewOf": "regret-river-three",
+        "reviewLand": "regret-river"
+      },
+      {
+        "id": 13,
+        "type": "input",
+        "question": "wishIslandEight.questTask13",
+        "correctAnswer": "würde",
+        "tip": "wishIslandEight.questDescription",
+        "reviewOf": "wish-island-eight",
+        "reviewLand": "wish-island"
+      },
+      {
+        "id": 14,
+        "type": "input",
+        "question": "regretRiverSeven.questTask14",
+        "correctAnswer": "würde",
+        "tip": "regretRiverSeven.questDescription"
+      },
+      {
+        "id": 15,
+        "type": "input",
+        "question": "regretRiverSeven.questTask15",
+        "correctAnswer": "trotzdem",
+        "tip": "regretRiverSeven.questDescription"
+      }
+    ]
+  },
+  {
+    "questId": "regret-river-eight",
+    "title": "regretRiverEight.questTitle",
+    "progress": "0/15",
+    "description": "regretRiverEight.questDescription",
+    "conditions": {
+      "goal": "regretRiverEight.questGoal",
+      "minCorrect": 15,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
+    "vocabulary": [
+      {
+        "word": "die Prüfung",
+        "translation-ru": "экзамен",
+        "translation-en": "exam",
+        "translation-uk": "іспит",
+        "translation-pl": "egzamin",
+        "translation-es": "el examen",
+        "translation-fr": "l’examen",
+        "translation-tr": "sınav",
+        "translation-ro": "examenul",
+        "translation-uz": "imtihon",
+        "translation-hi": "परीक्षा",
+        "translation-ar": "الامتحان"
+      },
+      {
+        "word": "bestehen",
+        "translation-ru": "сдать (экзамен)",
+        "translation-en": "to pass",
+        "translation-uk": "скласти",
+        "translation-pl": "zdać",
+        "translation-es": "aprobar",
+        "translation-fr": "réussir",
+        "translation-tr": "geçmek",
+        "translation-ro": "a lua (examenul)",
+        "translation-uz": "topshirmoq",
+        "translation-hi": "पास करना",
+        "translation-ar": "ينجح"
+      },
+      {
+        "word": "üben",
+        "translation-ru": "упражняться",
+        "translation-en": "to practise",
+        "translation-uk": "вправлятися",
+        "translation-pl": "ćwiczyć",
+        "translation-es": "practicar",
+        "translation-fr": "s’entraîner",
+        "translation-tr": "alıştırma yapmak",
+        "translation-ro": "a exersa",
+        "translation-uz": "mashq qilmoq",
+        "translation-hi": "अभ्यास करना",
+        "translation-ar": "يتدرب"
+      },
+      {
+        "word": "nervös",
+        "translation-ru": "нервный, взволнованный",
+        "translation-en": "nervous",
+        "translation-uk": "нервовий",
+        "translation-pl": "zdenerwowany",
+        "translation-es": "nervioso",
+        "translation-fr": "nerveux",
+        "translation-tr": "gergin",
+        "translation-ro": "nervos",
+        "translation-uz": "asabiy",
+        "translation-hi": "घबराया हुआ",
+        "translation-ar": "متوتر"
+      },
+      {
+        "word": "die Aufgabe",
+        "translation-ru": "задание",
+        "translation-en": "task",
+        "translation-uk": "завдання",
+        "translation-pl": "zadanie",
+        "translation-es": "la tarea",
+        "translation-fr": "l’exercice",
+        "translation-tr": "görev, soru",
+        "translation-ro": "sarcina",
+        "translation-uz": "topshiriq",
+        "translation-hi": "काम, सवाल",
+        "translation-ar": "المهمة"
+      },
+      {
+        "word": "mitfahren",
+        "translation-ru": "ехать вместе",
+        "translation-en": "to go along",
+        "translation-uk": "їхати разом",
+        "translation-pl": "jechać razem",
+        "translation-es": "ir también",
+        "translation-fr": "accompagner",
+        "translation-tr": "birlikte gitmek",
+        "translation-ro": "a merge cu",
+        "translation-uz": "birga bormoq",
+        "translation-hi": "साथ जाना",
+        "translation-ar": "يرافق"
+      },
+      {
+        "word": "korrigieren",
+        "translation-ru": "исправлять",
+        "translation-en": "to correct",
+        "translation-uk": "виправляти",
+        "translation-pl": "poprawiać",
+        "translation-es": "corregir",
+        "translation-fr": "corriger",
+        "translation-tr": "düzeltmek",
+        "translation-ro": "a corecta",
+        "translation-uz": "to'g'rilamoq",
+        "translation-hi": "सही करना",
+        "translation-ar": "يصحح"
+      }
+    ],
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "regretRiverEight.questTask1",
+        "options": [
+          "Wenn ich mehr geübt wäre, hätte ich die Prüfung bestanden.",
+          "Wenn ich mehr geübt hätte, wäre ich die Prüfung bestanden.",
+          "Wenn ich mehr geübt hätte, hätte ich die Prüfung bestanden."
+        ],
+        "answer": "Wenn ich mehr geübt hätte, hätte ich die Prüfung bestanden.",
+        "tip": "regretRiverEight.questDescription"
+      },
+      {
+        "id": 2,
+        "type": "input",
+        "question": "regretRiverEight.questTask2",
+        "correctAnswer": "geschlafen",
+        "tip": "regretRiverEight.questDescription"
+      },
+      {
+        "id": 3,
+        "type": "input",
+        "question": "regretRiverEight.questTask3",
+        "correctAnswer": "würde",
+        "tip": "regretRiverEight.questDescription"
+      },
+      {
+        "id": 4,
+        "type": "reorder",
+        "question": "regretRiverEight.questTask4",
+        "words": [
+          "vorbereitet",
+          "nicht",
+          "hätte",
+          "würde",
+          "Ich",
+          "mich",
+          "ich",
+          "gewesen",
+          "wenn",
+          "wäre",
+          "besser",
+          "nervös"
+        ],
+        "correctOrder": [
+          "Ich",
+          "wäre",
+          "nicht",
+          "nervös",
+          "gewesen",
+          "wenn",
+          "ich",
+          "mich",
+          "besser",
+          "vorbereitet",
+          "hätte"
+        ],
+        "tip": "regretRiverEight.questDescription"
+      },
+      {
+        "id": 5,
+        "type": "select",
+        "question": "regretRiverEight.questTask5",
+        "options": [
+          "Wenn sie die Aufgabe gelesen hat, hätte sie alles verstanden.",
+          "Wenn sie die Aufgabe gelesen hätte, wäre sie alles verstanden.",
+          "Wenn sie die Aufgabe gelesen hätte, hätte sie alles verstanden."
+        ],
+        "answer": "Wenn sie die Aufgabe gelesen hätte, hätte sie alles verstanden.",
+        "tip": "regretRiverEight.questDescription"
+      },
+      {
+        "id": 6,
+        "type": "input",
+        "question": "regretRiverEight.questTask6",
+        "correctAnswer": "angefangen",
+        "tip": "regretRiverEight.questDescription"
+      },
+      {
+        "id": 7,
+        "type": "readAndAnswer",
+        "question": "regretRiverEight.questTask7",
+        "text": "Max hat die Prüfung nicht bestanden. Er sagt: „Ich habe zu spät angefangen zu lernen. Wenn ich jeden Tag ein bisschen geübt hätte, hätte ich bestanden. Nächstes Mal fange ich früher an.“",
+        "options": [
+          "nicht lernen",
+          "jeden Tag ein bisschen üben",
+          "später anfangen"
+        ],
+        "answer": "jeden Tag ein bisschen üben",
+        "tip": "regretRiverEight.questDescription"
+      },
+      {
+        "id": 8,
+        "type": "input",
+        "question": "regretRiverEight.questTask8",
+        "correctAnswer": "hätten",
+        "tip": "regretRiverEight.questDescription"
+      },
+      {
+        "id": 9,
+        "type": "reorder",
+        "question": "regretRiverEight.questTask10",
+        "words": [
+          "zu",
+          "jetzt",
+          "bin",
+          "Wenn",
+          "Hause",
+          "würde",
+          "ich",
+          "ausruhen",
+          "mich",
+          "ich",
+          "wäre"
+        ],
+        "correctOrder": [
+          "Wenn",
+          "ich",
+          "jetzt",
+          "zu",
+          "Hause",
+          "wäre",
+          "würde",
+          "ich",
+          "mich",
+          "ausruhen"
+        ],
+        "tip": "regretRiverEight.questDescription"
+      },
+      {
+        "id": 10,
+        "type": "select",
+        "question": "regretRiverEight.questTask11",
+        "options": [
+          "Ich wäre mitgefahren, wenn ich nicht krank gewesen wäre.",
+          "Ich wäre mitgefahren, wenn ich nicht krank gewesen hätte.",
+          "Ich hätte mitgefahren, wenn ich nicht krank gewesen wäre."
+        ],
+        "answer": "Ich wäre mitgefahren, wenn ich nicht krank gewesen wäre.",
+        "tip": "regretRiverEight.questDescription"
+      },
+      {
+        "id": 11,
+        "type": "input",
+        "question": "regretRiverSeven.questTask9",
+        "correctAnswer": "bekommen",
+        "tip": "regretRiverSeven.questDescription",
+        "reviewOf": "regret-river-seven",
+        "reviewLand": "regret-river"
+      },
+      {
+        "id": 12,
+        "type": "input",
+        "question": "regretRiverFour.questTask12",
+        "correctAnswer": "hättest",
+        "tip": "regretRiverFour.questDescription",
+        "reviewOf": "regret-river-four",
+        "reviewLand": "regret-river"
+      },
+      {
+        "id": 13,
+        "type": "input",
+        "question": "regretRiverOne.questTask13",
+        "correctAnswer": "hätte",
+        "tip": "regretRiverOne.questDescription",
+        "reviewOf": "regret-river-one",
+        "reviewLand": "regret-river"
+      },
+      {
+        "id": 14,
+        "type": "input",
+        "question": "regretRiverEight.questTask14",
+        "correctAnswer": "der",
+        "tip": "regretRiverEight.questDescription"
+      },
+      {
+        "id": 15,
+        "type": "input",
+        "question": "regretRiverEight.questTask15",
+        "correctAnswer": "solltest",
+        "tip": "regretRiverEight.questDescription"
+      }
+    ]
+  },
+  {
+    "questId": "regret-river-nine",
+    "title": "regretRiverNine.questTitle",
+    "progress": "0/15",
+    "description": "regretRiverNine.questDescription",
+    "conditions": {
+      "goal": "regretRiverNine.questGoal",
+      "minCorrect": 15,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
+    "vocabulary": [
+      {
+        "word": "die Nummer",
+        "translation-ru": "номер",
+        "translation-en": "number",
+        "translation-uk": "номер",
+        "translation-pl": "numer",
+        "translation-es": "el número",
+        "translation-fr": "le numéro",
+        "translation-tr": "numara",
+        "translation-ro": "numărul",
+        "translation-uz": "raqam",
+        "translation-hi": "नंबर",
+        "translation-ar": "الرقم"
+      },
+      {
+        "word": "geantwortet",
+        "translation-ru": "ответил (Partizip от antworten)",
+        "translation-en": "answered",
+        "translation-uk": "відповів",
+        "translation-pl": "odpowiedział",
+        "translation-es": "respondido",
+        "translation-fr": "répondu",
+        "translation-tr": "cevap vermiş",
+        "translation-ro": "răspuns",
+        "translation-uz": "javob bergan",
+        "translation-hi": "जवाब दिया",
+        "translation-ar": "أجاب"
+      },
+      {
+        "word": "das Ticket",
+        "translation-ru": "билет",
+        "translation-en": "ticket",
+        "translation-uk": "квиток",
+        "translation-pl": "bilet",
+        "translation-es": "el billete",
+        "translation-fr": "le billet",
+        "translation-tr": "bilet",
+        "translation-ro": "biletul",
+        "translation-uz": "chipta",
+        "translation-hi": "टिकट",
+        "translation-ar": "التذكرة"
+      },
+      {
+        "word": "gewusst",
+        "translation-ru": "знал (Partizip от wissen)",
+        "translation-en": "known (participle of wissen)",
+        "translation-uk": "знав (Partizip від wissen)",
+        "translation-pl": "wiedział (Partizip od wissen)",
+        "translation-es": "sabido (participio de wissen)",
+        "translation-fr": "su (participe de wissen)",
+        "translation-tr": "bilmiş (wissen’in Partizip’i)",
+        "translation-ro": "știut (participiul lui wissen)",
+        "translation-uz": "bilgan (wissen dan Partizip)",
+        "translation-hi": "जाना (wissen का Partizip)",
+        "translation-ar": "عَلِم (اسم مفعول wissen)"
+      },
+      {
+        "word": "unser",
+        "translation-ru": "наш",
+        "translation-en": "our",
+        "translation-uk": "наш",
+        "translation-pl": "nasz",
+        "translation-es": "nuestro",
+        "translation-fr": "notre",
+        "translation-tr": "bizim",
+        "translation-ro": "nostru",
+        "translation-uz": "bizning",
+        "translation-hi": "हमारा",
+        "translation-ar": "لنا"
+      }
+    ],
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "regretRiverNine.questTask1",
+        "options": [
+          "Wenn ich deine Nummer gewusst habe, hätte ich angerufen.",
+          "Wenn ich deine Nummer gewusst hätte, wäre ich angerufen.",
+          "Wenn ich deine Nummer gewusst hätte, hätte ich angerufen."
+        ],
+        "answer": "Wenn ich deine Nummer gewusst hätte, hätte ich angerufen.",
+        "tip": "regretRiverNine.questDescription"
+      },
+      {
+        "id": 2,
+        "type": "input",
+        "question": "regretRiverNine.questTask2",
+        "correctAnswer": "wären",
+        "tip": "regretRiverNine.questDescription"
+      },
+      {
+        "id": 3,
+        "type": "input",
+        "question": "regretRiverNine.questTask3",
+        "correctAnswer": "gekauft",
+        "tip": "regretRiverNine.questDescription"
+      },
+      {
+        "id": 4,
+        "type": "reorder",
+        "question": "regretRiverNine.questTask4",
+        "words": [
+          "gefahren",
+          "wünschte",
+          "wäre",
+          "dir",
+          "Ich",
+          "mit",
+          "hätte",
+          "ich"
+        ],
+        "correctOrder": [
+          "Ich",
+          "wünschte",
+          "ich",
+          "wäre",
+          "mit",
+          "dir",
+          "gefahren"
+        ],
+        "tip": "regretRiverNine.questDescription"
+      },
+      {
+        "id": 5,
+        "type": "select",
+        "question": "regretRiverNine.questTask5",
+        "options": [
+          "Wenn du geblieben hättest, hätten wir gesprochen.",
+          "Wenn du geblieben wärst, wären wir gesprochen.",
+          "Wenn du geblieben wärst, hätten wir gesprochen."
+        ],
+        "answer": "Wenn du geblieben wärst, hätten wir gesprochen.",
+        "tip": "regretRiverNine.questDescription"
+      },
+      {
+        "id": 6,
+        "type": "input",
+        "question": "regretRiverNine.questTask6",
+        "correctAnswer": "wäre",
+        "tip": "regretRiverNine.questDescription"
+      },
+      {
+        "id": 7,
+        "type": "readAndAnswer",
+        "question": "regretRiverNine.questTask7",
+        "text": "Leon hat seine Prüfung nicht bestanden. Er sagt: „Ich wünschte, ich hätte mehr gelernt. Wenn ich nicht so oft ins Kino gegangen wäre, hätte ich mehr Zeit gehabt.“",
+        "options": [
+          "Er ging oft ins Kino.",
+          "Er war krank.",
+          "Er arbeitete viel."
+        ],
+        "answer": "Er ging oft ins Kino.",
+        "tip": "regretRiverNine.questDescription"
+      },
+      {
+        "id": 8,
+        "type": "input",
+        "question": "regretRiverNine.questTask8",
+        "correctAnswer": "geantwortet",
+        "tip": "regretRiverNine.questDescription"
+      },
+      {
+        "id": 9,
+        "type": "select",
+        "question": "regretRiverNine.questTask9",
+        "options": [
+          "Ich wünschte, ich wäre zur Party gegangen.",
+          "Ich wünschte, ich bin zur Party gegangen.",
+          "Ich wünschte, ich hätte zur Party gegangen."
+        ],
+        "answer": "Ich wünschte, ich wäre zur Party gegangen.",
+        "tip": "regretRiverNine.questDescription"
+      },
+      {
+        "id": 10,
+        "type": "input",
+        "question": "regretRiverNine.questTask10",
+        "correctAnswer": "würde",
+        "tip": "regretRiverNine.questDescription"
+      },
+      {
+        "id": 11,
+        "type": "reorder",
+        "question": "regretRiverNine.questTask11",
+        "words": [
+          "hätte",
+          "wäre",
+          "geblieben",
+          "Sie",
+          "länger"
+        ],
+        "correctOrder": [
+          "Sie",
+          "wäre",
+          "länger",
+          "geblieben"
+        ],
+        "tip": "regretRiverNine.questDescription"
+      },
+      {
+        "id": 12,
+        "type": "select",
+        "question": "regretRiverNine.questTask12",
+        "options": [
+          "Gestern würde ich gern länger schlafen.",
+          "Gestern hätte ich gern länger geschlafen.",
+          "Gestern wäre ich gern länger geschlafen."
+        ],
+        "answer": "Gestern hätte ich gern länger geschlafen.",
+        "tip": "regretRiverNine.questDescription"
+      },
+      {
+        "id": 13,
+        "type": "readAndAnswer",
+        "question": "regretRiverNine.questTask13",
+        "text": "Unser Zug kam zwei Stunden zu spät. Wenn wir mit dem Auto gefahren wären, wären wir pünktlich gewesen. Das nächste Mal fahren wir mit dem Auto.",
+        "options": [
+          "mit dem Auto",
+          "mit dem Fahrrad",
+          "mit dem Zug"
+        ],
+        "answer": "mit dem Auto",
+        "tip": "regretRiverNine.questDescription"
+      },
+      {
+        "id": 14,
+        "type": "input",
+        "question": "regretRiverNine.questTask14",
+        "correctAnswer": "gewesen",
+        "tip": "regretRiverNine.questDescription"
+      },
+      {
+        "id": 15,
+        "type": "input",
+        "question": "regretRiverNine.questTask15",
+        "correctAnswer": "geholfen",
+        "tip": "regretRiverNine.questDescription"
+      }
+    ]
+  },
+  {
+    "questId": "regret-river-ten",
+    "title": "regretRiverTen.questTitle",
+    "progress": "0/15",
+    "description": "regretRiverTen.questDescription",
+    "conditions": {
+      "goal": "regretRiverTen.questGoal",
+      "minCorrect": 15,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
+    "vocabulary": [
+      {
+        "word": "feiern",
+        "translation-ru": "праздновать",
+        "translation-en": "to celebrate",
+        "translation-uk": "святкувати",
+        "translation-pl": "świętować",
+        "translation-es": "celebrar",
+        "translation-fr": "fêter",
+        "translation-tr": "kutlamak",
+        "translation-ro": "a sărbători",
+        "translation-uz": "nishonlamoq",
+        "translation-hi": "जश्न मनाना",
+        "translation-ar": "يحتفل"
+      },
+      {
+        "word": "leben",
+        "translation-ru": "жить",
+        "translation-en": "to live",
+        "translation-uk": "жити",
+        "translation-pl": "żyć",
+        "translation-es": "vivir",
+        "translation-fr": "vivre",
+        "translation-tr": "yaşamak",
+        "translation-ro": "a trăi",
+        "translation-uz": "yashamoq",
+        "translation-hi": "जीना, रहना",
+        "translation-ar": "يعيش"
+      },
+      {
+        "word": "gewusst",
+        "translation-ru": "знал (Partizip от wissen)",
+        "translation-en": "known (participle of wissen)",
+        "translation-uk": "знав (Partizip від wissen)",
+        "translation-pl": "wiedział (Partizip od wissen)",
+        "translation-es": "sabido (participio de wissen)",
+        "translation-fr": "su (participe de wissen)",
+        "translation-tr": "bilmiş (wissen’in Partizip’i)",
+        "translation-ro": "știut (participiul lui wissen)",
+        "translation-uz": "bilgan (wissen dan Partizip)",
+        "translation-hi": "जाना (wissen का Partizip)",
+        "translation-ar": "عَلِم (اسم مفعول wissen)"
+      },
+      {
+        "word": "sparen",
+        "translation-ru": "экономить, копить",
+        "translation-en": "to save (money)",
+        "translation-uk": "заощаджувати",
+        "translation-pl": "oszczędzać",
+        "translation-es": "ahorrar",
+        "translation-fr": "économiser",
+        "translation-tr": "biriktirmek",
+        "translation-ro": "a economisi",
+        "translation-uz": "tejamoq",
+        "translation-hi": "बचत करना",
+        "translation-ar": "يوفّر"
+      },
+      {
+        "word": "nachdem",
+        "translation-ru": "после того как",
+        "translation-en": "after (conjunction)",
+        "translation-uk": "після того як",
+        "translation-pl": "po tym, jak",
+        "translation-es": "después de que",
+        "translation-fr": "après que",
+        "translation-tr": "-dıktan sonra",
+        "translation-ro": "după ce",
+        "translation-uz": "…gandan keyin",
+        "translation-hi": "…के बाद",
+        "translation-ar": "بعد أن"
+      }
+    ],
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "regretRiverTen.questTask1",
+        "options": [
+          "Wenn er pünktlich gekommen hätte, hätte er den Zug erreicht.",
+          "Wenn er pünktlich gekommen wäre, würde er den Zug erreicht.",
+          "Wenn er pünktlich gekommen wäre, hätte er den Zug erreicht."
+        ],
+        "answer": "Wenn er pünktlich gekommen wäre, hätte er den Zug erreicht.",
+        "tip": "regretRiverTen.questDescription"
+      },
+      {
+        "id": 2,
+        "type": "input",
+        "question": "regretRiverTen.questTask2",
+        "correctAnswer": "würde",
+        "tip": "regretRiverTen.questDescription"
+      },
+      {
+        "id": 3,
+        "type": "input",
+        "question": "regretRiverTen.questTask3",
+        "correctAnswer": "Obwohl",
+        "tip": "regretRiverTen.questDescription"
+      },
+      {
+        "id": 4,
+        "type": "input",
+        "question": "regretRiverTen.questTask4",
+        "correctAnswer": "haben",
+        "tip": "regretRiverTen.questDescription"
+      },
+      {
+        "id": 5,
+        "type": "select",
+        "question": "regretRiverTen.questTask5",
+        "options": [
+          "Ich wünschte, ich habe früher angefangen.",
+          "Ich wünschte, ich wäre früher angefangen.",
+          "Ich wünschte, ich hätte früher angefangen."
+        ],
+        "answer": "Ich wünschte, ich hätte früher angefangen.",
+        "tip": "regretRiverTen.questDescription"
+      },
+      {
+        "id": 6,
+        "type": "input",
+        "question": "regretRiverTen.questTask6",
+        "correctAnswer": "um",
+        "tip": "regretRiverTen.questDescription"
+      },
+      {
+        "id": 7,
+        "type": "readAndAnswer",
+        "question": "regretRiverTen.questTask7",
+        "text": "Herr Berg hat sein ganzes Leben viel gearbeitet und wenig Urlaub gemacht. Heute sagt er: „Ich wünschte, ich wäre mehr gereist. Aber ich habe ein schönes Haus gekauft.“",
+        "options": [
+          "Er hat wenig gearbeitet.",
+          "Er ist wenig gereist.",
+          "Er hat ein Haus gekauft."
+        ],
+        "answer": "Er ist wenig gereist.",
+        "tip": "regretRiverTen.questDescription"
+      },
+      {
+        "id": 8,
+        "type": "input",
+        "question": "regretRiverTen.questTask8",
+        "correctAnswer": "wurde",
+        "tip": "regretRiverTen.questDescription"
+      },
+      {
+        "id": 9,
+        "type": "reorder",
+        "question": "regretRiverTen.questTask9",
+        "words": [
+          "hättet",
+          "wärt",
+          "gekommen",
+          "Ihr",
+          "sofort"
+        ],
+        "correctOrder": [
+          "Ihr",
+          "wärt",
+          "sofort",
+          "gekommen"
+        ],
+        "tip": "regretRiverTen.questDescription"
+      },
+      {
+        "id": 10,
+        "type": "input",
+        "question": "regretRiverTen.questTask10",
+        "correctAnswer": "hatte",
+        "tip": "regretRiverTen.questDescription"
+      },
+      {
+        "id": 11,
+        "type": "input",
+        "question": "regretRiverTen.questTask11",
+        "correctAnswer": "wichtigste",
+        "tip": "regretRiverTen.questDescription"
+      },
+      {
+        "id": 12,
+        "type": "select",
+        "question": "regretRiverTen.questTask12",
+        "options": [
+          "Wenn wir es gewusst hätten, wären wir geblieben.",
+          "Wenn wir es wissen hätten, wären wir geblieben.",
+          "Wenn wir es gewusst hätten, hätten wir geblieben."
+        ],
+        "answer": "Wenn wir es gewusst hätten, wären wir geblieben.",
+        "tip": "regretRiverTen.questDescription"
+      },
+      {
+        "id": 13,
+        "type": "readAndAnswer",
+        "question": "regretRiverTen.questTask13",
+        "text": "Gestern hat Mia ihren Schlüssel vergessen. Sie musste zwei Stunden auf ihren Mann warten. Sie sagt: „Wenn ich den Schlüssel mitgenommen hätte, wäre ich sofort in die Wohnung gegangen.“",
+        "options": [
+          "zehn Minuten",
+          "zwei Stunden",
+          "eine Stunde"
+        ],
+        "answer": "zwei Stunden",
+        "tip": "regretRiverTen.questDescription"
+      },
+      {
+        "id": 14,
+        "type": "input",
+        "question": "regretRiverTen.questTask14",
+        "correctAnswer": "lasse",
+        "tip": "regretRiverTen.questDescription"
+      },
+      {
+        "id": 15,
+        "type": "input",
+        "question": "regretRiverTen.questTask15",
+        "correctAnswer": "was",
+        "tip": "regretRiverTen.questDescription"
+      }
+    ]
+  }
+]

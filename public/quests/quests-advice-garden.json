@@ -1,0 +1,2686 @@
+[
+  {
+    "questId": "advice-garden-one",
+    "title": "adviceGardenOne.questTitle",
+    "progress": "0/15",
+    "description": "adviceGardenOne.questDescription",
+    "conditions": {
+      "goal": "adviceGardenOne.questGoal",
+      "minCorrect": 15,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
+    "vocabulary": [
+      {
+        "word": "früh",
+        "translation-ru": "рано",
+        "translation-en": "early",
+        "translation-uk": "рано",
+        "translation-pl": "wcześnie",
+        "translation-es": "temprano",
+        "translation-fr": "tôt",
+        "translation-tr": "erken",
+        "translation-ro": "devreme",
+        "translation-uz": "erta",
+        "translation-hi": "जल्दी",
+        "translation-ar": "مبكرًا"
+      },
+      {
+        "word": "spazieren gehen",
+        "translation-ru": "гулять",
+        "translation-en": "to go for a walk",
+        "translation-uk": "гуляти",
+        "translation-pl": "spacerować",
+        "translation-es": "pasear",
+        "translation-fr": "se promener",
+        "translation-tr": "yürüyüşe çıkmak",
+        "translation-ro": "a se plimba",
+        "translation-uz": "sayr qilish",
+        "translation-hi": "टहलना",
+        "translation-ar": "يتنزّه"
+      },
+      {
+        "word": "die Pause",
+        "translation-ru": "перерыв",
+        "translation-en": "break",
+        "translation-uk": "перерва",
+        "translation-pl": "przerwa",
+        "translation-es": "la pausa",
+        "translation-fr": "la pause",
+        "translation-tr": "mola",
+        "translation-ro": "pauza",
+        "translation-uz": "tanaffus",
+        "translation-hi": "ब्रेक",
+        "translation-ar": "الاستراحة"
+      },
+      {
+        "word": "genug",
+        "translation-ru": "достаточно",
+        "translation-en": "enough",
+        "translation-uk": "достатньо",
+        "translation-pl": "wystarczająco",
+        "translation-es": "suficiente",
+        "translation-fr": "assez",
+        "translation-tr": "yeterince",
+        "translation-ro": "destul",
+        "translation-uz": "yetarli",
+        "translation-hi": "काफ़ी",
+        "translation-ar": "كفاية"
+      },
+      {
+        "word": "wärmer",
+        "translation-ru": "теплее",
+        "translation-en": "warmer",
+        "translation-uk": "тепліше",
+        "translation-pl": "cieplej",
+        "translation-es": "más cálido",
+        "translation-fr": "plus chaud",
+        "translation-tr": "daha sıcak",
+        "translation-ro": "mai cald",
+        "translation-uz": "iliqroq",
+        "translation-hi": "ज़्यादा गरम",
+        "translation-ar": "أدفأ"
+      }
+    ],
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "adviceGardenOne.questTask1",
+        "options": [
+          "Du musst mehr schlafen.",
+          "Du solltest weniger schlafen.",
+          "Du solltest mehr schlafen."
+        ],
+        "answer": "Du solltest mehr schlafen.",
+        "tip": "adviceGardenOne.questDescription"
+      },
+      {
+        "id": 2,
+        "type": "input",
+        "question": "adviceGardenOne.questTask2",
+        "correctAnswer": "solltest",
+        "tip": "adviceGardenOne.questDescription"
+      },
+      {
+        "id": 3,
+        "type": "input",
+        "question": "adviceGardenOne.questTask3",
+        "correctAnswer": "sollte",
+        "tip": "adviceGardenOne.questDescription"
+      },
+      {
+        "id": 4,
+        "type": "reorder",
+        "question": "adviceGardenOne.questTask4",
+        "words": [
+          "machen",
+          "solltest",
+          "Sie",
+          "sollten",
+          "Pause",
+          "eine"
+        ],
+        "correctOrder": [
+          "Sie",
+          "sollten",
+          "eine",
+          "Pause",
+          "machen"
+        ],
+        "tip": "adviceGardenOne.questDescription"
+      },
+      {
+        "id": 5,
+        "type": "select",
+        "question": "adviceGardenOne.questTask5",
+        "options": [
+          "Wir müssen mehr spazieren gehen.",
+          "Wir sollten mehr spazieren gehen.",
+          "Wir sollten weniger spazieren gehen."
+        ],
+        "answer": "Wir sollten mehr spazieren gehen.",
+        "tip": "adviceGardenOne.questDescription"
+      },
+      {
+        "id": 6,
+        "type": "input",
+        "question": "adviceGardenOne.questTask6",
+        "correctAnswer": "solltet",
+        "tip": "adviceGardenOne.questDescription"
+      },
+      {
+        "id": 7,
+        "type": "readAndAnswer",
+        "question": "adviceGardenOne.questTask7",
+        "text": "Max ist immer müde. Seine Mutter sagt: Du solltest früher ins Bett gehen!",
+        "options": [
+          "mehr arbeiten",
+          "früher ins Bett gehen",
+          "mehr Kaffee trinken"
+        ],
+        "answer": "früher ins Bett gehen",
+        "tip": "adviceGardenOne.questDescription"
+      },
+      {
+        "id": 8,
+        "type": "input",
+        "question": "adviceGardenOne.questTask8",
+        "correctAnswer": "sollte",
+        "tip": "adviceGardenOne.questDescription"
+      },
+      {
+        "id": 9,
+        "type": "input",
+        "question": "adviceGardenOne.questTask10",
+        "correctAnswer": "genug",
+        "tip": "adviceGardenOne.questDescription"
+      },
+      {
+        "id": 10,
+        "type": "reorder",
+        "question": "adviceGardenOne.questTask11",
+        "words": [
+          "Du",
+          "trinken",
+          "solltest",
+          "mehr",
+          "weniger",
+          "Kaffee"
+        ],
+        "correctOrder": [
+          "Du",
+          "solltest",
+          "weniger",
+          "Kaffee",
+          "trinken"
+        ],
+        "tip": "adviceGardenOne.questDescription"
+      },
+      {
+        "id": 11,
+        "type": "input",
+        "question": "comparisonHillsEight.questTask9",
+        "correctAnswer": "meisten",
+        "tip": "comparisonHillsEight.questDescription",
+        "reviewOf": "comparison-hills-eight",
+        "reviewLand": "comparison-hills"
+      },
+      {
+        "id": 12,
+        "type": "select",
+        "question": "comparisonHillsFive.questTask12",
+        "options": [
+          "Mein Sohn schläft am längsten.",
+          "Mein Sohn schläft am kürzesten.",
+          "Mein Sohn schläft länger."
+        ],
+        "answer": "Mein Sohn schläft am längsten.",
+        "tip": "comparisonHillsFive.questDescription",
+        "reviewOf": "comparison-hills-five",
+        "reviewLand": "comparison-hills"
+      },
+      {
+        "id": 13,
+        "type": "select",
+        "question": "comparisonHillsSeven.questTask1",
+        "options": [
+          "Die Jacke ist teurer wie der Pullover.",
+          "Die Jacke ist teuer als der Pullover.",
+          "Die Jacke ist teurer als der Pullover."
+        ],
+        "answer": "Die Jacke ist teurer als der Pullover.",
+        "tip": "comparisonHillsSeven.questDescription",
+        "reviewOf": "comparison-hills-seven",
+        "reviewLand": "comparison-hills"
+      },
+      {
+        "id": 14,
+        "type": "input",
+        "question": "adviceGardenOne.questTask14",
+        "correctAnswer": "wärmer",
+        "tip": "adviceGardenOne.questDescription"
+      },
+      {
+        "id": 15,
+        "type": "input",
+        "question": "adviceGardenOne.questTask15",
+        "correctAnswer": "Iss",
+        "tip": "adviceGardenOne.questDescription"
+      }
+    ]
+  },
+  {
+    "questId": "advice-garden-two",
+    "title": "adviceGardenTwo.questTitle",
+    "progress": "0/15",
+    "description": "adviceGardenTwo.questDescription",
+    "conditions": {
+      "goal": "adviceGardenTwo.questGoal",
+      "minCorrect": 15,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
+    "vocabulary": [
+      {
+        "word": "die Kopfschmerzen",
+        "translation-ru": "головная боль",
+        "translation-en": "headache",
+        "translation-uk": "головний біль",
+        "translation-pl": "ból głowy",
+        "translation-es": "el dolor de cabeza",
+        "translation-fr": "le mal de tête",
+        "translation-tr": "baş ağrısı",
+        "translation-ro": "durerea de cap",
+        "translation-uz": "bosh og‘rig‘i",
+        "translation-hi": "सिरदर्द",
+        "translation-ar": "الصداع"
+      },
+      {
+        "word": "das Fieber",
+        "translation-ru": "температура, жар",
+        "translation-en": "fever",
+        "translation-uk": "температура",
+        "translation-pl": "gorączka",
+        "translation-es": "la fiebre",
+        "translation-fr": "la fièvre",
+        "translation-tr": "ateş",
+        "translation-ro": "febra",
+        "translation-uz": "isitma",
+        "translation-hi": "बुख़ार",
+        "translation-ar": "الحمّى"
+      },
+      {
+        "word": "die Tablette",
+        "translation-ru": "таблетка",
+        "translation-en": "pill",
+        "translation-uk": "таблетка",
+        "translation-pl": "tabletka",
+        "translation-es": "la pastilla",
+        "translation-fr": "le comprimé",
+        "translation-tr": "hap",
+        "translation-ro": "pastila",
+        "translation-uz": "tabletka",
+        "translation-hi": "गोली",
+        "translation-ar": "الحبة"
+      },
+      {
+        "word": "sich ausruhen",
+        "translation-ru": "отдыхать",
+        "translation-en": "to rest",
+        "translation-uk": "відпочивати",
+        "translation-pl": "odpoczywać",
+        "translation-es": "descansar",
+        "translation-fr": "se reposer",
+        "translation-tr": "dinlenmek",
+        "translation-ro": "a se odihni",
+        "translation-uz": "dam olmoq",
+        "translation-hi": "आराम करना",
+        "translation-ar": "يرتاح"
+      },
+      {
+        "word": "die Apotheke",
+        "translation-ru": "аптека",
+        "translation-en": "pharmacy",
+        "translation-uk": "аптека",
+        "translation-pl": "apteka",
+        "translation-es": "la farmacia",
+        "translation-fr": "la pharmacie",
+        "translation-tr": "eczane",
+        "translation-ro": "farmacia",
+        "translation-uz": "dorixona",
+        "translation-hi": "दवा की दुकान",
+        "translation-ar": "الصيدلية"
+      },
+      {
+        "word": "der Kopf",
+        "translation-ru": "голова",
+        "translation-en": "head",
+        "translation-uk": "голова",
+        "translation-pl": "głowa",
+        "translation-es": "la cabeza",
+        "translation-fr": "la tête",
+        "translation-tr": "baş",
+        "translation-ro": "capul",
+        "translation-uz": "bosh",
+        "translation-hi": "सिर",
+        "translation-ar": "الرأس"
+      },
+      {
+        "word": "die Welt",
+        "translation-ru": "мир",
+        "translation-en": "world",
+        "translation-uk": "світ",
+        "translation-pl": "świat",
+        "translation-es": "el mundo",
+        "translation-fr": "le monde",
+        "translation-tr": "dünya",
+        "translation-ro": "lumea",
+        "translation-uz": "dunyo",
+        "translation-hi": "दुनिया",
+        "translation-ar": "العالم"
+      },
+      {
+        "word": "das Land",
+        "translation-ru": "страна",
+        "translation-en": "country",
+        "translation-uk": "країна",
+        "translation-pl": "kraj",
+        "translation-es": "el país",
+        "translation-fr": "le pays",
+        "translation-tr": "ülke",
+        "translation-ro": "țara",
+        "translation-uz": "mamlakat",
+        "translation-hi": "देश",
+        "translation-ar": "البلد"
+      }
+    ],
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "adviceGardenTwo.questTask1",
+        "options": [
+          "Ich habe Hunger.",
+          "Ich habe Fieber.",
+          "Ich habe Kopfschmerzen."
+        ],
+        "answer": "Ich habe Kopfschmerzen.",
+        "tip": "adviceGardenTwo.questDescription"
+      },
+      {
+        "id": 2,
+        "type": "input",
+        "question": "adviceGardenTwo.questTask2",
+        "correctAnswer": "sollten",
+        "tip": "adviceGardenTwo.questDescription"
+      },
+      {
+        "id": 3,
+        "type": "input",
+        "question": "adviceGardenTwo.questTask3",
+        "correctAnswer": "ausruhen",
+        "tip": "adviceGardenTwo.questDescription"
+      },
+      {
+        "id": 4,
+        "type": "reorder",
+        "question": "adviceGardenTwo.questTask4",
+        "words": [
+          "Du",
+          "solltet",
+          "bleiben",
+          "Hause",
+          "solltest",
+          "zu"
+        ],
+        "correctOrder": [
+          "Du",
+          "solltest",
+          "zu",
+          "Hause",
+          "bleiben"
+        ],
+        "tip": "adviceGardenTwo.questDescription"
+      },
+      {
+        "id": 5,
+        "type": "select",
+        "question": "adviceGardenTwo.questTask5",
+        "options": [
+          "Er hat kein Fieber.",
+          "Er hat Fieber.",
+          "Er hat Kopfschmerzen."
+        ],
+        "answer": "Er hat Fieber.",
+        "tip": "adviceGardenTwo.questDescription"
+      },
+      {
+        "id": 6,
+        "type": "input",
+        "question": "adviceGardenTwo.questTask6",
+        "correctAnswer": "solltest",
+        "tip": "adviceGardenTwo.questDescription"
+      },
+      {
+        "id": 7,
+        "type": "readAndAnswer",
+        "question": "adviceGardenTwo.questTask7",
+        "text": "Tom hat Fieber. Der Arzt sagt: Sie sollten drei Tage im Bett bleiben und viel Tee trinken.",
+        "options": [
+          "drei Tage",
+          "eine Woche",
+          "zwei Tage"
+        ],
+        "answer": "drei Tage",
+        "tip": "adviceGardenTwo.questDescription"
+      },
+      {
+        "id": 8,
+        "type": "input",
+        "question": "adviceGardenTwo.questTask8",
+        "correctAnswer": "sollte",
+        "tip": "adviceGardenTwo.questDescription"
+      },
+      {
+        "id": 9,
+        "type": "input",
+        "question": "adviceGardenTwo.questTask10",
+        "correctAnswer": "mussten",
+        "tip": "adviceGardenTwo.questDescription"
+      },
+      {
+        "id": 10,
+        "type": "reorder",
+        "question": "adviceGardenTwo.questTask11",
+        "words": [
+          "sollst",
+          "viel",
+          "trinken",
+          "solltest",
+          "Du",
+          "Tee"
+        ],
+        "correctOrder": [
+          "Du",
+          "solltest",
+          "viel",
+          "Tee",
+          "trinken"
+        ],
+        "tip": "adviceGardenTwo.questDescription"
+      },
+      {
+        "id": 11,
+        "type": "select",
+        "question": "adviceGardenOne.questTask9",
+        "options": [
+          "Du solltest nicht so viel arbeiten.",
+          "Du darfst nicht arbeiten.",
+          "Du solltest mehr arbeiten."
+        ],
+        "answer": "Du solltest nicht so viel arbeiten.",
+        "tip": "adviceGardenOne.questDescription",
+        "reviewOf": "advice-garden-one",
+        "reviewLand": "advice-garden"
+      },
+      {
+        "id": 12,
+        "type": "select",
+        "question": "comparisonHillsSix.questTask12",
+        "options": [
+          "Russland ist das kleinste Land der Welt.",
+          "Russland ist das größte Land der Welt.",
+          "Russland ist ein großes Land."
+        ],
+        "answer": "Russland ist das größte Land der Welt.",
+        "tip": "comparisonHillsSix.questDescription",
+        "reviewOf": "comparison-hills-six",
+        "reviewLand": "comparison-hills"
+      },
+      {
+        "id": 13,
+        "type": "readAndAnswer",
+        "question": "comparisonHillsThree.questTask13",
+        "text": "Das Hotel am Meer kostet 120 Euro. Das Hotel in der Stadt kostet 90 Euro.",
+        "options": [
+          "das Hotel in der Stadt",
+          "das Hotel am Meer",
+          "das Hotel am Bahnhof"
+        ],
+        "answer": "das Hotel am Meer",
+        "tip": "comparisonHillsThree.questDescription",
+        "reviewOf": "comparison-hills-three",
+        "reviewLand": "comparison-hills"
+      },
+      {
+        "id": 14,
+        "type": "input",
+        "question": "adviceGardenTwo.questTask14",
+        "correctAnswer": "billigste",
+        "tip": "adviceGardenTwo.questDescription"
+      },
+      {
+        "id": 15,
+        "type": "input",
+        "question": "adviceGardenTwo.questTask15",
+        "correctAnswer": "genommen",
+        "tip": "adviceGardenTwo.questDescription"
+      }
+    ]
+  },
+  {
+    "questId": "advice-garden-three",
+    "title": "adviceGardenThree.questTitle",
+    "progress": "0/15",
+    "description": "adviceGardenThree.questDescription",
+    "conditions": {
+      "goal": "adviceGardenThree.questGoal",
+      "minCorrect": 15,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
+    "vocabulary": [
+      {
+        "word": "reisen",
+        "translation-ru": "путешествовать",
+        "translation-en": "to travel",
+        "translation-uk": "подорожувати",
+        "translation-pl": "podróżować",
+        "translation-es": "viajar",
+        "translation-fr": "voyager",
+        "translation-tr": "seyahat etmek",
+        "translation-ro": "a călători",
+        "translation-uz": "sayohat qilmoq",
+        "translation-hi": "यात्रा करना",
+        "translation-ar": "يسافر"
+      },
+      {
+        "word": "das Meer",
+        "translation-ru": "море",
+        "translation-en": "sea",
+        "translation-uk": "море",
+        "translation-pl": "morze",
+        "translation-es": "el mar",
+        "translation-fr": "la mer",
+        "translation-tr": "deniz",
+        "translation-ro": "marea",
+        "translation-uz": "dengiz",
+        "translation-hi": "समुद्र",
+        "translation-ar": "البحر"
+      },
+      {
+        "word": "der Urlaub",
+        "translation-ru": "отпуск",
+        "translation-en": "holiday",
+        "translation-uk": "відпустка",
+        "translation-pl": "urlop",
+        "translation-es": "las vacaciones",
+        "translation-fr": "les vacances",
+        "translation-tr": "tatil",
+        "translation-ro": "concediul",
+        "translation-uz": "ta’til",
+        "translation-hi": "छुट्टी",
+        "translation-ar": "الإجازة"
+      },
+      {
+        "word": "die Insel",
+        "translation-ru": "остров",
+        "translation-en": "island",
+        "translation-uk": "острів",
+        "translation-pl": "wyspa",
+        "translation-es": "la isla",
+        "translation-fr": "l’île",
+        "translation-tr": "ada",
+        "translation-ro": "insula",
+        "translation-uz": "orol",
+        "translation-hi": "द्वीप",
+        "translation-ar": "الجزيرة"
+      },
+      {
+        "word": "fliegen",
+        "translation-ru": "летать",
+        "translation-en": "to fly",
+        "translation-uk": "літати",
+        "translation-pl": "latać",
+        "translation-es": "volar",
+        "translation-fr": "prendre l’avion",
+        "translation-tr": "uçmak",
+        "translation-ro": "a zbura",
+        "translation-uz": "uchmoq",
+        "translation-hi": "उड़ना",
+        "translation-ar": "يطير"
+      }
+    ],
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "adviceGardenThree.questTask1",
+        "options": [
+          "Ich fahre gern ans Meer.",
+          "Ich würde nicht gern ans Meer fahren.",
+          "Ich würde gern ans Meer fahren."
+        ],
+        "answer": "Ich würde gern ans Meer fahren.",
+        "tip": "adviceGardenThree.questDescription"
+      },
+      {
+        "id": 2,
+        "type": "input",
+        "question": "adviceGardenThree.questTask2",
+        "correctAnswer": "würde",
+        "tip": "adviceGardenThree.questDescription"
+      },
+      {
+        "id": 3,
+        "type": "input",
+        "question": "adviceGardenThree.questTask3",
+        "correctAnswer": "Würdest",
+        "tip": "adviceGardenThree.questDescription"
+      },
+      {
+        "id": 4,
+        "type": "reorder",
+        "question": "adviceGardenThree.questTask4",
+        "words": [
+          "werden",
+          "ein",
+          "kaufen",
+          "Wir",
+          "würden",
+          "Haus",
+          "gern"
+        ],
+        "correctOrder": [
+          "Wir",
+          "würden",
+          "gern",
+          "ein",
+          "Haus",
+          "kaufen"
+        ],
+        "tip": "adviceGardenThree.questDescription"
+      },
+      {
+        "id": 5,
+        "type": "select",
+        "question": "adviceGardenThree.questTask5",
+        "options": [
+          "Er würde gern Fußball spielen.",
+          "Er würde gern Tennis spielen.",
+          "Er spielt gern Fußball."
+        ],
+        "answer": "Er würde gern Fußball spielen.",
+        "tip": "adviceGardenThree.questDescription"
+      },
+      {
+        "id": 6,
+        "type": "input",
+        "question": "adviceGardenThree.questTask6",
+        "correctAnswer": "Würdet",
+        "tip": "adviceGardenThree.questDescription"
+      },
+      {
+        "id": 7,
+        "type": "readAndAnswer",
+        "question": "adviceGardenThree.questTask7",
+        "text": "Lisa arbeitet viel. Sie würde gern Urlaub machen und auf eine Insel fliegen.",
+        "options": [
+          "ein Auto kaufen",
+          "Urlaub machen",
+          "mehr arbeiten"
+        ],
+        "answer": "Urlaub machen",
+        "tip": "adviceGardenThree.questDescription"
+      },
+      {
+        "id": 8,
+        "type": "input",
+        "question": "adviceGardenThree.questTask8",
+        "correctAnswer": "würden",
+        "tip": "adviceGardenThree.questDescription"
+      },
+      {
+        "id": 9,
+        "type": "input",
+        "question": "adviceGardenThree.questTask10",
+        "correctAnswer": "Insel",
+        "tip": "adviceGardenThree.questDescription"
+      },
+      {
+        "id": 10,
+        "type": "reorder",
+        "question": "adviceGardenThree.questTask11",
+        "words": [
+          "gern",
+          "Würdest",
+          "du",
+          "lernen",
+          "Wirst",
+          "Deutsch"
+        ],
+        "correctOrder": [
+          "Würdest",
+          "du",
+          "gern",
+          "Deutsch",
+          "lernen"
+        ],
+        "tip": "adviceGardenThree.questDescription"
+      },
+      {
+        "id": 11,
+        "type": "select",
+        "question": "adviceGardenTwo.questTask9",
+        "options": [
+          "Sie sollten mehr Kaffee trinken.",
+          "Sie sollten mehr Wasser trinken.",
+          "Sie sollten weniger Wasser trinken."
+        ],
+        "answer": "Sie sollten mehr Wasser trinken.",
+        "tip": "adviceGardenTwo.questDescription",
+        "reviewOf": "advice-garden-two",
+        "reviewLand": "advice-garden"
+      },
+      {
+        "id": 12,
+        "type": "input",
+        "question": "comparisonHillsSeven.questTask12",
+        "correctAnswer": "billiger",
+        "tip": "comparisonHillsSeven.questDescription",
+        "reviewOf": "comparison-hills-seven",
+        "reviewLand": "comparison-hills"
+      },
+      {
+        "id": 13,
+        "type": "readAndAnswer",
+        "question": "comparisonHillsFour.questTask13",
+        "text": "Der Rucksack wiegt 5 Kilo. Der Koffer wiegt 15 Kilo. Der Rucksack ist nicht so schwer wie der Koffer.",
+        "options": [
+          "der Koffer",
+          "der Rucksack",
+          "die Tasche"
+        ],
+        "answer": "der Koffer",
+        "tip": "comparisonHillsFour.questDescription",
+        "reviewOf": "comparison-hills-four",
+        "reviewLand": "comparison-hills"
+      },
+      {
+        "id": 14,
+        "type": "input",
+        "question": "adviceGardenThree.questTask14",
+        "correctAnswer": "als",
+        "tip": "adviceGardenThree.questDescription"
+      },
+      {
+        "id": 15,
+        "type": "input",
+        "question": "adviceGardenThree.questTask15",
+        "correctAnswer": "meinem",
+        "tip": "adviceGardenThree.questDescription"
+      }
+    ]
+  },
+  {
+    "questId": "advice-garden-four",
+    "title": "adviceGardenFour.questTitle",
+    "progress": "0/15",
+    "description": "adviceGardenFour.questDescription",
+    "conditions": {
+      "goal": "adviceGardenFour.questGoal",
+      "minCorrect": 15,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
+    "vocabulary": [
+      {
+        "word": "reich",
+        "translation-ru": "богатый",
+        "translation-en": "rich",
+        "translation-uk": "багатий",
+        "translation-pl": "bogaty",
+        "translation-es": "rico",
+        "translation-fr": "riche",
+        "translation-tr": "zengin",
+        "translation-ro": "bogat",
+        "translation-uz": "boy",
+        "translation-hi": "अमीर",
+        "translation-ar": "غني"
+      },
+      {
+        "word": "der Garten",
+        "translation-ru": "сад",
+        "translation-en": "garden",
+        "translation-uk": "сад",
+        "translation-pl": "ogród",
+        "translation-es": "el jardín",
+        "translation-fr": "le jardin",
+        "translation-tr": "bahçe",
+        "translation-ro": "grădina",
+        "translation-uz": "bog‘",
+        "translation-hi": "बगीचा",
+        "translation-ar": "الحديقة"
+      },
+      {
+        "word": "das Haustier",
+        "translation-ru": "домашнее животное",
+        "translation-en": "pet",
+        "translation-uk": "домашня тварина",
+        "translation-pl": "zwierzę domowe",
+        "translation-es": "la mascota",
+        "translation-fr": "l’animal de compagnie",
+        "translation-tr": "evcil hayvan",
+        "translation-ro": "animalul de companie",
+        "translation-uz": "uy hayvoni",
+        "translation-hi": "पालतू जानवर",
+        "translation-ar": "الحيوان الأليف"
+      },
+      {
+        "word": "die Ferien",
+        "translation-ru": "каникулы",
+        "translation-en": "school holidays",
+        "translation-uk": "канікули",
+        "translation-pl": "wakacje",
+        "translation-es": "las vacaciones",
+        "translation-fr": "les vacances scolaires",
+        "translation-tr": "okul tatili",
+        "translation-ro": "vacanța",
+        "translation-uz": "ta’til (maktab)",
+        "translation-hi": "छुट्टियाँ",
+        "translation-ar": "العطلة"
+      },
+      {
+        "word": "lieber",
+        "translation-ru": "охотнее, больше нравится",
+        "translation-en": "rather, prefer",
+        "translation-uk": "охочіше, більше подобається",
+        "translation-pl": "chętniej, wolę",
+        "translation-es": "preferir, con más gusto",
+        "translation-fr": "plutôt, préférer",
+        "translation-tr": "tercihen, daha çok sevmek",
+        "translation-ro": "mai degrabă, prefer",
+        "translation-uz": "afzal ko‘rib",
+        "translation-hi": "ज़्यादा पसंद से",
+        "translation-ar": "يفضّل"
+      }
+    ],
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "adviceGardenFour.questTask1",
+        "options": [
+          "Ich hätte gern Geld.",
+          "Ich bin reich.",
+          "Ich wäre gern reich."
+        ],
+        "answer": "Ich wäre gern reich.",
+        "tip": "adviceGardenFour.questDescription"
+      },
+      {
+        "id": 2,
+        "type": "input",
+        "question": "adviceGardenFour.questTask2",
+        "correctAnswer": "hätte",
+        "tip": "adviceGardenFour.questDescription"
+      },
+      {
+        "id": 3,
+        "type": "input",
+        "question": "adviceGardenFour.questTask3",
+        "correctAnswer": "wäre",
+        "tip": "adviceGardenFour.questDescription"
+      },
+      {
+        "id": 4,
+        "type": "reorder",
+        "question": "adviceGardenFour.questTask4",
+        "words": [
+          "Hund",
+          "Wir",
+          "wären",
+          "einen",
+          "gern",
+          "hätten"
+        ],
+        "correctOrder": [
+          "Wir",
+          "hätten",
+          "gern",
+          "einen",
+          "Hund"
+        ],
+        "tip": "adviceGardenFour.questDescription"
+      },
+      {
+        "id": 5,
+        "type": "select",
+        "question": "adviceGardenFour.questTask5",
+        "options": [
+          "Wärst du gern zu Hause?",
+          "Hättest du gern mehr Zeit?",
+          "Hast du mehr Zeit?"
+        ],
+        "answer": "Hättest du gern mehr Zeit?",
+        "tip": "adviceGardenFour.questDescription"
+      },
+      {
+        "id": 6,
+        "type": "input",
+        "question": "adviceGardenFour.questTask6",
+        "correctAnswer": "Wärst",
+        "tip": "adviceGardenFour.questDescription"
+      },
+      {
+        "id": 7,
+        "type": "readAndAnswer",
+        "question": "adviceGardenFour.questTask7",
+        "text": "Mia sagt: Ich hätte gern ein Haustier. Am liebsten eine Katze.",
+        "options": [
+          "eine Katze",
+          "einen Vogel",
+          "einen Hund"
+        ],
+        "answer": "eine Katze",
+        "tip": "adviceGardenFour.questDescription"
+      },
+      {
+        "id": 8,
+        "type": "input",
+        "question": "adviceGardenFour.questTask8",
+        "correctAnswer": "hätte",
+        "tip": "adviceGardenFour.questDescription"
+      },
+      {
+        "id": 9,
+        "type": "input",
+        "question": "adviceGardenFour.questTask10",
+        "correctAnswer": "Hätten",
+        "tip": "adviceGardenFour.questDescription"
+      },
+      {
+        "id": 10,
+        "type": "reorder",
+        "question": "adviceGardenFour.questTask11",
+        "words": [
+          "Urlaub",
+          "gern",
+          "hätte",
+          "Ich",
+          "jetzt",
+          "wäre",
+          "im"
+        ],
+        "correctOrder": [
+          "Ich",
+          "wäre",
+          "jetzt",
+          "gern",
+          "im",
+          "Urlaub"
+        ],
+        "tip": "adviceGardenFour.questDescription"
+      },
+      {
+        "id": 11,
+        "type": "select",
+        "question": "adviceGardenThree.questTask9",
+        "options": [
+          "Ich würde gern früher aufstehen.",
+          "Ich würde gern länger schlafen.",
+          "Ich schlafe gern lange."
+        ],
+        "answer": "Ich würde gern länger schlafen.",
+        "tip": "adviceGardenThree.questDescription",
+        "reviewOf": "advice-garden-three",
+        "reviewLand": "advice-garden"
+      },
+      {
+        "id": 12,
+        "type": "input",
+        "question": "comparisonHillsEight.questTask12",
+        "correctAnswer": "größte",
+        "tip": "comparisonHillsEight.questDescription",
+        "reviewOf": "comparison-hills-eight",
+        "reviewLand": "comparison-hills"
+      },
+      {
+        "id": 13,
+        "type": "readAndAnswer",
+        "question": "comparisonHillsFive.questTask13",
+        "text": "Ich mag Fußball, aber Tennis mag ich lieber. Am liebsten schwimme ich.",
+        "options": [
+          "Schwimmen",
+          "Fußball",
+          "Tennis"
+        ],
+        "answer": "Schwimmen",
+        "tip": "comparisonHillsFive.questDescription",
+        "reviewOf": "comparison-hills-five",
+        "reviewLand": "comparison-hills"
+      },
+      {
+        "id": 14,
+        "type": "input",
+        "question": "adviceGardenFour.questTask14",
+        "correctAnswer": "hatten",
+        "tip": "adviceGardenFour.questDescription"
+      },
+      {
+        "id": 15,
+        "type": "input",
+        "question": "adviceGardenFour.questTask15",
+        "correctAnswer": "schönste",
+        "tip": "adviceGardenFour.questDescription"
+      }
+    ]
+  },
+  {
+    "questId": "advice-garden-five",
+    "title": "adviceGardenFive.questTitle",
+    "progress": "0/15",
+    "description": "adviceGardenFive.questDescription",
+    "conditions": {
+      "goal": "adviceGardenFive.questGoal",
+      "minCorrect": 15,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
+    "vocabulary": [
+      {
+        "word": "die Idee",
+        "translation-ru": "идея",
+        "translation-en": "idea",
+        "translation-uk": "ідея",
+        "translation-pl": "pomysł",
+        "translation-es": "la idea",
+        "translation-fr": "l’idée",
+        "translation-tr": "fikir",
+        "translation-ro": "ideea",
+        "translation-uz": "g‘oya",
+        "translation-hi": "विचार",
+        "translation-ar": "الفكرة"
+      },
+      {
+        "word": "die Lust",
+        "translation-ru": "желание, охота",
+        "translation-en": "desire, mood",
+        "translation-uk": "бажання",
+        "translation-pl": "ochota",
+        "translation-es": "las ganas",
+        "translation-fr": "l’envie",
+        "translation-tr": "istek",
+        "translation-ro": "cheful",
+        "translation-uz": "xohish",
+        "translation-hi": "मन, इच्छा",
+        "translation-ar": "الرغبة"
+      },
+      {
+        "word": "zusammen",
+        "translation-ru": "вместе",
+        "translation-en": "together",
+        "translation-uk": "разом",
+        "translation-pl": "razem",
+        "translation-es": "juntos",
+        "translation-fr": "ensemble",
+        "translation-tr": "birlikte",
+        "translation-ro": "împreună",
+        "translation-uz": "birga",
+        "translation-hi": "साथ में",
+        "translation-ar": "معًا"
+      },
+      {
+        "word": "das Wochenende",
+        "translation-ru": "выходные",
+        "translation-en": "weekend",
+        "translation-uk": "вихідні",
+        "translation-pl": "weekend",
+        "translation-es": "el fin de semana",
+        "translation-fr": "le week-end",
+        "translation-tr": "hafta sonu",
+        "translation-ro": "weekendul",
+        "translation-uz": "dam olish kunlari",
+        "translation-hi": "सप्ताहांत",
+        "translation-ar": "عطلة نهاية الأسبوع"
+      },
+      {
+        "word": "das Picknick",
+        "translation-ru": "пикник",
+        "translation-en": "picnic",
+        "translation-uk": "пікнік",
+        "translation-pl": "piknik",
+        "translation-es": "el pícnic",
+        "translation-fr": "le pique-nique",
+        "translation-tr": "piknik",
+        "translation-ro": "picnicul",
+        "translation-uz": "piknik",
+        "translation-hi": "पिकनिक",
+        "translation-ar": "النزهة"
+      },
+      {
+        "word": "die Schülerin",
+        "translation-ru": "ученица",
+        "translation-en": "pupil (girl)",
+        "translation-uk": "учениця",
+        "translation-pl": "uczennica",
+        "translation-es": "la alumna",
+        "translation-fr": "l’élève (fille)",
+        "translation-tr": "kız öğrenci",
+        "translation-ro": "eleva",
+        "translation-uz": "o‘quvchi qiz",
+        "translation-hi": "छात्रा",
+        "translation-ar": "التلميذة"
+      },
+      {
+        "word": "der Rat",
+        "translation-ru": "совет",
+        "translation-en": "advice",
+        "translation-uk": "порада",
+        "translation-pl": "rada",
+        "translation-es": "el consejo",
+        "translation-fr": "le conseil",
+        "translation-tr": "tavsiye",
+        "translation-ro": "sfatul",
+        "translation-uz": "maslahat",
+        "translation-hi": "सलाह",
+        "translation-ar": "النصيحة"
+      }
+    ],
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "adviceGardenFive.questTask1",
+        "options": [
+          "Würdest du mir nicht helfen?",
+          "Hast du mir geholfen?",
+          "Würdest du mir helfen?"
+        ],
+        "answer": "Würdest du mir helfen?",
+        "tip": "adviceGardenFive.questDescription"
+      },
+      {
+        "id": 2,
+        "type": "input",
+        "question": "adviceGardenFive.questTask2",
+        "correctAnswer": "Hättest",
+        "tip": "adviceGardenFive.questDescription"
+      },
+      {
+        "id": 3,
+        "type": "input",
+        "question": "adviceGardenFive.questTask3",
+        "correctAnswer": "mit",
+        "tip": "adviceGardenFive.questDescription"
+      },
+      {
+        "id": 4,
+        "type": "reorder",
+        "question": "adviceGardenFive.questTask4",
+        "words": [
+          "mit",
+          "du",
+          "uns",
+          "kommen",
+          "Wirst",
+          "Würdest",
+          "gern"
+        ],
+        "correctOrder": [
+          "Würdest",
+          "du",
+          "gern",
+          "mit",
+          "uns",
+          "kommen"
+        ],
+        "tip": "adviceGardenFive.questDescription"
+      },
+      {
+        "id": 5,
+        "type": "select",
+        "question": "adviceGardenFive.questTask5",
+        "options": [
+          "Gute Idee!",
+          "Keine Idee!",
+          "Schlechte Idee!"
+        ],
+        "answer": "Gute Idee!",
+        "tip": "adviceGardenFive.questDescription"
+      },
+      {
+        "id": 6,
+        "type": "input",
+        "question": "adviceGardenFive.questTask6",
+        "correctAnswer": "Würden",
+        "tip": "adviceGardenFive.questDescription"
+      },
+      {
+        "id": 7,
+        "type": "readAndAnswer",
+        "question": "adviceGardenFive.questTask7",
+        "text": "Anna: Hättest du am Wochenende Zeit? Ben: Ja. Anna: Wie wäre es mit einem Picknick im Park?",
+        "options": [
+          "ein Picknick im Park",
+          "ein Essen im Restaurant",
+          "einen Film im Kino"
+        ],
+        "answer": "ein Picknick im Park",
+        "tip": "adviceGardenFive.questDescription"
+      },
+      {
+        "id": 8,
+        "type": "input",
+        "question": "adviceGardenFive.questTask8",
+        "correctAnswer": "Lust",
+        "tip": "adviceGardenFive.questDescription"
+      },
+      {
+        "id": 9,
+        "type": "input",
+        "question": "adviceGardenFive.questTask10",
+        "correctAnswer": "Würdest",
+        "tip": "adviceGardenFive.questDescription"
+      },
+      {
+        "id": 10,
+        "type": "reorder",
+        "question": "adviceGardenFive.questTask11",
+        "words": [
+          "Willst",
+          "wir",
+          "Wollen",
+          "gehen",
+          "zusammen"
+        ],
+        "correctOrder": [
+          "Wollen",
+          "wir",
+          "zusammen",
+          "gehen"
+        ],
+        "tip": "adviceGardenFive.questDescription"
+      },
+      {
+        "id": 11,
+        "type": "select",
+        "question": "adviceGardenFour.questTask9",
+        "options": [
+          "Sie wäre gern Lehrerin.",
+          "Sie wäre gern Ärztin.",
+          "Sie ist Lehrerin."
+        ],
+        "answer": "Sie wäre gern Lehrerin.",
+        "tip": "adviceGardenFour.questDescription",
+        "reviewOf": "advice-garden-four",
+        "reviewLand": "advice-garden"
+      },
+      {
+        "id": 12,
+        "type": "select",
+        "question": "adviceGardenOne.questTask12",
+        "options": [
+          "Das ist ein schlechter Rat.",
+          "Das ist ein guter Rat.",
+          "Das ist kein Rat."
+        ],
+        "answer": "Das ist ein guter Rat.",
+        "tip": "adviceGardenOne.questDescription",
+        "reviewOf": "advice-garden-one",
+        "reviewLand": "advice-garden"
+      },
+      {
+        "id": 13,
+        "type": "readAndAnswer",
+        "question": "comparisonHillsSix.questTask13",
+        "text": "In unserer Klasse ist Mia die jüngste Schülerin. Sie ist erst 15 Jahre alt.",
+        "options": [
+          "Sara",
+          "Mia",
+          "Lena"
+        ],
+        "answer": "Mia",
+        "tip": "comparisonHillsSix.questDescription",
+        "reviewOf": "comparison-hills-six",
+        "reviewLand": "comparison-hills"
+      },
+      {
+        "id": 14,
+        "type": "input",
+        "question": "adviceGardenFive.questTask14",
+        "correctAnswer": "Könnten",
+        "tip": "adviceGardenFive.questDescription"
+      },
+      {
+        "id": 15,
+        "type": "input",
+        "question": "adviceGardenFive.questTask15",
+        "correctAnswer": "schneller",
+        "tip": "adviceGardenFive.questDescription"
+      }
+    ]
+  },
+  {
+    "questId": "advice-garden-six",
+    "title": "adviceGardenSix.questTitle",
+    "progress": "0/15",
+    "description": "adviceGardenSix.questDescription",
+    "conditions": {
+      "goal": "adviceGardenSix.questGoal",
+      "minCorrect": 15,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
+    "vocabulary": [
+      {
+        "word": "an deiner Stelle",
+        "translation-ru": "на твоём месте",
+        "translation-en": "if I were you",
+        "translation-uk": "на твоєму місці",
+        "translation-pl": "na twoim miejscu",
+        "translation-es": "en tu lugar",
+        "translation-fr": "à ta place",
+        "translation-tr": "senin yerinde",
+        "translation-ro": "în locul tău",
+        "translation-uz": "sening o‘rningda",
+        "translation-hi": "तुम्हारी जगह",
+        "translation-ar": "مكانك"
+      },
+      {
+        "word": "das Problem",
+        "translation-ru": "проблема",
+        "translation-en": "problem",
+        "translation-uk": "проблема",
+        "translation-pl": "problem",
+        "translation-es": "el problema",
+        "translation-fr": "le problème",
+        "translation-tr": "sorun",
+        "translation-ro": "problema",
+        "translation-uz": "muammo",
+        "translation-hi": "समस्या",
+        "translation-ar": "المشكلة"
+      },
+      {
+        "word": "der Nachbar",
+        "translation-ru": "сосед",
+        "translation-en": "neighbour",
+        "translation-uk": "сусід",
+        "translation-pl": "sąsiad",
+        "translation-es": "el vecino",
+        "translation-fr": "le voisin",
+        "translation-tr": "komşu",
+        "translation-ro": "vecinul",
+        "translation-uz": "qo‘shni",
+        "translation-hi": "पड़ोसी",
+        "translation-ar": "الجار"
+      },
+      {
+        "word": "laut",
+        "translation-ru": "громкий",
+        "translation-en": "loud",
+        "translation-uk": "гучний",
+        "translation-pl": "głośny",
+        "translation-es": "ruidoso",
+        "translation-fr": "bruyant",
+        "translation-tr": "gürültülü",
+        "translation-ro": "zgomotos",
+        "translation-uz": "shovqinli",
+        "translation-hi": "तेज़ आवाज़ वाला",
+        "translation-ar": "صاخب"
+      },
+      {
+        "word": "ruhig",
+        "translation-ru": "спокойный, тихий",
+        "translation-en": "calm, quiet",
+        "translation-uk": "спокійний",
+        "translation-pl": "spokojny",
+        "translation-es": "tranquilo",
+        "translation-fr": "calme",
+        "translation-tr": "sakin",
+        "translation-ro": "liniștit",
+        "translation-uz": "tinch",
+        "translation-hi": "शांत",
+        "translation-ar": "هادئ"
+      }
+    ],
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "adviceGardenSix.questTask1",
+        "options": [
+          "Ich habe mit dem Nachbarn gesprochen.",
+          "An deiner Stelle würde ich nicht mit dem Nachbarn sprechen.",
+          "An deiner Stelle würde ich mit dem Nachbarn sprechen."
+        ],
+        "answer": "An deiner Stelle würde ich mit dem Nachbarn sprechen.",
+        "tip": "adviceGardenSix.questDescription"
+      },
+      {
+        "id": 2,
+        "type": "input",
+        "question": "adviceGardenSix.questTask2",
+        "correctAnswer": "würde",
+        "tip": "adviceGardenSix.questDescription"
+      },
+      {
+        "id": 3,
+        "type": "input",
+        "question": "adviceGardenSix.questTask3",
+        "correctAnswer": "soll",
+        "tip": "adviceGardenSix.questDescription"
+      },
+      {
+        "id": 4,
+        "type": "reorder",
+        "question": "adviceGardenSix.questTask4",
+        "words": [
+          "sprechen",
+          "Chef",
+          "solltest",
+          "deinen",
+          "Du",
+          "deinem",
+          "mit"
+        ],
+        "correctOrder": [
+          "Du",
+          "solltest",
+          "mit",
+          "deinem",
+          "Chef",
+          "sprechen"
+        ],
+        "tip": "adviceGardenSix.questDescription"
+      },
+      {
+        "id": 5,
+        "type": "select",
+        "question": "adviceGardenSix.questTask5",
+        "options": [
+          "Der Nachbar ist sehr ruhig.",
+          "Der Nachbar ist nicht laut.",
+          "Der Nachbar ist zu laut."
+        ],
+        "answer": "Der Nachbar ist zu laut.",
+        "tip": "adviceGardenSix.questDescription"
+      },
+      {
+        "id": 6,
+        "type": "input",
+        "question": "adviceGardenSix.questTask6",
+        "correctAnswer": "sollten",
+        "tip": "adviceGardenSix.questDescription"
+      },
+      {
+        "id": 7,
+        "type": "readAndAnswer",
+        "question": "adviceGardenSix.questTask7",
+        "text": "Paul hat ein Problem: Sein Nachbar ist jeden Abend sehr laut. Lisa sagt: An deiner Stelle würde ich mit ihm sprechen.",
+        "options": [
+          "umziehen",
+          "mit dem Nachbarn sprechen",
+          "die Polizei rufen"
+        ],
+        "answer": "mit dem Nachbarn sprechen",
+        "tip": "adviceGardenSix.questDescription"
+      },
+      {
+        "id": 8,
+        "type": "input",
+        "question": "adviceGardenSix.questTask8",
+        "correctAnswer": "solltest",
+        "tip": "adviceGardenSix.questDescription"
+      },
+      {
+        "id": 9,
+        "type": "input",
+        "question": "adviceGardenSix.questTask10",
+        "correctAnswer": "leiser",
+        "tip": "adviceGardenSix.questDescription"
+      },
+      {
+        "id": 10,
+        "type": "reorder",
+        "question": "adviceGardenSix.questTask11",
+        "words": [
+          "eine",
+          "Fahrkarte",
+          "deiner",
+          "Stelle",
+          "würde",
+          "werde",
+          "An",
+          "kaufen",
+          "ich",
+          "heute"
+        ],
+        "correctOrder": [
+          "An",
+          "deiner",
+          "Stelle",
+          "würde",
+          "ich",
+          "heute",
+          "eine",
+          "Fahrkarte",
+          "kaufen"
+        ],
+        "tip": "adviceGardenSix.questDescription"
+      },
+      {
+        "id": 11,
+        "type": "select",
+        "question": "adviceGardenFive.questTask9",
+        "options": [
+          "Was machst du am Samstag?",
+          "Wie wäre es mit Samstag?",
+          "Wie war es am Samstag?"
+        ],
+        "answer": "Wie wäre es mit Samstag?",
+        "tip": "adviceGardenFive.questDescription",
+        "reviewOf": "advice-garden-five",
+        "reviewLand": "advice-garden"
+      },
+      {
+        "id": 12,
+        "type": "select",
+        "question": "adviceGardenTwo.questTask12",
+        "options": [
+          "Du solltest heute nicht in die Schule gehen.",
+          "Du musst heute in die Schule gehen.",
+          "Du solltest heute in die Schule gehen."
+        ],
+        "answer": "Du solltest heute nicht in die Schule gehen.",
+        "tip": "adviceGardenTwo.questDescription",
+        "reviewOf": "advice-garden-two",
+        "reviewLand": "advice-garden"
+      },
+      {
+        "id": 13,
+        "type": "input",
+        "question": "comparisonHillsSeven.questTask13",
+        "correctAnswer": "wie",
+        "tip": "comparisonHillsSeven.questDescription",
+        "reviewOf": "comparison-hills-seven",
+        "reviewLand": "comparison-hills"
+      },
+      {
+        "id": 14,
+        "type": "input",
+        "question": "adviceGardenSix.questTask14",
+        "correctAnswer": "hast",
+        "tip": "adviceGardenSix.questDescription"
+      },
+      {
+        "id": 15,
+        "type": "input",
+        "question": "adviceGardenSix.questTask15",
+        "correctAnswer": "mich",
+        "tip": "adviceGardenSix.questDescription"
+      }
+    ]
+  },
+  {
+    "questId": "advice-garden-seven",
+    "title": "adviceGardenSeven.questTitle",
+    "progress": "0/15",
+    "description": "adviceGardenSeven.questDescription",
+    "conditions": {
+      "goal": "adviceGardenSeven.questGoal",
+      "minCorrect": 15,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
+    "vocabulary": [
+      {
+        "word": "der Kopf",
+        "translation-ru": "голова",
+        "translation-en": "head",
+        "translation-uk": "голова",
+        "translation-pl": "głowa",
+        "translation-es": "la cabeza",
+        "translation-fr": "la tête",
+        "translation-tr": "baş",
+        "translation-ro": "capul",
+        "translation-uz": "bosh",
+        "translation-hi": "सिर",
+        "translation-ar": "الرأس"
+      },
+      {
+        "word": "das Fieber",
+        "translation-ru": "температура, жар",
+        "translation-en": "fever",
+        "translation-uk": "температура",
+        "translation-pl": "gorączka",
+        "translation-es": "la fiebre",
+        "translation-fr": "la fièvre",
+        "translation-tr": "ateş",
+        "translation-ro": "febra",
+        "translation-uz": "isitma",
+        "translation-hi": "बुख़ार",
+        "translation-ar": "الحمى"
+      },
+      {
+        "word": "der Tee",
+        "translation-ru": "чай",
+        "translation-en": "tea",
+        "translation-uk": "чай",
+        "translation-pl": "herbata",
+        "translation-es": "el té",
+        "translation-fr": "le thé",
+        "translation-tr": "çay",
+        "translation-ro": "ceaiul",
+        "translation-uz": "choy",
+        "translation-hi": "चाय",
+        "translation-ar": "الشاي"
+      },
+      {
+        "word": "das Bett",
+        "translation-ru": "кровать",
+        "translation-en": "bed",
+        "translation-uk": "ліжко",
+        "translation-pl": "łóżko",
+        "translation-es": "la cama",
+        "translation-fr": "le lit",
+        "translation-tr": "yatak",
+        "translation-ro": "patul",
+        "translation-uz": "karavot",
+        "translation-hi": "बिस्तर",
+        "translation-ar": "السرير"
+      },
+      {
+        "word": "die Gesundheit",
+        "translation-ru": "здоровье",
+        "translation-en": "health",
+        "translation-uk": "здоров’я",
+        "translation-pl": "zdrowie",
+        "translation-es": "la salud",
+        "translation-fr": "la santé",
+        "translation-tr": "sağlık",
+        "translation-ro": "sănătatea",
+        "translation-uz": "sog‘liq",
+        "translation-hi": "सेहत",
+        "translation-ar": "الصحة"
+      }
+    ],
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "adviceGardenSeven.questTask1",
+        "options": [
+          "Sie sollten bleiben im Bett.",
+          "Sie sollten im Bett bleibt.",
+          "Sie sollten im Bett bleiben."
+        ],
+        "answer": "Sie sollten im Bett bleiben.",
+        "tip": "adviceGardenSeven.questDescription"
+      },
+      {
+        "id": 2,
+        "type": "input",
+        "question": "adviceGardenSeven.questTask2",
+        "correctAnswer": "solltest",
+        "tip": "adviceGardenSeven.questDescription"
+      },
+      {
+        "id": 3,
+        "type": "input",
+        "question": "adviceGardenSeven.questTask3",
+        "correctAnswer": "Kopf",
+        "tip": "adviceGardenSeven.questDescription"
+      },
+      {
+        "id": 4,
+        "type": "reorder",
+        "question": "adviceGardenSeven.questTask4",
+        "words": [
+          "so",
+          "arbeiten",
+          "viel",
+          "Er",
+          "nicht",
+          "soll",
+          "sollte"
+        ],
+        "correctOrder": [
+          "Er",
+          "sollte",
+          "nicht",
+          "so",
+          "viel",
+          "arbeiten"
+        ],
+        "tip": "adviceGardenSeven.questDescription"
+      },
+      {
+        "id": 5,
+        "type": "select",
+        "question": "adviceGardenSeven.questTask5",
+        "options": [
+          "Wir solltet zum Arzt gehen.",
+          "Wir sollten zum Arzt gehst.",
+          "Wir sollten zum Arzt gehen."
+        ],
+        "answer": "Wir sollten zum Arzt gehen.",
+        "tip": "adviceGardenSeven.questDescription"
+      },
+      {
+        "id": 6,
+        "type": "input",
+        "question": "adviceGardenSeven.questTask6",
+        "correctAnswer": "schlafen",
+        "tip": "adviceGardenSeven.questDescription"
+      },
+      {
+        "id": 7,
+        "type": "readAndAnswer",
+        "question": "adviceGardenSeven.questTask7",
+        "text": "Herr Klein hat Fieber und sein Kopf tut weh. Die Ärztin sagt: „Sie sollten drei Tage im Bett bleiben und viel Tee trinken. Sie sollten nicht arbeiten.“",
+        "options": [
+          "im Bett bleiben und Tee trinken",
+          "in den Urlaub fahren",
+          "arbeiten und Sport machen"
+        ],
+        "answer": "im Bett bleiben und Tee trinken",
+        "tip": "adviceGardenSeven.questDescription"
+      },
+      {
+        "id": 8,
+        "type": "input",
+        "question": "adviceGardenSeven.questTask8",
+        "correctAnswer": "solltet",
+        "tip": "adviceGardenSeven.questDescription"
+      },
+      {
+        "id": 9,
+        "type": "reorder",
+        "question": "adviceGardenSeven.questTask10",
+        "words": [
+          "Du",
+          "die",
+          "sollst",
+          "nehmen",
+          "solltest",
+          "Tabletten"
+        ],
+        "correctOrder": [
+          "Du",
+          "solltest",
+          "die",
+          "Tabletten",
+          "nehmen"
+        ],
+        "tip": "adviceGardenSeven.questDescription"
+      },
+      {
+        "id": 10,
+        "type": "select",
+        "question": "adviceGardenSeven.questTask11",
+        "options": [
+          "Ich sollte weniger Süßes esse.",
+          "Ich sollte weniger Süßes essen.",
+          "Ich solltest weniger Süßes essen."
+        ],
+        "answer": "Ich sollte weniger Süßes essen.",
+        "tip": "adviceGardenSeven.questDescription"
+      },
+      {
+        "id": 11,
+        "type": "select",
+        "question": "adviceGardenSix.questTask9",
+        "options": [
+          "Was würdest du machen?",
+          "Was hast du gemacht?",
+          "Was machst du?"
+        ],
+        "answer": "Was würdest du machen?",
+        "tip": "adviceGardenSix.questDescription",
+        "reviewOf": "advice-garden-six",
+        "reviewLand": "advice-garden"
+      },
+      {
+        "id": 12,
+        "type": "select",
+        "question": "adviceGardenThree.questTask12",
+        "options": [
+          "Wir würden gern in den Urlaub fahren.",
+          "Wir würden gern zu Hause bleiben.",
+          "Wir fahren gern in den Urlaub."
+        ],
+        "answer": "Wir würden gern in den Urlaub fahren.",
+        "tip": "adviceGardenThree.questDescription",
+        "reviewOf": "advice-garden-three",
+        "reviewLand": "advice-garden"
+      },
+      {
+        "id": 13,
+        "type": "input",
+        "question": "comparisonHillsEight.questTask13",
+        "correctAnswer": "kürzeste",
+        "tip": "comparisonHillsEight.questDescription",
+        "reviewOf": "comparison-hills-eight",
+        "reviewLand": "comparison-hills"
+      },
+      {
+        "id": 14,
+        "type": "input",
+        "question": "adviceGardenSeven.questTask14",
+        "correctAnswer": "waren",
+        "tip": "adviceGardenSeven.questDescription"
+      },
+      {
+        "id": 15,
+        "type": "input",
+        "question": "adviceGardenSeven.questTask15",
+        "correctAnswer": "wichtiger",
+        "tip": "adviceGardenSeven.questDescription"
+      }
+    ]
+  },
+  {
+    "questId": "advice-garden-eight",
+    "title": "adviceGardenEight.questTitle",
+    "progress": "0/15",
+    "description": "adviceGardenEight.questDescription",
+    "conditions": {
+      "goal": "adviceGardenEight.questGoal",
+      "minCorrect": 15,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
+    "vocabulary": [
+      {
+        "word": "der Balkon",
+        "translation-ru": "балкон",
+        "translation-en": "balcony",
+        "translation-uk": "балкон",
+        "translation-pl": "balkon",
+        "translation-es": "el balcón",
+        "translation-fr": "le balcon",
+        "translation-tr": "balkon",
+        "translation-ro": "balconul",
+        "translation-uz": "balkon",
+        "translation-hi": "बालकनी",
+        "translation-ar": "الشرفة"
+      },
+      {
+        "word": "das Hotel",
+        "translation-ru": "отель",
+        "translation-en": "hotel",
+        "translation-uk": "готель",
+        "translation-pl": "hotel",
+        "translation-es": "el hotel",
+        "translation-fr": "l’hôtel",
+        "translation-tr": "otel",
+        "translation-ro": "hotelul",
+        "translation-uz": "mehmonxona",
+        "translation-hi": "होटल",
+        "translation-ar": "الفندق"
+      },
+      {
+        "word": "der Strand",
+        "translation-ru": "пляж",
+        "translation-en": "beach",
+        "translation-uk": "пляж",
+        "translation-pl": "plaża",
+        "translation-es": "la playa",
+        "translation-fr": "la plage",
+        "translation-tr": "plaj",
+        "translation-ro": "plaja",
+        "translation-uz": "plyaj",
+        "translation-hi": "समुद्र तट",
+        "translation-ar": "الشاطئ"
+      },
+      {
+        "word": "die Sonne",
+        "translation-ru": "солнце",
+        "translation-en": "sun",
+        "translation-uk": "сонце",
+        "translation-pl": "słońce",
+        "translation-es": "el sol",
+        "translation-fr": "le soleil",
+        "translation-tr": "güneş",
+        "translation-ro": "soarele",
+        "translation-uz": "quyosh",
+        "translation-hi": "सूरज",
+        "translation-ar": "الشمس"
+      },
+      {
+        "word": "das Meer",
+        "translation-ru": "море",
+        "translation-en": "sea",
+        "translation-uk": "море",
+        "translation-pl": "morze",
+        "translation-es": "el mar",
+        "translation-fr": "la mer",
+        "translation-tr": "deniz",
+        "translation-ro": "marea",
+        "translation-uz": "dengiz",
+        "translation-hi": "समुद्र",
+        "translation-ar": "البحر"
+      }
+    ],
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "adviceGardenEight.questTask1",
+        "options": [
+          "Ich würde gern nach Spanien fahre.",
+          "Ich würde nach Spanien gern fahren zu.",
+          "Ich würde gern nach Spanien fahren."
+        ],
+        "answer": "Ich würde gern nach Spanien fahren.",
+        "tip": "adviceGardenEight.questDescription"
+      },
+      {
+        "id": 2,
+        "type": "input",
+        "question": "adviceGardenEight.questTask2",
+        "correctAnswer": "hätte",
+        "tip": "adviceGardenEight.questDescription"
+      },
+      {
+        "id": 3,
+        "type": "input",
+        "question": "adviceGardenEight.questTask3",
+        "correctAnswer": "wäre",
+        "tip": "adviceGardenEight.questDescription"
+      },
+      {
+        "id": 4,
+        "type": "reorder",
+        "question": "adviceGardenEight.questTask4",
+        "words": [
+          "essen",
+          "würden",
+          "ein",
+          "werden",
+          "noch",
+          "Wir",
+          "Eis",
+          "gern"
+        ],
+        "correctOrder": [
+          "Wir",
+          "würden",
+          "gern",
+          "noch",
+          "ein",
+          "Eis",
+          "essen"
+        ],
+        "tip": "adviceGardenEight.questDescription"
+      },
+      {
+        "id": 5,
+        "type": "select",
+        "question": "adviceGardenEight.questTask5",
+        "options": [
+          "Sie wird gern in Italien wohnen.",
+          "Sie würde gern in Italien wohnt.",
+          "Sie würde gern in Italien wohnen."
+        ],
+        "answer": "Sie würde gern in Italien wohnen.",
+        "tip": "adviceGardenEight.questDescription"
+      },
+      {
+        "id": 6,
+        "type": "input",
+        "question": "adviceGardenEight.questTask6",
+        "correctAnswer": "Kaffee",
+        "tip": "adviceGardenEight.questDescription"
+      },
+      {
+        "id": 7,
+        "type": "readAndAnswer",
+        "question": "adviceGardenEight.questTask7",
+        "text": "Julia arbeitet viel. Sie sagt: „Ich wäre jetzt gern am Meer. Ich würde gern in einem kleinen Hotel wohnen und jeden Tag in der Sonne liegen. Ich hätte gern ein Zimmer mit Balkon.“",
+        "options": [
+          "zu Hause",
+          "am Meer",
+          "in den Bergen"
+        ],
+        "answer": "am Meer",
+        "tip": "adviceGardenEight.questDescription"
+      },
+      {
+        "id": 8,
+        "type": "input",
+        "question": "adviceGardenEight.questTask8",
+        "correctAnswer": "würden",
+        "tip": "adviceGardenEight.questDescription"
+      },
+      {
+        "id": 9,
+        "type": "reorder",
+        "question": "adviceGardenEight.questTask10",
+        "words": [
+          "du",
+          "gern",
+          "Würdest",
+          "Wirst",
+          "fahren?",
+          "uns",
+          "mit"
+        ],
+        "correctOrder": [
+          "Würdest",
+          "du",
+          "gern",
+          "mit",
+          "uns",
+          "fahren?"
+        ],
+        "tip": "adviceGardenEight.questDescription"
+      },
+      {
+        "id": 10,
+        "type": "select",
+        "question": "adviceGardenEight.questTask11",
+        "options": [
+          "Ich hätte gern ein großes Zimmer.",
+          "Ich hätte gern ein großer Zimmer.",
+          "Ich habe gern ein großes Zimmer."
+        ],
+        "answer": "Ich hätte gern ein großes Zimmer.",
+        "tip": "adviceGardenEight.questDescription"
+      },
+      {
+        "id": 11,
+        "type": "input",
+        "question": "adviceGardenSeven.questTask9",
+        "correctAnswer": "Fieber",
+        "tip": "adviceGardenSeven.questDescription",
+        "reviewOf": "advice-garden-seven",
+        "reviewLand": "advice-garden"
+      },
+      {
+        "id": 12,
+        "type": "select",
+        "question": "adviceGardenFour.questTask12",
+        "options": [
+          "Ich hätte gern einen kleinen Garten.",
+          "Ich hätte gern einen großen Garten.",
+          "Ich habe einen großen Garten."
+        ],
+        "answer": "Ich hätte gern einen großen Garten.",
+        "tip": "adviceGardenFour.questDescription",
+        "reviewOf": "advice-garden-four",
+        "reviewLand": "advice-garden"
+      },
+      {
+        "id": 13,
+        "type": "readAndAnswer",
+        "question": "adviceGardenOne.questTask13",
+        "text": "Lisa hat morgen eine Prüfung. Ihr Freund sagt: Du solltest heute nicht ins Kino gehen. Du solltest lernen.",
+        "options": [
+          "ins Kino gehen",
+          "lernen",
+          "schlafen"
+        ],
+        "answer": "lernen",
+        "tip": "adviceGardenOne.questDescription",
+        "reviewOf": "advice-garden-one",
+        "reviewLand": "advice-garden"
+      },
+      {
+        "id": 14,
+        "type": "input",
+        "question": "adviceGardenEight.questTask14",
+        "correctAnswer": "gefahren",
+        "tip": "adviceGardenEight.questDescription"
+      },
+      {
+        "id": 15,
+        "type": "input",
+        "question": "adviceGardenEight.questTask15",
+        "correctAnswer": "schöner",
+        "tip": "adviceGardenEight.questDescription"
+      }
+    ]
+  },
+  {
+    "questId": "advice-garden-nine",
+    "title": "adviceGardenNine.questTitle",
+    "progress": "0/15",
+    "description": "adviceGardenNine.questDescription",
+    "conditions": {
+      "goal": "adviceGardenNine.questGoal",
+      "minCorrect": 15,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
+    "vocabulary": [
+      {
+        "word": "das Wort",
+        "translation-ru": "слово",
+        "translation-en": "word",
+        "translation-uk": "слово",
+        "translation-pl": "słowo",
+        "translation-es": "la palabra",
+        "translation-fr": "le mot",
+        "translation-tr": "kelime",
+        "translation-ro": "cuvântul",
+        "translation-uz": "so‘z",
+        "translation-hi": "शब्द",
+        "translation-ar": "الكلمة"
+      },
+      {
+        "word": "der Platz",
+        "translation-ru": "место",
+        "translation-en": "space, room",
+        "translation-uk": "місце",
+        "translation-pl": "miejsce",
+        "translation-es": "el espacio",
+        "translation-fr": "la place",
+        "translation-tr": "yer",
+        "translation-ro": "locul",
+        "translation-uz": "joy",
+        "translation-hi": "जगह",
+        "translation-ar": "المكان"
+      },
+      {
+        "word": "der Strand",
+        "translation-ru": "пляж",
+        "translation-en": "beach",
+        "translation-uk": "пляж",
+        "translation-pl": "plaża",
+        "translation-es": "la playa",
+        "translation-fr": "la plage",
+        "translation-tr": "plaj",
+        "translation-ro": "plaja",
+        "translation-uz": "plyaj",
+        "translation-hi": "समुद्र तट",
+        "translation-ar": "الشاطئ"
+      },
+      {
+        "word": "die Rückenschmerzen",
+        "translation-ru": "боль в спине",
+        "translation-en": "back pain",
+        "translation-uk": "біль у спині",
+        "translation-pl": "ból pleców",
+        "translation-es": "el dolor de espalda",
+        "translation-fr": "le mal de dos",
+        "translation-tr": "sırt ağrısı",
+        "translation-ro": "durerea de spate",
+        "translation-uz": "bel og‘rig‘i",
+        "translation-hi": "पीठ दर्द",
+        "translation-ar": "ألم الظهر"
+      },
+      {
+        "word": "sitzen",
+        "translation-ru": "сидеть",
+        "translation-en": "to sit",
+        "translation-uk": "сидіти",
+        "translation-pl": "siedzieć",
+        "translation-es": "estar sentado",
+        "translation-fr": "être assis",
+        "translation-tr": "oturmak",
+        "translation-ro": "a sta jos",
+        "translation-uz": "o‘tirmoq",
+        "translation-hi": "बैठना",
+        "translation-ar": "يجلس"
+      },
+      {
+        "word": "mitkommen",
+        "translation-ru": "пойти вместе",
+        "translation-en": "to come along",
+        "translation-uk": "піти разом",
+        "translation-pl": "pójść razem",
+        "translation-es": "venir también",
+        "translation-fr": "venir avec",
+        "translation-tr": "birlikte gelmek",
+        "translation-ro": "a veni cu",
+        "translation-uz": "birga bormoq",
+        "translation-hi": "साथ आना",
+        "translation-ar": "يأتي معًا"
+      },
+      {
+        "word": "der Sport",
+        "translation-ru": "спорт",
+        "translation-en": "sport",
+        "translation-uk": "спорт",
+        "translation-pl": "sport",
+        "translation-es": "el deporte",
+        "translation-fr": "le sport",
+        "translation-tr": "spor",
+        "translation-ro": "sportul",
+        "translation-uz": "sport",
+        "translation-hi": "खेल",
+        "translation-ar": "الرياضة"
+      },
+      {
+        "word": "neu",
+        "translation-ru": "новый",
+        "translation-en": "new",
+        "translation-uk": "новий",
+        "translation-pl": "nowy",
+        "translation-es": "nuevo",
+        "translation-fr": "nouveau",
+        "translation-tr": "yeni",
+        "translation-ro": "nou",
+        "translation-uz": "yangi",
+        "translation-hi": "नया",
+        "translation-ar": "جديد"
+      }
+    ],
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "adviceGardenNine.questTask1",
+        "options": [
+          "Du solltest jede Woche neue Wörter lernen.",
+          "Du lernst jeden Tag neue Wörter.",
+          "Du solltest jeden Tag neue Wörter lernen."
+        ],
+        "answer": "Du solltest jeden Tag neue Wörter lernen.",
+        "tip": "adviceGardenNine.questDescription"
+      },
+      {
+        "id": 2,
+        "type": "input",
+        "question": "adviceGardenNine.questTask2",
+        "correctAnswer": "würde",
+        "tip": "adviceGardenNine.questDescription"
+      },
+      {
+        "id": 3,
+        "type": "input",
+        "question": "adviceGardenNine.questTask3",
+        "correctAnswer": "hätten",
+        "tip": "adviceGardenNine.questDescription"
+      },
+      {
+        "id": 4,
+        "type": "reorder",
+        "question": "adviceGardenNine.questTask4",
+        "words": [
+          "ausruhen",
+          "mehr",
+          "Sie",
+          "sich",
+          "sollten",
+          "sollte"
+        ],
+        "correctOrder": [
+          "Sie",
+          "sollte",
+          "sich",
+          "mehr",
+          "ausruhen"
+        ],
+        "tip": "adviceGardenNine.questDescription"
+      },
+      {
+        "id": 5,
+        "type": "select",
+        "question": "adviceGardenNine.questTask5",
+        "options": [
+          "Ich bin jetzt in Italien.",
+          "Ich wäre jetzt gern in Spanien.",
+          "Ich wäre jetzt gern in Italien."
+        ],
+        "answer": "Ich wäre jetzt gern in Italien.",
+        "tip": "adviceGardenNine.questDescription"
+      },
+      {
+        "id": 6,
+        "type": "input",
+        "question": "adviceGardenNine.questTask6",
+        "correctAnswer": "wäre",
+        "tip": "adviceGardenNine.questDescription"
+      },
+      {
+        "id": 7,
+        "type": "readAndAnswer",
+        "question": "adviceGardenNine.questTask7",
+        "text": "Jana: Ich bin so müde. Tim: Du solltest weniger arbeiten und mehr schlafen.",
+        "options": [
+          "mehr schlafen",
+          "mehr Kaffee trinken",
+          "mehr arbeiten"
+        ],
+        "answer": "mehr schlafen",
+        "tip": "adviceGardenNine.questDescription"
+      },
+      {
+        "id": 8,
+        "type": "input",
+        "question": "adviceGardenNine.questTask8",
+        "correctAnswer": "Würden",
+        "tip": "adviceGardenNine.questDescription"
+      },
+      {
+        "id": 9,
+        "type": "select",
+        "question": "adviceGardenNine.questTask9",
+        "options": [
+          "Er hätte gern ein neues Auto.",
+          "Er hätte gern ein altes Auto.",
+          "Er hat ein neues Auto."
+        ],
+        "answer": "Er hätte gern ein neues Auto.",
+        "tip": "adviceGardenNine.questDescription"
+      },
+      {
+        "id": 10,
+        "type": "input",
+        "question": "adviceGardenNine.questTask10",
+        "correctAnswer": "solltet",
+        "tip": "adviceGardenNine.questDescription"
+      },
+      {
+        "id": 11,
+        "type": "reorder",
+        "question": "adviceGardenNine.questTask11",
+        "words": [
+          "zu",
+          "An",
+          "Hause",
+          "Stelle",
+          "bleibe",
+          "würde",
+          "bleiben",
+          "deiner",
+          "ich"
+        ],
+        "correctOrder": [
+          "An",
+          "deiner",
+          "Stelle",
+          "würde",
+          "ich",
+          "zu",
+          "Hause",
+          "bleiben"
+        ],
+        "tip": "adviceGardenNine.questDescription"
+      },
+      {
+        "id": 12,
+        "type": "select",
+        "question": "adviceGardenNine.questTask12",
+        "options": [
+          "Würdest du gern zu Hause bleiben?",
+          "Würdest du gern mitkommen?",
+          "Kommst du mit?"
+        ],
+        "answer": "Würdest du gern mitkommen?",
+        "tip": "adviceGardenNine.questDescription"
+      },
+      {
+        "id": 13,
+        "type": "readAndAnswer",
+        "question": "adviceGardenNine.questTask13",
+        "text": "Herr Weber hat Rückenschmerzen. Der Arzt sagt: Sie sollten mehr Sport machen und nicht so lange sitzen.",
+        "options": [
+          "mehr Sport machen",
+          "mehr essen",
+          "länger sitzen"
+        ],
+        "answer": "mehr Sport machen",
+        "tip": "adviceGardenNine.questDescription"
+      },
+      {
+        "id": 14,
+        "type": "input",
+        "question": "adviceGardenNine.questTask14",
+        "correctAnswer": "Wärst",
+        "tip": "adviceGardenNine.questDescription"
+      },
+      {
+        "id": 15,
+        "type": "input",
+        "question": "adviceGardenNine.questTask15",
+        "correctAnswer": "Lust",
+        "tip": "adviceGardenNine.questDescription"
+      }
+    ]
+  },
+  {
+    "questId": "advice-garden-ten",
+    "title": "adviceGardenTen.questTitle",
+    "progress": "0/15",
+    "description": "adviceGardenTen.questDescription",
+    "conditions": {
+      "goal": "adviceGardenTen.questGoal",
+      "minCorrect": 15,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
+    "vocabulary": [
+      {
+        "word": "die Tasse",
+        "translation-ru": "чашка",
+        "translation-en": "cup",
+        "translation-uk": "чашка",
+        "translation-pl": "filiżanka",
+        "translation-es": "la taza",
+        "translation-fr": "la tasse",
+        "translation-tr": "fincan",
+        "translation-ro": "ceașca",
+        "translation-uz": "piyola",
+        "translation-hi": "कप",
+        "translation-ar": "الفنجان"
+      },
+      {
+        "word": "der Stress",
+        "translation-ru": "стресс",
+        "translation-en": "stress",
+        "translation-uk": "стрес",
+        "translation-pl": "stres",
+        "translation-es": "el estrés",
+        "translation-fr": "le stress",
+        "translation-tr": "stres",
+        "translation-ro": "stresul",
+        "translation-uz": "stress",
+        "translation-hi": "तनाव",
+        "translation-ar": "التوتر"
+      },
+      {
+        "word": "das Konzert",
+        "translation-ru": "концерт",
+        "translation-en": "concert",
+        "translation-uk": "концерт",
+        "translation-pl": "koncert",
+        "translation-es": "el concierto",
+        "translation-fr": "le concert",
+        "translation-tr": "konser",
+        "translation-ro": "concertul",
+        "translation-uz": "konsert",
+        "translation-hi": "कॉन्सर्ट",
+        "translation-ar": "الحفلة الموسيقية"
+      },
+      {
+        "word": "die Oma",
+        "translation-ru": "бабушка",
+        "translation-en": "grandma",
+        "translation-uk": "бабуся",
+        "translation-pl": "babcia",
+        "translation-es": "la abuela",
+        "translation-fr": "la grand-mère",
+        "translation-tr": "büyükanne",
+        "translation-ro": "bunica",
+        "translation-uz": "buvi",
+        "translation-hi": "दादी",
+        "translation-ar": "الجدة"
+      },
+      {
+        "word": "der Rat",
+        "translation-ru": "совет",
+        "translation-en": "advice",
+        "translation-uk": "порада",
+        "translation-pl": "rada",
+        "translation-es": "el consejo",
+        "translation-fr": "le conseil",
+        "translation-tr": "tavsiye",
+        "translation-ro": "sfatul",
+        "translation-uz": "maslahat",
+        "translation-hi": "सलाह",
+        "translation-ar": "النصيحة"
+      }
+    ],
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "adviceGardenTen.questTask1",
+        "options": [
+          "Du solltest schneller fahren.",
+          "Du fährst langsamer.",
+          "Du solltest langsamer fahren."
+        ],
+        "answer": "Du solltest langsamer fahren.",
+        "tip": "adviceGardenTen.questDescription"
+      },
+      {
+        "id": 2,
+        "type": "input",
+        "question": "adviceGardenTen.questTask2",
+        "correctAnswer": "hätte",
+        "tip": "adviceGardenTen.questDescription"
+      },
+      {
+        "id": 3,
+        "type": "input",
+        "question": "adviceGardenTen.questTask3",
+        "correctAnswer": "beste",
+        "tip": "adviceGardenTen.questDescription"
+      },
+      {
+        "id": 4,
+        "type": "input",
+        "question": "adviceGardenTen.questTask4",
+        "correctAnswer": "gewartet",
+        "tip": "adviceGardenTen.questDescription"
+      },
+      {
+        "id": 5,
+        "type": "select",
+        "question": "adviceGardenTen.questTask5",
+        "options": [
+          "Sie sollten den Lehrer fragen.",
+          "Sie haben den Arzt gefragt.",
+          "Sie sollten den Arzt fragen."
+        ],
+        "answer": "Sie sollten den Arzt fragen.",
+        "tip": "adviceGardenTen.questDescription"
+      },
+      {
+        "id": 6,
+        "type": "input",
+        "question": "adviceGardenTen.questTask6",
+        "correctAnswer": "wollten",
+        "tip": "adviceGardenTen.questDescription"
+      },
+      {
+        "id": 7,
+        "type": "readAndAnswer",
+        "question": "adviceGardenTen.questTask7",
+        "text": "Lena möchte besser Deutsch sprechen. Ihr Lehrer sagt: Du solltest jeden Tag deutsche Filme sehen und mit Deutschen sprechen.",
+        "options": [
+          "Englisch lernen",
+          "deutsche Filme sehen",
+          "mehr schlafen"
+        ],
+        "answer": "deutsche Filme sehen",
+        "tip": "adviceGardenTen.questDescription"
+      },
+      {
+        "id": 8,
+        "type": "input",
+        "question": "adviceGardenTen.questTask8",
+        "correctAnswer": "meiner",
+        "tip": "adviceGardenTen.questDescription"
+      },
+      {
+        "id": 9,
+        "type": "reorder",
+        "question": "adviceGardenTen.questTask9",
+        "words": [
+          "Kannst",
+          "du",
+          "helfen",
+          "Könntest",
+          "mir"
+        ],
+        "correctOrder": [
+          "Könntest",
+          "du",
+          "mir",
+          "helfen"
+        ],
+        "tip": "adviceGardenTen.questDescription"
+      },
+      {
+        "id": 10,
+        "type": "input",
+        "question": "adviceGardenTen.questTask10",
+        "correctAnswer": "bin",
+        "tip": "adviceGardenTen.questDescription"
+      },
+      {
+        "id": 11,
+        "type": "input",
+        "question": "adviceGardenTen.questTask11",
+        "correctAnswer": "wie",
+        "tip": "adviceGardenTen.questDescription"
+      },
+      {
+        "id": 12,
+        "type": "select",
+        "question": "adviceGardenTen.questTask12",
+        "options": [
+          "Würdest du gern ins Konzert gehen?",
+          "Würdest du gern ins Kino gehen?",
+          "Gehst du gern ins Konzert?"
+        ],
+        "answer": "Würdest du gern ins Konzert gehen?",
+        "tip": "adviceGardenTen.questDescription"
+      },
+      {
+        "id": 13,
+        "type": "readAndAnswer",
+        "question": "adviceGardenTen.questTask13",
+        "text": "Max hat viel Stress bei der Arbeit. Seine Frau sagt: Du solltest Urlaub machen. Max sagt: Ich wäre gern am Meer.",
+        "options": [
+          "zu Hause",
+          "am Meer",
+          "in den Bergen"
+        ],
+        "answer": "am Meer",
+        "tip": "adviceGardenTen.questDescription"
+      },
+      {
+        "id": 14,
+        "type": "input",
+        "question": "adviceGardenTen.questTask14",
+        "correctAnswer": "habe",
+        "tip": "adviceGardenTen.questDescription"
+      },
+      {
+        "id": 15,
+        "type": "input",
+        "question": "adviceGardenTen.questTask15",
+        "correctAnswer": "dem",
+        "tip": "adviceGardenTen.questDescription"
+      }
+    ]
+  }
+]

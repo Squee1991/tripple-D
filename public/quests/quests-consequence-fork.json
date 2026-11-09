@@ -1,0 +1,2811 @@
+[
+  {
+    "questId": "consequence-fork-one",
+    "title": "consequenceForkOne.questTitle",
+    "progress": "0/15",
+    "description": "consequenceForkOne.questDescription",
+    "conditions": {
+      "goal": "consequenceForkOne.questGoal",
+      "minCorrect": 15,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
+    "vocabulary": [
+      {
+        "word": "sodass",
+        "translation-ru": "так что",
+        "translation-en": "so, as a result",
+        "translation-uk": "тож, так що",
+        "translation-pl": "więc, tak że",
+        "translation-es": "así que",
+        "translation-fr": "si bien que",
+        "translation-tr": "bu yüzden",
+        "translation-ro": "așa că",
+        "translation-uz": "shuning uchun",
+        "translation-hi": "इसलिए",
+        "translation-ar": "لذلك"
+      },
+      {
+        "word": "stark",
+        "translation-ru": "сильный, сильно",
+        "translation-en": "strong, heavily",
+        "translation-uk": "сильний, сильно",
+        "translation-pl": "silny, mocno",
+        "translation-es": "fuerte, mucho",
+        "translation-fr": "fort, fortement",
+        "translation-tr": "güçlü, şiddetli",
+        "translation-ro": "puternic, tare",
+        "translation-uz": "kuchli, qattiq",
+        "translation-hi": "तेज़, ज़ोर से",
+        "translation-ar": "قوي، بشدة"
+      },
+      {
+        "word": "die Verspätung",
+        "translation-ru": "опоздание",
+        "translation-en": "delay",
+        "translation-uk": "запізнення",
+        "translation-pl": "opóźnienie",
+        "translation-es": "el retraso",
+        "translation-fr": "le retard",
+        "translation-tr": "gecikme",
+        "translation-ro": "întârzierea",
+        "translation-uz": "kechikish",
+        "translation-hi": "देरी",
+        "translation-ar": "التأخير"
+      },
+      {
+        "word": "der Strom",
+        "translation-ru": "электричество",
+        "translation-en": "electricity",
+        "translation-uk": "електрика",
+        "translation-pl": "prąd",
+        "translation-es": "la electricidad",
+        "translation-fr": "l’électricité",
+        "translation-tr": "elektrik",
+        "translation-ro": "curentul",
+        "translation-uz": "elektr toki",
+        "translation-hi": "बिजली",
+        "translation-ar": "الكهرباء"
+      },
+      {
+        "word": "ausfallen",
+        "translation-ru": "отменяться (об уроке, поезде)",
+        "translation-en": "to be cancelled",
+        "translation-uk": "скасовуватися (про урок, потяг)",
+        "translation-pl": "nie odbyć się, zostać odwołanym",
+        "translation-es": "cancelarse",
+        "translation-fr": "être annulé",
+        "translation-tr": "iptal olmak",
+        "translation-ro": "a se anula",
+        "translation-uz": "bekor bo‘lmoq",
+        "translation-hi": "रद्द होना",
+        "translation-ar": "يُلغى"
+      },
+      {
+        "word": "verschlafen",
+        "translation-ru": "проспать",
+        "translation-en": "to oversleep",
+        "translation-uk": "проспати",
+        "translation-pl": "zaspać",
+        "translation-es": "quedarse dormido",
+        "translation-fr": "ne pas se réveiller à temps",
+        "translation-tr": "uyuyakalmak",
+        "translation-ro": "a se trezi prea târziu",
+        "translation-uz": "uxlab qolmoq",
+        "translation-hi": "देर तक सोते रह जाना",
+        "translation-ar": "يتأخر في النوم"
+      }
+    ],
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "consequenceForkOne.questTask1",
+        "options": [
+          "Es regnete stark, sodass wir blieben zu Hause.",
+          "Es regnete stark, damit wir zu Hause blieben.",
+          "Es regnete stark, sodass wir zu Hause blieben."
+        ],
+        "answer": "Es regnete stark, sodass wir zu Hause blieben.",
+        "tip": "consequenceForkOne.questDescription"
+      },
+      {
+        "id": 2,
+        "type": "input",
+        "question": "consequenceForkOne.questTask2",
+        "correctAnswer": "sodass",
+        "tip": "consequenceForkOne.questDescription"
+      },
+      {
+        "id": 3,
+        "type": "input",
+        "question": "consequenceForkOne.questTask3",
+        "correctAnswer": "bin",
+        "tip": "consequenceForkOne.questDescription"
+      },
+      {
+        "id": 4,
+        "type": "reorder",
+        "question": "consequenceForkOne.questTask4",
+        "words": [
+          "sahen",
+          "damit",
+          "sodass",
+          "keinen",
+          "nichts",
+          "Es",
+          "gab",
+          "wir",
+          "Strom"
+        ],
+        "correctOrder": [
+          "Es",
+          "gab",
+          "keinen",
+          "Strom",
+          "sodass",
+          "wir",
+          "nichts",
+          "sahen"
+        ],
+        "tip": "consequenceForkOne.questDescription"
+      },
+      {
+        "id": 5,
+        "type": "select",
+        "question": "consequenceForkOne.questTask5",
+        "options": [
+          "Der Unterricht fiel aus, damit wir nach Hause gingen.",
+          "Der Unterricht fiel aus, sodass wir nach Hause gingen.",
+          "Der Unterricht fiel aus, sodass gingen wir nach Hause."
+        ],
+        "answer": "Der Unterricht fiel aus, sodass wir nach Hause gingen.",
+        "tip": "consequenceForkOne.questDescription"
+      },
+      {
+        "id": 6,
+        "type": "input",
+        "question": "consequenceForkOne.questTask6",
+        "correctAnswer": "wartete",
+        "tip": "consequenceForkOne.questDescription"
+      },
+      {
+        "id": 7,
+        "type": "readAndAnswer",
+        "question": "consequenceForkOne.questTask7",
+        "text": "Heute Morgen gab es einen langen Stau, sodass Anna eine Stunde zu spät zur Arbeit kam. Ihr Chef war nicht froh.",
+        "options": [
+          "Sie war krank.",
+          "Es gab einen Stau.",
+          "Der Zug fiel aus."
+        ],
+        "answer": "Es gab einen Stau.",
+        "tip": "consequenceForkOne.questDescription"
+      },
+      {
+        "id": 8,
+        "type": "input",
+        "question": "consequenceForkOne.questTask8",
+        "correctAnswer": "sodass",
+        "tip": "consequenceForkOne.questDescription"
+      },
+      {
+        "id": 9,
+        "type": "reorder",
+        "question": "consequenceForkOne.questTask10",
+        "words": [
+          "habe",
+          "ich",
+          "sodass",
+          "Zug",
+          "verpasst",
+          "habe",
+          "verschlafen",
+          "Ich",
+          "damit",
+          "den"
+        ],
+        "correctOrder": [
+          "Ich",
+          "habe",
+          "verschlafen",
+          "sodass",
+          "ich",
+          "den",
+          "Zug",
+          "verpasst",
+          "habe"
+        ],
+        "tip": "consequenceForkOne.questDescription"
+      },
+      {
+        "id": 10,
+        "type": "select",
+        "question": "consequenceForkOne.questTask11",
+        "options": [
+          "Er war krank, damit er nicht kam.",
+          "Er war krank, sodass er nicht kam.",
+          "Er war krank, sodass kam er nicht."
+        ],
+        "answer": "Er war krank, sodass er nicht kam.",
+        "tip": "consequenceForkOne.questDescription"
+      },
+      {
+        "id": 11,
+        "type": "input",
+        "question": "purposePathEight.questTask9",
+        "correctAnswer": "vergessen",
+        "tip": "purposePathEight.questDescription",
+        "reviewOf": "purpose-path-eight",
+        "reviewLand": "purpose-path"
+      },
+      {
+        "id": 12,
+        "type": "input",
+        "question": "purposePathFive.questTask12",
+        "correctAnswer": "aufzustehen",
+        "tip": "purposePathFive.questDescription",
+        "reviewOf": "purpose-path-five",
+        "reviewLand": "purpose-path"
+      },
+      {
+        "id": 13,
+        "type": "input",
+        "question": "purposePathTwo.questTask13",
+        "correctAnswer": "kennenzulernen",
+        "tip": "purposePathTwo.questDescription",
+        "reviewOf": "purpose-path-two",
+        "reviewLand": "purpose-path"
+      },
+      {
+        "id": 14,
+        "type": "input",
+        "question": "consequenceForkOne.questTask14",
+        "correctAnswer": "um",
+        "tip": "consequenceForkOne.questDescription"
+      },
+      {
+        "id": 15,
+        "type": "input",
+        "question": "consequenceForkOne.questTask15",
+        "correctAnswer": "waren",
+        "tip": "consequenceForkOne.questDescription"
+      }
+    ]
+  },
+  {
+    "questId": "consequence-fork-two",
+    "title": "consequenceForkTwo.questTitle",
+    "progress": "0/15",
+    "description": "consequenceForkTwo.questDescription",
+    "conditions": {
+      "goal": "consequenceForkTwo.questGoal",
+      "minCorrect": 15,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
+    "vocabulary": [
+      {
+        "word": "so … dass",
+        "translation-ru": "настолько …, что",
+        "translation-en": "so … that",
+        "translation-uk": "настільки …, що",
+        "translation-pl": "tak …, że",
+        "translation-es": "tan … que",
+        "translation-fr": "si … que",
+        "translation-tr": "o kadar … ki",
+        "translation-ro": "atât de … încât",
+        "translation-uz": "shunchalik …, ki",
+        "translation-hi": "इतना … कि",
+        "translation-ar": "لدرجة أن"
+      },
+      {
+        "word": "einschlafen",
+        "translation-ru": "заснуть",
+        "translation-en": "to fall asleep",
+        "translation-uk": "заснути",
+        "translation-pl": "zasnąć",
+        "translation-es": "dormirse",
+        "translation-fr": "s’endormir",
+        "translation-tr": "uykuya dalmak",
+        "translation-ro": "a adormi",
+        "translation-uz": "uxlab qolmoq",
+        "translation-hi": "सो जाना",
+        "translation-ar": "يغفو"
+      },
+      {
+        "word": "spannend",
+        "translation-ru": "захватывающий",
+        "translation-en": "exciting",
+        "translation-uk": "захопливий",
+        "translation-pl": "wciągający",
+        "translation-es": "emocionante",
+        "translation-fr": "passionnant",
+        "translation-tr": "heyecanlı",
+        "translation-ro": "captivant",
+        "translation-uz": "qiziqarli",
+        "translation-hi": "रोमांचक",
+        "translation-ar": "مشوّق"
+      },
+      {
+        "word": "voll",
+        "translation-ru": "полный",
+        "translation-en": "full",
+        "translation-uk": "повний",
+        "translation-pl": "pełny",
+        "translation-es": "lleno",
+        "translation-fr": "plein",
+        "translation-tr": "dolu",
+        "translation-ro": "plin",
+        "translation-uz": "to‘la",
+        "translation-hi": "भरा हुआ",
+        "translation-ar": "ممتلئ"
+      },
+      {
+        "word": "scharf",
+        "translation-ru": "острый",
+        "translation-en": "spicy, sharp",
+        "translation-uk": "гострий",
+        "translation-pl": "ostry",
+        "translation-es": "picante",
+        "translation-fr": "épicé",
+        "translation-tr": "acı",
+        "translation-ro": "iute",
+        "translation-uz": "achchiq",
+        "translation-hi": "तीखा",
+        "translation-ar": "حار"
+      },
+      {
+        "word": "schnell",
+        "translation-ru": "быстрый",
+        "translation-en": "fast",
+        "translation-uk": "швидкий",
+        "translation-pl": "szybki",
+        "translation-es": "rápido",
+        "translation-fr": "rapide",
+        "translation-tr": "hızlı",
+        "translation-ro": "rapid",
+        "translation-uz": "tez",
+        "translation-hi": "तेज़",
+        "translation-ar": "سريع"
+      }
+    ],
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "consequenceForkTwo.questTask1",
+        "options": [
+          "Ich war sehr müde, dass ich sofort einschlief.",
+          "Ich war so müde, dass ich schlief sofort ein.",
+          "Ich war so müde, dass ich sofort einschlief."
+        ],
+        "answer": "Ich war so müde, dass ich sofort einschlief.",
+        "tip": "consequenceForkTwo.questDescription"
+      },
+      {
+        "id": 2,
+        "type": "input",
+        "question": "consequenceForkTwo.questTask2",
+        "correctAnswer": "so",
+        "tip": "consequenceForkTwo.questDescription"
+      },
+      {
+        "id": 3,
+        "type": "input",
+        "question": "consequenceForkTwo.questTask3",
+        "correctAnswer": "dass",
+        "tip": "consequenceForkTwo.questDescription"
+      },
+      {
+        "id": 4,
+        "type": "reorder",
+        "question": "consequenceForkTwo.questTask4",
+        "words": [
+          "Der",
+          "sodass",
+          "musste",
+          "Bus",
+          "stehen",
+          "dass",
+          "voll",
+          "ich",
+          "war",
+          "so"
+        ],
+        "correctOrder": [
+          "Der",
+          "Bus",
+          "war",
+          "so",
+          "voll",
+          "dass",
+          "ich",
+          "stehen",
+          "musste"
+        ],
+        "tip": "consequenceForkTwo.questDescription"
+      },
+      {
+        "id": 5,
+        "type": "select",
+        "question": "consequenceForkTwo.questTask5",
+        "options": [
+          "Er sprach so schnell, damit ich nichts verstand.",
+          "Er sprach so schnell, dass ich nichts verstand.",
+          "Er sprach so schnell, dass ich verstand nichts."
+        ],
+        "answer": "Er sprach so schnell, dass ich nichts verstand.",
+        "tip": "consequenceForkTwo.questDescription"
+      },
+      {
+        "id": 6,
+        "type": "input",
+        "question": "consequenceForkTwo.questTask6",
+        "correctAnswer": "tranken",
+        "tip": "consequenceForkTwo.questDescription"
+      },
+      {
+        "id": 7,
+        "type": "readAndAnswer",
+        "question": "consequenceForkTwo.questTask7",
+        "text": "Paul hatte am Freitag so viel Arbeit, dass er nicht zur Party gehen konnte. Er war so müde, dass er um neun Uhr schon schlief.",
+        "options": [
+          "Er hatte zu viel Arbeit.",
+          "Er hatte kein Geld.",
+          "Er war krank."
+        ],
+        "answer": "Er hatte zu viel Arbeit.",
+        "tip": "consequenceForkTwo.questDescription"
+      },
+      {
+        "id": 8,
+        "type": "input",
+        "question": "consequenceForkTwo.questTask8",
+        "correctAnswer": "gingen",
+        "tip": "consequenceForkTwo.questDescription"
+      },
+      {
+        "id": 9,
+        "type": "reorder",
+        "question": "consequenceForkTwo.questTask10",
+        "words": [
+          "Das",
+          "Buch",
+          "damit",
+          "einer",
+          "Nacht",
+          "dass",
+          "las",
+          "war",
+          "spannend",
+          "in",
+          "ich",
+          "so",
+          "es"
+        ],
+        "correctOrder": [
+          "Das",
+          "Buch",
+          "war",
+          "so",
+          "spannend",
+          "dass",
+          "ich",
+          "es",
+          "in",
+          "einer",
+          "Nacht",
+          "las"
+        ],
+        "tip": "consequenceForkTwo.questDescription"
+      },
+      {
+        "id": 10,
+        "type": "select",
+        "question": "consequenceForkTwo.questTask11",
+        "options": [
+          "Es war so kalt, damit wir zu Hause blieben.",
+          "Es war so kalt, dass wir zu Hause blieben.",
+          "Es war so kalt, dass wir blieben zu Hause."
+        ],
+        "answer": "Es war so kalt, dass wir zu Hause blieben.",
+        "tip": "consequenceForkTwo.questDescription"
+      },
+      {
+        "id": 11,
+        "type": "input",
+        "question": "consequenceForkOne.questTask9",
+        "correctAnswer": "fuhren",
+        "tip": "consequenceForkOne.questDescription",
+        "reviewOf": "consequence-fork-one",
+        "reviewLand": "consequence-fork"
+      },
+      {
+        "id": 12,
+        "type": "input",
+        "question": "purposePathSix.questTask12",
+        "correctAnswer": "damit",
+        "tip": "purposePathSix.questDescription",
+        "reviewOf": "purpose-path-six",
+        "reviewLand": "purpose-path"
+      },
+      {
+        "id": 13,
+        "type": "input",
+        "question": "purposePathThree.questTask13",
+        "correctAnswer": "wirst",
+        "tip": "purposePathThree.questDescription",
+        "reviewOf": "purpose-path-three",
+        "reviewLand": "purpose-path"
+      },
+      {
+        "id": 14,
+        "type": "input",
+        "question": "consequenceForkTwo.questTask14",
+        "correctAnswer": "deshalb",
+        "tip": "consequenceForkTwo.questDescription"
+      },
+      {
+        "id": 15,
+        "type": "input",
+        "question": "consequenceForkTwo.questTask15",
+        "correctAnswer": "stand",
+        "tip": "consequenceForkTwo.questDescription"
+      }
+    ]
+  },
+  {
+    "questId": "consequence-fork-three",
+    "title": "consequenceForkThree.questTitle",
+    "progress": "0/15",
+    "description": "consequenceForkThree.questDescription",
+    "conditions": {
+      "goal": "consequenceForkThree.questGoal",
+      "minCorrect": 15,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
+    "vocabulary": [
+      {
+        "word": "der Unfall",
+        "translation-ru": "авария, несчастный случай",
+        "translation-en": "accident",
+        "translation-uk": "аварія",
+        "translation-pl": "wypadek",
+        "translation-es": "el accidente",
+        "translation-fr": "l’accident",
+        "translation-tr": "kaza",
+        "translation-ro": "accidentul",
+        "translation-uz": "baxtsiz hodisa",
+        "translation-hi": "दुर्घटना",
+        "translation-ar": "الحادث"
+      },
+      {
+        "word": "losfahren",
+        "translation-ru": "отправляться, выезжать",
+        "translation-en": "to set off",
+        "translation-uk": "вирушати",
+        "translation-pl": "wyruszać",
+        "translation-es": "salir, ponerse en marcha",
+        "translation-fr": "partir",
+        "translation-tr": "yola çıkmak",
+        "translation-ro": "a pleca",
+        "translation-uz": "yo‘lga chiqmoq",
+        "translation-hi": "रवाना होना",
+        "translation-ar": "ينطلق"
+      },
+      {
+        "word": "das Handy",
+        "translation-ru": "мобильный телефон",
+        "translation-en": "mobile phone",
+        "translation-uk": "мобільний телефон",
+        "translation-pl": "komórka",
+        "translation-es": "el móvil",
+        "translation-fr": "le portable",
+        "translation-tr": "cep telefonu",
+        "translation-ro": "telefonul mobil",
+        "translation-uz": "mobil telefon",
+        "translation-hi": "मोबाइल फ़ोन",
+        "translation-ar": "الهاتف المحمول"
+      },
+      {
+        "word": "sich bedanken",
+        "translation-ru": "благодарить",
+        "translation-en": "to say thank you",
+        "translation-uk": "дякувати",
+        "translation-pl": "dziękować",
+        "translation-es": "dar las gracias",
+        "translation-fr": "remercier",
+        "translation-tr": "teşekkür etmek",
+        "translation-ro": "a mulțumi",
+        "translation-uz": "minnatdorchilik bildirmoq",
+        "translation-hi": "धन्यवाद देना",
+        "translation-ar": "يشكر"
+      },
+      {
+        "word": "sodass",
+        "translation-ru": "так что",
+        "translation-en": "so, as a result",
+        "translation-uk": "тож, так що",
+        "translation-pl": "więc, tak że",
+        "translation-es": "así que",
+        "translation-fr": "si bien que",
+        "translation-tr": "bu yüzden",
+        "translation-ro": "așa că",
+        "translation-uz": "shuning uchun",
+        "translation-hi": "इसलिए",
+        "translation-ar": "لذلك"
+      }
+    ],
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "consequenceForkThree.questTask1",
+        "options": [
+          "Wir kamen früh, damit wir gute Plätze bekamen.",
+          "Wir kamen früh, sodass bekamen wir gute Plätze.",
+          "Wir kamen früh, sodass wir gute Plätze bekamen."
+        ],
+        "answer": "Wir kamen früh, sodass wir gute Plätze bekamen.",
+        "tip": "consequenceForkThree.questDescription"
+      },
+      {
+        "id": 2,
+        "type": "input",
+        "question": "consequenceForkThree.questTask2",
+        "correctAnswer": "damit",
+        "tip": "consequenceForkThree.questDescription"
+      },
+      {
+        "id": 3,
+        "type": "input",
+        "question": "consequenceForkThree.questTask3",
+        "correctAnswer": "sodass",
+        "tip": "consequenceForkThree.questDescription"
+      },
+      {
+        "id": 4,
+        "type": "reorder",
+        "question": "consequenceForkThree.questTask4",
+        "words": [
+          "Handy",
+          "dir",
+          "Mama",
+          "du",
+          "damit",
+          "gebe",
+          "kannst",
+          "Ich",
+          "sodass",
+          "anrufen",
+          "mein"
+        ],
+        "correctOrder": [
+          "Ich",
+          "gebe",
+          "dir",
+          "mein",
+          "Handy",
+          "damit",
+          "du",
+          "Mama",
+          "anrufen",
+          "kannst"
+        ],
+        "tip": "consequenceForkThree.questDescription"
+      },
+      {
+        "id": 5,
+        "type": "select",
+        "question": "consequenceForkThree.questTask5",
+        "options": [
+          "Es regnete, sodass wir ein Taxi nahmen.",
+          "Es regnete, sodass nahmen wir ein Taxi.",
+          "Es regnete, damit wir ein Taxi nahmen."
+        ],
+        "answer": "Es regnete, sodass wir ein Taxi nahmen.",
+        "tip": "consequenceForkThree.questDescription"
+      },
+      {
+        "id": 6,
+        "type": "input",
+        "question": "consequenceForkThree.questTask6",
+        "correctAnswer": "damit",
+        "tip": "consequenceForkThree.questDescription"
+      },
+      {
+        "id": 7,
+        "type": "readAndAnswer",
+        "question": "consequenceForkThree.questTask7",
+        "text": "Tom wollte pünktlich sein. Er fuhr früh los, damit er nicht zu spät kam. Aber es gab einen Unfall, sodass er doch eine Stunde warten musste.",
+        "options": [
+          "Er hatte kein Auto.",
+          "Alle Autos standen still.",
+          "Er fuhr zu spät los."
+        ],
+        "answer": "Alle Autos standen still.",
+        "tip": "consequenceForkThree.questDescription"
+      },
+      {
+        "id": 8,
+        "type": "input",
+        "question": "consequenceForkThree.questTask8",
+        "correctAnswer": "sodass",
+        "tip": "consequenceForkThree.questDescription"
+      },
+      {
+        "id": 9,
+        "type": "reorder",
+        "question": "consequenceForkThree.questTask10",
+        "words": [
+          "die",
+          "sodass",
+          "damit",
+          "bestand",
+          "Tag",
+          "Sie",
+          "jeden",
+          "lernte",
+          "Prüfung",
+          "sie"
+        ],
+        "correctOrder": [
+          "Sie",
+          "lernte",
+          "jeden",
+          "Tag",
+          "sodass",
+          "sie",
+          "die",
+          "Prüfung",
+          "bestand"
+        ],
+        "tip": "consequenceForkThree.questDescription"
+      },
+      {
+        "id": 10,
+        "type": "select",
+        "question": "consequenceForkThree.questTask11",
+        "options": [
+          "Er war müde, sodass er auf dem Sofa einschlief.",
+          "Er war müde, sodass schlief er auf dem Sofa ein.",
+          "Er war müde, damit er auf dem Sofa einschlief."
+        ],
+        "answer": "Er war müde, sodass er auf dem Sofa einschlief.",
+        "tip": "consequenceForkThree.questDescription"
+      },
+      {
+        "id": 11,
+        "type": "input",
+        "question": "consequenceForkTwo.questTask9",
+        "correctAnswer": "so",
+        "tip": "consequenceForkTwo.questDescription",
+        "reviewOf": "consequence-fork-two",
+        "reviewLand": "consequence-fork"
+      },
+      {
+        "id": 12,
+        "type": "input",
+        "question": "purposePathSeven.questTask12",
+        "correctAnswer": "um",
+        "tip": "purposePathSeven.questDescription",
+        "reviewOf": "purpose-path-seven",
+        "reviewLand": "purpose-path"
+      },
+      {
+        "id": 13,
+        "type": "input",
+        "question": "purposePathFour.questTask13",
+        "correctAnswer": "damit",
+        "tip": "purposePathFour.questDescription",
+        "reviewOf": "purpose-path-four",
+        "reviewLand": "purpose-path"
+      },
+      {
+        "id": 14,
+        "type": "input",
+        "question": "consequenceForkThree.questTask14",
+        "correctAnswer": "war",
+        "tip": "consequenceForkThree.questDescription"
+      },
+      {
+        "id": 15,
+        "type": "input",
+        "question": "consequenceForkThree.questTask15",
+        "correctAnswer": "weil",
+        "tip": "consequenceForkThree.questDescription"
+      }
+    ]
+  },
+  {
+    "questId": "consequence-fork-four",
+    "title": "consequenceForkFour.questTitle",
+    "progress": "0/15",
+    "description": "consequenceForkFour.questDescription",
+    "conditions": {
+      "goal": "consequenceForkFour.questGoal",
+      "minCorrect": 15,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
+    "vocabulary": [
+      {
+        "word": "falls",
+        "translation-ru": "если вдруг",
+        "translation-en": "in case",
+        "translation-uk": "якщо раптом",
+        "translation-pl": "gdyby",
+        "translation-es": "por si",
+        "translation-fr": "au cas où",
+        "translation-tr": "olur da",
+        "translation-ro": "în caz că",
+        "translation-uz": "agar birdan",
+        "translation-hi": "अगर कहीं",
+        "translation-ar": "في حال"
+      },
+      {
+        "word": "mitnehmen",
+        "translation-ru": "брать с собой",
+        "translation-en": "to take along",
+        "translation-uk": "брати з собою",
+        "translation-pl": "zabierać ze sobą",
+        "translation-es": "llevarse",
+        "translation-fr": "emporter",
+        "translation-tr": "yanına almak",
+        "translation-ro": "a lua cu sine",
+        "translation-uz": "o‘zi bilan olmoq",
+        "translation-hi": "साथ ले जाना",
+        "translation-ar": "يأخذ معه"
+      },
+      {
+        "word": "der Ausweis",
+        "translation-ru": "удостоверение личности",
+        "translation-en": "ID card",
+        "translation-uk": "посвідчення особи",
+        "translation-pl": "dowód osobisty",
+        "translation-es": "el carné de identidad",
+        "translation-fr": "la carte d’identité",
+        "translation-tr": "kimlik kartı",
+        "translation-ro": "buletinul",
+        "translation-uz": "shaxsiy guvohnoma",
+        "translation-hi": "पहचान पत्र",
+        "translation-ar": "بطاقة الهوية"
+      },
+      {
+        "word": "der Ausflug",
+        "translation-ru": "поездка, экскурсия",
+        "translation-en": "trip, outing",
+        "translation-uk": "поїздка, екскурсія",
+        "translation-pl": "wycieczka",
+        "translation-es": "la excursión",
+        "translation-fr": "l’excursion",
+        "translation-tr": "gezi",
+        "translation-ro": "excursia",
+        "translation-uz": "sayohat",
+        "translation-hi": "सैर",
+        "translation-ar": "الرحلة"
+      },
+      {
+        "word": "jemand",
+        "translation-ru": "кто-нибудь",
+        "translation-en": "someone",
+        "translation-uk": "хтось",
+        "translation-pl": "ktoś",
+        "translation-es": "alguien",
+        "translation-fr": "quelqu’un",
+        "translation-tr": "birisi",
+        "translation-ro": "cineva",
+        "translation-uz": "kimdir",
+        "translation-hi": "कोई",
+        "translation-ar": "أحد ما"
+      },
+      {
+        "word": "weglaufen",
+        "translation-ru": "убегать",
+        "translation-en": "to run away",
+        "translation-uk": "тікати",
+        "translation-pl": "uciekać",
+        "translation-es": "escaparse",
+        "translation-fr": "s’enfuir",
+        "translation-tr": "kaçmak",
+        "translation-ro": "a fugi",
+        "translation-uz": "qochib ketmoq",
+        "translation-hi": "भाग जाना",
+        "translation-ar": "يهرب"
+      }
+    ],
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "consequenceForkFour.questTask1",
+        "options": [
+          "Falls du Zeit hast, du rufst mich an.",
+          "Falls du hast Zeit, ruf mich an.",
+          "Falls du Zeit hast, ruf mich an."
+        ],
+        "answer": "Falls du Zeit hast, ruf mich an.",
+        "tip": "consequenceForkFour.questDescription"
+      },
+      {
+        "id": 2,
+        "type": "input",
+        "question": "consequenceForkFour.questTask2",
+        "correctAnswer": "sehen",
+        "tip": "consequenceForkFour.questDescription"
+      },
+      {
+        "id": 3,
+        "type": "input",
+        "question": "consequenceForkFour.questTask3",
+        "correctAnswer": "nehme",
+        "tip": "consequenceForkFour.questDescription"
+      },
+      {
+        "id": 4,
+        "type": "reorder",
+        "question": "consequenceForkFour.questTask4",
+        "words": [
+          "regnet",
+          "falls",
+          "einen",
+          "Nimm",
+          "mit",
+          "es",
+          "damit",
+          "Regenschirm"
+        ],
+        "correctOrder": [
+          "Nimm",
+          "einen",
+          "Regenschirm",
+          "mit",
+          "falls",
+          "es",
+          "regnet"
+        ],
+        "tip": "consequenceForkFour.questDescription"
+      },
+      {
+        "id": 5,
+        "type": "select",
+        "question": "consequenceForkFour.questTask5",
+        "options": [
+          "Falls du krank wirst, du bleibst zu Hause.",
+          "Falls du krank wirst, bleib zu Hause.",
+          "Falls du wirst krank, bleib zu Hause."
+        ],
+        "answer": "Falls du krank wirst, bleib zu Hause.",
+        "tip": "consequenceForkFour.questDescription"
+      },
+      {
+        "id": 6,
+        "type": "input",
+        "question": "consequenceForkFour.questTask6",
+        "correctAnswer": "findest",
+        "tip": "consequenceForkFour.questDescription"
+      },
+      {
+        "id": 7,
+        "type": "readAndAnswer",
+        "question": "consequenceForkFour.questTask7",
+        "text": "Morgen machen wir einen Ausflug in die Berge. Lisa nimmt eine warme Jacke mit, falls es kalt wird. Falls es regnet, fahren wir ins Museum.",
+        "options": [
+          "etwas gegen die Kälte",
+          "etwas gegen den Regen",
+          "etwas zum Lesen"
+        ],
+        "answer": "etwas gegen die Kälte",
+        "tip": "consequenceForkFour.questDescription"
+      },
+      {
+        "id": 8,
+        "type": "input",
+        "question": "consequenceForkFour.questTask8",
+        "correctAnswer": "fragt",
+        "tip": "consequenceForkFour.questDescription"
+      },
+      {
+        "id": 9,
+        "type": "reorder",
+        "question": "consequenceForkFour.questTask10",
+        "words": [
+          "mich",
+          "zu",
+          "auf",
+          "ich",
+          "Falls",
+          "komme",
+          "nicht",
+          "damit",
+          "spät",
+          "wartet"
+        ],
+        "correctOrder": [
+          "Falls",
+          "ich",
+          "zu",
+          "spät",
+          "komme",
+          "wartet",
+          "nicht",
+          "auf",
+          "mich"
+        ],
+        "tip": "consequenceForkFour.questDescription"
+      },
+      {
+        "id": 10,
+        "type": "select",
+        "question": "consequenceForkFour.questTask11",
+        "options": [
+          "Falls ist der Laden zu, kaufen wir das Brot morgen.",
+          "Falls der Laden zu ist, kaufen wir das Brot morgen.",
+          "Falls der Laden zu ist, wir kaufen das Brot morgen."
+        ],
+        "answer": "Falls der Laden zu ist, kaufen wir das Brot morgen.",
+        "tip": "consequenceForkFour.questDescription"
+      },
+      {
+        "id": 11,
+        "type": "input",
+        "question": "consequenceForkThree.questTask9",
+        "correctAnswer": "damit",
+        "tip": "consequenceForkThree.questDescription",
+        "reviewOf": "consequence-fork-three",
+        "reviewLand": "consequence-fork"
+      },
+      {
+        "id": 12,
+        "type": "input",
+        "question": "purposePathEight.questTask12",
+        "correctAnswer": "abzuholen",
+        "tip": "purposePathEight.questDescription",
+        "reviewOf": "purpose-path-eight",
+        "reviewLand": "purpose-path"
+      },
+      {
+        "id": 13,
+        "type": "input",
+        "question": "purposePathFive.questTask13",
+        "correctAnswer": "habe",
+        "tip": "purposePathFive.questDescription",
+        "reviewOf": "purpose-path-five",
+        "reviewLand": "purpose-path"
+      },
+      {
+        "id": 14,
+        "type": "input",
+        "question": "consequenceForkFour.questTask14",
+        "correctAnswer": "um",
+        "tip": "consequenceForkFour.questDescription"
+      },
+      {
+        "id": 15,
+        "type": "input",
+        "question": "consequenceForkFour.questTask15",
+        "correctAnswer": "fuhr",
+        "tip": "consequenceForkFour.questDescription"
+      }
+    ]
+  },
+  {
+    "questId": "consequence-fork-five",
+    "title": "consequenceForkFive.questTitle",
+    "progress": "0/15",
+    "description": "consequenceForkFive.questDescription",
+    "conditions": {
+      "goal": "consequenceForkFive.questGoal",
+      "minCorrect": 15,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
+    "vocabulary": [
+      {
+        "word": "solange",
+        "translation-ru": "пока, до тех пор пока",
+        "translation-en": "as long as",
+        "translation-uk": "поки, доки",
+        "translation-pl": "dopóki",
+        "translation-es": "mientras",
+        "translation-fr": "tant que",
+        "translation-tr": "-dığı sürece",
+        "translation-ro": "cât timp",
+        "translation-uz": "…gan ekan",
+        "translation-hi": "जब तक",
+        "translation-ar": "طالما"
+      },
+      {
+        "word": "drinnen",
+        "translation-ru": "внутри, в помещении",
+        "translation-en": "inside",
+        "translation-uk": "всередині",
+        "translation-pl": "w środku",
+        "translation-es": "dentro",
+        "translation-fr": "à l’intérieur",
+        "translation-tr": "içeride",
+        "translation-ro": "înăuntru",
+        "translation-uz": "ichkarida",
+        "translation-hi": "अंदर",
+        "translation-ar": "في الداخل"
+      },
+      {
+        "word": "das Fieber",
+        "translation-ru": "температура, жар",
+        "translation-en": "fever",
+        "translation-uk": "температура, жар",
+        "translation-pl": "gorączka",
+        "translation-es": "la fiebre",
+        "translation-fr": "la fièvre",
+        "translation-tr": "ateş",
+        "translation-ro": "febra",
+        "translation-uz": "isitma",
+        "translation-hi": "बुख़ार",
+        "translation-ar": "الحمّى"
+      },
+      {
+        "word": "die Ferien",
+        "translation-ru": "каникулы",
+        "translation-en": "holidays",
+        "translation-uk": "канікули",
+        "translation-pl": "wakacje, ferie",
+        "translation-es": "las vacaciones",
+        "translation-fr": "les vacances",
+        "translation-tr": "tatil",
+        "translation-ro": "vacanța",
+        "translation-uz": "ta’til",
+        "translation-hi": "छुट्टियाँ",
+        "translation-ar": "العطلة"
+      },
+      {
+        "word": "draußen",
+        "translation-ru": "на улице, снаружи",
+        "translation-en": "outside",
+        "translation-uk": "надворі",
+        "translation-pl": "na zewnątrz",
+        "translation-es": "fuera",
+        "translation-fr": "dehors",
+        "translation-tr": "dışarıda",
+        "translation-ro": "afară",
+        "translation-uz": "tashqarida",
+        "translation-hi": "बाहर",
+        "translation-ar": "في الخارج"
+      }
+    ],
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "consequenceForkFive.questTask1",
+        "options": [
+          "Solange regnet es, bleiben wir drinnen.",
+          "Solange es regnet, wir bleiben drinnen.",
+          "Solange es regnet, bleiben wir drinnen."
+        ],
+        "answer": "Solange es regnet, bleiben wir drinnen.",
+        "tip": "consequenceForkFive.questDescription"
+      },
+      {
+        "id": 2,
+        "type": "input",
+        "question": "consequenceForkFive.questTask2",
+        "correctAnswer": "bleibst",
+        "tip": "consequenceForkFive.questDescription"
+      },
+      {
+        "id": 3,
+        "type": "input",
+        "question": "consequenceForkFive.questTask3",
+        "correctAnswer": "schläft",
+        "tip": "consequenceForkFive.questDescription"
+      },
+      {
+        "id": 4,
+        "type": "reorder",
+        "question": "consequenceForkFive.questTask4",
+        "words": [
+          "ich",
+          "lerne",
+          "wohne",
+          "ich",
+          "Deutsch",
+          "damit",
+          "Solange",
+          "hier"
+        ],
+        "correctOrder": [
+          "Solange",
+          "ich",
+          "hier",
+          "wohne",
+          "lerne",
+          "ich",
+          "Deutsch"
+        ],
+        "tip": "consequenceForkFive.questDescription"
+      },
+      {
+        "id": 5,
+        "type": "select",
+        "question": "consequenceForkFive.questTask5",
+        "options": [
+          "Solange du Hausaufgaben machst, bleibt der Fernseher aus.",
+          "Solange du Hausaufgaben machst, der Fernseher bleibt aus.",
+          "Solange du machst Hausaufgaben, bleibt der Fernseher aus."
+        ],
+        "answer": "Solange du Hausaufgaben machst, bleibt der Fernseher aus.",
+        "tip": "consequenceForkFive.questDescription"
+      },
+      {
+        "id": 6,
+        "type": "input",
+        "question": "consequenceForkFive.questTask6",
+        "correctAnswer": "können",
+        "tip": "consequenceForkFive.questDescription"
+      },
+      {
+        "id": 7,
+        "type": "readAndAnswer",
+        "question": "consequenceForkFive.questTask7",
+        "text": "Max hat Ferien. Solange er Ferien hat, arbeitet er in einem Café. Danach studiert er wieder.",
+        "options": [
+          "bis die Ferien zu Ende sind",
+          "nur am Wochenende",
+          "das ganze Jahr"
+        ],
+        "answer": "bis die Ferien zu Ende sind",
+        "tip": "consequenceForkFive.questDescription"
+      },
+      {
+        "id": 8,
+        "type": "input",
+        "question": "consequenceForkFive.questTask8",
+        "correctAnswer": "ist",
+        "tip": "consequenceForkFive.questDescription"
+      },
+      {
+        "id": 9,
+        "type": "reorder",
+        "question": "consequenceForkFive.questTask10",
+        "words": [
+          "damit",
+          "sprechen",
+          "bist",
+          "wir",
+          "hier",
+          "du",
+          "Solange",
+          "können"
+        ],
+        "correctOrder": [
+          "Solange",
+          "du",
+          "hier",
+          "bist",
+          "können",
+          "wir",
+          "sprechen"
+        ],
+        "tip": "consequenceForkFive.questDescription"
+      },
+      {
+        "id": 10,
+        "type": "select",
+        "question": "consequenceForkFive.questTask11",
+        "options": [
+          "Solange er isst, spricht er nicht.",
+          "Solange isst er, spricht er nicht.",
+          "Solange er isst, er spricht nicht."
+        ],
+        "answer": "Solange er isst, spricht er nicht.",
+        "tip": "consequenceForkFive.questDescription"
+      },
+      {
+        "id": 11,
+        "type": "input",
+        "question": "consequenceForkFour.questTask9",
+        "correctAnswer": "brauchst",
+        "tip": "consequenceForkFour.questDescription",
+        "reviewOf": "consequence-fork-four",
+        "reviewLand": "consequence-fork"
+      },
+      {
+        "id": 12,
+        "type": "input",
+        "question": "consequenceForkOne.questTask12",
+        "correctAnswer": "sodass",
+        "tip": "consequenceForkOne.questDescription",
+        "reviewOf": "consequence-fork-one",
+        "reviewLand": "consequence-fork"
+      },
+      {
+        "id": 13,
+        "type": "input",
+        "question": "purposePathSix.questTask13",
+        "correctAnswer": "bekommen",
+        "tip": "purposePathSix.questDescription",
+        "reviewOf": "purpose-path-six",
+        "reviewLand": "purpose-path"
+      },
+      {
+        "id": 14,
+        "type": "input",
+        "question": "consequenceForkFive.questTask14",
+        "correctAnswer": "weil",
+        "tip": "consequenceForkFive.questDescription"
+      },
+      {
+        "id": 15,
+        "type": "input",
+        "question": "consequenceForkFive.questTask15",
+        "correctAnswer": "lagen",
+        "tip": "consequenceForkFive.questDescription"
+      }
+    ]
+  },
+  {
+    "questId": "consequence-fork-six",
+    "title": "consequenceForkSix.questTitle",
+    "progress": "0/15",
+    "description": "consequenceForkSix.questDescription",
+    "conditions": {
+      "goal": "consequenceForkSix.questGoal",
+      "minCorrect": 15,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
+    "vocabulary": [
+      {
+        "word": "der Umzug",
+        "translation-ru": "переезд",
+        "translation-en": "move (to a new home)",
+        "translation-uk": "переїзд",
+        "translation-pl": "przeprowadzka",
+        "translation-es": "la mudanza",
+        "translation-fr": "le déménagement",
+        "translation-tr": "taşınma",
+        "translation-ro": "mutarea",
+        "translation-uz": "ko‘chish",
+        "translation-hi": "घर बदलना",
+        "translation-ar": "الانتقال"
+      },
+      {
+        "word": "vorbeikommen",
+        "translation-ru": "заходить, заглядывать",
+        "translation-en": "to drop by",
+        "translation-uk": "заходити",
+        "translation-pl": "wpadać, zajrzeć",
+        "translation-es": "pasarse",
+        "translation-fr": "passer",
+        "translation-tr": "uğramak",
+        "translation-ro": "a trece pe la",
+        "translation-uz": "kirib o‘tmoq",
+        "translation-hi": "आना, मिलने आना",
+        "translation-ar": "يمرّ على"
+      },
+      {
+        "word": "der Karton",
+        "translation-ru": "коробка",
+        "translation-en": "cardboard box",
+        "translation-uk": "коробка",
+        "translation-pl": "karton",
+        "translation-es": "la caja",
+        "translation-fr": "le carton",
+        "translation-tr": "koli",
+        "translation-ro": "cutia",
+        "translation-uz": "quti",
+        "translation-hi": "डिब्बा",
+        "translation-ar": "الصندوق الكرتوني"
+      },
+      {
+        "word": "fertig",
+        "translation-ru": "готовый",
+        "translation-en": "ready, finished",
+        "translation-uk": "готовий",
+        "translation-pl": "gotowy",
+        "translation-es": "listo",
+        "translation-fr": "prêt",
+        "translation-tr": "hazır",
+        "translation-ro": "gata",
+        "translation-uz": "tayyor",
+        "translation-hi": "तैयार",
+        "translation-ar": "جاهز"
+      },
+      {
+        "word": "der Stadtplan",
+        "translation-ru": "карта города",
+        "translation-en": "city map",
+        "translation-uk": "мапа міста",
+        "translation-pl": "plan miasta",
+        "translation-es": "el plano de la ciudad",
+        "translation-fr": "le plan de la ville",
+        "translation-tr": "şehir haritası",
+        "translation-ro": "harta orașului",
+        "translation-uz": "shahar xaritasi",
+        "translation-hi": "शहर का नक्शा",
+        "translation-ar": "خريطة المدينة"
+      },
+      {
+        "word": "sich verlaufen",
+        "translation-ru": "заблудиться",
+        "translation-en": "to get lost",
+        "translation-uk": "заблукати",
+        "translation-pl": "zgubić się",
+        "translation-es": "perderse",
+        "translation-fr": "se perdre",
+        "translation-tr": "yolunu kaybetmek",
+        "translation-ro": "a se rătăci",
+        "translation-uz": "yo‘ldan adashmoq",
+        "translation-hi": "रास्ता भूलना",
+        "translation-ar": "يتوه"
+      }
+    ],
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "consequenceForkSix.questTask1",
+        "options": [
+          "Falls du Zeit hast, kommst bei uns vorbei.",
+          "Falls du hast Zeit, komm bei uns vorbei.",
+          "Falls du Zeit hast, komm bei uns vorbei."
+        ],
+        "answer": "Falls du Zeit hast, komm bei uns vorbei.",
+        "tip": "consequenceForkSix.questDescription"
+      },
+      {
+        "id": 2,
+        "type": "input",
+        "question": "consequenceForkSix.questTask2",
+        "correctAnswer": "so",
+        "tip": "consequenceForkSix.questDescription"
+      },
+      {
+        "id": 3,
+        "type": "input",
+        "question": "consequenceForkSix.questTask3",
+        "correctAnswer": "sodass",
+        "tip": "consequenceForkSix.questDescription"
+      },
+      {
+        "id": 4,
+        "type": "reorder",
+        "question": "consequenceForkSix.questTask4",
+        "words": [
+          "damit",
+          "Umzug",
+          "beim",
+          "hilf",
+          "uns",
+          "du",
+          "am",
+          "frei",
+          "Falls",
+          "bist",
+          "Samstag"
+        ],
+        "correctOrder": [
+          "Falls",
+          "du",
+          "am",
+          "Samstag",
+          "frei",
+          "bist",
+          "hilf",
+          "uns",
+          "beim",
+          "Umzug"
+        ],
+        "tip": "consequenceForkSix.questDescription"
+      },
+      {
+        "id": 5,
+        "type": "select",
+        "question": "consequenceForkSix.questTask5",
+        "options": [
+          "Wir hatten so viele Kartons, dass war das Auto voll.",
+          "Wir hatten sehr viele Kartons, dass das Auto voll war.",
+          "Wir hatten so viele Kartons, dass das Auto voll war."
+        ],
+        "answer": "Wir hatten so viele Kartons, dass das Auto voll war.",
+        "tip": "consequenceForkSix.questDescription"
+      },
+      {
+        "id": 6,
+        "type": "input",
+        "question": "consequenceForkSix.questTask6",
+        "correctAnswer": "wohnen",
+        "tip": "consequenceForkSix.questDescription"
+      },
+      {
+        "id": 7,
+        "type": "readAndAnswer",
+        "question": "consequenceForkSix.questTask7",
+        "text": "Mia wollte um acht Uhr bei der Party sein. Aber der Bus kam nicht, sodass sie zu Fuß gehen musste. Sie war so müde, dass sie gleich nach Hause wollte.",
+        "options": [
+          "Sie wollte zu Fuß gehen.",
+          "Es gab keinen Bus.",
+          "Sie hatte keine Zeit."
+        ],
+        "answer": "Es gab keinen Bus.",
+        "tip": "consequenceForkSix.questDescription"
+      },
+      {
+        "id": 8,
+        "type": "input",
+        "question": "consequenceForkSix.questTask8",
+        "correctAnswer": "fangen",
+        "tip": "consequenceForkSix.questDescription"
+      },
+      {
+        "id": 9,
+        "type": "reorder",
+        "question": "consequenceForkSix.questTask10",
+        "words": [
+          "dass",
+          "war",
+          "so",
+          "sodass",
+          "schliefen",
+          "heiß",
+          "Es",
+          "Balkon",
+          "dem",
+          "auf",
+          "wir"
+        ],
+        "correctOrder": [
+          "Es",
+          "war",
+          "so",
+          "heiß",
+          "dass",
+          "wir",
+          "auf",
+          "dem",
+          "Balkon",
+          "schliefen"
+        ],
+        "tip": "consequenceForkSix.questDescription"
+      },
+      {
+        "id": 10,
+        "type": "select",
+        "question": "consequenceForkSix.questTask11",
+        "options": [
+          "Falls du nicht kommen kannst, du schreibst mir.",
+          "Falls du nicht kommen kannst, schreib mir.",
+          "Falls du kannst nicht kommen, schreib mir."
+        ],
+        "answer": "Falls du nicht kommen kannst, schreib mir.",
+        "tip": "consequenceForkSix.questDescription"
+      },
+      {
+        "id": 11,
+        "type": "input",
+        "question": "consequenceForkFive.questTask9",
+        "correctAnswer": "habe",
+        "tip": "consequenceForkFive.questDescription",
+        "reviewOf": "consequence-fork-five",
+        "reviewLand": "consequence-fork"
+      },
+      {
+        "id": 12,
+        "type": "input",
+        "question": "consequenceForkTwo.questTask12",
+        "correctAnswer": "aß",
+        "tip": "consequenceForkTwo.questDescription",
+        "reviewOf": "consequence-fork-two",
+        "reviewLand": "consequence-fork"
+      },
+      {
+        "id": 13,
+        "type": "input",
+        "question": "purposePathSeven.questTask13",
+        "correctAnswer": "verlaufen",
+        "tip": "purposePathSeven.questDescription",
+        "reviewOf": "purpose-path-seven",
+        "reviewLand": "purpose-path"
+      },
+      {
+        "id": 14,
+        "type": "input",
+        "question": "consequenceForkSix.questTask14",
+        "correctAnswer": "um",
+        "tip": "consequenceForkSix.questDescription"
+      },
+      {
+        "id": 15,
+        "type": "input",
+        "question": "consequenceForkSix.questTask15",
+        "correctAnswer": "hatten",
+        "tip": "consequenceForkSix.questDescription"
+      }
+    ]
+  },
+  {
+    "questId": "consequence-fork-seven",
+    "title": "consequenceForkSeven.questTitle",
+    "progress": "0/15",
+    "description": "consequenceForkSeven.questDescription",
+    "conditions": {
+      "goal": "consequenceForkSeven.questGoal",
+      "minCorrect": 15,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
+    "vocabulary": [
+      {
+        "word": "der Stau",
+        "translation-ru": "пробка",
+        "translation-en": "traffic jam",
+        "translation-uk": "затор",
+        "translation-pl": "korek",
+        "translation-es": "el atasco",
+        "translation-fr": "l’embouteillage",
+        "translation-tr": "trafik sıkışıklığı",
+        "translation-ro": "ambuteiajul",
+        "translation-uz": "tirbandlik",
+        "translation-hi": "ट्रैफ़िक जाम",
+        "translation-ar": "الازدحام"
+      },
+      {
+        "word": "die Straße",
+        "translation-ru": "улица, дорога",
+        "translation-en": "street, road",
+        "translation-uk": "вулиця, дорога",
+        "translation-pl": "ulica, droga",
+        "translation-es": "la calle, la carretera",
+        "translation-fr": "la rue, la route",
+        "translation-tr": "yol, cadde",
+        "translation-ro": "strada, drumul",
+        "translation-uz": "ko‘cha, yo‘l",
+        "translation-hi": "सड़क",
+        "translation-ar": "الشارع"
+      },
+      {
+        "word": "tanken",
+        "translation-ru": "заправляться",
+        "translation-en": "to fill up (fuel)",
+        "translation-uk": "заправлятися",
+        "translation-pl": "tankować",
+        "translation-es": "echar gasolina",
+        "translation-fr": "faire le plein",
+        "translation-tr": "benzin almak",
+        "translation-ro": "a alimenta",
+        "translation-uz": "yoqilg‘i quymoq",
+        "translation-hi": "पेट्रोल भरवाना",
+        "translation-ar": "يعبّئ الوقود"
+      },
+      {
+        "word": "die Pause",
+        "translation-ru": "перерыв",
+        "translation-en": "break",
+        "translation-uk": "перерва",
+        "translation-pl": "przerwa",
+        "translation-es": "la pausa",
+        "translation-fr": "la pause",
+        "translation-tr": "mola",
+        "translation-ro": "pauza",
+        "translation-uz": "tanaffus",
+        "translation-hi": "ब्रेक",
+        "translation-ar": "الاستراحة"
+      },
+      {
+        "word": "eng",
+        "translation-ru": "тесный, узкий",
+        "translation-en": "narrow, tight",
+        "translation-uk": "тісний, вузький",
+        "translation-pl": "ciasny, wąski",
+        "translation-es": "estrecho",
+        "translation-fr": "étroit",
+        "translation-tr": "dar",
+        "translation-ro": "îngust",
+        "translation-uz": "tor",
+        "translation-hi": "तंग",
+        "translation-ar": "ضيق"
+      },
+      {
+        "word": "der Kindergarten",
+        "translation-ru": "детский сад",
+        "translation-en": "nursery school",
+        "translation-uk": "дитячий садок",
+        "translation-pl": "przedszkole",
+        "translation-es": "la guardería",
+        "translation-fr": "l’école maternelle",
+        "translation-tr": "anaokulu",
+        "translation-ro": "grădinița",
+        "translation-uz": "bolalar bog‘chasi",
+        "translation-hi": "नर्सरी स्कूल",
+        "translation-ar": "روضة الأطفال"
+      },
+      {
+        "word": "weiterfahren",
+        "translation-ru": "ехать дальше",
+        "translation-en": "to drive on",
+        "translation-uk": "їхати далі",
+        "translation-pl": "jechać dalej",
+        "translation-es": "seguir el viaje",
+        "translation-fr": "continuer sa route",
+        "translation-tr": "yola devam etmek",
+        "translation-ro": "a merge mai departe",
+        "translation-uz": "yo‘lda davom etmoq",
+        "translation-hi": "आगे बढ़ना",
+        "translation-ar": "يواصل السفر"
+      },
+      {
+        "word": "streiten",
+        "translation-ru": "ссориться",
+        "translation-en": "to argue",
+        "translation-uk": "сваритися",
+        "translation-pl": "kłócić się",
+        "translation-es": "discutir",
+        "translation-fr": "se disputer",
+        "translation-tr": "tartışmak",
+        "translation-ro": "a se certa",
+        "translation-uz": "janjallashmoq",
+        "translation-hi": "झगड़ना",
+        "translation-ar": "يتشاجر"
+      },
+      {
+        "word": "anhalten",
+        "translation-ru": "останавливать",
+        "translation-en": "to stop",
+        "translation-uk": "зупиняти",
+        "translation-pl": "zatrzymywać",
+        "translation-es": "parar",
+        "translation-fr": "arrêter",
+        "translation-tr": "durdurmak",
+        "translation-ro": "a opri",
+        "translation-uz": "to‘xtatmoq",
+        "translation-hi": "रोकना",
+        "translation-ar": "يوقف"
+      },
+      {
+        "word": "die Autobahn",
+        "translation-ru": "автобан",
+        "translation-en": "motorway",
+        "translation-uk": "автобан",
+        "translation-pl": "autostrada",
+        "translation-es": "la autopista",
+        "translation-fr": "l’autoroute",
+        "translation-tr": "otoyol",
+        "translation-ro": "autostrada",
+        "translation-uz": "avtomagistral",
+        "translation-hi": "राजमार्ग",
+        "translation-ar": "الطريق السريع"
+      },
+      {
+        "word": "das Navi",
+        "translation-ru": "навигатор",
+        "translation-en": "satnav",
+        "translation-uk": "навігатор",
+        "translation-pl": "nawigacja",
+        "translation-es": "el navegador",
+        "translation-fr": "le GPS",
+        "translation-tr": "navigasyon",
+        "translation-ro": "navigația",
+        "translation-uz": "navigator",
+        "translation-hi": "नेविगेशन",
+        "translation-ar": "جهاز الملاحة"
+      },
+      {
+        "word": "sich verfahren",
+        "translation-ru": "заблудиться (на машине)",
+        "translation-en": "to get lost (driving)",
+        "translation-uk": "заблукати (машиною)",
+        "translation-pl": "zabłądzić",
+        "translation-es": "perderse",
+        "translation-fr": "se tromper de route",
+        "translation-tr": "yolu şaşırmak",
+        "translation-ro": "a greși drumul",
+        "translation-uz": "yo‘ldan adashmoq",
+        "translation-hi": "गाड़ी से रास्ता भटकना",
+        "translation-ar": "يضل الطريق بالسيارة"
+      },
+      {
+        "word": "der Sonnenaufgang",
+        "translation-ru": "рассвет",
+        "translation-en": "sunrise",
+        "translation-uk": "світанок",
+        "translation-pl": "wschód słońca",
+        "translation-es": "amanecer",
+        "translation-fr": "lever du soleil",
+        "translation-tr": "gün doğumu",
+        "translation-ro": "răsărit",
+        "translation-uz": "tong otishi",
+        "translation-hi": "सूर्योदय",
+        "translation-ar": "شروق الشمس"
+      }
+    ],
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "consequenceForkSeven.questTask1",
+        "options": [
+          "Es gab einen Stau, damit wir spät ankamen.",
+          "Es gab einen Stau, sodass wir kamen spät an.",
+          "Es gab einen Stau, sodass wir spät ankamen."
+        ],
+        "answer": "Es gab einen Stau, sodass wir spät ankamen.",
+        "tip": "consequenceForkSeven.questDescription"
+      },
+      {
+        "id": 2,
+        "type": "input",
+        "question": "consequenceForkSeven.questTask2",
+        "correctAnswer": "so",
+        "tip": "consequenceForkSeven.questDescription"
+      },
+      {
+        "id": 3,
+        "type": "input",
+        "question": "consequenceForkSeven.questTask3",
+        "correctAnswer": "konnten",
+        "tip": "consequenceForkSeven.questDescription"
+      },
+      {
+        "id": 4,
+        "type": "reorder",
+        "question": "consequenceForkSeven.questTask4",
+        "words": [
+          "machten",
+          "eine",
+          "damit",
+          "Pause",
+          "müde",
+          "wir",
+          "Der",
+          "sodass",
+          "Fahrer",
+          "war"
+        ],
+        "correctOrder": [
+          "Der",
+          "Fahrer",
+          "war",
+          "müde",
+          "sodass",
+          "wir",
+          "eine",
+          "Pause",
+          "machten"
+        ],
+        "tip": "consequenceForkSeven.questDescription"
+      },
+      {
+        "id": 5,
+        "type": "select",
+        "question": "consequenceForkSeven.questTask5",
+        "options": [
+          "Im Auto war es so eng, dass stritten die Kinder.",
+          "Im Auto war es sehr eng, dass die Kinder stritten.",
+          "Im Auto war es so eng, dass die Kinder stritten."
+        ],
+        "answer": "Im Auto war es so eng, dass die Kinder stritten.",
+        "tip": "consequenceForkSeven.questDescription"
+      },
+      {
+        "id": 6,
+        "type": "input",
+        "question": "consequenceForkSeven.questTask6",
+        "correctAnswer": "anhielten",
+        "tip": "consequenceForkSeven.questDescription"
+      },
+      {
+        "id": 7,
+        "type": "readAndAnswer",
+        "question": "consequenceForkSeven.questTask7",
+        "text": "Familie Weber fuhr zu einer Hochzeit nach München. Auf der Autobahn gab es einen langen Stau, sodass sie zwei Stunden warten mussten. Die Kinder waren so müde, dass sie im Auto schliefen. Sie kamen erst am Abend an.",
+        "options": [
+          "Es gab einen langen Stau.",
+          "Sie hatten verschlafen.",
+          "Das Auto war kaputt."
+        ],
+        "answer": "Es gab einen langen Stau.",
+        "tip": "consequenceForkSeven.questDescription"
+      },
+      {
+        "id": 8,
+        "type": "input",
+        "question": "consequenceForkSeven.questTask8",
+        "correctAnswer": "sodass",
+        "tip": "consequenceForkSeven.questDescription"
+      },
+      {
+        "id": 9,
+        "type": "reorder",
+        "question": "consequenceForkSeven.questTask10",
+        "words": [
+          "wir",
+          "ankamen",
+          "Wir",
+          "damit",
+          "schnell",
+          "früh",
+          "so",
+          "fuhren",
+          "dass"
+        ],
+        "correctOrder": [
+          "Wir",
+          "fuhren",
+          "so",
+          "schnell",
+          "dass",
+          "wir",
+          "früh",
+          "ankamen"
+        ],
+        "tip": "consequenceForkSeven.questDescription"
+      },
+      {
+        "id": 10,
+        "type": "select",
+        "question": "consequenceForkSeven.questTask11",
+        "options": [
+          "Das Navi war kaputt, damit wir uns verfuhren.",
+          "Das Navi war kaputt, sodass wir uns verfuhren.",
+          "Das Navi war kaputt, sodass verfuhren wir uns."
+        ],
+        "answer": "Das Navi war kaputt, sodass wir uns verfuhren.",
+        "tip": "consequenceForkSeven.questDescription"
+      },
+      {
+        "id": 11,
+        "type": "input",
+        "question": "consequenceForkSix.questTask9",
+        "correctAnswer": "ist",
+        "tip": "consequenceForkSix.questDescription",
+        "reviewOf": "consequence-fork-six",
+        "reviewLand": "consequence-fork"
+      },
+      {
+        "id": 12,
+        "type": "input",
+        "question": "consequenceForkThree.questTask12",
+        "correctAnswer": "damit",
+        "tip": "consequenceForkThree.questDescription",
+        "reviewOf": "consequence-fork-three",
+        "reviewLand": "consequence-fork"
+      },
+      {
+        "id": 13,
+        "type": "input",
+        "question": "purposePathEight.questTask13",
+        "correctAnswer": "damit",
+        "tip": "purposePathEight.questDescription",
+        "reviewOf": "purpose-path-eight",
+        "reviewLand": "purpose-path"
+      },
+      {
+        "id": 14,
+        "type": "input",
+        "question": "consequenceForkSeven.questTask14",
+        "correctAnswer": "sehen",
+        "tip": "consequenceForkSeven.questDescription"
+      },
+      {
+        "id": 15,
+        "type": "input",
+        "question": "consequenceForkSeven.questTask15",
+        "correctAnswer": "Obwohl",
+        "tip": "consequenceForkSeven.questDescription"
+      }
+    ]
+  },
+  {
+    "questId": "consequence-fork-eight",
+    "title": "consequenceForkEight.questTitle",
+    "progress": "0/15",
+    "description": "consequenceForkEight.questDescription",
+    "conditions": {
+      "goal": "consequenceForkEight.questGoal",
+      "minCorrect": 15,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
+    "vocabulary": [
+      {
+        "word": "das Museum",
+        "translation-ru": "музей",
+        "translation-en": "museum",
+        "translation-uk": "музей",
+        "translation-pl": "muzeum",
+        "translation-es": "el museo",
+        "translation-fr": "le musée",
+        "translation-tr": "müze",
+        "translation-ro": "muzeul",
+        "translation-uz": "muzey",
+        "translation-hi": "संग्रहालय",
+        "translation-ar": "المتحف"
+      },
+      {
+        "word": "das Picknick",
+        "translation-ru": "пикник",
+        "translation-en": "picnic",
+        "translation-uk": "пікнік",
+        "translation-pl": "piknik",
+        "translation-es": "el pícnic",
+        "translation-fr": "le pique-nique",
+        "translation-tr": "piknik",
+        "translation-ro": "picnicul",
+        "translation-uz": "piknik",
+        "translation-hi": "पिकनिक",
+        "translation-ar": "النزهة"
+      },
+      {
+        "word": "die Decke",
+        "translation-ru": "плед, одеяло",
+        "translation-en": "blanket",
+        "translation-uk": "ковдра, плед",
+        "translation-pl": "koc",
+        "translation-es": "la manta",
+        "translation-fr": "la couverture",
+        "translation-tr": "battaniye",
+        "translation-ro": "pătura",
+        "translation-uz": "adyol",
+        "translation-hi": "कंबल",
+        "translation-ar": "البطانية"
+      },
+      {
+        "word": "schwimmen",
+        "translation-ru": "плавать",
+        "translation-en": "to swim",
+        "translation-uk": "плавати",
+        "translation-pl": "pływać",
+        "translation-es": "nadar",
+        "translation-fr": "nager",
+        "translation-tr": "yüzmek",
+        "translation-ro": "a înota",
+        "translation-uz": "suzmoq",
+        "translation-hi": "तैरना",
+        "translation-ar": "يسبح"
+      },
+      {
+        "word": "das Wochenende",
+        "translation-ru": "выходные",
+        "translation-en": "weekend",
+        "translation-uk": "вихідні",
+        "translation-pl": "weekend",
+        "translation-es": "el fin de semana",
+        "translation-fr": "le week-end",
+        "translation-tr": "hafta sonu",
+        "translation-ro": "weekendul",
+        "translation-uz": "dam olish kunlari",
+        "translation-hi": "वीकेंड",
+        "translation-ar": "عطلة نهاية الأسبوع"
+      }
+    ],
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "consequenceForkEight.questTask1",
+        "options": [
+          "Falls es regnet, wir gehen ins Museum.",
+          "Falls regnet es, gehen wir ins Museum.",
+          "Falls es regnet, gehen wir ins Museum."
+        ],
+        "answer": "Falls es regnet, gehen wir ins Museum.",
+        "tip": "consequenceForkEight.questDescription"
+      },
+      {
+        "id": 2,
+        "type": "input",
+        "question": "consequenceForkEight.questTask2",
+        "correctAnswer": "bleiben",
+        "tip": "consequenceForkEight.questDescription"
+      },
+      {
+        "id": 3,
+        "type": "input",
+        "question": "consequenceForkEight.questTask3",
+        "correctAnswer": "damit",
+        "tip": "consequenceForkEight.questDescription"
+      },
+      {
+        "id": 4,
+        "type": "reorder",
+        "question": "consequenceForkEight.questTask4",
+        "words": [
+          "Picknick",
+          "Falls",
+          "sodass",
+          "machen",
+          "wir",
+          "ist",
+          "es",
+          "ein",
+          "warm"
+        ],
+        "correctOrder": [
+          "Falls",
+          "es",
+          "warm",
+          "ist",
+          "machen",
+          "wir",
+          "ein",
+          "Picknick"
+        ],
+        "tip": "consequenceForkEight.questDescription"
+      },
+      {
+        "id": 5,
+        "type": "select",
+        "question": "consequenceForkEight.questTask5",
+        "options": [
+          "Solange die Kinder klein sind, wir fahren nicht weit weg.",
+          "Solange die Kinder sind klein, fahren wir nicht weit weg.",
+          "Solange die Kinder klein sind, fahren wir nicht weit weg."
+        ],
+        "answer": "Solange die Kinder klein sind, fahren wir nicht weit weg.",
+        "tip": "consequenceForkEight.questDescription"
+      },
+      {
+        "id": 6,
+        "type": "input",
+        "question": "consequenceForkEight.questTask6",
+        "correctAnswer": "sodass",
+        "tip": "consequenceForkEight.questDescription"
+      },
+      {
+        "id": 7,
+        "type": "readAndAnswer",
+        "question": "consequenceForkEight.questTask7",
+        "text": "Am Wochenende wollen Mia und Jan an den See fahren. Falls es kalt ist, gehen sie ins Museum. Solange es warm ist, wollen sie schwimmen. Mia packt Essen ein, damit sie ein Picknick machen können.",
+        "options": [
+          "Sie bleiben im Bett.",
+          "Sie gehen ins Museum.",
+          "Sie schwimmen trotzdem."
+        ],
+        "answer": "Sie gehen ins Museum.",
+        "tip": "consequenceForkEight.questDescription"
+      },
+      {
+        "id": 8,
+        "type": "input",
+        "question": "consequenceForkEight.questTask8",
+        "correctAnswer": "holt",
+        "tip": "consequenceForkEight.questDescription"
+      },
+      {
+        "id": 9,
+        "type": "reorder",
+        "question": "consequenceForkEight.questTask10",
+        "words": [
+          "hast",
+          "Solange",
+          "Fieber",
+          "sodass",
+          "du",
+          "du",
+          "Hause",
+          "zu",
+          "bleibst"
+        ],
+        "correctOrder": [
+          "Solange",
+          "du",
+          "Fieber",
+          "hast",
+          "bleibst",
+          "du",
+          "zu",
+          "Hause"
+        ],
+        "tip": "consequenceForkEight.questDescription"
+      },
+      {
+        "id": 10,
+        "type": "select",
+        "question": "consequenceForkEight.questTask11",
+        "options": [
+          "Er sprach laut, sodass alle aufwachten.",
+          "Er sprach laut, sodass alle wachten auf.",
+          "Er sprach laut, damit alle aufwachten."
+        ],
+        "answer": "Er sprach laut, sodass alle aufwachten.",
+        "tip": "consequenceForkEight.questDescription"
+      },
+      {
+        "id": 11,
+        "type": "input",
+        "question": "consequenceForkSeven.questTask9",
+        "correctAnswer": "einschliefen",
+        "tip": "consequenceForkSeven.questDescription",
+        "reviewOf": "consequence-fork-seven",
+        "reviewLand": "consequence-fork"
+      },
+      {
+        "id": 12,
+        "type": "input",
+        "question": "consequenceForkFour.questTask12",
+        "correctAnswer": "bin",
+        "tip": "consequenceForkFour.questDescription",
+        "reviewOf": "consequence-fork-four",
+        "reviewLand": "consequence-fork"
+      },
+      {
+        "id": 13,
+        "type": "input",
+        "question": "consequenceForkOne.questTask13",
+        "correctAnswer": "verstand",
+        "tip": "consequenceForkOne.questDescription",
+        "reviewOf": "consequence-fork-one",
+        "reviewLand": "consequence-fork"
+      },
+      {
+        "id": 14,
+        "type": "input",
+        "question": "consequenceForkEight.questTask14",
+        "correctAnswer": "haben",
+        "tip": "consequenceForkEight.questDescription"
+      },
+      {
+        "id": 15,
+        "type": "input",
+        "question": "consequenceForkEight.questTask15",
+        "correctAnswer": "bevor",
+        "tip": "consequenceForkEight.questDescription"
+      }
+    ]
+  },
+  {
+    "questId": "consequence-fork-nine",
+    "title": "consequenceForkNine.questTitle",
+    "progress": "0/15",
+    "description": "consequenceForkNine.questDescription",
+    "conditions": {
+      "goal": "consequenceForkNine.questGoal",
+      "minCorrect": 15,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
+    "vocabulary": [
+      {
+        "word": "die Erkältung",
+        "translation-ru": "простуда",
+        "translation-en": "cold",
+        "translation-uk": "застуда",
+        "translation-pl": "przeziębienie",
+        "translation-es": "el resfriado",
+        "translation-fr": "le rhume",
+        "translation-tr": "soğuk algınlığı",
+        "translation-ro": "răceala",
+        "translation-uz": "shamollash",
+        "translation-hi": "सर्दी-ज़ुकाम",
+        "translation-ar": "الزكام"
+      },
+      {
+        "word": "die Ampel",
+        "translation-ru": "светофор",
+        "translation-en": "traffic light",
+        "translation-uk": "світлофор",
+        "translation-pl": "sygnalizacja świetlna",
+        "translation-es": "el semáforo",
+        "translation-fr": "le feu",
+        "translation-tr": "trafik ışığı",
+        "translation-ro": "semaforul",
+        "translation-uz": "svetofor",
+        "translation-hi": "ट्रैफ़िक लाइट",
+        "translation-ar": "إشارة المرور"
+      },
+      {
+        "word": "hell",
+        "translation-ru": "светлый",
+        "translation-en": "light, bright",
+        "translation-uk": "світлий",
+        "translation-pl": "jasny",
+        "translation-es": "claro",
+        "translation-fr": "clair",
+        "translation-tr": "aydınlık",
+        "translation-ro": "luminos",
+        "translation-uz": "yorug‘",
+        "translation-hi": "उजला",
+        "translation-ar": "مضيء"
+      },
+      {
+        "word": "solange",
+        "translation-ru": "пока, до тех пор пока",
+        "translation-en": "as long as",
+        "translation-uk": "поки, доки",
+        "translation-pl": "dopóki",
+        "translation-es": "mientras",
+        "translation-fr": "tant que",
+        "translation-tr": "-dığı sürece",
+        "translation-ro": "cât timp",
+        "translation-uz": "…gan ekan",
+        "translation-hi": "जब तक",
+        "translation-ar": "طالما"
+      },
+      {
+        "word": "falls",
+        "translation-ru": "если вдруг",
+        "translation-en": "in case",
+        "translation-uk": "якщо раптом",
+        "translation-pl": "gdyby",
+        "translation-es": "por si",
+        "translation-fr": "au cas où",
+        "translation-tr": "olur da",
+        "translation-ro": "în caz că",
+        "translation-uz": "agar birdan",
+        "translation-hi": "अगर कहीं",
+        "translation-ar": "في حال"
+      }
+    ],
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "consequenceForkNine.questTask1",
+        "options": [
+          "Ich hatte eine Erkältung, damit ich zu Hause blieb.",
+          "Ich hatte eine Erkältung, sodass blieb ich zu Hause.",
+          "Ich hatte eine Erkältung, sodass ich zu Hause blieb."
+        ],
+        "answer": "Ich hatte eine Erkältung, sodass ich zu Hause blieb.",
+        "tip": "consequenceForkNine.questDescription"
+      },
+      {
+        "id": 2,
+        "type": "input",
+        "question": "consequenceForkNine.questTask2",
+        "correctAnswer": "fahren",
+        "tip": "consequenceForkNine.questDescription"
+      },
+      {
+        "id": 3,
+        "type": "input",
+        "question": "consequenceForkNine.questTask3",
+        "correctAnswer": "dass",
+        "tip": "consequenceForkNine.questDescription"
+      },
+      {
+        "id": 4,
+        "type": "reorder",
+        "question": "consequenceForkNine.questTask4",
+        "words": [
+          "Garten",
+          "wir",
+          "ist",
+          "im",
+          "es",
+          "Solange",
+          "arbeiten",
+          "damit",
+          "hell"
+        ],
+        "correctOrder": [
+          "Solange",
+          "es",
+          "hell",
+          "ist",
+          "arbeiten",
+          "wir",
+          "im",
+          "Garten"
+        ],
+        "tip": "consequenceForkNine.questDescription"
+      },
+      {
+        "id": 5,
+        "type": "select",
+        "question": "consequenceForkNine.questTask5",
+        "options": [
+          "Wir gingen früh, sodass erreichten wir den letzten Zug.",
+          "Wir gingen früh, damit erreichten wir den letzten Zug.",
+          "Wir gingen früh, sodass wir den letzten Zug erreichten."
+        ],
+        "answer": "Wir gingen früh, sodass wir den letzten Zug erreichten.",
+        "tip": "consequenceForkNine.questDescription"
+      },
+      {
+        "id": 6,
+        "type": "input",
+        "question": "consequenceForkNine.questTask6",
+        "correctAnswer": "damit",
+        "tip": "consequenceForkNine.questDescription"
+      },
+      {
+        "id": 7,
+        "type": "readAndAnswer",
+        "question": "consequenceForkNine.questTask7",
+        "text": "Peter will am Sonntag Fahrrad fahren. Falls es regnet, geht er ins Schwimmbad. Solange es nicht regnet, bleibt er draußen.",
+        "options": [
+          "Er geht ins Schwimmbad.",
+          "Er bleibt draußen.",
+          "Er fährt Fahrrad."
+        ],
+        "answer": "Er geht ins Schwimmbad.",
+        "tip": "consequenceForkNine.questDescription"
+      },
+      {
+        "id": 8,
+        "type": "input",
+        "question": "consequenceForkNine.questTask8",
+        "correctAnswer": "warten",
+        "tip": "consequenceForkNine.questDescription"
+      },
+      {
+        "id": 9,
+        "type": "select",
+        "question": "consequenceForkNine.questTask9",
+        "options": [
+          "Falls du Anna siehst, grüß sie von mir.",
+          "Falls du Anna siehst, du grüßt sie von mir.",
+          "Falls du siehst Anna, grüß sie von mir."
+        ],
+        "answer": "Falls du Anna siehst, grüß sie von mir.",
+        "tip": "consequenceForkNine.questDescription"
+      },
+      {
+        "id": 10,
+        "type": "input",
+        "question": "consequenceForkNine.questTask10",
+        "correctAnswer": "sodass",
+        "tip": "consequenceForkNine.questDescription"
+      },
+      {
+        "id": 11,
+        "type": "reorder",
+        "question": "consequenceForkNine.questTask11",
+        "words": [
+          "so",
+          "Das",
+          "Auto",
+          "es",
+          "Kind",
+          "müde",
+          "im",
+          "sodass",
+          "einschlief",
+          "war",
+          "dass"
+        ],
+        "correctOrder": [
+          "Das",
+          "Kind",
+          "war",
+          "so",
+          "müde",
+          "dass",
+          "es",
+          "im",
+          "Auto",
+          "einschlief"
+        ],
+        "tip": "consequenceForkNine.questDescription"
+      },
+      {
+        "id": 12,
+        "type": "select",
+        "question": "consequenceForkNine.questTask12",
+        "options": [
+          "Solange wohnst du hier, musst du aufräumen.",
+          "Solange du hier wohnst, musst du aufräumen.",
+          "Solange du hier wohnst, du musst aufräumen."
+        ],
+        "answer": "Solange du hier wohnst, musst du aufräumen.",
+        "tip": "consequenceForkNine.questDescription"
+      },
+      {
+        "id": 13,
+        "type": "input",
+        "question": "consequenceForkNine.questTask13",
+        "correctAnswer": "hast",
+        "tip": "consequenceForkNine.questDescription"
+      },
+      {
+        "id": 14,
+        "type": "input",
+        "question": "consequenceForkNine.questTask14",
+        "correctAnswer": "damit",
+        "tip": "consequenceForkNine.questDescription"
+      },
+      {
+        "id": 15,
+        "type": "input",
+        "question": "consequenceForkNine.questTask15",
+        "correctAnswer": "wurde",
+        "tip": "consequenceForkNine.questDescription"
+      }
+    ]
+  },
+  {
+    "questId": "consequence-fork-ten",
+    "title": "consequenceForkTen.questTitle",
+    "progress": "0/15",
+    "description": "consequenceForkTen.questDescription",
+    "conditions": {
+      "goal": "consequenceForkTen.questGoal",
+      "minCorrect": 15,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
+    "vocabulary": [
+      {
+        "word": "das Gewitter",
+        "translation-ru": "гроза",
+        "translation-en": "thunderstorm",
+        "translation-uk": "гроза",
+        "translation-pl": "burza",
+        "translation-es": "la tormenta",
+        "translation-fr": "l’orage",
+        "translation-tr": "fırtına",
+        "translation-ro": "furtuna",
+        "translation-uz": "momaqaldiroq",
+        "translation-hi": "आँधी-तूफ़ान",
+        "translation-ar": "العاصفة الرعدية"
+      },
+      {
+        "word": "der Flug",
+        "translation-ru": "полёт, рейс",
+        "translation-en": "flight",
+        "translation-uk": "рейс",
+        "translation-pl": "lot",
+        "translation-es": "el vuelo",
+        "translation-fr": "le vol",
+        "translation-tr": "uçuş",
+        "translation-ro": "zborul",
+        "translation-uz": "reys",
+        "translation-hi": "उड़ान",
+        "translation-ar": "الرحلة الجوية"
+      },
+      {
+        "word": "fliegen",
+        "translation-ru": "летать, лететь",
+        "translation-en": "to fly",
+        "translation-uk": "летіти",
+        "translation-pl": "lecieć",
+        "translation-es": "volar",
+        "translation-fr": "prendre l’avion",
+        "translation-tr": "uçmak",
+        "translation-ro": "a zbura",
+        "translation-uz": "uchmoq",
+        "translation-hi": "उड़ना",
+        "translation-ar": "يطير"
+      },
+      {
+        "word": "solange",
+        "translation-ru": "пока, до тех пор пока",
+        "translation-en": "as long as",
+        "translation-uk": "поки, доки",
+        "translation-pl": "dopóki",
+        "translation-es": "mientras",
+        "translation-fr": "tant que",
+        "translation-tr": "-dığı sürece",
+        "translation-ro": "cât timp",
+        "translation-uz": "…gan ekan",
+        "translation-hi": "जब तक",
+        "translation-ar": "طالما"
+      },
+      {
+        "word": "falls",
+        "translation-ru": "если вдруг",
+        "translation-en": "in case",
+        "translation-uk": "якщо раптом",
+        "translation-pl": "gdyby",
+        "translation-es": "por si",
+        "translation-fr": "au cas où",
+        "translation-tr": "olur da",
+        "translation-ro": "în caz că",
+        "translation-uz": "agar birdan",
+        "translation-hi": "अगर कहीं",
+        "translation-ar": "في حال"
+      }
+    ],
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "consequenceForkTen.questTask1",
+        "options": [
+          "Es gab ein Gewitter, sodass fiel der Flug aus.",
+          "Es gab ein Gewitter, damit der Flug ausfiel.",
+          "Es gab ein Gewitter, sodass der Flug ausfiel."
+        ],
+        "answer": "Es gab ein Gewitter, sodass der Flug ausfiel.",
+        "tip": "consequenceForkTen.questDescription"
+      },
+      {
+        "id": 2,
+        "type": "input",
+        "question": "consequenceForkTen.questTask2",
+        "correctAnswer": "um",
+        "tip": "consequenceForkTen.questDescription"
+      },
+      {
+        "id": 3,
+        "type": "input",
+        "question": "consequenceForkTen.questTask3",
+        "correctAnswer": "hatte",
+        "tip": "consequenceForkTen.questDescription"
+      },
+      {
+        "id": 4,
+        "type": "reorder",
+        "question": "consequenceForkTen.questTask4",
+        "words": [
+          "ausfällt",
+          "Falls",
+          "der",
+          "mit",
+          "dem",
+          "wir",
+          "fahren",
+          "damit",
+          "Zug",
+          "Flug"
+        ],
+        "correctOrder": [
+          "Falls",
+          "der",
+          "Flug",
+          "ausfällt",
+          "fahren",
+          "wir",
+          "mit",
+          "dem",
+          "Zug"
+        ],
+        "tip": "consequenceForkTen.questDescription"
+      },
+      {
+        "id": 5,
+        "type": "select",
+        "question": "consequenceForkTen.questTask5",
+        "options": [
+          "Obwohl das Hotel teuer war, wir blieben dort.",
+          "Obwohl das Hotel war teuer, blieben wir dort.",
+          "Obwohl das Hotel teuer war, blieben wir dort."
+        ],
+        "answer": "Obwohl das Hotel teuer war, blieben wir dort.",
+        "tip": "consequenceForkTen.questDescription"
+      },
+      {
+        "id": 6,
+        "type": "input",
+        "question": "consequenceForkTen.questTask6",
+        "correctAnswer": "so",
+        "tip": "consequenceForkTen.questDescription"
+      },
+      {
+        "id": 7,
+        "type": "readAndAnswer",
+        "question": "consequenceForkTen.questTask7",
+        "text": "Julia wollte im August nach Italien fliegen. Aber sie wurde krank, sodass sie zu Hause bleiben musste. Falls sie im Oktober Zeit hat, fliegt sie dann.",
+        "options": [
+          "Der Flug fiel aus.",
+          "Sie war nicht gesund.",
+          "Sie hatte kein Geld."
+        ],
+        "answer": "Sie war nicht gesund.",
+        "tip": "consequenceForkTen.questDescription"
+      },
+      {
+        "id": 8,
+        "type": "input",
+        "question": "consequenceForkTen.questTask8",
+        "correctAnswer": "arbeitet",
+        "tip": "consequenceForkTen.questDescription"
+      },
+      {
+        "id": 9,
+        "type": "reorder",
+        "question": "consequenceForkTen.questTask9",
+        "words": [
+          "fertig",
+          "ich",
+          "mir",
+          "Er",
+          "schnell",
+          "geholfen",
+          "damit",
+          "war",
+          "hat",
+          "sodass"
+        ],
+        "correctOrder": [
+          "Er",
+          "hat",
+          "mir",
+          "geholfen",
+          "sodass",
+          "ich",
+          "schnell",
+          "fertig",
+          "war"
+        ],
+        "tip": "consequenceForkTen.questDescription"
+      },
+      {
+        "id": 10,
+        "type": "input",
+        "question": "consequenceForkTen.questTask10",
+        "correctAnswer": "arbeitete",
+        "tip": "consequenceForkTen.questDescription"
+      },
+      {
+        "id": 11,
+        "type": "select",
+        "question": "consequenceForkTen.questTask11",
+        "options": [
+          "Als ich ein Kind war, wohnte ich in einem Dorf.",
+          "Als ich war ein Kind, wohnte ich in einem Dorf.",
+          "Wenn ich ein Kind war, wohnte ich in einem Dorf."
+        ],
+        "answer": "Als ich ein Kind war, wohnte ich in einem Dorf.",
+        "tip": "consequenceForkTen.questDescription"
+      },
+      {
+        "id": 12,
+        "type": "input",
+        "question": "consequenceForkTen.questTask12",
+        "correctAnswer": "weil",
+        "tip": "consequenceForkTen.questDescription"
+      },
+      {
+        "id": 13,
+        "type": "readAndAnswer",
+        "question": "consequenceForkTen.questTask13",
+        "text": "Ben fährt morgen zu seiner Oma. Falls der Zug Verspätung hat, ruft er sie an, damit sie nicht wartet.",
+        "options": [
+          "Er bleibt zu Hause.",
+          "Er ruft seine Oma an.",
+          "Er nimmt ein Taxi."
+        ],
+        "answer": "Er ruft seine Oma an.",
+        "tip": "consequenceForkTen.questDescription"
+      },
+      {
+        "id": 14,
+        "type": "input",
+        "question": "consequenceForkTen.questTask14",
+        "correctAnswer": "billigste",
+        "tip": "consequenceForkTen.questDescription"
+      },
+      {
+        "id": 15,
+        "type": "input",
+        "question": "consequenceForkTen.questTask15",
+        "correctAnswer": "meiner",
+        "tip": "consequenceForkTen.questDescription"
+      }
+    ]
+  }
+]

@@ -1,0 +1,2590 @@
+[
+  {
+    "questId": "choice-crossing-one",
+    "title": "choiceCrossingOne.questTitle",
+    "progress": "0/15",
+    "description": "choiceCrossingOne.questDescription",
+    "conditions": {
+      "goal": "choiceCrossingOne.questGoal",
+      "minCorrect": 15,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
+    "vocabulary": [
+      {
+        "word": "der Rock",
+        "translation-ru": "юбка",
+        "translation-en": "skirt",
+        "translation-uk": "спідниця",
+        "translation-pl": "spódnica",
+        "translation-es": "la falda",
+        "translation-fr": "la jupe",
+        "translation-tr": "etek",
+        "translation-ro": "fusta",
+        "translation-uz": "yubka",
+        "translation-hi": "स्कर्ट",
+        "translation-ar": "التنورة"
+      },
+      {
+        "word": "das Kleid",
+        "translation-ru": "платье",
+        "translation-en": "dress",
+        "translation-uk": "сукня",
+        "translation-pl": "sukienka",
+        "translation-es": "el vestido",
+        "translation-fr": "la robe",
+        "translation-tr": "elbise",
+        "translation-ro": "rochia",
+        "translation-uz": "ko‘ylak",
+        "translation-hi": "ड्रेस",
+        "translation-ar": "الفستان"
+      },
+      {
+        "word": "die Farbe",
+        "translation-ru": "цвет",
+        "translation-en": "colour",
+        "translation-uk": "колір",
+        "translation-pl": "kolor",
+        "translation-es": "el color",
+        "translation-fr": "la couleur",
+        "translation-tr": "renk",
+        "translation-ro": "culoarea",
+        "translation-uz": "rang",
+        "translation-hi": "रंग",
+        "translation-ar": "اللون"
+      },
+      {
+        "word": "die Größe",
+        "translation-ru": "размер",
+        "translation-en": "size",
+        "translation-uk": "розмір",
+        "translation-pl": "rozmiar",
+        "translation-es": "la talla",
+        "translation-fr": "la taille",
+        "translation-tr": "beden",
+        "translation-ro": "mărimea",
+        "translation-uz": "o‘lcham",
+        "translation-hi": "साइज़",
+        "translation-ar": "المقاس"
+      },
+      {
+        "word": "der Schuh",
+        "translation-ru": "ботинок, туфля",
+        "translation-en": "shoe",
+        "translation-uk": "черевик, туфля",
+        "translation-pl": "but",
+        "translation-es": "el zapato",
+        "translation-fr": "la chaussure",
+        "translation-tr": "ayakkabı",
+        "translation-ro": "pantoful",
+        "translation-uz": "poyabzal",
+        "translation-hi": "जूता",
+        "translation-ar": "الحذاء"
+      }
+    ],
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "choiceCrossingOne.questTask1",
+        "options": [
+          "Welcher Jacke gefällt dir?",
+          "Welches Jacke gefällt dir?",
+          "Welche Jacke gefällt dir?"
+        ],
+        "answer": "Welche Jacke gefällt dir?",
+        "tip": "choiceCrossingOne.questDescription"
+      },
+      {
+        "id": 2,
+        "type": "input",
+        "question": "choiceCrossingOne.questTask2",
+        "correctAnswer": "Welches",
+        "tip": "choiceCrossingOne.questDescription"
+      },
+      {
+        "id": 3,
+        "type": "input",
+        "question": "choiceCrossingOne.questTask3",
+        "correctAnswer": "Farbe",
+        "tip": "choiceCrossingOne.questDescription"
+      },
+      {
+        "id": 4,
+        "type": "reorder",
+        "question": "choiceCrossingOne.questTask4",
+        "words": [
+          "Welcher",
+          "Sie",
+          "Welche",
+          "brauchen",
+          "Größe"
+        ],
+        "correctOrder": [
+          "Welche",
+          "Größe",
+          "brauchen",
+          "Sie"
+        ],
+        "tip": "choiceCrossingOne.questDescription"
+      },
+      {
+        "id": 5,
+        "type": "select",
+        "question": "choiceCrossingOne.questTask5",
+        "options": [
+          "Welches Schuhe sind schöner?",
+          "Welche Schuhe sind schöner?",
+          "Welcher Schuhe sind schöner?"
+        ],
+        "answer": "Welche Schuhe sind schöner?",
+        "tip": "choiceCrossingOne.questDescription"
+      },
+      {
+        "id": 6,
+        "type": "input",
+        "question": "choiceCrossingOne.questTask6",
+        "correctAnswer": "Welcher",
+        "tip": "choiceCrossingOne.questDescription"
+      },
+      {
+        "id": 7,
+        "type": "readAndAnswer",
+        "question": "choiceCrossingOne.questTask7",
+        "text": "Im Laden fragt die Verkäuferin: „Welche Größe haben Sie?“ Frau Lang sagt: „Größe 38. Welches Kleid ist im Angebot?“ „Das blaue Kleid.“",
+        "options": [
+          "das grüne Kleid",
+          "das blaue Kleid",
+          "das rote Kleid"
+        ],
+        "answer": "das blaue Kleid",
+        "tip": "choiceCrossingOne.questDescription"
+      },
+      {
+        "id": 8,
+        "type": "input",
+        "question": "choiceCrossingOne.questTask8",
+        "correctAnswer": "Welcher",
+        "tip": "choiceCrossingOne.questDescription"
+      },
+      {
+        "id": 9,
+        "type": "reorder",
+        "question": "choiceCrossingOne.questTask10",
+        "words": [
+          "Tag",
+          "heute",
+          "Welcher",
+          "Welches",
+          "ist"
+        ],
+        "correctOrder": [
+          "Welcher",
+          "Tag",
+          "ist",
+          "heute"
+        ],
+        "tip": "choiceCrossingOne.questDescription"
+      },
+      {
+        "id": 10,
+        "type": "select",
+        "question": "choiceCrossingOne.questTask11",
+        "options": [
+          "Welche Bier trinken Sie?",
+          "Welches Bier trinken Sie?",
+          "Welcher Bier trinken Sie?"
+        ],
+        "answer": "Welches Bier trinken Sie?",
+        "tip": "choiceCrossingOne.questDescription"
+      },
+      {
+        "id": 11,
+        "type": "input",
+        "question": "adviceGardenEight.questTask9",
+        "correctAnswer": "Sonne",
+        "tip": "adviceGardenEight.questDescription",
+        "reviewOf": "advice-garden-eight",
+        "reviewLand": "advice-garden"
+      },
+      {
+        "id": 12,
+        "type": "select",
+        "question": "adviceGardenFive.questTask12",
+        "options": [
+          "Hätten Sie am Montag Zeit?",
+          "Hätten Sie am Freitag Zeit?",
+          "Hatten Sie am Montag Zeit?"
+        ],
+        "answer": "Hätten Sie am Montag Zeit?",
+        "tip": "adviceGardenFive.questDescription",
+        "reviewOf": "advice-garden-five",
+        "reviewLand": "advice-garden"
+      },
+      {
+        "id": 13,
+        "type": "readAndAnswer",
+        "question": "adviceGardenTwo.questTask13",
+        "text": "Anna hat Kopfschmerzen. Ihre Freundin sagt: Du solltest eine Tablette nehmen und dich ausruhen.",
+        "options": [
+          "der Kopf",
+          "der Bauch",
+          "der Fuß"
+        ],
+        "answer": "der Kopf",
+        "tip": "adviceGardenTwo.questDescription",
+        "reviewOf": "advice-garden-two",
+        "reviewLand": "advice-garden"
+      },
+      {
+        "id": 14,
+        "type": "input",
+        "question": "choiceCrossingOne.questTask14",
+        "correctAnswer": "teurer",
+        "tip": "choiceCrossingOne.questDescription"
+      },
+      {
+        "id": 15,
+        "type": "input",
+        "question": "choiceCrossingOne.questTask15",
+        "correctAnswer": "solltest",
+        "tip": "choiceCrossingOne.questDescription"
+      }
+    ]
+  },
+  {
+    "questId": "choice-crossing-two",
+    "title": "choiceCrossingTwo.questTitle",
+    "progress": "0/15",
+    "description": "choiceCrossingTwo.questDescription",
+    "conditions": {
+      "goal": "choiceCrossingTwo.questGoal",
+      "minCorrect": 15,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
+    "vocabulary": [
+      {
+        "word": "der Pullover",
+        "translation-ru": "свитер",
+        "translation-en": "jumper",
+        "translation-uk": "светр",
+        "translation-pl": "sweter",
+        "translation-es": "el jersey",
+        "translation-fr": "le pull",
+        "translation-tr": "kazak",
+        "translation-ro": "puloverul",
+        "translation-uz": "sviter",
+        "translation-hi": "स्वेटर",
+        "translation-ar": "الكنزة"
+      },
+      {
+        "word": "die Hose",
+        "translation-ru": "брюки",
+        "translation-en": "trousers",
+        "translation-uk": "штани",
+        "translation-pl": "spodnie",
+        "translation-es": "el pantalón",
+        "translation-fr": "le pantalon",
+        "translation-tr": "pantolon",
+        "translation-ro": "pantalonii",
+        "translation-uz": "shim",
+        "translation-hi": "पतलून",
+        "translation-ar": "البنطال"
+      },
+      {
+        "word": "das Hemd",
+        "translation-ru": "рубашка",
+        "translation-en": "shirt",
+        "translation-uk": "сорочка",
+        "translation-pl": "koszula",
+        "translation-es": "la camisa",
+        "translation-fr": "la chemise",
+        "translation-tr": "gömlek",
+        "translation-ro": "cămașa",
+        "translation-uz": "ko‘ylak",
+        "translation-hi": "कमीज़",
+        "translation-ar": "القميص"
+      },
+      {
+        "word": "anprobieren",
+        "translation-ru": "примерять",
+        "translation-en": "to try on",
+        "translation-uk": "приміряти",
+        "translation-pl": "przymierzać",
+        "translation-es": "probarse",
+        "translation-fr": "essayer",
+        "translation-tr": "denemek",
+        "translation-ro": "a proba",
+        "translation-uz": "kiyib ko‘rmoq",
+        "translation-hi": "पहनकर देखना",
+        "translation-ar": "يجرّب"
+      },
+      {
+        "word": "die Kasse",
+        "translation-ru": "касса",
+        "translation-en": "till, checkout",
+        "translation-uk": "каса",
+        "translation-pl": "kasa",
+        "translation-es": "la caja",
+        "translation-fr": "la caisse",
+        "translation-tr": "kasa",
+        "translation-ro": "casa",
+        "translation-uz": "kassa",
+        "translation-hi": "काउंटर",
+        "translation-ar": "الصندوق"
+      },
+      {
+        "word": "der Tisch",
+        "translation-ru": "стол",
+        "translation-en": "table",
+        "translation-uk": "стіл",
+        "translation-pl": "stół",
+        "translation-es": "la mesa",
+        "translation-fr": "la table",
+        "translation-tr": "masa",
+        "translation-ro": "masa",
+        "translation-uz": "stol",
+        "translation-hi": "मेज़",
+        "translation-ar": "الطاولة"
+      }
+    ],
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "choiceCrossingTwo.questTask1",
+        "options": [
+          "Ich nehme dieses Pullover.",
+          "Ich nehme dieser Pullover.",
+          "Ich nehme diesen Pullover."
+        ],
+        "answer": "Ich nehme diesen Pullover.",
+        "tip": "choiceCrossingTwo.questDescription"
+      },
+      {
+        "id": 2,
+        "type": "input",
+        "question": "choiceCrossingTwo.questTask2",
+        "correctAnswer": "Diese",
+        "tip": "choiceCrossingTwo.questDescription"
+      },
+      {
+        "id": 3,
+        "type": "input",
+        "question": "choiceCrossingTwo.questTask3",
+        "correctAnswer": "Pullover",
+        "tip": "choiceCrossingTwo.questDescription"
+      },
+      {
+        "id": 4,
+        "type": "reorder",
+        "question": "choiceCrossingTwo.questTask4",
+        "words": [
+          "Kann",
+          "diesen",
+          "anprobieren",
+          "Hemd",
+          "ich",
+          "dieses"
+        ],
+        "correctOrder": [
+          "Kann",
+          "ich",
+          "dieses",
+          "Hemd",
+          "anprobieren"
+        ],
+        "tip": "choiceCrossingTwo.questDescription"
+      },
+      {
+        "id": 5,
+        "type": "select",
+        "question": "choiceCrossingTwo.questTask5",
+        "options": [
+          "Dieses Tisch ist sehr alt.",
+          "Dieser Tisch ist sehr alt.",
+          "Diesen Tisch ist sehr alt."
+        ],
+        "answer": "Dieser Tisch ist sehr alt.",
+        "tip": "choiceCrossingTwo.questDescription"
+      },
+      {
+        "id": 6,
+        "type": "input",
+        "question": "choiceCrossingTwo.questTask6",
+        "correctAnswer": "Diese",
+        "tip": "choiceCrossingTwo.questDescription"
+      },
+      {
+        "id": 7,
+        "type": "readAndAnswer",
+        "question": "choiceCrossingTwo.questTask7",
+        "text": "Ben probiert zwei Hemden an. Dieses Hemd ist zu klein, aber das blaue Hemd passt gut. Er nimmt das blaue Hemd und geht zur Kasse.",
+        "options": [
+          "das blaue Hemd",
+          "zwei Hemden",
+          "das kleine Hemd"
+        ],
+        "answer": "das blaue Hemd",
+        "tip": "choiceCrossingTwo.questDescription"
+      },
+      {
+        "id": 8,
+        "type": "input",
+        "question": "choiceCrossingTwo.questTask8",
+        "correctAnswer": "diesen",
+        "tip": "choiceCrossingTwo.questDescription"
+      },
+      {
+        "id": 9,
+        "type": "reorder",
+        "question": "choiceCrossingTwo.questTask10",
+        "words": [
+          "Dieser",
+          "Diesen",
+          "mir",
+          "Pullover",
+          "gefällt"
+        ],
+        "correctOrder": [
+          "Dieser",
+          "Pullover",
+          "gefällt",
+          "mir"
+        ],
+        "tip": "choiceCrossingTwo.questDescription"
+      },
+      {
+        "id": 10,
+        "type": "select",
+        "question": "choiceCrossingTwo.questTask11",
+        "options": [
+          "Kennst du diesen Frau?",
+          "Kennst du diese Frau?",
+          "Kennst du dieser Frau?"
+        ],
+        "answer": "Kennst du diese Frau?",
+        "tip": "choiceCrossingTwo.questDescription"
+      },
+      {
+        "id": 11,
+        "type": "input",
+        "question": "choiceCrossingOne.questTask9",
+        "correctAnswer": "liest",
+        "tip": "choiceCrossingOne.questDescription",
+        "reviewOf": "choice-crossing-one",
+        "reviewLand": "choice-crossing"
+      },
+      {
+        "id": 12,
+        "type": "select",
+        "question": "adviceGardenSix.questTask12",
+        "options": [
+          "Das ist mein Problem.",
+          "Das ist kein Problem.",
+          "Das ist ein großes Problem."
+        ],
+        "answer": "Das ist kein Problem.",
+        "tip": "adviceGardenSix.questDescription",
+        "reviewOf": "advice-garden-six",
+        "reviewLand": "advice-garden"
+      },
+      {
+        "id": 13,
+        "type": "readAndAnswer",
+        "question": "adviceGardenThree.questTask13",
+        "text": "Ben sagt: Ich würde gern Koch werden. Ich koche sehr gern.",
+        "options": [
+          "Lehrer",
+          "Koch",
+          "Arzt"
+        ],
+        "answer": "Koch",
+        "tip": "adviceGardenThree.questDescription",
+        "reviewOf": "advice-garden-three",
+        "reviewLand": "advice-garden"
+      },
+      {
+        "id": 14,
+        "type": "input",
+        "question": "choiceCrossingTwo.questTask14",
+        "correctAnswer": "wie",
+        "tip": "choiceCrossingTwo.questDescription"
+      },
+      {
+        "id": 15,
+        "type": "input",
+        "question": "choiceCrossingTwo.questTask15",
+        "correctAnswer": "würde",
+        "tip": "choiceCrossingTwo.questDescription"
+      }
+    ]
+  },
+  {
+    "questId": "choice-crossing-three",
+    "title": "choiceCrossingThree.questTitle",
+    "progress": "0/15",
+    "description": "choiceCrossingThree.questDescription",
+    "conditions": {
+      "goal": "choiceCrossingThree.questGoal",
+      "minCorrect": 15,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
+    "vocabulary": [
+      {
+        "word": "das Land",
+        "translation-ru": "страна",
+        "translation-en": "country",
+        "translation-uk": "країна",
+        "translation-pl": "kraj",
+        "translation-es": "el país",
+        "translation-fr": "le pays",
+        "translation-tr": "ülke",
+        "translation-ro": "țara",
+        "translation-uz": "mamlakat",
+        "translation-hi": "देश",
+        "translation-ar": "البلد"
+      },
+      {
+        "word": "die Linie",
+        "translation-ru": "линия, маршрут",
+        "translation-en": "line (bus, tram)",
+        "translation-uk": "лінія, маршрут",
+        "translation-pl": "linia",
+        "translation-es": "la línea",
+        "translation-fr": "la ligne",
+        "translation-tr": "hat",
+        "translation-ro": "linia",
+        "translation-uz": "yo‘nalish",
+        "translation-hi": "लाइन",
+        "translation-ar": "الخط"
+      },
+      {
+        "word": "das Gebäude",
+        "translation-ru": "здание",
+        "translation-en": "building",
+        "translation-uk": "будівля",
+        "translation-pl": "budynek",
+        "translation-es": "el edificio",
+        "translation-fr": "le bâtiment",
+        "translation-tr": "bina",
+        "translation-ro": "clădirea",
+        "translation-uz": "bino",
+        "translation-hi": "इमारत",
+        "translation-ar": "المبنى"
+      },
+      {
+        "word": "der Ort",
+        "translation-ru": "место",
+        "translation-en": "place",
+        "translation-uk": "місце",
+        "translation-pl": "miejsce",
+        "translation-es": "el lugar",
+        "translation-fr": "le lieu",
+        "translation-tr": "yer",
+        "translation-ro": "locul",
+        "translation-uz": "joy",
+        "translation-hi": "जगह",
+        "translation-ar": "المكان"
+      },
+      {
+        "word": "die Leute",
+        "translation-ru": "люди",
+        "translation-en": "people",
+        "translation-uk": "люди",
+        "translation-pl": "ludzie",
+        "translation-es": "la gente",
+        "translation-fr": "les gens",
+        "translation-tr": "insanlar",
+        "translation-ro": "oamenii",
+        "translation-uz": "odamlar",
+        "translation-hi": "लोग",
+        "translation-ar": "الناس"
+      },
+      {
+        "word": "zufrieden",
+        "translation-ru": "довольный",
+        "translation-en": "satisfied",
+        "translation-uk": "задоволений",
+        "translation-pl": "zadowolony",
+        "translation-es": "satisfecho",
+        "translation-fr": "satisfait",
+        "translation-tr": "memnun",
+        "translation-ro": "mulțumit",
+        "translation-uz": "mamnun",
+        "translation-hi": "संतुष्ट",
+        "translation-ar": "راضٍ"
+      },
+      {
+        "word": "nah",
+        "translation-ru": "близкий",
+        "translation-en": "near",
+        "translation-uk": "близький",
+        "translation-pl": "bliski",
+        "translation-es": "cercano",
+        "translation-fr": "proche",
+        "translation-tr": "yakın",
+        "translation-ro": "aproape",
+        "translation-uz": "yaqin",
+        "translation-hi": "पास",
+        "translation-ar": "قريب"
+      }
+    ],
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "choiceCrossingThree.questTask1",
+        "options": [
+          "Aus welches Land kommst du?",
+          "Aus welcher Land kommst du?",
+          "Aus welchem Land kommst du?"
+        ],
+        "answer": "Aus welchem Land kommst du?",
+        "tip": "choiceCrossingThree.questDescription"
+      },
+      {
+        "id": 2,
+        "type": "input",
+        "question": "choiceCrossingThree.questTask2",
+        "correctAnswer": "welcher",
+        "tip": "choiceCrossingThree.questDescription"
+      },
+      {
+        "id": 3,
+        "type": "input",
+        "question": "choiceCrossingThree.questTask3",
+        "correctAnswer": "welchem",
+        "tip": "choiceCrossingThree.questDescription"
+      },
+      {
+        "id": 4,
+        "type": "reorder",
+        "question": "choiceCrossingThree.questTask4",
+        "words": [
+          "dieses",
+          "arbeitet",
+          "Vater",
+          "In",
+          "diesem",
+          "mein",
+          "Gebäude"
+        ],
+        "correctOrder": [
+          "In",
+          "diesem",
+          "Gebäude",
+          "arbeitet",
+          "mein",
+          "Vater"
+        ],
+        "tip": "choiceCrossingThree.questDescription"
+      },
+      {
+        "id": 5,
+        "type": "select",
+        "question": "choiceCrossingThree.questTask5",
+        "options": [
+          "Ich fahre mit dieser Linie.",
+          "Ich fahre mit diesem Linie.",
+          "Ich fahre mit diese Linie."
+        ],
+        "answer": "Ich fahre mit dieser Linie.",
+        "tip": "choiceCrossingThree.questDescription"
+      },
+      {
+        "id": 6,
+        "type": "input",
+        "question": "choiceCrossingThree.questTask6",
+        "correctAnswer": "diesen",
+        "tip": "choiceCrossingThree.questDescription"
+      },
+      {
+        "id": 7,
+        "type": "readAndAnswer",
+        "question": "choiceCrossingThree.questTask7",
+        "text": "Lara kommt aus Polen. Sie wohnt in einer kleinen Straße in Köln. In diesem Haus wohnen auch ihre Eltern. Sie fährt immer mit der Linie 5 zur Arbeit.",
+        "options": [
+          "ihre Freunde",
+          "ihre Eltern",
+          "ihre Kollegen"
+        ],
+        "answer": "ihre Eltern",
+        "tip": "choiceCrossingThree.questDescription"
+      },
+      {
+        "id": 8,
+        "type": "input",
+        "question": "choiceCrossingThree.questTask8",
+        "correctAnswer": "welcher",
+        "tip": "choiceCrossingThree.questDescription"
+      },
+      {
+        "id": 9,
+        "type": "reorder",
+        "question": "choiceCrossingThree.questTask10",
+        "words": [
+          "zwei",
+          "Jahren",
+          "Stadt",
+          "diese",
+          "Er",
+          "seit",
+          "wohnt",
+          "dieser",
+          "in"
+        ],
+        "correctOrder": [
+          "Er",
+          "wohnt",
+          "seit",
+          "zwei",
+          "Jahren",
+          "in",
+          "dieser",
+          "Stadt"
+        ],
+        "tip": "choiceCrossingThree.questDescription"
+      },
+      {
+        "id": 10,
+        "type": "select",
+        "question": "choiceCrossingThree.questTask11",
+        "options": [
+          "Mit welchem Freund gehst du ins Kino?",
+          "Mit welcher Freund gehst du ins Kino?",
+          "Mit welchen Freund gehst du ins Kino?"
+        ],
+        "answer": "Mit welchem Freund gehst du ins Kino?",
+        "tip": "choiceCrossingThree.questDescription"
+      },
+      {
+        "id": 11,
+        "type": "input",
+        "question": "choiceCrossingTwo.questTask9",
+        "correctAnswer": "sind",
+        "tip": "choiceCrossingTwo.questDescription",
+        "reviewOf": "choice-crossing-two",
+        "reviewLand": "choice-crossing"
+      },
+      {
+        "id": 12,
+        "type": "input",
+        "question": "adviceGardenSeven.questTask12",
+        "correctAnswer": "weh",
+        "tip": "adviceGardenSeven.questDescription",
+        "reviewOf": "advice-garden-seven",
+        "reviewLand": "advice-garden"
+      },
+      {
+        "id": 13,
+        "type": "readAndAnswer",
+        "question": "adviceGardenFour.questTask13",
+        "text": "Tom ist nicht zufrieden. Er hätte gern eine größere Wohnung und wäre gern näher an der Arbeit.",
+        "options": [
+          "eine größere Wohnung",
+          "eine kleinere Wohnung",
+          "eine billigere Wohnung"
+        ],
+        "answer": "eine größere Wohnung",
+        "tip": "adviceGardenFour.questDescription",
+        "reviewOf": "advice-garden-four",
+        "reviewLand": "advice-garden"
+      },
+      {
+        "id": 14,
+        "type": "input",
+        "question": "choiceCrossingThree.questTask14",
+        "correctAnswer": "waren",
+        "tip": "choiceCrossingThree.questDescription"
+      },
+      {
+        "id": 15,
+        "type": "input",
+        "question": "choiceCrossingThree.questTask15",
+        "correctAnswer": "den",
+        "tip": "choiceCrossingThree.questDescription"
+      }
+    ]
+  },
+  {
+    "questId": "choice-crossing-four",
+    "title": "choiceCrossingFour.questTitle",
+    "progress": "0/15",
+    "description": "choiceCrossingFour.questDescription",
+    "conditions": {
+      "goal": "choiceCrossingFour.questGoal",
+      "minCorrect": 15,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
+    "vocabulary": [
+      {
+        "word": "jeder",
+        "translation-ru": "каждый",
+        "translation-en": "every",
+        "translation-uk": "кожен",
+        "translation-pl": "każdy",
+        "translation-es": "cada",
+        "translation-fr": "chaque",
+        "translation-tr": "her",
+        "translation-ro": "fiecare",
+        "translation-uz": "har bir",
+        "translation-hi": "हर",
+        "translation-ar": "كل"
+      },
+      {
+        "word": "alle",
+        "translation-ru": "все",
+        "translation-en": "all",
+        "translation-uk": "усі",
+        "translation-pl": "wszyscy",
+        "translation-es": "todos",
+        "translation-fr": "tous",
+        "translation-tr": "hepsi",
+        "translation-ro": "toți",
+        "translation-uz": "hamma",
+        "translation-hi": "सब",
+        "translation-ar": "الجميع"
+      },
+      {
+        "word": "der Schüler",
+        "translation-ru": "ученик",
+        "translation-en": "pupil",
+        "translation-uk": "учень",
+        "translation-pl": "uczeń",
+        "translation-es": "el alumno",
+        "translation-fr": "l’élève",
+        "translation-tr": "öğrenci",
+        "translation-ro": "elevul",
+        "translation-uz": "o‘quvchi",
+        "translation-hi": "छात्र",
+        "translation-ar": "التلميذ"
+      },
+      {
+        "word": "die Zeitung",
+        "translation-ru": "газета",
+        "translation-en": "newspaper",
+        "translation-uk": "газета",
+        "translation-pl": "gazeta",
+        "translation-es": "el periódico",
+        "translation-fr": "le journal",
+        "translation-tr": "gazete",
+        "translation-ro": "ziarul",
+        "translation-uz": "gazeta",
+        "translation-hi": "अख़बार",
+        "translation-ar": "الجريدة"
+      },
+      {
+        "word": "das Training",
+        "translation-ru": "тренировка",
+        "translation-en": "training",
+        "translation-uk": "тренування",
+        "translation-pl": "trening",
+        "translation-es": "el entrenamiento",
+        "translation-fr": "l’entraînement",
+        "translation-tr": "antrenman",
+        "translation-ro": "antrenamentul",
+        "translation-uz": "mashg‘ulot",
+        "translation-hi": "ट्रेनिंग",
+        "translation-ar": "التمرين"
+      }
+    ],
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "choiceCrossingFour.questTask1",
+        "options": [
+          "Ich lese alle Morgen die Zeitung.",
+          "Ich lese jeder Morgen die Zeitung.",
+          "Ich lese jeden Morgen die Zeitung."
+        ],
+        "answer": "Ich lese jeden Morgen die Zeitung.",
+        "tip": "choiceCrossingFour.questDescription"
+      },
+      {
+        "id": 2,
+        "type": "input",
+        "question": "choiceCrossingFour.questTask2",
+        "correctAnswer": "Jeder",
+        "tip": "choiceCrossingFour.questDescription"
+      },
+      {
+        "id": 3,
+        "type": "input",
+        "question": "choiceCrossingFour.questTask3",
+        "correctAnswer": "Alle",
+        "tip": "choiceCrossingFour.questDescription"
+      },
+      {
+        "id": 4,
+        "type": "reorder",
+        "question": "choiceCrossingFour.questTask4",
+        "words": [
+          "Woche",
+          "fahren",
+          "Wir",
+          "Oma",
+          "zu",
+          "jeden",
+          "jede"
+        ],
+        "correctOrder": [
+          "Wir",
+          "fahren",
+          "jede",
+          "Woche",
+          "zu",
+          "Oma"
+        ],
+        "tip": "choiceCrossingFour.questDescription"
+      },
+      {
+        "id": 5,
+        "type": "select",
+        "question": "choiceCrossingFour.questTask5",
+        "options": [
+          "Jedes Jahr wir fahren ans Meer.",
+          "Jedes Jahr fahren wir ans Meer.",
+          "Jeden Jahr fahren wir ans Meer."
+        ],
+        "answer": "Jedes Jahr fahren wir ans Meer.",
+        "tip": "choiceCrossingFour.questDescription"
+      },
+      {
+        "id": 6,
+        "type": "input",
+        "question": "choiceCrossingFour.questTask6",
+        "correctAnswer": "jeden",
+        "tip": "choiceCrossingFour.questDescription"
+      },
+      {
+        "id": 7,
+        "type": "readAndAnswer",
+        "question": "choiceCrossingFour.questTask7",
+        "text": "Herr Wolf ist Lehrer. Jeden Morgen fährt er mit dem Rad zur Schule. Alle Schüler mögen ihn. Jede Woche schreibt die Klasse einen kleinen Test.",
+        "options": [
+          "einen kleinen Test",
+          "eine Zeitung",
+          "einen Brief"
+        ],
+        "answer": "einen kleinen Test",
+        "tip": "choiceCrossingFour.questDescription"
+      },
+      {
+        "id": 8,
+        "type": "input",
+        "question": "choiceCrossingFour.questTask8",
+        "correctAnswer": "jeder",
+        "tip": "choiceCrossingFour.questDescription"
+      },
+      {
+        "id": 9,
+        "type": "reorder",
+        "question": "choiceCrossingFour.questTask10",
+        "words": [
+          "ruft",
+          "jeden",
+          "Sie",
+          "an",
+          "Mutter",
+          "jede",
+          "Abend",
+          "ihre"
+        ],
+        "correctOrder": [
+          "Sie",
+          "ruft",
+          "jeden",
+          "Abend",
+          "ihre",
+          "Mutter",
+          "an"
+        ],
+        "tip": "choiceCrossingFour.questDescription"
+      },
+      {
+        "id": 10,
+        "type": "select",
+        "question": "choiceCrossingFour.questTask11",
+        "options": [
+          "Jeder Kind bekommt ein Geschenk.",
+          "Jedes Kind bekommt ein Geschenk.",
+          "Alle Kind bekommt ein Geschenk."
+        ],
+        "answer": "Jedes Kind bekommt ein Geschenk.",
+        "tip": "choiceCrossingFour.questDescription"
+      },
+      {
+        "id": 11,
+        "type": "input",
+        "question": "choiceCrossingThree.questTask9",
+        "correctAnswer": "ruhe",
+        "tip": "choiceCrossingThree.questDescription",
+        "reviewOf": "choice-crossing-three",
+        "reviewLand": "choice-crossing"
+      },
+      {
+        "id": 12,
+        "type": "input",
+        "question": "adviceGardenEight.questTask12",
+        "correctAnswer": "wäre",
+        "tip": "adviceGardenEight.questDescription",
+        "reviewOf": "advice-garden-eight",
+        "reviewLand": "advice-garden"
+      },
+      {
+        "id": 13,
+        "type": "readAndAnswer",
+        "question": "adviceGardenFive.questTask13",
+        "text": "Tim: Wollen wir am Sonntag zusammen kochen? Lisa: Gute Idee! Ich bringe einen Salat mit.",
+        "options": [
+          "einen Salat",
+          "Getränke",
+          "einen Kuchen"
+        ],
+        "answer": "einen Salat",
+        "tip": "adviceGardenFive.questDescription",
+        "reviewOf": "advice-garden-five",
+        "reviewLand": "advice-garden"
+      },
+      {
+        "id": 14,
+        "type": "input",
+        "question": "choiceCrossingFour.questTask14",
+        "correctAnswer": "kürzer",
+        "tip": "choiceCrossingFour.questDescription"
+      },
+      {
+        "id": 15,
+        "type": "input",
+        "question": "choiceCrossingFour.questTask15",
+        "correctAnswer": "wäre",
+        "tip": "choiceCrossingFour.questDescription"
+      }
+    ]
+  },
+  {
+    "questId": "choice-crossing-five",
+    "title": "choiceCrossingFive.questTitle",
+    "progress": "0/15",
+    "description": "choiceCrossingFive.questDescription",
+    "conditions": {
+      "goal": "choiceCrossingFive.questGoal",
+      "minCorrect": 15,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
+    "vocabulary": [
+      {
+        "word": "das Haustier",
+        "translation-ru": "домашнее животное",
+        "translation-en": "pet",
+        "translation-uk": "домашня тварина",
+        "translation-pl": "zwierzę domowe",
+        "translation-es": "la mascota",
+        "translation-fr": "l’animal domestique",
+        "translation-tr": "evcil hayvan",
+        "translation-ro": "animalul de companie",
+        "translation-uz": "uy hayvoni",
+        "translation-hi": "पालतू जानवर",
+        "translation-ar": "الحيوان الأليف"
+      },
+      {
+        "word": "der Film",
+        "translation-ru": "фильм",
+        "translation-en": "film",
+        "translation-uk": "фільм",
+        "translation-pl": "film",
+        "translation-es": "la película",
+        "translation-fr": "le film",
+        "translation-tr": "film",
+        "translation-ro": "filmul",
+        "translation-uz": "film",
+        "translation-hi": "फ़िल्म",
+        "translation-ar": "الفيلم"
+      },
+      {
+        "word": "die Musik",
+        "translation-ru": "музыка",
+        "translation-en": "music",
+        "translation-uk": "музика",
+        "translation-pl": "muzyka",
+        "translation-es": "la música",
+        "translation-fr": "la musique",
+        "translation-tr": "müzik",
+        "translation-ro": "muzica",
+        "translation-uz": "musiqa",
+        "translation-hi": "संगीत",
+        "translation-ar": "الموسيقى"
+      },
+      {
+        "word": "der Hund",
+        "translation-ru": "собака",
+        "translation-en": "dog",
+        "translation-uk": "собака",
+        "translation-pl": "pies",
+        "translation-es": "el perro",
+        "translation-fr": "le chien",
+        "translation-tr": "köpek",
+        "translation-ro": "câinele",
+        "translation-uz": "it",
+        "translation-hi": "कुत्ता",
+        "translation-ar": "الكلب"
+      },
+      {
+        "word": "das Hobby",
+        "translation-ru": "хобби",
+        "translation-en": "hobby",
+        "translation-uk": "хобі",
+        "translation-pl": "hobby",
+        "translation-es": "el pasatiempo",
+        "translation-fr": "le loisir",
+        "translation-tr": "hobi",
+        "translation-ro": "hobby-ul",
+        "translation-uz": "xobbi",
+        "translation-hi": "शौक़",
+        "translation-ar": "الهواية"
+      }
+    ],
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "choiceCrossingFive.questTask1",
+        "options": [
+          "Was für ein Auto du hast?",
+          "Was für eine Auto hast du?",
+          "Was für ein Auto hast du?"
+        ],
+        "answer": "Was für ein Auto hast du?",
+        "tip": "choiceCrossingFive.questDescription"
+      },
+      {
+        "id": 2,
+        "type": "input",
+        "question": "choiceCrossingFive.questTask2",
+        "correctAnswer": "Wohnung",
+        "tip": "choiceCrossingFive.questDescription"
+      },
+      {
+        "id": 3,
+        "type": "input",
+        "question": "choiceCrossingFive.questTask3",
+        "correctAnswer": "Filme",
+        "tip": "choiceCrossingFive.questDescription"
+      },
+      {
+        "id": 4,
+        "type": "reorder",
+        "question": "choiceCrossingFive.questTask4",
+        "words": [
+          "Hund",
+          "für",
+          "haben",
+          "Sie",
+          "ein",
+          "Was",
+          "einen"
+        ],
+        "correctOrder": [
+          "Was",
+          "für",
+          "einen",
+          "Hund",
+          "haben",
+          "Sie"
+        ],
+        "tip": "choiceCrossingFive.questDescription"
+      },
+      {
+        "id": 5,
+        "type": "select",
+        "question": "choiceCrossingFive.questTask5",
+        "options": [
+          "Was für Musik hörst du?",
+          "Was für Musik du hörst?",
+          "Was für eine Musiken hörst du?"
+        ],
+        "answer": "Was für Musik hörst du?",
+        "tip": "choiceCrossingFive.questDescription"
+      },
+      {
+        "id": 6,
+        "type": "input",
+        "question": "choiceCrossingFive.questTask6",
+        "correctAnswer": "Haustier",
+        "tip": "choiceCrossingFive.questDescription"
+      },
+      {
+        "id": 7,
+        "type": "readAndAnswer",
+        "question": "choiceCrossingFive.questTask7",
+        "text": "Jonas sucht eine Wohnung. Was für eine Wohnung? Eine kleine Wohnung mit Balkon, nicht zu teuer. Einen Hund hat er nicht, aber eine Katze.",
+        "options": [
+          "eine kleine Wohnung mit Balkon",
+          "ein Haus mit Garten",
+          "eine große Wohnung"
+        ],
+        "answer": "eine kleine Wohnung mit Balkon",
+        "tip": "choiceCrossingFive.questDescription"
+      },
+      {
+        "id": 8,
+        "type": "input",
+        "question": "choiceCrossingFive.questTask8",
+        "correctAnswer": "Buch",
+        "tip": "choiceCrossingFive.questDescription"
+      },
+      {
+        "id": 9,
+        "type": "reorder",
+        "question": "choiceCrossingFive.questTask10",
+        "words": [
+          "ein",
+          "du",
+          "eine",
+          "hast",
+          "für",
+          "Was",
+          "Hobby"
+        ],
+        "correctOrder": [
+          "Was",
+          "für",
+          "ein",
+          "Hobby",
+          "hast",
+          "du"
+        ],
+        "tip": "choiceCrossingFive.questDescription"
+      },
+      {
+        "id": 10,
+        "type": "select",
+        "question": "choiceCrossingFive.questTask11",
+        "options": [
+          "Was für eine Katze habt ihr? Eine schwarze.",
+          "Was für eine Katze habt ihr? Einen schwarzen.",
+          "Was für ein Katze habt ihr? Ein schwarzer."
+        ],
+        "answer": "Was für eine Katze habt ihr? Eine schwarze.",
+        "tip": "choiceCrossingFive.questDescription"
+      },
+      {
+        "id": 11,
+        "type": "input",
+        "question": "choiceCrossingFour.questTask9",
+        "correctAnswer": "sind",
+        "tip": "choiceCrossingFour.questDescription",
+        "reviewOf": "choice-crossing-four",
+        "reviewLand": "choice-crossing"
+      },
+      {
+        "id": 12,
+        "type": "input",
+        "question": "choiceCrossingOne.questTask12",
+        "correctAnswer": "Welche",
+        "tip": "choiceCrossingOne.questDescription",
+        "reviewOf": "choice-crossing-one",
+        "reviewLand": "choice-crossing"
+      },
+      {
+        "id": 13,
+        "type": "readAndAnswer",
+        "question": "adviceGardenSix.questTask13",
+        "text": "Mia findet keine Wohnung. Ihr Bruder sagt: Du solltest im Internet suchen. An deiner Stelle würde ich auch die Zeitung lesen.",
+        "options": [
+          "ein Auto",
+          "eine Wohnung",
+          "eine Arbeit"
+        ],
+        "answer": "eine Wohnung",
+        "tip": "adviceGardenSix.questDescription",
+        "reviewOf": "advice-garden-six",
+        "reviewLand": "advice-garden"
+      },
+      {
+        "id": 14,
+        "type": "input",
+        "question": "choiceCrossingFive.questTask14",
+        "correctAnswer": "hätte",
+        "tip": "choiceCrossingFive.questDescription"
+      },
+      {
+        "id": 15,
+        "type": "input",
+        "question": "choiceCrossingFive.questTask15",
+        "correctAnswer": "hatten",
+        "tip": "choiceCrossingFive.questDescription"
+      }
+    ]
+  },
+  {
+    "questId": "choice-crossing-six",
+    "title": "choiceCrossingSix.questTitle",
+    "progress": "0/15",
+    "description": "choiceCrossingSix.questDescription",
+    "conditions": {
+      "goal": "choiceCrossingSix.questGoal",
+      "minCorrect": 15,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
+    "vocabulary": [
+      {
+        "word": "der Schal",
+        "translation-ru": "шарф",
+        "translation-en": "scarf",
+        "translation-uk": "шарф",
+        "translation-pl": "szalik",
+        "translation-es": "la bufanda",
+        "translation-fr": "l’écharpe",
+        "translation-tr": "atkı",
+        "translation-ro": "fularul",
+        "translation-uz": "sharf",
+        "translation-hi": "मफ़लर",
+        "translation-ar": "الوشاح"
+      },
+      {
+        "word": "die Mütze",
+        "translation-ru": "шапка",
+        "translation-en": "cap, hat",
+        "translation-uk": "шапка",
+        "translation-pl": "czapka",
+        "translation-es": "el gorro",
+        "translation-fr": "le bonnet",
+        "translation-tr": "bere",
+        "translation-ro": "căciula",
+        "translation-uz": "shapka",
+        "translation-hi": "टोपी",
+        "translation-ar": "القبعة"
+      },
+      {
+        "word": "die Brille",
+        "translation-ru": "очки",
+        "translation-en": "glasses",
+        "translation-uk": "окуляри",
+        "translation-pl": "okulary",
+        "translation-es": "las gafas",
+        "translation-fr": "les lunettes",
+        "translation-tr": "gözlük",
+        "translation-ro": "ochelarii",
+        "translation-uz": "ko‘zoynak",
+        "translation-hi": "चश्मा",
+        "translation-ar": "النظارة"
+      },
+      {
+        "word": "der Kuchen",
+        "translation-ru": "торт, пирог",
+        "translation-en": "cake",
+        "translation-uk": "торт, пиріг",
+        "translation-pl": "ciasto",
+        "translation-es": "el pastel",
+        "translation-fr": "le gâteau",
+        "translation-tr": "pasta",
+        "translation-ro": "prăjitura",
+        "translation-uz": "tort",
+        "translation-hi": "केक",
+        "translation-ar": "الكعكة"
+      },
+      {
+        "word": "lecker",
+        "translation-ru": "вкусный",
+        "translation-en": "tasty",
+        "translation-uk": "смачний",
+        "translation-pl": "smaczny",
+        "translation-es": "rico",
+        "translation-fr": "délicieux",
+        "translation-tr": "lezzetli",
+        "translation-ro": "gustos",
+        "translation-uz": "mazali",
+        "translation-hi": "स्वादिष्ट",
+        "translation-ar": "لذيذ"
+      }
+    ],
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "choiceCrossingSix.questTask1",
+        "options": [
+          "Welcher Schal? Den hier.",
+          "Welcher Schal? Die hier.",
+          "Welcher Schal? Der hier."
+        ],
+        "answer": "Welcher Schal? Der hier.",
+        "tip": "choiceCrossingSix.questDescription"
+      },
+      {
+        "id": 2,
+        "type": "input",
+        "question": "choiceCrossingSix.questTask2",
+        "correctAnswer": "Die",
+        "tip": "choiceCrossingSix.questDescription"
+      },
+      {
+        "id": 3,
+        "type": "input",
+        "question": "choiceCrossingSix.questTask3",
+        "correctAnswer": "Den",
+        "tip": "choiceCrossingSix.questDescription"
+      },
+      {
+        "id": 4,
+        "type": "reorder",
+        "question": "choiceCrossingSix.questTask4",
+        "words": [
+          "ich",
+          "Den",
+          "Der",
+          "nehme"
+        ],
+        "correctOrder": [
+          "Den",
+          "nehme",
+          "ich"
+        ],
+        "tip": "choiceCrossingSix.questDescription"
+      },
+      {
+        "id": 5,
+        "type": "select",
+        "question": "choiceCrossingSix.questTask5",
+        "options": [
+          "Welche Brille gefällt dir? Der hier.",
+          "Welche Brille gefällt dir? Das hier.",
+          "Welche Brille gefällt dir? Die hier."
+        ],
+        "answer": "Welche Brille gefällt dir? Die hier.",
+        "tip": "choiceCrossingSix.questDescription"
+      },
+      {
+        "id": 6,
+        "type": "input",
+        "question": "choiceCrossingSix.questTask6",
+        "correctAnswer": "Das",
+        "tip": "choiceCrossingSix.questDescription"
+      },
+      {
+        "id": 7,
+        "type": "readAndAnswer",
+        "question": "choiceCrossingSix.questTask7",
+        "text": "Mia und Tom kaufen einen Schal für Papa. Mia sagt: „Der rote ist schön.“ Tom sagt: „Nein, den nehmen wir nicht. Der blaue ist besser.“ Am Ende kaufen sie den blauen Schal.",
+        "options": [
+          "keinen Schal",
+          "den blauen Schal",
+          "den roten Schal"
+        ],
+        "answer": "den blauen Schal",
+        "tip": "choiceCrossingSix.questDescription"
+      },
+      {
+        "id": 8,
+        "type": "input",
+        "question": "choiceCrossingSix.questTask8",
+        "correctAnswer": "die",
+        "tip": "choiceCrossingSix.questDescription"
+      },
+      {
+        "id": 9,
+        "type": "reorder",
+        "question": "choiceCrossingSix.questTask10",
+        "words": [
+          "da",
+          "Die",
+          "sind",
+          "teuer",
+          "Den",
+          "zu"
+        ],
+        "correctOrder": [
+          "Die",
+          "da",
+          "sind",
+          "zu",
+          "teuer"
+        ],
+        "tip": "choiceCrossingSix.questDescription"
+      },
+      {
+        "id": 10,
+        "type": "select",
+        "question": "choiceCrossingSix.questTask11",
+        "options": [
+          "Magst du den Kuchen? Ja, die ist sehr lecker.",
+          "Magst du den Kuchen? Ja, der ist sehr lecker.",
+          "Magst du den Kuchen? Ja, den ist sehr lecker."
+        ],
+        "answer": "Magst du den Kuchen? Ja, der ist sehr lecker.",
+        "tip": "choiceCrossingSix.questDescription"
+      },
+      {
+        "id": 11,
+        "type": "input",
+        "question": "choiceCrossingFive.questTask9",
+        "correctAnswer": "liest",
+        "tip": "choiceCrossingFive.questDescription",
+        "reviewOf": "choice-crossing-five",
+        "reviewLand": "choice-crossing"
+      },
+      {
+        "id": 12,
+        "type": "input",
+        "question": "choiceCrossingTwo.questTask12",
+        "correctAnswer": "Diesen",
+        "tip": "choiceCrossingTwo.questDescription",
+        "reviewOf": "choice-crossing-two",
+        "reviewLand": "choice-crossing"
+      },
+      {
+        "id": 13,
+        "type": "input",
+        "question": "adviceGardenSeven.questTask13",
+        "correctAnswer": "warten",
+        "tip": "adviceGardenSeven.questDescription",
+        "reviewOf": "advice-garden-seven",
+        "reviewLand": "advice-garden"
+      },
+      {
+        "id": 14,
+        "type": "input",
+        "question": "choiceCrossingSix.questTask14",
+        "correctAnswer": "billiger",
+        "tip": "choiceCrossingSix.questDescription"
+      },
+      {
+        "id": 15,
+        "type": "input",
+        "question": "choiceCrossingSix.questTask15",
+        "correctAnswer": "Zeigen",
+        "tip": "choiceCrossingSix.questDescription"
+      }
+    ]
+  },
+  {
+    "questId": "choice-crossing-seven",
+    "title": "choiceCrossingSeven.questTitle",
+    "progress": "0/15",
+    "description": "choiceCrossingSeven.questDescription",
+    "conditions": {
+      "goal": "choiceCrossingSeven.questGoal",
+      "minCorrect": 15,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
+    "vocabulary": [
+      {
+        "word": "der Flohmarkt",
+        "translation-ru": "блошиный рынок",
+        "translation-en": "flea market",
+        "translation-uk": "блошиний ринок",
+        "translation-pl": "pchli targ",
+        "translation-es": "el mercadillo",
+        "translation-fr": "le marché aux puces",
+        "translation-tr": "bit pazarı",
+        "translation-ro": "talciocul",
+        "translation-uz": "eski buyumlar bozori",
+        "translation-hi": "कबाड़ बाज़ार",
+        "translation-ar": "سوق الأشياء المستعملة"
+      },
+      {
+        "word": "der Stand",
+        "translation-ru": "прилавок",
+        "translation-en": "stall",
+        "translation-uk": "прилавок",
+        "translation-pl": "stoisko",
+        "translation-es": "el puesto",
+        "translation-fr": "le stand",
+        "translation-tr": "tezgâh",
+        "translation-ro": "taraba",
+        "translation-uz": "rasta",
+        "translation-hi": "स्टॉल",
+        "translation-ar": "الكشك"
+      },
+      {
+        "word": "die Lampe",
+        "translation-ru": "лампа",
+        "translation-en": "lamp",
+        "translation-uk": "лампа",
+        "translation-pl": "lampa",
+        "translation-es": "la lámpara",
+        "translation-fr": "la lampe",
+        "translation-tr": "lamba",
+        "translation-ro": "lampa",
+        "translation-uz": "chiroq",
+        "translation-hi": "लैंप",
+        "translation-ar": "المصباح"
+      },
+      {
+        "word": "alt",
+        "translation-ru": "старый",
+        "translation-en": "old",
+        "translation-uk": "старий",
+        "translation-pl": "stary",
+        "translation-es": "viejo",
+        "translation-fr": "vieux",
+        "translation-tr": "eski",
+        "translation-ro": "vechi",
+        "translation-uz": "eski",
+        "translation-hi": "पुराना",
+        "translation-ar": "قديم"
+      },
+      {
+        "word": "die Sache",
+        "translation-ru": "вещь",
+        "translation-en": "thing",
+        "translation-uk": "річ",
+        "translation-pl": "rzecz",
+        "translation-es": "la cosa",
+        "translation-fr": "la chose",
+        "translation-tr": "eşya",
+        "translation-ro": "lucrul",
+        "translation-uz": "narsa",
+        "translation-hi": "चीज़",
+        "translation-ar": "الشيء"
+      },
+      {
+        "word": "handeln",
+        "translation-ru": "действовать / торговать",
+        "translation-en": "to act / trade",
+        "translation-uk": "діяти / торгувати",
+        "translation-pl": "działać / handlować",
+        "translation-es": "actuar / comerciar",
+        "translation-fr": "agir / commercer",
+        "translation-tr": "hareket etmek / ticaret yapmak",
+        "translation-ro": "a acționa / a face comerț",
+        "translation-uz": "harakat qilmoq / savdo qilmoq",
+        "translation-hi": "कार्य करना / व्यापार करना",
+        "translation-ar": "يتصرف / يتاجر"
+      }
+    ],
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "choiceCrossingSeven.questTask1",
+        "options": [
+          "Wie viel kostet diesen Lampe?",
+          "Wie viel kostet dieser Lampe?",
+          "Wie viel kostet diese Lampe?"
+        ],
+        "answer": "Wie viel kostet diese Lampe?",
+        "tip": "choiceCrossingSeven.questDescription"
+      },
+      {
+        "id": 2,
+        "type": "input",
+        "question": "choiceCrossingSeven.questTask2",
+        "correctAnswer": "welchem",
+        "tip": "choiceCrossingSeven.questDescription"
+      },
+      {
+        "id": 3,
+        "type": "input",
+        "question": "choiceCrossingSeven.questTask3",
+        "correctAnswer": "Flohmarkt",
+        "tip": "choiceCrossingSeven.questDescription"
+      },
+      {
+        "id": 4,
+        "type": "reorder",
+        "question": "choiceCrossingSeven.questTask4",
+        "words": [
+          "willst",
+          "du",
+          "Welchen",
+          "Welche",
+          "Lampe"
+        ],
+        "correctOrder": [
+          "Welche",
+          "Lampe",
+          "willst",
+          "du"
+        ],
+        "tip": "choiceCrossingSeven.questDescription"
+      },
+      {
+        "id": 5,
+        "type": "select",
+        "question": "choiceCrossingSeven.questTask5",
+        "options": [
+          "Diese alten Lampe gefällt mir.",
+          "Dieser alte Lampe gefällt mir.",
+          "Diese alte Lampe gefällt mir."
+        ],
+        "answer": "Diese alte Lampe gefällt mir.",
+        "tip": "choiceCrossingSeven.questDescription"
+      },
+      {
+        "id": 6,
+        "type": "input",
+        "question": "choiceCrossingSeven.questTask6",
+        "correctAnswer": "Tisch",
+        "tip": "choiceCrossingSeven.questDescription"
+      },
+      {
+        "id": 7,
+        "type": "readAndAnswer",
+        "question": "choiceCrossingSeven.questTask7",
+        "text": "Jeden Sonntag geht Oma auf den Flohmarkt. Heute findet sie eine alte Lampe. Der Mann am Stand will zwanzig Euro, aber Oma bezahlt nur fünfzehn.",
+        "options": [
+          "fünfzehn Euro",
+          "fünf Euro",
+          "zwanzig Euro"
+        ],
+        "answer": "fünfzehn Euro",
+        "tip": "choiceCrossingSeven.questDescription"
+      },
+      {
+        "id": 8,
+        "type": "input",
+        "question": "choiceCrossingSeven.questTask8",
+        "correctAnswer": "Alle",
+        "tip": "choiceCrossingSeven.questDescription"
+      },
+      {
+        "id": 9,
+        "type": "reorder",
+        "question": "choiceCrossingSeven.questTask10",
+        "words": [
+          "Wir",
+          "an",
+          "jeden",
+          "Stand",
+          "handeln",
+          "jedem"
+        ],
+        "correctOrder": [
+          "Wir",
+          "handeln",
+          "an",
+          "jedem",
+          "Stand"
+        ],
+        "tip": "choiceCrossingSeven.questDescription"
+      },
+      {
+        "id": 10,
+        "type": "select",
+        "question": "choiceCrossingSeven.questTask11",
+        "options": [
+          "Welcher Bücher sind billiger?",
+          "Welche Bücher sind billiger?",
+          "Welches Bücher sind billiger?"
+        ],
+        "answer": "Welche Bücher sind billiger?",
+        "tip": "choiceCrossingSeven.questDescription"
+      },
+      {
+        "id": 11,
+        "type": "input",
+        "question": "choiceCrossingSix.questTask9",
+        "correctAnswer": "habe",
+        "tip": "choiceCrossingSix.questDescription",
+        "reviewOf": "choice-crossing-six",
+        "reviewLand": "choice-crossing"
+      },
+      {
+        "id": 12,
+        "type": "input",
+        "question": "choiceCrossingThree.questTask12",
+        "correctAnswer": "welchem",
+        "tip": "choiceCrossingThree.questDescription",
+        "reviewOf": "choice-crossing-three",
+        "reviewLand": "choice-crossing"
+      },
+      {
+        "id": 13,
+        "type": "input",
+        "question": "adviceGardenEight.questTask13",
+        "correctAnswer": "schwimmen",
+        "tip": "adviceGardenEight.questDescription",
+        "reviewOf": "advice-garden-eight",
+        "reviewLand": "advice-garden"
+      },
+      {
+        "id": 14,
+        "type": "input",
+        "question": "choiceCrossingSeven.questTask14",
+        "correctAnswer": "hatte",
+        "tip": "choiceCrossingSeven.questDescription"
+      },
+      {
+        "id": 15,
+        "type": "input",
+        "question": "choiceCrossingSeven.questTask15",
+        "correctAnswer": "älter",
+        "tip": "choiceCrossingSeven.questDescription"
+      }
+    ]
+  },
+  {
+    "questId": "choice-crossing-eight",
+    "title": "choiceCrossingEight.questTitle",
+    "progress": "0/15",
+    "description": "choiceCrossingEight.questDescription",
+    "conditions": {
+      "goal": "choiceCrossingEight.questGoal",
+      "minCorrect": 15,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
+    "vocabulary": [
+      {
+        "word": "die Miete",
+        "translation-ru": "квартплата",
+        "translation-en": "rent",
+        "translation-uk": "орендна плата",
+        "translation-pl": "czynsz",
+        "translation-es": "el alquiler",
+        "translation-fr": "le loyer",
+        "translation-tr": "kira",
+        "translation-ro": "chiria",
+        "translation-uz": "ijara haqi",
+        "translation-hi": "किराया",
+        "translation-ar": "الإيجار"
+      },
+      {
+        "word": "der Balkon",
+        "translation-ru": "балкон",
+        "translation-en": "balcony",
+        "translation-uk": "балкон",
+        "translation-pl": "balkon",
+        "translation-es": "el balcón",
+        "translation-fr": "le balcon",
+        "translation-tr": "balkon",
+        "translation-ro": "balconul",
+        "translation-uz": "balkon",
+        "translation-hi": "बालकनी",
+        "translation-ar": "الشرفة"
+      },
+      {
+        "word": "das Zimmer",
+        "translation-ru": "комната",
+        "translation-en": "room",
+        "translation-uk": "кімната",
+        "translation-pl": "pokój",
+        "translation-es": "la habitación",
+        "translation-fr": "la pièce",
+        "translation-tr": "oda",
+        "translation-ro": "camera",
+        "translation-uz": "xona",
+        "translation-hi": "कमरा",
+        "translation-ar": "الغرفة"
+      },
+      {
+        "word": "hell",
+        "translation-ru": "светлый",
+        "translation-en": "bright",
+        "translation-uk": "світлий",
+        "translation-pl": "jasny",
+        "translation-es": "luminoso",
+        "translation-fr": "clair",
+        "translation-tr": "aydınlık",
+        "translation-ro": "luminos",
+        "translation-uz": "yorug‘",
+        "translation-hi": "रोशनीदार",
+        "translation-ar": "مضيء"
+      },
+      {
+        "word": "die Küche",
+        "translation-ru": "кухня",
+        "translation-en": "kitchen",
+        "translation-uk": "кухня",
+        "translation-pl": "kuchnia",
+        "translation-es": "la cocina",
+        "translation-fr": "la cuisine",
+        "translation-tr": "mutfak",
+        "translation-ro": "bucătăria",
+        "translation-uz": "oshxona",
+        "translation-hi": "रसोई",
+        "translation-ar": "المطبخ"
+      }
+    ],
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "choiceCrossingEight.questTask1",
+        "options": [
+          "Welcher Wohnung hat einen Balkon?",
+          "Welche Wohnung hat ein Balkon?",
+          "Welche Wohnung hat einen Balkon?"
+        ],
+        "answer": "Welche Wohnung hat einen Balkon?",
+        "tip": "choiceCrossingEight.questDescription"
+      },
+      {
+        "id": 2,
+        "type": "input",
+        "question": "choiceCrossingEight.questTask2",
+        "correctAnswer": "hell",
+        "tip": "choiceCrossingEight.questDescription"
+      },
+      {
+        "id": 3,
+        "type": "input",
+        "question": "choiceCrossingEight.questTask3",
+        "correctAnswer": "Miete",
+        "tip": "choiceCrossingEight.questDescription"
+      },
+      {
+        "id": 4,
+        "type": "reorder",
+        "question": "choiceCrossingEight.questTask4",
+        "words": [
+          "Zimmer",
+          "hat",
+          "Dieser",
+          "Diese",
+          "drei",
+          "Wohnung"
+        ],
+        "correctOrder": [
+          "Diese",
+          "Wohnung",
+          "hat",
+          "drei",
+          "Zimmer"
+        ],
+        "tip": "choiceCrossingEight.questDescription"
+      },
+      {
+        "id": 5,
+        "type": "select",
+        "question": "choiceCrossingEight.questTask5",
+        "options": [
+          "Was für ein Balkon hat die Wohnung? Einen großes.",
+          "Was für einen Balkon hat die Wohnung? Ein großer.",
+          "Was für einen Balkon hat die Wohnung? Einen großen."
+        ],
+        "answer": "Was für einen Balkon hat die Wohnung? Einen großen.",
+        "tip": "choiceCrossingEight.questDescription"
+      },
+      {
+        "id": 6,
+        "type": "input",
+        "question": "choiceCrossingEight.questTask6",
+        "correctAnswer": "jedem",
+        "tip": "choiceCrossingEight.questDescription"
+      },
+      {
+        "id": 7,
+        "type": "readAndAnswer",
+        "question": "choiceCrossingEight.questTask7",
+        "text": "Familie Kaya sucht eine Wohnung. Die erste Wohnung ist hell, aber klein. Die zweite hat einen Balkon und eine große Küche. Diese nimmt die Familie.",
+        "options": [
+          "keine Wohnung",
+          "die zweite Wohnung",
+          "die erste Wohnung"
+        ],
+        "answer": "die zweite Wohnung",
+        "tip": "choiceCrossingEight.questDescription"
+      },
+      {
+        "id": 8,
+        "type": "input",
+        "question": "choiceCrossingEight.questTask8",
+        "correctAnswer": "Küche",
+        "tip": "choiceCrossingEight.questDescription"
+      },
+      {
+        "id": 9,
+        "type": "reorder",
+        "question": "choiceCrossingEight.questTask10",
+        "words": [
+          "welchem",
+          "Stock",
+          "In",
+          "welcher",
+          "Wohnung",
+          "die",
+          "ist"
+        ],
+        "correctOrder": [
+          "In",
+          "welchem",
+          "Stock",
+          "ist",
+          "die",
+          "Wohnung"
+        ],
+        "tip": "choiceCrossingEight.questDescription"
+      },
+      {
+        "id": 10,
+        "type": "select",
+        "question": "choiceCrossingEight.questTask11",
+        "options": [
+          "Diese Wohnung nehmen wir!",
+          "Diese Wohnung wir nehmen!",
+          "Diesen Wohnung nehmen wir!"
+        ],
+        "answer": "Diese Wohnung nehmen wir!",
+        "tip": "choiceCrossingEight.questDescription"
+      },
+      {
+        "id": 11,
+        "type": "input",
+        "question": "choiceCrossingSeven.questTask9",
+        "correctAnswer": "nehme",
+        "tip": "choiceCrossingSeven.questDescription",
+        "reviewOf": "choice-crossing-seven",
+        "reviewLand": "choice-crossing"
+      },
+      {
+        "id": 12,
+        "type": "input",
+        "question": "choiceCrossingFour.questTask12",
+        "correctAnswer": "jeden",
+        "tip": "choiceCrossingFour.questDescription",
+        "reviewOf": "choice-crossing-four",
+        "reviewLand": "choice-crossing"
+      },
+      {
+        "id": 13,
+        "type": "input",
+        "question": "choiceCrossingOne.questTask13",
+        "correctAnswer": "Größe",
+        "tip": "choiceCrossingOne.questDescription",
+        "reviewOf": "choice-crossing-one",
+        "reviewLand": "choice-crossing"
+      },
+      {
+        "id": 14,
+        "type": "input",
+        "question": "choiceCrossingEight.questTask14",
+        "correctAnswer": "solltet",
+        "tip": "choiceCrossingEight.questDescription"
+      },
+      {
+        "id": 15,
+        "type": "input",
+        "question": "choiceCrossingEight.questTask15",
+        "correctAnswer": "Zeigen",
+        "tip": "choiceCrossingEight.questDescription"
+      }
+    ]
+  },
+  {
+    "questId": "choice-crossing-nine",
+    "title": "choiceCrossingNine.questTitle",
+    "progress": "0/15",
+    "description": "choiceCrossingNine.questDescription",
+    "conditions": {
+      "goal": "choiceCrossingNine.questGoal",
+      "minCorrect": 15,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
+    "vocabulary": [
+      {
+        "word": "das Geschenk",
+        "translation-ru": "подарок",
+        "translation-en": "present",
+        "translation-uk": "подарунок",
+        "translation-pl": "prezent",
+        "translation-es": "el regalo",
+        "translation-fr": "le cadeau",
+        "translation-tr": "hediye",
+        "translation-ro": "cadoul",
+        "translation-uz": "sovg‘a",
+        "translation-hi": "तोहफ़ा",
+        "translation-ar": "الهدية"
+      },
+      {
+        "word": "die Tasche",
+        "translation-ru": "сумка",
+        "translation-en": "bag",
+        "translation-uk": "сумка",
+        "translation-pl": "torba",
+        "translation-es": "el bolso",
+        "translation-fr": "le sac",
+        "translation-tr": "çanta",
+        "translation-ro": "geanta",
+        "translation-uz": "sumka",
+        "translation-hi": "बैग",
+        "translation-ar": "الحقيبة"
+      },
+      {
+        "word": "das Restaurant",
+        "translation-ru": "ресторан",
+        "translation-en": "restaurant",
+        "translation-uk": "ресторан",
+        "translation-pl": "restauracja",
+        "translation-es": "el restaurante",
+        "translation-fr": "le restaurant",
+        "translation-tr": "restoran",
+        "translation-ro": "restaurantul",
+        "translation-uz": "restoran",
+        "translation-hi": "रेस्टोरेंट",
+        "translation-ar": "المطعم"
+      },
+      {
+        "word": "die Blume",
+        "translation-ru": "цветок",
+        "translation-en": "flower",
+        "translation-uk": "квітка",
+        "translation-pl": "kwiat",
+        "translation-es": "la flor",
+        "translation-fr": "la fleur",
+        "translation-tr": "çiçek",
+        "translation-ro": "floarea",
+        "translation-uz": "gul",
+        "translation-hi": "फूल",
+        "translation-ar": "الزهرة"
+      },
+      {
+        "word": "der Gast",
+        "translation-ru": "гость",
+        "translation-en": "guest",
+        "translation-uk": "гість",
+        "translation-pl": "gość",
+        "translation-es": "el invitado",
+        "translation-fr": "l’invité",
+        "translation-tr": "misafir",
+        "translation-ro": "oaspetele",
+        "translation-uz": "mehmon",
+        "translation-hi": "मेहमान",
+        "translation-ar": "الضيف"
+      }
+    ],
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "choiceCrossingNine.questTask1",
+        "options": [
+          "Aus welchem Restaurant ist diesen Kuchen?",
+          "Aus welches Restaurant ist dieser Kuchen?",
+          "Aus welchem Restaurant ist dieser Kuchen?"
+        ],
+        "answer": "Aus welchem Restaurant ist dieser Kuchen?",
+        "tip": "choiceCrossingNine.questDescription"
+      },
+      {
+        "id": 2,
+        "type": "input",
+        "question": "choiceCrossingNine.questTask2",
+        "correctAnswer": "Die",
+        "tip": "choiceCrossingNine.questDescription"
+      },
+      {
+        "id": 3,
+        "type": "input",
+        "question": "choiceCrossingNine.questTask3",
+        "correctAnswer": "Jeder",
+        "tip": "choiceCrossingNine.questDescription"
+      },
+      {
+        "id": 4,
+        "type": "reorder",
+        "question": "choiceCrossingNine.questTask4",
+        "words": [
+          "Mama",
+          "du",
+          "Geschenk",
+          "für",
+          "für",
+          "Was",
+          "kaufst",
+          "eine",
+          "ein"
+        ],
+        "correctOrder": [
+          "Was",
+          "für",
+          "ein",
+          "Geschenk",
+          "kaufst",
+          "du",
+          "für",
+          "Mama"
+        ],
+        "tip": "choiceCrossingNine.questDescription"
+      },
+      {
+        "id": 5,
+        "type": "select",
+        "question": "choiceCrossingNine.questTask5",
+        "options": [
+          "Diesen Kuchen ist sehr lecker.",
+          "Dieses Kuchen ist sehr lecker.",
+          "Dieser Kuchen ist sehr lecker."
+        ],
+        "answer": "Dieser Kuchen ist sehr lecker.",
+        "tip": "choiceCrossingNine.questDescription"
+      },
+      {
+        "id": 6,
+        "type": "input",
+        "question": "choiceCrossingNine.questTask6",
+        "correctAnswer": "Alle",
+        "tip": "choiceCrossingNine.questDescription"
+      },
+      {
+        "id": 7,
+        "type": "readAndAnswer",
+        "question": "choiceCrossingNine.questTask7",
+        "text": "Lena sucht ein Geschenk für ihre Freundin. Was für ein Geschenk? Vielleicht eine Tasche. Im ersten Laden sind alle Taschen zu teuer. Im zweiten Laden findet sie eine schöne Tasche für dreißig Euro.",
+        "options": [
+          "im zweiten Laden",
+          "auf dem Flohmarkt",
+          "im ersten Laden"
+        ],
+        "answer": "im zweiten Laden",
+        "tip": "choiceCrossingNine.questDescription"
+      },
+      {
+        "id": 8,
+        "type": "input",
+        "question": "choiceCrossingNine.questTask8",
+        "correctAnswer": "dieser",
+        "tip": "choiceCrossingNine.questDescription"
+      },
+      {
+        "id": 9,
+        "type": "input",
+        "question": "choiceCrossingNine.questTask9",
+        "correctAnswer": "mag",
+        "tip": "choiceCrossingNine.questDescription"
+      },
+      {
+        "id": 10,
+        "type": "reorder",
+        "question": "choiceCrossingNine.questTask10",
+        "words": [
+          "Wir",
+          "in",
+          "essen",
+          "diesen",
+          "diesem",
+          "Restaurant",
+          "jede",
+          "Woche"
+        ],
+        "correctOrder": [
+          "Wir",
+          "essen",
+          "jede",
+          "Woche",
+          "in",
+          "diesem",
+          "Restaurant"
+        ],
+        "tip": "choiceCrossingNine.questDescription"
+      },
+      {
+        "id": 11,
+        "type": "select",
+        "question": "choiceCrossingNine.questTask11",
+        "options": [
+          "Welchen Kuchen möchtest du? Das da.",
+          "Welchen Kuchen möchtest du? Den da.",
+          "Welchen Kuchen möchtest du? Der da."
+        ],
+        "answer": "Welchen Kuchen möchtest du? Den da.",
+        "tip": "choiceCrossingNine.questDescription"
+      },
+      {
+        "id": 12,
+        "type": "input",
+        "question": "choiceCrossingNine.questTask12",
+        "correctAnswer": "welchem",
+        "tip": "choiceCrossingNine.questDescription"
+      },
+      {
+        "id": 13,
+        "type": "input",
+        "question": "choiceCrossingNine.questTask13",
+        "correctAnswer": "Blume",
+        "tip": "choiceCrossingNine.questDescription"
+      },
+      {
+        "id": 14,
+        "type": "input",
+        "question": "choiceCrossingNine.questTask14",
+        "correctAnswer": "durften",
+        "tip": "choiceCrossingNine.questDescription"
+      },
+      {
+        "id": 15,
+        "type": "input",
+        "question": "choiceCrossingNine.questTask15",
+        "correctAnswer": "beste",
+        "tip": "choiceCrossingNine.questDescription"
+      }
+    ]
+  },
+  {
+    "questId": "choice-crossing-ten",
+    "title": "choiceCrossingTen.questTitle",
+    "progress": "0/15",
+    "description": "choiceCrossingTen.questDescription",
+    "conditions": {
+      "goal": "choiceCrossingTen.questGoal",
+      "minCorrect": 15,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
+    "vocabulary": [
+      {
+        "word": "das Hotel",
+        "translation-ru": "отель",
+        "translation-en": "hotel",
+        "translation-uk": "готель",
+        "translation-pl": "hotel",
+        "translation-es": "el hotel",
+        "translation-fr": "l’hôtel",
+        "translation-tr": "otel",
+        "translation-ro": "hotelul",
+        "translation-uz": "mehmonxona",
+        "translation-hi": "होटल",
+        "translation-ar": "الفندق"
+      },
+      {
+        "word": "das Museum",
+        "translation-ru": "музей",
+        "translation-en": "museum",
+        "translation-uk": "музей",
+        "translation-pl": "muzeum",
+        "translation-es": "el museo",
+        "translation-fr": "le musée",
+        "translation-tr": "müze",
+        "translation-ro": "muzeul",
+        "translation-uz": "muzey",
+        "translation-hi": "संग्रहालय",
+        "translation-ar": "المتحف"
+      },
+      {
+        "word": "die Brücke",
+        "translation-ru": "мост",
+        "translation-en": "bridge",
+        "translation-uk": "міст",
+        "translation-pl": "most",
+        "translation-es": "el puente",
+        "translation-fr": "le pont",
+        "translation-tr": "köprü",
+        "translation-ro": "podul",
+        "translation-uz": "ko‘prik",
+        "translation-hi": "पुल",
+        "translation-ar": "الجسر"
+      },
+      {
+        "word": "der Weg",
+        "translation-ru": "дорога, путь",
+        "translation-en": "way, path",
+        "translation-uk": "дорога, шлях",
+        "translation-pl": "droga",
+        "translation-es": "el camino",
+        "translation-fr": "le chemin",
+        "translation-tr": "yol",
+        "translation-ro": "drumul",
+        "translation-uz": "yo‘l",
+        "translation-hi": "रास्ता",
+        "translation-ar": "الطريق"
+      },
+      {
+        "word": "die Karte",
+        "translation-ru": "карта",
+        "translation-en": "map, card",
+        "translation-uk": "карта",
+        "translation-pl": "mapa, karta",
+        "translation-es": "el mapa, la tarjeta",
+        "translation-fr": "la carte",
+        "translation-tr": "harita, kart",
+        "translation-ro": "harta, cardul",
+        "translation-uz": "xarita, karta",
+        "translation-hi": "नक़्शा, कार्ड",
+        "translation-ar": "الخريطة، البطاقة"
+      }
+    ],
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "choiceCrossingTen.questTask1",
+        "options": [
+          "In welchen Hotel wohnen Sie?",
+          "In welches Hotel wohnen Sie?",
+          "In welchem Hotel wohnen Sie?"
+        ],
+        "answer": "In welchem Hotel wohnen Sie?",
+        "tip": "choiceCrossingTen.questDescription"
+      },
+      {
+        "id": 2,
+        "type": "input",
+        "question": "choiceCrossingTen.questTask2",
+        "correctAnswer": "jeden",
+        "tip": "choiceCrossingTen.questDescription"
+      },
+      {
+        "id": 3,
+        "type": "input",
+        "question": "choiceCrossingTen.questTask3",
+        "correctAnswer": "Brücke",
+        "tip": "choiceCrossingTen.questDescription"
+      },
+      {
+        "id": 4,
+        "type": "reorder",
+        "question": "choiceCrossingTen.questTask4",
+        "words": [
+          "diesen",
+          "dieser",
+          "Wir",
+          "Weg",
+          "gehen"
+        ],
+        "correctOrder": [
+          "Wir",
+          "gehen",
+          "diesen",
+          "Weg"
+        ],
+        "tip": "choiceCrossingTen.questDescription"
+      },
+      {
+        "id": 5,
+        "type": "select",
+        "question": "choiceCrossingTen.questTask5",
+        "options": [
+          "Alle Museen am Montag sind geschlossen.",
+          "Jede Museen sind am Montag geschlossen.",
+          "Alle Museen sind am Montag geschlossen."
+        ],
+        "answer": "Alle Museen sind am Montag geschlossen.",
+        "tip": "choiceCrossingTen.questDescription"
+      },
+      {
+        "id": 6,
+        "type": "input",
+        "question": "choiceCrossingTen.questTask6",
+        "correctAnswer": "Karte",
+        "tip": "choiceCrossingTen.questDescription"
+      },
+      {
+        "id": 7,
+        "type": "readAndAnswer",
+        "question": "choiceCrossingTen.questTask7",
+        "text": "Wir sind seit drei Tagen in Dresden. Jeden Tag besuchen wir ein Museum. Heute fragt Papa: „Über welche Brücke gehen wir?“ Mama zeigt auf die Karte: „Über die da, sie ist am schönsten.“",
+        "options": [
+          "im Hotel bleiben",
+          "ein Museum besuchen",
+          "eine Karte kaufen"
+        ],
+        "answer": "ein Museum besuchen",
+        "tip": "choiceCrossingTen.questDescription"
+      },
+      {
+        "id": 8,
+        "type": "input",
+        "question": "choiceCrossingTen.questTask8",
+        "correctAnswer": "Jedes",
+        "tip": "choiceCrossingTen.questDescription"
+      },
+      {
+        "id": 9,
+        "type": "input",
+        "question": "choiceCrossingTen.questTask9",
+        "correctAnswer": "kennen",
+        "tip": "choiceCrossingTen.questDescription"
+      },
+      {
+        "id": 10,
+        "type": "reorder",
+        "question": "choiceCrossingTen.questTask10",
+        "words": [
+          "Welchen",
+          "Karte",
+          "Welche",
+          "du",
+          "kaufst"
+        ],
+        "correctOrder": [
+          "Welche",
+          "Karte",
+          "kaufst",
+          "du"
+        ],
+        "tip": "choiceCrossingTen.questDescription"
+      },
+      {
+        "id": 11,
+        "type": "select",
+        "question": "choiceCrossingTen.questTask11",
+        "options": [
+          "Welches Hotel gefällt dir? Das hier.",
+          "Welches Hotel gefällt dir? Den hier.",
+          "Welches Hotel gefällt dir? Der hier."
+        ],
+        "answer": "Welches Hotel gefällt dir? Das hier.",
+        "tip": "choiceCrossingTen.questDescription"
+      },
+      {
+        "id": 12,
+        "type": "input",
+        "question": "choiceCrossingTen.questTask12",
+        "correctAnswer": "welcher",
+        "tip": "choiceCrossingTen.questDescription"
+      },
+      {
+        "id": 13,
+        "type": "input",
+        "question": "choiceCrossingTen.questTask13",
+        "correctAnswer": "Gebäude",
+        "tip": "choiceCrossingTen.questDescription"
+      },
+      {
+        "id": 14,
+        "type": "input",
+        "question": "choiceCrossingTen.questTask14",
+        "correctAnswer": "würden",
+        "tip": "choiceCrossingTen.questDescription"
+      },
+      {
+        "id": 15,
+        "type": "input",
+        "question": "choiceCrossingTen.questTask15",
+        "correctAnswer": "älter",
+        "tip": "choiceCrossingTen.questDescription"
+      }
+    ]
+  }
+]

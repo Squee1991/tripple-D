@@ -46,6 +46,9 @@ const isUserCancelledAuth = (error) => {
     return msg.includes('cancel');
 };
 
+// Уровни, которые можно выбрать. Сохранённый уровень вне списка сбрасываем и спрашиваем заново
+export const GERMAN_LEVELS = ['A1', 'A2', 'B1'];
+
 export const userAuthStore = defineStore('auth', () => {
     const auth = getAuth();
     const langStore = userlangStore();
@@ -60,6 +63,8 @@ export const userAuthStore = defineStore('auth', () => {
     const avatar = ref(null);
     const voiceConsentGiven = ref(false);
     const hasSeenOnboarding = ref(false);
+    // уровень немецкого: 'A1' | 'A2' | 'B1', null — ещё не выбирал (тогда на главной спрашиваем)
+    const germanLevel = ref(null);
     const initialized = ref(false);
     const totalHats = ref(0);
     const hasAds = ref(true);
@@ -188,6 +193,7 @@ export const userAuthStore = defineStore('auth', () => {
         achievements.value = data.achievements || null;
         voiceConsentGiven.value = data.voiceConsentGiven === true;
         hasSeenOnboarding.value = data.hasSeenOnboarding === true;
+        germanLevel.value = GERMAN_LEVELS.includes(data.germanLevel) ? data.germanLevel : null;
         totalHats.value = data.totalHats || 0;
         hasAds.value = data.hasAds ?? true;
         streakCount.value = data.streakCount || 0;
@@ -750,6 +756,18 @@ export const userAuthStore = defineStore('auth', () => {
         }
     };
 
+    const setGermanLevel = async (level) => {
+        if (!GERMAN_LEVELS.includes(level)) return;
+        germanLevel.value = level;
+        const user = auth.currentUser;
+        if (!user) return;
+        try {
+            await updateDoc(doc(db, 'users', user.uid), { germanLevel: level });
+        } catch (e) {
+            console.error('Ошибка при сохранении germanLevel:', e);
+        }
+    };
+
     const setVoiceConsent = async (value = true) => {
         const user = auth.currentUser;
         if (!user) return;
@@ -879,6 +897,8 @@ export const userAuthStore = defineStore('auth', () => {
         isWebView, detectWebView,
         hasSeenOnboarding,
         setHasSeenOnboarding,
+        germanLevel,
+        setGermanLevel,
         shouldShowFeedbackSurvey,
         checkFeedbackSurveyEligibility,
         markFeedbackSurveyShown,

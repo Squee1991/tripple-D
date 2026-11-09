@@ -1,10 +1,11 @@
 import { initializeApp, getApps } from 'firebase/app'
-import { getAnalytics, isSupported, logEvent } from 'firebase/analytics'
+import { getAnalytics, isSupported, logEvent, setUserProperties } from 'firebase/analytics'
 import { firebaseConfig } from '../config/firebaseConfig.js'
 
 export default defineNuxtPlugin(async (nuxtApp) => {
 	if (process.env.NODE_ENV !== 'production') {
 		nuxtApp.provide('track', (name, params) => console.log(`[Dev Track] ${name}`, params))
+		nuxtApp.provide('setUserProps', (props) => console.log('[Dev UserProps]', props))
 		return
 	}
 
@@ -78,4 +79,6 @@ export default defineNuxtPlugin(async (nuxtApp) => {
 
 	// 4. Метод $track для логики в <script setup> (победы/поражения)
 	nuxtApp.provide('track', (name, params = {}) => logEvent(analytics, name, params))
+	// Свойства пользователя: по ним в GA делим аудиторию (например, german_level = A1/A2/B1)
+	nuxtApp.provide('setUserProps', (props = {}) => setUserProperties(analytics, props))
 })

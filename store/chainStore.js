@@ -6,6 +6,7 @@ import {getAuth, onAuthStateChanged} from 'firebase/auth'
 import {dailyStore} from './dailyStore.js'
 import {userlangStore} from './learningStore.js'
 import {userAuthStore} from './authStore.js'
+import {levelForProgress} from '~/utils/landProgress.js'
 
 const MAX_LIVES = 5
 
@@ -41,6 +42,8 @@ export const userChainStore = defineStore('chain', () => {
 	const currentQuestId = ref('')
 	const currentRegionKey = ref('')
 	const questProgress = ref({})
+	// прогресс уже прочитан из базы: карта по нему прокручивается к текущей земле
+	const progressLoaded = ref(false)
 	const sessionStarted = ref(false)
 	const justAwarded = ref(false)
 	const activeQueue = ref([])
@@ -231,10 +234,38 @@ export const userChainStore = defineStore('chain', () => {
 		await saveLivesToRoot()
 	}
 
+	// результат итогового теста уровня: последняя попытка, на прохождение ничего не влияет
+	async function saveLocationTest(level, result) {
+		const userRef = await getUserRef()
+		if (!userRef) return
+		await setDoc(userRef, {locationTests: {[level]: result}}, {merge: true})
+	}
+
+	// Старым игрокам поднимаем уровень до самой дальней земли, где у них есть прогресс,
+	// чтобы новые земли, вставленные раньше неё, не оказались закрытыми. Уровень только растёт.
+	// Премиум пропускаем: у него открыто всё, и прогресс в дальней земле не значит, что он до неё дошёл.
+	async function raiseLevelToProgress() {
+		const userRef = await getUserRef()
+		if (!userRef) return
+		const raised = await runTransaction(db, async (tx) => {
+			const snap = await tx.get(userRef)
+			if (!snap.exists()) return null
+			const data = snap.data() || {}
+			if (data.isPremium === true) return null
+			const current = Number(data.isLeveling || 0)
+			const target = levelForProgress(data.questProgress, data.germanLevel)
+			if (target <= current) return null
+			tx.set(userRef, {isLeveling: target}, {merge: true})
+			return target
+		})
+		if (raised !== null) langStore.isLeveling = Math.max(Number(langStore.isLeveling || 0), raised)
+	}
+
 	async function loadProgressFromFirebase() {
 		const userRef = await getUserRef()
 		if (!userRef) return
 		const snap = await getDoc(userRef)
+		progressLoaded.value = true
 		if (snap.exists()) {
 			const data = snap.data() || {}
 			questProgress.value = data.questProgress || {}
@@ -638,6 +669,7 @@ export const userChainStore = defineStore('chain', () => {
 		currentRegenIntervalMs,
 
 		questProgress,
+		progressLoaded,
 		sessionStarted,
 		justAwarded,
 		questHasAccept,
@@ -647,6 +679,9 @@ export const userChainStore = defineStore('chain', () => {
 		regionQuests,
 		addLife,
 		loadProgressFromFirebase,
+		raiseLevelToProgress,
+		saveLocationTest,
+		normalizeSpeechText,
 		loadQuest,
 		choose,
 		handleReorderWord,

@@ -1,6 +1,6 @@
 [
   {
-    "questId": "one",
+    "questId": "lake-ruins-one",
     "title": "questLakeRuinsFirstQuests.title",
     "progress": "0/15",
     "description": "questLakeRuinsFirstQuests.description",
@@ -275,16 +275,16 @@
         "type": "reorder",
         "question": "questLakeRuinsFirstQuests.questFive",
         "words": [
+          "es",
+          "Heute",
+          "sonnig",
+          "ist"
+        ],
+        "correctOrder": [
           "Heute",
           "ist",
           "es",
           "sonnig"
-        ],
-        "correctOrder": [
-          "sonnig",
-          "ist",
-          "es",
-          "Heute"
         ]
       },
       {
@@ -410,7 +410,7 @@
     ]
   },
   {
-    "questId": "two",
+    "questId": "lake-ruins-two",
     "title": "questLakeRuinsSecondQuests.title",
     "progress": "0/15",
     "description": "questLakeRuinsSecondQuests.description",
@@ -693,7 +693,7 @@
       {
         "id": 10,
         "type": "select",
-        "question": "Что значит: Grad",
+        "question": "questLakeRuinsSecondQuests.questTen",
         "options": [
           "questLakeRuinsSecondQuests.questTenFirstOption",
           "questLakeRuinsSecondQuests.questTenSecondOption",
@@ -740,7 +740,7 @@
       {
         "id": 14,
         "type": "select",
-        "question": "Переведи: Es regnet",
+        "question": "questLakeRuinsSecondQuests.questFourteen",
         "options": [
           "questLakeRuinsSecondQuests.questFourteenFirstOption",
           "questLakeRuinsSecondQuests.questFourteenSecondOption",
@@ -763,7 +763,7 @@
     ]
   },
   {
-    "questId": "three",
+    "questId": "lake-ruins-three",
     "title": "questLakeRuinsThirdQuests.title",
     "progress": "0/15",
     "description": "questLakeRuinsThirdQuests.description",
@@ -1131,7 +1131,7 @@
     ]
   },
   {
-    "questId": "four",
+    "questId": "lake-ruins-four",
     "title": "questLakeRuinsFourthQuests.title",
     "progress": "0/15",
     "description": "questLakeRuinsFourthQuests.description",
@@ -1512,7 +1512,7 @@
     ]
   },
   {
-    "questId": "five",
+    "questId": "lake-ruins-five",
     "title": "questLakeRuinsFifthQuests.title",
     "progress": "0/15",
     "description": "questLakeRuinsFifthQuests.description",
@@ -1679,6 +1679,20 @@
         "translation-ro": "Duminică",
         "translation-tr": "Pazar",
         "translation-uz": "Yakshanba"
+      },
+      {
+        "word": "der Hagel",
+        "translation-ru": "град",
+        "translation-en": "hail",
+        "translation-uk": "град",
+        "translation-pl": "grad",
+        "translation-es": "el granizo",
+        "translation-fr": "la grêle",
+        "translation-tr": "dolu",
+        "translation-ro": "grindina",
+        "translation-uz": "do‘l",
+        "translation-hi": "ओले",
+        "translation-ar": "البَرَد"
       }
     ],
     "tasks": [
@@ -1857,7 +1871,7 @@
     ]
   },
   {
-    "questId": "six",
+    "questId": "lake-ruins-six",
     "title": "questLakeRuinsSixthQuests.title",
     "progress": "0/15",
     "description": "questLakeRuinsSixthQuests.description",
@@ -2191,7 +2205,7 @@
     ]
   },
   {
-    "questId": "seven",
+    "questId": "lake-ruins-seven",
     "title": "questLakeRuinsSeventhQuests.title",
     "progress": "0/15",
     "description": "questLakeRuinsSeventhQuests.description",
@@ -2461,7 +2475,7 @@
         "id": 9,
         "type": "readAndAnswer",
         "text": "Heute ist es wechselhaft: morgens regnet es, am Nachmittag scheint die Sonne.",
-        "question": "",
+        "question": "questLakeRuinsSeventhQuests.questNine",
         "options": [
           "questLakeRuinsSeventhQuests.questNineFirstOption",
           "questLakeRuinsSeventhQuests.questNineSecondOption",
@@ -2472,7 +2486,7 @@
       {
         "id": 10,
         "type": "select",
-        "question": "Что значит: bis zu 25 Grad",
+        "question": "questLakeRuinsSeventhQuests.questTen",
         "options": [
           "questLakeRuinsSeventhQuests.questTenFirstOption",
           "questLakeRuinsSeventhQuests.questTenSecondOption",
@@ -2539,7 +2553,7 @@
     ]
   },
   {
-    "questId": "eight",
+    "questId": "lake-ruins-eight",
     "title": "questLakeRuinsEighthQuests.title",
     "progress": "0/15",
     "description": "questLakeRuinsEighthQuests.description",
@@ -2911,7 +2925,7 @@
     ]
   },
   {
-    "questId": "nine",
+    "questId": "lake-ruins-nine",
     "title": "questLakeRuinsNinthQuests.title",
     "progress": "0/15",
     "description": "questLakeRuinsNinthQuests.description",
@@ -2938,20 +2952,6 @@
         "translation-ro": "Umbrelă",
         "translation-tr": "Şemsiye",
         "translation-uz": "Zontik / Soyabon"
-      },
-      {
-        "word": "die Sonnenbrille",
-        "translation-ru": "Солнцезащитные очки",
-        "translation-en": "Sunglasses",
-        "translation-uk": "Сонцезахисні окуляри",
-        "translation-pl": "Okulary przeciwsłoneczne",
-        "translation-es": "Gafas de sol",
-        "translation-fr": "Lunettes de soleil",
-        "translation-ar": "نظارة شمسية",
-        "translation-hi": "धूप का चश्मा",
-        "translation-ro": "Ochelari de soare",
-        "translation-tr": "Güneş gözlüğü",
-        "translation-uz": "Quyosh ko'zoynagi"
       },
       {
         "word": "regnen",
@@ -3258,7 +3258,7 @@
     ]
   },
   {
-    "questId": "ten",
+    "questId": "lake-ruins-ten",
     "title": "questLakeRuinsTenthQuests.title",
     "progress": "0/15",
     "description": "questLakeRuinsTenthQuests.description",
@@ -3299,34 +3299,6 @@
         "translation-ro": "Parc",
         "translation-tr": "Park",
         "translation-uz": "Park / Bog'"
-      },
-      {
-        "word": "das Museum",
-        "translation-ru": "Музей",
-        "translation-en": "Museum",
-        "translation-uk": "Музей",
-        "translation-pl": "Muzeum",
-        "translation-es": "Museo",
-        "translation-fr": "Musée",
-        "translation-ar": "متحف",
-        "translation-hi": "संग्रहालय",
-        "translation-ro": "Muzeu",
-        "translation-tr": "Müze",
-        "translation-uz": "Muzey"
-      },
-      {
-        "word": "das Café",
-        "translation-ru": "Кафе",
-        "translation-en": "Café",
-        "translation-uk": "Кафе",
-        "translation-pl": "Kawiarnia",
-        "translation-es": "Cafetería / Café",
-        "translation-fr": "Café",
-        "translation-ar": "مقهى",
-        "translation-hi": "कैफ़े",
-        "translation-ro": "Cafenea",
-        "translation-tr": "Kafe",
-        "translation-uz": "Qahvaxona / Kafe"
       },
       {
         "word": "gehen",
@@ -3624,4 +3596,3 @@
     ]
   }
 ]
-

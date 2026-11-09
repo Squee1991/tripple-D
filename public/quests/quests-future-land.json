@@ -26,14 +26,16 @@
           "sein",
           "haben"
         ],
-        "answer": "werden"
+        "answer": "werden",
+        "tip": "a2Course.tipFutur"
       },
       {
         "id": 2,
         "type": "speechToText",
         "question": "pluralLandQuestOne.questTwo",
         "text": "Ich werde das machen",
-        "answer": "Ich werde das machen"
+        "answer": "Ich werde das machen",
+        "tip": "a2Course.tipFutur"
       },
       {
         "id": 3,
@@ -53,7 +55,8 @@
           "einen",
           "Koffer",
           "packen"
-        ]
+        ],
+        "tip": "a2Course.tipFutur"
       },
       {
         "id": 4,
@@ -72,14 +75,16 @@
           "meine",
           "Freunde",
           "besuchen"
-        ]
+        ],
+        "tip": "a2Course.tipFutur"
       },
       {
         "id": 5,
         "type": "speechToText",
         "question": "pluralLandQuestOne.questFive",
         "text": "Wir werden nach Italien fliegen",
-        "answer": "Wir werden nach Italien fliegen"
+        "answer": "Wir werden nach Italien fliegen",
+        "tip": "a2Course.tipFutur"
       },
       {
         "id": 6,
@@ -101,27 +106,46 @@
           "neues",
           "Auto",
           "kaufen"
-        ]
+        ],
+        "tip": "a2Course.tipFutur"
       },
       {
         "id": 7,
         "type": "input",
         "question": "pluralLandQuestOne.questSeven",
-        "answer": "wird"
+        "answer": "wird",
+        "tip": "a2Course.tipFutur"
       },
       {
         "id": 8,
         "type": "speechToText",
         "question": "pluralLandQuestOne.questEight",
         "text": "Ich werde heute zu Hause arbeiten",
-        "answer": "Ich werde heute zu Hause arbeiten"
+        "answer": "Ich werde heute zu Hause arbeiten",
+        "tip": "a2Course.tipFutur"
       },
       {
         "id": 9,
         "type": "reorder",
         "question": "pluralLandQuestOne.questNine",
-        "words": ["Wann", "wirst", "du", "nach", "werdet", "Hause", "fahren"],
-        "correctOrder": ["Wann", "wirst", "du", "nach", "Hause", "fahren"]
+        "words": [
+          "Wann",
+          "wirst",
+          "du",
+          "nach",
+          "werdet",
+          "Hause",
+          "fahren"
+        ],
+        "correctOrder": [
+          "Wann",
+          "wirst",
+          "du",
+          "nach",
+          "Hause",
+          "fahren"
+        ],
+        "tip": "a2Course.tipFutur"
       },
       {
         "id": 10,
@@ -132,7 +156,8 @@
         "accept": [
           "Ich werde am Montag um 12 Uhr nach Hause fahren",
           "Ich werde am Montag um zwölf Uhr nach Hause fahren"
-        ]
+        ],
+        "tip": "a2Course.tipFutur"
       },
       {
         "id": 11,
@@ -152,7 +177,8 @@
           "viele",
           "Museen",
           "besuchen"
-        ]
+        ],
+        "tip": "a2Course.tipFutur"
       },
       {
         "id": 12,
@@ -172,14 +198,16 @@
           "nächstes",
           "Jahr",
           "studieren"
-        ]
+        ],
+        "tip": "a2Course.tipFutur"
       },
       {
         "id": 13,
         "type": "speechToText",
         "question": "pluralLandQuestOne.questThirteen",
         "text": "Das Wetter wird morgen schön sein",
-        "answer": "Das Wetter wird morgen schön sein"
+        "answer": "Das Wetter wird morgen schön sein",
+        "tip": "a2Course.tipFutur"
       },
       {
         "id": 14,
@@ -191,7 +219,8 @@
           "Sie werden uns am Freitag um 17 Uhr besuchen",
           "Sie werden uns am Freitag um fünf Uhr besuchen",
           "Sie werden uns am Freitag um siebzehn Uhr besuchen"
-        ]
+        ],
+        "tip": "a2Course.tipFutur"
       },
       {
         "id": 15,
@@ -212,7 +241,80 @@
           "tolle",
           "Reise",
           "sein"
-        ]
+        ],
+        "tip": "a2Course.tipFutur"
+      }
+    ],
+    "vocabulary": [
+      {
+        "word": "packen",
+        "translation-ru": "упаковывать",
+        "translation-en": "to pack",
+        "translation-uk": "пакувати",
+        "translation-pl": "pakować",
+        "translation-es": "hacer la maleta",
+        "translation-fr": "faire les bagages",
+        "translation-tr": "bavul hazırlamak",
+        "translation-ro": "a împacheta",
+        "translation-uz": "joylamoq",
+        "translation-hi": "सामान बाँधना",
+        "translation-ar": "يحزم"
+      },
+      {
+        "word": "meinen",
+        "translation-ru": "считать / иметь в виду",
+        "translation-en": "to mean / think",
+        "translation-uk": "вважати / мати на увазі",
+        "translation-pl": "uważać / mieć na myśli",
+        "translation-es": "pensar / querer decir",
+        "translation-fr": "penser / vouloir dire",
+        "translation-tr": "düşünmek / demek istemek",
+        "translation-ro": "a crede / a vrea să spună",
+        "translation-uz": "o'ylamoq / nazarda tutmoq",
+        "translation-hi": "सोचना / मतलब होना",
+        "translation-ar": "يعتقد / يعني"
+      },
+      {
+        "word": "der Freund",
+        "translation-ru": "друг",
+        "translation-en": "friend",
+        "translation-uk": "друг",
+        "translation-pl": "przyjaciel",
+        "translation-es": "el amigo",
+        "translation-fr": "l’ami",
+        "translation-tr": "arkadaş",
+        "translation-ro": "prietenul",
+        "translation-uz": "do‘st",
+        "translation-hi": "दोस्त",
+        "translation-ar": "الصديق"
+      },
+      {
+        "word": "besuchen",
+        "translation-ru": "навещать, посещать",
+        "translation-en": "to visit",
+        "translation-uk": "відвідувати",
+        "translation-pl": "odwiedzać",
+        "translation-es": "visitar",
+        "translation-fr": "rendre visite",
+        "translation-tr": "ziyaret etmek",
+        "translation-ro": "a vizita",
+        "translation-uz": "tashrif buyurmoq",
+        "translation-hi": "मिलने जाना",
+        "translation-ar": "يزور"
+      },
+      {
+        "word": "das Auto",
+        "translation-ru": "машина",
+        "translation-en": "car",
+        "translation-uk": "машина",
+        "translation-pl": "samochód",
+        "translation-es": "coche",
+        "translation-fr": "voiture",
+        "translation-tr": "araba",
+        "translation-ro": "mașină",
+        "translation-uz": "mashina",
+        "translation-hi": "गाड़ी",
+        "translation-ar": "سيارة"
       }
     ]
   },
@@ -253,7 +355,8 @@
           "nie",
           "wieder",
           "machen"
-        ]
+        ],
+        "tip": "a2Course.tipFutur"
       },
       {
         "id": 2,
@@ -264,7 +367,8 @@
           "Er werdet morgen anrufen dich",
           "Er wird dich anrufen morgen"
         ],
-        "answer": "Er wird dich morgen anrufen"
+        "answer": "Er wird dich morgen anrufen",
+        "tip": "a2Course.tipFutur"
       },
       {
         "id": 3,
@@ -285,14 +389,16 @@
           "deutsche",
           "Wörter",
           "lernen"
-        ]
+        ],
+        "tip": "a2Course.tipFutur"
       },
       {
         "id": 4,
         "type": "speechToText",
         "question": "pluralLandQuestTwo.questFour",
         "text": "Ich werde einen guten Job finden",
-        "answer": "Ich werde einen guten Job finden"
+        "answer": "Ich werde einen guten Job finden",
+        "tip": "a2Course.tipFutur"
       },
       {
         "id": 5,
@@ -303,7 +409,8 @@
           "Was wird du heute Abend kochen?",
           "Was werdet du heute Abend kochen?"
         ],
-        "answer": "Was wirst du heute Abend kochen?"
+        "answer": "Was wirst du heute Abend kochen?",
+        "tip": "a2Course.tipFutur"
       },
       {
         "id": 6,
@@ -323,21 +430,24 @@
           "mir",
           "morgen",
           "helfen"
-        ]
+        ],
+        "tip": "a2Course.tipFutur"
       },
       {
         "id": 7,
         "type": "speechToText",
         "question": "pluralLandQuestTwo.questSeven",
         "text": "Wir werden bald eine Lösung finden",
-        "answer": "Wir werden bald eine Lösung finden"
+        "answer": "Wir werden bald eine Lösung finden",
+        "tip": "a2Course.tipFutur"
       },
       {
         "id": 8,
         "type": "speechToText",
         "question": "pluralLandQuestTwo.questEight",
         "text": "Wir werden das Spiel gewinnen",
-        "answer": "Wir werden das Spiel gewinnen"
+        "answer": "Wir werden das Spiel gewinnen",
+        "tip": "a2Course.tipFutur"
       },
       {
         "id": 9,
@@ -348,7 +458,8 @@
           "Ich werde rauchen nicht",
           "Ich nicht werde rauchen"
         ],
-        "answer": "Ich werde nicht rauchen"
+        "answer": "Ich werde nicht rauchen",
+        "tip": "a2Course.tipFutur"
       },
       {
         "id": 10,
@@ -367,46 +478,209 @@
           "das",
           "nie",
           "vergessen"
-        ]
+        ],
+        "tip": "a2Course.tipFutur"
       },
       {
         "id": 11,
-        "type": "select",
-        "question": "pluralLandQuestTwo.questEleven",
-        "options": [
-          "Ich werde auf dich warten",
-          "Ich warte auf dich",
-          "Ich werden auf dich warten"
+        "type": "reorder",
+        "question": "pluralLandQuestOne.questThree",
+        "words": [
+          "werde",
+          "Ich",
+          "einen",
+          "packen",
+          "wird",
+          "Koffer"
         ],
-        "answer": "Ich werde auf dich warten"
+        "correctOrder": [
+          "Ich",
+          "werde",
+          "einen",
+          "Koffer",
+          "packen"
+        ],
+        "reviewOf": "future-one",
+        "reviewLand": "future-land",
+        "tip": "a2Course.tipFutur"
       },
       {
         "id": 12,
         "type": "speechToText",
         "question": "pluralLandQuestTwo.questTwelve",
         "text": "Das wird sehr interessant sein",
-        "answer": "Das wird sehr interessant sein"
+        "answer": "Das wird sehr interessant sein",
+        "tip": "a2Course.tipFutur"
       },
       {
         "id": 13,
         "type": "reorder",
         "question": "pluralLandQuestTwo.questThirteen",
-        "words": ["Jahr", "kaufen", "nächstes", "ein", "werde", "Ich", "Haus", "einen"],
-        "correctOrder": ["Ich", "werde", "nächstes", "Jahr", "ein", "Haus", "kaufen"]
+        "words": [
+          "Jahr",
+          "kaufen",
+          "nächstes",
+          "ein",
+          "werde",
+          "Ich",
+          "Haus",
+          "einen"
+        ],
+        "correctOrder": [
+          "Ich",
+          "werde",
+          "nächstes",
+          "Jahr",
+          "ein",
+          "Haus",
+          "kaufen"
+        ],
+        "tip": "a2Course.tipFutur"
       },
       {
         "id": 14,
         "type": "reorder",
         "question": "pluralLandQuestTwo.questFourteen",
-        "words": ["werde", "ans", "Ich", "Jahr", "fahren", "nächstes", "Meer", "werden"],
-        "correctOrder": ["Ich", "werde", "nächstes", "Jahr", "ans", "Meer", "fahren"]
+        "words": [
+          "werde",
+          "ans",
+          "Ich",
+          "Jahr",
+          "fahren",
+          "nächstes",
+          "Meer",
+          "werden"
+        ],
+        "correctOrder": [
+          "Ich",
+          "werde",
+          "nächstes",
+          "Jahr",
+          "ans",
+          "Meer",
+          "fahren"
+        ],
+        "tip": "a2Course.tipFutur"
       },
       {
         "id": 15,
         "type": "reorder",
         "question": "pluralLandQuestTwo.questFifteen",
-        "words": ["alles", "Roboter", "Die", "machen", "werden"],
-        "correctOrder": ["Die", "Roboter", "werden", "alles", "machen"]
+        "words": [
+          "alles",
+          "Roboter",
+          "Die",
+          "machen",
+          "werden"
+        ],
+        "correctOrder": [
+          "Die",
+          "Roboter",
+          "werden",
+          "alles",
+          "machen"
+        ],
+        "tip": "a2Course.tipFutur"
+      }
+    ],
+    "vocabulary": [
+      {
+        "word": "mehr",
+        "translation-ru": "больше",
+        "translation-en": "more",
+        "translation-uk": "більше",
+        "translation-pl": "więcej",
+        "translation-es": "más",
+        "translation-fr": "plus",
+        "translation-tr": "daha çok",
+        "translation-ro": "mai mult",
+        "translation-uz": "ko‘proq",
+        "translation-hi": "ज़्यादा",
+        "translation-ar": "أكثر"
+      },
+      {
+        "word": "kochen",
+        "translation-ru": "готовить / варить",
+        "translation-en": "to cook",
+        "translation-uk": "готувати / варити",
+        "translation-pl": "gotować",
+        "translation-es": "cocinar",
+        "translation-fr": "cuisiner",
+        "translation-tr": "yemek pişirmek",
+        "translation-ro": "a găti",
+        "translation-uz": "ovqat pishirmoq",
+        "translation-hi": "पकाना",
+        "translation-ar": "يطبخ"
+      },
+      {
+        "word": "bald",
+        "translation-ru": "скоро",
+        "translation-en": "soon",
+        "translation-uk": "скоро",
+        "translation-pl": "wkrótce",
+        "translation-es": "pronto",
+        "translation-fr": "bientôt",
+        "translation-tr": "yakında",
+        "translation-ro": "curând",
+        "translation-uz": "tez orada",
+        "translation-hi": "जल्द",
+        "translation-ar": "قريبًا"
+      },
+      {
+        "word": "die Lösung",
+        "translation-ru": "решение (задачи)",
+        "translation-en": "solution",
+        "translation-uk": "розв’язок, вирішення",
+        "translation-pl": "rozwiązanie",
+        "translation-es": "la solución",
+        "translation-fr": "la solution",
+        "translation-tr": "çözüm",
+        "translation-ro": "soluția",
+        "translation-uz": "yechim",
+        "translation-hi": "हल",
+        "translation-ar": "الحل"
+      },
+      {
+        "word": "das Spiel",
+        "translation-ru": "игра, матч",
+        "translation-en": "game, match",
+        "translation-uk": "гра, матч",
+        "translation-pl": "mecz, gra",
+        "translation-es": "el partido",
+        "translation-fr": "le match",
+        "translation-tr": "maç",
+        "translation-ro": "meciul",
+        "translation-uz": "o‘yin",
+        "translation-hi": "मैच",
+        "translation-ar": "المباراة"
+      },
+      {
+        "word": "der Roboter",
+        "translation-ru": "робот",
+        "translation-en": "robot",
+        "translation-uk": "робот",
+        "translation-pl": "robot",
+        "translation-es": "el robot",
+        "translation-fr": "le robot",
+        "translation-tr": "robot",
+        "translation-ro": "robotul",
+        "translation-uz": "robot",
+        "translation-hi": "रोबोट",
+        "translation-ar": "الروبوت"
+      },
+      {
+        "word": "gewinnen",
+        "translation-ru": "выигрывать",
+        "translation-en": "to win",
+        "translation-uk": "вигравати",
+        "translation-pl": "wygrywać",
+        "translation-es": "ganar",
+        "translation-fr": "gagner",
+        "translation-tr": "kazanmak",
+        "translation-ro": "a câștiga",
+        "translation-uz": "yutmoq",
+        "translation-hi": "जीतना",
+        "translation-ar": "يفوز"
       }
     ]
   },
@@ -437,28 +711,47 @@
           "Wann werden ihr nach Berlin fahren?",
           "Wann wird ihr nach Berlin fahren?"
         ],
-        "answer": "Wann werdet ihr nach Berlin fahren?"
+        "answer": "Wann werdet ihr nach Berlin fahren?",
+        "tip": "a2Course.tipFutur"
       },
       {
         "id": 2,
         "type": "reorder",
         "question": "pluralLandQuestThree.questTwo",
-        "words": ["kaufen", "Wir", "werde", "Tickets", "morgen", "die", "werden"],
-        "correctOrder": ["Wir", "werden", "morgen", "die", "Tickets", "kaufen"]
+        "words": [
+          "kaufen",
+          "Wir",
+          "werde",
+          "Tickets",
+          "morgen",
+          "die",
+          "werden"
+        ],
+        "correctOrder": [
+          "Wir",
+          "werden",
+          "morgen",
+          "die",
+          "Tickets",
+          "kaufen"
+        ],
+        "tip": "a2Course.tipFutur"
       },
       {
         "id": 3,
         "type": "speechToText",
         "question": "pluralLandQuestThree.questThree",
         "text": "Die Kollegen werden uns informieren",
-        "answer": "Die Kollegen werden uns informieren"
+        "answer": "Die Kollegen werden uns informieren",
+        "tip": "a2Course.tipFutur"
       },
       {
         "id": 4,
         "type": "speechToText",
         "question": "pluralLandQuestThree.questFour",
         "text": "Wir werden zusammen arbeiten",
-        "answer": "Wir werden zusammen arbeiten"
+        "answer": "Wir werden zusammen arbeiten",
+        "tip": "a2Course.tipFutur"
       },
       {
         "id": 5,
@@ -469,7 +762,8 @@
           "Sie werdet das Projekt beenden",
           "Sie wird das Projekt beenden"
         ],
-        "answer": "Sie werden das Projekt beenden"
+        "answer": "Sie werden das Projekt beenden",
+        "tip": "a2Course.tipFutur"
       },
       {
         "id": 6,
@@ -480,21 +774,52 @@
           "Ich werde diese Prüfung sicher bestehen",
           "Ich werde bestehen diese Prüfung sicher"
         ],
-        "answer": "Ich werde diese Prüfung sicher bestehen"
+        "answer": "Ich werde diese Prüfung sicher bestehen",
+        "tip": "a2Course.tipFutur"
       },
       {
         "id": 7,
         "type": "reorder",
         "question": "pluralLandQuestThree.questSeven",
-        "words": ["bekommen", "wird", "Antwort", "bald", "die", "werdet", "Ihr"],
-        "correctOrder": ["Ihr", "werdet", "bald", "die", "Antwort", "bekommen"]
+        "words": [
+          "bekommen",
+          "wird",
+          "Antwort",
+          "bald",
+          "die",
+          "werdet",
+          "Ihr"
+        ],
+        "correctOrder": [
+          "Ihr",
+          "werdet",
+          "bald",
+          "die",
+          "Antwort",
+          "bekommen"
+        ],
+        "tip": "a2Course.tipFutur"
       },
       {
         "id": 8,
         "type": "reorder",
         "question": "pluralLandQuestThree.questEight",
-        "words": ["kommen", "werdet", "Gäste", "später", "werden", "Die"],
-        "correctOrder": ["Die", "Gäste", "werden", "später", "kommen"]
+        "words": [
+          "kommen",
+          "werdet",
+          "Gäste",
+          "später",
+          "werden",
+          "Die"
+        ],
+        "correctOrder": [
+          "Die",
+          "Gäste",
+          "werden",
+          "später",
+          "kommen"
+        ],
+        "tip": "a2Course.tipFutur"
       },
       {
         "id": 9,
@@ -505,42 +830,64 @@
           "Werden ihr uns helfen?",
           "Wirst ihr uns helfen?"
         ],
-        "answer": "Werdet ihr uns helfen?"
+        "answer": "Werdet ihr uns helfen?",
+        "tip": "a2Course.tipFutur"
       },
       {
         "id": 10,
         "type": "speechToText",
         "question": "pluralLandQuestThree.questTen",
         "text": "Ihr werdet viel Spaß haben",
-        "answer": "Ihr werdet viel Spaß haben"
+        "answer": "Ihr werdet viel Spaß haben",
+        "tip": "a2Course.tipFutur"
       },
       {
         "id": 11,
         "type": "reorder",
-        "question": "pluralLandQuestThree.questEleven",
-        "words": ["warten", "werde", "nicht", "lange", "Wir", "werden"],
-        "correctOrder": ["Wir", "werden", "nicht", "lange", "warten"]
+        "question": "pluralLandQuestTwo.questOne",
+        "words": [
+          "das",
+          "nie",
+          "Ich",
+          "machen",
+          "werde",
+          "wieder"
+        ],
+        "correctOrder": [
+          "Ich",
+          "werde",
+          "das",
+          "nie",
+          "wieder",
+          "machen"
+        ],
+        "reviewOf": "future-two",
+        "reviewLand": "future-land",
+        "tip": "a2Course.tipFutur"
       },
       {
         "id": 12,
         "type": "speechToText",
         "question": "pluralLandQuestThree.questTwelve",
         "text": "Wo werden Sie wohnen",
-        "answer": "Wo werden Sie wohnen"
+        "answer": "Wo werden Sie wohnen",
+        "tip": "a2Course.tipFutur"
       },
       {
         "id": 13,
         "type": "speechToText",
         "question": "pluralLandQuestThree.questThirteen",
         "text": "Meine Freunde werden mich besuchen",
-        "answer": "Meine Freunde werden mich besuchen"
+        "answer": "Meine Freunde werden mich besuchen",
+        "tip": "a2Course.tipFutur"
       },
       {
         "id": 14,
         "type": "speechToText",
         "question": "pluralLandQuestThree.questFourteen",
         "text": "Die Preise werden steigen",
-        "answer": "Die Preise werden steigen"
+        "answer": "Die Preise werden steigen",
+        "tip": "a2Course.tipFutur"
       },
       {
         "id": 15,
@@ -551,7 +898,80 @@
           "Ihr werdet bezahlen viel Geld für das Auto",
           "Ihr viel Geld für das Auto bezahlen werdet"
         ],
-        "answer": "Ihr werdet viel Geld für das Auto bezahlen"
+        "answer": "Ihr werdet viel Geld für das Auto bezahlen",
+        "tip": "a2Course.tipFutur"
+      }
+    ],
+    "vocabulary": [
+      {
+        "word": "beenden",
+        "translation-ru": "заканчивать",
+        "translation-en": "to finish / end",
+        "translation-uk": "завершувати",
+        "translation-pl": "kończyć",
+        "translation-es": "terminar",
+        "translation-fr": "finir",
+        "translation-tr": "bitirmek",
+        "translation-ro": "a termina",
+        "translation-uz": "tugatmoq",
+        "translation-hi": "समाप्त करना",
+        "translation-ar": "ينهي"
+      },
+      {
+        "word": "die Prüfung",
+        "translation-ru": "экзамен",
+        "translation-en": "exam",
+        "translation-uk": "іспит",
+        "translation-pl": "egzamin",
+        "translation-es": "el examen",
+        "translation-fr": "l’examen",
+        "translation-tr": "sınav",
+        "translation-ro": "examenul",
+        "translation-uz": "imtihon",
+        "translation-hi": "परीक्षा",
+        "translation-ar": "الامتحان"
+      },
+      {
+        "word": "sicher",
+        "translation-ru": "уверенный",
+        "translation-en": "sure",
+        "translation-uk": "впевнений",
+        "translation-pl": "pewny",
+        "translation-es": "seguro",
+        "translation-fr": "sûr",
+        "translation-tr": "emin",
+        "translation-ro": "sigur",
+        "translation-uz": "amin, ishonchli",
+        "translation-hi": "निश्चित",
+        "translation-ar": "متأكد"
+      },
+      {
+        "word": "bestehen",
+        "translation-ru": "сдать (экзамен)",
+        "translation-en": "to pass (an exam)",
+        "translation-uk": "скласти (іспит)",
+        "translation-pl": "zdać",
+        "translation-es": "aprobar",
+        "translation-fr": "réussir",
+        "translation-tr": "geçmek (sınav)",
+        "translation-ro": "a lua (examenul)",
+        "translation-uz": "topshirmoq (imtihon)",
+        "translation-hi": "पास करना",
+        "translation-ar": "ينجح في"
+      },
+      {
+        "word": "die Antwort",
+        "translation-ru": "ответ",
+        "translation-en": "answer",
+        "translation-uk": "відповідь",
+        "translation-pl": "odpowiedź",
+        "translation-es": "la respuesta",
+        "translation-fr": "la réponse",
+        "translation-tr": "cevap",
+        "translation-ro": "răspunsul",
+        "translation-uz": "javob",
+        "translation-hi": "जवाब",
+        "translation-ar": "الجواب"
       }
     ]
   },
@@ -577,106 +997,352 @@
         "id": 1,
         "type": "reorder",
         "question": "pluralLandQuestFour.questOne",
-        "words": ["machen", "Party", "große", "Samstag", "Wir", "in", "werden", "eine", "am"],
-        "correctOrder": ["Wir", "werden", "am", "Samstag", "eine", "große", "Party", "machen"]
+        "words": [
+          "machen",
+          "Party",
+          "große",
+          "Samstag",
+          "Wir",
+          "in",
+          "werden",
+          "eine",
+          "am"
+        ],
+        "correctOrder": [
+          "Wir",
+          "werden",
+          "am",
+          "Samstag",
+          "eine",
+          "große",
+          "Party",
+          "machen"
+        ],
+        "tip": "a2Course.tipFutur"
       },
       {
         "id": 2,
         "type": "speechToText",
         "question": "pluralLandQuestFour.questTwo",
         "text": "Ihr werdet alle Freunde einladen",
-        "answer": "Ihr werdet alle Freunde einladen"
+        "answer": "Ihr werdet alle Freunde einladen",
+        "tip": "a2Course.tipFutur"
       },
       {
         "id": 3,
         "type": "reorder",
         "question": "pluralLandQuestFour.questThree",
-        "words": ["mitbringen", "werdet", "Geschenke", "Gäste", "Die", "werden"],
-        "correctOrder": ["Die", "Gäste", "werden", "Geschenke", "mitbringen"]
+        "words": [
+          "mitbringen",
+          "werdet",
+          "Geschenke",
+          "Gäste",
+          "Die",
+          "werden"
+        ],
+        "correctOrder": [
+          "Die",
+          "Gäste",
+          "werden",
+          "Geschenke",
+          "mitbringen"
+        ],
+        "tip": "a2Course.tipFutur"
       },
       {
         "id": 4,
         "type": "reorder",
         "question": "pluralLandQuestFour.questFour",
-        "words": ["wird", "backen", "ein", "Kuchen", "Wir", "leckeren", "einen", "werden"],
-        "correctOrder": ["Wir", "werden", "einen", "leckeren", "Kuchen", "backen"]
+        "words": [
+          "wird",
+          "backen",
+          "ein",
+          "Kuchen",
+          "Wir",
+          "leckeren",
+          "einen",
+          "werden"
+        ],
+        "correctOrder": [
+          "Wir",
+          "werden",
+          "einen",
+          "leckeren",
+          "Kuchen",
+          "backen"
+        ],
+        "tip": "a2Course.tipFutur"
       },
       {
         "id": 5,
         "type": "speechToText",
         "question": "pluralLandQuestFour.questFive",
         "text": "Die Nachbarn werden sich nicht beschweren",
-        "answer": "Die Nachbarn werden sich nicht beschweren"
+        "answer": "Die Nachbarn werden sich nicht beschweren",
+        "tip": "a2Course.tipFutur"
       },
       {
         "id": 6,
         "type": "reorder",
         "question": "pluralLandQuestFour.questSix",
-        "words": ["sie", "kommen", "ihr", "Wann", "werdet"],
-        "correctOrder": ["Wann", "werdet", "ihr", "kommen"]
+        "words": [
+          "sie",
+          "kommen",
+          "ihr",
+          "Wann",
+          "werdet"
+        ],
+        "correctOrder": [
+          "Wann",
+          "werdet",
+          "ihr",
+          "kommen"
+        ],
+        "tip": "a2Course.tipFutur"
       },
       {
         "id": 7,
         "type": "speechToText",
         "question": "pluralLandQuestFour.questSeven",
         "text": "Wir werden die ganze Nacht tanzen",
-        "answer": "Wir werden die ganze Nacht tanzen"
+        "answer": "Wir werden die ganze Nacht tanzen",
+        "tip": "a2Course.tipFutur"
       },
       {
         "id": 8,
         "type": "reorder",
         "question": "pluralLandQuestFour.questEight",
-        "words": ["Hause", "Eltern", "nicht", "zu", "sein", "Meine", "werden"],
-        "correctOrder": ["Meine", "Eltern", "werden", "nicht", "zu", "Hause", "sein"]
+        "words": [
+          "Hause",
+          "Eltern",
+          "nicht",
+          "zu",
+          "sein",
+          "Meine",
+          "werden"
+        ],
+        "correctOrder": [
+          "Meine",
+          "Eltern",
+          "werden",
+          "nicht",
+          "zu",
+          "Hause",
+          "sein"
+        ],
+        "tip": "a2Course.tipFutur"
       },
       {
         "id": 9,
         "type": "reorder",
         "question": "pluralLandQuestFour.questNine",
-        "words": ["oder", "Saft", "trinken", "Cola", "Ihr", "werdet"],
-        "correctOrder": ["Ihr", "werdet", "Saft", "oder", "Cola", "trinken"]
+        "words": [
+          "Werdet",
+          "ihr",
+          "Cola",
+          "trinken",
+          "Saft",
+          "oder"
+        ],
+        "correctOrder": [
+          "Werdet",
+          "ihr",
+          "Saft",
+          "oder",
+          "Cola",
+          "trinken"
+        ],
+        "tip": "a2Course.tipFutur"
       },
       {
         "id": 10,
         "type": "speechToText",
         "question": "pluralLandQuestFour.questTen",
         "text": "Die Kinder werden im Garten spielen",
-        "answer": "Die Kinder werden im Garten spielen"
+        "answer": "Die Kinder werden im Garten spielen",
+        "tip": "a2Course.tipFutur"
       },
       {
         "id": 11,
         "type": "reorder",
-        "question": "pluralLandQuestFour.questEleven",
-        "words": ["schmücken", "Zimmer", "Luftballons", "Wir", "das", "mit", "werden"],
-        "correctOrder": ["Wir", "werden", "das", "Zimmer", "mit", "Luftballons", "schmücken"]
+        "question": "pluralLandQuestThree.questTwo",
+        "words": [
+          "kaufen",
+          "Wir",
+          "werde",
+          "Tickets",
+          "morgen",
+          "die",
+          "werden"
+        ],
+        "correctOrder": [
+          "Wir",
+          "werden",
+          "morgen",
+          "die",
+          "Tickets",
+          "kaufen"
+        ],
+        "reviewOf": "future-three",
+        "reviewLand": "future-land",
+        "tip": "a2Course.tipFutur"
       },
       {
         "id": 12,
-        "type": "speechToText",
-        "question": "pluralLandQuestFour.questTwelve",
-        "text": "Ihr werdet viel Spaß haben",
-        "answer": "Ihr werdet viel Spaß haben"
+        "type": "reorder",
+        "question": "pluralLandQuestOne.questFour",
+        "words": [
+          "besuchen",
+          "meine",
+          "werde",
+          "Ich",
+          "Freunde"
+        ],
+        "correctOrder": [
+          "Ich",
+          "werde",
+          "meine",
+          "Freunde",
+          "besuchen"
+        ],
+        "reviewOf": "future-one",
+        "reviewLand": "future-land",
+        "tip": "a2Course.tipFutur"
       },
       {
         "id": 13,
         "type": "reorder",
         "question": "pluralLandQuestFour.questThirteen",
-        "words": ["bleiben", "Wir", "bis", "werden", "morgen"],
-        "correctOrder": ["Wir", "werden", "bis", "morgen", "bleiben"]
+        "words": [
+          "bleiben",
+          "Wir",
+          "bis",
+          "werden",
+          "morgen"
+        ],
+        "correctOrder": [
+          "Wir",
+          "werden",
+          "bis",
+          "morgen",
+          "bleiben"
+        ],
+        "tip": "a2Course.tipFutur"
       },
       {
         "id": 14,
         "type": "speechToText",
         "question": "pluralLandQuestFour.questFourteen",
         "text": "Wir werden viele Fotos machen",
-        "answer": "Wir werden viele Fotos machen"
+        "answer": "Wir werden viele Fotos machen",
+        "tip": "a2Course.tipFutur"
       },
       {
         "id": 15,
         "type": "reorder",
         "question": "pluralLandQuestFour.questFifteen",
-        "words": ["wird", "hören", "zusammen", "Wir", "Musik", "werden"],
-        "correctOrder": ["Wir", "werden", "zusammen", "Musik", "hören"]
+        "words": [
+          "wird",
+          "hören",
+          "zusammen",
+          "Wir",
+          "Musik",
+          "werden"
+        ],
+        "correctOrder": [
+          "Wir",
+          "werden",
+          "zusammen",
+          "Musik",
+          "hören"
+        ],
+        "tip": "a2Course.tipFutur"
+      }
+    ],
+    "vocabulary": [
+      {
+        "word": "alle",
+        "translation-ru": "все",
+        "translation-en": "all",
+        "translation-uk": "усі",
+        "translation-pl": "wszyscy",
+        "translation-es": "todos",
+        "translation-fr": "tous",
+        "translation-tr": "hepsi",
+        "translation-ro": "toți",
+        "translation-uz": "hamma",
+        "translation-hi": "सब",
+        "translation-ar": "الجميع"
+      },
+      {
+        "word": "lecker",
+        "translation-ru": "вкусный",
+        "translation-en": "tasty",
+        "translation-uk": "смачний",
+        "translation-pl": "smaczny",
+        "translation-es": "rico",
+        "translation-fr": "délicieux",
+        "translation-tr": "lezzetli",
+        "translation-ro": "gustos",
+        "translation-uz": "mazali",
+        "translation-hi": "स्वादिष्ट",
+        "translation-ar": "لذيذ"
+      },
+      {
+        "word": "backen",
+        "translation-ru": "печь",
+        "translation-en": "to bake",
+        "translation-uk": "пекти",
+        "translation-pl": "piec",
+        "translation-es": "hornear",
+        "translation-fr": "faire cuire au four",
+        "translation-tr": "pişirmek (fırında)",
+        "translation-ro": "a coace",
+        "translation-uz": "pishirmoq (pechda)",
+        "translation-hi": "बेक करना",
+        "translation-ar": "يخبز"
+      },
+      {
+        "word": "bis",
+        "translation-ru": "пока не, до тех пор пока",
+        "translation-en": "until",
+        "translation-uk": "доки не",
+        "translation-pl": "aż, dopóki nie",
+        "translation-es": "hasta que",
+        "translation-fr": "jusqu’à ce que",
+        "translation-tr": "…e kadar",
+        "translation-ro": "până când",
+        "translation-uz": "…guncha",
+        "translation-hi": "जब तक",
+        "translation-ar": "حتى"
+      },
+      {
+        "word": "viel",
+        "translation-ru": "много",
+        "translation-en": "much, a lot",
+        "translation-uk": "багато",
+        "translation-pl": "dużo",
+        "translation-es": "mucho",
+        "translation-fr": "beaucoup",
+        "translation-tr": "çok",
+        "translation-ro": "mult",
+        "translation-uz": "ko‘p",
+        "translation-hi": "बहुत",
+        "translation-ar": "كثير"
+      },
+      {
+        "word": "die Cola",
+        "translation-ru": "кола",
+        "translation-en": "cola",
+        "translation-uk": "кола",
+        "translation-pl": "cola",
+        "translation-es": "la cola",
+        "translation-fr": "le cola",
+        "translation-tr": "kola",
+        "translation-ro": "cola",
+        "translation-uz": "kola",
+        "translation-hi": "कोला",
+        "translation-ar": "الكولا"
       }
     ]
   },
@@ -702,113 +1368,401 @@
         "id": 1,
         "type": "reorder",
         "question": "pluralLandQuestFive.questOne",
-        "words": ["gewinnen", "Spiel", "dieses", "Wir", "werden", "unbedingt"],
-        "correctOrder": ["Wir", "werden", "dieses", "Spiel", "unbedingt", "gewinnen"]
+        "words": [
+          "gewinnen",
+          "Spiel",
+          "dieses",
+          "Wir",
+          "werden",
+          "unbedingt"
+        ],
+        "correctOrder": [
+          "Wir",
+          "werden",
+          "dieses",
+          "Spiel",
+          "unbedingt",
+          "gewinnen"
+        ],
+        "tip": "a2Course.tipFutur"
       },
       {
         "id": 2,
         "type": "speechToText",
         "question": "pluralLandQuestFive.questTwo",
         "text": "Ihr werdet sehr schnell laufen",
-        "answer": "Ihr werdet sehr schnell laufen"
+        "answer": "Ihr werdet sehr schnell laufen",
+        "tip": "a2Course.tipFutur"
       },
       {
         "id": 3,
         "type": "reorder",
         "question": "pluralLandQuestFive.questThree",
-        "words": ["spielen", "gut", "Mannschaft", "Die", "wird", "morgen", "werden"],
-        "correctOrder": ["Die", "Mannschaft", "wird", "gut", "spielen"
-        ]
+        "words": [
+          "spielen",
+          "gut",
+          "Mannschaft",
+          "Die",
+          "wird",
+          "morgen",
+          "werden"
+        ],
+        "correctOrder": [
+          "Die",
+          "Mannschaft",
+          "wird",
+          "gut",
+          "spielen"
+        ],
+        "tip": "a2Course.tipFutur"
       },
       {
         "id": 4,
         "type": "reorder",
         "question": "pluralLandQuestFive.questFour",
-        "words": ["Tag", "trainieren", "jeden", "Sie", "werden"],
-        "correctOrder": ["Sie", "werden", "jeden", "Tag", "trainieren"]
+        "words": [
+          "Tag",
+          "trainieren",
+          "jeden",
+          "Sie",
+          "werden"
+        ],
+        "correctOrder": [
+          "Sie",
+          "werden",
+          "jeden",
+          "Tag",
+          "trainieren"
+        ],
+        "tip": "a2Course.tipFutur"
       },
       {
         "id": 5,
         "type": "speechToText",
         "question": "pluralLandQuestFive.questFive",
         "text": "Wir werden ins Stadion gehen",
-        "answer": "Wir werden ins Stadion gehen"
+        "answer": "Wir werden ins Stadion gehen",
+        "tip": "a2Course.tipFutur"
       },
       {
         "id": 6,
         "type": "reorder",
         "question": "pluralLandQuestFive.questSix",
-        "words": ["gehen", "Fußball", "zum", "Werdet", "ihr"],
-        "correctOrder": ["Werdet", "ihr", "zum", "Fußball", "gehen"]
+        "words": [
+          "gehen",
+          "Fußball",
+          "zum",
+          "Werdet",
+          "ihr"
+        ],
+        "correctOrder": [
+          "Werdet",
+          "ihr",
+          "zum",
+          "Fußball",
+          "gehen"
+        ],
+        "tip": "a2Course.tipFutur"
       },
       {
         "id": 7,
         "type": "speechToText",
         "question": "pluralLandQuestFive.questSeven",
         "text": "Der Trainer wird uns helfen",
-        "answer": "Der Trainer wird uns helfen"
+        "answer": "Der Trainer wird uns helfen",
+        "tip": "a2Course.tipFutur"
       },
       {
         "id": 8,
         "type": "select",
         "question": "pluralLandQuestFive.questEight",
-        "options": ["Wir werden sehen", "Wir sehen werden", "Wir wird sehen"],
-        "answer": "Wir werden sehen"
+        "options": [
+          "Wir werden sehen",
+          "Wir sehen werden",
+          "Wir wird sehen"
+        ],
+        "answer": "Wir werden sehen",
+        "tip": "a2Course.tipFutur"
       },
       {
         "id": 9,
         "type": "speechToText",
         "question": "pluralLandQuestFive.questNine",
         "text": "Das Spiel wird sehr spannend sein",
-        "answer": "Das Spiel wird sehr spannend sein"
+        "answer": "Das Spiel wird sehr spannend sein",
+        "tip": "a2Course.tipFutur"
       },
       {
         "id": 10,
         "type": "reorder",
         "question": "pluralLandQuestFive.questTen",
-        "words": ["Zuschauer", "laut", "Die", "werden", "schreien", "werden"],
-        "correctOrder": ["Die", "Zuschauer", "werden", "laut", "schreien"]
+        "words": [
+          "Zuschauer",
+          "laut",
+          "Die",
+          "werden",
+          "schreien",
+          "werden"
+        ],
+        "correctOrder": [
+          "Die",
+          "Zuschauer",
+          "werden",
+          "laut",
+          "schreien"
+        ],
+        "tip": "a2Course.tipFutur"
       },
       {
         "id": 11,
         "type": "reorder",
-        "question": "pluralLandQuestFive.questEleven",
-        "words": ["sein", "müde", "Spiel", "nach", "dem", "Ihr", "werdet", "wird"],
-        "correctOrder": ["Ihr", "werdet", "nach", "dem", "Spiel", "müde", "sein"]
+        "question": "pluralLandQuestFour.questOne",
+        "words": [
+          "machen",
+          "Party",
+          "große",
+          "Samstag",
+          "Wir",
+          "in",
+          "werden",
+          "eine",
+          "am"
+        ],
+        "correctOrder": [
+          "Wir",
+          "werden",
+          "am",
+          "Samstag",
+          "eine",
+          "große",
+          "Party",
+          "machen"
+        ],
+        "reviewOf": "future-four",
+        "reviewLand": "future-land",
+        "tip": "a2Course.tipFutur"
       },
       {
         "id": 12,
-        "type": "speechToText",
-        "question": "pluralLandQuestFive.questTwelve",
-        "text": "Sie werden ein Tor schießen",
-        "answer": "Sie werden ein Tor schießen"
+        "type": "reorder",
+        "question": "pluralLandQuestTwo.questThree",
+        "words": [
+          "Wörter",
+          "lernen",
+          "werde",
+          "Ich",
+          "mehr",
+          "deutsche"
+        ],
+        "correctOrder": [
+          "Ich",
+          "werde",
+          "mehr",
+          "deutsche",
+          "Wörter",
+          "lernen"
+        ],
+        "reviewOf": "future-two",
+        "reviewLand": "future-land",
+        "tip": "a2Course.tipFutur"
       },
       {
         "id": 13,
         "type": "reorder",
         "question": "pluralLandQuestFive.questThirteen",
-        "words": ["bekommen", "Spiel", "Wer", "gewinnen", "wird", "das"],
-        "correctOrder": ["Wer", "wird", "das", "Spiel", "gewinnen"]
+        "words": [
+          "bekommen",
+          "Spiel",
+          "Wer",
+          "gewinnen",
+          "wird",
+          "das"
+        ],
+        "correctOrder": [
+          "Wer",
+          "wird",
+          "das",
+          "Spiel",
+          "gewinnen"
+        ],
+        "tip": "a2Course.tipFutur"
       },
       {
         "id": 14,
         "type": "speechToText",
         "question": "pluralLandQuestFive.questFourteen",
-        "text": "Wir werden den ersten Platz machen",
-        "answer": "Wir werden den ersten Platz machen"
+        "text": "Wir werden den ersten Platz belegen",
+        "answer": "Wir werden den ersten Platz belegen",
+        "tip": "a2Course.tipFutur"
       },
       {
         "id": 15,
         "type": "reorder",
         "question": "pluralLandQuestFive.questFifteen",
-        "words": ["wird", "machen", "Sport", "Wir", "werden"],
-        "correctOrder": ["Wir", "werden", "Sport", "machen"]
+        "words": [
+          "wird",
+          "machen",
+          "Sport",
+          "Wir",
+          "werden"
+        ],
+        "correctOrder": [
+          "Wir",
+          "werden",
+          "Sport",
+          "machen"
+        ],
+        "tip": "a2Course.tipFutur"
+      }
+    ],
+    "vocabulary": [
+      {
+        "word": "gewinnen",
+        "translation-ru": "выигрывать",
+        "translation-en": "to win",
+        "translation-uk": "вигравати",
+        "translation-pl": "wygrywać",
+        "translation-es": "ganar",
+        "translation-fr": "gagner",
+        "translation-tr": "kazanmak",
+        "translation-ro": "a câștiga",
+        "translation-uz": "yutmoq",
+        "translation-hi": "जीतना",
+        "translation-ar": "يفوز"
+      },
+      {
+        "word": "die Mannschaft",
+        "translation-ru": "команда",
+        "translation-en": "team",
+        "translation-uk": "команда",
+        "translation-pl": "drużyna",
+        "translation-es": "equipo",
+        "translation-fr": "équipe",
+        "translation-tr": "takım",
+        "translation-ro": "echipă",
+        "translation-uz": "jamoa",
+        "translation-hi": "टीम",
+        "translation-ar": "فريق"
+      },
+      {
+        "word": "trainieren",
+        "translation-ru": "тренироваться",
+        "translation-en": "to train",
+        "translation-uk": "тренуватися",
+        "translation-pl": "trenować",
+        "translation-es": "entrenar",
+        "translation-fr": "s’entraîner",
+        "translation-tr": "antrenman yapmak",
+        "translation-ro": "a se antrena",
+        "translation-uz": "mashq qilmoq",
+        "translation-hi": "अभ्यास करना",
+        "translation-ar": "يتدرب"
+      },
+      {
+        "word": "das Stadion",
+        "translation-ru": "стадион",
+        "translation-en": "stadium",
+        "translation-uk": "стадіон",
+        "translation-pl": "stadion",
+        "translation-es": "estadio",
+        "translation-fr": "stade",
+        "translation-tr": "stadyum",
+        "translation-ro": "stadion",
+        "translation-uz": "stadion",
+        "translation-hi": "स्टेडियम",
+        "translation-ar": "استاد"
+      },
+      {
+        "word": "der Fußball",
+        "translation-ru": "футбол",
+        "translation-en": "football",
+        "translation-uk": "футбол",
+        "translation-pl": "piłka nożna",
+        "translation-es": "fútbol",
+        "translation-fr": "football",
+        "translation-tr": "futbol",
+        "translation-ro": "fotbal",
+        "translation-uz": "futbol",
+        "translation-hi": "फ़ुटबॉल",
+        "translation-ar": "كرة القدم"
+      },
+      {
+        "word": "unbedingt",
+        "translation-ru": "обязательно",
+        "translation-en": "definitely",
+        "translation-uk": "обов’язково",
+        "translation-pl": "koniecznie",
+        "translation-es": "sin falta",
+        "translation-fr": "absolument",
+        "translation-tr": "mutlaka",
+        "translation-ro": "neapărat",
+        "translation-uz": "albatta",
+        "translation-hi": "ज़रूर",
+        "translation-ar": "بالتأكيد"
+      },
+      {
+        "word": "der Trainer",
+        "translation-ru": "тренер",
+        "translation-en": "coach",
+        "translation-uk": "тренер",
+        "translation-pl": "trener",
+        "translation-es": "entrenador",
+        "translation-fr": "entraîneur",
+        "translation-tr": "antrenör",
+        "translation-ro": "antrenor",
+        "translation-uz": "trener",
+        "translation-hi": "प्रशिक्षक",
+        "translation-ar": "مدرب"
+      },
+      {
+        "word": "der Zuschauer",
+        "translation-ru": "зритель",
+        "translation-en": "spectator",
+        "translation-uk": "глядач",
+        "translation-pl": "widz",
+        "translation-es": "el espectador",
+        "translation-fr": "le spectateur",
+        "translation-tr": "seyirci",
+        "translation-ro": "spectatorul",
+        "translation-uz": "tomoshabin",
+        "translation-hi": "दर्शक",
+        "translation-ar": "المشاهد"
+      },
+      {
+        "word": "schreien",
+        "translation-ru": "кричать",
+        "translation-en": "to shout / scream",
+        "translation-uk": "кричати",
+        "translation-pl": "krzyczeć",
+        "translation-es": "gritar",
+        "translation-fr": "crier",
+        "translation-tr": "bağırmak",
+        "translation-ro": "a striga",
+        "translation-uz": "baqirmoq",
+        "translation-hi": "चिल्लाना",
+        "translation-ar": "يصرخ"
+      },
+      {
+        "word": "belegen",
+        "translation-ru": "занимать (место)",
+        "translation-en": "to take (a place)",
+        "translation-uk": "посідати (місце)",
+        "translation-pl": "zajmować (miejsce)",
+        "translation-es": "ocupar",
+        "translation-fr": "occuper",
+        "translation-tr": "almak (sıra)",
+        "translation-ro": "a ocupa",
+        "translation-uz": "egallamoq",
+        "translation-hi": "स्थान पाना",
+        "translation-ar": "يحتل"
       }
     ]
   },
   {
     "questId": "future-six",
-    "aliases": ["futur-leisure"],
+    "aliases": [
+      "futur-leisure"
+    ],
     "title": "pluralLandQuestSix.title",
     "progress": "0/15",
     "description": "pluralLandQuestSix.description",
@@ -826,110 +1780,346 @@
         "id": 1,
         "type": "reorder",
         "question": "pluralLandQuestSix.questOne",
-        "words": ["werden", "in", "schlafen", "werde", "lange", "Samstag", "Ich", "am"],
-        "correctOrder": ["Ich", "werde", "am", "Samstag", "lange", "schlafen"]
+        "words": [
+          "werden",
+          "in",
+          "schlafen",
+          "werde",
+          "lange",
+          "Samstag",
+          "Ich",
+          "am"
+        ],
+        "correctOrder": [
+          "Ich",
+          "werde",
+          "am",
+          "Samstag",
+          "lange",
+          "schlafen"
+        ],
+        "tip": "a2Course.tipFutur"
       },
       {
         "id": 2,
         "type": "speechToText",
         "question": "pluralLandQuestSix.questTwo",
         "text": "Wir werden zusammen frühstücken",
-        "answer": "Wir werden zusammen frühstücken"
+        "answer": "Wir werden zusammen frühstücken",
+        "tip": "a2Course.tipFutur"
       },
       {
         "id": 3,
         "type": "reorder",
         "question": "pluralLandQuestSix.questThree",
-        "words": ["gehen", "werdet", "Kino", "Bruder", "ins", "Mein", "wird"],
-        "correctOrder": ["Mein", "Bruder", "wird", "ins", "Kino", "gehen"]
+        "words": [
+          "gehen",
+          "werdet",
+          "Kino",
+          "Bruder",
+          "ins",
+          "Mein",
+          "wird"
+        ],
+        "correctOrder": [
+          "Mein",
+          "Bruder",
+          "wird",
+          "ins",
+          "Kino",
+          "gehen"
+        ],
+        "tip": "a2Course.tipFutur"
       },
       {
         "id": 4,
         "type": "speechToText",
         "question": "pluralLandQuestSix.questFour",
         "text": "Ich werde am Nachmittag einkaufen gehen",
-        "answer": "Ich werde am Nachmittag einkaufen gehen"
+        "answer": "Ich werde am Nachmittag einkaufen gehen",
+        "tip": "a2Course.tipFutur"
       },
       {
         "id": 5,
         "type": "reorder",
         "question": "pluralLandQuestSix.questFive",
-        "words": ["gehen", "Park", "spazieren", "im", "Wir", "werden"],
-        "correctOrder": ["Wir", "werden", "im", "Park", "spazieren", "gehen"]
+        "words": [
+          "gehen",
+          "Park",
+          "spazieren",
+          "im",
+          "Wir",
+          "werden"
+        ],
+        "correctOrder": [
+          "Wir",
+          "werden",
+          "im",
+          "Park",
+          "spazieren",
+          "gehen"
+        ],
+        "tip": "a2Course.tipFutur"
       },
       {
         "id": 6,
         "type": "reorder",
         "question": "pluralLandQuestSix.questSix",
-        "words": ["machen", "Sonntag", "werden", "am", "Was", "Sie", "werdet"],
-        "correctOrder": ["Was", "werden", "Sie", "am", "Sonntag", "machen"]
+        "words": [
+          "machen",
+          "Sonntag",
+          "werden",
+          "am",
+          "Was",
+          "Sie",
+          "werdet"
+        ],
+        "correctOrder": [
+          "Was",
+          "werden",
+          "Sie",
+          "am",
+          "Sonntag",
+          "machen"
+        ],
+        "tip": "a2Course.tipFutur"
       },
       {
         "id": 7,
         "type": "speechToText",
         "question": "pluralLandQuestSix.questSeven",
         "text": "Das Wetter wird schön sein",
-        "answer": "Das Wetter wird schön sein"
+        "answer": "Das Wetter wird schön sein",
+        "tip": "a2Course.tipFutur"
       },
       {
         "id": 8,
         "type": "reorder",
         "question": "pluralLandQuestSix.questEight",
-        "words": ["schauen", "Abend", "Film", "Wir", "werden", "einen", "am"],
-        "correctOrder": ["Wir", "werden", "am", "Abend", "einen", "Film", "schauen"]
+        "words": [
+          "schauen",
+          "Abend",
+          "Film",
+          "Wir",
+          "werden",
+          "einen",
+          "am"
+        ],
+        "correctOrder": [
+          "Wir",
+          "werden",
+          "am",
+          "Abend",
+          "einen",
+          "Film",
+          "schauen"
+        ],
+        "tip": "a2Course.tipFutur"
       },
       {
         "id": 9,
         "type": "speechToText",
         "question": "pluralLandQuestSix.questNine",
         "text": "Meine Freunde werden mich besuchen",
-        "answer": "Meine Freunde werden mich besuchen"
+        "answer": "Meine Freunde werden mich besuchen",
+        "tip": "a2Course.tipFutur"
       },
       {
         "id": 10,
         "type": "reorder",
         "question": "pluralLandQuestSix.questTen",
-        "words": ["arbeiten", "Wochenende", "diesem", "nicht", "Ich", "werde", "an"],
-        "correctOrder": ["Ich", "werde", "an", "diesem", "Wochenende", "nicht", "arbeiten"]
+        "words": [
+          "arbeiten",
+          "Wochenende",
+          "diesem",
+          "nicht",
+          "Ich",
+          "werde",
+          "an"
+        ],
+        "correctOrder": [
+          "Ich",
+          "werde",
+          "an",
+          "diesem",
+          "Wochenende",
+          "nicht",
+          "arbeiten"
+        ],
+        "tip": "a2Course.tipFutur"
       },
       {
         "id": 11,
         "type": "reorder",
-        "question": "pluralLandQuestSix.questEleven",
-        "words": ["kochen", "Pizza", "Wir", "werden", "zusammen"],
-        "correctOrder": ["Wir", "werden", "zusammen", "Pizza", "kochen"]
+        "question": "pluralLandQuestFive.questOne",
+        "words": [
+          "gewinnen",
+          "Spiel",
+          "dieses",
+          "Wir",
+          "werden",
+          "unbedingt"
+        ],
+        "correctOrder": [
+          "Wir",
+          "werden",
+          "dieses",
+          "Spiel",
+          "unbedingt",
+          "gewinnen"
+        ],
+        "reviewOf": "future-five",
+        "reviewLand": "future-land",
+        "tip": "a2Course.tipFutur"
       },
       {
         "id": 12,
-        "type": "speechToText",
-        "question": "pluralLandQuestSix.questTwelve",
-        "text": "Wir werden um zehn Uhr frühstücken",
-        "answer": "Wir werden um zehn Uhr frühstücken",
-        "accept": [
-          "Wir werden um zehn Uhr frühstücken",
-          "Wir werden um 10 Uhr frühstücken"
-        ]
+        "type": "reorder",
+        "question": "pluralLandQuestThree.questSeven",
+        "words": [
+          "bekommen",
+          "wird",
+          "Antwort",
+          "bald",
+          "die",
+          "werdet",
+          "Ihr"
+        ],
+        "correctOrder": [
+          "Ihr",
+          "werdet",
+          "bald",
+          "die",
+          "Antwort",
+          "bekommen"
+        ],
+        "reviewOf": "future-three",
+        "reviewLand": "future-land",
+        "tip": "a2Course.tipFutur"
       },
       {
         "id": 13,
         "type": "reorder",
         "question": "pluralLandQuestSix.questThirteen",
-        "words": ["dauern", "Film", "Stunden", "wird", "Der", "zwei"],
-        "correctOrder": ["Der", "Film", "wird", "zwei", "Stunden", "dauern"]
+        "words": [
+          "dauern",
+          "Film",
+          "Stunden",
+          "wird",
+          "Der",
+          "zwei"
+        ],
+        "correctOrder": [
+          "Der",
+          "Film",
+          "wird",
+          "zwei",
+          "Stunden",
+          "dauern"
+        ],
+        "tip": "a2Course.tipFutur"
       },
       {
         "id": 14,
         "type": "speechToText",
         "question": "pluralLandQuestSix.questFourteen",
         "text": "Wir werden viel Zeit haben",
-        "answer": "Wir werden viel Zeit haben"
+        "answer": "Wir werden viel Zeit haben",
+        "tip": "a2Course.tipFutur"
       },
       {
         "id": 15,
         "type": "reorder",
         "question": "pluralLandQuestSix.questFifteen",
-        "words": ["sein", "tolles", "Das", "Wochenende", "ein", "wird"],
-        "correctOrder": ["Das", "wird", "ein", "tolles", "Wochenende", "sein"]
+        "words": [
+          "sein",
+          "tolles",
+          "Das",
+          "Wochenende",
+          "ein",
+          "wird"
+        ],
+        "correctOrder": [
+          "Das",
+          "wird",
+          "ein",
+          "tolles",
+          "Wochenende",
+          "sein"
+        ],
+        "tip": "a2Course.tipFutur"
+      }
+    ],
+    "vocabulary": [
+      {
+        "word": "der Film",
+        "translation-ru": "фильм",
+        "translation-en": "film",
+        "translation-uk": "фільм",
+        "translation-pl": "film",
+        "translation-es": "la película",
+        "translation-fr": "le film",
+        "translation-tr": "film",
+        "translation-ro": "filmul",
+        "translation-uz": "film",
+        "translation-hi": "फ़िल्म",
+        "translation-ar": "الفيلم"
+      },
+      {
+        "word": "schauen",
+        "translation-ru": "смотреть / глядеть",
+        "translation-en": "to look / watch",
+        "translation-uk": "дивитися",
+        "translation-pl": "patrzeć",
+        "translation-es": "mirar",
+        "translation-fr": "regarder",
+        "translation-tr": "bakmak",
+        "translation-ro": "a privi",
+        "translation-uz": "qaramoq",
+        "translation-hi": "देखना",
+        "translation-ar": "ينظر"
+      },
+      {
+        "word": "dauern",
+        "translation-ru": "длиться",
+        "translation-en": "to last",
+        "translation-uk": "тривати",
+        "translation-pl": "trwać",
+        "translation-es": "durar",
+        "translation-fr": "durer",
+        "translation-tr": "sürmek",
+        "translation-ro": "a dura",
+        "translation-uz": "davom etmoq",
+        "translation-hi": "चलना, लगना",
+        "translation-ar": "يستغرق"
+      },
+      {
+        "word": "gewinnen",
+        "translation-ru": "выигрывать",
+        "translation-en": "to win",
+        "translation-uk": "вигравати",
+        "translation-pl": "wygrywać",
+        "translation-es": "ganar",
+        "translation-fr": "gagner",
+        "translation-tr": "kazanmak",
+        "translation-ro": "a câștiga",
+        "translation-uz": "yutmoq",
+        "translation-hi": "जीतना",
+        "translation-ar": "يفوز"
+      },
+      {
+        "word": "viel",
+        "translation-ru": "много",
+        "translation-en": "much, a lot",
+        "translation-uk": "багато",
+        "translation-pl": "dużo",
+        "translation-es": "mucho",
+        "translation-fr": "beaucoup",
+        "translation-tr": "çok",
+        "translation-ro": "mult",
+        "translation-uz": "ko‘p",
+        "translation-hi": "बहुत",
+        "translation-ar": "كثير"
       }
     ]
   },
@@ -955,111 +2145,419 @@
         "id": 1,
         "type": "reorder",
         "question": "pluralLandQuestSeven.questOne",
-        "words": ["Woche", "umziehen", "nächste", "werde", "Ich"],
-        "correctOrder": ["Ich", "werde", "nächste", "Woche", "umziehen"]
+        "words": [
+          "Woche",
+          "umziehen",
+          "nächste",
+          "werde",
+          "Ich"
+        ],
+        "correctOrder": [
+          "Ich",
+          "werde",
+          "nächste",
+          "Woche",
+          "umziehen"
+        ],
+        "tip": "a2Course.tipFutur"
       },
       {
         "id": 2,
         "type": "reorder",
         "question": "pluralLandQuestSeven.questTwo",
-        "words": ["brauchen", "werdet", "Wir", "Kartons", "viele", "werden"],
-        "correctOrder": ["Wir", "werden", "viele", "Kartons", "brauchen"]
+        "words": [
+          "brauchen",
+          "werdet",
+          "Wir",
+          "Kartons",
+          "viele",
+          "werden"
+        ],
+        "correctOrder": [
+          "Wir",
+          "werden",
+          "viele",
+          "Kartons",
+          "brauchen"
+        ],
+        "tip": "a2Course.tipFutur"
       },
       {
         "id": 3,
         "type": "speechToText",
         "question": "pluralLandQuestSeven.questThree",
         "text": "Der LKW wird pünktlich kommen",
-        "answer": "Der LKW wird pünktlich kommen"
+        "answer": "Der LKW wird pünktlich kommen",
+        "tip": "a2Course.tipFutur"
       },
       {
         "id": 4,
         "type": "reorder",
         "question": "pluralLandQuestSeven.questFour",
-        "words": ["helfen", "Freunde", "Tragen", "uns", "beim", "Die", "werden"],
-        "correctOrder": ["Die", "Freunde", "werden", "uns", "beim", "Tragen", "helfen"],
+        "words": [
+          "helfen",
+          "Freunde",
+          "Tragen",
+          "uns",
+          "beim",
+          "Die",
+          "werden"
+        ],
+        "correctOrder": [
+          "Die",
+          "Freunde",
+          "werden",
+          "uns",
+          "beim",
+          "Tragen",
+          "helfen"
+        ],
         "tip": "pluralLandQuestSeven.questFourTip"
       },
       {
         "id": 5,
         "type": "reorder",
         "question": "pluralLandQuestSeven.questFive",
-        "words": ["werdet", "fahren", "wird", "Wer", "Auto", "das"],
-        "correctOrder": ["Wer", "wird", "das", "Auto", "fahren"]
+        "words": [
+          "werdet",
+          "fahren",
+          "wird",
+          "Wer",
+          "Auto",
+          "das"
+        ],
+        "correctOrder": [
+          "Wer",
+          "wird",
+          "das",
+          "Auto",
+          "fahren"
+        ],
+        "tip": "a2Course.tipFutur"
       },
       {
         "id": 6,
         "type": "reorder",
         "question": "pluralLandQuestSeven.questSix",
-        "words": ["streichen", "Wände", "weiß", "Wir", "die", "werden"],
-        "correctOrder": ["Wir", "werden", "die", "Wände", "weiß", "streichen"]
+        "words": [
+          "streichen",
+          "Wände",
+          "weiß",
+          "Wir",
+          "die",
+          "werden"
+        ],
+        "correctOrder": [
+          "Wir",
+          "werden",
+          "die",
+          "Wände",
+          "weiß",
+          "streichen"
+        ],
+        "tip": "a2Course.tipFutur"
       },
       {
         "id": 7,
         "type": "speechToText",
         "question": "pluralLandQuestSeven.questSeven",
         "text": "Ich werde meine alten Möbel verkaufen",
-        "answer": "Ich werde meine alten Möbel verkaufen"
+        "answer": "Ich werde meine alten Möbel verkaufen",
+        "tip": "a2Course.tipFutur"
       },
       {
         "id": 8,
         "type": "reorder",
         "question": "pluralLandQuestSeven.questEight",
-        "words": ["Schlüssel", "du", "Wann", "bekommen", "wirst", "den"],
-        "correctOrder": ["Wann", "wirst", "du", "den", "Schlüssel", "bekommen"]
+        "words": [
+          "Schlüssel",
+          "du",
+          "Wann",
+          "bekommen",
+          "wirst",
+          "den"
+        ],
+        "correctOrder": [
+          "Wann",
+          "wirst",
+          "du",
+          "den",
+          "Schlüssel",
+          "bekommen"
+        ],
+        "tip": "a2Course.tipFutur"
       },
       {
         "id": 9,
         "type": "reorder",
         "question": "pluralLandQuestSeven.questNine",
-        "words": ["sein", "Wohnung", "schön", "sehr", "wird", "Die", "neue"],
-        "correctOrder": ["Die", "neue", "Wohnung", "wird", "sehr", "schön", "sein"]
+        "words": [
+          "sein",
+          "Wohnung",
+          "schön",
+          "sehr",
+          "wird",
+          "Die",
+          "neue"
+        ],
+        "correctOrder": [
+          "Die",
+          "neue",
+          "Wohnung",
+          "wird",
+          "sehr",
+          "schön",
+          "sein"
+        ],
+        "tip": "a2Course.tipFutur"
       },
       {
         "id": 10,
         "type": "speechToText",
         "question": "pluralLandQuestSeven.questTen",
         "text": "Wir werden den Mietvertrag unterschreiben",
-        "answer": "Wir werden den Mietvertrag unterschreiben"
+        "answer": "Wir werden den Mietvertrag unterschreiben",
+        "tip": "a2Course.tipFutur"
       },
       {
         "id": 11,
-        "type": "select",
-        "question": "pluralLandQuestSeven.questEleven",
-        "options": [
-          "Ihr werdet viel Platz haben",
-          "Ihr werden viel Platz haben",
-          "Ihr wird viel Platz haben"
+        "type": "reorder",
+        "question": "pluralLandQuestSix.questOne",
+        "words": [
+          "werden",
+          "in",
+          "schlafen",
+          "werde",
+          "lange",
+          "Samstag",
+          "Ich",
+          "am"
         ],
-        "answer": "Ihr werdet viel Platz haben"
+        "correctOrder": [
+          "Ich",
+          "werde",
+          "am",
+          "Samstag",
+          "lange",
+          "schlafen"
+        ],
+        "reviewOf": "future-six",
+        "reviewLand": "future-land",
+        "tip": "a2Course.tipFutur"
       },
       {
         "id": 12,
         "type": "reorder",
-        "question": "pluralLandQuestSeven.questTwelve",
-        "words": ["werden", "auspacken", "Sachen", "alle", "werde", "Ich", "morgen"],
-        "correctOrder": ["Ich", "werde", "morgen", "alle", "Sachen", "auspacken"]
+        "question": "pluralLandQuestFour.questThree",
+        "words": [
+          "mitbringen",
+          "werdet",
+          "Geschenke",
+          "Gäste",
+          "Die",
+          "werden"
+        ],
+        "correctOrder": [
+          "Die",
+          "Gäste",
+          "werden",
+          "Geschenke",
+          "mitbringen"
+        ],
+        "reviewOf": "future-four",
+        "reviewLand": "future-land",
+        "tip": "a2Course.tipFutur"
       },
       {
         "id": 13,
         "type": "reorder",
         "question": "pluralLandQuestSeven.questThirteen",
-        "words": ["wird", "aufbauen", "Möbel", "Wir", "die", "werden"],
-        "correctOrder": ["Wir", "werden", "die", "Möbel", "aufbauen"]
+        "words": [
+          "wird",
+          "aufbauen",
+          "Möbel",
+          "Wir",
+          "die",
+          "werden"
+        ],
+        "correctOrder": [
+          "Wir",
+          "werden",
+          "die",
+          "Möbel",
+          "aufbauen"
+        ],
+        "tip": "a2Course.tipFutur"
       },
       {
         "id": 14,
         "type": "speechToText",
         "question": "pluralLandQuestSeven.questFourteen",
         "text": "Das wird viel Arbeit sein",
-        "answer": "Das wird viel Arbeit sein"
+        "answer": "Das wird viel Arbeit sein",
+        "tip": "a2Course.tipFutur"
       },
       {
         "id": 15,
         "type": "reorder",
         "question": "pluralLandQuestSeven.questFifteen",
-        "words": ["aufhängen", "Lampen", "Wir", "die", "werden"],
-        "correctOrder": ["Wir", "werden", "die", "Lampen", "aufhängen"]
+        "words": [
+          "aufhängen",
+          "Lampen",
+          "Wir",
+          "die",
+          "werden"
+        ],
+        "correctOrder": [
+          "Wir",
+          "werden",
+          "die",
+          "Lampen",
+          "aufhängen"
+        ],
+        "tip": "a2Course.tipFutur"
+      }
+    ],
+    "vocabulary": [
+      {
+        "word": "umziehen",
+        "translation-ru": "переезжать",
+        "translation-en": "to move house",
+        "translation-uk": "переїжджати",
+        "translation-pl": "przeprowadzać się",
+        "translation-es": "mudarse",
+        "translation-fr": "déménager",
+        "translation-tr": "taşınmak",
+        "translation-ro": "a se muta",
+        "translation-uz": "ko‘chib o‘tmoq",
+        "translation-hi": "घर बदलना",
+        "translation-ar": "ينتقل"
+      },
+      {
+        "word": "streichen",
+        "translation-ru": "красить / вычеркивать",
+        "translation-en": "to paint / strike / roam",
+        "translation-uk": "фарбувати / викреслювати",
+        "translation-pl": "malować / skreślać",
+        "translation-es": "pintar / tachar",
+        "translation-fr": "peindre / rayer",
+        "translation-tr": "boyamak / silmek",
+        "translation-ro": "a picta / a tăia",
+        "translation-uz": "bo'yamoq / o'chirmoq",
+        "translation-hi": "पेंट करना / मिटाना",
+        "translation-ar": "دهن / شطب"
+      },
+      {
+        "word": "verkaufen",
+        "translation-ru": "продавать",
+        "translation-en": "to sell",
+        "translation-uk": "продавати",
+        "translation-pl": "sprzedawać",
+        "translation-es": "vender",
+        "translation-fr": "vendre",
+        "translation-tr": "satmak",
+        "translation-ro": "a vinde",
+        "translation-uz": "sotmoq",
+        "translation-hi": "बेचना",
+        "translation-ar": "يبيع"
+      },
+      {
+        "word": "viel",
+        "translation-ru": "много",
+        "translation-en": "much, a lot",
+        "translation-uk": "багато",
+        "translation-pl": "dużo",
+        "translation-es": "mucho",
+        "translation-fr": "beaucoup",
+        "translation-tr": "çok",
+        "translation-ro": "mult",
+        "translation-uz": "ko‘p",
+        "translation-hi": "बहुत",
+        "translation-ar": "كثير"
+      },
+      {
+        "word": "der Freund",
+        "translation-ru": "друг",
+        "translation-en": "friend",
+        "translation-uk": "друг",
+        "translation-pl": "przyjaciel",
+        "translation-es": "el amigo",
+        "translation-fr": "l’ami",
+        "translation-tr": "arkadaş",
+        "translation-ro": "prietenul",
+        "translation-uz": "do‘st",
+        "translation-hi": "दोस्त",
+        "translation-ar": "الصديق"
+      },
+      {
+        "word": "der Karton",
+        "translation-ru": "коробка",
+        "translation-en": "cardboard box",
+        "translation-uk": "коробка",
+        "translation-pl": "karton",
+        "translation-es": "la caja",
+        "translation-fr": "le carton",
+        "translation-tr": "koli",
+        "translation-ro": "cutia",
+        "translation-uz": "quti",
+        "translation-hi": "डिब्बा",
+        "translation-ar": "الصندوق الكرتوني"
+      },
+      {
+        "word": "die Möbel",
+        "translation-ru": "мебель",
+        "translation-en": "furniture",
+        "translation-uk": "меблі",
+        "translation-pl": "meble",
+        "translation-es": "los muebles",
+        "translation-fr": "les meubles",
+        "translation-tr": "mobilya",
+        "translation-ro": "mobila",
+        "translation-uz": "mebel",
+        "translation-hi": "फ़र्नीचर",
+        "translation-ar": "الأثاث"
+      },
+      {
+        "word": "der Mietvertrag",
+        "translation-ru": "договор аренды",
+        "translation-en": "rental contract",
+        "translation-uk": "договір оренди",
+        "translation-pl": "umowa najmu",
+        "translation-es": "el contrato de alquiler",
+        "translation-fr": "le bail",
+        "translation-tr": "kira sözleşmesi",
+        "translation-ro": "contractul de închiriere",
+        "translation-uz": "ijara shartnomasi",
+        "translation-hi": "किराया अनुबंध",
+        "translation-ar": "عقد الإيجار"
+      },
+      {
+        "word": "aufbauen",
+        "translation-ru": "собирать, строить",
+        "translation-en": "to set up",
+        "translation-uk": "збирати, будувати",
+        "translation-pl": "składać",
+        "translation-es": "montar",
+        "translation-fr": "monter",
+        "translation-tr": "kurmak",
+        "translation-ro": "a monta",
+        "translation-uz": "yig‘moq",
+        "translation-hi": "जोड़ना",
+        "translation-ar": "يركّب"
+      },
+      {
+        "word": "aufhängen",
+        "translation-ru": "вешать",
+        "translation-en": "to hang up",
+        "translation-uk": "вішати",
+        "translation-pl": "wieszać",
+        "translation-es": "colgar",
+        "translation-fr": "accrocher",
+        "translation-tr": "asmak",
+        "translation-ro": "a agăța",
+        "translation-uz": "osmoq",
+        "translation-hi": "टाँगना",
+        "translation-ar": "يعلّق"
       }
     ]
   },
@@ -1090,28 +2588,56 @@
           "Es werden morgen regnen",
           "Es werdet morgen regnen"
         ],
-        "answer": "Es wird morgen regnen"
+        "answer": "Es wird morgen regnen",
+        "tip": "a2Course.tipFutur"
       },
       {
         "id": 2,
         "type": "reorder",
         "question": "pluralLandQuestEight.questTwo",
-        "words": ["scheinen", "Sonne", "wird", "Die"],
-        "correctOrder": ["Die", "Sonne", "wird", "scheinen"]
+        "words": [
+          "scheinen",
+          "Sonne",
+          "wird",
+          "Die"
+        ],
+        "correctOrder": [
+          "Die",
+          "Sonne",
+          "wird",
+          "scheinen"
+        ],
+        "tip": "a2Course.tipFutur"
       },
       {
         "id": 3,
         "type": "speechToText",
         "question": "pluralLandQuestEight.questThree",
         "text": "Das Wetter wird schön sein",
-        "answer": "Das Wetter wird schön sein"
+        "answer": "Das Wetter wird schön sein",
+        "tip": "a2Course.tipFutur"
       },
       {
         "id": 4,
         "type": "reorder",
         "question": "pluralLandQuestEight.questFour",
-        "words": ["werdet", "schneien", "in", "Winter", "es", "wird", "Im"],
-        "correctOrder": ["Im", "Winter", "wird", "es", "schneien"]
+        "words": [
+          "werdet",
+          "schneien",
+          "in",
+          "Winter",
+          "es",
+          "wird",
+          "Im"
+        ],
+        "correctOrder": [
+          "Im",
+          "Winter",
+          "wird",
+          "es",
+          "schneien"
+        ],
+        "tip": "a2Course.tipFutur"
       },
       {
         "id": 5,
@@ -1122,21 +2648,37 @@
           "Die Temperaturen wird steigen",
           "Die Temperaturen werdet steigen"
         ],
-        "answer": "Die Temperaturen werden steigen"
+        "answer": "Die Temperaturen werden steigen",
+        "tip": "a2Course.tipFutur"
       },
       {
         "id": 6,
         "type": "reorder",
         "question": "pluralLandQuestEight.questSix",
-        "words": ["werde", "sein", "morgen", "windig", "Es", "wird"],
-        "correctOrder": ["Es", "wird", "morgen", "windig", "sein"]
+        "words": [
+          "werde",
+          "sein",
+          "morgen",
+          "windig",
+          "Es",
+          "wird"
+        ],
+        "correctOrder": [
+          "Es",
+          "wird",
+          "morgen",
+          "windig",
+          "sein"
+        ],
+        "tip": "a2Course.tipFutur"
       },
       {
         "id": 7,
         "type": "speechToText",
         "question": "pluralLandQuestEight.questSeven",
         "text": "Es wird bald dunkel",
-        "answer": "Es wird bald dunkel"
+        "answer": "Es wird bald dunkel",
+        "tip": "a2Course.tipFutur"
       },
       {
         "id": 8,
@@ -1147,53 +2689,127 @@
           "Der Himmel werden blau sein",
           "Der Himmel werdet blau sein"
         ],
-        "answer": "Der Himmel wird blau sein"
+        "answer": "Der Himmel wird blau sein",
+        "tip": "a2Course.tipFutur"
       },
       {
         "id": 9,
         "type": "reorder",
         "question": "pluralLandQuestEight.questNine",
-        "words": ["brauchen", "einen", "Regenschirm", "Wir", "werden"],
-        "correctOrder": ["Wir", "werden", "einen", "Regenschirm", "brauchen"]
+        "words": [
+          "brauchen",
+          "einen",
+          "Regenschirm",
+          "Wir",
+          "werden"
+        ],
+        "correctOrder": [
+          "Wir",
+          "werden",
+          "einen",
+          "Regenschirm",
+          "brauchen"
+        ],
+        "tip": "a2Course.tipFutur"
       },
       {
         "id": 10,
         "type": "speechToText",
         "question": "pluralLandQuestEight.questTen",
         "text": "Der Sommer wird heiß sein",
-        "answer": "Der Sommer wird heiß sein"
+        "answer": "Der Sommer wird heiß sein",
+        "tip": "a2Course.tipFutur"
       },
       {
         "id": 11,
         "type": "reorder",
-        "question": "pluralLandQuestEight.questEleven",
-        "words": ["sein", "stark", "Wind", "wird", "Der"],
-        "correctOrder": ["Der", "Wind", "wird", "stark", "sein"]
+        "question": "pluralLandQuestSeven.questOne",
+        "words": [
+          "Woche",
+          "umziehen",
+          "nächste",
+          "werde",
+          "Ich"
+        ],
+        "correctOrder": [
+          "Ich",
+          "werde",
+          "nächste",
+          "Woche",
+          "umziehen"
+        ],
+        "reviewOf": "future-seven",
+        "reviewLand": "future-land",
+        "tip": "a2Course.tipFutur"
       },
       {
         "id": 12,
-        "type": "select",
-        "question": "pluralLandQuestEight.questTwelve",
-        "options": [
-          "Das Gewitter wird bald kommen",
-          "Das Gewitter werden bald kommen",
-          "Das Gewitter werdet bald kommen"
+        "type": "reorder",
+        "question": "pluralLandQuestFive.questThree",
+        "words": [
+          "spielen",
+          "gut",
+          "Mannschaft",
+          "Die",
+          "wird",
+          "morgen",
+          "werden"
         ],
-        "answer": "Das Gewitter wird bald kommen"
+        "correctOrder": [
+          "Die",
+          "Mannschaft",
+          "wird",
+          "gut",
+          "spielen"
+        ],
+        "reviewOf": "future-five",
+        "reviewLand": "future-land",
+        "tip": "a2Course.tipFutur"
       },
       {
         "id": 13,
-        "type": "speechToText",
-        "question": "pluralLandQuestEight.questThirteen",
-        "text": "Es wird kalt werden",
-        "answer": "Es wird kalt werden"
+        "type": "reorder",
+        "question": "pluralLandQuestOne.questSix",
+        "words": [
+          "Auto",
+          "kaufen",
+          "neuen",
+          "ein",
+          "wird",
+          "Er",
+          "neues"
+        ],
+        "correctOrder": [
+          "Er",
+          "wird",
+          "ein",
+          "neues",
+          "Auto",
+          "kaufen"
+        ],
+        "reviewOf": "future-one",
+        "reviewLand": "future-land",
+        "tip": "a2Course.tipFutur"
       },
       {
         "id": 14,
         "type": "reorder",
         "question": "pluralLandQuestEight.questFourteen",
-        "words": ["besser", "Wetter", "Das", "wird", "werden"],
-        "correctOrder": ["Das", "Wetter", "wird", "besser", "werden"]
+        "words": [
+          "besser",
+          "Wetter",
+          "das",
+          "Wird",
+          "werden"
+        ],
+        "correctOrder": [
+          "Wird",
+          "das",
+          "Wetter",
+          "besser",
+          "werden"
+        ],
+        "tip": "a2Course.tipFutur"
       },
       {
         "id": 15,
@@ -1204,7 +2820,80 @@
           "Die Tage wird wieder länger werden",
           "Die Tage werdet wieder länger werden"
         ],
-        "answer": "Die Tage werden wieder länger werden"
+        "answer": "Die Tage werden wieder länger werden",
+        "tip": "a2Course.tipFutur"
+      }
+    ],
+    "vocabulary": [
+      {
+        "word": "besser",
+        "translation-ru": "лучше",
+        "translation-en": "better",
+        "translation-uk": "краще",
+        "translation-pl": "lepiej",
+        "translation-es": "mejor",
+        "translation-fr": "mieux",
+        "translation-tr": "daha iyi",
+        "translation-ro": "mai bine",
+        "translation-uz": "yaxshiroq",
+        "translation-hi": "बेहतर",
+        "translation-ar": "أفضل"
+      },
+      {
+        "word": "länger",
+        "translation-ru": "дольше",
+        "translation-en": "longer",
+        "translation-uk": "довше",
+        "translation-pl": "dłużej",
+        "translation-es": "más tiempo",
+        "translation-fr": "plus longtemps",
+        "translation-tr": "daha uzun",
+        "translation-ro": "mai mult timp",
+        "translation-uz": "uzoqroq",
+        "translation-hi": "ज़्यादा देर",
+        "translation-ar": "مدة أطول"
+      },
+      {
+        "word": "umziehen",
+        "translation-ru": "переезжать",
+        "translation-en": "to move house",
+        "translation-uk": "переїжджати",
+        "translation-pl": "przeprowadzać się",
+        "translation-es": "mudarse",
+        "translation-fr": "déménager",
+        "translation-tr": "taşınmak",
+        "translation-ro": "a se muta",
+        "translation-uz": "ko‘chib o‘tmoq",
+        "translation-hi": "घर बदलना",
+        "translation-ar": "ينتقل"
+      },
+      {
+        "word": "die Mannschaft",
+        "translation-ru": "команда",
+        "translation-en": "team",
+        "translation-uk": "команда",
+        "translation-pl": "drużyna",
+        "translation-es": "equipo",
+        "translation-fr": "équipe",
+        "translation-tr": "takım",
+        "translation-ro": "echipă",
+        "translation-uz": "jamoa",
+        "translation-hi": "टीम",
+        "translation-ar": "فريق"
+      },
+      {
+        "word": "bald",
+        "translation-ru": "скоро",
+        "translation-en": "soon",
+        "translation-uk": "скоро",
+        "translation-pl": "wkrótce",
+        "translation-es": "pronto",
+        "translation-fr": "bientôt",
+        "translation-tr": "yakında",
+        "translation-ro": "curând",
+        "translation-uz": "tez orada",
+        "translation-hi": "जल्द",
+        "translation-ar": "قريبًا"
       }
     ]
   },
@@ -1230,8 +2919,22 @@
         "id": 1,
         "type": "reorder",
         "question": "pluralLandQuestNine.questOne",
-        "words": ["gehen", "Arzt", "zum", "werde", "Ich", "zu"],
-        "correctOrder": ["Ich", "werde", "zum", "Arzt", "gehen"]
+        "words": [
+          "gehen",
+          "Arzt",
+          "zum",
+          "werde",
+          "Ich",
+          "zu"
+        ],
+        "correctOrder": [
+          "Ich",
+          "werde",
+          "zum",
+          "Arzt",
+          "gehen"
+        ],
+        "tip": "a2Course.tipFutur"
       },
       {
         "id": 2,
@@ -1242,21 +2945,36 @@
           "Der Arzt werden mich untersuchen",
           "Der Arzt werdet mich untersuchen"
         ],
-        "answer": "Der Arzt wird mich untersuchen"
+        "answer": "Der Arzt wird mich untersuchen",
+        "tip": "a2Course.tipFutur"
       },
       {
         "id": 3,
         "type": "speechToText",
         "question": "pluralLandQuestNine.questThree",
         "text": "Ich werde im Bett bleiben",
-        "answer": "Ich werde im Bett bleiben"
+        "answer": "Ich werde im Bett bleiben",
+        "tip": "a2Course.tipFutur"
       },
       {
         "id": 4,
         "type": "reorder",
         "question": "pluralLandQuestNine.questFour",
-        "words": ["sein", "gesund", "bald", "Du", "wirst"],
-        "correctOrder": ["Du", "wirst", "bald", "gesund", "sein"]
+        "words": [
+          "sein",
+          "gesund",
+          "bald",
+          "Du",
+          "wirst"
+        ],
+        "correctOrder": [
+          "Du",
+          "wirst",
+          "bald",
+          "gesund",
+          "sein"
+        ],
+        "tip": "a2Course.tipFutur"
       },
       {
         "id": 5,
@@ -1267,21 +2985,34 @@
           "Wir wird die Medizin nehmen",
           "Wir werdet die Medizin nehmen"
         ],
-        "answer": "Wir werden die Medizin nehmen"
+        "answer": "Wir werden die Medizin nehmen",
+        "tip": "a2Course.tipFutur"
       },
       {
         "id": 6,
         "type": "reorder",
         "question": "pluralLandQuestNine.questSix",
-        "words": ["helfen", "Medizin", "wird", "Die"],
-        "correctOrder": ["Die", "Medizin", "wird", "helfen"]
+        "words": [
+          "helfen",
+          "Medizin",
+          "wird",
+          "Die"
+        ],
+        "correctOrder": [
+          "Die",
+          "Medizin",
+          "wird",
+          "helfen"
+        ],
+        "tip": "a2Course.tipFutur"
       },
       {
         "id": 7,
         "type": "speechToText",
         "question": "pluralLandQuestNine.questSeven",
         "text": "Du wirst dich besser fühlen",
-        "answer": "Du wirst dich besser fühlen"
+        "answer": "Du wirst dich besser fühlen",
+        "tip": "a2Course.tipFutur"
       },
       {
         "id": 8,
@@ -1292,53 +3023,123 @@
           "Ich wird gesund essen",
           "Ich werden gesund essen"
         ],
-        "answer": "Ich werde gesund essen"
+        "answer": "Ich werde gesund essen",
+        "tip": "a2Course.tipFutur"
       },
       {
         "id": 9,
         "type": "reorder",
         "question": "pluralLandQuestNine.questNine",
-        "words": ["trinken", "Tee", "Sie", "viel", "wird"],
-        "correctOrder": ["Sie", "wird", "viel", "Tee", "trinken"]
+        "words": [
+          "trinken",
+          "Tee",
+          "Sie",
+          "viel",
+          "wird"
+        ],
+        "correctOrder": [
+          "Sie",
+          "wird",
+          "viel",
+          "Tee",
+          "trinken"
+        ],
+        "tip": "a2Course.tipFutur"
       },
       {
         "id": 10,
         "type": "speechToText",
         "question": "pluralLandQuestNine.questTen",
         "text": "Der Schmerz wird weggehen",
-        "answer": "Der Schmerz wird weggehen"
+        "answer": "Der Schmerz wird weggehen",
+        "tip": "a2Course.tipFutur"
       },
       {
         "id": 11,
-        "type": "select",
-        "question": "pluralLandQuestNine.questEleven",
-        "options": [
-          "Ihr werdet mehr Sport machen",
-          "Ihr werden mehr Sport machen",
-          "Ihr wird mehr Sport machen"
+        "type": "reorder",
+        "question": "pluralLandQuestEight.questTwo",
+        "words": [
+          "scheinen",
+          "Sonne",
+          "wird",
+          "Die"
         ],
-        "answer": "Ihr werdet mehr Sport machen"
+        "correctOrder": [
+          "Die",
+          "Sonne",
+          "wird",
+          "scheinen"
+        ],
+        "reviewOf": "future-eight",
+        "reviewLand": "future-land",
+        "tip": "a2Course.tipFutur"
       },
       {
         "id": 12,
         "type": "reorder",
-        "question": "pluralLandQuestNine.questTwelve",
-        "words": ["machen", "Termin", "Wir", "einen", "werden"],
-        "correctOrder": ["Wir", "werden", "einen", "Termin", "machen"]
+        "question": "pluralLandQuestSix.questThree",
+        "words": [
+          "gehen",
+          "werdet",
+          "Kino",
+          "Bruder",
+          "ins",
+          "Mein",
+          "wird"
+        ],
+        "correctOrder": [
+          "Mein",
+          "Bruder",
+          "wird",
+          "ins",
+          "Kino",
+          "gehen"
+        ],
+        "reviewOf": "future-six",
+        "reviewLand": "future-land",
+        "tip": "a2Course.tipFutur"
       },
       {
         "id": 13,
-        "type": "speechToText",
-        "question": "pluralLandQuestNine.questThirteen",
-        "text": "Ich werde Fieber messen",
-        "answer": "Ich werde Fieber messen"
+        "type": "reorder",
+        "question": "pluralLandQuestTwo.questSix",
+        "words": [
+          "helfen",
+          "du",
+          "Wirst",
+          "morgen",
+          "mir",
+          "werdet"
+        ],
+        "correctOrder": [
+          "Wirst",
+          "du",
+          "mir",
+          "morgen",
+          "helfen"
+        ],
+        "reviewOf": "future-two",
+        "reviewLand": "future-land",
+        "tip": "a2Course.tipFutur"
       },
       {
         "id": 14,
         "type": "reorder",
         "question": "pluralLandQuestNine.questFourteen",
-        "words": ["aufhören", "Der", "Schmerz", "Die", "wird"],
-        "correctOrder": ["Der", "Schmerz", "wird", "aufhören"]
+        "words": [
+          "aufhören",
+          "Der",
+          "Schmerz",
+          "Die",
+          "wird"
+        ],
+        "correctOrder": [
+          "Der",
+          "Schmerz",
+          "wird",
+          "aufhören"
+        ],
+        "tip": "a2Course.tipFutur"
       },
       {
         "id": 15,
@@ -1349,7 +3150,94 @@
           "Er werden viel schlafen",
           "Er werdet viel schlafen"
         ],
-        "answer": "Er wird viel schlafen"
+        "answer": "Er wird viel schlafen",
+        "tip": "a2Course.tipFutur"
+      }
+    ],
+    "vocabulary": [
+      {
+        "word": "untersuchen",
+        "translation-ru": "обследовать",
+        "translation-en": "to examine",
+        "translation-uk": "обстежувати",
+        "translation-pl": "badać",
+        "translation-es": "examinar",
+        "translation-fr": "examiner",
+        "translation-tr": "muayene etmek",
+        "translation-ro": "a examina",
+        "translation-uz": "tekshirmoq",
+        "translation-hi": "जाँच करना",
+        "translation-ar": "يفحص"
+      },
+      {
+        "word": "gesund",
+        "translation-ru": "здоровый, полезный",
+        "translation-en": "healthy",
+        "translation-uk": "здоровий, корисний",
+        "translation-pl": "zdrowy",
+        "translation-es": "sano",
+        "translation-fr": "sain",
+        "translation-tr": "sağlıklı",
+        "translation-ro": "sănătos",
+        "translation-uz": "sog‘lom, foydali",
+        "translation-hi": "स्वस्थ, सेहतमंद",
+        "translation-ar": "صحي"
+      },
+      {
+        "word": "fühlen",
+        "translation-ru": "чувствовать",
+        "translation-en": "to feel",
+        "translation-uk": "відчувати",
+        "translation-pl": "czuć",
+        "translation-es": "sentir",
+        "translation-fr": "sentir",
+        "translation-tr": "hissetmek",
+        "translation-ro": "a simți",
+        "translation-uz": "his qilmoq",
+        "translation-hi": "महसूस करना",
+        "translation-ar": "يشعر"
+      },
+      {
+        "word": "der Schmerz",
+        "translation-ru": "боль",
+        "translation-en": "pain",
+        "translation-uk": "біль",
+        "translation-pl": "ból",
+        "translation-es": "dolor",
+        "translation-fr": "douleur",
+        "translation-tr": "ağrı",
+        "translation-ro": "durere",
+        "translation-uz": "og'riq",
+        "translation-hi": "दर्द",
+        "translation-ar": "ألم"
+      },
+      {
+        "word": "weggehen",
+        "translation-ru": "уходить",
+        "translation-en": "to leave, to go away",
+        "translation-uk": "йти геть",
+        "translation-pl": "odchodzić",
+        "translation-es": "irse",
+        "translation-fr": "partir",
+        "translation-tr": "gitmek, ayrılmak",
+        "translation-ro": "a pleca",
+        "translation-uz": "ketmoq",
+        "translation-hi": "चले जाना",
+        "translation-ar": "يغادر"
+      },
+      {
+        "word": "die Medizin",
+        "translation-ru": "лекарство",
+        "translation-en": "medicine",
+        "translation-uk": "ліки",
+        "translation-pl": "lekarstwo",
+        "translation-es": "la medicina",
+        "translation-fr": "le médicament",
+        "translation-tr": "ilaç",
+        "translation-ro": "medicamentul",
+        "translation-uz": "dori",
+        "translation-hi": "दवा",
+        "translation-ar": "الدواء"
       }
     ]
   },
@@ -1375,8 +3263,23 @@
         "id": 1,
         "type": "reorder",
         "question": "pluralLandQuestTen.questOne",
-        "words": ["kaufen", "Kleid", "neues", "werde", "Ich", "ein"],
-        "correctOrder": ["Ich", "werde", "ein", "neues", "Kleid", "kaufen"]
+        "words": [
+          "kaufen",
+          "Kleid",
+          "neues",
+          "werde",
+          "Ich",
+          "ein"
+        ],
+        "correctOrder": [
+          "Ich",
+          "werde",
+          "ein",
+          "neues",
+          "Kleid",
+          "kaufen"
+        ],
+        "tip": "a2Course.tipFutur"
       },
       {
         "id": 2,
@@ -1387,21 +3290,36 @@
           "Die Schuhe wird viel kosten",
           "Die Schuhe werdet viel kosten"
         ],
-        "answer": "Die Schuhe werden viel kosten"
+        "answer": "Die Schuhe werden viel kosten",
+        "tip": "a2Course.tipFutur"
       },
       {
         "id": 3,
         "type": "speechToText",
         "question": "pluralLandQuestTen.questThree",
         "text": "Wir werden in den Supermarkt gehen",
-        "answer": "Wir werden in den Supermarkt gehen"
+        "answer": "Wir werden in den Supermarkt gehen",
+        "tip": "a2Course.tipFutur"
       },
       {
         "id": 4,
         "type": "reorder",
         "question": "pluralLandQuestTen.questFour",
-        "words": ["passen", "Hemd", "dir", "Das", "wird"],
-        "correctOrder": ["Das", "Hemd", "wird", "dir", "passen"]
+        "words": [
+          "passen",
+          "Hemd",
+          "dir",
+          "Das",
+          "wird"
+        ],
+        "correctOrder": [
+          "Das",
+          "Hemd",
+          "wird",
+          "dir",
+          "passen"
+        ],
+        "tip": "a2Course.tipFutur"
       },
       {
         "id": 5,
@@ -1412,21 +3330,36 @@
           "Ich wird mit Karte bezahlen",
           "Ich werden mit Karte bezahlen"
         ],
-        "answer": "Ich werde mit Karte bezahlen"
+        "answer": "Ich werde mit Karte bezahlen",
+        "tip": "a2Course.tipFutur"
       },
       {
         "id": 6,
         "type": "reorder",
         "question": "pluralLandQuestTen.questSix",
-        "words": ["anprobieren", "Hose", "Er", "die", "wird"],
-        "correctOrder": ["Er", "wird", "die", "Hose", "anprobieren"]
+        "words": [
+          "anprobieren",
+          "Hose",
+          "Er",
+          "die",
+          "wird"
+        ],
+        "correctOrder": [
+          "Er",
+          "wird",
+          "die",
+          "Hose",
+          "anprobieren"
+        ],
+        "tip": "a2Course.tipFutur"
       },
       {
         "id": 7,
         "type": "speechToText",
         "question": "pluralLandQuestTen.questSeven",
         "text": "Ich werde das rote T-Shirt nehmen",
-        "answer": "Ich werde das rote T-Shirt nehmen"
+        "answer": "Ich werde das rote T-Shirt nehmen",
+        "tip": "a2Course.tipFutur"
       },
       {
         "id": 8,
@@ -1437,53 +3370,114 @@
           "Wir wird viel Geld ausgeben",
           "Wir werdet viel Geld ausgeben"
         ],
-        "answer": "Wir werden viel Geld ausgeben"
+        "answer": "Wir werden viel Geld ausgeben",
+        "tip": "a2Course.tipFutur"
       },
       {
         "id": 9,
         "type": "reorder",
         "question": "pluralLandQuestTen.questNine",
-        "words": ["schließen", "Laden", "bald", "werdet", "Der", "wird"],
-        "correctOrder": ["Der", "Laden", "wird", "bald", "schließen"]
+        "words": [
+          "schließen",
+          "Laden",
+          "bald",
+          "werdet",
+          "Der",
+          "wird"
+        ],
+        "correctOrder": [
+          "Der",
+          "Laden",
+          "wird",
+          "bald",
+          "schließen"
+        ],
+        "tip": "a2Course.tipFutur"
       },
       {
         "id": 10,
         "type": "speechToText",
         "question": "pluralLandQuestTen.questTen",
         "text": "Du wirst toll aussehen",
-        "answer": "Du wirst toll aussehen"
+        "answer": "Du wirst toll aussehen",
+        "tip": "a2Course.tipFutur"
       },
       {
         "id": 11,
         "type": "reorder",
-        "question": "pluralLandQuestTen.questEleven",
-        "words": ["tragen", "Taschen", "Wer", "die", "wird"],
-        "correctOrder": ["Wer", "wird", "die", "Taschen", "tragen"]
+        "question": "pluralLandQuestNine.questOne",
+        "words": [
+          "gehen",
+          "Arzt",
+          "zum",
+          "werde",
+          "Ich",
+          "zu"
+        ],
+        "correctOrder": [
+          "Ich",
+          "werde",
+          "zum",
+          "Arzt",
+          "gehen"
+        ],
+        "reviewOf": "future-nine",
+        "reviewLand": "future-land",
+        "tip": "a2Course.tipFutur"
       },
       {
         "id": 12,
-        "type": "select",
-        "question": "pluralLandQuestTen.questTwelve",
-        "options": [
-          "Ihr werdet ein Geschenk finden",
-          "Ihr werden ein Geschenk finden",
-          "Ihr wird ein Geschenk finden"
+        "type": "reorder",
+        "question": "pluralLandQuestSeven.questTwo",
+        "words": [
+          "brauchen",
+          "werdet",
+          "Wir",
+          "Kartons",
+          "viele",
+          "werden"
         ],
-        "answer": "Ihr werdet ein Geschenk finden"
+        "correctOrder": [
+          "Wir",
+          "werden",
+          "viele",
+          "Kartons",
+          "brauchen"
+        ],
+        "reviewOf": "future-seven",
+        "reviewLand": "future-land",
+        "tip": "a2Course.tipFutur"
       },
       {
         "id": 13,
         "type": "reorder",
-        "question": "pluralLandQuestTen.questThirteen",
-        "words": ["sein", "billig", "Das", "wird"],
-        "correctOrder": ["Das", "wird", "billig", "sein"]
+        "question": "pluralLandQuestThree.questEight",
+        "words": [
+          "kommen",
+          "werdet",
+          "Gäste",
+          "später",
+          "werden",
+          "Die"
+        ],
+        "correctOrder": [
+          "Die",
+          "Gäste",
+          "werden",
+          "später",
+          "kommen"
+        ],
+        "reviewOf": "future-three",
+        "reviewLand": "future-land",
+        "tip": "a2Course.tipFutur"
       },
       {
         "id": 14,
         "type": "speechToText",
         "question": "pluralLandQuestTen.questFourteen",
         "text": "Ich werde online bestellen",
-        "answer": "Ich werde online bestellen"
+        "answer": "Ich werde online bestellen",
+        "tip": "a2Course.tipFutur"
       },
       {
         "id": 15,
@@ -1494,7 +3488,108 @@
           "Der Preis werden steigen",
           "Der Preis werdet steigen"
         ],
-        "answer": "Der Preis wird steigen"
+        "answer": "Der Preis wird steigen",
+        "tip": "a2Course.tipFutur"
+      }
+    ],
+    "vocabulary": [
+      {
+        "word": "das Kleid",
+        "translation-ru": "платье",
+        "translation-en": "dress",
+        "translation-uk": "сукня",
+        "translation-pl": "sukienka",
+        "translation-es": "el vestido",
+        "translation-fr": "la robe",
+        "translation-tr": "elbise",
+        "translation-ro": "rochia",
+        "translation-uz": "ko‘ylak",
+        "translation-hi": "ड्रेस",
+        "translation-ar": "الفستان"
+      },
+      {
+        "word": "das Hemd",
+        "translation-ru": "рубашка",
+        "translation-en": "shirt",
+        "translation-uk": "сорочка",
+        "translation-pl": "koszula",
+        "translation-es": "la camisa",
+        "translation-fr": "la chemise",
+        "translation-tr": "gömlek",
+        "translation-ro": "cămașa",
+        "translation-uz": "ko‘ylak",
+        "translation-hi": "कमीज़",
+        "translation-ar": "القميص"
+      },
+      {
+        "word": "passen",
+        "translation-ru": "подходить / быть впору",
+        "translation-en": "to fit / suit",
+        "translation-uk": "пасувати / підходити",
+        "translation-pl": "pasować",
+        "translation-es": "quedar bien / encajar",
+        "translation-fr": "convenir / aller",
+        "translation-tr": "uymak / uygun olmak",
+        "translation-ro": "a se potrivi",
+        "translation-uz": "mos kelmoq",
+        "translation-hi": "उपयुक्त होना",
+        "translation-ar": "يناسب"
+      },
+      {
+        "word": "die Hose",
+        "translation-ru": "брюки",
+        "translation-en": "trousers",
+        "translation-uk": "штани",
+        "translation-pl": "spodnie",
+        "translation-es": "el pantalón",
+        "translation-fr": "le pantalon",
+        "translation-tr": "pantolon",
+        "translation-ro": "pantalonii",
+        "translation-uz": "shim",
+        "translation-hi": "पैंट",
+        "translation-ar": "البنطال"
+      },
+      {
+        "word": "anprobieren",
+        "translation-ru": "примерять",
+        "translation-en": "to try on",
+        "translation-uk": "приміряти",
+        "translation-pl": "przymierzać",
+        "translation-es": "probarse",
+        "translation-fr": "essayer",
+        "translation-tr": "denemek",
+        "translation-ro": "a proba",
+        "translation-uz": "kiyib ko‘rmoq",
+        "translation-hi": "पहनकर देखना",
+        "translation-ar": "يجرّب"
+      },
+      {
+        "word": "ausgeben",
+        "translation-ru": "тратить",
+        "translation-en": "to spend",
+        "translation-uk": "витрачати",
+        "translation-pl": "wydawać",
+        "translation-es": "gastar",
+        "translation-fr": "dépenser",
+        "translation-tr": "harcamak",
+        "translation-ro": "a cheltui",
+        "translation-uz": "sarflamoq",
+        "translation-hi": "ख़र्च करना",
+        "translation-ar": "ينفق"
+      },
+      {
+        "word": "aussehen",
+        "translation-ru": "выглядеть",
+        "translation-en": "to look / appear",
+        "translation-uk": "виглядати",
+        "translation-pl": "wyglądać",
+        "translation-es": "parecer / verse",
+        "translation-fr": "avoir l'air",
+        "translation-tr": "görünmek",
+        "translation-ro": "a arăta",
+        "translation-uz": "ko'rinmoq",
+        "translation-hi": "दिखना",
+        "translation-ar": "يبدو"
       }
     ]
   },
@@ -1520,8 +3615,21 @@
         "id": 1,
         "type": "reorder",
         "question": "pluralLandQuestEleven.questOne",
-        "words": ["reservieren", "Tisch", "einen", "Wir", "werden"],
-        "correctOrder": ["Wir", "werden", "einen", "Tisch", "reservieren"]
+        "words": [
+          "reservieren",
+          "Tisch",
+          "einen",
+          "Wir",
+          "werden"
+        ],
+        "correctOrder": [
+          "Wir",
+          "werden",
+          "einen",
+          "Tisch",
+          "reservieren"
+        ],
+        "tip": "a2Course.tipFutur"
       },
       {
         "id": 2,
@@ -1532,21 +3640,34 @@
           "Der Kellner werden die Speisekarte bringen",
           "Der Kellner wird der Speisekarte bringen"
         ],
-        "answer": "Der Kellner wird die Speisekarte bringen"
+        "answer": "Der Kellner wird die Speisekarte bringen",
+        "tip": "a2Course.tipFutur"
       },
       {
         "id": 3,
         "type": "speechToText",
         "question": "pluralLandQuestEleven.questThree",
         "text": "Ich werde Pizza bestellen",
-        "answer": "Ich werde Pizza bestellen"
+        "answer": "Ich werde Pizza bestellen",
+        "tip": "a2Course.tipFutur"
       },
       {
         "id": 4,
         "type": "reorder",
         "question": "pluralLandQuestEleven.questFour",
-        "words": ["essen", "Fisch", "du", "Wirst"],
-        "correctOrder": ["Wirst", "du", "Fisch", "essen"]
+        "words": [
+          "essen",
+          "Fisch",
+          "du",
+          "Wirst"
+        ],
+        "correctOrder": [
+          "Wirst",
+          "du",
+          "Fisch",
+          "essen"
+        ],
+        "tip": "a2Course.tipFutur"
       },
       {
         "id": 5,
@@ -1557,21 +3678,34 @@
           "Das Essen werden lecker sein",
           "Das Essen werdet lecker sein"
         ],
-        "answer": "Das Essen wird lecker sein"
+        "answer": "Das Essen wird lecker sein",
+        "tip": "a2Course.tipFutur"
       },
       {
         "id": 6,
         "type": "reorder",
         "question": "pluralLandQuestEleven.questSix",
-        "words": ["geben", "Trinkgeld", "Wir", "werden"],
-        "correctOrder": ["Wir", "werden", "Trinkgeld", "geben"]
+        "words": [
+          "geben",
+          "Trinkgeld",
+          "Wir",
+          "werden"
+        ],
+        "correctOrder": [
+          "Wir",
+          "werden",
+          "Trinkgeld",
+          "geben"
+        ],
+        "tip": "a2Course.tipFutur"
       },
       {
         "id": 7,
         "type": "speechToText",
         "question": "pluralLandQuestEleven.questSeven",
         "text": "Wir werden zusammen essen",
-        "answer": "Wir werden zusammen essen"
+        "answer": "Wir werden zusammen essen",
+        "tip": "a2Course.tipFutur"
       },
       {
         "id": 8,
@@ -1582,53 +3716,127 @@
           "Ihr werden satt werden",
           "Ihr wird satt werden"
         ],
-        "answer": "Ihr werdet satt werden"
+        "answer": "Ihr werdet satt werden",
+        "tip": "a2Course.tipFutur"
       },
       {
         "id": 9,
         "type": "reorder",
         "question": "pluralLandQuestEleven.questNine",
-        "words": ["bezahlen", "Rechnung", "die", "Er", "wird"],
-        "correctOrder": ["Er", "wird", "die", "Rechnung", "bezahlen"]
+        "words": [
+          "bezahlen",
+          "Rechnung",
+          "die",
+          "Er",
+          "wird"
+        ],
+        "correctOrder": [
+          "Er",
+          "wird",
+          "die",
+          "Rechnung",
+          "bezahlen"
+        ],
+        "tip": "a2Course.tipFutur"
       },
       {
         "id": 10,
         "type": "speechToText",
         "question": "pluralLandQuestEleven.questTen",
         "text": "Der Wein wird gut schmecken",
-        "answer": "Der Wein wird gut schmecken"
+        "answer": "Der Wein wird gut schmecken",
+        "tip": "a2Course.tipFutur"
       },
       {
         "id": 11,
         "type": "reorder",
-        "question": "pluralLandQuestEleven.questEleven",
-        "words": ["werden", "trinken", "Wasser", "Sie", "wird"],
-        "correctOrder": ["Sie", "wird", "Wasser", "trinken"]
+        "question": "pluralLandQuestTen.questOne",
+        "words": [
+          "kaufen",
+          "Kleid",
+          "neues",
+          "werde",
+          "Ich",
+          "ein"
+        ],
+        "correctOrder": [
+          "Ich",
+          "werde",
+          "ein",
+          "neues",
+          "Kleid",
+          "kaufen"
+        ],
+        "reviewOf": "future-ten",
+        "reviewLand": "future-land",
+        "tip": "a2Course.tipFutur"
       },
       {
         "id": 12,
-        "type": "select",
-        "question": "pluralLandQuestEleven.questTwelve",
-        "options": [
-          "Wir werden lange warten",
-          "Wir wird lange warten",
-          "Wir werdet lange warten"
+        "type": "reorder",
+        "question": "pluralLandQuestEight.questFour",
+        "words": [
+          "werdet",
+          "schneien",
+          "in",
+          "Winter",
+          "es",
+          "wird",
+          "Im"
         ],
-        "answer": "Wir werden lange warten"
+        "correctOrder": [
+          "Im",
+          "Winter",
+          "wird",
+          "es",
+          "schneien"
+        ],
+        "reviewOf": "future-eight",
+        "reviewLand": "future-land",
+        "tip": "a2Course.tipFutur"
       },
       {
         "id": 13,
-        "type": "speechToText",
-        "question": "pluralLandQuestEleven.questThirteen",
-        "text": "Das Restaurant wird voll sein",
-        "answer": "Das Restaurant wird voll sein"
+        "type": "reorder",
+        "question": "pluralLandQuestFour.questFour",
+        "words": [
+          "wird",
+          "backen",
+          "ein",
+          "Kuchen",
+          "Wir",
+          "leckeren",
+          "einen",
+          "werden"
+        ],
+        "correctOrder": [
+          "Wir",
+          "werden",
+          "einen",
+          "leckeren",
+          "Kuchen",
+          "backen"
+        ],
+        "reviewOf": "future-four",
+        "reviewLand": "future-land",
+        "tip": "a2Course.tipFutur"
       },
       {
         "id": 14,
         "type": "reorder",
         "question": "pluralLandQuestEleven.questFourteen",
-        "words": ["bezahlen", "Wer", "wird", "werdet"],
-        "correctOrder": ["Wer", "wird", "bezahlen"]
+        "words": [
+          "bezahlen",
+          "Wer",
+          "wird",
+          "werdet"
+        ],
+        "correctOrder": [
+          "Wer",
+          "wird",
+          "bezahlen"
+        ],
+        "tip": "a2Course.tipFutur"
       },
       {
         "id": 15,
@@ -1639,7 +3847,80 @@
           "Ich wird den Nachtisch nehmen",
           "Ich werden den Nachtisch nehmen"
         ],
-        "answer": "Ich werde den Nachtisch nehmen"
+        "answer": "Ich werde den Nachtisch nehmen",
+        "tip": "a2Course.tipFutur"
+      }
+    ],
+    "vocabulary": [
+      {
+        "word": "der Kellner",
+        "translation-ru": "официант",
+        "translation-en": "waiter",
+        "translation-uk": "офіціант",
+        "translation-pl": "kelner",
+        "translation-es": "el camarero",
+        "translation-fr": "le serveur",
+        "translation-tr": "garson",
+        "translation-ro": "chelnerul",
+        "translation-uz": "ofitsiant",
+        "translation-hi": "वेटर",
+        "translation-ar": "النادل"
+      },
+      {
+        "word": "satt",
+        "translation-ru": "сытый",
+        "translation-en": "full (not hungry)",
+        "translation-uk": "ситий",
+        "translation-pl": "syty",
+        "translation-es": "lleno, saciado",
+        "translation-fr": "rassasié",
+        "translation-tr": "tok",
+        "translation-ro": "sătul",
+        "translation-uz": "to‘q",
+        "translation-hi": "पेट भरा",
+        "translation-ar": "شبعان"
+      },
+      {
+        "word": "der Wein",
+        "translation-ru": "вино",
+        "translation-en": "wine",
+        "translation-uk": "вино",
+        "translation-pl": "wino",
+        "translation-es": "el vino",
+        "translation-fr": "le vin",
+        "translation-tr": "şarap",
+        "translation-ro": "vinul",
+        "translation-uz": "vino",
+        "translation-hi": "वाइन",
+        "translation-ar": "النبيذ"
+      },
+      {
+        "word": "schmecken",
+        "translation-ru": "быть на вкус",
+        "translation-en": "to taste",
+        "translation-uk": "смакувати",
+        "translation-pl": "smakować",
+        "translation-es": "saber",
+        "translation-fr": "avoir bon goût",
+        "translation-tr": "tadı olmak",
+        "translation-ro": "a avea gust",
+        "translation-uz": "ta’mi bo‘lmoq",
+        "translation-hi": "स्वाद होना",
+        "translation-ar": "يكون طعمه"
+      },
+      {
+        "word": "das Kleid",
+        "translation-ru": "платье",
+        "translation-en": "dress",
+        "translation-uk": "сукня",
+        "translation-pl": "sukienka",
+        "translation-es": "el vestido",
+        "translation-fr": "la robe",
+        "translation-tr": "elbise",
+        "translation-ro": "rochia",
+        "translation-uz": "ko‘ylak",
+        "translation-hi": "ड्रेस",
+        "translation-ar": "الفستان"
       }
     ]
   },
@@ -1665,8 +3946,22 @@
         "id": 1,
         "type": "reorder",
         "question": "pluralLandQuestTwelve.questOne",
-        "words": ["gehen", "Kino", "ins", "Wir", "werden", "zu"],
-        "correctOrder": ["Wir", "werden", "ins", "Kino", "gehen"]
+        "words": [
+          "gehen",
+          "Kino",
+          "ins",
+          "Wir",
+          "werden",
+          "zu"
+        ],
+        "correctOrder": [
+          "Wir",
+          "werden",
+          "ins",
+          "Kino",
+          "gehen"
+        ],
+        "tip": "a2Course.tipFutur"
       },
       {
         "id": 2,
@@ -1677,21 +3972,36 @@
           "Der Film werden spannend sein",
           "Der Film werdet spannend sein"
         ],
-        "answer": "Der Film wird spannend sein"
+        "answer": "Der Film wird spannend sein",
+        "tip": "a2Course.tipFutur"
       },
       {
         "id": 3,
         "type": "speechToText",
         "question": "pluralLandQuestTwelve.questThree",
         "text": "Ich werde Popcorn kaufen",
-        "answer": "Ich werde Popcorn kaufen"
+        "answer": "Ich werde Popcorn kaufen",
+        "tip": "a2Course.tipFutur"
       },
       {
         "id": 4,
         "type": "reorder",
         "question": "pluralLandQuestTwelve.questFour",
-        "words": ["anfangen", "Film", "bald", "Der", "wird"],
-        "correctOrder": ["Der", "Film", "wird", "bald", "anfangen"]
+        "words": [
+          "anfangen",
+          "Film",
+          "bald",
+          "Der",
+          "wird"
+        ],
+        "correctOrder": [
+          "Der",
+          "Film",
+          "wird",
+          "bald",
+          "anfangen"
+        ],
+        "tip": "a2Course.tipFutur"
       },
       {
         "id": 5,
@@ -1702,74 +4012,162 @@
           "Ihr werden viel lachen",
           "Ihr wird viel lachen"
         ],
-        "answer": "Ihr werdet viel lachen"
+        "answer": "Ihr werdet viel lachen",
+        "tip": "a2Course.tipFutur"
       },
       {
         "id": 6,
         "type": "reorder",
         "question": "pluralLandQuestTwelve.questSix",
-        "words": ["kaufen", "Tickets", "die", "Wer", "wird"],
-        "correctOrder": ["Wer", "wird", "die", "Tickets", "kaufen"]
+        "words": [
+          "kaufen",
+          "Tickets",
+          "die",
+          "Wer",
+          "wird"
+        ],
+        "correctOrder": [
+          "Wer",
+          "wird",
+          "die",
+          "Tickets",
+          "kaufen"
+        ],
+        "tip": "a2Course.tipFutur"
       },
       {
         "id": 7,
         "type": "speechToText",
         "question": "pluralLandQuestTwelve.questSeven",
         "text": "Wir werden gute Plätze haben",
-        "answer": "Wir werden gute Plätze haben"
+        "answer": "Wir werden gute Plätze haben",
+        "tip": "a2Course.tipFutur"
       },
       {
         "id": 8,
         "type": "select",
         "question": "pluralLandQuestTwelve.questEight",
-        "options": ["Du wirst den Film mögen", "Du wird den Film mögen", "Du werden den Film mögen"],
-        "answer": "Du wirst den Film mögen"
+        "options": [
+          "Du wirst den Film mögen",
+          "Du wird den Film mögen",
+          "Du werden den Film mögen"
+        ],
+        "answer": "Du wirst den Film mögen",
+        "tip": "a2Course.tipFutur"
       },
       {
         "id": 9,
         "type": "reorder",
         "question": "pluralLandQuestTwelve.questNine",
-        "words": ["schauen", "Komödie", "eine", "werde", "Ich"],
-        "correctOrder": ["Ich", "werde", "eine", "Komödie", "schauen"]
+        "words": [
+          "schauen",
+          "Komödie",
+          "eine",
+          "werde",
+          "Ich"
+        ],
+        "correctOrder": [
+          "Ich",
+          "werde",
+          "eine",
+          "Komödie",
+          "schauen"
+        ],
+        "tip": "a2Course.tipFutur"
       },
       {
         "id": 10,
         "type": "speechToText",
         "question": "pluralLandQuestTwelve.questTen",
         "text": "Das Kino wird voll sein",
-        "answer": "Das Kino wird voll sein"
+        "answer": "Das Kino wird voll sein",
+        "tip": "a2Course.tipFutur"
       },
       {
         "id": 11,
         "type": "reorder",
-        "question": "pluralLandQuestTwelve.questEleven",
-        "words": ["sitzen", "vorne", "Wir", "werden"],
-        "correctOrder": ["Wir", "werden", "vorne", "sitzen"]
+        "question": "pluralLandQuestEleven.questOne",
+        "words": [
+          "reservieren",
+          "Tisch",
+          "einen",
+          "Wir",
+          "werden"
+        ],
+        "correctOrder": [
+          "Wir",
+          "werden",
+          "einen",
+          "Tisch",
+          "reservieren"
+        ],
+        "reviewOf": "future-eleven",
+        "reviewLand": "future-land",
+        "tip": "a2Course.tipFutur"
       },
       {
         "id": 12,
-        "type": "select",
-        "question": "pluralLandQuestTwelve.questTwelve",
-        "options": [
-          "Es wird dunkel sein",
-          "Es werden dunkel sein",
-          "Es werdet dunkel sein"
+        "type": "reorder",
+        "question": "pluralLandQuestNine.questFour",
+        "words": [
+          "sein",
+          "gesund",
+          "bald",
+          "Du",
+          "wirst"
         ],
-        "answer": "Es wird dunkel sein"
+        "correctOrder": [
+          "Du",
+          "wirst",
+          "bald",
+          "gesund",
+          "sein"
+        ],
+        "reviewOf": "future-nine",
+        "reviewLand": "future-land",
+        "tip": "a2Course.tipFutur"
       },
       {
         "id": 13,
-        "type": "speechToText",
-        "question": "pluralLandQuestTwelve.questThirteen",
-        "text": "Der Schauspieler wird gut spielen",
-        "answer": "Der Schauspieler wird gut spielen"
+        "type": "reorder",
+        "question": "pluralLandQuestFive.questFour",
+        "words": [
+          "Tag",
+          "trainieren",
+          "jeden",
+          "Sie",
+          "werden"
+        ],
+        "correctOrder": [
+          "Sie",
+          "werden",
+          "jeden",
+          "Tag",
+          "trainieren"
+        ],
+        "reviewOf": "future-five",
+        "reviewLand": "future-land",
+        "tip": "a2Course.tipFutur"
       },
       {
         "id": 14,
         "type": "reorder",
         "question": "pluralLandQuestTwelve.questFourteen",
-        "words": ["dauern", "lange", "Film", "Der", "wird"],
-        "correctOrder": ["Der", "Film", "wird", "lange", "dauern"]
+        "words": [
+          "dauern",
+          "lange",
+          "Film",
+          "Der",
+          "wird"
+        ],
+        "correctOrder": [
+          "Der",
+          "Film",
+          "wird",
+          "lange",
+          "dauern"
+        ],
+        "tip": "a2Course.tipFutur"
       },
       {
         "id": 15,
@@ -1780,7 +4178,94 @@
           "Im Kino werden es leise sein",
           "Im Kino wird leise sein"
         ],
-        "answer": "Im Kino wird es leise sein"
+        "answer": "Im Kino wird es leise sein",
+        "tip": "a2Course.tipFutur"
+      }
+    ],
+    "vocabulary": [
+      {
+        "word": "spannend",
+        "translation-ru": "захватывающий",
+        "translation-en": "exciting",
+        "translation-uk": "захопливий",
+        "translation-pl": "wciągający",
+        "translation-es": "emocionante",
+        "translation-fr": "passionnant",
+        "translation-tr": "heyecanlı",
+        "translation-ro": "captivant",
+        "translation-uz": "qiziqarli",
+        "translation-hi": "रोमांचक",
+        "translation-ar": "مشوّق"
+      },
+      {
+        "word": "lachen",
+        "translation-ru": "смеяться",
+        "translation-en": "to laugh",
+        "translation-uk": "сміятися",
+        "translation-pl": "śmiać się",
+        "translation-es": "reír",
+        "translation-fr": "rire",
+        "translation-tr": "gülmek",
+        "translation-ro": "a râde",
+        "translation-uz": "kulmoq",
+        "translation-hi": "हँसना",
+        "translation-ar": "يضحك"
+      },
+      {
+        "word": "gesund",
+        "translation-ru": "здоровый, полезный",
+        "translation-en": "healthy",
+        "translation-uk": "здоровий, корисний",
+        "translation-pl": "zdrowy",
+        "translation-es": "sano",
+        "translation-fr": "sain",
+        "translation-tr": "sağlıklı",
+        "translation-ro": "sănătos",
+        "translation-uz": "sog‘lom, foydali",
+        "translation-hi": "स्वस्थ, सेहतमंद",
+        "translation-ar": "صحي"
+      },
+      {
+        "word": "der Film",
+        "translation-ru": "фильм",
+        "translation-en": "film",
+        "translation-uk": "фільм",
+        "translation-pl": "film",
+        "translation-es": "la película",
+        "translation-fr": "le film",
+        "translation-tr": "film",
+        "translation-ro": "filmul",
+        "translation-uz": "film",
+        "translation-hi": "फ़िल्म",
+        "translation-ar": "الفيلم"
+      },
+      {
+        "word": "schauen",
+        "translation-ru": "смотреть / глядеть",
+        "translation-en": "to look / watch",
+        "translation-uk": "дивитися",
+        "translation-pl": "patrzeć",
+        "translation-es": "mirar",
+        "translation-fr": "regarder",
+        "translation-tr": "bakmak",
+        "translation-ro": "a privi",
+        "translation-uz": "qaramoq",
+        "translation-hi": "देखना",
+        "translation-ar": "ينظر"
+      },
+      {
+        "word": "das Popcorn",
+        "translation-ru": "попкорн",
+        "translation-en": "popcorn",
+        "translation-uk": "попкорн",
+        "translation-pl": "popcorn",
+        "translation-es": "las palomitas",
+        "translation-fr": "le pop-corn",
+        "translation-tr": "patlamış mısır",
+        "translation-ro": "floricelele",
+        "translation-uz": "popkorn",
+        "translation-hi": "पॉपकॉर्न",
+        "translation-ar": "الفشار"
       }
     ]
   },
@@ -1806,8 +4291,22 @@
         "id": 1,
         "type": "reorder",
         "question": "pluralLandQuestThirteen.questOne",
-        "words": ["kaufen", "Hund", "werdet", "einen", "werde", "Ich"],
-        "correctOrder": ["Ich", "werde", "einen", "Hund", "kaufen"]
+        "words": [
+          "kaufen",
+          "Hund",
+          "werdet",
+          "einen",
+          "werde",
+          "Ich"
+        ],
+        "correctOrder": [
+          "Ich",
+          "werde",
+          "einen",
+          "Hund",
+          "kaufen"
+        ],
+        "tip": "a2Course.tipFutur"
       },
       {
         "id": 2,
@@ -1818,21 +4317,35 @@
           "Die Katze werden schlafen",
           "Die Katze werdet schlafen"
         ],
-        "answer": "Die Katze wird schlafen"
+        "answer": "Die Katze wird schlafen",
+        "tip": "a2Course.tipFutur"
       },
       {
         "id": 3,
         "type": "speechToText",
         "question": "pluralLandQuestThirteen.questThree",
         "text": "Wir werden in den Zoo gehen",
-        "answer": "Wir werden in den Zoo gehen"
+        "answer": "Wir werden in den Zoo gehen",
+        "tip": "a2Course.tipFutur"
       },
       {
         "id": 4,
         "type": "reorder",
         "question": "pluralLandQuestThirteen.questFour",
-        "words": ["singen", "Vogel", "Der", "wird", "werdet"],
-        "correctOrder": ["Der", "Vogel", "wird", "singen"]
+        "words": [
+          "singen",
+          "Vogel",
+          "Der",
+          "wird",
+          "werdet"
+        ],
+        "correctOrder": [
+          "Der",
+          "Vogel",
+          "wird",
+          "singen"
+        ],
+        "tip": "a2Course.tipFutur"
       },
       {
         "id": 5,
@@ -1843,21 +4356,36 @@
           "Der Hund werden bellen",
           "Der Hund werdet bellen"
         ],
-        "answer": "Der Hund wird bellen"
+        "answer": "Der Hund wird bellen",
+        "tip": "a2Course.tipFutur"
       },
       {
         "id": 6,
         "type": "reorder",
         "question": "pluralLandQuestThirteen.questSix",
-        "words": ["füttern", "Tiere", "die", "Wir", "werden"],
-        "correctOrder": ["Wir", "werden", "die", "Tiere", "füttern"]
+        "words": [
+          "füttern",
+          "Tiere",
+          "die",
+          "Wir",
+          "werden"
+        ],
+        "correctOrder": [
+          "Wir",
+          "werden",
+          "die",
+          "Tiere",
+          "füttern"
+        ],
+        "tip": "a2Course.tipFutur"
       },
       {
         "id": 7,
         "type": "speechToText",
         "question": "pluralLandQuestThirteen.questSeven",
         "text": "Das Pferd wird rennen",
-        "answer": "Das Pferd wird rennen"
+        "answer": "Das Pferd wird rennen",
+        "tip": "a2Course.tipFutur"
       },
       {
         "id": 8,
@@ -1868,53 +4396,129 @@
           "Du wird mit dem Hund spielen",
           "Du werden mit dem Hund spielen"
         ],
-        "answer": "Du wirst mit dem Hund spielen"
+        "answer": "Du wirst mit dem Hund spielen",
+        "tip": "a2Course.tipFutur"
       },
       {
         "id": 9,
         "type": "reorder",
         "question": "pluralLandQuestThirteen.questNine",
-        "words": ["gehen", "spazieren", "Hund", "dem", "mit", "Wer", "wird"],
-        "correctOrder": ["Wer", "wird", "mit", "dem", "Hund", "spazieren", "gehen"]
+        "words": [
+          "gehen",
+          "spazieren",
+          "Hund",
+          "dem",
+          "mit",
+          "Wer",
+          "wird"
+        ],
+        "correctOrder": [
+          "Wer",
+          "wird",
+          "mit",
+          "dem",
+          "Hund",
+          "spazieren",
+          "gehen"
+        ],
+        "tip": "a2Course.tipFutur"
       },
       {
         "id": 10,
         "type": "speechToText",
         "question": "pluralLandQuestThirteen.questTen",
         "text": "Er wird einen Hamster haben",
-        "answer": "Er wird einen Hamster haben"
+        "answer": "Er wird einen Hamster haben",
+        "tip": "a2Course.tipFutur"
       },
       {
         "id": 11,
         "type": "reorder",
-        "question": "pluralLandQuestThirteen.questEleven",
-        "words": ["schlafen", "wird", "Die", "Katze", "werdet"],
-        "correctOrder": ["Die", "Katze", "wird", "schlafen"]
+        "question": "pluralLandQuestTwelve.questOne",
+        "words": [
+          "gehen",
+          "Kino",
+          "ins",
+          "Wir",
+          "werden",
+          "zu"
+        ],
+        "correctOrder": [
+          "Wir",
+          "werden",
+          "ins",
+          "Kino",
+          "gehen"
+        ],
+        "reviewOf": "future-twelve",
+        "reviewLand": "future-land",
+        "tip": "a2Course.tipFutur"
       },
       {
         "id": 12,
-        "type": "select",
-        "question": "pluralLandQuestThirteen.questTwelve",
-        "options": [
-          "Ihr werdet Tiere lieben",
-          "Ihr werden Tiere lieben",
-          "Ihr wird Tiere lieben"
+        "type": "reorder",
+        "question": "pluralLandQuestTen.questFour",
+        "words": [
+          "passen",
+          "Hemd",
+          "dir",
+          "Das",
+          "wird"
         ],
-        "answer": "Ihr werdet Tiere lieben"
+        "correctOrder": [
+          "Das",
+          "Hemd",
+          "wird",
+          "dir",
+          "passen"
+        ],
+        "reviewOf": "future-ten",
+        "reviewLand": "future-land",
+        "tip": "a2Course.tipFutur"
       },
       {
         "id": 13,
-        "type": "speechToText",
-        "question": "pluralLandQuestThirteen.questThirteen",
-        "text": "Die Maus wird Käse fressen",
-        "answer": "Die Maus wird Käse fressen"
+        "type": "reorder",
+        "question": "pluralLandQuestSix.questFive",
+        "words": [
+          "gehen",
+          "Park",
+          "spazieren",
+          "im",
+          "Wir",
+          "werden"
+        ],
+        "correctOrder": [
+          "Wir",
+          "werden",
+          "im",
+          "Park",
+          "spazieren",
+          "gehen"
+        ],
+        "reviewOf": "future-six",
+        "reviewLand": "future-land",
+        "tip": "a2Course.tipFutur"
       },
       {
         "id": 14,
         "type": "reorder",
         "question": "pluralLandQuestThirteen.questFourteen",
-        "words": ["rennen", "wird", "Der", "werdet", "Hamster", "Die"],
-        "correctOrder": ["Der", "Hamster", "wird", "rennen"]
+        "words": [
+          "rennen",
+          "wird",
+          "Der",
+          "werdet",
+          "Hamster",
+          "Die"
+        ],
+        "correctOrder": [
+          "Der",
+          "Hamster",
+          "wird",
+          "rennen"
+        ],
+        "tip": "a2Course.tipFutur"
       },
       {
         "id": 15,
@@ -1925,7 +4529,80 @@
           "Der Papagei werden sprechen",
           "Der Papagei werdet sprechen"
         ],
-        "answer": "Der Papagei wird sprechen"
+        "answer": "Der Papagei wird sprechen",
+        "tip": "a2Course.tipFutur"
+      }
+    ],
+    "vocabulary": [
+      {
+        "word": "bellen",
+        "translation-ru": "лаять",
+        "translation-en": "to bark",
+        "translation-uk": "гавкати",
+        "translation-pl": "szczekać",
+        "translation-es": "ladrar",
+        "translation-fr": "aboyer",
+        "translation-tr": "havlamak",
+        "translation-ro": "a lătra",
+        "translation-uz": "vovillamoq",
+        "translation-hi": "भोंकना",
+        "translation-ar": "ينبح"
+      },
+      {
+        "word": "das Pferd",
+        "translation-ru": "лошадь",
+        "translation-en": "horse",
+        "translation-uk": "кінь",
+        "translation-pl": "koń",
+        "translation-es": "caballo",
+        "translation-fr": "cheval",
+        "translation-tr": "at",
+        "translation-ro": "cal",
+        "translation-uz": "ot",
+        "translation-hi": "घोड़ा",
+        "translation-ar": "حصان"
+      },
+      {
+        "word": "rennen",
+        "translation-ru": "бежать / мчаться",
+        "translation-en": "to run / race",
+        "translation-uk": "бігти / мчати",
+        "translation-pl": "biec / pędzić",
+        "translation-es": "correr",
+        "translation-fr": "courir",
+        "translation-tr": "koşmak",
+        "translation-ro": "a alerga",
+        "translation-uz": "yugurmoq",
+        "translation-hi": "दौड़ना",
+        "translation-ar": "يركض"
+      },
+      {
+        "word": "der Hamster",
+        "translation-ru": "хомяк",
+        "translation-en": "hamster",
+        "translation-uk": "хом'як",
+        "translation-pl": "chomik",
+        "translation-es": "hámster",
+        "translation-fr": "hamster",
+        "translation-tr": "hamster",
+        "translation-ro": "hamster",
+        "translation-uz": "xomyak",
+        "translation-hi": "हैम्स्टर",
+        "translation-ar": "هامستر"
+      },
+      {
+        "word": "der Papagei",
+        "translation-ru": "попугай",
+        "translation-en": "parrot",
+        "translation-uk": "папуга",
+        "translation-pl": "papuga",
+        "translation-es": "loro",
+        "translation-fr": "perroquet",
+        "translation-tr": "papağan",
+        "translation-ro": "papagal",
+        "translation-uz": "tuti",
+        "translation-hi": "तोता",
+        "translation-ar": "ببغاء"
       }
     ]
   },
@@ -1951,8 +4628,23 @@
         "id": 1,
         "type": "reorder",
         "question": "pluralLandQuestFourteen.questOne",
-        "words": ["schützen", "Natur", "unsere", "besser", "Wir", "werden"],
-        "correctOrder": ["Wir", "werden", "unsere", "Natur", "besser", "schützen"]
+        "words": [
+          "schützen",
+          "Natur",
+          "unsere",
+          "besser",
+          "Wir",
+          "werden"
+        ],
+        "correctOrder": [
+          "Wir",
+          "werden",
+          "unsere",
+          "Natur",
+          "besser",
+          "schützen"
+        ],
+        "tip": "a2Course.tipFutur"
       },
       {
         "id": 2,
@@ -1963,21 +4655,37 @@
           "Das Klima werden sich schnell ändern",
           "Das Klima werdet sich schnell ändern"
         ],
-        "answer": "Das Klima wird sich schnell ändern"
+        "answer": "Das Klima wird sich schnell ändern",
+        "tip": "a2Course.tipFutur"
       },
       {
         "id": 3,
         "type": "speechToText",
         "question": "pluralLandQuestFourteen.questThree",
         "text": "Wir werden weniger Plastik benutzen",
-        "answer": "Wir werden weniger Plastik benutzen"
+        "answer": "Wir werden weniger Plastik benutzen",
+        "tip": "a2Course.tipFutur"
       },
       {
         "id": 4,
         "type": "reorder",
         "question": "pluralLandQuestFourteen.questFour",
-        "words": ["nutzen", "Energie", "solare", "Menschen", "Die", "werden", "werdet"],
-        "correctOrder": ["Die", "Menschen", "werden", "solare", "Energie", "nutzen"]
+        "words": [
+          "nutzen",
+          "Solarenergie",
+          "Menschen",
+          "Die",
+          "werden",
+          "werdet"
+        ],
+        "correctOrder": [
+          "Die",
+          "Menschen",
+          "werden",
+          "Solarenergie",
+          "nutzen"
+        ],
+        "tip": "a2Course.tipFutur"
       },
       {
         "id": 5,
@@ -1988,21 +4696,38 @@
           "Die Luft werden in der Stadt sauberer sein",
           "Die Luft werdet in der Stadt sauberer sein"
         ],
-        "answer": "Die Luft wird in der Stadt sauberer sein"
+        "answer": "Die Luft wird in der Stadt sauberer sein",
+        "tip": "a2Course.tipFutur"
       },
       {
         "id": 6,
         "type": "reorder",
         "question": "pluralLandQuestFourteen.questSix",
-        "words": ["trennen", "Müll", "immer", "den", "werde", "Ich"],
-        "correctOrder": ["Ich", "werde", "den", "Müll", "immer", "trennen"]
+        "words": [
+          "trennen",
+          "Müll",
+          "immer",
+          "den",
+          "werde",
+          "Ich"
+        ],
+        "correctOrder": [
+          "Ich",
+          "werde",
+          "den",
+          "Müll",
+          "immer",
+          "trennen"
+        ],
+        "tip": "a2Course.tipFutur"
       },
       {
         "id": 7,
         "type": "speechToText",
         "question": "pluralLandQuestFourteen.questSeven",
         "text": "Wir werden den Wald retten",
-        "answer": "Wir werden den Wald retten"
+        "answer": "Wir werden den Wald retten",
+        "tip": "a2Course.tipFutur"
       },
       {
         "id": 8,
@@ -2011,55 +4736,130 @@
         "options": [
           "Ihr werde umweltfreundlich leben",
           "Wir werden umweltfreundlich leben",
-          "ich werdet umweltfreundlich leben"
+          "Ich werdet umweltfreundlich leben"
         ],
-        "answer": "Wir werden umweltfreundlich leben"
+        "answer": "Wir werden umweltfreundlich leben",
+        "tip": "a2Course.tipFutur"
       },
       {
         "id": 9,
         "type": "reorder",
         "question": "pluralLandQuestFourteen.questNine",
-        "words": ["werden", "populär", "sehr", "Elektroautos", "werden", "werdet"],
-        "correctOrder": ["Elektroautos", "werden", "sehr", "populär", "werden"]
+        "words": [
+          "werden",
+          "populär",
+          "sehr",
+          "Elektroautos",
+          "werden",
+          "werdet"
+        ],
+        "correctOrder": [
+          "Elektroautos",
+          "werden",
+          "sehr",
+          "populär",
+          "werden"
+        ],
+        "tip": "a2Course.tipFutur"
       },
       {
         "id": 10,
         "type": "speechToText",
         "question": "pluralLandQuestFourteen.questTen",
         "text": "Das Wasser wird sauber bleiben",
-        "answer": "Das Wasser wird sauber bleiben"
+        "answer": "Das Wasser wird sauber bleiben",
+        "tip": "a2Course.tipFutur"
       },
       {
         "id": 11,
         "type": "reorder",
-        "question": "pluralLandQuestFourteen.questEleven",
-        "words": ["kümmern", "Planeten", "den", "um", "Wer", "wird", "sich", "dem"],
-        "correctOrder": ["Wer", "wird", "sich", "um", "den", "Planeten", "kümmern"]
+        "question": "pluralLandQuestThirteen.questOne",
+        "words": [
+          "kaufen",
+          "Hund",
+          "werdet",
+          "einen",
+          "werde",
+          "Ich"
+        ],
+        "correctOrder": [
+          "Ich",
+          "werde",
+          "einen",
+          "Hund",
+          "kaufen"
+        ],
+        "reviewOf": "future-thirteen",
+        "reviewLand": "future-land",
+        "tip": "a2Course.tipFutur"
       },
       {
         "id": 12,
-        "type": "select",
-        "question": "pluralLandQuestFourteen.questTwelve",
-        "options": [
-          "Wir werden Bäume pflanzen",
-          "Ihr wird Bäume pflanzen",
-          "Sie werdet Bäume pflanzen"
+        "type": "reorder",
+        "question": "pluralLandQuestEleven.questFour",
+        "words": [
+          "essen",
+          "Fisch",
+          "du",
+          "Wirst"
         ],
-        "answer": "Wir werden Bäume pflanzen"
+        "correctOrder": [
+          "Wirst",
+          "du",
+          "Fisch",
+          "essen"
+        ],
+        "reviewOf": "future-eleven",
+        "reviewLand": "future-land",
+        "tip": "a2Course.tipFutur"
       },
       {
         "id": 13,
-        "type": "speechToText",
-        "question": "pluralLandQuestFourteen.questThirteen",
-        "text": "Die Erde wird wärmer werden",
-        "answer": "Die Erde wird wärmer werden"
+        "type": "reorder",
+        "question": "pluralLandQuestSeven.questFour",
+        "words": [
+          "helfen",
+          "Freunde",
+          "Tragen",
+          "uns",
+          "beim",
+          "Die",
+          "werden"
+        ],
+        "correctOrder": [
+          "Die",
+          "Freunde",
+          "werden",
+          "uns",
+          "beim",
+          "Tragen",
+          "helfen"
+        ],
+        "tip": "pluralLandQuestSeven.questFourTip",
+        "reviewOf": "future-seven",
+        "reviewLand": "future-land"
       },
       {
         "id": 14,
         "type": "reorder",
         "question": "pluralLandQuestFourteen.questFourteen",
-        "words": ["verschmutzen", "Meer", "das", "nicht", "Wir", "werden"],
-        "correctOrder": ["Wir", "werden", "das", "Meer", "nicht", "verschmutzen"]
+        "words": [
+          "verschmutzen",
+          "Meer",
+          "das",
+          "nicht",
+          "Wir",
+          "werden"
+        ],
+        "correctOrder": [
+          "Wir",
+          "werden",
+          "das",
+          "Meer",
+          "nicht",
+          "verschmutzen"
+        ],
+        "tip": "a2Course.tipFutur"
       },
       {
         "id": 15,
@@ -2070,7 +4870,192 @@
           "Das Eis werden im Sommer schmelzen",
           "Das Eis wird in Sommer schmelzen"
         ],
-        "answer": "Das Eis wird im Sommer schmelzen"
+        "answer": "Das Eis wird im Sommer schmelzen",
+        "tip": "a2Course.tipFutur"
+      }
+    ],
+    "vocabulary": [
+      {
+        "word": "das Klima",
+        "translation-ru": "климат",
+        "translation-en": "climate",
+        "translation-uk": "клімат",
+        "translation-pl": "klimat",
+        "translation-es": "clima",
+        "translation-fr": "climat",
+        "translation-tr": "i̇klim",
+        "translation-ro": "climă",
+        "translation-uz": "iqlim",
+        "translation-hi": "जलवायु",
+        "translation-ar": "مناخ"
+      },
+      {
+        "word": "weniger",
+        "translation-ru": "меньше",
+        "translation-en": "less",
+        "translation-uk": "менше",
+        "translation-pl": "mniej",
+        "translation-es": "menos",
+        "translation-fr": "moins",
+        "translation-tr": "daha az",
+        "translation-ro": "mai puțin",
+        "translation-uz": "kamroq",
+        "translation-hi": "कम",
+        "translation-ar": "أقل"
+      },
+      {
+        "word": "benutzen",
+        "translation-ru": "использовать",
+        "translation-en": "to use / utilize",
+        "translation-uk": "використовувати",
+        "translation-pl": "używać",
+        "translation-es": "utilizar",
+        "translation-fr": "utiliser",
+        "translation-tr": "kullanmak",
+        "translation-ro": "a utiliza",
+        "translation-uz": "foydalanmoq",
+        "translation-hi": "उपयोग करना",
+        "translation-ar": "يستخدم"
+      },
+      {
+        "word": "retten",
+        "translation-ru": "спасать",
+        "translation-en": "to save, to rescue",
+        "translation-uk": "рятувати",
+        "translation-pl": "ratować",
+        "translation-es": "salvar",
+        "translation-fr": "sauver",
+        "translation-tr": "kurtarmak",
+        "translation-ro": "a salva",
+        "translation-uz": "qutqarmoq",
+        "translation-hi": "बचाना",
+        "translation-ar": "ينقذ"
+      },
+      {
+        "word": "das Leben",
+        "translation-ru": "жизнь",
+        "translation-en": "life",
+        "translation-uk": "життя",
+        "translation-pl": "życie",
+        "translation-es": "la vida",
+        "translation-fr": "la vie",
+        "translation-tr": "hayat",
+        "translation-ro": "viața",
+        "translation-uz": "hayot",
+        "translation-hi": "ज़िंदगी",
+        "translation-ar": "الحياة"
+      },
+      {
+        "word": "schützen",
+        "translation-ru": "защищать",
+        "translation-en": "to protect",
+        "translation-uk": "захищати",
+        "translation-pl": "chronić",
+        "translation-es": "proteger",
+        "translation-fr": "protéger",
+        "translation-tr": "korumak",
+        "translation-ro": "a proteja",
+        "translation-uz": "himoya qilmoq",
+        "translation-hi": "रक्षा करना",
+        "translation-ar": "يحمي"
+      },
+      {
+        "word": "das Plastik",
+        "translation-ru": "пластик",
+        "translation-en": "plastic",
+        "translation-uk": "пластик",
+        "translation-pl": "plastik",
+        "translation-es": "el plástico",
+        "translation-fr": "le plastique",
+        "translation-tr": "plastik",
+        "translation-ro": "plasticul",
+        "translation-uz": "plastik",
+        "translation-hi": "प्लास्टिक",
+        "translation-ar": "البلاستيك"
+      },
+      {
+        "word": "die Solarenergie",
+        "translation-ru": "солнечная энергия",
+        "translation-en": "solar energy",
+        "translation-uk": "сонячна енергія",
+        "translation-pl": "energia słoneczna",
+        "translation-es": "la energía solar",
+        "translation-fr": "l’énergie solaire",
+        "translation-tr": "güneş enerjisi",
+        "translation-ro": "energia solară",
+        "translation-uz": "quyosh energiyasi",
+        "translation-hi": "सौर ऊर्जा",
+        "translation-ar": "الطاقة الشمسية"
+      },
+      {
+        "word": "umweltfreundlich",
+        "translation-ru": "экологичный",
+        "translation-en": "environmentally friendly",
+        "translation-uk": "екологічний",
+        "translation-pl": "ekologiczny",
+        "translation-es": "ecológico",
+        "translation-fr": "écologique",
+        "translation-tr": "çevre dostu",
+        "translation-ro": "ecologic",
+        "translation-uz": "ekologik toza",
+        "translation-hi": "पर्यावरण के अनुकूल",
+        "translation-ar": "صديق للبيئة"
+      },
+      {
+        "word": "das Elektroauto",
+        "translation-ru": "электромобиль",
+        "translation-en": "electric car",
+        "translation-uk": "електромобіль",
+        "translation-pl": "samochód elektryczny",
+        "translation-es": "el coche eléctrico",
+        "translation-fr": "la voiture électrique",
+        "translation-tr": "elektrikli araba",
+        "translation-ro": "mașina electrică",
+        "translation-uz": "elektromobil",
+        "translation-hi": "इलेक्ट्रिक कार",
+        "translation-ar": "السيارة الكهربائية"
+      },
+      {
+        "word": "populär",
+        "translation-ru": "популярный",
+        "translation-en": "popular",
+        "translation-uk": "популярний",
+        "translation-pl": "popularny",
+        "translation-es": "popular",
+        "translation-fr": "populaire",
+        "translation-tr": "popüler",
+        "translation-ro": "popular",
+        "translation-uz": "mashhur",
+        "translation-hi": "लोकप्रिय",
+        "translation-ar": "شائع"
+      },
+      {
+        "word": "verschmutzen",
+        "translation-ru": "загрязнять",
+        "translation-en": "to pollute",
+        "translation-uk": "забруднювати",
+        "translation-pl": "zanieczyszczać",
+        "translation-es": "contaminar",
+        "translation-fr": "polluer",
+        "translation-tr": "kirletmek",
+        "translation-ro": "a polua",
+        "translation-uz": "ifloslantirmoq",
+        "translation-hi": "प्रदूषित करना",
+        "translation-ar": "يلوث"
+      },
+      {
+        "word": "nutzen",
+        "translation-ru": "использовать",
+        "translation-en": "to use",
+        "translation-uk": "використовувати",
+        "translation-pl": "używać",
+        "translation-es": "usar",
+        "translation-fr": "utiliser",
+        "translation-tr": "kullanmak",
+        "translation-ro": "a folosi",
+        "translation-uz": "foydalanmoq",
+        "translation-hi": "उपयोग करना",
+        "translation-ar": "يستخدم"
       }
     ]
   },
@@ -2096,8 +5081,24 @@
         "id": 1,
         "type": "reorder",
         "question": "pluralLandQuestFifteen.questOne",
-        "words": ["den", "feiern", "Tag", "werden", "ganzen", "Wir", "der"],
-        "correctOrder": ["Wir", "werden", "den", "ganzen", "Tag", "feiern"]
+        "words": [
+          "den",
+          "feiern",
+          "Tag",
+          "werden",
+          "ganzen",
+          "Wir",
+          "der"
+        ],
+        "correctOrder": [
+          "Wir",
+          "werden",
+          "den",
+          "ganzen",
+          "Tag",
+          "feiern"
+        ],
+        "tip": "a2Course.tipFutur"
       },
       {
         "id": 2,
@@ -2108,21 +5109,34 @@
           "Das Fest werden beginnen",
           "Das Fest werdet beginnen"
         ],
-        "answer": "Das Fest wird beginnen"
+        "answer": "Das Fest wird beginnen",
+        "tip": "a2Course.tipFutur"
       },
       {
         "id": 3,
         "type": "speechToText",
         "question": "pluralLandQuestFifteen.questThree",
         "text": "Ich werde einen Kuchen backen",
-        "answer": "Ich werde einen Kuchen backen"
+        "answer": "Ich werde einen Kuchen backen",
+        "tip": "a2Course.tipFutur"
       },
       {
         "id": 4,
         "type": "reorder",
         "question": "pluralLandQuestFifteen.questFour",
-        "words": ["feiern", "Weihnachten", "werden", "Wir"],
-        "correctOrder": ["Wir", "werden", "Weihnachten", "feiern"]
+        "words": [
+          "feiern",
+          "Weihnachten",
+          "werden",
+          "Wir"
+        ],
+        "correctOrder": [
+          "Wir",
+          "werden",
+          "Weihnachten",
+          "feiern"
+        ],
+        "tip": "a2Course.tipFutur"
       },
       {
         "id": 5,
@@ -2133,21 +5147,36 @@
           "Ihr werden Geschenke bekommen",
           "Ihr wird Geschenke bekommen"
         ],
-        "answer": "Ihr werdet Geschenke bekommen"
+        "answer": "Ihr werdet Geschenke bekommen",
+        "tip": "a2Course.tipFutur"
       },
       {
         "id": 6,
         "type": "reorder",
         "question": "pluralLandQuestFifteen.questSix",
-        "words": ["beginnen", "Jahr", "Das", "wird", "bald"],
-        "correctOrder": ["Das", "Jahr", "wird", "bald", "beginnen"]
+        "words": [
+          "beginnen",
+          "Jahr",
+          "Das",
+          "wird",
+          "bald"
+        ],
+        "correctOrder": [
+          "Das",
+          "Jahr",
+          "wird",
+          "bald",
+          "beginnen"
+        ],
+        "tip": "a2Course.tipFutur"
       },
       {
         "id": 7,
         "type": "speechToText",
         "question": "pluralLandQuestFifteen.questSeven",
         "text": "Wir werden den Baum schmücken",
-        "answer": "Wir werden den Baum schmücken"
+        "answer": "Wir werden den Baum schmücken",
+        "tip": "a2Course.tipFutur"
       },
       {
         "id": 8,
@@ -2158,53 +5187,127 @@
           "Die Stimmung werden gut sein",
           "Die Stimmung werdet gut sein"
         ],
-        "answer": "Die Stimmung wird gut sein"
+        "answer": "Die Stimmung wird gut sein",
+        "tip": "a2Course.tipFutur"
       },
       {
         "id": 9,
         "type": "reorder",
         "question": "pluralLandQuestFifteen.questNine",
-        "words": ["einladen", "Freunde", "Sie", "wird"],
-        "correctOrder": ["Sie", "wird", "Freunde", "einladen"]
+        "words": [
+          "einladen",
+          "Freunde",
+          "Sie",
+          "wird"
+        ],
+        "correctOrder": [
+          "Sie",
+          "wird",
+          "Freunde",
+          "einladen"
+        ],
+        "tip": "a2Course.tipFutur"
       },
       {
         "id": 10,
         "type": "speechToText",
         "question": "pluralLandQuestFifteen.questTen",
         "text": "Es wird eine Tradition sein",
-        "answer": "Es wird eine Tradition sein"
+        "answer": "Es wird eine Tradition sein",
+        "tip": "a2Course.tipFutur"
       },
       {
         "id": 11,
         "type": "reorder",
-        "question": "pluralLandQuestFifteen.questEleven",
-        "words": ["schicken", "Karte", "eine", "Wirst", "du", "einen"],
-        "correctOrder": ["Wirst", "du", "eine", "Karte", "schicken"]
+        "question": "pluralLandQuestFourteen.questOne",
+        "words": [
+          "schützen",
+          "Natur",
+          "unsere",
+          "besser",
+          "Wir",
+          "werden"
+        ],
+        "correctOrder": [
+          "Wir",
+          "werden",
+          "unsere",
+          "Natur",
+          "besser",
+          "schützen"
+        ],
+        "reviewOf": "future-fourteen",
+        "reviewLand": "future-land",
+        "tip": "a2Course.tipFutur"
       },
       {
         "id": 12,
-        "type": "select",
-        "question": "pluralLandQuestFifteen.questTwelve",
-        "options": [
-          "Die Gäste werden kommen",
-          "Die Gäste wird kommen",
-          "Die Gäste werdet kommen"
+        "type": "reorder",
+        "question": "pluralLandQuestTwelve.questFour",
+        "words": [
+          "anfangen",
+          "Film",
+          "bald",
+          "Der",
+          "wird"
         ],
-        "answer": "Die Gäste werden kommen"
+        "correctOrder": [
+          "Der",
+          "Film",
+          "wird",
+          "bald",
+          "anfangen"
+        ],
+        "reviewOf": "future-twelve",
+        "reviewLand": "future-land",
+        "tip": "a2Course.tipFutur"
       },
       {
         "id": 13,
-        "type": "speechToText",
-        "question": "pluralLandQuestFifteen.questThirteen",
-        "text": "Ich werde mir etwas wünschen",
-        "answer": "Ich werde mir etwas wünschen"
+        "type": "reorder",
+        "question": "pluralLandQuestEight.questSix",
+        "words": [
+          "werde",
+          "sein",
+          "morgen",
+          "windig",
+          "Es",
+          "wird"
+        ],
+        "correctOrder": [
+          "Es",
+          "wird",
+          "morgen",
+          "windig",
+          "sein"
+        ],
+        "reviewOf": "future-eight",
+        "reviewLand": "future-land",
+        "tip": "a2Course.tipFutur"
       },
       {
         "id": 14,
         "type": "reorder",
         "question": "pluralLandQuestFifteen.questFourteen",
-        "words": ["werdet", "vergessen", "Fest", "das", "nicht", "Wir", "die", "werden"],
-        "correctOrder": ["Wir", "werden", "das", "Fest", "nicht", "vergessen"]
+        "words": [
+          "werdet",
+          "vergessen",
+          "Fest",
+          "das",
+          "nicht",
+          "Wir",
+          "die",
+          "werden"
+        ],
+        "correctOrder": [
+          "Wir",
+          "werden",
+          "das",
+          "Fest",
+          "nicht",
+          "vergessen"
+        ],
+        "tip": "a2Course.tipFutur"
       },
       {
         "id": 15,
@@ -2215,7 +5318,94 @@
           "Er werden eine Rede halten",
           "Er werdet eine Rede halten"
         ],
-        "answer": "Er wird eine Rede halten"
+        "answer": "Er wird eine Rede halten",
+        "tip": "a2Course.tipFutur"
+      }
+    ],
+    "vocabulary": [
+      {
+        "word": "das Fest",
+        "translation-ru": "праздник",
+        "translation-en": "celebration, party",
+        "translation-uk": "свято",
+        "translation-pl": "święto, przyjęcie",
+        "translation-es": "la fiesta",
+        "translation-fr": "la fête",
+        "translation-tr": "kutlama",
+        "translation-ro": "sărbătoarea",
+        "translation-uz": "bayram",
+        "translation-hi": "उत्सव",
+        "translation-ar": "الحفل"
+      },
+      {
+        "word": "die Stimmung",
+        "translation-ru": "атмосфера",
+        "translation-en": "atmosphere",
+        "translation-uk": "атмосфера",
+        "translation-pl": "atmosfera",
+        "translation-es": "atmósfera",
+        "translation-fr": "ambiance",
+        "translation-tr": "atmosfer",
+        "translation-ro": "atmosferă",
+        "translation-uz": "muhit",
+        "translation-hi": "वातावरण",
+        "translation-ar": "جو"
+      },
+      {
+        "word": "reden",
+        "translation-ru": "разговаривать",
+        "translation-en": "to talk / speak",
+        "translation-uk": "розмовляти",
+        "translation-pl": "rozmawiać",
+        "translation-es": "hablar",
+        "translation-fr": "parler",
+        "translation-tr": "konuşmak",
+        "translation-ro": "a vorbi",
+        "translation-uz": "gaplashmoq",
+        "translation-hi": "बात करना",
+        "translation-ar": "يتحدث"
+      },
+      {
+        "word": "halten",
+        "translation-ru": "держать / останавливать",
+        "translation-en": "to hold / stop",
+        "translation-uk": "тримати / зупиняти",
+        "translation-pl": "trzymać / zatrzymać",
+        "translation-es": "sostener / parar",
+        "translation-fr": "tenir / s'arrêter",
+        "translation-tr": "tutmak / durdurmak",
+        "translation-ro": "a ține / a opri",
+        "translation-uz": "ushlamoq / to'xtatmoq",
+        "translation-hi": "पकड़ना / रुकना",
+        "translation-ar": "يمسك / يتوقف"
+      },
+      {
+        "word": "besser",
+        "translation-ru": "лучше",
+        "translation-en": "better",
+        "translation-uk": "краще",
+        "translation-pl": "lepiej",
+        "translation-es": "mejor",
+        "translation-fr": "mieux",
+        "translation-tr": "daha iyi",
+        "translation-ro": "mai bine",
+        "translation-uz": "yaxshiroq",
+        "translation-hi": "बेहतर",
+        "translation-ar": "أفضل"
+      },
+      {
+        "word": "schmücken",
+        "translation-ru": "украшать",
+        "translation-en": "to decorate",
+        "translation-uk": "прикрашати",
+        "translation-pl": "ozdabiać",
+        "translation-es": "adornar",
+        "translation-fr": "décorer",
+        "translation-tr": "süslemek",
+        "translation-ro": "a împodobi",
+        "translation-uz": "bezamoq",
+        "translation-hi": "सजाना",
+        "translation-ar": "يزيّن"
       }
     ]
   }

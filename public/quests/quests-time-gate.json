@@ -9,21 +9,42 @@
       "minCorrect": 15,
       "requiredTasks": 15
     },
-    "rewards": { "points": 10, "xp": 10 },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
     "tasks": [
       {
         "id": 1,
         "type": "reorder",
         "question": "timeGageQuestOne.questOne",
-        "words": ["werde", "dich", "bald", "besuchen", "Ich", "wirst", "dir"],
-        "correctOrder": ["Ich", "werde", "dich", "bald", "besuchen"],
+        "words": [
+          "werde",
+          "dich",
+          "bald",
+          "besuchen",
+          "Ich",
+          "wirst",
+          "dir"
+        ],
+        "correctOrder": [
+          "Ich",
+          "werde",
+          "dich",
+          "bald",
+          "besuchen"
+        ],
         "tip": "timeGageQuestOne.questOneTip"
       },
       {
         "id": 2,
         "type": "select",
         "question": "timeGageQuestOne.questTwo",
-        "options": ["Wir haben uns im Urlaub kennengelernt", "Wir sind uns im Urlaub kennengelernt", "Wir haben uns in den Urlaub kennengelernt"],
+        "options": [
+          "Wir haben uns im Urlaub kennengelernt",
+          "Wir sind uns im Urlaub kennengelernt",
+          "Wir haben uns in den Urlaub kennengelernt"
+        ],
         "answer": "Wir haben uns im Urlaub kennengelernt",
         "tip": "timeGageQuestOne.questTwoTip"
       },
@@ -39,15 +60,35 @@
         "id": 4,
         "type": "reorder",
         "question": "timeGageQuestOne.questFour",
-        "words": ["lade", "dich", "ins", "Café", "ein", "Ich", "im", "dem"],
-        "correctOrder": ["Ich", "lade", "dich", "ins", "Café", "ein"],
+        "words": [
+          "lade",
+          "dich",
+          "ins",
+          "Café",
+          "ein",
+          "Ich",
+          "im",
+          "dem"
+        ],
+        "correctOrder": [
+          "Ich",
+          "lade",
+          "dich",
+          "ins",
+          "Café",
+          "ein"
+        ],
         "tip": "timeGageQuestOne.questFourTip"
       },
       {
         "id": 5,
         "type": "select",
         "question": "timeGageQuestOne.questFive",
-        "options": ["Ich freue mich, weil du hier bist", "Ich freue mich, weil du bist hier", "Ich freue mich, weil bist du hier"],
+        "options": [
+          "Ich freue mich, weil du hier bist",
+          "Ich freue mich, weil du bist hier",
+          "Ich freue mich, weil bist du hier"
+        ],
         "answer": "Ich freue mich, weil du hier bist",
         "tip": "timeGageQuestOne.questFiveTip"
       },
@@ -55,8 +96,19 @@
         "id": 6,
         "type": "reorder",
         "question": "timeGageQuestOne.questSix",
-        "words": ["werden", "viel", "sprechen", "Wir", "werdet"],
-        "correctOrder": ["Wir", "werden", "viel", "sprechen"],
+        "words": [
+          "werden",
+          "viel",
+          "sprechen",
+          "Wir",
+          "werdet"
+        ],
+        "correctOrder": [
+          "Wir",
+          "werden",
+          "viel",
+          "sprechen"
+        ],
         "tip": "timeGageQuestOne.questSixTip"
       },
       {
@@ -71,7 +123,11 @@
         "id": 8,
         "type": "select",
         "question": "timeGageQuestOne.questEight",
-        "options": ["Wir treffen uns im Kino", "Wir treffen uns ins Kino", "Wir treffen uns in das Kino"],
+        "options": [
+          "Wir treffen uns im Kino",
+          "Wir treffen uns ins Kino",
+          "Wir treffen uns in das Kino"
+        ],
         "answer": "Wir treffen uns im Kino",
         "tip": "timeGageQuestOne.questEightTip"
       },
@@ -79,8 +135,23 @@
         "id": 9,
         "type": "reorder",
         "question": "timeGageQuestOne.questNine",
-        "words": ["dass", "sie", "später", "kommt", "sagt", "Sie", "ist"],
-        "correctOrder": ["Sie", "sagt", "dass", "sie", "später", "kommt"],
+        "words": [
+          "dass",
+          "sie",
+          "später",
+          "kommt",
+          "sagt",
+          "Sie",
+          "ist"
+        ],
+        "correctOrder": [
+          "Sie",
+          "sagt",
+          "dass",
+          "sie",
+          "später",
+          "kommt"
+        ],
         "tip": "timeGageQuestOne.questNineTip"
       },
       {
@@ -88,38 +159,106 @@
         "type": "readAndAnswer",
         "text": "Ich habe gestern einen alten Freund getroffen. Wir werden uns bald wiedersehen.",
         "question": "timeGageQuestOne.questTen",
-        "options": ["In naher Zukunft", "Vor kurzem", "Letzten Sommer"],
-        "answer": "In naher Zukunft"
+        "options": [
+          "In naher Zukunft",
+          "Vor kurzem",
+          "Letzten Sommer"
+        ],
+        "answer": "In naher Zukunft",
+        "tip": "timeGageQuestOne.description"
       },
       {
         "id": 11,
-        "type": "select",
-        "question": "timeGageQuestOne.questEleven",
-        "options": ["Wirst du mich anrufen?", "Wirst du mir anrufen?", "Werdest du mich anrufen?"],
-        "answer": "Wirst du mich anrufen?",
-        "tip": "timeGageQuestOne.questElevenTip"
+        "type": "reorder",
+        "question": "orderValleyQuestTwelve.questOne",
+        "words": [
+          "treffe",
+          "mich",
+          "mit",
+          "Leuten",
+          "weil",
+          "Party",
+          "eine",
+          "gibt",
+          "es",
+          "Ich"
+        ],
+        "correctOrder": [
+          "Ich",
+          "treffe",
+          "mich",
+          "mit",
+          "Leuten",
+          "weil",
+          "es",
+          "eine",
+          "Party",
+          "gibt"
+        ],
+        "tip": "orderValleyQuestTwelve.questOneTip",
+        "reviewOf": "order-twelve",
+        "reviewLand": "order-valley"
       },
       {
         "id": 12,
         "type": "reorder",
-        "question": "timeGageQuestOne.questTwelve",
-        "words": ["frage", "ob", "du", "frei", "bist", "Ich", "dass", "hast"],
-        "correctOrder": ["Ich", "frage", "ob", "du", "frei", "bist"],
-        "tip": "timeGageQuestOne.questTwelveTip"
+        "question": "orderValleyQuestTen.questFour",
+        "words": [
+          "freue",
+          "mich",
+          "dass",
+          "frei",
+          "habe",
+          "Ich",
+          "heute",
+          "ich"
+        ],
+        "correctOrder": [
+          "Ich",
+          "freue",
+          "mich",
+          "dass",
+          "ich",
+          "heute",
+          "frei",
+          "habe"
+        ],
+        "tip": "orderValleyQuestTen.questFourTip",
+        "reviewOf": "order-ten",
+        "reviewLand": "order-valley"
       },
       {
         "id": 13,
-        "type": "speechToText",
-        "question": "timeGageQuestOne.questThirteen",
-        "text": "Ich rufe dich morgen an",
-        "answer": "Ich rufe dich morgen an",
-        "tip": "timeGageQuestOne.questThirteenTip"
+        "type": "reorder",
+        "question": "orderValleyQuestSix.questSix",
+        "words": [
+          "Ich",
+          "wasche",
+          "mir",
+          "die",
+          "Hände",
+          "mich"
+        ],
+        "correctOrder": [
+          "Ich",
+          "wasche",
+          "mir",
+          "die",
+          "Hände"
+        ],
+        "tip": "orderValleyQuestSix.questSixTip",
+        "reviewOf": "order-six",
+        "reviewLand": "order-valley"
       },
       {
         "id": 14,
         "type": "select",
         "question": "timeGageQuestOne.questFourteen",
-        "options": ["Sie sind auf die Party gegangen", "Sie haben auf die Party gegangen", "Sie sind auf der Party gegangen"],
+        "options": [
+          "Sie sind auf die Party gegangen",
+          "Sie haben auf die Party gegangen",
+          "Sie sind auf der Party gegangen"
+        ],
         "answer": "Sie sind auf die Party gegangen",
         "tip": "timeGageQuestOne.questFourteenTip"
       },
@@ -127,9 +266,99 @@
         "id": 15,
         "type": "reorder",
         "question": "timeGageQuestOne.questFifteen",
-        "words": ["bin", "glücklich", "wenn", "du", "kommst", "Ich", "ist", "hat", "wird", "dass"],
-        "correctOrder": ["Ich", "bin", "glücklich", "wenn", "du", "kommst"],
+        "words": [
+          "bin",
+          "glücklich",
+          "wenn",
+          "du",
+          "kommst",
+          "Ich",
+          "ist",
+          "hat",
+          "wird",
+          "dass"
+        ],
+        "correctOrder": [
+          "Ich",
+          "bin",
+          "glücklich",
+          "wenn",
+          "du",
+          "kommst"
+        ],
         "tip": "timeGageQuestOne.questFifteenTip"
+      }
+    ],
+    "vocabulary": [
+      {
+        "word": "die Zukunft",
+        "translation-ru": "будущее",
+        "translation-en": "future",
+        "translation-uk": "майбутнє",
+        "translation-pl": "przyszłość",
+        "translation-es": "el futuro",
+        "translation-fr": "l’avenir",
+        "translation-tr": "gelecek",
+        "translation-ro": "viitorul",
+        "translation-uz": "kelajak",
+        "translation-hi": "भविष्य",
+        "translation-ar": "المستقبل"
+      },
+      {
+        "word": "waschen",
+        "translation-ru": "мыть / стирать",
+        "translation-en": "to wash",
+        "translation-uk": "мити / прати",
+        "translation-pl": "myć",
+        "translation-es": "lavar",
+        "translation-fr": "laver",
+        "translation-tr": "yıkamak",
+        "translation-ro": "a spăla",
+        "translation-uz": "yuvmoq",
+        "translation-hi": "धोना",
+        "translation-ar": "يغسل"
+      },
+      {
+        "word": "die Hand",
+        "translation-ru": "рука",
+        "translation-en": "hand",
+        "translation-uk": "рука",
+        "translation-pl": "ręka",
+        "translation-es": "mano",
+        "translation-fr": "main",
+        "translation-tr": "el",
+        "translation-ro": "mână",
+        "translation-uz": "qo‘l",
+        "translation-hi": "हाथ",
+        "translation-ar": "يد"
+      },
+      {
+        "word": "glücklich",
+        "translation-ru": "счастливый",
+        "translation-en": "happy",
+        "translation-uk": "щасливий",
+        "translation-pl": "szczęśliwy",
+        "translation-es": "feliz",
+        "translation-fr": "heureux",
+        "translation-tr": "mutlu",
+        "translation-ro": "fericit",
+        "translation-uz": "baxtli",
+        "translation-hi": "ख़ुश",
+        "translation-ar": "سعيد"
+      },
+      {
+        "word": "kennenlernen",
+        "translation-ru": "знакомиться",
+        "translation-en": "to get to know / meet",
+        "translation-uk": "знайомитися",
+        "translation-pl": "poznawać",
+        "translation-es": "conocer a alguien",
+        "translation-fr": "faire la connaissance de",
+        "translation-tr": "tanışmak",
+        "translation-ro": "a face cunoștință",
+        "translation-uz": "tanishmoq",
+        "translation-hi": "जान-पहचान करना",
+        "translation-ar": "يتعرف على"
       }
     ]
   },
@@ -143,21 +372,41 @@
       "minCorrect": 15,
       "requiredTasks": 15
     },
-    "rewards": { "points": 10, "xp": 10 },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
     "tasks": [
       {
         "id": 1,
         "type": "reorder",
         "question": "timeGageQuestTwo.questOne",
-        "words": ["werde", "Auto", "kaufen", "dieses", "Ich", "den"],
-        "correctOrder": ["Ich", "werde", "dieses", "Auto", "kaufen"],
+        "words": [
+          "werde",
+          "Auto",
+          "kaufen",
+          "dieses",
+          "Ich",
+          "den"
+        ],
+        "correctOrder": [
+          "Ich",
+          "werde",
+          "dieses",
+          "Auto",
+          "kaufen"
+        ],
         "tip": "timeGageQuestTwo.questOneTip"
       },
       {
         "id": 2,
         "type": "select",
         "question": "timeGageQuestTwo.questTwo",
-        "options": ["Wir sind nach Berlin gefahren", "Wir haben nach Berlin gefahren", "Wir sind nach Berlin fahren"],
+        "options": [
+          "Wir sind nach Berlin gefahren",
+          "Wir haben nach Berlin gefahren",
+          "Wir sind nach Berlin fahren"
+        ],
         "answer": "Wir sind nach Berlin gefahren",
         "tip": "timeGageQuestTwo.questTwoTip"
       },
@@ -173,15 +422,34 @@
         "id": 4,
         "type": "reorder",
         "question": "timeGageQuestTwo.questFour",
-        "words": ["auf", "dem", "liegt", "Buch", "Das", "Tisch", "den"],
-        "correctOrder": ["Das", "Buch", "liegt", "auf", "dem", "Tisch"],
+        "words": [
+          "auf",
+          "dem",
+          "liegt",
+          "Buch",
+          "Das",
+          "Tisch",
+          "den"
+        ],
+        "correctOrder": [
+          "Das",
+          "Buch",
+          "liegt",
+          "auf",
+          "dem",
+          "Tisch"
+        ],
         "tip": "timeGageQuestTwo.questFourTip"
       },
       {
         "id": 5,
         "type": "select",
         "question": "timeGageQuestTwo.questFive",
-        "options": ["Ich stelle das Glas auf den Tisch", "Ich stelle das Glas auf dem Tisch", "Ich stelle das Glas in der Tisch"],
+        "options": [
+          "Ich stelle das Glas auf den Tisch",
+          "Ich stelle das Glas auf dem Tisch",
+          "Ich stelle das Glas in der Tisch"
+        ],
         "answer": "Ich stelle das Glas auf den Tisch",
         "tip": "timeGageQuestTwo.questFiveTip"
       },
@@ -189,8 +457,21 @@
         "id": 6,
         "type": "reorder",
         "question": "timeGageQuestTwo.questSix",
-        "words": ["hat", "Apfel", "den", "gegessen", "Sie", "einen"],
-        "correctOrder": ["Sie", "hat", "den", "Apfel", "gegessen"],
+        "words": [
+          "hat",
+          "Apfel",
+          "den",
+          "gegessen",
+          "Sie",
+          "einen"
+        ],
+        "correctOrder": [
+          "Sie",
+          "hat",
+          "den",
+          "Apfel",
+          "gegessen"
+        ],
         "tip": "timeGageQuestTwo.questSixTip"
       },
       {
@@ -205,7 +486,11 @@
         "id": 8,
         "type": "select",
         "question": "timeGageQuestTwo.questEight",
-        "options": ["Ich lerne, weil es wichtig ist", "Ich lerne, weil es ist wichtig", "Ich lerne, weil wichtig es ist"],
+        "options": [
+          "Ich lerne, weil es wichtig ist",
+          "Ich lerne, weil es ist wichtig",
+          "Ich lerne, weil wichtig es ist"
+        ],
         "answer": "Ich lerne, weil es wichtig ist",
         "tip": "timeGageQuestTwo.questEightTip"
       },
@@ -213,8 +498,26 @@
         "id": 9,
         "type": "reorder",
         "question": "timeGageQuestTwo.questNine",
-        "words": ["hängt", "Schrank", "den", "Jacke", "die", "in", "Er", "dem", "der"],
-        "correctOrder": ["Er", "hängt", "die", "Jacke", "in", "den", "Schrank"],
+        "words": [
+          "hängt",
+          "Schrank",
+          "den",
+          "Jacke",
+          "die",
+          "in",
+          "Er",
+          "dem",
+          "der"
+        ],
+        "correctOrder": [
+          "Er",
+          "hängt",
+          "die",
+          "Jacke",
+          "in",
+          "den",
+          "Schrank"
+        ],
         "tip": "timeGageQuestTwo.questNineTip"
       },
       {
@@ -222,38 +525,105 @@
         "type": "readAndAnswer",
         "text": "Morgen werde ich nach Hamburg fahren. Ich habe schon ein Ticket gekauft.",
         "question": "timeGageQuestTwo.questTen",
-        "options": ["nach Hamburg", "nach Berlin", "nach München"],
-        "answer": "nach Hamburg"
+        "options": [
+          "nach Hamburg",
+          "nach Berlin",
+          "nach München"
+        ],
+        "answer": "nach Hamburg",
+        "tip": "timeGageQuestTwo.description"
       },
       {
         "id": 11,
-        "type": "select",
-        "question": "timeGageQuestTwo.questEleven",
-        "options": ["Wirst du schlafen?", "Wirst du schläfst?", "Werdest du schlafen?"],
-        "answer": "Wirst du schlafen?",
-        "tip": "timeGageQuestTwo.questElevenTip"
+        "type": "reorder",
+        "question": "timeGageQuestOne.questOne",
+        "words": [
+          "werde",
+          "dich",
+          "bald",
+          "besuchen",
+          "Ich",
+          "wirst",
+          "dir"
+        ],
+        "correctOrder": [
+          "Ich",
+          "werde",
+          "dich",
+          "bald",
+          "besuchen"
+        ],
+        "tip": "timeGageQuestOne.questOneTip",
+        "reviewOf": "time-one",
+        "reviewLand": "time-gate"
       },
       {
         "id": 12,
         "type": "reorder",
-        "question": "timeGageQuestTwo.questTwelve",
-        "words": ["kommt", "sie", "ob", "nicht", "weiß", "Ich", "wenn"],
-        "correctOrder": ["Ich", "weiß", "nicht", "ob", "sie", "kommt"],
-        "tip": "timeGageQuestTwo.questTwelveTip"
+        "question": "orderValleyQuestEleven.questFour",
+        "words": [
+          "sagt",
+          "dass",
+          "sie",
+          "sich",
+          "jetzt",
+          "schminkt",
+          "Sie"
+        ],
+        "correctOrder": [
+          "Sie",
+          "sagt",
+          "dass",
+          "sie",
+          "sich",
+          "jetzt",
+          "schminkt"
+        ],
+        "tip": "orderValleyQuestEleven.questFourTip",
+        "reviewOf": "order-eleven",
+        "reviewLand": "order-valley"
       },
       {
         "id": 13,
-        "type": "speechToText",
-        "question": "timeGageQuestTwo.questThirteen",
-        "text": "Das Buch liegt auf dem Tisch",
-        "answer": "Das Buch liegt auf dem Tisch",
-        "tip": "timeGageQuestTwo.questThirteenTip"
+        "type": "reorder",
+        "question": "orderValleyQuestSeven.questSix",
+        "words": [
+          "dass",
+          "Fehler",
+          "Ich",
+          "mir",
+          "gibt",
+          "merke",
+          "es",
+          "einen",
+          "hier",
+          "ein",
+          "mich"
+        ],
+        "correctOrder": [
+          "Ich",
+          "merke",
+          "mir",
+          "dass",
+          "es",
+          "hier",
+          "einen",
+          "Fehler",
+          "gibt"
+        ],
+        "tip": "orderValleyQuestSeven.questSixTip",
+        "reviewOf": "order-seven",
+        "reviewLand": "order-valley"
       },
       {
         "id": 14,
         "type": "select",
         "question": "timeGageQuestTwo.questFourteen",
-        "options": ["Sie ist spät gekommen", "Sie hat spät gekommen", "Sie ist spät kommen"],
+        "options": [
+          "Sie ist spät gekommen",
+          "Sie hat spät gekommen",
+          "Sie ist spät kommen"
+        ],
         "answer": "Sie ist spät gekommen",
         "tip": "timeGageQuestTwo.questFourteenTip"
       },
@@ -261,9 +631,101 @@
         "id": 15,
         "type": "reorder",
         "question": "timeGageQuestTwo.questFifteen",
-        "words": ["dass", "hat", "gekauft", "Haus", "das", "er", "glaube", "ist", "den", "Ich"],
-        "correctOrder": ["Ich", "glaube", "dass", "er", "das", "Haus", "gekauft", "hat"],
+        "words": [
+          "dass",
+          "hat",
+          "gekauft",
+          "Haus",
+          "das",
+          "er",
+          "glaube",
+          "ist",
+          "den",
+          "Ich"
+        ],
+        "correctOrder": [
+          "Ich",
+          "glaube",
+          "dass",
+          "er",
+          "das",
+          "Haus",
+          "gekauft",
+          "hat"
+        ],
         "tip": "timeGageQuestTwo.questFifteenTip"
+      }
+    ],
+    "vocabulary": [
+      {
+        "word": "der Fehler",
+        "translation-ru": "ошибка",
+        "translation-en": "mistake",
+        "translation-uk": "помилка",
+        "translation-pl": "błąd",
+        "translation-es": "el error",
+        "translation-fr": "l’erreur",
+        "translation-tr": "hata",
+        "translation-ro": "greșeala",
+        "translation-uz": "xato",
+        "translation-hi": "ग़लती",
+        "translation-ar": "الخطأ"
+      },
+      {
+        "word": "wichtig",
+        "translation-ru": "важный",
+        "translation-en": "important",
+        "translation-uk": "важливий",
+        "translation-pl": "ważny",
+        "translation-es": "importante",
+        "translation-fr": "important",
+        "translation-tr": "önemli",
+        "translation-ro": "important",
+        "translation-uz": "muhim",
+        "translation-hi": "ज़रूरी",
+        "translation-ar": "مهم"
+      },
+      {
+        "word": "der Apfel",
+        "translation-ru": "яблоко",
+        "translation-en": "apple",
+        "translation-uk": "яблуко",
+        "translation-pl": "jabłko",
+        "translation-es": "manzana",
+        "translation-fr": "pomme",
+        "translation-tr": "elma",
+        "translation-ro": "măr",
+        "translation-uz": "olma",
+        "translation-hi": "सेब",
+        "translation-ar": "تفاحة"
+      },
+      {
+        "word": "die Stelle",
+        "translation-ru": "место работы, должность",
+        "translation-en": "job, position",
+        "translation-uk": "посада, місце роботи",
+        "translation-pl": "posada, praca",
+        "translation-es": "el puesto",
+        "translation-fr": "le poste",
+        "translation-tr": "iş yeri, pozisyon",
+        "translation-ro": "postul",
+        "translation-uz": "lavozim",
+        "translation-hi": "नौकरी, पद",
+        "translation-ar": "الوظيفة"
+      },
+      {
+        "word": "hängen",
+        "translation-ru": "висеть",
+        "translation-en": "to hang",
+        "translation-uk": "висіти",
+        "translation-pl": "wisieć",
+        "translation-es": "colgar",
+        "translation-fr": "être suspendu",
+        "translation-tr": "asılı olmak",
+        "translation-ro": "a atârna",
+        "translation-uz": "osilib turmoq",
+        "translation-hi": "लटकना",
+        "translation-ar": "يعلق"
       }
     ]
   },
@@ -277,22 +739,44 @@
       "minCorrect": 15,
       "requiredTasks": 15
     },
-    "rewards": { "points": 10, "xp": 10 },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
     "tasks": [
       {
         "id": 1,
         "type": "reorder",
         "question": "timeGageQuestThree.questOne",
-        "words": ["werde", "ins", "fahren", "Zentrum", "Ich", "in", "dem"],
-        "correctOrder": ["Ich", "werde", "ins", "Zentrum", "fahren"],
+        "words": [
+          "werde",
+          "ins",
+          "fahren",
+          "Zentrum",
+          "Ich",
+          "in",
+          "dem"
+        ],
+        "correctOrder": [
+          "Ich",
+          "werde",
+          "ins",
+          "Zentrum",
+          "fahren"
+        ],
         "tip": "timeGageQuestThree.questOneTip"
       },
       {
         "id": 2,
         "type": "select",
         "question": "timeGageQuestThree.questTwo",
-        "options": ["Ich habe einen Freund im Park getroffen", "Ich bin einen Freund im Park getroffen", "Ich habe einen Freund in den Park getroffen"],
-        "answer": "Ich habe einen Freund im Park getroffen"
+        "options": [
+          "Ich habe einen Freund im Park getroffen",
+          "Ich bin einen Freund im Park getroffen",
+          "Ich habe einen Freund in den Park getroffen"
+        ],
+        "answer": "Ich habe einen Freund im Park getroffen",
+        "tip": "timeGageQuestThree.description"
       },
       {
         "id": 3,
@@ -306,15 +790,30 @@
         "id": 4,
         "type": "reorder",
         "question": "timeGageQuestThree.questFour",
-        "words": ["gehe", "Museum", "ins", "Ich", "in"],
-        "correctOrder": ["Ich", "gehe", "ins", "Museum"],
+        "words": [
+          "gehe",
+          "Museum",
+          "ins",
+          "Ich",
+          "in"
+        ],
+        "correctOrder": [
+          "Ich",
+          "gehe",
+          "ins",
+          "Museum"
+        ],
         "tip": "timeGageQuestThree.questFourTip"
       },
       {
         "id": 5,
         "type": "select",
         "question": "timeGageQuestThree.questFive",
-        "options": ["Ich freue mich, dass du hier bist", "Ich freue mich, dass du bist hier", "Ich freue mich, dass hier du bist"],
+        "options": [
+          "Ich freue mich, dass du hier bist",
+          "Ich freue mich, dass du bist hier",
+          "Ich freue mich, dass hier du bist"
+        ],
         "answer": "Ich freue mich, dass du hier bist",
         "tip": "timeGageQuestThree.questFiveTip"
       },
@@ -322,8 +821,21 @@
         "id": 6,
         "type": "reorder",
         "question": "timeGageQuestThree.questSix",
-        "words": ["werden", "Restaurant", "im", "essen", "Wir", "in"],
-        "correctOrder": ["Wir", "werden", "im", "Restaurant", "essen"],
+        "words": [
+          "werden",
+          "Restaurant",
+          "im",
+          "essen",
+          "Wir",
+          "in"
+        ],
+        "correctOrder": [
+          "Wir",
+          "werden",
+          "im",
+          "Restaurant",
+          "essen"
+        ],
         "tip": "timeGageQuestThree.questSixTip"
       },
       {
@@ -331,13 +843,18 @@
         "type": "speechToText",
         "question": "timeGageQuestThree.questSeven",
         "text": "Er hat ein Ticket gekauft",
-        "answer": "Er hat ein Ticket gekauft"
+        "answer": "Er hat ein Ticket gekauft",
+        "tip": "timeGageQuestThree.description"
       },
       {
         "id": 8,
         "type": "select",
         "question": "timeGageQuestThree.questEight",
-        "options": ["Das Auto steht vor dem Haus", "Das Auto steht vor den Haus", "Das Auto steht vor das Haus"],
+        "options": [
+          "Das Auto steht vor dem Haus",
+          "Das Auto steht vor den Haus",
+          "Das Auto steht vor das Haus"
+        ],
         "answer": "Das Auto steht vor dem Haus",
         "tip": "timeGageQuestThree.questEightTip"
       },
@@ -345,8 +862,27 @@
         "id": 9,
         "type": "reorder",
         "question": "timeGageQuestThree.questNine",
-        "words": ["gehe", "weil", "bin", "müde", "ich", "Hause", "nach", "Ich", "ist"],
-        "correctOrder": ["Ich", "gehe", "nach", "Hause", "weil", "ich", "müde", "bin"],
+        "words": [
+          "gehe",
+          "weil",
+          "bin",
+          "müde",
+          "ich",
+          "Hause",
+          "nach",
+          "Ich",
+          "ist"
+        ],
+        "correctOrder": [
+          "Ich",
+          "gehe",
+          "nach",
+          "Hause",
+          "weil",
+          "ich",
+          "müde",
+          "bin"
+        ],
         "tip": "timeGageQuestThree.questNineTip"
       },
       {
@@ -354,38 +890,108 @@
         "type": "readAndAnswer",
         "text": "Wir sind gestern im Kino gewesen. Der Film hat uns sehr gefallen.",
         "question": "timeGageQuestThree.questTen",
-        "options": ["im Kino", "im Theater", "im Park"],
-        "answer": "im Kino"
+        "options": [
+          "im Kino",
+          "im Theater",
+          "im Park"
+        ],
+        "answer": "im Kino",
+        "tip": "timeGageQuestThree.description"
       },
       {
         "id": 11,
-        "type": "select",
-        "question": "timeGageQuestThree.questEleven",
-        "options": ["Ich hänge das Plakat an die Wand", "Ich hänge das Plakat an der Wand", "Ich hänge das Plakat an den Wand"],
-        "answer": "Ich hänge das Plakat an die Wand",
-        "tip": "timeGageQuestThree.questElevenTip"
+        "type": "reorder",
+        "question": "timeGageQuestTwo.questOne",
+        "words": [
+          "werde",
+          "Auto",
+          "kaufen",
+          "dieses",
+          "Ich",
+          "den"
+        ],
+        "correctOrder": [
+          "Ich",
+          "werde",
+          "dieses",
+          "Auto",
+          "kaufen"
+        ],
+        "tip": "timeGageQuestTwo.questOneTip",
+        "reviewOf": "time-two",
+        "reviewLand": "time-gate"
       },
       {
         "id": 12,
         "type": "reorder",
-        "question": "timeGageQuestThree.questTwelve",
-        "words": ["sind", "Bahnhof", "am", "angekommen", "Sie", "haben", "auf"],
-        "correctOrder": ["Sie", "sind", "am", "Bahnhof", "angekommen"],
-        "tip": "timeGageQuestThree.questTwelveTip"
+        "question": "orderValleyQuestTwelve.questFour",
+        "words": [
+          "überlege",
+          "mir",
+          "das",
+          "wenn",
+          "Chance",
+          "es",
+          "eine",
+          "gibt",
+          "Ich"
+        ],
+        "correctOrder": [
+          "Ich",
+          "überlege",
+          "mir",
+          "das",
+          "wenn",
+          "es",
+          "eine",
+          "Chance",
+          "gibt"
+        ],
+        "tip": "orderValleyQuestTwelve.questFourTip",
+        "reviewOf": "order-twelve",
+        "reviewLand": "order-valley"
       },
       {
         "id": 13,
-        "type": "speechToText",
-        "question": "timeGageQuestThree.questThirteen",
-        "text": "Was wirst du am Abend machen?",
-        "answer": "Was wirst du am Abend machen?",
-        "tip": "timeGageQuestThree.questThirteenTip"
+        "type": "reorder",
+        "question": "orderValleyQuestEight.questSix",
+        "words": [
+          "merke",
+          "mir",
+          "dass",
+          "Bahnhof",
+          "gibt",
+          "hier",
+          "Ich",
+          "es",
+          "einen",
+          "ein",
+          "mich"
+        ],
+        "correctOrder": [
+          "Ich",
+          "merke",
+          "mir",
+          "dass",
+          "es",
+          "hier",
+          "einen",
+          "Bahnhof",
+          "gibt"
+        ],
+        "tip": "orderValleyQuestEight.questSixTip",
+        "reviewOf": "order-eight",
+        "reviewLand": "order-valley"
       },
       {
         "id": 14,
         "type": "select",
         "question": "timeGageQuestThree.questFourteen",
-        "options": ["Ich frage, ob es hier eine Apotheke gibt", "Ich frage, ob es hier eine Apotheke", "Ich frage, ob es hier ein Apotheke gibt"],
+        "options": [
+          "Ich frage, ob es hier eine Apotheke gibt",
+          "Ich frage, ob es hier eine Apotheke",
+          "Ich frage, ob es hier ein Apotheke gibt"
+        ],
         "answer": "Ich frage, ob es hier eine Apotheke gibt",
         "tip": "timeGageQuestThree.questFourteenTip"
       },
@@ -393,9 +999,115 @@
         "id": 15,
         "type": "reorder",
         "question": "timeGageQuestThree.questFifteen",
-        "words": ["dass", "wird", "Sonne", "die", "scheinen", "morgen", "glaube", "Ich", "ist", "es"],
-        "correctOrder": ["Ich", "glaube", "dass", "morgen", "die", "Sonne", "scheinen", "wird"],
+        "words": [
+          "dass",
+          "wird",
+          "Sonne",
+          "die",
+          "scheinen",
+          "morgen",
+          "glaube",
+          "Ich",
+          "ist",
+          "es"
+        ],
+        "correctOrder": [
+          "Ich",
+          "glaube",
+          "dass",
+          "morgen",
+          "die",
+          "Sonne",
+          "scheinen",
+          "wird"
+        ],
         "tip": "timeGageQuestThree.questFifteenTip"
+      }
+    ],
+    "vocabulary": [
+      {
+        "word": "die Chance",
+        "translation-ru": "шанс",
+        "translation-en": "chance",
+        "translation-uk": "шанс",
+        "translation-pl": "szansa",
+        "translation-es": "la oportunidad",
+        "translation-fr": "la chance",
+        "translation-tr": "şans",
+        "translation-ro": "șansa",
+        "translation-uz": "imkoniyat",
+        "translation-hi": "मौक़ा",
+        "translation-ar": "الفرصة"
+      },
+      {
+        "word": "die Frage",
+        "translation-ru": "вопрос",
+        "translation-en": "question",
+        "translation-uk": "питання",
+        "translation-pl": "pytanie",
+        "translation-es": "la pregunta",
+        "translation-fr": "la question",
+        "translation-tr": "soru",
+        "translation-ro": "întrebarea",
+        "translation-uz": "savol",
+        "translation-hi": "सवाल",
+        "translation-ar": "السؤال"
+      },
+      {
+        "word": "gefallen",
+        "translation-ru": "нравиться",
+        "translation-en": "to please / like",
+        "translation-uk": "подобатися",
+        "translation-pl": "podobać się",
+        "translation-es": "gustar",
+        "translation-fr": "plaire",
+        "translation-tr": "hoşuna gitmek",
+        "translation-ro": "a plăcea",
+        "translation-uz": "yoqmoq",
+        "translation-hi": "पसंद आना",
+        "translation-ar": "يعجب"
+      },
+      {
+        "word": "glauben",
+        "translation-ru": "верить / полагать",
+        "translation-en": "to believe / think",
+        "translation-uk": "вірити / думати",
+        "translation-pl": "wierzyć",
+        "translation-es": "creer",
+        "translation-fr": "croire",
+        "translation-tr": "inanmak",
+        "translation-ro": "a crede",
+        "translation-uz": "ishonmoq",
+        "translation-hi": "विश्वास करना",
+        "translation-ar": "يعتقد / يؤمن"
+      },
+      {
+        "word": "der Film",
+        "translation-ru": "фильм",
+        "translation-en": "film",
+        "translation-uk": "фільм",
+        "translation-pl": "film",
+        "translation-es": "la película",
+        "translation-fr": "le film",
+        "translation-tr": "film",
+        "translation-ro": "filmul",
+        "translation-uz": "film",
+        "translation-hi": "फ़िल्म",
+        "translation-ar": "الفيلم"
+      },
+      {
+        "word": "die Bushaltestelle",
+        "translation-ru": "автобусная остановка",
+        "translation-en": "bus stop",
+        "translation-uk": "автобусна зупинка",
+        "translation-pl": "przystanek autobusowy",
+        "translation-es": "la parada de autobús",
+        "translation-fr": "l’arrêt de bus",
+        "translation-tr": "otobüs durağı",
+        "translation-ro": "stația de autobuz",
+        "translation-uz": "avtobus bekati",
+        "translation-hi": "बस स्टॉप",
+        "translation-ar": "موقف الحافلات"
       }
     ]
   },
@@ -409,21 +1121,41 @@
       "minCorrect": 15,
       "requiredTasks": 15
     },
-    "rewards": { "points": 10, "xp": 10 },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
     "tasks": [
       {
         "id": 1,
         "type": "reorder",
         "question": "timeGageQuestFour.questOne",
-        "words": ["werde", "Brief", "einen", "schreiben", "Ich", "eine"],
-        "correctOrder": ["Ich", "werde", "einen", "Brief", "schreiben"],
+        "words": [
+          "werde",
+          "Brief",
+          "einen",
+          "schreiben",
+          "Ich",
+          "eine"
+        ],
+        "correctOrder": [
+          "Ich",
+          "werde",
+          "einen",
+          "Brief",
+          "schreiben"
+        ],
         "tip": "timeGageQuestFour.questOneTip"
       },
       {
         "id": 2,
         "type": "select",
         "question": "timeGageQuestFour.questTwo",
-        "options": ["Er ist zum Chef gegangen", "Er hat zum Chef gegangen", "Er ist zum Chef gehen"],
+        "options": [
+          "Er ist zum Chef gegangen",
+          "Er hat zum Chef gegangen",
+          "Er ist zum Chef gehen"
+        ],
         "answer": "Er ist zum Chef gegangen",
         "tip": "timeGageQuestFour.questTwoTip"
       },
@@ -439,15 +1171,37 @@
         "id": 4,
         "type": "reorder",
         "question": "timeGageQuestFour.questFour",
-        "words": ["lege", "Mappe", "die", "in", "Schrank", "den", "Ich", "der", "liege"],
-        "correctOrder": ["Ich", "lege", "die", "Mappe", "in", "den", "Schrank"],
+        "words": [
+          "lege",
+          "Mappe",
+          "die",
+          "in",
+          "Schrank",
+          "den",
+          "Ich",
+          "der",
+          "liege"
+        ],
+        "correctOrder": [
+          "Ich",
+          "lege",
+          "die",
+          "Mappe",
+          "in",
+          "den",
+          "Schrank"
+        ],
         "tip": "timeGageQuestFour.questFourTip"
       },
       {
         "id": 5,
         "type": "select",
         "question": "timeGageQuestFour.questFive",
-        "options": ["Ich arbeite, weil ich Geld brauche", "Ich arbeite, weil ich brauche Geld", "Ich arbeite, weil Geld ich brauche"],
+        "options": [
+          "Ich arbeite, weil ich Geld brauche",
+          "Ich arbeite, weil ich brauche Geld",
+          "Ich arbeite, weil Geld ich brauche"
+        ],
         "answer": "Ich arbeite, weil ich Geld brauche",
         "tip": "timeGageQuestFour.questFiveTip"
       },
@@ -455,8 +1209,22 @@
         "id": 6,
         "type": "reorder",
         "question": "timeGageQuestFour.questSix",
-        "words": ["werden", "ein", "Meeting", "haben", "Wir", "wirst", "einen"],
-        "correctOrder": ["Wir", "werden", "ein", "Meeting", "haben"],
+        "words": [
+          "werden",
+          "ein",
+          "Meeting",
+          "haben",
+          "Wir",
+          "wirst",
+          "einen"
+        ],
+        "correctOrder": [
+          "Wir",
+          "werden",
+          "ein",
+          "Meeting",
+          "haben"
+        ],
         "tip": "timeGageQuestFour.questSixTip"
       },
       {
@@ -471,7 +1239,11 @@
         "id": 8,
         "type": "select",
         "question": "timeGageQuestFour.questEight",
-        "options": ["Sie sitzt im Büro", "Sie sitzt in das Büro", "Sie sitzt ins Büro"],
+        "options": [
+          "Sie sitzt im Büro",
+          "Sie sitzt in das Büro",
+          "Sie sitzt ins Büro"
+        ],
         "answer": "Sie sitzt im Büro",
         "tip": "timeGageQuestFour.questEightTip"
       },
@@ -479,8 +1251,27 @@
         "id": 9,
         "type": "reorder",
         "question": "timeGageQuestFour.questNine",
-        "words": ["dass", "Projekt", "das", "fertig", "ist", "Er", "hat", "gesagt", "den"],
-        "correctOrder": ["Er", "hat", "gesagt", "dass", "das", "Projekt", "fertig", "ist"],
+        "words": [
+          "dass",
+          "Projekt",
+          "das",
+          "fertig",
+          "ist",
+          "Er",
+          "hat",
+          "gesagt",
+          "den"
+        ],
+        "correctOrder": [
+          "Er",
+          "hat",
+          "gesagt",
+          "dass",
+          "das",
+          "Projekt",
+          "fertig",
+          "ist"
+        ],
         "tip": "timeGageQuestFour.questNineTip"
       },
       {
@@ -488,39 +1279,106 @@
         "type": "readAndAnswer",
         "text": "Herr Schmidt wird heute um 15 Uhr den Kunden anrufen. Er hat alle Dokumente vorbereitet.",
         "question": "timeGageQuestFour.questTen",
-        "options": ["telefonieren", "ein Meeting haben", "Dokumente vorbereiten"],
+        "options": [
+          "telefonieren",
+          "ein Meeting haben",
+          "Dokumente vorbereiten"
+        ],
         "answer": "telefonieren",
         "tip": "timeGageQuestFour.questTenTip"
       },
       {
         "id": 11,
-        "type": "select",
-        "question": "timeGageQuestFour.questEleven",
-        "options": ["Ich hänge den Kalender an die Wand", "Ich hänge den Kalender an der Wand", "Ich hänge dem Kalender an die Wand"],
-        "answer": "Ich hänge den Kalender an die Wand",
-        "tip": "timeGageQuestFour.questElevenTip"
+        "type": "reorder",
+        "question": "timeGageQuestThree.questOne",
+        "words": [
+          "werde",
+          "ins",
+          "fahren",
+          "Zentrum",
+          "Ich",
+          "in",
+          "dem"
+        ],
+        "correctOrder": [
+          "Ich",
+          "werde",
+          "ins",
+          "Zentrum",
+          "fahren"
+        ],
+        "tip": "timeGageQuestThree.questOneTip",
+        "reviewOf": "time-three",
+        "reviewLand": "time-gate"
       },
       {
         "id": 12,
         "type": "reorder",
-        "question": "timeGageQuestFour.questTwelve",
-        "words": ["haben", "Arbeit", "die", "beendet", "Wir", "sind", "der"],
-        "correctOrder": ["Wir", "haben", "die", "Arbeit", "beendet"],
-        "tip": "timeGageQuestFour.questTwelveTip"
+        "question": "timeGageQuestOne.questFour",
+        "words": [
+          "lade",
+          "dich",
+          "ins",
+          "Café",
+          "ein",
+          "Ich",
+          "im",
+          "dem"
+        ],
+        "correctOrder": [
+          "Ich",
+          "lade",
+          "dich",
+          "ins",
+          "Café",
+          "ein"
+        ],
+        "tip": "timeGageQuestOne.questFourTip",
+        "reviewOf": "time-one",
+        "reviewLand": "time-gate"
       },
       {
         "id": 13,
-        "type": "speechToText",
-        "question": "timeGageQuestFour.questThirteen",
-        "text": "Ich weiß nicht, ob er kommt",
-        "answer": "Ich weiß nicht, ob er kommt",
-        "tip": "timeGageQuestFour.questThirteenTip"
+        "type": "reorder",
+        "question": "orderValleyQuestNine.questSix",
+        "words": [
+          "suche",
+          "mir",
+          "Job",
+          "einen",
+          "wenn",
+          "Stelle",
+          "es",
+          "gibt",
+          "eine",
+          "Ich",
+          "mich"
+        ],
+        "correctOrder": [
+          "Ich",
+          "suche",
+          "mir",
+          "einen",
+          "Job",
+          "wenn",
+          "es",
+          "eine",
+          "Stelle",
+          "gibt"
+        ],
+        "tip": "orderValleyQuestNine.questSixTip",
+        "reviewOf": "order-nine",
+        "reviewLand": "order-valley"
       },
       {
         "id": 14,
         "type": "select",
         "question": "timeGageQuestFour.questFourteen",
-        "options": ["Du wirst morgen viel arbeiten", "Du werdest morgen viel arbeiten", "Du wirst morgen viel gearbeitet"],
+        "options": [
+          "Du wirst morgen viel arbeiten",
+          "Du werdest morgen viel arbeiten",
+          "Du wirst morgen viel gearbeitet"
+        ],
         "answer": "Du wirst morgen viel arbeiten",
         "tip": "timeGageQuestFour.questFourteenTip"
       },
@@ -528,9 +1386,130 @@
         "id": 15,
         "type": "reorder",
         "question": "timeGageQuestFour.questFifteen",
-        "words": ["dass", "er", "einen", "Computer", "gekauft", "hat", "Ich", "habe", "gesehen", "einem"],
-        "correctOrder": ["Ich", "habe", "gesehen", "dass", "er", "einen", "Computer", "gekauft", "hat"],
+        "words": [
+          "dass",
+          "er",
+          "einen",
+          "Computer",
+          "gekauft",
+          "hat",
+          "Ich",
+          "habe",
+          "gesehen",
+          "einem"
+        ],
+        "correctOrder": [
+          "Ich",
+          "habe",
+          "gesehen",
+          "dass",
+          "er",
+          "einen",
+          "Computer",
+          "gekauft",
+          "hat"
+        ],
         "tip": "timeGageQuestFour.questFifteenTip"
+      }
+    ],
+    "vocabulary": [
+      {
+        "word": "der Herr",
+        "translation-ru": "господин",
+        "translation-en": "Mr, gentleman",
+        "translation-uk": "пан",
+        "translation-pl": "pan",
+        "translation-es": "el señor",
+        "translation-fr": "monsieur",
+        "translation-tr": "bey",
+        "translation-ro": "domnul",
+        "translation-uz": "janob",
+        "translation-hi": "साहब, श्रीमान",
+        "translation-ar": "السيد"
+      },
+      {
+        "word": "telefonieren",
+        "translation-ru": "разговаривать по телефону",
+        "translation-en": "to talk on the phone",
+        "translation-uk": "розмовляти по телефону",
+        "translation-pl": "rozmawiać przez telefon",
+        "translation-es": "hablar por teléfono",
+        "translation-fr": "téléphoner",
+        "translation-tr": "telefonla konuşmak",
+        "translation-ro": "a vorbi la telefon",
+        "translation-uz": "telefonda gaplashmoq",
+        "translation-hi": "फ़ोन पर बात करना",
+        "translation-ar": "يتكلم بالهاتف"
+      },
+      {
+        "word": "der Laptop",
+        "translation-ru": "ноутбук",
+        "translation-en": "laptop",
+        "translation-uk": "ноутбук",
+        "translation-pl": "laptop",
+        "translation-es": "portátil",
+        "translation-fr": "ordinateur portable",
+        "translation-tr": "dizüstü bilgisayar",
+        "translation-ro": "laptop",
+        "translation-uz": "noutbuk",
+        "translation-hi": "लैपटॉप",
+        "translation-ar": "حاسوب محمول"
+      },
+      {
+        "word": "die Stelle",
+        "translation-ru": "место работы, должность",
+        "translation-en": "job, position",
+        "translation-uk": "посада, місце роботи",
+        "translation-pl": "posada, praca",
+        "translation-es": "el puesto",
+        "translation-fr": "le poste",
+        "translation-tr": "iş yeri, pozisyon",
+        "translation-ro": "postul",
+        "translation-uz": "lavozim",
+        "translation-hi": "नौकरी, पद",
+        "translation-ar": "الوظيفة"
+      },
+      {
+        "word": "schreiben",
+        "translation-ru": "писать",
+        "translation-en": "to write",
+        "translation-uk": "писати",
+        "translation-pl": "pisać",
+        "translation-es": "escribir",
+        "translation-fr": "écrire",
+        "translation-tr": "yazmak",
+        "translation-ro": "a scrie",
+        "translation-uz": "yozmoq",
+        "translation-hi": "लिखना",
+        "translation-ar": "يكتب"
+      },
+      {
+        "word": "die Mappe",
+        "translation-ru": "папка",
+        "translation-en": "folder",
+        "translation-uk": "папка",
+        "translation-pl": "teczka",
+        "translation-es": "la carpeta",
+        "translation-fr": "le dossier",
+        "translation-tr": "dosya",
+        "translation-ro": "mapa",
+        "translation-uz": "papka",
+        "translation-hi": "फ़ोल्डर",
+        "translation-ar": "الملف"
+      },
+      {
+        "word": "der Kunde",
+        "translation-ru": "клиент, покупатель",
+        "translation-en": "customer",
+        "translation-uk": "клієнт, покупець",
+        "translation-pl": "klient",
+        "translation-es": "el cliente",
+        "translation-fr": "le client",
+        "translation-tr": "müşteri",
+        "translation-ro": "clientul",
+        "translation-uz": "mijoz",
+        "translation-hi": "ग्राहक",
+        "translation-ar": "الزبون"
       }
     ]
   },
@@ -544,21 +1523,41 @@
       "minCorrect": 15,
       "requiredTasks": 15
     },
-    "rewards": { "points": 10, "xp": 10 },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
     "tasks": [
       {
         "id": 1,
         "type": "reorder",
         "question": "timeGageQuestFive.questOne",
-        "words": ["werden", "Spanien", "nach", "fliegen", "Wir", "zu"],
-        "correctOrder": ["Wir", "werden", "nach", "Spanien", "fliegen"],
+        "words": [
+          "werden",
+          "Spanien",
+          "nach",
+          "fliegen",
+          "Wir",
+          "zu"
+        ],
+        "correctOrder": [
+          "Wir",
+          "werden",
+          "nach",
+          "Spanien",
+          "fliegen"
+        ],
         "tip": "timeGageQuestFive.questOneTip"
       },
       {
         "id": 2,
         "type": "select",
         "question": "timeGageQuestFive.questTwo",
-        "options": ["Wir sind im Hotel angekommen", "Wir haben im Hotel angekommen", "Wir sind in das Hotel angekommen"],
+        "options": [
+          "Wir sind im Hotel angekommen",
+          "Wir haben im Hotel angekommen",
+          "Wir sind in das Hotel angekommen"
+        ],
         "answer": "Wir sind im Hotel angekommen",
         "tip": "timeGageQuestFive.questTwoTip"
       },
@@ -567,21 +1566,40 @@
         "type": "speechToText",
         "question": "timeGageQuestFive.questThree",
         "text": "Ich habe meinen Koffer vergessen",
-        "answer": "Ich habe meinen Koffer vergessen"
+        "answer": "Ich habe meinen Koffer vergessen",
+        "tip": "timeGageQuestFive.description"
       },
       {
         "id": 4,
         "type": "reorder",
         "question": "timeGageQuestFive.questFour",
-        "words": ["Handtuch", "Das", "Strand", "am", "liegt", "dem", "in"],
-        "correctOrder": ["Das", "Handtuch", "liegt", "am", "Strand"],
+        "words": [
+          "Handtuch",
+          "Das",
+          "Strand",
+          "am",
+          "liegt",
+          "dem",
+          "in"
+        ],
+        "correctOrder": [
+          "Das",
+          "Handtuch",
+          "liegt",
+          "am",
+          "Strand"
+        ],
         "tip": "timeGageQuestFive.questFourTip"
       },
       {
         "id": 5,
         "type": "select",
         "question": "timeGageQuestFive.questFive",
-        "options": ["Ich lege das Handtuch auf den Sand", "Ich lege das Handtuch auf dem Sand", "Ich lege das Handtuch in den Sand"],
+        "options": [
+          "Ich lege das Handtuch auf den Sand",
+          "Ich lege das Handtuch auf dem Sand",
+          "Ich lege das Handtuch in den Sand"
+        ],
         "answer": "Ich lege das Handtuch auf den Sand",
         "tip": "timeGageQuestFive.questFiveTip"
       },
@@ -589,8 +1607,22 @@
         "id": 6,
         "type": "reorder",
         "question": "timeGageQuestFive.questSix",
-        "words": ["Wirst", "Souvenir", "ein", "kaufen", "du", "werdet", "einen"],
-        "correctOrder": ["Wirst", "du", "ein", "Souvenir", "kaufen"],
+        "words": [
+          "Wirst",
+          "Souvenir",
+          "ein",
+          "kaufen",
+          "du",
+          "werdet",
+          "einen"
+        ],
+        "correctOrder": [
+          "Wirst",
+          "du",
+          "ein",
+          "Souvenir",
+          "kaufen"
+        ],
         "tip": "timeGageQuestFive.questSixTip"
       },
       {
@@ -605,7 +1637,11 @@
         "id": 8,
         "type": "select",
         "question": "timeGageQuestFive.questEight",
-        "options": ["Er hat das Meer gesehen", "Er ist das Meer gesehen", "Er hat das Meer sehen"],
+        "options": [
+          "Er hat das Meer gesehen",
+          "Er ist das Meer gesehen",
+          "Er hat das Meer sehen"
+        ],
         "answer": "Er hat das Meer gesehen",
         "tip": "timeGageQuestFive.questEightTip"
       },
@@ -613,8 +1649,22 @@
         "id": 9,
         "type": "reorder",
         "question": "timeGageQuestFive.questNine",
-        "words": ["Wald", "den", "in", "gehen", "Wir", "dem", "im"],
-        "correctOrder": ["Wir", "gehen", "in", "den", "Wald"],
+        "words": [
+          "Wald",
+          "den",
+          "in",
+          "gehen",
+          "Wir",
+          "dem",
+          "im"
+        ],
+        "correctOrder": [
+          "Wir",
+          "gehen",
+          "in",
+          "den",
+          "Wald"
+        ],
         "tip": "timeGageQuestFive.questNineTip"
       },
       {
@@ -622,39 +1672,101 @@
         "type": "readAndAnswer",
         "text": "Unser Flug hat zwei Stunden Verspätung. Wir werden erst spät in Paris ankommen.",
         "question": "timeGageQuestFive.questTen",
-        "options": ["zwei Stunden", "eine Stunde", "drei Stunden"],
+        "options": [
+          "zwei Stunden",
+          "eine Stunde",
+          "drei Stunden"
+        ],
         "answer": "zwei Stunden",
         "tip": "timeGageQuestFive.questTenTip"
       },
       {
         "id": 11,
-        "type": "select",
-        "question": "timeGageQuestFive.questEleven",
-        "options": ["Ich gehe schwimmen, weil es heiß ist", "Ich gehe schwimmen, weil es ist heiß", "Ich gehe schwimmen, weil heiß es ist"],
-        "answer": "Ich gehe schwimmen, weil es heiß ist",
-        "tip": "timeGageQuestFive.questElevenTip"
+        "type": "reorder",
+        "question": "timeGageQuestFour.questOne",
+        "words": [
+          "werde",
+          "Brief",
+          "einen",
+          "schreiben",
+          "Ich",
+          "eine"
+        ],
+        "correctOrder": [
+          "Ich",
+          "werde",
+          "einen",
+          "Brief",
+          "schreiben"
+        ],
+        "tip": "timeGageQuestFour.questOneTip",
+        "reviewOf": "time-four",
+        "reviewLand": "time-gate"
       },
       {
         "id": 12,
         "type": "reorder",
-        "question": "timeGageQuestFive.questTwelve",
-        "words": ["Berge", "die", "in", "fahre", "Ich", "wenn", "Geld", "habe", "ich", "den"],
-        "correctOrder": ["Ich", "fahre", "in", "die", "Berge", "wenn", "ich", "Geld", "habe"],
-        "tip": "timeGageQuestFive.questTwelveTip"
+        "question": "timeGageQuestTwo.questFour",
+        "words": [
+          "auf",
+          "dem",
+          "liegt",
+          "Buch",
+          "Das",
+          "Tisch",
+          "den"
+        ],
+        "correctOrder": [
+          "Das",
+          "Buch",
+          "liegt",
+          "auf",
+          "dem",
+          "Tisch"
+        ],
+        "tip": "timeGageQuestTwo.questFourTip",
+        "reviewOf": "time-two",
+        "reviewLand": "time-gate"
       },
       {
         "id": 13,
-        "type": "speechToText",
-        "question": "timeGageQuestFive.questThirteen",
-        "text": "Die Sonne scheint am Himmel",
-        "answer": "Die Sonne scheint am Himmel",
-        "tip": "timeGageQuestFive.questThirteenTip"
+        "type": "reorder",
+        "question": "orderValleyQuestTen.questSix",
+        "words": [
+          "merke",
+          "mir",
+          "dass",
+          "morgen",
+          "Termin",
+          "es",
+          "gibt",
+          "Ich",
+          "einen"
+        ],
+        "correctOrder": [
+          "Ich",
+          "merke",
+          "mir",
+          "dass",
+          "es",
+          "morgen",
+          "einen",
+          "Termin",
+          "gibt"
+        ],
+        "tip": "orderValleyQuestTen.questSixTip",
+        "reviewOf": "order-ten",
+        "reviewLand": "order-valley"
       },
       {
         "id": 14,
         "type": "select",
         "question": "timeGageQuestFive.questFourteen",
-        "options": ["Ich bin in die Türkei geflogen", "Ich habe in die Türkei geflogen", "Ich bin in die Türkei fliegen"],
+        "options": [
+          "Ich bin in die Türkei geflogen",
+          "Ich habe in die Türkei geflogen",
+          "Ich bin in die Türkei fliegen"
+        ],
         "answer": "Ich bin in die Türkei geflogen",
         "tip": "timeGageQuestFive.questFourteenTip"
       },
@@ -662,9 +1774,101 @@
         "id": 15,
         "type": "reorder",
         "question": "timeGageQuestFive.questFifteen",
-        "words": ["dass", "du", "Meer", "am", "warst", "bist", "Ich", "habe", "gehört", "dem"],
-        "correctOrder": ["Ich", "habe", "gehört", "dass", "du", "am", "Meer", "warst"],
+        "words": [
+          "dass",
+          "du",
+          "Meer",
+          "am",
+          "warst",
+          "bist",
+          "Ich",
+          "habe",
+          "gehört",
+          "dem"
+        ],
+        "correctOrder": [
+          "Ich",
+          "habe",
+          "gehört",
+          "dass",
+          "du",
+          "am",
+          "Meer",
+          "warst"
+        ],
         "tip": "timeGageQuestFive.questFifteenTip"
+      }
+    ],
+    "vocabulary": [
+      {
+        "word": "das Souvenir",
+        "translation-ru": "сувенир",
+        "translation-en": "souvenir",
+        "translation-uk": "сувенір",
+        "translation-pl": "pamiątka",
+        "translation-es": "recuerdo",
+        "translation-fr": "souvenir",
+        "translation-tr": "hediyelik eşya",
+        "translation-ro": "suvenir",
+        "translation-uz": "sovg‘a",
+        "translation-hi": "स्मृति चिन्ह",
+        "translation-ar": "تذكار"
+      },
+      {
+        "word": "schreiben",
+        "translation-ru": "писать",
+        "translation-en": "to write",
+        "translation-uk": "писати",
+        "translation-pl": "pisać",
+        "translation-es": "escribir",
+        "translation-fr": "écrire",
+        "translation-tr": "yazmak",
+        "translation-ro": "a scrie",
+        "translation-uz": "yozmoq",
+        "translation-hi": "लिखना",
+        "translation-ar": "يكتب"
+      },
+      {
+        "word": "gehören",
+        "translation-ru": "принадлежать",
+        "translation-en": "to belong to",
+        "translation-uk": "належати",
+        "translation-pl": "należeć do",
+        "translation-es": "pertenecer",
+        "translation-fr": "appartenir à",
+        "translation-tr": "ait olmak",
+        "translation-ro": "a aparține",
+        "translation-uz": "tegishli bo'lmoq",
+        "translation-hi": "का होना",
+        "translation-ar": "يخص / ينتمي إلى"
+      },
+      {
+        "word": "meinen",
+        "translation-ru": "считать, иметь в виду",
+        "translation-en": "to think, mean",
+        "translation-uk": "вважати, мати на увазі",
+        "translation-pl": "uważać, mieć na myśli",
+        "translation-es": "opinar, querer decir",
+        "translation-fr": "penser, vouloir dire",
+        "translation-tr": "düşünmek, kastetmek",
+        "translation-ro": "a crede, a vrea să spui",
+        "translation-uz": "fikrda bo‘lmoq",
+        "translation-hi": "सोचना, मतलब होना",
+        "translation-ar": "يقصد"
+      },
+      {
+        "word": "vergessen",
+        "translation-ru": "забывать",
+        "translation-en": "to forget",
+        "translation-uk": "забувати",
+        "translation-pl": "zapominać",
+        "translation-es": "olvidar",
+        "translation-fr": "oublier",
+        "translation-tr": "unutmak",
+        "translation-ro": "a uita",
+        "translation-uz": "unutmoq",
+        "translation-hi": "भूलना",
+        "translation-ar": "ينسى"
       }
     ]
   },
@@ -678,22 +1882,43 @@
       "minCorrect": 15,
       "requiredTasks": 15
     },
-    "rewards": { "points": 10, "xp": 10 },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
     "tasks": [
       {
         "id": 1,
         "type": "reorder",
         "question": "timeGageQuestSix.questOne",
-        "words": ["werde", "Pizza", "eine", "bestellen", "Ich", "einen"],
-        "correctOrder": ["Ich", "werde", "eine", "Pizza", "bestellen"],
+        "words": [
+          "werde",
+          "Pizza",
+          "eine",
+          "bestellen",
+          "Ich",
+          "einen"
+        ],
+        "correctOrder": [
+          "Ich",
+          "werde",
+          "eine",
+          "Pizza",
+          "bestellen"
+        ],
         "tip": "timeGageQuestSix.questOneTip"
       },
       {
         "id": 2,
         "type": "select",
         "question": "timeGageQuestSix.questTwo",
-        "options": ["Ich habe im Restaurant gegessen", "Ich bin im Restaurant gegessen", "Ich habe ins Restaurant gegessen"],
-        "answer": "Ich habe im Restaurant gegessen"
+        "options": [
+          "Ich habe im Restaurant gegessen",
+          "Ich bin im Restaurant gegessen",
+          "Ich habe ins Restaurant gegessen"
+        ],
+        "answer": "Ich habe im Restaurant gegessen",
+        "tip": "timeGageQuestSix.description"
       },
       {
         "id": 3,
@@ -707,15 +1932,34 @@
         "id": 4,
         "type": "reorder",
         "question": "timeGageQuestSix.questFour",
-        "words": ["Teller", "Der", "liegt", "auf", "dem", "Tisch", "den"],
-        "correctOrder": ["Der", "Teller", "liegt", "auf", "dem", "Tisch"],
+        "words": [
+          "Teller",
+          "Der",
+          "liegt",
+          "auf",
+          "dem",
+          "Tisch",
+          "den"
+        ],
+        "correctOrder": [
+          "Der",
+          "Teller",
+          "liegt",
+          "auf",
+          "dem",
+          "Tisch"
+        ],
         "tip": "timeGageQuestSix.questFourTip"
       },
       {
         "id": 5,
         "type": "select",
         "question": "timeGageQuestSix.questFive",
-        "options": ["Ich lege die Gabel auf dem Tisch", "Ich lege die Gabel auf den Tisch", "Ich lege die Gabel auf der Tisch"],
+        "options": [
+          "Ich lege die Gabel auf dem Tisch",
+          "Ich lege die Gabel auf den Tisch",
+          "Ich lege die Gabel auf der Tisch"
+        ],
         "answer": "Ich lege die Gabel auf den Tisch",
         "tip": "timeGageQuestSix.questFiveTip"
       },
@@ -723,8 +1967,25 @@
         "id": 6,
         "type": "reorder",
         "question": "timeGageQuestSix.questSix",
-        "words": ["hoffe", "dass", "Essen", "das", "gut", "schmeckt", "Ich", "ist"],
-        "correctOrder": ["Ich", "hoffe", "dass", "das", "Essen", "gut", "schmeckt"],
+        "words": [
+          "hoffe",
+          "dass",
+          "Essen",
+          "das",
+          "gut",
+          "schmeckt",
+          "Ich",
+          "ist"
+        ],
+        "correctOrder": [
+          "Ich",
+          "hoffe",
+          "dass",
+          "das",
+          "Essen",
+          "gut",
+          "schmeckt"
+        ],
         "tip": "timeGageQuestSix.questSixTip"
       },
       {
@@ -739,7 +2000,11 @@
         "id": 8,
         "type": "select",
         "question": "timeGageQuestSix.questEight",
-        "options": ["Wo ist der Kellner?", "Wo ist den Kellner?", "Wo ist dem Kellner?"],
+        "options": [
+          "Wo ist der Kellner?",
+          "Wo ist den Kellner?",
+          "Wo ist dem Kellner?"
+        ],
         "answer": "Wo ist der Kellner?",
         "tip": "timeGageQuestSix.questEightTip"
       },
@@ -747,8 +2012,30 @@
         "id": 9,
         "type": "reorder",
         "question": "timeGageQuestSix.questNine",
-        "words": ["gehe", "in", "die", "Küche", "weil", "ich", "Hunger", "habe", "Ich", "ist", "bin"],
-        "correctOrder": ["Ich", "gehe", "in", "die", "Küche", "weil", "ich", "Hunger", "habe"],
+        "words": [
+          "gehe",
+          "in",
+          "die",
+          "Küche",
+          "weil",
+          "ich",
+          "Hunger",
+          "habe",
+          "Ich",
+          "ist",
+          "bin"
+        ],
+        "correctOrder": [
+          "Ich",
+          "gehe",
+          "in",
+          "die",
+          "Küche",
+          "weil",
+          "ich",
+          "Hunger",
+          "habe"
+        ],
         "tip": "timeGageQuestSix.questNineTip"
       },
       {
@@ -756,38 +2043,91 @@
         "type": "readAndAnswer",
         "text": "In diesem Restaurant gibt es keinen Fisch. Wir haben heute nur Gemüse.",
         "question": "timeGageQuestSix.questTen",
-        "options": ["vegane Gerichte", "nur Fleisch", "Obst"],
-        "answer": "vegane Gerichte"
+        "options": [
+          "Gemüse",
+          "nur Fleisch",
+          "Fisch"
+        ],
+        "answer": "Gemüse",
+        "tip": "timeGageQuestSix.description"
       },
       {
         "id": 11,
-        "type": "select",
-        "question": "timeGageQuestSix.questEleven",
-        "options": ["Du wirst einen Kaffee trinken", "Du werdest einen Kaffee trinken", "Du wirst einen Kaffee getrunken"],
-        "answer": "Du wirst einen Kaffee trinken",
-        "tip": "timeGageQuestSix.questElevenTip"
+        "type": "reorder",
+        "question": "timeGageQuestFive.questOne",
+        "words": [
+          "werden",
+          "Spanien",
+          "nach",
+          "fliegen",
+          "Wir",
+          "zu"
+        ],
+        "correctOrder": [
+          "Wir",
+          "werden",
+          "nach",
+          "Spanien",
+          "fliegen"
+        ],
+        "tip": "timeGageQuestFive.questOneTip",
+        "reviewOf": "time-five",
+        "reviewLand": "time-gate"
       },
       {
         "id": 12,
         "type": "reorder",
-        "question": "timeGageQuestSix.questTwelve",
-        "words": ["weiß", "nicht", "ob", "das", "Cafe", "offen", "ist", "Ich", "hat", "wenn"],
-        "correctOrder": ["Ich", "weiß", "nicht", "ob", "das", "Cafe", "offen", "ist"],
-        "tip": "timeGageQuestSix.questTwelveTip"
+        "question": "timeGageQuestThree.questFour",
+        "words": [
+          "gehe",
+          "Museum",
+          "ins",
+          "Ich",
+          "in"
+        ],
+        "correctOrder": [
+          "Ich",
+          "gehe",
+          "ins",
+          "Museum"
+        ],
+        "tip": "timeGageQuestThree.questFourTip",
+        "reviewOf": "time-three",
+        "reviewLand": "time-gate"
       },
       {
         "id": 13,
-        "type": "speechToText",
-        "question": "timeGageQuestSix.questThirteen",
-        "text": "Ich stelle das Glas auf den Tisch",
-        "answer": "Ich stelle das Glas auf den Tisch",
-        "tip": "timeGageQuestSix.questThirteenTip"
+        "type": "reorder",
+        "question": "orderValleyQuestEleven.questSix",
+        "words": [
+          "Schade",
+          "dass",
+          "es",
+          "Handtuch",
+          "kein",
+          "gibt"
+        ],
+        "correctOrder": [
+          "Schade",
+          "dass",
+          "es",
+          "kein",
+          "Handtuch",
+          "gibt"
+        ],
+        "tip": "orderValleyQuestEleven.questSixTip",
+        "reviewOf": "order-eleven",
+        "reviewLand": "order-valley"
       },
       {
         "id": 14,
         "type": "select",
         "question": "timeGageQuestSix.questFourteen",
-        "options": ["Wir haben ein Wasser getrunken", "Wir sind ein Wasser getrunken", "Wir haben ein Wasser trinken"],
+        "options": [
+          "Wir haben ein Wasser getrunken",
+          "Wir sind ein Wasser getrunken",
+          "Wir haben ein Wasser trinken"
+        ],
         "answer": "Wir haben ein Wasser getrunken",
         "tip": "timeGageQuestSix.questFourteenTip"
       },
@@ -795,9 +2135,102 @@
         "id": 15,
         "type": "reorder",
         "question": "timeGageQuestSix.questFifteen",
-        "words": ["habe", "gesehen", "dass", "er", "ein", "Bier", "gekauft", "hat", "einen", "Ich"],
-        "correctOrder": ["Ich", "habe", "gesehen", "dass", "er", "ein", "Bier", "gekauft", "hat"],
+        "words": [
+          "habe",
+          "gesehen",
+          "dass",
+          "er",
+          "ein",
+          "Bier",
+          "gekauft",
+          "hat",
+          "einen",
+          "Ich"
+        ],
+        "correctOrder": [
+          "Ich",
+          "habe",
+          "gesehen",
+          "dass",
+          "er",
+          "ein",
+          "Bier",
+          "gekauft",
+          "hat"
+        ],
         "tip": "timeGageQuestSix.questFifteenTip"
+      }
+    ],
+    "vocabulary": [
+      {
+        "word": "hoffen",
+        "translation-ru": "надеяться",
+        "translation-en": "to hope",
+        "translation-uk": "сподіватися",
+        "translation-pl": "mieć nadzieję",
+        "translation-es": "esperar / tener esperanza",
+        "translation-fr": "espérer",
+        "translation-tr": "umut etmek",
+        "translation-ro": "a spera",
+        "translation-uz": "umid qilmoq",
+        "translation-hi": "आशा करना",
+        "translation-ar": "يأمل"
+      },
+      {
+        "word": "schade",
+        "translation-ru": "жаль",
+        "translation-en": "a pity",
+        "translation-uk": "шкода",
+        "translation-pl": "szkoda",
+        "translation-es": "qué pena",
+        "translation-fr": "dommage",
+        "translation-tr": "yazık",
+        "translation-ro": "păcat",
+        "translation-uz": "afsus",
+        "translation-hi": "अफ़सोस",
+        "translation-ar": "للأسف"
+      },
+      {
+        "word": "das Bier",
+        "translation-ru": "пиво",
+        "translation-en": "beer",
+        "translation-uk": "пиво",
+        "translation-pl": "piwo",
+        "translation-es": "cerveza",
+        "translation-fr": "bière",
+        "translation-tr": "bira",
+        "translation-ro": "bere",
+        "translation-uz": "pivo",
+        "translation-hi": "बीयर",
+        "translation-ar": "بيرة"
+      },
+      {
+        "word": "essen",
+        "translation-ru": "есть / кушать",
+        "translation-en": "to eat",
+        "translation-uk": "їсти",
+        "translation-pl": "jeść",
+        "translation-es": "comer",
+        "translation-fr": "manger",
+        "translation-tr": "yemek yemek",
+        "translation-ro": "a mânca",
+        "translation-uz": "yemoq",
+        "translation-hi": "खाना",
+        "translation-ar": "يأكل"
+      },
+      {
+        "word": "schmecken",
+        "translation-ru": "быть вкусным / пробовать на вкус",
+        "translation-en": "to taste",
+        "translation-uk": "смакувати",
+        "translation-pl": "smakować",
+        "translation-es": "saber / gustar",
+        "translation-fr": "goûter / avoir bon goût",
+        "translation-tr": "tadına bakmak / lezzetli olmak",
+        "translation-ro": "a avea gust",
+        "translation-uz": "mazasi bo'lmoq",
+        "translation-hi": "चखना / स्वादिष्ट होना",
+        "translation-ar": "يتذوق"
       }
     ]
   },
@@ -811,21 +2244,39 @@
       "minCorrect": 15,
       "requiredTasks": 15
     },
-    "rewards": { "points": 10, "xp": 10 },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
     "tasks": [
       {
         "id": 1,
         "type": "reorder",
         "question": "timeGageQuestSeven.questOne",
-        "words": ["werde", "Fußball", "spielen", "Ich", "wirst"],
-        "correctOrder": ["Ich", "werde", "Fußball", "spielen"],
+        "words": [
+          "werde",
+          "Fußball",
+          "spielen",
+          "Ich",
+          "wirst"
+        ],
+        "correctOrder": [
+          "Ich",
+          "werde",
+          "Fußball",
+          "spielen"
+        ],
         "tip": "timeGageQuestSeven.questOneTip"
       },
       {
         "id": 2,
         "type": "select",
         "question": "timeGageQuestSeven.questTwo",
-        "options": ["Ich bin gestern ins Fitnessstudio gegangen", "Ich habe gestern ins Fitnessstudio gegangen", "Ich bin gestern in dem Fitnessstudio gegangen"],
+        "options": [
+          "Ich bin gestern ins Fitnessstudio gegangen",
+          "Ich habe gestern ins Fitnessstudio gegangen",
+          "Ich bin gestern in dem Fitnessstudio gegangen"
+        ],
         "answer": "Ich bin gestern ins Fitnessstudio gegangen",
         "tip": "timeGageQuestSeven.questTwoTip"
       },
@@ -834,21 +2285,38 @@
         "type": "speechToText",
         "question": "timeGageQuestSeven.questThree",
         "text": "Ich höre gern Musik",
-        "answer": "Ich höre gern Musik"
+        "answer": "Ich höre gern Musik",
+        "tip": "timeGageQuestSeven.description"
       },
       {
         "id": 4,
         "type": "reorder",
         "question": "timeGageQuestSeven.questFour",
-        "words": ["gehe", "Kino", "ins", "Ich", "den", "im"],
-        "correctOrder": ["Ich", "gehe", "ins", "Kino"],
+        "words": [
+          "gehe",
+          "Kino",
+          "ins",
+          "Ich",
+          "den",
+          "im"
+        ],
+        "correctOrder": [
+          "Ich",
+          "gehe",
+          "ins",
+          "Kino"
+        ],
         "tip": "timeGageQuestSeven.questFourTip"
       },
       {
         "id": 5,
         "type": "select",
         "question": "timeGageQuestSeven.questFive",
-        "options": ["Ich jogge, weil es gesund ist", "Ich jogge, weil es ist gesund", "Ich jogge, weil gesund es ist"],
+        "options": [
+          "Ich jogge, weil es gesund ist",
+          "Ich jogge, weil es ist gesund",
+          "Ich jogge, weil gesund es ist"
+        ],
         "answer": "Ich jogge, weil es gesund ist",
         "tip": "timeGageQuestSeven.questFiveTip"
       },
@@ -856,8 +2324,22 @@
         "id": 6,
         "type": "reorder",
         "question": "timeGageQuestSeven.questSix",
-        "words": ["werden", "Film", "einen", "schauen", "Wir", "den", "geschaut"],
-        "correctOrder": ["Wir", "werden", "einen", "Film", "schauen"],
+        "words": [
+          "werden",
+          "Film",
+          "einen",
+          "schauen",
+          "Wir",
+          "den",
+          "geschaut"
+        ],
+        "correctOrder": [
+          "Wir",
+          "werden",
+          "einen",
+          "Film",
+          "schauen"
+        ],
         "tip": "timeGageQuestSeven.questSixTip"
       },
       {
@@ -872,7 +2354,11 @@
         "id": 8,
         "type": "select",
         "question": "timeGageQuestSeven.questEight",
-        "options": ["Ich lese ein Buch im Garten", "Ich lese ein Buch in den Garten", "Ich lese ein Buch in der Garten"],
+        "options": [
+          "Ich lese ein Buch im Garten",
+          "Ich lese ein Buch in den Garten",
+          "Ich lese ein Buch in der Garten"
+        ],
         "answer": "Ich lese ein Buch im Garten",
         "tip": "timeGageQuestSeven.questEightTip"
       },
@@ -880,8 +2366,23 @@
         "id": 9,
         "type": "reorder",
         "question": "timeGageQuestSeven.questNine",
-        "words": ["dass", "er", "kommt", "gesagt", "hat", "Er", "ist"],
-        "correctOrder": ["Er", "hat", "gesagt", "dass", "er", "kommt"],
+        "words": [
+          "dass",
+          "er",
+          "kommt",
+          "gesagt",
+          "hat",
+          "Er",
+          "ist"
+        ],
+        "correctOrder": [
+          "Er",
+          "hat",
+          "gesagt",
+          "dass",
+          "er",
+          "kommt"
+        ],
         "tip": "timeGageQuestSeven.questNineTip"
       },
       {
@@ -889,38 +2390,100 @@
         "type": "readAndAnswer",
         "text": "Mein Hobby ist Fotografieren. Letzten Sommer habe ich viele Fotos im Wald gemacht.",
         "question": "timeGageQuestSeven.questTen",
-        "options": ["in der Natur", "zu Hause", "in der Stadt"],
-        "answer": "in der Natur"
+        "options": [
+          "in der Natur",
+          "zu Hause",
+          "in der Stadt"
+        ],
+        "answer": "in der Natur",
+        "tip": "timeGageQuestSeven.description"
       },
       {
         "id": 11,
-        "type": "select",
-        "question": "timeGageQuestSeven.questEleven",
-        "options": ["Ich lege die Gitarre in den Auto", "Ich lege die Gitarre ins Auto", "Ich lege die Gitarre in dem Auto"],
-        "answer": "Ich lege die Gitarre ins Auto",
-        "tip": "timeGageQuestSeven.questElevenTip"
+        "type": "reorder",
+        "question": "timeGageQuestSix.questOne",
+        "words": [
+          "werde",
+          "Pizza",
+          "eine",
+          "bestellen",
+          "Ich",
+          "einen"
+        ],
+        "correctOrder": [
+          "Ich",
+          "werde",
+          "eine",
+          "Pizza",
+          "bestellen"
+        ],
+        "tip": "timeGageQuestSix.questOneTip",
+        "reviewOf": "time-six",
+        "reviewLand": "time-gate"
       },
       {
         "id": 12,
         "type": "reorder",
-        "question": "timeGageQuestSeven.questTwelve",
-        "words": ["wenn", "wir", "gewinnen", "bin", "Ich", "glücklich", "ist"],
-        "correctOrder": ["Ich", "bin", "glücklich", "wenn", "wir", "gewinnen"],
-        "tip": "timeGageQuestSeven.questTwelveTip"
+        "question": "timeGageQuestFour.questFour",
+        "words": [
+          "lege",
+          "Mappe",
+          "die",
+          "in",
+          "Schrank",
+          "den",
+          "Ich",
+          "der",
+          "liege"
+        ],
+        "correctOrder": [
+          "Ich",
+          "lege",
+          "die",
+          "Mappe",
+          "in",
+          "den",
+          "Schrank"
+        ],
+        "tip": "timeGageQuestFour.questFourTip",
+        "reviewOf": "time-four",
+        "reviewLand": "time-gate"
       },
       {
         "id": 13,
-        "type": "speechToText",
-        "question": "timeGageQuestSeven.questThirteen",
-        "text": "Hast du das Foto gemacht?",
-        "answer": "Hast du das Foto gemacht?",
-        "tip": "timeGageQuestSeven.questThirteenTip"
+        "type": "reorder",
+        "question": "orderValleyQuestTwelve.questSix",
+        "words": [
+          "Schade",
+          "dass",
+          "es",
+          "hier",
+          "Hund",
+          "keinen",
+          "gibt"
+        ],
+        "correctOrder": [
+          "Schade",
+          "dass",
+          "es",
+          "hier",
+          "keinen",
+          "Hund",
+          "gibt"
+        ],
+        "tip": "orderValleyQuestTwelve.questSixTip",
+        "reviewOf": "order-twelve",
+        "reviewLand": "order-valley"
       },
       {
         "id": 14,
         "type": "select",
         "question": "timeGageQuestSeven.questFourteen",
-        "options": ["Wir haben die ganze Nacht getanzt", "Wir sind die ganze Nacht getanzt", "Wir haben die ganze Nacht tanzen"],
+        "options": [
+          "Wir haben die ganze Nacht getanzt",
+          "Wir sind die ganze Nacht getanzt",
+          "Wir haben die ganze Nacht tanzen"
+        ],
         "answer": "Wir haben die ganze Nacht getanzt",
         "tip": "timeGageQuestSeven.questFourteenTip"
       },
@@ -928,9 +2491,98 @@
         "id": 15,
         "type": "reorder",
         "question": "timeGageQuestSeven.questFifteen",
-        "words": ["dass", "wir", "morgen", "spielen", "werden", "glaube", "Ich", "haben"],
-        "correctOrder": ["Ich", "glaube", "dass", "wir", "morgen", "spielen", "werden"],
+        "words": [
+          "dass",
+          "wir",
+          "morgen",
+          "spielen",
+          "werden",
+          "glaube",
+          "Ich",
+          "haben"
+        ],
+        "correctOrder": [
+          "Ich",
+          "glaube",
+          "dass",
+          "wir",
+          "morgen",
+          "spielen",
+          "werden"
+        ],
         "tip": "timeGageQuestSeven.questFifteenTip"
+      }
+    ],
+    "vocabulary": [
+      {
+        "word": "wandern",
+        "translation-ru": "бродить / путешествовать пешком",
+        "translation-en": "to hike / wander",
+        "translation-uk": "мандрувати",
+        "translation-pl": "wędrować",
+        "translation-es": "caminar / hacer senderismo",
+        "translation-fr": "randonner",
+        "translation-tr": "yürüyüş yapmak",
+        "translation-ro": "a face drumeții",
+        "translation-uz": "piyoda sayohat qilmoq",
+        "translation-hi": "पैदल यात्रा करना",
+        "translation-ar": "يتجول / يهاجر"
+      },
+      {
+        "word": "das Hobby",
+        "translation-ru": "хобби",
+        "translation-en": "hobby",
+        "translation-uk": "хобі",
+        "translation-pl": "hobby",
+        "translation-es": "el pasatiempo",
+        "translation-fr": "le loisir",
+        "translation-tr": "hobi",
+        "translation-ro": "hobby-ul",
+        "translation-uz": "xobbi",
+        "translation-hi": "शौक़",
+        "translation-ar": "الهواية"
+      },
+      {
+        "word": "fotografieren",
+        "translation-ru": "фотографировать",
+        "translation-en": "to take photos",
+        "translation-uk": "фотографувати",
+        "translation-pl": "fotografować",
+        "translation-es": "fotografiar",
+        "translation-fr": "photographier",
+        "translation-tr": "fotoğraf çekmek",
+        "translation-ro": "a fotografia",
+        "translation-uz": "suratga olmoq",
+        "translation-hi": "फ़ोटो खींचना",
+        "translation-ar": "يصوّر"
+      },
+      {
+        "word": "schade",
+        "translation-ru": "жаль",
+        "translation-en": "a pity",
+        "translation-uk": "шкода",
+        "translation-pl": "szkoda",
+        "translation-es": "qué pena",
+        "translation-fr": "dommage",
+        "translation-tr": "yazık",
+        "translation-ro": "păcat",
+        "translation-uz": "afsus",
+        "translation-hi": "अफ़सोस",
+        "translation-ar": "للأسف"
+      },
+      {
+        "word": "glauben",
+        "translation-ru": "верить / полагать",
+        "translation-en": "to believe / think",
+        "translation-uk": "вірити / думати",
+        "translation-pl": "wierzyć",
+        "translation-es": "creer",
+        "translation-fr": "croire",
+        "translation-tr": "inanmak",
+        "translation-ro": "a crede",
+        "translation-uz": "ishonmoq",
+        "translation-hi": "विश्वास करना",
+        "translation-ar": "يعتقد / يؤمن"
       }
     ]
   },
@@ -944,21 +2596,41 @@
       "minCorrect": 15,
       "requiredTasks": 15
     },
-    "rewards": { "points": 10, "xp": 10 },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
     "tasks": [
       {
         "id": 1,
         "type": "reorder",
         "question": "timeGageQuestEight.questOne",
-        "words": ["werde", "Jacke", "diese", "kaufen", "Ich", "dieser"],
-        "correctOrder": ["Ich", "werde", "diese", "Jacke", "kaufen"],
+        "words": [
+          "werde",
+          "Jacke",
+          "diese",
+          "kaufen",
+          "Ich",
+          "dieser"
+        ],
+        "correctOrder": [
+          "Ich",
+          "werde",
+          "diese",
+          "Jacke",
+          "kaufen"
+        ],
         "tip": "timeGageQuestEight.questOneTip"
       },
       {
         "id": 2,
         "type": "select",
         "question": "timeGageQuestEight.questTwo",
-        "options": ["Sie ist in den Laden gegangen", "Sie hat in den Laden gegangen", "Sie ist in dem Laden gegangen"],
+        "options": [
+          "Sie ist in den Laden gegangen",
+          "Sie hat in den Laden gegangen",
+          "Sie ist in dem Laden gegangen"
+        ],
         "answer": "Sie ist in den Laden gegangen",
         "tip": "timeGageQuestEight.questTwoTip"
       },
@@ -974,15 +2646,33 @@
         "id": 4,
         "type": "reorder",
         "question": "timeGageQuestEight.questFour",
-        "words": ["Der", "Geld", "Das", "liegt", "im", "Portemonnaie", "in"],
-        "correctOrder": ["Das", "Geld", "liegt", "im", "Portemonnaie"],
+        "words": [
+          "Der",
+          "Geld",
+          "Das",
+          "liegt",
+          "im",
+          "Portemonnaie",
+          "in"
+        ],
+        "correctOrder": [
+          "Das",
+          "Geld",
+          "liegt",
+          "im",
+          "Portemonnaie"
+        ],
         "tip": "timeGageQuestEight.questFourTip"
       },
       {
         "id": 5,
         "type": "select",
         "question": "timeGageQuestEight.questFive",
-        "options": ["Ich lege das Portemonnaie in die Tasche", "Ich lege das Portemonnaie in der Tasche", "Ich lege das Portemonnaie an die Tasche"],
+        "options": [
+          "Ich lege das Portemonnaie in die Tasche",
+          "Ich lege das Portemonnaie in der Tasche",
+          "Ich lege das Portemonnaie an die Tasche"
+        ],
         "answer": "Ich lege das Portemonnaie in die Tasche",
         "tip": "timeGageQuestEight.questFiveTip"
       },
@@ -990,8 +2680,27 @@
         "id": 6,
         "type": "reorder",
         "question": "timeGageQuestEight.questSix",
-        "words": ["Schuhe", "die", "kaufe", "Ich", "weil", "sie", "billig", "sind", "ist"],
-        "correctOrder": ["Ich", "kaufe", "die", "Schuhe", "weil", "sie", "billig", "sind"],
+        "words": [
+          "Schuhe",
+          "die",
+          "kaufe",
+          "Ich",
+          "weil",
+          "sie",
+          "billig",
+          "sind",
+          "ist"
+        ],
+        "correctOrder": [
+          "Ich",
+          "kaufe",
+          "die",
+          "Schuhe",
+          "weil",
+          "sie",
+          "billig",
+          "sind"
+        ],
         "tip": "timeGageQuestEight.questSixTip"
       },
       {
@@ -1006,7 +2715,11 @@
         "id": 8,
         "type": "select",
         "question": "timeGageQuestEight.questEight",
-        "options": ["Hast du dieses Kleid anprobiert?", "Bist du dieses Kleid anprobiert?", "Hast du dieses Kleid anprobieren?"],
+        "options": [
+          "Hast du dieses Kleid anprobiert?",
+          "Bist du dieses Kleid anprobiert?",
+          "Hast du dieses Kleid anprobieren?"
+        ],
         "answer": "Hast du dieses Kleid anprobiert?",
         "tip": "timeGageQuestEight.questEightTip"
       },
@@ -1014,8 +2727,25 @@
         "id": 9,
         "type": "reorder",
         "question": "timeGageQuestEight.questNine",
-        "words": ["hängt", "Hemd", "das", "in", "Schrank", "den", "Er", "dem"],
-        "correctOrder": ["Er", "hängt", "das", "Hemd", "in", "den", "Schrank"],
+        "words": [
+          "hängt",
+          "Hemd",
+          "das",
+          "in",
+          "Schrank",
+          "den",
+          "Er",
+          "dem"
+        ],
+        "correctOrder": [
+          "Er",
+          "hängt",
+          "das",
+          "Hemd",
+          "in",
+          "den",
+          "Schrank"
+        ],
         "tip": "timeGageQuestEight.questNineTip"
       },
       {
@@ -1023,38 +2753,89 @@
         "type": "readAndAnswer",
         "text": "Morgen gibt es im Einkaufszentrum 50% Rabatt. Ich werde zwei Hosen kaufen.",
         "question": "timeGageQuestEight.questTen",
-        "options": ["ein Hemd", "zwei Hosen", "neue Schuhe"],
-        "answer": "zwei Hosen"
+        "options": [
+          "ein Hemd",
+          "zwei Hosen",
+          "neue Schuhe"
+        ],
+        "answer": "zwei Hosen",
+        "tip": "timeGageQuestEight.description"
       },
       {
         "id": 11,
-        "type": "select",
-        "question": "timeGageQuestEight.questEleven",
-        "options": ["Wir werden mit Karte bezahlen", "Wir wirst mit Karte bezahlen", "Wir werden mit Karte bezahlt"],
-        "answer": "Wir werden mit Karte bezahlen",
-        "tip": "timeGageQuestEight.questElevenTip"
+        "type": "reorder",
+        "question": "timeGageQuestSeven.questOne",
+        "words": [
+          "werde",
+          "Fußball",
+          "spielen",
+          "Ich",
+          "wirst"
+        ],
+        "correctOrder": [
+          "Ich",
+          "werde",
+          "Fußball",
+          "spielen"
+        ],
+        "tip": "timeGageQuestSeven.questOneTip",
+        "reviewOf": "time-seven",
+        "reviewLand": "time-gate"
       },
       {
         "id": 12,
         "type": "reorder",
-        "question": "timeGageQuestEight.questTwelve",
-        "words": ["Größe", "diese", "mir", "passt", "ob", "nicht", "weiß", "Ich", "ist"],
-        "correctOrder": ["Ich", "weiß", "nicht", "ob", "mir", "diese", "Größe", "passt"],
-        "tip": "timeGageQuestEight.questTwelveTip"
+        "question": "timeGageQuestFive.questFour",
+        "words": [
+          "Handtuch",
+          "Das",
+          "Strand",
+          "am",
+          "liegt",
+          "dem",
+          "in"
+        ],
+        "correctOrder": [
+          "Das",
+          "Handtuch",
+          "liegt",
+          "am",
+          "Strand"
+        ],
+        "tip": "timeGageQuestFive.questFourTip",
+        "reviewOf": "time-five",
+        "reviewLand": "time-gate"
       },
       {
         "id": 13,
-        "type": "speechToText",
-        "question": "timeGageQuestEight.questThirteen",
-        "text": "Das Kleid hängt im Schrank",
-        "answer": "Das Kleid hängt im Schrank",
-        "tip": "timeGageQuestEight.questThirteenTip"
+        "type": "reorder",
+        "question": "timeGageQuestOne.questSix",
+        "words": [
+          "werden",
+          "viel",
+          "sprechen",
+          "Wir",
+          "werdet"
+        ],
+        "correctOrder": [
+          "Wir",
+          "werden",
+          "viel",
+          "sprechen"
+        ],
+        "tip": "timeGageQuestOne.questSixTip",
+        "reviewOf": "time-one",
+        "reviewLand": "time-gate"
       },
       {
         "id": 14,
         "type": "select",
         "question": "timeGageQuestEight.questFourteen",
-        "options": ["Wir sind ins Einkaufszentrum gefahren", "Wir haben ins Einkaufszentrum gefahren", "Wir sind im Einkaufszentrum gefahren"],
+        "options": [
+          "Wir sind ins Einkaufszentrum gefahren",
+          "Wir haben ins Einkaufszentrum gefahren",
+          "Wir sind im Einkaufszentrum gefahren"
+        ],
         "answer": "Wir sind ins Einkaufszentrum gefahren",
         "tip": "timeGageQuestEight.questFourteenTip"
       },
@@ -1062,9 +2843,114 @@
         "id": 15,
         "type": "reorder",
         "question": "timeGageQuestEight.questFifteen",
-        "words": ["dass", "sie", "Tasche", "die", "gekauft", "hat", "sagt", "Sie", "ein"],
-        "correctOrder": ["Sie", "sagt", "dass", "sie", "die", "Tasche", "gekauft", "hat"],
+        "words": [
+          "dass",
+          "sie",
+          "Tasche",
+          "die",
+          "gekauft",
+          "hat",
+          "sagt",
+          "Sie",
+          "ein"
+        ],
+        "correctOrder": [
+          "Sie",
+          "sagt",
+          "dass",
+          "sie",
+          "die",
+          "Tasche",
+          "gekauft",
+          "hat"
+        ],
         "tip": "timeGageQuestEight.questFifteenTip"
+      }
+    ],
+    "vocabulary": [
+      {
+        "word": "der Pullover",
+        "translation-ru": "свитер",
+        "translation-en": "jumper",
+        "translation-uk": "светр",
+        "translation-pl": "sweter",
+        "translation-es": "el jersey",
+        "translation-fr": "le pull",
+        "translation-tr": "kazak",
+        "translation-ro": "puloverul",
+        "translation-uz": "sviter",
+        "translation-hi": "स्वेटर",
+        "translation-ar": "الكنزة"
+      },
+      {
+        "word": "billig",
+        "translation-ru": "дешёвый",
+        "translation-en": "cheap",
+        "translation-uk": "дешевий",
+        "translation-pl": "tani",
+        "translation-es": "barato",
+        "translation-fr": "bon marché",
+        "translation-tr": "ucuz",
+        "translation-ro": "ieftin",
+        "translation-uz": "arzon",
+        "translation-hi": "सस्ता",
+        "translation-ar": "رخيص"
+      },
+      {
+        "word": "das Einkaufszentrum",
+        "translation-ru": "торговый центр",
+        "translation-en": "shopping mall",
+        "translation-uk": "торговий центр",
+        "translation-pl": "centrum handlowe",
+        "translation-es": "centro comercial",
+        "translation-fr": "centre commercial",
+        "translation-tr": "alışveriş merkezi",
+        "translation-ro": "centru comercial",
+        "translation-uz": "savdo markazi",
+        "translation-hi": "शॉपिंग मॉल",
+        "translation-ar": "مركز تسوق"
+      },
+      {
+        "word": "hängen",
+        "translation-ru": "висеть",
+        "translation-en": "to hang",
+        "translation-uk": "висіти",
+        "translation-pl": "wisieć",
+        "translation-es": "colgar",
+        "translation-fr": "être suspendu",
+        "translation-tr": "asılı olmak",
+        "translation-ro": "a atârna",
+        "translation-uz": "osilib turmoq",
+        "translation-hi": "लटकना",
+        "translation-ar": "يعلق"
+      },
+      {
+        "word": "das Kleid",
+        "translation-ru": "платье",
+        "translation-en": "dress",
+        "translation-uk": "сукня",
+        "translation-pl": "sukienka",
+        "translation-es": "el vestido",
+        "translation-fr": "la robe",
+        "translation-tr": "elbise",
+        "translation-ro": "rochia",
+        "translation-uz": "ko‘ylak",
+        "translation-hi": "ड्रेस",
+        "translation-ar": "الفستان"
+      },
+      {
+        "word": "das Portemonnaie",
+        "translation-ru": "кошелёк",
+        "translation-en": "wallet",
+        "translation-uk": "гаманець",
+        "translation-pl": "portfel",
+        "translation-es": "la cartera",
+        "translation-fr": "le portefeuille",
+        "translation-tr": "cüzdan",
+        "translation-ro": "portofelul",
+        "translation-uz": "hamyon",
+        "translation-hi": "बटुआ",
+        "translation-ar": "المحفظة"
       }
     ]
   },
@@ -1078,21 +2964,42 @@
       "minCorrect": 15,
       "requiredTasks": 15
     },
-    "rewards": { "points": 10, "xp": 10 },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
     "tasks": [
       {
         "id": 1,
         "type": "reorder",
         "question": "timeGageQuestNine.questOne",
-        "words": ["werde", "Arzt", "zum", "gehen", "Ich", "gegangen", "zur"],
-        "correctOrder": ["Ich", "werde", "zum", "Arzt", "gehen"],
+        "words": [
+          "werde",
+          "Arzt",
+          "zum",
+          "gehen",
+          "Ich",
+          "gegangen",
+          "zur"
+        ],
+        "correctOrder": [
+          "Ich",
+          "werde",
+          "zum",
+          "Arzt",
+          "gehen"
+        ],
         "tip": "timeGageQuestNine.questOneTip"
       },
       {
         "id": 2,
         "type": "select",
         "question": "timeGageQuestNine.questTwo",
-        "options": ["Sie ist in die Apotheke gegangen", "Sie hat in die Apotheke gegangen", "Sie ist in der Apotheke gegangen"],
+        "options": [
+          "Sie ist in die Apotheke gegangen",
+          "Sie hat in die Apotheke gegangen",
+          "Sie ist in der Apotheke gegangen"
+        ],
         "answer": "Sie ist in die Apotheke gegangen",
         "tip": "timeGageQuestNine.questTwoTip"
       },
@@ -1108,15 +3015,36 @@
         "id": 4,
         "type": "reorder",
         "question": "timeGageQuestNine.questFour",
-        "words": ["den", "lege", "Tabletten", "die", "in", "Tasche", "die", "Ich"],
-        "correctOrder": ["Ich", "lege", "die", "Tabletten", "in", "die", "Tasche"],
+        "words": [
+          "den",
+          "lege",
+          "Tabletten",
+          "die",
+          "in",
+          "Tasche",
+          "die",
+          "Ich"
+        ],
+        "correctOrder": [
+          "Ich",
+          "lege",
+          "die",
+          "Tabletten",
+          "in",
+          "die",
+          "Tasche"
+        ],
         "tip": "timeGageQuestNine.questFourTip"
       },
       {
         "id": 5,
         "type": "select",
         "question": "timeGageQuestNine.questFive",
-        "options": ["Ich bleibe im Bett, weil ich krank bin", "Ich bleibe im Bett, weil ich bin krank", "Ich bleibe im Bett, weil krank ich bin"],
+        "options": [
+          "Ich bleibe im Bett, weil ich krank bin",
+          "Ich bleibe im Bett, weil ich bin krank",
+          "Ich bleibe im Bett, weil krank ich bin"
+        ],
         "answer": "Ich bleibe im Bett, weil ich krank bin",
         "tip": "timeGageQuestNine.questFiveTip"
       },
@@ -1124,8 +3052,20 @@
         "id": 6,
         "type": "reorder",
         "question": "timeGageQuestNine.questSix",
-        "words": ["werden", "Tennis", "spielen", "Wir", "wirst", "einen"],
-        "correctOrder": ["Wir", "werden", "Tennis", "spielen"],
+        "words": [
+          "werden",
+          "Tennis",
+          "spielen",
+          "Wir",
+          "wirst",
+          "einen"
+        ],
+        "correctOrder": [
+          "Wir",
+          "werden",
+          "Tennis",
+          "spielen"
+        ],
         "tip": "timeGageQuestNine.questSixTip"
       },
       {
@@ -1133,13 +3073,18 @@
         "type": "speechToText",
         "question": "timeGageQuestNine.questSeven",
         "text": "Er hat gestern Fußball gespielt",
-        "answer": "Er hat gestern Fußball gespielt"
+        "answer": "Er hat gestern Fußball gespielt",
+        "tip": "timeGageQuestNine.description"
       },
       {
         "id": 8,
         "type": "select",
         "question": "timeGageQuestNine.questEight",
-        "options": ["Ich war im Krankenhaus", "Ich war in die Schule", "Ich war in Arzt"],
+        "options": [
+          "Ich war im Krankenhaus",
+          "Ich war in die Schule",
+          "Ich war in Arzt"
+        ],
         "answer": "Ich war im Krankenhaus",
         "tip": "timeGageQuestNine.questEightTip"
       },
@@ -1147,8 +3092,20 @@
         "id": 9,
         "type": "reorder",
         "question": "timeGageQuestNine.questNine",
-        "words": ["gehen", "Fitnessstudio", "ins", "Wir", "im", "den"],
-        "correctOrder": ["Wir", "gehen", "ins", "Fitnessstudio"],
+        "words": [
+          "gehen",
+          "Fitnessstudio",
+          "ins",
+          "Wir",
+          "im",
+          "den"
+        ],
+        "correctOrder": [
+          "Wir",
+          "gehen",
+          "ins",
+          "Fitnessstudio"
+        ],
         "tip": "timeGageQuestNine.questNineTip"
       },
       {
@@ -1156,38 +3113,94 @@
         "type": "readAndAnswer",
         "text": "Ich habe Kopfschmerzen. Ich werde eine Tablette nehmen und Wasser trinken.",
         "question": "timeGageQuestNine.questTen",
-        "options": ["Medizin nehmen", "Sport machen", "einkaufen gehen"],
-        "answer": "Medizin nehmen"
+        "options": [
+          "Medizin nehmen",
+          "Sport machen",
+          "einkaufen gehen"
+        ],
+        "answer": "Medizin nehmen",
+        "tip": "timeGageQuestNine.description"
       },
       {
         "id": 11,
-        "type": "select",
-        "question": "timeGageQuestNine.questEleven",
-        "options": ["Du wirst mehr Sport machen", "Du werdest mehr Sport machen", "Du wirst mehr Sport gemacht"],
-        "answer": "Du wirst mehr Sport machen",
-        "tip": "timeGageQuestNine.questElevenTip"
+        "type": "reorder",
+        "question": "timeGageQuestEight.questOne",
+        "words": [
+          "werde",
+          "Jacke",
+          "diese",
+          "kaufen",
+          "Ich",
+          "dieser"
+        ],
+        "correctOrder": [
+          "Ich",
+          "werde",
+          "diese",
+          "Jacke",
+          "kaufen"
+        ],
+        "tip": "timeGageQuestEight.questOneTip",
+        "reviewOf": "time-eight",
+        "reviewLand": "time-gate"
       },
       {
         "id": 12,
         "type": "reorder",
-        "question": "timeGageQuestNine.questTwelve",
-        "words": ["Arzt", "der", "heute", "kommt", "ob", "nicht", "weiß", "Ich", "hat"],
-        "correctOrder": ["Ich", "weiß", "nicht", "ob", "der", "Arzt", "heute", "kommt"],
-        "tip": "timeGageQuestNine.questTwelveTip"
+        "question": "timeGageQuestSix.questFour",
+        "words": [
+          "Teller",
+          "Der",
+          "liegt",
+          "auf",
+          "dem",
+          "Tisch",
+          "den"
+        ],
+        "correctOrder": [
+          "Der",
+          "Teller",
+          "liegt",
+          "auf",
+          "dem",
+          "Tisch"
+        ],
+        "tip": "timeGageQuestSix.questFourTip",
+        "reviewOf": "time-six",
+        "reviewLand": "time-gate"
       },
       {
         "id": 13,
-        "type": "speechToText",
-        "question": "timeGageQuestNine.questThirteen",
-        "text": "Der Arzt ist im Zimmer",
-        "answer": "Der Arzt ist im Zimmer",
-        "tip": "timeGageQuestNine.questThirteenTip"
+        "type": "reorder",
+        "question": "timeGageQuestTwo.questSix",
+        "words": [
+          "hat",
+          "Apfel",
+          "den",
+          "gegessen",
+          "Sie",
+          "einen"
+        ],
+        "correctOrder": [
+          "Sie",
+          "hat",
+          "den",
+          "Apfel",
+          "gegessen"
+        ],
+        "tip": "timeGageQuestTwo.questSixTip",
+        "reviewOf": "time-two",
+        "reviewLand": "time-gate"
       },
       {
         "id": 14,
         "type": "select",
         "question": "timeGageQuestNine.questFourteen",
-        "options": ["Sie sind fünf Kilometer gelaufen", "Sie haben fünf Kilometer gelaufen", "Sie sind fünf Kilometer laufen"],
+        "options": [
+          "Sie sind fünf Kilometer gelaufen",
+          "Sie haben fünf Kilometer gelaufen",
+          "Sie sind fünf Kilometer laufen"
+        ],
         "answer": "Sie sind fünf Kilometer gelaufen",
         "tip": "timeGageQuestNine.questFourteenTip"
       },
@@ -1195,9 +3208,114 @@
         "id": 15,
         "type": "reorder",
         "question": "timeGageQuestNine.questFifteen",
-        "words": ["dass", "er", "Medikament", "das", "gekauft", "hat", "sehe", "Ich", "den"],
-        "correctOrder": ["Ich", "sehe", "dass", "er", "das", "Medikament", "gekauft", "hat"],
+        "words": [
+          "dass",
+          "er",
+          "Medikament",
+          "das",
+          "gekauft",
+          "hat",
+          "sehe",
+          "Ich",
+          "den"
+        ],
+        "correctOrder": [
+          "Ich",
+          "sehe",
+          "dass",
+          "er",
+          "das",
+          "Medikament",
+          "gekauft",
+          "hat"
+        ],
         "tip": "timeGageQuestNine.questFifteenTip"
+      }
+    ],
+    "vocabulary": [
+      {
+        "word": "das Tennis",
+        "translation-ru": "теннис",
+        "translation-en": "tennis",
+        "translation-uk": "теніс",
+        "translation-pl": "tenis",
+        "translation-es": "tenis",
+        "translation-fr": "tennis",
+        "translation-tr": "tenis",
+        "translation-ro": "tenis",
+        "translation-uz": "tennis",
+        "translation-hi": "टेनिस",
+        "translation-ar": "تنس"
+      },
+      {
+        "word": "die Tablette",
+        "translation-ru": "таблетка",
+        "translation-en": "pill",
+        "translation-uk": "таблетка",
+        "translation-pl": "tabletka",
+        "translation-es": "la pastilla",
+        "translation-fr": "le comprimé",
+        "translation-tr": "hap",
+        "translation-ro": "pastila",
+        "translation-uz": "tabletka",
+        "translation-hi": "गोली",
+        "translation-ar": "الحبة"
+      },
+      {
+        "word": "das Medikament",
+        "translation-ru": "лекарство",
+        "translation-en": "medicine",
+        "translation-uk": "ліки",
+        "translation-pl": "lek",
+        "translation-es": "el medicamento",
+        "translation-fr": "le médicament",
+        "translation-tr": "ilaç",
+        "translation-ro": "medicamentul",
+        "translation-uz": "dori",
+        "translation-hi": "दवा",
+        "translation-ar": "الدواء"
+      },
+      {
+        "word": "der Apfel",
+        "translation-ru": "яблоко",
+        "translation-en": "apple",
+        "translation-uk": "яблуко",
+        "translation-pl": "jabłko",
+        "translation-es": "manzana",
+        "translation-fr": "pomme",
+        "translation-tr": "elma",
+        "translation-ro": "măr",
+        "translation-uz": "olma",
+        "translation-hi": "सेब",
+        "translation-ar": "تفاحة"
+      },
+      {
+        "word": "essen",
+        "translation-ru": "есть / кушать",
+        "translation-en": "to eat",
+        "translation-uk": "їсти",
+        "translation-pl": "jeść",
+        "translation-es": "comer",
+        "translation-fr": "manger",
+        "translation-tr": "yemek yemek",
+        "translation-ro": "a mânca",
+        "translation-uz": "yemoq",
+        "translation-hi": "खाना",
+        "translation-ar": "يأكل"
+      },
+      {
+        "word": "der Kilometer",
+        "translation-ru": "километр",
+        "translation-en": "kilometre",
+        "translation-uk": "кілометр",
+        "translation-pl": "kilometr",
+        "translation-es": "el kilómetro",
+        "translation-fr": "le kilomètre",
+        "translation-tr": "kilometre",
+        "translation-ro": "kilometrul",
+        "translation-uz": "kilometr",
+        "translation-hi": "किलोमीटर",
+        "translation-ar": "الكيلومتر"
       }
     ]
   },
@@ -1211,21 +3329,44 @@
       "minCorrect": 15,
       "requiredTasks": 15
     },
-    "rewards": { "points": 10, "xp": 10 },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
     "tasks": [
       {
         "id": 1,
         "type": "reorder",
         "question": "timeGageQuestTen.questOne",
-        "words": ["werde", "Zimmer", "das", "aufräumen", "Ich", "wirst", "geputzt", "einen", "dem"],
-        "correctOrder": ["Ich", "werde", "das", "Zimmer", "aufräumen"],
+        "words": [
+          "werde",
+          "Zimmer",
+          "das",
+          "aufräumen",
+          "Ich",
+          "wirst",
+          "geputzt",
+          "einen",
+          "dem"
+        ],
+        "correctOrder": [
+          "Ich",
+          "werde",
+          "das",
+          "Zimmer",
+          "aufräumen"
+        ],
         "tip": "timeGageQuestTen.questOneTip"
       },
       {
         "id": 2,
         "type": "select",
         "question": "timeGageQuestTen.questTwo",
-        "options": ["Wir haben neue Möbel gekauft", "Wir sind neue Möbel gekauft", "Wir haben neue Möbel kaufen"],
+        "options": [
+          "Wir haben neue Möbel gekauft",
+          "Wir sind neue Möbel gekauft",
+          "Wir haben neue Möbel kaufen"
+        ],
         "answer": "Wir haben neue Möbel gekauft",
         "tip": "timeGageQuestTen.questTwoTip"
       },
@@ -1241,15 +3382,34 @@
         "id": 4,
         "type": "reorder",
         "question": "timeGageQuestTen.questFour",
-        "words": ["Katze", "Die", "schläft", "auf", "dem", "Bett", "den"],
-        "correctOrder": ["Die", "Katze", "schläft", "auf", "dem", "Bett"],
+        "words": [
+          "Katze",
+          "Die",
+          "schläft",
+          "auf",
+          "dem",
+          "Bett",
+          "den"
+        ],
+        "correctOrder": [
+          "Die",
+          "Katze",
+          "schläft",
+          "auf",
+          "dem",
+          "Bett"
+        ],
         "tip": "timeGageQuestTen.questFourTip"
       },
       {
         "id": 5,
         "type": "select",
         "question": "timeGageQuestTen.questFive",
-        "options": ["Ich lege die Schlüssel auf das Regal", "Ich lege die Schlüssel auf dem Regal", "Ich lege die Schlüssel in der Regal"],
+        "options": [
+          "Ich lege die Schlüssel auf das Regal",
+          "Ich lege die Schlüssel auf dem Regal",
+          "Ich lege die Schlüssel in der Regal"
+        ],
         "answer": "Ich lege die Schlüssel auf das Regal",
         "tip": "timeGageQuestTen.questFiveTip"
       },
@@ -1257,8 +3417,21 @@
         "id": 6,
         "type": "reorder",
         "question": "timeGageQuestTen.questSix",
-        "words": ["wird", "Abendessen", "das", "kochen", "Sie", "einen"],
-        "correctOrder": ["Sie", "wird", "das", "Abendessen", "kochen"],
+        "words": [
+          "wird",
+          "Abendessen",
+          "das",
+          "kochen",
+          "Sie",
+          "einen"
+        ],
+        "correctOrder": [
+          "Sie",
+          "wird",
+          "das",
+          "Abendessen",
+          "kochen"
+        ],
         "tip": "timeGageQuestTen.questSixTip"
       },
       {
@@ -1273,7 +3446,11 @@
         "id": 8,
         "type": "select",
         "question": "timeGageQuestTen.questEight",
-        "options": ["Ich weiß nicht, wo mein Handy ist", "Ich weiß nicht, wo ist mein Handy", "Ich weiß nicht, wo Handy ist"],
+        "options": [
+          "Ich weiß nicht, wo mein Handy ist",
+          "Ich weiß nicht, wo ist mein Handy",
+          "Ich weiß nicht, wo Handy ist"
+        ],
         "answer": "Ich weiß nicht, wo mein Handy ist",
         "tip": "timeGageQuestTen.questEightTip"
       },
@@ -1281,8 +3458,25 @@
         "id": 9,
         "type": "reorder",
         "question": "timeGageQuestTen.questNine",
-        "words": ["hängen", "Spiegel", "den", "in", "Flur", "den", "Wir", "dem"],
-        "correctOrder": ["Wir", "hängen", "den", "Spiegel", "in", "den", "Flur"],
+        "words": [
+          "hängen",
+          "Spiegel",
+          "den",
+          "in",
+          "Flur",
+          "den",
+          "Wir",
+          "dem"
+        ],
+        "correctOrder": [
+          "Wir",
+          "hängen",
+          "den",
+          "Spiegel",
+          "in",
+          "den",
+          "Flur"
+        ],
         "tip": "timeGageQuestTen.questNineTip"
       },
       {
@@ -1290,38 +3484,92 @@
         "type": "readAndAnswer",
         "text": "Wir sind letzte Woche umgezogen. Die neue Wohnung ist hell und hat einen Balkon.",
         "question": "timeGageQuestTen.questTen",
-        "options": ["einen Balkon", "einen Garten", "eine Garage"],
-        "answer": "einen Balkon"
+        "options": [
+          "einen Balkon",
+          "einen Garten",
+          "eine Garage"
+        ],
+        "answer": "einen Balkon",
+        "tip": "timeGageQuestTen.description"
       },
       {
         "id": 11,
-        "type": "select",
-        "question": "timeGageQuestTen.questEleven",
-        "options": ["Wirst du mir beim Putzen helfen?", "Werdest du mir beim Putzen helfen?", "Wirst du mir beim Putzen geholfen?"],
-        "answer": "Wirst du mir beim Putzen helfen?",
-        "tip": "timeGageQuestTen.questElevenTip"
+        "type": "reorder",
+        "question": "timeGageQuestNine.questOne",
+        "words": [
+          "werde",
+          "Arzt",
+          "zum",
+          "gehen",
+          "Ich",
+          "gegangen",
+          "zur"
+        ],
+        "correctOrder": [
+          "Ich",
+          "werde",
+          "zum",
+          "Arzt",
+          "gehen"
+        ],
+        "tip": "timeGageQuestNine.questOneTip",
+        "reviewOf": "time-nine",
+        "reviewLand": "time-gate"
       },
       {
         "id": 12,
         "type": "reorder",
-        "question": "timeGageQuestTen.questTwelve",
-        "words": ["dass", "Wohnung", "die", "teuer", "ist", "glaube", "Ich", "hat", "den"],
-        "correctOrder": ["Ich", "glaube", "dass", "die", "Wohnung", "teuer", "ist"],
-        "tip": "timeGageQuestTen.questTwelveTip"
+        "question": "timeGageQuestSeven.questFour",
+        "words": [
+          "gehe",
+          "Kino",
+          "ins",
+          "Ich",
+          "den",
+          "im"
+        ],
+        "correctOrder": [
+          "Ich",
+          "gehe",
+          "ins",
+          "Kino"
+        ],
+        "tip": "timeGageQuestSeven.questFourTip",
+        "reviewOf": "time-seven",
+        "reviewLand": "time-gate"
       },
       {
         "id": 13,
-        "type": "speechToText",
-        "question": "timeGageQuestTen.questThirteen",
-        "text": "Wir wohnen in einer Wohnung",
-        "answer": "Wir wohnen in einer Wohnung",
-        "tip": "timeGageQuestTen.questThirteenTip"
+        "type": "reorder",
+        "question": "timeGageQuestThree.questSix",
+        "words": [
+          "werden",
+          "Restaurant",
+          "im",
+          "essen",
+          "Wir",
+          "in"
+        ],
+        "correctOrder": [
+          "Wir",
+          "werden",
+          "im",
+          "Restaurant",
+          "essen"
+        ],
+        "tip": "timeGageQuestThree.questSixTip",
+        "reviewOf": "time-three",
+        "reviewLand": "time-gate"
       },
       {
         "id": 14,
         "type": "select",
         "question": "timeGageQuestTen.questFourteen",
-        "options": ["Sie sind in eine andere Stadt umgezogen", "Sie haben in eine andere Stadt umgezogen", "Sie sind in eine andere Stadt umziehen"],
+        "options": [
+          "Sie sind in eine andere Stadt umgezogen",
+          "Sie haben in eine andere Stadt umgezogen",
+          "Sie sind in eine andere Stadt umziehen"
+        ],
         "answer": "Sie sind in eine andere Stadt umgezogen",
         "tip": "timeGageQuestTen.questFourteenTip"
       },
@@ -1329,9 +3577,114 @@
         "id": 15,
         "type": "reorder",
         "question": "timeGageQuestTen.questFifteen",
-        "words": ["dass", "er", "Wohnung", "die", "renoviert", "hat", "sagt", "Er", "den"],
-        "correctOrder": ["Er", "sagt", "dass", "er", "die", "Wohnung", "renoviert", "hat"],
+        "words": [
+          "dass",
+          "er",
+          "Wohnung",
+          "die",
+          "renoviert",
+          "hat",
+          "sagt",
+          "Er",
+          "den"
+        ],
+        "correctOrder": [
+          "Er",
+          "sagt",
+          "dass",
+          "er",
+          "die",
+          "Wohnung",
+          "renoviert",
+          "hat"
+        ],
         "tip": "timeGageQuestTen.questFifteenTip"
+      }
+    ],
+    "vocabulary": [
+      {
+        "word": "der Flur",
+        "translation-ru": "прихожая",
+        "translation-en": "hallway",
+        "translation-uk": "передпокій",
+        "translation-pl": "przedpokój",
+        "translation-es": "pasillo",
+        "translation-fr": "entrée",
+        "translation-tr": "antre",
+        "translation-ro": "hol",
+        "translation-uz": "yo‘lak",
+        "translation-hi": "हॉलवे",
+        "translation-ar": "مدخل"
+      },
+      {
+        "word": "das Handy",
+        "translation-ru": "мобильный телефон",
+        "translation-en": "mobile phone",
+        "translation-uk": "мобільний телефон",
+        "translation-pl": "komórka",
+        "translation-es": "el móvil",
+        "translation-fr": "le portable",
+        "translation-tr": "cep telefonu",
+        "translation-ro": "mobilul",
+        "translation-uz": "mobil telefon",
+        "translation-hi": "मोबाइल",
+        "translation-ar": "الهاتف المحمول"
+      },
+      {
+        "word": "hängen",
+        "translation-ru": "вешать, висеть",
+        "translation-en": "to hang",
+        "translation-uk": "вішати, висіти",
+        "translation-pl": "wieszać, wisieć",
+        "translation-es": "colgar",
+        "translation-fr": "accrocher, être accroché",
+        "translation-tr": "asmak, asılı olmak",
+        "translation-ro": "a agăța, a atârna",
+        "translation-uz": "osmoq, osilib turmoq",
+        "translation-hi": "टाँगना, लटकना",
+        "translation-ar": "يعلّق"
+      },
+      {
+        "word": "umziehen",
+        "translation-ru": "переезжать",
+        "translation-en": "to move house",
+        "translation-uk": "переїжджати",
+        "translation-pl": "przeprowadzać się",
+        "translation-es": "mudarse",
+        "translation-fr": "déménager",
+        "translation-tr": "taşınmak",
+        "translation-ro": "a se muta",
+        "translation-uz": "ko'chib o'tmoq",
+        "translation-hi": "घर बदलना",
+        "translation-ar": "ينتقل"
+      },
+      {
+        "word": "kochen",
+        "translation-ru": "готовить / варить",
+        "translation-en": "to cook",
+        "translation-uk": "готувати / варити",
+        "translation-pl": "gotować",
+        "translation-es": "cocinar",
+        "translation-fr": "cuisiner",
+        "translation-tr": "yemek pişirmek",
+        "translation-ro": "a găti",
+        "translation-uz": "ovqat pishirmoq",
+        "translation-hi": "पकाना",
+        "translation-ar": "يطبخ"
+      },
+      {
+        "word": "renovieren",
+        "translation-ru": "делать ремонт",
+        "translation-en": "to renovate",
+        "translation-uk": "робити ремонт",
+        "translation-pl": "remontować",
+        "translation-es": "reformar",
+        "translation-fr": "rénover",
+        "translation-tr": "tadilat yapmak",
+        "translation-ro": "a renova",
+        "translation-uz": "ta’mirlamoq",
+        "translation-hi": "मरम्मत करना",
+        "translation-ar": "يجدد"
       }
     ]
   },
@@ -1345,21 +3698,44 @@
       "minCorrect": 15,
       "requiredTasks": 15
     },
-    "rewards": { "points": 10, "xp": 10 },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
     "tasks": [
       {
         "id": 1,
         "type": "reorder",
         "question": "timeGageQuestEleven.questOne",
-        "words": ["werde", "Deutsch", "lernen", "Ich", "auf", "skillupgerman", "wirst", "im"],
-        "correctOrder": ["Ich", "werde", "Deutsch", "auf", "skillupgerman", "lernen"],
+        "words": [
+          "werde",
+          "Deutsch",
+          "lernen",
+          "Ich",
+          "auf",
+          "skillupgerman",
+          "wirst",
+          "im"
+        ],
+        "correctOrder": [
+          "Ich",
+          "werde",
+          "Deutsch",
+          "auf",
+          "skillupgerman",
+          "lernen"
+        ],
         "tip": "timeGageQuestEleven.questOneTip"
       },
       {
         "id": 2,
         "type": "select",
         "question": "timeGageQuestEleven.questTwo",
-        "options": ["Sie ist in die Schule gegangen", "Sie hat in die Schule gegangen", "Sie ist in der Schule gegangen"],
+        "options": [
+          "Sie ist in die Schule gegangen",
+          "Sie hat in die Schule gegangen",
+          "Sie ist in der Schule gegangen"
+        ],
         "answer": "Sie ist in die Schule gegangen",
         "tip": "timeGageQuestEleven.questTwoTip"
       },
@@ -1368,21 +3744,41 @@
         "type": "speechToText",
         "question": "timeGageQuestEleven.questThree",
         "text": "Ich verstehe die Grammatik",
-        "answer": "Ich verstehe die Grammatik"
+        "answer": "Ich verstehe die Grammatik",
+        "tip": "timeGageQuestEleven.description"
       },
       {
         "id": 4,
         "type": "reorder",
         "question": "timeGageQuestEleven.questFour",
-        "words": ["Heft", "Das", "liegt", "auf", "dem", "Tisch", "den"],
-        "correctOrder": ["Das", "Heft", "liegt", "auf", "dem", "Tisch"],
+        "words": [
+          "Heft",
+          "Das",
+          "liegt",
+          "auf",
+          "dem",
+          "Tisch",
+          "den"
+        ],
+        "correctOrder": [
+          "Das",
+          "Heft",
+          "liegt",
+          "auf",
+          "dem",
+          "Tisch"
+        ],
         "tip": "timeGageQuestEleven.questFourTip"
       },
       {
         "id": 5,
         "type": "select",
         "question": "timeGageQuestEleven.questFive",
-        "options": ["Ich lege den Stift ins Mäppchen", "Ich lege den Stift in dem Mäppchen", "Ich lege den Stift in der Mäppchen"],
+        "options": [
+          "Ich lege den Stift ins Mäppchen",
+          "Ich lege den Stift in dem Mäppchen",
+          "Ich lege den Stift in der Mäppchen"
+        ],
         "answer": "Ich lege den Stift ins Mäppchen",
         "tip": "timeGageQuestEleven.questFiveTip"
       },
@@ -1390,8 +3786,23 @@
         "id": 6,
         "type": "reorder",
         "question": "timeGageQuestEleven.questSix",
-        "words": ["Ich", "lerne", "weil", "ich", "das", "will", "ist"],
-        "correctOrder": ["Ich", "lerne", "weil", "ich", "das", "will"],
+        "words": [
+          "Ich",
+          "lerne",
+          "weil",
+          "ich",
+          "das",
+          "will",
+          "ist"
+        ],
+        "correctOrder": [
+          "Ich",
+          "lerne",
+          "weil",
+          "ich",
+          "das",
+          "will"
+        ],
         "tip": "timeGageQuestEleven.questSixTip"
       },
       {
@@ -1406,7 +3817,11 @@
         "id": 8,
         "type": "select",
         "question": "timeGageQuestEleven.questEight",
-        "options": ["Hast du die Hausaufgabe gemacht?", "Bist du die Hausaufgabe gemacht?", "Hast du die Hausaufgabe machen?"],
+        "options": [
+          "Hast du die Hausaufgabe gemacht?",
+          "Bist du die Hausaufgabe gemacht?",
+          "Hast du die Hausaufgabe machen?"
+        ],
         "answer": "Hast du die Hausaufgabe gemacht?",
         "tip": "timeGageQuestEleven.questEightTip"
       },
@@ -1414,8 +3829,25 @@
         "id": 9,
         "type": "reorder",
         "question": "timeGageQuestEleven.questNine",
-        "words": ["hängt", "Karte", "die", "an", "die", "Wand", "Er", "auf"],
-        "correctOrder": ["Er", "hängt", "die", "Karte", "an", "die", "Wand"],
+        "words": [
+          "hängt",
+          "Karte",
+          "die",
+          "an",
+          "die",
+          "Wand",
+          "Er",
+          "auf"
+        ],
+        "correctOrder": [
+          "Er",
+          "hängt",
+          "die",
+          "Karte",
+          "an",
+          "die",
+          "Wand"
+        ],
         "tip": "timeGageQuestEleven.questNineTip"
       },
       {
@@ -1423,38 +3855,97 @@
         "type": "readAndAnswer",
         "text": "Lukas lernt seit zwei Jahren Deutsch. Er hat gestern ein Zertifikat bekommen.",
         "question": "timeGageQuestEleven.questTen",
-        "options": ["ein Zertifikat", "ein Buch", "eine Note"],
-        "answer": "ein Zertifikat"
+        "options": [
+          "ein Zertifikat",
+          "ein Buch",
+          "eine Note"
+        ],
+        "answer": "ein Zertifikat",
+        "tip": "timeGageQuestEleven.description"
       },
       {
         "id": 11,
-        "type": "select",
-        "question": "timeGageQuestEleven.questEleven",
-        "options": ["Du wirst viel lesen", "Du werdest viel lesen", "Du wirst viel gelesen"],
-        "answer": "Du wirst viel lesen",
-        "tip": "timeGageQuestEleven.questElevenTip"
+        "type": "reorder",
+        "question": "timeGageQuestTen.questOne",
+        "words": [
+          "werde",
+          "Zimmer",
+          "das",
+          "aufräumen",
+          "Ich",
+          "wirst",
+          "geputzt",
+          "einen",
+          "dem"
+        ],
+        "correctOrder": [
+          "Ich",
+          "werde",
+          "das",
+          "Zimmer",
+          "aufräumen"
+        ],
+        "tip": "timeGageQuestTen.questOneTip",
+        "reviewOf": "time-ten",
+        "reviewLand": "time-gate"
       },
       {
         "id": 12,
         "type": "reorder",
-        "question": "timeGageQuestEleven.questTwelve",
-        "words": ["weiß", "nicht", "ob", "er", "versteht", "Ich", "dass"],
-        "correctOrder": ["Ich", "weiß", "nicht", "ob", "er", "versteht"],
-        "tip": "timeGageQuestEleven.questTwelveTip"
+        "question": "timeGageQuestEight.questFour",
+        "words": [
+          "Der",
+          "Geld",
+          "Das",
+          "liegt",
+          "im",
+          "Portemonnaie",
+          "in"
+        ],
+        "correctOrder": [
+          "Das",
+          "Geld",
+          "liegt",
+          "im",
+          "Portemonnaie"
+        ],
+        "tip": "timeGageQuestEight.questFourTip",
+        "reviewOf": "time-eight",
+        "reviewLand": "time-gate"
       },
       {
         "id": 13,
-        "type": "speechToText",
-        "question": "timeGageQuestEleven.questThirteen",
-        "text": "Wir sitzen in der Klasse",
-        "answer": "Wir sitzen in der Klasse",
-        "tip": "timeGageQuestEleven.questThirteenTip"
+        "type": "reorder",
+        "question": "timeGageQuestFour.questSix",
+        "words": [
+          "werden",
+          "ein",
+          "Meeting",
+          "haben",
+          "Wir",
+          "wirst",
+          "einen"
+        ],
+        "correctOrder": [
+          "Wir",
+          "werden",
+          "ein",
+          "Meeting",
+          "haben"
+        ],
+        "tip": "timeGageQuestFour.questSixTip",
+        "reviewOf": "time-four",
+        "reviewLand": "time-gate"
       },
       {
         "id": 14,
         "type": "select",
         "question": "timeGageQuestEleven.questFourteen",
-        "options": ["Wir sind zur Uni gefahren", "Wir haben zur Uni gefahren", "Wir sind zur Uni fahren"],
+        "options": [
+          "Wir sind zur Uni gefahren",
+          "Wir haben zur Uni gefahren",
+          "Wir sind zur Uni fahren"
+        ],
         "answer": "Wir sind zur Uni gefahren",
         "tip": "timeGageQuestEleven.questFourteenTip"
       },
@@ -1462,9 +3953,143 @@
         "id": 15,
         "type": "reorder",
         "question": "timeGageQuestEleven.questFifteen",
-        "words": ["dass", "sie", "Wörter", "die", "gelernt", "hat", "sagt", "Sie", "ist", "den"],
-        "correctOrder": ["Sie", "sagt", "dass", "sie", "die", "Wörter", "gelernt", "hat"],
+        "words": [
+          "dass",
+          "sie",
+          "Wörter",
+          "die",
+          "gelernt",
+          "hat",
+          "sagt",
+          "Sie",
+          "ist",
+          "den"
+        ],
+        "correctOrder": [
+          "Sie",
+          "sagt",
+          "dass",
+          "sie",
+          "die",
+          "Wörter",
+          "gelernt",
+          "hat"
+        ],
         "tip": "timeGageQuestEleven.questFifteenTip"
+      }
+    ],
+    "vocabulary": [
+      {
+        "word": "der Stift",
+        "translation-ru": "ручка",
+        "translation-en": "pen",
+        "translation-uk": "ручка",
+        "translation-pl": "długopis",
+        "translation-es": "el bolígrafo",
+        "translation-fr": "le stylo",
+        "translation-tr": "kalem",
+        "translation-ro": "pixul",
+        "translation-uz": "ruchka",
+        "translation-hi": "पेन",
+        "translation-ar": "القلم"
+      },
+      {
+        "word": "die Hausaufgabe",
+        "translation-ru": "домашнее задание",
+        "translation-en": "homework",
+        "translation-uk": "домашнє завдання",
+        "translation-pl": "praca domowa",
+        "translation-es": "los deberes",
+        "translation-fr": "les devoirs",
+        "translation-tr": "ev ödevi",
+        "translation-ro": "tema",
+        "translation-uz": "uy vazifasi",
+        "translation-hi": "होमवर्क",
+        "translation-ar": "الواجب المنزلي"
+      },
+      {
+        "word": "hängen",
+        "translation-ru": "висеть",
+        "translation-en": "to hang",
+        "translation-uk": "висіти",
+        "translation-pl": "wisieć",
+        "translation-es": "colgar",
+        "translation-fr": "être suspendu",
+        "translation-tr": "asılı olmak",
+        "translation-ro": "a atârna",
+        "translation-uz": "osilib turmoq",
+        "translation-hi": "लटकना",
+        "translation-ar": "يعلق"
+      },
+      {
+        "word": "seit",
+        "translation-ru": "с, уже (о времени)",
+        "translation-en": "since, for",
+        "translation-uk": "з, уже (про час)",
+        "translation-pl": "od (o czasie)",
+        "translation-es": "desde",
+        "translation-fr": "depuis",
+        "translation-tr": "-den beri",
+        "translation-ro": "de, din",
+        "translation-uz": "beri",
+        "translation-hi": "से (समय)",
+        "translation-ar": "منذ"
+      },
+      {
+        "word": "schreiben",
+        "translation-ru": "писать",
+        "translation-en": "to write",
+        "translation-uk": "писати",
+        "translation-pl": "pisać",
+        "translation-es": "escribir",
+        "translation-fr": "écrire",
+        "translation-tr": "yazmak",
+        "translation-ro": "a scrie",
+        "translation-uz": "yozmoq",
+        "translation-hi": "लिखना",
+        "translation-ar": "يكتب"
+      },
+      {
+        "word": "das Mäppchen",
+        "translation-ru": "пенал",
+        "translation-en": "pencil case",
+        "translation-uk": "пенал",
+        "translation-pl": "piórnik",
+        "translation-es": "el estuche",
+        "translation-fr": "la trousse",
+        "translation-tr": "kalem kutusu",
+        "translation-ro": "penarul",
+        "translation-uz": "qalamdon",
+        "translation-hi": "पेंसिल बॉक्स",
+        "translation-ar": "مقلمة"
+      },
+      {
+        "word": "das Zertifikat",
+        "translation-ru": "сертификат",
+        "translation-en": "certificate",
+        "translation-uk": "сертифікат",
+        "translation-pl": "certyfikat",
+        "translation-es": "el certificado",
+        "translation-fr": "le certificat",
+        "translation-tr": "sertifika",
+        "translation-ro": "certificatul",
+        "translation-uz": "sertifikat",
+        "translation-hi": "प्रमाणपत्र",
+        "translation-ar": "الشهادة"
+      },
+      {
+        "word": "die Uni",
+        "translation-ru": "университет",
+        "translation-en": "university",
+        "translation-uk": "університет",
+        "translation-pl": "uczelnia",
+        "translation-es": "la universidad",
+        "translation-fr": "la fac",
+        "translation-tr": "üniversite",
+        "translation-ro": "facultatea",
+        "translation-uz": "universitet",
+        "translation-hi": "विश्वविद्यालय",
+        "translation-ar": "الجامعة"
       }
     ]
   },
@@ -1478,21 +4103,40 @@
       "minCorrect": 12,
       "requiredTasks": 15
     },
-    "rewards": { "points": 20, "xp": 20 },
+    "rewards": {
+      "points": 20,
+      "xp": 20
+    },
     "tasks": [
       {
         "id": 1,
         "type": "reorder",
         "question": "timeGageQuestTwelve.questOne",
-        "words": ["wird", "regnen", "es", "Morgen", "werdet", "ist"],
-        "correctOrder": ["Morgen", "wird", "es", "regnen"],
+        "words": [
+          "wird",
+          "regnen",
+          "es",
+          "Morgen",
+          "werdet",
+          "ist"
+        ],
+        "correctOrder": [
+          "Morgen",
+          "wird",
+          "es",
+          "regnen"
+        ],
         "tip": "timeGageQuestTwelve.questOneTip"
       },
       {
         "id": 2,
         "type": "select",
         "question": "timeGageQuestTwelve.questTwo",
-        "options": ["Wir sind im Wald spazieren gegangen", "Wir haben im Wald spazieren gegangen", "Wir sind in den Wald spazieren gegangen"],
+        "options": [
+          "Wir sind im Wald spazieren gegangen",
+          "Wir haben im Wald spazieren gegangen",
+          "Wir sind in den Wald spazieren gegangen"
+        ],
         "answer": "Wir sind im Wald spazieren gegangen",
         "tip": "timeGageQuestTwelve.questTwoTip"
       },
@@ -1508,15 +4152,34 @@
         "id": 4,
         "type": "reorder",
         "question": "timeGageQuestTwelve.questFour",
-        "words": ["Vogel", "Der", "sitzt", "auf", "dem", "Baum", "den"],
-        "correctOrder": ["Der", "Vogel", "sitzt", "auf", "dem", "Baum"],
+        "words": [
+          "Vogel",
+          "Der",
+          "sitzt",
+          "auf",
+          "dem",
+          "Baum",
+          "den"
+        ],
+        "correctOrder": [
+          "Der",
+          "Vogel",
+          "sitzt",
+          "auf",
+          "dem",
+          "Baum"
+        ],
         "tip": "timeGageQuestTwelve.questFourTip"
       },
       {
         "id": 5,
         "type": "select",
         "question": "timeGageQuestTwelve.questFive",
-        "options": ["Ich gehe in den Garten", "Ich gehe im Garten", "Ich gehe in der Garten"],
+        "options": [
+          "Ich gehe in den Garten",
+          "Ich gehe im Garten",
+          "Ich gehe in der Garten"
+        ],
         "answer": "Ich gehe in den Garten",
         "tip": "timeGageQuestTwelve.questFiveTip"
       },
@@ -1524,8 +4187,26 @@
         "id": 6,
         "type": "reorder",
         "question": "timeGageQuestTwelve.questSix",
-        "words": ["bleibe", "Hause", "zu", "weil", "es", "stürmt", "Ich", "ist", "wird"],
-        "correctOrder": ["Ich", "bleibe", "zu", "Hause", "weil", "es", "stürmt"],
+        "words": [
+          "bleibe",
+          "Hause",
+          "zu",
+          "weil",
+          "es",
+          "stürmt",
+          "Ich",
+          "ist",
+          "wird"
+        ],
+        "correctOrder": [
+          "Ich",
+          "bleibe",
+          "zu",
+          "Hause",
+          "weil",
+          "es",
+          "stürmt"
+        ],
         "tip": "timeGageQuestTwelve.questSixTip"
       },
       {
@@ -1540,7 +4221,11 @@
         "id": 8,
         "type": "select",
         "question": "timeGageQuestTwelve.questEight",
-        "options": ["Der Schnee ist geschmolzen", "Der Schnee hat geschmolzen", "Der Schnee ist schmelzen"],
+        "options": [
+          "Der Schnee ist geschmolzen",
+          "Der Schnee hat geschmolzen",
+          "Der Schnee ist schmelzen"
+        ],
         "answer": "Der Schnee ist geschmolzen",
         "tip": "timeGageQuestTwelve.questEightTip"
       },
@@ -1548,8 +4233,25 @@
         "id": 9,
         "type": "reorder",
         "question": "timeGageQuestTwelve.questNine",
-        "words": ["stelle", "Pflanze", "die", "auf", "Balkon", "den", "Ich", "das"],
-        "correctOrder": ["Ich", "stelle", "die", "Pflanze", "auf", "den", "Balkon"],
+        "words": [
+          "stelle",
+          "Pflanze",
+          "die",
+          "auf",
+          "Balkon",
+          "den",
+          "Ich",
+          "das"
+        ],
+        "correctOrder": [
+          "Ich",
+          "stelle",
+          "die",
+          "Pflanze",
+          "auf",
+          "den",
+          "Balkon"
+        ],
         "tip": "timeGageQuestTwelve.questNineTip"
       },
       {
@@ -1557,38 +4259,100 @@
         "type": "readAndAnswer",
         "text": "Heute ist es wolkig. Aber der Wetterbericht sagt, dass morgen die Sonne scheinen wird.",
         "question": "timeGageQuestTwelve.questTen",
-        "options": ["klares Wetter", "ein wenig wolkig", "regnerisch"],
-        "answer": "klares Wetter"
+        "options": [
+          "klares Wetter",
+          "ein wenig wolkig",
+          "regnerisch"
+        ],
+        "answer": "klares Wetter",
+        "tip": "timeGageQuestTwelve.description"
       },
       {
         "id": 11,
-        "type": "select",
-        "question": "timeGageQuestTwelve.questEleven",
-        "options": ["Wir werden nach die Berge gehen", "Wir werden in die Berge gehen", "Wir werden in den Berge gehen"],
-        "answer": "Wir werden in die Berge gehen",
-        "tip": "timeGageQuestTwelve.questElevenTip"
+        "type": "reorder",
+        "question": "timeGageQuestEleven.questOne",
+        "words": [
+          "werde",
+          "Deutsch",
+          "lernen",
+          "Ich",
+          "auf",
+          "skillupgerman",
+          "wirst",
+          "im"
+        ],
+        "correctOrder": [
+          "Ich",
+          "werde",
+          "Deutsch",
+          "auf",
+          "skillupgerman",
+          "lernen"
+        ],
+        "tip": "timeGageQuestEleven.questOneTip",
+        "reviewOf": "time-eleven",
+        "reviewLand": "time-gate"
       },
       {
         "id": 12,
         "type": "reorder",
-        "question": "timeGageQuestTwelve.questTwelve",
-        "words": ["weiß", "nicht", "ob", "es", "schneit", "Ich", "ist"],
-        "correctOrder": ["Ich", "weiß", "nicht", "ob", "es", "schneit"],
-        "tip": "timeGageQuestTwelve.questTwelveTip"
+        "question": "timeGageQuestNine.questFour",
+        "words": [
+          "den",
+          "lege",
+          "Tabletten",
+          "die",
+          "in",
+          "Tasche",
+          "die",
+          "Ich"
+        ],
+        "correctOrder": [
+          "Ich",
+          "lege",
+          "die",
+          "Tabletten",
+          "in",
+          "die",
+          "Tasche"
+        ],
+        "tip": "timeGageQuestNine.questFourTip",
+        "reviewOf": "time-nine",
+        "reviewLand": "time-gate"
       },
       {
         "id": 13,
-        "type": "speechToText",
-        "question": "timeGageQuestTwelve.questThirteen",
-        "text": "Die Blumen blühen im Frühling",
-        "answer": "Die Blumen blühen im Frühling",
-        "tip": "timeGageQuestTwelve.questThirteenTip"
+        "type": "reorder",
+        "question": "timeGageQuestFive.questSix",
+        "words": [
+          "Wirst",
+          "Souvenir",
+          "ein",
+          "kaufen",
+          "du",
+          "werdet",
+          "einen"
+        ],
+        "correctOrder": [
+          "Wirst",
+          "du",
+          "ein",
+          "Souvenir",
+          "kaufen"
+        ],
+        "tip": "timeGageQuestFive.questSixTip",
+        "reviewOf": "time-five",
+        "reviewLand": "time-gate"
       },
       {
         "id": 14,
         "type": "select",
         "question": "timeGageQuestTwelve.questFourteen",
-        "options": ["Wir haben den Berg bestiegen", "Wir sind den Berg bestiegen", "Wir haben den Berg besteigen"],
+        "options": [
+          "Wir haben den Berg bestiegen",
+          "Wir sind den Berg bestiegen",
+          "Wir haben den Berg besteigen"
+        ],
         "answer": "Wir haben den Berg bestiegen",
         "tip": "timeGageQuestTwelve.questFourteenTip"
       },
@@ -1596,9 +4360,126 @@
         "id": 15,
         "type": "reorder",
         "question": "timeGageQuestTwelve.questFifteen",
-        "words": ["hoffe", "dass", "morgen", "Sonne", "die", "scheint", "Ich", "wird"],
-        "correctOrder": ["Ich", "hoffe", "dass", "morgen", "die", "Sonne", "scheint"],
+        "words": [
+          "hoffe",
+          "dass",
+          "morgen",
+          "Sonne",
+          "die",
+          "scheint",
+          "Ich",
+          "wird"
+        ],
+        "correctOrder": [
+          "Ich",
+          "hoffe",
+          "dass",
+          "morgen",
+          "die",
+          "Sonne",
+          "scheint"
+        ],
         "tip": "timeGageQuestTwelve.questFifteenTip"
+      }
+    ],
+    "vocabulary": [
+      {
+        "word": "hoffen",
+        "translation-ru": "надеяться",
+        "translation-en": "to hope",
+        "translation-uk": "сподіватися",
+        "translation-pl": "mieć nadzieję",
+        "translation-es": "esperar / tener esperanza",
+        "translation-fr": "espérer",
+        "translation-tr": "umut etmek",
+        "translation-ro": "a spera",
+        "translation-uz": "umid qilmoq",
+        "translation-hi": "आशा करना",
+        "translation-ar": "يأمل"
+      },
+      {
+        "word": "das Souvenir",
+        "translation-ru": "сувенир",
+        "translation-en": "souvenir",
+        "translation-uk": "сувенір",
+        "translation-pl": "pamiątka",
+        "translation-es": "recuerdo",
+        "translation-fr": "souvenir",
+        "translation-tr": "hediyelik eşya",
+        "translation-ro": "suvenir",
+        "translation-uz": "sovg‘a",
+        "translation-hi": "स्मृति चिन्ह",
+        "translation-ar": "تذكار"
+      },
+      {
+        "word": "die Stelle",
+        "translation-ru": "место работы, должность",
+        "translation-en": "job, position",
+        "translation-uk": "посада, місце роботи",
+        "translation-pl": "posada, praca",
+        "translation-es": "el puesto",
+        "translation-fr": "le poste",
+        "translation-tr": "iş yeri, pozisyon",
+        "translation-ro": "postul",
+        "translation-uz": "lavozim",
+        "translation-hi": "नौकरी, पद",
+        "translation-ar": "الوظيفة"
+      },
+      {
+        "word": "die Tabletten",
+        "translation-ru": "таблетки",
+        "translation-en": "tablets",
+        "translation-uk": "таблетки",
+        "translation-pl": "tabletki",
+        "translation-es": "las pastillas",
+        "translation-fr": "les comprimés",
+        "translation-tr": "tabletler",
+        "translation-ro": "pastilele",
+        "translation-uz": "tabletkalar",
+        "translation-hi": "गोलियाँ",
+        "translation-ar": "الأقراص"
+      },
+      {
+        "word": "lernen",
+        "translation-ru": "учить",
+        "translation-en": "to learn",
+        "translation-uk": "вчити",
+        "translation-pl": "uczyć się",
+        "translation-es": "aprender",
+        "translation-fr": "apprendre",
+        "translation-tr": "öğrenmek",
+        "translation-ro": "a învăța",
+        "translation-uz": "o‘rganmoq",
+        "translation-hi": "सीखना",
+        "translation-ar": "يتعلم"
+      },
+      {
+        "word": "wolkig",
+        "translation-ru": "облачно",
+        "translation-en": "cloudy",
+        "translation-uk": "хмарно",
+        "translation-pl": "pochmurno",
+        "translation-es": "nublado",
+        "translation-fr": "nuageux",
+        "translation-tr": "bulutlu",
+        "translation-ro": "înnorat",
+        "translation-uz": "bulutli",
+        "translation-hi": "बादल वाला",
+        "translation-ar": "غائم"
+      },
+      {
+        "word": "besteigen",
+        "translation-ru": "восходить на",
+        "translation-en": "to climb",
+        "translation-uk": "підніматися на",
+        "translation-pl": "wchodzić na",
+        "translation-es": "escalar",
+        "translation-fr": "gravir",
+        "translation-tr": "tırmanmak",
+        "translation-ro": "a urca pe",
+        "translation-uz": "chiqmoq",
+        "translation-hi": "चढ़ना",
+        "translation-ar": "يتسلق"
       }
     ]
   },
@@ -1612,21 +4493,44 @@
       "minCorrect": 15,
       "requiredTasks": 15
     },
-    "rewards": { "points": 10, "xp": 10 },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
     "tasks": [
       {
         "id": 1,
         "type": "reorder",
         "question": "timeGageQuestThirteen.questOne",
-        "words": ["werde", "mit", "dem", "Zug", "fahren", "Ich", "gefahren", "den"],
-        "correctOrder": ["Ich", "werde", "mit", "dem", "Zug", "fahren"],
+        "words": [
+          "werde",
+          "mit",
+          "dem",
+          "Zug",
+          "fahren",
+          "Ich",
+          "gefahren",
+          "den"
+        ],
+        "correctOrder": [
+          "Ich",
+          "werde",
+          "mit",
+          "dem",
+          "Zug",
+          "fahren"
+        ],
         "tip": "timeGageQuestThirteen.questOneTip"
       },
       {
         "id": 2,
         "type": "select",
         "question": "timeGageQuestThirteen.questTwo",
-        "options": ["Er ist mit dem Bus gekommen", "Er hat mit dem Bus gekommen", "Er ist mit den Bus gekommen"],
+        "options": [
+          "Er ist mit dem Bus gekommen",
+          "Er hat mit dem Bus gekommen",
+          "Er ist mit den Bus gekommen"
+        ],
         "answer": "Er ist mit dem Bus gekommen",
         "tip": "timeGageQuestThirteen.questTwoTip"
       },
@@ -1642,24 +4546,53 @@
         "id": 4,
         "type": "reorder",
         "question": "timeGageQuestThirteen.questFour",
-        "words": ["steige", "ins", "Auto", "Ich", "im"],
-        "correctOrder": ["Ich", "steige", "ins", "Auto"],
+        "words": [
+          "steige",
+          "ins",
+          "Auto",
+          "Ich",
+          "im"
+        ],
+        "correctOrder": [
+          "Ich",
+          "steige",
+          "ins",
+          "Auto"
+        ],
         "tip": "timeGageQuestThirteen.questFourTip"
       },
       {
         "id": 5,
         "type": "select",
         "question": "timeGageQuestThirteen.questFive",
-        "options": ["Ich bin zu spät, weil der Zug Verspätung hatte", "Ich bin zu spät, weil der Zug hatte Verspätung", "Ich habe zu spät, weil der Zug Verspätung hatte"],
-        "answer": "Ich bin zu spät, weil der Zug Verspätung hatte",
+        "options": [
+          "Ich bin zu spät gekommen, weil der Zug Verspätung hatte",
+          "Ich bin zu spät gekommen, weil der Zug hatte Verspätung",
+          "Ich habe zu spät gekommen, weil der Zug Verspätung hatte"
+        ],
+        "answer": "Ich bin zu spät gekommen, weil der Zug Verspätung hatte",
         "tip": "timeGageQuestThirteen.questFiveTip"
       },
       {
         "id": 6,
         "type": "reorder",
         "question": "timeGageQuestThirteen.questSix",
-        "words": ["werden", "Fahrkarten", "die", "kaufen", "Wir", "gekauft", "der"],
-        "correctOrder": ["Wir", "werden", "die", "Fahrkarten", "kaufen"],
+        "words": [
+          "werden",
+          "Fahrkarten",
+          "die",
+          "kaufen",
+          "Wir",
+          "gekauft",
+          "der"
+        ],
+        "correctOrder": [
+          "Wir",
+          "werden",
+          "die",
+          "Fahrkarten",
+          "kaufen"
+        ],
         "tip": "timeGageQuestThirteen.questSixTip"
       },
       {
@@ -1674,7 +4607,11 @@
         "id": 8,
         "type": "select",
         "question": "timeGageQuestThirteen.questEight",
-        "options": ["Wir warten an der Haltestelle", "Wir warten an die Haltestelle", "Wir warten an den Haltestelle"],
+        "options": [
+          "Wir warten an der Haltestelle",
+          "Wir warten an die Haltestelle",
+          "Wir warten an den Haltestelle"
+        ],
         "answer": "Wir warten an der Haltestelle",
         "tip": "timeGageQuestThirteen.questEightTip"
       },
@@ -1682,8 +4619,25 @@
         "id": 9,
         "type": "reorder",
         "question": "timeGageQuestThirteen.questNine",
-        "words": ["legt", "Koffer", "den", "in", "Kofferraum", "den", "Er", "dem"],
-        "correctOrder": ["Er", "legt", "den", "Koffer", "in", "den", "Kofferraum"],
+        "words": [
+          "legt",
+          "Koffer",
+          "den",
+          "in",
+          "Kofferraum",
+          "den",
+          "Er",
+          "dem"
+        ],
+        "correctOrder": [
+          "Er",
+          "legt",
+          "den",
+          "Koffer",
+          "in",
+          "den",
+          "Kofferraum"
+        ],
         "tip": "timeGageQuestThirteen.questNineTip"
       },
       {
@@ -1691,37 +4645,97 @@
         "type": "readAndAnswer",
         "text": "Der Flug nach Berlin dauert eine Stunde. Wir werden pünktlich landen.",
         "question": "timeGageQuestThirteen.questTen",
-        "options": ["eine Stunde", "zwei Stunden", "drei Stunden"],
-        "answer": "eine Stunde"
+        "options": [
+          "eine Stunde",
+          "zwei Stunden",
+          "drei Stunden"
+        ],
+        "answer": "eine Stunde",
+        "tip": "timeGageQuestThirteen.description"
       },
       {
         "id": 11,
-        "type": "select",
-        "question": "timeGageQuestThirteen.questEleven",
-        "options": ["Du wirst das Hotel reservieren", "Du werdest das Hotel reservieren", "Du wirst das Hotel reserviert"],
-        "answer": "Du wirst das Hotel reservieren",
-        "tip": "timeGageQuestThirteen.questElevenTip"
+        "type": "reorder",
+        "question": "timeGageQuestTwelve.questOne",
+        "words": [
+          "wird",
+          "regnen",
+          "es",
+          "Morgen",
+          "werdet",
+          "ist"
+        ],
+        "correctOrder": [
+          "Morgen",
+          "wird",
+          "es",
+          "regnen"
+        ],
+        "tip": "timeGageQuestTwelve.questOneTip",
+        "reviewOf": "time-twelve",
+        "reviewLand": "time-gate"
       },
       {
         "id": 12,
         "type": "reorder",
-        "question": "timeGageQuestThirteen.questTwelve",
-        "words": ["weiß", "nicht", "ob", "die", "Straßenbahn", "kommt", "Ich", "wenn"],
-        "correctOrder": ["Ich", "weiß", "nicht", "ob", "die", "Straßenbahn", "kommt"],
-        "tip": "timeGageQuestThirteen.questTwelveTip"
+        "question": "timeGageQuestTen.questFour",
+        "words": [
+          "Katze",
+          "Die",
+          "schläft",
+          "auf",
+          "dem",
+          "Bett",
+          "den"
+        ],
+        "correctOrder": [
+          "Die",
+          "Katze",
+          "schläft",
+          "auf",
+          "dem",
+          "Bett"
+        ],
+        "tip": "timeGageQuestTen.questFourTip",
+        "reviewOf": "time-ten",
+        "reviewLand": "time-gate"
       },
       {
         "id": 13,
-        "type": "speechToText",
-        "question": "timeGageQuestThirteen.questThirteen",
-        "text": "Der Zug fährt vom Gleis 4 ab",
-        "answer": "Der Zug fährt vom Gleis 4 ab"
+        "type": "reorder",
+        "question": "timeGageQuestSix.questSix",
+        "words": [
+          "hoffe",
+          "dass",
+          "Essen",
+          "das",
+          "gut",
+          "schmeckt",
+          "Ich",
+          "ist"
+        ],
+        "correctOrder": [
+          "Ich",
+          "hoffe",
+          "dass",
+          "das",
+          "Essen",
+          "gut",
+          "schmeckt"
+        ],
+        "tip": "timeGageQuestSix.questSixTip",
+        "reviewOf": "time-six",
+        "reviewLand": "time-gate"
       },
       {
         "id": 14,
         "type": "select",
         "question": "timeGageQuestThirteen.questFourteen",
-        "options": ["Wir sind aus der U-Bahn ausgestiegen", "Wir haben aus der U-Bahn ausgestiegen", "Wir sind aus der U-Bahn aussteigen"],
+        "options": [
+          "Wir sind aus der U-Bahn ausgestiegen",
+          "Wir haben aus der U-Bahn ausgestiegen",
+          "Wir sind aus der U-Bahn aussteigen"
+        ],
         "answer": "Wir sind aus der U-Bahn ausgestiegen",
         "tip": "timeGageQuestThirteen.questFourteenTip"
       },
@@ -1729,9 +4743,140 @@
         "id": 15,
         "type": "reorder",
         "question": "timeGageQuestThirteen.questFifteen",
-        "words": ["dass", "Flugzeug", "das", "abgehoben", "ist", "sagt", "Er", "hat"],
-        "correctOrder": ["Er", "sagt", "dass", "das", "Flugzeug", "abgehoben", "ist"],
+        "words": [
+          "dass",
+          "Flugzeug",
+          "das",
+          "abgehoben",
+          "ist",
+          "sagt",
+          "Er",
+          "hat"
+        ],
+        "correctOrder": [
+          "Er",
+          "sagt",
+          "dass",
+          "das",
+          "Flugzeug",
+          "abgehoben",
+          "ist"
+        ],
         "tip": "timeGageQuestThirteen.questFifteenTip"
+      }
+    ],
+    "vocabulary": [
+      {
+        "word": "landen",
+        "translation-ru": "приземляться",
+        "translation-en": "to land",
+        "translation-uk": "приземлятися",
+        "translation-pl": "lądować",
+        "translation-es": "aterrizar",
+        "translation-fr": "atterrir",
+        "translation-tr": "iniş yapmak",
+        "translation-ro": "a ateriza",
+        "translation-uz": "qo‘nmoq",
+        "translation-hi": "उतरना",
+        "translation-ar": "يهبط"
+      },
+      {
+        "word": "hoffen",
+        "translation-ru": "надеяться",
+        "translation-en": "to hope",
+        "translation-uk": "сподіватися",
+        "translation-pl": "mieć nadzieję",
+        "translation-es": "esperar / tener esperanza",
+        "translation-fr": "espérer",
+        "translation-tr": "umut etmek",
+        "translation-ro": "a spera",
+        "translation-uz": "umid qilmoq",
+        "translation-hi": "आशा करना",
+        "translation-ar": "يأمل"
+      },
+      {
+        "word": "schmecken",
+        "translation-ru": "быть вкусным / пробовать на вкус",
+        "translation-en": "to taste",
+        "translation-uk": "смакувати",
+        "translation-pl": "smakować",
+        "translation-es": "saber / gustar",
+        "translation-fr": "goûter / avoir bon goût",
+        "translation-tr": "tadına bakmak / lezzetli olmak",
+        "translation-ro": "a avea gust",
+        "translation-uz": "mazasi bo'lmoq",
+        "translation-hi": "चखना / स्वादिष्ट होना",
+        "translation-ar": "يتذوق"
+      },
+      {
+        "word": "dauern",
+        "translation-ru": "длиться",
+        "translation-en": "to last / take time",
+        "translation-uk": "тривати",
+        "translation-pl": "trwać",
+        "translation-es": "durar",
+        "translation-fr": "durer",
+        "translation-tr": "sürmek",
+        "translation-ro": "a dura",
+        "translation-uz": "davom etmoq",
+        "translation-hi": "समय लगना",
+        "translation-ar": "يستغرق"
+      },
+      {
+        "word": "das Auto",
+        "translation-ru": "машина",
+        "translation-en": "car",
+        "translation-uk": "машина",
+        "translation-pl": "samochód",
+        "translation-es": "coche",
+        "translation-fr": "voiture",
+        "translation-tr": "araba",
+        "translation-ro": "mașină",
+        "translation-uz": "mashina",
+        "translation-hi": "गाड़ी",
+        "translation-ar": "سيارة"
+      },
+      {
+        "word": "entwerten",
+        "translation-ru": "компостировать",
+        "translation-en": "to validate",
+        "translation-uk": "компостувати",
+        "translation-pl": "kasować",
+        "translation-es": "validar",
+        "translation-fr": "composter",
+        "translation-tr": "bileti onaylamak",
+        "translation-ro": "a composta",
+        "translation-uz": "chiptani tasdiqlamoq",
+        "translation-hi": "टिकट मान्य करना",
+        "translation-ar": "يختم التذكرة"
+      },
+      {
+        "word": "der Kofferraum",
+        "translation-ru": "багажник",
+        "translation-en": "car boot",
+        "translation-uk": "багажник",
+        "translation-pl": "bagażnik",
+        "translation-es": "el maletero",
+        "translation-fr": "le coffre",
+        "translation-tr": "bagaj",
+        "translation-ro": "portbagajul",
+        "translation-uz": "bagaj",
+        "translation-hi": "डिक्की",
+        "translation-ar": "صندوق السيارة"
+      },
+      {
+        "word": "abheben",
+        "translation-ru": "снимать (деньги)",
+        "translation-en": "to withdraw",
+        "translation-uk": "знімати (гроші)",
+        "translation-pl": "wypłacać",
+        "translation-es": "sacar",
+        "translation-fr": "retirer",
+        "translation-tr": "para çekmek",
+        "translation-ro": "a retrage",
+        "translation-uz": "pul yechmoq",
+        "translation-hi": "पैसे निकालना",
+        "translation-ar": "يسحب"
       }
     ]
   },
@@ -1745,21 +4890,43 @@
       "minCorrect": 15,
       "requiredTasks": 15
     },
-    "rewards": { "points": 10, "xp": 10 },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
     "tasks": [
       {
         "id": 1,
         "type": "reorder",
         "question": "timeGageQuestFourteen.questOne",
-        "words": ["werde", "Laptop", "einen", "neuen", "kaufen", "Ich", "ein"],
-        "correctOrder": ["Ich", "werde", "einen", "neuen", "Laptop", "kaufen"],
+        "words": [
+          "werde",
+          "Laptop",
+          "einen",
+          "neuen",
+          "kaufen",
+          "Ich",
+          "ein"
+        ],
+        "correctOrder": [
+          "Ich",
+          "werde",
+          "einen",
+          "neuen",
+          "Laptop",
+          "kaufen"
+        ],
         "tip": "timeGageQuestFourteen.questOneTip"
       },
       {
         "id": 2,
         "type": "select",
         "question": "timeGageQuestFourteen.questTwo",
-        "options": ["Er hat eine Nachricht geschickt", "Er ist eine Nachricht geschickt", "Er hat eine Nachricht schicken"],
+        "options": [
+          "Er hat eine Nachricht geschickt",
+          "Er ist eine Nachricht geschickt",
+          "Er hat eine Nachricht schicken"
+        ],
         "answer": "Er hat eine Nachricht geschickt",
         "tip": "timeGageQuestFourteen.questTwoTip"
       },
@@ -1775,15 +4942,34 @@
         "id": 4,
         "type": "reorder",
         "question": "timeGageQuestFourteen.questFour",
-        "words": ["Smartphone", "Das", "liegt", "auf", "dem", "Sofa", "den"],
-        "correctOrder": ["Das", "Smartphone", "liegt", "auf", "dem", "Sofa"],
+        "words": [
+          "Smartphone",
+          "Das",
+          "liegt",
+          "auf",
+          "dem",
+          "Sofa",
+          "den"
+        ],
+        "correctOrder": [
+          "Das",
+          "Smartphone",
+          "liegt",
+          "auf",
+          "dem",
+          "Sofa"
+        ],
         "tip": "timeGageQuestFourteen.questFourTip"
       },
       {
         "id": 5,
         "type": "select",
         "question": "timeGageQuestFourteen.questFive",
-        "options": ["Ich lege das Tablet auf den Tisch", "Ich lege das Tablet auf dem Tisch", "Ich lege das Tablet in den Tisch"],
+        "options": [
+          "Ich lege das Tablet auf den Tisch",
+          "Ich lege das Tablet auf dem Tisch",
+          "Ich lege das Tablet in den Tisch"
+        ],
         "answer": "Ich lege das Tablet auf den Tisch",
         "tip": "timeGageQuestFourteen.questFiveTip"
       },
@@ -1791,8 +4977,25 @@
         "id": 6,
         "type": "reorder",
         "question": "timeGageQuestFourteen.questSix",
-        "words": ["arbeite", "Ich", "ein", "weil", "ich", "einen", "Computer", "brauche"],
-        "correctOrder": ["Ich", "arbeite", "weil", "ich", "einen", "Computer", "brauche"],
+        "words": [
+          "arbeite",
+          "Ich",
+          "ein",
+          "weil",
+          "ich",
+          "einen",
+          "Computer",
+          "brauche"
+        ],
+        "correctOrder": [
+          "Ich",
+          "arbeite",
+          "weil",
+          "ich",
+          "einen",
+          "Computer",
+          "brauche"
+        ],
         "tip": "timeGageQuestFourteen.questSixTip"
       },
       {
@@ -1807,7 +5010,11 @@
         "id": 8,
         "type": "select",
         "question": "timeGageQuestFourteen.questEight",
-        "options": ["Hast du gestern den Film heruntergeladen?", "Bist du gestern den Film heruntergeladen?", "Hast du gestern den Film herunterladen?"],
+        "options": [
+          "Hast du gestern den Film heruntergeladen?",
+          "Bist du gestern den Film heruntergeladen?",
+          "Hast du gestern den Film herunterladen?"
+        ],
         "answer": "Hast du gestern den Film heruntergeladen?",
         "tip": "timeGageQuestFourteen.questEightTip"
       },
@@ -1815,8 +5022,25 @@
         "id": 9,
         "type": "reorder",
         "question": "timeGageQuestFourteen.questNine",
-        "words": ["hängt", "Fernseher", "den", "an", "die", "Wand", "Er", "dem"],
-        "correctOrder": ["Er", "hängt", "den", "Fernseher", "an", "die", "Wand"],
+        "words": [
+          "hängt",
+          "Fernseher",
+          "den",
+          "an",
+          "die",
+          "Wand",
+          "Er",
+          "dem"
+        ],
+        "correctOrder": [
+          "Er",
+          "hängt",
+          "den",
+          "Fernseher",
+          "an",
+          "die",
+          "Wand"
+        ],
         "tip": "timeGageQuestFourteen.questNineTip"
       },
       {
@@ -1824,38 +5048,98 @@
         "type": "readAndAnswer",
         "text": "Ich benutze soziale Medien, um mit Freunden zu schreiben. Gestern habe ich ein Foto gepostet.",
         "question": "timeGageQuestFourteen.questTen",
-        "options": ["ein Foto gepostet", "ein Video gelöscht", "einen Computer gekauft"],
-        "answer": "ein Foto gepostet"
+        "options": [
+          "ein Foto gepostet",
+          "ein Video gelöscht",
+          "einen Computer gekauft"
+        ],
+        "answer": "ein Foto gepostet",
+        "tip": "timeGageQuestFourteen.description"
       },
       {
         "id": 11,
-        "type": "select",
-        "question": "timeGageQuestFourteen.questEleven",
-        "options": ["Wir werden morgen anrufen", "Wir wirst morgen anrufen", "Wir werden morgen angerufen"],
-        "answer": "Wir werden morgen anrufen",
-        "tip": "timeGageQuestFourteen.questElevenTip"
+        "type": "reorder",
+        "question": "timeGageQuestThirteen.questOne",
+        "words": [
+          "werde",
+          "mit",
+          "dem",
+          "Zug",
+          "fahren",
+          "Ich",
+          "gefahren",
+          "den"
+        ],
+        "correctOrder": [
+          "Ich",
+          "werde",
+          "mit",
+          "dem",
+          "Zug",
+          "fahren"
+        ],
+        "tip": "timeGageQuestThirteen.questOneTip",
+        "reviewOf": "time-thirteen",
+        "reviewLand": "time-gate"
       },
       {
         "id": 12,
         "type": "reorder",
-        "question": "timeGageQuestFourteen.questTwelve",
-        "words": ["weiß", "nicht", "ob", "das", "WLAN", "funktioniert", "Ich", "dass"],
-        "correctOrder": ["Ich", "weiß", "nicht", "ob", "das", "WLAN", "funktioniert"],
-        "tip": "timeGageQuestFourteen.questTwelveTip"
+        "question": "timeGageQuestEleven.questFour",
+        "words": [
+          "Heft",
+          "Das",
+          "liegt",
+          "auf",
+          "dem",
+          "Tisch",
+          "den"
+        ],
+        "correctOrder": [
+          "Das",
+          "Heft",
+          "liegt",
+          "auf",
+          "dem",
+          "Tisch"
+        ],
+        "tip": "timeGageQuestEleven.questFourTip",
+        "reviewOf": "time-eleven",
+        "reviewLand": "time-gate"
       },
       {
         "id": 13,
-        "type": "speechToText",
-        "question": "timeGageQuestFourteen.questThirteen",
-        "text": "Die Tastatur liegt vor dem Monitor",
-        "answer": "Die Tastatur liegt vor dem Monitor",
-        "tip": "timeGageQuestFourteen.questThirteenTip"
+        "type": "reorder",
+        "question": "timeGageQuestSeven.questSix",
+        "words": [
+          "werden",
+          "Film",
+          "einen",
+          "schauen",
+          "Wir",
+          "den",
+          "geschaut"
+        ],
+        "correctOrder": [
+          "Wir",
+          "werden",
+          "einen",
+          "Film",
+          "schauen"
+        ],
+        "tip": "timeGageQuestSeven.questSixTip",
+        "reviewOf": "time-seven",
+        "reviewLand": "time-gate"
       },
       {
         "id": 14,
         "type": "select",
         "question": "timeGageQuestFourteen.questFourteen",
-        "options": ["Sie ist in den Elektronikladen gegangen", "Sie hat in den Elektronikladen gegangen", "Sie ist in dem Elektronikladen gegangen"],
+        "options": [
+          "Sie ist in den Elektronikladen gegangen",
+          "Sie hat in den Elektronikladen gegangen",
+          "Sie ist in dem Elektronikladen gegangen"
+        ],
         "answer": "Sie ist in den Elektronikladen gegangen",
         "tip": "timeGageQuestFourteen.questFourteenTip"
       },
@@ -1863,9 +5147,196 @@
         "id": 15,
         "type": "reorder",
         "question": "timeGageQuestFourteen.questFifteen",
-        "words": ["hoffe", "dass", "Internet", "das", "schnell", "ist", "Ich", "der"],
-        "correctOrder": ["Ich", "hoffe", "dass", "das", "Internet", "schnell", "ist"],
+        "words": [
+          "hoffe",
+          "dass",
+          "Internet",
+          "das",
+          "schnell",
+          "ist",
+          "Ich",
+          "der"
+        ],
+        "correctOrder": [
+          "Ich",
+          "hoffe",
+          "dass",
+          "das",
+          "Internet",
+          "schnell",
+          "ist"
+        ],
         "tip": "timeGageQuestFourteen.questFifteenTip"
+      }
+    ],
+    "vocabulary": [
+      {
+        "word": "das Tablet",
+        "translation-ru": "планшет",
+        "translation-en": "tablet",
+        "translation-uk": "планшет",
+        "translation-pl": "tablet",
+        "translation-es": "tableta",
+        "translation-fr": "tablette",
+        "translation-tr": "tablet",
+        "translation-ro": "tabletă",
+        "translation-uz": "planshet",
+        "translation-hi": "टैबलेट",
+        "translation-ar": "جهاز لوحي"
+      },
+      {
+        "word": "das Foto",
+        "translation-ru": "фотография",
+        "translation-en": "photo",
+        "translation-uk": "фотографія",
+        "translation-pl": "zdjęcie",
+        "translation-es": "la foto",
+        "translation-fr": "la photo",
+        "translation-tr": "fotoğraf",
+        "translation-ro": "fotografia",
+        "translation-uz": "surat",
+        "translation-hi": "फ़ोटो",
+        "translation-ar": "الصورة"
+      },
+      {
+        "word": "hoffen",
+        "translation-ru": "надеяться",
+        "translation-en": "to hope",
+        "translation-uk": "сподіватися",
+        "translation-pl": "mieć nadzieję",
+        "translation-es": "esperar / tener esperanza",
+        "translation-fr": "espérer",
+        "translation-tr": "umut etmek",
+        "translation-ro": "a spera",
+        "translation-uz": "umid qilmoq",
+        "translation-hi": "आशा करना",
+        "translation-ar": "يأمل"
+      },
+      {
+        "word": "der Laptop",
+        "translation-ru": "ноутбук",
+        "translation-en": "laptop",
+        "translation-uk": "ноутбук",
+        "translation-pl": "laptop",
+        "translation-es": "portátil",
+        "translation-fr": "ordinateur portable",
+        "translation-tr": "dizüstü bilgisayar",
+        "translation-ro": "laptop",
+        "translation-uz": "noutbuk",
+        "translation-hi": "लैपटॉप",
+        "translation-ar": "حاسوب محمول"
+      },
+      {
+        "word": "hängen",
+        "translation-ru": "висеть",
+        "translation-en": "to hang",
+        "translation-uk": "висіти",
+        "translation-pl": "wisieć",
+        "translation-es": "colgar",
+        "translation-fr": "être suspendu",
+        "translation-tr": "asılı olmak",
+        "translation-ro": "a atârna",
+        "translation-uz": "osilib turmoq",
+        "translation-hi": "लटकना",
+        "translation-ar": "يعلق"
+      },
+      {
+        "word": "surfen",
+        "translation-ru": "сидеть в интернете",
+        "translation-en": "to surf",
+        "translation-uk": "сидіти в інтернеті",
+        "translation-pl": "surfować",
+        "translation-es": "navegar",
+        "translation-fr": "surfer",
+        "translation-tr": "internette gezinmek",
+        "translation-ro": "a naviga",
+        "translation-uz": "internetda kezmoq",
+        "translation-hi": "इंटरनेट चलाना",
+        "translation-ar": "يتصفح"
+      },
+      {
+        "word": "das Smartphone",
+        "translation-ru": "смартфон",
+        "translation-en": "smartphone",
+        "translation-uk": "смартфон",
+        "translation-pl": "smartfon",
+        "translation-es": "el móvil",
+        "translation-fr": "le smartphone",
+        "translation-tr": "akıllı telefon",
+        "translation-ro": "smartphone-ul",
+        "translation-uz": "smartfon",
+        "translation-hi": "स्मार्टफ़ोन",
+        "translation-ar": "الهاتف الذكي"
+      },
+      {
+        "word": "sozial",
+        "translation-ru": "социальный",
+        "translation-en": "social",
+        "translation-uk": "соціальний",
+        "translation-pl": "społeczny",
+        "translation-es": "social",
+        "translation-fr": "social",
+        "translation-tr": "sosyal",
+        "translation-ro": "social",
+        "translation-uz": "ijtimoiy",
+        "translation-hi": "सामाजिक",
+        "translation-ar": "اجتماعي"
+      },
+      {
+        "word": "die Medien",
+        "translation-ru": "медиа",
+        "translation-en": "media",
+        "translation-uk": "медіа",
+        "translation-pl": "media",
+        "translation-es": "los medios",
+        "translation-fr": "les médias",
+        "translation-tr": "medya",
+        "translation-ro": "mass-media",
+        "translation-uz": "media",
+        "translation-hi": "मीडिया",
+        "translation-ar": "وسائل الإعلام"
+      },
+      {
+        "word": "posten",
+        "translation-ru": "публиковать",
+        "translation-en": "to post",
+        "translation-uk": "публікувати",
+        "translation-pl": "publikować",
+        "translation-es": "publicar",
+        "translation-fr": "poster",
+        "translation-tr": "paylaşmak",
+        "translation-ro": "a posta",
+        "translation-uz": "joylamoq",
+        "translation-hi": "पोस्ट करना",
+        "translation-ar": "ينشر"
+      },
+      {
+        "word": "der Elektronikladen",
+        "translation-ru": "магазин электроники",
+        "translation-en": "electronics shop",
+        "translation-uk": "магазин електроніки",
+        "translation-pl": "sklep z elektroniką",
+        "translation-es": "la tienda de electrónica",
+        "translation-fr": "le magasin d’électronique",
+        "translation-tr": "elektronik mağazası",
+        "translation-ro": "magazinul de electronice",
+        "translation-uz": "elektronika do‘koni",
+        "translation-hi": "इलेक्ट्रॉनिक्स की दुकान",
+        "translation-ar": "متجر الإلكترونيات"
+      },
+      {
+        "word": "herunterladen",
+        "translation-ru": "скачивать",
+        "translation-en": "to download",
+        "translation-uk": "завантажувати",
+        "translation-pl": "pobierać",
+        "translation-es": "descargar",
+        "translation-fr": "télécharger",
+        "translation-tr": "indirmek",
+        "translation-ro": "a descărca",
+        "translation-uz": "yuklab olmoq",
+        "translation-hi": "डाउनलोड करना",
+        "translation-ar": "يحمّل"
       }
     ]
   },
@@ -1879,21 +5350,42 @@
       "minCorrect": 12,
       "requiredTasks": 15
     },
-    "rewards": { "points": 20, "xp": 20 },
+    "rewards": {
+      "points": 20,
+      "xp": 20
+    },
     "tasks": [
       {
         "id": 1,
         "type": "reorder",
         "question": "timeGageQuestFifteen.questOne",
-        "words": ["werde", "Museum", "ins", "gehen", "Ich", "wirst", "dem"],
-        "correctOrder": ["Ich", "werde", "ins", "Museum", "gehen"],
+        "words": [
+          "werde",
+          "Museum",
+          "ins",
+          "gehen",
+          "Ich",
+          "wirst",
+          "dem"
+        ],
+        "correctOrder": [
+          "Ich",
+          "werde",
+          "ins",
+          "Museum",
+          "gehen"
+        ],
         "tip": "timeGageQuestFifteen.questOneTip"
       },
       {
         "id": 2,
         "type": "select",
         "question": "timeGageQuestFifteen.questTwo",
-        "options": ["Wir sind auf das Konzert gegangen", "Wir haben auf das Konzert gegangen", "Wir sind auf dem Konzert gegangen"],
+        "options": [
+          "Wir sind auf das Konzert gegangen",
+          "Wir haben auf das Konzert gegangen",
+          "Wir sind auf dem Konzert gegangen"
+        ],
         "answer": "Wir sind auf das Konzert gegangen",
         "tip": "timeGageQuestFifteen.questTwoTip"
       },
@@ -1909,15 +5401,36 @@
         "id": 4,
         "type": "reorder",
         "question": "timeGageQuestFifteen.questFour",
-        "words": ["hänge", "Bild", "das", "an", "Wand", "die", "Ich", "der"],
-        "correctOrder": ["Ich", "hänge", "das", "Bild", "an", "die", "Wand"],
+        "words": [
+          "hänge",
+          "Bild",
+          "das",
+          "an",
+          "Wand",
+          "die",
+          "Ich",
+          "der"
+        ],
+        "correctOrder": [
+          "Ich",
+          "hänge",
+          "das",
+          "Bild",
+          "an",
+          "die",
+          "Wand"
+        ],
         "tip": "timeGageQuestFifteen.questFourTip"
       },
       {
         "id": 5,
         "type": "select",
         "question": "timeGageQuestFifteen.questFive",
-        "options": ["Ich mag die Musik, weil sie schön ist", "Ich mag die Musik, weil er schön ist", "Ich mag die Musik, weil sie ist schön"],
+        "options": [
+          "Ich mag die Musik, weil sie schön ist",
+          "Ich mag die Musik, weil er schön ist",
+          "Ich mag die Musik, weil sie ist schön"
+        ],
         "answer": "Ich mag die Musik, weil sie schön ist",
         "tip": "timeGageQuestFifteen.questFiveTip"
       },
@@ -1925,8 +5438,22 @@
         "id": 6,
         "type": "reorder",
         "question": "timeGageQuestFifteen.questSix",
-        "words": ["werden", "Ballett", "das", "sehen", "Wir", "wirst", "dem"],
-        "correctOrder": ["Wir", "werden", "das", "Ballett", "sehen"],
+        "words": [
+          "werden",
+          "Ballett",
+          "das",
+          "sehen",
+          "Wir",
+          "wirst",
+          "dem"
+        ],
+        "correctOrder": [
+          "Wir",
+          "werden",
+          "das",
+          "Ballett",
+          "sehen"
+        ],
         "tip": "timeGageQuestFifteen.questSixTip"
       },
       {
@@ -1941,7 +5468,11 @@
         "id": 8,
         "type": "select",
         "question": "timeGageQuestFifteen.questEight",
-        "options": ["Wir sitzen im Theater", "Wir sitzen ins Theater", "Wir sitzen in das Theater"],
+        "options": [
+          "Wir sitzen im Theater",
+          "Wir sitzen ins Theater",
+          "Wir sitzen in das Theater"
+        ],
         "answer": "Wir sitzen im Theater",
         "tip": "timeGageQuestFifteen.questEightTip"
       },
@@ -1949,8 +5480,24 @@
         "id": 9,
         "type": "reorder",
         "question": "timeGageQuestFifteen.questNine",
-        "words": ["dass", "er", "Schauspieler", "ist", "sagt", "Er", "ein", "den"],
-        "correctOrder": ["Er", "sagt", "dass", "er", "Schauspieler", "ist"],
+        "words": [
+          "dass",
+          "er",
+          "Schauspieler",
+          "ist",
+          "sagt",
+          "Er",
+          "ein",
+          "den"
+        ],
+        "correctOrder": [
+          "Er",
+          "sagt",
+          "dass",
+          "er",
+          "Schauspieler",
+          "ist"
+        ],
         "tip": "timeGageQuestFifteen.questNineTip"
       },
       {
@@ -1958,38 +5505,102 @@
         "type": "readAndAnswer",
         "text": "Das Museum öffnet morgen erst um 10 Uhr. Wir werden dort viele Statuen sehen.",
         "question": "timeGageQuestFifteen.questTen",
-        "options": ["um zehn Uhr", "um acht Uhr", "um zwei Uhr"],
-        "answer": "um zehn Uhr"
+        "options": [
+          "um zehn Uhr",
+          "um acht Uhr",
+          "um zwei Uhr"
+        ],
+        "answer": "um zehn Uhr",
+        "tip": "timeGageQuestFifteen.description"
       },
       {
         "id": 11,
-        "type": "select",
-        "question": "timeGageQuestFifteen.questEleven",
-        "options": ["Du wirst Klavier spielen", "Du werdest Klavier spielen", "Du wirst Klavier gespielt"],
-        "answer": "Du wirst Klavier spielen",
-        "tip": "timeGageQuestFifteen.questElevenTip"
+        "type": "reorder",
+        "question": "timeGageQuestFourteen.questOne",
+        "words": [
+          "werde",
+          "Laptop",
+          "einen",
+          "neuen",
+          "kaufen",
+          "Ich",
+          "ein"
+        ],
+        "correctOrder": [
+          "Ich",
+          "werde",
+          "einen",
+          "neuen",
+          "Laptop",
+          "kaufen"
+        ],
+        "tip": "timeGageQuestFourteen.questOneTip",
+        "reviewOf": "time-fourteen",
+        "reviewLand": "time-gate"
       },
       {
         "id": 12,
         "type": "reorder",
-        "question": "timeGageQuestFifteen.questTwelve",
-        "words": ["weiß", "nicht", "ob", "die", "Ausstellung", "offen", "ist", "Ich", "hat"],
-        "correctOrder": ["Ich", "weiß", "nicht", "ob", "die", "Ausstellung", "offen", "ist"],
-        "tip": "timeGageQuestFifteen.questTwelveTip"
+        "question": "timeGageQuestTwelve.questFour",
+        "words": [
+          "Vogel",
+          "Der",
+          "sitzt",
+          "auf",
+          "dem",
+          "Baum",
+          "den"
+        ],
+        "correctOrder": [
+          "Der",
+          "Vogel",
+          "sitzt",
+          "auf",
+          "dem",
+          "Baum"
+        ],
+        "tip": "timeGageQuestTwelve.questFourTip",
+        "reviewOf": "time-twelve",
+        "reviewLand": "time-gate"
       },
       {
         "id": 13,
-        "type": "speechToText",
-        "question": "timeGageQuestFifteen.questThirteen",
-        "text": "Wir gehen heute in die Oper",
-        "answer": "Wir gehen heute in die Oper",
-        "tip": "timeGageQuestFifteen.questThirteenTip"
+        "type": "reorder",
+        "question": "timeGageQuestEight.questSix",
+        "words": [
+          "Schuhe",
+          "die",
+          "kaufe",
+          "Ich",
+          "weil",
+          "sie",
+          "billig",
+          "sind",
+          "ist"
+        ],
+        "correctOrder": [
+          "Ich",
+          "kaufe",
+          "die",
+          "Schuhe",
+          "weil",
+          "sie",
+          "billig",
+          "sind"
+        ],
+        "tip": "timeGageQuestEight.questSixTip",
+        "reviewOf": "time-eight",
+        "reviewLand": "time-gate"
       },
       {
         "id": 14,
         "type": "select",
         "question": "timeGageQuestFifteen.questFourteen",
-        "options": ["Sie ist zum Festival gekommen", "Sie hat zum Festival gekommen", "Sie ist zum Festival kommen"],
+        "options": [
+          "Sie ist zum Festival gekommen",
+          "Sie hat zum Festival gekommen",
+          "Sie ist zum Festival kommen"
+        ],
         "answer": "Sie ist zum Festival gekommen",
         "tip": "timeGageQuestFifteen.questFourteenTip"
       },
@@ -1997,9 +5608,128 @@
         "id": 15,
         "type": "reorder",
         "question": "timeGageQuestFifteen.questFifteen",
-        "words": ["kaufe", "Ticket", "ein", "wenn", "ich", "Zeit", "habe", "Ich", "einen"],
-        "correctOrder": ["Ich", "kaufe", "ein", "Ticket", "wenn", "ich", "Zeit", "habe"],
+        "words": [
+          "kaufe",
+          "Ticket",
+          "ein",
+          "wenn",
+          "ich",
+          "Zeit",
+          "habe",
+          "Ich",
+          "einen"
+        ],
+        "correctOrder": [
+          "Ich",
+          "kaufe",
+          "ein",
+          "Ticket",
+          "wenn",
+          "ich",
+          "Zeit",
+          "habe"
+        ],
         "tip": "timeGageQuestFifteen.questFifteenTip"
+      }
+    ],
+    "vocabulary": [
+      {
+        "word": "das Theater",
+        "translation-ru": "театр",
+        "translation-en": "theatre",
+        "translation-uk": "театр",
+        "translation-pl": "teatr",
+        "translation-es": "teatro",
+        "translation-fr": "théâtre",
+        "translation-tr": "tiyatro",
+        "translation-ro": "teatru",
+        "translation-uz": "teatr",
+        "translation-hi": "थियेटर",
+        "translation-ar": "مسرح"
+      },
+      {
+        "word": "der Schauspieler",
+        "translation-ru": "актёр",
+        "translation-en": "actor",
+        "translation-uk": "актор",
+        "translation-pl": "aktor",
+        "translation-es": "actor",
+        "translation-fr": "acteur",
+        "translation-tr": "aktör",
+        "translation-ro": "actor",
+        "translation-uz": "aktyor",
+        "translation-hi": "अभिनेता",
+        "translation-ar": "ممثل"
+      },
+      {
+        "word": "das Festival",
+        "translation-ru": "фестиваль",
+        "translation-en": "festival",
+        "translation-uk": "фестиваль",
+        "translation-pl": "festiwal",
+        "translation-es": "festival",
+        "translation-fr": "festival",
+        "translation-tr": "festival",
+        "translation-ro": "festival",
+        "translation-uz": "festival",
+        "translation-hi": "महोत्सव",
+        "translation-ar": "مهرجان"
+      },
+      {
+        "word": "billig",
+        "translation-ru": "дешёвый",
+        "translation-en": "cheap",
+        "translation-uk": "дешевий",
+        "translation-pl": "tani",
+        "translation-es": "barato",
+        "translation-fr": "bon marché",
+        "translation-tr": "ucuz",
+        "translation-ro": "ieftin",
+        "translation-uz": "arzon",
+        "translation-hi": "सस्ता",
+        "translation-ar": "رخيص"
+      },
+      {
+        "word": "der Laptop",
+        "translation-ru": "ноутбук",
+        "translation-en": "laptop",
+        "translation-uk": "ноутбук",
+        "translation-pl": "laptop",
+        "translation-es": "portátil",
+        "translation-fr": "ordinateur portable",
+        "translation-tr": "dizüstü bilgisayar",
+        "translation-ro": "laptop",
+        "translation-uz": "noutbuk",
+        "translation-hi": "लैपटॉप",
+        "translation-ar": "حاسوب محمول"
+      },
+      {
+        "word": "das Ballett",
+        "translation-ru": "балет",
+        "translation-en": "ballet",
+        "translation-uk": "балет",
+        "translation-pl": "balet",
+        "translation-es": "el ballet",
+        "translation-fr": "le ballet",
+        "translation-tr": "bale",
+        "translation-ro": "baletul",
+        "translation-uz": "balet",
+        "translation-hi": "बैले",
+        "translation-ar": "الباليه"
+      },
+      {
+        "word": "die Statue",
+        "translation-ru": "статуя",
+        "translation-en": "statue",
+        "translation-uk": "статуя",
+        "translation-pl": "posąg",
+        "translation-es": "la estatua",
+        "translation-fr": "la statue",
+        "translation-tr": "heykel",
+        "translation-ro": "statuia",
+        "translation-uz": "haykal",
+        "translation-hi": "मूर्ति",
+        "translation-ar": "التمثال"
       }
     ]
   }

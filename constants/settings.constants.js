@@ -42,14 +42,16 @@ export const SETTINGS_GROUPS_CONFIG = [
         items: [
             { key: 'theme', labelKey: 'cabinetToggle.themeBtn', type: 'button' },
             { key: 'snowFall', labelKey: 'cabinetToggle.snowFall', type: 'toggle' },
-            { key: 'hedgehogHelper', labelKey: 'cabinetToggle.hedgehogAssistent', type: 'toggle' }
+            { key: 'hedgehogHelper', labelKey: 'cabinetToggle.hedgehogAssistent', type: 'toggle' },
+            { key: 'hedgehogGuide', labelKey: 'cabinetToggle.hedgehogGuide', type: 'toggle' }
         ]
     },
     {
         id: 'language',
         titleKey: 'settingsGroup.language',
         items: [
-            { key: 'lang', labelKey: 'cabinetToggle.language', type: 'button' }
+            { key: 'lang', labelKey: 'cabinetToggle.language', type: 'button' },
+            { key: 'germanLevel', labelKey: 'levelPicker.settingsLabel', type: 'button' }
         ]
     }
 ]

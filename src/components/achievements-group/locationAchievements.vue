@@ -2,7 +2,7 @@
   <div class="achievements">
     <div
         v-for="group in overGroups"
-        :key="group.id"
+        :key="group.title"
         class="achievement-group-container"
     >
       <div class="group-header">

@@ -14,6 +14,27 @@ const IMMUNITY_RANK_HATS = 500;
 const GEMINI_API_KEY = defineSecret("GEMINI_API_KEY");
 const RESEND_API_KEY = defineSecret("RESEND_API_KEY");
 let timeZone = 'ru-RU'
+
+// Тексты пуш-напоминаний на языке приложения (поле users/{uid}.locale пишет клиент, utils/saveUserLocale.js).
+// Совпадают с локальными напоминаниями reminders.n1Title / n1Body
+const REMINDER_MESSAGES = {
+	en: { title: '📚 Time for German!', body: '5 minutes a day, and your goal is done' },
+	ru: { title: '📚 Время немецкого!', body: '5 минут в день, и цель выполнена' },
+	uk: { title: '📚 Час для німецької!', body: '5 хвилин на день, і мету виконано' },
+	pl: { title: '📚 Czas na niemiecki!', body: '5 minut dziennie i cel osiągnięty' },
+	es: { title: '📚 ¡Hora de alemán!', body: '5 minutos al día y tu meta está cumplida' },
+	fr: { title: "📚 C'est l'heure de l'allemand !", body: '5 minutes par jour et ton objectif est atteint' },
+	tr: { title: '📚 Almanca zamanı!', body: 'Günde 5 dakika ve hedefin tamam' },
+	ro: { title: '📚 E timpul pentru germană!', body: '5 minute pe zi și obiectivul e atins' },
+	uz: { title: '📚 Nemis tili vaqti!', body: 'Kuniga 5 daqiqa va maqsad bajarildi' },
+	hi: { title: '📚 जर्मन का समय!', body: 'दिन में 5 मिनट, और लक्ष्य पूरा' },
+	ar: { title: '📚 حان وقت الألمانية!', body: '5 دقائق يوميًا ويتحقق هدفك' }
+};
+
+// 'ru-RU' → 'ru'; язык не сохранён или неизвестен → английский
+const getReminderMessage = (locale) =>
+	REMINDER_MESSAGES[String(locale || '').split('-')[0].trim().toLowerCase()] || REMINDER_MESSAGES.en;
+
 exports.sendScheduledReminders = onSchedule('every 15 minutes', async (event) => {
 	const db = admin.firestore()
 	const snapshot = await db.collection('users')
@@ -34,10 +55,7 @@ exports.sendScheduledReminders = onSchedule('every 15 minutes', async (event) =>
 		if (userCurrentTime === data.reminderTime) {
 			messages.push({
 				token: data.fcmToken,
-				notification: {
-					title: 'Время для практики! 📚',
-					body: '5 минут занятий сегодня помогут закрепить результат.'
-				}
+				notification: getReminderMessage(data.locale || data.language)
 			})
 		}
 	})
@@ -445,5 +463,140 @@ exports.handleRevenueCatWebhook = onRequest(async (req, res) => {
 	} catch (error) {
 		console.error("RevenueCat Webhook Error:", error);
 		res.status(500).send("Error");
+	}
+});
+
+const EXAM_LANGUAGE_NAMES = {
+	de: 'German', ru: 'Russian', en: 'English', uk: 'Ukrainian', pl: 'Polish', es: 'Spanish', fr: 'French',
+	ar: 'Arabic', hi: 'Hindi', ro: 'Romanian', tr: 'Turkish', uz: 'Uzbek'
+};
+const getExamLanguageName = (locale, fallback = 'Russian') =>
+	EXAM_LANGUAGE_NAMES[String(locale || '').split('-')[0].trim().toLowerCase()] || fallback;
+
+exports.checkExamAnswer = onCall({
+	secrets: [GEMINI_API_KEY],
+	memory: "256Mi",
+	timeoutSeconds: 30,
+	cors: true
+}, async (request) => {
+
+	const dataIn = request.data || {};
+	const task = dataIn.task || {};
+	const answer = dataIn.answer || "";
+	const level = dataIn.level || "A2";
+	const locale = getExamLanguageName(dataIn.locale);
+
+	const modelId = 'gemini-3.5-flash-lite';
+	const taskText = task.instruction || task.prompt || task.text || task.question || "";
+	const systemPrompt = `You are a strict but fair German language examiner evaluating a student's answer written in German.
+Target CEFR level: ${level}
+Task: "${taskText}"
+Student's Answer: "${answer}"
+Interface Language: ${locale}
+
+Evaluate the answer based on the task requirements and the target level: does it answer the task, is the German grammatically correct (articles and cases, adjective endings, verb forms and word order, capitalisation of nouns), is the vocabulary appropriate.
+If the answer is empty or not in German, use "keine antwort" or a low result.
+Respond ONLY with valid JSON matching this schema (keep the "result" values exactly as listed):
+{
+  "result": "ausgezeichnet" | "fast perfekt" | "gut" | "kleine fehler" | "mittelmäßig" | "okay" | "viele fehler" | "muss verbessert werden" | "schlecht" | "sehr schlecht" | "keine antwort",
+  "feedback": "Explain in 1-2 short sentences what is good or bad, WRITTEN STRICTLY IN ${locale}.",
+  "correctedVersion": "The grammatically correct version of the student's answer in German."
+}`;
+
+	try {
+		const url = `https://generativelanguage.googleapis.com/v1beta/models/${modelId}:generateContent?key=${GEMINI_API_KEY.value()}`;
+		const response = await fetch(url, {
+			method: 'POST',
+			headers: { 'Content-Type': 'application/json' },
+			body: JSON.stringify({
+				contents: [{ role: 'user', parts: [{ text: systemPrompt }] }],
+				generationConfig: {
+					temperature: 0.1,
+					response_mime_type: "application/json"
+				}
+			})
+		});
+
+		const resText = await response.text();
+		if (!response.ok) return { error: `Gemini error: ${response.status}` };
+
+		const resJson = JSON.parse(resText);
+		const content = resJson.candidates?.[0]?.content?.parts?.[0]?.text;
+		if (!content) return { error: "Пустой ответ от Gemini" };
+
+		let parsedContent = JSON.parse(content);
+		if (Array.isArray(parsedContent)) {
+			parsedContent = parsedContent[0] || {};
+		}
+
+		return { data: parsedContent };
+	} catch (err) {
+		console.error("EXAM CHECK ERROR:", err);
+		return { error: String(err.message || err) };
+	}
+});
+
+exports.transcribeSpeech = onCall({
+	secrets: [GEMINI_API_KEY],
+	memory: "512Mi",
+	timeoutSeconds: 60,
+	cors: true
+}, async (request) => {
+	if (!request.auth || !request.auth.uid) {
+		return { error: "UNAUTHORIZED" };
+	}
+
+	const dataIn = request.data || {};
+	const rawAudio = String(dataIn.audioBase64 || "");
+	const mimeType = String(dataIn.mimeType || "audio/webm").split(';')[0].trim();
+	const languageName = getExamLanguageName(dataIn.lang || "de", 'German');
+	if (!rawAudio) return { error: "NO_AUDIO" };
+
+	const audioBase64 = rawAudio.includes('base64,') ? rawAudio.split('base64,')[1] : rawAudio;
+	if (audioBase64.length > 10 * 1024 * 1024) return { error: "TOO_LARGE" };
+
+	const modelId = 'gemini-3.5-flash-lite';
+	const prompt = `Transcribe the speech in this audio recording. The speaker is a student practising ${languageName}.
+STRICT RULES:
+- Write exactly what the student said, word for word, in ${languageName}.
+- DO NOT correct grammar, vocabulary or pronunciation mistakes — the transcript is used to grade the student.
+- Do not translate and do not add any comments.
+- If there is no speech or it is impossible to understand, return an empty string.
+
+CRITICAL: Respond ONLY with valid JSON: { "text": "transcript" }`;
+
+	try {
+		const url = `https://generativelanguage.googleapis.com/v1beta/models/${modelId}:generateContent?key=${GEMINI_API_KEY.value()}`;
+		const response = await fetch(url, {
+			method: 'POST',
+			headers: { 'Content-Type': 'application/json' },
+			body: JSON.stringify({
+				contents: [{
+					role: 'user',
+					parts: [
+						{ text: prompt },
+						{ inline_data: { mime_type: mimeType, data: audioBase64 } }
+					]
+				}],
+				generationConfig: {
+					temperature: 0,
+					response_mime_type: "application/json"
+				}
+			})
+		});
+
+		const resText = await response.text();
+		if (!response.ok) {
+			console.error("TRANSCRIBE ERROR:", response.status, resText);
+			return { error: `Gemini error: ${response.status}` };
+		}
+
+		const content = JSON.parse(resText).candidates?.[0]?.content?.parts?.[0]?.text;
+		if (!content) return { text: "" };
+		const parsedContent = JSON.parse(content);
+		return { text: String(parsedContent.text || "").trim() };
+	} catch (err) {
+		console.error("TRANSCRIBE ERROR:", err);
+		return { error: String(err.message || err) };
 	}
 });

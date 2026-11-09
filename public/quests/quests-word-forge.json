@@ -1,0 +1,2804 @@
+[
+  {
+    "questId": "word-forge-one",
+    "title": "wordForgeOne.questTitle",
+    "progress": "0/15",
+    "description": "wordForgeOne.questDescription",
+    "conditions": {
+      "goal": "wordForgeOne.questGoal",
+      "minCorrect": 15,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
+    "vocabulary": [
+      {
+        "word": "die Einladung",
+        "translation-ru": "приглашение",
+        "translation-en": "invitation",
+        "translation-uk": "запрошення",
+        "translation-pl": "zaproszenie",
+        "translation-es": "la invitación",
+        "translation-fr": "l’invitation",
+        "translation-tr": "davet",
+        "translation-ro": "invitația",
+        "translation-uz": "taklifnoma",
+        "translation-hi": "निमंत्रण",
+        "translation-ar": "الدعوة"
+      },
+      {
+        "word": "die Bestellung",
+        "translation-ru": "заказ",
+        "translation-en": "order",
+        "translation-uk": "замовлення",
+        "translation-pl": "zamówienie",
+        "translation-es": "el pedido",
+        "translation-fr": "la commande",
+        "translation-tr": "sipariş",
+        "translation-ro": "comanda",
+        "translation-uz": "buyurtma",
+        "translation-hi": "ऑर्डर",
+        "translation-ar": "الطلب"
+      },
+      {
+        "word": "die Erklärung",
+        "translation-ru": "объяснение",
+        "translation-en": "explanation",
+        "translation-uk": "пояснення",
+        "translation-pl": "wyjaśnienie",
+        "translation-es": "la explicación",
+        "translation-fr": "l’explication",
+        "translation-tr": "açıklama",
+        "translation-ro": "explicația",
+        "translation-uz": "tushuntirish",
+        "translation-hi": "व्याख्या",
+        "translation-ar": "الشرح"
+      },
+      {
+        "word": "die Lösung",
+        "translation-ru": "решение (задачи)",
+        "translation-en": "solution",
+        "translation-uk": "розв’язок, вирішення",
+        "translation-pl": "rozwiązanie",
+        "translation-es": "la solución",
+        "translation-fr": "la solution",
+        "translation-tr": "çözüm",
+        "translation-ro": "soluția",
+        "translation-uz": "yechim",
+        "translation-hi": "हल",
+        "translation-ar": "الحل"
+      },
+      {
+        "word": "die Übung",
+        "translation-ru": "упражнение",
+        "translation-en": "exercise",
+        "translation-uk": "вправа",
+        "translation-pl": "ćwiczenie",
+        "translation-es": "el ejercicio",
+        "translation-fr": "l’exercice",
+        "translation-tr": "alıştırma",
+        "translation-ro": "exercițiul",
+        "translation-uz": "mashq",
+        "translation-hi": "अभ्यास",
+        "translation-ar": "التمرين"
+      },
+      {
+        "word": "die Hochzeit",
+        "translation-ru": "свадьба",
+        "translation-en": "wedding",
+        "translation-uk": "весілля",
+        "translation-pl": "ślub, wesele",
+        "translation-es": "la boda",
+        "translation-fr": "le mariage",
+        "translation-tr": "düğün",
+        "translation-ro": "nunta",
+        "translation-uz": "to‘y",
+        "translation-hi": "शादी",
+        "translation-ar": "العرس"
+      }
+    ],
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "wordForgeOne.questTask1",
+        "options": [
+          "Danke für den Einladung!",
+          "Danke für die Einladen!",
+          "Danke für die Einladung!"
+        ],
+        "answer": "Danke für die Einladung!",
+        "tip": "wordForgeOne.questDescription"
+      },
+      {
+        "id": 2,
+        "type": "input",
+        "question": "wordForgeOne.questTask2",
+        "correctAnswer": "Einladung",
+        "tip": "wordForgeOne.questDescription"
+      },
+      {
+        "id": 3,
+        "type": "input",
+        "question": "wordForgeOne.questTask3",
+        "correctAnswer": "Bestellung",
+        "tip": "wordForgeOne.questDescription"
+      },
+      {
+        "id": 4,
+        "type": "reorder",
+        "question": "wordForgeOne.questTask4",
+        "words": [
+          "Erklären",
+          "war",
+          "gut",
+          "Die",
+          "Erklärung",
+          "Lehrers",
+          "des"
+        ],
+        "correctOrder": [
+          "Die",
+          "Erklärung",
+          "des",
+          "Lehrers",
+          "war",
+          "gut"
+        ],
+        "tip": "wordForgeOne.questDescription"
+      },
+      {
+        "id": 5,
+        "type": "select",
+        "question": "wordForgeOne.questTask5",
+        "options": [
+          "Das Lösung ist einfach.",
+          "Die Lösung ist einfach.",
+          "Der Lösung ist einfach."
+        ],
+        "answer": "Die Lösung ist einfach.",
+        "tip": "wordForgeOne.questDescription"
+      },
+      {
+        "id": 6,
+        "type": "input",
+        "question": "wordForgeOne.questTask6",
+        "correctAnswer": "Übung",
+        "tip": "wordForgeOne.questDescription"
+      },
+      {
+        "id": 7,
+        "type": "readAndAnswer",
+        "question": "wordForgeOne.questTask7",
+        "text": "Anna bekam eine Einladung zur Hochzeit von Lena. Sie las die Einladung zweimal. Dann machte sie eine Bestellung im Internet: ein neues Kleid.",
+        "options": [
+          "Blumen",
+          "ein neues Kleid",
+          "ein Geschenk"
+        ],
+        "answer": "ein neues Kleid",
+        "tip": "wordForgeOne.questDescription"
+      },
+      {
+        "id": 8,
+        "type": "input",
+        "question": "wordForgeOne.questTask8",
+        "correctAnswer": "Erklärung",
+        "tip": "wordForgeOne.questDescription"
+      },
+      {
+        "id": 9,
+        "type": "reorder",
+        "question": "wordForgeOne.questTask10",
+        "words": [
+          "Tisch",
+          "Einladens",
+          "liegen",
+          "Einladungen",
+          "Die",
+          "auf",
+          "dem"
+        ],
+        "correctOrder": [
+          "Die",
+          "Einladungen",
+          "liegen",
+          "auf",
+          "dem",
+          "Tisch"
+        ],
+        "tip": "wordForgeOne.questDescription"
+      },
+      {
+        "id": 10,
+        "type": "select",
+        "question": "wordForgeOne.questTask11",
+        "options": [
+          "Unsere Wohnen ist klein.",
+          "Unsere Wohnung ist klein.",
+          "Unser Wohnung ist klein."
+        ],
+        "answer": "Unsere Wohnung ist klein.",
+        "tip": "wordForgeOne.questDescription"
+      },
+      {
+        "id": 11,
+        "type": "input",
+        "question": "nuanceBridgeEight.questTask9",
+        "correctAnswer": "irgendwo",
+        "tip": "nuanceBridgeEight.questDescription",
+        "reviewOf": "nuance-bridge-eight",
+        "reviewLand": "nuance-bridge"
+      },
+      {
+        "id": 12,
+        "type": "reorder",
+        "question": "nuanceBridgeFive.questTask12",
+        "words": [
+          "Briefe",
+          "Die",
+          "sind",
+          "worden",
+          "geworden",
+          "geschrieben"
+        ],
+        "correctOrder": [
+          "Die",
+          "Briefe",
+          "sind",
+          "geschrieben",
+          "worden"
+        ],
+        "tip": "nuanceBridgeFive.questDescription",
+        "reviewOf": "nuance-bridge-five",
+        "reviewLand": "nuance-bridge"
+      },
+      {
+        "id": 13,
+        "type": "input",
+        "question": "nuanceBridgeTwo.questTask13",
+        "correctAnswer": "auch",
+        "tip": "nuanceBridgeTwo.questDescription",
+        "reviewOf": "nuance-bridge-two",
+        "reviewLand": "nuance-bridge"
+      },
+      {
+        "id": 14,
+        "type": "input",
+        "question": "wordForgeOne.questTask14",
+        "correctAnswer": "noch",
+        "tip": "wordForgeOne.questDescription"
+      },
+      {
+        "id": 15,
+        "type": "input",
+        "question": "wordForgeOne.questTask15",
+        "correctAnswer": "an",
+        "tip": "wordForgeOne.questDescription"
+      }
+    ]
+  },
+  {
+    "questId": "word-forge-two",
+    "title": "wordForgeTwo.questTitle",
+    "progress": "0/15",
+    "description": "wordForgeTwo.questDescription",
+    "conditions": {
+      "goal": "wordForgeTwo.questGoal",
+      "minCorrect": 15,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
+    "vocabulary": [
+      {
+        "word": "die Gesundheit",
+        "translation-ru": "здоровье",
+        "translation-en": "health",
+        "translation-uk": "здоров’я",
+        "translation-pl": "zdrowie",
+        "translation-es": "la salud",
+        "translation-fr": "la santé",
+        "translation-tr": "sağlık",
+        "translation-ro": "sănătatea",
+        "translation-uz": "sog‘liq",
+        "translation-hi": "सेहत",
+        "translation-ar": "الصحة"
+      },
+      {
+        "word": "die Krankheit",
+        "translation-ru": "болезнь",
+        "translation-en": "illness",
+        "translation-uk": "хвороба",
+        "translation-pl": "choroba",
+        "translation-es": "la enfermedad",
+        "translation-fr": "la maladie",
+        "translation-tr": "hastalık",
+        "translation-ro": "boala",
+        "translation-uz": "kasallik",
+        "translation-hi": "बीमारी",
+        "translation-ar": "المرض"
+      },
+      {
+        "word": "die Freiheit",
+        "translation-ru": "свобода",
+        "translation-en": "freedom",
+        "translation-uk": "свобода",
+        "translation-pl": "wolność",
+        "translation-es": "la libertad",
+        "translation-fr": "la liberté",
+        "translation-tr": "özgürlük",
+        "translation-ro": "libertatea",
+        "translation-uz": "erkinlik",
+        "translation-hi": "आज़ादी",
+        "translation-ar": "الحرية"
+      },
+      {
+        "word": "die Möglichkeit",
+        "translation-ru": "возможность",
+        "translation-en": "possibility, opportunity",
+        "translation-uk": "можливість",
+        "translation-pl": "możliwość",
+        "translation-es": "la posibilidad",
+        "translation-fr": "la possibilité",
+        "translation-tr": "imkân",
+        "translation-ro": "posibilitatea",
+        "translation-uz": "imkoniyat",
+        "translation-hi": "संभावना, मौक़ा",
+        "translation-ar": "الإمكانية"
+      },
+      {
+        "word": "die Pünktlichkeit",
+        "translation-ru": "пунктуальность",
+        "translation-en": "punctuality",
+        "translation-uk": "пунктуальність",
+        "translation-pl": "punktualność",
+        "translation-es": "la puntualidad",
+        "translation-fr": "la ponctualité",
+        "translation-tr": "dakiklik",
+        "translation-ro": "punctualitatea",
+        "translation-uz": "vaqtga rioya qilish",
+        "translation-hi": "समय की पाबंदी",
+        "translation-ar": "الالتزام بالمواعيد"
+      },
+      {
+        "word": "die Freundlichkeit",
+        "translation-ru": "любезность, дружелюбие",
+        "translation-en": "friendliness",
+        "translation-uk": "привітність",
+        "translation-pl": "uprzejmość",
+        "translation-es": "la amabilidad",
+        "translation-fr": "la gentillesse",
+        "translation-tr": "güler yüzlülük",
+        "translation-ro": "amabilitatea",
+        "translation-uz": "xushmuomalalik",
+        "translation-hi": "मिलनसारिता",
+        "translation-ar": "اللطف"
+      }
+    ],
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "wordForgeTwo.questTask1",
+        "options": [
+          "Das Gesundheit ist wichtiger als Geld.",
+          "Die Gesundkeit ist wichtiger als Geld.",
+          "Die Gesundheit ist wichtiger als Geld."
+        ],
+        "answer": "Die Gesundheit ist wichtiger als Geld.",
+        "tip": "wordForgeTwo.questDescription"
+      },
+      {
+        "id": 2,
+        "type": "input",
+        "question": "wordForgeTwo.questTask2",
+        "correctAnswer": "Möglichkeit",
+        "tip": "wordForgeTwo.questDescription"
+      },
+      {
+        "id": 3,
+        "type": "input",
+        "question": "wordForgeTwo.questTask3",
+        "correctAnswer": "Krankheit",
+        "tip": "wordForgeTwo.questDescription"
+      },
+      {
+        "id": 4,
+        "type": "reorder",
+        "question": "wordForgeTwo.questTask4",
+        "words": [
+          "In",
+          "wichtig",
+          "Pünktlichkeit",
+          "Pünktlichheit",
+          "sehr",
+          "Deutschland",
+          "ist"
+        ],
+        "correctOrder": [
+          "In",
+          "Deutschland",
+          "ist",
+          "Pünktlichkeit",
+          "sehr",
+          "wichtig"
+        ],
+        "tip": "wordForgeTwo.questDescription"
+      },
+      {
+        "id": 5,
+        "type": "select",
+        "question": "wordForgeTwo.questTask5",
+        "options": [
+          "Danke für Ihren Freundlichkeit.",
+          "Danke für Ihre Freundlichkeit.",
+          "Danke für Ihre Freundlichheit."
+        ],
+        "answer": "Danke für Ihre Freundlichkeit.",
+        "tip": "wordForgeTwo.questDescription"
+      },
+      {
+        "id": 6,
+        "type": "input",
+        "question": "wordForgeTwo.questTask6",
+        "correctAnswer": "Freiheit",
+        "tip": "wordForgeTwo.questDescription"
+      },
+      {
+        "id": 7,
+        "type": "readAndAnswer",
+        "question": "wordForgeTwo.questTask7",
+        "text": "Opa Karl ist 80 Jahre alt. Er sagt: „Die Gesundheit ist das Wichtigste.“ Jeden Tag geht er spazieren. Er hatte nie eine schwere Krankheit.",
+        "options": [
+          "die Gesundheit",
+          "die Arbeit",
+          "das Geld"
+        ],
+        "answer": "die Gesundheit",
+        "tip": "wordForgeTwo.questDescription"
+      },
+      {
+        "id": 8,
+        "type": "input",
+        "question": "wordForgeTwo.questTask8",
+        "correctAnswer": "Möglichkeiten",
+        "tip": "wordForgeTwo.questDescription"
+      },
+      {
+        "id": 9,
+        "type": "reorder",
+        "question": "wordForgeTwo.questTask10",
+        "words": [
+          "der",
+          "Die",
+          "mir",
+          "Freundlichheit",
+          "Leute",
+          "Freundlichkeit",
+          "gefällt"
+        ],
+        "correctOrder": [
+          "Die",
+          "Freundlichkeit",
+          "der",
+          "Leute",
+          "gefällt",
+          "mir"
+        ],
+        "tip": "wordForgeTwo.questDescription"
+      },
+      {
+        "id": 10,
+        "type": "select",
+        "question": "wordForgeTwo.questTask11",
+        "options": [
+          "Gibt es das Möglichkeit, von zu Hause zu arbeiten?",
+          "Gibt es die Möglichkeit, von zu Hause zu arbeiten?",
+          "Gibt es die Möglichheit, von zu Hause zu arbeiten?"
+        ],
+        "answer": "Gibt es die Möglichkeit, von zu Hause zu arbeiten?",
+        "tip": "wordForgeTwo.questDescription"
+      },
+      {
+        "id": 11,
+        "type": "input",
+        "question": "wordForgeOne.questTask9",
+        "correctAnswer": "Lösung",
+        "tip": "wordForgeOne.questDescription",
+        "reviewOf": "word-forge-one",
+        "reviewLand": "word-forge"
+      },
+      {
+        "id": 12,
+        "type": "reorder",
+        "question": "nuanceBridgeSix.questTask12",
+        "words": [
+          "Das",
+          "Fenster",
+          "geöffnet",
+          "mich",
+          "geöffnete",
+          "stört"
+        ],
+        "correctOrder": [
+          "Das",
+          "geöffnete",
+          "Fenster",
+          "stört",
+          "mich"
+        ],
+        "tip": "nuanceBridgeSix.questDescription",
+        "reviewOf": "nuance-bridge-six",
+        "reviewLand": "nuance-bridge"
+      },
+      {
+        "id": 13,
+        "type": "input",
+        "question": "nuanceBridgeThree.questTask13",
+        "correctAnswer": "machst",
+        "tip": "nuanceBridgeThree.questDescription",
+        "reviewOf": "nuance-bridge-three",
+        "reviewLand": "nuance-bridge"
+      },
+      {
+        "id": 14,
+        "type": "input",
+        "question": "wordForgeTwo.questTask14",
+        "correctAnswer": "desto",
+        "tip": "wordForgeTwo.questDescription"
+      },
+      {
+        "id": 15,
+        "type": "input",
+        "question": "wordForgeTwo.questTask15",
+        "correctAnswer": "Kollegen",
+        "tip": "wordForgeTwo.questDescription"
+      }
+    ]
+  },
+  {
+    "questId": "word-forge-three",
+    "title": "wordForgeThree.questTitle",
+    "progress": "0/15",
+    "description": "wordForgeThree.questDescription",
+    "conditions": {
+      "goal": "wordForgeThree.questGoal",
+      "minCorrect": 15,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
+    "vocabulary": [
+      {
+        "word": "täglich",
+        "translation-ru": "ежедневно, ежедневный",
+        "translation-en": "daily",
+        "translation-uk": "щодня, щоденний",
+        "translation-pl": "codziennie, codzienny",
+        "translation-es": "a diario, diario",
+        "translation-fr": "quotidien, chaque jour",
+        "translation-tr": "günlük, her gün",
+        "translation-ro": "zilnic",
+        "translation-uz": "har kuni, kundalik",
+        "translation-hi": "रोज़, रोज़ाना",
+        "translation-ar": "يوميًا، يومي"
+      },
+      {
+        "word": "jährlich",
+        "translation-ru": "ежегодно",
+        "translation-en": "yearly",
+        "translation-uk": "щороку",
+        "translation-pl": "corocznie",
+        "translation-es": "cada año",
+        "translation-fr": "chaque année",
+        "translation-tr": "yıllık, her yıl",
+        "translation-ro": "anual",
+        "translation-uz": "har yili",
+        "translation-hi": "हर साल",
+        "translation-ar": "سنويًا"
+      },
+      {
+        "word": "sonnig",
+        "translation-ru": "солнечный",
+        "translation-en": "sunny",
+        "translation-uk": "сонячний",
+        "translation-pl": "słoneczny",
+        "translation-es": "soleado",
+        "translation-fr": "ensoleillé",
+        "translation-tr": "güneşli",
+        "translation-ro": "însorit",
+        "translation-uz": "quyoshli",
+        "translation-hi": "धूप वाला",
+        "translation-ar": "مشمس"
+      },
+      {
+        "word": "windig",
+        "translation-ru": "ветреный",
+        "translation-en": "windy",
+        "translation-uk": "вітряний",
+        "translation-pl": "wietrzny",
+        "translation-es": "ventoso",
+        "translation-fr": "venteux",
+        "translation-tr": "rüzgârlı",
+        "translation-ro": "vântos",
+        "translation-uz": "shamolli",
+        "translation-hi": "हवादार",
+        "translation-ar": "عاصف"
+      },
+      {
+        "word": "salzig",
+        "translation-ru": "солёный",
+        "translation-en": "salty",
+        "translation-uk": "солоний",
+        "translation-pl": "słony",
+        "translation-es": "salado",
+        "translation-fr": "salé",
+        "translation-tr": "tuzlu",
+        "translation-ro": "sărat",
+        "translation-uz": "sho‘r",
+        "translation-hi": "नमकीन",
+        "translation-ar": "مالح"
+      },
+      {
+        "word": "lustig",
+        "translation-ru": "весёлый, смешной",
+        "translation-en": "funny",
+        "translation-uk": "веселий, смішний",
+        "translation-pl": "zabawny",
+        "translation-es": "divertido",
+        "translation-fr": "drôle",
+        "translation-tr": "komik, eğlenceli",
+        "translation-ro": "amuzant",
+        "translation-uz": "kulgili",
+        "translation-hi": "मज़ेदार",
+        "translation-ar": "مضحك"
+      }
+    ],
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "wordForgeThree.questTask1",
+        "options": [
+          "Am Wochenende war es sonnlich.",
+          "Am Wochenende war es Sonne.",
+          "Am Wochenende war es sonnig."
+        ],
+        "answer": "Am Wochenende war es sonnig.",
+        "tip": "wordForgeThree.questDescription"
+      },
+      {
+        "id": 2,
+        "type": "input",
+        "question": "wordForgeThree.questTask2",
+        "correctAnswer": "täglich",
+        "tip": "wordForgeThree.questDescription"
+      },
+      {
+        "id": 3,
+        "type": "input",
+        "question": "wordForgeThree.questTask3",
+        "correctAnswer": "salzig",
+        "tip": "wordForgeThree.questDescription"
+      },
+      {
+        "id": 4,
+        "type": "reorder",
+        "question": "wordForgeThree.questTask4",
+        "words": [
+          "sehr",
+          "war",
+          "Der",
+          "lustlich",
+          "lustig",
+          "Film"
+        ],
+        "correctOrder": [
+          "Der",
+          "Film",
+          "war",
+          "sehr",
+          "lustig"
+        ],
+        "tip": "wordForgeThree.questDescription"
+      },
+      {
+        "id": 5,
+        "type": "select",
+        "question": "wordForgeThree.questTask5",
+        "options": [
+          "Wir machen jährlich eine Reise.",
+          "Wir machen jährig eine Reise.",
+          "Wir machen jahrlich eine Reise."
+        ],
+        "answer": "Wir machen jährlich eine Reise.",
+        "tip": "wordForgeThree.questDescription"
+      },
+      {
+        "id": 6,
+        "type": "input",
+        "question": "wordForgeThree.questTask6",
+        "correctAnswer": "windig",
+        "tip": "wordForgeThree.questDescription"
+      },
+      {
+        "id": 7,
+        "type": "readAndAnswer",
+        "question": "wordForgeThree.questTask7",
+        "text": "Im Sommer ist es in Italien sonnig und warm. Tom fährt jährlich mit seiner Familie dorthin. Sein Sohn findet den Urlaub immer lustig.",
+        "options": [
+          "nur einmal",
+          "jedes Jahr",
+          "jeden Monat"
+        ],
+        "answer": "jedes Jahr",
+        "tip": "wordForgeThree.questDescription"
+      },
+      {
+        "id": 8,
+        "type": "input",
+        "question": "wordForgeThree.questTask8",
+        "correctAnswer": "freundlich",
+        "tip": "wordForgeThree.questDescription"
+      },
+      {
+        "id": 9,
+        "type": "reorder",
+        "question": "wordForgeThree.questTask10",
+        "words": [
+          "windlicher",
+          "windiger",
+          "ein",
+          "Meer",
+          "war",
+          "Es",
+          "am",
+          "Tag"
+        ],
+        "correctOrder": [
+          "Es",
+          "war",
+          "ein",
+          "windiger",
+          "Tag",
+          "am",
+          "Meer"
+        ],
+        "tip": "wordForgeThree.questDescription"
+      },
+      {
+        "id": 10,
+        "type": "select",
+        "question": "wordForgeThree.questTask11",
+        "options": [
+          "Wir haben eine tägliche Besprechung.",
+          "Wir haben eine tagliche Besprechung.",
+          "Wir haben eine tägige Besprechung."
+        ],
+        "answer": "Wir haben eine tägliche Besprechung.",
+        "tip": "wordForgeThree.questDescription"
+      },
+      {
+        "id": 11,
+        "type": "input",
+        "question": "wordForgeTwo.questTask9",
+        "correctAnswer": "Krankheit",
+        "tip": "wordForgeTwo.questDescription",
+        "reviewOf": "word-forge-two",
+        "reviewLand": "word-forge"
+      },
+      {
+        "id": 12,
+        "type": "reorder",
+        "question": "nuanceBridgeSeven.questTask12",
+        "words": [
+          "uns",
+          "Wir",
+          "brauchen",
+          "nicht",
+          "müssen",
+          "beeilen",
+          "zu"
+        ],
+        "correctOrder": [
+          "Wir",
+          "brauchen",
+          "uns",
+          "nicht",
+          "zu",
+          "beeilen"
+        ],
+        "tip": "nuanceBridgeSeven.questDescription",
+        "reviewOf": "nuance-bridge-seven",
+        "reviewLand": "nuance-bridge"
+      },
+      {
+        "id": 13,
+        "type": "input",
+        "question": "nuanceBridgeFour.questTask13",
+        "correctAnswer": "essen",
+        "tip": "nuanceBridgeFour.questDescription",
+        "reviewOf": "nuance-bridge-four",
+        "reviewLand": "nuance-bridge"
+      },
+      {
+        "id": 14,
+        "type": "input",
+        "question": "wordForgeThree.questTask14",
+        "correctAnswer": "Herrn",
+        "tip": "wordForgeThree.questDescription"
+      },
+      {
+        "id": 15,
+        "type": "input",
+        "question": "wordForgeThree.questTask15",
+        "correctAnswer": "auf",
+        "tip": "wordForgeThree.questDescription"
+      }
+    ]
+  },
+  {
+    "questId": "word-forge-four",
+    "title": "wordForgeFour.questTitle",
+    "progress": "0/15",
+    "description": "wordForgeFour.questDescription",
+    "conditions": {
+      "goal": "wordForgeFour.questGoal",
+      "minCorrect": 15,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
+    "vocabulary": [
+      {
+        "word": "essbar",
+        "translation-ru": "съедобный",
+        "translation-en": "edible",
+        "translation-uk": "їстівний",
+        "translation-pl": "jadalny",
+        "translation-es": "comestible",
+        "translation-fr": "comestible",
+        "translation-tr": "yenilebilir",
+        "translation-ro": "comestibil",
+        "translation-uz": "yeyiladigan",
+        "translation-hi": "खाने लायक",
+        "translation-ar": "صالح للأكل"
+      },
+      {
+        "word": "trinkbar",
+        "translation-ru": "питьевой, пригодный для питья",
+        "translation-en": "drinkable",
+        "translation-uk": "придатний для пиття",
+        "translation-pl": "zdatny do picia",
+        "translation-es": "potable",
+        "translation-fr": "potable",
+        "translation-tr": "içilebilir",
+        "translation-ro": "potabil",
+        "translation-uz": "ichsa bo‘ladigan",
+        "translation-hi": "पीने लायक",
+        "translation-ar": "صالح للشرب"
+      },
+      {
+        "word": "machbar",
+        "translation-ru": "выполнимый",
+        "translation-en": "doable",
+        "translation-uk": "здійсненний",
+        "translation-pl": "wykonalny",
+        "translation-es": "factible",
+        "translation-fr": "faisable",
+        "translation-tr": "yapılabilir",
+        "translation-ro": "realizabil",
+        "translation-uz": "bajarsa bo‘ladigan",
+        "translation-hi": "मुमकिन",
+        "translation-ar": "ممكن التنفيذ"
+      },
+      {
+        "word": "lesbar",
+        "translation-ru": "разборчивый, читаемый",
+        "translation-en": "readable",
+        "translation-uk": "розбірливий",
+        "translation-pl": "czytelny",
+        "translation-es": "legible",
+        "translation-fr": "lisible",
+        "translation-tr": "okunaklı",
+        "translation-ro": "lizibil",
+        "translation-uz": "o‘qiladigan",
+        "translation-hi": "पढ़ने लायक",
+        "translation-ar": "مقروء"
+      },
+      {
+        "word": "erreichbar",
+        "translation-ru": "доступный (можно связаться)",
+        "translation-en": "reachable",
+        "translation-uk": "на зв’язку, досяжний",
+        "translation-pl": "osiągalny, dostępny",
+        "translation-es": "localizable",
+        "translation-fr": "joignable",
+        "translation-tr": "ulaşılabilir",
+        "translation-ro": "de contactat",
+        "translation-uz": "bog‘lansa bo‘ladigan",
+        "translation-hi": "संपर्क में",
+        "translation-ar": "يمكن الوصول إليه"
+      },
+      {
+        "word": "waschbar",
+        "translation-ru": "стирающийся, можно стирать",
+        "translation-en": "washable",
+        "translation-uk": "можна прати",
+        "translation-pl": "nadający się do prania",
+        "translation-es": "lavable",
+        "translation-fr": "lavable",
+        "translation-tr": "yıkanabilir",
+        "translation-ro": "lavabil",
+        "translation-uz": "yuvsa bo‘ladigan",
+        "translation-hi": "धोने लायक",
+        "translation-ar": "قابل للغسل"
+      },
+      {
+        "word": "der Pilz",
+        "translation-ru": "гриб",
+        "translation-en": "mushroom",
+        "translation-uk": "гриб",
+        "translation-pl": "grzyb",
+        "translation-es": "la seta",
+        "translation-fr": "le champignon",
+        "translation-tr": "mantar",
+        "translation-ro": "ciuperca",
+        "translation-uz": "qo‘ziqorin",
+        "translation-hi": "मशरूम",
+        "translation-ar": "الفطر"
+      },
+      {
+        "word": "das Netz",
+        "translation-ru": "сеть, связь",
+        "translation-en": "network, signal",
+        "translation-uk": "мережа, зв’язок",
+        "translation-pl": "sieć, zasięg",
+        "translation-es": "la red, la cobertura",
+        "translation-fr": "le réseau",
+        "translation-tr": "şebeke, çekim",
+        "translation-ro": "rețeaua, semnalul",
+        "translation-uz": "tarmoq, aloqa",
+        "translation-hi": "नेटवर्क",
+        "translation-ar": "الشبكة"
+      },
+      {
+        "word": "das Papier",
+        "translation-ru": "бумага",
+        "translation-en": "paper",
+        "translation-uk": "папір",
+        "translation-pl": "papier",
+        "translation-es": "el papel",
+        "translation-fr": "le papier",
+        "translation-tr": "kâğıt",
+        "translation-ro": "hârtia",
+        "translation-uz": "qog‘oz",
+        "translation-hi": "काग़ज़",
+        "translation-ar": "الورق"
+      },
+      {
+        "word": "die Maschine",
+        "translation-ru": "машина, станок",
+        "translation-en": "machine",
+        "translation-uk": "машина, верстат",
+        "translation-pl": "maszyna",
+        "translation-es": "la máquina",
+        "translation-fr": "la machine",
+        "translation-tr": "makine",
+        "translation-ro": "mașina",
+        "translation-uz": "mashina",
+        "translation-hi": "मशीन",
+        "translation-ar": "الآلة"
+      }
+    ],
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "wordForgeFour.questTask1",
+        "options": [
+          "Diese Pilze sind essig.",
+          "Diese Pilze sind essbarlich.",
+          "Diese Pilze sind essbar."
+        ],
+        "answer": "Diese Pilze sind essbar.",
+        "tip": "wordForgeFour.questDescription"
+      },
+      {
+        "id": 2,
+        "type": "input",
+        "question": "wordForgeFour.questTask2",
+        "correctAnswer": "trinkbar",
+        "tip": "wordForgeFour.questDescription"
+      },
+      {
+        "id": 3,
+        "type": "input",
+        "question": "wordForgeFour.questTask3",
+        "correctAnswer": "lesbar",
+        "tip": "wordForgeFour.questDescription"
+      },
+      {
+        "id": 4,
+        "type": "reorder",
+        "question": "wordForgeFour.questTask4",
+        "words": [
+          "erreichbar",
+          "Ich",
+          "erreichlich",
+          "nicht",
+          "heute",
+          "bin"
+        ],
+        "correctOrder": [
+          "Ich",
+          "bin",
+          "heute",
+          "nicht",
+          "erreichbar"
+        ],
+        "tip": "wordForgeFour.questDescription"
+      },
+      {
+        "id": 5,
+        "type": "select",
+        "question": "wordForgeFour.questTask5",
+        "options": [
+          "Das ist gemachbar.",
+          "Das ist machbar.",
+          "Das ist machlich."
+        ],
+        "answer": "Das ist machbar.",
+        "tip": "wordForgeFour.questDescription"
+      },
+      {
+        "id": 6,
+        "type": "input",
+        "question": "wordForgeFour.questTask6",
+        "correctAnswer": "waschbar",
+        "tip": "wordForgeFour.questDescription"
+      },
+      {
+        "id": 7,
+        "type": "readAndAnswer",
+        "question": "wordForgeFour.questTask7",
+        "text": "Max ist im Urlaub in den Bergen. Dort ist er nicht erreichbar, weil es kein Netz gibt. Das Wasser aus dem Fluss ist trinkbar, sagt er.",
+        "options": [
+          "Es gibt kein Netz.",
+          "Er schläft.",
+          "Sein Handy ist kaputt."
+        ],
+        "answer": "Es gibt kein Netz.",
+        "tip": "wordForgeFour.questDescription"
+      },
+      {
+        "id": 8,
+        "type": "input",
+        "question": "wordForgeFour.questTask8",
+        "correctAnswer": "erreichbar",
+        "tip": "wordForgeFour.questDescription"
+      },
+      {
+        "id": 9,
+        "type": "reorder",
+        "question": "wordForgeFour.questTask10",
+        "words": [
+          "Nicht",
+          "alle",
+          "essig",
+          "essbar",
+          "Pilze",
+          "sind"
+        ],
+        "correctOrder": [
+          "Nicht",
+          "alle",
+          "Pilze",
+          "sind",
+          "essbar"
+        ],
+        "tip": "wordForgeFour.questDescription"
+      },
+      {
+        "id": 10,
+        "type": "select",
+        "question": "wordForgeFour.questTask11",
+        "options": [
+          "Ist der Saft noch getrinkbar?",
+          "Ist der Saft noch trinkbar?",
+          "Ist der Saft noch trinklich?"
+        ],
+        "answer": "Ist der Saft noch trinkbar?",
+        "tip": "wordForgeFour.questDescription"
+      },
+      {
+        "id": 11,
+        "type": "input",
+        "question": "wordForgeThree.questTask9",
+        "correctAnswer": "täglich",
+        "tip": "wordForgeThree.questDescription",
+        "reviewOf": "word-forge-three",
+        "reviewLand": "word-forge"
+      },
+      {
+        "id": 12,
+        "type": "reorder",
+        "question": "nuanceBridgeEight.questTask12",
+        "words": [
+          "irgendwo",
+          "Kann",
+          "helfen",
+          "mir",
+          "irgendjemand"
+        ],
+        "correctOrder": [
+          "Kann",
+          "mir",
+          "irgendjemand",
+          "helfen"
+        ],
+        "tip": "nuanceBridgeEight.questDescription",
+        "reviewOf": "nuance-bridge-eight",
+        "reviewLand": "nuance-bridge"
+      },
+      {
+        "id": 13,
+        "type": "input",
+        "question": "nuanceBridgeFive.questTask13",
+        "correctAnswer": "ist",
+        "tip": "nuanceBridgeFive.questDescription",
+        "reviewOf": "nuance-bridge-five",
+        "reviewLand": "nuance-bridge"
+      },
+      {
+        "id": 14,
+        "type": "input",
+        "question": "wordForgeFour.questTask14",
+        "correctAnswer": "Studenten",
+        "tip": "wordForgeFour.questDescription"
+      },
+      {
+        "id": 15,
+        "type": "input",
+        "question": "wordForgeFour.questTask15",
+        "correctAnswer": "sondern",
+        "tip": "wordForgeFour.questDescription"
+      }
+    ]
+  },
+  {
+    "questId": "word-forge-five",
+    "title": "wordForgeFive.questTitle",
+    "progress": "0/15",
+    "description": "wordForgeFive.questDescription",
+    "conditions": {
+      "goal": "wordForgeFive.questGoal",
+      "minCorrect": 15,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
+    "vocabulary": [
+      {
+        "word": "unmöglich",
+        "translation-ru": "невозможный",
+        "translation-en": "impossible",
+        "translation-uk": "неможливий",
+        "translation-pl": "niemożliwy",
+        "translation-es": "imposible",
+        "translation-fr": "impossible",
+        "translation-tr": "imkânsız",
+        "translation-ro": "imposibil",
+        "translation-uz": "imkonsiz",
+        "translation-hi": "नामुमकिन",
+        "translation-ar": "مستحيل"
+      },
+      {
+        "word": "ungesund",
+        "translation-ru": "вредный для здоровья",
+        "translation-en": "unhealthy",
+        "translation-uk": "шкідливий для здоров’я",
+        "translation-pl": "niezdrowy",
+        "translation-es": "poco saludable",
+        "translation-fr": "mauvais pour la santé",
+        "translation-tr": "sağlıksız",
+        "translation-ro": "nesănătos",
+        "translation-uz": "sog‘liqqa zararli",
+        "translation-hi": "सेहत के लिए बुरा",
+        "translation-ar": "غير صحي"
+      },
+      {
+        "word": "unfreundlich",
+        "translation-ru": "неприветливый, грубый",
+        "translation-en": "unfriendly",
+        "translation-uk": "неприязний, грубий",
+        "translation-pl": "nieuprzejmy",
+        "translation-es": "antipático",
+        "translation-fr": "désagréable",
+        "translation-tr": "kaba, soğuk",
+        "translation-ro": "neprietenos",
+        "translation-uz": "qo‘pol, xushmuomala emas",
+        "translation-hi": "रूखा",
+        "translation-ar": "غير ودود"
+      },
+      {
+        "word": "unpünktlich",
+        "translation-ru": "непунктуальный",
+        "translation-en": "unpunctual",
+        "translation-uk": "непунктуальний",
+        "translation-pl": "niepunktualny",
+        "translation-es": "impuntual",
+        "translation-fr": "pas ponctuel",
+        "translation-tr": "dakik olmayan",
+        "translation-ro": "nepunctual",
+        "translation-uz": "vaqtga rioya qilmaydigan",
+        "translation-hi": "समय का पाबंद नहीं",
+        "translation-ar": "غير منضبط في المواعيد"
+      },
+      {
+        "word": "unzufrieden",
+        "translation-ru": "недовольный",
+        "translation-en": "dissatisfied",
+        "translation-uk": "незадоволений",
+        "translation-pl": "niezadowolony",
+        "translation-es": "insatisfecho",
+        "translation-fr": "mécontent",
+        "translation-tr": "memnuniyetsiz",
+        "translation-ro": "nemulțumit",
+        "translation-uz": "norozi",
+        "translation-hi": "असंतुष्ट",
+        "translation-ar": "غير راضٍ"
+      },
+      {
+        "word": "unwichtig",
+        "translation-ru": "неважный",
+        "translation-en": "unimportant",
+        "translation-uk": "неважливий",
+        "translation-pl": "nieważny",
+        "translation-es": "sin importancia",
+        "translation-fr": "sans importance",
+        "translation-tr": "önemsiz",
+        "translation-ro": "neimportant",
+        "translation-uz": "ahamiyatsiz",
+        "translation-hi": "ग़ैरज़रूरी",
+        "translation-ar": "غير مهم"
+      },
+      {
+        "word": "unbekannt",
+        "translation-ru": "незнакомый, неизвестный",
+        "translation-en": "unknown",
+        "translation-uk": "незнайомий",
+        "translation-pl": "nieznany",
+        "translation-es": "desconocido",
+        "translation-fr": "inconnu",
+        "translation-tr": "bilinmeyen",
+        "translation-ro": "necunoscut",
+        "translation-uz": "notanish",
+        "translation-hi": "अनजान",
+        "translation-ar": "مجهول"
+      },
+      {
+        "word": "das Personal",
+        "translation-ru": "персонал",
+        "translation-en": "staff",
+        "translation-uk": "персонал",
+        "translation-pl": "personel",
+        "translation-es": "el personal",
+        "translation-fr": "le personnel",
+        "translation-tr": "personel",
+        "translation-ro": "personalul",
+        "translation-uz": "xodimlar",
+        "translation-hi": "स्टाफ़",
+        "translation-ar": "الموظفون"
+      }
+    ],
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "wordForgeFive.questTask1",
+        "options": [
+          "Das ist ummöglich!",
+          "Das ist nichtmöglich!",
+          "Das ist unmöglich!"
+        ],
+        "answer": "Das ist unmöglich!",
+        "tip": "wordForgeFive.questDescription"
+      },
+      {
+        "id": 2,
+        "type": "input",
+        "question": "wordForgeFive.questTask2",
+        "correctAnswer": "ungesund",
+        "tip": "wordForgeFive.questDescription"
+      },
+      {
+        "id": 3,
+        "type": "input",
+        "question": "wordForgeFive.questTask3",
+        "correctAnswer": "unfreundlich",
+        "tip": "wordForgeFive.questDescription"
+      },
+      {
+        "id": 4,
+        "type": "reorder",
+        "question": "wordForgeFive.questTask4",
+        "words": [
+          "ist",
+          "oft",
+          "unpünktlich",
+          "nichtpünktlich",
+          "Mein",
+          "Kollege"
+        ],
+        "correctOrder": [
+          "Mein",
+          "Kollege",
+          "ist",
+          "oft",
+          "unpünktlich"
+        ],
+        "tip": "wordForgeFive.questDescription"
+      },
+      {
+        "id": 5,
+        "type": "select",
+        "question": "wordForgeFive.questTask5",
+        "options": [
+          "Der Kunde war unzufrieden.",
+          "Der Kunde war unzufriedenheit.",
+          "Der Kunde war nichtzufrieden."
+        ],
+        "answer": "Der Kunde war unzufrieden.",
+        "tip": "wordForgeFive.questDescription"
+      },
+      {
+        "id": 6,
+        "type": "input",
+        "question": "wordForgeFive.questTask6",
+        "correctAnswer": "unwichtig",
+        "tip": "wordForgeFive.questDescription"
+      },
+      {
+        "id": 7,
+        "type": "readAndAnswer",
+        "question": "wordForgeFive.questTask7",
+        "text": "Herr Lang war mit dem Hotel unzufrieden. Das Zimmer war klein, und das Personal war unfreundlich. Das Frühstück war ungesund: nur Kuchen und Kaffee.",
+        "options": [
+          "unfreundlich",
+          "pünktlich",
+          "freundlich"
+        ],
+        "answer": "unfreundlich",
+        "tip": "wordForgeFive.questDescription"
+      },
+      {
+        "id": 8,
+        "type": "input",
+        "question": "wordForgeFive.questTask8",
+        "correctAnswer": "unmöglich",
+        "tip": "wordForgeFive.questDescription"
+      },
+      {
+        "id": 9,
+        "type": "reorder",
+        "question": "wordForgeFive.questTask10",
+        "words": [
+          "ist",
+          "unbekannt",
+          "nichtbekannt",
+          "Stadt",
+          "Diese",
+          "mir"
+        ],
+        "correctOrder": [
+          "Diese",
+          "Stadt",
+          "ist",
+          "mir",
+          "unbekannt"
+        ],
+        "tip": "wordForgeFive.questDescription"
+      },
+      {
+        "id": 10,
+        "type": "select",
+        "question": "wordForgeFive.questTask11",
+        "options": [
+          "Bist du mit deiner Arbeit unzufrieden?",
+          "Bist du von deiner Arbeit unzufrieden?",
+          "Bist du mit deiner Arbeit nichtzufrieden?"
+        ],
+        "answer": "Bist du mit deiner Arbeit unzufrieden?",
+        "tip": "wordForgeFive.questDescription"
+      },
+      {
+        "id": 11,
+        "type": "input",
+        "question": "wordForgeFour.questTask9",
+        "correctAnswer": "machbar",
+        "tip": "wordForgeFour.questDescription",
+        "reviewOf": "word-forge-four",
+        "reviewLand": "word-forge"
+      },
+      {
+        "id": 12,
+        "type": "input",
+        "question": "wordForgeOne.questTask12",
+        "correctAnswer": "Bestellung",
+        "tip": "wordForgeOne.questDescription",
+        "reviewOf": "word-forge-one",
+        "reviewLand": "word-forge"
+      },
+      {
+        "id": 13,
+        "type": "input",
+        "question": "nuanceBridgeSix.questTask13",
+        "correctAnswer": "gekochte",
+        "tip": "nuanceBridgeSix.questDescription",
+        "reviewOf": "nuance-bridge-six",
+        "reviewLand": "nuance-bridge"
+      },
+      {
+        "id": 14,
+        "type": "input",
+        "question": "wordForgeFive.questTask14",
+        "correctAnswer": "denkst",
+        "tip": "wordForgeFive.questDescription"
+      },
+      {
+        "id": 15,
+        "type": "input",
+        "question": "wordForgeFive.questTask15",
+        "correctAnswer": "Jungen",
+        "tip": "wordForgeFive.questDescription"
+      }
+    ]
+  },
+  {
+    "questId": "word-forge-six",
+    "title": "wordForgeSix.questTitle",
+    "progress": "0/15",
+    "description": "wordForgeSix.questDescription",
+    "conditions": {
+      "goal": "wordForgeSix.questGoal",
+      "minCorrect": 15,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
+    "vocabulary": [
+      {
+        "word": "die Anzeige",
+        "translation-ru": "объявление",
+        "translation-en": "advert",
+        "translation-uk": "оголошення",
+        "translation-pl": "ogłoszenie",
+        "translation-es": "el anuncio",
+        "translation-fr": "l’annonce",
+        "translation-tr": "ilan",
+        "translation-ro": "anunțul",
+        "translation-uz": "e’lon",
+        "translation-hi": "विज्ञापन",
+        "translation-ar": "الإعلان"
+      },
+      {
+        "word": "die Besichtigung",
+        "translation-ru": "осмотр (квартиры)",
+        "translation-en": "viewing",
+        "translation-uk": "огляд (квартири)",
+        "translation-pl": "oglądanie (mieszkania)",
+        "translation-es": "la visita",
+        "translation-fr": "la visite",
+        "translation-tr": "görme, gezme",
+        "translation-ro": "vizionarea",
+        "translation-uz": "ko‘rib chiqish",
+        "translation-hi": "देखने जाना",
+        "translation-ar": "المعاينة"
+      },
+      {
+        "word": "die Miete",
+        "translation-ru": "арендная плата",
+        "translation-en": "rent",
+        "translation-uk": "орендна плата",
+        "translation-pl": "czynsz",
+        "translation-es": "el alquiler",
+        "translation-fr": "le loyer",
+        "translation-tr": "kira",
+        "translation-ro": "chiria",
+        "translation-uz": "ijara haqi",
+        "translation-hi": "किराया",
+        "translation-ar": "الإيجار"
+      },
+      {
+        "word": "die Lage",
+        "translation-ru": "расположение",
+        "translation-en": "location",
+        "translation-uk": "розташування",
+        "translation-pl": "położenie",
+        "translation-es": "la ubicación",
+        "translation-fr": "la situation",
+        "translation-tr": "konum",
+        "translation-ro": "amplasarea",
+        "translation-uz": "joylashuv",
+        "translation-hi": "जगह",
+        "translation-ar": "الموقع"
+      },
+      {
+        "word": "hell",
+        "translation-ru": "светлый",
+        "translation-en": "bright",
+        "translation-uk": "світлий",
+        "translation-pl": "jasny",
+        "translation-es": "luminoso",
+        "translation-fr": "clair",
+        "translation-tr": "aydınlık",
+        "translation-ro": "luminos",
+        "translation-uz": "yorug‘",
+        "translation-hi": "रोशनीदार",
+        "translation-ar": "مضيء"
+      },
+      {
+        "word": "ruhig",
+        "translation-ru": "тихий, спокойный",
+        "translation-en": "quiet",
+        "translation-uk": "тихий",
+        "translation-pl": "cichy",
+        "translation-es": "tranquilo",
+        "translation-fr": "calme",
+        "translation-tr": "sakin",
+        "translation-ro": "liniștit",
+        "translation-uz": "tinch",
+        "translation-hi": "शांत",
+        "translation-ar": "هادئ"
+      },
+      {
+        "word": "monatlich",
+        "translation-ru": "ежемесячно",
+        "translation-en": "monthly",
+        "translation-uk": "щомісяця",
+        "translation-pl": "co miesiąc",
+        "translation-es": "cada mes",
+        "translation-fr": "chaque mois",
+        "translation-tr": "aylık",
+        "translation-ro": "lunar",
+        "translation-uz": "har oy",
+        "translation-hi": "हर महीने",
+        "translation-ar": "شهريًا"
+      }
+    ],
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "wordForgeSix.questTask1",
+        "options": [
+          "Die Wohnung ist ruhig und gut erreichlich.",
+          "Die Wohnung ist ruhig und gut reichbar.",
+          "Die Wohnung ist ruhig und gut erreichbar."
+        ],
+        "answer": "Die Wohnung ist ruhig und gut erreichbar.",
+        "tip": "wordForgeSix.questDescription"
+      },
+      {
+        "id": 2,
+        "type": "input",
+        "question": "wordForgeSix.questTask2",
+        "correctAnswer": "Besichtigung",
+        "tip": "wordForgeSix.questDescription"
+      },
+      {
+        "id": 3,
+        "type": "input",
+        "question": "wordForgeSix.questTask3",
+        "correctAnswer": "freundlich",
+        "tip": "wordForgeSix.questDescription"
+      },
+      {
+        "id": 4,
+        "type": "reorder",
+        "question": "wordForgeSix.questTask4",
+        "words": [
+          "unmöglich",
+          "fast",
+          "ist",
+          "in",
+          "billige",
+          "nichtmöglich",
+          "der",
+          "Eine",
+          "Stadt",
+          "Wohnung"
+        ],
+        "correctOrder": [
+          "Eine",
+          "billige",
+          "Wohnung",
+          "in",
+          "der",
+          "Stadt",
+          "ist",
+          "fast",
+          "unmöglich"
+        ],
+        "tip": "wordForgeSix.questDescription"
+      },
+      {
+        "id": 5,
+        "type": "select",
+        "question": "wordForgeSix.questTask5",
+        "options": [
+          "Die Miete wird monatig bezahlt.",
+          "Die Miete wird monatbar bezahlt.",
+          "Die Miete wird monatlich bezahlt."
+        ],
+        "answer": "Die Miete wird monatlich bezahlt.",
+        "tip": "wordForgeSix.questDescription"
+      },
+      {
+        "id": 6,
+        "type": "input",
+        "question": "wordForgeSix.questTask6",
+        "correctAnswer": "Wohnung",
+        "tip": "wordForgeSix.questDescription"
+      },
+      {
+        "id": 7,
+        "type": "readAndAnswer",
+        "question": "wordForgeSix.questTask7",
+        "text": "In der Anzeige steht: „Helle Wohnung, ruhige Lage, gut erreichbar. Besichtigung am Samstag.“ Sara ruft an. Leider ist die Miete sehr hoch. Für eine Studentin ist das unmöglich.",
+        "options": [
+          "Die Lage ist laut.",
+          "Die Miete ist zu hoch.",
+          "Die Wohnung ist dunkel."
+        ],
+        "answer": "Die Miete ist zu hoch.",
+        "tip": "wordForgeSix.questDescription"
+      },
+      {
+        "id": 8,
+        "type": "input",
+        "question": "wordForgeSix.questTask8",
+        "correctAnswer": "unfreundlich",
+        "tip": "wordForgeSix.questDescription"
+      },
+      {
+        "id": 9,
+        "type": "reorder",
+        "question": "wordForgeSix.questTask10",
+        "words": [
+          "ist",
+          "Zimmer",
+          "Das",
+          "sonnig",
+          "und",
+          "sonnlich",
+          "hell"
+        ],
+        "correctOrder": [
+          "Das",
+          "Zimmer",
+          "ist",
+          "hell",
+          "und",
+          "sonnig"
+        ],
+        "tip": "wordForgeSix.questDescription"
+      },
+      {
+        "id": 10,
+        "type": "select",
+        "question": "wordForgeSix.questTask11",
+        "options": [
+          "Wir waren an der Wohnung zufrieden.",
+          "Wir waren mit der Wohnung zufrieden.",
+          "Wir waren mit der Wohnung zufriedenheit."
+        ],
+        "answer": "Wir waren mit der Wohnung zufrieden.",
+        "tip": "wordForgeSix.questDescription"
+      },
+      {
+        "id": 11,
+        "type": "input",
+        "question": "wordForgeFive.questTask9",
+        "correctAnswer": "unpünktlich",
+        "tip": "wordForgeFive.questDescription",
+        "reviewOf": "word-forge-five",
+        "reviewLand": "word-forge"
+      },
+      {
+        "id": 12,
+        "type": "input",
+        "question": "wordForgeTwo.questTask12",
+        "correctAnswer": "Gesundheit",
+        "tip": "wordForgeTwo.questDescription",
+        "reviewOf": "word-forge-two",
+        "reviewLand": "word-forge"
+      },
+      {
+        "id": 13,
+        "type": "input",
+        "question": "nuanceBridgeSeven.questTask13",
+        "correctAnswer": "zu",
+        "tip": "nuanceBridgeSeven.questDescription",
+        "reviewOf": "nuance-bridge-seven",
+        "reviewLand": "nuance-bridge"
+      },
+      {
+        "id": 14,
+        "type": "input",
+        "question": "wordForgeSix.questTask14",
+        "correctAnswer": "Studenten",
+        "tip": "wordForgeSix.questDescription"
+      },
+      {
+        "id": 15,
+        "type": "input",
+        "question": "wordForgeSix.questTask15",
+        "correctAnswer": "über",
+        "tip": "wordForgeSix.questDescription"
+      }
+    ]
+  },
+  {
+    "questId": "word-forge-seven",
+    "title": "wordForgeSeven.questTitle",
+    "progress": "0/15",
+    "description": "wordForgeSeven.questDescription",
+    "conditions": {
+      "goal": "wordForgeSeven.questGoal",
+      "minCorrect": 15,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
+    "vocabulary": [
+      {
+        "word": "die Lieferung",
+        "translation-ru": "доставка",
+        "translation-en": "delivery",
+        "translation-uk": "доставка",
+        "translation-pl": "dostawa",
+        "translation-es": "la entrega",
+        "translation-fr": "la livraison",
+        "translation-tr": "teslimat",
+        "translation-ro": "livrarea",
+        "translation-uz": "yetkazib berish",
+        "translation-hi": "डिलीवरी",
+        "translation-ar": "التوصيل"
+      },
+      {
+        "word": "liefern",
+        "translation-ru": "доставлять",
+        "translation-en": "to deliver",
+        "translation-uk": "доставляти",
+        "translation-pl": "dostarczać",
+        "translation-es": "entregar",
+        "translation-fr": "livrer",
+        "translation-tr": "teslim etmek",
+        "translation-ro": "a livra",
+        "translation-uz": "yetkazib bermoq",
+        "translation-hi": "पहुँचाना",
+        "translation-ar": "يوصّل"
+      },
+      {
+        "word": "die Bezahlung",
+        "translation-ru": "оплата",
+        "translation-en": "payment",
+        "translation-uk": "оплата",
+        "translation-pl": "płatność",
+        "translation-es": "el pago",
+        "translation-fr": "le paiement",
+        "translation-tr": "ödeme",
+        "translation-ro": "plata",
+        "translation-uz": "to‘lov",
+        "translation-hi": "भुगतान",
+        "translation-ar": "الدفع"
+      },
+      {
+        "word": "zurückschicken",
+        "translation-ru": "отправлять обратно",
+        "translation-en": "to send back",
+        "translation-uk": "надсилати назад",
+        "translation-pl": "odsyłać",
+        "translation-es": "devolver",
+        "translation-fr": "renvoyer",
+        "translation-tr": "geri göndermek",
+        "translation-ro": "a trimite înapoi",
+        "translation-uz": "qaytarib yubormoq",
+        "translation-hi": "वापस भेजना",
+        "translation-ar": "يعيد الإرسال"
+      },
+      {
+        "word": "die Größe",
+        "translation-ru": "размер",
+        "translation-en": "size",
+        "translation-uk": "розмір",
+        "translation-pl": "rozmiar",
+        "translation-es": "la talla",
+        "translation-fr": "la taille",
+        "translation-tr": "beden",
+        "translation-ro": "mărimea",
+        "translation-uz": "o‘lcham",
+        "translation-hi": "साइज़",
+        "translation-ar": "المقاس"
+      },
+      {
+        "word": "der Shop",
+        "translation-ru": "магазин",
+        "translation-en": "shop",
+        "translation-uk": "магазин",
+        "translation-pl": "sklep",
+        "translation-es": "la tienda",
+        "translation-fr": "la boutique",
+        "translation-tr": "mağaza",
+        "translation-ro": "magazinul",
+        "translation-uz": "do‘kon",
+        "translation-hi": "दुकान",
+        "translation-ar": "المتجر"
+      },
+      {
+        "word": "das Modell",
+        "translation-ru": "модель",
+        "translation-en": "model",
+        "translation-uk": "модель",
+        "translation-pl": "model",
+        "translation-es": "el modelo",
+        "translation-fr": "le modèle",
+        "translation-tr": "model",
+        "translation-ro": "modelul",
+        "translation-uz": "model",
+        "translation-hi": "मॉडल",
+        "translation-ar": "الطراز"
+      },
+      {
+        "word": "lieferbar",
+        "translation-ru": "в наличии",
+        "translation-en": "available",
+        "translation-uk": "у наявності",
+        "translation-pl": "dostępny",
+        "translation-es": "disponible",
+        "translation-fr": "disponible",
+        "translation-tr": "teslim edilebilir",
+        "translation-ro": "disponibil",
+        "translation-uz": "yetkazib berish mumkin",
+        "translation-hi": "उपलब्ध",
+        "translation-ar": "متوفر"
+      }
+    ],
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "wordForgeSeven.questTask1",
+        "options": [
+          "Die Liefern dauert zwei Tage.",
+          "Der Lieferung dauert zwei Tage.",
+          "Die Lieferung dauert zwei Tage."
+        ],
+        "answer": "Die Lieferung dauert zwei Tage.",
+        "tip": "wordForgeSeven.questDescription"
+      },
+      {
+        "id": 2,
+        "type": "input",
+        "question": "wordForgeSeven.questTask2",
+        "correctAnswer": "Bezahlung",
+        "tip": "wordForgeSeven.questDescription"
+      },
+      {
+        "id": 3,
+        "type": "input",
+        "question": "wordForgeSeven.questTask3",
+        "correctAnswer": "unzufrieden",
+        "tip": "wordForgeSeven.questDescription"
+      },
+      {
+        "id": 4,
+        "type": "reorder",
+        "question": "wordForgeSeven.questTask4",
+        "words": [
+          "der",
+          "waschlich",
+          "waschbar",
+          "Maschine",
+          "Die",
+          "in",
+          "Jacke",
+          "ist"
+        ],
+        "correctOrder": [
+          "Die",
+          "Jacke",
+          "ist",
+          "in",
+          "der",
+          "Maschine",
+          "waschbar"
+        ],
+        "tip": "wordForgeSeven.questDescription"
+      },
+      {
+        "id": 5,
+        "type": "select",
+        "question": "wordForgeSeven.questTask5",
+        "options": [
+          "Die Großheit passt leider nicht.",
+          "Der Größe passt leider nicht.",
+          "Die Größe passt leider nicht."
+        ],
+        "answer": "Die Größe passt leider nicht.",
+        "tip": "wordForgeSeven.questDescription"
+      },
+      {
+        "id": 6,
+        "type": "input",
+        "question": "wordForgeSeven.questTask6",
+        "correctAnswer": "liefert",
+        "tip": "wordForgeSeven.questDescription"
+      },
+      {
+        "id": 7,
+        "type": "readAndAnswer",
+        "question": "wordForgeSeven.questTask7",
+        "text": "Marta hat im Internet ein Kleid bestellt. Die Lieferung kam schnell, und die Bezahlung war einfach. Aber die Größe war falsch. Marta war unzufrieden und hat das Kleid zurückgeschickt.",
+        "options": [
+          "Das Kleid passte ihr nicht.",
+          "Die Lieferung dauerte zu lange.",
+          "Das Kleid war zu teuer."
+        ],
+        "answer": "Das Kleid passte ihr nicht.",
+        "tip": "wordForgeSeven.questDescription"
+      },
+      {
+        "id": 8,
+        "type": "input",
+        "question": "wordForgeSeven.questTask8",
+        "correctAnswer": "Bestellung",
+        "tip": "wordForgeSeven.questDescription"
+      },
+      {
+        "id": 9,
+        "type": "reorder",
+        "question": "wordForgeSeven.questTask10",
+        "words": [
+          "Ohne",
+          "ist",
+          "nichtmöglich",
+          "unmöglich",
+          "Internet",
+          "Einkaufen"
+        ],
+        "correctOrder": [
+          "Ohne",
+          "Internet",
+          "ist",
+          "Einkaufen",
+          "unmöglich"
+        ],
+        "tip": "wordForgeSeven.questDescription"
+      },
+      {
+        "id": 10,
+        "type": "select",
+        "question": "wordForgeSeven.questTask11",
+        "options": [
+          "Dieses Modell ist leider nicht geliefertbar.",
+          "Dieses Modell ist leider nicht lieferbar.",
+          "Dieses Modell ist leider nicht lieferlich."
+        ],
+        "answer": "Dieses Modell ist leider nicht lieferbar.",
+        "tip": "wordForgeSeven.questDescription"
+      },
+      {
+        "id": 11,
+        "type": "input",
+        "question": "wordForgeSix.questTask9",
+        "correctAnswer": "Besichtigung",
+        "tip": "wordForgeSix.questDescription",
+        "reviewOf": "word-forge-six",
+        "reviewLand": "word-forge"
+      },
+      {
+        "id": 12,
+        "type": "input",
+        "question": "wordForgeThree.questTask12",
+        "correctAnswer": "lustig",
+        "tip": "wordForgeThree.questDescription",
+        "reviewOf": "word-forge-three",
+        "reviewLand": "word-forge"
+      },
+      {
+        "id": 13,
+        "type": "input",
+        "question": "nuanceBridgeEight.questTask13",
+        "correctAnswer": "soll",
+        "tip": "nuanceBridgeEight.questDescription",
+        "reviewOf": "nuance-bridge-eight",
+        "reviewLand": "nuance-bridge"
+      },
+      {
+        "id": 14,
+        "type": "input",
+        "question": "wordForgeSeven.questTask14",
+        "correctAnswer": "wäre",
+        "tip": "wordForgeSeven.questDescription"
+      },
+      {
+        "id": 15,
+        "type": "input",
+        "question": "wordForgeSeven.questTask15",
+        "correctAnswer": "das",
+        "tip": "wordForgeSeven.questDescription"
+      }
+    ]
+  },
+  {
+    "questId": "word-forge-eight",
+    "title": "wordForgeEight.questTitle",
+    "progress": "0/15",
+    "description": "wordForgeEight.questDescription",
+    "conditions": {
+      "goal": "wordForgeEight.questGoal",
+      "minCorrect": 15,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
+    "vocabulary": [
+      {
+        "word": "die Müdigkeit",
+        "translation-ru": "усталость",
+        "translation-en": "tiredness",
+        "translation-uk": "втома",
+        "translation-pl": "zmęczenie",
+        "translation-es": "el cansancio",
+        "translation-fr": "la fatigue",
+        "translation-tr": "yorgunluk",
+        "translation-ro": "oboseala",
+        "translation-uz": "charchoq",
+        "translation-hi": "थकान",
+        "translation-ar": "التعب"
+      },
+      {
+        "word": "das Gemüse",
+        "translation-ru": "овощи",
+        "translation-en": "vegetables",
+        "translation-uk": "овочі",
+        "translation-pl": "warzywa",
+        "translation-es": "la verdura",
+        "translation-fr": "les légumes",
+        "translation-tr": "sebze",
+        "translation-ro": "legumele",
+        "translation-uz": "sabzavot",
+        "translation-hi": "सब्ज़ियाँ",
+        "translation-ar": "الخضار"
+      },
+      {
+        "word": "joggen",
+        "translation-ru": "бегать трусцой",
+        "translation-en": "to jog",
+        "translation-uk": "бігати підтюпцем",
+        "translation-pl": "biegać",
+        "translation-es": "hacer footing",
+        "translation-fr": "faire du jogging",
+        "translation-tr": "koşu yapmak",
+        "translation-ro": "a alerga",
+        "translation-uz": "yugurmoq",
+        "translation-hi": "जॉगिंग करना",
+        "translation-ar": "يهرول"
+      },
+      {
+        "word": "die Ernährung",
+        "translation-ru": "питание",
+        "translation-en": "diet, nutrition",
+        "translation-uk": "харчування",
+        "translation-pl": "odżywianie",
+        "translation-es": "la alimentación",
+        "translation-fr": "l’alimentation",
+        "translation-tr": "beslenme",
+        "translation-ro": "alimentația",
+        "translation-uz": "ovqatlanish",
+        "translation-hi": "खान-पान",
+        "translation-ar": "التغذية"
+      },
+      {
+        "word": "schlafen",
+        "translation-ru": "спать",
+        "translation-en": "to sleep",
+        "translation-uk": "спати",
+        "translation-pl": "spać",
+        "translation-es": "dormir",
+        "translation-fr": "dormir",
+        "translation-tr": "uyumak",
+        "translation-ro": "a dormi",
+        "translation-uz": "uxlamoq",
+        "translation-hi": "सोना",
+        "translation-ar": "ينام"
+      },
+      {
+        "word": "wöchentlich",
+        "translation-ru": "еженедельно",
+        "translation-en": "weekly",
+        "translation-uk": "щотижня",
+        "translation-pl": "co tydzień",
+        "translation-es": "cada semana",
+        "translation-fr": "chaque semaine",
+        "translation-tr": "haftalık",
+        "translation-ro": "săptămânal",
+        "translation-uz": "har hafta",
+        "translation-hi": "हर हफ़्ते",
+        "translation-ar": "أسبوعيًا"
+      }
+    ],
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "wordForgeEight.questTask1",
+        "options": [
+          "Ich jogge tägig eine halbe Stunde.",
+          "Ich jogge taglich eine halbe Stunde.",
+          "Ich jogge täglich eine halbe Stunde."
+        ],
+        "answer": "Ich jogge täglich eine halbe Stunde.",
+        "tip": "wordForgeEight.questDescription"
+      },
+      {
+        "id": 2,
+        "type": "input",
+        "question": "wordForgeEight.questTask2",
+        "correctAnswer": "Gesundheit",
+        "tip": "wordForgeEight.questDescription"
+      },
+      {
+        "id": 3,
+        "type": "input",
+        "question": "wordForgeEight.questTask3",
+        "correctAnswer": "Müdigkeit",
+        "tip": "wordForgeEight.questDescription"
+      },
+      {
+        "id": 4,
+        "type": "reorder",
+        "question": "wordForgeEight.questTask4",
+        "words": [
+          "ungesund",
+          "sind",
+          "nichtgesund",
+          "Süße",
+          "sehr",
+          "Getränke"
+        ],
+        "correctOrder": [
+          "Süße",
+          "Getränke",
+          "sind",
+          "sehr",
+          "ungesund"
+        ],
+        "tip": "wordForgeEight.questDescription"
+      },
+      {
+        "id": 5,
+        "type": "select",
+        "question": "wordForgeEight.questTask5",
+        "options": [
+          "Ich gehe wochentlich schwimmen.",
+          "Ich gehe wöchig schwimmen.",
+          "Ich gehe wöchentlich schwimmen."
+        ],
+        "answer": "Ich gehe wöchentlich schwimmen.",
+        "tip": "wordForgeEight.questDescription"
+      },
+      {
+        "id": 6,
+        "type": "input",
+        "question": "wordForgeEight.questTask6",
+        "correctAnswer": "ungesund",
+        "tip": "wordForgeEight.questDescription"
+      },
+      {
+        "id": 7,
+        "type": "readAndAnswer",
+        "question": "wordForgeEight.questTask7",
+        "text": "Anna lebt sehr gesund. Sie isst täglich Gemüse und trinkt viel Wasser. Wöchentlich geht sie zweimal schwimmen. Bei sonnigem Wetter joggt sie im Park. Für Anna ist Gesundheit das Wichtigste.",
+        "options": [
+          "Sie fährt in die Berge.",
+          "Sie geht zweimal schwimmen.",
+          "Sie isst Kuchen."
+        ],
+        "answer": "Sie geht zweimal schwimmen.",
+        "tip": "wordForgeEight.questDescription"
+      },
+      {
+        "id": 8,
+        "type": "input",
+        "question": "wordForgeEight.questTask8",
+        "correctAnswer": "sonnigem",
+        "tip": "wordForgeEight.questDescription"
+      },
+      {
+        "id": 9,
+        "type": "reorder",
+        "question": "wordForgeEight.questTask10",
+        "words": [
+          "täglicher",
+          "Ein",
+          "Spaziergang",
+          "gesund",
+          "tägiger",
+          "ist"
+        ],
+        "correctOrder": [
+          "Ein",
+          "täglicher",
+          "Spaziergang",
+          "ist",
+          "gesund"
+        ],
+        "tip": "wordForgeEight.questDescription"
+      },
+      {
+        "id": 10,
+        "type": "select",
+        "question": "wordForgeEight.questTask11",
+        "options": [
+          "Zu viel Arbeit und wenig Schlaf sind ungesund.",
+          "Zu viel Arbeit und wenig Schlaf sind ungesundheit.",
+          "Zu viel Arbeit und wenig Schlaf sind nichtgesund."
+        ],
+        "answer": "Zu viel Arbeit und wenig Schlaf sind ungesund.",
+        "tip": "wordForgeEight.questDescription"
+      },
+      {
+        "id": 11,
+        "type": "input",
+        "question": "wordForgeSeven.questTask9",
+        "correctAnswer": "schicke",
+        "tip": "wordForgeSeven.questDescription",
+        "reviewOf": "word-forge-seven",
+        "reviewLand": "word-forge"
+      },
+      {
+        "id": 12,
+        "type": "input",
+        "question": "wordForgeFour.questTask12",
+        "correctAnswer": "lesbar",
+        "tip": "wordForgeFour.questDescription",
+        "reviewOf": "word-forge-four",
+        "reviewLand": "word-forge"
+      },
+      {
+        "id": 13,
+        "type": "input",
+        "question": "wordForgeOne.questTask13",
+        "correctAnswer": "Übung",
+        "tip": "wordForgeOne.questDescription",
+        "reviewOf": "word-forge-one",
+        "reviewLand": "word-forge"
+      },
+      {
+        "id": 14,
+        "type": "input",
+        "question": "wordForgeEight.questTask14",
+        "correctAnswer": "desto",
+        "tip": "wordForgeEight.questDescription"
+      },
+      {
+        "id": 15,
+        "type": "input",
+        "question": "wordForgeEight.questTask15",
+        "correctAnswer": "auf",
+        "tip": "wordForgeEight.questDescription"
+      }
+    ]
+  },
+  {
+    "questId": "word-forge-nine",
+    "title": "wordForgeNine.questTitle",
+    "progress": "0/15",
+    "description": "wordForgeNine.questDescription",
+    "conditions": {
+      "goal": "wordForgeNine.questGoal",
+      "minCorrect": 15,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
+    "vocabulary": [
+      {
+        "word": "unklar",
+        "translation-ru": "неясный",
+        "translation-en": "unclear",
+        "translation-uk": "неясний",
+        "translation-pl": "niejasny",
+        "translation-es": "poco claro",
+        "translation-fr": "pas clair",
+        "translation-tr": "belirsiz",
+        "translation-ro": "neclar",
+        "translation-uz": "noaniq",
+        "translation-hi": "अस्पष्ट",
+        "translation-ar": "غير واضح"
+      },
+      {
+        "word": "die Uhr",
+        "translation-ru": "часы",
+        "translation-en": "clock, watch",
+        "translation-uk": "годинник",
+        "translation-pl": "zegar",
+        "translation-es": "el reloj",
+        "translation-fr": "l’horloge",
+        "translation-tr": "saat",
+        "translation-ro": "ceasul",
+        "translation-uz": "soat",
+        "translation-hi": "घड़ी",
+        "translation-ar": "الساعة"
+      },
+      {
+        "word": "monatlich",
+        "translation-ru": "ежемесячно",
+        "translation-en": "monthly",
+        "translation-uk": "щомісяця",
+        "translation-pl": "co miesiąc",
+        "translation-es": "cada mes",
+        "translation-fr": "chaque mois",
+        "translation-tr": "aylık",
+        "translation-ro": "lunar",
+        "translation-uz": "har oy",
+        "translation-hi": "हर महीने",
+        "translation-ar": "شهريًا"
+      },
+      {
+        "word": "ungesund",
+        "translation-ru": "вредный для здоровья",
+        "translation-en": "unhealthy",
+        "translation-uk": "шкідливий для здоров’я",
+        "translation-pl": "niezdrowy",
+        "translation-es": "poco saludable",
+        "translation-fr": "mauvais pour la santé",
+        "translation-tr": "sağlıksız",
+        "translation-ro": "nesănătos",
+        "translation-uz": "sog‘liqqa zararli",
+        "translation-hi": "सेहत के लिए बुरा",
+        "translation-ar": "غير صحي"
+      },
+      {
+        "word": "unpünktlich",
+        "translation-ru": "непунктуальный",
+        "translation-en": "unpunctual",
+        "translation-uk": "непунктуальний",
+        "translation-pl": "niepunktualny",
+        "translation-es": "impuntual",
+        "translation-fr": "pas ponctuel",
+        "translation-tr": "dakik olmayan",
+        "translation-ro": "nepunctual",
+        "translation-uz": "vaqtga rioya qilmaydigan",
+        "translation-hi": "समय का पाबंद नहीं",
+        "translation-ar": "غير منضبط في المواعيد"
+      }
+    ],
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "wordForgeNine.questTask1",
+        "options": [
+          "Seine Erklärung war nichtklar.",
+          "Seine Erklärheit war unklar.",
+          "Seine Erklärung war unklar."
+        ],
+        "answer": "Seine Erklärung war unklar.",
+        "tip": "wordForgeNine.questDescription"
+      },
+      {
+        "id": 2,
+        "type": "input",
+        "question": "wordForgeNine.questTask2",
+        "correctAnswer": "monatlich",
+        "tip": "wordForgeNine.questDescription"
+      },
+      {
+        "id": 3,
+        "type": "input",
+        "question": "wordForgeNine.questTask3",
+        "correctAnswer": "windig",
+        "tip": "wordForgeNine.questDescription"
+      },
+      {
+        "id": 4,
+        "type": "reorder",
+        "question": "wordForgeNine.questTask4",
+        "words": [
+          "dachte",
+          "Lösung",
+          "einfacher",
+          "ich",
+          "Die",
+          "als",
+          "Lösheit",
+          "ist"
+        ],
+        "correctOrder": [
+          "Die",
+          "Lösung",
+          "ist",
+          "einfacher",
+          "als",
+          "ich",
+          "dachte"
+        ],
+        "tip": "wordForgeNine.questDescription"
+      },
+      {
+        "id": 5,
+        "type": "select",
+        "question": "wordForgeNine.questTask5",
+        "options": [
+          "Dieses Essen ist nichtgesund.",
+          "Dieses Essen ist ungesundheit.",
+          "Dieses Essen ist ungesund."
+        ],
+        "answer": "Dieses Essen ist ungesund.",
+        "tip": "wordForgeNine.questDescription"
+      },
+      {
+        "id": 6,
+        "type": "input",
+        "question": "wordForgeNine.questTask6",
+        "correctAnswer": "Einladung",
+        "tip": "wordForgeNine.questDescription"
+      },
+      {
+        "id": 7,
+        "type": "readAndAnswer",
+        "question": "wordForgeNine.questTask7",
+        "text": "Im Kurs gibt es täglich Übungen. Die Lehrerin ist freundlich und pünktlich. Leider ist die Uhr im Raum kaputt, deshalb ist ein Schüler immer unpünktlich.",
+        "options": [
+          "Die Uhr ist kaputt.",
+          "Der Bus ist unpünktlich.",
+          "Er ist krank."
+        ],
+        "answer": "Die Uhr ist kaputt.",
+        "tip": "wordForgeNine.questDescription"
+      },
+      {
+        "id": 8,
+        "type": "input",
+        "question": "wordForgeNine.questTask8",
+        "correctAnswer": "lesbar",
+        "tip": "wordForgeNine.questDescription"
+      },
+      {
+        "id": 9,
+        "type": "input",
+        "question": "wordForgeNine.questTask9",
+        "correctAnswer": "freundliches",
+        "tip": "wordForgeNine.questDescription"
+      },
+      {
+        "id": 10,
+        "type": "reorder",
+        "question": "wordForgeNine.questTask10",
+        "words": [
+          "Das",
+          "Möglichheit",
+          "gute",
+          "Möglichkeit",
+          "ist",
+          "eine"
+        ],
+        "correctOrder": [
+          "Das",
+          "ist",
+          "eine",
+          "gute",
+          "Möglichkeit"
+        ],
+        "tip": "wordForgeNine.questDescription"
+      },
+      {
+        "id": 11,
+        "type": "select",
+        "question": "wordForgeNine.questTask11",
+        "options": [
+          "Freiung ist für alle wichtig.",
+          "Freiheit ist für alle wichtig.",
+          "Freikeit ist für alle wichtig."
+        ],
+        "answer": "Freiheit ist für alle wichtig.",
+        "tip": "wordForgeNine.questDescription"
+      },
+      {
+        "id": 12,
+        "type": "input",
+        "question": "wordForgeNine.questTask12",
+        "correctAnswer": "Bestellung",
+        "tip": "wordForgeNine.questDescription"
+      },
+      {
+        "id": 13,
+        "type": "input",
+        "question": "wordForgeNine.questTask13",
+        "correctAnswer": "Krankheit",
+        "tip": "wordForgeNine.questDescription"
+      },
+      {
+        "id": 14,
+        "type": "input",
+        "question": "wordForgeNine.questTask14",
+        "correctAnswer": "unzufrieden",
+        "tip": "wordForgeNine.questDescription"
+      },
+      {
+        "id": 15,
+        "type": "input",
+        "question": "wordForgeNine.questTask15",
+        "correctAnswer": "machbar",
+        "tip": "wordForgeNine.questDescription"
+      }
+    ]
+  },
+  {
+    "questId": "word-forge-ten",
+    "title": "wordForgeTen.questTitle",
+    "progress": "0/15",
+    "description": "wordForgeTen.questDescription",
+    "conditions": {
+      "goal": "wordForgeTen.questGoal",
+      "minCorrect": 15,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
+    "vocabulary": [
+      {
+        "word": "die Bewerbung",
+        "translation-ru": "заявление о приёме на работу",
+        "translation-en": "job application",
+        "translation-uk": "заява на роботу",
+        "translation-pl": "podanie o pracę",
+        "translation-es": "la solicitud de empleo",
+        "translation-fr": "la candidature",
+        "translation-tr": "iş başvurusu",
+        "translation-ro": "cererea de angajare",
+        "translation-uz": "ishga ariza",
+        "translation-hi": "नौकरी की अर्ज़ी",
+        "translation-ar": "طلب التوظيف"
+      },
+      {
+        "word": "wöchentlich",
+        "translation-ru": "еженедельно",
+        "translation-en": "weekly",
+        "translation-uk": "щотижня",
+        "translation-pl": "co tydzień",
+        "translation-es": "cada semana",
+        "translation-fr": "chaque semaine",
+        "translation-tr": "haftalık",
+        "translation-ro": "săptămânal",
+        "translation-uz": "har hafta",
+        "translation-hi": "हर हफ़्ते",
+        "translation-ar": "أسبوعيًا"
+      },
+      {
+        "word": "unpünktlich",
+        "translation-ru": "непунктуальный",
+        "translation-en": "unpunctual",
+        "translation-uk": "непунктуальний",
+        "translation-pl": "niepunktualny",
+        "translation-es": "impuntual",
+        "translation-fr": "pas ponctuel",
+        "translation-tr": "dakik olmayan",
+        "translation-ro": "nepunctual",
+        "translation-uz": "vaqtga rioya qilmaydigan",
+        "translation-hi": "समय का पाबंद नहीं",
+        "translation-ar": "غير منضبط في المواعيد"
+      },
+      {
+        "word": "erreichbar",
+        "translation-ru": "доступный (можно связаться)",
+        "translation-en": "reachable",
+        "translation-uk": "на зв’язку, досяжний",
+        "translation-pl": "osiągalny, dostępny",
+        "translation-es": "localizable",
+        "translation-fr": "joignable",
+        "translation-tr": "ulaşılabilir",
+        "translation-ro": "de contactat",
+        "translation-uz": "bog‘lansa bo‘ladigan",
+        "translation-hi": "संपर्क में",
+        "translation-ar": "يمكن الوصول إليه"
+      },
+      {
+        "word": "täglich",
+        "translation-ru": "ежедневно, ежедневный",
+        "translation-en": "daily",
+        "translation-uk": "щодня, щоденний",
+        "translation-pl": "codziennie, codzienny",
+        "translation-es": "a diario, diario",
+        "translation-fr": "quotidien, chaque jour",
+        "translation-tr": "günlük, her gün",
+        "translation-ro": "zilnic",
+        "translation-uz": "har kuni, kundalik",
+        "translation-hi": "रोज़, रोज़ाना",
+        "translation-ar": "يوميًا، يومي"
+      }
+    ],
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "wordForgeTen.questTask1",
+        "options": [
+          "Ich danke Herr Becker für die Einladung.",
+          "Ich danke Herrn Becker für die Einladen.",
+          "Ich danke Herrn Becker für die Einladung."
+        ],
+        "answer": "Ich danke Herrn Becker für die Einladung.",
+        "tip": "wordForgeTen.questDescription"
+      },
+      {
+        "id": 2,
+        "type": "input",
+        "question": "wordForgeTen.questTask2",
+        "correctAnswer": "weder",
+        "tip": "wordForgeTen.questDescription"
+      },
+      {
+        "id": 3,
+        "type": "input",
+        "question": "wordForgeTen.questTask3",
+        "correctAnswer": "über",
+        "tip": "wordForgeTen.questDescription"
+      },
+      {
+        "id": 4,
+        "type": "reorder",
+        "question": "wordForgeTen.questTask4",
+        "words": [
+          "Die",
+          "dauerte",
+          "zwei",
+          "Krankkeit",
+          "Wochen",
+          "Krankheit"
+        ],
+        "correctOrder": [
+          "Die",
+          "Krankheit",
+          "dauerte",
+          "zwei",
+          "Wochen"
+        ],
+        "tip": "wordForgeTen.questDescription"
+      },
+      {
+        "id": 5,
+        "type": "select",
+        "question": "wordForgeTen.questTask5",
+        "options": [
+          "Frische Brot schmeckt gut.",
+          "Frischer Brot schmeckt gut.",
+          "Frisches Brot schmeckt gut."
+        ],
+        "answer": "Frisches Brot schmeckt gut.",
+        "tip": "wordForgeTen.questDescription"
+      },
+      {
+        "id": 6,
+        "type": "input",
+        "question": "wordForgeTen.questTask6",
+        "correctAnswer": "ihrer",
+        "tip": "wordForgeTen.questDescription"
+      },
+      {
+        "id": 7,
+        "type": "readAndAnswer",
+        "question": "wordForgeTen.questTask7",
+        "text": "Die Firma sucht eine neue Kollegin. In der Anzeige steht: „Wichtig sind Pünktlichkeit und Freundlichkeit. Sie sollten täglich erreichbar sein.“ Nina schreibt sofort eine Bewerbung.",
+        "options": [
+          "ein eigenes Auto",
+          "pünktlich und freundlich sein",
+          "Geld und Zeit"
+        ],
+        "answer": "pünktlich und freundlich sein",
+        "tip": "wordForgeTen.questDescription"
+      },
+      {
+        "id": 8,
+        "type": "input",
+        "question": "wordForgeTen.questTask8",
+        "correctAnswer": "würde",
+        "tip": "wordForgeTen.questDescription"
+      },
+      {
+        "id": 9,
+        "type": "input",
+        "question": "wordForgeTen.questTask9",
+        "correctAnswer": "Praktikanten",
+        "tip": "wordForgeTen.questDescription"
+      },
+      {
+        "id": 10,
+        "type": "reorder",
+        "question": "wordForgeTen.questTask10",
+        "words": [
+          "gestern",
+          "Einladungen",
+          "Einladen",
+          "Die",
+          "geschickt",
+          "wurden"
+        ],
+        "correctOrder": [
+          "Die",
+          "Einladungen",
+          "wurden",
+          "gestern",
+          "geschickt"
+        ],
+        "tip": "wordForgeTen.questDescription"
+      },
+      {
+        "id": 11,
+        "type": "select",
+        "question": "wordForgeTen.questTask11",
+        "options": [
+          "Der Arzt ist nur am Morgen erreichbar.",
+          "Der Arzt ist nur am Morgen erreichig.",
+          "Der Arzt ist nur am Morgen erreichlich."
+        ],
+        "answer": "Der Arzt ist nur am Morgen erreichbar.",
+        "tip": "wordForgeTen.questDescription"
+      },
+      {
+        "id": 12,
+        "type": "input",
+        "question": "wordForgeTen.questTask12",
+        "correctAnswer": "die",
+        "tip": "wordForgeTen.questDescription"
+      },
+      {
+        "id": 13,
+        "type": "input",
+        "question": "wordForgeTen.questTask13",
+        "correctAnswer": "wöchentlich",
+        "tip": "wordForgeTen.questDescription"
+      },
+      {
+        "id": 14,
+        "type": "input",
+        "question": "wordForgeTen.questTask14",
+        "correctAnswer": "gefunden",
+        "tip": "wordForgeTen.questDescription"
+      },
+      {
+        "id": 15,
+        "type": "input",
+        "question": "wordForgeTen.questTask15",
+        "correctAnswer": "unpünktlich",
+        "tip": "wordForgeTen.questDescription"
+      }
+    ]
+  }
+]

@@ -3,6 +3,8 @@ import {ref, computed, onMounted, watch} from "vue"
 import {useRoute, useRouter} from "vue-router"
 import {useI18n} from "vue-i18n"
 import {userExamStore} from "../../../store/examStore"
+import {userAuthStore} from "~/store/authStore.js"
+import {examThemeLabel} from "~/utils/examThemes.js"
 import SoundBtn from "~/src/components/soundBtn.vue"
 import VoiceRecorder from "~/src/components/VoiceRecorder.vue"
 import {useGroqCheckHomeWork} from "~/composables/useGroqCheck.js"
@@ -15,6 +17,7 @@ const router = useRouter()
 const {locale: i18nLocale , t} = useI18n()
 
 const examStore = userExamStore()
+const authStore = userAuthStore()
 const userInput = ref("")
 const level = ref("")
 const isIntroVisible = ref(true)
@@ -29,12 +32,6 @@ const showHeader = computed(() => isIntroVisible.value || (!isIntroVisible.value
 const startExam = async () => {
   isIntroVisible.value = false
   await examStore.startAttempt({level: level.value, locale: i18nLocale.value})
-}
-
-const onAudioRecorded = async ({blob, durationSec}) => {
-  const exerciseId = currentExercise.value?.id
-  if (!exerciseId || !blob) return
-  await examStore.uploadSpeakingAudio({exerciseId, blob, durationSec, transcription: ""})
 }
 
 const submitTextAnswer = async () => {
@@ -69,6 +66,8 @@ const submitTranscription = async (text) => {
       locale: i18nLocale.value
     })
     await examStore.answerCurrent(answer, feedback)
+    // достижение «Право голоса»: раньше за принятие уведомления о записи, теперь за первый ответ голосом
+    if (!authStore.voiceConsentGiven) authStore.setVoiceConsent(true).catch(() => {})
   } finally {
     isSubmitting.value = false
   }
@@ -142,9 +141,13 @@ const moduleCounts = computed(() => {
   return Object.entries(counts).map(([name, count]) => ({name, count}))
 })
 
+// иконка модуля на стартовом экране; незнакомый модуль получает пазл
+const MODULE_ICONS = {lesen: '📖', hören: '🎧', horen: '🎧', schreiben: '✍️', sprechen: '🗣️'}
+const moduleIcon = (name) => MODULE_ICONS[String(name || '').trim().toLowerCase()] || '🧩'
+
 onMounted(() => {
   level.value = (route.params.level || "").toString().toUpperCase()
-  examStore.loadTopics(`/exams/exam-${level.value}.json`)
+  examStore.loadTopics(`/exams/exam-${level.value}.json`, route.query.examId || null)
 })
 </script>
 
@@ -184,18 +187,26 @@ onMounted(() => {
     <div v-else-if="isIntroVisible" class="exam__card exam__card--intro">
       <Transition name="menu-appear" appear>
         <div>
+          <!-- картинка экзамена покачивается над мягким свечением -->
           <div class="card-icon">
+            <span class="card-icon__glow" aria-hidden="true"></span>
             <img class="card__icon-item" src="../../../assets/images/exam-results.svg" alt="exam-results">
           </div>
           <h2 class="card-title">{{ t('examSession.ready') }}</h2>
+          <div v-if="examStore.currentExamTheme" class="theme-banner">
+            <span class="theme-banner__label">{{ t('plExam.theme') }}</span>
+            <span class="theme-banner__value">{{ examThemeLabel(t, examStore.currentExamTheme) }}</span>
+          </div>
           <p class="card-text">
             {{ t('examSession.cardTextOne') }} <strong>{{ moduleCounts.length }}</strong> {{ t('examSession.cardTextTwo') }}
             <strong>{{ examStore.exercises.length }}</strong> {{ t('examSession.cardTextThree') }}
           </p>
+          <!-- модули экзамена: объёмные плитки со своей иконкой и числом заданий -->
           <div class="intro-stats">
             <div v-for="mod in moduleCounts" :key="mod.name" class="stat-badge">
-              <span class="stat-icon">🧩</span>
-              <span class="stat-info">{{ mod.name }}: {{ mod.count }}</span>
+              <span class="stat-icon" aria-hidden="true">{{ moduleIcon(mod.name) }}</span>
+              <span class="stat-name">{{ mod.name }}</span>
+              <span class="stat-count">{{ mod.count }}</span>
             </div>
           </div>
           <button class="action-btn action-btn--primary" @click="startExam">{{ t('examSession.begin') }}</button>
@@ -254,7 +265,6 @@ onMounted(() => {
                 :key="examStore.currentIndex"
                 @start="isRecording = true"
                 @stop="isRecording = false"
-                @audio="onAudioRecorded"
                 @submit="submitTranscription"
             />
           </div>
@@ -274,6 +284,7 @@ onMounted(() => {
           <span class="score-max">/ 10</span>
         </div>
         <p class="results-subtitle">{{ t('examSession.result') }} {{ level }}</p>
+        <p v-if="examStore.currentExamTheme" class="results-theme">{{ examThemeLabel(t, examStore.currentExamTheme) }}</p>
       </div>
       <div v-if="examStore.saveLoading" class="saving-status">{{ t('examSession.save') }}</div>
       <div class="results-scroll-area">
@@ -320,6 +331,14 @@ onMounted(() => {
   font-family: "Nunito", sans-serif;
   display: flex;
   flex-direction: column;
+}
+
+/* на широких экранах экзамен идёт колонкой по центру, как на телефоне, а не растягивается во всю ширину */
+.exam-app-container > * {
+  width: 100%;
+  max-width: 640px;
+  margin-inline: auto;
+  box-sizing: border-box;
 }
 
 .question__label {
@@ -397,82 +416,180 @@ onMounted(() => {
 }
 
 .card__icon-item {
-  width: 130px;
+  position: relative;
+  width: 92px;
+  filter: drop-shadow(0 8px 6px rgba(0, 0, 0, 0.3));
+  animation: intro-float 3s ease-in-out infinite;
 }
 
 .exam__card {
   padding: 20px;
 }
 
+.exam__card--intro {
+  padding-top: 8px;
+}
+
 .card-icon {
-  padding: 10px;
+  position: relative;
+  padding: 4px;
   display: flex;
   justify-content: center;
-  margin-bottom: 10px;
+  margin-bottom: 2px;
+}
+
+/* мягкое свечение под картинкой */
+.card-icon__glow {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  background: radial-gradient(circle, rgba(96, 165, 250, 0.45) 0%, rgba(96, 165, 250, 0) 70%);
+  pointer-events: none;
+}
+
+@keyframes intro-float {
+  0%, 100% { translate: 0 0; rotate: -2deg; }
+  50% { translate: 0 -6px; rotate: 2deg; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .card__icon-item {
+    animation: none;
+  }
 }
 
 .card-title {
-  font-size: 23px;
+  font-size: 21px;
   font-weight: 900;
   text-align: center;
-  margin-bottom: 15px;
+  margin-bottom: 10px;
   color: var(--title);
 }
 
 .card-text {
   color: var(--title);
-  font-size: 17px;
+  font-size: 15px;
   text-align: center;
-  margin-bottom: 20px;
-  font-weight: 600;
+  margin-bottom: 14px;
+  font-weight: 700;
 }
 
-.intro-stats {
+/* тема экзамена: яркая синяя объёмная плашка */
+.theme-banner {
   display: flex;
   flex-direction: column;
-  gap: 8px;
-  margin-bottom: 25px;
+  align-items: center;
+  gap: 1px;
+  width: fit-content;
+  max-width: 100%;
+  margin: 0 auto 12px;
+  padding: 7px 18px;
+  border: 2px solid #93c5fd;
+  border-radius: 16px;
+  background: linear-gradient(180deg, #60a5fa 0%, #3b82f6 100%);
+  box-shadow: 0 4px 0 #1d4ed8, 0 7px 12px rgba(0, 0, 0, 0.25);
+  color: #fff;
+  text-align: center;
+  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.2);
+}
+
+.theme-banner__label {
+  font-size: 10px;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+  opacity: 0.85;
+}
+
+.theme-banner__value {
+  font-size: 16px;
+  font-weight: 900;
+  line-height: 1.2;
+}
+
+.results-theme {
+  margin-top: 4px;
+  color: var(--title);
+  font-size: 16px;
+  font-weight: 700;
+  opacity: .75;
+}
+
+/* модули: сетка 2×2 из ярких объёмных плиток в одну строку */
+.intro-stats {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+  margin-bottom: 20px;
 }
 
 .stat-badge {
-  padding: 10px 15px;
-  border-radius: 12px;
+  --mod: #8b5cf6;
+  --mod-light: #a78bfa;
+  --mod-dark: #6d28d9;
   display: flex;
   align-items: center;
-  gap: 10px;
-  border: 1px solid transparent;
-  background: rgba(124, 77, 255, 0.2);
-  border-color: #7c4dff;
+  gap: 8px;
+  min-width: 0;
+  padding: 9px 9px 9px 8px;
+  border: 2px solid color-mix(in srgb, var(--mod-light) 70%, #fff);
+  border-radius: 16px;
+  background: linear-gradient(180deg, var(--mod-light) 0%, var(--mod) 100%);
+  box-shadow: 0 4px 0 var(--mod-dark), 0 7px 10px rgba(0, 0, 0, 0.22);
+  color: #fff;
 }
 
-.stat-badge:nth-child(5n + 1) {
-  background: rgba(59, 130, 246, 0.15);
-  border-color: rgba(59, 130, 246, 0.6);
-  color: #93c5fd;
+.stat-badge:nth-child(5n + 1) { --mod: #3b82f6; --mod-light: #60a5fa; --mod-dark: #1d4ed8; }
+.stat-badge:nth-child(5n + 2) { --mod: #16a34a; --mod-light: #22c55e; --mod-dark: #15803d; }
+.stat-badge:nth-child(5n + 3) { --mod: #f59e0b; --mod-light: #fbbf24; --mod-dark: #b45309; }
+.stat-badge:nth-child(5n + 4) { --mod: #ec4899; --mod-light: #f472b6; --mod-dark: #be185d; }
+.stat-badge:nth-child(5n + 5) { --mod: #8b5cf6; --mod-light: #a78bfa; --mod-dark: #6d28d9; }
+
+/* иконка модуля в белом круге */
+.stat-icon {
+  display: flex;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: #fff;
+  box-shadow: 0 2px 0 var(--mod-dark);
+  font-size: 18px;
+  line-height: 1;
 }
 
-.stat-badge:nth-child(5n + 2) {
-  background: rgba(16, 185, 129, 0.15);
-  border-color: rgba(16, 185, 129, 0.6);
-  color: #6ee7b7;
+.stat-name {
+  flex: 1;
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-size: 14px;
+  font-weight: 900;
+  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.2);
 }
 
-.stat-badge:nth-child(5n + 3) {
-  background: rgba(245, 158, 11, 0.15);
-  border-color: rgba(245, 158, 11, 0.6);
-  color: #fcd34d;
-}
-
-.stat-badge:nth-child(5n + 4) {
-  background: rgba(236, 72, 153, 0.15);
-  border-color: rgba(236, 72, 153, 0.6);
-  color: #f9a8d4;
-}
-
-.stat-badge:nth-child(5n + 5) {
-  background: rgba(139, 92, 246, 0.15);
-  border-color: rgba(139, 92, 246, 0.6);
-  color: #c4b5fd;
+/* число заданий в белом кружке цветом модуля */
+.stat-count {
+  display: flex;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+  min-width: 28px;
+  height: 28px;
+  padding: 0 6px;
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.92);
+  color: var(--mod-dark);
+  font-size: 15px;
+  font-weight: 900;
+  line-height: 1;
 }
 
 .progress-container {
@@ -603,13 +720,19 @@ onMounted(() => {
   transform: none;
 }
 
+/* кнопка старта: объёмная, при нажатии проседает в своём цвете */
 .action-btn--primary {
-  background: #3b82f6;
-  box-shadow: 0 5px 0 #306ccc;
+  background: linear-gradient(180deg, #60a5fa, #3b82f6);
+  box-shadow: 0 6px 0 #1d4ed8, 0 10px 16px rgba(0, 0, 0, 0.25);
   color: white;
   display: flex;
   justify-content: center;
+  text-shadow: 0 2px 0 rgba(0, 0, 0, 0.2);
+}
 
+.action-btn--primary:active {
+  transform: translateY(5px);
+  box-shadow: 0 1px 0 #1d4ed8, 0 3px 6px rgba(0, 0, 0, 0.2);
 }
 
 .action-btn--submit {

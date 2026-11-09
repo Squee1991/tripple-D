@@ -1,0 +1,2709 @@
+[
+  {
+    "questId": "a1-summit-one",
+    "title": "a1SummitOne.questTitle",
+    "progress": "0/15",
+    "description": "a1SummitOne.questDescription",
+    "conditions": {
+      "goal": "a1SummitOne.questGoal",
+      "minCorrect": 15,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
+    "vocabulary": [
+      {
+        "word": "die Nummer",
+        "translation-ru": "номер",
+        "translation-en": "number",
+        "translation-uk": "номер",
+        "translation-pl": "numer",
+        "translation-es": "el número",
+        "translation-fr": "le numéro",
+        "translation-tr": "numara",
+        "translation-ro": "numărul",
+        "translation-uz": "raqam",
+        "translation-hi": "नंबर",
+        "translation-ar": "الرقم"
+      },
+      {
+        "word": "die Lehrerin",
+        "translation-ru": "учительница",
+        "translation-en": "teacher (female)",
+        "translation-uk": "учителька",
+        "translation-pl": "nauczycielka",
+        "translation-es": "profesora",
+        "translation-fr": "enseignante",
+        "translation-tr": "öğretmen (kadın)",
+        "translation-ro": "profesoară",
+        "translation-uz": "o‘qituvchi (ayol)",
+        "translation-hi": "शिक्षिका",
+        "translation-ar": "معلّمة"
+      },
+      {
+        "word": "ein bisschen",
+        "translation-ru": "немного",
+        "translation-en": "a little",
+        "translation-uk": "трохи",
+        "translation-pl": "trochę",
+        "translation-es": "un poco",
+        "translation-fr": "un peu",
+        "translation-tr": "biraz",
+        "translation-ro": "puțin",
+        "translation-uz": "biroz",
+        "translation-hi": "थोड़ा",
+        "translation-ar": "قليلًا"
+      },
+      {
+        "word": "der Nachbar",
+        "translation-ru": "сосед",
+        "translation-en": "neighbour",
+        "translation-uk": "сусід",
+        "translation-pl": "sąsiad",
+        "translation-es": "el vecino",
+        "translation-fr": "le voisin",
+        "translation-tr": "komşu",
+        "translation-ro": "vecinul",
+        "translation-uz": "qo‘shni",
+        "translation-hi": "पड़ोसी",
+        "translation-ar": "الجار"
+      },
+      {
+        "word": "was",
+        "translation-ru": "что",
+        "translation-en": "what",
+        "translation-uk": "що",
+        "translation-pl": "co",
+        "translation-es": "qué",
+        "translation-fr": "quoi",
+        "translation-tr": "ne",
+        "translation-ro": "ce",
+        "translation-uz": "nima",
+        "translation-hi": "क्या",
+        "translation-ar": "ماذا"
+      }
+    ],
+    "tasks": [
+      {
+        "id": 1,
+        "type": "input",
+        "question": "a1SummitOne.questTask1",
+        "correctAnswer": "Seid",
+        "tip": "a1SummitOne.questDescription"
+      },
+      {
+        "id": 2,
+        "type": "input",
+        "question": "a1SummitOne.questTask2",
+        "correctAnswer": "hat",
+        "tip": "a1SummitOne.questDescription"
+      },
+      {
+        "id": 3,
+        "type": "input",
+        "question": "a1SummitOne.questTask3",
+        "correctAnswer": "lernst",
+        "tip": "a1SummitOne.questDescription"
+      },
+      {
+        "id": 4,
+        "type": "select",
+        "question": "a1SummitOne.questTask4",
+        "options": [
+          "Ich bin zweiunddreißig Jahre alt.",
+          "Ich bin zweiunddreißig Jahre alte.",
+          "Ich habe zweiunddreißig Jahre alt."
+        ],
+        "answer": "Ich bin zweiunddreißig Jahre alt.",
+        "tip": "a1SummitOne.questDescription"
+      },
+      {
+        "id": 5,
+        "type": "select",
+        "question": "a1SummitOne.questTask5",
+        "options": [
+          "Wir wohnst in Zürich.",
+          "Wir wohnen in Zürich.",
+          "Wir wohnt in Zürich."
+        ],
+        "answer": "Wir wohnen in Zürich.",
+        "tip": "a1SummitOne.questDescription"
+      },
+      {
+        "id": 6,
+        "type": "select",
+        "question": "a1SummitOne.questTask6",
+        "options": [
+          "Das bin mein Nachbar.",
+          "Das ist mein Nachbar.",
+          "Das ist meine Nachbar."
+        ],
+        "answer": "Das ist mein Nachbar.",
+        "tip": "a1SummitOne.questDescription"
+      },
+      {
+        "id": 7,
+        "type": "select",
+        "question": "a1SummitOne.questTask7",
+        "options": [
+          "Wie heiße Sie, bitte?",
+          "Wie heißen Sie, bitte?",
+          "Wie heißt Sie, bitte?"
+        ],
+        "answer": "Wie heißen Sie, bitte?",
+        "tip": "a1SummitOne.questDescription"
+      },
+      {
+        "id": 8,
+        "type": "select",
+        "question": "a1SummitOne.questTask8",
+        "options": [
+          "Sie arbeiten in Wien.",
+          "Sie arbeitest in Wien.",
+          "Sie arbeitet in Wien."
+        ],
+        "answer": "Sie arbeiten in Wien.",
+        "tip": "a1SummitOne.questDescription"
+      },
+      {
+        "id": 9,
+        "type": "reorder",
+        "question": "a1SummitOne.questTask9",
+        "words": [
+          "sprichst",
+          "spricht",
+          "ein",
+          "Ich",
+          "spreche",
+          "Deutsch",
+          "bisschen"
+        ],
+        "correctOrder": [
+          "Ich",
+          "spreche",
+          "ein",
+          "bisschen",
+          "Deutsch"
+        ],
+        "tip": "a1SummitOne.questDescription"
+      },
+      {
+        "id": 10,
+        "type": "reorder",
+        "question": "a1SummitOne.questTask10",
+        "words": [
+          "ist",
+          "Mein",
+          "sieben",
+          "fünf",
+          "Nummer",
+          "Meine",
+          "bin",
+          "sechs"
+        ],
+        "correctOrder": [
+          "Meine",
+          "Nummer",
+          "ist",
+          "fünf",
+          "sechs",
+          "sieben"
+        ],
+        "tip": "a1SummitOne.questDescription"
+      },
+      {
+        "id": 11,
+        "type": "reorder",
+        "question": "a1SummitOne.questTask11",
+        "words": [
+          "Sie",
+          "heute",
+          "Sind",
+          "Herr",
+          "Bist",
+          "seid",
+          "frei",
+          "Becker"
+        ],
+        "correctOrder": [
+          "Sind",
+          "Sie",
+          "heute",
+          "frei",
+          "Herr",
+          "Becker"
+        ],
+        "tip": "a1SummitOne.questDescription"
+      },
+      {
+        "id": 12,
+        "type": "input",
+        "question": "a1SummitOne.questTask12",
+        "correctAnswer": "kostet",
+        "tip": "a1SummitOne.questDescription"
+      },
+      {
+        "id": 13,
+        "type": "input",
+        "question": "a1SummitOne.questTask13",
+        "correctAnswer": "zehn",
+        "tip": "a1SummitOne.questDescription"
+      },
+      {
+        "id": 14,
+        "type": "input",
+        "question": "a1SummitOne.questTask14",
+        "correctAnswer": "Morgen",
+        "tip": "a1SummitOne.questDescription"
+      },
+      {
+        "id": 15,
+        "type": "readAndAnswer",
+        "question": "a1SummitOne.questTask15",
+        "text": "Hallo! Ich heiße Carlos. Ich komme aus Spanien und wohne jetzt in Leipzig. Ich bin Koch. Meine Frau ist Lehrerin. Wir haben zwei Kinder.",
+        "options": [
+          "aus Spanien",
+          "aus Leipzig",
+          "aus Polen"
+        ],
+        "answer": "aus Spanien",
+        "tip": "a1SummitOne.questDescription"
+      }
+    ]
+  },
+  {
+    "questId": "a1-summit-two",
+    "title": "a1SummitTwo.questTitle",
+    "progress": "0/15",
+    "description": "a1SummitTwo.questDescription",
+    "conditions": {
+      "goal": "a1SummitTwo.questGoal",
+      "minCorrect": 15,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
+    "vocabulary": [
+      {
+        "word": "doch",
+        "translation-ru": "да нет же, наоборот",
+        "translation-en": "yes (contradicting)",
+        "translation-uk": "та ні ж, навпаки",
+        "translation-pl": "ależ tak",
+        "translation-es": "sí (que sí)",
+        "translation-fr": "si",
+        "translation-tr": "hayır, var / evet",
+        "translation-ro": "ba da",
+        "translation-uz": "yo‘q, aksincha",
+        "translation-hi": "हाँ (उल्टा जवाब)",
+        "translation-ar": "بلى"
+      },
+      {
+        "word": "wer",
+        "translation-ru": "кто",
+        "translation-en": "who",
+        "translation-uk": "хто",
+        "translation-pl": "kto",
+        "translation-es": "quién",
+        "translation-fr": "qui",
+        "translation-tr": "kim",
+        "translation-ro": "cine",
+        "translation-uz": "kim",
+        "translation-hi": "कौन",
+        "translation-ar": "من"
+      },
+      {
+        "word": "der Mann",
+        "translation-ru": "мужчина; муж",
+        "translation-en": "man; husband",
+        "translation-uk": "чоловік",
+        "translation-pl": "mężczyzna; mąż",
+        "translation-es": "el hombre; el marido",
+        "translation-fr": "l’homme; le mari",
+        "translation-tr": "adam; koca",
+        "translation-ro": "bărbatul; soțul",
+        "translation-uz": "erkak; er",
+        "translation-hi": "आदमी; पति",
+        "translation-ar": "الرجل؛ الزوج"
+      },
+      {
+        "word": "Englisch",
+        "translation-ru": "английский язык",
+        "translation-en": "English",
+        "translation-uk": "англійська мова",
+        "translation-pl": "angielski",
+        "translation-es": "el inglés",
+        "translation-fr": "l’anglais",
+        "translation-tr": "İngilizce",
+        "translation-ro": "engleza",
+        "translation-uz": "ingliz tili",
+        "translation-hi": "अंग्रेज़ी",
+        "translation-ar": "الإنجليزية"
+      },
+      {
+        "word": "was",
+        "translation-ru": "что",
+        "translation-en": "what",
+        "translation-uk": "що",
+        "translation-pl": "co",
+        "translation-es": "qué",
+        "translation-fr": "quoi",
+        "translation-tr": "ne",
+        "translation-ro": "ce",
+        "translation-uz": "nima",
+        "translation-hi": "क्या",
+        "translation-ar": "ماذا"
+      }
+    ],
+    "tasks": [
+      {
+        "id": 1,
+        "type": "input",
+        "question": "a1SummitTwo.questTask1",
+        "correctAnswer": "Wo",
+        "tip": "a1SummitTwo.questDescription"
+      },
+      {
+        "id": 2,
+        "type": "input",
+        "question": "a1SummitTwo.questTask2",
+        "correctAnswer": "Wer",
+        "tip": "a1SummitTwo.questDescription"
+      },
+      {
+        "id": 3,
+        "type": "input",
+        "question": "a1SummitTwo.questTask3",
+        "correctAnswer": "keinen",
+        "tip": "a1SummitTwo.questDescription"
+      },
+      {
+        "id": 4,
+        "type": "input",
+        "question": "a1SummitTwo.questTask4",
+        "correctAnswer": "nicht",
+        "tip": "a1SummitTwo.questDescription"
+      },
+      {
+        "id": 5,
+        "type": "select",
+        "question": "a1SummitTwo.questTask5",
+        "options": [
+          "Spricht du nicht Englisch? Doch!",
+          "Sprichst du nicht Englisch? Doch!",
+          "Sprichst du nicht Englisch? Ja!"
+        ],
+        "answer": "Sprichst du nicht Englisch? Doch!",
+        "tip": "a1SummitTwo.questDescription"
+      },
+      {
+        "id": 6,
+        "type": "select",
+        "question": "a1SummitTwo.questTask6",
+        "options": [
+          "Hier gibt es keine Apotheke.",
+          "Hier gibt es keinen Apotheke.",
+          "Hier gibt es nicht Apotheke."
+        ],
+        "answer": "Hier gibt es keine Apotheke.",
+        "tip": "a1SummitTwo.questDescription"
+      },
+      {
+        "id": 7,
+        "type": "select",
+        "question": "a1SummitTwo.questTask7",
+        "options": [
+          "Was ist das? Das ist ein Schlüssel.",
+          "Was ist das? Das ist eine Schlüssel.",
+          "Wer ist das? Das ist ein Schlüssel."
+        ],
+        "answer": "Was ist das? Das ist ein Schlüssel.",
+        "tip": "a1SummitTwo.questDescription"
+      },
+      {
+        "id": 8,
+        "type": "select",
+        "question": "a1SummitTwo.questTask8",
+        "options": [
+          "Das Haus ist nicht alt.",
+          "Das Haus nicht ist alt.",
+          "Das Haus ist kein alt."
+        ],
+        "answer": "Das Haus ist nicht alt.",
+        "tip": "a1SummitTwo.questDescription"
+      },
+      {
+        "id": 9,
+        "type": "select",
+        "question": "a1SummitTwo.questTask9",
+        "options": [
+          "Wann kommt du?",
+          "Wann kommst du?",
+          "Wann du kommst?"
+        ],
+        "answer": "Wann kommst du?",
+        "tip": "a1SummitTwo.questDescription"
+      },
+      {
+        "id": 10,
+        "type": "reorder",
+        "question": "a1SummitTwo.questTask10",
+        "words": [
+          "Wohnen",
+          "Wohnst",
+          "wo",
+          "in",
+          "Sie",
+          "Berlin"
+        ],
+        "correctOrder": [
+          "Wohnen",
+          "Sie",
+          "in",
+          "Berlin"
+        ],
+        "tip": "a1SummitTwo.questDescription"
+      },
+      {
+        "id": 11,
+        "type": "reorder",
+        "question": "a1SummitTwo.questTask11",
+        "words": [
+          "hat",
+          "keine",
+          "haben",
+          "nicht",
+          "heute",
+          "Wir",
+          "Zeit"
+        ],
+        "correctOrder": [
+          "Wir",
+          "haben",
+          "heute",
+          "keine",
+          "Zeit"
+        ],
+        "tip": "a1SummitTwo.questDescription"
+      },
+      {
+        "id": 12,
+        "type": "reorder",
+        "question": "a1SummitTwo.questTask12",
+        "words": [
+          "kostet",
+          "wo",
+          "das",
+          "viel",
+          "Wie",
+          "kosten",
+          "Ticket"
+        ],
+        "correctOrder": [
+          "Wie",
+          "viel",
+          "kostet",
+          "das",
+          "Ticket"
+        ],
+        "tip": "a1SummitTwo.questDescription"
+      },
+      {
+        "id": 13,
+        "type": "input",
+        "question": "a1SummitTwo.questTask13",
+        "correctAnswer": "machst",
+        "tip": "a1SummitTwo.questDescription"
+      },
+      {
+        "id": 14,
+        "type": "input",
+        "question": "a1SummitTwo.questTask14",
+        "correctAnswer": "fährt",
+        "tip": "a1SummitTwo.questDescription"
+      },
+      {
+        "id": 15,
+        "type": "readAndAnswer",
+        "question": "a1SummitTwo.questTask15",
+        "text": "Lukas hat ein Fahrrad, aber kein Auto. Er hat einen Bruder, aber keine Schwester. Sein Bruder wohnt nicht in Köln.",
+        "options": [
+          "kein Fahrrad",
+          "kein Auto",
+          "keinen Bruder"
+        ],
+        "answer": "kein Auto",
+        "tip": "a1SummitTwo.questDescription"
+      }
+    ]
+  },
+  {
+    "questId": "a1-summit-three",
+    "title": "a1SummitThree.questTitle",
+    "progress": "0/15",
+    "description": "a1SummitThree.questDescription",
+    "conditions": {
+      "goal": "a1SummitThree.questGoal",
+      "minCorrect": 15,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
+    "vocabulary": [
+      {
+        "word": "der Mann",
+        "translation-ru": "мужчина; муж",
+        "translation-en": "man; husband",
+        "translation-uk": "чоловік",
+        "translation-pl": "mężczyzna; mąż",
+        "translation-es": "el hombre; el marido",
+        "translation-fr": "l’homme; le mari",
+        "translation-tr": "adam; koca",
+        "translation-ro": "bărbatul; soțul",
+        "translation-uz": "erkak; er",
+        "translation-hi": "आदमी; पति",
+        "translation-ar": "الرجل؛ الزوج"
+      },
+      {
+        "word": "was",
+        "translation-ru": "что",
+        "translation-en": "what",
+        "translation-uk": "що",
+        "translation-pl": "co",
+        "translation-es": "qué",
+        "translation-fr": "quoi",
+        "translation-tr": "ne",
+        "translation-ro": "ce",
+        "translation-uz": "nima",
+        "translation-hi": "क्या",
+        "translation-ar": "ماذا"
+      },
+      {
+        "word": "der Ball",
+        "translation-ru": "мяч",
+        "translation-en": "ball",
+        "translation-uk": "м’яч",
+        "translation-pl": "piłka",
+        "translation-es": "la pelota",
+        "translation-fr": "le ballon",
+        "translation-tr": "top",
+        "translation-ro": "mingea",
+        "translation-uz": "to‘p",
+        "translation-hi": "गेंद",
+        "translation-ar": "الكرة"
+      },
+      {
+        "word": "du",
+        "translation-ru": "ты",
+        "translation-en": "you",
+        "translation-uk": "ти",
+        "translation-pl": "ty",
+        "translation-es": "tú",
+        "translation-fr": "tu",
+        "translation-tr": "sen",
+        "translation-ro": "tu",
+        "translation-uz": "sen",
+        "translation-hi": "तुम",
+        "translation-ar": "أنت"
+      },
+      {
+        "word": "die Oma",
+        "translation-ru": "бабушка",
+        "translation-en": "grandma",
+        "translation-uk": "бабуся",
+        "translation-pl": "babcia",
+        "translation-es": "la abuela",
+        "translation-fr": "la mamie",
+        "translation-tr": "nine",
+        "translation-ro": "bunica",
+        "translation-uz": "buvi",
+        "translation-hi": "दादी",
+        "translation-ar": "الجدة"
+      }
+    ],
+    "tasks": [
+      {
+        "id": 1,
+        "type": "input",
+        "question": "a1SummitThree.questTask1",
+        "correctAnswer": "den",
+        "tip": "a1SummitThree.questDescription"
+      },
+      {
+        "id": 2,
+        "type": "input",
+        "question": "a1SummitThree.questTask2",
+        "correctAnswer": "einen",
+        "tip": "a1SummitThree.questDescription"
+      },
+      {
+        "id": 3,
+        "type": "input",
+        "question": "a1SummitThree.questTask3",
+        "correctAnswer": "Wen",
+        "tip": "a1SummitThree.questDescription"
+      },
+      {
+        "id": 4,
+        "type": "input",
+        "question": "a1SummitThree.questTask4",
+        "correctAnswer": "kein",
+        "tip": "a1SummitThree.questDescription"
+      },
+      {
+        "id": 5,
+        "type": "select",
+        "question": "a1SummitThree.questTask5",
+        "options": [
+          "Ich liebe meinen Vater.",
+          "Ich liebe meiner Vater.",
+          "Ich liebe mein Vater."
+        ],
+        "answer": "Ich liebe meinen Vater.",
+        "tip": "a1SummitThree.questDescription"
+      },
+      {
+        "id": 6,
+        "type": "select",
+        "question": "a1SummitThree.questTask6",
+        "options": [
+          "Der Schal ist rot. Ich nehme sie.",
+          "Der Schal ist rot. Ich nehme ihn.",
+          "Der Schal ist rot. Ich nehme er."
+        ],
+        "answer": "Der Schal ist rot. Ich nehme ihn.",
+        "tip": "a1SummitThree.questDescription"
+      },
+      {
+        "id": 7,
+        "type": "select",
+        "question": "a1SummitThree.questTask7",
+        "options": [
+          "Hast du einer Bruder?",
+          "Hast du einen Bruder?",
+          "Hast du ein Bruder?"
+        ],
+        "answer": "Hast du einen Bruder?",
+        "tip": "a1SummitThree.questDescription"
+      },
+      {
+        "id": 8,
+        "type": "select",
+        "question": "a1SummitThree.questTask8",
+        "options": [
+          "Wir besuchen der Oma und den Opa.",
+          "Wir besuchen die Oma und den Opa.",
+          "Wir besuchen die Oma und der Opa."
+        ],
+        "answer": "Wir besuchen die Oma und den Opa.",
+        "tip": "a1SummitThree.questDescription"
+      },
+      {
+        "id": 9,
+        "type": "select",
+        "question": "a1SummitThree.questTask9",
+        "options": [
+          "Das Hemd ist billig. Ich kaufe er.",
+          "Das Hemd ist billig. Ich kaufe es.",
+          "Das Hemd ist billig. Ich kaufe ihn."
+        ],
+        "answer": "Das Hemd ist billig. Ich kaufe es.",
+        "tip": "a1SummitThree.questDescription"
+      },
+      {
+        "id": 10,
+        "type": "reorder",
+        "question": "a1SummitThree.questTask10",
+        "words": [
+          "einen",
+          "brauchst",
+          "brauche",
+          "Ich",
+          "ein",
+          "Computer"
+        ],
+        "correctOrder": [
+          "Ich",
+          "brauche",
+          "einen",
+          "Computer"
+        ],
+        "tip": "a1SummitThree.questDescription"
+      },
+      {
+        "id": 11,
+        "type": "reorder",
+        "question": "a1SummitThree.questTask11",
+        "words": [
+          "das",
+          "Sie",
+          "liest",
+          "den",
+          "lest",
+          "Buch"
+        ],
+        "correctOrder": [
+          "Sie",
+          "liest",
+          "das",
+          "Buch"
+        ],
+        "tip": "a1SummitThree.questDescription"
+      },
+      {
+        "id": 12,
+        "type": "reorder",
+        "question": "a1SummitThree.questTask12",
+        "words": [
+          "nimmt",
+          "Tim",
+          "der",
+          "nehmt",
+          "den",
+          "Schlüssel"
+        ],
+        "correctOrder": [
+          "Tim",
+          "nimmt",
+          "den",
+          "Schlüssel"
+        ],
+        "tip": "a1SummitThree.questDescription"
+      },
+      {
+        "id": 13,
+        "type": "input",
+        "question": "a1SummitThree.questTask13",
+        "correctAnswer": "kaufst",
+        "tip": "a1SummitThree.questDescription"
+      },
+      {
+        "id": 14,
+        "type": "input",
+        "question": "a1SummitThree.questTask14",
+        "correctAnswer": "suchen",
+        "tip": "a1SummitThree.questDescription"
+      },
+      {
+        "id": 15,
+        "type": "readAndAnswer",
+        "question": "a1SummitThree.questTask15",
+        "text": "Maria braucht einen Kuchen und eine Flasche Saft. Für die Kinder kauft sie einen Ball. Den Kuchen kauft sie im Laden.",
+        "options": [
+          "einen Kuchen",
+          "einen Ball",
+          "eine Flasche Saft"
+        ],
+        "answer": "einen Ball",
+        "tip": "a1SummitThree.questDescription"
+      }
+    ]
+  },
+  {
+    "questId": "a1-summit-four",
+    "title": "a1SummitFour.questTitle",
+    "progress": "0/15",
+    "description": "a1SummitFour.questDescription",
+    "conditions": {
+      "goal": "a1SummitFour.questGoal",
+      "minCorrect": 15,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
+    "vocabulary": [
+      {
+        "word": "die Tante",
+        "translation-ru": "тётя",
+        "translation-en": "aunt",
+        "translation-uk": "тітка",
+        "translation-pl": "ciocia",
+        "translation-es": "la tía",
+        "translation-fr": "la tante",
+        "translation-tr": "teyze, hala",
+        "translation-ro": "mătușa",
+        "translation-uz": "xola, amma",
+        "translation-hi": "चाची, मौसी",
+        "translation-ar": "العمة، الخالة"
+      },
+      {
+        "word": "der Sohn",
+        "translation-ru": "сын",
+        "translation-en": "son",
+        "translation-uk": "син",
+        "translation-pl": "syn",
+        "translation-es": "el hijo",
+        "translation-fr": "le fils",
+        "translation-tr": "oğul",
+        "translation-ro": "fiul",
+        "translation-uz": "o‘g‘il",
+        "translation-hi": "बेटा",
+        "translation-ar": "الابن"
+      },
+      {
+        "word": "dein",
+        "translation-ru": "твой",
+        "translation-en": "your",
+        "translation-uk": "твій",
+        "translation-pl": "twój",
+        "translation-es": "tu",
+        "translation-fr": "ton",
+        "translation-tr": "senin",
+        "translation-ro": "tău",
+        "translation-uz": "sening",
+        "translation-hi": "तुम्हारा",
+        "translation-ar": "لك"
+      },
+      {
+        "word": "lange",
+        "translation-ru": "долго",
+        "translation-en": "for a long time",
+        "translation-uk": "довго",
+        "translation-pl": "długo",
+        "translation-es": "mucho tiempo",
+        "translation-fr": "longtemps",
+        "translation-tr": "uzun süre",
+        "translation-ro": "mult timp",
+        "translation-uz": "uzoq",
+        "translation-hi": "देर तक",
+        "translation-ar": "طويلًا"
+      },
+      {
+        "word": "was",
+        "translation-ru": "что",
+        "translation-en": "what",
+        "translation-uk": "що",
+        "translation-pl": "co",
+        "translation-es": "qué",
+        "translation-fr": "quoi",
+        "translation-tr": "ne",
+        "translation-ro": "ce",
+        "translation-uz": "nima",
+        "translation-hi": "क्या",
+        "translation-ar": "ماذا"
+      }
+    ],
+    "tasks": [
+      {
+        "id": 1,
+        "type": "input",
+        "question": "a1SummitFour.questTask1",
+        "correctAnswer": "Fährst",
+        "tip": "a1SummitFour.questDescription"
+      },
+      {
+        "id": 2,
+        "type": "input",
+        "question": "a1SummitFour.questTask2",
+        "correctAnswer": "isst",
+        "tip": "a1SummitFour.questDescription"
+      },
+      {
+        "id": 3,
+        "type": "input",
+        "question": "a1SummitFour.questTask3",
+        "correctAnswer": "spricht",
+        "tip": "a1SummitFour.questDescription"
+      },
+      {
+        "id": 4,
+        "type": "input",
+        "question": "a1SummitFour.questTask4",
+        "correctAnswer": "schläft",
+        "tip": "a1SummitFour.questDescription"
+      },
+      {
+        "id": 5,
+        "type": "input",
+        "question": "a1SummitFour.questTask5",
+        "correctAnswer": "Lest",
+        "tip": "a1SummitFour.questDescription"
+      },
+      {
+        "id": 6,
+        "type": "select",
+        "question": "a1SummitFour.questTask6",
+        "options": [
+          "Sieht du das Meer?",
+          "Siehst du das Meer?",
+          "Sehst du das Meer?"
+        ],
+        "answer": "Siehst du das Meer?",
+        "tip": "a1SummitFour.questDescription"
+      },
+      {
+        "id": 7,
+        "type": "select",
+        "question": "a1SummitFour.questTask7",
+        "options": [
+          "Er nimmt das Buch.",
+          "Er nimmst das Buch.",
+          "Er nehmt das Buch."
+        ],
+        "answer": "Er nimmt das Buch.",
+        "tip": "a1SummitFour.questDescription"
+      },
+      {
+        "id": 8,
+        "type": "select",
+        "question": "a1SummitFour.questTask8",
+        "options": [
+          "Weißt du seine Adresse?",
+          "Weiß du seine Adresse?",
+          "Wisst du seine Adresse?"
+        ],
+        "answer": "Weißt du seine Adresse?",
+        "tip": "a1SummitFour.questDescription"
+      },
+      {
+        "id": 9,
+        "type": "select",
+        "question": "a1SummitFour.questTask9",
+        "options": [
+          "Der Zug fährt um sechs Uhr ab.",
+          "Der Zug fährt ab um sechs Uhr ab.",
+          "Der Zug abfährt um sechs Uhr."
+        ],
+        "answer": "Der Zug fährt um sechs Uhr ab.",
+        "tip": "a1SummitFour.questDescription"
+      },
+      {
+        "id": 10,
+        "type": "select",
+        "question": "a1SummitFour.questTask10",
+        "options": [
+          "Ich räume auf die Küche.",
+          "Ich räume die Küche auf.",
+          "Ich aufräume die Küche."
+        ],
+        "answer": "Ich räume die Küche auf.",
+        "tip": "a1SummitFour.questDescription"
+      },
+      {
+        "id": 11,
+        "type": "reorder",
+        "question": "a1SummitFour.questTask11",
+        "words": [
+          "anruft",
+          "Tante",
+          "meinen",
+          "Mama",
+          "meine",
+          "ruft",
+          "an"
+        ],
+        "correctOrder": [
+          "Mama",
+          "ruft",
+          "meine",
+          "Tante",
+          "an"
+        ],
+        "tip": "a1SummitFour.questDescription"
+      },
+      {
+        "id": 12,
+        "type": "reorder",
+        "question": "a1SummitFour.questTask12",
+        "words": [
+          "Uhr",
+          "elf",
+          "ankommen",
+          "um",
+          "kommt",
+          "kommen",
+          "Wir",
+          "an"
+        ],
+        "correctOrder": [
+          "Wir",
+          "kommen",
+          "um",
+          "elf",
+          "Uhr",
+          "an"
+        ],
+        "tip": "a1SummitFour.questDescription"
+      },
+      {
+        "id": 13,
+        "type": "reorder",
+        "question": "a1SummitFour.questTask13",
+        "words": [
+          "fern",
+          "jetzt",
+          "du",
+          "Siehst",
+          "sehe",
+          "fernsiehst"
+        ],
+        "correctOrder": [
+          "Siehst",
+          "du",
+          "jetzt",
+          "fern"
+        ],
+        "tip": "a1SummitFour.questDescription"
+      },
+      {
+        "id": 14,
+        "type": "input",
+        "question": "a1SummitFour.questTask14",
+        "correctAnswer": "zu",
+        "tip": "a1SummitFour.questDescription"
+      },
+      {
+        "id": 15,
+        "type": "readAndAnswer",
+        "question": "a1SummitFour.questTask15",
+        "text": "Am Sonntag schläft Papa lange. Mama liest die Zeitung und isst ein Brötchen. Ben sieht fern und Lea trifft eine Freundin.",
+        "options": [
+          "Mama",
+          "Papa",
+          "Ben"
+        ],
+        "answer": "Mama",
+        "tip": "a1SummitFour.questDescription"
+      }
+    ]
+  },
+  {
+    "questId": "a1-summit-five",
+    "title": "a1SummitFive.questTitle",
+    "progress": "0/15",
+    "description": "a1SummitFive.questDescription",
+    "conditions": {
+      "goal": "a1SummitFive.questGoal",
+      "minCorrect": 15,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
+    "vocabulary": [
+      {
+        "word": "der März",
+        "translation-ru": "март",
+        "translation-en": "march",
+        "translation-uk": "березень",
+        "translation-pl": "marzec",
+        "translation-es": "marzo",
+        "translation-fr": "mars",
+        "translation-tr": "mart",
+        "translation-ro": "martie",
+        "translation-uz": "mart",
+        "translation-hi": "मार्च",
+        "translation-ar": "مارس"
+      },
+      {
+        "word": "der Oktober",
+        "translation-ru": "октябрь",
+        "translation-en": "october",
+        "translation-uk": "жовтень",
+        "translation-pl": "październik",
+        "translation-es": "octubre",
+        "translation-fr": "octobre",
+        "translation-tr": "ekim",
+        "translation-ro": "octombrie",
+        "translation-uz": "oktabr",
+        "translation-hi": "अक्टूबर",
+        "translation-ar": "أكتوبر"
+      },
+      {
+        "word": "der Januar",
+        "translation-ru": "январь",
+        "translation-en": "January",
+        "translation-uk": "січень",
+        "translation-pl": "styczeń",
+        "translation-es": "enero",
+        "translation-fr": "janvier",
+        "translation-tr": "ocak",
+        "translation-ro": "ianuarie",
+        "translation-uz": "yanvar",
+        "translation-hi": "जनवरी",
+        "translation-ar": "يناير"
+      },
+      {
+        "word": "der Juni",
+        "translation-ru": "июнь",
+        "translation-en": "June",
+        "translation-uk": "червень",
+        "translation-pl": "czerwiec",
+        "translation-es": "junio",
+        "translation-fr": "juin",
+        "translation-tr": "haziran",
+        "translation-ro": "iunie",
+        "translation-uz": "iyun",
+        "translation-hi": "जून",
+        "translation-ar": "يونيو"
+      },
+      {
+        "word": "der Donnerstag",
+        "translation-ru": "четверг",
+        "translation-en": "Thursday",
+        "translation-uk": "четвер",
+        "translation-pl": "czwartek",
+        "translation-es": "el jueves",
+        "translation-fr": "le jeudi",
+        "translation-tr": "perşembe",
+        "translation-ro": "joia",
+        "translation-uz": "payshanba",
+        "translation-hi": "गुरुवार",
+        "translation-ar": "الخميس"
+      }
+    ],
+    "tasks": [
+      {
+        "id": 1,
+        "type": "input",
+        "question": "a1SummitFive.questTask1",
+        "correctAnswer": "Meine",
+        "tip": "a1SummitFive.questDescription"
+      },
+      {
+        "id": 2,
+        "type": "input",
+        "question": "a1SummitFive.questTask2",
+        "correctAnswer": "Am",
+        "tip": "a1SummitFive.questDescription"
+      },
+      {
+        "id": 3,
+        "type": "input",
+        "question": "a1SummitFive.questTask3",
+        "correctAnswer": "um",
+        "tip": "a1SummitFive.questDescription"
+      },
+      {
+        "id": 4,
+        "type": "input",
+        "question": "a1SummitFive.questTask4",
+        "correctAnswer": "Im",
+        "tip": "a1SummitFive.questDescription"
+      },
+      {
+        "id": 5,
+        "type": "input",
+        "question": "a1SummitFive.questTask5",
+        "correctAnswer": "Seine",
+        "tip": "a1SummitFive.questDescription"
+      },
+      {
+        "id": 6,
+        "type": "select",
+        "question": "a1SummitFive.questTask6",
+        "options": [
+          "Ihr Auto ist hier, Herr Schmidt.",
+          "Sein Auto ist hier, Herr Schmidt.",
+          "Ihre Auto ist hier, Herr Schmidt."
+        ],
+        "answer": "Ihr Auto ist hier, Herr Schmidt.",
+        "tip": "a1SummitFive.questDescription"
+      },
+      {
+        "id": 7,
+        "type": "select",
+        "question": "a1SummitFive.questTask7",
+        "options": [
+          "Am Abend sehe ich einen Film.",
+          "Im Abend sehe ich einen Film.",
+          "Am Abend ich sehe einen Film."
+        ],
+        "answer": "Am Abend sehe ich einen Film.",
+        "tip": "a1SummitFive.questDescription"
+      },
+      {
+        "id": 8,
+        "type": "select",
+        "question": "a1SummitFive.questTask8",
+        "options": [
+          "Unsere Kinder ist im Garten.",
+          "Unsere Kinder sind im Garten.",
+          "Unser Kinder sind im Garten."
+        ],
+        "answer": "Unsere Kinder sind im Garten.",
+        "tip": "a1SummitFive.questDescription"
+      },
+      {
+        "id": 9,
+        "type": "select",
+        "question": "a1SummitFive.questTask9",
+        "options": [
+          "Wie spät bist es? Es ist drei Uhr.",
+          "Wie spät ist es? Es ist drei Uhr.",
+          "Wie spät ist es? Es sind drei Uhr."
+        ],
+        "answer": "Wie spät ist es? Es ist drei Uhr.",
+        "tip": "a1SummitFive.questDescription"
+      },
+      {
+        "id": 10,
+        "type": "select",
+        "question": "a1SummitFive.questTask10",
+        "options": [
+          "Bist deine Jacke hier?",
+          "Ist deine Jacke hier?",
+          "Ist dein Jacke hier?"
+        ],
+        "answer": "Ist deine Jacke hier?",
+        "tip": "a1SummitFive.questDescription"
+      },
+      {
+        "id": 11,
+        "type": "reorder",
+        "question": "a1SummitFive.questTask11",
+        "words": [
+          "ist",
+          "Am",
+          "sind",
+          "oft",
+          "Herbst",
+          "wir",
+          "Im",
+          "Wald",
+          "im"
+        ],
+        "correctOrder": [
+          "Im",
+          "Herbst",
+          "sind",
+          "wir",
+          "oft",
+          "im",
+          "Wald"
+        ],
+        "tip": "a1SummitFive.questDescription"
+      },
+      {
+        "id": 12,
+        "type": "reorder",
+        "question": "a1SummitFive.questTask12",
+        "words": [
+          "muss",
+          "Am",
+          "ich",
+          "Donnerstag",
+          "im",
+          "arbeite",
+          "morgens",
+          "arbeiten"
+        ],
+        "correctOrder": [
+          "Am",
+          "Donnerstag",
+          "muss",
+          "ich",
+          "morgens",
+          "arbeiten"
+        ],
+        "tip": "a1SummitFive.questDescription"
+      },
+      {
+        "id": 13,
+        "type": "reorder",
+        "question": "a1SummitFive.questTask13",
+        "words": [
+          "heißt",
+          "heißen",
+          "Wie",
+          "Ihr",
+          "Ihre",
+          "Tochter"
+        ],
+        "correctOrder": [
+          "Wie",
+          "heißt",
+          "Ihre",
+          "Tochter"
+        ],
+        "tip": "a1SummitFive.questDescription"
+      },
+      {
+        "id": 14,
+        "type": "input",
+        "question": "a1SummitFive.questTask14",
+        "correctAnswer": "dauert",
+        "tip": "a1SummitFive.questDescription"
+      },
+      {
+        "id": 15,
+        "type": "readAndAnswer",
+        "question": "a1SummitFive.questTask15",
+        "text": "Mein Bruder Thomas hat im Juni Geburtstag. Seine Frau hat im Oktober Geburtstag. Unsere Mutter hat im Januar Geburtstag, im Winter.",
+        "options": [
+          "im Oktober",
+          "im Juni",
+          "im Januar"
+        ],
+        "answer": "im Juni",
+        "tip": "a1SummitFive.questDescription"
+      }
+    ]
+  },
+  {
+    "questId": "a1-summit-six",
+    "title": "a1SummitSix.questTitle",
+    "progress": "0/15",
+    "description": "a1SummitSix.questDescription",
+    "conditions": {
+      "goal": "a1SummitSix.questGoal",
+      "minCorrect": 15,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
+    "vocabulary": [
+      {
+        "word": "rauchen",
+        "translation-ru": "курить",
+        "translation-en": "to smoke",
+        "translation-uk": "курити",
+        "translation-pl": "palić",
+        "translation-es": "fumar",
+        "translation-fr": "fumer",
+        "translation-tr": "sigara içmek",
+        "translation-ro": "a fuma",
+        "translation-uz": "chekmoq",
+        "translation-hi": "धूम्रपान करना",
+        "translation-ar": "يدخن"
+      },
+      {
+        "word": "mitkommen",
+        "translation-ru": "идти вместе",
+        "translation-en": "to come along",
+        "translation-uk": "іти разом",
+        "translation-pl": "iść razem",
+        "translation-es": "venir también",
+        "translation-fr": "venir avec",
+        "translation-tr": "birlikte gelmek",
+        "translation-ro": "a veni cu cineva",
+        "translation-uz": "birga bormoq",
+        "translation-hi": "साथ चलना",
+        "translation-ar": "يأتي معنا"
+      },
+      {
+        "word": "reisen",
+        "translation-ru": "путешествовать",
+        "translation-en": "to travel",
+        "translation-uk": "подорожувати",
+        "translation-pl": "podróżować",
+        "translation-es": "viajar",
+        "translation-fr": "voyager",
+        "translation-tr": "seyahat etmek",
+        "translation-ro": "a călători",
+        "translation-uz": "sayohat qilmoq",
+        "translation-hi": "यात्रा करना",
+        "translation-ar": "يسافر"
+      },
+      {
+        "word": "wie",
+        "translation-ru": "как",
+        "translation-en": "how",
+        "translation-uk": "як",
+        "translation-pl": "jak",
+        "translation-es": "cómo",
+        "translation-fr": "comment",
+        "translation-tr": "nasıl",
+        "translation-ro": "cum",
+        "translation-uz": "qanday",
+        "translation-hi": "कैसे",
+        "translation-ar": "كيف"
+      },
+      {
+        "word": "abholen",
+        "translation-ru": "забирать, встречать",
+        "translation-en": "to pick up",
+        "translation-uk": "забирати, зустрічати",
+        "translation-pl": "odbierać",
+        "translation-es": "recoger",
+        "translation-fr": "aller chercher",
+        "translation-tr": "almaya gitmek",
+        "translation-ro": "a lua pe cineva",
+        "translation-uz": "olib ketmoq",
+        "translation-hi": "लेने जाना",
+        "translation-ar": "يصطحب"
+      }
+    ],
+    "tasks": [
+      {
+        "id": 1,
+        "type": "input",
+        "question": "a1SummitSix.questTask1",
+        "correctAnswer": "Kannst",
+        "tip": "a1SummitSix.questDescription"
+      },
+      {
+        "id": 2,
+        "type": "input",
+        "question": "a1SummitSix.questTask2",
+        "correctAnswer": "muss",
+        "tip": "a1SummitSix.questDescription"
+      },
+      {
+        "id": 3,
+        "type": "input",
+        "question": "a1SummitSix.questTask3",
+        "correctAnswer": "wollen",
+        "tip": "a1SummitSix.questDescription"
+      },
+      {
+        "id": 4,
+        "type": "input",
+        "question": "a1SummitSix.questTask4",
+        "correctAnswer": "darfst",
+        "tip": "a1SummitSix.questDescription"
+      },
+      {
+        "id": 5,
+        "type": "select",
+        "question": "a1SummitSix.questTask5",
+        "options": [
+          "Morgen darf ich nicht kochen.",
+          "Morgen muss ich kochen nicht.",
+          "Morgen muss ich nicht kochen."
+        ],
+        "answer": "Morgen muss ich nicht kochen.",
+        "tip": "a1SummitSix.questDescription"
+      },
+      {
+        "id": 6,
+        "type": "select",
+        "question": "a1SummitSix.questTask6",
+        "options": [
+          "Kinder darf nicht rauchen.",
+          "Kinder dürfen nicht rauchen.",
+          "Kinder müssen nicht rauchen."
+        ],
+        "answer": "Kinder dürfen nicht rauchen.",
+        "tip": "a1SummitSix.questDescription"
+      },
+      {
+        "id": 7,
+        "type": "select",
+        "question": "a1SummitSix.questTask7",
+        "options": [
+          "Ich einkaufe muss.",
+          "Ich muss einkaufen.",
+          "Ich muss kaufe ein."
+        ],
+        "answer": "Ich muss einkaufen.",
+        "tip": "a1SummitSix.questDescription"
+      },
+      {
+        "id": 8,
+        "type": "select",
+        "question": "a1SummitSix.questTask8",
+        "options": [
+          "Kannst du mich morgen abholen?",
+          "Kannst du ich morgen abholen?",
+          "Kannst du mich morgen holst ab?"
+        ],
+        "answer": "Kannst du mich morgen abholen?",
+        "tip": "a1SummitSix.questDescription"
+      },
+      {
+        "id": 9,
+        "type": "select",
+        "question": "a1SummitSix.questTask9",
+        "options": [
+          "Ich möchte bitte eine Tasse Tee.",
+          "Ich möchten bitte eine Tasse Tee.",
+          "Ich muss bitte eine Tasse Tee."
+        ],
+        "answer": "Ich möchte bitte eine Tasse Tee.",
+        "tip": "a1SummitSix.questDescription"
+      },
+      {
+        "id": 10,
+        "type": "reorder",
+        "question": "a1SummitSix.questTask10",
+        "words": [
+          "Wollen",
+          "Sie",
+          "will",
+          "kommen",
+          "mitkommen"
+        ],
+        "correctOrder": [
+          "Wollen",
+          "Sie",
+          "mitkommen"
+        ],
+        "tip": "a1SummitSix.questDescription"
+      },
+      {
+        "id": 11,
+        "type": "reorder",
+        "question": "a1SummitSix.questTask11",
+        "words": [
+          "gehst",
+          "muss",
+          "wie",
+          "viel",
+          "gehen",
+          "Um",
+          "musst",
+          "Uhr",
+          "du"
+        ],
+        "correctOrder": [
+          "Um",
+          "wie",
+          "viel",
+          "Uhr",
+          "musst",
+          "du",
+          "gehen"
+        ],
+        "tip": "a1SummitSix.questDescription"
+      },
+      {
+        "id": 12,
+        "type": "reorder",
+        "question": "a1SummitSix.questTask12",
+        "words": [
+          "kommt",
+          "Wir",
+          "kommen",
+          "sieben",
+          "können",
+          "kann",
+          "um",
+          "Uhr"
+        ],
+        "correctOrder": [
+          "Wir",
+          "können",
+          "um",
+          "sieben",
+          "Uhr",
+          "kommen"
+        ],
+        "tip": "a1SummitSix.questDescription"
+      },
+      {
+        "id": 13,
+        "type": "input",
+        "question": "a1SummitSix.questTask13",
+        "correctAnswer": "fernsehen",
+        "tip": "a1SummitSix.questDescription"
+      },
+      {
+        "id": 14,
+        "type": "input",
+        "question": "a1SummitSix.questTask14",
+        "correctAnswer": "aufstehen",
+        "tip": "a1SummitSix.questDescription"
+      },
+      {
+        "id": 15,
+        "type": "readAndAnswer",
+        "question": "a1SummitSix.questTask15",
+        "text": "Nina kann gut singen und tanzen, aber sie kann nicht kochen. Sie will kochen lernen. Am Samstag muss sie nicht arbeiten, dann kocht sie mit Oma.",
+        "options": [
+          "kochen",
+          "singen",
+          "tanzen"
+        ],
+        "answer": "kochen",
+        "tip": "a1SummitSix.questDescription"
+      }
+    ]
+  },
+  {
+    "questId": "a1-summit-seven",
+    "title": "a1SummitSeven.questTitle",
+    "progress": "0/15",
+    "description": "a1SummitSeven.questDescription",
+    "conditions": {
+      "goal": "a1SummitSeven.questGoal",
+      "minCorrect": 15,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
+    "vocabulary": [
+      {
+        "word": "eng",
+        "translation-ru": "тесный, узкий",
+        "translation-en": "tight",
+        "translation-uk": "тісний, вузький",
+        "translation-pl": "ciasny",
+        "translation-es": "estrecho",
+        "translation-fr": "serré",
+        "translation-tr": "dar",
+        "translation-ro": "strâmt",
+        "translation-uz": "tor",
+        "translation-hi": "तंग",
+        "translation-ar": "ضيق"
+      },
+      {
+        "word": "süß",
+        "translation-ru": "сладкий",
+        "translation-en": "sweet",
+        "translation-uk": "солодкий",
+        "translation-pl": "słodki",
+        "translation-es": "dulce",
+        "translation-fr": "sucré",
+        "translation-tr": "tatlı",
+        "translation-ro": "dulce",
+        "translation-uz": "shirin",
+        "translation-hi": "मीठा",
+        "translation-ar": "حلو"
+      },
+      {
+        "word": "sauer",
+        "translation-ru": "кислый",
+        "translation-en": "sour",
+        "translation-uk": "кислий",
+        "translation-pl": "kwaśny",
+        "translation-es": "ácido",
+        "translation-fr": "acide",
+        "translation-tr": "ekşi",
+        "translation-ro": "acru",
+        "translation-uz": "nordon",
+        "translation-hi": "खट्टा",
+        "translation-ar": "حامض"
+      },
+      {
+        "word": "der Fisch",
+        "translation-ru": "рыба",
+        "translation-en": "fish",
+        "translation-uk": "риба",
+        "translation-pl": "ryba",
+        "translation-es": "el pescado",
+        "translation-fr": "le poisson",
+        "translation-tr": "balık",
+        "translation-ro": "peștele",
+        "translation-uz": "baliq",
+        "translation-hi": "मछली",
+        "translation-ar": "السمك"
+      },
+      {
+        "word": "was",
+        "translation-ru": "что",
+        "translation-en": "what",
+        "translation-uk": "що",
+        "translation-pl": "co",
+        "translation-es": "qué",
+        "translation-fr": "quoi",
+        "translation-tr": "ne",
+        "translation-ro": "ce",
+        "translation-uz": "nima",
+        "translation-hi": "क्या",
+        "translation-ar": "ماذا"
+      }
+    ],
+    "tasks": [
+      {
+        "id": 1,
+        "type": "input",
+        "question": "a1SummitSeven.questTask1",
+        "correctAnswer": "mögen",
+        "tip": "a1SummitSeven.questDescription"
+      },
+      {
+        "id": 2,
+        "type": "input",
+        "question": "a1SummitSeven.questTask2",
+        "correctAnswer": "trägt",
+        "tip": "a1SummitSeven.questDescription"
+      },
+      {
+        "id": 3,
+        "type": "input",
+        "question": "a1SummitSeven.questTask3",
+        "correctAnswer": "gefällt",
+        "tip": "a1SummitSeven.questDescription"
+      },
+      {
+        "id": 4,
+        "type": "input",
+        "question": "a1SummitSeven.questTask4",
+        "correctAnswer": "Kilo",
+        "tip": "a1SummitSeven.questDescription"
+      },
+      {
+        "id": 5,
+        "type": "input",
+        "question": "a1SummitSeven.questTask5",
+        "correctAnswer": "zu",
+        "tip": "a1SummitSeven.questDescription"
+      },
+      {
+        "id": 6,
+        "type": "select",
+        "question": "a1SummitSeven.questTask6",
+        "options": [
+          "Ich esse gern Torte.",
+          "Ich isst gern Torte.",
+          "Ich gern esse Torte."
+        ],
+        "answer": "Ich esse gern Torte.",
+        "tip": "a1SummitSeven.questDescription"
+      },
+      {
+        "id": 7,
+        "type": "select",
+        "question": "a1SummitSeven.questTask7",
+        "options": [
+          "Was kostet die Jacke?",
+          "Was kostet der Jacke?",
+          "Was kosten die Jacke?"
+        ],
+        "answer": "Was kostet die Jacke?",
+        "tip": "a1SummitSeven.questDescription"
+      },
+      {
+        "id": 8,
+        "type": "select",
+        "question": "a1SummitSeven.questTask8",
+        "options": [
+          "Ich nehme die Suppe und ein Wasser.",
+          "Ich nehme der Suppe und ein Wasser.",
+          "Ich nimmt die Suppe und ein Wasser."
+        ],
+        "answer": "Ich nehme die Suppe und ein Wasser.",
+        "tip": "a1SummitSeven.questDescription"
+      },
+      {
+        "id": 9,
+        "type": "select",
+        "question": "a1SummitSeven.questTask9",
+        "options": [
+          "Kann ich die Schuhe anprobiert?",
+          "Kann ich die Schuhe anprobieren?",
+          "Kann ich die Schuhe probiere an?"
+        ],
+        "answer": "Kann ich die Schuhe anprobieren?",
+        "tip": "a1SummitSeven.questDescription"
+      },
+      {
+        "id": 10,
+        "type": "select",
+        "question": "a1SummitSeven.questTask10",
+        "options": [
+          "Der Apfel sind sauer und die Torte ist süß.",
+          "Der Apfel ist sauer und die Torte ist süß.",
+          "Der Apfel ist süß und die Torte ist sauer."
+        ],
+        "answer": "Der Apfel ist sauer und die Torte ist süß.",
+        "tip": "a1SummitSeven.questDescription"
+      },
+      {
+        "id": 11,
+        "type": "reorder",
+        "question": "a1SummitSeven.questTask11",
+        "words": [
+          "kostest",
+          "fünfzehn",
+          "macht",
+          "machen",
+          "Das",
+          "Euro"
+        ],
+        "correctOrder": [
+          "Das",
+          "macht",
+          "fünfzehn",
+          "Euro"
+        ],
+        "tip": "a1SummitSeven.questDescription"
+      },
+      {
+        "id": 12,
+        "type": "reorder",
+        "question": "a1SummitSeven.questTask12",
+        "words": [
+          "teuer",
+          "Jacke",
+          "sie",
+          "ist",
+          "Ich",
+          "Die",
+          "zu",
+          "kein",
+          "ihn",
+          "nicht",
+          "nehme"
+        ],
+        "correctOrder": [
+          "Die",
+          "Jacke",
+          "ist",
+          "zu",
+          "teuer",
+          "Ich",
+          "nehme",
+          "sie",
+          "nicht"
+        ],
+        "tip": "a1SummitSeven.questDescription"
+      },
+      {
+        "id": 13,
+        "type": "reorder",
+        "question": "a1SummitSeven.questTask13",
+        "words": [
+          "es",
+          "gibst",
+          "gibt",
+          "Was",
+          "zum",
+          "sind",
+          "Frühstück"
+        ],
+        "correctOrder": [
+          "Was",
+          "gibt",
+          "es",
+          "zum",
+          "Frühstück"
+        ],
+        "tip": "a1SummitSeven.questDescription"
+      },
+      {
+        "id": 14,
+        "type": "input",
+        "question": "a1SummitSeven.questTask14",
+        "correctAnswer": "Karte",
+        "tip": "a1SummitSeven.questDescription"
+      },
+      {
+        "id": 15,
+        "type": "readAndAnswer",
+        "question": "a1SummitSeven.questTask15",
+        "text": "Leo sucht eine Hose. Die Hose in Blau ist zu eng und die Hose in Grau ist zu teuer. Dann probiert er eine Jeans an. Sie passt gut und kostet vierzig Euro. Er nimmt sie.",
+        "options": [
+          "die Hose in Blau",
+          "eine Jeans",
+          "die Hose in Grau"
+        ],
+        "answer": "eine Jeans",
+        "tip": "a1SummitSeven.questDescription"
+      }
+    ]
+  },
+  {
+    "questId": "a1-summit-eight",
+    "title": "a1SummitEight.questTitle",
+    "progress": "0/15",
+    "description": "a1SummitEight.questDescription",
+    "conditions": {
+      "goal": "a1SummitEight.questGoal",
+      "minCorrect": 15,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
+    "vocabulary": [
+      {
+        "word": "der August",
+        "translation-ru": "август",
+        "translation-en": "August",
+        "translation-uk": "серпень",
+        "translation-pl": "sierpień",
+        "translation-es": "agosto",
+        "translation-fr": "août",
+        "translation-tr": "ağustos",
+        "translation-ro": "august",
+        "translation-uz": "avgust",
+        "translation-hi": "अगस्त",
+        "translation-ar": "أغسطس"
+      },
+      {
+        "word": "was",
+        "translation-ru": "что",
+        "translation-en": "what",
+        "translation-uk": "що",
+        "translation-pl": "co",
+        "translation-es": "qué",
+        "translation-fr": "quoi",
+        "translation-tr": "ne",
+        "translation-ro": "ce",
+        "translation-uz": "nima",
+        "translation-hi": "क्या",
+        "translation-ar": "ماذا"
+      },
+      {
+        "word": "ihr",
+        "translation-ru": "вы (вы все)",
+        "translation-en": "you (plural)",
+        "translation-uk": "ви (усі)",
+        "translation-pl": "wy",
+        "translation-es": "vosotros",
+        "translation-fr": "vous (pluriel)",
+        "translation-tr": "siz (çoğul)",
+        "translation-ro": "voi",
+        "translation-uz": "sizlar",
+        "translation-hi": "तुम सब",
+        "translation-ar": "أنتم"
+      },
+      {
+        "word": "das Zentrum",
+        "translation-ru": "центр",
+        "translation-en": "centre",
+        "translation-uk": "центр",
+        "translation-pl": "centrum",
+        "translation-es": "el centro",
+        "translation-fr": "le centre",
+        "translation-tr": "merkez",
+        "translation-ro": "centrul",
+        "translation-uz": "markaz",
+        "translation-hi": "केंद्र",
+        "translation-ar": "المركز"
+      },
+      {
+        "word": "das Jahr",
+        "translation-ru": "год",
+        "translation-en": "year",
+        "translation-uk": "рік",
+        "translation-pl": "rok",
+        "translation-es": "el año",
+        "translation-fr": "l’an, l’année",
+        "translation-tr": "yıl",
+        "translation-ro": "anul",
+        "translation-uz": "yil",
+        "translation-hi": "साल",
+        "translation-ar": "السنة"
+      }
+    ],
+    "tasks": [
+      {
+        "id": 1,
+        "type": "input",
+        "question": "a1SummitEight.questTask1",
+        "correctAnswer": "Post",
+        "tip": "a1SummitEight.questDescription"
+      },
+      {
+        "id": 2,
+        "type": "input",
+        "question": "a1SummitEight.questTask2",
+        "correctAnswer": "schneit",
+        "tip": "a1SummitEight.questDescription"
+      },
+      {
+        "id": 3,
+        "type": "input",
+        "question": "a1SummitEight.questTask3",
+        "correctAnswer": "Wetter",
+        "tip": "a1SummitEight.questDescription"
+      },
+      {
+        "id": 4,
+        "type": "input",
+        "question": "a1SummitEight.questTask4",
+        "correctAnswer": "Büro",
+        "tip": "a1SummitEight.questDescription"
+      },
+      {
+        "id": 5,
+        "type": "select",
+        "question": "a1SummitEight.questTask5",
+        "options": [
+          "Links und dann geradeaus.",
+          "Geradeaus und dann rechts.",
+          "Geradeaus und dann links."
+        ],
+        "answer": "Geradeaus und dann links.",
+        "tip": "a1SummitEight.questDescription"
+      },
+      {
+        "id": 6,
+        "type": "select",
+        "question": "a1SummitEight.questTask6",
+        "options": [
+          "Im August es ist warm.",
+          "Im August ist es warm.",
+          "Am August ist es warm."
+        ],
+        "answer": "Im August ist es warm.",
+        "tip": "a1SummitEight.questDescription"
+      },
+      {
+        "id": 7,
+        "type": "select",
+        "question": "a1SummitEight.questTask7",
+        "options": [
+          "Ich möchte eine Einzelzimmer.",
+          "Ich möchte ein Einzelzimmer.",
+          "Ich möchte einen Einzelzimmer."
+        ],
+        "answer": "Ich möchte ein Einzelzimmer.",
+        "tip": "a1SummitEight.questDescription"
+      },
+      {
+        "id": 8,
+        "type": "select",
+        "question": "a1SummitEight.questTask8",
+        "options": [
+          "Die Zug hat Verspätung.",
+          "Der Zug hat Verspätung.",
+          "Der Zug ist Verspätung."
+        ],
+        "answer": "Der Zug hat Verspätung.",
+        "tip": "a1SummitEight.questDescription"
+      },
+      {
+        "id": 9,
+        "type": "select",
+        "question": "a1SummitEight.questTask9",
+        "options": [
+          "Der Wald ist groß und ruhig.",
+          "Der Wald sind groß und ruhig.",
+          "Das Wald ist groß und ruhig."
+        ],
+        "answer": "Der Wald ist groß und ruhig.",
+        "tip": "a1SummitEight.questDescription"
+      },
+      {
+        "id": 10,
+        "type": "reorder",
+        "question": "a1SummitEight.questTask10",
+        "words": [
+          "für",
+          "das",
+          "Alles",
+          "Gute",
+          "den",
+          "Alle",
+          "Jahr",
+          "neue"
+        ],
+        "correctOrder": [
+          "Alles",
+          "Gute",
+          "für",
+          "das",
+          "neue",
+          "Jahr"
+        ],
+        "tip": "a1SummitEight.questDescription"
+      },
+      {
+        "id": 11,
+        "type": "reorder",
+        "question": "a1SummitEight.questTask11",
+        "words": [
+          "beginnt",
+          "um",
+          "Arbeit",
+          "Uhr",
+          "Meine",
+          "Mein",
+          "am",
+          "acht"
+        ],
+        "correctOrder": [
+          "Meine",
+          "Arbeit",
+          "beginnt",
+          "um",
+          "acht",
+          "Uhr"
+        ],
+        "tip": "a1SummitEight.questDescription"
+      },
+      {
+        "id": 12,
+        "type": "reorder",
+        "question": "a1SummitEight.questTask12",
+        "words": [
+          "für",
+          "Nacht",
+          "den",
+          "kostet",
+          "Was",
+          "das",
+          "kosten",
+          "Zimmer",
+          "eine"
+        ],
+        "correctOrder": [
+          "Was",
+          "kostet",
+          "das",
+          "Zimmer",
+          "für",
+          "eine",
+          "Nacht"
+        ],
+        "tip": "a1SummitEight.questDescription"
+      },
+      {
+        "id": 13,
+        "type": "input",
+        "question": "a1SummitEight.questTask13",
+        "correctAnswer": "friere",
+        "tip": "a1SummitEight.questDescription"
+      },
+      {
+        "id": 14,
+        "type": "input",
+        "question": "a1SummitEight.questTask14",
+        "correctAnswer": "fliegt",
+        "tip": "a1SummitEight.questDescription"
+      },
+      {
+        "id": 15,
+        "type": "readAndAnswer",
+        "question": "a1SummitEight.questTask15",
+        "text": "Eva kommt um zehn Uhr in Wien an. Es regnet und ihr Koffer ist schwer. Sie nimmt ein Taxi. Das Hotel liegt im Zentrum. Ihr Zimmer ist klein, aber schön.",
+        "options": [
+          "ein Taxi",
+          "den Bus",
+          "den Zug"
+        ],
+        "answer": "ein Taxi",
+        "tip": "a1SummitEight.questDescription"
+      }
+    ]
+  },
+  {
+    "questId": "a1-summit-nine",
+    "title": "a1SummitNine.questTitle",
+    "progress": "0/15",
+    "description": "a1SummitNine.questDescription",
+    "conditions": {
+      "goal": "a1SummitNine.questGoal",
+      "minCorrect": 15,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
+    "vocabulary": [
+      {
+        "word": "kennen",
+        "translation-ru": "знать",
+        "translation-en": "to know",
+        "translation-uk": "знати",
+        "translation-pl": "znać",
+        "translation-es": "conocer",
+        "translation-fr": "connaître",
+        "translation-tr": "tanımak / bilmek",
+        "translation-ro": "a cunoaște",
+        "translation-uz": "tanimoq",
+        "translation-hi": "जानना",
+        "translation-ar": "يعرف"
+      },
+      {
+        "word": "der Frühling",
+        "translation-ru": "весна",
+        "translation-en": "spring",
+        "translation-uk": "весна",
+        "translation-pl": "wiosna",
+        "translation-es": "la primavera",
+        "translation-fr": "le printemps",
+        "translation-tr": "ilkbahar",
+        "translation-ro": "primăvara",
+        "translation-uz": "bahor",
+        "translation-hi": "वसंत",
+        "translation-ar": "الربيع"
+      },
+      {
+        "word": "Deutsch",
+        "translation-ru": "немецкий язык",
+        "translation-en": "German",
+        "translation-uk": "німецька мова",
+        "translation-pl": "niemiecki",
+        "translation-es": "el alemán",
+        "translation-fr": "l’allemand",
+        "translation-tr": "Almanca",
+        "translation-ro": "germana",
+        "translation-uz": "nemis tili",
+        "translation-hi": "जर्मन भाषा",
+        "translation-ar": "الألمانية"
+      },
+      {
+        "word": "wie",
+        "translation-ru": "как",
+        "translation-en": "how",
+        "translation-uk": "як",
+        "translation-pl": "jak",
+        "translation-es": "cómo",
+        "translation-fr": "comment",
+        "translation-tr": "nasıl",
+        "translation-ro": "cum",
+        "translation-uz": "qanday",
+        "translation-hi": "कैसे",
+        "translation-ar": "كيف"
+      },
+      {
+        "word": "früh",
+        "translation-ru": "рано",
+        "translation-en": "early",
+        "translation-uk": "рано",
+        "translation-pl": "wcześnie",
+        "translation-es": "temprano",
+        "translation-fr": "tôt",
+        "translation-tr": "erken",
+        "translation-ro": "devreme",
+        "translation-uz": "erta",
+        "translation-hi": "जल्दी",
+        "translation-ar": "مبكر"
+      }
+    ],
+    "tasks": [
+      {
+        "id": 1,
+        "type": "input",
+        "question": "a1SummitNine.questTask1",
+        "correctAnswer": "kommen",
+        "tip": "a1SummitNine.questDescription"
+      },
+      {
+        "id": 2,
+        "type": "input",
+        "question": "a1SummitNine.questTask2",
+        "correctAnswer": "bist",
+        "tip": "a1SummitNine.questDescription"
+      },
+      {
+        "id": 3,
+        "type": "input",
+        "question": "a1SummitNine.questTask3",
+        "correctAnswer": "meinen",
+        "tip": "a1SummitNine.questDescription"
+      },
+      {
+        "id": 4,
+        "type": "input",
+        "question": "a1SummitNine.questTask4",
+        "correctAnswer": "keine",
+        "tip": "a1SummitNine.questDescription"
+      },
+      {
+        "id": 5,
+        "type": "input",
+        "question": "a1SummitNine.questTask5",
+        "correctAnswer": "an",
+        "tip": "a1SummitNine.questDescription"
+      },
+      {
+        "id": 6,
+        "type": "select",
+        "question": "a1SummitNine.questTask6",
+        "options": [
+          "Am Montag arbeite ich kein.",
+          "Am Montag arbeite ich nicht.",
+          "Am Montag ich arbeite nicht."
+        ],
+        "answer": "Am Montag arbeite ich nicht.",
+        "tip": "a1SummitNine.questDescription"
+      },
+      {
+        "id": 7,
+        "type": "select",
+        "question": "a1SummitNine.questTask7",
+        "options": [
+          "Kennst du meinen Vater?",
+          "Kennt du meinen Vater?",
+          "Kennst du mein Vater?"
+        ],
+        "answer": "Kennst du meinen Vater?",
+        "tip": "a1SummitNine.questDescription"
+      },
+      {
+        "id": 8,
+        "type": "select",
+        "question": "a1SummitNine.questTask8",
+        "options": [
+          "Er will Deutsch lernen.",
+          "Er will Deutsch lernt.",
+          "Er willst Deutsch lernen."
+        ],
+        "answer": "Er will Deutsch lernen.",
+        "tip": "a1SummitNine.questDescription"
+      },
+      {
+        "id": 9,
+        "type": "select",
+        "question": "a1SummitNine.questTask9",
+        "options": [
+          "Im Frühling ist es warm und alles ist grün.",
+          "Im Frühling ist es warm und alles sind grün.",
+          "Am Frühling ist es warm und alles ist grün."
+        ],
+        "answer": "Im Frühling ist es warm und alles ist grün.",
+        "tip": "a1SummitNine.questDescription"
+      },
+      {
+        "id": 10,
+        "type": "select",
+        "question": "a1SummitNine.questTask10",
+        "options": [
+          "Abends sieht die Kinder fern.",
+          "Abends sehen die Kinder fern.",
+          "Abends fernsehen die Kinder."
+        ],
+        "answer": "Abends sehen die Kinder fern.",
+        "tip": "a1SummitNine.questDescription"
+      },
+      {
+        "id": 11,
+        "type": "reorder",
+        "question": "a1SummitNine.questTask11",
+        "words": [
+          "Meine",
+          "Kaffee",
+          "trinke",
+          "trinkt",
+          "Mein",
+          "Mutter",
+          "gern"
+        ],
+        "correctOrder": [
+          "Meine",
+          "Mutter",
+          "trinkt",
+          "gern",
+          "Kaffee"
+        ],
+        "tip": "a1SummitNine.questDescription"
+      },
+      {
+        "id": 12,
+        "type": "reorder",
+        "question": "a1SummitNine.questTask12",
+        "words": [
+          "an",
+          "muss",
+          "ich",
+          "früh",
+          "fange",
+          "Heute",
+          "anfangen"
+        ],
+        "correctOrder": [
+          "Heute",
+          "muss",
+          "ich",
+          "früh",
+          "anfangen"
+        ],
+        "tip": "a1SummitNine.questDescription"
+      },
+      {
+        "id": 13,
+        "type": "reorder",
+        "question": "a1SummitNine.questTask13",
+        "words": [
+          "du",
+          "wohnst",
+          "Wo",
+          "wohin",
+          "wohnt",
+          "jetzt"
+        ],
+        "correctOrder": [
+          "Wo",
+          "wohnst",
+          "du",
+          "jetzt"
+        ],
+        "tip": "a1SummitNine.questDescription"
+      },
+      {
+        "id": 14,
+        "type": "input",
+        "question": "a1SummitNine.questTask14",
+        "correctAnswer": "Nimmst",
+        "tip": "a1SummitNine.questDescription"
+      },
+      {
+        "id": 15,
+        "type": "readAndAnswer",
+        "question": "a1SummitNine.questTask15",
+        "text": "Am Samstag räumt Paul die Wohnung auf und kauft ein. Am Sonntag steht er spät auf. Dann ruft er seine Mutter an und sieht fern. Am Montag muss er wieder arbeiten.",
+        "options": [
+          "Er ruft seine Mutter an.",
+          "Er kauft ein.",
+          "Er arbeitet."
+        ],
+        "answer": "Er ruft seine Mutter an.",
+        "tip": "a1SummitNine.questDescription"
+      }
+    ]
+  },
+  {
+    "questId": "a1-summit-ten",
+    "title": "a1SummitTen.questTitle",
+    "progress": "0/15",
+    "description": "a1SummitTen.questDescription",
+    "conditions": {
+      "goal": "a1SummitTen.questGoal",
+      "minCorrect": 15,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
+    "vocabulary": [
+      {
+        "word": "die Lehrerin",
+        "translation-ru": "учительница",
+        "translation-en": "teacher (female)",
+        "translation-uk": "учителька",
+        "translation-pl": "nauczycielka",
+        "translation-es": "profesora",
+        "translation-fr": "enseignante",
+        "translation-tr": "öğretmen (kadın)",
+        "translation-ro": "profesoară",
+        "translation-uz": "o‘qituvchi (ayol)",
+        "translation-hi": "शिक्षिका",
+        "translation-ar": "معلّمة"
+      },
+      {
+        "word": "die Tante",
+        "translation-ru": "тётя",
+        "translation-en": "aunt",
+        "translation-uk": "тітка",
+        "translation-pl": "ciocia",
+        "translation-es": "la tía",
+        "translation-fr": "la tante",
+        "translation-tr": "teyze, hala",
+        "translation-ro": "mătușa",
+        "translation-uz": "xola, amma",
+        "translation-hi": "चाची, मौसी",
+        "translation-ar": "العمة، الخالة"
+      },
+      {
+        "word": "langsam",
+        "translation-ru": "медленно",
+        "translation-en": "slowly",
+        "translation-uk": "повільно",
+        "translation-pl": "powoli",
+        "translation-es": "despacio",
+        "translation-fr": "lentement",
+        "translation-tr": "yavaş",
+        "translation-ro": "încet",
+        "translation-uz": "sekin",
+        "translation-hi": "धीरे",
+        "translation-ar": "ببطء"
+      },
+      {
+        "word": "sprechen",
+        "translation-ru": "говорить",
+        "translation-en": "to speak",
+        "translation-uk": "говорити",
+        "translation-pl": "mówić",
+        "translation-es": "hablar",
+        "translation-fr": "parler",
+        "translation-tr": "konuşmak",
+        "translation-ro": "a vorbi",
+        "translation-uz": "gapirmoq",
+        "translation-hi": "बोलना",
+        "translation-ar": "يتكلم"
+      },
+      {
+        "word": "das Konzert",
+        "translation-ru": "концерт",
+        "translation-en": "concert",
+        "translation-uk": "концерт",
+        "translation-pl": "koncert",
+        "translation-es": "el concierto",
+        "translation-fr": "le concert",
+        "translation-tr": "konser",
+        "translation-ro": "concertul",
+        "translation-uz": "konsert",
+        "translation-hi": "संगीत समारोह",
+        "translation-ar": "الحفلة الموسيقية"
+      }
+    ],
+    "tasks": [
+      {
+        "id": 1,
+        "type": "input",
+        "question": "a1SummitTen.questTask1",
+        "correctAnswer": "kommen",
+        "tip": "a1SummitTen.questDescription"
+      },
+      {
+        "id": 2,
+        "type": "input",
+        "question": "a1SummitTen.questTask2",
+        "correctAnswer": "Kochst",
+        "tip": "a1SummitTen.questDescription"
+      },
+      {
+        "id": 3,
+        "type": "input",
+        "question": "a1SummitTen.questTask3",
+        "correctAnswer": "liest",
+        "tip": "a1SummitTen.questDescription"
+      },
+      {
+        "id": 4,
+        "type": "input",
+        "question": "a1SummitTen.questTask4",
+        "correctAnswer": "den",
+        "tip": "a1SummitTen.questDescription"
+      },
+      {
+        "id": 5,
+        "type": "input",
+        "question": "a1SummitTen.questTask5",
+        "correctAnswer": "Seine",
+        "tip": "a1SummitTen.questDescription"
+      },
+      {
+        "id": 6,
+        "type": "input",
+        "question": "a1SummitTen.questTask6",
+        "correctAnswer": "keine",
+        "tip": "a1SummitTen.questDescription"
+      },
+      {
+        "id": 7,
+        "type": "select",
+        "question": "a1SummitTen.questTask7",
+        "options": [
+          "Am Mittwoch habe ich nicht Zeit.",
+          "Am Mittwoch habe ich keine Zeit.",
+          "Am Mittwoch ich habe keine Zeit."
+        ],
+        "answer": "Am Mittwoch habe ich keine Zeit.",
+        "tip": "a1SummitTen.questDescription"
+      },
+      {
+        "id": 8,
+        "type": "select",
+        "question": "a1SummitTen.questTask8",
+        "options": [
+          "Können Sie bitte langsam sprichst?",
+          "Können Sie bitte langsam sprechen?",
+          "Könnt Sie bitte langsam sprechen?"
+        ],
+        "answer": "Können Sie bitte langsam sprechen?",
+        "tip": "a1SummitTen.questDescription"
+      },
+      {
+        "id": 9,
+        "type": "select",
+        "question": "a1SummitTen.questTask9",
+        "options": [
+          "Mein Bruder hast zwei Kinder.",
+          "Mein Bruder hat zwei Kinder.",
+          "Meine Bruder hat zwei Kinder."
+        ],
+        "answer": "Mein Bruder hat zwei Kinder.",
+        "tip": "a1SummitTen.questDescription"
+      },
+      {
+        "id": 10,
+        "type": "select",
+        "question": "a1SummitTen.questTask10",
+        "options": [
+          "Das Konzert fängt um sechs Uhr an.",
+          "Das Konzert fängt am sechs Uhr an.",
+          "Das Konzert anfängt um sechs Uhr."
+        ],
+        "answer": "Das Konzert fängt um sechs Uhr an.",
+        "tip": "a1SummitTen.questDescription"
+      },
+      {
+        "id": 11,
+        "type": "select",
+        "question": "a1SummitTen.questTask11",
+        "options": [
+          "Das Haus gefällt mir.",
+          "Ich gefalle das Haus.",
+          "Das Haus gefallen mir."
+        ],
+        "answer": "Das Haus gefällt mir.",
+        "tip": "a1SummitTen.questDescription"
+      },
+      {
+        "id": 12,
+        "type": "reorder",
+        "question": "a1SummitTen.questTask12",
+        "words": [
+          "Sie",
+          "fahren",
+          "Wohin",
+          "will",
+          "wollen",
+          "im",
+          "am",
+          "Sommer"
+        ],
+        "correctOrder": [
+          "Wohin",
+          "wollen",
+          "Sie",
+          "im",
+          "Sommer",
+          "fahren"
+        ],
+        "tip": "a1SummitTen.questDescription"
+      },
+      {
+        "id": 13,
+        "type": "reorder",
+        "question": "a1SummitTen.questTask13",
+        "words": [
+          "gern",
+          "Ich",
+          "komme",
+          "kommst",
+          "mitkomme",
+          "heute",
+          "mit"
+        ],
+        "correctOrder": [
+          "Ich",
+          "komme",
+          "heute",
+          "gern",
+          "mit"
+        ],
+        "tip": "a1SummitTen.questDescription"
+      },
+      {
+        "id": 14,
+        "type": "readAndAnswer",
+        "question": "a1SummitTen.questTask14",
+        "text": "Liebe Lisa! Morgen habe ich viel Arbeit. Am Morgen muss ich den Arzt anrufen, ich habe Kopfschmerzen. Dann arbeite ich im Büro. Am Abend habe ich Zeit. Wollen wir eine Pizza essen? Deine Anna",
+        "options": [
+          "Sie besucht Lisa.",
+          "Sie muss den Arzt anrufen.",
+          "Sie isst eine Pizza."
+        ],
+        "answer": "Sie muss den Arzt anrufen.",
+        "tip": "a1SummitTen.questDescription"
+      },
+      {
+        "id": 15,
+        "type": "readAndAnswer",
+        "question": "a1SummitTen.questTask15",
+        "text": "Thomas ist im Café. Er nimmt einen Kaffee für drei Euro und ein Stück Kuchen für vier Euro. Dann bezahlt er mit Karte. Der Kellner sagt: Danke und auf Wiedersehen!",
+        "options": [
+          "drei Euro",
+          "sieben Euro",
+          "vier Euro"
+        ],
+        "answer": "sieben Euro",
+        "tip": "a1SummitTen.questDescription"
+      }
+    ]
+  }
+]

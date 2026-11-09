@@ -1,0 +1,2577 @@
+[
+  {
+    "questId": "link-harbor-one",
+    "title": "linkHarborOne.questTitle",
+    "progress": "0/15",
+    "description": "linkHarborOne.questDescription",
+    "conditions": {
+      "goal": "linkHarborOne.questGoal",
+      "minCorrect": 15,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
+    "vocabulary": [
+      {
+        "word": "nicht nur… sondern auch",
+        "translation-ru": "не только… но и",
+        "translation-en": "not only… but also",
+        "translation-uk": "не тільки… а й",
+        "translation-pl": "nie tylko… ale też",
+        "translation-es": "no solo… sino también",
+        "translation-fr": "non seulement… mais aussi",
+        "translation-tr": "sadece… değil… de",
+        "translation-ro": "nu numai… ci și",
+        "translation-uz": "nafaqat… balki… ham",
+        "translation-hi": "न केवल… बल्कि… भी",
+        "translation-ar": "ليس فقط… بل أيضًا"
+      },
+      {
+        "word": "sondern",
+        "translation-ru": "а (не то, а это)",
+        "translation-en": "but (rather)",
+        "translation-uk": "а (не те, а це)",
+        "translation-pl": "lecz, tylko",
+        "translation-es": "sino",
+        "translation-fr": "mais (plutôt)",
+        "translation-tr": "bilakis",
+        "translation-ro": "ci",
+        "translation-uz": "balki",
+        "translation-hi": "बल्कि",
+        "translation-ar": "بل"
+      },
+      {
+        "word": "Spanisch",
+        "translation-ru": "испанский язык",
+        "translation-en": "Spanish",
+        "translation-uk": "іспанська мова",
+        "translation-pl": "hiszpański",
+        "translation-es": "el español",
+        "translation-fr": "l’espagnol",
+        "translation-tr": "İspanyolca",
+        "translation-ro": "spaniola",
+        "translation-uz": "ispan tili",
+        "translation-hi": "स्पेनिश",
+        "translation-ar": "الإسبانية"
+      },
+      {
+        "word": "das Brot",
+        "translation-ru": "хлеб",
+        "translation-en": "bread",
+        "translation-uk": "хліб",
+        "translation-pl": "chleb",
+        "translation-es": "el pan",
+        "translation-fr": "le pain",
+        "translation-tr": "ekmek",
+        "translation-ro": "pâinea",
+        "translation-uz": "non",
+        "translation-hi": "ब्रेड",
+        "translation-ar": "الخبز"
+      },
+      {
+        "word": "Englisch",
+        "translation-ru": "английский язык",
+        "translation-en": "English",
+        "translation-uk": "англійська мова",
+        "translation-pl": "angielski",
+        "translation-es": "el inglés",
+        "translation-fr": "l’anglais",
+        "translation-tr": "İngilizce",
+        "translation-ro": "engleza",
+        "translation-uz": "ingliz tili",
+        "translation-hi": "अंग्रेज़ी",
+        "translation-ar": "الإنجليزية"
+      }
+    ],
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "linkHarborOne.questTask1",
+        "options": [
+          "Er spricht nicht nur Deutsch, oder auch Englisch.",
+          "Er spricht nur nicht Deutsch, sondern auch Englisch.",
+          "Er spricht nicht nur Deutsch, sondern auch Englisch."
+        ],
+        "answer": "Er spricht nicht nur Deutsch, sondern auch Englisch.",
+        "tip": "linkHarborOne.questDescription"
+      },
+      {
+        "id": 2,
+        "type": "input",
+        "question": "linkHarborOne.questTask2",
+        "correctAnswer": "sondern",
+        "tip": "linkHarborOne.questDescription"
+      },
+      {
+        "id": 3,
+        "type": "input",
+        "question": "linkHarborOne.questTask3",
+        "correctAnswer": "nur",
+        "tip": "linkHarborOne.questDescription"
+      },
+      {
+        "id": 4,
+        "type": "reorder",
+        "question": "linkHarborOne.questTask4",
+        "words": [
+          "backen",
+          "aber",
+          "kochen",
+          "nicht",
+          "auch",
+          "Er",
+          "kann",
+          "sondern",
+          "nur"
+        ],
+        "correctOrder": [
+          "Er",
+          "kann",
+          "nicht",
+          "nur",
+          "kochen",
+          "sondern",
+          "auch",
+          "backen"
+        ],
+        "tip": "linkHarborOne.questDescription"
+      },
+      {
+        "id": 5,
+        "type": "select",
+        "question": "linkHarborOne.questTask5",
+        "options": [
+          "Im Urlaub war ich nur nicht am Strand, sondern auch in den Bergen.",
+          "Im Urlaub war ich nicht nur am Strand, sondern auch in den Bergen.",
+          "Im Urlaub war ich nicht nur am Strand, sondern auch in die Berge."
+        ],
+        "answer": "Im Urlaub war ich nicht nur am Strand, sondern auch in den Bergen.",
+        "tip": "linkHarborOne.questDescription"
+      },
+      {
+        "id": 6,
+        "type": "input",
+        "question": "linkHarborOne.questTask6",
+        "correctAnswer": "auch",
+        "tip": "linkHarborOne.questDescription"
+      },
+      {
+        "id": 7,
+        "type": "readAndAnswer",
+        "question": "linkHarborOne.questTask7",
+        "text": "Lisa arbeitet nicht nur in einem Café, sondern auch in einem Hotel. Am Wochenende hat sie frei. Dann trifft sie ihre Freunde.",
+        "options": [
+          "nur in einem Hotel",
+          "in einem Café und in einem Hotel",
+          "nur in einem Café"
+        ],
+        "answer": "in einem Café und in einem Hotel",
+        "tip": "linkHarborOne.questDescription"
+      },
+      {
+        "id": 8,
+        "type": "input",
+        "question": "linkHarborOne.questTask8",
+        "correctAnswer": "nur",
+        "tip": "linkHarborOne.questDescription"
+      },
+      {
+        "id": 9,
+        "type": "reorder",
+        "question": "linkHarborOne.questTask10",
+        "words": [
+          "Tee",
+          "aber",
+          "kein",
+          "ist",
+          "Das",
+          "Kaffee",
+          "sondern"
+        ],
+        "correctOrder": [
+          "Das",
+          "ist",
+          "kein",
+          "Kaffee",
+          "sondern",
+          "Tee"
+        ],
+        "tip": "linkHarborOne.questDescription"
+      },
+      {
+        "id": 10,
+        "type": "select",
+        "question": "linkHarborOne.questTask11",
+        "options": [
+          "Ich komme nicht am Montag, oder am Dienstag.",
+          "Ich komme nicht am Montag, sondern am Dienstag.",
+          "Ich komme nicht am Montag, aber am Dienstag."
+        ],
+        "answer": "Ich komme nicht am Montag, sondern am Dienstag.",
+        "tip": "linkHarborOne.questDescription"
+      },
+      {
+        "id": 11,
+        "type": "input",
+        "question": "questionBridgeEight.questTask9",
+        "correctAnswer": "warte",
+        "tip": "questionBridgeEight.questDescription",
+        "reviewOf": "question-bridge-eight",
+        "reviewLand": "question-bridge"
+      },
+      {
+        "id": 12,
+        "type": "input",
+        "question": "questionBridgeFive.questTask12",
+        "correctAnswer": "ihr",
+        "tip": "questionBridgeFive.questDescription",
+        "reviewOf": "question-bridge-five",
+        "reviewLand": "question-bridge"
+      },
+      {
+        "id": 13,
+        "type": "input",
+        "question": "questionBridgeTwo.questTask13",
+        "correctAnswer": "wem",
+        "tip": "questionBridgeTwo.questDescription",
+        "reviewOf": "question-bridge-two",
+        "reviewLand": "question-bridge"
+      },
+      {
+        "id": 14,
+        "type": "input",
+        "question": "linkHarborOne.questTask14",
+        "correctAnswer": "daran",
+        "tip": "linkHarborOne.questDescription"
+      },
+      {
+        "id": 15,
+        "type": "input",
+        "question": "linkHarborOne.questTask15",
+        "correctAnswer": "kleine",
+        "tip": "linkHarborOne.questDescription"
+      }
+    ]
+  },
+  {
+    "questId": "link-harbor-two",
+    "title": "linkHarborTwo.questTitle",
+    "progress": "0/15",
+    "description": "linkHarborTwo.questDescription",
+    "conditions": {
+      "goal": "linkHarborTwo.questGoal",
+      "minCorrect": 15,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
+    "vocabulary": [
+      {
+        "word": "entweder… oder",
+        "translation-ru": "или… или",
+        "translation-en": "either… or",
+        "translation-uk": "або… або",
+        "translation-pl": "albo… albo",
+        "translation-es": "o… o",
+        "translation-fr": "soit… soit",
+        "translation-tr": "ya… ya da",
+        "translation-ro": "fie… fie",
+        "translation-uz": "yo… yoki",
+        "translation-hi": "या तो… या",
+        "translation-ar": "إمّا… أو"
+      },
+      {
+        "word": "sondern",
+        "translation-ru": "а (не то, а это)",
+        "translation-en": "but (rather)",
+        "translation-uk": "а (не те, а це)",
+        "translation-pl": "lecz, tylko",
+        "translation-es": "sino",
+        "translation-fr": "mais (plutôt)",
+        "translation-tr": "bilakis",
+        "translation-ro": "ci",
+        "translation-uz": "balki",
+        "translation-hi": "बल्कि",
+        "translation-ar": "بل"
+      },
+      {
+        "word": "während",
+        "translation-ru": "пока, в то время как",
+        "translation-en": "while",
+        "translation-uk": "поки, у той час як",
+        "translation-pl": "podczas gdy",
+        "translation-es": "mientras",
+        "translation-fr": "pendant que",
+        "translation-tr": "-iken",
+        "translation-ro": "în timp ce",
+        "translation-uz": "…ayotganda",
+        "translation-hi": "जबकि, जब तक",
+        "translation-ar": "بينما"
+      },
+      {
+        "word": "das Abendessen",
+        "translation-ru": "ужин",
+        "translation-en": "dinner",
+        "translation-uk": "вечеря",
+        "translation-pl": "kolacja",
+        "translation-es": "la cena",
+        "translation-fr": "le dîner",
+        "translation-tr": "akşam yemeği",
+        "translation-ro": "cina",
+        "translation-uz": "kechki ovqat",
+        "translation-hi": "रात का खाना",
+        "translation-ar": "العشاء"
+      },
+      {
+        "word": "der Fisch",
+        "translation-ru": "рыба",
+        "translation-en": "fish",
+        "translation-uk": "риба",
+        "translation-pl": "ryba",
+        "translation-es": "el pescado",
+        "translation-fr": "le poisson",
+        "translation-tr": "balık",
+        "translation-ro": "peștele",
+        "translation-uz": "baliq",
+        "translation-hi": "मछली",
+        "translation-ar": "السمك"
+      }
+    ],
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "linkHarborTwo.questTask1",
+        "options": [
+          "Wir fahren entweder mit dem Zug sondern mit dem Auto.",
+          "Wir fahren entweder mit dem Zug noch mit dem Auto.",
+          "Wir fahren entweder mit dem Zug oder mit dem Auto."
+        ],
+        "answer": "Wir fahren entweder mit dem Zug oder mit dem Auto.",
+        "tip": "linkHarborTwo.questDescription"
+      },
+      {
+        "id": 2,
+        "type": "input",
+        "question": "linkHarborTwo.questTask2",
+        "correctAnswer": "entweder",
+        "tip": "linkHarborTwo.questDescription"
+      },
+      {
+        "id": 3,
+        "type": "input",
+        "question": "linkHarborTwo.questTask3",
+        "correctAnswer": "oder",
+        "tip": "linkHarborTwo.questDescription"
+      },
+      {
+        "id": 4,
+        "type": "reorder",
+        "question": "linkHarborTwo.questTask4",
+        "words": [
+          "Er",
+          "morgen",
+          "heute",
+          "noch",
+          "oder",
+          "kommt",
+          "entweder"
+        ],
+        "correctOrder": [
+          "Er",
+          "kommt",
+          "entweder",
+          "heute",
+          "oder",
+          "morgen"
+        ],
+        "tip": "linkHarborTwo.questDescription"
+      },
+      {
+        "id": 5,
+        "type": "select",
+        "question": "linkHarborTwo.questTask5",
+        "options": [
+          "Sie wohnt oder in Berlin entweder in Hamburg.",
+          "Sie wohnt entweder in Berlin oder in Hamburg.",
+          "Sie wohnt entweder in Berlin noch in Hamburg."
+        ],
+        "answer": "Sie wohnt entweder in Berlin oder in Hamburg.",
+        "tip": "linkHarborTwo.questDescription"
+      },
+      {
+        "id": 6,
+        "type": "input",
+        "question": "linkHarborTwo.questTask6",
+        "correctAnswer": "oder",
+        "tip": "linkHarborTwo.questDescription"
+      },
+      {
+        "id": 7,
+        "type": "readAndAnswer",
+        "question": "linkHarborTwo.questTask7",
+        "text": "Am Wochenende geht Paul entweder ins Kino oder er besucht seine Oma. Wenn es regnet, geht er ins Kino. Wenn die Sonne scheint, fährt er zu seiner Oma.",
+        "options": [
+          "Er geht ins Kino.",
+          "Er bleibt zu Hause.",
+          "Er besucht seine Oma."
+        ],
+        "answer": "Er geht ins Kino.",
+        "tip": "linkHarborTwo.questDescription"
+      },
+      {
+        "id": 8,
+        "type": "input",
+        "question": "linkHarborTwo.questTask8",
+        "correctAnswer": "oder",
+        "tip": "linkHarborTwo.questDescription"
+      },
+      {
+        "id": 9,
+        "type": "reorder",
+        "question": "linkHarborTwo.questTask10",
+        "words": [
+          "Wir",
+          "nach",
+          "nach",
+          "fahren",
+          "Spanien",
+          "noch",
+          "Italien",
+          "entweder",
+          "oder"
+        ],
+        "correctOrder": [
+          "Wir",
+          "fahren",
+          "entweder",
+          "nach",
+          "Italien",
+          "oder",
+          "nach",
+          "Spanien"
+        ],
+        "tip": "linkHarborTwo.questDescription"
+      },
+      {
+        "id": 10,
+        "type": "select",
+        "question": "linkHarborTwo.questTask11",
+        "options": [
+          "Ich rufe dich entweder heute Abend noch morgen an.",
+          "Ich rufe dich entweder heute Abend oder morgen an.",
+          "Ich rufe dich entweder heute Abend oder morgen."
+        ],
+        "answer": "Ich rufe dich entweder heute Abend oder morgen an.",
+        "tip": "linkHarborTwo.questDescription"
+      },
+      {
+        "id": 11,
+        "type": "input",
+        "question": "linkHarborOne.questTask9",
+        "correctAnswer": "sondern",
+        "tip": "linkHarborOne.questDescription",
+        "reviewOf": "link-harbor-one",
+        "reviewLand": "link-harbor"
+      },
+      {
+        "id": 12,
+        "type": "input",
+        "question": "questionBridgeSix.questTask12",
+        "correctAnswer": "darüber",
+        "tip": "questionBridgeSix.questDescription",
+        "reviewOf": "question-bridge-six",
+        "reviewLand": "question-bridge"
+      },
+      {
+        "id": 13,
+        "type": "input",
+        "question": "questionBridgeThree.questTask13",
+        "correctAnswer": "Worauf",
+        "tip": "questionBridgeThree.questDescription",
+        "reviewOf": "question-bridge-three",
+        "reviewLand": "question-bridge"
+      },
+      {
+        "id": 14,
+        "type": "input",
+        "question": "linkHarborTwo.questTask14",
+        "correctAnswer": "sondern",
+        "tip": "linkHarborTwo.questDescription"
+      },
+      {
+        "id": 15,
+        "type": "input",
+        "question": "linkHarborTwo.questTask15",
+        "correctAnswer": "des",
+        "tip": "linkHarborTwo.questDescription"
+      }
+    ]
+  },
+  {
+    "questId": "link-harbor-three",
+    "title": "linkHarborThree.questTitle",
+    "progress": "0/15",
+    "description": "linkHarborThree.questDescription",
+    "conditions": {
+      "goal": "linkHarborThree.questGoal",
+      "minCorrect": 15,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
+    "vocabulary": [
+      {
+        "word": "weder… noch",
+        "translation-ru": "ни… ни",
+        "translation-en": "neither… nor",
+        "translation-uk": "ні… ні",
+        "translation-pl": "ani… ani",
+        "translation-es": "ni… ni",
+        "translation-fr": "ni… ni (ne)",
+        "translation-tr": "ne… ne",
+        "translation-ro": "nici… nici",
+        "translation-uz": "na… na",
+        "translation-hi": "न… न",
+        "translation-ar": "لا… ولا"
+      },
+      {
+        "word": "gewusst",
+        "translation-ru": "знал (Partizip от wissen)",
+        "translation-en": "known (participle of wissen)",
+        "translation-uk": "знав (Partizip від wissen)",
+        "translation-pl": "wiedział (Partizip od wissen)",
+        "translation-es": "sabido (participio de wissen)",
+        "translation-fr": "su (participe de wissen)",
+        "translation-tr": "bilmiş (wissen’in Partizip’i)",
+        "translation-ro": "știut (participiul lui wissen)",
+        "translation-uz": "bilgan (wissen dan Partizip)",
+        "translation-hi": "जाना (wissen का Partizip)",
+        "translation-ar": "عَلِم (اسم مفعول wissen)"
+      },
+      {
+        "word": "kennen",
+        "translation-ru": "знать",
+        "translation-en": "to know",
+        "translation-uk": "знати",
+        "translation-pl": "znać",
+        "translation-es": "conocer",
+        "translation-fr": "connaître",
+        "translation-tr": "tanımak / bilmek",
+        "translation-ro": "a cunoaște",
+        "translation-uz": "tanimoq",
+        "translation-hi": "जानना",
+        "translation-ar": "يعرف"
+      },
+      {
+        "word": "die Nummer",
+        "translation-ru": "номер",
+        "translation-en": "number",
+        "translation-uk": "номер",
+        "translation-pl": "numer",
+        "translation-es": "el número",
+        "translation-fr": "le numéro",
+        "translation-tr": "numara",
+        "translation-ro": "numărul",
+        "translation-uz": "raqam",
+        "translation-hi": "नंबर",
+        "translation-ar": "الرقم"
+      },
+      {
+        "word": "Französisch",
+        "translation-ru": "французский язык",
+        "translation-en": "French",
+        "translation-uk": "французька мова",
+        "translation-pl": "francuski",
+        "translation-es": "el francés",
+        "translation-fr": "le français",
+        "translation-tr": "Fransızca",
+        "translation-ro": "franceza",
+        "translation-uz": "fransuz tili",
+        "translation-hi": "फ़्रेंच",
+        "translation-ar": "الفرنسية"
+      }
+    ],
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "linkHarborThree.questTask1",
+        "options": [
+          "Ich trinke weder Kaffee oder Tee.",
+          "Ich trinke nicht weder Kaffee noch Tee.",
+          "Ich trinke weder Kaffee noch Tee."
+        ],
+        "answer": "Ich trinke weder Kaffee noch Tee.",
+        "tip": "linkHarborThree.questDescription"
+      },
+      {
+        "id": 2,
+        "type": "input",
+        "question": "linkHarborThree.questTask2",
+        "correctAnswer": "noch",
+        "tip": "linkHarborThree.questDescription"
+      },
+      {
+        "id": 3,
+        "type": "input",
+        "question": "linkHarborThree.questTask3",
+        "correctAnswer": "weder",
+        "tip": "linkHarborThree.questDescription"
+      },
+      {
+        "id": 4,
+        "type": "reorder",
+        "question": "linkHarborThree.questTask4",
+        "words": [
+          "Rom",
+          "in",
+          "noch",
+          "waren",
+          "Paris",
+          "Wir",
+          "oder",
+          "in",
+          "weder"
+        ],
+        "correctOrder": [
+          "Wir",
+          "waren",
+          "weder",
+          "in",
+          "Rom",
+          "noch",
+          "in",
+          "Paris"
+        ],
+        "tip": "linkHarborThree.questDescription"
+      },
+      {
+        "id": 5,
+        "type": "select",
+        "question": "linkHarborThree.questTask5",
+        "options": [
+          "Heute ist es weder kalt noch heiß.",
+          "Heute ist es nicht weder kalt noch heiß.",
+          "Heute ist es weder kalt oder heiß."
+        ],
+        "answer": "Heute ist es weder kalt noch heiß.",
+        "tip": "linkHarborThree.questDescription"
+      },
+      {
+        "id": 6,
+        "type": "input",
+        "question": "linkHarborThree.questTask6",
+        "correctAnswer": "noch",
+        "tip": "linkHarborThree.questDescription"
+      },
+      {
+        "id": 7,
+        "type": "readAndAnswer",
+        "question": "linkHarborThree.questTask7",
+        "text": "Herr Wolf isst kein Fleisch und keinen Fisch. Er trinkt weder Kaffee noch Wein. Am liebsten trinkt er grünen Tee.",
+        "options": [
+          "Wein",
+          "grünen Tee",
+          "Kaffee"
+        ],
+        "answer": "grünen Tee",
+        "tip": "linkHarborThree.questDescription"
+      },
+      {
+        "id": 8,
+        "type": "input",
+        "question": "linkHarborThree.questTask8",
+        "correctAnswer": "noch",
+        "tip": "linkHarborThree.questDescription"
+      },
+      {
+        "id": 9,
+        "type": "reorder",
+        "question": "linkHarborThree.questTask10",
+        "words": [
+          "weder",
+          "oder",
+          "noch",
+          "liest",
+          "Er",
+          "Zeitungen",
+          "Bücher"
+        ],
+        "correctOrder": [
+          "Er",
+          "liest",
+          "weder",
+          "Bücher",
+          "noch",
+          "Zeitungen"
+        ],
+        "tip": "linkHarborThree.questDescription"
+      },
+      {
+        "id": 10,
+        "type": "select",
+        "question": "linkHarborThree.questTask11",
+        "options": [
+          "Das Hotel war weder schön noch billig.",
+          "Das Hotel war weder schön oder billig.",
+          "Das Hotel war entweder schön noch billig."
+        ],
+        "answer": "Das Hotel war weder schön noch billig.",
+        "tip": "linkHarborThree.questDescription"
+      },
+      {
+        "id": 11,
+        "type": "input",
+        "question": "linkHarborTwo.questTask9",
+        "correctAnswer": "oder",
+        "tip": "linkHarborTwo.questDescription",
+        "reviewOf": "link-harbor-two",
+        "reviewLand": "link-harbor"
+      },
+      {
+        "id": 12,
+        "type": "input",
+        "question": "questionBridgeSeven.questTask12",
+        "correctAnswer": "über",
+        "tip": "questionBridgeSeven.questDescription",
+        "reviewOf": "question-bridge-seven",
+        "reviewLand": "question-bridge"
+      },
+      {
+        "id": 13,
+        "type": "input",
+        "question": "questionBridgeFour.questTask13",
+        "correctAnswer": "darum",
+        "tip": "questionBridgeFour.questDescription",
+        "reviewOf": "question-bridge-four",
+        "reviewLand": "question-bridge"
+      },
+      {
+        "id": 14,
+        "type": "input",
+        "question": "linkHarborThree.questTask14",
+        "correctAnswer": "oder",
+        "tip": "linkHarborThree.questDescription"
+      },
+      {
+        "id": 15,
+        "type": "input",
+        "question": "linkHarborThree.questTask15",
+        "correctAnswer": "wäre",
+        "tip": "linkHarborThree.questDescription"
+      }
+    ]
+  },
+  {
+    "questId": "link-harbor-four",
+    "title": "linkHarborFour.questTitle",
+    "progress": "0/15",
+    "description": "linkHarborFour.questDescription",
+    "conditions": {
+      "goal": "linkHarborFour.questGoal",
+      "minCorrect": 15,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
+    "vocabulary": [
+      {
+        "word": "je… desto",
+        "translation-ru": "чем… тем",
+        "translation-en": "the… the",
+        "translation-uk": "чим… тим",
+        "translation-pl": "im… tym",
+        "translation-es": "cuanto… más",
+        "translation-fr": "plus… plus",
+        "translation-tr": "ne kadar… o kadar",
+        "translation-ro": "cu cât… cu atât",
+        "translation-uz": "qancha… shuncha",
+        "translation-hi": "जितना… उतना",
+        "translation-ar": "كلما… كلما"
+      },
+      {
+        "word": "schneller",
+        "translation-ru": "быстрее",
+        "translation-en": "faster",
+        "translation-uk": "швидше",
+        "translation-pl": "szybciej",
+        "translation-es": "más rápido",
+        "translation-fr": "plus vite",
+        "translation-tr": "daha hızlı",
+        "translation-ro": "mai repede",
+        "translation-uz": "tezroq",
+        "translation-hi": "ज़्यादा जल्दी",
+        "translation-ar": "أسرع"
+      },
+      {
+        "word": "deshalb",
+        "translation-ru": "поэтому",
+        "translation-en": "that’s why",
+        "translation-uk": "тому",
+        "translation-pl": "dlatego",
+        "translation-es": "por eso",
+        "translation-fr": "c’est pourquoi",
+        "translation-tr": "bu yüzden",
+        "translation-ro": "de aceea",
+        "translation-uz": "shuning uchun",
+        "translation-hi": "इसलिए",
+        "translation-ar": "لذلك"
+      },
+      {
+        "word": "man",
+        "translation-ru": "люди вообще (безличное)",
+        "translation-en": "one, people (impersonal)",
+        "translation-uk": "люди взагалі (безособове)",
+        "translation-pl": "się (bezosobowo)",
+        "translation-es": "se, uno",
+        "translation-fr": "on",
+        "translation-tr": "insan (genel)",
+        "translation-ro": "se (impersonal)",
+        "translation-uz": "kishi (umumiy)",
+        "translation-hi": "लोग (आम तौर पर)",
+        "translation-ar": "المرء"
+      },
+      {
+        "word": "wärmer",
+        "translation-ru": "теплее",
+        "translation-en": "warmer",
+        "translation-uk": "тепліше",
+        "translation-pl": "cieplej",
+        "translation-es": "más cálido",
+        "translation-fr": "plus chaud",
+        "translation-tr": "daha sıcak",
+        "translation-ro": "mai cald",
+        "translation-uz": "iliqroq",
+        "translation-hi": "ज़्यादा गरम",
+        "translation-ar": "أدفأ"
+      }
+    ],
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "linkHarborFour.questTask1",
+        "options": [
+          "Je mehr lerne ich, desto besser spreche ich.",
+          "Je mehr ich lerne, desto besser ich spreche.",
+          "Je mehr ich lerne, desto besser spreche ich."
+        ],
+        "answer": "Je mehr ich lerne, desto besser spreche ich.",
+        "tip": "linkHarborFour.questDescription"
+      },
+      {
+        "id": 2,
+        "type": "input",
+        "question": "linkHarborFour.questTask2",
+        "correctAnswer": "desto",
+        "tip": "linkHarborFour.questDescription"
+      },
+      {
+        "id": 3,
+        "type": "input",
+        "question": "linkHarborFour.questTask3",
+        "correctAnswer": "ruhiger",
+        "tip": "linkHarborFour.questDescription"
+      },
+      {
+        "id": 4,
+        "type": "reorder",
+        "question": "linkHarborFour.questTask4",
+        "words": [
+          "länger",
+          "müder",
+          "desto",
+          "wird",
+          "Je",
+          "ich",
+          "werde",
+          "warte",
+          "ich"
+        ],
+        "correctOrder": [
+          "Je",
+          "länger",
+          "ich",
+          "warte",
+          "desto",
+          "müder",
+          "werde",
+          "ich"
+        ],
+        "tip": "linkHarborFour.questDescription"
+      },
+      {
+        "id": 5,
+        "type": "select",
+        "question": "linkHarborFour.questTask5",
+        "options": [
+          "Je wärmer ist das Wetter, desto lieber gehe ich schwimmen.",
+          "Je wärmer das Wetter ist, desto lieber gehe ich schwimmen.",
+          "Je wärmer das Wetter ist, desto lieber ich gehe schwimmen."
+        ],
+        "answer": "Je wärmer das Wetter ist, desto lieber gehe ich schwimmen.",
+        "tip": "linkHarborFour.questDescription"
+      },
+      {
+        "id": 6,
+        "type": "input",
+        "question": "linkHarborFour.questTask6",
+        "correctAnswer": "teurer",
+        "tip": "linkHarborFour.questDescription"
+      },
+      {
+        "id": 7,
+        "type": "readAndAnswer",
+        "question": "linkHarborFour.questTask7",
+        "text": "Mein Opa sagt immer: „Je älter man wird, desto wichtiger ist die Familie.“ Deshalb besucht er uns jeden Sonntag.",
+        "options": [
+          "die Familie",
+          "das Geld",
+          "die Arbeit"
+        ],
+        "answer": "die Familie",
+        "tip": "linkHarborFour.questDescription"
+      },
+      {
+        "id": 8,
+        "type": "input",
+        "question": "linkHarborFour.questTask8",
+        "correctAnswer": "läufst",
+        "tip": "linkHarborFour.questDescription"
+      },
+      {
+        "id": 9,
+        "type": "reorder",
+        "question": "linkHarborFour.questTask10",
+        "words": [
+          "Party",
+          "Leute",
+          "die",
+          "mehr",
+          "Je",
+          "desto",
+          "ist",
+          "kommt",
+          "kommen",
+          "schöner"
+        ],
+        "correctOrder": [
+          "Je",
+          "mehr",
+          "Leute",
+          "kommen",
+          "desto",
+          "schöner",
+          "ist",
+          "die",
+          "Party"
+        ],
+        "tip": "linkHarborFour.questDescription"
+      },
+      {
+        "id": 10,
+        "type": "select",
+        "question": "linkHarborFour.questTask11",
+        "options": [
+          "Je besser das Wetter ist, je mehr Leute sind im Park.",
+          "Je besser das Wetter ist, desto mehr Leute sind im Park.",
+          "Je besser das Wetter ist, desto mehr Leute im Park sind."
+        ],
+        "answer": "Je besser das Wetter ist, desto mehr Leute sind im Park.",
+        "tip": "linkHarborFour.questDescription"
+      },
+      {
+        "id": 11,
+        "type": "input",
+        "question": "linkHarborThree.questTask9",
+        "correctAnswer": "weder",
+        "tip": "linkHarborThree.questDescription",
+        "reviewOf": "link-harbor-three",
+        "reviewLand": "link-harbor"
+      },
+      {
+        "id": 12,
+        "type": "input",
+        "question": "questionBridgeEight.questTask12",
+        "correctAnswer": "auf",
+        "tip": "questionBridgeEight.questDescription",
+        "reviewOf": "question-bridge-eight",
+        "reviewLand": "question-bridge"
+      },
+      {
+        "id": 13,
+        "type": "input",
+        "question": "questionBridgeFive.questTask13",
+        "correctAnswer": "darüber",
+        "tip": "questionBridgeFive.questDescription",
+        "reviewOf": "question-bridge-five",
+        "reviewLand": "question-bridge"
+      },
+      {
+        "id": 14,
+        "type": "input",
+        "question": "linkHarborFour.questTask14",
+        "correctAnswer": "noch",
+        "tip": "linkHarborFour.questDescription"
+      },
+      {
+        "id": 15,
+        "type": "input",
+        "question": "linkHarborFour.questTask15",
+        "correctAnswer": "Worüber",
+        "tip": "linkHarborFour.questDescription"
+      }
+    ]
+  },
+  {
+    "questId": "link-harbor-five",
+    "title": "linkHarborFive.questTitle",
+    "progress": "0/15",
+    "description": "linkHarborFive.questDescription",
+    "conditions": {
+      "goal": "linkHarborFive.questGoal",
+      "minCorrect": 15,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
+    "vocabulary": [
+      {
+        "word": "statt… zu",
+        "translation-ru": "вместо того чтобы",
+        "translation-en": "instead of …ing",
+        "translation-uk": "замість того щоб",
+        "translation-pl": "zamiast",
+        "translation-es": "en lugar de",
+        "translation-fr": "au lieu de",
+        "translation-tr": "…mek yerine",
+        "translation-ro": "în loc să",
+        "translation-uz": "…ish o‘rniga",
+        "translation-hi": "… के बजाय",
+        "translation-ar": "بدلًا من"
+      },
+      {
+        "word": "sondern",
+        "translation-ru": "а (не то, а это)",
+        "translation-en": "but (rather)",
+        "translation-uk": "а (не те, а це)",
+        "translation-pl": "lecz, tylko",
+        "translation-es": "sino",
+        "translation-fr": "mais (plutôt)",
+        "translation-tr": "bilakis",
+        "translation-ro": "ci",
+        "translation-uz": "balki",
+        "translation-hi": "बल्कि",
+        "translation-ar": "بل"
+      },
+      {
+        "word": "leicht",
+        "translation-ru": "лёгкий",
+        "translation-en": "light, easy",
+        "translation-uk": "легкий",
+        "translation-pl": "lekki, łatwy",
+        "translation-es": "ligero, fácil",
+        "translation-fr": "léger, facile",
+        "translation-tr": "hafif, kolay",
+        "translation-ro": "ușor",
+        "translation-uz": "yengil, oson",
+        "translation-hi": "हल्का, आसान",
+        "translation-ar": "خفيف، سهل"
+      },
+      {
+        "word": "der Fuß",
+        "translation-ru": "стопа",
+        "translation-en": "foot",
+        "translation-uk": "стопа",
+        "translation-pl": "stopa",
+        "translation-es": "el pie",
+        "translation-fr": "le pied",
+        "translation-tr": "ayak",
+        "translation-ro": "laba piciorului",
+        "translation-uz": "oyoq panjasi",
+        "translation-hi": "पैर",
+        "translation-ar": "القدم"
+      },
+      {
+        "word": "der Preis",
+        "translation-ru": "цена",
+        "translation-en": "price",
+        "translation-uk": "ціна",
+        "translation-pl": "cena",
+        "translation-es": "el precio",
+        "translation-fr": "le prix",
+        "translation-tr": "fiyat",
+        "translation-ro": "prețul",
+        "translation-uz": "narx",
+        "translation-hi": "क़ीमत",
+        "translation-ar": "السعر"
+      }
+    ],
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "linkHarborFive.questTask1",
+        "options": [
+          "Er spielt, statt zu lernt.",
+          "Er spielt, statt lernen.",
+          "Er spielt, statt zu lernen."
+        ],
+        "answer": "Er spielt, statt zu lernen.",
+        "tip": "linkHarborFive.questDescription"
+      },
+      {
+        "id": 2,
+        "type": "input",
+        "question": "linkHarborFive.questTask2",
+        "correctAnswer": "Statt",
+        "tip": "linkHarborFive.questDescription"
+      },
+      {
+        "id": 3,
+        "type": "input",
+        "question": "linkHarborFive.questTask3",
+        "correctAnswer": "ohne",
+        "tip": "linkHarborFive.questDescription"
+      },
+      {
+        "id": 4,
+        "type": "reorder",
+        "question": "linkHarborFive.questTask4",
+        "words": [
+          "ohne",
+          "zu",
+          "dem",
+          "mit",
+          "er",
+          "geht",
+          "fahren",
+          "Fuß",
+          "zu",
+          "Statt",
+          "Auto"
+        ],
+        "correctOrder": [
+          "Statt",
+          "mit",
+          "dem",
+          "Auto",
+          "zu",
+          "fahren",
+          "geht",
+          "er",
+          "zu",
+          "Fuß"
+        ],
+        "tip": "linkHarborFive.questDescription"
+      },
+      {
+        "id": 5,
+        "type": "select",
+        "question": "linkHarborFive.questTask5",
+        "options": [
+          "Statt zu kochen, haben wir Pizza bestellt.",
+          "Statt kochen, haben wir Pizza bestellt.",
+          "Statt zu kochen, wir haben Pizza bestellt."
+        ],
+        "answer": "Statt zu kochen, haben wir Pizza bestellt.",
+        "tip": "linkHarborFive.questDescription"
+      },
+      {
+        "id": 6,
+        "type": "input",
+        "question": "linkHarborFive.questTask6",
+        "correctAnswer": "fernzusehen",
+        "tip": "linkHarborFive.questDescription"
+      },
+      {
+        "id": 7,
+        "type": "readAndAnswer",
+        "question": "linkHarborFive.questTask7",
+        "text": "Gestern hatte Max eine Prüfung. Statt zu lernen, hat er am Abend vorher Fußball gesehen. Jetzt ärgert er sich darüber.",
+        "options": [
+          "Er hat Fußball gesehen.",
+          "Er hat geschlafen.",
+          "Er hat gelernt."
+        ],
+        "answer": "Er hat Fußball gesehen.",
+        "tip": "linkHarborFive.questDescription"
+      },
+      {
+        "id": 8,
+        "type": "input",
+        "question": "linkHarborFive.questTask8",
+        "correctAnswer": "ohne",
+        "tip": "linkHarborFive.questDescription"
+      },
+      {
+        "id": 9,
+        "type": "reorder",
+        "question": "linkHarborFive.questTask10",
+        "words": [
+          "fern",
+          "schlafen",
+          "ohne",
+          "zu",
+          "sieht",
+          "Er",
+          "statt"
+        ],
+        "correctOrder": [
+          "Er",
+          "sieht",
+          "fern",
+          "statt",
+          "zu",
+          "schlafen"
+        ],
+        "tip": "linkHarborFive.questDescription"
+      },
+      {
+        "id": 10,
+        "type": "select",
+        "question": "linkHarborFive.questTask11",
+        "options": [
+          "Sie ist zur Arbeit gegangen, ohne zu frühstücken.",
+          "Sie ist zur Arbeit gegangen, ohne frühstücken.",
+          "Sie ist zur Arbeit gegangen, statt zu frühstücken."
+        ],
+        "answer": "Sie ist zur Arbeit gegangen, ohne zu frühstücken.",
+        "tip": "linkHarborFive.questDescription"
+      },
+      {
+        "id": 11,
+        "type": "input",
+        "question": "linkHarborFour.questTask9",
+        "correctAnswer": "weniger",
+        "tip": "linkHarborFour.questDescription",
+        "reviewOf": "link-harbor-four",
+        "reviewLand": "link-harbor"
+      },
+      {
+        "id": 12,
+        "type": "input",
+        "question": "linkHarborOne.questTask12",
+        "correctAnswer": "sondern",
+        "tip": "linkHarborOne.questDescription",
+        "reviewOf": "link-harbor-one",
+        "reviewLand": "link-harbor"
+      },
+      {
+        "id": 13,
+        "type": "input",
+        "question": "questionBridgeSix.questTask13",
+        "correctAnswer": "darum",
+        "tip": "questionBridgeSix.questDescription",
+        "reviewOf": "question-bridge-six",
+        "reviewLand": "question-bridge"
+      },
+      {
+        "id": 14,
+        "type": "input",
+        "question": "linkHarborFive.questTask14",
+        "correctAnswer": "besser",
+        "tip": "linkHarborFive.questDescription"
+      },
+      {
+        "id": 15,
+        "type": "input",
+        "question": "linkHarborFive.questTask15",
+        "correctAnswer": "guten",
+        "tip": "linkHarborFive.questDescription"
+      }
+    ]
+  },
+  {
+    "questId": "link-harbor-six",
+    "title": "linkHarborSix.questTitle",
+    "progress": "0/15",
+    "description": "linkHarborSix.questDescription",
+    "conditions": {
+      "goal": "linkHarborSix.questGoal",
+      "minCorrect": 15,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
+    "vocabulary": [
+      {
+        "word": "seitdem",
+        "translation-ru": "с тех пор как",
+        "translation-en": "since",
+        "translation-uk": "відтоді як",
+        "translation-pl": "odkąd",
+        "translation-es": "desde que",
+        "translation-fr": "depuis que",
+        "translation-tr": "…den beri",
+        "translation-ro": "de când",
+        "translation-uz": "…dan beri",
+        "translation-hi": "जब से",
+        "translation-ar": "منذ أن"
+      },
+      {
+        "word": "bis",
+        "translation-ru": "пока не, до тех пор пока",
+        "translation-en": "until",
+        "translation-uk": "доки не",
+        "translation-pl": "aż, dopóki nie",
+        "translation-es": "hasta que",
+        "translation-fr": "jusqu’à ce que",
+        "translation-tr": "…e kadar",
+        "translation-ro": "până când",
+        "translation-uz": "…guncha",
+        "translation-hi": "जब तक",
+        "translation-ar": "حتى"
+      },
+      {
+        "word": "sobald",
+        "translation-ru": "как только",
+        "translation-en": "as soon as",
+        "translation-uk": "щойно, як тільки",
+        "translation-pl": "jak tylko",
+        "translation-es": "en cuanto",
+        "translation-fr": "dès que",
+        "translation-tr": "…ir …mez",
+        "translation-ro": "imediat ce",
+        "translation-uz": "…ishi bilan",
+        "translation-hi": "जैसे ही",
+        "translation-ar": "بمجرد أن"
+      },
+      {
+        "word": "selten",
+        "translation-ru": "редко",
+        "translation-en": "rarely",
+        "translation-uk": "рідко",
+        "translation-pl": "rzadko",
+        "translation-es": "raramente",
+        "translation-fr": "rarement",
+        "translation-tr": "nadiren",
+        "translation-ro": "rar",
+        "translation-uz": "kamdan-kam",
+        "translation-hi": "शायद ही कभी",
+        "translation-ar": "نادرًا"
+      },
+      {
+        "word": "das Ende",
+        "translation-ru": "конец",
+        "translation-en": "end",
+        "translation-uk": "кінець",
+        "translation-pl": "koniec",
+        "translation-es": "el final",
+        "translation-fr": "la fin",
+        "translation-tr": "son",
+        "translation-ro": "sfârșitul",
+        "translation-uz": "oxir",
+        "translation-hi": "अंत",
+        "translation-ar": "النهاية"
+      }
+    ],
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "linkHarborSix.questTask1",
+        "options": [
+          "Seitdem ich wohne in Berlin, spreche ich viel Deutsch.",
+          "Seitdem ich in Berlin wohne, ich spreche viel Deutsch.",
+          "Seitdem ich in Berlin wohne, spreche ich viel Deutsch."
+        ],
+        "answer": "Seitdem ich in Berlin wohne, spreche ich viel Deutsch.",
+        "tip": "linkHarborSix.questDescription"
+      },
+      {
+        "id": 2,
+        "type": "input",
+        "question": "linkHarborSix.questTask2",
+        "correctAnswer": "bis",
+        "tip": "linkHarborSix.questDescription"
+      },
+      {
+        "id": 3,
+        "type": "input",
+        "question": "linkHarborSix.questTask3",
+        "correctAnswer": "Sobald",
+        "tip": "linkHarborSix.questDescription"
+      },
+      {
+        "id": 4,
+        "type": "reorder",
+        "question": "linkHarborSix.questTask4",
+        "words": [
+          "spazieren",
+          "viel",
+          "er",
+          "Hund",
+          "er",
+          "bis",
+          "hat",
+          "Seitdem",
+          "geht",
+          "einen"
+        ],
+        "correctOrder": [
+          "Seitdem",
+          "er",
+          "einen",
+          "Hund",
+          "hat",
+          "geht",
+          "er",
+          "viel",
+          "spazieren"
+        ],
+        "tip": "linkHarborSix.questDescription"
+      },
+      {
+        "id": 5,
+        "type": "select",
+        "question": "linkHarborSix.questTask5",
+        "options": [
+          "Wir warten, bis der Regen hört auf.",
+          "Wir warten, seitdem der Regen aufhört.",
+          "Wir warten, bis der Regen aufhört."
+        ],
+        "answer": "Wir warten, bis der Regen aufhört.",
+        "tip": "linkHarborSix.questDescription"
+      },
+      {
+        "id": 6,
+        "type": "input",
+        "question": "linkHarborSix.questTask6",
+        "correctAnswer": "gehen",
+        "tip": "linkHarborSix.questDescription"
+      },
+      {
+        "id": 7,
+        "type": "readAndAnswer",
+        "question": "linkHarborSix.questTask7",
+        "text": "Seitdem Anna in Wien arbeitet, sieht sie ihre Familie selten. Sobald sie Urlaub hat, fährt sie nach Hause zu ihren Eltern.",
+        "options": [
+          "Sie bleibt in Wien.",
+          "Sie fährt zu ihren Eltern.",
+          "Sie arbeitet in Wien."
+        ],
+        "answer": "Sie fährt zu ihren Eltern.",
+        "tip": "linkHarborSix.questDescription"
+      },
+      {
+        "id": 8,
+        "type": "input",
+        "question": "linkHarborSix.questTask8",
+        "correctAnswer": "bis",
+        "tip": "linkHarborSix.questDescription"
+      },
+      {
+        "id": 9,
+        "type": "reorder",
+        "question": "linkHarborSix.questTask10",
+        "words": [
+          "an",
+          "mich",
+          "Ruf",
+          "ankommst",
+          "du",
+          "seitdem",
+          "sobald"
+        ],
+        "correctOrder": [
+          "Ruf",
+          "mich",
+          "an",
+          "sobald",
+          "du",
+          "ankommst"
+        ],
+        "tip": "linkHarborSix.questDescription"
+      },
+      {
+        "id": 10,
+        "type": "select",
+        "question": "linkHarborSix.questTask11",
+        "options": [
+          "Seitdem er nicht mehr raucht, er fühlt sich besser.",
+          "Seitdem er nicht mehr raucht, fühlt er sich besser.",
+          "Seitdem er raucht nicht mehr, fühlt er sich besser."
+        ],
+        "answer": "Seitdem er nicht mehr raucht, fühlt er sich besser.",
+        "tip": "linkHarborSix.questDescription"
+      },
+      {
+        "id": 11,
+        "type": "input",
+        "question": "linkHarborFive.questTask9",
+        "correctAnswer": "Statt",
+        "tip": "linkHarborFive.questDescription",
+        "reviewOf": "link-harbor-five",
+        "reviewLand": "link-harbor"
+      },
+      {
+        "id": 12,
+        "type": "input",
+        "question": "linkHarborTwo.questTask12",
+        "correctAnswer": "entweder",
+        "tip": "linkHarborTwo.questDescription",
+        "reviewOf": "link-harbor-two",
+        "reviewLand": "link-harbor"
+      },
+      {
+        "id": 13,
+        "type": "input",
+        "question": "questionBridgeSeven.questTask13",
+        "correctAnswer": "Denkst",
+        "tip": "questionBridgeSeven.questDescription",
+        "reviewOf": "question-bridge-seven",
+        "reviewLand": "question-bridge"
+      },
+      {
+        "id": 14,
+        "type": "input",
+        "question": "linkHarborSix.questTask14",
+        "correctAnswer": "ohne",
+        "tip": "linkHarborSix.questDescription"
+      },
+      {
+        "id": 15,
+        "type": "input",
+        "question": "linkHarborSix.questTask15",
+        "correctAnswer": "darauf",
+        "tip": "linkHarborSix.questDescription"
+      }
+    ]
+  },
+  {
+    "questId": "link-harbor-seven",
+    "title": "linkHarborSeven.questTitle",
+    "progress": "0/15",
+    "description": "linkHarborSeven.questDescription",
+    "conditions": {
+      "goal": "linkHarborSeven.questGoal",
+      "minCorrect": 15,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
+    "vocabulary": [
+      {
+        "word": "der Beruf",
+        "translation-ru": "профессия",
+        "translation-en": "profession, job",
+        "translation-uk": "професія",
+        "translation-pl": "zawód",
+        "translation-es": "la profesión",
+        "translation-fr": "le métier",
+        "translation-tr": "meslek",
+        "translation-ro": "meseria",
+        "translation-uz": "kasb",
+        "translation-hi": "पेशा",
+        "translation-ar": "المهنة"
+      },
+      {
+        "word": "die Ausbildung",
+        "translation-ru": "профессиональное обучение",
+        "translation-en": "vocational training",
+        "translation-uk": "професійне навчання",
+        "translation-pl": "kształcenie zawodowe",
+        "translation-es": "la formación profesional",
+        "translation-fr": "la formation",
+        "translation-tr": "meslek eğitimi",
+        "translation-ro": "formarea profesională",
+        "translation-uz": "kasbiy ta’lim",
+        "translation-hi": "प्रशिक्षण",
+        "translation-ar": "التدريب المهني"
+      },
+      {
+        "word": "studieren",
+        "translation-ru": "учиться в вузе",
+        "translation-en": "to study (at university)",
+        "translation-uk": "навчатися у виші",
+        "translation-pl": "studiować",
+        "translation-es": "estudiar (en la universidad)",
+        "translation-fr": "faire des études",
+        "translation-tr": "üniversitede okumak",
+        "translation-ro": "a studia",
+        "translation-uz": "oliygohda o‘qimoq",
+        "translation-hi": "पढ़ाई करना",
+        "translation-ar": "يدرس في الجامعة"
+      },
+      {
+        "word": "verdienen",
+        "translation-ru": "зарабатывать",
+        "translation-en": "to earn",
+        "translation-uk": "заробляти",
+        "translation-pl": "zarabiać",
+        "translation-es": "ganar (dinero)",
+        "translation-fr": "gagner (de l’argent)",
+        "translation-tr": "kazanmak",
+        "translation-ro": "a câștiga",
+        "translation-uz": "ishlab topmoq",
+        "translation-hi": "कमाना",
+        "translation-ar": "يكسب"
+      },
+      {
+        "word": "der Koch",
+        "translation-ru": "повар",
+        "translation-en": "cook, chef",
+        "translation-uk": "кухар",
+        "translation-pl": "kucharz",
+        "translation-es": "el cocinero",
+        "translation-fr": "le cuisinier",
+        "translation-tr": "aşçı",
+        "translation-ro": "bucătarul",
+        "translation-uz": "oshpaz",
+        "translation-hi": "रसोइया",
+        "translation-ar": "الطباخ"
+      }
+    ],
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "linkHarborSeven.questTask1",
+        "options": [
+          "Er will weder studieren oder eine Ausbildung machen.",
+          "Er will entweder studieren noch eine Ausbildung machen.",
+          "Er will entweder studieren oder eine Ausbildung machen."
+        ],
+        "answer": "Er will entweder studieren oder eine Ausbildung machen.",
+        "tip": "linkHarborSeven.questDescription"
+      },
+      {
+        "id": 2,
+        "type": "input",
+        "question": "linkHarborSeven.questTask2",
+        "correctAnswer": "sondern",
+        "tip": "linkHarborSeven.questDescription"
+      },
+      {
+        "id": 3,
+        "type": "input",
+        "question": "linkHarborSeven.questTask3",
+        "correctAnswer": "noch",
+        "tip": "linkHarborSeven.questDescription"
+      },
+      {
+        "id": 4,
+        "type": "reorder",
+        "question": "linkHarborSeven.questTask4",
+        "words": [
+          "mehr",
+          "ich",
+          "arbeite",
+          "dann",
+          "verdiene",
+          "Je",
+          "desto",
+          "mehr",
+          "ich"
+        ],
+        "correctOrder": [
+          "Je",
+          "mehr",
+          "ich",
+          "arbeite",
+          "desto",
+          "mehr",
+          "verdiene",
+          "ich"
+        ],
+        "tip": "linkHarborSeven.questDescription"
+      },
+      {
+        "id": 5,
+        "type": "select",
+        "question": "linkHarborSeven.questTask5",
+        "options": [
+          "Das Kind singt nicht nur, aber tanzt auch.",
+          "Das Kind singt nicht nur, sondern auch tanzt.",
+          "Das Kind singt nicht nur, sondern tanzt auch."
+        ],
+        "answer": "Das Kind singt nicht nur, sondern tanzt auch.",
+        "tip": "linkHarborSeven.questDescription"
+      },
+      {
+        "id": 6,
+        "type": "input",
+        "question": "linkHarborSeven.questTask6",
+        "correctAnswer": "desto",
+        "tip": "linkHarborSeven.questDescription"
+      },
+      {
+        "id": 7,
+        "type": "readAndAnswer",
+        "question": "linkHarborSeven.questTask7",
+        "text": "Lena ist 18 und muss einen Beruf wählen. Sie möchte weder studieren noch im Büro arbeiten. Sie kocht nicht nur gern, sondern auch sehr gut. Deshalb macht sie eine Ausbildung als Köchin. Je mehr sie kocht, desto glücklicher ist sie.",
+        "options": [
+          "Sie kocht gern und gut.",
+          "Ihre Mutter ist Köchin.",
+          "Sie will viel verdienen."
+        ],
+        "answer": "Sie kocht gern und gut.",
+        "tip": "linkHarborSeven.questDescription"
+      },
+      {
+        "id": 8,
+        "type": "input",
+        "question": "linkHarborSeven.questTask8",
+        "correctAnswer": "oder",
+        "tip": "linkHarborSeven.questDescription"
+      },
+      {
+        "id": 9,
+        "type": "reorder",
+        "question": "linkHarborSeven.questTask10",
+        "words": [
+          "Ich",
+          "weder",
+          "oder",
+          "noch",
+          "Lust",
+          "habe",
+          "Zeit"
+        ],
+        "correctOrder": [
+          "Ich",
+          "habe",
+          "weder",
+          "Zeit",
+          "noch",
+          "Lust"
+        ],
+        "tip": "linkHarborSeven.questDescription"
+      },
+      {
+        "id": 10,
+        "type": "select",
+        "question": "linkHarborSeven.questTask11",
+        "options": [
+          "Je mehr Sport mache ich, desto gesünder fühle ich mich.",
+          "Je mehr Sport ich mache, desto gesünder fühle ich mich.",
+          "Je mehr Sport ich mache, desto ich fühle mich gesünder."
+        ],
+        "answer": "Je mehr Sport ich mache, desto gesünder fühle ich mich.",
+        "tip": "linkHarborSeven.questDescription"
+      },
+      {
+        "id": 11,
+        "type": "input",
+        "question": "linkHarborSix.questTask9",
+        "correctAnswer": "Seitdem",
+        "tip": "linkHarborSix.questDescription",
+        "reviewOf": "link-harbor-six",
+        "reviewLand": "link-harbor"
+      },
+      {
+        "id": 12,
+        "type": "input",
+        "question": "linkHarborThree.questTask12",
+        "correctAnswer": "noch",
+        "tip": "linkHarborThree.questDescription",
+        "reviewOf": "link-harbor-three",
+        "reviewLand": "link-harbor"
+      },
+      {
+        "id": 13,
+        "type": "input",
+        "question": "questionBridgeEight.questTask13",
+        "correctAnswer": "vermisse",
+        "tip": "questionBridgeEight.questDescription",
+        "reviewOf": "question-bridge-eight",
+        "reviewLand": "question-bridge"
+      },
+      {
+        "id": 14,
+        "type": "input",
+        "question": "linkHarborSeven.questTask14",
+        "correctAnswer": "Gespräch",
+        "tip": "linkHarborSeven.questDescription"
+      },
+      {
+        "id": 15,
+        "type": "input",
+        "question": "linkHarborSeven.questTask15",
+        "correctAnswer": "würden",
+        "tip": "linkHarborSeven.questDescription"
+      }
+    ]
+  },
+  {
+    "questId": "link-harbor-eight",
+    "title": "linkHarborEight.questTitle",
+    "progress": "0/15",
+    "description": "linkHarborEight.questDescription",
+    "conditions": {
+      "goal": "linkHarborEight.questGoal",
+      "minCorrect": 15,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
+    "vocabulary": [
+      {
+        "word": "umziehen",
+        "translation-ru": "переезжать",
+        "translation-en": "to move house",
+        "translation-uk": "переїжджати",
+        "translation-pl": "przeprowadzać się",
+        "translation-es": "mudarse",
+        "translation-fr": "déménager",
+        "translation-tr": "taşınmak",
+        "translation-ro": "a se muta",
+        "translation-uz": "ko‘chmoq",
+        "translation-hi": "घर बदलना",
+        "translation-ar": "ينتقل إلى بيت جديد"
+      },
+      {
+        "word": "sich gewöhnen an",
+        "translation-ru": "привыкать к",
+        "translation-en": "to get used to",
+        "translation-uk": "звикати до",
+        "translation-pl": "przyzwyczajać się do",
+        "translation-es": "acostumbrarse a",
+        "translation-fr": "s’habituer à",
+        "translation-tr": "alışmak",
+        "translation-ro": "a se obișnui cu",
+        "translation-uz": "ko‘nikmoq",
+        "translation-hi": "आदी होना",
+        "translation-ar": "يعتاد على"
+      },
+      {
+        "word": "die Gegend",
+        "translation-ru": "местность, район",
+        "translation-en": "area",
+        "translation-uk": "місцевість, район",
+        "translation-pl": "okolica",
+        "translation-es": "la zona",
+        "translation-fr": "le quartier, la région",
+        "translation-tr": "bölge, çevre",
+        "translation-ro": "zona",
+        "translation-uz": "hudud",
+        "translation-hi": "इलाक़ा",
+        "translation-ar": "المنطقة"
+      },
+      {
+        "word": "das Fahrrad",
+        "translation-ru": "велосипед",
+        "translation-en": "bike",
+        "translation-uk": "велосипед",
+        "translation-pl": "rower",
+        "translation-es": "la bicicleta",
+        "translation-fr": "le vélo",
+        "translation-tr": "bisiklet",
+        "translation-ro": "bicicleta",
+        "translation-uz": "velosiped",
+        "translation-hi": "साइकिल",
+        "translation-ar": "الدراجة"
+      },
+      {
+        "word": "kennenlernen",
+        "translation-ru": "знакомиться",
+        "translation-en": "to get to know",
+        "translation-uk": "знайомитися",
+        "translation-pl": "poznawać",
+        "translation-es": "conocer",
+        "translation-fr": "faire connaissance",
+        "translation-tr": "tanışmak",
+        "translation-ro": "a cunoaște",
+        "translation-uz": "tanishmoq",
+        "translation-hi": "जान-पहचान करना",
+        "translation-ar": "يتعرّف"
+      }
+    ],
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "linkHarborEight.questTask1",
+        "options": [
+          "Statt mit dem Auto fahren, fahre ich mit dem Fahrrad.",
+          "Statt mit dem Auto zu fahren, ich fahre mit dem Fahrrad.",
+          "Statt mit dem Auto zu fahren, fahre ich mit dem Fahrrad."
+        ],
+        "answer": "Statt mit dem Auto zu fahren, fahre ich mit dem Fahrrad.",
+        "tip": "linkHarborEight.questDescription"
+      },
+      {
+        "id": 2,
+        "type": "input",
+        "question": "linkHarborEight.questTask2",
+        "correctAnswer": "Seitdem",
+        "tip": "linkHarborEight.questDescription"
+      },
+      {
+        "id": 3,
+        "type": "input",
+        "question": "linkHarborEight.questTask3",
+        "correctAnswer": "Sobald",
+        "tip": "linkHarborEight.questDescription"
+      },
+      {
+        "id": 4,
+        "type": "reorder",
+        "question": "linkHarborEight.questTask4",
+        "words": [
+          "kommt",
+          "der",
+          "sobald",
+          "bis",
+          "Ich",
+          "Bus",
+          "warte"
+        ],
+        "correctOrder": [
+          "Ich",
+          "warte",
+          "bis",
+          "der",
+          "Bus",
+          "kommt"
+        ],
+        "tip": "linkHarborEight.questDescription"
+      },
+      {
+        "id": 5,
+        "type": "select",
+        "question": "linkHarborEight.questTask5",
+        "options": [
+          "Er ist umgezogen, statt sich von den Nachbarn zu verabschieden.",
+          "Er ist umgezogen, ohne sich von den Nachbarn verabschieden.",
+          "Er ist umgezogen, ohne sich von den Nachbarn zu verabschieden."
+        ],
+        "answer": "Er ist umgezogen, ohne sich von den Nachbarn zu verabschieden.",
+        "tip": "linkHarborEight.questDescription"
+      },
+      {
+        "id": 6,
+        "type": "input",
+        "question": "linkHarborEight.questTask6",
+        "correctAnswer": "Statt",
+        "tip": "linkHarborEight.questDescription"
+      },
+      {
+        "id": 7,
+        "type": "readAndAnswer",
+        "question": "linkHarborEight.questTask7",
+        "text": "Ali ist im März nach Leipzig umgezogen. Seitdem er hier wohnt, fährt er mit dem Fahrrad zur Arbeit, statt den Bus zu nehmen. Er hat sich schnell an die neue Gegend gewöhnt. Sobald er Zeit hat, will er die Stadt besser kennenlernen.",
+        "options": [
+          "seit gestern",
+          "seit März",
+          "seit einem Jahr"
+        ],
+        "answer": "seit März",
+        "tip": "linkHarborEight.questDescription"
+      },
+      {
+        "id": 8,
+        "type": "input",
+        "question": "linkHarborEight.questTask8",
+        "correctAnswer": "bis",
+        "tip": "linkHarborEight.questDescription"
+      },
+      {
+        "id": 9,
+        "type": "reorder",
+        "question": "linkHarborEight.questTask10",
+        "words": [
+          "zu",
+          "beschweren",
+          "Statt",
+          "dich",
+          "ohne",
+          "Lösung",
+          "eine",
+          "such"
+        ],
+        "correctOrder": [
+          "Statt",
+          "dich",
+          "zu",
+          "beschweren",
+          "such",
+          "eine",
+          "Lösung"
+        ],
+        "tip": "linkHarborEight.questDescription"
+      },
+      {
+        "id": 10,
+        "type": "select",
+        "question": "linkHarborEight.questTask11",
+        "options": [
+          "Seitdem ich ein Fahrrad habe, bewege ich mich mehr.",
+          "Seitdem ich ein Fahrrad habe, ich bewege mich mehr.",
+          "Seitdem ich habe ein Fahrrad, bewege ich mich mehr."
+        ],
+        "answer": "Seitdem ich ein Fahrrad habe, bewege ich mich mehr.",
+        "tip": "linkHarborEight.questDescription"
+      },
+      {
+        "id": 11,
+        "type": "input",
+        "question": "linkHarborSeven.questTask9",
+        "correctAnswer": "auch",
+        "tip": "linkHarborSeven.questDescription",
+        "reviewOf": "link-harbor-seven",
+        "reviewLand": "link-harbor"
+      },
+      {
+        "id": 12,
+        "type": "input",
+        "question": "linkHarborFour.questTask12",
+        "correctAnswer": "desto",
+        "tip": "linkHarborFour.questDescription",
+        "reviewOf": "link-harbor-four",
+        "reviewLand": "link-harbor"
+      },
+      {
+        "id": 13,
+        "type": "input",
+        "question": "linkHarborOne.questTask13",
+        "correctAnswer": "auch",
+        "tip": "linkHarborOne.questDescription",
+        "reviewOf": "link-harbor-one",
+        "reviewLand": "link-harbor"
+      },
+      {
+        "id": 14,
+        "type": "input",
+        "question": "linkHarborEight.questTask14",
+        "correctAnswer": "weil",
+        "tip": "linkHarborEight.questDescription"
+      },
+      {
+        "id": 15,
+        "type": "input",
+        "question": "linkHarborEight.questTask15",
+        "correctAnswer": "gefallen",
+        "tip": "linkHarborEight.questDescription"
+      }
+    ]
+  },
+  {
+    "questId": "link-harbor-nine",
+    "title": "linkHarborNine.questTitle",
+    "progress": "0/15",
+    "description": "linkHarborNine.questDescription",
+    "conditions": {
+      "goal": "linkHarborNine.questGoal",
+      "minCorrect": 15,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
+    "vocabulary": [
+      {
+        "word": "hungrig",
+        "translation-ru": "голодный",
+        "translation-en": "hungry",
+        "translation-uk": "голодний",
+        "translation-pl": "głodny",
+        "translation-es": "hambriento",
+        "translation-fr": "affamé",
+        "translation-tr": "aç",
+        "translation-ro": "flămând",
+        "translation-uz": "och",
+        "translation-hi": "भूखा",
+        "translation-ar": "جائع"
+      },
+      {
+        "word": "seitdem",
+        "translation-ru": "с тех пор как",
+        "translation-en": "since",
+        "translation-uk": "відтоді як",
+        "translation-pl": "odkąd",
+        "translation-es": "desde que",
+        "translation-fr": "depuis que",
+        "translation-tr": "…den beri",
+        "translation-ro": "de când",
+        "translation-uz": "…dan beri",
+        "translation-hi": "जब से",
+        "translation-ar": "منذ أن"
+      },
+      {
+        "word": "sondern",
+        "translation-ru": "а (не то, а это)",
+        "translation-en": "but (rather)",
+        "translation-uk": "а (не те, а це)",
+        "translation-pl": "lecz, tylko",
+        "translation-es": "sino",
+        "translation-fr": "mais (plutôt)",
+        "translation-tr": "bilakis",
+        "translation-ro": "ci",
+        "translation-uz": "balki",
+        "translation-hi": "बल्कि",
+        "translation-ar": "بل"
+      },
+      {
+        "word": "das Telefon",
+        "translation-ru": "телефон",
+        "translation-en": "phone",
+        "translation-uk": "телефон",
+        "translation-pl": "telefon",
+        "translation-es": "el teléfono",
+        "translation-fr": "le téléphone",
+        "translation-tr": "telefon",
+        "translation-ro": "telefonul",
+        "translation-uz": "telefon",
+        "translation-hi": "फ़ोन",
+        "translation-ar": "الهاتف"
+      },
+      {
+        "word": "der Besuch",
+        "translation-ru": "гости, визит",
+        "translation-en": "visit, visitors",
+        "translation-uk": "гості, візит",
+        "translation-pl": "goście, wizyta",
+        "translation-es": "la visita",
+        "translation-fr": "la visite",
+        "translation-tr": "misafir, ziyaret",
+        "translation-ro": "vizita, musafirii",
+        "translation-uz": "mehmonlar, tashrif",
+        "translation-hi": "मेहमान",
+        "translation-ar": "الزيارة"
+      }
+    ],
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "linkHarborNine.questTask1",
+        "options": [
+          "Ich bin nur nicht müde, sondern auch hungrig.",
+          "Ich bin nicht nur müde, oder auch hungrig.",
+          "Ich bin nicht nur müde, sondern auch hungrig."
+        ],
+        "answer": "Ich bin nicht nur müde, sondern auch hungrig.",
+        "tip": "linkHarborNine.questDescription"
+      },
+      {
+        "id": 2,
+        "type": "input",
+        "question": "linkHarborNine.questTask2",
+        "correctAnswer": "noch",
+        "tip": "linkHarborNine.questDescription"
+      },
+      {
+        "id": 3,
+        "type": "input",
+        "question": "linkHarborNine.questTask3",
+        "correctAnswer": "oder",
+        "tip": "linkHarborNine.questDescription"
+      },
+      {
+        "id": 4,
+        "type": "reorder",
+        "question": "linkHarborNine.questTask4",
+        "words": [
+          "desto",
+          "mich",
+          "fühle",
+          "je",
+          "ich",
+          "mehr",
+          "Je",
+          "besser",
+          "schlafe",
+          "ich"
+        ],
+        "correctOrder": [
+          "Je",
+          "mehr",
+          "ich",
+          "schlafe",
+          "desto",
+          "besser",
+          "fühle",
+          "ich",
+          "mich"
+        ],
+        "tip": "linkHarborNine.questDescription"
+      },
+      {
+        "id": 5,
+        "type": "select",
+        "question": "linkHarborNine.questTask5",
+        "options": [
+          "Statt mit dem Bus fahren, gehe ich zu Fuß.",
+          "Statt mit dem Bus zu fahren, ich gehe zu Fuß.",
+          "Statt mit dem Bus zu fahren, gehe ich zu Fuß."
+        ],
+        "answer": "Statt mit dem Bus zu fahren, gehe ich zu Fuß.",
+        "tip": "linkHarborNine.questDescription"
+      },
+      {
+        "id": 6,
+        "type": "input",
+        "question": "linkHarborNine.questTask6",
+        "correctAnswer": "Seitdem",
+        "tip": "linkHarborNine.questDescription"
+      },
+      {
+        "id": 7,
+        "type": "readAndAnswer",
+        "question": "linkHarborNine.questTask7",
+        "text": "Liebe Sara, seitdem ich in Hamburg wohne, gehe ich jeden Tag am Wasser spazieren. Die Stadt ist nicht nur schön, sondern auch sehr grün. Sobald du Zeit hast, besuch mich! Dein Tim",
+        "options": [
+          "schön und grün",
+          "klein und ruhig",
+          "laut und grau"
+        ],
+        "answer": "schön und grün",
+        "tip": "linkHarborNine.questDescription"
+      },
+      {
+        "id": 8,
+        "type": "input",
+        "question": "linkHarborNine.questTask8",
+        "correctAnswer": "bis",
+        "tip": "linkHarborNine.questDescription"
+      },
+      {
+        "id": 9,
+        "type": "select",
+        "question": "linkHarborNine.questTask9",
+        "options": [
+          "Je länger ich hier wohne, desto besser gefällt es mir.",
+          "Je länger wohne ich hier, desto besser gefällt es mir.",
+          "Je länger ich hier wohne, desto besser es gefällt mir."
+        ],
+        "answer": "Je länger ich hier wohne, desto besser gefällt es mir.",
+        "tip": "linkHarborNine.questDescription"
+      },
+      {
+        "id": 10,
+        "type": "input",
+        "question": "linkHarborNine.questTask10",
+        "correctAnswer": "sondern",
+        "tip": "linkHarborNine.questDescription"
+      },
+      {
+        "id": 11,
+        "type": "reorder",
+        "question": "linkHarborNine.questTask11",
+        "words": [
+          "wir",
+          "Sobald",
+          "Zug",
+          "bis",
+          "ankommt",
+          "an",
+          "der",
+          "rufen"
+        ],
+        "correctOrder": [
+          "Sobald",
+          "der",
+          "Zug",
+          "ankommt",
+          "rufen",
+          "wir",
+          "an"
+        ],
+        "tip": "linkHarborNine.questDescription"
+      },
+      {
+        "id": 12,
+        "type": "select",
+        "question": "linkHarborNine.questTask12",
+        "options": [
+          "Sie ist gegangen, ohne zu die Tür schließen.",
+          "Sie ist gegangen, ohne die Tür zu schließen.",
+          "Sie ist gegangen, ohne die Tür schließen."
+        ],
+        "answer": "Sie ist gegangen, ohne die Tür zu schließen.",
+        "tip": "linkHarborNine.questDescription"
+      },
+      {
+        "id": 13,
+        "type": "readAndAnswer",
+        "question": "linkHarborNine.questTask13",
+        "text": "Familie Koch macht Urlaub. Sie fahren weder ans Meer noch in die Berge. Dieses Jahr bleiben sie in Deutschland und besuchen Berlin.",
+        "options": [
+          "nach Berlin",
+          "in die Berge",
+          "ans Meer"
+        ],
+        "answer": "nach Berlin",
+        "tip": "linkHarborNine.questDescription"
+      },
+      {
+        "id": 14,
+        "type": "input",
+        "question": "linkHarborNine.questTask14",
+        "correctAnswer": "oder",
+        "tip": "linkHarborNine.questDescription"
+      },
+      {
+        "id": 15,
+        "type": "input",
+        "question": "linkHarborNine.questTask15",
+        "correctAnswer": "heißer",
+        "tip": "linkHarborNine.questDescription"
+      }
+    ]
+  },
+  {
+    "questId": "link-harbor-ten",
+    "title": "linkHarborTen.questTitle",
+    "progress": "0/15",
+    "description": "linkHarborTen.questDescription",
+    "conditions": {
+      "goal": "linkHarborTen.questGoal",
+      "minCorrect": 15,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
+    "vocabulary": [
+      {
+        "word": "die Person",
+        "translation-ru": "человек (лицо)",
+        "translation-en": "person",
+        "translation-uk": "особа",
+        "translation-pl": "osoba",
+        "translation-es": "la persona",
+        "translation-fr": "la personne",
+        "translation-tr": "kişi",
+        "translation-ro": "persoana",
+        "translation-uz": "shaxs",
+        "translation-hi": "व्यक्ति",
+        "translation-ar": "الشخص"
+      },
+      {
+        "word": "seitdem",
+        "translation-ru": "с тех пор как",
+        "translation-en": "since",
+        "translation-uk": "відтоді як",
+        "translation-pl": "odkąd",
+        "translation-es": "desde que",
+        "translation-fr": "depuis que",
+        "translation-tr": "…den beri",
+        "translation-ro": "de când",
+        "translation-uz": "…dan beri",
+        "translation-hi": "जब से",
+        "translation-ar": "منذ أن"
+      },
+      {
+        "word": "sondern",
+        "translation-ru": "а (не то, а это)",
+        "translation-en": "but (rather)",
+        "translation-uk": "а (не те, а це)",
+        "translation-pl": "lecz, tylko",
+        "translation-es": "sino",
+        "translation-fr": "mais (plutôt)",
+        "translation-tr": "bilakis",
+        "translation-ro": "ci",
+        "translation-uz": "balki",
+        "translation-hi": "बल्कि",
+        "translation-ar": "بل"
+      },
+      {
+        "word": "trotz",
+        "translation-ru": "несмотря на",
+        "translation-en": "despite",
+        "translation-uk": "попри",
+        "translation-pl": "mimo",
+        "translation-es": "a pesar de",
+        "translation-fr": "malgré",
+        "translation-tr": "rağmen",
+        "translation-ro": "în ciuda",
+        "translation-uz": "qaramay",
+        "translation-hi": "के बावजूद",
+        "translation-ar": "رغم"
+      },
+      {
+        "word": "die Anzeige",
+        "translation-ru": "объявление",
+        "translation-en": "advert",
+        "translation-uk": "оголошення",
+        "translation-pl": "ogłoszenie",
+        "translation-es": "el anuncio",
+        "translation-fr": "l’annonce",
+        "translation-tr": "ilan",
+        "translation-ro": "anunțul",
+        "translation-uz": "e’lon",
+        "translation-hi": "विज्ञापन",
+        "translation-ar": "الإعلان"
+      }
+    ],
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "linkHarborTen.questTask1",
+        "options": [
+          "Wenn ich Zeit hätte, würde ich nicht nur Deutsch, sondern auch Spanisch lerne.",
+          "Wenn ich Zeit hätte, ich würde nicht nur Deutsch, sondern auch Spanisch lernen.",
+          "Wenn ich Zeit hätte, würde ich nicht nur Deutsch, sondern auch Spanisch lernen."
+        ],
+        "answer": "Wenn ich Zeit hätte, würde ich nicht nur Deutsch, sondern auch Spanisch lernen.",
+        "tip": "linkHarborTen.questDescription"
+      },
+      {
+        "id": 2,
+        "type": "input",
+        "question": "linkHarborTen.questTask2",
+        "correctAnswer": "schneller",
+        "tip": "linkHarborTen.questDescription"
+      },
+      {
+        "id": 3,
+        "type": "input",
+        "question": "linkHarborTen.questTask3",
+        "correctAnswer": "meiner",
+        "tip": "linkHarborTen.questDescription"
+      },
+      {
+        "id": 4,
+        "type": "input",
+        "question": "linkHarborTen.questTask4",
+        "correctAnswer": "gesprochen",
+        "tip": "linkHarborTen.questDescription"
+      },
+      {
+        "id": 5,
+        "type": "select",
+        "question": "linkHarborTen.questTask5",
+        "options": [
+          "Seitdem er hier ist, ich denke oft an ihn.",
+          "Seitdem er hier ist, denke ich oft daran.",
+          "Seitdem er hier ist, denke ich oft an ihn."
+        ],
+        "answer": "Seitdem er hier ist, denke ich oft an ihn.",
+        "tip": "linkHarborTen.questDescription"
+      },
+      {
+        "id": 6,
+        "type": "input",
+        "question": "linkHarborTen.questTask6",
+        "correctAnswer": "der",
+        "tip": "linkHarborTen.questDescription"
+      },
+      {
+        "id": 7,
+        "type": "readAndAnswer",
+        "question": "linkHarborTen.questTask7",
+        "text": "Jonas lernt seit einem Jahr Deutsch. Je mehr er lernt, desto besser versteht er seine Kollegen. Sobald er gut genug spricht, möchte er die Prüfung B1 machen.",
+        "options": [
+          "eine neue Arbeit suchen",
+          "die Prüfung B1 machen",
+          "nach Hause fahren"
+        ],
+        "answer": "die Prüfung B1 machen",
+        "tip": "linkHarborTen.questDescription"
+      },
+      {
+        "id": 8,
+        "type": "input",
+        "question": "linkHarborTen.questTask8",
+        "correctAnswer": "frischen",
+        "tip": "linkHarborTen.questDescription"
+      },
+      {
+        "id": 9,
+        "type": "reorder",
+        "question": "linkHarborTen.questTask9",
+        "words": [
+          "zu",
+          "das",
+          "nach",
+          "Wir",
+          "Museum",
+          "München",
+          "statt",
+          "sehen",
+          "fahren",
+          "um"
+        ],
+        "correctOrder": [
+          "Wir",
+          "fahren",
+          "nach",
+          "München",
+          "um",
+          "das",
+          "Museum",
+          "zu",
+          "sehen"
+        ],
+        "tip": "linkHarborTen.questDescription"
+      },
+      {
+        "id": 10,
+        "type": "input",
+        "question": "linkHarborTen.questTask10",
+        "correctAnswer": "wäre",
+        "tip": "linkHarborTen.questDescription"
+      },
+      {
+        "id": 11,
+        "type": "input",
+        "question": "linkHarborTen.questTask11",
+        "correctAnswer": "bis",
+        "tip": "linkHarborTen.questDescription"
+      },
+      {
+        "id": 12,
+        "type": "select",
+        "question": "linkHarborTen.questTask12",
+        "options": [
+          "Ich war weder in Italien noch in Spanien.",
+          "Ich war weder in Italien oder in Spanien.",
+          "Ich war entweder in Italien noch in Spanien."
+        ],
+        "answer": "Ich war weder in Italien noch in Spanien.",
+        "tip": "linkHarborTen.questDescription"
+      },
+      {
+        "id": 13,
+        "type": "readAndAnswer",
+        "question": "linkHarborTen.questTask13",
+        "text": "Anzeige: Wir suchen eine Person, die nicht nur gut kocht, sondern auch Englisch spricht. Sie arbeiten entweder morgens oder abends.",
+        "options": [
+          "den ganzen Tag",
+          "morgens oder abends",
+          "nur am Wochenende"
+        ],
+        "answer": "morgens oder abends",
+        "tip": "linkHarborTen.questDescription"
+      },
+      {
+        "id": 14,
+        "type": "input",
+        "question": "linkHarborTen.questTask14",
+        "correctAnswer": "hat",
+        "tip": "linkHarborTen.questDescription"
+      },
+      {
+        "id": 15,
+        "type": "input",
+        "question": "linkHarborTen.questTask15",
+        "correctAnswer": "der",
+        "tip": "linkHarborTen.questDescription"
+      }
+    ]
+  }
+]

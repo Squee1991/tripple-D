@@ -1,0 +1,2658 @@
+[
+  {
+    "questId": "a2-summit-one",
+    "title": "a2SummitOne.questTitle",
+    "progress": "0/15",
+    "description": "a2SummitOne.questDescription",
+    "conditions": {
+      "goal": "a2SummitOne.questGoal",
+      "minCorrect": 15,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
+    "vocabulary": [
+      {
+        "word": "der Ausflug",
+        "translation-ru": "поездка, экскурсия",
+        "translation-en": "trip",
+        "translation-uk": "поїздка",
+        "translation-pl": "wycieczka",
+        "translation-es": "la excursión",
+        "translation-fr": "l’excursion",
+        "translation-tr": "gezi",
+        "translation-ro": "excursia",
+        "translation-uz": "sayohat",
+        "translation-hi": "सैर",
+        "translation-ar": "الرحلة"
+      },
+      {
+        "word": "besuchen",
+        "translation-ru": "навещать, посещать",
+        "translation-en": "to visit",
+        "translation-uk": "відвідувати",
+        "translation-pl": "odwiedzać",
+        "translation-es": "visitar",
+        "translation-fr": "rendre visite",
+        "translation-tr": "ziyaret etmek",
+        "translation-ro": "a vizita",
+        "translation-uz": "tashrif buyurmoq",
+        "translation-hi": "मिलने जाना",
+        "translation-ar": "يزور"
+      },
+      {
+        "word": "ankommen",
+        "translation-ru": "прибывать",
+        "translation-en": "to arrive",
+        "translation-uk": "прибувати",
+        "translation-pl": "przyjeżdżać",
+        "translation-es": "llegar",
+        "translation-fr": "arriver",
+        "translation-tr": "varmak",
+        "translation-ro": "a ajunge",
+        "translation-uz": "yetib kelmoq",
+        "translation-hi": "पहुँचना",
+        "translation-ar": "يصل"
+      },
+      {
+        "word": "vergessen",
+        "translation-ru": "забывать",
+        "translation-en": "to forget",
+        "translation-uk": "забувати",
+        "translation-pl": "zapominać",
+        "translation-es": "olvidar",
+        "translation-fr": "oublier",
+        "translation-tr": "unutmak",
+        "translation-ro": "a uita",
+        "translation-uz": "unutmoq",
+        "translation-hi": "भूलना",
+        "translation-ar": "ينسى"
+      },
+      {
+        "word": "das Schloss",
+        "translation-ru": "замок",
+        "translation-en": "castle",
+        "translation-uk": "замок",
+        "translation-pl": "zamek",
+        "translation-es": "el castillo",
+        "translation-fr": "le château",
+        "translation-tr": "şato",
+        "translation-ro": "castelul",
+        "translation-uz": "qasr",
+        "translation-hi": "महल",
+        "translation-ar": "القصر"
+      },
+      {
+        "word": "abfahren",
+        "translation-ru": "отправляться (о транспорте)",
+        "translation-en": "to depart",
+        "translation-uk": "відправлятися",
+        "translation-pl": "odjeżdżać",
+        "translation-es": "salir (un tren)",
+        "translation-fr": "partir (un train)",
+        "translation-tr": "kalkmak (araç)",
+        "translation-ro": "a pleca (trenul)",
+        "translation-uz": "jo‘nab ketmoq",
+        "translation-hi": "रवाना होना",
+        "translation-ar": "يغادر"
+      }
+    ],
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "a2SummitOne.questTask1",
+        "options": [
+          "Morgen besuche ich meine Oma.",
+          "Gestern hat meine Oma mich besucht.",
+          "Gestern habe ich meine Oma besucht."
+        ],
+        "answer": "Gestern habe ich meine Oma besucht.",
+        "tip": "a2SummitOne.questDescription"
+      },
+      {
+        "id": 2,
+        "type": "input",
+        "question": "a2SummitOne.questTask2",
+        "correctAnswer": "angekommen",
+        "tip": "a2SummitOne.questDescription"
+      },
+      {
+        "id": 3,
+        "type": "input",
+        "question": "a2SummitOne.questTask3",
+        "correctAnswer": "vergessen",
+        "tip": "a2SummitOne.questDescription"
+      },
+      {
+        "id": 4,
+        "type": "reorder",
+        "question": "a2SummitOne.questTask4",
+        "words": [
+          "Kino",
+          "bin",
+          "Ich",
+          "war",
+          "im",
+          "gestern"
+        ],
+        "correctOrder": [
+          "Ich",
+          "war",
+          "gestern",
+          "im",
+          "Kino"
+        ],
+        "tip": "a2SummitOne.questDescription"
+      },
+      {
+        "id": 5,
+        "type": "select",
+        "question": "a2SummitOne.questTask5",
+        "options": [
+          "Er hatte viel Zeit.",
+          "Er hatte keine Zeit.",
+          "Er hat keine Zeit."
+        ],
+        "answer": "Er hatte keine Zeit.",
+        "tip": "a2SummitOne.questDescription"
+      },
+      {
+        "id": 6,
+        "type": "input",
+        "question": "a2SummitOne.questTask6",
+        "correctAnswer": "gefahren",
+        "tip": "a2SummitOne.questDescription"
+      },
+      {
+        "id": 7,
+        "type": "readAndAnswer",
+        "question": "a2SummitOne.questTask7",
+        "text": "Am Samstag haben wir einen Ausflug gemacht. Wir sind mit dem Zug nach Potsdam gefahren und haben ein Schloss besucht.",
+        "options": [
+          "nach München",
+          "nach Potsdam",
+          "nach Hamburg"
+        ],
+        "answer": "nach Potsdam",
+        "tip": "a2SummitOne.questDescription"
+      },
+      {
+        "id": 8,
+        "type": "input",
+        "question": "a2SummitOne.questTask8",
+        "correctAnswer": "mussten",
+        "tip": "a2SummitOne.questDescription"
+      },
+      {
+        "id": 9,
+        "type": "select",
+        "question": "a2SummitOne.questTask9",
+        "options": [
+          "Was hast du am Wochenende gemacht?",
+          "Was wirst du am Wochenende machen?",
+          "Was machst du am Wochenende?"
+        ],
+        "answer": "Was hast du am Wochenende gemacht?",
+        "tip": "a2SummitOne.questDescription"
+      },
+      {
+        "id": 10,
+        "type": "input",
+        "question": "a2SummitOne.questTask10",
+        "correctAnswer": "konnte",
+        "tip": "a2SummitOne.questDescription"
+      },
+      {
+        "id": 11,
+        "type": "reorder",
+        "question": "a2SummitOne.questTask11",
+        "words": [
+          "haben",
+          "Wir",
+          "neues",
+          "gekauft",
+          "sind",
+          "ein",
+          "Auto"
+        ],
+        "correctOrder": [
+          "Wir",
+          "haben",
+          "ein",
+          "neues",
+          "Auto",
+          "gekauft"
+        ],
+        "tip": "a2SummitOne.questDescription"
+      },
+      {
+        "id": 12,
+        "type": "select",
+        "question": "a2SummitOne.questTask12",
+        "options": [
+          "Wo bist du?",
+          "Wo warst du?",
+          "Wohin bist du gegangen?"
+        ],
+        "answer": "Wo warst du?",
+        "tip": "a2SummitOne.questDescription"
+      },
+      {
+        "id": 13,
+        "type": "readAndAnswer",
+        "question": "a2SummitOne.questTask13",
+        "text": "Lisa wollte gestern ins Kino gehen, aber sie konnte nicht. Sie musste arbeiten.",
+        "options": [
+          "Sie war krank.",
+          "Sie musste arbeiten.",
+          "Sie hatte kein Geld."
+        ],
+        "answer": "Sie musste arbeiten.",
+        "tip": "a2SummitOne.questDescription"
+      },
+      {
+        "id": 14,
+        "type": "input",
+        "question": "a2SummitOne.questTask14",
+        "correctAnswer": "abgefahren",
+        "tip": "a2SummitOne.questDescription"
+      },
+      {
+        "id": 15,
+        "type": "input",
+        "question": "a2SummitOne.questTask15",
+        "correctAnswer": "wollten",
+        "tip": "a2SummitOne.questDescription"
+      }
+    ]
+  },
+  {
+    "questId": "a2-summit-two",
+    "title": "a2SummitTwo.questTitle",
+    "progress": "0/15",
+    "description": "a2SummitTwo.questDescription",
+    "conditions": {
+      "goal": "a2SummitTwo.questGoal",
+      "minCorrect": 15,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
+    "vocabulary": [
+      {
+        "word": "die Wand",
+        "translation-ru": "стена",
+        "translation-en": "wall",
+        "translation-uk": "стіна",
+        "translation-pl": "ściana",
+        "translation-es": "la pared",
+        "translation-fr": "le mur",
+        "translation-tr": "duvar",
+        "translation-ro": "peretele",
+        "translation-uz": "devor",
+        "translation-hi": "दीवार",
+        "translation-ar": "الحائط"
+      },
+      {
+        "word": "hängen",
+        "translation-ru": "вешать, висеть",
+        "translation-en": "to hang",
+        "translation-uk": "вішати, висіти",
+        "translation-pl": "wieszać, wisieć",
+        "translation-es": "colgar",
+        "translation-fr": "accrocher, être accroché",
+        "translation-tr": "asmak, asılı olmak",
+        "translation-ro": "a agăța, a atârna",
+        "translation-uz": "osmoq, osilib turmoq",
+        "translation-hi": "टाँगना, लटकना",
+        "translation-ar": "يعلّق"
+      },
+      {
+        "word": "legen",
+        "translation-ru": "класть",
+        "translation-en": "to put (lying)",
+        "translation-uk": "класти",
+        "translation-pl": "kłaść",
+        "translation-es": "poner (tumbado)",
+        "translation-fr": "poser à plat",
+        "translation-tr": "koymak (yatay)",
+        "translation-ro": "a pune (culcat)",
+        "translation-uz": "qo‘ymoq (yotqizib)",
+        "translation-hi": "रखना (लिटाकर)",
+        "translation-ar": "يضع"
+      },
+      {
+        "word": "das Regal",
+        "translation-ru": "полка",
+        "translation-en": "shelf",
+        "translation-uk": "полиця",
+        "translation-pl": "półka",
+        "translation-es": "la estantería",
+        "translation-fr": "l’étagère",
+        "translation-tr": "raf",
+        "translation-ro": "raftul",
+        "translation-uz": "javon",
+        "translation-hi": "शेल्फ़",
+        "translation-ar": "الرف"
+      },
+      {
+        "word": "das Sofa",
+        "translation-ru": "диван",
+        "translation-en": "sofa",
+        "translation-uk": "диван",
+        "translation-pl": "kanapa",
+        "translation-es": "el sofá",
+        "translation-fr": "le canapé",
+        "translation-tr": "kanepe",
+        "translation-ro": "canapeaua",
+        "translation-uz": "divan",
+        "translation-hi": "सोफ़ा",
+        "translation-ar": "الأريكة"
+      },
+      {
+        "word": "suchen",
+        "translation-ru": "искать",
+        "translation-en": "to look for",
+        "translation-uk": "шукати",
+        "translation-pl": "szukać",
+        "translation-es": "buscar",
+        "translation-fr": "chercher",
+        "translation-tr": "aramak",
+        "translation-ro": "a căuta",
+        "translation-uz": "qidirmoq",
+        "translation-hi": "ढूँढना",
+        "translation-ar": "يبحث"
+      }
+    ],
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "a2SummitTwo.questTask1",
+        "options": [
+          "Ich stelle die Vase unter den Tisch.",
+          "Die Vase steht auf dem Tisch.",
+          "Ich stelle die Vase auf den Tisch."
+        ],
+        "answer": "Ich stelle die Vase auf den Tisch.",
+        "tip": "a2SummitTwo.questDescription"
+      },
+      {
+        "id": 2,
+        "type": "input",
+        "question": "a2SummitTwo.questTask2",
+        "correctAnswer": "der",
+        "tip": "a2SummitTwo.questDescription"
+      },
+      {
+        "id": 3,
+        "type": "input",
+        "question": "a2SummitTwo.questTask3",
+        "correctAnswer": "die",
+        "tip": "a2SummitTwo.questDescription"
+      },
+      {
+        "id": 4,
+        "type": "reorder",
+        "question": "a2SummitTwo.questTask4",
+        "words": [
+          "Das",
+          "ins",
+          "Regal",
+          "im",
+          "Buch",
+          "liegt"
+        ],
+        "correctOrder": [
+          "Das",
+          "Buch",
+          "liegt",
+          "im",
+          "Regal"
+        ],
+        "tip": "a2SummitTwo.questDescription"
+      },
+      {
+        "id": 5,
+        "type": "select",
+        "question": "a2SummitTwo.questTask5",
+        "options": [
+          "Woher kommst du?",
+          "Wohin gehst du?",
+          "Wo bist du?"
+        ],
+        "answer": "Wohin gehst du?",
+        "tip": "a2SummitTwo.questDescription"
+      },
+      {
+        "id": 6,
+        "type": "input",
+        "question": "a2SummitTwo.questTask6",
+        "correctAnswer": "meinem",
+        "tip": "a2SummitTwo.questDescription"
+      },
+      {
+        "id": 7,
+        "type": "readAndAnswer",
+        "question": "a2SummitTwo.questTask7",
+        "text": "Anna sucht ihr Handy. Es liegt nicht auf dem Tisch. Es liegt unter dem Sofa.",
+        "options": [
+          "unter dem Sofa",
+          "im Regal",
+          "auf dem Tisch"
+        ],
+        "answer": "unter dem Sofa",
+        "tip": "a2SummitTwo.questDescription"
+      },
+      {
+        "id": 8,
+        "type": "input",
+        "question": "a2SummitTwo.questTask8",
+        "correctAnswer": "dich",
+        "tip": "a2SummitTwo.questDescription"
+      },
+      {
+        "id": 9,
+        "type": "select",
+        "question": "a2SummitTwo.questTask9",
+        "options": [
+          "Ich lege den Schlüssel auf den Tisch.",
+          "Ich lege den Schlüssel in die Tasche.",
+          "Der Schlüssel liegt in der Tasche."
+        ],
+        "answer": "Ich lege den Schlüssel in die Tasche.",
+        "tip": "a2SummitTwo.questDescription"
+      },
+      {
+        "id": 10,
+        "type": "input",
+        "question": "a2SummitTwo.questTask10",
+        "correctAnswer": "den",
+        "tip": "a2SummitTwo.questDescription"
+      },
+      {
+        "id": 11,
+        "type": "reorder",
+        "question": "a2SummitTwo.questTask11",
+        "words": [
+          "meinem",
+          "meinen",
+          "helfe",
+          "Ich",
+          "Bruder"
+        ],
+        "correctOrder": [
+          "Ich",
+          "helfe",
+          "meinem",
+          "Bruder"
+        ],
+        "tip": "a2SummitTwo.questDescription"
+      },
+      {
+        "id": 12,
+        "type": "select",
+        "question": "a2SummitTwo.questTask12",
+        "options": [
+          "Die Katze sitzt unter dem Tisch.",
+          "Die Katze springt unter den Tisch.",
+          "Die Katze sitzt auf dem Tisch."
+        ],
+        "answer": "Die Katze sitzt unter dem Tisch.",
+        "tip": "a2SummitTwo.questDescription"
+      },
+      {
+        "id": 13,
+        "type": "readAndAnswer",
+        "question": "a2SummitTwo.questTask13",
+        "text": "Herr Müller stellt die Bücher ins Regal und hängt die Uhr an die Wand.",
+        "options": [
+          "die Uhr",
+          "die Bücher",
+          "das Bild"
+        ],
+        "answer": "die Uhr",
+        "tip": "a2SummitTwo.questDescription"
+      },
+      {
+        "id": 14,
+        "type": "input",
+        "question": "a2SummitTwo.questTask14",
+        "correctAnswer": "dich",
+        "tip": "a2SummitTwo.questDescription"
+      },
+      {
+        "id": 15,
+        "type": "input",
+        "question": "a2SummitTwo.questTask15",
+        "correctAnswer": "meine",
+        "tip": "a2SummitTwo.questDescription"
+      }
+    ]
+  },
+  {
+    "questId": "a2-summit-three",
+    "title": "a2SummitThree.questTitle",
+    "progress": "0/15",
+    "description": "a2SummitThree.questDescription",
+    "conditions": {
+      "goal": "a2SummitThree.questGoal",
+      "minCorrect": 15,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
+    "vocabulary": [
+      {
+        "word": "krank",
+        "translation-ru": "больной",
+        "translation-en": "ill",
+        "translation-uk": "хворий",
+        "translation-pl": "chory",
+        "translation-es": "enfermo",
+        "translation-fr": "malade",
+        "translation-tr": "hasta",
+        "translation-ro": "bolnav",
+        "translation-uz": "kasal",
+        "translation-hi": "बीमार",
+        "translation-ar": "مريض"
+      },
+      {
+        "word": "glauben",
+        "translation-ru": "думать, верить",
+        "translation-en": "to believe, to think",
+        "translation-uk": "думати, вірити",
+        "translation-pl": "sądzić, wierzyć",
+        "translation-es": "creer",
+        "translation-fr": "croire",
+        "translation-tr": "sanmak, inanmak",
+        "translation-ro": "a crede",
+        "translation-uz": "ishonmoq, o‘ylamoq",
+        "translation-hi": "मानना, सोचना",
+        "translation-ar": "يعتقد"
+      },
+      {
+        "word": "sich freuen",
+        "translation-ru": "радоваться",
+        "translation-en": "to be happy, to look forward",
+        "translation-uk": "радіти",
+        "translation-pl": "cieszyć się",
+        "translation-es": "alegrarse",
+        "translation-fr": "se réjouir",
+        "translation-tr": "sevinmek",
+        "translation-ro": "a se bucura",
+        "translation-uz": "quvonmoq",
+        "translation-hi": "ख़ुश होना",
+        "translation-ar": "يفرح"
+      },
+      {
+        "word": "sich beeilen",
+        "translation-ru": "торопиться",
+        "translation-en": "to hurry",
+        "translation-uk": "поспішати",
+        "translation-pl": "spieszyć się",
+        "translation-es": "darse prisa",
+        "translation-fr": "se dépêcher",
+        "translation-tr": "acele etmek",
+        "translation-ro": "a se grăbi",
+        "translation-uz": "shoshilmoq",
+        "translation-hi": "जल्दी करना",
+        "translation-ar": "يستعجل"
+      },
+      {
+        "word": "Deutsch",
+        "translation-ru": "немецкий язык",
+        "translation-en": "German",
+        "translation-uk": "німецька мова",
+        "translation-pl": "niemiecki",
+        "translation-es": "el alemán",
+        "translation-fr": "l’allemand",
+        "translation-tr": "Almanca",
+        "translation-ro": "germana",
+        "translation-uz": "nemis tili",
+        "translation-hi": "जर्मन भाषा",
+        "translation-ar": "الألمانية"
+      }
+    ],
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "a2SummitThree.questTask1",
+        "options": [
+          "Ich komme, weil ich gesund bin.",
+          "Ich komme nicht, wenn ich krank bin.",
+          "Ich komme nicht, weil ich krank bin."
+        ],
+        "answer": "Ich komme nicht, weil ich krank bin.",
+        "tip": "a2SummitThree.questDescription"
+      },
+      {
+        "id": 2,
+        "type": "input",
+        "question": "a2SummitThree.questTask2",
+        "correctAnswer": "ist",
+        "tip": "a2SummitThree.questDescription"
+      },
+      {
+        "id": 3,
+        "type": "input",
+        "question": "a2SummitThree.questTask3",
+        "correctAnswer": "ob",
+        "tip": "a2SummitThree.questDescription"
+      },
+      {
+        "id": 4,
+        "type": "reorder",
+        "question": "a2SummitThree.questTask4",
+        "words": [
+          "ist",
+          "ein",
+          "Café",
+          "Hier",
+          "gibt",
+          "gutes",
+          "es"
+        ],
+        "correctOrder": [
+          "Hier",
+          "gibt",
+          "es",
+          "ein",
+          "gutes",
+          "Café"
+        ],
+        "tip": "a2SummitThree.questDescription"
+      },
+      {
+        "id": 5,
+        "type": "select",
+        "question": "a2SummitThree.questTask5",
+        "options": [
+          "Ich freue mich auf das Wochenende.",
+          "Ich ärgere mich über das Wochenende.",
+          "Ich freue mich über das Geschenk."
+        ],
+        "answer": "Ich freue mich auf das Wochenende.",
+        "tip": "a2SummitThree.questDescription"
+      },
+      {
+        "id": 6,
+        "type": "input",
+        "question": "a2SummitThree.questTask6",
+        "correctAnswer": "sich",
+        "tip": "a2SummitThree.questDescription"
+      },
+      {
+        "id": 7,
+        "type": "readAndAnswer",
+        "question": "a2SummitThree.questTask7",
+        "text": "Tom geht heute nicht zur Arbeit, weil er Fieber hat. Er bleibt im Bett.",
+        "options": [
+          "Er hat keine Lust.",
+          "Er hat Fieber.",
+          "Er hat Urlaub."
+        ],
+        "answer": "Er hat Fieber.",
+        "tip": "a2SummitThree.questDescription"
+      },
+      {
+        "id": 8,
+        "type": "input",
+        "question": "a2SummitThree.questTask8",
+        "correctAnswer": "Wenn",
+        "tip": "a2SummitThree.questDescription"
+      },
+      {
+        "id": 9,
+        "type": "select",
+        "question": "a2SummitThree.questTask9",
+        "options": [
+          "Er fragt, ob ich Zeit habe.",
+          "Er sagt, dass er keine Zeit hat.",
+          "Er sagt, dass er viel Zeit hat."
+        ],
+        "answer": "Er sagt, dass er keine Zeit hat.",
+        "tip": "a2SummitThree.questDescription"
+      },
+      {
+        "id": 10,
+        "type": "input",
+        "question": "a2SummitThree.questTask10",
+        "correctAnswer": "will",
+        "tip": "a2SummitThree.questDescription"
+      },
+      {
+        "id": 11,
+        "type": "reorder",
+        "question": "a2SummitThree.questTask11",
+        "words": [
+          "wo",
+          "weiß",
+          "Ich",
+          "nicht",
+          "wohnt",
+          "dass",
+          "er"
+        ],
+        "correctOrder": [
+          "Ich",
+          "weiß",
+          "nicht",
+          "wo",
+          "er",
+          "wohnt"
+        ],
+        "tip": "a2SummitThree.questDescription"
+      },
+      {
+        "id": 12,
+        "type": "select",
+        "question": "a2SummitThree.questTask12",
+        "options": [
+          "Gibt es hier eine Apotheke?",
+          "Gibt es hier keine Apotheke?",
+          "Gibt es hier eine Bank?"
+        ],
+        "answer": "Gibt es hier eine Apotheke?",
+        "tip": "a2SummitThree.questDescription"
+      },
+      {
+        "id": 13,
+        "type": "readAndAnswer",
+        "question": "a2SummitThree.questTask13",
+        "text": "Mia fragt ihren Freund, ob er am Abend Zeit hat. Er sagt, dass er arbeiten muss.",
+        "options": [
+          "wo er arbeitet",
+          "ob er am Abend Zeit hat",
+          "wann er kommt"
+        ],
+        "answer": "ob er am Abend Zeit hat",
+        "tip": "a2SummitThree.questDescription"
+      },
+      {
+        "id": 14,
+        "type": "input",
+        "question": "a2SummitThree.questTask14",
+        "correctAnswer": "mich",
+        "tip": "a2SummitThree.questDescription"
+      },
+      {
+        "id": 15,
+        "type": "input",
+        "question": "a2SummitThree.questTask15",
+        "correctAnswer": "bin",
+        "tip": "a2SummitThree.questDescription"
+      }
+    ]
+  },
+  {
+    "questId": "a2-summit-four",
+    "title": "a2SummitFour.questTitle",
+    "progress": "0/15",
+    "description": "a2SummitFour.questDescription",
+    "conditions": {
+      "goal": "a2SummitFour.questGoal",
+      "minCorrect": 15,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
+    "vocabulary": [
+      {
+        "word": "die Jacke",
+        "translation-ru": "куртка",
+        "translation-en": "jacket",
+        "translation-uk": "куртка",
+        "translation-pl": "kurtka",
+        "translation-es": "la chaqueta",
+        "translation-fr": "la veste",
+        "translation-tr": "ceket",
+        "translation-ro": "geaca",
+        "translation-uz": "kurtka",
+        "translation-hi": "जैकेट",
+        "translation-ar": "السترة"
+      },
+      {
+        "word": "das Hemd",
+        "translation-ru": "рубашка",
+        "translation-en": "shirt",
+        "translation-uk": "сорочка",
+        "translation-pl": "koszula",
+        "translation-es": "la camisa",
+        "translation-fr": "la chemise",
+        "translation-tr": "gömlek",
+        "translation-ro": "cămașa",
+        "translation-uz": "ko‘ylak",
+        "translation-hi": "कमीज़",
+        "translation-ar": "القميص"
+      },
+      {
+        "word": "der Pullover",
+        "translation-ru": "пуловер, свитер",
+        "translation-en": "jumper",
+        "translation-uk": "светр",
+        "translation-pl": "sweter",
+        "translation-es": "el jersey",
+        "translation-fr": "le pull",
+        "translation-tr": "kazak",
+        "translation-ro": "puloverul",
+        "translation-uz": "sviter",
+        "translation-hi": "स्वेटर",
+        "translation-ar": "الكنزة"
+      },
+      {
+        "word": "bequem",
+        "translation-ru": "удобный",
+        "translation-en": "comfortable",
+        "translation-uk": "зручний",
+        "translation-pl": "wygodny",
+        "translation-es": "cómodo",
+        "translation-fr": "confortable",
+        "translation-tr": "rahat",
+        "translation-ro": "comod",
+        "translation-uz": "qulay",
+        "translation-hi": "आरामदायक",
+        "translation-ar": "مريح"
+      },
+      {
+        "word": "die Farbe",
+        "translation-ru": "цвет",
+        "translation-en": "colour",
+        "translation-uk": "колір",
+        "translation-pl": "kolor",
+        "translation-es": "el color",
+        "translation-fr": "la couleur",
+        "translation-tr": "renk",
+        "translation-ro": "culoarea",
+        "translation-uz": "rang",
+        "translation-hi": "रंग",
+        "translation-ar": "اللون"
+      },
+      {
+        "word": "das Schaufenster",
+        "translation-ru": "витрина",
+        "translation-en": "shop window",
+        "translation-uk": "вітрина",
+        "translation-pl": "witryna",
+        "translation-es": "el escaparate",
+        "translation-fr": "la vitrine",
+        "translation-tr": "vitrin",
+        "translation-ro": "vitrina",
+        "translation-uz": "vitrina",
+        "translation-hi": "शो-विंडो",
+        "translation-ar": "واجهة المتجر"
+      },
+      {
+        "word": "grau",
+        "translation-ru": "серый",
+        "translation-en": "grey",
+        "translation-uk": "сірий",
+        "translation-pl": "szary",
+        "translation-es": "gris",
+        "translation-fr": "gris",
+        "translation-tr": "gri",
+        "translation-ro": "gri",
+        "translation-uz": "kulrang",
+        "translation-hi": "स्लेटी",
+        "translation-ar": "رمادي"
+      }
+    ],
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "a2SummitFour.questTask1",
+        "options": [
+          "Ich trage die rote Jacke.",
+          "Ich kaufe die blaue Jacke.",
+          "Ich kaufe die rote Jacke."
+        ],
+        "answer": "Ich kaufe die rote Jacke.",
+        "tip": "a2SummitFour.questDescription"
+      },
+      {
+        "id": 2,
+        "type": "input",
+        "question": "a2SummitFour.questTask2",
+        "correctAnswer": "neuen",
+        "tip": "a2SummitFour.questDescription"
+      },
+      {
+        "id": 3,
+        "type": "input",
+        "question": "a2SummitFour.questTask3",
+        "correctAnswer": "große",
+        "tip": "a2SummitFour.questDescription"
+      },
+      {
+        "id": 4,
+        "type": "reorder",
+        "question": "a2SummitFour.questTask4",
+        "words": [
+          "Hemd",
+          "Er",
+          "weiße",
+          "weißes",
+          "ein",
+          "trägt"
+        ],
+        "correctOrder": [
+          "Er",
+          "trägt",
+          "ein",
+          "weißes",
+          "Hemd"
+        ],
+        "tip": "a2SummitFour.questDescription"
+      },
+      {
+        "id": 5,
+        "type": "select",
+        "question": "a2SummitFour.questTask5",
+        "options": [
+          "Das ist kein bequemer Stuhl.",
+          "Das ist ein bequemer Stuhl.",
+          "Das ist ein alter Stuhl."
+        ],
+        "answer": "Das ist ein bequemer Stuhl.",
+        "tip": "a2SummitFour.questDescription"
+      },
+      {
+        "id": 6,
+        "type": "input",
+        "question": "a2SummitFour.questTask6",
+        "correctAnswer": "alten",
+        "tip": "a2SummitFour.questDescription"
+      },
+      {
+        "id": 7,
+        "type": "readAndAnswer",
+        "question": "a2SummitFour.questTask7",
+        "text": "Lena sucht eine Jacke. Die schwarze Jacke ist zu klein, aber die blaue Jacke passt gut.",
+        "options": [
+          "die blaue Jacke",
+          "die rote Jacke",
+          "die schwarze Jacke"
+        ],
+        "answer": "die blaue Jacke",
+        "tip": "a2SummitFour.questDescription"
+      },
+      {
+        "id": 8,
+        "type": "input",
+        "question": "a2SummitFour.questTask8",
+        "correctAnswer": "großen",
+        "tip": "a2SummitFour.questDescription"
+      },
+      {
+        "id": 9,
+        "type": "select",
+        "question": "a2SummitFour.questTask9",
+        "options": [
+          "Mir gefällt die grüne Farbe.",
+          "Mir gefällt die grüne Jacke.",
+          "Mir gefällt die rote Farbe."
+        ],
+        "answer": "Mir gefällt die grüne Farbe.",
+        "tip": "a2SummitFour.questDescription"
+      },
+      {
+        "id": 10,
+        "type": "input",
+        "question": "a2SummitFour.questTask10",
+        "correctAnswer": "gute",
+        "tip": "a2SummitFour.questDescription"
+      },
+      {
+        "id": 11,
+        "type": "reorder",
+        "question": "a2SummitFour.questTask11",
+        "words": [
+          "kalte",
+          "Ich",
+          "Wasser",
+          "trinke",
+          "kaltes"
+        ],
+        "correctOrder": [
+          "Ich",
+          "trinke",
+          "kaltes",
+          "Wasser"
+        ],
+        "tip": "a2SummitFour.questDescription"
+      },
+      {
+        "id": 12,
+        "type": "select",
+        "question": "a2SummitFour.questTask12",
+        "options": [
+          "Das große Kind schläft.",
+          "Das kleine Kind schläft.",
+          "Das kleine Kind spielt."
+        ],
+        "answer": "Das kleine Kind schläft.",
+        "tip": "a2SummitFour.questDescription"
+      },
+      {
+        "id": 13,
+        "type": "readAndAnswer",
+        "question": "a2SummitFour.questTask13",
+        "text": "Im Schaufenster liegen ein roter Pullover für 30 Euro und ein grauer Pullover für 25 Euro.",
+        "options": [
+          "30 Euro",
+          "25 Euro",
+          "35 Euro"
+        ],
+        "answer": "30 Euro",
+        "tip": "a2SummitFour.questDescription"
+      },
+      {
+        "id": 14,
+        "type": "input",
+        "question": "a2SummitFour.questTask14",
+        "correctAnswer": "billige",
+        "tip": "a2SummitFour.questDescription"
+      },
+      {
+        "id": 15,
+        "type": "input",
+        "question": "a2SummitFour.questTask15",
+        "correctAnswer": "alten",
+        "tip": "a2SummitFour.questDescription"
+      }
+    ]
+  },
+  {
+    "questId": "a2-summit-five",
+    "title": "a2SummitFive.questTitle",
+    "progress": "0/15",
+    "description": "a2SummitFive.questDescription",
+    "conditions": {
+      "goal": "a2SummitFive.questGoal",
+      "minCorrect": 15,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
+    "vocabulary": [
+      {
+        "word": "der Plan",
+        "translation-ru": "план",
+        "translation-en": "plan",
+        "translation-uk": "план",
+        "translation-pl": "plan",
+        "translation-es": "el plan",
+        "translation-fr": "le projet",
+        "translation-tr": "plan",
+        "translation-ro": "planul",
+        "translation-uz": "reja",
+        "translation-hi": "योजना",
+        "translation-ar": "الخطة"
+      },
+      {
+        "word": "nächste Woche",
+        "translation-ru": "на следующей неделе",
+        "translation-en": "next week",
+        "translation-uk": "наступного тижня",
+        "translation-pl": "w przyszłym tygodniu",
+        "translation-es": "la semana que viene",
+        "translation-fr": "la semaine prochaine",
+        "translation-tr": "gelecek hafta",
+        "translation-ro": "săptămâna viitoare",
+        "translation-uz": "keyingi hafta",
+        "translation-hi": "अगले हफ़्ते",
+        "translation-ar": "الأسبوع القادم"
+      },
+      {
+        "word": "umziehen",
+        "translation-ru": "переезжать",
+        "translation-en": "to move house",
+        "translation-uk": "переїжджати",
+        "translation-pl": "przeprowadzać się",
+        "translation-es": "mudarse",
+        "translation-fr": "déménager",
+        "translation-tr": "taşınmak",
+        "translation-ro": "a se muta",
+        "translation-uz": "ko‘chib o‘tmoq",
+        "translation-hi": "घर बदलना",
+        "translation-ar": "ينتقل"
+      },
+      {
+        "word": "die Zukunft",
+        "translation-ru": "будущее",
+        "translation-en": "future",
+        "translation-uk": "майбутнє",
+        "translation-pl": "przyszłość",
+        "translation-es": "el futuro",
+        "translation-fr": "l’avenir",
+        "translation-tr": "gelecek",
+        "translation-ro": "viitorul",
+        "translation-uz": "kelajak",
+        "translation-hi": "भविष्य",
+        "translation-ar": "المستقبل"
+      },
+      {
+        "word": "die Ausbildung",
+        "translation-ru": "профессиональное обучение",
+        "translation-en": "vocational training",
+        "translation-uk": "професійне навчання",
+        "translation-pl": "szkolenie zawodowe",
+        "translation-es": "la formación profesional",
+        "translation-fr": "la formation",
+        "translation-tr": "meslek eğitimi",
+        "translation-ro": "formarea profesională",
+        "translation-uz": "kasbiy ta’lim",
+        "translation-hi": "व्यावसायिक प्रशिक्षण",
+        "translation-ar": "التدريب المهني"
+      },
+      {
+        "word": "regnen",
+        "translation-ru": "идти (о дожде)",
+        "translation-en": "to rain",
+        "translation-uk": "іти (про дощ)",
+        "translation-pl": "padać (deszcz)",
+        "translation-es": "llover",
+        "translation-fr": "pleuvoir",
+        "translation-tr": "yağmur yağmak",
+        "translation-ro": "a ploua",
+        "translation-uz": "yomg‘ir yog‘moq",
+        "translation-hi": "बारिश होना",
+        "translation-ar": "تمطر"
+      }
+    ],
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "a2SummitFive.questTask1",
+        "options": [
+          "Morgen fahre ich nach Berlin.",
+          "Gestern bin ich nach Hamburg gefahren.",
+          "Morgen fahre ich nach Hamburg."
+        ],
+        "answer": "Morgen fahre ich nach Hamburg.",
+        "tip": "a2SummitFive.questDescription"
+      },
+      {
+        "id": 2,
+        "type": "input",
+        "question": "a2SummitFive.questTask2",
+        "correctAnswer": "werde",
+        "tip": "a2SummitFive.questDescription"
+      },
+      {
+        "id": 3,
+        "type": "input",
+        "question": "a2SummitFive.questTask3",
+        "correctAnswer": "Wirst",
+        "tip": "a2SummitFive.questDescription"
+      },
+      {
+        "id": 4,
+        "type": "reorder",
+        "question": "a2SummitFive.questTask4",
+        "words": [
+          "ziehen",
+          "wir",
+          "um",
+          "umziehen",
+          "Nächste",
+          "Woche"
+        ],
+        "correctOrder": [
+          "Nächste",
+          "Woche",
+          "ziehen",
+          "wir",
+          "um"
+        ],
+        "tip": "a2SummitFive.questDescription"
+      },
+      {
+        "id": 5,
+        "type": "select",
+        "question": "a2SummitFive.questTask5",
+        "options": [
+          "Es wird regnen.",
+          "Es wird schneien.",
+          "Es hat geregnet."
+        ],
+        "answer": "Es wird regnen.",
+        "tip": "a2SummitFive.questDescription"
+      },
+      {
+        "id": 6,
+        "type": "input",
+        "question": "a2SummitFive.questTask6",
+        "correctAnswer": "will",
+        "tip": "a2SummitFive.questDescription"
+      },
+      {
+        "id": 7,
+        "type": "readAndAnswer",
+        "question": "a2SummitFive.questTask7",
+        "text": "Anna hat große Pläne. Nächstes Jahr wird sie in Wien studieren. Sie freut sich sehr.",
+        "options": [
+          "in Wien",
+          "in Zürich",
+          "in Berlin"
+        ],
+        "answer": "in Wien",
+        "tip": "a2SummitFive.questDescription"
+      },
+      {
+        "id": 8,
+        "type": "input",
+        "question": "a2SummitFive.questTask8",
+        "correctAnswer": "wird",
+        "tip": "a2SummitFive.questDescription"
+      },
+      {
+        "id": 9,
+        "type": "select",
+        "question": "a2SummitFive.questTask9",
+        "options": [
+          "Wo bist du am Samstag?",
+          "Was machst du am Samstag?",
+          "Was hast du am Samstag gemacht?"
+        ],
+        "answer": "Was machst du am Samstag?",
+        "tip": "a2SummitFive.questDescription"
+      },
+      {
+        "id": 10,
+        "type": "input",
+        "question": "a2SummitFive.questTask10",
+        "correctAnswer": "werden",
+        "tip": "a2SummitFive.questDescription"
+      },
+      {
+        "id": 11,
+        "type": "reorder",
+        "question": "a2SummitFive.questTask11",
+        "words": [
+          "werde",
+          "Ich",
+          "wird",
+          "Lehrer"
+        ],
+        "correctOrder": [
+          "Ich",
+          "werde",
+          "Lehrer"
+        ],
+        "tip": "a2SummitFive.questDescription"
+      },
+      {
+        "id": 12,
+        "type": "select",
+        "question": "a2SummitFive.questTask12",
+        "options": [
+          "Was sind deine Pläne?",
+          "Wo sind deine Pläne?",
+          "Was war dein Plan?"
+        ],
+        "answer": "Was sind deine Pläne?",
+        "tip": "a2SummitFive.questDescription"
+      },
+      {
+        "id": 13,
+        "type": "readAndAnswer",
+        "question": "a2SummitFive.questTask13",
+        "text": "Ben: Was machst du nach der Schule? Tim: Ich werde eine Ausbildung als Koch machen.",
+        "options": [
+          "Koch",
+          "Arzt",
+          "Lehrer"
+        ],
+        "answer": "Koch",
+        "tip": "a2SummitFive.questDescription"
+      },
+      {
+        "id": 14,
+        "type": "input",
+        "question": "a2SummitFive.questTask14",
+        "correctAnswer": "Werdet",
+        "tip": "a2SummitFive.questDescription"
+      },
+      {
+        "id": 15,
+        "type": "input",
+        "question": "a2SummitFive.questTask15",
+        "correctAnswer": "Zukunft",
+        "tip": "a2SummitFive.questDescription"
+      }
+    ]
+  },
+  {
+    "questId": "a2-summit-six",
+    "title": "a2SummitSix.questTitle",
+    "progress": "0/15",
+    "description": "a2SummitSix.questDescription",
+    "conditions": {
+      "goal": "a2SummitSix.questGoal",
+      "minCorrect": 15,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
+    "vocabulary": [
+      {
+        "word": "höflich",
+        "translation-ru": "вежливый",
+        "translation-en": "polite",
+        "translation-uk": "ввічливий",
+        "translation-pl": "uprzejmy",
+        "translation-es": "educado",
+        "translation-fr": "poli",
+        "translation-tr": "kibar",
+        "translation-ro": "politicos",
+        "translation-uz": "xushmuomala",
+        "translation-hi": "विनम्र",
+        "translation-ar": "مهذب"
+      },
+      {
+        "word": "die Hilfe",
+        "translation-ru": "помощь",
+        "translation-en": "help",
+        "translation-uk": "допомога",
+        "translation-pl": "pomoc",
+        "translation-es": "la ayuda",
+        "translation-fr": "l’aide",
+        "translation-tr": "yardım",
+        "translation-ro": "ajutorul",
+        "translation-uz": "yordam",
+        "translation-hi": "मदद",
+        "translation-ar": "المساعدة"
+      },
+      {
+        "word": "der Kellner",
+        "translation-ru": "официант",
+        "translation-en": "waiter",
+        "translation-uk": "офіціант",
+        "translation-pl": "kelner",
+        "translation-es": "el camarero",
+        "translation-fr": "le serveur",
+        "translation-tr": "garson",
+        "translation-ro": "chelnerul",
+        "translation-uz": "ofitsiant",
+        "translation-hi": "वेटर",
+        "translation-ar": "النادل"
+      },
+      {
+        "word": "die Rechnung",
+        "translation-ru": "счёт",
+        "translation-en": "bill",
+        "translation-uk": "рахунок",
+        "translation-pl": "rachunek",
+        "translation-es": "la cuenta",
+        "translation-fr": "l’addition",
+        "translation-tr": "hesap",
+        "translation-ro": "nota de plată",
+        "translation-uz": "hisob",
+        "translation-hi": "बिल",
+        "translation-ar": "الفاتورة"
+      },
+      {
+        "word": "die Speisekarte",
+        "translation-ru": "меню",
+        "translation-en": "menu",
+        "translation-uk": "меню",
+        "translation-pl": "karta dań",
+        "translation-es": "la carta",
+        "translation-fr": "la carte",
+        "translation-tr": "menü",
+        "translation-ro": "meniul",
+        "translation-uz": "menyu",
+        "translation-hi": "मेन्यू",
+        "translation-ar": "قائمة الطعام"
+      },
+      {
+        "word": "natürlich",
+        "translation-ru": "конечно",
+        "translation-en": "of course",
+        "translation-uk": "звичайно",
+        "translation-pl": "oczywiście",
+        "translation-es": "por supuesto",
+        "translation-fr": "bien sûr",
+        "translation-tr": "tabii ki",
+        "translation-ro": "desigur",
+        "translation-uz": "albatta",
+        "translation-hi": "ज़रूर",
+        "translation-ar": "طبعًا"
+      },
+      {
+        "word": "der Moment",
+        "translation-ru": "момент",
+        "translation-en": "moment",
+        "translation-uk": "момент",
+        "translation-pl": "chwila",
+        "translation-es": "el momento",
+        "translation-fr": "le moment",
+        "translation-tr": "an",
+        "translation-ro": "momentul",
+        "translation-uz": "lahza",
+        "translation-hi": "पल",
+        "translation-ar": "اللحظة"
+      }
+    ],
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "a2SummitSix.questTask1",
+        "options": [
+          "Könnten Sie das Fenster schließen?",
+          "Haben Sie das Fenster geöffnet?",
+          "Könnten Sie das Fenster öffnen?"
+        ],
+        "answer": "Könnten Sie das Fenster öffnen?",
+        "tip": "a2SummitSix.questDescription"
+      },
+      {
+        "id": 2,
+        "type": "input",
+        "question": "a2SummitSix.questTask2",
+        "correctAnswer": "Bring",
+        "tip": "a2SummitSix.questDescription"
+      },
+      {
+        "id": 3,
+        "type": "input",
+        "question": "a2SummitSix.questTask3",
+        "correctAnswer": "hätte",
+        "tip": "a2SummitSix.questDescription"
+      },
+      {
+        "id": 4,
+        "type": "reorder",
+        "question": "a2SummitSix.questTask4",
+        "words": [
+          "fragen",
+          "Kellner",
+          "dem",
+          "Du",
+          "den",
+          "solltest"
+        ],
+        "correctOrder": [
+          "Du",
+          "solltest",
+          "den",
+          "Kellner",
+          "fragen"
+        ],
+        "tip": "a2SummitSix.questDescription"
+      },
+      {
+        "id": 5,
+        "type": "select",
+        "question": "a2SummitSix.questTask5",
+        "options": [
+          "Dieses Restaurant ist gut.",
+          "Dieses Restaurant ist am schlechtesten.",
+          "Dieses Restaurant ist besser."
+        ],
+        "answer": "Dieses Restaurant ist besser.",
+        "tip": "a2SummitSix.questDescription"
+      },
+      {
+        "id": 6,
+        "type": "input",
+        "question": "a2SummitSix.questTask6",
+        "correctAnswer": "lauter",
+        "tip": "a2SummitSix.questDescription"
+      },
+      {
+        "id": 7,
+        "type": "readAndAnswer",
+        "question": "a2SummitSix.questTask7",
+        "text": "Gast: Entschuldigung, könnten Sie mir bitte die Speisekarte bringen? Kellner: Natürlich, einen Moment bitte.",
+        "options": [
+          "ein Glas Wasser",
+          "die Speisekarte",
+          "die Rechnung"
+        ],
+        "answer": "die Speisekarte",
+        "tip": "a2SummitSix.questDescription"
+      },
+      {
+        "id": 8,
+        "type": "input",
+        "question": "a2SummitSix.questTask8",
+        "correctAnswer": "Hilfe",
+        "tip": "a2SummitSix.questDescription"
+      },
+      {
+        "id": 9,
+        "type": "select",
+        "question": "a2SummitSix.questTask9",
+        "options": [
+          "Würdest du gern ins Café gehen?",
+          "Würdest du gern ins Kino gehen?",
+          "Gehst du ins Café?"
+        ],
+        "answer": "Würdest du gern ins Café gehen?",
+        "tip": "a2SummitSix.questDescription"
+      },
+      {
+        "id": 10,
+        "type": "input",
+        "question": "a2SummitSix.questTask10",
+        "correctAnswer": "höflichste",
+        "tip": "a2SummitSix.questDescription"
+      },
+      {
+        "id": 11,
+        "type": "reorder",
+        "question": "a2SummitSix.questTask11",
+        "words": [
+          "Machst",
+          "bitte",
+          "Mach",
+          "auf",
+          "die",
+          "Tür"
+        ],
+        "correctOrder": [
+          "Mach",
+          "bitte",
+          "die",
+          "Tür",
+          "auf"
+        ],
+        "tip": "a2SummitSix.questDescription"
+      },
+      {
+        "id": 12,
+        "type": "select",
+        "question": "a2SummitSix.questTask12",
+        "options": [
+          "Möchtest du keinen Tee?",
+          "Wie wäre es mit einem Tee?",
+          "Wie war der Tee?"
+        ],
+        "answer": "Wie wäre es mit einem Tee?",
+        "tip": "a2SummitSix.questDescription"
+      },
+      {
+        "id": 13,
+        "type": "readAndAnswer",
+        "question": "a2SummitSix.questTask13",
+        "text": "Lisa: Mein Zimmer ist so klein. Paul: An deiner Stelle würde ich eine größere Wohnung suchen.",
+        "options": [
+          "im Zimmer bleiben",
+          "eine größere Wohnung suchen",
+          "ein kleineres Zimmer suchen"
+        ],
+        "answer": "eine größere Wohnung suchen",
+        "tip": "a2SummitSix.questDescription"
+      },
+      {
+        "id": 14,
+        "type": "input",
+        "question": "a2SummitSix.questTask14",
+        "correctAnswer": "wie",
+        "tip": "a2SummitSix.questDescription"
+      },
+      {
+        "id": 15,
+        "type": "input",
+        "question": "a2SummitSix.questTask15",
+        "correctAnswer": "sollten",
+        "tip": "a2SummitSix.questDescription"
+      }
+    ]
+  },
+  {
+    "questId": "a2-summit-seven",
+    "title": "a2SummitSeven.questTitle",
+    "progress": "0/15",
+    "description": "a2SummitSeven.questDescription",
+    "conditions": {
+      "goal": "a2SummitSeven.questGoal",
+      "minCorrect": 15,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
+    "vocabulary": [
+      {
+        "word": "der Hund",
+        "translation-ru": "собака",
+        "translation-en": "dog",
+        "translation-uk": "собака",
+        "translation-pl": "pies",
+        "translation-es": "el perro",
+        "translation-fr": "le chien",
+        "translation-tr": "köpek",
+        "translation-ro": "câinele",
+        "translation-uz": "it",
+        "translation-hi": "कुत्ता",
+        "translation-ar": "الكلب"
+      },
+      {
+        "word": "die Katze",
+        "translation-ru": "кошка",
+        "translation-en": "cat",
+        "translation-uk": "кішка",
+        "translation-pl": "kot",
+        "translation-es": "el gato",
+        "translation-fr": "le chat",
+        "translation-tr": "kedi",
+        "translation-ro": "pisica",
+        "translation-uz": "mushuk",
+        "translation-hi": "बिल्ली",
+        "translation-ar": "القطة"
+      },
+      {
+        "word": "der Bus",
+        "translation-ru": "автобус",
+        "translation-en": "bus",
+        "translation-uk": "автобус",
+        "translation-pl": "autobus",
+        "translation-es": "el autobús",
+        "translation-fr": "le bus",
+        "translation-tr": "otobüs",
+        "translation-ro": "autobuzul",
+        "translation-uz": "avtobus",
+        "translation-hi": "बस",
+        "translation-ar": "الحافلة"
+      },
+      {
+        "word": "das Fahrrad",
+        "translation-ru": "велосипед",
+        "translation-en": "bike",
+        "translation-uk": "велосипед",
+        "translation-pl": "rower",
+        "translation-es": "la bicicleta",
+        "translation-fr": "le vélo",
+        "translation-tr": "bisiklet",
+        "translation-ro": "bicicleta",
+        "translation-uz": "velosiped",
+        "translation-hi": "साइकिल",
+        "translation-ar": "الدراجة"
+      },
+      {
+        "word": "der Monat",
+        "translation-ru": "месяц",
+        "translation-en": "month",
+        "translation-uk": "місяць",
+        "translation-pl": "miesiąc",
+        "translation-es": "el mes",
+        "translation-fr": "le mois",
+        "translation-tr": "ay",
+        "translation-ro": "luna",
+        "translation-uz": "oy",
+        "translation-hi": "महीना",
+        "translation-ar": "الشهر"
+      }
+    ],
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "a2SummitSeven.questTask1",
+        "options": [
+          "Das Fahrrad ist langsam als der Bus.",
+          "Das Fahrrad ist langsamer wie der Bus.",
+          "Das Fahrrad ist langsamer als der Bus."
+        ],
+        "answer": "Das Fahrrad ist langsamer als der Bus.",
+        "tip": "a2SummitSeven.questDescription"
+      },
+      {
+        "id": 2,
+        "type": "input",
+        "question": "a2SummitSeven.questTask2",
+        "correctAnswer": "älter",
+        "tip": "a2SummitSeven.questDescription"
+      },
+      {
+        "id": 3,
+        "type": "input",
+        "question": "a2SummitSeven.questTask3",
+        "correctAnswer": "wie",
+        "tip": "a2SummitSeven.questDescription"
+      },
+      {
+        "id": 4,
+        "type": "reorder",
+        "question": "a2SummitSeven.questTask4",
+        "words": [
+          "am",
+          "wärmer",
+          "wärmsten?",
+          "ist",
+          "Welcher",
+          "Monat"
+        ],
+        "correctOrder": [
+          "Welcher",
+          "Monat",
+          "ist",
+          "am",
+          "wärmsten?"
+        ],
+        "tip": "a2SummitSeven.questDescription"
+      },
+      {
+        "id": 5,
+        "type": "select",
+        "question": "a2SummitSeven.questTask5",
+        "options": [
+          "Ich mag Hunde gerner als Katzen.",
+          "Ich mag Hunde lieber wie Katzen.",
+          "Ich mag Hunde lieber als Katzen."
+        ],
+        "answer": "Ich mag Hunde lieber als Katzen.",
+        "tip": "a2SummitSeven.questDescription"
+      },
+      {
+        "id": 6,
+        "type": "input",
+        "question": "a2SummitSeven.questTask6",
+        "correctAnswer": "schnellste",
+        "tip": "a2SummitSeven.questDescription"
+      },
+      {
+        "id": 7,
+        "type": "readAndAnswer",
+        "question": "a2SummitSeven.questTask7",
+        "text": "In meiner Familie bin ich größer als meine Mutter, aber mein Bruder ist noch größer. Er ist am größten. Mein Vater ist so groß wie ich.",
+        "options": [
+          "der Bruder",
+          "die Mutter",
+          "der Vater"
+        ],
+        "answer": "der Bruder",
+        "tip": "a2SummitSeven.questDescription"
+      },
+      {
+        "id": 8,
+        "type": "input",
+        "question": "a2SummitSeven.questTask8",
+        "correctAnswer": "besser",
+        "tip": "a2SummitSeven.questDescription"
+      },
+      {
+        "id": 9,
+        "type": "input",
+        "question": "a2SummitSeven.questTask9",
+        "correctAnswer": "meisten",
+        "tip": "a2SummitSeven.questDescription"
+      },
+      {
+        "id": 10,
+        "type": "reorder",
+        "question": "a2SummitSeven.questTask10",
+        "words": [
+          "wie",
+          "Straßenbahn",
+          "Der",
+          "als",
+          "so",
+          "die",
+          "ist",
+          "Bus",
+          "langsam"
+        ],
+        "correctOrder": [
+          "Der",
+          "Bus",
+          "ist",
+          "so",
+          "langsam",
+          "wie",
+          "die",
+          "Straßenbahn"
+        ],
+        "tip": "a2SummitSeven.questDescription"
+      },
+      {
+        "id": 11,
+        "type": "select",
+        "question": "a2SummitSeven.questTask11",
+        "options": [
+          "Das ist das am billigsten Fahrrad.",
+          "Das ist das billigste Fahrrad.",
+          "Das ist das billiger Fahrrad."
+        ],
+        "answer": "Das ist das billigste Fahrrad.",
+        "tip": "a2SummitSeven.questDescription"
+      },
+      {
+        "id": 12,
+        "type": "input",
+        "question": "a2SummitSeven.questTask12",
+        "correctAnswer": "länger",
+        "tip": "a2SummitSeven.questDescription"
+      },
+      {
+        "id": 13,
+        "type": "input",
+        "question": "a2SummitSeven.questTask13",
+        "correctAnswer": "liebsten",
+        "tip": "a2SummitSeven.questDescription"
+      },
+      {
+        "id": 14,
+        "type": "input",
+        "question": "a2SummitSeven.questTask14",
+        "correctAnswer": "schwerer",
+        "tip": "a2SummitSeven.questDescription"
+      },
+      {
+        "id": 15,
+        "type": "input",
+        "question": "a2SummitSeven.questTask15",
+        "correctAnswer": "schönste",
+        "tip": "a2SummitSeven.questDescription"
+      }
+    ]
+  },
+  {
+    "questId": "a2-summit-eight",
+    "title": "a2SummitEight.questTitle",
+    "progress": "0/15",
+    "description": "a2SummitEight.questDescription",
+    "conditions": {
+      "goal": "a2SummitEight.questGoal",
+      "minCorrect": 15,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
+    "vocabulary": [
+      {
+        "word": "der Saft",
+        "translation-ru": "сок",
+        "translation-en": "juice",
+        "translation-uk": "сік",
+        "translation-pl": "sok",
+        "translation-es": "el zumo",
+        "translation-fr": "le jus",
+        "translation-tr": "meyve suyu",
+        "translation-ro": "sucul",
+        "translation-uz": "sharbat",
+        "translation-hi": "जूस",
+        "translation-ar": "العصير"
+      },
+      {
+        "word": "das Obst",
+        "translation-ru": "фрукты",
+        "translation-en": "fruit",
+        "translation-uk": "фрукти",
+        "translation-pl": "owoce",
+        "translation-es": "la fruta",
+        "translation-fr": "les fruits",
+        "translation-tr": "meyve",
+        "translation-ro": "fructele",
+        "translation-uz": "meva",
+        "translation-hi": "फल",
+        "translation-ar": "الفاكهة"
+      },
+      {
+        "word": "die Reise",
+        "translation-ru": "путешествие",
+        "translation-en": "trip, journey",
+        "translation-uk": "подорож",
+        "translation-pl": "podróż",
+        "translation-es": "el viaje",
+        "translation-fr": "le voyage",
+        "translation-tr": "yolculuk",
+        "translation-ro": "călătoria",
+        "translation-uz": "sayohat",
+        "translation-hi": "यात्रा",
+        "translation-ar": "الرحلة"
+      },
+      {
+        "word": "das Glas",
+        "translation-ru": "стакан",
+        "translation-en": "glass",
+        "translation-uk": "склянка",
+        "translation-pl": "szklanka",
+        "translation-es": "el vaso",
+        "translation-fr": "le verre",
+        "translation-tr": "bardak",
+        "translation-ro": "paharul",
+        "translation-uz": "stakan",
+        "translation-hi": "गिलास",
+        "translation-ar": "الكأس"
+      },
+      {
+        "word": "ausruhen",
+        "translation-ru": "отдыхать",
+        "translation-en": "to rest",
+        "translation-uk": "відпочивати",
+        "translation-pl": "odpoczywać",
+        "translation-es": "descansar",
+        "translation-fr": "se reposer",
+        "translation-tr": "dinlenmek",
+        "translation-ro": "a se odihni",
+        "translation-uz": "dam olmoq",
+        "translation-hi": "आराम करना",
+        "translation-ar": "يستريح"
+      },
+      {
+        "word": "mitnehmen",
+        "translation-ru": "брать с собой",
+        "translation-en": "to take along",
+        "translation-uk": "брати з собою",
+        "translation-pl": "zabierać ze sobą",
+        "translation-es": "llevarse",
+        "translation-fr": "emporter",
+        "translation-tr": "yanına almak",
+        "translation-ro": "a lua cu sine",
+        "translation-uz": "o‘zi bilan olmoq",
+        "translation-hi": "साथ ले जाना",
+        "translation-ar": "يأخذ معه"
+      }
+    ],
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "a2SummitEight.questTask1",
+        "options": [
+          "Ich habe gern ein Glas Saft, bitte.",
+          "Ich hätte gern einen Glas Saft, bitte.",
+          "Ich hätte gern ein Glas Saft, bitte."
+        ],
+        "answer": "Ich hätte gern ein Glas Saft, bitte.",
+        "tip": "a2SummitEight.questDescription"
+      },
+      {
+        "id": 2,
+        "type": "input",
+        "question": "a2SummitEight.questTask2",
+        "correctAnswer": "solltest",
+        "tip": "a2SummitEight.questDescription"
+      },
+      {
+        "id": 3,
+        "type": "input",
+        "question": "a2SummitEight.questTask3",
+        "correctAnswer": "Reise",
+        "tip": "a2SummitEight.questDescription"
+      },
+      {
+        "id": 4,
+        "type": "reorder",
+        "question": "a2SummitEight.questTask4",
+        "words": [
+          "sich",
+          "sollen",
+          "Sie",
+          "ausruhen",
+          "sollten"
+        ],
+        "correctOrder": [
+          "Sie",
+          "sollten",
+          "sich",
+          "ausruhen"
+        ],
+        "tip": "a2SummitEight.questDescription"
+      },
+      {
+        "id": 5,
+        "type": "select",
+        "question": "a2SummitEight.questTask5",
+        "options": [
+          "Ich wäre jetzt gern zu Haus sein.",
+          "Ich bin jetzt gern zu Hause wäre.",
+          "Ich wäre jetzt gern zu Hause."
+        ],
+        "answer": "Ich wäre jetzt gern zu Hause.",
+        "tip": "a2SummitEight.questDescription"
+      },
+      {
+        "id": 6,
+        "type": "input",
+        "question": "a2SummitEight.questTask6",
+        "correctAnswer": "kaufen",
+        "tip": "a2SummitEight.questDescription"
+      },
+      {
+        "id": 7,
+        "type": "readAndAnswer",
+        "question": "a2SummitEight.questTask7",
+        "text": "Ben ist oft müde. Seine Freundin Anna sagt: „Du solltest früher ins Bett gehen und mehr Obst essen. Ich würde gern mit dir am Wochenende wandern.“",
+        "options": [
+          "mehr Kaffee trinken",
+          "früher ins Bett gehen",
+          "mehr arbeiten"
+        ],
+        "answer": "früher ins Bett gehen",
+        "tip": "a2SummitEight.questDescription"
+      },
+      {
+        "id": 8,
+        "type": "input",
+        "question": "a2SummitEight.questTask8",
+        "correctAnswer": "sollte",
+        "tip": "a2SummitEight.questDescription"
+      },
+      {
+        "id": 9,
+        "type": "input",
+        "question": "a2SummitEight.questTask9",
+        "correctAnswer": "Obst",
+        "tip": "a2SummitEight.questDescription"
+      },
+      {
+        "id": 10,
+        "type": "reorder",
+        "question": "a2SummitEight.questTask10",
+        "words": [
+          "würde",
+          "Sie",
+          "gern",
+          "werden",
+          "wird",
+          "Ärztin"
+        ],
+        "correctOrder": [
+          "Sie",
+          "würde",
+          "gern",
+          "Ärztin",
+          "werden"
+        ],
+        "tip": "a2SummitEight.questDescription"
+      },
+      {
+        "id": 11,
+        "type": "select",
+        "question": "a2SummitEight.questTask11",
+        "options": [
+          "Ihr solltet einen Schirm mitnehmen.",
+          "Ihr solltet einen Schirm mitnehmt.",
+          "Ihr sollten einen Schirm mitnehmen."
+        ],
+        "answer": "Ihr solltet einen Schirm mitnehmen.",
+        "tip": "a2SummitEight.questDescription"
+      },
+      {
+        "id": 12,
+        "type": "input",
+        "question": "a2SummitEight.questTask12",
+        "correctAnswer": "wären",
+        "tip": "a2SummitEight.questDescription"
+      },
+      {
+        "id": 13,
+        "type": "input",
+        "question": "a2SummitEight.questTask13",
+        "correctAnswer": "fragen",
+        "tip": "a2SummitEight.questDescription"
+      },
+      {
+        "id": 14,
+        "type": "input",
+        "question": "a2SummitEight.questTask14",
+        "correctAnswer": "hättest",
+        "tip": "a2SummitEight.questDescription"
+      },
+      {
+        "id": 15,
+        "type": "input",
+        "question": "a2SummitEight.questTask15",
+        "correctAnswer": "würde",
+        "tip": "a2SummitEight.questDescription"
+      }
+    ]
+  },
+  {
+    "questId": "a2-summit-nine",
+    "title": "a2SummitNine.questTitle",
+    "progress": "0/15",
+    "description": "a2SummitNine.questDescription",
+    "conditions": {
+      "goal": "a2SummitNine.questGoal",
+      "minCorrect": 15,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
+    "vocabulary": [
+      {
+        "word": "der Frühling",
+        "translation-ru": "весна",
+        "translation-en": "spring",
+        "translation-uk": "весна",
+        "translation-pl": "wiosna",
+        "translation-es": "la primavera",
+        "translation-fr": "le printemps",
+        "translation-tr": "ilkbahar",
+        "translation-ro": "primăvara",
+        "translation-uz": "bahor",
+        "translation-hi": "वसंत",
+        "translation-ar": "الربيع"
+      },
+      {
+        "word": "deshalb",
+        "translation-ru": "поэтому",
+        "translation-en": "that’s why",
+        "translation-uk": "тому",
+        "translation-pl": "dlatego",
+        "translation-es": "por eso",
+        "translation-fr": "c’est pourquoi",
+        "translation-tr": "bu yüzden",
+        "translation-ro": "de aceea",
+        "translation-uz": "shuning uchun",
+        "translation-hi": "इसलिए",
+        "translation-ar": "لذلك"
+      },
+      {
+        "word": "seit",
+        "translation-ru": "с (какого-то времени)",
+        "translation-en": "since, for",
+        "translation-uk": "від, вже",
+        "translation-pl": "od",
+        "translation-es": "desde",
+        "translation-fr": "depuis",
+        "translation-tr": "beri",
+        "translation-ro": "de",
+        "translation-uz": "beri",
+        "translation-hi": "से",
+        "translation-ar": "منذ"
+      },
+      {
+        "word": "das Hotel",
+        "translation-ru": "гостиница",
+        "translation-en": "hotel",
+        "translation-uk": "готель",
+        "translation-pl": "hotel",
+        "translation-es": "el hotel",
+        "translation-fr": "l’hôtel",
+        "translation-tr": "otel",
+        "translation-ro": "hotelul",
+        "translation-uz": "mehmonxona",
+        "translation-hi": "होटल",
+        "translation-ar": "الفندق"
+      },
+      {
+        "word": "das Fahrrad",
+        "translation-ru": "велосипед",
+        "translation-en": "bicycle",
+        "translation-uk": "велосипед",
+        "translation-pl": "rower",
+        "translation-es": "la bicicleta",
+        "translation-fr": "le vélo",
+        "translation-tr": "bisiklet",
+        "translation-ro": "bicicleta",
+        "translation-uz": "velosiped",
+        "translation-hi": "साइकिल",
+        "translation-ar": "الدراجة"
+      },
+      {
+        "word": "das Geschenk",
+        "translation-ru": "подарок",
+        "translation-en": "present",
+        "translation-uk": "подарунок",
+        "translation-pl": "prezent",
+        "translation-es": "el regalo",
+        "translation-fr": "le cadeau",
+        "translation-tr": "hediye",
+        "translation-ro": "cadoul",
+        "translation-uz": "sovg‘a",
+        "translation-hi": "तोहफ़ा",
+        "translation-ar": "الهدية"
+      }
+    ],
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "a2SummitNine.questTask1",
+        "options": [
+          "Gestern habe ich eine alte Jacke gekauft.",
+          "Morgen kaufe ich eine neue Jacke.",
+          "Gestern habe ich eine neue Jacke gekauft."
+        ],
+        "answer": "Gestern habe ich eine neue Jacke gekauft.",
+        "tip": "a2SummitNine.questDescription"
+      },
+      {
+        "id": 2,
+        "type": "input",
+        "question": "a2SummitNine.questTask2",
+        "correctAnswer": "waren",
+        "tip": "a2SummitNine.questDescription"
+      },
+      {
+        "id": 3,
+        "type": "input",
+        "question": "a2SummitNine.questTask3",
+        "correctAnswer": "den",
+        "tip": "a2SummitNine.questDescription"
+      },
+      {
+        "id": 4,
+        "type": "reorder",
+        "question": "a2SummitNine.questTask4",
+        "words": [
+          "ob",
+          "bist",
+          "müde",
+          "Ich",
+          "du",
+          "dass",
+          "weiß"
+        ],
+        "correctOrder": [
+          "Ich",
+          "weiß",
+          "dass",
+          "du",
+          "müde",
+          "bist"
+        ],
+        "tip": "a2SummitNine.questDescription"
+      },
+      {
+        "id": 5,
+        "type": "select",
+        "question": "a2SummitNine.questTask5",
+        "options": [
+          "Im Frühling ist es wärmer als im Sommer.",
+          "Im Sommer ist es so warm wie im Frühling.",
+          "Im Sommer ist es wärmer als im Frühling."
+        ],
+        "answer": "Im Sommer ist es wärmer als im Frühling.",
+        "tip": "a2SummitNine.questDescription"
+      },
+      {
+        "id": 6,
+        "type": "input",
+        "question": "a2SummitNine.questTask6",
+        "correctAnswer": "schönes",
+        "tip": "a2SummitNine.questDescription"
+      },
+      {
+        "id": 7,
+        "type": "readAndAnswer",
+        "question": "a2SummitNine.questTask7",
+        "text": "Max wollte am Sonntag Fahrrad fahren, aber es hat geregnet. Deshalb ist er zu Hause geblieben.",
+        "options": [
+          "Es hat geregnet.",
+          "Er musste arbeiten.",
+          "Er war krank."
+        ],
+        "answer": "Es hat geregnet.",
+        "tip": "a2SummitNine.questDescription"
+      },
+      {
+        "id": 8,
+        "type": "input",
+        "question": "a2SummitNine.questTask8",
+        "correctAnswer": "solltest",
+        "tip": "a2SummitNine.questDescription"
+      },
+      {
+        "id": 9,
+        "type": "select",
+        "question": "a2SummitNine.questTask9",
+        "options": [
+          "Ich freue mich über das Geschenk.",
+          "Ich ärgere mich über das Geschenk.",
+          "Ich freue mich auf das Geschenk."
+        ],
+        "answer": "Ich freue mich über das Geschenk.",
+        "tip": "a2SummitNine.questDescription"
+      },
+      {
+        "id": 10,
+        "type": "input",
+        "question": "a2SummitNine.questTask10",
+        "correctAnswer": "werde",
+        "tip": "a2SummitNine.questDescription"
+      },
+      {
+        "id": 11,
+        "type": "reorder",
+        "question": "a2SummitNine.questTask11",
+        "words": [
+          "mir",
+          "Hilfst",
+          "Hilf",
+          "bitte"
+        ],
+        "correctOrder": [
+          "Hilf",
+          "mir",
+          "bitte"
+        ],
+        "tip": "a2SummitNine.questDescription"
+      },
+      {
+        "id": 12,
+        "type": "select",
+        "question": "a2SummitNine.questTask12",
+        "options": [
+          "Er arbeitet am wenigsten.",
+          "Er arbeitet am meisten.",
+          "Er arbeitet mehr."
+        ],
+        "answer": "Er arbeitet am meisten.",
+        "tip": "a2SummitNine.questDescription"
+      },
+      {
+        "id": 13,
+        "type": "readAndAnswer",
+        "question": "a2SummitNine.questTask13",
+        "text": "Sara wohnt seit zwei Jahren in Köln. Sie arbeitet in einem Hotel und lernt am Abend Deutsch.",
+        "options": [
+          "in einem Hotel",
+          "in einem Café",
+          "in einer Schule"
+        ],
+        "answer": "in einem Hotel",
+        "tip": "a2SummitNine.questDescription"
+      },
+      {
+        "id": 14,
+        "type": "input",
+        "question": "a2SummitNine.questTask14",
+        "correctAnswer": "ins",
+        "tip": "a2SummitNine.questDescription"
+      },
+      {
+        "id": 15,
+        "type": "input",
+        "question": "a2SummitNine.questTask15",
+        "correctAnswer": "komme",
+        "tip": "a2SummitNine.questDescription"
+      }
+    ]
+  },
+  {
+    "questId": "a2-summit-ten",
+    "title": "a2SummitTen.questTitle",
+    "progress": "0/15",
+    "description": "a2SummitTen.questDescription",
+    "conditions": {
+      "goal": "a2SummitTen.questGoal",
+      "minCorrect": 15,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
+    "vocabulary": [
+      {
+        "word": "wohnen",
+        "translation-ru": "жить (где-то)",
+        "translation-en": "to live (somewhere)",
+        "translation-uk": "мешкати",
+        "translation-pl": "mieszkać",
+        "translation-es": "vivir",
+        "translation-fr": "habiter",
+        "translation-tr": "oturmak, yaşamak",
+        "translation-ro": "a locui",
+        "translation-uz": "yashamoq",
+        "translation-hi": "रहना",
+        "translation-ar": "يسكن"
+      },
+      {
+        "word": "gemütlich",
+        "translation-ru": "уютный",
+        "translation-en": "cosy",
+        "translation-uk": "затишний",
+        "translation-pl": "przytulny",
+        "translation-es": "acogedor",
+        "translation-fr": "confortable, douillet",
+        "translation-tr": "rahat, sıcak",
+        "translation-ro": "confortabil",
+        "translation-uz": "shinam",
+        "translation-hi": "आरामदेह",
+        "translation-ar": "مريح، دافئ"
+      },
+      {
+        "word": "interessant",
+        "translation-ru": "интересный",
+        "translation-en": "interesting",
+        "translation-uk": "цікавий",
+        "translation-pl": "ciekawy",
+        "translation-es": "interesante",
+        "translation-fr": "intéressant",
+        "translation-tr": "ilginç",
+        "translation-ro": "interesant",
+        "translation-uz": "qiziqarli",
+        "translation-hi": "दिलचस्प",
+        "translation-ar": "مثير للاهتمام"
+      },
+      {
+        "word": "die Hose",
+        "translation-ru": "брюки",
+        "translation-en": "trousers",
+        "translation-uk": "штани",
+        "translation-pl": "spodnie",
+        "translation-es": "el pantalón",
+        "translation-fr": "le pantalon",
+        "translation-tr": "pantolon",
+        "translation-ro": "pantalonii",
+        "translation-uz": "shim",
+        "translation-hi": "पतलून",
+        "translation-ar": "البنطال"
+      },
+      {
+        "word": "sich interessieren für",
+        "translation-ru": "интересоваться",
+        "translation-en": "to be interested in",
+        "translation-uk": "цікавитися",
+        "translation-pl": "interesować się",
+        "translation-es": "interesarse por",
+        "translation-fr": "s’intéresser à",
+        "translation-tr": "ilgilenmek",
+        "translation-ro": "a se interesa de",
+        "translation-uz": "qiziqmoq",
+        "translation-hi": "में रुचि रखना",
+        "translation-ar": "يهتم بـ"
+      }
+    ],
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "a2SummitTen.questTask1",
+        "options": [
+          "Ich wohne gern am Meer.",
+          "Ich würde gern in den Bergen wohnen.",
+          "Ich würde gern am Meer wohnen."
+        ],
+        "answer": "Ich würde gern am Meer wohnen.",
+        "tip": "a2SummitTen.questDescription"
+      },
+      {
+        "id": 2,
+        "type": "input",
+        "question": "a2SummitTen.questTask2",
+        "correctAnswer": "gegessen",
+        "tip": "a2SummitTen.questDescription"
+      },
+      {
+        "id": 3,
+        "type": "input",
+        "question": "a2SummitTen.questTask3",
+        "correctAnswer": "meiner",
+        "tip": "a2SummitTen.questDescription"
+      },
+      {
+        "id": 4,
+        "type": "reorder",
+        "question": "a2SummitTen.questTask4",
+        "words": [
+          "ein",
+          "Ich",
+          "Auto",
+          "dass",
+          "er",
+          "ob",
+          "weiß",
+          "hat",
+          "nicht"
+        ],
+        "correctOrder": [
+          "Ich",
+          "weiß",
+          "nicht",
+          "ob",
+          "er",
+          "ein",
+          "Auto",
+          "hat"
+        ],
+        "tip": "a2SummitTen.questDescription"
+      },
+      {
+        "id": 5,
+        "type": "select",
+        "question": "a2SummitTen.questTask5",
+        "options": [
+          "Berlin ist so groß wie Hamburg.",
+          "Hamburg ist größer als Berlin.",
+          "Berlin ist größer als Hamburg."
+        ],
+        "answer": "Berlin ist größer als Hamburg.",
+        "tip": "a2SummitTen.questDescription"
+      },
+      {
+        "id": 6,
+        "type": "input",
+        "question": "a2SummitTen.questTask6",
+        "correctAnswer": "musste",
+        "tip": "a2SummitTen.questDescription"
+      },
+      {
+        "id": 7,
+        "type": "readAndAnswer",
+        "question": "a2SummitTen.questTask7",
+        "text": "Liebe Anna, ich bin jetzt in Wien. Das Wetter ist schön und das Hotel ist sehr gemütlich. Morgen besuche ich ein Museum. Viele Grüße, Lisa",
+        "options": [
+          "in Graz",
+          "in Wien",
+          "in Berlin"
+        ],
+        "answer": "in Wien",
+        "tip": "a2SummitTen.questDescription"
+      },
+      {
+        "id": 8,
+        "type": "input",
+        "question": "a2SummitTen.questTask8",
+        "correctAnswer": "interessanteste",
+        "tip": "a2SummitTen.questDescription"
+      },
+      {
+        "id": 9,
+        "type": "select",
+        "question": "a2SummitTen.questTask9",
+        "options": [
+          "Du solltest zu Hause bleiben.",
+          "Du solltest nach Hause gehen.",
+          "Du bist nach Hause gegangen."
+        ],
+        "answer": "Du solltest nach Hause gehen.",
+        "tip": "a2SummitTen.questDescription"
+      },
+      {
+        "id": 10,
+        "type": "input",
+        "question": "a2SummitTen.questTask10",
+        "correctAnswer": "schwarze",
+        "tip": "a2SummitTen.questDescription"
+      },
+      {
+        "id": 11,
+        "type": "reorder",
+        "question": "a2SummitTen.questTask11",
+        "words": [
+          "treffen",
+          "den",
+          "am",
+          "Kino",
+          "uns",
+          "Wir",
+          "vor",
+          "dem",
+          "Samstag"
+        ],
+        "correctOrder": [
+          "Wir",
+          "treffen",
+          "uns",
+          "am",
+          "Samstag",
+          "vor",
+          "dem",
+          "Kino"
+        ],
+        "tip": "a2SummitTen.questDescription"
+      },
+      {
+        "id": 12,
+        "type": "select",
+        "question": "a2SummitTen.questTask12",
+        "options": [
+          "Könnten Sie mir den Weg zeigen?",
+          "Haben Sie mir den Weg gezeigt?",
+          "Können Sie mir den Weg nicht zeigen?"
+        ],
+        "answer": "Könnten Sie mir den Weg zeigen?",
+        "tip": "a2SummitTen.questDescription"
+      },
+      {
+        "id": 13,
+        "type": "readAndAnswer",
+        "question": "a2SummitTen.questTask13",
+        "text": "Herr Klein hat Rückenschmerzen. Er war gestern beim Arzt. Der Arzt sagt, dass er mehr schwimmen sollte.",
+        "options": [
+          "mehr schlafen",
+          "mehr schwimmen",
+          "weniger laufen"
+        ],
+        "answer": "mehr schwimmen",
+        "tip": "a2SummitTen.questDescription"
+      },
+      {
+        "id": 14,
+        "type": "input",
+        "question": "a2SummitTen.questTask14",
+        "correctAnswer": "für",
+        "tip": "a2SummitTen.questDescription"
+      },
+      {
+        "id": 15,
+        "type": "input",
+        "question": "a2SummitTen.questTask15",
+        "correctAnswer": "werde",
+        "tip": "a2SummitTen.questDescription"
+      }
+    ]
+  }
+]

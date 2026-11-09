@@ -45,6 +45,7 @@
       </div>
     </div>
     <LangSwitcher v-if="isLangModalOpen" @close="isLangModalOpen = false"/>
+    <VLevelPicker v-model="isLevelModalOpen" mode="settings"/>
     <div
         v-for="group in settingsGroups"
         :key="group.id"
@@ -65,9 +66,9 @@
           <template v-if="item.type === 'button'">
             <button
                 class="theme-select-btn"
-                @click="item.key === 'theme' ? isThemeModalOpen = true : isLangModalOpen = true"
+                @click="openSettingButton(item.key)"
             >
-              {{ item.key === 'theme' ? currentThemeName : currentLangName }}
+              {{ settingButtonText(item.key) }}
             </button>
           </template>
 
@@ -127,6 +128,8 @@ import LangSwitcher from '~/src/components/langSwitcher.vue'
 import VBanner from '~/src/components/V-banner.vue'
 import SettingIcon from '../../assets/images/settings.svg'
 import VArrowNav from '~/src/components/V-arrowNav.vue'
+import VLevelPicker from '~/src/components/V-levelPicker.vue'
+import {userAuthStore} from '~/store/authStore.js'
 
 import {
   RESTRICTIONS_MAP,
@@ -149,6 +152,20 @@ const colorMode = useColorMode()
 
 const isThemeModalOpen = ref(false)
 const isLangModalOpen = ref(false)
+const isLevelModalOpen = ref(false)
+const authStore = userAuthStore()
+
+const openSettingButton = (key) => {
+  if (key === 'theme') isThemeModalOpen.value = true
+  else if (key === 'germanLevel') isLevelModalOpen.value = true
+  else isLangModalOpen.value = true
+}
+
+const settingButtonText = (key) => {
+  if (key === 'theme') return currentThemeName.value
+  if (key === 'germanLevel') return authStore.germanLevel || 'A1'
+  return currentLangName.value
+}
 const isLockedModalOpen = ref(false)
 
 const currentRestrictionKey = ref(null)
@@ -216,6 +233,7 @@ const getSettingValue = (key) => {
   if (key === 'ach') return uiSettings.achievementsNotifyEnabled
   if (key === 'snowFall') return eventStore.isSnowEnabled
   if (key === 'hedgehogHelper') return uiSettings.hedgehogHelperEnabled
+  if (key === 'hedgehogGuide') return uiSettings.hedgehogGuideEnabled
   return false
 }
 
@@ -228,6 +246,7 @@ const onSettingChange = (key, value) => {
   }
   if (key === 'ach') return uiSettings.setAchievementsNotifyEnabled(value)
   if (key === 'hedgehogHelper') return uiSettings.setHedgehogHelperEnabled(value)
+  if (key === 'hedgehogGuide') return uiSettings.setHedgehogGuideEnabled(value)
   if (key === 'snowFall') {
     if (!isSnowUnlocked.value) {
       showRestriction('snow')

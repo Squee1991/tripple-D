@@ -1,170 +1,187 @@
 <template>
   <div class="voice-wrapper">
     <button
-        v-if="!isRecording && !isRecorded && !isBusy"
+        v-if="!isRecording && !isProcessing && !isRecorded"
         class="record-btn"
-        :disabled="isRecording || isBusy"
         @click="startRecording"
     >
       <img class="record__icon-recorder" :src="Recorder" alt="Recorder">
-<!--      🎙️ Aufnahme starten-->
     </button>
+
     <div v-if="isRecording" class="recording-status">
-      <button class="stop-btn" :disabled="isBusy" @click="stopRecording">
-        ⏹️
+      <button class="stop-btn" @click="stopRecording">
+        ⏹
       </button>
       <div class="voice-indicator">
         <span class="record-dot"/>
+        <span class="record-time">{{ formattedTime }}</span>
       </div>
     </div>
-    <div v-if="isBusy && !isRecording" class="processing-text">Отправка…</div>
-    <button
-        v-if="!isRecording && isRecorded && !isBusy"
-        class="send-btn"
-        :disabled="sending"
-        @click="submitAnswer"
-    >
-      {{ sending ? 'Senden...' : 'Antwort senden' }}
-    </button>
+
+    <div v-if="isProcessing" class="transcript-preview">{{ t('examSession.recognizing') }}</div>
+
+    <div v-if="transcript" class="transcript-preview">
+      {{ transcript }}
+    </div>
+
+    <p v-if="errorText" class="voice-error">{{ errorText }}</p>
+
+    <div v-if="!isRecording && !isProcessing && isRecorded" class="voice-actions">
+      <button class="record-again-btn" @click="resetRecording">
+        {{ t('examSession.recordAgain') }}
+      </button>
+      <button
+          v-if="transcript"
+          class="send-btn"
+          :disabled="sending"
+          @click="submitAnswer"
+      >
+        {{ sending ? t('examSession.check') : t('examSession.send') }}
+      </button>
+    </div>
   </div>
 </template>
 
 <script setup>
-import { ref } from 'vue'
-import { VoiceRecorder } from 'capacitor-voice-recorder'
-import { Capacitor } from '@capacitor/core'
-import { Directory, Filesystem } from '@capacitor/filesystem'
+import {ref, computed, onUnmounted} from 'vue'
+import {useI18n} from 'vue-i18n'
+import {getFunctions, httpsCallable} from 'firebase/functions'
 import Recorder from '../../assets/images/microphone.svg'
 
-const emit = defineEmits(['start', 'stop', 'audio', 'result', 'submit'])
+// Запись через MediaRecorder: работает в браузере и во WebView приложений Android/iOS (Capacitor),
+// а распознавание делает облачная функция transcribeSpeech
+const emit = defineEmits(['start', 'stop', 'submit'])
 const props = defineProps({
-  languageCode: { type: String, default: 'de-DE' },
-  sttEndpoint: { type: String, default: '/api/whisper' },
+  lang: {type: String, default: 'de-DE'}
 })
 
-const isBusy = ref(false)
+const {t} = useI18n()
+const MAX_SECONDS = 120
+const MIME_TYPES = ['audio/webm;codecs=opus', 'audio/webm', 'audio/mp4', 'audio/aac', 'audio/ogg;codecs=opus']
+
 const isRecording = ref(false)
+const isProcessing = ref(false)
 const isRecorded = ref(false)
 const sending = ref(false)
 const transcript = ref('')
+const errorText = ref('')
+const seconds = ref(0)
 
-let startedAt = 0
+let mediaRecorder = null
+let stream = null
+let chunks = []
+let timer = null
 
-const startRecording = async () => {
-  if (isRecording.value || isBusy.value) return
-  isBusy.value = true
-  try {
-    const hasPermission = await VoiceRecorder.hasAudioRecordingPermission()
-    if (!hasPermission.value) {
-      const request = await VoiceRecorder.requestAudioRecordingPermission()
-      if (!request.value) throw new Error('No permission')
-    }
+const formattedTime = computed(() => {
+  const minutes = Math.floor(seconds.value / 60)
+  return `${minutes}:${String(seconds.value % 60).padStart(2, '0')}`
+})
 
-    transcript.value = ''
-    isRecorded.value = false
-
-    await VoiceRecorder.startRecording({ directory: Directory.Data })
-    startedAt = Date.now()
-    isRecording.value = true
-    emit('start')
-  } catch (e) {
-    console.error('startRecording error:', e)
-  } finally {
-    if (isRecording.value) isBusy.value = false
-  }
+const pickMimeType = () => {
+  if (typeof MediaRecorder === 'undefined' || !MediaRecorder.isTypeSupported) return ''
+  return MIME_TYPES.find(type => MediaRecorder.isTypeSupported(type)) || ''
 }
 
-const stopRecording = async () => {
-  if (isBusy.value) return
-  isBusy.value = true
-  try {
-    const result = await VoiceRecorder.stopRecording()
-    isRecording.value = false
-    emit('stop')
-
-    let finalBlob = null
-    let base64Data = null
-    const durationSec = result.value?.msDuration
-        ? Math.round(result.value.msDuration / 1000)
-        : Math.max(0, Math.round((Date.now() - startedAt) / 1000))
-
-    if (result.value?.path) {
-      const { uri } = await Filesystem.getUri({ directory: Directory.Data, path: result.value.path })
-      const fileUrl = Capacitor.convertFileSrc(uri)
-      const response = await fetch(fileUrl)
-      finalBlob = await response.blob()
-      const fullBase64 = await toBase64(finalBlob)
-      base64Data = stripDataUrlPrefix(fullBase64)
-    } else if (result.value?.recordDataBase64) {
-      base64Data = result.value.recordDataBase64
-      const byteCharacters = atob(base64Data)
-      const byteNumbers = new Array(byteCharacters.length)
-      for (let i = 0; i < byteCharacters.length; i++) {
-        byteNumbers[i] = byteCharacters.charCodeAt(i)
-      }
-      finalBlob = new Blob([new Uint8Array(byteNumbers)], { type: 'audio/aac' })
-    }
-
-    if (finalBlob) {
-      emit('audio', { blob: finalBlob, durationSec })
-    }
-
-    if (base64Data) {
-      const res = await fetch(props.sttEndpoint, {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ audioContent: base64Data, lang: 'de' }),
-      })
-      let text = ''
-      if (res.ok) {
-        const data = await res.json().catch(() => ({}))
-        text = data?.text ? String(data.text) : (data?.transcription || '')
-      } else {
-        console.warn('STT request failed:', res.status)
-      }
-
-      transcript.value = text
-      isRecorded.value = true
-      emit('result', transcript.value)
-    }
-  } catch (e) {
-    console.error('stopRecording error:', e)
-    isRecorded.value = true
-  } finally {
-    isBusy.value = false
-  }
+const releaseMicrophone = () => {
+  clearInterval(timer)
+  timer = null
+  stream?.getTracks().forEach(track => track.stop())
+  stream = null
 }
 
-const submitAnswer = () => {
-  if (sending.value) return
-  sending.value = true
-  try {
-    const text = (transcript.value || '').trim()
-    emit('submit', text.length > 0 ? text : 'Du hast nichts gesagt.')
-    reset()
-  } finally {
-    sending.value = false
-  }
-}
-
-const reset = () => {
-  transcript.value = ''
-  isRecorded.value = false
-  isRecording.value = false
-  startedAt = 0
-}
-
-const toBase64 = (blob) => new Promise((resolve) => {
+const blobToBase64 = (blob) => new Promise((resolve, reject) => {
   const reader = new FileReader()
-  reader.onloadend = () => resolve(reader.result)
+  reader.onloadend = () => resolve(String(reader.result).split('base64,')[1] || '')
+  reader.onerror = reject
   reader.readAsDataURL(blob)
 })
 
-const stripDataUrlPrefix = (dataUrl) => {
-  if (typeof dataUrl !== 'string') return ''
-  const idx = dataUrl.indexOf(',')
-  return idx >= 0 ? dataUrl.slice(idx + 1) : dataUrl
+const transcribe = async (blob, mimeType) => {
+  isProcessing.value = true
+  try {
+    const audioBase64 = await blobToBase64(blob)
+    const transcribeSpeech = httpsCallable(getFunctions(undefined, 'us-central1'), 'transcribeSpeech')
+    const result = await transcribeSpeech({audioBase64, mimeType, lang: props.lang})
+    if (result.data?.error) throw new Error(result.data.error)
+    transcript.value = result.data?.text || ''
+    if (!transcript.value) errorText.value = t('examSession.notRecognized')
+  } catch (error) {
+    console.error('Transcription error:', error)
+    errorText.value = t('examSession.notRecognized')
+  } finally {
+    isProcessing.value = false
+    isRecorded.value = true
+  }
 }
+
+const startRecording = async () => {
+  errorText.value = ''
+  transcript.value = ''
+  isRecorded.value = false
+
+  if (!navigator.mediaDevices?.getUserMedia || typeof MediaRecorder === 'undefined') {
+    errorText.value = t('examSession.micUnsupported')
+    return
+  }
+
+  try {
+    stream = await navigator.mediaDevices.getUserMedia({audio: true})
+  } catch (error) {
+    console.error('Microphone error:', error)
+    errorText.value = t('examSession.micDenied')
+    return
+  }
+
+  const mimeType = pickMimeType()
+  mediaRecorder = mimeType ? new MediaRecorder(stream, {mimeType}) : new MediaRecorder(stream)
+  chunks = []
+
+  mediaRecorder.ondataavailable = (event) => {
+    if (event.data?.size) chunks.push(event.data)
+  }
+  mediaRecorder.onstop = () => {
+    const recordedType = mediaRecorder.mimeType || mimeType || 'audio/webm'
+    releaseMicrophone()
+    isRecording.value = false
+    emit('stop')
+    transcribe(new Blob(chunks, {type: recordedType}), recordedType)
+  }
+
+  mediaRecorder.start()
+  seconds.value = 0
+  isRecording.value = true
+  emit('start')
+  timer = setInterval(() => {
+    seconds.value++
+    if (seconds.value >= MAX_SECONDS) stopRecording()
+  }, 1000)
+}
+
+const stopRecording = () => {
+  if (mediaRecorder && mediaRecorder.state !== 'inactive') mediaRecorder.stop()
+}
+
+const resetRecording = () => {
+  transcript.value = ''
+  errorText.value = ''
+  isRecorded.value = false
+}
+
+const submitAnswer = () => {
+  const text = transcript.value.trim()
+  if (sending.value || !text) return
+  sending.value = true
+  emit('submit', text)
+  sending.value = false
+}
+
+onUnmounted(() => {
+  if (mediaRecorder && mediaRecorder.state !== 'inactive') {
+    mediaRecorder.onstop = null
+    mediaRecorder.stop()
+  }
+  releaseMicrophone()
+})
 </script>
 
 <style scoped>
@@ -177,6 +194,17 @@ const stripDataUrlPrefix = (dataUrl) => {
 
 .record__icon-recorder {
   width: 35px;
+}
+
+.transcript-preview {
+  background-color: #f8f9fa;
+  padding: 10px;
+  border-radius: 8px;
+  width: 100%;
+  min-height: 40px;
+  font-style: italic;
+  color: #2c3e50;
+  border: 1px solid #e9ecef;
 }
 
 .record-btn,
@@ -217,6 +245,7 @@ const stripDataUrlPrefix = (dataUrl) => {
 .send-btn {
   background-color: #2ecc71;
   color: #fff;
+  padding: 10px 15px;
 }
 .send-btn:disabled {
   background-color: #95a5a6;
@@ -234,8 +263,6 @@ const stripDataUrlPrefix = (dataUrl) => {
 .voice-indicator {
   display: flex;
   align-items: center;
-  color: #c0392b;
-  font-weight: bold;
 }
 .record-dot {
   width: 10px;
@@ -246,21 +273,36 @@ const stripDataUrlPrefix = (dataUrl) => {
   animation: pulse 1s infinite;
 }
 @keyframes pulse {
-  0% {
-    transform: scale(1);
-    opacity: 1;
-  }
-  50% {
-    transform: scale(1.5);
-    opacity: 0.5;
-  }
-  100% {
-    transform: scale(1);
-    opacity: 1;
-  }
+  0% { transform: scale(1); opacity: 1; }
+  50% { transform: scale(1.5); opacity: 0.5; }
+  100% { transform: scale(1); opacity: 1; }
 }
-.processing-text {
+
+.record-time {
   font-weight: 800;
-  padding: 0.2rem 0;
+  color: var(--titleColor);
+}
+
+.voice-error {
+  color: #e74c3c;
+  font-weight: 700;
+  margin: 0;
+}
+
+.voice-actions {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.record-again-btn {
+  padding: 10px 15px;
+  font-size: 1rem;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  font-weight: 800;
+  background-color: #bdc3c7;
+  color: #2c3e50;
 }
 </style>
