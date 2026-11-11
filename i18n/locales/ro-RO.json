@@ -21142,5 +21142,8 @@
     "mediaCulture": "Media și cultură",
     "consumerMoney": "Consum și bani",
     "scienceTech": "Știință și tehnologie"
+  },
+  "rateApp": {
+    "settingsRow": "Evaluează aplicația"
   }
 }

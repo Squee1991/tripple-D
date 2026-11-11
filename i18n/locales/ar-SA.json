@@ -21164,5 +21164,8 @@
     "mediaCulture": "الإعلام والثقافة",
     "consumerMoney": "الاستهلاك والمال",
     "scienceTech": "العلوم والتكنولوجيا"
+  },
+  "rateApp": {
+    "settingsRow": "قيّم التطبيق"
   }
 }

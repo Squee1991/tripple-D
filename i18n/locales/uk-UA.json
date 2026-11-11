@@ -21151,5 +21151,8 @@
     "mediaCulture": "Медіа і культура",
     "consumerMoney": "Споживання і гроші",
     "scienceTech": "Наука і технології"
+  },
+  "rateApp": {
+    "settingsRow": "Оцінити застосунок"
   }
 }

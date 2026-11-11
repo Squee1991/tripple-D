@@ -21162,5 +21162,8 @@
     "mediaCulture": "Медиа и культура",
     "consumerMoney": "Потребление и деньги",
     "scienceTech": "Наука и технологии"
+  },
+  "rateApp": {
+    "settingsRow": "Оценить приложение"
   }
 }

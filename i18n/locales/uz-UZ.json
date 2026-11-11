@@ -21148,5 +21148,8 @@
     "mediaCulture": "Media va madaniyat",
     "consumerMoney": "Iste’mol va pul",
     "scienceTech": "Fan va texnologiya"
+  },
+  "rateApp": {
+    "settingsRow": "Ilovani baholash"
   }
 }

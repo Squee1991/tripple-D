@@ -21161,5 +21161,8 @@
     "mediaCulture": "Medya ve kültür",
     "consumerMoney": "Tüketim ve para",
     "scienceTech": "Bilim ve teknoloji"
+  },
+  "rateApp": {
+    "settingsRow": "Uygulamayı değerlendir"
   }
 }

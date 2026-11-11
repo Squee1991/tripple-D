@@ -21142,5 +21142,8 @@
     "mediaCulture": "Medios y cultura",
     "consumerMoney": "Consumo y dinero",
     "scienceTech": "Ciencia y tecnología"
+  },
+  "rateApp": {
+    "settingsRow": "Valorar la app"
   }
 }

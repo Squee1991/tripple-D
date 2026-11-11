@@ -279,7 +279,7 @@ import {useGermanKeyboard} from '~/composables/useGermanKeyboard.js'
 import {useQuestLives} from '~/composables/useQuestLives.js'
 import VStreakModal from '~/src/components/V-streak.vue'
 import VReminderModal from '~/src/components/V-reminderModal.vue'
-import {onQuestSuccessForReview} from '~/utils/appReview.js'
+import {onQuestSuccessForReview, isStreakMilestone} from '~/utils/appReview.js'
 import {shouldAskForReminders, postponeReminderPrompt, enableReminders, markLessonDoneToday} from '~/utils/reminders.js'
 import { dailyStore } from '~/store/dailyStore.js'
 import hedgehogLeaveSession from 'assets/animation/hedgehog_leave_session.json'
@@ -333,6 +333,10 @@ const showReminderModal = ref(false)
 let afterReminderPrompt = null
 
 let reviewCheckedForSession = false
+// Системное окно оценки запрошено в этом квесте: тогда на выходе с экрана результатов без рекламы
+let reviewAskedThisQuest = false
+// Сегодняшняя серия засчитана в этом квесте (показали окно серии)
+let streakShownThisQuest = false
 
 watch(shouldShowResultScreen, (visible) => {
   if (!visible || !questStore.success) return
@@ -341,9 +345,15 @@ watch(shouldShowResultScreen, (visible) => {
   if (reviewCheckedForSession) return
   reviewCheckedForSession = true
   const canPrompt = !shouldAskForReminders()
+  const streakMilestone = streakShownThisQuest && isStreakMilestone(authStore.streakCount)
   setTimeout(async () => {
-    const requested = await onQuestSuccessForReview(canPrompt && shouldShowResultScreen.value)
-    if (requested) $track('app_review_requested', {quest_id: questId.value})
+    const reason = await onQuestSuccessForReview({
+      canPrompt: canPrompt && shouldShowResultScreen.value,
+      streakMilestone
+    })
+    if (!reason) return
+    reviewAskedThisQuest = true
+    $track('app_review_requested', {quest_id: questId.value, reason})
   }, 1500)
 })
 
@@ -357,6 +367,7 @@ function withReminderPrompt(next) {
 // Выход с экрана результатов: сначала все модалки (напоминания), в самом конце реклама → переход.
 // Реклама и после успеха, и после проигрыша
 function leaveResultScreen(next) {
+  if (reviewAskedThisQuest) return withReminderPrompt(next)
   withReminderPrompt(() => showInterstitial(next))
 }
 
@@ -746,6 +757,7 @@ watch(() => questStore.finished, (isFinished) => {
           await daily.markStreakModalShown()
         }
         showStreakModal.value = true
+        streakShownThisQuest = true
       } else {
         isWaitingForStreakClose.value = false
         playLevelCompleted()
@@ -759,6 +771,8 @@ watch([questId, regionKey], async () => {
       showPremiumModal.value = false
       hasShownPremiumForRevive.value = false
       reviewCheckedForSession = false
+      reviewAskedThisQuest = false
+      streakShownThisQuest = false
       initialStreak.value = authStore.streakCount || 0
       streakWasIncremented.value = false
       showStreakModal.value = false

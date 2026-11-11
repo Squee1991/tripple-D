@@ -70,6 +70,7 @@ import VTransition from "~/src/components/V-transition.vue";
 import {Capacitor} from "@capacitor/core";
 import VLandIntro from "~/src/components/V-landIntro.vue";
 import {isLandIntroSeen} from "~/utils/landIntro.js";
+import {requestReviewAtPeak} from "~/utils/appReview.js";
 import {useDictationStore} from "~/store/dictationStore.js";
 
 const route = useRoute();
@@ -253,6 +254,10 @@ async function handleClaimChest() {
   // сначала отмечаем сундук открытым, чтобы награду нельзя было получить дважды
   if (!await dictationStore.claimChest(regionId)) return;
   await langStore.addPoints(CHEST_REWARD);
+  // Земля пройдена целиком: удачный момент попросить оценку (после анимации награды)
+  setTimeout(async () => {
+    if (await requestReviewAtPeak()) $track('app_review_requested', {region_id: regionId, reason: 'land'});
+  }, 2500);
 }
 
 async function loadDictation() {

@@ -21144,5 +21144,8 @@
     "mediaCulture": "Media i kultura",
     "consumerMoney": "Konsumpcja i pieniądze",
     "scienceTech": "Nauka i technologia"
+  },
+  "rateApp": {
+    "settingsRow": "Oceń aplikację"
   }
 }
