@@ -173,3 +173,4 @@ xandr.com, 13799, RESELLER
 xandr.com, 17779, RESELLER
 zetaglobal.net, 525, RESELLER
 zmaticoo.com, 5135195, RESELLER
+playdigo.com, 1965, RESELLER
