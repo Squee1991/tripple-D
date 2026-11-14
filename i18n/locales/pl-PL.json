@@ -19518,6 +19518,9 @@
     "descriptionThematic": "Wyjaśni przypadki i rodzajniki bezpośrednio podczas ćwiczeń, jeśli masz wątpliwości."
   },
   "questModals": {
+    "fixMistakesTitle": "Poprawmy błędy",
+    "fixMistakesText": "Powtórz zadania, w których był błąd. Popraw je, a lekcja zostanie zaliczona.",
+    "fixMistakesBtn": "Popraw błędy ({count})",
     "repeat": "Powtórz błędy",
     "next": "Następne zadanie ➔",
     "back": "Do tematów",

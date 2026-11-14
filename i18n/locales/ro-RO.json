@@ -19518,6 +19518,9 @@
     "descriptionThematic": "Explică cazurile și articolele direct în timpul exercițiului dacă ai nelămuriri."
   },
   "questModals": {
+    "fixMistakesTitle": "Hai să corectăm greșelile",
+    "fixMistakesText": "Refă sarcinile greșite. Corectează-le și lecția va fi finalizată.",
+    "fixMistakesBtn": "Corectează greșelile ({count})",
     "repeat": "Revedeți greșelile",
     "next": "Următoarea sarcină ➔",
     "back": "La teme",

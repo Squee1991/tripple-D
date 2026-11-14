@@ -19535,14 +19535,17 @@
     "descriptionThematic": "Tereddütte kaldığınızda doğrudan alıştırma sırasında artikelleri ve ismin hallerini açıklar."
   },
   "questModals": {
-    "repeat": "Xatolarni takrorlash",
-    "next": "Keyingi vazifa ➔",
-    "back": "Mavzularga",
-    "mistakes": "Mukofot olinmadi",
-    "areErrors": "XATOLAR BOR",
-    "succesCompleted": "BAJARILDI",
-    "rewardGot": "Siz mukofot oldingiz:",
-    "questCompletedAgain": "Vazifa qaytadan bajarildi:"
+    "fixMistakesTitle": "Hatalarını düzeltelim",
+    "fixMistakesText": "Yanlış yaptığın görevleri tekrar çöz. Düzeltirsen ders tamamlanır.",
+    "fixMistakesBtn": "Hataları düzelt ({count})",
+    "repeat": "Hataları tekrarla",
+    "next": "Sonraki görev ➔",
+    "back": "Konulara",
+    "mistakes": "Ödül alınmadı",
+    "areErrors": "HATALAR VAR",
+    "succesCompleted": "TAMAMLANDI",
+    "rewardGot": "Ödül kazandın:",
+    "questCompletedAgain": "Görev tekrar tamamlandı:"
   },
   "calendarHints": {
     "first": "Bu hafta harika bir tempo! Aynen böyle devam",

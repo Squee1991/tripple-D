@@ -19525,6 +19525,9 @@
     "descriptionThematic": "Explains cases and articles right during practice whenever you're in doubt."
   },
   "questModals": {
+    "fixMistakesTitle": "Let's fix your mistakes",
+    "fixMistakesText": "Redo the tasks you got wrong. Fix them and the lesson is complete.",
+    "fixMistakesBtn": "Fix mistakes ({count})",
     "repeat": "Review mistakes",
     "next": "Next task ➔",
     "back": "To topics",

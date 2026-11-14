@@ -19518,6 +19518,9 @@
     "descriptionThematic": "Explica los casos y artículos en plena práctica si tienes dudas."
   },
   "questModals": {
+    "fixMistakesTitle": "Corrijamos los errores",
+    "fixMistakesText": "Repite las tareas en las que fallaste. Corrígelas y la lección estará completa.",
+    "fixMistakesBtn": "Corregir errores ({count})",
     "repeat": "Repasar errores",
     "next": "Siguiente tarea ➔",
     "back": "A los temas",

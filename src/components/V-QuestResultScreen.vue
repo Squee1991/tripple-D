@@ -52,10 +52,12 @@
           </div>
           <div class="success-actions" :class="{ 'visible': animStep >= (!hasMistakes && !previouslyCleared ? 4 : 2) }">
             <template v-if="!hasMistakes">
-              <!-- <button v-if="hasNextQuest" class="success-btn success-btn-primary" @click="$emit('next')">
+              <!-- «Далее» ведёт сразу в следующий квест; реклама на выходе та же, что и у «Назад» -->
+              <button v-if="hasNextQuest" class="success-btn success-btn-primary" data-track="quest_result_next"
+                      @click="$emit('next')">
                 {{ t('questModals.next') }}
-              </button> -->
-              <button class="success-btn success-btn-primary"
+              </button>
+              <button class="success-btn" :class="hasNextQuest ? 'success-btn-secondary' : 'success-btn-primary'"
                       @click="$emit('themes')">
                 {{ t('questModals.back') }}
               </button>

@@ -19519,6 +19519,9 @@
     "descriptionThematic": "Explique les cas et les articles directement pendant la pratique en cas de doute."
   },
   "questModals": {
+    "fixMistakesTitle": "Corrigeons les erreurs",
+    "fixMistakesText": "Refais les tâches ratées. Corrige-les et la leçon sera validée.",
+    "fixMistakesBtn": "Corriger les erreurs ({count})",
     "repeat": "Réviser les erreurs",
     "next": "Tâche suivante ➔",
     "back": "Aux thèmes",

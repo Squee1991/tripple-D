@@ -19522,6 +19522,9 @@
     "descriptionThematic": "Ikkilanib qolsangiz, mashq davomida kelishiklar va artikllarni tushuntirib beradi."
   },
   "questModals": {
+    "fixMistakesTitle": "Xatolarni tuzatamiz",
+    "fixMistakesText": "Xato qilgan vazifalarni qayta bajaring. Tuzatsangiz, dars yakunlanadi.",
+    "fixMistakesBtn": "Xatolarni tuzatish ({count})",
     "repeat": "Xatolarni takrorlash",
     "next": "Keyingi vazifa ➔",
     "back": "Mavzularga",
