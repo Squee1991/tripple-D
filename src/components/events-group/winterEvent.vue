@@ -542,12 +542,15 @@ onMounted(() => {
   display: none;
 }
 
+/* Зимний синий баннер, в цвет синих подарков и ночной деревни */
 .banner {
-  background: linear-gradient(135deg, rgb(255 255 255 / 65%) 0%, rgb(226 240 255 / 50%) 100%);
-  border: 2px solid rgb(255 255 255 / 75%);
-  box-shadow: 0 4px 0 rgb(31 58 107 / 0.12);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
+  position: relative;
+  overflow: hidden;
+  background:
+    radial-gradient(circle at 18% 0%, rgb(255 255 255 / 0.3) 0%, transparent 55%),
+    linear-gradient(135deg, #5aa9f0 0%, #3f74c4 55%, #2b4f8c 100%);
+  border: 2px solid rgb(255 255 255 / 0.6);
+  box-shadow: 0 5px 0 #1f3a6b, 0 10px 24px rgb(31 58 107 / 0.25);
   border-radius: 24px;
   padding: 16px 20px;
   display: flex;
@@ -558,7 +561,8 @@ onMounted(() => {
 }
 
 .banner__text {
-  color: #1f3a6b;
+  color: #ffffff;
+  text-shadow: 0 2px 0 rgb(0 0 0 / 0.18);
   font-size: 19px;
   font-family: "Fredoka", "Nunito", sans-serif;
   font-weight: 600;
@@ -568,6 +572,8 @@ onMounted(() => {
 
 .banner__icon {
   height: 96px;
+  position: relative;
+  filter: drop-shadow(0 4px 6px rgb(0 0 0 / 0.25));
 }
 
 .coin {

@@ -21457,5 +21457,9 @@
     "ok": "Понятно",
     "needDoors": "открыть {count} окошек календаря",
     "doorsProgress": "Окошки календаря: {done} из {need}"
+  },
+  "eventTile": {
+    "daysHours": "{d} д {h} ч",
+    "hoursMinutes": "{h} ч {m} мин"
   }
 }

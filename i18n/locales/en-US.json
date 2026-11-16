@@ -21446,5 +21446,9 @@
     "ok": "Got it",
     "needDoors": "open {count} calendar doors",
     "doorsProgress": "Calendar doors: {done} of {need}"
+  },
+  "eventTile": {
+    "daysHours": "{d}d {h}h",
+    "hoursMinutes": "{h}h {m}m"
   }
 }

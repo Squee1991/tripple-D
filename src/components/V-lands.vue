@@ -6,6 +6,9 @@
           <span class="map__title-text">{{ t('locationsMenu.title') }}</span>
         </span>
       </h1>
+      <div class="map__event" :class="{ 'is-rtl': locale === 'ar' }">
+        <VEventTile/>
+      </div>
       <div class="map-layout">
         <transition name="fade">
           <div
@@ -168,6 +171,7 @@ import {userlangStore} from '../../store/learningStore.js'
 import {userAuthStore} from "~/store/authStore.js";
 import {visibleRegionCategories, requiredLandLevel, levelOfCategory, LEVEL_SUMMITS, isLevelFinished} from "~/utils/germanLevel.js";
 import VLandsMap from "~/src/components/V-landsMap.vue";
+import VEventTile from "~/src/components/V-eventTile.vue";
 import VTestLockedModal from "~/src/components/V-testLockedModal.vue";
 import {userChainStore} from "~/store/chainStore.js";
 import {landsWithProgress, landCompletion, isPrevLandDone, previousRegion} from "~/utils/landProgress.js";
@@ -456,12 +460,26 @@ onBeforeUnmount(() => {
 }
 
 .map__wrapper {
+  position: relative;
   display: flex;
   flex-direction: column;
   gap: 12px;
   align-items: center;
   max-width: 1200px;
   margin: 0 auto;
+}
+
+/* плитка идущего ивента: под лентой слева, поверх карты, дорогу не сдвигает */
+.map__event {
+  position: absolute;
+  top: 66px;
+  left: 14px;
+  z-index: 6;
+}
+
+.map__event.is-rtl {
+  left: auto;
+  right: 14px;
 }
 
 /* заголовок карты: лента в цвет приложения на всю ширину, максимум 768px */
