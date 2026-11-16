@@ -12,6 +12,7 @@ import {DotLottieVue} from '@lottiefiles/dotlottie-vue'
 import {showInterstitial, preloadInterstitial} from '~/utils/admob.js'
 import RightIcon from '~/assets/images/location-icons/accept.svg'
 import WrongIcon from '~/assets/images/location-icons/cancel.svg'
+import SnowCoin from '~/assets/images/event-rewards/winter-event/winter-words/snowflake.svg'
 
 const isSpeaking = ref(false)
 
@@ -652,6 +653,8 @@ const feedbackClass = computed(() => {
           :confetti-particles="confettiParticles"
           :mascot-src="getResultIcon(isQuestFullyCompleted)"
           :lottie-data="getResultAnimation(isQuestFullyCompleted)"
+          :show-xp="(currentQuest?.rewardRep || 0) > 0"
+          :coin-image="eventId === 'winter' ? SnowCoin : ''"
           @themes="goBackHome"
           @retryMistakes="retryQuest"
       />

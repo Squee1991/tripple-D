@@ -23,13 +23,31 @@ export const useEventSessionStore = defineStore('eventSession', () => {
 	const shopItems = ref({})
 	const solvedSteps = ref([])
 	const isReplayMode = ref(false)
+
+	// Тестовый режим ивентов: в dev всегда, в проде через ?eventTest=1 (выключить ?eventTest=0)
+	const TEST_FLAG_KEY = 'skillup.eventTest'
+	const readTestFlag = () => {
+		if (import.meta.dev) return true
+		if (typeof window === 'undefined') return false
+		try {
+			const param = new URLSearchParams(window.location.search).get('eventTest')
+			if (param === '1') localStorage.setItem(TEST_FLAG_KEY, '1')
+			if (param === '0') localStorage.removeItem(TEST_FLAG_KEY)
+			return localStorage.getItem(TEST_FLAG_KEY) === '1'
+		} catch (e) {
+			return false
+		}
+	}
+	const isTestMode = ref(readTestFlag())
+	const TEST_EVENT_IDS = ['winter']
+	const isForcedOpen = (id) => isTestMode.value && TEST_EVENT_IDS.includes(id)
 	const events = ref([
 		{
 			id: 'winter',
 			valueKey: 'eventsNavNames.winter',
 			url: '/event-winter',
-			start: '12-18 00:00',
-			end: '01-03 23:59',
+			start: '12-01 00:00',
+			end: '01-06 23:59',
 			icon: ChristmasDayNav,
 			alt: 'ChristmasDayNav'
 		},
@@ -96,6 +114,7 @@ export const useEventSessionStore = defineStore('eventSession', () => {
 	const isEventActive = (id, now = new Date()) => {
 		const event = events.value.find(e => e.id === id)
 		if (!event) return false
+		if (isForcedOpen(id)) return true
 		const parse = (str, y) => {
 			const [datePart, timePart] = str.split(' ')
 			const [month, day] = datePart.split('-').map(Number)
@@ -378,6 +397,7 @@ export const useEventSessionStore = defineStore('eventSession', () => {
 	return {
 		eventId, questId, stepIndex, score, finished, isLoading,
 		isSnowEnabled, shopItems, events, isValentineThemePurchased, isEventActive,
+		isTestMode, isForcedOpen,
 		solvedSteps, isReplayMode,
 		isSnowPurchased, loadGlobalWinterSettings, setSnowFallEnabled,
 		start, restoreIfPossible, next, prev, addScore, finishQuest,
