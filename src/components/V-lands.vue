@@ -6,9 +6,6 @@
           <span class="map__title-text">{{ t('locationsMenu.title') }}</span>
         </span>
       </h1>
-      <div class="map__event" :class="{ 'is-rtl': locale === 'ar' }">
-        <VEventTile/>
-      </div>
       <div class="map-layout">
         <transition name="fade">
           <div
@@ -95,6 +92,9 @@
           </div>
         </transition>
         <div class="map-right-container">
+          <div class="map__event" :class="{ 'is-rtl': locale === 'ar' }">
+            <VEventTile/>
+          </div>
           <!-- пагинация разделов пока скрыта, раздел виден по прокрутке карты
           <div class="map-pagination-arrows">
             <button
@@ -460,7 +460,6 @@ onBeforeUnmount(() => {
 }
 
 .map__wrapper {
-  position: relative;
   display: flex;
   flex-direction: column;
   gap: 12px;
@@ -469,11 +468,11 @@ onBeforeUnmount(() => {
   margin: 0 auto;
 }
 
-/* плитка идущего ивента: под лентой слева, поверх карты, дорогу не сдвигает */
+/* плитка идущего ивента: в левом верхнем углу колонки с картой, поверх карты, дорогу не сдвигает */
 .map__event {
   position: absolute;
-  top: 66px;
-  left: 14px;
+  top: 8px;
+  left: 10px;
   z-index: 6;
 }
 
@@ -1159,6 +1158,7 @@ html.orange .map__title {
 }
 
 .map-right-container {
+  position: relative;
   flex: 2;
   display: flex;
   flex-direction: column;
