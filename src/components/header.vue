@@ -125,6 +125,7 @@ import {userAuthStore} from '../../store/authStore.js'
 import {useBreakPointsStore} from '../../store/breakPointsStore.js'
 import { useEasterEggsStore } from '../../store/easterEggsStore.js'
 import { useRankUserStore} from "../../store/rankStore.js";
+import { useEventSessionStore } from '../../store/eventsStore.js'
 const rankStore = useRankUserStore()
 import SignIn from '../components/logIn.vue'
 import LanguageSelector from '../components/langSwitcher.vue'
@@ -146,6 +147,7 @@ const router = useRouter()
 const {t, locale} = useI18n()
 const bp = useBreakPointsStore()
 const userAuth = userAuthStore()
+const eventStore = useEventSessionStore()
 
 // const click = () => {
 //   easterEggsStore.triggerTaps()
@@ -279,8 +281,8 @@ const menuItems = computed(() => {
         url: '/event-winter',
         isEvent: true,
         eventKey: 'winter',
-        startDate: '18.12 00:00',
-        endDate: '02.01 23:59'
+        startDate: '01.12 00:00',
+        endDate: '06.01 23:59'
       },
       {
         id: 'valentine',
@@ -312,7 +314,7 @@ const menuItems = computed(() => {
     ]
     const processedEvents = allEvents.map(event => ({
       ...event,
-      url: isEventActive(event.startDate, event.endDate) ? event.url : null,
+      url: (eventStore.isForcedOpen(event.eventKey) || isEventActive(event.startDate, event.endDate)) ? event.url : null,
     }))
     items.push(
         {id: 'events', valueKey: 'nav.events', children: processedEvents}

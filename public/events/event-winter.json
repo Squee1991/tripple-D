@@ -2569,6 +2569,1931 @@
           "correctOptionIndex": 2
         }
       ]
+    },
+    {
+      "id": "advent-1",
+      "title": "Adventskalender 1",
+      "kind": "classic",
+      "rewardCoins": 5,
+      "rewardRep": 0,
+      "steps": [
+        {
+          "type": "multiple-choice",
+          "id": "adv1-pic",
+          "question": "Was ist das?",
+          "image": "/assets/images/event-rewards/winter-event/winter-words/calendar.svg",
+          "options": [
+            "die Kerze",
+            "der Schneemann",
+            "der Stern",
+            "der Adventskalender"
+          ],
+          "correctOptionIndex": 3
+        },
+        {
+          "type": "multiple-choice",
+          "id": "adv1-art",
+          "question": "Der, die oder das? ... Adventskalender",
+          "options": [
+            "das",
+            "der",
+            "die"
+          ],
+          "correctOptionIndex": 1
+        },
+        {
+          "type": "choose-word",
+          "id": "adv1-sent",
+          "sentence": "Jeden Tag öffne ich ein ___ im Adventskalender.",
+          "options": [
+            "Türchen",
+            "Auto",
+            "Brot"
+          ],
+          "correctOptionIndex": 0
+        },
+        {
+          "type": "multiple-choice",
+          "id": "adv1-culture",
+          "question": "Wie viele Türchen hat ein Adventskalender?",
+          "options": [
+            "24",
+            "20",
+            "31",
+            "12"
+          ],
+          "correctOptionIndex": 0
+        }
+      ]
+    },
+    {
+      "id": "advent-2",
+      "title": "Adventskalender 2",
+      "kind": "listen",
+      "rewardCoins": 5,
+      "rewardRep": 0,
+      "steps": [
+        {
+          "type": "multiple-choice",
+          "id": "adv2-pic",
+          "question": "Was ist das?",
+          "image": "/assets/images/event-rewards/winter-event/winter-words/candle.svg",
+          "options": [
+            "der Schlitten",
+            "der Schlittschuh",
+            "die Kerze",
+            "der Adventskranz"
+          ],
+          "correctOptionIndex": 2
+        },
+        {
+          "type": "multiple-choice",
+          "id": "adv2-art",
+          "question": "Der, die oder das? ... Kerze",
+          "options": [
+            "die",
+            "der",
+            "das"
+          ],
+          "correctOptionIndex": 0
+        },
+        {
+          "type": "reading",
+          "id": "adv2-listen",
+          "text": "Es ist dunkel. Mia zündet eine Kerze an. Die Kerze ist rot und riecht nach Zimt.",
+          "questions": [
+            {
+              "question": "Welche Farbe hat die Kerze?",
+              "options": [
+                "weiß",
+                "rot",
+                "blau",
+                "grün"
+              ],
+              "correctOptionIndex": 1
+            },
+            {
+              "question": "Wonach riecht die Kerze?",
+              "options": [
+                "nach Zimt",
+                "nach Fisch",
+                "nach Kaffee",
+                "nach Regen"
+              ],
+              "correctOptionIndex": 0
+            }
+          ]
+        },
+        {
+          "type": "choose-word",
+          "id": "adv2-sent",
+          "sentence": "Die ___ brennt auf dem Tisch.",
+          "options": [
+            "Tasse",
+            "Gabel",
+            "Kerze"
+          ],
+          "correctOptionIndex": 2
+        }
+      ]
+    },
+    {
+      "id": "advent-3",
+      "title": "Adventskalender 3",
+      "kind": "build",
+      "rewardCoins": 5,
+      "rewardRep": 0,
+      "steps": [
+        {
+          "type": "multiple-choice",
+          "id": "adv3-pic",
+          "question": "Was ist das?",
+          "image": "/assets/images/event-rewards/winter-event/winter-words/christmas-wreath.svg",
+          "options": [
+            "die Kugel",
+            "der Adventskranz",
+            "die Schneeflocke",
+            "der Handschuh"
+          ],
+          "correctOptionIndex": 1
+        },
+        {
+          "type": "matching",
+          "id": "adv3-build",
+          "instruction": "adventCalendar.tasks.build",
+          "pairsLeft": [
+            {
+              "id": "l1",
+              "text": "Advents-"
+            },
+            {
+              "id": "l2",
+              "text": "Lebkuchen-"
+            },
+            {
+              "id": "l3",
+              "text": "Schnee-"
+            },
+            {
+              "id": "l4",
+              "text": "Hand-"
+            }
+          ],
+          "pairsRight": [
+            {
+              "id": "r2",
+              "text": "-herz"
+            },
+            {
+              "id": "r3",
+              "text": "-flocke"
+            },
+            {
+              "id": "r4",
+              "text": "-schuh"
+            },
+            {
+              "id": "r1",
+              "text": "-kranz"
+            }
+          ],
+          "correctPairs": [
+            [
+              "l1",
+              "r1"
+            ],
+            [
+              "l2",
+              "r2"
+            ],
+            [
+              "l3",
+              "r3"
+            ],
+            [
+              "l4",
+              "r4"
+            ]
+          ]
+        },
+        {
+          "type": "multiple-choice",
+          "id": "adv3-art",
+          "question": "Der, die oder das? ... Adventskranz",
+          "options": [
+            "die",
+            "das",
+            "der"
+          ],
+          "correctOptionIndex": 2
+        },
+        {
+          "type": "choose-word",
+          "id": "adv3-sent",
+          "sentence": "Auf dem Adventskranz sind vier ___.",
+          "options": [
+            "Hunde",
+            "Kerzen",
+            "Äpfel"
+          ],
+          "correctOptionIndex": 1
+        }
+      ]
+    },
+    {
+      "id": "advent-4",
+      "title": "Adventskalender 4",
+      "kind": "odd",
+      "rewardCoins": 5,
+      "rewardRep": 0,
+      "steps": [
+        {
+          "type": "multiple-choice",
+          "id": "adv4-pic",
+          "question": "Was ist das?",
+          "image": "/assets/images/event-rewards/winter-event/winter-words/snowflake.svg",
+          "options": [
+            "die Schneeflocke",
+            "der Strumpf",
+            "der Schal",
+            "die Schleife"
+          ],
+          "correctOptionIndex": 0
+        },
+        {
+          "type": "multiple-choice",
+          "id": "adv4-odd",
+          "question": "Was passt nicht zum Winter?",
+          "options": [
+            "der Schneemann",
+            "der Schlitten",
+            "die Sonnencreme",
+            "die Schneeflocke"
+          ],
+          "correctOptionIndex": 2
+        },
+        {
+          "type": "choose-word",
+          "id": "adv4-sent",
+          "sentence": "Eine Schneeflocke ___ auf meine Nase.",
+          "options": [
+            "fällt",
+            "isst",
+            "liest"
+          ],
+          "correctOptionIndex": 0
+        },
+        {
+          "type": "multiple-choice",
+          "id": "adv4-culture",
+          "question": "Welche Farbe hat Schnee?",
+          "options": [
+            "blau",
+            "weiß",
+            "grün",
+            "rot"
+          ],
+          "correctOptionIndex": 1
+        }
+      ]
+    },
+    {
+      "id": "advent-5",
+      "title": "Adventskalender 5",
+      "kind": "classic",
+      "rewardCoins": 5,
+      "rewardRep": 0,
+      "steps": [
+        {
+          "type": "multiple-choice",
+          "id": "adv5-pic",
+          "question": "Was ist das?",
+          "image": "/assets/images/event-rewards/winter-event/winter-words/christmas-stocking.svg",
+          "options": [
+            "der Nikolaus",
+            "das Rentier",
+            "der Kamin",
+            "der Strumpf"
+          ],
+          "correctOptionIndex": 3
+        },
+        {
+          "type": "multiple-choice",
+          "id": "adv5-art",
+          "question": "Der, die oder das? ... Strumpf",
+          "options": [
+            "der",
+            "die",
+            "das"
+          ],
+          "correctOptionIndex": 0
+        },
+        {
+          "type": "choose-word",
+          "id": "adv5-sent",
+          "sentence": "Der ___ hängt am Kamin.",
+          "options": [
+            "Tisch",
+            "Stuhl",
+            "Strumpf"
+          ],
+          "correctOptionIndex": 2
+        },
+        {
+          "type": "multiple-choice",
+          "id": "adv5-culture",
+          "question": "Was stellen Kinder am 5. Dezember vor die Tür?",
+          "options": [
+            "einen Stiefel",
+            "einen Baum",
+            "eine Kerze",
+            "einen Ball"
+          ],
+          "correctOptionIndex": 0
+        }
+      ]
+    },
+    {
+      "id": "advent-6",
+      "title": "Adventskalender 6",
+      "kind": "listen",
+      "rewardCoins": 5,
+      "rewardRep": 0,
+      "steps": [
+        {
+          "type": "multiple-choice",
+          "id": "adv6-pic",
+          "question": "Was ist das?",
+          "image": "/assets/images/event-rewards/winter-event/winter-words/Santa.svg",
+          "options": [
+            "die Glocke",
+            "der Kuchen",
+            "der Nikolaus",
+            "das Plätzchen"
+          ],
+          "correctOptionIndex": 2
+        },
+        {
+          "type": "multiple-choice",
+          "id": "adv6-art",
+          "question": "Der, die oder das? ... Nikolaus",
+          "options": [
+            "die",
+            "das",
+            "der"
+          ],
+          "correctOptionIndex": 2
+        },
+        {
+          "type": "reading",
+          "id": "adv6-listen",
+          "text": "Am Abend stellt Paul seinen Stiefel vor die Tür. Am Morgen ist der Stiefel voll. Paul findet Nüsse, eine Mandarine und Schokolade.",
+          "questions": [
+            {
+              "question": "Wohin stellt Paul den Stiefel?",
+              "options": [
+                "auf das Dach",
+                "vor die Tür",
+                "ins Bett",
+                "in den Schrank"
+              ],
+              "correctOptionIndex": 1
+            },
+            {
+              "question": "Was ist nicht im Stiefel?",
+              "options": [
+                "ein Handy",
+                "Nüsse",
+                "eine Mandarine",
+                "Schokolade"
+              ],
+              "correctOptionIndex": 0
+            }
+          ]
+        },
+        {
+          "type": "choose-word",
+          "id": "adv6-sent",
+          "sentence": "Der Nikolaus bringt Nüsse und ___.",
+          "options": [
+            "Schuhe",
+            "Schokolade",
+            "Steine"
+          ],
+          "correctOptionIndex": 1
+        }
+      ]
+    },
+    {
+      "id": "advent-7",
+      "title": "Adventskalender 7",
+      "kind": "review",
+      "rewardCoins": 5,
+      "rewardRep": 0,
+      "steps": [
+        {
+          "type": "multiple-choice",
+          "id": "adv7-pic",
+          "question": "Was ist das?",
+          "image": "/assets/images/event-rewards/winter-event/winter-words/cookies.svg",
+          "options": [
+            "die Mütze",
+            "das Plätzchen",
+            "der Schneemann",
+            "der Stern"
+          ],
+          "correctOptionIndex": 1
+        },
+        {
+          "type": "matching",
+          "id": "adv7-review",
+          "instruction": "adventCalendar.tasks.review",
+          "pairsLeft": [
+            {
+              "id": "l1",
+              "text": "der Adventskranz"
+            },
+            {
+              "id": "l2",
+              "text": "die Schneeflocke"
+            },
+            {
+              "id": "l3",
+              "text": "der Strumpf"
+            },
+            {
+              "id": "l4",
+              "text": "der Nikolaus"
+            },
+            {
+              "id": "l5",
+              "text": "das Plätzchen"
+            }
+          ],
+          "pairsRight": [
+            {
+              "id": "r5",
+              "text": "adventCalendar.days.d7.word"
+            },
+            {
+              "id": "r1",
+              "text": "adventCalendar.days.d3.word"
+            },
+            {
+              "id": "r2",
+              "text": "adventCalendar.days.d4.word"
+            },
+            {
+              "id": "r3",
+              "text": "adventCalendar.days.d5.word"
+            },
+            {
+              "id": "r4",
+              "text": "adventCalendar.days.d6.word"
+            }
+          ],
+          "correctPairs": [
+            [
+              "l1",
+              "r1"
+            ],
+            [
+              "l2",
+              "r2"
+            ],
+            [
+              "l3",
+              "r3"
+            ],
+            [
+              "l4",
+              "r4"
+            ],
+            [
+              "l5",
+              "r5"
+            ]
+          ]
+        },
+        {
+          "type": "choose-word",
+          "id": "adv7-sent",
+          "sentence": "Wir ___ Plätzchen mit Oma.",
+          "options": [
+            "backen",
+            "trinken",
+            "waschen"
+          ],
+          "correctOptionIndex": 0
+        },
+        {
+          "type": "multiple-choice",
+          "id": "adv7-culture",
+          "question": "Wo backt man Plätzchen?",
+          "options": [
+            "im Bett",
+            "im Auto",
+            "im Ofen",
+            "im Kühlschrank"
+          ],
+          "correctOptionIndex": 2
+        }
+      ]
+    },
+    {
+      "id": "advent-8",
+      "title": "Adventskalender 8",
+      "kind": "build",
+      "rewardCoins": 5,
+      "rewardRep": 0,
+      "steps": [
+        {
+          "type": "multiple-choice",
+          "id": "adv8-pic",
+          "question": "Was ist das?",
+          "image": "/assets/images/event-rewards/winter-event/winter-words/snowman.svg",
+          "options": [
+            "der Schneemann",
+            "der Schlitten",
+            "der Schlittschuh",
+            "der Weihnachtsschmuck"
+          ],
+          "correctOptionIndex": 0
+        },
+        {
+          "type": "matching",
+          "id": "adv8-build",
+          "instruction": "adventCalendar.tasks.build",
+          "pairsLeft": [
+            {
+              "id": "l1",
+              "text": "Schnee-"
+            },
+            {
+              "id": "l2",
+              "text": "Tannen-"
+            },
+            {
+              "id": "l3",
+              "text": "Kerzen-"
+            },
+            {
+              "id": "l4",
+              "text": "Geschenk-"
+            }
+          ],
+          "pairsRight": [
+            {
+              "id": "r4",
+              "text": "-papier"
+            },
+            {
+              "id": "r1",
+              "text": "-mann"
+            },
+            {
+              "id": "r2",
+              "text": "-baum"
+            },
+            {
+              "id": "r3",
+              "text": "-licht"
+            }
+          ],
+          "correctPairs": [
+            [
+              "l1",
+              "r1"
+            ],
+            [
+              "l2",
+              "r2"
+            ],
+            [
+              "l3",
+              "r3"
+            ],
+            [
+              "l4",
+              "r4"
+            ]
+          ]
+        },
+        {
+          "type": "multiple-choice",
+          "id": "adv8-art",
+          "question": "Der, die oder das? ... Schneemann",
+          "options": [
+            "der",
+            "die",
+            "das"
+          ],
+          "correctOptionIndex": 0
+        },
+        {
+          "type": "choose-word",
+          "id": "adv8-sent",
+          "sentence": "Der Schneemann hat eine ___ aus einer Karotte.",
+          "options": [
+            "Hand",
+            "Tasche",
+            "Nase"
+          ],
+          "correctOptionIndex": 2
+        }
+      ]
+    },
+    {
+      "id": "advent-9",
+      "title": "Adventskalender 9",
+      "kind": "odd",
+      "rewardCoins": 5,
+      "rewardRep": 0,
+      "steps": [
+        {
+          "type": "multiple-choice",
+          "id": "adv9-pic",
+          "question": "Was ist das?",
+          "image": "/assets/images/event-rewards/winter-event/winter-words/sled.svg",
+          "options": [
+            "der Handschuh",
+            "die Kugel",
+            "die Süßigkeiten",
+            "der Schlitten"
+          ],
+          "correctOptionIndex": 3
+        },
+        {
+          "type": "multiple-choice",
+          "id": "adv9-odd",
+          "question": "Was trägt man im Winter nicht?",
+          "options": [
+            "die Handschuhe",
+            "den Bikini",
+            "den Schal",
+            "die Mütze"
+          ],
+          "correctOptionIndex": 1
+        },
+        {
+          "type": "choose-word",
+          "id": "adv9-sent",
+          "sentence": "Die Kinder ___ Schlitten.",
+          "options": [
+            "schreiben",
+            "fahren",
+            "essen"
+          ],
+          "correctOptionIndex": 1
+        },
+        {
+          "type": "multiple-choice",
+          "id": "adv9-culture",
+          "question": "Was macht man mit einem Schlitten?",
+          "options": [
+            "Man fährt den Berg hinunter.",
+            "Man kocht Suppe.",
+            "Man liest ein Buch.",
+            "Man schwimmt im Meer."
+          ],
+          "correctOptionIndex": 0
+        }
+      ]
+    },
+    {
+      "id": "advent-10",
+      "title": "Adventskalender 10",
+      "kind": "classic",
+      "rewardCoins": 5,
+      "rewardRep": 0,
+      "steps": [
+        {
+          "type": "multiple-choice",
+          "id": "adv10-pic",
+          "question": "Was ist das?",
+          "image": "/assets/images/event-rewards/winter-event/winter-words/mittens.svg",
+          "options": [
+            "die Schleife",
+            "der Weihnachtsbaum",
+            "der Handschuh",
+            "der Schal"
+          ],
+          "correctOptionIndex": 2
+        },
+        {
+          "type": "multiple-choice",
+          "id": "adv10-art",
+          "question": "Der, die oder das? ... Handschuh",
+          "options": [
+            "das",
+            "der",
+            "die"
+          ],
+          "correctOptionIndex": 1
+        },
+        {
+          "type": "choose-word",
+          "id": "adv10-sent",
+          "sentence": "Ohne ___ sind meine Hände kalt.",
+          "options": [
+            "Handschuhe",
+            "Socken",
+            "Brillen"
+          ],
+          "correctOptionIndex": 0
+        },
+        {
+          "type": "multiple-choice",
+          "id": "adv10-culture",
+          "question": "Wo trägt man Handschuhe?",
+          "options": [
+            "an den Füßen",
+            "auf dem Kopf",
+            "am Hals",
+            "an den Händen"
+          ],
+          "correctOptionIndex": 3
+        }
+      ]
+    },
+    {
+      "id": "advent-11",
+      "title": "Adventskalender 11",
+      "kind": "listen",
+      "rewardCoins": 5,
+      "rewardRep": 0,
+      "steps": [
+        {
+          "type": "multiple-choice",
+          "id": "adv11-pic",
+          "question": "Was ist das?",
+          "image": "/assets/images/event-rewards/winter-event/winter-words/scarf.svg",
+          "options": [
+            "das Geschenk",
+            "der Schal",
+            "das Rentier",
+            "der Kamin"
+          ],
+          "correctOptionIndex": 1
+        },
+        {
+          "type": "multiple-choice",
+          "id": "adv11-art",
+          "question": "Der, die oder das? ... Schal",
+          "options": [
+            "der",
+            "die",
+            "das"
+          ],
+          "correctOptionIndex": 0
+        },
+        {
+          "type": "reading",
+          "id": "adv11-listen",
+          "text": "Draußen ist es sehr kalt. Oma strickt einen langen Schal für Tom. Der Schal ist grün und sehr warm.",
+          "questions": [
+            {
+              "question": "Wer strickt den Schal?",
+              "options": [
+                "Oma",
+                "Tom",
+                "Papa",
+                "der Nachbar"
+              ],
+              "correctOptionIndex": 0
+            },
+            {
+              "question": "Wie ist der Schal?",
+              "options": [
+                "kurz und kalt",
+                "klein und nass",
+                "alt und kaputt",
+                "lang und warm"
+              ],
+              "correctOptionIndex": 3
+            }
+          ]
+        },
+        {
+          "type": "choose-word",
+          "id": "adv11-sent",
+          "sentence": "Ich trage einen warmen ___.",
+          "options": [
+            "Löffel",
+            "Teller",
+            "Schal"
+          ],
+          "correctOptionIndex": 2
+        }
+      ]
+    },
+    {
+      "id": "advent-12",
+      "title": "Adventskalender 12",
+      "kind": "build",
+      "rewardCoins": 5,
+      "rewardRep": 0,
+      "steps": [
+        {
+          "type": "multiple-choice",
+          "id": "adv12-pic",
+          "question": "Was ist das?",
+          "image": "/assets/images/event-rewards/winter-event/winter-words/reindeer.svg",
+          "options": [
+            "das Rentier",
+            "die Glocke",
+            "der Kuchen",
+            "der Adventskalender"
+          ],
+          "correctOptionIndex": 0
+        },
+        {
+          "type": "matching",
+          "id": "adv12-build",
+          "instruction": "adventCalendar.tasks.build",
+          "pairsLeft": [
+            {
+              "id": "l1",
+              "text": "Ren-"
+            },
+            {
+              "id": "l2",
+              "text": "Weihnachts-"
+            },
+            {
+              "id": "l3",
+              "text": "Winter-"
+            },
+            {
+              "id": "l4",
+              "text": "Puder-"
+            }
+          ],
+          "pairsRight": [
+            {
+              "id": "r2",
+              "text": "-mann"
+            },
+            {
+              "id": "r3",
+              "text": "-mantel"
+            },
+            {
+              "id": "r4",
+              "text": "-zucker"
+            },
+            {
+              "id": "r1",
+              "text": "-tier"
+            }
+          ],
+          "correctPairs": [
+            [
+              "l1",
+              "r1"
+            ],
+            [
+              "l2",
+              "r2"
+            ],
+            [
+              "l3",
+              "r3"
+            ],
+            [
+              "l4",
+              "r4"
+            ]
+          ]
+        },
+        {
+          "type": "multiple-choice",
+          "id": "adv12-art",
+          "question": "Der, die oder das? ... Rentier",
+          "options": [
+            "der",
+            "die",
+            "das"
+          ],
+          "correctOptionIndex": 2
+        },
+        {
+          "type": "choose-word",
+          "id": "adv12-sent",
+          "sentence": "Das Rentier ___ den Schlitten.",
+          "options": [
+            "kauft",
+            "zieht",
+            "trinkt"
+          ],
+          "correctOptionIndex": 1
+        }
+      ]
+    },
+    {
+      "id": "advent-13",
+      "title": "Adventskalender 13",
+      "kind": "odd",
+      "rewardCoins": 5,
+      "rewardRep": 0,
+      "steps": [
+        {
+          "type": "multiple-choice",
+          "id": "adv13-pic",
+          "question": "Was ist das?",
+          "image": "/assets/images/event-rewards/winter-event/winter-words/christmas-bell.svg",
+          "options": [
+            "der Stern",
+            "die Mütze",
+            "die Kerze",
+            "die Glocke"
+          ],
+          "correctOptionIndex": 3
+        },
+        {
+          "type": "multiple-choice",
+          "id": "adv13-odd",
+          "question": "Was macht keine Musik?",
+          "options": [
+            "die Flöte",
+            "das Kissen",
+            "die Glocke",
+            "die Trommel"
+          ],
+          "correctOptionIndex": 1
+        },
+        {
+          "type": "choose-word",
+          "id": "adv13-sent",
+          "sentence": "Die ___ läuten am Heiligabend.",
+          "options": [
+            "Glocken",
+            "Kerzen",
+            "Sterne"
+          ],
+          "correctOptionIndex": 0
+        },
+        {
+          "type": "multiple-choice",
+          "id": "adv13-culture",
+          "question": "Was macht eine Glocke?",
+          "options": [
+            "Sie läutet.",
+            "Sie kocht.",
+            "Sie schwimmt.",
+            "Sie malt."
+          ],
+          "correctOptionIndex": 0
+        }
+      ]
+    },
+    {
+      "id": "advent-14",
+      "title": "Adventskalender 14",
+      "kind": "review",
+      "rewardCoins": 5,
+      "rewardRep": 0,
+      "steps": [
+        {
+          "type": "multiple-choice",
+          "id": "adv14-pic",
+          "question": "Was ist das?",
+          "image": "/assets/images/event-rewards/winter-event/winter-words/star.svg",
+          "options": [
+            "der Weihnachtsschmuck",
+            "der Adventskranz",
+            "der Stern",
+            "der Schlittschuh"
+          ],
+          "correctOptionIndex": 2
+        },
+        {
+          "type": "matching",
+          "id": "adv14-review",
+          "instruction": "adventCalendar.tasks.review",
+          "pairsLeft": [
+            {
+              "id": "l1",
+              "text": "der Handschuh"
+            },
+            {
+              "id": "l2",
+              "text": "der Schal"
+            },
+            {
+              "id": "l3",
+              "text": "das Rentier"
+            },
+            {
+              "id": "l4",
+              "text": "die Glocke"
+            },
+            {
+              "id": "l5",
+              "text": "der Stern"
+            }
+          ],
+          "pairsRight": [
+            {
+              "id": "r4",
+              "text": "adventCalendar.days.d13.word"
+            },
+            {
+              "id": "r5",
+              "text": "adventCalendar.days.d14.word"
+            },
+            {
+              "id": "r1",
+              "text": "adventCalendar.days.d10.word"
+            },
+            {
+              "id": "r2",
+              "text": "adventCalendar.days.d11.word"
+            },
+            {
+              "id": "r3",
+              "text": "adventCalendar.days.d12.word"
+            }
+          ],
+          "correctPairs": [
+            [
+              "l1",
+              "r1"
+            ],
+            [
+              "l2",
+              "r2"
+            ],
+            [
+              "l3",
+              "r3"
+            ],
+            [
+              "l4",
+              "r4"
+            ],
+            [
+              "l5",
+              "r5"
+            ]
+          ]
+        },
+        {
+          "type": "choose-word",
+          "id": "adv14-sent",
+          "sentence": "Oben auf dem Baum leuchtet ein ___.",
+          "options": [
+            "Hund",
+            "Schuh",
+            "Stern"
+          ],
+          "correctOptionIndex": 2
+        },
+        {
+          "type": "multiple-choice",
+          "id": "adv14-culture",
+          "question": "Wo ist der Stern?",
+          "options": [
+            "unter dem Tisch",
+            "im Kühlschrank",
+            "im Keller",
+            "oben auf dem Baum"
+          ],
+          "correctOptionIndex": 3
+        }
+      ]
+    },
+    {
+      "id": "advent-15",
+      "title": "Adventskalender 15",
+      "kind": "classic",
+      "rewardCoins": 5,
+      "rewardRep": 0,
+      "steps": [
+        {
+          "type": "multiple-choice",
+          "id": "adv15-pic",
+          "question": "Was ist das?",
+          "image": "/assets/images/event-rewards/winter-event/winter-words/ice-skates.svg",
+          "options": [
+            "die Schneeflocke",
+            "der Schlittschuh",
+            "die Kugel",
+            "die Süßigkeiten"
+          ],
+          "correctOptionIndex": 1
+        },
+        {
+          "type": "multiple-choice",
+          "id": "adv15-art",
+          "question": "Der, die oder das? ... Schlittschuh",
+          "options": [
+            "die",
+            "das",
+            "der"
+          ],
+          "correctOptionIndex": 2
+        },
+        {
+          "type": "choose-word",
+          "id": "adv15-sent",
+          "sentence": "Im Winter laufen wir ___.",
+          "options": [
+            "Treppe",
+            "Schlittschuh",
+            "Tennis"
+          ],
+          "correctOptionIndex": 1
+        },
+        {
+          "type": "multiple-choice",
+          "id": "adv15-culture",
+          "question": "Wo läuft man Schlittschuh?",
+          "options": [
+            "auf dem Dach",
+            "im Sand",
+            "auf dem Eis",
+            "im Wasser"
+          ],
+          "correctOptionIndex": 2
+        }
+      ]
+    },
+    {
+      "id": "advent-16",
+      "title": "Adventskalender 16",
+      "kind": "listen",
+      "rewardCoins": 5,
+      "rewardRep": 0,
+      "steps": [
+        {
+          "type": "multiple-choice",
+          "id": "adv16-pic",
+          "question": "Was ist das?",
+          "image": "/assets/images/event-rewards/winter-event/winter-words/christmas-ball.svg",
+          "options": [
+            "die Kugel",
+            "die Schleife",
+            "der Weihnachtsbaum",
+            "der Strumpf"
+          ],
+          "correctOptionIndex": 0
+        },
+        {
+          "type": "multiple-choice",
+          "id": "adv16-art",
+          "question": "Der, die oder das? ... Kugel",
+          "options": [
+            "das",
+            "die",
+            "der"
+          ],
+          "correctOptionIndex": 1
+        },
+        {
+          "type": "reading",
+          "id": "adv16-listen",
+          "text": "Lisa und ihr Bruder schmücken den Baum. Lisa hängt eine rote Kugel auf. Ihr Bruder setzt einen goldenen Stern oben auf den Baum.",
+          "questions": [
+            {
+              "question": "Was hängt Lisa auf?",
+              "options": [
+                "einen Stern",
+                "eine Kerze",
+                "eine Glocke",
+                "eine rote Kugel"
+              ],
+              "correctOptionIndex": 3
+            },
+            {
+              "question": "Was ist oben auf dem Baum?",
+              "options": [
+                "ein Hut",
+                "ein Apfel",
+                "ein goldener Stern",
+                "eine Katze"
+              ],
+              "correctOptionIndex": 2
+            }
+          ]
+        },
+        {
+          "type": "choose-word",
+          "id": "adv16-sent",
+          "sentence": "Die rote ___ hängt am Baum.",
+          "options": [
+            "Kugel",
+            "Katze",
+            "Suppe"
+          ],
+          "correctOptionIndex": 0
+        }
+      ]
+    },
+    {
+      "id": "advent-17",
+      "title": "Adventskalender 17",
+      "kind": "build",
+      "rewardCoins": 5,
+      "rewardRep": 0,
+      "steps": [
+        {
+          "type": "multiple-choice",
+          "id": "adv17-pic",
+          "question": "Was ist das?",
+          "image": "/assets/images/event-rewards/winter-event/winter-words/ribbon.svg",
+          "options": [
+            "der Kamin",
+            "das Geschenk",
+            "der Nikolaus",
+            "die Schleife"
+          ],
+          "correctOptionIndex": 3
+        },
+        {
+          "type": "matching",
+          "id": "adv17-build",
+          "instruction": "adventCalendar.tasks.build",
+          "pairsLeft": [
+            {
+              "id": "l1",
+              "text": "Geschenk-"
+            },
+            {
+              "id": "l2",
+              "text": "Zimt-"
+            },
+            {
+              "id": "l3",
+              "text": "Nuss-"
+            },
+            {
+              "id": "l4",
+              "text": "Winter-"
+            }
+          ],
+          "pairsRight": [
+            {
+              "id": "r4",
+              "text": "-schlaf"
+            },
+            {
+              "id": "r1",
+              "text": "-band"
+            },
+            {
+              "id": "r2",
+              "text": "-stern"
+            },
+            {
+              "id": "r3",
+              "text": "-knacker"
+            }
+          ],
+          "correctPairs": [
+            [
+              "l1",
+              "r1"
+            ],
+            [
+              "l2",
+              "r2"
+            ],
+            [
+              "l3",
+              "r3"
+            ],
+            [
+              "l4",
+              "r4"
+            ]
+          ]
+        },
+        {
+          "type": "multiple-choice",
+          "id": "adv17-art",
+          "question": "Der, die oder das? ... Schleife",
+          "options": [
+            "die",
+            "der",
+            "das"
+          ],
+          "correctOptionIndex": 0
+        },
+        {
+          "type": "choose-word",
+          "id": "adv17-sent",
+          "sentence": "Auf dem Geschenk ist eine ___.",
+          "options": [
+            "Suppe",
+            "Wolke",
+            "Schleife"
+          ],
+          "correctOptionIndex": 2
+        }
+      ]
+    },
+    {
+      "id": "advent-18",
+      "title": "Adventskalender 18",
+      "kind": "odd",
+      "rewardCoins": 5,
+      "rewardRep": 0,
+      "steps": [
+        {
+          "type": "multiple-choice",
+          "id": "adv18-pic",
+          "question": "Was ist das?",
+          "image": "/assets/images/event-rewards/winter-event/winter-words/chimney.svg",
+          "options": [
+            "der Adventskalender",
+            "das Plätzchen",
+            "der Kamin",
+            "der Kuchen"
+          ],
+          "correctOptionIndex": 2
+        },
+        {
+          "type": "multiple-choice",
+          "id": "adv18-odd",
+          "question": "Was ist nicht warm?",
+          "options": [
+            "der Schneemann",
+            "das Feuer",
+            "die Kerze",
+            "der Kamin"
+          ],
+          "correctOptionIndex": 0
+        },
+        {
+          "type": "choose-word",
+          "id": "adv18-sent",
+          "sentence": "Im ___ brennt ein Feuer.",
+          "options": [
+            "Bett",
+            "Kamin",
+            "Kühlschrank"
+          ],
+          "correctOptionIndex": 1
+        },
+        {
+          "type": "multiple-choice",
+          "id": "adv18-culture",
+          "question": "Was brennt im Kamin?",
+          "options": [
+            "das Eis",
+            "der Schnee",
+            "das Wasser",
+            "das Feuer"
+          ],
+          "correctOptionIndex": 3
+        }
+      ]
+    },
+    {
+      "id": "advent-19",
+      "title": "Adventskalender 19",
+      "kind": "classic",
+      "rewardCoins": 5,
+      "rewardRep": 0,
+      "steps": [
+        {
+          "type": "multiple-choice",
+          "id": "adv19-pic",
+          "question": "Was ist das?",
+          "image": "/assets/images/event-rewards/winter-event/winter-words/cake.svg",
+          "options": [
+            "der Schneemann",
+            "der Kuchen",
+            "die Mütze",
+            "die Kerze"
+          ],
+          "correctOptionIndex": 1
+        },
+        {
+          "type": "multiple-choice",
+          "id": "adv19-art",
+          "question": "Der, die oder das? ... Kuchen",
+          "options": [
+            "das",
+            "der",
+            "die"
+          ],
+          "correctOptionIndex": 1
+        },
+        {
+          "type": "choose-word",
+          "id": "adv19-sent",
+          "sentence": "Zum Kaffee gibt es ___.",
+          "options": [
+            "Kuchen",
+            "Schnee",
+            "Seife"
+          ],
+          "correctOptionIndex": 0
+        },
+        {
+          "type": "multiple-choice",
+          "id": "adv19-culture",
+          "question": "Welchen Kuchen isst man im Advent oft in Deutschland?",
+          "options": [
+            "Pizza",
+            "Tacos",
+            "Stollen",
+            "Sushi"
+          ],
+          "correctOptionIndex": 2
+        }
+      ]
+    },
+    {
+      "id": "advent-20",
+      "title": "Adventskalender 20",
+      "kind": "listen",
+      "rewardCoins": 5,
+      "rewardRep": 0,
+      "steps": [
+        {
+          "type": "multiple-choice",
+          "id": "adv20-pic",
+          "question": "Was ist das?",
+          "image": "/assets/images/event-rewards/winter-event/winter-words/santa-hat.svg",
+          "options": [
+            "die Mütze",
+            "der Weihnachtsschmuck",
+            "der Adventskranz",
+            "der Schlitten"
+          ],
+          "correctOptionIndex": 0
+        },
+        {
+          "type": "multiple-choice",
+          "id": "adv20-art",
+          "question": "Der, die oder das? ... Mütze",
+          "options": [
+            "die",
+            "der",
+            "das"
+          ],
+          "correctOptionIndex": 0
+        },
+        {
+          "type": "reading",
+          "id": "adv20-listen",
+          "text": "Ben geht in den Schnee. Er trägt eine blaue Mütze und dicke Handschuhe. Er baut einen großen Schneemann.",
+          "questions": [
+            {
+              "question": "Welche Farbe hat die Mütze?",
+              "options": [
+                "rot",
+                "gelb",
+                "schwarz",
+                "blau"
+              ],
+              "correctOptionIndex": 3
+            },
+            {
+              "question": "Was baut Ben?",
+              "options": [
+                "ein Auto",
+                "einen Turm",
+                "einen Schneemann",
+                "ein Haus"
+              ],
+              "correctOptionIndex": 2
+            }
+          ]
+        },
+        {
+          "type": "choose-word",
+          "id": "adv20-sent",
+          "sentence": "Der Weihnachtsmann trägt eine rote ___.",
+          "options": [
+            "Banane",
+            "Lampe",
+            "Mütze"
+          ],
+          "correctOptionIndex": 2
+        }
+      ]
+    },
+    {
+      "id": "advent-21",
+      "title": "Adventskalender 21",
+      "kind": "review",
+      "rewardCoins": 5,
+      "rewardRep": 0,
+      "steps": [
+        {
+          "type": "multiple-choice",
+          "id": "adv21-pic",
+          "question": "Was ist das?",
+          "image": "/assets/images/event-rewards/winter-event/winter-words/christmas-decoration.svg",
+          "options": [
+            "die Süßigkeiten",
+            "die Schneeflocke",
+            "der Handschuh",
+            "der Weihnachtsschmuck"
+          ],
+          "correctOptionIndex": 3
+        },
+        {
+          "type": "matching",
+          "id": "adv21-review",
+          "instruction": "adventCalendar.tasks.review",
+          "pairsLeft": [
+            {
+              "id": "l1",
+              "text": "die Schleife"
+            },
+            {
+              "id": "l2",
+              "text": "der Kamin"
+            },
+            {
+              "id": "l3",
+              "text": "der Kuchen"
+            },
+            {
+              "id": "l4",
+              "text": "die Mütze"
+            },
+            {
+              "id": "l5",
+              "text": "der Weihnachtsschmuck"
+            }
+          ],
+          "pairsRight": [
+            {
+              "id": "r3",
+              "text": "adventCalendar.days.d19.word"
+            },
+            {
+              "id": "r4",
+              "text": "adventCalendar.days.d20.word"
+            },
+            {
+              "id": "r5",
+              "text": "adventCalendar.days.d21.word"
+            },
+            {
+              "id": "r1",
+              "text": "adventCalendar.days.d17.word"
+            },
+            {
+              "id": "r2",
+              "text": "adventCalendar.days.d18.word"
+            }
+          ],
+          "correctPairs": [
+            [
+              "l1",
+              "r1"
+            ],
+            [
+              "l2",
+              "r2"
+            ],
+            [
+              "l3",
+              "r3"
+            ],
+            [
+              "l4",
+              "r4"
+            ],
+            [
+              "l5",
+              "r5"
+            ]
+          ]
+        },
+        {
+          "type": "choose-word",
+          "id": "adv21-sent",
+          "sentence": "Wir hängen den Weihnachtsschmuck an den ___.",
+          "options": [
+            "Kuchen",
+            "Baum",
+            "Hund"
+          ],
+          "correctOptionIndex": 1
+        },
+        {
+          "type": "multiple-choice",
+          "id": "adv21-culture",
+          "question": "Wann schmücken viele Familien den Baum?",
+          "options": [
+            "kurz vor Weihnachten",
+            "im Sommer",
+            "an Ostern",
+            "im März"
+          ],
+          "correctOptionIndex": 0
+        }
+      ]
+    },
+    {
+      "id": "advent-22",
+      "title": "Adventskalender 22",
+      "kind": "build",
+      "rewardCoins": 5,
+      "rewardRep": 0,
+      "steps": [
+        {
+          "type": "multiple-choice",
+          "id": "adv22-pic",
+          "question": "Was ist das?",
+          "image": "/assets/images/event-rewards/winter-event/winter-words/candy.svg",
+          "options": [
+            "der Strumpf",
+            "der Schal",
+            "die Süßigkeiten",
+            "der Weihnachtsbaum"
+          ],
+          "correctOptionIndex": 2
+        },
+        {
+          "type": "matching",
+          "id": "adv22-build",
+          "instruction": "adventCalendar.tasks.build",
+          "pairsLeft": [
+            {
+              "id": "l1",
+              "text": "Schoko-"
+            },
+            {
+              "id": "l2",
+              "text": "Zucker-"
+            },
+            {
+              "id": "l3",
+              "text": "Gummi-"
+            },
+            {
+              "id": "l4",
+              "text": "Pfeffer-"
+            }
+          ],
+          "pairsRight": [
+            {
+              "id": "r3",
+              "text": "-bär"
+            },
+            {
+              "id": "r4",
+              "text": "-nuss"
+            },
+            {
+              "id": "r1",
+              "text": "-lade"
+            },
+            {
+              "id": "r2",
+              "text": "-stange"
+            }
+          ],
+          "correctPairs": [
+            [
+              "l1",
+              "r1"
+            ],
+            [
+              "l2",
+              "r2"
+            ],
+            [
+              "l3",
+              "r3"
+            ],
+            [
+              "l4",
+              "r4"
+            ]
+          ]
+        },
+        {
+          "type": "multiple-choice",
+          "id": "adv22-art",
+          "question": "Der, die oder das? ... Süßigkeiten",
+          "options": [
+            "das",
+            "die",
+            "der"
+          ],
+          "correctOptionIndex": 1
+        },
+        {
+          "type": "choose-word",
+          "id": "adv22-sent",
+          "sentence": "Die Kinder lieben ___.",
+          "options": [
+            "Süßigkeiten",
+            "Hausaufgaben",
+            "Zahnärzte"
+          ],
+          "correctOptionIndex": 0
+        }
+      ]
+    },
+    {
+      "id": "advent-23",
+      "title": "Adventskalender 23",
+      "kind": "odd",
+      "rewardCoins": 5,
+      "rewardRep": 0,
+      "steps": [
+        {
+          "type": "multiple-choice",
+          "id": "adv23-pic",
+          "question": "Was ist das?",
+          "image": "/assets/images/event-rewards/winter-event/winter-words/christmas-tree.svg",
+          "options": [
+            "das Rentier",
+            "der Weihnachtsbaum",
+            "das Geschenk",
+            "der Nikolaus"
+          ],
+          "correctOptionIndex": 1
+        },
+        {
+          "type": "multiple-choice",
+          "id": "adv23-odd",
+          "question": "Was hängt man nicht an den Baum?",
+          "options": [
+            "die Kugel",
+            "den Stern",
+            "die Lichterkette",
+            "den Fußball"
+          ],
+          "correctOptionIndex": 3
+        },
+        {
+          "type": "choose-word",
+          "id": "adv23-sent",
+          "sentence": "Wir ___ den Weihnachtsbaum.",
+          "options": [
+            "trinken",
+            "schlafen",
+            "schmücken"
+          ],
+          "correctOptionIndex": 2
+        },
+        {
+          "type": "multiple-choice",
+          "id": "adv23-culture",
+          "question": "Was ist ein anderes Wort für Weihnachtsbaum?",
+          "options": [
+            "der Kamin",
+            "der Stern",
+            "der Tannenbaum",
+            "der Apfelbaum"
+          ],
+          "correctOptionIndex": 2
+        }
+      ]
+    },
+    {
+      "id": "advent-24",
+      "title": "Adventskalender 24",
+      "kind": "finale",
+      "rewardCoins": 5,
+      "rewardRep": 0,
+      "steps": [
+        {
+          "type": "multiple-choice",
+          "id": "adv24-pic",
+          "question": "Was ist das?",
+          "image": "/assets/images/event-rewards/winter-event/winter-words/gift.svg",
+          "options": [
+            "das Geschenk",
+            "der Adventskalender",
+            "das Plätzchen",
+            "die Glocke"
+          ],
+          "correctOptionIndex": 0
+        },
+        {
+          "type": "reading",
+          "id": "adv24-listen",
+          "text": "Heute ist Heiligabend. Die Familie singt Lieder unter dem Weihnachtsbaum. Dann packen alle ihre Geschenke aus. Anna bekommt ein Buch und freut sich sehr.",
+          "questions": [
+            {
+              "question": "Wo singt die Familie?",
+              "options": [
+                "im Auto",
+                "in der Schule",
+                "im Garten",
+                "unter dem Weihnachtsbaum"
+              ],
+              "correctOptionIndex": 3
+            },
+            {
+              "question": "Was bekommt Anna?",
+              "options": [
+                "einen Hund",
+                "eine Puppe",
+                "ein Buch",
+                "ein Fahrrad"
+              ],
+              "correctOptionIndex": 2
+            },
+            {
+              "question": "Wie fühlt sich Anna?",
+              "options": [
+                "Sie ist böse.",
+                "Sie freut sich.",
+                "Sie ist traurig.",
+                "Sie ist müde."
+              ],
+              "correctOptionIndex": 1
+            }
+          ]
+        },
+        {
+          "type": "matching",
+          "id": "adv24-review",
+          "instruction": "adventCalendar.tasks.review",
+          "pairsLeft": [
+            {
+              "id": "l1",
+              "text": "die Kerze"
+            },
+            {
+              "id": "l2",
+              "text": "der Schneemann"
+            },
+            {
+              "id": "l3",
+              "text": "das Rentier"
+            },
+            {
+              "id": "l4",
+              "text": "die Kugel"
+            },
+            {
+              "id": "l5",
+              "text": "der Weihnachtsbaum"
+            }
+          ],
+          "pairsRight": [
+            {
+              "id": "r2",
+              "text": "adventCalendar.days.d8.word"
+            },
+            {
+              "id": "r3",
+              "text": "adventCalendar.days.d12.word"
+            },
+            {
+              "id": "r4",
+              "text": "adventCalendar.days.d16.word"
+            },
+            {
+              "id": "r5",
+              "text": "adventCalendar.days.d23.word"
+            },
+            {
+              "id": "r1",
+              "text": "adventCalendar.days.d2.word"
+            }
+          ],
+          "correctPairs": [
+            [
+              "l1",
+              "r1"
+            ],
+            [
+              "l2",
+              "r2"
+            ],
+            [
+              "l3",
+              "r3"
+            ],
+            [
+              "l4",
+              "r4"
+            ],
+            [
+              "l5",
+              "r5"
+            ]
+          ]
+        },
+        {
+          "type": "multiple-choice",
+          "id": "adv24-culture",
+          "question": "Wann bekommen Kinder in Deutschland ihre Geschenke?",
+          "options": [
+            "im Sommer",
+            "am Heiligabend",
+            "am 1. Dezember",
+            "an Ostern"
+          ],
+          "correctOptionIndex": 1
+        }
+      ]
     }
   ]
 }

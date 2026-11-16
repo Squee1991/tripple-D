@@ -153,7 +153,7 @@ const formatToDisplayDate = (dateStr) => {
 
 const processedEvents = computed(() => {
   return eventStore.events.map(event => {
-    const active = isEventActive(event.start, event.end)
+    const active = eventStore.isForcedOpen(event.id) || isEventActive(event.start, event.end)
     return {
       ...event,
       title: t(event.valueKey),
