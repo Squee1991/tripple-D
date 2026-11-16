@@ -1145,13 +1145,6 @@ onMounted(() => {
   cursor: not-allowed;
 }
 
-@media (min-width: 768px) {
-  .cards, .quests {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
 @media (max-width: 480px) {
   .tab-label {
     font-size: 14px;
