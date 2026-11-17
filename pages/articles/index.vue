@@ -446,7 +446,9 @@ onUnmounted(() => window.removeEventListener('popstate', handlePopState))
 .theme-page {
   font-family: "Nunito", sans-serif;
   height: 100%;
-  width: 100vw;
+  width: 100%;
+  max-width: 1024px;
+  margin: 0 auto;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -529,12 +531,7 @@ onUnmounted(() => window.removeEventListener('popstate', handlePopState))
   display: flex;
   flex-direction: column;
   overflow-y: auto;
-  scrollbar-width: none;
   -ms-overflow-style: none;
-}
-
-.theme__grid-container::-webkit-scrollbar {
-  display: none;
 }
 
 .banner-wrapper {
@@ -644,7 +641,7 @@ onUnmounted(() => window.removeEventListener('popstate', handlePopState))
 }
 
 .learning-modes-block {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   right: 0;
@@ -713,7 +710,6 @@ onUnmounted(() => window.removeEventListener('popstate', handlePopState))
   text-align: center;
 }
 
-/* Карточка повторения над темами */
 .review-card {
   display: flex;
   align-items: center;
@@ -773,7 +769,6 @@ onUnmounted(() => window.removeEventListener('popstate', handlePopState))
   box-shadow: 0 1px 0 rgba(0, 0, 0, 0.2);
 }
 
-/* Отметка на теме: сколько слов ждут повторения */
 .topic-due {
   align-self: flex-start;
   margin-top: 8px;
@@ -785,7 +780,6 @@ onUnmounted(() => window.removeEventListener('popstate', handlePopState))
   font-weight: 900;
 }
 
-/* Экран темы */
 .topic-progress-card {
   display: flex;
   align-items: center;
@@ -846,7 +840,6 @@ onUnmounted(() => window.removeEventListener('popstate', handlePopState))
   font-weight: 800;
 }
 
-/* Карточка следующего урока */
 .lesson-card {
   display: flex;
   flex-direction: column;
@@ -1228,15 +1221,28 @@ onUnmounted(() => window.removeEventListener('popstate', handlePopState))
   flex-wrap: nowrap;
   overflow-x: auto;
   gap: 12px;
-  padding: 0 16px 15px 16px;
-  scrollbar-width: none;
-  -ms-overflow-style: none;
+  padding: 0 16px 15px 0;
   scroll-snap-type: x mandatory;
   scroll-behavior: smooth;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(150, 150, 150, 0.4) transparent;
 }
 
 .category-grid::-webkit-scrollbar {
-  display: none;
+  height: 6px;
+}
+
+.category-grid::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.category-grid::-webkit-scrollbar-thumb {
+  background: rgba(150, 150, 150, 0.4);
+  border-radius: 10px;
+}
+
+.category-grid::-webkit-scrollbar-thumb:hover {
+  background: rgba(150, 150, 150, 0.7);
 }
 
 .topic-list-item {

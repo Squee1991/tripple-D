@@ -122,7 +122,7 @@ onMounted(async () => {
 
   font-family: "Nunito", sans-serif;
   color: var(--titleColor);
-  max-width: 600px;
+  max-width: 1240px;
   margin: 0 auto;
   overflow: hidden;
   display: flex;

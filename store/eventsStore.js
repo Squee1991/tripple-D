@@ -2,6 +2,7 @@ import { ref, computed } from 'vue'
 import { defineStore } from 'pinia'
 import { getFirestore, doc, getDoc, setDoc, increment } from 'firebase/firestore'
 import { getAuth } from 'firebase/auth'
+import { useRuntimeConfig } from '#imports'
 
 
 import ChristmasDayNav from '~/assets/images/christmas-wreathNav.svg'
@@ -24,10 +25,19 @@ export const useEventSessionStore = defineStore('eventSession', () => {
 	const solvedSteps = ref([])
 	const isReplayMode = ref(false)
 
-	// Тестовый режим ивентов: в dev всегда, в проде через ?eventTest=1 (выключить ?eventTest=0)
+	// Тестовый режим ивентов: локально (npm run dev) и на dev-окружении (Firebase-проект tripple-d-dev) всегда,
+	// на продакшне только через ?eventTest=1 (выключить ?eventTest=0)
 	const TEST_FLAG_KEY = 'skillup.eventTest'
+	const DEV_FIREBASE_PROJECT = 'tripple-d-dev'
+	const isDevEnvironment = () => {
+		try {
+			return useRuntimeConfig().public.firebaseProjectId === DEV_FIREBASE_PROJECT
+		} catch (e) {
+			return false
+		}
+	}
 	const readTestFlag = () => {
-		if (import.meta.dev) return true
+		if (import.meta.dev || isDevEnvironment()) return true
 		if (typeof window === 'undefined') return false
 		try {
 			const param = new URLSearchParams(window.location.search).get('eventTest')

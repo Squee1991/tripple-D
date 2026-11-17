@@ -465,7 +465,7 @@ async function processAccountCleanup() {
 }
 
 .canva {
-  transform: scale(1.9);
+  transform: scale(1.4);
 }
 
 .fade-enter-active, .fade-leave-active {

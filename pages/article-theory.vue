@@ -228,8 +228,8 @@ const resetResult = () => {
 .rules__wrapper {
   display: flex;
   flex-direction: column;
-  height: 100%;
-  max-width: 1000px;
+  height: 100vh;
+  max-width: 1024px;
   margin: 0 auto;
   width: 100%;
 }
@@ -247,7 +247,6 @@ const resetResult = () => {
   font-size: 23px;
   text-align: center;
   color: var(--titleColor);
-  max-width: 600px;
   line-height: 1.3;
   background: #00c2ff;
   border-radius: 15px;

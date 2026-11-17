@@ -10,6 +10,7 @@
 // }
 
 export const firebaseConfig = {
+
     apiKey: "AIzaSyDo4q7Lm8h2YDWjNqeif7gZgfCIBHfSk3s",
     authDomain: "login.skillupgerman.com",
     projectId: "tripple-d-90bd2",
@@ -18,4 +19,6 @@ export const firebaseConfig = {
     appId: "1:21366957409:web:dc4a79f807c80a8004d120",
     measurementId: "G-T2Y8SRW6D2"
 };
+
+
 

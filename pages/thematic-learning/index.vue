@@ -107,7 +107,7 @@ import VBanner from "~/src/components/V-banner.vue";
 import VHeadsUp from '~/src/components/V-headsUp.vue'
 import Banner from '../../assets/images/thematicSticker.svg'
 import VTransition from "~/src/components/V-transition.vue";
-import {showInterstitial, preloadInterstitial} from '../../utils/admob.js'
+import { showInterstitial } from '../../utils/admob.js'
 
 const isMounted = ref(false)
 const {t} = useI18n()
@@ -220,7 +220,6 @@ const loadThemeData = async () => {
   loading.value = false
 }
 onMounted(() => {
-  preloadInterstitial()
   setTimeout(() => {
     isMounted.value = true
     loadThemeData()
@@ -234,7 +233,9 @@ watch(topic, loadThemeData)
 
 .theme-page {
   font-family: "Nunito", sans-serif;
-  height: 100%;
+  height: 100vh;
+  max-width: 1024px;
+  margin: 0 auto;
   display: flex;
   flex-direction: column;
   overflow: hidden;
@@ -276,13 +277,27 @@ watch(topic, loadThemeData)
 .themes-scroll {
   width: 100%;
   overflow-x: auto;
+  overflow-y: hidden;
   padding: 8px 0 20px 0;
-  scrollbar-width: none;
-  -ms-overflow-style: none;
+  scrollbar-width: thin;
+  margin-bottom: 10px;
+  scrollbar-color: rgba(90, 150, 183, 0.4) transparent;
+}
+.themes-scroll::-webkit-scrollbar {
+  height: 5px;
 }
 
-.themes-scroll::-webkit-scrollbar {
-  display: none;
+.themes-scroll::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.themes-scroll::-webkit-scrollbar-thumb {
+  background: rgba(90, 150, 183, 0.4);
+  border-radius: 10px;
+}
+
+.themes-scroll::-webkit-scrollbar-thumb:hover {
+  background: rgba(90, 150, 183, 0.7);
 }
 
 .themes-container {
@@ -488,6 +503,7 @@ watch(topic, loadThemeData)
 
 .bottom-action {
   position: fixed;
+  display: flex;
   bottom: 0;
   left: 0;
   right: 0;
@@ -497,9 +513,8 @@ watch(topic, loadThemeData)
 }
 
 .btn-start {
-  display: block;
   width: 100%;
-  max-width: 500px;
+  max-width: 480px;
   margin: 0 auto;
   padding: 16px;
   background: #3b82f6;

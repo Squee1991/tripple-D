@@ -53,7 +53,7 @@ export default defineEventHandler(async (event) => {
 					updatedAt: new Date().toISOString()
 				}
 
-				if (discountUsed && ['sale_5', 'sale_10', 'sale_15'].includes(discountUsed)) {
+				if (discountUsed && ['sale_3', 'sale_5', '6', 'sale_10', 'sale_15'].includes(discountUsed)) {
 					updateData[discountUsed] = false
 					console.log(`🔥 Сервер: Скидка ${discountUsed} сброшена для юзера ${userId}`)
 				}

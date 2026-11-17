@@ -699,7 +699,7 @@ onMounted(() => {
 .app-container {
   display: flex;
   flex-direction: column;
-  height: 100%;
+  height: 100vh;
   max-width: 1240px;
   margin: 0 auto;
   overflow: hidden;

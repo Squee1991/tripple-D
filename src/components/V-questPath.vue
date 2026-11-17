@@ -229,6 +229,11 @@
                       @click="emitAndClose('learn')">
                 📘 {{ t('locationWordSession.stuff') }}
               </button>
+              <button v-if="openedQuest.vocabulary?.length" type="button" class="qsheet__btn qsheet__btn--cards"
+                      :data-track="'region_toCards_clicked_' + openedQuest.questId"
+                      @click="openAddToDeck(openedQuest)">
+                🗂️ {{ t('flashCards.toMyCards') }}
+              </button>
               <button v-if="openedQuest.isSuccess" type="button" class="qsheet__btn qsheet__btn--write"
                       :data-track="'region_write_clicked_' + openedQuest.questId"
                       @click="emitAndClose('write')">
@@ -246,6 +251,7 @@
         </div>
       </transition>
     </Teleport>
+    <VAddToDeck v-model="addToDeckOpen" :cards="addToDeckCards" :suggested-title="addToDeckTitle"/>
   </div>
 </template>
 
@@ -255,6 +261,8 @@ import { vibrateTap, vibrateError, vibrateSuccess } from '~/utils/haptics.js'
 import { playLevelCompleted } from '~/utils/soundManager.js'
 import CoinIcon from '~/assets/images/article.svg'
 import VLandChest from '~/src/components/V-landChest.vue'
+import VAddToDeck from '~/src/components/cards/V-addToDeck.vue'
+import { loadDictionary, cardsFromQuestVocabulary } from '~/utils/cardDictionary.js'
 
 const props = defineProps({
   quests: { type: Array, required: true },
@@ -267,7 +275,19 @@ const props = defineProps({
 
 const emit = defineEmits(['start', 'learn', 'write', 'claim-chest'])
 
-const { t } = useI18n()
+const { t, locale } = useI18n()
+
+// слова квеста в свои карточки: словарь дополнит мн. число
+const addToDeckOpen = ref(false)
+const addToDeckCards = ref([])
+const addToDeckTitle = ref('')
+async function openAddToDeck(quest) {
+  await loadDictionary().catch(err => console.error(err))
+  addToDeckCards.value = cardsFromQuestVocabulary(quest.vocabulary, locale.value)
+  addToDeckTitle.value = t(quest.title)
+  openedQuest.value = null
+  addToDeckOpen.value = true
+}
 
 const HINT_MS = 2200
 
@@ -1481,6 +1501,11 @@ onBeforeUnmount(() => {
 .qsheet__btn--learn {
   background: linear-gradient(180deg, #5b82ff, #3d68f5);
   box-shadow: 0 5px 0 #1d3a8a;
+}
+
+.qsheet__btn--cards {
+  background: linear-gradient(180deg, #a78bfa, #8b5cf6);
+  box-shadow: 0 5px 0 #6d28d9;
 }
 
 .qsheet__btn--write {

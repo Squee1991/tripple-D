@@ -140,16 +140,16 @@ const startMission = (sectorId) => {
 
 const toggleScreen = (target) => {
   if (target !== 'menu' && currentScreen.value === 'menu') {
-    window.history.pushState({isSubScreen: true}, '')
+    window.history.pushState({ screen: target }, '')
     currentScreen.value = target
   } else if (target === 'menu' && currentScreen.value !== 'menu') {
-    window.history.back()
+    currentScreen.value = 'menu'
   } else {
-    currentScreen.value = target
+    router.push('/')
   }
 }
 
-const handlePopState = () => {
+const handlePopState = (event) => {
   if (currentScreen.value !== 'menu') {
     currentScreen.value = 'menu'
   } else {
@@ -216,7 +216,7 @@ onUnmounted(() => {
   gap: 50px;
   width: 100%;
   height: 100%;
-  max-width: 360px;
+  max-width: 420px;
   margin: auto;
 }
 

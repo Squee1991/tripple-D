@@ -2,6 +2,11 @@
 import { ref, computed, onMounted, onBeforeUnmount, watch } from 'vue'
 import { userAuthStore } from "~/store/authStore.js"
 import Header from '../src/components/header.vue'
+import Banner from '../src/components/banner.vue'
+import Description from '../src/components/DescriptionBlock.vue'
+import About from '../src/components/about.vue'
+import FeedBack from '../src/components/feedBack.vue'
+import Footer from '../src/components/footer.vue'
 import VUid from '../src/components/V-uid.vue'
 import VEventAvailableModal from "../src/components/V-eventAvailableModal.vue";
 import VShowFall from "../src/components/V-showFall.vue";
@@ -12,11 +17,13 @@ import LeafOrange from "../assets/images/halloween-effects/leafOrange.svg";
 import LeafGold from "../assets/images/halloween-effects/leafGold.svg";
 import { useEventSessionStore } from '../store/eventsStore.js'
 import VStartPage from "~/src/components/V-startPage.vue";
+import VAppBanner from "~/src/components/V-appBanner.vue";
 import VHedgehogGuide from "~/src/components/V-hedgehogGuide.vue";
 import { useUiSettingsStore } from '~/store/uiSettingsStore.js'
-import { SplashScreen } from '@capacitor/splash-screen'
 import VLevelPicker from "~/src/components/V-levelPicker.vue";
 
+
+const showLogin = ref(false)
 const eventStore = useEventSessionStore()
 const authStore = userAuthStore()
 const uiSettings = useUiSettingsStore()
@@ -26,7 +33,6 @@ const colorMode = useColorMode()
 
 // Эффекты Хэллоуина — только на главной после входа:
 // пока идёт его событие (в любой теме) или включена купленная тема
-const isLoggedIn = computed(() => isLocallyLogged.value || !!authStore.uid)
 // Уровень спрашиваем один раз у каждого вошедшего, у кого его ещё нет (и у старых пользователей).
 // Пока не выбрал, модалку ивента не показываем, а за ней ждёт и модалка марафона (app.vue)
 const needsLevel = computed(() => authStore.initialized && !!authStore.uid && !authStore.germanLevel)
@@ -36,7 +42,7 @@ watch(needsLevel, (need) => {
 }, { immediate: true })
 
 const isHalloweenFx = computed(() =>
-    isLoggedIn.value && (colorMode.value === 'orange' || eventStore.isEventActive('pumpkin'))
+    !!authStore.uid && (colorMode.value === 'orange' || eventStore.isEventActive('pumpkin'))
 )
 
 // html.halloween-fx делает фон body прозрачным, чтобы было видно эффекты под контентом
@@ -53,20 +59,8 @@ definePageMeta({
 })
 
 onMounted(() => {
-
   hydrated.value = true
   isLocallyLogged.value = localStorage.getItem('app_user_logged') === 'true'
-  if (authStore.initialized) {
-    SplashScreen.hide()
-  }
-})
-
-watch(() => authStore.initialized, (isInit) => {
-  if (isInit) {
-    requestAnimationFrame(() => {
-      SplashScreen.hide()
-    })
-  }
 })
 
 watch(() => authStore.uid, (newUid) => {
@@ -84,26 +78,36 @@ watch(() => authStore.uid, (newUid) => {
   <VLevelPicker v-model="showLevelPicker" mode="onboarding"/>
   <VEventAvailableModal @close="false" v-if="authStore.initialized && !needsLevel"/>
   <VShowFall v-if="eventStore.isSnowEnabled" :image="Snow"/>
-  <template v-if="isHalloweenFx">
-    <div class="halloween-layer halloween-layer--back" aria-hidden="true">
-      <VHalloweenEffects layer="back"/>
-      <VShowFall :image="LeafOrange" :count="3"/>
-      <VShowFall :image="LeafGold" :count="2"/>
-    </div>
-    <div class="halloween-layer" aria-hidden="true">
-      <VHalloweenEffects/>
-    </div>
-  </template>
-  <div class="container">
-    <template v-if="isLocallyLogged || authStore.uid">
-      <div class="stat">
-        <Header/>
-        <VUid/>
+  <ClientOnly>
+    <template v-if="isHalloweenFx">
+      <div class="halloween-layer halloween-layer--back" aria-hidden="true">
+        <VHalloweenEffects layer="back"/>
+        <VShowFall :image="LeafOrange" :count="3"/>
+        <VShowFall :image="LeafGold" :count="2"/>
       </div>
-      <VHedgehogGuide v-if="authStore.uid && uiSettings.hedgehogGuideEnabled"/>
+      <div class="halloween-layer" aria-hidden="true">
+        <VHalloweenEffects/>
+      </div>
     </template>
-    <template v-else-if="authStore.initialized && !authStore.uid">
-      <VStartPage/>
+  </ClientOnly>
+  <div class="container">
+    <ClientOnly>
+      <template v-if="authStore.uid">
+        <div class="stat">
+          <Header/>
+          <VUid/>
+          <Footer/>
+        </div>
+        <VHedgehogGuide v-if="uiSettings.hedgehogGuideEnabled"/>
+      </template>
+    </ClientOnly>
+    <template v-if="authStore.initialized && !authStore.uid">
+      <Header/>
+      <Banner/>
+      <Description/>
+      <About/>
+      <!--      <VAppBanner/>-->
+      <FeedBack/>
     </template>
   </div>
 </template>
@@ -125,16 +129,18 @@ watch(() => authStore.uid, (newUid) => {
 .container {
   max-width: 1240px;
   width: 100%;
-  height: 100%;
+  min-height: 100dvh;
   margin: 0 auto;
   padding: 0 10px;
+
 }
 
 .stat {
   display: flex;
-  justify-content: center;
-  height: 100%;
   flex-direction: column;
+  justify-content: center;
+  height: 100vh;
+  overflow: hidden;
 }
 
 .stat::after{

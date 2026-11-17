@@ -1,8 +1,8 @@
 import { defineStore } from "pinia";
-import { ref, computed } from 'vue';
+import { ref, computed, watch } from 'vue';
 import { Capacitor } from '@capacitor/core';
 import { Purchases } from '@revenuecat/purchases-capacitor';
-import { useBillingStore } from '../store/billingStore.js';
+import { useBillingStore } from '~/store/billingStore.js';
 import {
     getAuth,
     createUserWithEmailAndPassword,
@@ -23,8 +23,12 @@ import {
     fetchSignInMethodsForEmail
 } from 'firebase/auth';
 import { GoogleSignIn } from '@capawesome/capacitor-google-sign-in';
+// Если используете Apple на нативе, убедитесь что импорт есть:
+// import { SignIn as AppleSignIn } from '@capacitor-community/apple-sign-in';
 import { doc, setDoc, getDoc, getFirestore, updateDoc, serverTimestamp, writeBatch } from 'firebase/firestore';
 import { userlangStore } from "./learningStore.js";
+import { useAchievementStore } from "./achievementStore.js"; // Добавлен импорт, так как используется в purchaseAvatar
+
 let authStateUnsubscribe = null;
 
 const isUserCancelledAuth = (error) => {
@@ -89,7 +93,7 @@ export const userAuthStore = defineStore('auth', () => {
         if (typeof window !== 'undefined') {
             localStorage.setItem('cached_premium', newValue ? 'true' : 'false')
         }
-    })
+    });
 
     const isWebView = ref(false);
     const shouldShowFeedbackSurvey = ref(false);
@@ -174,7 +178,6 @@ export const userAuthStore = defineStore('auth', () => {
         }
     });
 
-    
     const setUserData = (data) => {
         uid.value = data.uid || null;
         name.value = data.name || null;
@@ -215,7 +218,6 @@ export const userAuthStore = defineStore('auth', () => {
 
         if (data.isPremium && !data.gotPremiumBonus) grantPremiumBonusPoints();
     };
-
 
     const incrementStreak = async () => {
         const authUser = auth.currentUser;
@@ -343,11 +345,9 @@ export const userAuthStore = defineStore('auth', () => {
             '16.png': { ach: 'leaderboardEasy-1', error: 'locked_easy_1' },
             '17.png': { ach: 'leaderboardEasy-2', error: 'locked_easy_2' },
             '18.png': { ach: 'leaderboardEasy-3', error: 'locked_easy_3' },
-
             '19.png': { ach: 'leaderboardNormal-1', error: 'locked_normal_1' },
             '20.png': { ach: 'leaderboardNormal-2', error: 'locked_normal_2' },
             '21.png': { ach: 'leaderboardNormal-3', error: 'locked_normal_3' },
-
             '22.png': { ach: 'leaderboardHard-1', error: 'locked_hard_1' },
             '23.png': { ach: 'leaderboardHard-2', error: 'locked_hard_2' },
             '24.png': { ach: 'leaderboardHard-3', error: 'locked_hard_3' }
@@ -409,7 +409,7 @@ export const userAuthStore = defineStore('auth', () => {
         const regDate = regDateFromDb || regDateFromAuth;
         if (!regDate) return;
 
-        if (Date.now() - regDate.getTime() < 3 * 24 * 60 * 60 * 1000) return; // Поменял 0 на честные 3 дня, раз переменная называется "threeDaysMs"
+        if (Date.now() - regDate.getTime() < 3 * 24 * 60 * 60 * 1000) return;
         shouldShowFeedbackSurvey.value = true;
     };
 
@@ -428,10 +428,10 @@ export const userAuthStore = defineStore('auth', () => {
             let authResult;
 
             if (isNative) {
+                // Если AppleSignIn не инициализирован для нативок, нужно проверять плагин
                 const result = await AppleSignIn.signIn({
                     scopes: [SignInScope.Email, SignInScope.FullName],
                 });
-                // ИСПРАВЛЕНО: у Capawesome токен берется напрямую из result.idToken
                 const idToken = result.idToken;
 
                 if (!idToken) {
@@ -443,6 +443,7 @@ export const userAuthStore = defineStore('auth', () => {
                 });
                 authResult = await signInWithCredential(auth, credential);
             } else {
+                // Логика для Web
                 provider.addScope('email');
                 provider.addScope('name');
                 authResult = await signInWithPopup(auth, provider);
@@ -491,7 +492,6 @@ export const userAuthStore = defineStore('auth', () => {
             });
 
             await checkFeedbackSurveyEligibility();
-
             return authResult;
 
         } catch (error) {
@@ -506,30 +506,32 @@ export const userAuthStore = defineStore('auth', () => {
     const loginWithGoogle = async () => {
         try {
             const isNative = Capacitor.isNativePlatform();
-            let idToken = null;
+            let user = null;
+
             if (isNative) {
+                // Логика только для iOS/Android
                 await GoogleSignIn.initialize({
                     clientId: '21366957409-oh0vp8d7dh9echqs2cvbsa5i4pcp68a3.apps.googleusercontent.com',
                 });
                 const result = await GoogleSignIn.signIn({
                     clientId: '21366957409-oh0vp8d7dh9echqs2cvbsa5i4pcp68a3.apps.googleusercontent.com',
                 });
-                idToken = result.idToken;
+
+                if (!result.idToken) {
+                    console.error('Берет у артикля не вернул токен');
+                    return;
+                }
+                const credential = GoogleAuthProvider.credential(result.idToken);
+                const authResult = await signInWithCredential(auth, credential);
+                user = authResult.user;
             } else {
+                // Логика только для браузера (Web)
                 const provider = new GoogleAuthProvider();
-                const result = await signInWithPopup(auth, provider);
-                const credential = GoogleAuthProvider.credentialFromResult(result);
-                idToken = credential?.idToken;
-            }
+                provider.setCustomParameters({ prompt: 'select_account' });
 
-            if (!idToken) {
-                console.error('Берет у артикля не вернул токен');
-                return;
+                const authResult = await signInWithPopup(auth, provider);
+                user = authResult.user;
             }
-
-            const credential = GoogleAuthProvider.credential(idToken);
-            const authResult = await signInWithCredential(auth, credential);
-            const user = authResult.user;
 
             const userDocRef = doc(db, 'users', user.uid);
             const userDoc = await getDoc(userDocRef);
@@ -579,9 +581,8 @@ export const userAuthStore = defineStore('auth', () => {
         }
     };
 
-
-
     const registerUser = async (userData) => {
+        // Подходит для Web и Capacitor
         const methods = await fetchSignInMethodsForEmail(auth, userData.email);
         if (methods.length > 0) {
             throw { code: 'auth/email-already-in-use' };
@@ -918,4 +919,3 @@ export const userAuthStore = defineStore('auth', () => {
         resetStreak
     };
 });
-
