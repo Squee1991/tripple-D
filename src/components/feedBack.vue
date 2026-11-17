@@ -226,7 +226,7 @@ onUnmounted(() => {
   display: flex;
   gap: 2rem;
   max-width: 1000px;
-  margin: 60px auto;
+  margin: 0 auto;
 }
 
 .form__animation-wrapper {
@@ -235,6 +235,9 @@ onUnmounted(() => {
   display: flex;
   align-items: center;
   justify-content: center;
+  background: #1C1E26;
+  border-radius: 24px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
 }
 
 .form__animation {
@@ -248,7 +251,6 @@ onUnmounted(() => {
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
   display: flex;
   flex-direction: column;
-  padding: 15px;
 }
 
 .form__header {
@@ -266,19 +268,15 @@ onUnmounted(() => {
 }
 
 .form__title {
-  font-size: 18px;
+  font-size: 1.2rem;
   font-weight: 500;
-  color: white;
+  color: #A3A3A3;
   margin-top: 0.5rem;
   margin-bottom: 0;
-  background: goldenrod;
-  box-shadow: 4px 4px 0 #a87f17;
-  padding: 15px 10px;
-  border-radius: 20px;
 }
 
 .form__field {
-  margin-bottom: 16px;
+  margin-bottom: 1.5rem;
   position: relative;
 }
 
@@ -295,7 +293,7 @@ onUnmounted(() => {
   border: none;
   border-radius: 16px;
   font-size: 1rem;
-  padding: 14px;
+  padding: 1.2rem;
   transition: all 0.2s ease;
   box-sizing: border-box;
   box-shadow: inset 0 3px 6px rgba(0, 0, 0, 0.15);
@@ -310,6 +308,7 @@ onUnmounted(() => {
 .input:focus,
 .area:focus {
   outline: none;
+  /* Голубое свечение при фокусе */
   box-shadow: inset 0 3px 6px rgba(0, 0, 0, 0.1), 0 0 0 2px #55a8f5;
 }
 

@@ -291,6 +291,7 @@ onMounted(async () => {
   overflow-y: auto;
   overflow-x: hidden;
   -webkit-overflow-scrolling: touch;
+  padding-bottom: 84px;
   scrollbar-width: none;
   -ms-overflow-style: none;
 }

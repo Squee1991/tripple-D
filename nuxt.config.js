@@ -3,8 +3,6 @@ import {loadEnv} from 'vite'
 
 const mode = process.env.NODE_ENV === 'production' ? 'production' : 'development'
 const env = loadEnv(mode, process.cwd(), '')
-const isProd = mode === 'production'
-
 const firebaseConfig = {
 	apiKey: process.env.FIREBASE_API_KEY || env.FIREBASE_API_KEY,
 	authDomain: process.env.FIREBASE_AUTH_DOMAIN || env.FIREBASE_AUTH_DOMAIN,
@@ -14,32 +12,41 @@ const firebaseConfig = {
 	appId: process.env.FIREBASE_APP_ID || env.FIREBASE_APP_ID,
 }
 
-let adminConfig = undefined
-const rawJson = process.env.GOOGLE_APPLICATION_CREDENTIALS_JSON || env.GOOGLE_APPLICATION_CREDENTIALS_JSON
-
-if (rawJson) {
-	try {
-		const parsed = typeof rawJson === 'string' ? JSON.parse(rawJson) : rawJson
-		if (parsed.private_key) {
-			parsed.private_key = parsed.private_key.replace(/\\n/g, '\n')
-		}
-		adminConfig = {serviceAccount: parsed}
-	} catch (error) {
-		console.error('Ошибка инициализации Firebase Admin:', error)
-	}
+const serviceAccountJson = process.env.GOOGLE_APPLICATION_CREDENTIALS_JSON
+let admin
+try {
+	admin = serviceAccountJson ? {serviceAccount: JSON.parse(serviceAccountJson)} : undefined
+} catch {
+	admin = undefined
 }
 
-const siteUrl = process.env.NUXT_SITE_URL || (process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` : 'http://localhost:3000')
+const siteUrl =
+	process.env.NUXT_SITE_URL ||
+	(process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` : 'http://localhost:3000')
 
 export default defineNuxtConfig({
 	ssr: false,
 	experimental: {
-		payloadExtraction: true,
+		payloadExtraction: false,
 		appManifest: false
 	},
+
 	defaults: {
-		nuxtLink: {prefetch: true, noPrefetch: false}
+		nuxtLink: {
+			prefetch: false,
+			noPrefetch: true
+		}
 	},
+
+	router: {
+		options: {
+			prefetchLinks: false,
+			hashMode: true
+		}
+	},
+
+
+
 	compatibilityDate: '2024-11-01',
 	devtools: {enabled: false},
 	modules: [
@@ -48,16 +55,35 @@ export default defineNuxtConfig({
 		'nuxt-vuefire',
 		'@nuxtjs/google-fonts',
 		'@nuxtjs/i18n',
-		'@nuxtjs/color-mode'
+		'@nuxtjs/color-mode',
+		/*'@sentry/nuxt/module'*/
 	],
+	sentry: {
+		sourceMapsUploadOptions: {
+			org: "skillup-cp",
+			project: "javascript-nuxt",
+		},
+	},
+
+	build: {
+		transpile: [
+			'@capacitor/filesystem',
+			'capacitor-blob-writer'
+		]
+	},
+
 	vuefire: {
 		config: firebaseConfig,
-		auth: true,
+		auth: {
+			enabled: true,
+			popupRedirectResolver: false
+		},
 		firestore: {
 			experimentalForceLongPolling: true,
 		},
-		...(adminConfig ? {admin: adminConfig} : {}),
+		...(admin ? {admin} : {}),
 	},
+
 	runtimeConfig: {
 		stripeSecret: process.env.STRIPE_SECRET_KEY || env.STRIPE_SECRET_KEY,
 		stripeWebhookSecret: process.env.STRIPE_WEBHOOK_SECRET || env.STRIPE_WEBHOOK_SECRET,
@@ -76,18 +102,27 @@ export default defineNuxtConfig({
 			siteUrl,
 		},
 	},
+
 	app: {
-		baseURL: '/',
+		baseURL: './',
+		buildAssetsDir: 'assets',
 		head: {
 			meta: [
-				{name: 'viewport', content: 'width=device-width, initial-scale=1, viewport-fit=cover'}
+				{
+					name: 'viewport',
+					content: 'width=device-width, initial-scale=1, user-scalable=no, viewport-fit=cover'
+				}
 			]
 		}
 	},
+
 	css: [
+		'simplebar/dist/simplebar.min.css',
+		'~/assets/styles/simplebar.css',
 		'~/assets/styles/reset.css',
 		'~/assets/styles/theme.css',
 	],
+
 	colorMode: {
 		preference: 'dark',
 		fallback: 'dark',
@@ -96,7 +131,9 @@ export default defineNuxtConfig({
 		storage: 'localStorage',
 		storageKey: 'nuxt-color-mode',
 	},
-	sourcemap: !isProd,
+
+	sourcemap: mode !== 'production',
+
 	i18n: {
 		strategy: 'no_prefix',
 		lazy: true,
@@ -124,7 +161,9 @@ export default defineNuxtConfig({
 		},
 		bundle: {optimizeTranslationDirective: false},
 	},
+
 	plugins: ['~/plugins/simplebar.client.js'],
+
 	googleFonts: {
 		families: {
 			'Uncial Antiqua': true,
@@ -132,33 +171,38 @@ export default defineNuxtConfig({
 			Fredoka: true,
 			'Lilita One': true,
 			Nunito: true,
-			Kablammo: true,
-			'Rubik Wet Paint': true
-
-		},
+			'Rubik Wet Paint': true,
+			Sniglet: true,
+			Coiny: true
+		}
 	},
 	vite: {
 		build: {
-			minify: 'esbuild'
+			minify: 'esbuild',
 		},
 		esbuild: {
-			drop: isProd ? ['console', 'debugger'] : [],
+			drop: mode === 'production' ? ['console', 'debugger'] : [],
 			legalComments: 'none',
 		},
-		rollupOptions: {
-			external: ['@capacitor/local-notifications']
+		optimizeDeps: {
+			include: [
+				'@capacitor/filesystem',
+				'capacitor-blob-writer'
+			],
+
 		}
 	},
+	ignore: [
+		'ios/**',
+		'android/**',
+		'android-app/**',
+		'functions/**',
+		'.output/**'
+	],
 	nitro: {
-		compressPublicAssets: true
-	},
-	routeRules: {
-		'/**': { ssr: false },
-		'/info-about': { ssr: false },
-		'/admin/**': {status: 404},
-		'/wp-login.php': {status: 404},
-		'/sounds/**': {headers: {'Cache-Control': 'no-cache, no-store, must-revalidate'}},
-		'/images/**': {headers: {'Cache-Control': 'no-cache, no-store, must-revalidate'}},
-		'/*.png': {headers: {'Cache-Control': 'no-cache, no-store, must-revalidate'}}
+		preset: 'static',
+		ignore: [
+			'android/**'
+		]
 	},
 })

@@ -28,18 +28,13 @@
             </div>
           </div>
           <AccountManagement/>
-          <div class="section-card mt-20" v-if="authStore.isPremium && !authStore.subscriptionCancelled && !isMobileApp">
-            <div class="section-row">
-              <div class="row-label">{{ t('cabinet.active')}}</div>
-              <button class="btn-cancel-sub" @click="router.push('/cancel?action=unsubscribe')">
-                {{ t('cabinet.cancelBtn')}}
-              </button>
-            </div>
-          </div>
         </div>
       </VTransition>
       <div v-if="isMounted" class="settings-section account-actions">
         <div class="account-buttons">
+          <button v-if="showPrivacyButton" class="btn btn-logout w-full btn-m" @click="showPrivacyOptions($track)">
+            {{ t('cabinet.privacyOptions') }}
+          </button>
           <button class="btn btn-logout w-full btn-m" @click="handleLogout">
             {{ t('auth.logOut') }}
           </button>
@@ -59,18 +54,15 @@ import { useI18n } from 'vue-i18n'
 import { userAuthStore } from '~/store/authStore.js'
 import VTransition from "~/src/components/V-transition.vue"
 import AccountManagement from "../src/components/AccountManagement.vue";
-import {useSeoMeta} from "#imports";
+import { isPrivacyOptionsRequired, showPrivacyOptions } from '~/utils/admob.js'
 
 const router = useRouter()
 const { locale, t } = useI18n()
 const authStore = userAuthStore()
 const isMounted = ref(false)
-const isMobileApp = ref(false)
-
-
-useSeoMeta({
-  robots: 'noindex, nofollow'
-})
+const { $track } = useNuxtApp()
+// Кнопка нужна только тем, кому Google показывал окно согласия (ЕЭЗ/UK/Швейцария)
+const showPrivacyButton = ref(false)
 
 const registrationDateText = computed(() => {
   const registeredAt = authStore.registeredAt
@@ -100,24 +92,19 @@ const openDeleteModal = () => {
   router.push('/delete')
 }
 
-onMounted(() => {
-  if (typeof window !== 'undefined' && window.Capacitor) {
-    isMobileApp.value = window.Capacitor.isNativePlatform()
-  }
+onMounted(async () => {
   setTimeout(() => {
     isMounted.value = true
   }, 100)
+  showPrivacyButton.value = await isPrivacyOptionsRequired()
 })
-
 </script>
 
 <style scoped>
 .tab-content {
   display: flex;
   flex-direction: column;
-  height: 100vh;
-  max-width: 1024px;
-  margin: 0 auto;
+  height: 100%;
   overflow: hidden;
   background: transparent;
   font-family: "Nunito", sans-serif;
@@ -196,7 +183,6 @@ onMounted(() => {
   gap: 12px;
   align-items: center;
   border-radius: 16px;
-  margin-top: 20px;
 }
 
 .w-full {
@@ -260,31 +246,5 @@ onMounted(() => {
 .btn-icon-back:active {
   transform: translate(2px, 2px);
   box-shadow: 0px 0px 0px #2b2b2b;
-}
-
-.mt-20 {
-  margin-top: 20px;
-}
-
-.btn-cancel-sub {
-  background: #e55656;
-  color: #ffffff;
-  border: 2px solid #fca5a5;
-  border-radius: 50px;
-  padding: 8px 10px;
-  font-weight: 600;
-  font-size: 14px;
-  cursor: pointer;
-  font-family: "Nunito", sans-serif;
-  transition: all 0.2s ease;
-}
-
-.btn-cancel-sub:hover {
-  background: #ef4444;
-  color: white;
-}
-
-.btn-cancel-sub:active {
-  transform: translateY(2px);
 }
 </style>

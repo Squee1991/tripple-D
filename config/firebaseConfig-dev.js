@@ -1,6 +1,6 @@
 export const firebaseConfig = {
 	apiKey: "AIzaSyAa-vCRkT9xbDq6KzhzAVWwWs6LkUmbK9A",
-	authDomain: "auth.skillupgerman.com",
+	authDomain: "tripple-d-dev.firebaseapp.com",
 	projectId: "tripple-d-dev",
 	storageBucket: "tripple-d-dev.firebasestorage.app",
 	messagingSenderId: "516504654997",

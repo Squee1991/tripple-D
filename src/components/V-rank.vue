@@ -123,7 +123,7 @@ const currentRankIcon = computed(() => currentRankInfo.value.icon)
 .ranks-wrapper {
   margin: 0 auto;
   overflow-y: auto;
-  padding-bottom: 20px;
+  padding-bottom: 55px;
   position: relative;
 }
 

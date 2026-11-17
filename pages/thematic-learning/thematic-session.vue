@@ -39,12 +39,12 @@
           <div class="question-card">
             <div class="question-inner">
               <SoundBtn :text="cleanText(visibleSentence)"/>
-              <p class="question-text notranslate" translate="no" :class="{ 'is-revealed': feedback && feedback.isCorrect }">
+              <p class="question-text" :class="{ 'is-revealed': feedback && feedback.isCorrect }">
                 {{ visibleSentence }}
               </p>
             </div>
           </div>
-          <div class="options-grid notranslate" translate="no">
+          <div class="options-grid">
             <button
                 v-for="option in answerOptions"
                 :key="option"

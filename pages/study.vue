@@ -109,7 +109,6 @@
 <script setup>
 import { ref, computed, onMounted, onUnmounted } from 'vue'
 import { useRouter } from 'vue-router'
-import { useSeoMeta} from "#imports";
 import VBackBtnNav from "~/src/components/V-backBtnNav.vue";
 import VBanner from "~/src/components/V-banner.vue";
 import Folder from "../assets/images/fileFolder.svg";
@@ -127,10 +126,6 @@ import PracticeIcon from '../assets/images/practiceIcon.svg'
 import GrammarIcon from '../assets/images/GrammarIcon.svg'
 import TextBook from '../assets/images/TextBook.svg'
 import SpeakingIcon from '../assets/images/speakingIcon.svg'
-
-useSeoMeta({
-  robots: 'noindex, nofollow'
-})
 
 const { t, locale } = useI18n()
 const router = useRouter()
@@ -165,7 +160,6 @@ function setTab(id) {
 
 const practiceCategories = computed(() => [
   { id: 'words', icon: BannerIcon, url: '/articles', title: t('sub.words') },
-  { id: 'cards', icon: Cards, url: '/cards', title: t('flashCards.menuTitle') },
   { id: 'words', icon: SpeakingIcon, url: '/speak-practice', title: t('sub.speak') },
   { id: 'audio', icon: Sound, url: '/audio-tasks', title: t('sub.audio') },
   { id: 'description', icon: Photo, url: '/image-description', title: t('sub.describePicture') },
@@ -252,9 +246,7 @@ definePageMeta({
 <style scoped>
 .learn-page {
   font-family: "Nunito", sans-serif;
-  height: 100vh;
-  max-width: 1240px;
-  margin: 0 auto;
+  height: 100%;
   display: flex;
   flex-direction: column;
   overflow: hidden;

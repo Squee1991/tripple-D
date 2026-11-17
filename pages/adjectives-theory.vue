@@ -109,7 +109,6 @@ import {ref} from 'vue'
 import Pin from '../assets/images/pin.svg'
 import Chat from '../assets/images/chat.svg'
 import VBackBtnNav from "~/src/components/V-backBtnNav.vue";
-import {useSeoMeta} from "#imports";
 const { t } = useI18n()
 const contentSections = ref([
   {
@@ -348,10 +347,6 @@ const quizQuestions = ref([
     answer: 'Gutes'
   }
 ])
-
-useSeoMeta({
-  robots: 'noindex, nofollow'
-})
 
 const quizIndex = ref(0)
 const selectedAnswer = ref(null)

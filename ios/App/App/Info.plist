@@ -8,6 +8,8 @@
 	<string>en</string>
 	<key>GADApplicationIdentifier</key>
 	<string>ca-app-pub-7535671094319234~6499324694</string>
+	<key>NSMicrophoneUsageDescription</key>
+	<string>Das Mikrofon wird benötigt, um deine Antwort in den Sprechaufgaben aufzunehmen.</string>
 	<key>LSApplicationCategoryType</key>
 	<string></string>
 	<key>CFBundleDisplayName</key>

@@ -482,8 +482,6 @@ const goToPay = () => {
   flex: 1;
   display: flex;
   flex-wrap: wrap;
-  max-width: 1024px;
-  margin: 0 auto;
   justify-content: center;
   align-content: flex-start;
   gap: 25px;
@@ -531,7 +529,6 @@ const goToPay = () => {
   border-top: 3px solid #303443;
   border-radius: 40px 40px 0 0;
   width: 100%;
-  max-width: 768px;
   position: relative;
   display: flex;
   flex-direction: column;

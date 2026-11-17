@@ -3,19 +3,15 @@
     <VLoginPreloader v-if="submitLoading"/>
     <div class="auth__inner">
       <div class="auth__form">
-        <button class="close__modal" @click="emits('close-auth-form')"
-                style="position: absolute; right: 15px; top: 15px;">
-          <img class="close__auth-icon" src="../../assets/images/CloseIcon.svg" alt="close">
-        </button>
         <div v-if="submitLoading" class="loading-overlay">
           <div class="loader-box"></div>
         </div>
         <div class="auth__title" :class="{ 'left': mode === 'reset' }">
           <img
               @click="mode = 'login'"
-              v-if="mode === 'reset'" class="auth__arrow" src="../../assets/images/arrowNav.svg"
+              v-if="mode === 'reset'" class="auth__arrow" src="../assets/images/arrowNav.svg"
               alt="arrow_nav">
-          <h1 class="login__title">
+          <h1  class="login__title">
             {{
               mode === 'login' ? t('auth.auths') : mode === 'register' ? t('auth.regs') :
                   t('auth.resetTitle')
@@ -34,7 +30,7 @@
           </div>
           <div class="auth__toggle" :style="{ transform: toggleTransform }"></div>
         </div>
-        <form class="auth-form" @submit.prevent="handleSubmit">
+        <form class="auth-form">
           <div class="auth__fields">
             <div v-for="field in visibleFields" :key="field.id" class="auth__field">
               <label class="auth__label">
@@ -55,8 +51,8 @@
                       class="auth__eye"
                       @click="toggleVisibility(field)"
                   >
-                    <img v-if="field.type === 'password'" :src="View" alt="View">
-                    <img v-else :src="Hide" alt="Hide">
+                    <img v-if="field.type === 'password'" :src="field.type === 'password' ? View : Hide" alt="View">
+<!--                    <img  v-else :src="Hide" alt="Hide">-->
                   </div>
                 </div>
               </label>
@@ -65,13 +61,14 @@
             </div>
 
             <div class="auth__actions">
-              <button type="submit" class="auth__submit" :disabled="submitLoading">
+              <button @click.prevent="handleSubmit" class="auth__submit" :disabled="submitLoading">
                 {{
                   mode === 'login' ? t('auth.logIn') : mode === 'register' ? t('auth.regs') :
                       t('auth.resetBtn')
                 }}
               </button>
             </div>
+
             <div v-if="mode === 'login'" class="auth__forgot" @click="mode = 'reset'">{{
                 t('auth.forgot')
               }}
@@ -79,14 +76,17 @@
           </div>
         </form>
         <div v-if="mode === 'login'" class="social-auth-container">
-          <button class="google__auth-wrapper" @click.prevent="handleSocialLogin('google')" :disabled="submitLoading">
-            <img class="google__icon" src="../../assets/images/google.svg" alt="google_icon">
+          <button class="google__auth-wrapper" @click="handleSocialLogin('google')" :disabled="submitLoading">
+            <img class="google__icon" src="../assets/images/google.svg" alt="google_icon">
             <span class="auth__text-method">GOOGLE</span>
           </button>
-          <button class="apple__auth-wrapper" @click.prevent="handleSocialLogin('apple')" :disabled="submitLoading">
-            <img class="apple__icon" src="../../assets/images/apple.svg" alt="apple_icon">
+          <button class="apple__auth-wrapper" @click="handleSocialLogin('apple')" :disabled="submitLoading">
+            <img class="apple__icon" src="../assets/images/apple.svg" alt="apple_icon">
             <span class="auth__text-method">APPLE</span>
           </button>
+<!--          <button class="facebook__auth-wrapper" @click="handleSocialLogin('facebook')" :disabled="submitLoading">-->
+<!--            <img class="facebook__icon" src="../assets/images/facebook.svg" alt="facebook_icon">-->
+<!--          </button>-->
         </div>
       </div>
     </div>
@@ -94,7 +94,7 @@
 </template>
 
 <script setup>
-import {ref, computed, watch, onUnmounted} from 'vue'
+import {ref, computed, watch, onMounted, onUnmounted} from 'vue'
 import {userAuthStore} from '../../store/authStore.js'
 import {useRouter} from 'vue-router'
 import {useI18n} from 'vue-i18n'
@@ -103,18 +103,11 @@ import View from '../../assets/images/loginEyes/view.svg'
 import Hide from '../../assets/images/loginEyes/hide.svg'
 import VLoginPreloader from "~/src/components/V-loginPreloader.vue";
 
-const props = defineProps({
-  initialMode: {
-    type: String,
-    default: 'login'
-  }
-})
-
 const {t, locale} = useI18n()
 const router = useRouter()
 const emits = defineEmits(['close-auth-form'])
 const authStore = userAuthStore()
-const mode = ref(props.initialMode)
+const mode = ref('login')
 const resetSent = ref(false)
 const submitLoading = ref(false)
 const isAuthed = computed(() => !!authStore.uid)
@@ -128,51 +121,10 @@ const toggleTransform = computed(() => {
 })
 
 const fields = ref([
-  {
-    id: 1,
-    name: "name",
-    type: "text",
-    placeholder: "placeholder.name",
-    label: "formLabel.name",
-    error: false,
-    value: '',
-    required: true,
-    maxlength: 18,
-    autocomplete: "username"
-  },
-  {
-    id: 2,
-    name: "email",
-    type: "email",
-    placeholder: "placeholder.email",
-    label: "formLabel.email",
-    error: false,
-    value: '',
-    required: true,
-    autocomplete: "email"
-  },
-  {
-    id: 3,
-    name: "password",
-    type: "password",
-    placeholder: "placeholder.password",
-    label: "formLabel.password",
-    error: false,
-    value: '',
-    required: true,
-    autocomplete: "current-password"
-  },
-  {
-    id: 4,
-    name: "confirm",
-    type: "password",
-    placeholder: "placeholder.confirm",
-    label: "formLabel.confirm",
-    error: false,
-    value: '',
-    required: true,
-    autocomplete: "new-password"
-  }
+  { id: 1, name: "name", type: "text", placeholder: "placeholder.name", label: "formLabel.name", error: false, value: '', required: true, maxlength: 18, autocomplete: "username" },
+  { id: 2, name: "email", type: "email", placeholder: "placeholder.email", label: "formLabel.email", error: false, value: '', required: true, autocomplete: "email" },
+  { id: 3, name: "password", type: "password", placeholder: "placeholder.password", label: "formLabel.password", error: false, value: '', required: true, autocomplete: "current-password" },
+  { id: 4, name: "confirm", type: "password", placeholder: "placeholder.confirm", label: "formLabel.confirm", error: false, value: '', required: true, autocomplete: "new-password" }
 ])
 
 const toggleVisibility = (field) => {
@@ -236,11 +188,13 @@ function validateFields(values) {
 
 const handleSubmit = async () => {
   if (submitLoading.value) return
-  const values = Object.fromEntries(fields.value.map(field => [field.name, field.value]))
-  if (!validateFields(values)) return
 
   try {
+    const values = Object.fromEntries(fields.value.map(field => [field.name, field.value]))
+    if (!validateFields(values)) return
+
     submitLoading.value = true
+
     if (mode.value === 'reset') {
       await authStore.resetPassword(values.email)
       resetSent.value = true
@@ -252,12 +206,14 @@ const handleSubmit = async () => {
     }
 
     if (mode.value === 'register') {
-      await authStore.registerUser({name: values.name, email: values.email, password: values.password})
-      await router.push('/')
+      await authStore.registerUser({ name: values.name, email: values.email, password: values.password })
+      router.push('/')
+      fields.value.forEach(f => f.value = '')
       return
     }
-    await authStore.loginUser({email: values.email, password: values.password})
-    await router.push('/')
+    await authStore.loginUser({ email: values.email, password: values.password })
+    router.push('/')
+    fields.value.forEach(f => f.value = '')
   } catch (e) {
     fields.value.forEach(f => f.error = '')
     mapErrors(fields.value, e.code)
@@ -273,12 +229,14 @@ watch(mode, () => {
   })
 })
 
+// watch(isAuthed, (v) => {
+//   if (v) emits('close-auth-form')
+// })
 watch(isAuthed, (v) => {
   if (v) {
     router.push('/')
   }
 })
-
 onUnmounted(() => {
   document.body.style.overflow = ''
 })
@@ -286,48 +244,25 @@ onUnmounted(() => {
 
 <style>
 
-.auth {
-  position: fixed;
-  top: 0;
-  right: 0;
-  width: 100%;
-  max-width: 400px;
-  height: 100vh;
-  background-color: var(--bg);
-  z-index: 1000;
-  overflow-y: auto;
-  box-shadow: -10px 0 30px rgba(0, 0, 0, 0.15);
-}
-
-.auth--rtl {
-  right: auto;
-  left: 0;
-  box-shadow: 10px 0 30px rgba(0, 0, 0, 0.15);
-}
-
-.auth__inner {
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding-bottom: 12px;
-  width: 100%;
-  margin: 0 auto;
-}
-
-.auth__form {
-  width: 100%;
-  border-radius: 0;
-  padding: 40px 34px 30px 34px;
-  position: relative;
-  overflow: hidden;
-  background: transparent;
-}
 
 .close__auth-icon {
   width: 22px;
   height: 22px;
   transform: rotate(-90deg);
+}
+
+.close__mob-auth-text {
+  color: black;
+  font-weight: 600;
+  font-family: "Nunito", sans-serif;
+  font-size: 18px;
+}
+
+.close__btn-modal-wrapper {
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+  opacity: 0;
 }
 
 .close__modal {
@@ -363,7 +298,9 @@ onUnmounted(() => {
   margin-top: 1.5rem;
 }
 
-.google__auth-wrapper, .apple__auth-wrapper, .facebook__auth-wrapper {
+.google__auth-wrapper,
+.apple__auth-wrapper,
+.facebook__auth-wrapper {
   flex: 1;
   display: flex;
   align-items: center;
@@ -373,11 +310,18 @@ onUnmounted(() => {
   padding: 8px;
   border: none;
   transition: all 0.1s ease-in-out;
+}
+
+.google__auth-wrapper,
+.apple__auth-wrapper,
+.facebook__auth-wrapper {
   background: #424141;
   box-shadow: 0 5px 0 #282727;
 }
 
-.google__icon, .apple__icon, .facebook__icon {
+.google__icon,
+.apple__icon,
+.facebook__icon {
   width: 36px;
   height: 36px;
 }
@@ -388,6 +332,7 @@ onUnmounted(() => {
   color: var(--titleColor);
   display: block;
   font-weight: 600;
+
 }
 
 .auth__arrow {
@@ -406,6 +351,23 @@ onUnmounted(() => {
   font-family: "Nunito", sans-serif;
   font-weight: 700;
   font-size: 17px;
+}
+
+.auth__inner {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 12px;
+}
+
+.auth__form {
+  width: 100%;
+  border-radius: 0;
+  padding: 15px 34px 30px 34px;
+  position: relative;
+  overflow: hidden;
+  background: transparent;
 }
 
 .auth__title {
@@ -428,6 +390,7 @@ onUnmounted(() => {
   justify-content: flex-start;
   text-align: left;
 }
+
 
 .auth__tabs {
   width: 100%;
@@ -530,7 +493,7 @@ onUnmounted(() => {
   font-size: 1.5rem;
   padding: 12px 0;
   font-weight: 600;
-  border-radius: 50px;
+  border-radius: 18px;
   cursor: pointer;
   background: #3b82f6;
   border: none;
@@ -552,7 +515,8 @@ onUnmounted(() => {
   cursor: not-allowed;
 }
 
-.auth__error, .auth__success {
+.auth__error,
+.auth__success {
   color: #d32f2f;
   text-align: center;
   font-family: "Nunito", sans-serif;
@@ -563,6 +527,43 @@ onUnmounted(() => {
 
 .auth__success {
   color: #4ade80
+}
+
+@media (max-width: 767px) {
+  .close__btn-modal-wrapper {
+    opacity: 1;
+  }
+}
+
+@media (max-width: 600px) {
+  .auth {
+    width: 100vw;
+    border-left: none;
+  }
+
+  .auth__form {
+    padding: 25px;
+  }
+
+  .auth__title {
+    font-size: 1.8rem;
+  }
+
+  .auth__submit {
+    font-size: 1.3rem;
+  }
+
+  .auth__tab {
+    font-size: 1.1rem;
+  }
+}
+
+.auth--rtl {
+  right: auto;
+  left: 0;
+  border-left: none;
+  border-right: 4px solid #1e1e1e;
+  box-shadow: 12px 0 44px rgba(0, 0, 0, 0.1);
 }
 
 .auth__input-container {
@@ -609,28 +610,9 @@ onUnmounted(() => {
   display: block;
 }
 
-
-@media (max-width: 767px) {
-  .auth {
-    max-width: 100%;
-  }
-}
-
 @media (max-width: 600px) {
-  .auth__form {
-    padding: 40px 25px 25px 25px;
-  }
-
-  .auth__title {
-    font-size: 1.8rem;
-  }
-
-  .auth__submit {
-    font-size: 1.3rem;
-  }
-
-  .auth__tab {
-    font-size: 1.1rem;
+  .auth--rtl {
+    border-right: none;
   }
 }
 </style>

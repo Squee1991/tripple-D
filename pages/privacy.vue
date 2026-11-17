@@ -14,22 +14,15 @@
       <div class="privacy_section-inner">
         <section v-for="(section, index) in sections" :key="index" class="section">
           <h2>{{ section.heading }}</h2>
-
-          <p v-if="section.paragraphs" v-for="(paragraph, j) in section.paragraphs" :key="'p-' + j">
+          <p v-for="(paragraph, j) in section.paragraphs" :key="'p-' + j">
             {{ paragraph }}
           </p>
-
           <ul v-if="section.listItems && section.listItems.length" class="privacy-list">
             <li v-for="(item, k) in section.listItems" :key="'li-' + k">
               {{ item }}
             </li>
           </ul>
-
-          <p v-if="section.postParagraphs" v-for="(postParagraph, l) in section.postParagraphs" :key="'pp-' + l">
-            {{ postParagraph }}
-          </p>
         </section>
-
         <p class="last-updated">
           Last updated: {{ lastUpdated }}
         </p>
@@ -41,22 +34,20 @@
 <script setup>
 import { ref } from "vue"
 import { useRouter } from "vue-router"
-import { PROJECT_NAME, SUPPORT_EMAIL, formatLegalDate } from "~/constants/legal.constants.js"
 
 const router = useRouter()
 const { t } = useI18n()
 
-const PROJECT = PROJECT_NAME
-const EMAIL = SUPPORT_EMAIL
+const PROJECT = "SkillUpGerman"
+const EMAIL = "skillupgerman.com@gmail.com"
 const COUNTRY = "Poland"
-const CITY = "Szczecin"
-const lastUpdated = ref(formatLegalDate('en-US'))
+const lastUpdated = ref("June 29, 2026")
 
 const sections = ref([
   {
     heading: "1. Introduction",
     paragraphs: [
-      `This Privacy Policy describes how ${PROJECT} ("we", "Service") collects, uses, and protects users' personal data. The data controller is the administrator of ${PROJECT}, located in ${CITY}, ${COUNTRY}.`,
+      `This Privacy Policy describes how ${PROJECT} ("we", "Service") collects, uses, and protects users' personal data. The data controller is the administrator of ${PROJECT}, located in ${COUNTRY}.`,
       "By using the Service, you agree to the terms of this Policy."
     ]
   },
@@ -117,9 +108,9 @@ const sections = ref([
       "Delete your account and associated data.",
       "Restrict or object to data processing."
     ],
-    postParagraphs: [
-      `To exercise your rights, please contact us at: ${EMAIL}.`
-    ]
+    get paragraphsAfter() {
+      return [`To exercise your rights, please contact us at: ${EMAIL}.`]
+    }
   },
   {
     heading: "8. International data transfer",
@@ -146,18 +137,19 @@ const sections = ref([
   {
     heading: "11. Contacts",
     paragraphs: [
-      `For questions regarding data protection and privacy, please contact us at: ${EMAIL}.`,
-      `Address: ${CITY}, ${COUNTRY}`
+      `For questions regarding data protection and privacy, please contact us at: ${EMAIL}.`
     ]
   }
 ])
+
+sections.value[6].paragraphs.push(`To exercise your rights, please contact us at: ${EMAIL}.`);
 </script>
 
 <style scoped>
 .privacy__title {
   font-size: 23px;
   font-weight: 600;
-  font-family: "Nunito", sans-serif;
+  font-family: Nunito, sans-serif;
   color: var(--title);
   text-shadow: 1px 1px var(--title);
   margin-left: 15px;
@@ -200,7 +192,6 @@ const sections = ref([
   height: 100%;
   line-height: 1.75;
   color: var(--titleColor);
-  font-family: "Nunito", sans-serif;
 }
 
 .last-updated {
@@ -231,14 +222,12 @@ const sections = ref([
 
 .section p {
   margin: 8px 0;
-  font-size: 15px;
 }
 
 .privacy-list {
   margin: 8px 0;
   padding-left: 20px;
   list-style-type: disc;
-  font-size: 15px;
 }
 
 .privacy-list li {

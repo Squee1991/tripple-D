@@ -24,15 +24,18 @@ export default defineEventHandler(async (event) => {
 	const config = useRuntimeConfig()
 	const stripeKey = config.stripeSecret || process.env.STRIPE_SECRET_KEY
 	const webhookSecret = config.stripeWebhookSecret || process.env.STRIPE_WEBHOOK_SECRET
+
 	if (!stripeKey || !webhookSecret) {
 		console.error('❌ ОШИБКА: Нет ключей Stripe или Webhook Secret')
 		setResponseStatus(event, 500)
 		return { error: 'Keys missing' }
 	}
+
 	const stripe = new Stripe(stripeKey, { apiVersion: '2024-06-20' })
 	const body = await readRawBody(event)
 	const signature = getHeader(event, 'stripe-signature')
 	let stripeEvent
+
 	try {
 		stripeEvent = stripe.webhooks.constructEvent(body, signature, webhookSecret)
 	} catch (err) {
@@ -40,6 +43,7 @@ export default defineEventHandler(async (event) => {
 		setResponseStatus(event, 400)
 		return { error: `Webhook Error: ${err.message}` }
 	}
+
 	if (stripeEvent.type === 'checkout.session.completed') {
 		const session = stripeEvent.data.object
 		const userId = session.metadata?.firebaseUID
@@ -53,6 +57,7 @@ export default defineEventHandler(async (event) => {
 					const subDetails = await stripe.subscriptions.retrieve(session.subscription)
 					subscriptionEndsAt = new Date(subDetails.current_period_end * 1000).toISOString()
 				}
+
 				const updateData = {
 					isPremium: true,
 					paymentSource: 'stripe',
@@ -61,7 +66,7 @@ export default defineEventHandler(async (event) => {
 					subscriptionId: session.subscription || null,
 					updatedAt: new Date().toISOString()
 				}
-				if (discountUsed && ['sale_3', 'sale_5', 'sale_6', 'sale_10', 'sale_15'].includes(discountUsed)) {
+				if (discountUsed && ['sale_5', 'sale_10', 'sale_15'].includes(discountUsed)) {
 					updateData[discountUsed] = false
 					console.log(`🔥 [Webhook] Скидка ${discountUsed} сброшена для юзера ${userId}`)
 				}
@@ -72,9 +77,11 @@ export default defineEventHandler(async (event) => {
 			}
 		}
 	}
+
 	else if (stripeEvent.type === 'customer.subscription.deleted') {
 		const subscription = stripeEvent.data.object
 		const subscriptionId = subscription.id
+
 		try {
 			const db = getFirestore()
 			const usersRef = db.collection('users')
@@ -84,6 +91,7 @@ export default defineEventHandler(async (event) => {
 				console.log(`⚠️ [Webhook] Юзер с подпиской ${subscriptionId} не найден.`)
 				return { received: true }
 			}
+
 			const batch = db.batch()
 			snapshot.forEach(doc => {
 				batch.update(doc.ref, {
@@ -94,6 +102,7 @@ export default defineEventHandler(async (event) => {
 					updatedAt: new Date().toISOString()
 				})
 			})
+
 			await batch.commit()
 			console.log(`❌ [Webhook] Подписка ${subscriptionId} удалена. Премиум отключен.`)
 
@@ -101,31 +110,7 @@ export default defineEventHandler(async (event) => {
 			console.error('❌ [Webhook] Ошибка при удалении подписки:', dbError)
 		}
 	}
-	else if (stripeEvent.type === 'invoice.payment_succeeded') {
-		const invoice = stripeEvent.data.object;
-		if (invoice.subscription) {
-			try {
-				const db = getFirestore();
-				const usersRef = db.collection('users');
-				const snapshot = await usersRef.where('subscriptionId', '==', invoice.subscription).get();
-				if (!snapshot.empty) {
-					const subDetails = await stripe.subscriptions.retrieve(invoice.subscription);
-					const newEndsAt = new Date(subDetails.current_period_end * 1000).toISOString();
-					const batch = db.batch();
-					snapshot.forEach(doc => {
-						batch.update(doc.ref, {
-							subscriptionEndsAt: newEndsAt,
-							updatedAt: new Date().toISOString()
-						});
-					});
-					await batch.commit();
-					console.log(`🔄 [Webhook] Подписка ${invoice.subscription} продлена. Новая дата: ${newEndsAt}`);
-				}
-			} catch (dbError) {
-				console.error('❌ [Webhook] Ошибка при продлении подписки:', dbError);
-			}
-		}
-	}
 
+	// 3. ОТВЕЧАЕМ STRIPE, ЧТО ВСЕ ОК
 	return { received: true }
 })

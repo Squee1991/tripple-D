@@ -528,7 +528,7 @@ watch(currentIndex, stopAllAudio)
 
 <style scoped>
 .quiz-app {
-  height: 100vh;
+  height: 100%;
   width: 100%;
   box-sizing: border-box;
   font-family: 'Nunito', sans-serif;

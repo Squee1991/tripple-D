@@ -181,8 +181,6 @@ const processedEvents = computed(() => {
   flex-direction: column;
   height: 100%;
   width: 100%;
-  max-width: 1240px;
-  margin: 0 auto;
 }
 
 .page-header {

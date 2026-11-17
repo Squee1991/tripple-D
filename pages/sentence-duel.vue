@@ -18,7 +18,7 @@
           :title="t('adjectiveComparisonPage.tipTitle')"
           :tips="tipsData.tips"
       />
-      <div class="duel__wrapper" v-if="!isWaitingForOpponent && !isOpponentFound">
+      <div v-if="!isWaitingForOpponent && !isOpponentFound">
         <div class="duel__header">
           <div class="duel__header--left">
             <VBackBtn/>
@@ -295,11 +295,6 @@ watch(() => gameStore.sessionData?.status, async (s) => {
   justify-content: center;
   flex-direction: column;
   align-items: center;
-}
-
-.duel__wrapper {
-  max-width: 1024px;
-  margin: 0 auto;
 }
 
 .stats__block-level {

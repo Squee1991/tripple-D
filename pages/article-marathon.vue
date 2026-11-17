@@ -154,8 +154,6 @@ const difficultyBase = ref([
 .prepare-container {
   flex: 1;
   width: 100%;
-  max-width: 768px;
-  margin: 0 auto;
   display: flex;
   flex-direction: column;
   animation: fadeIn 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
