@@ -697,17 +697,16 @@ export const useAchievementStore = defineStore('achievementStore', () => {
 				const shopItems = eventData.shopItems || {}
 				winterRank1BoughtCount.value = ['santaHat', 'christmasBall', 'christmasWreath'].reduce((acc, id) => acc + (shopItems[id] ? 1 : 0), 0)
 				updateCollectionCount()
-				const completedQuestsCount = Object.values(questsProgress).filter(q => q.finished).length
+				const completedQuestsCount = Object.entries(questsProgress).filter(([id, q]) => id.startsWith('quest-') && q?.finished).length
 				updateProgress('firstQuest', completedQuestsCount > 0 ? 1 : 0)
 				updateProgress('santaLexicon', questsProgress['quest-21']?.score || 0)
 				updateProgress('everyQuest', completedQuestsCount)
-				updateProgress('winterHonor', eventData.reputationPoints || 0)
 				updateProgress('snowFall', shopItems['snowFall'] ? 1 : 0)
 				updateProgress('santaHat', shopItems['santaHat'] ? 1 : 0)
 				updateProgress('christmasBall', shopItems['christmasBall'] ? 1 : 0)
 				updateProgress('christmasWreath', shopItems['christmasWreath'] ? 1 : 0)
 
-				const metaChildrenIds = ['firstQuest', 'santaLexicon', 'everyQuest', 'snowFall', 'santaHat', 'winterHonor', 'christmasBall', 'christmasWreath'];
+				const metaChildrenIds = ['firstQuest', 'santaLexicon', 'everyQuest', 'snowFall', 'santaHat', 'christmasBall', 'christmasWreath'];
 				updateProgress('metaChristmas', metaChildrenIds.filter(id => completedSet.has(id)).length);
 			})
 			eventUnsubs.push(unsubWinter)

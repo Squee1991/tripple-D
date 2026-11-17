@@ -4,16 +4,14 @@ import { useRouter, useRoute } from 'vue-router'
 import { useSeoMeta, useI18n, useLocalePath } from '#imports'
 import VShowFall from '../V-showFall.vue'
 import AdventCalendar from './winter/AdventCalendar.vue'
+import WinterVillage from './winter/WinterVillage.vue'
 import { useEventSessionStore } from '../../../store/eventsStore.js'
 
 import Snow from 'assets/images/mery-christmas/Snow.svg'
-import Present from 'assets/images/mery-christmas/Present.svg'
 import SnowCoin from 'assets/images/event-rewards/winter-event/winter-words/snowflake.svg'
 import CalendarNavIcon from 'assets/images/event-rewards/winter-event/winter-words/calendar.svg'
 import QuestsNavIcon from 'assets/images/event-rewards/winter-event/winter-words/christmas-stocking.svg'
 import ShopNavIcon from 'assets/images/event-rewards/winter-event/winter-words/gift.svg'
-import SantaBanner from 'assets/images/event-rewards/winter-event/winter-rewards/Santa-icon.svg'
-import ElfBanner from 'assets/images/event-rewards/winter-event/winter-rewards/elf-icon.svg'
 
 import Hat from 'assets/images/event-rewards/winter-event/winter-rewards/santa-hat.svg'
 import ChristmasBall from 'assets/images/event-rewards/winter-event/winter-rewards/christmas-ball.svg'
@@ -32,7 +30,6 @@ const isReqModalOpen = ref(false)
 const reqModalTitle = ref('')
 const coins = ref(0)
 const activeTab = ref('advent')
-const reputationPoints = ref(0)
 const questsProgress = ref({})
 
 // Снежинки за окошко прибавляются к счётчику, только когда долетают до него
@@ -58,12 +55,16 @@ function onCoinsLanded() {
 const eventId = computed(() => String(route.params.id || ''))
 const isEventOpen = computed(() => eventStore.isEventActive(eventId.value))
 
+// Заголовок на снегу под деревней меняется вместе с вкладкой
 const bannerByTab = computed(() => ({
-  advent: { text: t('winterBanner.advent'), icon: Present },
-  quests: { text: t('winterBanner.quests'), icon: SantaBanner },
-  reputation: { text: t('winterBanner.shop'), icon: ElfBanner }
+  advent: t('winterBanner.advent'),
+  quests: t('winterBanner.quests'),
+  reputation: t('winterBanner.shop')
 }))
-const banner = computed(() => bannerByTab.value[activeTab.value] || bannerByTab.value.advent)
+const bannerTitle = computed(() => bannerByTab.value[activeTab.value] || bannerByTab.value.advent)
+
+// Окна деревни, загоревшиеся после последнего визита
+const freshDays = ref([])
 
 const navTabs = computed(() => ([
   { id: 'advent', label: t('adventCalendar.tab'), icon: CalendarNavIcon },
@@ -87,52 +88,28 @@ function setTab(tabId) {
   activeTab.value = tabId
 }
 
-const ranks = computed(() => ([
-  { level: 1, need: 0, title: t('eventPanel.firstReputationWinter') },
-  { level: 2, need: 1000, title: t('eventPanel.secondReputationWinter') }
-]))
-
-const currentLevel = computed(() => {
-  let lvl = 1
-  for (const rank of ranks.value) {
-    if (reputationPoints.value >= rank.need) lvl = rank.level
-  }
-  return lvl
-})
-
-const levelStart = computed(() => ranks.value[currentLevel.value - 1]?.need ?? 0)
-const nextNeed = computed(() => ranks.value[currentLevel.value]?.need ?? ranks.value.at(-1)?.need ?? 0)
-const levelTotal = computed(() => Math.max(nextNeed.value - levelStart.value, 1))
-const levelCurrent = computed(() => Math.max(reputationPoints.value - levelStart.value, 0))
-
-const levelProgressText = computed(() => {
-  const maxRep = ranks.value.at(-1)?.need ?? 0
-  if (reputationPoints.value >= maxRep) return `${maxRep} / ${maxRep}`
-  return `${levelCurrent.value} / ${levelTotal.value}`
-})
-
 const quests = ref([
-  { id: 'quest-21', title: t('winterEventQuests.quest-21'), rewardCoins: 10, rewardRep: 25, isDone: false, hasErrors: false, icon: '💎' },
-  { id: 'quest-1', title: t('winterEventQuests.quest-1'), rewardCoins: 10, rewardRep: 25, isDone: false, hasErrors: false, icon: '🎄' },
-  { id: 'quest-2', title: t('winterEventQuests.quest-2'), rewardCoins: 10, rewardRep: 50, isDone: false, hasErrors: false, icon: '🕯️' },
-  { id: 'quest-3', title: t('winterEventQuests.quest-3'), rewardCoins: 10, rewardRep: 50, isDone: false, hasErrors: false, icon: '🎅' },
-  { id: 'quest-4', title: t('winterEventQuests.quest-4'), rewardCoins: 10, rewardRep: 50, isDone: false, hasErrors: false, icon: '🌟' },
-  { id: 'quest-5', title: t('winterEventQuests.quest-5'), rewardCoins: 10, rewardRep: 50, isDone: false, hasErrors: false, icon: '🎁' },
-  { id: 'quest-6', title: t('winterEventQuests.quest-6'), rewardCoins: 10, rewardRep: 50, isDone: false, hasErrors: false, icon: '📖' },
-  { id: 'quest-7', title: t('winterEventQuests.quest-7'), rewardCoins: 10, rewardRep: 50, isDone: false, hasErrors: false, icon: '📅' },
-  { id: 'quest-8', title: t('winterEventQuests.quest-8'), rewardCoins: 10, rewardRep: 50, isDone: false, hasErrors: false, icon: '👻' },
-  { id: 'quest-9', title: t('winterEventQuests.quest-9'), rewardCoins: 10, rewardRep: 50, isDone: false, hasErrors: false, icon: '✨' },
-  { id: 'quest-10', title: t('winterEventQuests.quest-10'), rewardCoins: 10, rewardRep: 50, isDone: false, hasErrors: false, icon: '🏫' },
-  { id: 'quest-11', title: t('winterEventQuests.quest-11'), rewardCoins: 10, rewardRep: 50, isDone: false, hasErrors: false, icon: '🔗' },
-  { id: 'quest-12', title: t('winterEventQuests.quest-12'), rewardCoins: 10, rewardRep: 50, isDone: false, hasErrors: false, icon: '🧩' },
-  { id: 'quest-13', title: t('winterEventQuests.quest-13'), rewardCoins: 10, rewardRep: 50, isDone: false, hasErrors: false, icon: '🌍' },
-  { id: 'quest-14', title: t('winterEventQuests.quest-14'), rewardCoins: 10, rewardRep: 50, isDone: false, hasErrors: false, icon: '🔮' },
-  { id: 'quest-15', title: t('winterEventQuests.quest-15'), rewardCoins: 10, rewardRep: 50, isDone: false, hasErrors: false, icon: '⛸️' },
-  { id: 'quest-16', title: t('winterEventQuests.quest-16'), rewardCoins: 10, rewardRep: 50, isDone: false, hasErrors: false, icon: '❄️' },
-  { id: 'quest-17', title: t('winterEventQuests.quest-17'), rewardCoins: 10, rewardRep: 50, isDone: false, hasErrors: false, icon: '🔔' },
-  { id: 'quest-18', title: t('winterEventQuests.quest-18'), rewardCoins: 10, rewardRep: 50, isDone: false, hasErrors: false, icon: '🎀' },
-  { id: 'quest-19', title: t('winterEventQuests.quest-19'), rewardCoins: 10, rewardRep: 50, isDone: false, hasErrors: false, icon: '🎆' },
-  { id: 'quest-20', title: t('winterEventQuests.quest-20'), rewardCoins: 10, rewardRep: 50, isDone: false, hasErrors: false, icon: '🥨' }
+  { id: 'quest-21', title: t('winterEventQuests.quest-21'), rewardCoins: 10, isDone: false, hasErrors: false, icon: '💎' },
+  { id: 'quest-1', title: t('winterEventQuests.quest-1'), rewardCoins: 10, isDone: false, hasErrors: false, icon: '🎄' },
+  { id: 'quest-2', title: t('winterEventQuests.quest-2'), rewardCoins: 10, isDone: false, hasErrors: false, icon: '🕯️' },
+  { id: 'quest-3', title: t('winterEventQuests.quest-3'), rewardCoins: 10, isDone: false, hasErrors: false, icon: '🎅' },
+  { id: 'quest-4', title: t('winterEventQuests.quest-4'), rewardCoins: 10, isDone: false, hasErrors: false, icon: '🌟' },
+  { id: 'quest-5', title: t('winterEventQuests.quest-5'), rewardCoins: 10, isDone: false, hasErrors: false, icon: '🎁' },
+  { id: 'quest-6', title: t('winterEventQuests.quest-6'), rewardCoins: 10, isDone: false, hasErrors: false, icon: '📖' },
+  { id: 'quest-7', title: t('winterEventQuests.quest-7'), rewardCoins: 10, isDone: false, hasErrors: false, icon: '📅' },
+  { id: 'quest-8', title: t('winterEventQuests.quest-8'), rewardCoins: 10, isDone: false, hasErrors: false, icon: '👻' },
+  { id: 'quest-9', title: t('winterEventQuests.quest-9'), rewardCoins: 10, isDone: false, hasErrors: false, icon: '✨' },
+  { id: 'quest-10', title: t('winterEventQuests.quest-10'), rewardCoins: 10, isDone: false, hasErrors: false, icon: '🏫' },
+  { id: 'quest-11', title: t('winterEventQuests.quest-11'), rewardCoins: 10, isDone: false, hasErrors: false, icon: '🔗' },
+  { id: 'quest-12', title: t('winterEventQuests.quest-12'), rewardCoins: 10, isDone: false, hasErrors: false, icon: '🧩' },
+  { id: 'quest-13', title: t('winterEventQuests.quest-13'), rewardCoins: 10, isDone: false, hasErrors: false, icon: '🌍' },
+  { id: 'quest-14', title: t('winterEventQuests.quest-14'), rewardCoins: 10, isDone: false, hasErrors: false, icon: '🔮' },
+  { id: 'quest-15', title: t('winterEventQuests.quest-15'), rewardCoins: 10, isDone: false, hasErrors: false, icon: '⛸️' },
+  { id: 'quest-16', title: t('winterEventQuests.quest-16'), rewardCoins: 10, isDone: false, hasErrors: false, icon: '❄️' },
+  { id: 'quest-17', title: t('winterEventQuests.quest-17'), rewardCoins: 10, isDone: false, hasErrors: false, icon: '🔔' },
+  { id: 'quest-18', title: t('winterEventQuests.quest-18'), rewardCoins: 10, isDone: false, hasErrors: false, icon: '🎀' },
+  { id: 'quest-19', title: t('winterEventQuests.quest-19'), rewardCoins: 10, isDone: false, hasErrors: false, icon: '🎆' },
+  { id: 'quest-20', title: t('winterEventQuests.quest-20'), rewardCoins: 10, isDone: false, hasErrors: false, icon: '🥨' }
 ])
 
 async function goToSession(questId) {
@@ -143,10 +120,10 @@ async function goToSession(questId) {
 
 // Экономика: 21 задание x 10 + 24 окошка x 5 = 330 снежинок, весь магазин 300 (запас 10%)
 const shopItemsList = ref([
-  { id: 'santaHat', title: t('eventsShopItems.santaHat'), priceCoins: 50, level: 1, isOwned: false, icon: Hat },
-  { id: 'christmasBall', title: t('eventsShopItems.christmasBall'), priceCoins: 50, level: 1, isOwned: false, icon: ChristmasBall },
-  { id: 'christmasWreath', title: t('eventsShopItems.christmasWreath'), priceCoins: 60, level: 1, isOwned: false, icon: ChristmasWreath },
-  { id: 'snowFall', title: t('eventsShopItems.snowFall'), priceCoins: 140, level: 2, minDoors: 18, isOwned: false, icon: SnowEffectIcon }
+  { id: 'santaHat', title: t('eventsShopItems.santaHat'), priceCoins: 50, isOwned: false, icon: Hat },
+  { id: 'christmasBall', title: t('eventsShopItems.christmasBall'), priceCoins: 50, isOwned: false, icon: ChristmasBall },
+  { id: 'christmasWreath', title: t('eventsShopItems.christmasWreath'), priceCoins: 60, isOwned: false, icon: ChristmasWreath },
+  { id: 'snowFall', title: t('eventsShopItems.snowFall'), priceCoins: 140, minDoors: 18, isOwned: false, icon: SnowEffectIcon }
 ])
 
 // Сколько окошек адвент-календаря уже открыто: снегопад доступен только после 18-го
@@ -155,7 +132,6 @@ const openedDoors = computed(() => Object.entries(questsProgress.value || {})
 
 function canBuyItem(item) {
   if (!item || item.isOwned) return false
-  if (currentLevel.value < item.level) return false
   if (item.minDoors && openedDoors.value < item.minDoors) return false
   return coins.value >= item.priceCoins
 }
@@ -173,14 +149,11 @@ async function buyReward(item) {
 // Товар, для которого открыта шторка с условиями покупки
 const reqItem = ref(null)
 
-// Условия покупки с текущим прогрессом: снежинки, репутация, окошки календаря
+// Условия покупки с текущим прогрессом: снежинки и окошки календаря
 const reqList = computed(() => {
   const item = reqItem.value
   if (!item) return []
   const list = [{ id: 'coins', iconImg: SnowCoin, label: t('winterShop.reqCoins'), have: coins.value, need: item.priceCoins }]
-  if (item.level > 1) {
-    list.push({ id: 'rep', icon: '⭐', label: t('eventPanel.reputation'), have: reputationPoints.value, need: ranks.value[item.level - 1].need })
-  }
   if (item.minDoors) {
     list.push({ id: 'doors', icon: '🎄', label: t('winterShop.reqDoors'), have: openedDoors.value, need: item.minDoors })
   }
@@ -222,7 +195,6 @@ async function refreshProgressBadges() {
   if (!progressData) return
 
   coins.value = progressData.coins || 0
-  reputationPoints.value = progressData.reputationPoints || 0
   questsProgress.value = progressData.quests || {}
 
   quests.value = quests.value.map(q => {
@@ -244,7 +216,7 @@ async function syncQuestRewards() {
     const data = await $fetch('/events/event-winter.json')
     const byId = Object.fromEntries((data?.quests || []).map(q => [q.id, q]))
     quests.value = quests.value.map(q => byId[q.id]
-      ? { ...q, rewardCoins: byId[q.id].rewardCoins ?? q.rewardCoins, rewardRep: byId[q.id].rewardRep ?? q.rewardRep }
+      ? { ...q, rewardCoins: byId[q.id].rewardCoins ?? q.rewardCoins }
       : q)
   } catch (e) {}
 }
@@ -271,9 +243,6 @@ onMounted(() => {
           </svg>
         </button>
         <div class="stats-board">
-          <div class="stat-item">
-            <span class="stat-value">{{ levelProgressText }}</span>
-          </div>
           <div class="stat-item" data-coin-target>
             <div class="stat-value">
               <img class="coin" :src="SnowCoin" alt="">
@@ -283,10 +252,8 @@ onMounted(() => {
         </div>
       </div>
       <div class="scrollable-view">
-        <div class="banner">
-          <div class="banner__text">{{ banner.text }}</div>
-          <img :src="banner.icon" alt="" class="banner__icon">
-        </div>
+        <WinterVillage class="season-village" :quests-progress="questsProgress" :fresh-days="freshDays"
+                       :title="bannerTitle"/>
         <nav class="mobile-nav" role="tablist">
           <div class="sliding-bg" :style="{ transform: `translateX(${getTransformX(activeIndex)}%)` }"></div>
           <button
@@ -304,7 +271,8 @@ onMounted(() => {
         <div class="scroll_sections">
           <section v-if="activeTab === 'advent'">
             <AdventCalendar :quests-progress="questsProgress" @start="goToSession" @coins-pending="onCoinsPending"
-                            @coins-landed="onCoinsLanded"/>
+                            @coins-landed="onCoinsLanded"
+                            @fresh-windows="freshDays = $event"/>
           </section>
           <section v-if="activeTab === 'reputation'">
             <div class="cards">
@@ -314,7 +282,6 @@ onMounted(() => {
                 </div>
                 <div class="prize-card__body">
                   <div class="prize-card__title">{{ reward.title }}</div>
-                  <div v-if="reward.level > 1" class="prize-card__rank">{{ ranks[reward.level - 1].title }}</div>
                   <div v-if="reward.minDoors && !reward.isOwned" class="prize-card__rank">
                     {{ t('winterShop.doorsProgress', { done: Math.min(openedDoors, reward.minDoors), need: reward.minDoors }) }}
                   </div>
@@ -335,12 +302,11 @@ onMounted(() => {
           <section v-if="activeTab === 'quests'">
             <div class="quests">
               <div v-for="(quest, qi) in quests" :key="quest.id" :class="['quest', 'achv-card', `--v${qi % 4}`]">
-                <div class="quest__icon">{{ quest.icon }}</div>
+                <div class="quest__icon"><span class="quest__emoji">{{ quest.icon }}</span></div>
                 <div class="quest__body">
                   <div class="quest__title clickable" @click="goToSession(quest.id)">{{ quest.title }}</div>
                   <div class="quest__meta">
                     <div class="quest__inner">
-                      <span class="meta__pill --rep">{{ quest.rewardRep }} {{ t('eventPanel.rep') }}</span>
                       <span class="meta__pill --coins">{{ quest.rewardCoins }} <img class="meta__coin" :src="SnowCoin" alt=""></span>
                     </div>
                     <button
@@ -402,7 +368,9 @@ onMounted(() => {
 
 <style scoped>
 .season-page {
-  height: 100%;
+  /* Высота экрана, а не родителя: у main нет высоты, иначе прокручивалась вся страница */
+  height: 100vh;
+  height: 100dvh;
   max-width: 640px;
   margin: 0 auto;
   display: flex;
@@ -542,38 +510,8 @@ onMounted(() => {
   display: none;
 }
 
-/* Зимний синий баннер, в цвет синих подарков и ночной деревни */
-.banner {
-  position: relative;
-  overflow: hidden;
-  background:
-    radial-gradient(circle at 18% 0%, rgb(255 255 255 / 0.3) 0%, transparent 55%),
-    linear-gradient(135deg, #5aa9f0 0%, #3f74c4 55%, #2b4f8c 100%);
-  border: 2px solid rgb(255 255 255 / 0.6);
-  box-shadow: 0 5px 0 #1f3a6b, 0 10px 24px rgb(31 58 107 / 0.25);
-  border-radius: 24px;
-  padding: 16px 20px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+.season-village {
   margin-bottom: 14px;
-  flex-shrink: 0;
-}
-
-.banner__text {
-  color: #ffffff;
-  text-shadow: 0 2px 0 rgb(0 0 0 / 0.18);
-  font-size: 19px;
-  font-family: "Fredoka", "Nunito", sans-serif;
-  font-weight: 600;
-  line-height: 1.3;
-  margin-right: 10px;
-}
-
-.banner__icon {
-  height: 96px;
-  position: relative;
-  filter: drop-shadow(0 4px 6px rgb(0 0 0 / 0.25));
 }
 
 .coin {
@@ -720,54 +658,97 @@ onMounted(() => {
   gap: 10px;
 }
 
-/* Карточки заданий: цвета чередуются, как у подарков в календаре */
+/* Карточки заданий как подарки из календаря: слева обёртка с узором, лентой и снегом, на ней бирка с иконкой */
 .quest {
-  --tint: #d8463f;
-  --tint-2: #ff8a80;
-  --tint-dark: #a3241f;
-  --tint-soft: rgb(216 70 63 / 0.16);
+  --box: #d8463f;
+  --box-dark: #a3241f;
+  --ribbon: #ffd45e;
+  --pattern: repeating-linear-gradient(45deg, rgb(255 255 255 / 0.10) 0 6px, transparent 6px 14px);
   position: relative;
   overflow: hidden;
   display: flex;
-  align-items: center;
+  align-items: stretch;
   gap: 12px;
-  padding-left: 18px;
-  background: linear-gradient(90deg, var(--tint-soft) 0%, rgb(255 255 255 / 55%) 45%);
+  padding: 0 12px 0 0;
+  border-radius: 20px;
+  background: rgb(255 255 255 / 82%);
 }
 
-.quest::before {
-  content: '';
-  position: absolute;
-  left: 0;
-  top: 0;
-  bottom: 0;
-  width: 6px;
-  background: linear-gradient(180deg, var(--tint-2), var(--tint));
+.quest.--v1 {
+  --box: #2f8a4f;
+  --box-dark: #1d5e33;
+  --ribbon: #e2463d;
+  --pattern: radial-gradient(circle, rgb(255 255 255 / 0.22) 2px, transparent 2.5px) 0 0 / 12px 12px;
 }
 
-.quest.--v1 { --tint: #2f8a4f; --tint-2: #6fd38f; --tint-dark: #1d5e33; --tint-soft: rgb(47 138 79 / 0.16); }
-.quest.--v2 { --tint: #e9a92c; --tint-2: #ffd45e; --tint-dark: #b5850f; --tint-soft: rgb(233 169 44 / 0.18); }
-.quest.--v3 { --tint: #3f6db8; --tint-2: #7fb2ff; --tint-dark: #284d8c; --tint-soft: rgb(63 109 184 / 0.16); }
+.quest.--v2 {
+  --box: #e9a92c;
+  --box-dark: #b5850f;
+  --ribbon: #d8463f;
+  --pattern: repeating-linear-gradient(90deg, rgb(255 255 255 / 0.14) 0 4px, transparent 4px 12px);
+}
+
+.quest.--v3 {
+  --box: #3f6db8;
+  --box-dark: #284d8c;
+  --ribbon: #ffffff;
+  --pattern: radial-gradient(circle, rgb(255 255 255 / 0.35) 1.5px, transparent 2px) 0 0 / 10px 10px;
+}
 
 .quest__icon {
+  position: relative;
   flex-shrink: 0;
-  width: 62px;
-  height: 62px;
-  border-radius: 18px;
-  border: 2px solid rgb(255 255 255 / 85%);
-  background: radial-gradient(circle at 35% 30%, var(--tint-2), var(--tint) 75%);
-  box-shadow: 0 3px 0 var(--tint-dark), inset 0 2px 6px rgb(255 255 255 / 0.35);
+  width: 80px;
+  min-height: 84px;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 32px;
+  font-size: 26px;
+  background:
+    linear-gradient(180deg, transparent calc(50% - 5px), var(--ribbon) calc(50% - 5px), var(--ribbon) calc(50% + 5px), transparent calc(50% + 5px)),
+    var(--pattern),
+    linear-gradient(180deg, var(--box), var(--box-dark));
+  box-shadow: inset -3px 0 0 rgb(0 0 0 / 0.08);
+}
+
+/* Снежная шапка на обёртке */
+.quest__icon::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  height: 9px;
+  background: radial-gradient(circle at 7px 0, #ffffff 7px, transparent 7.5px) 0 0 / 14px 9px repeat-x;
+  filter: drop-shadow(0 1px 0 rgb(31 58 107 / 0.12));
+}
+
+/* Бирка с иконкой посередине ленты */
+.quest__icon::after {
+  content: '';
+  position: absolute;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: #ffffff;
+  border: 2px dashed var(--box);
+  box-shadow: 0 3px 0 rgb(0 0 0 / 0.15);
+}
+
+.quest__emoji {
+  position: relative;
+  z-index: 1;
+  line-height: 1;
 }
 
 .quest__body {
   width: 100%;
+  min-width: 0;
   display: flex;
   flex-direction: column;
+  justify-content: center;
   gap: 6px;
+  padding: 10px 0;
 }
 
 .quest__title {
@@ -808,10 +789,6 @@ onMounted(() => {
   white-space: nowrap;
 }
 
-.meta__pill.--rep {
-  color: #8e2a24;
-  background: #ffe1dd;
-}
 
 .meta__pill.--coins {
   color: #1f5f9e;
@@ -1148,14 +1125,6 @@ onMounted(() => {
 @media (max-width: 480px) {
   .tab-label {
     font-size: 14px;
-  }
-
-  .banner__icon {
-    height: 72px;
-  }
-
-  .banner__text {
-    font-size: 16px;
   }
 }
 </style>

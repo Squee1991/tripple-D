@@ -12396,8 +12396,6 @@
     "christmasBallDescription": "Buy this magical snow globe to capture a moment of winter.",
     "christmasWreathName": "Christmas Wreath",
     "christmasWreathDescription": "Buy a traditional wreath, a symbol of the holidays and home comfort.",
-    "winterHonorName": "Winter Honor",
-    "winterHonorDescription": "Earn winter honor by completing quests in the “Whisper of Winter” event.",
     "metaChristmasName": "Christmas Master",
     "metaChristmasDescription": "Unlock all achievements of the “Whisper of Winter” event and become a legend of the holiday season."
   },
@@ -21436,9 +21434,9 @@
     }
   },
   "winterBanner": {
-    "advent": "Open a new door every day until Christmas!",
-    "quests": "Complete tasks to collect snowflakes!",
-    "shop": "Spend your snowflakes on winter gifts and effects!"
+    "advent": "Advent calendar",
+    "quests": "Tasks for snowflakes",
+    "shop": "Gifts for snowflakes"
   },
   "winterShop": {
     "reqCoins": "Snowflakes",

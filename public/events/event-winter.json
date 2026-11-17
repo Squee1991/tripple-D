@@ -4,7 +4,7 @@
       "id": "quest-1",
       "title": "Рождественская викторина",
         "rewardCoins": 10,
-        "rewardRep": 25,
+        "rewardRep": 0,
       "steps": [
         {
           "type": "multiple-choice",
@@ -116,7 +116,7 @@
       "id": "quest-2",
       "title": "Традиции и обычаи ",
       "rewardCoins": 10,
-      "rewardRep": 25,
+      "rewardRep": 0,
       "steps": [
         {
           "type": "multiple-choice",
@@ -228,7 +228,7 @@
       "id": "quest-3",
       "title": "Праздничные герои",
       "rewardCoins": 10,
-      "rewardRep": 50,
+      "rewardRep": 0,
       "steps": [
         {
           "type": "multiple-choice",
@@ -340,7 +340,7 @@
       "id": "quest-4",
       "title": "Адвент и ожидание",
       "rewardCoins": 10,
-      "rewardRep": 50,
+      "rewardRep": 0,
       "steps": [
         {
           "type": "multiple-choice",
@@ -452,7 +452,7 @@
       "id": "quest-5",
       "title": "Желания и подарки",
       "rewardCoins": 10,
-      "rewardRep": 50,
+      "rewardRep": 0,
       "steps": [
         {
           "type": "multiple-choice",
@@ -565,7 +565,7 @@
       "id": "quest-6",
       "title": "Weihnachten in Deutschland",
       "rewardCoins": 10,
-      "rewardRep": 50,
+      "rewardRep": 0,
       "steps": [
         {
           "type": "reading",
@@ -705,7 +705,7 @@
       "id": "quest-7",
       "title": "Weihnachten und Neujahr in Deutschland",
       "rewardCoins": 10,
-      "rewardRep": 50,
+      "rewardRep": 0,
       "steps": [
         {
           "type": "reading",
@@ -845,7 +845,7 @@
       "id": "quest-8",
       "title": "Silvester der Geister",
       "rewardCoins": 10,
-      "rewardRep": 50,
+      "rewardRep": 0,
       "steps": [
         {
           "type": "reading",
@@ -985,7 +985,7 @@
       "id": "quest-9",
       "title": "Neujahr im Zauberwald",
       "rewardCoins": 10,
-      "rewardRep": 50,
+      "rewardRep": 0,
       "steps": [
         {
           "type": "reading",
@@ -1130,7 +1130,7 @@
       "id": "quest-10",
       "title": "Winterferien und Schulanfang",
       "rewardCoins": 10,
-      "rewardRep": 50,
+      "rewardRep": 0,
       "steps": [
         {
           "type": "reading",
@@ -1271,7 +1271,7 @@
       "id": "quest-11",
       "title": "Соедини рождественские пары",
       "rewardCoins": 10,
-      "rewardRep": 50,
+      "rewardRep": 0,
       "steps": [
         {
           "type": "matching",
@@ -1391,7 +1391,7 @@
       "id": "quest-12",
       "title": "Соедини новогодние пары",
       "rewardCoins": 10,
-      "rewardRep": 50,
+      "rewardRep": 0,
       "steps": [
         {
           "type": "matching",
@@ -1511,7 +1511,7 @@
       "id": "quest-13",
       "title": "Соедини зимние традиции разных стран",
       "rewardCoins": 10,
-      "rewardRep": 50,
+      "rewardRep": 0,
       "steps": [
         {
           "type": "matching",
@@ -1631,7 +1631,7 @@
       "id": "quest-14",
       "title": "Соедини зимние праздники и поверья Европы",
       "rewardCoins": 10,
-      "rewardRep": 50,
+      "rewardRep": 0,
       "steps": [
         {
           "type": "matching",
@@ -1751,7 +1751,7 @@
       "id": "quest-15",
       "title": "Соедини зимние пары — Зима в Германии",
       "rewardCoins": 10,
-      "rewardRep": 50,
+      "rewardRep": 0,
       "steps": [
         {
           "type": "matching",
@@ -1872,7 +1872,7 @@
       "id": "quest-16",
       "title": "Выбери правильное слово — Зима и Новый год",
       "rewardCoins": 10,
-      "rewardRep": 50,
+      "rewardRep": 0,
       "steps": [
         {
           "type": "choose-word",
@@ -1936,7 +1936,7 @@
       "id": "quest-17",
       "title": "Выбери правильное слово",
       "rewardCoins": 10,
-      "rewardRep": 50,
+      "rewardRep": 0,
       "steps": [
         {
           "type": "choose-word",
@@ -2000,7 +2000,7 @@
       "id": "quest-18",
       "title": "Выбери правильное слово — Подготовка к Новому году",
       "rewardCoins": 10,
-      "rewardRep": 50,
+      "rewardRep": 0,
       "steps": [
         {
           "type": "choose-word",
@@ -2064,7 +2064,7 @@
       "id": "quest-19",
       "title": "Выбери правильное слово — Новогодняя ночь",
       "rewardCoins": 10,
-      "rewardRep": 50,
+      "rewardRep": 0,
       "steps": [
         {
           "type": "choose-word",
@@ -2128,7 +2128,7 @@
       "id": "quest-20",
       "title": "Выбери правильное слово — Как немцы празднуют Новый год",
       "rewardCoins": 10,
-      "rewardRep": 50,
+      "rewardRep": 0,
       "steps": [
         {
           "type": "choose-word",
@@ -2206,7 +2206,7 @@
       "id": "quest-21",
       "title": "Weihnachten: Bild → Wort (mit Artikel)",
       "rewardCoins": 10,
-      "rewardRep": 50,
+      "rewardRep": 0,
       "steps": [
         {
           "type": "multiple-choice",
