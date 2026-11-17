@@ -1,0 +1,1119 @@
+{
+  "patterns": [
+    {
+      "match": "^Der, die oder das\\? \\.\\.\\. (.+)$",
+      "ru": "Какой артикль у слова «$1»?",
+      "en": "Which article goes with “$1”?"
+    }
+  ],
+  "texts": {
+    "In welcher Jahreszeit feiert man Weihnachten?": {
+      "ru": "В какое время года празднуют Рождество?",
+      "en": "In which season is Christmas celebrated?"
+    },
+    "Wie ist das Wetter zu Weihnachten in Deutschland meistens?": {
+      "ru": "Какая погода обычно бывает на Рождество в Германии?",
+      "en": "What is the weather usually like at Christmas in Germany?"
+    },
+    "Welche Tiere ziehen den Schlitten des Weihnachtsmannes?": {
+      "ru": "Какие животные везут сани Деда Мороза?",
+      "en": "Which animals pull Santa Claus’s sleigh?"
+    },
+    "Wie kommt der Weihnachtsmann ins Haus?": {
+      "ru": "Как Дед Мороз попадает в дом?",
+      "en": "How does Santa Claus get into the house?"
+    },
+    "Wie viele Kerzen sind auf einem Adventskranz?": {
+      "ru": "Сколько свечей на рождественском венке?",
+      "en": "How many candles are on an Advent wreath?"
+    },
+    "Wie viele Türen hat der Adventskalender?": {
+      "ru": "Сколько дверец у адвент-календаря?",
+      "en": "How many doors does the Advent calendar have?"
+    },
+    "Was legt man unter den Christbaum?": {
+      "ru": "Что кладут под ёлку?",
+      "en": "What do you put under the Christmas tree?"
+    },
+    "Welche dieser Figuren ist nicht in der Krippe?": {
+      "ru": "Какой из этих персонажей не стоит в рождественском вертепе?",
+      "en": "Which of these figures is not in the nativity scene?"
+    },
+    "Welche Farbe ist typisch für Weihnachten?": {
+      "ru": "Какой цвет типичен для Рождества?",
+      "en": "Which colour is typical for Christmas?"
+    },
+    "Welches Geräusch machen die Glocken?": {
+      "ru": "Какой звук издают колокольчики?",
+      "en": "What sound do the bells make?"
+    },
+    "Was hängt man nicht auf den Christbaum?": {
+      "ru": "Что не вешают на ёлку?",
+      "en": "What do you not hang on the Christmas tree?"
+    },
+    "Was machen die Leute unter den Misteln?": {
+      "ru": "Что делают люди под омелой?",
+      "en": "What do people do under the mistletoe?"
+    },
+    "Welche Art von Baum ist der Christbaum?": {
+      "ru": "Каким деревом бывает рождественская ёлка?",
+      "en": "What kind of tree is the Christmas tree?"
+    },
+    "Welche Figur gehört nicht zu Weihnachten?": {
+      "ru": "Какой персонаж не относится к Рождеству?",
+      "en": "Which figure does not belong to Christmas?"
+    },
+    "Was schreiben die Kinder an den Weihnachtsmann?": {
+      "ru": "Что дети пишут Деду Морозу?",
+      "en": "What do children write to Santa Claus?"
+    },
+    "In welcher deutschen Stadt findet der berühmte Christkindlesmarkt statt?": {
+      "ru": "В каком немецком городе проходит знаменитая ярмарка Christkindlesmarkt?",
+      "en": "In which German city is the famous Christkindlesmarkt held?"
+    },
+    "Was stellen die Kinder am 6. Dezember vor die Tür?": {
+      "ru": "Что дети ставят за дверь 6 декабря?",
+      "en": "What do children put outside the door on 6 December?"
+    },
+    "Was hat Knecht Ruprecht für unartige Kinder dabei?": {
+      "ru": "Что Кнехт Рупрехт приносит непослушным детям?",
+      "en": "What does Knecht Ruprecht carry for naughty children?"
+    },
+    "Was zündet man an den vier Sonntagen vor Weihnachten an?": {
+      "ru": "Что зажигают в четыре воскресенья перед Рождеством?",
+      "en": "What do you light on the four Sundays before Christmas?"
+    },
+    "Was isst man in Deutschland oft am Heiligabend?": {
+      "ru": "Что в Германии часто едят в Сочельник?",
+      "en": "What do people in Germany often eat on Christmas Eve?"
+    },
+    "Was macht man traditionell am Silvesterabend?": {
+      "ru": "Что традиционно делают вечером на Сильвестр?",
+      "en": "What do people traditionally do on New Year’s Eve?"
+    },
+    "Wer begleitet den Nikolaus?": {
+      "ru": "Кто сопровождает Николауса?",
+      "en": "Who accompanies Saint Nicholas?"
+    },
+    "Welches Lied wird an Weihnachten oft gesungen?": {
+      "ru": "Какую песню часто поют на Рождество?",
+      "en": "Which song is often sung at Christmas?"
+    },
+    "Was steckt man an die Spitze des Weihnachtsbaums?": {
+      "ru": "Что ставят на верхушку ёлки?",
+      "en": "What do you put on top of the Christmas tree?"
+    },
+    "Was ist typisch für den Adventskalender?": {
+      "ru": "Что типично для адвент-календаря?",
+      "en": "What is typical for the Advent calendar?"
+    },
+    "Was trinken viele Erwachsene auf dem Weihnachtsmarkt?": {
+      "ru": "Что пьют многие взрослые на рождественской ярмарке?",
+      "en": "What do many adults drink at the Christmas market?"
+    },
+    "Was symbolisiert der Adventskranz?": {
+      "ru": "Что символизирует рождественский венок?",
+      "en": "What does the Advent wreath symbolise?"
+    },
+    "Was macht man traditionell unter einem Mistelzweig?": {
+      "ru": "Что традиционно делают под веточкой омелы?",
+      "en": "What do people traditionally do under a sprig of mistletoe?"
+    },
+    "Wie heißt das Gebäck, das man zu Weihnachten oft mit Puderzucker bestreut?": {
+      "ru": "Как называется выпечка, которую на Рождество часто посыпают сахарной пудрой?",
+      "en": "What is the pastry often dusted with icing sugar at Christmas called?"
+    },
+    "Wann beginnt die Adventszeit?": {
+      "ru": "Когда начинается время Адвента?",
+      "en": "When does the Advent season begin?"
+    },
+    "Was findet man hinter den Türchen eines Adventskalenders?": {
+      "ru": "Что находится за дверцами адвент-календаря?",
+      "en": "What do you find behind the doors of an Advent calendar?"
+    },
+    "Welches Gebäck hat oft die Form von Herzen und wird mit Zuckerguss verziert?": {
+      "ru": "Какая выпечка часто бывает в форме сердечек и украшена глазурью?",
+      "en": "Which pastry is often heart-shaped and decorated with icing?"
+    },
+    "Wann ist die Bescherung in Deutschland meistens?": {
+      "ru": "Когда в Германии обычно дарят подарки?",
+      "en": "When is the gift-giving in Germany usually?"
+    },
+    "Was gehört NICHT zum Adventskranz?": {
+      "ru": "Что НЕ относится к рождественскому венку?",
+      "en": "What does NOT belong to the Advent wreath?"
+    },
+    "Welches Tier ist Rudolf?": {
+      "ru": "Какое животное Рудольф?",
+      "en": "What animal is Rudolph?"
+    },
+    "Was macht man bei der Bescherung?": {
+      "ru": "Что делают во время раздачи подарков?",
+      "en": "What do you do during the gift-giving?"
+    },
+    "Was ist „Lametta“?": {
+      "ru": "Что такое «Lametta»?",
+      "en": "What is “Lametta”?"
+    },
+    "Welches Getränk ist auf dem Weihnachtsmarkt warm und alkoholfrei?": {
+      "ru": "Какой напиток на рождественской ярмарке горячий и безалкогольный?",
+      "en": "Which drink at the Christmas market is hot and alcohol-free?"
+    },
+    "Wer bringt in manchen Regionen statt des Weihnachtsmanns die Geschenke?": {
+      "ru": "Кто в некоторых регионах приносит подарки вместо Деда Мороза?",
+      "en": "Who brings the presents instead of Santa Claus in some regions?"
+    },
+    "Was hängen Kinder in England und in den USA an den Kamin?": {
+      "ru": "Что дети в Англии и США вешают над камином?",
+      "en": "What do children in England and the USA hang on the fireplace?"
+    },
+    "Am 24. Dezember feiern viele Familien in Deutschland Weihnachten. Die Kinder warten auf den Weihnachtsmann. Am Abend werden Geschenke geöffnet, Lichter brennen und es gibt leckeres Essen.": {
+      "ru": "24 декабря многие семьи в Германии празднуют Рождество. Дети ждут Деда Мороза. Вечером открывают подарки, горят огоньки и подают вкусную еду.",
+      "en": "On 24 December many families in Germany celebrate Christmas. The children wait for Santa Claus. In the evening presents are opened, lights shine and there is delicious food."
+    },
+    "Wann feiern die meisten Familien in Deutschland Weihnachten?": {
+      "ru": "Когда большинство семей в Германии празднуют Рождество?",
+      "en": "When do most families in Germany celebrate Christmas?"
+    },
+    "Wer bringt die Geschenke?": {
+      "ru": "Кто приносит подарки?",
+      "en": "Who brings the presents?"
+    },
+    "Was machen die Kinder am Abend?": {
+      "ru": "Что делают дети вечером?",
+      "en": "What do the children do in the evening?"
+    },
+    "Was gibt es am Abend?": {
+      "ru": "Что бывает вечером?",
+      "en": "What is there in the evening?"
+    },
+    "Wie ist die Stimmung am Weihnachtsabend?": {
+      "ru": "Какое настроение в рождественский вечер?",
+      "en": "What is the mood like on Christmas Eve?"
+    },
+    "Im Dezember gibt es in fast jeder Stadt in Deutschland einen Weihnachtsmarkt. Dort kann man Glühwein trinken, Plätzchen essen und Geschenke kaufen. Es duftet nach Zimt und Vanille, und überall leuchten Lichter.": {
+      "ru": "В декабре почти в каждом городе Германии есть рождественская ярмарка. Там можно выпить глинтвейна, поесть печенья и купить подарки. Пахнет корицей и ванилью, и повсюду горят огни.",
+      "en": "In December almost every town in Germany has a Christmas market. There you can drink mulled wine, eat biscuits and buy presents. It smells of cinnamon and vanilla, and lights shine everywhere."
+    },
+    "Wann findet der Weihnachtsmarkt statt?": {
+      "ru": "Когда проходит рождественская ярмарка?",
+      "en": "When does the Christmas market take place?"
+    },
+    "Was kann man auf dem Weihnachtsmarkt trinken?": {
+      "ru": "Что можно выпить на рождественской ярмарке?",
+      "en": "What can you drink at the Christmas market?"
+    },
+    "Wonach duftet es auf dem Weihnachtsmarkt?": {
+      "ru": "Чем пахнет на рождественской ярмарке?",
+      "en": "What does the Christmas market smell of?"
+    },
+    "Was kann man dort kaufen?": {
+      "ru": "Что там можно купить?",
+      "en": "What can you buy there?"
+    },
+    "Wie sieht der Markt aus?": {
+      "ru": "Как выглядит ярмарка?",
+      "en": "What does the market look like?"
+    },
+    "Ein Adventskranz hat vier Kerzen. Jeden Sonntag vor Weihnachten wird eine Kerze angezündet. Wenn alle vier Kerzen brennen, ist bald Heiligabend.": {
+      "ru": "У рождественского венка четыре свечи. Каждое воскресенье перед Рождеством зажигают одну свечу. Когда горят все четыре свечи, скоро Сочельник.",
+      "en": "An Advent wreath has four candles. Every Sunday before Christmas one candle is lit. When all four candles are burning, Christmas Eve is near."
+    },
+    "Wie viele Kerzen hat ein Adventskranz?": {
+      "ru": "Сколько свечей у рождественского венка?",
+      "en": "How many candles does an Advent wreath have?"
+    },
+    "Wann zündet man die Kerzen an?": {
+      "ru": "Когда зажигают свечи?",
+      "en": "When do you light the candles?"
+    },
+    "Was zeigt der Adventskranz?": {
+      "ru": "Что показывает рождественский венок?",
+      "en": "What does the Advent wreath show?"
+    },
+    "Was bedeutet es, wenn alle vier Kerzen brennen?": {
+      "ru": "Что значит, если горят все четыре свечи?",
+      "en": "What does it mean when all four candles are burning?"
+    },
+    "Was macht man am Sonntag im Advent?": {
+      "ru": "Что делают в воскресенье во время Адвента?",
+      "en": "What do you do on a Sunday in Advent?"
+    },
+    "Am 6. Dezember kommt der Nikolaus. Kinder stellen ihre Schuhe vor die Tür. Wenn sie brav waren, finden sie am Morgen Süßigkeiten darin. Wenn nicht, bekommen sie eine Rute.": {
+      "ru": "6 декабря приходит Николаус. Дети ставят свою обувь за дверь. Если они хорошо себя вели, утром находят в ней сладости. Если нет, получают розгу.",
+      "en": "On 6 December Saint Nicholas comes. Children put their shoes outside the door. If they were good, they find sweets in them in the morning. If not, they get a rod."
+    },
+    "Wann kommt der Nikolaus?": {
+      "ru": "Когда приходит Николаус?",
+      "en": "When does Saint Nicholas come?"
+    },
+    "Was stellen die Kinder vor die Tür?": {
+      "ru": "Что дети ставят за дверь?",
+      "en": "What do the children put outside the door?"
+    },
+    "Was finden brave Kinder am Morgen?": {
+      "ru": "Что находят утром послушные дети?",
+      "en": "What do good children find in the morning?"
+    },
+    "Was bekommen unartige Kinder?": {
+      "ru": "Что получают непослушные дети?",
+      "en": "What do naughty children get?"
+    },
+    "Wer bringt am 6. Dezember die Süßigkeiten?": {
+      "ru": "Кто приносит сладости 6 декабря?",
+      "en": "Who brings the sweets on 6 December?"
+    },
+    "Am 31. Dezember feiern die Menschen in Deutschland Silvester. Viele treffen sich mit Freunden, essen Raclette oder Fondue und schauen Feuerwerk. Um Mitternacht stoßen alle mit Sekt an und wünschen sich ein gutes neues Jahr.": {
+      "ru": "31 декабря люди в Германии празднуют Сильвестр. Многие встречаются с друзьями, едят раклет или фондю и смотрят фейерверк. В полночь все чокаются игристым вином и желают друг другу счастливого Нового года.",
+      "en": "On 31 December people in Germany celebrate New Year’s Eve. Many meet friends, eat raclette or fondue and watch fireworks. At midnight everyone toasts with sparkling wine and wishes each other a happy new year."
+    },
+    "Wann ist Silvester in Deutschland?": {
+      "ru": "Когда в Германии Сильвестр?",
+      "en": "When is New Year’s Eve in Germany?"
+    },
+    "Was essen viele Menschen an Silvester?": {
+      "ru": "Что едят многие люди на Сильвестр?",
+      "en": "What do many people eat on New Year’s Eve?"
+    },
+    "Was machen die Menschen um Mitternacht?": {
+      "ru": "Что делают люди в полночь?",
+      "en": "What do people do at midnight?"
+    },
+    "Was wünschen sich die Leute?": {
+      "ru": "Что люди желают друг другу?",
+      "en": "What do people wish each other?"
+    },
+    "Wie ist die Stimmung an Silvester?": {
+      "ru": "Какое настроение на Сильвестр?",
+      "en": "What is the mood like on New Year’s Eve?"
+    },
+    "Am 1. Januar ist Neujahr. Viele Menschen schlafen lange, weil sie in der Nacht gefeiert haben. Es ist ein ruhiger Tag mit Familie, Spaziergängen und gutem Essen. Manche schreiben gute Vorsätze für das neue Jahr auf.": {
+      "ru": "1 января Новый год. Многие спят долго, потому что праздновали ночью. Это спокойный день с семьёй, прогулками и вкусной едой. Некоторые записывают планы на новый год.",
+      "en": "On 1 January it is New Year’s Day. Many people sleep late because they celebrated at night. It is a quiet day with family, walks and good food. Some write down resolutions for the new year."
+    },
+    "Wann ist Neujahr?": {
+      "ru": "Когда Новый год?",
+      "en": "When is New Year’s Day?"
+    },
+    "Warum schlafen viele Menschen lange?": {
+      "ru": "Почему многие люди спят долго?",
+      "en": "Why do many people sleep late?"
+    },
+    "Mit wem verbringt man oft den Neujahrstag?": {
+      "ru": "С кем часто проводят первый день года?",
+      "en": "Who do people often spend New Year’s Day with?"
+    },
+    "Was machen manche Menschen an Neujahr?": {
+      "ru": "Что делают некоторые люди в Новый год?",
+      "en": "What do some people do on New Year’s Day?"
+    },
+    "Wie ist der Tag meistens?": {
+      "ru": "Какой обычно этот день?",
+      "en": "What is the day usually like?"
+    },
+    "Viele Menschen nehmen sich für das neue Jahr etwas vor. Zum Beispiel: mehr Sport machen, gesünder essen oder weniger Zeit am Handy verbringen. Doch oft halten die Vorsätze nur ein paar Wochen.": {
+      "ru": "Многие люди что-то обещают себе на новый год. Например: больше заниматься спортом, есть здоровее или меньше сидеть в телефоне. Но часто такие обещания держатся всего несколько недель.",
+      "en": "Many people make plans for the new year. For example: do more sport, eat healthier or spend less time on their phone. But resolutions often last only a few weeks."
+    },
+    "Was machen viele Menschen zu Neujahr?": {
+      "ru": "Что делают многие люди на Новый год?",
+      "en": "What do many people do at New Year?"
+    },
+    "Was ist ein typischer Vorsatz?": {
+      "ru": "Какое обещание себе типично?",
+      "en": "What is a typical resolution?"
+    },
+    "Wie lange halten viele Vorsätze?": {
+      "ru": "Сколько держатся многие обещания?",
+      "en": "How long do many resolutions last?"
+    },
+    "Welcher Vorsatz steht auch im Text?": {
+      "ru": "Какое обещание тоже есть в тексте?",
+      "en": "Which resolution is also in the text?"
+    },
+    "Was wollen manche weniger tun?": {
+      "ru": "Что некоторые хотят делать меньше?",
+      "en": "What do some people want to do less?"
+    },
+    "Am 6. Januar feiern viele Menschen in Deutschland den Tag der Heiligen Drei Könige. Kinder verkleiden sich als Könige, singen Lieder und sammeln Geld für arme Kinder. Sie schreiben mit Kreide den Segen an die Haustüren.": {
+      "ru": "6 января многие в Германии празднуют день Трёх королей. Дети наряжаются королями, поют песни и собирают деньги для бедных детей. Мелом они пишут благословение на дверях домов.",
+      "en": "On 6 January many people in Germany celebrate the Day of the Three Kings. Children dress up as kings, sing songs and collect money for poor children. They write a blessing on the front doors with chalk."
+    },
+    "Wann ist der Tag der Heiligen Drei Könige?": {
+      "ru": "Когда день Трёх королей?",
+      "en": "When is the Day of the Three Kings?"
+    },
+    "Was machen die Kinder an diesem Tag?": {
+      "ru": "Что делают дети в этот день?",
+      "en": "What do the children do on this day?"
+    },
+    "Wofür sammeln die Kinder Geld?": {
+      "ru": "На что дети собирают деньги?",
+      "en": "What do the children collect money for?"
+    },
+    "Was schreiben sie an die Türen?": {
+      "ru": "Что они пишут на дверях?",
+      "en": "What do they write on the doors?"
+    },
+    "Wie verkleiden sich die Kinder?": {
+      "ru": "Кем наряжаются дети?",
+      "en": "What do the children dress up as?"
+    },
+    "In einer alten Burg in Deutschland bereiten sich die Dorfbewohner auf Silvester vor. Doch in dieser Nacht soll der Geist des alten Ritters erscheinen! Die Menschen schmücken den Saal mit Kerzen und hoffen, dass der Geist freundlich ist.": {
+      "ru": "В старом замке в Германии жители деревни готовятся к Сильвестру. Но этой ночью должен появиться призрак старого рыцаря! Люди украшают зал свечами и надеются, что призрак будет добрым.",
+      "en": "In an old castle in Germany the villagers are preparing for New Year’s Eve. But tonight the ghost of the old knight is supposed to appear! The people decorate the hall with candles and hope that the ghost is friendly."
+    },
+    "Wo spielt die Geschichte?": {
+      "ru": "Где происходит история?",
+      "en": "Where does the story take place?"
+    },
+    "Was feiern die Dorfbewohner?": {
+      "ru": "Что празднуют жители деревни?",
+      "en": "What are the villagers celebrating?"
+    },
+    "Wer soll in der Nacht erscheinen?": {
+      "ru": "Кто должен появиться ночью?",
+      "en": "Who is supposed to appear at night?"
+    },
+    "Womit schmücken die Menschen den Saal?": {
+      "ru": "Чем люди украшают зал?",
+      "en": "What do the people decorate the hall with?"
+    },
+    "Was hoffen die Menschen?": {
+      "ru": "На что надеются люди?",
+      "en": "What do the people hope?"
+    },
+    "Als die Uhr Mitternacht schlägt, wird es still. Ein kalter Wind weht durch den Saal. Plötzlich erscheint eine helle Gestalt: der Geist des Ritters! Er lächelt und sagt: „Fürchtet euch nicht. Ich wünsche euch ein gutes neues Jahr!“": {
+      "ru": "Когда часы бьют полночь, становится тихо. По залу дует холодный ветер. Вдруг появляется светлая фигура: призрак рыцаря! Он улыбается и говорит: «Не бойтесь. Желаю вам счастливого Нового года!»",
+      "en": "When the clock strikes midnight, it becomes quiet. A cold wind blows through the hall. Suddenly a bright figure appears: the ghost of the knight! He smiles and says: “Do not be afraid. I wish you a happy new year!”"
+    },
+    "Was passiert, wenn die Uhr Mitternacht schlägt?": {
+      "ru": "Что происходит, когда часы бьют полночь?",
+      "en": "What happens when the clock strikes midnight?"
+    },
+    "Was weht durch den Saal?": {
+      "ru": "Что дует по залу?",
+      "en": "What blows through the hall?"
+    },
+    "Wer erscheint plötzlich?": {
+      "ru": "Кто вдруг появляется?",
+      "en": "Who suddenly appears?"
+    },
+    "Was sagt der Geist?": {
+      "ru": "Что говорит призрак?",
+      "en": "What does the ghost say?"
+    },
+    "Wie ist der Geist?": {
+      "ru": "Какой призрак?",
+      "en": "What is the ghost like?"
+    },
+    "Draußen beginnt das Feuerwerk. Rote, blaue und goldene Lichter füllen den Himmel. Der Geist schaut hinauf und lacht. „So schön habe ich es seit hundert Jahren nicht gesehen“, sagt er. Die Menschen feiern mit Freude weiter.": {
+      "ru": "На улице начинается фейерверк. Красные, синие и золотые огни наполняют небо. Призрак смотрит вверх и смеётся. «Такой красоты я не видел сто лет», говорит он. Люди радостно празднуют дальше.",
+      "en": "Outside the fireworks begin. Red, blue and golden lights fill the sky. The ghost looks up and laughs. “I have not seen anything so beautiful for a hundred years,” he says. The people happily keep celebrating."
+    },
+    "Was passiert draußen?": {
+      "ru": "Что происходит на улице?",
+      "en": "What is happening outside?"
+    },
+    "Welche Farben sieht man am Himmel?": {
+      "ru": "Какие цвета видно на небе?",
+      "en": "Which colours can you see in the sky?"
+    },
+    "Wie reagiert der Geist?": {
+      "ru": "Как реагирует призрак?",
+      "en": "How does the ghost react?"
+    },
+    "Wie lange hat der Geist so etwas nicht gesehen?": {
+      "ru": "Сколько лет призрак не видел ничего подобного?",
+      "en": "How long has the ghost not seen anything like this?"
+    },
+    "Wie fühlen sich die Menschen?": {
+      "ru": "Как чувствуют себя люди?",
+      "en": "How do the people feel?"
+    },
+    "Am Morgen ist der Geist verschwunden. Doch im Saal liegt ein goldenes Licht. Die Dorfbewohner glauben, dass es ein Zeichen für Glück im neuen Jahr ist. Seitdem feiern sie jedes Jahr Silvester in der alten Burg und denken an den freundlichen Ritter.": {
+      "ru": "Утром призрак исчез. Но в зале лежит золотой свет. Жители деревни верят, что это знак счастья в новом году. С тех пор они каждый год празднуют Сильвестр в старом замке и вспоминают доброго рыцаря.",
+      "en": "In the morning the ghost has disappeared. But a golden light lies in the hall. The villagers believe it is a sign of luck in the new year. Since then they celebrate New Year’s Eve in the old castle every year and remember the friendly knight."
+    },
+    "Was finden die Dorfbewohner am Morgen?": {
+      "ru": "Что находят жители деревни утром?",
+      "en": "What do the villagers find in the morning?"
+    },
+    "Was glauben die Menschen?": {
+      "ru": "Во что верят люди?",
+      "en": "What do the people believe?"
+    },
+    "Wo feiern die Dorfbewohner seitdem?": {
+      "ru": "Где жители деревни празднуют с тех пор?",
+      "en": "Where have the villagers celebrated since then?"
+    },
+    "An wen denken sie jedes Jahr?": {
+      "ru": "О ком они вспоминают каждый год?",
+      "en": "Who do they remember every year?"
+    },
+    "Wie ist die Stimmung am Ende?": {
+      "ru": "Какое настроение в конце?",
+      "en": "What is the mood like at the end?"
+    },
+    "Am letzten Tag des Jahres liegt der Zauberwald still unter Schnee. Die Tiere schlafen, und nur der Wind flüstert durch die Bäume. Eine kleine Eule wacht und schaut auf den hellen Mond. Sie spürt, dass heute etwas Besonderes passieren wird.": {
+      "ru": "В последний день года волшебный лес тихо лежит под снегом. Звери спят, и только ветер шепчет среди деревьев. Маленькая сова не спит и смотрит на яркую луну. Она чувствует, что сегодня случится что-то особенное.",
+      "en": "On the last day of the year the magic forest lies quietly under the snow. The animals are asleep, and only the wind whispers through the trees. A little owl is awake and looks at the bright moon. She feels that something special will happen today."
+    },
+    "Wie ist der Zauberwald am letzten Tag des Jahres?": {
+      "ru": "Какой волшебный лес в последний день года?",
+      "en": "What is the magic forest like on the last day of the year?"
+    },
+    "Was machen die Tiere?": {
+      "ru": "Что делают звери?",
+      "en": "What are the animals doing?"
+    },
+    "Was flüstert durch die Bäume?": {
+      "ru": "Что шепчет среди деревьев?",
+      "en": "What whispers through the trees?"
+    },
+    "Wer ist noch wach?": {
+      "ru": "Кто ещё не спит?",
+      "en": "Who is still awake?"
+    },
+    "Was spürt die Eule?": {
+      "ru": "Что чувствует сова?",
+      "en": "What does the owl feel?"
+    },
+    "Plötzlich sieht die Eule ein goldenes Licht zwischen den Tannen. Es bewegt sich langsam, als würde es tanzen. Neugierig fliegt sie näher und entdeckt kleine Elfen, die das neue Jahr begrüßen. Sie singen und malen Sterne in die Luft.": {
+      "ru": "Вдруг сова видит золотой свет среди ёлок. Он медленно движется, будто танцует. Сова с любопытством подлетает ближе и находит маленьких эльфов, которые встречают Новый год. Они поют и рисуют звёзды в воздухе.",
+      "en": "Suddenly the owl sees a golden light between the fir trees. It moves slowly, as if it were dancing. Curious, she flies closer and discovers little elves welcoming the new year. They sing and paint stars in the air."
+    },
+    "Was sieht die Eule zwischen den Tannen?": {
+      "ru": "Что сова видит среди ёлок?",
+      "en": "What does the owl see between the fir trees?"
+    },
+    "Wie bewegt sich das Licht?": {
+      "ru": "Как движется свет?",
+      "en": "How does the light move?"
+    },
+    "Wer feiert das neue Jahr?": {
+      "ru": "Кто празднует Новый год?",
+      "en": "Who is celebrating the new year?"
+    },
+    "Was machen die Elfen?": {
+      "ru": "Что делают эльфы?",
+      "en": "What are the elves doing?"
+    },
+    "Wie fühlt sich die Eule, als sie das sieht?": {
+      "ru": "Что чувствует сова, когда видит это?",
+      "en": "How does the owl feel when she sees this?"
+    },
+    "Die Eule schließt die Augen und wünscht sich, dass der Wald im neuen Jahr voller Frieden bleibt. Eine kleine Fee hört ihren Wunsch und lächelt. Sie streut funkelnden Staub über die Eule, und der ganze Wald leuchtet kurz in goldenem Glanz.": {
+      "ru": "Сова закрывает глаза и желает, чтобы в новом году в лесу был мир. Маленькая фея слышит её желание и улыбается. Она посыпает сову сверкающей пыльцой, и весь лес на миг светится золотым сиянием.",
+      "en": "The owl closes her eyes and wishes that the forest stays full of peace in the new year. A little fairy hears her wish and smiles. She sprinkles sparkling dust over the owl, and the whole forest glows golden for a moment."
+    },
+    "Was wünscht sich die Eule?": {
+      "ru": "Чего желает сова?",
+      "en": "What does the owl wish for?"
+    },
+    "Wer hört den Wunsch der Eule?": {
+      "ru": "Кто слышит желание совы?",
+      "en": "Who hears the owl’s wish?"
+    },
+    "Was macht die Fee?": {
+      "ru": "Что делает фея?",
+      "en": "What does the fairy do?"
+    },
+    "Wie sieht der Wald danach aus?": {
+      "ru": "Как выглядит лес после этого?",
+      "en": "What does the forest look like afterwards?"
+    },
+    "Was macht die Eule, bevor sie sich etwas wünscht?": {
+      "ru": "Что делает сова, прежде чем загадать желание?",
+      "en": "What does the owl do before she makes a wish?"
+    },
+    "Als der erste Morgen des neuen Jahres kommt, funkelt der Schnee in allen Farben. Die Tiere wachen auf und hören das Lachen der Elfen. Die Eule denkt: ‚Ein neues Jahr voller Zauber und Freundschaft hat begonnen.‘ Und der Wald atmet leise vor Glück.": {
+      "ru": "Когда наступает первое утро нового года, снег сверкает всеми цветами. Звери просыпаются и слышат смех эльфов. Сова думает: «Начался новый год, полный волшебства и дружбы». И лес тихо дышит от счастья.",
+      "en": "When the first morning of the new year comes, the snow sparkles in all colours. The animals wake up and hear the elves laughing. The owl thinks: “A new year full of magic and friendship has begun.” And the forest breathes softly with happiness."
+    },
+    "Wann spielt dieser Teil der Geschichte?": {
+      "ru": "Когда происходит эта часть истории?",
+      "en": "When does this part of the story take place?"
+    },
+    "Wie sieht der Schnee am Morgen aus?": {
+      "ru": "Как выглядит снег утром?",
+      "en": "What does the snow look like in the morning?"
+    },
+    "Was machen die Tiere, als der Morgen kommt?": {
+      "ru": "Что делают звери, когда наступает утро?",
+      "en": "What do the animals do when morning comes?"
+    },
+    "Was denkt die Eule?": {
+      "ru": "О чём думает сова?",
+      "en": "What does the owl think?"
+    },
+    "Wie ist die Stimmung am Ende der Geschichte?": {
+      "ru": "Какое настроение в конце истории?",
+      "en": "What is the mood like at the end of the story?"
+    },
+    "In Deutschland dauern die Weihnachtsferien meist zwei Wochen. Viele Familien fahren in die Berge oder besuchen Verwandte. Manche Kinder bleiben zu Hause, spielen im Schnee oder sehen Filme. Es ist eine Zeit zum Ausruhen und Spaß haben.": {
+      "ru": "В Германии рождественские каникулы обычно длятся две недели. Многие семьи едут в горы или навещают родственников. Некоторые дети остаются дома, играют в снегу или смотрят фильмы. Это время, чтобы отдохнуть и повеселиться.",
+      "en": "In Germany the Christmas holidays usually last two weeks. Many families go to the mountains or visit relatives. Some children stay at home, play in the snow or watch films. It is a time to rest and have fun."
+    },
+    "Wie lange dauern die Weihnachtsferien meistens?": {
+      "ru": "Сколько обычно длятся рождественские каникулы?",
+      "en": "How long do the Christmas holidays usually last?"
+    },
+    "Wohin fahren viele Familien in den Ferien?": {
+      "ru": "Куда многие семьи едут на каникулах?",
+      "en": "Where do many families go during the holidays?"
+    },
+    "Was machen Kinder, die zu Hause bleiben?": {
+      "ru": "Что делают дети, которые остаются дома?",
+      "en": "What do children who stay at home do?"
+    },
+    "Wie ist die Stimmung in den Ferien?": {
+      "ru": "Какое настроение на каникулах?",
+      "en": "What is the mood like during the holidays?"
+    },
+    "Was ist typisch für Winterferien?": {
+      "ru": "Что типично для зимних каникул?",
+      "en": "What is typical for the winter holidays?"
+    },
+    "Lena fährt mit ihrer Familie in den Schwarzwald. Sie bauen einen Schneemann und fahren Schlitten. Am Nachmittag trinken sie heißen Kakao und essen Kekse. Abends sehen sie einen Film und spielen Karten. Es ist ein perfekter Wintertag.": {
+      "ru": "Лена едет с семьёй в Шварцвальд. Они лепят снеговика и катаются на санках. Днём они пьют горячее какао и едят печенье. Вечером смотрят фильм и играют в карты. Это идеальный зимний день.",
+      "en": "Lena goes to the Black Forest with her family. They build a snowman and go sledging. In the afternoon they drink hot cocoa and eat biscuits. In the evening they watch a film and play cards. It is a perfect winter day."
+    },
+    "Wohin fährt Lena mit ihrer Familie?": {
+      "ru": "Куда Лена едет с семьёй?",
+      "en": "Where does Lena go with her family?"
+    },
+    "Was machen sie im Schnee?": {
+      "ru": "Что они делают на снегу?",
+      "en": "What do they do in the snow?"
+    },
+    "Was trinken sie am Nachmittag?": {
+      "ru": "Что они пьют днём?",
+      "en": "What do they drink in the afternoon?"
+    },
+    "Was machen sie am Abend?": {
+      "ru": "Что они делают вечером?",
+      "en": "What do they do in the evening?"
+    },
+    "Wie ist der Tag für Lena?": {
+      "ru": "Какой этот день для Лены?",
+      "en": "What is the day like for Lena?"
+    },
+    "Nach den Ferien beginnt wieder die Schule. Die Schüler erzählen, was sie erlebt haben. Manche zeigen Fotos, andere berichten von Reisen oder vom Schnee zu Hause. Die Lehrer freuen sich, alle wiederzusehen.": {
+      "ru": "После каникул снова начинается школа. Ученики рассказывают, что с ними было. Одни показывают фото, другие рассказывают о поездках или о снеге дома. Учителя рады снова всех видеть.",
+      "en": "After the holidays school starts again. The pupils tell what they experienced. Some show photos, others talk about trips or about the snow at home. The teachers are happy to see everyone again."
+    },
+    "Was beginnt nach den Winterferien?": {
+      "ru": "Что начинается после зимних каникул?",
+      "en": "What starts after the winter holidays?"
+    },
+    "Was machen die Schüler am ersten Tag?": {
+      "ru": "Что делают ученики в первый день?",
+      "en": "What do the pupils do on the first day?"
+    },
+    "Was zeigen manche Schüler?": {
+      "ru": "Что показывают некоторые ученики?",
+      "en": "What do some pupils show?"
+    },
+    "Worüber sprechen die Kinder?": {
+      "ru": "О чём говорят дети?",
+      "en": "What do the children talk about?"
+    },
+    "Wie reagieren die Lehrer?": {
+      "ru": "Как реагируют учителя?",
+      "en": "How do the teachers react?"
+    },
+    "In der ersten Schulwoche schreiben viele Schüler ihre Vorsätze auf: mehr lernen, pünktlich sein oder netter zu anderen sein. Auch Lehrer planen Neues: Projekte, Ausflüge und spannende Themen. Alle hoffen auf ein gutes neues Jahr.": {
+      "ru": "В первую учебную неделю многие ученики записывают свои планы: больше учиться, быть пунктуальными или добрее к другим. Учителя тоже планируют новое: проекты, экскурсии и интересные темы. Все надеются на хороший новый год.",
+      "en": "In the first week of school many pupils write down their resolutions: study more, be on time or be kinder to others. The teachers also plan new things: projects, trips and exciting topics. Everyone hopes for a good new year."
+    },
+    "Was schreiben viele Schüler in der ersten Woche auf?": {
+      "ru": "Что многие ученики записывают в первую неделю?",
+      "en": "What do many pupils write down in the first week?"
+    },
+    "Was wollen viele Schüler tun?": {
+      "ru": "Что хотят делать многие ученики?",
+      "en": "What do many pupils want to do?"
+    },
+    "Was planen die Lehrer?": {
+      "ru": "Что планируют учителя?",
+      "en": "What do the teachers plan?"
+    },
+    "Was hoffen alle?": {
+      "ru": "На что надеются все?",
+      "en": "What does everyone hope for?"
+    },
+    "Wie ist die Stimmung zu Beginn des Jahres?": {
+      "ru": "Какое настроение в начале года?",
+      "en": "What is the mood like at the start of the year?"
+    },
+    "Am 31. Dezember feiern die Menschen ___.": {
+      "ru": "31 декабря люди празднуют ___.",
+      "en": "On 31 December people celebrate ___."
+    },
+    "Um Mitternacht sieht man am Himmel buntes ___.": {
+      "ru": "В полночь в небе видно разноцветный ___.",
+      "en": "At midnight you can see colourful ___ in the sky."
+    },
+    "Viele Menschen stoßen mit ___ an.": {
+      "ru": "Многие люди чокаются ___.",
+      "en": "Many people toast with ___."
+    },
+    "Am Neujahrstag wünschen sich alle ein ___ neues Jahr.": {
+      "ru": "В первый день года все желают друг другу ___ нового года.",
+      "en": "On New Year’s Day everyone wishes each other a ___ new year."
+    },
+    "Im Winter tragen die Leute warme ___ und Mützen.": {
+      "ru": "Зимой люди носят тёплые ___ и шапки.",
+      "en": "In winter people wear warm ___ and hats."
+    },
+    "Im Winter liegt auf den Straßen viel ___.": {
+      "ru": "Зимой на улицах лежит много ___.",
+      "en": "In winter there is a lot of ___ on the streets."
+    },
+    "Kinder fahren gern mit dem ___ den Hügel hinunter.": {
+      "ru": "Дети любят кататься с горки на ___.",
+      "en": "Children love riding down the hill on the ___."
+    },
+    "Viele Menschen machen zu Neujahr gute ___.": {
+      "ru": "На Новый год многие дают себе хорошие ___.",
+      "en": "At New Year many people make good ___."
+    },
+    "Am 24. Dezember steht der geschmückte ___ im Wohnzimmer.": {
+      "ru": "24 декабря в гостиной стоит наряженная ___.",
+      "en": "On 24 December the decorated ___ stands in the living room."
+    },
+    "Die Kinder bekommen viele ___ zu Weihnachten.": {
+      "ru": "На Рождество дети получают много ___.",
+      "en": "Children get lots of ___ at Christmas."
+    },
+    "Der Weihnachtsmann trägt einen ___ Mantel.": {
+      "ru": "Дед Мороз носит ___ шубу.",
+      "en": "Santa Claus wears a ___ coat."
+    },
+    "Auf dem Tisch stehen vier ___ vom Adventskranz.": {
+      "ru": "На столе стоят четыре ___ с рождественского венка.",
+      "en": "There are four ___ from the Advent wreath on the table."
+    },
+    "Die Familie ___ zusammen Weihnachtslieder.": {
+      "ru": "Семья вместе ___ рождественские песни.",
+      "en": "The family ___ Christmas songs together."
+    },
+    "Es ist kalt, und draußen fällt ___.": {
+      "ru": "Холодно, и на улице идёт ___.",
+      "en": "It is cold, and ___ is falling outside."
+    },
+    "Zu Weihnachten backt die Familie süße ___.": {
+      "ru": "На Рождество семья печёт сладкое ___.",
+      "en": "At Christmas the family bakes sweet ___."
+    },
+    "Die Kinder hängen bunte ___ an den Baum.": {
+      "ru": "Дети вешают на ёлку разноцветные ___.",
+      "en": "The children hang colourful ___ on the tree."
+    },
+    "Vor Silvester kaufen viele Leute ___ für das Feuerwerk.": {
+      "ru": "Перед Сильвестром многие покупают ___ для фейерверка.",
+      "en": "Before New Year’s Eve many people buy ___ for the fireworks."
+    },
+    "Die Familie deckt den Tisch und stellt viele ___ darauf.": {
+      "ru": "Семья накрывает на стол и ставит на него много ___.",
+      "en": "The family sets the table and puts lots of ___ on it."
+    },
+    "Viele Menschen tragen an Silvester elegante ___.": {
+      "ru": "На Сильвестр многие надевают элегантную ___.",
+      "en": "On New Year’s Eve many people wear elegant ___."
+    },
+    "Die Kinder helfen, den Tisch mit ___ zu schmücken.": {
+      "ru": "Дети помогают украсить стол ___.",
+      "en": "The children help decorate the table with ___."
+    },
+    "In der Küche riecht es nach leckerem ___.": {
+      "ru": "На кухне пахнет вкусной ___.",
+      "en": "The kitchen smells of delicious ___."
+    },
+    "Um Mitternacht zündet der Vater die ersten ___ an.": {
+      "ru": "В полночь папа зажигает первые ___.",
+      "en": "At midnight dad lights the first ___."
+    },
+    "Alle sind fröhlich und warten auf ___.": {
+      "ru": "Все весёлые и ждут ___.",
+      "en": "Everyone is cheerful and waiting for ___."
+    },
+    "Die Mutter legt Süßigkeiten und kleine ___ auf den Tisch.": {
+      "ru": "Мама кладёт на стол сладости и маленькие ___.",
+      "en": "Mum puts sweets and small ___ on the table."
+    },
+    "Um Mitternacht hört man überall lautes ___.": {
+      "ru": "В полночь повсюду слышен громкий ___.",
+      "en": "At midnight you can hear loud ___ everywhere."
+    },
+    "Die Menschen umarmen sich und sagen ___.": {
+      "ru": "Люди обнимаются и говорят ___.",
+      "en": "People hug each other and say ___."
+    },
+    "Viele Nachbarn kommen auf die Straße und ___ zusammen.": {
+      "ru": "Многие соседи выходят на улицу и вместе ___.",
+      "en": "Many neighbours come out into the street and ___ together."
+    },
+    "Am Himmel sieht man bunte ___.": {
+      "ru": "В небе видно разноцветные ___.",
+      "en": "You can see colourful ___ in the sky."
+    },
+    "Die Kinder lachen und schauen das Feuerwerk aus dem ___.": {
+      "ru": "Дети смеются и смотрят фейерверк из ___.",
+      "en": "The children laugh and watch the fireworks from the ___."
+    },
+    "Im Radio läuft fröhliche ___.": {
+      "ru": "По радио играет весёлая ___.",
+      "en": "Cheerful ___ is playing on the radio."
+    },
+    "Manche Leute machen Fotos vom bunten ___ am Himmel.": {
+      "ru": "Некоторые фотографируют разноцветный ___ в небе.",
+      "en": "Some people take photos of the colourful ___ in the sky."
+    },
+    "Nach Mitternacht wünschen sich alle ein frohes neues ___.": {
+      "ru": "После полуночи все желают друг другу счастливого нового ___.",
+      "en": "After midnight everyone wishes each other a happy new ___."
+    },
+    "In Deutschland sieht man an Silvester überall buntes ___.": {
+      "ru": "На Сильвестр в Германии повсюду видно разноцветный ___.",
+      "en": "On New Year’s Eve in Germany you see colourful ___ everywhere."
+    },
+    "Viele essen zu Mitternacht Glücksbringer aus ___.": {
+      "ru": "В полночь многие едят талисманы на удачу из ___.",
+      "en": "At midnight many people eat lucky charms made of ___."
+    },
+    "Ein typisches Gericht an Silvester ist ___.": {
+      "ru": "Типичное блюдо на Сильвестр: ___.",
+      "en": "A typical dish on New Year’s Eve is ___."
+    },
+    "Um Mitternacht stoßen Freunde und Familie mit ___ an.": {
+      "ru": "В полночь друзья и семья чокаются ___.",
+      "en": "At midnight friends and family toast with ___."
+    },
+    "Ein altes Ritual ist das Bleigießen: Man gießt heißes Blei in kaltes ___.": {
+      "ru": "Старый обычай: гадание на свинце. Горячий свинец льют в холодную ___.",
+      "en": "An old custom is lead pouring: you pour hot lead into cold ___."
+    },
+    "Was das Blei zeigt, soll Glück oder ___ im neuen Jahr bedeuten.": {
+      "ru": "Фигура из свинца должна означать удачу или ___ в новом году.",
+      "en": "What the lead shows is supposed to mean luck or ___ in the new year."
+    },
+    "Viele wünschen sich im neuen Jahr Gesundheit und ___.": {
+      "ru": "Многие желают себе в новом году здоровья и ___.",
+      "en": "Many people wish for health and ___ in the new year."
+    },
+    "In manchen Regionen bringt ein Schornsteinfeger ___.": {
+      "ru": "В некоторых регионах трубочист приносит ___.",
+      "en": "In some regions a chimney sweep brings ___."
+    },
+    "Am nächsten Tag wünschen sich alle: „___ neues Jahr!“": {
+      "ru": "На следующий день все желают друг другу: «___ Нового года!»",
+      "en": "The next day everyone wishes each other: “___ New Year!”"
+    },
+    "In Berlin feiern viele Menschen am Brandenburger ___.": {
+      "ru": "В Берлине многие празднуют у Бранденбургских ___.",
+      "en": "In Berlin many people celebrate at the Brandenburg ___."
+    },
+    "Der Weihnachtsmann bringt ___ Kindern Geschenke.": {
+      "ru": "Дед Мороз приносит детям подарки. Какое слово нужно перед «Kindern»?",
+      "en": "Santa Claus brings the children presents. Which word goes before “Kindern”?"
+    },
+    "Was sagt man am 31. Dezember um Mitternacht?": {
+      "ru": "Что говорят 31 декабря в полночь?",
+      "en": "What do you say at midnight on 31 December?"
+    },
+    "Wir ___ am 24. Dezember zusammen den Baum.": {
+      "ru": "Мы ___ ёлку вместе 24 декабря.",
+      "en": "We ___ the tree together on 24 December."
+    },
+    "Was ist ein Wunschzettel?": {
+      "ru": "Что такое Wunschzettel?",
+      "en": "What is a Wunschzettel?"
+    },
+    "Am 24. Dezember besucht Paul seine Großeltern. Zuerst schmücken sie zusammen den Weihnachtsbaum. Dann backt die Oma Plätzchen, und Paul hilft ihr. Am Abend singen alle Lieder und öffnen die Geschenke. Paul bekommt einen roten Schlitten. Er freut sich sehr und hofft auf viel Schnee.": {
+      "ru": "24 декабря Пауль едет к бабушке и дедушке. Сначала они вместе наряжают ёлку. Потом бабушка печёт печенье, и Пауль ей помогает. Вечером все поют песни и открывают подарки. Пауль получает красные санки. Он очень рад и надеется, что выпадет много снега.",
+      "en": "On 24 December Paul visits his grandparents. First they decorate the Christmas tree together. Then grandma bakes biscuits and Paul helps her. In the evening everyone sings songs and opens the presents. Paul gets a red sledge. He is very happy and hopes for lots of snow."
+    },
+    "Wen besucht Paul am 24. Dezember?": {
+      "ru": "К кому Пауль едет 24 декабря?",
+      "en": "Who does Paul visit on 24 December?"
+    },
+    "Was machen sie zuerst?": {
+      "ru": "Что они делают сначала?",
+      "en": "What do they do first?"
+    },
+    "Wer backt die Plätzchen?": {
+      "ru": "Кто печёт печенье?",
+      "en": "Who bakes the biscuits?"
+    },
+    "Was bekommt Paul?": {
+      "ru": "Что получает Пауль?",
+      "en": "What does Paul get?"
+    },
+    "Worauf hofft Paul?": {
+      "ru": "На что надеется Пауль?",
+      "en": "What is Paul hoping for?"
+    },
+    "Ein Adventskranz hat vier ___.": {
+      "ru": "У рождественского венка четыре ___. Какая форма слова верная?",
+      "en": "An Advent wreath has four ___. Which form of the word is correct?"
+    },
+    "Welcher Tag kommt direkt nach Heiligabend?": {
+      "ru": "Какой день идёт сразу после Сочельника?",
+      "en": "Which day comes right after Christmas Eve?"
+    },
+    "Gestern ___ es den ganzen Tag geschneit.": {
+      "ru": "Вчера весь день шёл снег. Какой вспомогательный глагол нужен?",
+      "en": "It snowed all day yesterday. Which auxiliary verb is needed?"
+    },
+    "Was ist das?": {
+      "ru": "Что это?",
+      "en": "What is this?"
+    },
+    "Jeden Tag öffne ich ein ___ im Adventskalender.": {
+      "ru": "Каждый день я открываю ___ в адвент-календаре.",
+      "en": "Every day I open a ___ in the Advent calendar."
+    },
+    "Wie viele Türchen hat ein Adventskalender?": {
+      "ru": "Сколько дверец у адвент-календаря?",
+      "en": "How many doors does an Advent calendar have?"
+    },
+    "Es ist dunkel. Mia zündet eine Kerze an. Die Kerze ist rot und riecht nach Zimt.": {
+      "ru": "Темно. Мия зажигает свечу. Свеча красная и пахнет корицей.",
+      "en": "It is dark. Mia lights a candle. The candle is red and smells of cinnamon."
+    },
+    "Welche Farbe hat die Kerze?": {
+      "ru": "Какого цвета свеча?",
+      "en": "What colour is the candle?"
+    },
+    "Wonach riecht die Kerze?": {
+      "ru": "Чем пахнет свеча?",
+      "en": "What does the candle smell of?"
+    },
+    "Die ___ brennt auf dem Tisch.": {
+      "ru": "На столе горит ___.",
+      "en": "The ___ is burning on the table."
+    },
+    "Auf dem Adventskranz sind vier ___.": {
+      "ru": "На рождественском венке четыре ___.",
+      "en": "There are four ___ on the Advent wreath."
+    },
+    "Was passt nicht zum Winter?": {
+      "ru": "Что не подходит к зиме?",
+      "en": "What does not go with winter?"
+    },
+    "Eine Schneeflocke ___ auf meine Nase.": {
+      "ru": "Снежинка ___ мне на нос.",
+      "en": "A snowflake ___ on my nose."
+    },
+    "Welche Farbe hat Schnee?": {
+      "ru": "Какого цвета снег?",
+      "en": "What colour is snow?"
+    },
+    "Der ___ hängt am Kamin.": {
+      "ru": "На камине висит ___.",
+      "en": "The ___ is hanging on the fireplace."
+    },
+    "Was stellen Kinder am 5. Dezember vor die Tür?": {
+      "ru": "Что дети ставят за дверь 5 декабря?",
+      "en": "What do children put outside the door on 5 December?"
+    },
+    "Am Abend stellt Paul seinen Stiefel vor die Tür. Am Morgen ist der Stiefel voll. Paul findet Nüsse, eine Mandarine und Schokolade.": {
+      "ru": "Вечером Пауль ставит свой сапог за дверь. Утром сапог полный. Пауль находит орехи, мандарин и шоколад.",
+      "en": "In the evening Paul puts his boot outside the door. In the morning the boot is full. Paul finds nuts, a tangerine and chocolate."
+    },
+    "Wohin stellt Paul den Stiefel?": {
+      "ru": "Куда Пауль ставит сапог?",
+      "en": "Where does Paul put the boot?"
+    },
+    "Was ist nicht im Stiefel?": {
+      "ru": "Чего нет в сапоге?",
+      "en": "What is not in the boot?"
+    },
+    "Der Nikolaus bringt Nüsse und ___.": {
+      "ru": "Николаус приносит орехи и ___.",
+      "en": "Saint Nicholas brings nuts and ___."
+    },
+    "Wir ___ Plätzchen mit Oma.": {
+      "ru": "Мы ___ печенье с бабушкой.",
+      "en": "We ___ biscuits with grandma."
+    },
+    "Wo backt man Plätzchen?": {
+      "ru": "Где пекут печенье?",
+      "en": "Where do you bake biscuits?"
+    },
+    "Der Schneemann hat eine ___ aus einer Karotte.": {
+      "ru": "У снеговика ___ из морковки.",
+      "en": "The snowman has a ___ made of a carrot."
+    },
+    "Was trägt man im Winter nicht?": {
+      "ru": "Что не носят зимой?",
+      "en": "What do you not wear in winter?"
+    },
+    "Die Kinder ___ Schlitten.": {
+      "ru": "Дети ___ на санках.",
+      "en": "The children ___ on the sledge."
+    },
+    "Was macht man mit einem Schlitten?": {
+      "ru": "Что делают с санками?",
+      "en": "What do you do with a sledge?"
+    },
+    "Ohne ___ sind meine Hände kalt.": {
+      "ru": "Без ___ у меня мёрзнут руки.",
+      "en": "Without ___ my hands are cold."
+    },
+    "Wo trägt man Handschuhe?": {
+      "ru": "Где носят перчатки?",
+      "en": "Where do you wear gloves?"
+    },
+    "Draußen ist es sehr kalt. Oma strickt einen langen Schal für Tom. Der Schal ist grün und sehr warm.": {
+      "ru": "На улице очень холодно. Бабушка вяжет для Тома длинный шарф. Шарф зелёный и очень тёплый.",
+      "en": "It is very cold outside. Grandma is knitting a long scarf for Tom. The scarf is green and very warm."
+    },
+    "Wer strickt den Schal?": {
+      "ru": "Кто вяжет шарф?",
+      "en": "Who is knitting the scarf?"
+    },
+    "Wie ist der Schal?": {
+      "ru": "Какой шарф?",
+      "en": "What is the scarf like?"
+    },
+    "Ich trage einen warmen ___.": {
+      "ru": "Я ношу тёплый ___.",
+      "en": "I am wearing a warm ___."
+    },
+    "Das Rentier ___ den Schlitten.": {
+      "ru": "Северный олень ___ сани.",
+      "en": "The reindeer ___ the sledge."
+    },
+    "Was macht keine Musik?": {
+      "ru": "Что не издаёт музыку?",
+      "en": "What does not make music?"
+    },
+    "Die ___ läuten am Heiligabend.": {
+      "ru": "В Сочельник звонят ___.",
+      "en": "The ___ ring on Christmas Eve."
+    },
+    "Was macht eine Glocke?": {
+      "ru": "Что делает колокольчик?",
+      "en": "What does a bell do?"
+    },
+    "Oben auf dem Baum leuchtet ein ___.": {
+      "ru": "На верхушке ёлки светится ___.",
+      "en": "A ___ shines on top of the tree."
+    },
+    "Wo ist der Stern?": {
+      "ru": "Где звезда?",
+      "en": "Where is the star?"
+    },
+    "Im Winter laufen wir ___.": {
+      "ru": "Зимой мы катаемся на ___.",
+      "en": "In winter we go ___."
+    },
+    "Wo läuft man Schlittschuh?": {
+      "ru": "Где катаются на коньках?",
+      "en": "Where do you go ice skating?"
+    },
+    "Lisa und ihr Bruder schmücken den Baum. Lisa hängt eine rote Kugel auf. Ihr Bruder setzt einen goldenen Stern oben auf den Baum.": {
+      "ru": "Лиза и её брат наряжают ёлку. Лиза вешает красный шар. Её брат ставит золотую звезду на верхушку ёлки.",
+      "en": "Lisa and her brother decorate the tree. Lisa hangs up a red bauble. Her brother puts a golden star on top of the tree."
+    },
+    "Was hängt Lisa auf?": {
+      "ru": "Что вешает Лиза?",
+      "en": "What does Lisa hang up?"
+    },
+    "Was ist oben auf dem Baum?": {
+      "ru": "Что на верхушке ёлки?",
+      "en": "What is on top of the tree?"
+    },
+    "Die rote ___ hängt am Baum.": {
+      "ru": "На ёлке висит красный ___.",
+      "en": "The red ___ is hanging on the tree."
+    },
+    "Auf dem Geschenk ist eine ___.": {
+      "ru": "На подарке ___.",
+      "en": "There is a ___ on the present."
+    },
+    "Was ist nicht warm?": {
+      "ru": "Что не тёплое?",
+      "en": "What is not warm?"
+    },
+    "Im ___ brennt ein Feuer.": {
+      "ru": "В ___ горит огонь.",
+      "en": "A fire is burning in the ___."
+    },
+    "Was brennt im Kamin?": {
+      "ru": "Что горит в камине?",
+      "en": "What is burning in the fireplace?"
+    },
+    "Zum Kaffee gibt es ___.": {
+      "ru": "К кофе подают ___.",
+      "en": "There is ___ with the coffee."
+    },
+    "Welchen Kuchen isst man im Advent oft in Deutschland?": {
+      "ru": "Какой пирог в Германии часто едят во время Адвента?",
+      "en": "Which cake do people in Germany often eat during Advent?"
+    },
+    "Ben geht in den Schnee. Er trägt eine blaue Mütze und dicke Handschuhe. Er baut einen großen Schneemann.": {
+      "ru": "Бен выходит на снег. На нём синяя шапка и толстые перчатки. Он лепит большого снеговика.",
+      "en": "Ben goes out into the snow. He is wearing a blue hat and thick gloves. He builds a big snowman."
+    },
+    "Welche Farbe hat die Mütze?": {
+      "ru": "Какого цвета шапка?",
+      "en": "What colour is the hat?"
+    },
+    "Was baut Ben?": {
+      "ru": "Что лепит Бен?",
+      "en": "What does Ben build?"
+    },
+    "Der Weihnachtsmann trägt eine rote ___.": {
+      "ru": "Дед Мороз носит красную ___.",
+      "en": "Santa Claus wears a red ___."
+    },
+    "Wir hängen den Weihnachtsschmuck an den ___.": {
+      "ru": "Мы вешаем ёлочные украшения на ___.",
+      "en": "We hang the Christmas decorations on the ___."
+    },
+    "Wann schmücken viele Familien den Baum?": {
+      "ru": "Когда многие семьи наряжают ёлку?",
+      "en": "When do many families decorate the tree?"
+    },
+    "Die Kinder lieben ___.": {
+      "ru": "Дети любят ___.",
+      "en": "Children love ___."
+    },
+    "Was hängt man nicht an den Baum?": {
+      "ru": "Что не вешают на ёлку?",
+      "en": "What do you not hang on the tree?"
+    },
+    "Wir ___ den Weihnachtsbaum.": {
+      "ru": "Мы ___ ёлку.",
+      "en": "We ___ the Christmas tree."
+    },
+    "Was ist ein anderes Wort für Weihnachtsbaum?": {
+      "ru": "Как ещё можно назвать рождественскую ёлку?",
+      "en": "What is another word for Christmas tree?"
+    },
+    "Heute ist Heiligabend. Die Familie singt Lieder unter dem Weihnachtsbaum. Dann packen alle ihre Geschenke aus. Anna bekommt ein Buch und freut sich sehr.": {
+      "ru": "Сегодня Сочельник. Семья поёт песни под ёлкой. Потом все распаковывают подарки. Анна получает книгу и очень радуется.",
+      "en": "Today is Christmas Eve. The family sings songs under the Christmas tree. Then everyone unwraps their presents. Anna gets a book and is very happy."
+    },
+    "Wo singt die Familie?": {
+      "ru": "Где поёт семья?",
+      "en": "Where does the family sing?"
+    },
+    "Was bekommt Anna?": {
+      "ru": "Что получает Анна?",
+      "en": "What does Anna get?"
+    },
+    "Wie fühlt sich Anna?": {
+      "ru": "Что чувствует Анна?",
+      "en": "How does Anna feel?"
+    },
+    "Wann bekommen Kinder in Deutschland ihre Geschenke?": {
+      "ru": "Когда дети в Германии получают подарки?",
+      "en": "When do children in Germany get their presents?"
+    }
+  }
+}

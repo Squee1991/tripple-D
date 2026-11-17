@@ -2,7 +2,8 @@
 import { ref, computed, onMounted, onBeforeUnmount } from 'vue'
 import { useEventSessionStore } from '~/store/eventsStore.js'
 
-// Квадратная плитка на карте: показывает, что сейчас идёт ивент и сколько до его конца
+// Квадратная плитка на карте: показывает, что сейчас идёт ивент и сколько до его конца.
+// За неделю до старта плитка уже видна и показывает, сколько осталось до начала
 const { t } = useI18n()
 const localePath = useLocalePath()
 const eventStore = useEventSessionStore()
@@ -35,18 +36,53 @@ const activeEvent = computed(() => {
   return { ...event, endDate: end }
 })
 
-const timeLeft = computed(() => {
-  if (!activeEvent.value) return ''
-  const ms = Math.max(0, activeEvent.value.endDate - now.value)
-  const totalMinutes = Math.floor(ms / 60000)
+const ANNOUNCE_DAYS = 7
+
+// Ближайший ивент, который начнётся в течение недели (пока ни один не идёт)
+const upcomingEvent = computed(() => {
+  if (activeEvent.value) return null
+  const date = now.value
+  let best = null
+  for (const event of eventStore.events) {
+    let start = parseDate(event.start, date.getFullYear())
+    start.setSeconds(0, 0)
+    if (start < date) {
+      start = parseDate(event.start, date.getFullYear() + 1)
+      start.setSeconds(0, 0)
+    }
+    const ms = start - date
+    if (ms > 0 && ms <= ANNOUNCE_DAYS * 86400000 && (!best || start < best.startDate)) {
+      best = { ...event, startDate: start }
+    }
+  }
+  return best
+})
+
+const shownEvent = computed(() => activeEvent.value || upcomingEvent.value)
+
+const formatDuration = (ms) => {
+  const totalMinutes = Math.floor(Math.max(0, ms) / 60000)
   const days = Math.floor(totalMinutes / 1440)
   const hours = Math.floor((totalMinutes % 1440) / 60)
   const minutes = totalMinutes % 60
   if (days > 0) return t('eventTile.daysHours', { d: days, h: hours })
   return t('eventTile.hoursMinutes', { h: hours, m: minutes })
+}
+
+// Идёт: сколько до конца. Скоро: «через …» до начала
+const timeLeft = computed(() => {
+  if (activeEvent.value) return formatDuration(activeEvent.value.endDate - now.value)
+  if (upcomingEvent.value) {
+    // до начала коротко, чтобы влезло в плитку: дни, а в последние сутки часы и минуты
+    const ms = upcomingEvent.value.startDate - now.value
+    const days = Math.floor(ms / 86400000)
+    const time = days > 0 ? t('eventTile.days', { d: days }) : formatDuration(ms)
+    return t('eventTile.startsIn', { time })
+  }
+  return ''
 })
 
-const theme = computed(() => THEMES[activeEvent.value?.id] || { top: '#7d70cf', bottom: '#5d50a8', edge: '#483d8f' })
+const theme = computed(() => THEMES[shownEvent.value?.id] || { top: '#7d70cf', bottom: '#5d50a8', edge: '#483d8f' })
 
 onMounted(() => {
   timer = setInterval(() => { now.value = new Date() }, 30000)
@@ -59,14 +95,14 @@ onBeforeUnmount(() => {
 
 <template>
   <NuxtLink
-      v-if="activeEvent"
-      :to="localePath(activeEvent.url)"
-      class="event-tile"
+      v-if="shownEvent"
+      :to="localePath(activeEvent ? activeEvent.url : '/events')"
+      :class="['event-tile', { 'is-upcoming': !activeEvent }]"
       :style="{ '--tile-top': theme.top, '--tile-bottom': theme.bottom, '--tile-edge': theme.edge }"
-      :aria-label="`${t(activeEvent.valueKey)}: ${timeLeft}`"
-      :title="t(activeEvent.valueKey)"
+      :aria-label="`${t(shownEvent.valueKey)}: ${timeLeft}`"
+      :title="t(shownEvent.valueKey)"
   >
-    <img :src="activeEvent.icon" :alt="activeEvent.alt" class="event-tile__icon">
+    <img :src="shownEvent.icon" :alt="shownEvent.alt" class="event-tile__icon">
     <span class="event-tile__time">{{ timeLeft }}</span>
   </NuxtLink>
 </template>

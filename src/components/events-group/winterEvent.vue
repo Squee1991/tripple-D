@@ -90,6 +90,7 @@ function setTab(tabId) {
 
 const quests = ref([
   { id: 'quest-21', title: t('winterEventQuests.quest-21'), rewardCoins: 10, isDone: false, hasErrors: false, icon: '💎' },
+  { id: 'quest-22', title: t('winterEventQuests.quest-22'), rewardCoins: 10, isDone: false, hasErrors: false, icon: '🏆' },
   { id: 'quest-1', title: t('winterEventQuests.quest-1'), rewardCoins: 10, isDone: false, hasErrors: false, icon: '🎄' },
   { id: 'quest-2', title: t('winterEventQuests.quest-2'), rewardCoins: 10, isDone: false, hasErrors: false, icon: '🕯️' },
   { id: 'quest-3', title: t('winterEventQuests.quest-3'), rewardCoins: 10, isDone: false, hasErrors: false, icon: '🎅' },
@@ -112,18 +113,90 @@ const quests = ref([
   { id: 'quest-20', title: t('winterEventQuests.quest-20'), rewardCoins: 10, isDone: false, hasErrors: false, icon: '🥨' }
 ])
 
+// Задания разложены по главам: сначала слова праздника, потом история от Адвента к Новому году, финал после всех глав
+const FINAL_QUEST_ID = 'quest-22'
+const CHAPTERS = [
+  { id: 'words', quests: ['quest-21'] },
+  { id: 'advent', quests: ['quest-4', 'quest-3', 'quest-6', 'quest-11'] },
+  { id: 'christmas', quests: ['quest-1', 'quest-2', 'quest-5', 'quest-17', 'quest-18'] },
+  { id: 'silvester', quests: ['quest-7', 'quest-12', 'quest-19', 'quest-20'] },
+  { id: 'winter', quests: ['quest-10', 'quest-15', 'quest-16'] },
+  { id: 'legends', quests: ['quest-8', 'quest-9', 'quest-13', 'quest-14'] },
+  { id: 'final', quests: [FINAL_QUEST_ID], isFinal: true }
+]
+const KIND_BY_STEP_TYPE = { 'multiple-choice': 'choice', reading: 'reading', matching: 'matching', 'choose-word': 'chooseWord' }
+const KIND_ICON = { choice: '✅', reading: '📖', matching: '🧩', chooseWord: '✍️', pictures: '🖼️', final: '🏆' }
+
+const isFinalOpen = computed(() => quests.value.every(q => q.id === FINAL_QUEST_ID || q.isDone))
+
+// Задания проходятся строго по порядку глав: следующее открывается, когда пройдено предыдущее.
+// Пройденные можно повторять. Порядок не зависит от дат, поэтому действует и в тестовом режиме
+const QUEST_ORDER = CHAPTERS.flatMap(chapter => chapter.quests)
+
+const chapters = computed(() => {
+  const byId = Object.fromEntries(quests.value.map(q => [q.id, q]))
+  const isQuestOpen = (id) => {
+    // пройденное задание всегда можно повторить, даже если проходили не по нынешнему порядку
+    if (byId[id]?.isDone) return true
+    if (id === FINAL_QUEST_ID) return isFinalOpen.value
+    const index = QUEST_ORDER.indexOf(id)
+    return index <= 0 || !!byId[QUEST_ORDER[index - 1]]?.isDone
+  }
+  return CHAPTERS.map(chapter => {
+    const list = chapter.quests.map(id => byId[id]).filter(Boolean)
+      .map(quest => ({ ...quest, isLocked: !isQuestOpen(quest.id) }))
+    const done = list.filter(q => q.isDone).length
+    return {
+      ...chapter,
+      list,
+      done,
+      pct: list.length ? Math.round((done / list.length) * 100) : 0,
+      // глава закрыта, пока не открыто ни одно её задание
+      isLocked: list.length > 0 && list.every(q => q.isLocked)
+    }
+  })
+})
+
+// Подпись на карточке: что внутри задания и сколько там вопросов
+function questKindLabel(quest) {
+  const kind = quest.id === FINAL_QUEST_ID ? 'final' : quest.kind
+  if (!kind || !quest.count) return ''
+  return `${KIND_ICON[kind]} ${t(`winterChapters.kinds.${kind}`)} · ${t(`winterChapters.counts.${kind}`, { n: quest.count })}`
+}
+
+// Задание, которое нужно пройти следующим: первое непройденное по порядку
+const nextQuest = computed(() => {
+  const byId = Object.fromEntries(quests.value.map(q => [q.id, q]))
+  return QUEST_ORDER.map(id => byId[id]).find(q => q && !q.isDone) || null
+})
+
+const isLockedSheetOpen = ref(false)
+
+function openQuest(quest) {
+  if (quest.isLocked) {
+    isLockedSheetOpen.value = true
+    return
+  }
+  goToSession(quest.id)
+}
+
+function goToNextQuest() {
+  isLockedSheetOpen.value = false
+  if (nextQuest.value) goToSession(nextQuest.value.id)
+}
+
 async function goToSession(questId) {
   await eventStore.start(eventId.value, String(questId))
   const to = localePath({ name: 'event-id-session', params: { id: route.params.id } })
   await router.push(to)
 }
 
-// Экономика: 21 задание x 10 + 24 окошка x 5 = 330 снежинок, весь магазин 300 (запас 10%)
+// Экономика: 22 задания x 10 + 24 окошка x 5 = 340 снежинок, весь магазин 310 (запас 10%)
 const shopItemsList = ref([
   { id: 'santaHat', title: t('eventsShopItems.santaHat'), priceCoins: 50, isOwned: false, icon: Hat },
   { id: 'christmasBall', title: t('eventsShopItems.christmasBall'), priceCoins: 50, isOwned: false, icon: ChristmasBall },
   { id: 'christmasWreath', title: t('eventsShopItems.christmasWreath'), priceCoins: 60, isOwned: false, icon: ChristmasWreath },
-  { id: 'snowFall', title: t('eventsShopItems.snowFall'), priceCoins: 140, minDoors: 18, isOwned: false, icon: SnowEffectIcon }
+  { id: 'snowFall', title: t('eventsShopItems.snowFall'), priceCoins: 150, minDoors: 18, isOwned: false, icon: SnowEffectIcon }
 ])
 
 // Сколько окошек адвент-календаря уже открыто: снегопад доступен только после 18-го
@@ -215,9 +288,17 @@ async function syncQuestRewards() {
   try {
     const data = await $fetch('/events/event-winter.json')
     const byId = Object.fromEntries((data?.quests || []).map(q => [q.id, q]))
-    quests.value = quests.value.map(q => byId[q.id]
-      ? { ...q, rewardCoins: byId[q.id].rewardCoins ?? q.rewardCoins }
-      : q)
+    quests.value = quests.value.map(q => {
+      const source = byId[q.id]
+      if (!source) return q
+      const steps = source.steps || []
+      return {
+        ...q,
+        rewardCoins: source.rewardCoins ?? q.rewardCoins,
+        kind: steps.length && steps.every(step => step.image) ? 'pictures' : (KIND_BY_STEP_TYPE[steps[0]?.type] || null),
+        count: steps.length
+      }
+    })
   } catch (e) {}
 }
 
@@ -242,10 +323,11 @@ onMounted(() => {
             <polyline points="12 19 5 12 12 5"></polyline>
           </svg>
         </button>
+        <h1 class="page-title">{{ t('eventsNavNames.winter') }}</h1>
         <div class="stats-board">
           <div class="stat-item" data-coin-target>
-            <div class="stat-value">
-              <img class="coin" :src="SnowCoin" alt="">
+            <div class="stat-value stat-value--coins">
+              <img class="coin coin--header" :src="SnowCoin" alt="">
               <div class="coin__value">{{ displayedCoins }}</div>
             </div>
           </div>
@@ -299,22 +381,52 @@ onMounted(() => {
               </div>
             </div>
           </section>
-          <section v-if="activeTab === 'quests'">
-            <div class="quests">
-              <div v-for="(quest, qi) in quests" :key="quest.id" :class="['quest', 'achv-card', `--v${qi % 4}`]">
-                <div class="quest__icon"><span class="quest__emoji">{{ quest.icon }}</span></div>
-                <div class="quest__body">
-                  <div class="quest__title clickable" @click="goToSession(quest.id)">{{ quest.title }}</div>
-                  <div class="quest__meta">
-                    <div class="quest__inner">
-                      <span class="meta__pill --coins">{{ quest.rewardCoins }} <img class="meta__coin" :src="SnowCoin" alt=""></span>
+          <section v-if="activeTab === 'quests'" class="chapters">
+            <div v-for="chapter in chapters" :key="chapter.id"
+                 :class="['chapter', { 'is-done': chapter.done === chapter.list.length, 'is-locked': chapter.isLocked }]">
+              <div class="chapter__head">
+                <svg v-if="chapter.isFinal" class="chapter__deco" viewBox="0 0 40 40" aria-hidden="true">
+                  <polygon points="20,3 25,15 38,15 27.5,23 31.5,36 20,28 8.5,36 12.5,23 2,15 15,15"
+                           fill="#ffd45e" stroke="#e0a526" stroke-width="2" stroke-linejoin="round"/>
+                </svg>
+                <svg v-else class="chapter__deco" viewBox="0 0 40 40" aria-hidden="true">
+                  <path d="M20,22 C14,22 8,18 3,19 C6,15 6,11 4,7 C9,9 13,8 16,5 C17,10 20,15 20,22 Z" fill="#2f8a4f"/>
+                  <path d="M20,22 C26,22 32,18 37,19 C34,15 34,11 36,7 C31,9 27,8 24,5 C23,10 20,15 20,22 Z" fill="#3aa76d"/>
+                  <path d="M20,22 L11,10 M20,22 L29,10" stroke="#1d5e33" stroke-width="1.2" fill="none"/>
+                  <circle cx="16" cy="25" r="4.5" fill="#d8463f"/>
+                  <circle cx="24" cy="25" r="4.5" fill="#e2463d"/>
+                  <circle cx="20" cy="30" r="4.5" fill="#c43a33"/>
+                  <circle cx="14.6" cy="23.6" r="1.3" fill="#ffffff" opacity="0.7"/>
+                  <circle cx="22.6" cy="23.6" r="1.3" fill="#ffffff" opacity="0.7"/>
+                  <circle cx="18.6" cy="28.6" r="1.3" fill="#ffffff" opacity="0.7"/>
+                </svg>
+                <div class="chapter__info">
+                  <div class="chapter__title">{{ t(`winterChapters.${chapter.id}`) }}</div>
+                  <div v-if="chapter.isLocked" class="chapter__hint">
+                    {{ chapter.isFinal ? t('winterChapters.finalLocked') : t('winterChapters.chapterLocked') }}
+                  </div>
+                </div>
+                <span class="chapter__count">{{ chapter.done }} / {{ chapter.list.length }}</span>
+              </div>
+              <div class="quests">
+                <div v-for="(quest, qi) in chapter.list" :key="quest.id" :class="['quest', 'achv-card', `--v${qi % 4}`, { 'is-locked': quest.isLocked }]">
+                  <div class="quest__icon"><span class="quest__emoji">{{ quest.icon }}</span></div>
+                  <div class="quest__body">
+                    <div class="quest__title" :class="{ clickable: !quest.isLocked }" @click="openQuest(quest)">
+                      {{ quest.title }}
                     </div>
-                    <button
-                        :class="['btn', 'btn--candy', { 'btn--repeat': quest.isDone, 'btn--errors': quest.hasErrors }]"
-                        @click="goToSession(quest.id)"
-                    >
-                      {{ quest.isDone ? t('eventPanel.repeat') : (quest.hasErrors ? t('eventPanel.errors') : t('eventPanel.execute')) }}
-                    </button>
+                    <div v-if="questKindLabel(quest)" class="quest__kind">{{ questKindLabel(quest) }}</div>
+                    <div class="quest__meta">
+                      <div class="quest__inner">
+                        <span class="meta__pill --coins">{{ quest.rewardCoins }} <img class="meta__coin" :src="SnowCoin" alt=""></span>
+                      </div>
+                      <button
+                          :class="['btn', 'btn--candy', { 'btn--repeat': quest.isDone, 'btn--errors': quest.hasErrors }]"
+                          @click="openQuest(quest)"
+                      >
+                        {{ quest.isDone ? t('eventPanel.repeat') : (quest.hasErrors ? t('eventPanel.errors') : t('eventPanel.execute')) }}
+                      </button>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -322,6 +434,26 @@ onMounted(() => {
           </section>
         </div>
       </div>
+      <transition name="sheet">
+        <div v-if="isLockedSheetOpen" class="req-modal" @click.self="isLockedSheetOpen = false">
+          <div class="req-modal__card">
+            <div class="req-modal__head">
+              <button class="req-modal__close" type="button" :aria-label="t('adventCalendar.close')"
+                      @click="isLockedSheetOpen = false">
+                <img :src="SnowCoin" alt="">
+              </button>
+            </div>
+            <div class="req-modal__bauble">
+              <span class="req-modal__bauble-cap"></span>
+              <span class="lock-sheet__emoji">{{ nextQuest?.icon || '🎄' }}</span>
+            </div>
+            <div class="req-modal__title">{{ t('winterChapters.lockedTitle', { title: nextQuest?.title || '' }) }}</div>
+            <button v-if="nextQuest" class="req-modal__btn" type="button" @click="goToNextQuest">
+              {{ t('winterChapters.lockedGo') }}
+            </button>
+          </div>
+        </div>
+      </transition>
       <transition name="sheet">
         <div v-if="isReqModalOpen && reqItem" class="req-modal" @click.self="closeRequirementsModal">
           <div class="req-modal__card">
@@ -368,9 +500,10 @@ onMounted(() => {
 
 <style scoped>
 .season-page {
-  /* Высота экрана, а не родителя: у main нет высоты, иначе прокручивалась вся страница */
-  height: 100vh;
-  height: 100dvh;
+  /* Высота экрана минус системные полосы телефона (в приложении у .layout есть отступы --sat/--sab),
+     иначе страница выше доступного места и прокручивается вся вместе с шапкой */
+  height: calc(100vh - var(--sat, 0px) - var(--sab, 0px));
+  height: calc(100dvh - var(--sat, 0px) - var(--sab, 0px));
   max-width: 640px;
   margin: 0 auto;
   display: flex;
@@ -448,6 +581,21 @@ onMounted(() => {
   box-shadow: 0 4px 0 rgb(31 58 107 / 0.12);
 }
 
+/* Название ивента между кнопкой назад и счётчиком, как заголовки на других страницах */
+.page-title {
+  min-width: 0;
+  margin: 0 0 0 5px;
+  font-family: "Nunito", sans-serif;
+  font-size: 23px;
+  font-weight: 800;
+  letter-spacing: 1px;
+  color: #1f3a6b;
+  text-shadow: 0 1px #1f3a6b;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
 .stats-board {
   display: flex;
   align-items: center;
@@ -500,7 +648,9 @@ onMounted(() => {
   flex: 1;
   min-height: 0;
   overflow-y: auto;
-  padding-bottom: 120px;
+  /* запас под последним элементом плюс высота системной полосы телефона: последний ряд всегда над ней,
+     даже на устройствах, где общий отступ приложения не сработал */
+  padding-bottom: calc(32px + env(safe-area-inset-bottom, 0px));
   scrollbar-width: none;
   -ms-overflow-style: none;
   -webkit-overflow-scrolling: touch;
@@ -516,6 +666,16 @@ onMounted(() => {
 
 .coin {
   width: 22px;
+}
+
+/* Снежинка в счётчике шапки: крупнее и ближе к числу (.coin общий с иконками вкладок) */
+.stat-value--coins {
+  gap: 3px;
+}
+
+.coin--header {
+  width: 30px;
+  height: 30px;
 }
 
 .coin__value {
@@ -558,7 +718,7 @@ onMounted(() => {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 8px;
+  gap: 2px;
   padding: 7px 0;
   cursor: pointer;
   position: relative;
@@ -755,9 +915,75 @@ onMounted(() => {
   font-size: 16px;
   font-weight: 600;
   color: #1f3a6b;
-  margin-bottom: 8px;
   font-family: "Fredoka", "Nunito", sans-serif;
 }
+
+/* Что внутри задания: тип и количество */
+.quest__kind {
+  font-size: 12px;
+  font-weight: 700;
+  color: #5b6f96;
+  margin-bottom: 4px;
+}
+
+/* Главы заданий */
+.chapters {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.chapter__head {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+  padding: 0 4px;
+}
+
+.chapter__deco {
+  flex-shrink: 0;
+  width: 34px;
+  height: 34px;
+  filter: drop-shadow(0 2px 0 rgb(31 58 107 / 0.15));
+}
+
+.chapter__info {
+  flex: 1;
+  min-width: 0;
+}
+
+.chapter__title {
+  font-family: "Lilita One", sans-serif;
+  font-size: 20px;
+  letter-spacing: 0.4px;
+  color: #1f3a6b;
+  text-shadow: 0 2px 0 rgb(255 255 255 / 0.8);
+  line-height: 1.15;
+}
+
+.chapter__hint {
+  font-size: 12px;
+  font-weight: 700;
+  color: #5b6f96;
+}
+
+.chapter__count {
+  flex-shrink: 0;
+  font-family: "Lilita One", sans-serif;
+  font-size: 15px;
+  color: #ffffff;
+  background: linear-gradient(180deg, #3aa76d, #2b8a57);
+  box-shadow: 0 3px 0 #1f6b42;
+  border-radius: 50px;
+  padding: 3px 11px;
+}
+
+.chapter.is-locked .chapter__count {
+  background: #c7d2e6;
+  box-shadow: 0 3px 0 #a3b1cc;
+}
+
 
 .quest__meta {
   display: flex;
@@ -849,7 +1075,7 @@ onMounted(() => {
 }
 
 .event-closed {
-  height: 100vh;
+  height: calc(100dvh - var(--sat, 0px) - var(--sab, 0px));
   display: flex;
   align-items: center;
   justify-content: center;
@@ -961,6 +1187,13 @@ onMounted(() => {
   border-radius: 4px 4px 2px 2px;
   background: linear-gradient(90deg, #8a94a8, #e6ebf3 45%, #8a94a8);
 }
+
+.lock-sheet__emoji {
+  position: relative;
+  font-size: 40px;
+  line-height: 1;
+}
+
 
 .req-modal__title {
   font-family: "Fredoka", "Nunito", sans-serif;
@@ -1123,6 +1356,10 @@ onMounted(() => {
 }
 
 @media (max-width: 480px) {
+  .page-title {
+    font-size: 20px;
+  }
+
   .tab-label {
     font-size: 14px;
   }
