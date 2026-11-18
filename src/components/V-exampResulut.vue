@@ -9,6 +9,7 @@ import Share from '../../assets/images/share.svg'
 import { useFriendsStore } from '../../store/friendsStore.js'
 import ShareExamModal from '../../src/components/shareModal.vue';
 import { useI18n } from 'vue-i18n'
+import { examThemeLabel } from '~/utils/examThemes.js'
 import VBanner from "~/src/components/V-banner.vue";
 import Archive from "../../assets/images/folder.svg";
 
@@ -153,7 +154,7 @@ onMounted(() => {
                 </span>
               </div>
               <div class="ec__meta">
-                <span v-if="a.theme" class="ec__theme">{{ a.theme }}</span>
+                <span v-if="a.theme" class="ec__theme">{{ examThemeLabel(t, a.theme) }}</span>
                 <span>{{ t('examResult.start') }} {{ toDateFlexible(a.startedAt)?.toLocaleString?.() || '—' }}</span>
                 <span v-if="a.status === 'finished'" class="ec__score">
                   {{ t('examResult.middle') }} <b>{{ a.averageScore }}</b> / 10

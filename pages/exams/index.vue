@@ -5,6 +5,7 @@ import {useRouter} from 'vue-router'
 import {userAuthStore} from "../../store/authStore.js";
 import {useHead, useSeoMeta} from '#imports'
 import VBackBtn from "~/src/components/V-back-btn.vue";
+import {examThemeLabel} from "~/utils/examThemes.js";
 
 const {t} = useI18n()
 
@@ -119,6 +120,9 @@ const startSpecificExam = (examId) => {
   router.replace(`/exams/level/${selectedLevelId.value}?examId=${examId}`)
 }
 
+const attemptToStartExam = (levelId) => {
+  onLevelSelect(levelId)
+}
 
 onMounted(async () => {
   window.addEventListener('popstate', onPopState)
@@ -159,8 +163,9 @@ onBeforeUnmount(() => {
                   :data-track="`exam_theme_${selectedLevelId}_${exam.exam_id}`"
                   @click="startSpecificExam(exam.exam_id)"
               >
+                <!-- яркая карточка: у каждой темы свой цвет, иконка в белом круге -->
                 <span class="picker-tile-icon">{{ exam.icon || '📝' }}</span>
-                <span class="picker-tile-theme">{{ exam.theme }}</span>
+                <span class="picker-tile-theme">{{ examThemeLabel(t, exam.theme) }}</span>
               </button>
             </div>
           </div>
@@ -207,7 +212,7 @@ onBeforeUnmount(() => {
                 </ul>
                 <button
                     class="exam-card__button"
-                    @click="onLevelSelect(level.id)"
+                    @click="attemptToStartExam(level.id)"
                 >
                   {{ t('examIndexPage.to') }} {{ level.id.toUpperCase() }}
                 </button>
@@ -476,6 +481,11 @@ onBeforeUnmount(() => {
   display: flex;
   align-items: center;
   gap: 15px;
+  width: 100%;
+  /* на широких экранах шапка по ширине сетки тем (560px + отступы), а не на весь экран */
+  max-width: 590px;
+  margin: 0 auto;
+  box-sizing: border-box;
   padding: 10px 10px 15px 10px;
 }
 
@@ -550,56 +560,78 @@ onBeforeUnmount(() => {
   margin: 0 auto;
 }
 
+/* карточка темы: яркая заливка своим цветом, белый текст, снизу объёмная толщина, при нажатии проседает.
+   Цвета идут по кругу, как у плиток модулей на стартовом экране теста */
 .picker-tile {
+  --tile: #3b82f6;
+  --tile-light: #60a5fa;
+  --tile-dark: #1d4ed8;
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   gap: 10px;
+  min-height: 128px;
   padding: 16px 10px 14px;
-  border: 2px solid var(--tabsSlideBorderColor);
+  border: 2px solid color-mix(in srgb, var(--tile-light) 65%, #fff);
   border-radius: 20px;
-  background: var(--menuItemsBg);
-  box-shadow: var(--boxShadowMobile);
+  background: linear-gradient(180deg, var(--tile-light) 0%, var(--tile) 100%);
+  box-shadow: 0 5px 0 var(--tile-dark), 0 8px 14px rgba(0, 0, 0, 0.25);
   font-family: inherit;
   cursor: pointer;
   opacity: 0;
+  /* появление двигает отдельное свойство translate, чтобы не мешать transform при нажатии */
   animation: picker-tile-in 0.3s ease forwards;
-  transition: transform 0.1s;
+  transition: transform 0.1s ease, box-shadow 0.1s ease;
+  -webkit-tap-highlight-color: transparent;
 }
+
+.picker-tile:nth-child(8n + 1) { --tile: #3b82f6; --tile-light: #60a5fa; --tile-dark: #1d4ed8; }
+.picker-tile:nth-child(8n + 2) { --tile: #ec4899; --tile-light: #f472b6; --tile-dark: #be185d; }
+.picker-tile:nth-child(8n + 3) { --tile: #16a34a; --tile-light: #22c55e; --tile-dark: #15803d; }
+.picker-tile:nth-child(8n + 4) { --tile: #f59e0b; --tile-light: #fbbf24; --tile-dark: #b45309; }
+.picker-tile:nth-child(8n + 5) { --tile: #8b5cf6; --tile-light: #a78bfa; --tile-dark: #6d28d9; }
+.picker-tile:nth-child(8n + 6) { --tile: #0891b2; --tile-light: #22d3ee; --tile-dark: #0e7490; }
+.picker-tile:nth-child(8n + 7) { --tile: #ef4444; --tile-light: #f87171; --tile-dark: #b91c1c; }
+.picker-tile:nth-child(8n + 8) { --tile: #ea580c; --tile-light: #fb923c; --tile-dark: #c2410c; }
 
 .picker-tile:active {
-  transform: translateY(2px);
+  transform: translateY(5px);
+  box-shadow: 0 0 0 var(--tile-dark), 0 2px 6px rgba(0, 0, 0, 0.2);
 }
 
+/* иконка в белом круге */
 .picker-tile-icon {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 64px;
-  height: 64px;
-  border-radius: 16px;
+  width: 58px;
+  height: 58px;
+  border-radius: 50%;
   background: #fff;
-  border: 3px solid var(--level-color);
-  font-size: 34px;
+  box-shadow: 0 3px 0 var(--tile-dark);
+  font-size: 30px;
   line-height: 1;
 }
 
 .picker-tile-theme {
-  font-size: 15px;
-  font-weight: 800;
-  line-height: 1.25;
+  font-size: 14px;
+  font-weight: 900;
+  line-height: 1.2;
   text-align: center;
-  color: var(--titleColor);
+  color: #fff;
+  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.25);
 }
 
 @keyframes picker-tile-in {
   from {
     opacity: 0;
-    transform: translateY(10px);
+    translate: 0 10px;
   }
   to {
     opacity: 1;
-    transform: translateY(0);
+    translate: 0 0;
   }
 }
 

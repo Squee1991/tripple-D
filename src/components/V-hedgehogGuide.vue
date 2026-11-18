@@ -171,7 +171,7 @@ import { regions } from '~/utils/regions.js'
 import { isRegionVisible, requiredLandLevel, levelOfCategory } from '~/utils/germanLevel.js'
 import { userAuthStore } from '~/store/authStore.js'
 import { userChainStore } from '~/store/chainStore.js'
-import { landsWithProgress } from '~/utils/landProgress.js'
+import { landsWithProgress, isPrevLandDone } from '~/utils/landProgress.js'
 import { userlangStore } from '~/store/learningStore.js'
 import { useEventSessionStore } from '~/store/eventsStore.js'
 import { vibrateTap, vibrateError } from '~/utils/haptics.js'
@@ -203,6 +203,8 @@ function landLevel(item) {
   if (!item.id.startsWith('land-')) return null
   const region = regionById[item.id.slice(5)]
   if (!region || landsWithProgress(chainStore.questProgress).has(region.id)) return null
+  // предыдущая земля пройдена целиком: открыта и без уровня
+  if (isPrevLandDone(chainStore.questProgress, region.id)) return null
   return requiredLandLevel(region, authStore.germanLevel)
 }
 
