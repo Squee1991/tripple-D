@@ -21162,10 +21162,10 @@
   "adventCalendar": {
     "tab": "Calendrier",
     "title": "Calendrier de l'Avent",
-    "subtitle": "Chaque jour jusqu'au réveillon, une nouvelle case s'ouvre. Ouvre-les toutes et illumine tout le village !",
+    "subtitle": "Ouvre les cases une par une, autant que tu veux par jour. Ouvre les 24 et illumine tout le village !",
     "progress": "{count} cases ouvertes sur 24",
     "lockedTitle": "Pas encore !",
-    "lockedText": "Cette case s'ouvre le {day} décembre.",
+    "lockedText": "Ouvre d'abord la case {day}.",
     "lockedOk": "Compris",
     "wordOfDay": "Mot du jour",
     "didYouKnow": "Le savais-tu ?",

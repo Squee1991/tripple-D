@@ -2,7 +2,7 @@
 import { ref, computed, watch, nextTick, onMounted, onBeforeUnmount } from 'vue'
 import { isSoundEnabled } from '~/utils/soundManager.js'
 import SoundBtn from '~/src/components/soundBtn.vue'
-import { useEventSessionStore, WINTER_FORCE_OPEN } from '~/store/eventsStore.js'
+import { useEventSessionStore } from '~/store/eventsStore.js'
 import adventDays from './adventDays.json'
 import SnowClose from '~/assets/images/event-rewards/winter-event/winter-words/snowflake.svg'
 import LockedGift from '~/assets/images/mery-christmas/Present.svg'
@@ -32,8 +32,6 @@ const imageUrl = (name) => {
 const BOARD_ORDER = [17, 5, 22, 9, 1, 13, 20, 3, 11, 24, 7, 15, 2, 19, 8, 23, 12, 4, 16, 10, 21, 6, 14, 18]
 const SEEN_KEY = 'skillup.advent.seen'
 
-const now = ref(new Date())
-let clockTimer = null
 
 const isDone = (day) => !!props.questsProgress?.[`advent-${day}`]?.finished
 
@@ -85,19 +83,11 @@ const treeSparkles = Array.from({ length: 14 }, (_, i) => ({
   delay: (i * 0.29) % 2
 }))
 
-// В тестовом режиме дни идут по очереди: «сегодня» — первое непройденное окошко
+// Окошки идут по очереди: «сегодня» — первое непройденное окошко
 const firstUndoneDay = computed(() => adventDays.map(item => item.day).sort((a, b) => a - b).find(day => !isDone(day)) ?? null)
 
-// Окошко N открывается N декабря; в январе (до конца ивента) открыты все, чтобы догнать пропущенное.
-// В тестовом режиме открыты пройденные и следующее за ними
-const isUnlocked = (day) => {
-  if (WINTER_FORCE_OPEN) return isDone(day) || day === firstUndoneDay.value
-  const date = now.value
-  const month = date.getMonth()
-  if (month === 0) return true
-  if (month !== 11) return false
-  return date.getDate() >= day
-}
+// Без ограничения по датам: открыты пройденные и следующее за ними, проходить можно сколько угодно в день
+const isUnlocked = (day) => isDone(day) || day === firstUndoneDay.value
 
 const days = computed(() => adventDays.map(item => ({
   ...item,
@@ -111,14 +101,8 @@ const boardDays = computed(() => BOARD_ORDER.map((day, index) => ({
   variant: index % 4
 })))
 
-// Сегодняшнее окошко: в декабре по дате, в тестовом режиме первое неоткрытое
-const todayDay = computed(() => {
-  if (WINTER_FORCE_OPEN) return firstUndoneDay.value
-  const date = now.value
-  if (date.getMonth() !== 11 || date.getDate() > 24) return null
-  const today = days.value.find(item => item.day === date.getDate())
-  return today && !today.done ? today.day : null
-})
+// Подсвеченное окошко: первое неоткрытое
+const todayDay = computed(() => firstUndoneDay.value)
 const openedCount = computed(() => days.value.filter(item => item.done).length)
 const isAllOpened = computed(() => openedCount.value === 24)
 
@@ -309,11 +293,9 @@ onMounted(() => {
     boardObserver = new ResizeObserver(() => measureTiles())
     boardObserver.observe(boardRef.value)
   }
-  clockTimer = setInterval(() => { now.value = new Date() }, 60000)
 })
 
 onBeforeUnmount(() => {
-  clearInterval(clockTimer)
   try { audioCtx?.close() } catch (e) {}
   boardObserver?.disconnect()
 })
@@ -410,7 +392,7 @@ onBeforeUnmount(() => {
             <img :src="LockedGift" alt="" class="day-modal__img"/>
           </div>
           <div class="locked-sheet__title">{{ t('adventCalendar.lockedTitle') }}</div>
-          <p class="locked-sheet__text">{{ t('adventCalendar.lockedText', { day: lockedDay }) }}</p>
+          <p class="locked-sheet__text">{{ t('adventCalendar.lockedText', { day: firstUndoneDay }) }}</p>
           <button type="button" class="day-modal__btn" @click="lockedDay = null">{{ t('adventCalendar.lockedOk') }}</button>
         </div>
       </div>

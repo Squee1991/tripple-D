@@ -21162,10 +21162,10 @@
   "adventCalendar": {
     "tab": "Kalendarz",
     "title": "Kalendarz adwentowy",
-    "subtitle": "Każdego dnia aż do Wigilii otwiera się nowe okienko. Otwórz je wszystkie i rozświetl całą wioskę!",
+    "subtitle": "Otwieraj okienka po kolei, ile chcesz dziennie. Otwórz wszystkie 24 i rozświetl całą wioskę!",
     "progress": "Otwarto {count} z 24 okienek",
     "lockedTitle": "Jeszcze nie!",
-    "lockedText": "To okienko otworzy się {day} grudnia.",
+    "lockedText": "Najpierw otwórz okienko {day}.",
     "lockedOk": "Rozumiem",
     "wordOfDay": "Słowo dnia",
     "didYouKnow": "Czy wiesz, że…?",
