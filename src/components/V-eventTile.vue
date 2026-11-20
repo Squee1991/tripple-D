@@ -36,9 +36,9 @@ const activeEvent = computed(() => {
   return { ...event, endDate: end }
 })
 
-const ANNOUNCE_DAYS = 14
+const ANNOUNCE_DAYS = 7
 
-// Ближайший ивент, который начнётся в течение двух недель (пока ни один не идёт)
+// Ближайший ивент, который начнётся в течение 7 дней (пока ни один не идёт)
 const upcomingEvent = computed(() => {
   if (activeEvent.value) return null
   const date = now.value
