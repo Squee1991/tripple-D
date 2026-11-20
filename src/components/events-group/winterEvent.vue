@@ -999,8 +999,8 @@ onMounted(() => {
 }
 
 .meta__coin {
-  width: 12px;
-  height: 12px;
+  width: 17px;
+  height: 17px;
   vertical-align: -1px;
 }
 
@@ -1019,6 +1019,8 @@ onMounted(() => {
 .meta__pill.--coins {
   color: #1f5f9e;
   background: #dcefff;
+  font-size: 14px;
+  gap: 4px;
 }
 
 .btn {

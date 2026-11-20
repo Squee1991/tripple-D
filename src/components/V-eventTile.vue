@@ -3,7 +3,7 @@ import { ref, computed, onMounted, onBeforeUnmount } from 'vue'
 import { useEventSessionStore } from '~/store/eventsStore.js'
 
 // Квадратная плитка на карте: показывает, что сейчас идёт ивент и сколько до его конца.
-// За неделю до старта плитка уже видна и показывает, сколько осталось до начала
+// За две недели до старта плитка уже видна и показывает, сколько осталось до начала
 const { t } = useI18n()
 const localePath = useLocalePath()
 const eventStore = useEventSessionStore()
@@ -36,9 +36,9 @@ const activeEvent = computed(() => {
   return { ...event, endDate: end }
 })
 
-const ANNOUNCE_DAYS = 7
+const ANNOUNCE_DAYS = 14
 
-// Ближайший ивент, который начнётся в течение недели (пока ни один не идёт)
+// Ближайший ивент, который начнётся в течение двух недель (пока ни один не идёт)
 const upcomingEvent = computed(() => {
   if (activeEvent.value) return null
   const date = now.value

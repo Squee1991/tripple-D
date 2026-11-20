@@ -25,6 +25,7 @@ import {
 import { GoogleSignIn } from '@capawesome/capacitor-google-sign-in';
 import { doc, setDoc, getDoc, getFirestore, updateDoc, serverTimestamp, writeBatch } from 'firebase/firestore';
 import { userlangStore } from "./learningStore.js";
+import {AppleSignIn, SignInScope} from "@capawesome/capacitor-apple-sign-in";
 let authStateUnsubscribe = null;
 
 const isUserCancelledAuth = (error) => {
@@ -42,7 +43,7 @@ const isUserCancelledAuth = (error) => {
     return msg.includes('cancel');
 };
 
-// Уровни, которые можно выбрать. Сохранённый уровень вне списка сбрасываем и спрашиваем заново
+// Уровни, которые можно выбрать. Сохранённый уровень вне списка сбрасываем и  заново
 export const GERMAN_LEVELS = ['A1', 'A2', 'B1'];
 
 export const userAuthStore = defineStore('auth', () => {

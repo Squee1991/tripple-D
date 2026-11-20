@@ -11,7 +11,7 @@ import HalloweenNav from '~/assets/images/halloweenIconNav.svg'
 
 // ВРЕМЕННО для проверки сборки: зимний ивент и все окошки календаря открыты вне дат.
 // ПЕРЕД РЕЛИЗОМ ПОСТАВИТЬ false
-export const WINTER_FORCE_OPEN = true
+export const WINTER_FORCE_OPEN = false
 
 export const useEventSessionStore = defineStore('eventSession', () => {
 	const db = getFirestore()

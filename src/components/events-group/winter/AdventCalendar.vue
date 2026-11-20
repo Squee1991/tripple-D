@@ -85,9 +85,13 @@ const treeSparkles = Array.from({ length: 14 }, (_, i) => ({
   delay: (i * 0.29) % 2
 }))
 
-// Окошко N открывается N декабря; в январе (до конца ивента) открыты все, чтобы догнать пропущенное
+// В тестовом режиме дни идут по очереди: «сегодня» — первое непройденное окошко
+const firstUndoneDay = computed(() => adventDays.map(item => item.day).sort((a, b) => a - b).find(day => !isDone(day)) ?? null)
+
+// Окошко N открывается N декабря; в январе (до конца ивента) открыты все, чтобы догнать пропущенное.
+// В тестовом режиме открыты пройденные и следующее за ними
 const isUnlocked = (day) => {
-  if (WINTER_FORCE_OPEN) return true
+  if (WINTER_FORCE_OPEN) return isDone(day) || day === firstUndoneDay.value
   const date = now.value
   const month = date.getMonth()
   if (month === 0) return true
@@ -109,6 +113,7 @@ const boardDays = computed(() => BOARD_ORDER.map((day, index) => ({
 
 // Сегодняшнее окошко: в декабре по дате, в тестовом режиме первое неоткрытое
 const todayDay = computed(() => {
+  if (WINTER_FORCE_OPEN) return firstUndoneDay.value
   const date = now.value
   if (date.getMonth() !== 11 || date.getDate() > 24) return null
   const today = days.value.find(item => item.day === date.getDate())

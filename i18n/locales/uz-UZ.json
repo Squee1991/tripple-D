@@ -10693,7 +10693,6 @@
     "questFifteen": "Vaqtim bo'lsa, chipta sotib olaman.",
     "questFifteenTip": "'Wenn' fe'lni oxiriga qo'yadi."
   },
-
   "pastValleyQuestOne": {
     "title": "Perfekt asoslari",
     "description": "Nima qildingiz? O'tgan zamon bilan tanishamiz: 'Sotib oldim', 'Qildik'.",
@@ -11031,7 +11030,6 @@
     "questFourteenTip": "singen: kuchli fe'l. ge- qo'shiladi, -en qoladi. O'zakda unli o'zgaradi (i dan u ga).",
     "questFifteen": "Tanlang: Men sport bilan shug'ullandim."
   },
-
   "actionValleyQuestOne": {
     "title": "Menga, senga, unga",
     "description": "Kishilik olmoshlari bilan Dativni mashq qilamiz. Kimga yordam beramiz va kimga sovg'alar beramiz?",
@@ -11398,7 +11396,6 @@
     "questFifteen": "Tanlang: Kim bilan gaplashyapsan?",
     "questFifteenTip": "Odamlar uchun predlog + savol (Mit wem?) ishlating."
   },
-
   "pluralLandQuestOne": {
     "title": "Sayohat",
     "description": "Futur I yordamida sayohatni rejalashtiramiz. Vaqt, joy va harakatni bog'lashni o'rganamiz.",
@@ -11700,8 +11697,6 @@
     "questFourteen": "Yig'ing: Biz bayramni unutmaymiz.",
     "questFifteen": "To'g'ri variantni tanlang"
   },
-
-
   "orderValleyQuestOne": {
     "title": "Fe'l oxirida!",
     "description": "Ergashtirilgan gaplarda so'z tartibini mashq qilamiz. Asosiy qoida: fe'l eng oxiriga ketadi.",
@@ -12121,8 +12116,6 @@
     "questFifteen": "Tinglang va gapni yozing",
     "questFifteenTip": "Inkor 'kein'. 'dass'dan keyin 'gibt' gapning eng oxiriga qochadi."
   },
-
-
   "pwa": {
     "title": "Skillupgerman-ni o'rnating",
     "sub": "Tezkor kirish uchun ilovani asosiy ekranga qo'shing!",
@@ -12271,7 +12264,9 @@
     "answerHighlighted": "Noto‘g‘ri! To‘g‘ri javob ajratilgan.",
     "excellentAnswers": "A’lo, hammasi to‘g‘ri!",
     "rightAnswer": "Xato! To‘g‘ri javob:",
-    "connectPaar": "Juftlarni ulang"
+    "connectPaar": "Juftlarni ulang",
+    "showTranslation": "Tarjima",
+    "hideTranslation": "Tarjimani yashirish"
   },
   "winterQuestEleven": {
     "firTree": "Yangi yil archasi",
@@ -12334,7 +12329,8 @@
     "quest-17": "Rojdestvo",
     "quest-18": "Tayyorgarlik",
     "quest-19": "Yangi yil kechasi",
-    "quest-20": "Nemis bayrami"
+    "quest-20": "Nemis bayrami",
+    "quest-22": "Katta Rojdestvo testi"
   },
   "valentineEventQuests": {
     "quest-1": "So'zlar ro'yxati",
@@ -19489,7 +19485,7 @@
     "loading": "Yuklanmoqda...",
     "errorText": "Tahlil qilishda xatolik yuz berdi...",
     "errorTip": "Birozdan keyin qayta urinib ko'ring...",
-    "hintAds": " \uD83D\uDCFA Reklamani ko'rish (+1 maslahat)"
+    "hintAds": " 📺 Reklamani ko'rish (+1 maslahat)"
   },
   "hedgehogHleper": {
     "greetings": "Halli Hallo! Qanday yordam bera olaman?",
@@ -21152,5 +21148,204 @@
   },
   "rateApp": {
     "settingsRow": "Ilovani baholash"
+  },
+  "eventTile": {
+    "startsIn": "{time} dan keyin",
+    "days": "{d} k",
+    "daysHours": "{d} k {h} s",
+    "hoursMinutes": "{h} s {m} daq"
+  },
+  "adventCalendar": {
+    "tab": "Kalendar",
+    "title": "Advent kalendari",
+    "subtitle": "Rojdestvo arafasigacha har kuni yangi derazacha ochiladi. Hammasini och va butun qishloqni yoritib yubor!",
+    "progress": "24 ta derazachadan {count} tasi ochildi",
+    "lockedTitle": "Hali emas!",
+    "lockedText": "Bu derazacha {day}-dekabrda ochiladi.",
+    "lockedOk": "Tushunarli",
+    "wordOfDay": "Kun so'zi",
+    "didYouKnow": "Bilasizmi?",
+    "start": "Topshiriqni boshlash",
+    "repeat": "Takrorlash",
+    "done": "Ochildi",
+    "close": "Yopish",
+    "testBadge": "Test rejimi: barcha derazachalar ochiq",
+    "finalTitle": "Qishloq charaqlab turibdi!",
+    "finalText": "Siz 24 ta derazachaning hammasini ochdingiz. Frohe Weihnachten!",
+    "tasks": {
+      "build": "So'zlarni yig': ikki yarmini birlashtir",
+      "review": "Har bir so'zni tarjimasi bilan moslashtir"
+    },
+    "kinds": {
+      "classic": "So'z viktorinasi",
+      "listen": "Tinglash",
+      "build": "So'z konstruktori",
+      "odd": "Ortiqchasini top",
+      "review": "Haftalik takrorlash",
+      "finale": "Rojdestvo arafasi finali"
+    },
+    "days": {
+      "d1": {
+        "word": "advent kalendari",
+        "example": "Har kuni advent kalendaridagi kichik derazachani ochaman.",
+        "fact": "1-dekabrda Germaniyadagi bolalar birinchi derazachani ochadi. Uning ortida ko'pincha bir bo'lak shokolad bo'ladi."
+      },
+      "d2": {
+        "word": "sham",
+        "example": "Stol ustida sham yonmoqda.",
+        "fact": "Advent paytida nemislar sham yorug'ligini juda yaxshi ko'radi. Ko'p uylarda har bir deraza tokchasida sham turadi."
+      },
+      "d3": {
+        "word": "advent gulchambari",
+        "example": "Advent gulchambarida to'rtta sham bor.",
+        "fact": "Adventning har yakshanbasida yana bitta sham yoqiladi. To'rttasi ham yonganda Rojdestvo yaqin bo'ladi."
+      },
+      "d4": {
+        "word": "qor parchasi",
+        "example": "Burnimga qor parchasi tushmoqda.",
+        "fact": "Bir-biriga aynan o'xshash ikkita qor parchasi bo'lmaydi. Nemis tilida «es schneit» «qor yog'yapti» degani."
+      },
+      "d5": {
+        "word": "Rojdestvo paypog'i",
+        "example": "Paypoq kamin ustida osilib turibdi.",
+        "fact": "Nemis bolalari paypoq osmaydi. 5-dekabr kechasi ular eshik oldiga toza etik (der Stiefel) qo'yishadi."
+      },
+      "d6": {
+        "word": "Avliyo Nikolay",
+        "example": "Avliyo Nikolay yong'oq va shokolad olib keladi.",
+        "fact": "6-dekabr — Nikolaustag. Ertalab etiklar shirinlik, yong'oq va mandarinlarga to'la bo'ladi."
+      },
+      "d7": {
+        "word": "Rojdestvo pechenyesi",
+        "example": "Buvim bilan pechenye pishiramiz.",
+        "fact": "Advent paytida nemis oilalari ko'p turdagi Plätzchen pishiradi. Ko'plik shakli ham bir xil: die Plätzchen."
+      },
+      "d8": {
+        "word": "qordan odam",
+        "example": "Qordan odamning burni sabzidan.",
+        "fact": "Nemis tilida ham bu «qor odami»: der Schnee + der Mann = der Schneemann."
+      },
+      "d9": {
+        "word": "chana",
+        "example": "Bolalar chana uchishmoqda.",
+        "fact": "Nemis tilida chanani mashina kabi «haydashadi»: Schlitten fahren."
+      },
+      "d10": {
+        "word": "qo'lqop",
+        "example": "Qo'lqopsiz qo'llarim muzlaydi.",
+        "fact": "Handschuh so'zma-so'z «qo'l poyabzali» degani. Bir barmoqli qo'lqoplar Fäustlinge deb ataladi."
+      },
+      "d11": {
+        "word": "sharf",
+        "example": "Men issiq sharf taqib olganman.",
+        "fact": "Der Schal fors tilidagi «shal» so'zidan kelib chiqqan. Ko'plab nemis so'zlari uzoq yo'l bosib o'tgan."
+      },
+      "d12": {
+        "word": "shimol bug'usi",
+        "example": "Bug'u chanani tortmoqda.",
+        "fact": "Das Rentier katta hayvon bo'lsa ham, o'rta jinsda. Artikllar mantiqqa bo'ysunmaydi, shuning uchun ularni so'z bilan birga o'rganing."
+      },
+      "d13": {
+        "word": "qo'ng'iroq",
+        "example": "Rojdestvo arafasida qo'ng'iroqlar chalinadi.",
+        "fact": "Rojdestvo arafasi kechqurun butun Germaniyada cherkov qo'ng'iroqlari chalinadi."
+      },
+      "d14": {
+        "word": "yulduz",
+        "example": "Archa tepasida yulduz porlamoqda.",
+        "fact": "Ko'p nemislar Rojdestvo archasining tepasiga yulduz yoki «Spitze» (shisha uchlik) qo'yishadi."
+      },
+      "d15": {
+        "word": "konki",
+        "example": "Qishda konkida uchamiz.",
+        "fact": "Nemis tilida konkida «yugurishadi»: Schlittschuh laufen."
+      },
+      "d16": {
+        "word": "archa o'yinchog'i (shar)",
+        "example": "Qizil shar archada osilib turibdi.",
+        "fact": "Shishadan yasalgan archa sharlari Germaniyaning Tyuringiya o'lkasidagi kichik Lauscha shaharchasida ixtiro qilingan."
+      },
+      "d17": {
+        "word": "bant",
+        "example": "Sovg'ada bant bor.",
+        "fact": "Die Schleife «sikl» degan ma'noni ham bildiradi, masalan dasturlashdagi sikl."
+      },
+      "d18": {
+        "word": "kamin",
+        "example": "Kaminda olov yonmoqda.",
+        "fact": "Ertaklarda Santa-Klaus mo'ridan tushadi. Germaniyada esa sovg'alarni ko'pincha Christkind (Go'dak Iso) olib keladi."
+      },
+      "d19": {
+        "word": "pirog, tort",
+        "example": "Qahvaga pirog bor.",
+        "fact": "Stollen — mashhur nemis Rojdestvo keksi. Eng mashhuri Drezdendan."
+      },
+      "d20": {
+        "word": "telpak, shapka",
+        "example": "Santa-Klaus qizil shapka kiyadi.",
+        "fact": "Die Mütze — yumshoq issiq shapka. Soyabonli shlyapa der Hut deb ataladi."
+      },
+      "d21": {
+        "word": "Rojdestvo bezaklari",
+        "example": "Bezaklarni archaga osamiz.",
+        "fact": "21-dekabr — yilning eng qisqa kuni. Chiroqlar va bezaklar qorong'i kechalarni yoritadi."
+      },
+      "d22": {
+        "word": "shirinliklar",
+        "example": "Bolalar shirinliklarni yaxshi ko'radi.",
+        "fact": "Süßigkeiten deyarli har doim ko'plikda ishlatiladi, xuddi «shirinliklar» kabi."
+      },
+      "d23": {
+        "word": "Rojdestvo archasi",
+        "example": "Biz archani bezatamiz.",
+        "fact": "Rojdestvo archasi an'anasi Germaniyadan kelgan. Uni Tannenbaum yoki Christbaum deb ham atashadi."
+      },
+      "d24": {
+        "word": "sovg'a",
+        "example": "Rojdestvo arafasida sovg'alarni ochamiz.",
+        "fact": "Germaniyada sovg'alar 24-dekabr kechqurun ochiladi. Bu lahza die Bescherung deb ataladi."
+      }
+    }
+  },
+  "winterChapters": {
+    "words": "Bayram so'zlari",
+    "advent": "Advent va Nikolay",
+    "christmas": "Rojdestvo",
+    "silvester": "Silvestr va Yangi yil",
+    "winter": "Qish va bayramlar",
+    "legends": "Afsonalar va urf-odatlar",
+    "final": "Final",
+    "finalLocked": "Barcha boblarni tugatganingizda ochiladi",
+    "chapterLocked": "Oldingi bobni tugatganingizda ochiladi",
+    "lockedTitle": "Avval «{title}» topshirig'ini bajaring",
+    "lockedGo": "Topshiriqqa o'tish",
+    "kinds": {
+      "choice": "Viktorina",
+      "reading": "O'qish",
+      "matching": "So'z juftliklari",
+      "chooseWord": "Bo'sh joyni to'ldiring",
+      "pictures": "Rasmli so'zlar",
+      "final": "Yakuniy test"
+    },
+    "counts": {
+      "choice": "{n} ta savol",
+      "reading": "{n} ta matn",
+      "matching": "{n} ta raund",
+      "chooseWord": "{n} ta gap",
+      "pictures": "{n} ta so'z",
+      "final": "{n} ta topshiriq"
+    }
+  },
+  "winterBanner": {
+    "advent": "Advent kalendari",
+    "quests": "Qor parchalari uchun topshiriqlar",
+    "shop": "Qor parchalariga sovg'alar"
+  },
+  "winterShop": {
+    "reqCoins": "Qor parchalari",
+    "reqDoors": "Kalendar derazachalari",
+    "ok": "Tushunarli",
+    "needDoors": "{count} ta kalendar derazachasini oching",
+    "doorsProgress": "Kalendar derazachalari: {done} / {need}"
   }
 }
