@@ -8,6 +8,7 @@ import VShowFall from "../src/components/V-showFall.vue";
 import Snow from "../assets/images/mery-christmas/Snow.svg";
 import HeartFall from "assets/images/mery-christmas/heartFall.svg";
 import VHalloweenEffects from "../src/components/V-halloweenEffects.vue";
+import VWinterEffects from "../src/components/V-winterEffects.vue";
 import LeafOrange from "../assets/images/halloween-effects/leafOrange.svg";
 import LeafGold from "../assets/images/halloween-effects/leafGold.svg";
 import { useEventSessionStore } from '../store/eventsStore.js'
@@ -44,8 +45,15 @@ watch(isHalloweenFx, (on) => {
   if (process.client) document.documentElement.classList.toggle('halloween-fx', on)
 }, { immediate: true })
 
+// Зимнее оформление главной: только после входа и пока идёт зимний ивент
+const isWinterFx = computed(() => isLoggedIn.value && !isHalloweenFx.value && eventStore.isEventActive('winter'))
+
+watch(isWinterFx, (on) => {
+  if (process.client) document.documentElement.classList.toggle('winter-fx', on)
+}, { immediate: true })
+
 onBeforeUnmount(() => {
-  document.documentElement.classList.remove('halloween-fx')
+  document.documentElement.classList.remove('halloween-fx', 'winter-fx')
 })
 
 definePageMeta({
@@ -92,6 +100,11 @@ watch(() => authStore.uid, (newUid) => {
     </div>
     <div class="halloween-layer" aria-hidden="true">
       <VHalloweenEffects/>
+    </div>
+  </template>
+  <template v-if="isWinterFx">
+    <div class="halloween-layer halloween-layer--back" aria-hidden="true">
+      <VWinterEffects/>
     </div>
   </template>
   <div class="container">
