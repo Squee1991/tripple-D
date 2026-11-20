@@ -21158,10 +21158,10 @@
   "adventCalendar": {
     "tab": "Kalendar",
     "title": "Advent kalendari",
-    "subtitle": "Derazachalarni navbat bilan och, kuniga xohlagancha. 24 tasini ham och va butun qishloqni yoritib yubor!",
+    "subtitle": "Rojdestvo arafasigacha har kuni yangi derazacha ochiladi. Hammasini och va butun qishloqni yoritib yubor!",
     "progress": "24 ta derazachadan {count} tasi ochildi",
     "lockedTitle": "Hali emas!",
-    "lockedText": "Avval {day}-derazachani och.",
+    "lockedText": "Bu derazacha {day}-dekabrda ochiladi.",
     "lockedOk": "Tushunarli",
     "wordOfDay": "Kun so'zi",
     "didYouKnow": "Bilasizmi?",

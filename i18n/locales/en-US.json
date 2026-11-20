@@ -21162,10 +21162,10 @@
   "adventCalendar": {
     "tab": "Calendar",
     "title": "Advent calendar",
-    "subtitle": "Open the doors one by one, as many a day as you like. Open all 24 and light up the whole village!",
+    "subtitle": "A new door opens every day until Christmas Eve. Open them all and light up the whole village!",
     "progress": "{count} of 24 doors opened",
     "lockedTitle": "Not yet!",
-    "lockedText": "Open door {day} first.",
+    "lockedText": "This door opens on December {day}.",
     "lockedOk": "Got it",
     "wordOfDay": "Word of the day",
     "didYouKnow": "Did you know?",

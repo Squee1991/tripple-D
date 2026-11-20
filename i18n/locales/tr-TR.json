@@ -21160,10 +21160,10 @@
   "adventCalendar": {
     "tab": "Takvim",
     "title": "Advent takvimi",
-    "subtitle": "Pencereleri sırayla aç, günde istediğin kadar. 24 pencerenin hepsini aç ve tüm köyü aydınlat!",
+    "subtitle": "Noel arifesine kadar her gün yeni bir pencere açılıyor. Hepsini aç ve tüm köyü aydınlat!",
     "progress": "24 pencereden {count} tanesi açıldı",
     "lockedTitle": "Henüz değil!",
-    "lockedText": "Önce {day}. pencereyi aç.",
+    "lockedText": "Bu pencere {day} Aralık'ta açılır.",
     "lockedOk": "Anladım",
     "wordOfDay": "Günün kelimesi",
     "didYouKnow": "Biliyor muydun?",

@@ -21159,10 +21159,10 @@
   "adventCalendar": {
     "tab": "Calendar",
     "title": "Calendar de Advent",
-    "subtitle": "Deschide ferestruicile pe rând, câte vrei pe zi. Deschide-le pe toate 24 și luminează tot satul!",
+    "subtitle": "În fiecare zi până în Ajunul Crăciunului se deschide o nouă ferestruică. Deschide-le pe toate și luminează tot satul!",
     "progress": "{count} din 24 de ferestruici deschise",
     "lockedTitle": "Încă nu!",
-    "lockedText": "Mai întâi deschide ferestruica {day}.",
+    "lockedText": "Această ferestruică se deschide pe {day} decembrie.",
     "lockedOk": "Am înțeles",
     "wordOfDay": "Cuvântul zilei",
     "didYouKnow": "Știai că…?",

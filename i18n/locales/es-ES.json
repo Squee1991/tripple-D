@@ -21159,10 +21159,10 @@
   "adventCalendar": {
     "tab": "Calendario",
     "title": "Calendario de Adviento",
-    "subtitle": "Abre las ventanitas una tras otra, todas las que quieras al día. ¡Abre las 24 e ilumina todo el pueblo!",
+    "subtitle": "Cada día hasta Nochebuena se abre una nueva ventanita. ¡Ábrelas todas e ilumina todo el pueblo!",
     "progress": "{count} de 24 ventanitas abiertas",
     "lockedTitle": "¡Todavía no!",
-    "lockedText": "Primero abre la ventanita {day}.",
+    "lockedText": "Esta ventanita se abre el {day} de diciembre.",
     "lockedOk": "Entendido",
     "wordOfDay": "Palabra del día",
     "didYouKnow": "¿Sabías que…?",
