@@ -2,13 +2,16 @@ import { ref, computed } from 'vue'
 import { defineStore } from 'pinia'
 import { getFirestore, doc, getDoc, setDoc, increment } from 'firebase/firestore'
 import { getAuth } from 'firebase/auth'
-import { useRuntimeConfig } from '#imports'
 
 
 import ChristmasDayNav from '~/assets/images/christmas-wreathNav.svg'
 import ValentineNav from '~/assets/images/valentineIcon.svg'
 import FoolDayNav from '~/assets/images/fooldayNav.svg'
 import HalloweenNav from '~/assets/images/halloweenIconNav.svg'
+
+// ВРЕМЕННО для проверки сборки: зимний ивент и все окошки календаря открыты вне дат.
+// ПЕРЕД РЕЛИЗОМ ПОСТАВИТЬ false
+export const WINTER_FORCE_OPEN = false
 
 export const useEventSessionStore = defineStore('eventSession', () => {
 	const db = getFirestore()
@@ -25,39 +28,13 @@ export const useEventSessionStore = defineStore('eventSession', () => {
 	const solvedSteps = ref([])
 	const isReplayMode = ref(false)
 
-	// Тестовый режим ивентов: локально (npm run dev) и на dev-окружении (Firebase-проект tripple-d-dev) всегда,
-	// на продакшне только через ?eventTest=1 (выключить ?eventTest=0)
-	const TEST_FLAG_KEY = 'skillup.eventTest'
-	const DEV_FIREBASE_PROJECT = 'tripple-d-dev'
-	const isDevEnvironment = () => {
-		try {
-			return useRuntimeConfig().public.firebaseProjectId === DEV_FIREBASE_PROJECT
-		} catch (e) {
-			return false
-		}
-	}
-	const readTestFlag = () => {
-		if (import.meta.dev || isDevEnvironment()) return true
-		if (typeof window === 'undefined') return false
-		try {
-			const param = new URLSearchParams(window.location.search).get('eventTest')
-			if (param === '1') localStorage.setItem(TEST_FLAG_KEY, '1')
-			if (param === '0') localStorage.removeItem(TEST_FLAG_KEY)
-			return localStorage.getItem(TEST_FLAG_KEY) === '1'
-		} catch (e) {
-			return false
-		}
-	}
-	const isTestMode = ref(readTestFlag())
-	const TEST_EVENT_IDS = ['winter']
-	const isForcedOpen = (id) => isTestMode.value && TEST_EVENT_IDS.includes(id)
 	const events = ref([
 		{
 			id: 'winter',
 			valueKey: 'eventsNavNames.winter',
 			url: '/event-winter',
 			start: '12-01 00:00',
-			end: '01-06 23:59',
+			end: '01-03 23:59',
 			icon: ChristmasDayNav,
 			alt: 'ChristmasDayNav'
 		},
@@ -124,7 +101,7 @@ export const useEventSessionStore = defineStore('eventSession', () => {
 	const isEventActive = (id, now = new Date()) => {
 		const event = events.value.find(e => e.id === id)
 		if (!event) return false
-		if (isForcedOpen(id)) return true
+		if (WINTER_FORCE_OPEN && id === 'winter') return true
 		const parse = (str, y) => {
 			const [datePart, timePart] = str.split(' ')
 			const [month, day] = datePart.split('-').map(Number)
@@ -407,7 +384,6 @@ export const useEventSessionStore = defineStore('eventSession', () => {
 	return {
 		eventId, questId, stepIndex, score, finished, isLoading,
 		isSnowEnabled, shopItems, events, isValentineThemePurchased, isEventActive,
-		isTestMode, isForcedOpen,
 		solvedSteps, isReplayMode,
 		isSnowPurchased, loadGlobalWinterSettings, setSnowFallEnabled,
 		start, restoreIfPossible, next, prev, addScore, finishQuest,

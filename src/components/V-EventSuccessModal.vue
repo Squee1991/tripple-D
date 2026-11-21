@@ -119,7 +119,8 @@ const handleLottieError = () => {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 10px;
+  /* сверху и снизу место под системные полосы телефона */
+  padding: calc(10px + env(safe-area-inset-top, 0px)) 10px calc(10px + env(safe-area-inset-bottom, 0px));
   color: white;
   text-align: center;
   position: relative;

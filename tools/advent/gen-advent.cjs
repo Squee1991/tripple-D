@@ -17,7 +17,7 @@ const D = [
  [12,'das','Rentier','reindeer.svg','Das Rentier ___ den Schlitten.',['zieht','trinkt','kauft'],'Wer zieht den Schlitten vom Weihnachtsmann?',['die Rentiere','die Katzen','die Fische','die Hühner']],
  [13,'die','Glocke','christmas-bell.svg','Die ___ läuten am Heiligabend.',['Glocken','Kerzen','Sterne'],'Was macht eine Glocke?',['Sie läutet.','Sie kocht.','Sie schwimmt.','Sie malt.']],
  [14,'der','Stern','star.svg','Oben auf dem Baum leuchtet ein ___.',['Stern','Hund','Schuh'],'Wo ist der Stern?',['oben auf dem Baum','unter dem Tisch','im Kühlschrank','im Keller']],
- [15,'der','Schlittschuh','ice-skates.svg','Im Winter laufen wir ___.',['Schlittschuh','Tennis','Treppe'],'Wo läuft man Schlittschuh?',['auf dem Eis','im Wasser','auf dem Dach','im Sand']],
+ [15,'der','Schlittschuh','ice-skates.svg','Im Winter laufen wir ___.',['Schlittschuh','Tennis','Fahrrad'],'Wo läuft man Schlittschuh?',['auf dem Eis','im Wasser','auf dem Dach','im Sand']],
  [16,'die','Kugel','christmas-ball.svg','Die rote ___ hängt am Baum.',['Kugel','Katze','Suppe'],'Woran hängt die Kugel?',['am Weihnachtsbaum','an der Tür','am Auto','am Fenster']],
  [17,'die','Schleife','ribbon.svg','Auf dem Geschenk ist eine ___.',['Schleife','Suppe','Wolke'],'Wo ist die Schleife?',['auf dem Geschenk','im Schnee','im Ofen','im Wasser']],
  [18,'der','Kamin','chimney.svg','Im ___ brennt ein Feuer.',['Kamin','Kühlschrank','Bett'],'Was brennt im Kamin?',['das Feuer','das Eis','der Schnee','das Wasser']],

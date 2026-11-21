@@ -1,5 +1,5 @@
 <script setup>
-import {ref, computed, onMounted, watch} from 'vue'
+import {ref, computed, onMounted, onBeforeUnmount, watch} from 'vue'
 import {useRoute, useRouter} from 'vue-router'
 import {useLocalePath} from '#i18n'
 import {useEventSessionStore} from '~/store/eventsStore.js'
@@ -28,7 +28,7 @@ async function speakText(text) {
   }
 }
 
-const {t} = useI18n()
+const {t, locale} = useI18n()
 
 const {
   getResultIcon,
@@ -39,7 +39,7 @@ const {
   displayCoins,
   confettiParticles,
   runSuccessAnimation
-} = useEventSessionLogic()
+} = useEventSessionLogic(() => String(route.params.id || ''))
 
 const route = useRoute()
 const router = useRouter()
@@ -107,6 +107,50 @@ const getImageUrl = (imagePathFromJson) => {
   return ''
 }
 
+// Перевод немецких формулировок на язык пользователя, чтобы задания были понятны новичкам.
+// Файл public/events/<id>-translations.json: texts — по точному немецкому тексту, patterns — по шаблону.
+// Нет перевода на язык пользователя — показываем английский
+const translations = ref({texts: {}, patterns: []})
+// Перевод скрыт, пока не нажмут кнопку: 'q' — вопрос, 'q0'.. — вопросы к тексту, 'text' — сам текст
+const openTranslations = ref(new Set())
+const isTranslationOpen = key => openTranslations.value.has(key)
+function closeTranslationsOnOutsideTap(event) {
+  if (!openTranslations.value.size) return
+  if (event.target?.closest?.('.tr__btn')) return
+  openTranslations.value = new Set()
+}
+
+onMounted(() => document.addEventListener('pointerdown', closeTranslationsOnOutsideTap))
+onBeforeUnmount(() => document.removeEventListener('pointerdown', closeTranslationsOnOutsideTap))
+
+function toggleTranslation(key) {
+  const next = new Set(openTranslations.value)
+  next.has(key) ? next.delete(key) : next.add(key)
+  openTranslations.value = next
+}
+
+async function loadTranslations() {
+  try {
+    const data = await $fetch(`/events/${eventId.value}-translations.json`)
+    translations.value = {texts: data?.texts || {}, patterns: data?.patterns || []}
+  } catch (error) {
+    translations.value = {texts: {}, patterns: []}
+  }
+}
+
+function translationOf(germanText) {
+  if (!germanText) return ''
+  const lang = String(locale.value || 'en').slice(0, 2)
+  const pick = entry => entry?.[lang] || entry?.en || ''
+  const direct = translations.value.texts[germanText]
+  if (direct) return pick(direct)
+  for (const pattern of translations.value.patterns) {
+    const regex = new RegExp(pattern.match)
+    if (regex.test(germanText)) return germanText.replace(regex, pick(pattern))
+  }
+  return ''
+}
+
 async function loadEventJson() {
   isLoading.value = true
   try {
@@ -121,13 +165,15 @@ async function loadEventJson() {
 
 onMounted(async () => {
   preloadInterstitial()
+  // Счётчик рекламы адвент-календаря больше не используется — убираем остаток у тех, кто успел его получить
+  try { localStorage.removeItem('skillup.advent.adCounter') } catch (e) {}
   if (!eventStore.eventId || eventStore.eventId !== eventId.value) {
     const restorationSuccess = await eventStore.restoreIfPossible(eventId.value)
     if (!restorationSuccess) {
       return router.replace({name: 'event-id', params: {id: eventId.value}})
     }
   }
-  await loadEventJson()
+  await Promise.all([loadEventJson(), loadTranslations()])
   if (!currentQuest.value) {
     router.replace({name: 'event-id', params: {id: eventId.value}})
   } else {
@@ -144,6 +190,7 @@ onMounted(async () => {
 })
 
 watch(currentStep, () => {
+  openTranslations.value = new Set()
   selectedOptionIndex.value = null
   userTextInput.value = ''
   checkStatus.value = null
@@ -213,13 +260,12 @@ function closeExitModal() {
 }
 
 function goBackHome() {
-  if (isFinished.value) {
-    showInterstitial(() => {
-      router.push(localePath({name: 'event-id', params: {id: eventId.value}}))
-    })
-  } else {
-    router.push(localePath({name: 'event-id', params: {id: eventId.value}}))
-  }
+  const goToEvent = () => router.push(localePath({name: 'event-id', params: {id: eventId.value}}))
+  if (!isFinished.value) return goToEvent()
+  // Адвент-календарь — короткий ежедневный ритуал, рекламу после его окошек не показываем
+  const isAdvent = String(eventStore.questId || '').startsWith('advent-')
+  if (isAdvent) return goToEvent()
+  showInterstitial(goToEvent)
 }
 
 const filledSentenceHtml = computed(() => {
@@ -476,10 +522,28 @@ const feedbackClass = computed(() => {
               <SoundBtn :text="currentStep.text"/>
               <h3 class="section__title">{{ t('eventSessionPage.listen') }}</h3>
             </div>
+            <div v-if="translationOf(currentStep.text)" class="tr">
+              <button type="button" class="tr__btn" :class="{ 'is-open': isTranslationOpen('text') }" @click="toggleTranslation('text')">
+                <svg class="tr__icon" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12.87 15.07l-2.54-2.51.03-.03c1.74-1.94 2.98-4.17 3.71-6.53H17V4h-7V2H8v2H1v1.99h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11.76-2.04zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2l-4.5-12zm-2.62 7l1.62-4.33L19.12 17h-3.24z"/></svg>
+                <span>{{ t('eventSessionPage.showTranslation') }}</span>
+              </button>
+              <transition name="tr">
+                <p v-if="isTranslationOpen('text')" class="tr__bubble">{{ translationOf(currentStep.text) }}</p>
+              </transition>
+            </div>
             <div v-if="currentStep.questions && currentStep.questions.length" class="reading">
               <div v-for="(questionItem, questionIndex) in currentStep.questions" :key="questionIndex"
                    class="reading__item">
                 <p class="question">{{ questionIndex + 1 }}. {{ t(questionItem.question) }}</p>
+                <div v-if="translationOf(questionItem.question)" class="tr">
+                  <button type="button" class="tr__btn" :class="{ 'is-open': isTranslationOpen('q' + questionIndex) }" @click="toggleTranslation('q' + questionIndex)">
+                    <svg class="tr__icon" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12.87 15.07l-2.54-2.51.03-.03c1.74-1.94 2.98-4.17 3.71-6.53H17V4h-7V2H8v2H1v1.99h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11.76-2.04zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2l-4.5-12zm-2.62 7l1.62-4.33L19.12 17h-3.24z"/></svg>
+                    <span>{{ t('eventSessionPage.showTranslation') }}</span>
+                  </button>
+                  <transition name="tr">
+                    <p v-if="isTranslationOpen('q' + questionIndex)" class="tr__bubble">{{ translationOf(questionItem.question) }}</p>
+                  </transition>
+                </div>
                 <div class="choices">
                   <button
                       v-for="(optionText, optionIndex) in questionItem.options"
@@ -501,7 +565,17 @@ const feedbackClass = computed(() => {
           </section>
           <section v-else-if="currentStep?.type === 'mcq' || currentStep?.type === 'multiple-choice'"
                    class="section card">
-            <p v-if="currentStep.question" class="question">{{ t(currentStep.question) }}</p>
+            <!-- В заданиях с картинкой вопрос и перевод не нужны: всё понятно по изображению -->
+            <p v-if="currentStep.question && !currentStep.image" class="question">{{ t(currentStep.question) }}</p>
+            <div v-if="!currentStep.image && translationOf(currentStep.question)" class="tr">
+              <button type="button" class="tr__btn" :class="{ 'is-open': isTranslationOpen('q') }" @click="toggleTranslation('q')">
+                <svg class="tr__icon" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12.87 15.07l-2.54-2.51.03-.03c1.74-1.94 2.98-4.17 3.71-6.53H17V4h-7V2H8v2H1v1.99h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11.76-2.04zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2l-4.5-12zm-2.62 7l1.62-4.33L19.12 17h-3.24z"/></svg>
+                <span>{{ t('eventSessionPage.showTranslation') }}</span>
+              </button>
+              <transition name="tr">
+                <p v-if="isTranslationOpen('q')" class="tr__bubble">{{ translationOf(currentStep.question) }}</p>
+              </transition>
+            </div>
             <img class="question-image" v-if="currentStep.image" :src="getImageUrl(currentStep.image)"
                  alt="Task image"/>
             <div class="choices">
@@ -522,6 +596,15 @@ const feedbackClass = computed(() => {
           </section>
           <section v-else-if="currentStep?.type === 'choose-word'" class="section card">
             <p class="question" v-html="filledSentenceHtml"></p>
+            <div v-if="translationOf(currentStep.sentence)" class="tr">
+              <button type="button" class="tr__btn" :class="{ 'is-open': isTranslationOpen('q') }" @click="toggleTranslation('q')">
+                <svg class="tr__icon" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12.87 15.07l-2.54-2.51.03-.03c1.74-1.94 2.98-4.17 3.71-6.53H17V4h-7V2H8v2H1v1.99h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11.76-2.04zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2l-4.5-12zm-2.62 7l1.62-4.33L19.12 17h-3.24z"/></svg>
+                <span>{{ t('eventSessionPage.showTranslation') }}</span>
+              </button>
+              <transition name="tr">
+                <p v-if="isTranslationOpen('q')" class="tr__bubble">{{ translationOf(currentStep.sentence) }}</p>
+              </transition>
+            </div>
             <div class="choices">
               <button
                   v-for="(optionText, optionIndex) in currentStep.options"
@@ -627,11 +710,12 @@ const feedbackClass = computed(() => {
       <div v-if="showExitModal" class="result-modal-overlay" @click.self="closeExitModal">
         <div class="result-wrapper">
           <div class="result card fail-card">
-            <div class="result__icon">
+            <div class="result__icon" :class="{ 'result__icon--leave': eventId !== 'halloween' }">
               <DotLottieVue
                   :data="JSON.stringify(getLeaveAnimation())"
                   :loop="true"
                   :autoplay="true"
+                  class="result__lottie"
               />
             </div>
             <p class="result__subtext">{{t('questCompletedModals.continueQuest')}}</p>
@@ -742,7 +826,8 @@ const feedbackClass = computed(() => {
 
 .result.card {
   background: var(--bgModal, #fff);
-  padding: 30px 20px;
+  /* снизу место под системную полосу телефона, чтобы кнопки не уходили под неё */
+  padding: 30px 20px calc(30px + env(safe-area-inset-bottom, 0px));
   border-radius: 24px 24px 0 0;
   box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
   border: none;
@@ -756,6 +841,21 @@ const feedbackClass = computed(() => {
 .result__icon {
   font-size: 50px;
   margin-bottom: 10px;
+}
+
+/* Ёж выхода из квестов на карте: в файле анимации много пустого поля, поэтому крупнее, как в V-stopSessionModal */
+.result__icon--leave {
+  height: 160px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 10px 0 20px;
+}
+
+.result__icon--leave .result__lottie {
+  width: 280px;
+  height: 280px;
+  flex-shrink: 0;
 }
 
 .result__subtext {
@@ -897,6 +997,104 @@ const feedbackClass = computed(() => {
   font-weight: 800;
   color: var(--title);
   margin: 6px 15px 12px;
+}
+
+/* Перевод на язык пользователя: скрыт за кнопкой, открывается «пузырём» под вопросом */
+/* Пузырь с переводом лежит поверх заданий и не сдвигает их: место под кнопку зарезервировано всегда */
+.tr {
+  position: relative;
+  z-index: 5;
+  align-self: stretch;
+  text-align: left;
+  margin: -4px 15px 14px;
+}
+
+.tr__btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  border: none;
+  border-radius: 50px;
+  padding: 6px 14px 6px 10px;
+  background: rgb(94 124 240 / 0.18);
+  color: #9fb4ff;
+  font-family: "Nunito", sans-serif;
+  font-size: 13px;
+  font-weight: 800;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+}
+
+.tr__btn:active {
+  transform: translateY(1px);
+}
+
+.tr__btn:not(.is-open) {
+  animation: trWiggle 4s ease-in-out 1s infinite;
+}
+
+.tr__btn.is-open {
+  background: #5e7cf0;
+  color: #ffffff;
+}
+
+@keyframes trWiggle {
+  0%, 82%, 100% { transform: rotate(0); }
+  85% { transform: rotate(-6deg); }
+  88% { transform: rotate(5deg); }
+  91% { transform: rotate(-4deg); }
+  94% { transform: rotate(2deg); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .tr__btn:not(.is-open) { animation: none; }
+}
+
+.tr__icon {
+  width: 16px;
+  height: 16px;
+  flex-shrink: 0;
+}
+
+.tr__bubble {
+  position: absolute;
+  top: calc(100% + 10px);
+  left: 0;
+  right: 0;
+  margin: 0;
+  cursor: pointer;
+  box-shadow: 0 10px 24px rgb(0 0 0 / 0.45);
+  padding: 10px 14px;
+  border-radius: 14px;
+  background: #26315a;
+  border: 1px solid rgb(94 124 240 / 0.6);
+  color: #ffffff;
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 1.45;
+}
+
+/* хвостик пузыря к кнопке */
+.tr__bubble::before {
+  content: '';
+  position: absolute;
+  top: -7px;
+  left: 22px;
+  width: 12px;
+  height: 12px;
+  background: inherit;
+  border-left: 1px solid rgb(94 124 240 / 0.6);
+  border-top: 1px solid rgb(94 124 240 / 0.6);
+  transform: rotate(45deg);
+}
+
+.tr-enter-active, .tr-leave-active {
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.tr-enter-from, .tr-leave-to {
+  opacity: 0;
+  transform: translateY(-4px);
 }
 
 .choices {

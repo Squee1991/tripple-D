@@ -28,9 +28,9 @@
       <main class="main">
         <section class="calendar-card">
           <header class="calendar__header">
-            <button class="calendar__nav-btn" @click="goToPreviousMonth" aria-label="Предыдущий месяц">‹</button>
+            <button class="calendar__nav-btn calendar__nav-btn--prev" type="button" @click="goToPreviousMonth" aria-label="Предыдущий месяц"><VArrowNav/></button>
             <div class="calendar__header-date">{{ monthNames[currentMonth] }} {{ currentYear }}</div>
-            <button class="calendar__nav-btn" @click="goToNextMonth" aria-label="Следующий месяц">›</button>
+            <button class="calendar__nav-btn" type="button" @click="goToNextMonth" aria-label="Следующий месяц"><VArrowNav/></button>
           </header>
           <div class="calendar__weekdays">
             <div v-for="weekday in weekdayNames" :key="weekday" class="calendar__weekday">{{ weekday }}</div>
@@ -77,6 +77,7 @@ import ChristmasIcon from '~/assets/images/calendar-icons/christmas-wreath.svg'
 import FoolDay from '~/assets/images/calendar-icons/FoolDay.svg'
 import Bees from '~/assets/images/calendar-icons/bees.svg'
 import VBackBtn from "~/src/components/V-back-btn.vue";
+import VArrowNav from "~/src/components/V-arrowNav.vue";
 const { t} = useI18n()
 
 definePageMeta({
@@ -117,7 +118,7 @@ const annualEvents = ref([
     alt: 'ChristmasIcon',
     title: t('eventsNavNames.winter'),
     typeId: 'winter',
-    start: '12-18 00:00',
+    start: '12-01 00:00',
     end: '01-03 23:59'
   },
   {
@@ -283,397 +284,336 @@ function endOfDay(dateObj) {
 </script>
 
 <style scoped>
-:root {
-  --ink: #121018;
-  --sticker: #fffdfa;
-  --cta: #ff6ea6;
-}
-
-.legend__wrapper {
-  padding:  0 11px 15px 11px ;
-}
-
+/* Календарь событий в стиле приложения, дни ивента подсвечены его цветом.
+   Светлая тема по умолчанию (как :root в theme.css), тёмная через html.dark */
 .page {
+  --cal-surface: #ffffff;
+  --cal-surface-2: #f3f5fa;
+  --cal-border: rgb(31 41 72 / 0.09);
+  --cal-text: #1f2937;
+  --cal-muted: #8a93a6;
+  --cal-shadow: 0 6px 18px rgb(31 41 72 / 0.08);
+  --cal-accent: #6c5ce7;
+  --cal-accent-dark: #5143c4;
+
   height: 100%;
-  max-width: 1400px;
+  max-width: 1100px;
   display: flex;
   flex-direction: column;
   margin: 0 auto;
   overflow: hidden;
+  font-family: "Nunito", sans-serif;
+}
+
+html.dark .page {
+  --cal-surface: #1d2333;
+  --cal-surface-2: #252c40;
+  --cal-border: rgb(255 255 255 / 0.07);
+  --cal-text: #ffffff;
+  --cal-muted: #8b93a7;
+  --cal-shadow: 0 8px 24px rgb(0 0 0 / 0.18);
 }
 
 .topbar {
   position: sticky;
   top: 0;
   z-index: 10;
-  display: grid;
-  grid-template-columns: 56px 1fr 56px;
+  display: flex;
   align-items: center;
-  padding: 5px 10px 15px 10px;
-  margin-bottom: 5px;
+  gap: 12px;
+  padding: 5px 10px 12px;
   background: var(--bg);
 }
 
-.back-btn {
-  width: 44px;
-  height: 44px;
-  border-radius: 12px;
-  cursor: pointer;
-  border: 3px solid var(--ink);
-  background: #54cb54;
-  font-size: 20px;
-  font-weight: 1000;
-  line-height: 1;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  box-shadow: 0 4px 0 #30b630;
-  transition: transform .18s ease, box-shadow .18s ease;
-}
-
-.back-btn:active {
-  transform: translateY(1px);
-  box-shadow: 0 2px 0 #f0b7d2;
-}
-
 .page-title {
-  margin-left: 10px;
   font-size: 23px;
-  font-weight: 600;
+  font-weight: 800;
+  letter-spacing: 0.5px;
   color: var(--title);
-  text-shadow: 1px 1px var(--title);
 }
 
 .spacer {
-  width: 56px;
+  display: none;
 }
 
-/* --- ИСПРАВЛЕНО: Базовый контейнер теперь имеет стандартное направление --- */
 .calendar__layout {
   flex: 1;
-  display: flex;
-  flex-direction: column; /* Скролл теперь будет правильно начинаться сверху */
-  gap: 10px;
-  padding: 10px;
+  min-height: 0;
   overflow-y: auto;
-  -webkit-overflow-scrolling: touch;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  padding: 0 10px calc(20px + env(safe-area-inset-bottom, 0px));
   scrollbar-width: none;
-  -ms-overflow-style: none;
-  padding-bottom: 60px;
 }
 
+.calendar__layout::-webkit-scrollbar {
+  display: none;
+}
 
 .main {
-  flex-grow: 1;
   order: 1;
 }
 
 .area__info {
-  background: #ffffff;
-  border-radius: 15px;
   order: 2;
+}
+
+/* ---------- карточка календаря ---------- */
+.calendar-card {
+  background: var(--cal-surface);
+  border: 1px solid var(--cal-border);
+  border-radius: 24px;
+  padding: 14px 12px 16px;
+  box-shadow: var(--cal-shadow);
+}
+
+.calendar__header {
+  display: grid;
+  grid-template-columns: 40px 1fr 40px;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 14px;
+}
+
+.calendar__header-date {
+  text-align: center;
+  font-size: 19px;
+  font-weight: 800;
+  color: var(--cal-text);
+  text-transform: capitalize;
+}
+
+/* Стрелки месяцев: общий компонент V-arrowNav, левая развёрнута */
+.calendar__nav-btn {
+  border: none;
+  background: none;
+  padding: 0;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.calendar__nav-btn :deep(.topic-arrow) {
+  margin: 0;
+  width: 30px;
+  height: 30px;
+  padding: 9px;
+}
+
+.calendar__nav-btn--prev :deep(.topic-arrow) {
+  transform: rotate(180deg);
+}
+
+.calendar__nav-btn:active {
+  transform: scale(0.94);
+}
+
+.calendar__weekdays,
+.calendar__grid {
+  display: grid;
+  grid-template-columns: repeat(7, minmax(0, 1fr));
+  gap: 6px;
+}
+
+.calendar__weekdays {
+  margin-bottom: 6px;
+}
+
+.calendar__weekday {
+  text-align: center;
+  font-size: 12px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: var(--cal-muted);
+  padding: 4px 0;
+}
+
+/* ---------- клетки ---------- */
+.calendar__cell {
+  --event: transparent;
+  position: relative;
+  aspect-ratio: 1 / 1.08;
+  border-radius: 14px;
+  background: var(--cal-surface-2);
+  border: 1px solid var(--cal-border);
+  padding: 5px 6px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.calendar__date {
+  font-size: 14px;
+  font-weight: 800;
+  color: var(--cal-text);
+  line-height: 1;
+}
+
+.calendar__cell--today {
+  border: 2px solid var(--cal-accent);
+  box-shadow: 0 0 0 3px rgb(108 92 231 / 0.25);
+}
+
+.calendar__cell--today .calendar__date {
+  color: var(--cal-accent);
+}
+
+/* дни ивента: мягкий фон в цвете ивента и иконка по центру */
+.calendar__cell--event {
+  background: linear-gradient(160deg, color-mix(in srgb, var(--event) 34%, var(--cal-surface-2)), color-mix(in srgb, var(--event) 14%, var(--cal-surface-2)));
+  border-color: color-mix(in srgb, var(--event) 55%, transparent);
+}
+
+.calendar__cell--event-winter { --event: #4f9cf0; }
+.calendar__cell--event-valentine { --event: #ff6f9e; }
+.calendar__cell--event-fools { --event: #ffb547; }
+.calendar__cell--event-pumpkin { --event: #ff8a1a; }
+
+.calendar__icon-wrap {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.calendar__icon {
+  width: 60%;
+  max-width: 34px;
+  height: auto;
+  filter: drop-shadow(0 2px 3px rgb(0 0 0 / 0.25));
+}
+
+.calendar__badge {
+  display: none;
+}
+
+/* ---------- обозначения ---------- */
+.legend {
+  background: var(--cal-surface);
+  border: 1px solid var(--cal-border);
+  box-shadow: var(--cal-shadow);
+  border-radius: 24px;
+  padding: 16px 14px;
+}
+
+.legend__title {
+  font-size: 18px;
+  font-weight: 800;
+  color: var(--cal-text);
+  margin-bottom: 12px;
+}
+
+.legend__list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
 }
 
 .legend__item {
   display: flex;
-  margin-bottom: 10px;
-  padding: 10px;
-}
-
-.legend {
-  border-radius: 18px;
-  min-width: 320px;
-  height: 100%;
-}
-
-.legend__title {
-  font-size: 24px;
-  text-align: center;
-  font-weight: 1000;
-  color: #2f2e2e;
-  padding: 15px;
-  margin-bottom: 10px;
-  border-bottom: 2px dashed black;
+  align-items: center;
+  gap: 10px;
+  min-width: 0;
+  padding: 8px;
+  border-radius: 16px;
+  background: var(--cal-surface-2);
 }
 
 .legend__icon-wrap {
-  width: 60px;
-  height: 60px;
-  border: 3px solid var(--ink);
-  border-radius: 14px;
-  display: grid;
-  place-items: center;
-  background: #fff;
-  margin-right: 15px;
+  --event: var(--cal-accent);
+  flex-shrink: 0;
+  width: 42px;
+  height: 42px;
+  border-radius: 12px;
+  background: color-mix(in srgb, var(--event) 25%, transparent);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.legend__icon-wrap--winter { --event: #4f9cf0; }
+.legend__icon-wrap--valentine { --event: #ff6f9e; }
+.legend__icon-wrap--fools { --event: #ffb547; }
+.legend__icon-wrap--pumpkin { --event: #ff8a1a; }
+
+.legend__icon {
+  width: 28px;
+  height: 28px;
 }
 
 .legend__meta {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  min-width: 0;
 }
 
 .legend__name {
-  display: block;
+  font-size: 14px;
+  font-weight: 800;
+  color: var(--cal-text);
+  line-height: 1.2;
 }
 
 .legend__period {
-  opacity: .8;
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--cal-muted);
 }
 
-.legend-mobile > summary {
-  cursor: pointer;
-  padding: 8px 10px;
-  border: 3px solid var(--ink);
-  border-radius: 12px;
-  background: #fff;
-  font-weight: 800;
-}
-
-.calendar-card {
-  border-radius: 22px;
-  margin-bottom: 15px;
-  flex: 1;
-}
-
-.calendar__header {
-  display: grid;
-  grid-template-columns: 44px 1fr 44px;
-  align-items: center;
-  gap: 12px;
-  margin: 0 0 12px;
-  background: linear-gradient(180deg, #ffeff8 0%, #ffd9ec 100%);
-  border: 3px solid var(--ink);
-  border-radius: 16px;
-  padding: 8px 10px;
-}
-
-.calendar__header-date {
-  font-size: 20px;
-  font-weight: 1000;
-  text-align: center;
-  background: #fff;
-  border: 2px solid var(--ink);
-  border-radius: 12px;
-  padding: 6px 10px;
-}
-
-.calendar__nav-btn {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 44px;
-  height: 44px;
-  border-radius: 12px;
-  cursor: pointer;
-  border: 3px solid var(--ink);
-  background: radial-gradient(circle at 50% 35%, #fff, #ffe7f4 60%, #ffd1ea 100%);
-  font-size: 20px;
-  font-weight: 1000;
-  box-shadow: 0 6px 0 #f0b7d2;
-}
-
-.calendar__weekdays {
-  display: grid;
-  grid-template-columns: repeat(7, 1fr);
-  gap: 8px;
-  margin: 10px 0;
-}
-
-.calendar__weekday {
-  text-align: center;
-  font-weight: 1000;
-  background: linear-gradient(180deg, #dff6ff 0%, #cfe9ff 100%);
-  border-radius: 12px;
-  padding: 8px 0;
-}
-
-.calendar__grid {
-  display: grid;
-  grid-template-columns: repeat(7, 1fr);
-  gap: 8px;
-}
-
-.calendar__cell {
-  position: relative;
-  min-height: clamp(70px, 10vw, 100px);
-  max-height: clamp(70px, 10vw, 100px);
-  background: #fff;
-  border-radius: 16px;
-  padding: 8px;
-  box-shadow: 0 4px 0 #d1d1d5;
-}
-
-.calendar__date {
-  font-weight: 1000;
-  font-size: 15px;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  padding: 2px;
-}
-
-.calendar__cell--today {
-  background: linear-gradient(180deg, #fff7fb 0%, #ffeef7 100%);
-  border-color: #ff6ea6;
-}
-
-.calendar__icon-wrap {
-  position: absolute;
-  inset: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  pointer-events: none;
-}
-
-.calendar__icon {
-  width: clamp(26px, 4.5vw, 42px);
-  height: clamp(26px, 4.5vw, 42px);
-  object-fit: contain;
-  filter: drop-shadow(0 2px 0 rgba(0, 0, 0, .35));
-}
-
-.calendar__badge {
-  position: absolute;
-  left: 6px;
-  right: 6px;
-  bottom: 6px;
-  text-align: center;
-  font-size: 11px;
-  font-weight: 900;
-  padding: 4px 6px;
-  color: #111;
-  background: #fff6d8;
-  border: 3px solid var(--ink);
-  border-radius: 10px;
-  box-shadow: 0 4px 0 #e7d7a6;
-  overflow: hidden;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-}
-
-.calendar__cell--event-pumpkin {
-  background: linear-gradient(180deg, #ffd4a2 0%, #ffb46b 100%);
-  border-color: #5a3100;
-}
-
-.calendar__cell--event-winter {
-  background: linear-gradient(180deg, #d7f0ff 0%, #a9d7ff 100%);
-  border-color: #1a3d6b;
-}
-
-.calendar__cell--event-valentine {
-  background: linear-gradient(180deg, #ffcee1 0%, #ff9dc4 100%);
-  border-color: #7a0e3f;
-}
-
-.calendar__cell--event-fools {
-  background: linear-gradient(180deg, #cde0ff 0%, #9ec0ff 100%);
-  border-color: #0f2d7a;
-}
-
-.calendar__badge--pumpkin {
-  background: #ffe9c7;
-}
-
-.calendar__badge--winter {
-  background: #eaf6ff;
-}
-
-.calendar__badge--valentine {
-  background: #ffe0ee;
-}
-
-.calendar__badge--fools {
-  background: #e3eeff;
-}
-
-/* --- ИСПРАВЛЕНО: Сетка для больших экранов (от 768px) --- */
+/* ---------- большие экраны: обозначения слева, календарь справа ---------- */
 @media (min-width: 768px) {
   .calendar__layout {
     display: grid;
-    grid-template-columns: 280px 1fr; /* Легенда слева, календарь справа */
-    padding: 10px;
+    grid-template-columns: 280px 1fr;
+    align-items: start;
     gap: 20px;
   }
 
-  /* Сбрасываем мобильный order, чтобы всё встало по порядку DOM */
   .main, .area__info {
     order: unset;
   }
-}
-
-/* --- ИСПРАВЛЕНО: Стили для мобильных экранов (до 767px) --- */
-@media (max-width: 767px) {
-  .calendar__layout {
-    gap: 0;
-    padding: 0 5px 20px 5px;
-  }
 
   .legend__list {
-    display: flex;
-    flex-wrap: wrap;
+    grid-template-columns: 1fr;
   }
 
-  .legend__item {
-    width: 50%;
+  .calendar__grid {
+    gap: 8px;
   }
 
-  .legend__wrapper { /* Исправлена опечатка legend__wrappper -> legend__wrapper */
-    padding: 10px;
-  }
-
-  .legend__icon-wrap {
-    width: 48px;
-    height: 48px;
-    margin-right: 8px;
-  }
-
-  .legend__name {
-    font-size: 15px;
-  }
-
-  .calendar__cell {
-    padding: 4px;
+  .calendar__date {
+    font-size: 16px;
   }
 
   .calendar__badge {
-    display: none;
-  }
-
-  .calendar__icon {
-    width: 31px;
-    height: 31px;
-  }
-
-  .calendar__icon-wrap {
-    padding-top: 15px;
-  }
-}
-
-@media (max-width: 520px) {
-  .topbar {
-    grid-template-columns: 48px 1fr 48px;
-  }
-
-  .calendar__header {
-    grid-template-columns: 40px 1fr 40px;
-  }
-
-  .calendar__nav-btn {
-    width: 40px;
-    height: 40px;
-  }
-
-  .calendar__weekdays {
-    gap: 6px;
+    display: block;
+    margin-top: auto;
+    font-size: 10px;
+    font-weight: 800;
+    color: var(--cal-text);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    opacity: 0.8;
   }
 }
 
-@media (max-width: 360px) {
+@media (max-width: 380px) {
+  .calendar__weekdays,
   .calendar__grid {
-    grid-template-columns: repeat(6, 1fr);
+    gap: 4px;
+  }
+
+  .calendar__cell {
+    border-radius: 11px;
+    padding: 4px;
+  }
+
+  .calendar__date {
+    font-size: 12px;
   }
 }
 </style>

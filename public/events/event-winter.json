@@ -3,8 +3,8 @@
     {
       "id": "quest-1",
       "title": "Рождественская викторина",
-        "rewardCoins": 10,
-        "rewardRep": 0,
+      "rewardCoins": 10,
+      "rewardRep": 0,
       "steps": [
         {
           "type": "multiple-choice",
@@ -23,11 +23,11 @@
           "type": "multiple-choice",
           "id": "mcq-2",
           "title": "Погода на Рождество",
-          "question": "Wie ist das Wetter zu Weihnachten (Nordliche Hemisphäre)?",
+          "question": "Wie ist das Wetter zu Weihnachten in Deutschland meistens?",
           "options": [
             "es ist sehr heiß",
-            "es schneit nie",
             "es ist warm und sonnig",
+            "es ist schwül",
             "es ist kalt"
           ],
           "correctOptionIndex": 3
@@ -51,10 +51,10 @@
           "title": "Как Санта попадает в дом?",
           "question": "Wie kommt der Weihnachtsmann ins Haus?",
           "options": [
-            "durch die Tür",
+            "durch die Garage",
             "durchs Fenster",
             "durch den Kamin",
-            "durch den Rauchfang"
+            "durch den Keller"
           ],
           "correctOptionIndex": 2
         },
@@ -92,8 +92,8 @@
           "options": [
             "Geschenke",
             "das Abendessen",
-            "Kerzen",
-            "eine Krippe"
+            "Schuhe",
+            "Bücher für die Schule"
           ],
           "correctOptionIndex": 0
         },
@@ -106,7 +106,7 @@
             "Jesus",
             "Maria",
             "der Weihnachtsmann",
-            "die heiligen drei Könige"
+            "die Heiligen Drei Könige"
           ],
           "correctOptionIndex": 2
         }
@@ -187,12 +187,12 @@
           "type": "multiple-choice",
           "id": "mcq-14",
           "title": "Нерождественские персонажи",
-          "question": "Welche Figuren gehören nicht zu Weihnachten?",
+          "question": "Welche Figur gehört nicht zu Weihnachten?",
           "options": [
-            "Heinzelmännchen",
-            "Engel",
-            "der Krampus",
-            "die Heiligen 3 Könige"
+            "der Osterhase",
+            "ein Engel",
+            "der Weihnachtsmann",
+            "die Heiligen Drei Könige"
           ],
           "correctOptionIndex": 0
         },
@@ -247,10 +247,10 @@
           "type": "multiple-choice",
           "id": "mcq-18",
           "title": "Кнехт Рупрехт",
-          "question": "Was bringt der Knecht Ruprecht laut der Tradition?",
+          "question": "Was hat Knecht Ruprecht für unartige Kinder dabei?",
           "options": [
             "Süßigkeiten",
-            "Rute",
+            "eine Rute",
             "Geschenke",
             "Plätzchen"
           ],
@@ -289,9 +289,9 @@
           "question": "Was macht man traditionell am Silvesterabend?",
           "options": [
             "man öffnet Geschenke",
-            "man schießt Feuerwerk",
+            "man zündet ein Feuerwerk",
             "man bemalt Eier",
-            "man backt Kekse"
+            "man stellt Schuhe vor die Tür"
           ],
           "correctOptionIndex": 1
         },
@@ -299,12 +299,12 @@
           "type": "multiple-choice",
           "id": "mcq-22",
           "title": "Цвета праздника",
-          "question": "Welche Farbe wird mit Weihnachten am meisten verbunden?",
+          "question": "Wer begleitet den Nikolaus?",
           "options": [
-            "Rot",
-            "Blau",
-            "Grün",
-            "Gelb"
+            "Knecht Ruprecht",
+            "der Osterhase",
+            "Rudolf",
+            "die Zahnfee"
           ],
           "correctOptionIndex": 0
         },
@@ -411,40 +411,40 @@
           "type": "multiple-choice",
           "id": "mcq-30",
           "title": "Письмо Санте",
-          "question": "Was schreibt man an den Weihnachtsmann?",
+          "question": "Wann beginnt die Adventszeit?",
           "options": [
-            "einen Wunschzettel",
-            "eine Einladung",
-            "einen Vertrag",
-            "ein Tagebuch"
-          ],
-          "correctOptionIndex": 0
-        },
-        {
-          "type": "multiple-choice",
-          "id": "mcq-31",
-          "title": "Традиция под омелой",
-          "question": "Was macht man traditionell unter einem Mistelzweig?",
-          "options": [
-            "Man tanzt",
-            "Man küsst sich",
-            "Man schenkt Geld",
-            "Man isst Plätzchen"
+            "am 6. Dezember",
+            "am vierten Sonntag vor Weihnachten",
+            "am 24. Dezember",
+            "am 1. Januar"
           ],
           "correctOptionIndex": 1
         },
         {
           "type": "multiple-choice",
-          "id": "mcq-32",
-          "title": "Праздничная выпечка",
-          "question": "Wie heißt das Gebäck, das man zu Weihnachten oft mit Puderzucker bestreut?",
+          "id": "mcq-31",
+          "title": "Традиция под омелой",
+          "question": "Was findet man hinter den Türchen eines Adventskalenders?",
           "options": [
-            "Brezel",
-            "Käsekuchen",
-            "Stollen",
-            "Croissant"
+            "Rechnungen",
+            "Hausaufgaben",
+            "kleine Überraschungen",
+            "Socken"
           ],
           "correctOptionIndex": 2
+        },
+        {
+          "type": "multiple-choice",
+          "id": "mcq-32",
+          "title": "Праздничная выпечка",
+          "question": "Welches Gebäck hat oft die Form von Herzen und wird mit Zuckerguss verziert?",
+          "options": [
+            "Brezel",
+            "Lebkuchen",
+            "Toast",
+            "Croissant"
+          ],
+          "correctOptionIndex": 1
         }
       ]
     },
@@ -458,14 +458,14 @@
           "type": "multiple-choice",
           "id": "mcq-33",
           "title": "Желания детям",
-          "question": "Was schreibt man an den Weihnachtsmann?",
+          "question": "Wann ist die Bescherung in Deutschland meistens?",
           "options": [
-            "einen Wunschzettel",
-            "eine Einladung",
-            "einen Vertrag",
-            "ein Tagebuch"
+            "am 6. Dezember",
+            "am Heiligabend",
+            "am 31. Dezember",
+            "am 6. Januar"
           ],
-          "correctOptionIndex": 0
+          "correctOptionIndex": 1
         },
         {
           "type": "multiple-choice",
@@ -474,7 +474,7 @@
           "question": "Was gehört NICHT zum Adventskranz?",
           "options": [
             "vier Kerzen",
-            "grüner Kranz",
+            "Tannenzweige",
             "fünf Kerzen",
             "Schleifen"
           ],
@@ -514,7 +514,7 @@
           "options": [
             "ein Getränk",
             "eine Lichterkette",
-            "Tinselschmuck",
+            "glänzende Silberfäden für den Baum",
             "ein Plätzchen"
           ],
           "correctOptionIndex": 2
@@ -549,18 +549,17 @@
           "type": "multiple-choice",
           "id": "mcq-40",
           "title": "Что вешают к камину?",
-          "question": "Was hängt man traditionell an den Kamin?",
+          "question": "Was hängen Kinder in England und in den USA an den Kamin?",
           "options": [
-            "den Hut",
-            "den Schal",
-            "den Handschuh",
-            "den Strumpf"
+            "einen Hut",
+            "einen Schal",
+            "einen Handschuh",
+            "einen Strumpf"
           ],
           "correctOptionIndex": 3
         }
       ]
     },
-
     {
       "id": "quest-6",
       "title": "Weihnachten in Deutschland",
@@ -575,27 +574,52 @@
           "questions": [
             {
               "question": "Wann feiern die meisten Familien in Deutschland Weihnachten?",
-              "options": ["am 25. Dezember", "am 24. Dezember", "am 1. Januar", "am 6. Dezember"],
+              "options": [
+                "am 25. Dezember",
+                "am 24. Dezember",
+                "am 1. Januar",
+                "am 6. Dezember"
+              ],
               "correctOptionIndex": 1
             },
             {
               "question": "Wer bringt die Geschenke?",
-              "options": ["der Nikolaus", "der Weihnachtsmann", "die Eltern", "der Engel"],
+              "options": [
+                "der Nikolaus",
+                "der Weihnachtsmann",
+                "die Eltern",
+                "der Engel"
+              ],
               "correctOptionIndex": 1
             },
             {
               "question": "Was machen die Kinder am Abend?",
-              "options": ["schlafen", "singen Lieder", "öffnen Geschenke", "gehen spazieren"],
+              "options": [
+                "schlafen",
+                "singen Lieder",
+                "öffnen Geschenke",
+                "gehen spazieren"
+              ],
               "correctOptionIndex": 2
             },
             {
               "question": "Was gibt es am Abend?",
-              "options": ["Eiscreme", "leckeres Essen", "Kuchen", "Pizza"],
+              "options": [
+                "Eiscreme",
+                "leckeres Essen",
+                "Kuchen",
+                "Pizza"
+              ],
               "correctOptionIndex": 1
             },
             {
               "question": "Wie ist die Stimmung am Weihnachtsabend?",
-              "options": ["traurig", "laut", "fröhlich", "langweilig"],
+              "options": [
+                "traurig",
+                "laut",
+                "fröhlich",
+                "langweilig"
+              ],
               "correctOptionIndex": 2
             }
           ]
@@ -608,27 +632,52 @@
           "questions": [
             {
               "question": "Wann findet der Weihnachtsmarkt statt?",
-              "options": ["im Oktober", "im Dezember", "im März", "im Sommer"],
+              "options": [
+                "im Oktober",
+                "im Dezember",
+                "im März",
+                "im Sommer"
+              ],
               "correctOptionIndex": 1
             },
             {
               "question": "Was kann man auf dem Weihnachtsmarkt trinken?",
-              "options": ["Cola", "Eistee", "Glühwein", "Wasser"],
+              "options": [
+                "Cola",
+                "Eistee",
+                "Glühwein",
+                "Wasser"
+              ],
               "correctOptionIndex": 2
             },
             {
               "question": "Wonach duftet es auf dem Weihnachtsmarkt?",
-              "options": ["nach Apfel und Birne", "nach Zimt und Vanille", "nach Rosen", "nach Pfeffer"],
+              "options": [
+                "nach Apfel und Birne",
+                "nach Zimt und Vanille",
+                "nach Rosen",
+                "nach Pfeffer"
+              ],
               "correctOptionIndex": 1
             },
             {
               "question": "Was kann man dort kaufen?",
-              "options": ["Kleidung", "Geschenke", "Autos", "Zeitungen"],
+              "options": [
+                "Kleidung",
+                "Geschenke",
+                "Autos",
+                "Zeitungen"
+              ],
               "correctOptionIndex": 1
             },
             {
               "question": "Wie sieht der Markt aus?",
-              "options": ["Dunkel und leer", "Bunt und hell", "Schmutzig", "Geschlossen"],
+              "options": [
+                "dunkel und leer",
+                "hell und voller Lichter",
+                "schmutzig",
+                "geschlossen"
+              ],
               "correctOptionIndex": 1
             }
           ]
@@ -641,27 +690,52 @@
           "questions": [
             {
               "question": "Wie viele Kerzen hat ein Adventskranz?",
-              "options": ["drei", "vier", "fünf", "sechs"],
+              "options": [
+                "drei",
+                "vier",
+                "fünf",
+                "sechs"
+              ],
               "correctOptionIndex": 1
             },
             {
               "question": "Wann zündet man die Kerzen an?",
-              "options": ["an jedem Sonntag im Advent", "an Weihnachten", "am Nikolaustag", "am Neujahrstag"],
+              "options": [
+                "an jedem Sonntag im Advent",
+                "an Weihnachten",
+                "am Nikolaustag",
+                "am Neujahrstag"
+              ],
               "correctOptionIndex": 0
             },
             {
               "question": "Was zeigt der Adventskranz?",
-              "options": ["die Jahreszeiten", "die Zeit bis Weihnachten", "den Frühling", "die Familienfeier"],
+              "options": [
+                "die Jahreszeiten",
+                "die Zeit bis Weihnachten",
+                "den Frühling",
+                "die Familienfeier"
+              ],
               "correctOptionIndex": 1
             },
             {
-              "question": "Wann ist Heiligabend?",
-              "options": ["nach der vierten Kerze", "nach der ersten Kerze", "vor der dritten Kerze", "nach Neujahr"],
+              "question": "Was bedeutet es, wenn alle vier Kerzen brennen?",
+              "options": [
+                "Heiligabend ist bald da",
+                "Ostern kommt",
+                "der Winter ist vorbei",
+                "das neue Jahr beginnt"
+              ],
               "correctOptionIndex": 0
             },
             {
               "question": "Was macht man am Sonntag im Advent?",
-              "options": ["man zündet eine Kerze an", "man spielt Fußball", "man feiert Silvester", "man tanzt"],
+              "options": [
+                "man zündet eine Kerze an",
+                "man spielt Fußball",
+                "man feiert Silvester",
+                "man tanzt"
+              ],
               "correctOptionIndex": 0
             }
           ]
@@ -674,27 +748,52 @@
           "questions": [
             {
               "question": "Wann kommt der Nikolaus?",
-              "options": ["am 24. Dezember", "am 6. Dezember", "am 1. Januar", "am 31. Dezember"],
+              "options": [
+                "am 24. Dezember",
+                "am 6. Dezember",
+                "am 1. Januar",
+                "am 31. Dezember"
+              ],
               "correctOptionIndex": 1
             },
             {
               "question": "Was stellen die Kinder vor die Tür?",
-              "options": ["ihre Mützen", "ihre Schuhe", "ihre Handschuhe", "ihre Teller"],
+              "options": [
+                "ihre Mützen",
+                "ihre Schuhe",
+                "ihre Handschuhe",
+                "ihre Teller"
+              ],
               "correctOptionIndex": 1
             },
             {
               "question": "Was finden brave Kinder am Morgen?",
-              "options": ["Süßigkeiten", "Bücher", "Spielzeugautos", "Kerzen"],
+              "options": [
+                "Süßigkeiten",
+                "Bücher",
+                "Spielzeugautos",
+                "Kerzen"
+              ],
               "correctOptionIndex": 0
             },
             {
               "question": "Was bekommen unartige Kinder?",
-              "options": ["eine Rute", "ein Geschenk", "ein Lied", "eine Karte"],
+              "options": [
+                "eine Rute",
+                "ein Geschenk",
+                "ein Lied",
+                "eine Karte"
+              ],
               "correctOptionIndex": 0
             },
             {
-              "question": "Wer bringt die Geschenke am Nikolaustag?",
-              "options": ["der Weihnachtsmann", "der Nikolaus", "das Christkind", "der Engel"],
+              "question": "Wer bringt am 6. Dezember die Süßigkeiten?",
+              "options": [
+                "der Weihnachtsmann",
+                "der Nikolaus",
+                "das Christkind",
+                "der Osterhase"
+              ],
               "correctOptionIndex": 1
             }
           ]
@@ -715,27 +814,52 @@
           "questions": [
             {
               "question": "Wann ist Silvester in Deutschland?",
-              "options": ["am 24. Dezember", "am 31. Dezember", "am 1. Januar", "am 6. Januar"],
+              "options": [
+                "am 24. Dezember",
+                "am 31. Dezember",
+                "am 1. Januar",
+                "am 6. Januar"
+              ],
               "correctOptionIndex": 1
             },
             {
               "question": "Was essen viele Menschen an Silvester?",
-              "options": ["Pizza", "Raclette oder Fondue", "Kuchen", "Eis"],
+              "options": [
+                "Pizza",
+                "Raclette oder Fondue",
+                "Kuchen",
+                "Eis"
+              ],
               "correctOptionIndex": 1
             },
             {
               "question": "Was machen die Menschen um Mitternacht?",
-              "options": ["sie gehen schlafen", "sie singen Lieder", "sie stoßen mit Sekt an", "sie tanzen"],
+              "options": [
+                "sie gehen schlafen",
+                "sie singen Lieder",
+                "sie stoßen mit Sekt an",
+                "sie tanzen"
+              ],
               "correctOptionIndex": 2
             },
             {
               "question": "Was wünschen sich die Leute?",
-              "options": ["frohe Ostern", "ein gutes neues Jahr", "viel Spaß", "gute Reise"],
+              "options": [
+                "frohe Ostern",
+                "ein gutes neues Jahr",
+                "viel Spaß",
+                "gute Reise"
+              ],
               "correctOptionIndex": 1
             },
             {
               "question": "Wie ist die Stimmung an Silvester?",
-              "options": ["ruhig", "traurig", "fröhlich und laut", "langweilig"],
+              "options": [
+                "ruhig",
+                "traurig",
+                "fröhlich und laut",
+                "langweilig"
+              ],
               "correctOptionIndex": 2
             }
           ]
@@ -748,27 +872,52 @@
           "questions": [
             {
               "question": "Wann ist Neujahr?",
-              "options": ["am 24. Dezember", "am 31. Dezember", "am 1. Januar", "am 6. Januar"],
+              "options": [
+                "am 24. Dezember",
+                "am 31. Dezember",
+                "am 1. Januar",
+                "am 6. Januar"
+              ],
               "correctOptionIndex": 2
             },
             {
               "question": "Warum schlafen viele Menschen lange?",
-              "options": ["weil sie krank sind", "weil sie gefeiert haben", "weil sie reisen", "weil sie arbeiten"],
+              "options": [
+                "weil sie krank sind",
+                "weil sie gefeiert haben",
+                "weil sie reisen",
+                "weil sie arbeiten"
+              ],
               "correctOptionIndex": 1
             },
             {
               "question": "Mit wem verbringt man oft den Neujahrstag?",
-              "options": ["mit Kollegen", "mit Freunden", "mit der Familie", "mit Nachbarn"],
+              "options": [
+                "mit Kollegen",
+                "mit Freunden",
+                "mit der Familie",
+                "mit Nachbarn"
+              ],
               "correctOptionIndex": 2
             },
             {
               "question": "Was machen manche Menschen an Neujahr?",
-              "options": ["sie schreiben gute Vorsätze", "sie schmücken den Baum", "sie kaufen Geschenke", "sie feiern Geburtstag"],
+              "options": [
+                "sie schreiben gute Vorsätze",
+                "sie schmücken den Baum",
+                "sie kaufen Geschenke",
+                "sie feiern Geburtstag"
+              ],
               "correctOptionIndex": 0
             },
             {
               "question": "Wie ist der Tag meistens?",
-              "options": ["laut und hektisch", "ruhig und gemütlich", "langweilig", "kalt und dunkel"],
+              "options": [
+                "laut und hektisch",
+                "ruhig und gemütlich",
+                "langweilig",
+                "kalt und dunkel"
+              ],
               "correctOptionIndex": 1
             }
           ]
@@ -781,27 +930,52 @@
           "questions": [
             {
               "question": "Was machen viele Menschen zu Neujahr?",
-              "options": ["sie reisen", "sie machen gute Vorsätze", "sie schmücken den Baum", "sie schenken Geschenke"],
+              "options": [
+                "sie reisen",
+                "sie machen gute Vorsätze",
+                "sie schmücken den Baum",
+                "sie kaufen Geschenke"
+              ],
               "correctOptionIndex": 1
             },
             {
               "question": "Was ist ein typischer Vorsatz?",
-              "options": ["mehr schlafen", "mehr Sport machen", "mehr essen", "mehr fernsehen"],
+              "options": [
+                "mehr schlafen",
+                "mehr Sport machen",
+                "mehr essen",
+                "mehr fernsehen"
+              ],
               "correctOptionIndex": 1
             },
             {
               "question": "Wie lange halten viele Vorsätze?",
-              "options": ["das ganze Jahr", "ein paar Wochen", "einen Tag", "gar nicht"],
+              "options": [
+                "das ganze Jahr",
+                "ein paar Wochen",
+                "einen Tag",
+                "gar nicht"
+              ],
               "correctOptionIndex": 1
             },
             {
-              "question": "Was wollen viele Menschen verbessern?",
-              "options": ["ihre Wohnung", "ihren Körper und ihr Leben", "ihre Arbeit", "ihre Kleidung"],
+              "question": "Welcher Vorsatz steht auch im Text?",
+              "options": [
+                "mehr Süßigkeiten essen",
+                "gesünder essen",
+                "später aufstehen",
+                "mehr fernsehen"
+              ],
               "correctOptionIndex": 1
             },
             {
               "question": "Was wollen manche weniger tun?",
-              "options": ["arbeiten", "reisen", "am Handy sein", "lernen"],
+              "options": [
+                "arbeiten",
+                "reisen",
+                "am Handy sein",
+                "lernen"
+              ],
               "correctOptionIndex": 2
             }
           ]
@@ -814,27 +988,52 @@
           "questions": [
             {
               "question": "Wann ist der Tag der Heiligen Drei Könige?",
-              "options": ["am 24. Dezember", "am 31. Dezember", "am 6. Januar", "am 1. Januar"],
+              "options": [
+                "am 24. Dezember",
+                "am 31. Dezember",
+                "am 6. Januar",
+                "am 1. Januar"
+              ],
               "correctOptionIndex": 2
             },
             {
               "question": "Was machen die Kinder an diesem Tag?",
-              "options": ["sie essen Plätzchen", "sie verkleiden sich und singen", "sie lernen in der Schule", "sie schauen Fernsehen"],
+              "options": [
+                "sie essen Plätzchen",
+                "sie verkleiden sich und singen",
+                "sie lernen in der Schule",
+                "sie schauen Fernsehen"
+              ],
               "correctOptionIndex": 1
             },
             {
               "question": "Wofür sammeln die Kinder Geld?",
-              "options": ["für ein Fest", "für arme Kinder", "für Geschenke", "für Musik"],
+              "options": [
+                "für ein Fest",
+                "für arme Kinder",
+                "für Geschenke",
+                "für Musik"
+              ],
               "correctOptionIndex": 1
             },
             {
               "question": "Was schreiben sie an die Türen?",
-              "options": ["ihre Namen", "den Segen mit Kreide", "eine Zahl", "einen Brief"],
+              "options": [
+                "ihre Namen",
+                "den Segen mit Kreide",
+                "eine Zahl",
+                "einen Brief"
+              ],
               "correctOptionIndex": 1
             },
             {
               "question": "Wie verkleiden sich die Kinder?",
-              "options": ["als Engel", "als Könige", "als Tiere", "als Hexen"],
+              "options": [
+                "als Engel",
+                "als Könige",
+                "als Tiere",
+                "als Hexen"
+              ],
               "correctOptionIndex": 1
             }
           ]
@@ -855,27 +1054,52 @@
           "questions": [
             {
               "question": "Wo spielt die Geschichte?",
-              "options": ["in einer Stadt", "in einer alten Burg", "in einem Wald", "auf einem Markt"],
+              "options": [
+                "in einer Stadt",
+                "in einer alten Burg",
+                "in einem Wald",
+                "auf einem Markt"
+              ],
               "correctOptionIndex": 1
             },
             {
               "question": "Was feiern die Dorfbewohner?",
-              "options": ["Weihnachten", "Silvester", "Ostern", "Halloween"],
+              "options": [
+                "Weihnachten",
+                "Silvester",
+                "Ostern",
+                "Halloween"
+              ],
               "correctOptionIndex": 1
             },
             {
               "question": "Wer soll in der Nacht erscheinen?",
-              "options": ["ein Zauberer", "der alte Ritter", "ein Wolf", "der Weihnachtsmann"],
+              "options": [
+                "ein Zauberer",
+                "der alte Ritter",
+                "ein Wolf",
+                "der Weihnachtsmann"
+              ],
               "correctOptionIndex": 1
             },
             {
-              "question": "Wie schmücken die Menschen den Saal?",
-              "options": ["mit Blumen", "mit Kerzen", "mit Lichtern", "mit Geschenken"],
+              "question": "Womit schmücken die Menschen den Saal?",
+              "options": [
+                "mit Blumen",
+                "mit Kerzen",
+                "mit Luftballons",
+                "mit Geschenken"
+              ],
               "correctOptionIndex": 1
             },
             {
-              "question": "Wie hoffen die Menschen, dass der Geist ist?",
-              "options": ["freundlich", "böse", "laut", "unsichtbar"],
+              "question": "Was hoffen die Menschen?",
+              "options": [
+                "dass der Geist freundlich ist",
+                "dass der Geist böse ist",
+                "dass es regnet",
+                "dass niemand kommt"
+              ],
               "correctOptionIndex": 0
             }
           ]
@@ -884,31 +1108,56 @@
           "type": "reading",
           "id": "reading-2",
           "title": "Mitternacht",
-          "text": "Als die Uhr Mitternacht schlägt, wird es still. Ein kalter Wind weht durch den Saal. Plötzlich erscheint eine helle Gestalt – der Geist des Ritters! Er lächelt und sagt: 'Fürchtet euch nicht. Ich wünsche euch ein gutes neues Jahr!'",
+          "text": "Als die Uhr Mitternacht schlägt, wird es still. Ein kalter Wind weht durch den Saal. Plötzlich erscheint eine helle Gestalt: der Geist des Ritters! Er lächelt und sagt: „Fürchtet euch nicht. Ich wünsche euch ein gutes neues Jahr!“",
           "questions": [
             {
               "question": "Was passiert, wenn die Uhr Mitternacht schlägt?",
-              "options": ["die Musik beginnt", "es wird still", "die Kerzen gehen aus", "die Gäste tanzen"],
+              "options": [
+                "die Musik beginnt",
+                "es wird still",
+                "die Kerzen gehen aus",
+                "die Gäste tanzen"
+              ],
               "correctOptionIndex": 1
             },
             {
               "question": "Was weht durch den Saal?",
-              "options": ["ein warmer Wind", "ein kalter Wind", "Rauch", "Musik"],
+              "options": [
+                "ein warmer Wind",
+                "ein kalter Wind",
+                "Rauch",
+                "Musik"
+              ],
               "correctOptionIndex": 1
             },
             {
               "question": "Wer erscheint plötzlich?",
-              "options": ["ein Ritter", "der Geist des Ritters", "ein König", "eine Hexe"],
+              "options": [
+                "ein Ritter",
+                "der Geist des Ritters",
+                "ein König",
+                "eine Hexe"
+              ],
               "correctOptionIndex": 1
             },
             {
               "question": "Was sagt der Geist?",
-              "options": ["Frohe Weihnachten!", "Fürchtet euch nicht!", "Wo ist mein Schwert?", "Guten Morgen!"],
+              "options": [
+                "Frohe Weihnachten!",
+                "Fürchtet euch nicht!",
+                "Wo ist mein Schwert?",
+                "Guten Morgen!"
+              ],
               "correctOptionIndex": 1
             },
             {
               "question": "Wie ist der Geist?",
-              "options": ["freundlich", "böse", "traurig", "laut"],
+              "options": [
+                "freundlich",
+                "böse",
+                "traurig",
+                "laut"
+              ],
               "correctOptionIndex": 0
             }
           ]
@@ -917,31 +1166,56 @@
           "type": "reading",
           "id": "reading-3",
           "title": "Das Feuerwerk",
-          "text": "Draußen beginnt das Feuerwerk. Rote, blaue und goldene Lichter füllen den Himmel. Der Geist schaut hinauf und lacht. 'So schön habe ich es seit hundert Jahren nicht gesehen', sagt er. Die Menschen feiern mit Freude weiter.",
+          "text": "Draußen beginnt das Feuerwerk. Rote, blaue und goldene Lichter füllen den Himmel. Der Geist schaut hinauf und lacht. „So schön habe ich es seit hundert Jahren nicht gesehen“, sagt er. Die Menschen feiern mit Freude weiter.",
           "questions": [
             {
               "question": "Was passiert draußen?",
-              "options": ["es schneit", "es beginnt ein Feuerwerk", "es regnet", "es donnert"],
+              "options": [
+                "es schneit",
+                "es beginnt ein Feuerwerk",
+                "es regnet",
+                "es donnert"
+              ],
               "correctOptionIndex": 1
             },
             {
               "question": "Welche Farben sieht man am Himmel?",
-              "options": ["rot, blau und gold", "grün und schwarz", "weiß und grau", "nur rot"],
+              "options": [
+                "rot, blau und gold",
+                "grün und schwarz",
+                "weiß und grau",
+                "nur rot"
+              ],
               "correctOptionIndex": 0
             },
             {
               "question": "Wie reagiert der Geist?",
-              "options": ["er lacht", "er weint", "er verschwindet", "er schreit"],
+              "options": [
+                "er lacht",
+                "er weint",
+                "er verschwindet",
+                "er schreit"
+              ],
               "correctOptionIndex": 0
             },
             {
               "question": "Wie lange hat der Geist so etwas nicht gesehen?",
-              "options": ["zehn Jahre", "fünfzig Jahre", "hundert Jahre", "seit gestern"],
+              "options": [
+                "zehn Jahre",
+                "fünfzig Jahre",
+                "hundert Jahre",
+                "seit gestern"
+              ],
               "correctOptionIndex": 2
             },
             {
               "question": "Wie fühlen sich die Menschen?",
-              "options": ["traurig", "ängstlich", "freudig", "erschöpft"],
+              "options": [
+                "traurig",
+                "ängstlich",
+                "freudig",
+                "erschöpft"
+              ],
               "correctOptionIndex": 2
             }
           ]
@@ -950,31 +1224,56 @@
           "type": "reading",
           "id": "reading-4",
           "title": "Der Neujahrszauber",
-          "text": "Am Morgen ist der Geist verschwunden. Doch im Saal liegt ein goldenes Licht. Die Dorfbewohner glauben, dass es ein Zeichen für Glück im neuen Jahr ist. Seitdem feiern sie jedes Jahr Silvester in der alten Burg – und denken an den freundlichen Ritter.",
+          "text": "Am Morgen ist der Geist verschwunden. Doch im Saal liegt ein goldenes Licht. Die Dorfbewohner glauben, dass es ein Zeichen für Glück im neuen Jahr ist. Seitdem feiern sie jedes Jahr Silvester in der alten Burg und denken an den freundlichen Ritter.",
           "questions": [
             {
               "question": "Was finden die Dorfbewohner am Morgen?",
-              "options": ["einen Brief", "ein goldenes Licht", "ein Schwert", "eine Kerze"],
+              "options": [
+                "einen Brief",
+                "ein goldenes Licht",
+                "ein Schwert",
+                "eine Kerze"
+              ],
               "correctOptionIndex": 1
             },
             {
               "question": "Was glauben die Menschen?",
-              "options": ["dass es ein Zauber ist", "dass es ein Zeichen für Glück ist", "dass der Geist böse war", "dass es ein Traum war"],
+              "options": [
+                "dass es ein Zauber ist",
+                "dass es ein Zeichen für Glück ist",
+                "dass der Geist böse war",
+                "dass es ein Traum war"
+              ],
               "correctOptionIndex": 1
             },
             {
               "question": "Wo feiern die Dorfbewohner seitdem?",
-              "options": ["im Dorf", "in der alten Burg", "auf dem Markt", "im Wald"],
+              "options": [
+                "im Dorf",
+                "in der alten Burg",
+                "auf dem Markt",
+                "im Wald"
+              ],
               "correctOptionIndex": 1
             },
             {
               "question": "An wen denken sie jedes Jahr?",
-              "options": ["an den König", "an den alten Ritter", "an die Hexe", "an die Kinder"],
+              "options": [
+                "an den König",
+                "an den alten Ritter",
+                "an die Hexe",
+                "an die Kinder"
+              ],
               "correctOptionIndex": 1
             },
             {
               "question": "Wie ist die Stimmung am Ende?",
-              "options": ["traurig", "glücklich und friedlich", "gruselig", "chaotisch"],
+              "options": [
+                "traurig",
+                "glücklich und friedlich",
+                "gruselig",
+                "chaotisch"
+              ],
               "correctOptionIndex": 1
             }
           ]
@@ -995,27 +1294,52 @@
           "questions": [
             {
               "question": "Wie ist der Zauberwald am letzten Tag des Jahres?",
-              "options": ["laut und bunt", "still und verschneit", "voller Menschen", "trocken und warm"],
+              "options": [
+                "laut und bunt",
+                "still und verschneit",
+                "voller Menschen",
+                "trocken und warm"
+              ],
               "correctOptionIndex": 1
             },
             {
               "question": "Was machen die Tiere?",
-              "options": ["sie tanzen", "sie schlafen", "sie singen", "sie essen"],
+              "options": [
+                "sie tanzen",
+                "sie schlafen",
+                "sie singen",
+                "sie essen"
+              ],
               "correctOptionIndex": 1
             },
             {
               "question": "Was flüstert durch die Bäume?",
-              "options": ["der Wind", "ein Vogel", "der Regen", "die Sonne"],
+              "options": [
+                "der Wind",
+                "ein Vogel",
+                "der Regen",
+                "die Sonne"
+              ],
               "correctOptionIndex": 0
             },
             {
               "question": "Wer ist noch wach?",
-              "options": ["ein Hase", "eine Katze", "eine Eule", "ein Bär"],
+              "options": [
+                "ein Hase",
+                "eine Katze",
+                "eine Eule",
+                "ein Bär"
+              ],
               "correctOptionIndex": 2
             },
             {
               "question": "Was spürt die Eule?",
-              "options": ["dass etwas Besonderes passieren wird", "dass ein Sturm kommt", "dass es regnen wird", "dass der Frühling da ist"],
+              "options": [
+                "dass etwas Besonderes passieren wird",
+                "dass ein Sturm kommt",
+                "dass es regnen wird",
+                "dass der Frühling da ist"
+              ],
               "correctOptionIndex": 0
             }
           ]
@@ -1028,27 +1352,52 @@
           "questions": [
             {
               "question": "Was sieht die Eule zwischen den Tannen?",
-              "options": ["ein Tier", "ein goldenes Licht", "einen Schneeberg", "eine Hütte"],
+              "options": [
+                "ein Tier",
+                "ein goldenes Licht",
+                "einen Schneeberg",
+                "eine Hütte"
+              ],
               "correctOptionIndex": 1
             },
             {
               "question": "Wie bewegt sich das Licht?",
-              "options": ["schnell und laut", "langsam und tanzend", "still und dunkel", "gar nicht"],
+              "options": [
+                "schnell und laut",
+                "langsam und tanzend",
+                "still und dunkel",
+                "gar nicht"
+              ],
               "correctOptionIndex": 1
             },
             {
               "question": "Wer feiert das neue Jahr?",
-              "options": ["die Elfen", "die Menschen", "die Tiere", "die Sterne"],
+              "options": [
+                "die Elfen",
+                "die Menschen",
+                "die Tiere",
+                "die Sterne"
+              ],
               "correctOptionIndex": 0
             },
             {
               "question": "Was machen die Elfen?",
-              "options": ["sie schlafen", "sie malen Sterne", "sie essen Plätzchen", "sie bauen ein Feuer"],
+              "options": [
+                "sie schlafen",
+                "sie malen Sterne",
+                "sie essen Plätzchen",
+                "sie bauen ein Feuer"
+              ],
               "correctOptionIndex": 1
             },
             {
               "question": "Wie fühlt sich die Eule, als sie das sieht?",
-              "options": ["ängstlich", "neugierig", "müde", "traurig"],
+              "options": [
+                "ängstlich",
+                "neugierig",
+                "müde",
+                "traurig"
+              ],
               "correctOptionIndex": 1
             }
           ]
@@ -1061,28 +1410,53 @@
           "questions": [
             {
               "question": "Was wünscht sich die Eule?",
-              "options": ["mehr Schnee", "Frieden im Wald", "viele Freunde", "eine neue Höhle"],
+              "options": [
+                "mehr Schnee",
+                "Frieden im Wald",
+                "viele Freunde",
+                "eine neue Höhle"
+              ],
               "correctOptionIndex": 1
             },
             {
               "question": "Wer hört den Wunsch der Eule?",
-              "options": ["eine Maus", "eine Fee", "ein Elf", "ein Fuchs"],
+              "options": [
+                "eine Maus",
+                "eine Fee",
+                "ein Elf",
+                "ein Fuchs"
+              ],
               "correctOptionIndex": 1
             },
             {
               "question": "Was macht die Fee?",
-              "options": ["sie fliegt weg", "sie streut funkelnden Staub", "sie singt ein Lied", "sie tanzt"],
+              "options": [
+                "sie fliegt weg",
+                "sie streut funkelnden Staub",
+                "sie singt ein Lied",
+                "sie tanzt"
+              ],
               "correctOptionIndex": 1
             },
             {
               "question": "Wie sieht der Wald danach aus?",
-              "options": ["dunkel", "bunt", "golden und leuchtend", "leer"],
+              "options": [
+                "dunkel",
+                "bunt",
+                "golden und leuchtend",
+                "leer"
+              ],
               "correctOptionIndex": 2
             },
             {
-              "question": "Wie reagiert die Eule auf das Licht?",
-              "options": ["sie fliegt weg", "sie lächelt", "sie ruft laut", "sie versteckt sich"],
-              "correctOptionIndex": 1
+              "question": "Was macht die Eule, bevor sie sich etwas wünscht?",
+              "options": [
+                "sie schließt die Augen",
+                "sie fliegt weg",
+                "sie singt ein Lied",
+                "sie schläft ein"
+              ],
+              "correctOptionIndex": 0
             }
           ]
         },
@@ -1093,18 +1467,33 @@
           "text": "Als der erste Morgen des neuen Jahres kommt, funkelt der Schnee in allen Farben. Die Tiere wachen auf und hören das Lachen der Elfen. Die Eule denkt: ‚Ein neues Jahr voller Zauber und Freundschaft hat begonnen.‘ Und der Wald atmet leise vor Glück.",
           "questions": [
             {
-              "question": "Wann beginnt die Geschichte in diesem Teil?",
-              "options": ["am Abend", "in der Nacht", "am ersten Morgen des neuen Jahres", "am Nachmittag"],
+              "question": "Wann spielt dieser Teil der Geschichte?",
+              "options": [
+                "am Abend",
+                "in der Nacht",
+                "am ersten Morgen des neuen Jahres",
+                "am Nachmittag"
+              ],
               "correctOptionIndex": 2
             },
             {
               "question": "Wie sieht der Schnee am Morgen aus?",
-              "options": ["grau und nass", "funkelnd in vielen Farben", "schmutzig", "unsichtbar"],
+              "options": [
+                "grau und nass",
+                "funkelnd in vielen Farben",
+                "schmutzig",
+                "unsichtbar"
+              ],
               "correctOptionIndex": 1
             },
             {
               "question": "Was machen die Tiere, als der Morgen kommt?",
-              "options": ["sie schlafen weiter", "sie wachen auf", "sie fliegen davon", "sie bauen Häuser"],
+              "options": [
+                "sie schlafen weiter",
+                "sie wachen auf",
+                "sie fliegen davon",
+                "sie bauen Häuser"
+              ],
               "correctOptionIndex": 1
             },
             {
@@ -1119,7 +1508,12 @@
             },
             {
               "question": "Wie ist die Stimmung am Ende der Geschichte?",
-              "options": ["traurig", "friedlich und glücklich", "laut und wild", "ängstlich"],
+              "options": [
+                "traurig",
+                "friedlich und glücklich",
+                "laut und wild",
+                "ängstlich"
+              ],
               "correctOptionIndex": 1
             }
           ]
@@ -1136,31 +1530,56 @@
           "type": "reading",
           "id": "reading-1",
           "title": "Die Winterferien",
-          "text": "In Deutschland dauern die Winterferien meist zwei Wochen. Viele Familien fahren in die Berge oder besuchen Verwandte. Manche Kinder bleiben zu Hause, spielen im Schnee oder sehen Filme. Es ist eine Zeit zum Ausruhen und Spaß haben.",
+          "text": "In Deutschland dauern die Weihnachtsferien meist zwei Wochen. Viele Familien fahren in die Berge oder besuchen Verwandte. Manche Kinder bleiben zu Hause, spielen im Schnee oder sehen Filme. Es ist eine Zeit zum Ausruhen und Spaß haben.",
           "questions": [
             {
-              "question": "Wie lange dauern die Winterferien meistens?",
-              "options": ["eine Woche", "zwei Wochen", "drei Tage", "einen Monat"],
+              "question": "Wie lange dauern die Weihnachtsferien meistens?",
+              "options": [
+                "eine Woche",
+                "zwei Wochen",
+                "drei Tage",
+                "einen Monat"
+              ],
               "correctOptionIndex": 1
             },
             {
               "question": "Wohin fahren viele Familien in den Ferien?",
-              "options": ["ans Meer", "in die Berge", "in die Stadt", "nach Italien"],
+              "options": [
+                "ans Meer",
+                "in die Berge",
+                "in die Stadt",
+                "nach Italien"
+              ],
               "correctOptionIndex": 1
             },
             {
               "question": "Was machen Kinder, die zu Hause bleiben?",
-              "options": ["sie lernen für die Schule", "sie spielen im Schnee oder sehen Filme", "sie arbeiten", "sie reisen ins Ausland"],
+              "options": [
+                "sie lernen für die Schule",
+                "sie spielen im Schnee oder sehen Filme",
+                "sie arbeiten",
+                "sie reisen ins Ausland"
+              ],
               "correctOptionIndex": 1
             },
             {
               "question": "Wie ist die Stimmung in den Ferien?",
-              "options": ["gestresst", "traurig", "entspannt und fröhlich", "laut und unruhig"],
+              "options": [
+                "gestresst",
+                "traurig",
+                "entspannt und fröhlich",
+                "laut und unruhig"
+              ],
               "correctOptionIndex": 2
             },
             {
               "question": "Was ist typisch für Winterferien?",
-              "options": ["viele Hausaufgaben", "Erholung und Spaß", "lange Schultage", "Sportwettkämpfe"],
+              "options": [
+                "viele Hausaufgaben",
+                "Erholung und Spaß",
+                "lange Schultage",
+                "Sportwettkämpfe"
+              ],
               "correctOptionIndex": 1
             }
           ]
@@ -1173,27 +1592,52 @@
           "questions": [
             {
               "question": "Wohin fährt Lena mit ihrer Familie?",
-              "options": ["in die Stadt", "in den Schwarzwald", "nach Berlin", "an den See"],
+              "options": [
+                "in die Stadt",
+                "in den Schwarzwald",
+                "nach Berlin",
+                "an den See"
+              ],
               "correctOptionIndex": 1
             },
             {
               "question": "Was machen sie im Schnee?",
-              "options": ["sie spielen Fußball", "sie bauen einen Schneemann und fahren Schlitten", "sie machen Fotos", "sie tanzen"],
+              "options": [
+                "sie spielen Fußball",
+                "sie bauen einen Schneemann und fahren Schlitten",
+                "sie machen Fotos",
+                "sie tanzen"
+              ],
               "correctOptionIndex": 1
             },
             {
               "question": "Was trinken sie am Nachmittag?",
-              "options": ["Kaffee", "heißen Kakao", "Tee", "Milch"],
+              "options": [
+                "Kaffee",
+                "heißen Kakao",
+                "Tee",
+                "Milch"
+              ],
               "correctOptionIndex": 1
             },
             {
               "question": "Was machen sie am Abend?",
-              "options": ["sie lernen", "sie sehen einen Film und spielen Karten", "sie gehen spazieren", "sie schlafen früh"],
+              "options": [
+                "sie lernen",
+                "sie sehen einen Film und spielen Karten",
+                "sie gehen spazieren",
+                "sie schlafen früh"
+              ],
               "correctOptionIndex": 1
             },
             {
               "question": "Wie ist der Tag für Lena?",
-              "options": ["langweilig", "anstrengend", "perfekt und schön", "kalt und traurig"],
+              "options": [
+                "langweilig",
+                "anstrengend",
+                "perfekt und schön",
+                "kalt und traurig"
+              ],
               "correctOptionIndex": 2
             }
           ]
@@ -1206,27 +1650,52 @@
           "questions": [
             {
               "question": "Was beginnt nach den Winterferien?",
-              "options": ["der Sommer", "die Schule", "der Urlaub", "das Wochenende"],
+              "options": [
+                "der Sommer",
+                "die Schule",
+                "der Urlaub",
+                "das Wochenende"
+              ],
               "correctOptionIndex": 1
             },
             {
               "question": "Was machen die Schüler am ersten Tag?",
-              "options": ["sie schlafen", "sie erzählen von ihren Ferien", "sie schreiben eine Prüfung", "sie malen"],
+              "options": [
+                "sie schlafen",
+                "sie erzählen von ihren Ferien",
+                "sie schreiben eine Prüfung",
+                "sie malen"
+              ],
               "correctOptionIndex": 1
             },
             {
               "question": "Was zeigen manche Schüler?",
-              "options": ["ihre Hefte", "Fotos", "Hausaufgaben", "Bücher"],
+              "options": [
+                "ihre Hefte",
+                "Fotos",
+                "Hausaufgaben",
+                "Bücher"
+              ],
               "correctOptionIndex": 1
             },
             {
               "question": "Worüber sprechen die Kinder?",
-              "options": ["über Reisen und Schnee", "über Filme", "über Musik", "über Sport"],
+              "options": [
+                "über Reisen und Schnee",
+                "über Filme",
+                "über Musik",
+                "über Sport"
+              ],
               "correctOptionIndex": 0
             },
             {
               "question": "Wie reagieren die Lehrer?",
-              "options": ["sie sind müde", "sie freuen sich", "sie sind streng", "sie sind überrascht"],
+              "options": [
+                "sie sind müde",
+                "sie freuen sich",
+                "sie sind streng",
+                "sie sind überrascht"
+              ],
               "correctOptionIndex": 1
             }
           ]
@@ -1238,35 +1707,59 @@
           "text": "In der ersten Schulwoche schreiben viele Schüler ihre Vorsätze auf: mehr lernen, pünktlich sein oder netter zu anderen sein. Auch Lehrer planen Neues: Projekte, Ausflüge und spannende Themen. Alle hoffen auf ein gutes neues Jahr.",
           "questions": [
             {
-              "question": "Was schreiben viele Schüler in der ersten Woche?",
-              "options": ["ihre Noten", "ihre Vorsätze", "ihre Hausaufgaben", "ihre Wünsche"],
+              "question": "Was schreiben viele Schüler in der ersten Woche auf?",
+              "options": [
+                "ihre Noten",
+                "ihre Vorsätze",
+                "ihre Hausaufgaben",
+                "ihre Einkaufslisten"
+              ],
               "correctOptionIndex": 1
             },
             {
               "question": "Was wollen viele Schüler tun?",
-              "options": ["mehr lernen und pünktlich sein", "mehr schlafen", "weniger lesen", "mehr essen"],
+              "options": [
+                "mehr lernen und pünktlich sein",
+                "mehr schlafen",
+                "weniger lesen",
+                "mehr essen"
+              ],
               "correctOptionIndex": 0
             },
             {
               "question": "Was planen die Lehrer?",
-              "options": ["neue Projekte und Ausflüge", "Ferien", "Examen", "Sportfeste"],
+              "options": [
+                "neue Projekte und Ausflüge",
+                "Ferien",
+                "Prüfungen",
+                "Sportfeste"
+              ],
               "correctOptionIndex": 0
             },
             {
               "question": "Was hoffen alle?",
-              "options": ["auf ein gutes neues Jahr", "auf mehr Ferien", "auf weniger Schule", "auf besseres Wetter"],
+              "options": [
+                "auf ein gutes neues Jahr",
+                "auf mehr Ferien",
+                "auf weniger Schule",
+                "auf besseres Wetter"
+              ],
               "correctOptionIndex": 0
             },
             {
               "question": "Wie ist die Stimmung zu Beginn des Jahres?",
-              "options": ["negativ", "positiv und motiviert", "müde", "gleichgültig"],
+              "options": [
+                "negativ",
+                "positiv und motiviert",
+                "müde",
+                "gleichgültig"
+              ],
               "correctOptionIndex": 1
             }
           ]
         }
       ]
     },
-
     {
       "id": "quest-11",
       "title": "Соедини рождественские пары",
@@ -1277,112 +1770,328 @@
           "type": "matching",
           "id": "match-1",
           "pairsLeft": [
-            { "id": "l1", "text": "Adventskranz" },
-            { "id": "l2", "text": "Weihnachtsbaum" },
-            { "id": "l3", "text": "Geschenke" },
-            { "id": "l4", "text": "Weihnachtsmarkt" },
-            { "id": "l5", "text": "Plätzchen" },
-            { "id": "l6", "text": "Sterne" }
+            {
+              "id": "l1",
+              "text": "Adventskranz"
+            },
+            {
+              "id": "l2",
+              "text": "Weihnachtsbaum"
+            },
+            {
+              "id": "l3",
+              "text": "Geschenke"
+            },
+            {
+              "id": "l4",
+              "text": "Weihnachtsmarkt"
+            },
+            {
+              "id": "l5",
+              "text": "Plätzchen"
+            },
+            {
+              "id": "l6",
+              "text": "Sterne"
+            }
           ],
           "pairsRight": [
-            { "id": "r1", "text": "Vier Kerzen für die Adventszeit" },
-            { "id": "r2", "text": "Ein geschmückter Baum im Wohnzimmer" },
-            { "id": "r3", "text": "Man kauft und gibt sie an Weihnachten" },
-            { "id": "r4", "text": "Ein Ort mit Lichtern, Essen und Musik" },
-            { "id": "r5", "text": "Süßes Gebäck zu Weihnachten" },
-            { "id": "r6", "text": "Sie leuchten in der Nacht" }
+            {
+              "id": "r5",
+              "text": "Süßes Gebäck zu Weihnachten"
+            },
+            {
+              "id": "r6",
+              "text": "Sie leuchten in der Nacht"
+            },
+            {
+              "id": "r1",
+              "text": "Vier Kerzen für die Adventszeit"
+            },
+            {
+              "id": "r2",
+              "text": "Ein geschmückter Baum im Wohnzimmer"
+            },
+            {
+              "id": "r3",
+              "text": "Man kauft und gibt sie an Weihnachten"
+            },
+            {
+              "id": "r4",
+              "text": "Ein Ort mit Lichtern, Essen und Musik"
+            }
           ],
           "correctPairs": [
-            ["l1", "r1"],
-            ["l2", "r2"],
-            ["l3", "r3"],
-            ["l4", "r4"],
-            ["l5", "r5"],
-            ["l6", "r6"]
+            [
+              "l1",
+              "r1"
+            ],
+            [
+              "l2",
+              "r2"
+            ],
+            [
+              "l3",
+              "r3"
+            ],
+            [
+              "l4",
+              "r4"
+            ],
+            [
+              "l5",
+              "r5"
+            ],
+            [
+              "l6",
+              "r6"
+            ]
           ]
         },
         {
           "type": "matching",
           "id": "match-2",
           "pairsLeft": [
-            { "id": "l1", "text": "Weihnachtsmann" },
-            { "id": "l2", "text": "Engel" },
-            { "id": "l3", "text": "Kinder" },
-            { "id": "l4", "text": "Nikolaus" },
-            { "id": "l5", "text": "Rentiere" },
-            { "id": "l6", "text": "Elfen" }
+            {
+              "id": "l1",
+              "text": "Weihnachtsmann"
+            },
+            {
+              "id": "l2",
+              "text": "Engel"
+            },
+            {
+              "id": "l3",
+              "text": "Kinder"
+            },
+            {
+              "id": "l4",
+              "text": "Nikolaus"
+            },
+            {
+              "id": "l5",
+              "text": "Rentiere"
+            },
+            {
+              "id": "l6",
+              "text": "Elfen"
+            }
           ],
           "pairsRight": [
-            { "id": "r1", "text": "fliegen mit dem Schlitten" },
-            { "id": "r2", "text": "helfen beim Verpacken der Geschenke" },
-            { "id": "r3", "text": "bringen die Geschenke" },
-            { "id": "r4", "text": "spielen und freuen sich" },
-            { "id": "r5", "text": "bringt Süßigkeiten am 6. Dezember" },
-            { "id": "r6", "text": "singen vom Himmel" }
+            {
+              "id": "r6",
+              "text": "singen vom Himmel"
+            },
+            {
+              "id": "r1",
+              "text": "fliegen mit dem Schlitten"
+            },
+            {
+              "id": "r2",
+              "text": "helfen beim Verpacken der Geschenke"
+            },
+            {
+              "id": "r3",
+              "text": "bringt die Geschenke"
+            },
+            {
+              "id": "r4",
+              "text": "spielen und freuen sich"
+            },
+            {
+              "id": "r5",
+              "text": "bringt Süßigkeiten am 6. Dezember"
+            }
           ],
           "correctPairs": [
-            ["l1", "r3"],
-            ["l2", "r6"],
-            ["l3", "r4"],
-            ["l4", "r5"],
-            ["l5", "r1"],
-            ["l6", "r2"]
+            [
+              "l1",
+              "r3"
+            ],
+            [
+              "l2",
+              "r6"
+            ],
+            [
+              "l3",
+              "r4"
+            ],
+            [
+              "l4",
+              "r5"
+            ],
+            [
+              "l5",
+              "r1"
+            ],
+            [
+              "l6",
+              "r2"
+            ]
           ]
         },
         {
           "type": "matching",
           "id": "match-3",
           "pairsLeft": [
-            { "id": "l1", "text": "Kerze" },
-            { "id": "l2", "text": "Schnee" },
-            { "id": "l3", "text": "Stern" },
-            { "id": "l4", "text": "Geschenk" },
-            { "id": "l5", "text": "Weihnachtsbaum" },
-            { "id": "l6", "text": "Glocke" }
+            {
+              "id": "l1",
+              "text": "Kerze"
+            },
+            {
+              "id": "l2",
+              "text": "Schnee"
+            },
+            {
+              "id": "l3",
+              "text": "Stern"
+            },
+            {
+              "id": "l4",
+              "text": "Geschenk"
+            },
+            {
+              "id": "l5",
+              "text": "Weihnachtsbaum"
+            },
+            {
+              "id": "l6",
+              "text": "Glocke"
+            }
           ],
           "pairsRight": [
-            { "id": "r1", "text": "winterQuestEleven.firTree" },
-            { "id": "r2", "text": "winterQuestEleven.candle" },
-            { "id": "r3", "text": "winterQuestEleven.snow" },
-            { "id": "r4", "text": "winterQuestEleven.gift" },
-            { "id": "r5", "text": "winterQuestEleven.bell" },
-            { "id": "r6", "text": "winterQuestEleven.star" }
+            {
+              "id": "r2",
+              "text": "winterQuestEleven.candle"
+            },
+            {
+              "id": "r3",
+              "text": "winterQuestEleven.snow"
+            },
+            {
+              "id": "r4",
+              "text": "winterQuestEleven.gift"
+            },
+            {
+              "id": "r5",
+              "text": "winterQuestEleven.bell"
+            },
+            {
+              "id": "r6",
+              "text": "winterQuestEleven.star"
+            },
+            {
+              "id": "r1",
+              "text": "winterQuestEleven.firTree"
+            }
           ],
           "correctPairs": [
-            ["l1", "r2"],
-            ["l2", "r3"],
-            ["l3", "r6"],
-            ["l4", "r4"],
-            ["l5", "r1"],
-            ["l6", "r5"]
+            [
+              "l1",
+              "r2"
+            ],
+            [
+              "l2",
+              "r3"
+            ],
+            [
+              "l3",
+              "r6"
+            ],
+            [
+              "l4",
+              "r4"
+            ],
+            [
+              "l5",
+              "r1"
+            ],
+            [
+              "l6",
+              "r5"
+            ]
           ]
         },
         {
           "type": "matching",
           "id": "match-4",
           "pairsLeft": [
-            { "id": "l1", "text": "Heiligabend" },
-            { "id": "l2", "text": "Nikolaustag" },
-            { "id": "l3", "text": "Silvester" },
-            { "id": "l4", "text": "Neujahr" },
-            { "id": "l5", "text": "Erster Advent" },
-            { "id": "l6", "text": "Weihnachten" }
+            {
+              "id": "l1",
+              "text": "Heiligabend"
+            },
+            {
+              "id": "l2",
+              "text": "Nikolaustag"
+            },
+            {
+              "id": "l3",
+              "text": "Silvester"
+            },
+            {
+              "id": "l4",
+              "text": "Neujahr"
+            },
+            {
+              "id": "l5",
+              "text": "Erster Advent"
+            },
+            {
+              "id": "l6",
+              "text": "Weihnachten"
+            }
           ],
           "pairsRight": [
-            { "id": "r1", "text": "6. Dezember" },
-            { "id": "r2", "text": "24. Dezember" },
-            { "id": "r3", "text": "25. Dezember" },
-            { "id": "r4", "text": "31. Dezember" },
-            { "id": "r5", "text": "1. Januar" },
-            { "id": "r6", "text": "vier Wochen vor Weihnachten" }
+            {
+              "id": "r3",
+              "text": "25. Dezember"
+            },
+            {
+              "id": "r4",
+              "text": "31. Dezember"
+            },
+            {
+              "id": "r5",
+              "text": "1. Januar"
+            },
+            {
+              "id": "r6",
+              "text": "vier Wochen vor Weihnachten"
+            },
+            {
+              "id": "r1",
+              "text": "6. Dezember"
+            },
+            {
+              "id": "r2",
+              "text": "24. Dezember"
+            }
           ],
           "correctPairs": [
-            ["l1", "r2"],
-            ["l2", "r1"],
-            ["l3", "r4"],
-            ["l4", "r5"],
-            ["l5", "r6"],
-            ["l6", "r3"]
+            [
+              "l1",
+              "r2"
+            ],
+            [
+              "l2",
+              "r1"
+            ],
+            [
+              "l3",
+              "r4"
+            ],
+            [
+              "l4",
+              "r5"
+            ],
+            [
+              "l5",
+              "r6"
+            ],
+            [
+              "l6",
+              "r3"
+            ]
           ]
         }
       ]
@@ -1397,112 +2106,328 @@
           "type": "matching",
           "id": "match-1",
           "pairsLeft": [
-            { "id": "l1", "text": "Feuerwerk" },
-            { "id": "l2", "text": "Raclette" },
-            { "id": "l3", "text": "Fondue" },
-            { "id": "l4", "text": "Countdown" },
-            { "id": "l5", "text": "Neujahrsvorsätze" },
-            { "id": "l6", "text": "Neujahrskonzert" }
+            {
+              "id": "l1",
+              "text": "Feuerwerk"
+            },
+            {
+              "id": "l2",
+              "text": "Raclette"
+            },
+            {
+              "id": "l3",
+              "text": "Fondue"
+            },
+            {
+              "id": "l4",
+              "text": "Countdown"
+            },
+            {
+              "id": "l5",
+              "text": "Neujahrsvorsätze"
+            },
+            {
+              "id": "l6",
+              "text": "Neujahrskonzert"
+            }
           ],
           "pairsRight": [
-            { "id": "r1", "text": "Die letzten Sekunden laut mitzählen" },
-            { "id": "r2", "text": "Bunte Lichter am Himmel um Mitternacht" },
-            { "id": "r3", "text": "Ziele und Pläne für das neue Jahr" },
-            { "id": "r4", "text": "Geschmolzener Käse am Tisch" },
-            { "id": "r5", "text": "Klassische Musik am 1. Januar" },
-            { "id": "r6", "text": "Topf mit heißem Öl oder Brühe" }
+            {
+              "id": "r5",
+              "text": "Klassische Musik am 1. Januar"
+            },
+            {
+              "id": "r6",
+              "text": "Topf mit heißem Öl oder Brühe"
+            },
+            {
+              "id": "r1",
+              "text": "Die letzten Sekunden laut mitzählen"
+            },
+            {
+              "id": "r2",
+              "text": "Bunte Lichter am Himmel um Mitternacht"
+            },
+            {
+              "id": "r3",
+              "text": "Ziele und Pläne für das neue Jahr"
+            },
+            {
+              "id": "r4",
+              "text": "Geschmolzener Käse am Tisch"
+            }
           ],
           "correctPairs": [
-            ["l1", "r2"],
-            ["l2", "r4"],
-            ["l3", "r6"],
-            ["l4", "r1"],
-            ["l5", "r3"],
-            ["l6", "r5"]
+            [
+              "l1",
+              "r2"
+            ],
+            [
+              "l2",
+              "r4"
+            ],
+            [
+              "l3",
+              "r6"
+            ],
+            [
+              "l4",
+              "r1"
+            ],
+            [
+              "l5",
+              "r3"
+            ],
+            [
+              "l6",
+              "r5"
+            ]
           ]
         },
         {
           "type": "matching",
           "id": "match-2",
           "pairsLeft": [
-            { "id": "l1", "text": "Schornsteinfeger" },
-            { "id": "l2", "text": "Marienkäfer" },
-            { "id": "l3", "text": "Glücksschwein" },
-            { "id": "l4", "text": "Vierblättriges Kleeblatt" },
-            { "id": "l5", "text": "Hufeisen" },
-            { "id": "l6", "text": "Bleigießen" }
+            {
+              "id": "l1",
+              "text": "Schornsteinfeger"
+            },
+            {
+              "id": "l2",
+              "text": "Marienkäfer"
+            },
+            {
+              "id": "l3",
+              "text": "Glücksschwein"
+            },
+            {
+              "id": "l4",
+              "text": "Vierblättriges Kleeblatt"
+            },
+            {
+              "id": "l5",
+              "text": "Hufeisen"
+            },
+            {
+              "id": "l6",
+              "text": "Bleigießen"
+            }
           ],
           "pairsRight": [
-            { "id": "r1", "text": "Bringt Glück, wenn man ihn trifft" },
-            { "id": "r2", "text": "Kleines rotes Insekt als Glückszeichen" },
-            { "id": "r3", "text": "Wird über der Tür aufgehängt" },
-            { "id": "r4", "text": "Vier Blätter stehen für Glück" },
-            { "id": "r5", "text": "Figuren deuten die Zukunft" },
-            { "id": "r6", "text": "Symbol für Wohlstand und Erfolg" }
+            {
+              "id": "r6",
+              "text": "Symbol für Wohlstand und Erfolg"
+            },
+            {
+              "id": "r1",
+              "text": "Bringt Glück, wenn man ihn trifft"
+            },
+            {
+              "id": "r2",
+              "text": "Kleines rotes Insekt als Glückszeichen"
+            },
+            {
+              "id": "r3",
+              "text": "Wird über der Tür aufgehängt"
+            },
+            {
+              "id": "r4",
+              "text": "Vier Blätter stehen für Glück"
+            },
+            {
+              "id": "r5",
+              "text": "Figuren deuten die Zukunft"
+            }
           ],
           "correctPairs": [
-            ["l1", "r1"],
-            ["l2", "r2"],
-            ["l3", "r6"],
-            ["l4", "r4"],
-            ["l5", "r3"],
-            ["l6", "r5"]
+            [
+              "l1",
+              "r1"
+            ],
+            [
+              "l2",
+              "r2"
+            ],
+            [
+              "l3",
+              "r6"
+            ],
+            [
+              "l4",
+              "r4"
+            ],
+            [
+              "l5",
+              "r3"
+            ],
+            [
+              "l6",
+              "r5"
+            ]
           ]
         },
         {
           "type": "matching",
           "id": "match-3",
           "pairsLeft": [
-            { "id": "l1", "text": "Feuerwerk" },
-            { "id": "l2", "text": "Rakete" },
-            { "id": "l3", "text": "Sekt" },
-            { "id": "l4", "text": "Vorsatz" },
-            { "id": "l5", "text": "Mitternacht" },
-            { "id": "l6", "text": "Brandenburger Tor" }
+            {
+              "id": "l1",
+              "text": "Feuerwerk"
+            },
+            {
+              "id": "l2",
+              "text": "Rakete"
+            },
+            {
+              "id": "l3",
+              "text": "Sekt"
+            },
+            {
+              "id": "l4",
+              "text": "Vorsatz"
+            },
+            {
+              "id": "l5",
+              "text": "Mitternacht"
+            },
+            {
+              "id": "l6",
+              "text": "Brandenburger Tor"
+            }
           ],
           "pairsRight": [
-            { "id": "r1", "text": "winterQuestTwelve.midnight" },
-            { "id": "r2", "text": "winterQuestTwelve.resolution" },
-            { "id": "r3", "text": "winterQuestTwelve.brandenburgGate" },
-            { "id": "r4", "text": "winterQuestTwelve.fireworks" },
-            { "id": "r5", "text": "winterQuestTwelve.fireworkRocket" },
-            { "id": "r6", "text": "winterQuestTwelve.champagne" }
+            {
+              "id": "r2",
+              "text": "winterQuestTwelve.resolution"
+            },
+            {
+              "id": "r3",
+              "text": "winterQuestTwelve.brandenburgGate"
+            },
+            {
+              "id": "r4",
+              "text": "winterQuestTwelve.fireworks"
+            },
+            {
+              "id": "r5",
+              "text": "winterQuestTwelve.fireworkRocket"
+            },
+            {
+              "id": "r6",
+              "text": "winterQuestTwelve.champagne"
+            },
+            {
+              "id": "r1",
+              "text": "winterQuestTwelve.midnight"
+            }
           ],
           "correctPairs": [
-            ["l1", "r4"],
-            ["l2", "r5"],
-            ["l3", "r6"],
-            ["l4", "r2"],
-            ["l5", "r1"],
-            ["l6", "r3"]
+            [
+              "l1",
+              "r4"
+            ],
+            [
+              "l2",
+              "r5"
+            ],
+            [
+              "l3",
+              "r6"
+            ],
+            [
+              "l4",
+              "r2"
+            ],
+            [
+              "l5",
+              "r1"
+            ],
+            [
+              "l6",
+              "r3"
+            ]
           ]
         },
         {
           "type": "matching",
           "id": "match-4",
           "pairsLeft": [
-            { "id": "l1", "text": "Silvesterabend" },
-            { "id": "l2", "text": "Mitternacht" },
-            { "id": "l3", "text": "Neujahr" },
-            { "id": "l4", "text": "Heilige Drei Könige" },
-            { "id": "l5", "text": "Bleigießen" },
-            { "id": "l6", "text": "Neujahrskonzert" }
+            {
+              "id": "l1",
+              "text": "Silvesterabend"
+            },
+            {
+              "id": "l2",
+              "text": "Mitternacht"
+            },
+            {
+              "id": "l3",
+              "text": "Neujahr"
+            },
+            {
+              "id": "l4",
+              "text": "Heilige Drei Könige"
+            },
+            {
+              "id": "l5",
+              "text": "Wunderkerze"
+            },
+            {
+              "id": "l6",
+              "text": "Neujahrskonzert"
+            }
           ],
           "pairsRight": [
-            { "id": "r1", "text": "31. Dezember abends" },
-            { "id": "r2", "text": "in der Silvesternacht" },
-            { "id": "r3", "text": "0:00 Uhr" },
-            { "id": "r4", "text": "1. Januar" },
-            { "id": "r5", "text": "6. Januar" },
-            { "id": "r6", "text": "am Vormittag des 1. Januar" }
+            {
+              "id": "r3",
+              "text": "0:00 Uhr"
+            },
+            {
+              "id": "r4",
+              "text": "1. Januar"
+            },
+            {
+              "id": "r5",
+              "text": "6. Januar"
+            },
+            {
+              "id": "r6",
+              "text": "klassische Musik aus Wien"
+            },
+            {
+              "id": "r1",
+              "text": "31. Dezember"
+            },
+            {
+              "id": "r2",
+              "text": "kleines Feuerwerk für die Hand"
+            }
           ],
           "correctPairs": [
-            ["l1", "r1"],
-            ["l2", "r3"],
-            ["l3", "r4"],
-            ["l4", "r5"],
-            ["l5", "r2"],
-            ["l6", "r6"]
+            [
+              "l1",
+              "r1"
+            ],
+            [
+              "l2",
+              "r3"
+            ],
+            [
+              "l3",
+              "r4"
+            ],
+            [
+              "l4",
+              "r5"
+            ],
+            [
+              "l5",
+              "r2"
+            ],
+            [
+              "l6",
+              "r6"
+            ]
           ]
         }
       ]
@@ -1517,112 +2442,328 @@
           "type": "matching",
           "id": "match-1",
           "pairsLeft": [
-            { "id": "l1", "text": "Deutschland" },
-            { "id": "l2", "text": "Spanien" },
-            { "id": "l3", "text": "Italien" },
-            { "id": "l4", "text": "Dänemark" },
-            { "id": "l5", "text": "Schweiz" },
-            { "id": "l6", "text": "Österreich" }
+            {
+              "id": "l1",
+              "text": "Deutschland"
+            },
+            {
+              "id": "l2",
+              "text": "Spanien"
+            },
+            {
+              "id": "l3",
+              "text": "Italien"
+            },
+            {
+              "id": "l4",
+              "text": "Dänemark"
+            },
+            {
+              "id": "l5",
+              "text": "Schottland"
+            },
+            {
+              "id": "l6",
+              "text": "Österreich"
+            }
           ],
           "pairsRight": [
-            { "id": "r1", "text": "Man isst um Mitternacht zwölf Trauben" },
-            { "id": "r2", "text": "Man wirft altes Geschirr aus dem Fenster" },
-            { "id": "r3", "text": "Man gießt Blei, um die Zukunft zu sehen" },
-            { "id": "r4", "text": "Man trägt rote Unterwäsche als Glücksbringer" },
-            { "id": "r5", "text": "Man hört das Neujahrskonzert aus Wien" },
-            { "id": "r6", "text": "Man stößt mit Sekt an und zündet Feuerwerk" }
+            {
+              "id": "r5",
+              "text": "Man hört das Neujahrskonzert aus Wien"
+            },
+            {
+              "id": "r6",
+              "text": "Man stößt mit Sekt an und zündet Feuerwerk"
+            },
+            {
+              "id": "r1",
+              "text": "Man isst um Mitternacht zwölf Trauben"
+            },
+            {
+              "id": "r2",
+              "text": "Man wirft altes Geschirr gegen die Tür von Freunden"
+            },
+            {
+              "id": "r3",
+              "text": "Der erste Gast im neuen Jahr bringt Glück"
+            },
+            {
+              "id": "r4",
+              "text": "Man trägt rote Unterwäsche als Glücksbringer"
+            }
           ],
           "correctPairs": [
-            ["l1", "r6"],
-            ["l2", "r1"],
-            ["l3", "r4"],
-            ["l4", "r2"],
-            ["l5", "r3"],
-            ["l6", "r5"]
+            [
+              "l1",
+              "r6"
+            ],
+            [
+              "l2",
+              "r1"
+            ],
+            [
+              "l3",
+              "r4"
+            ],
+            [
+              "l4",
+              "r2"
+            ],
+            [
+              "l5",
+              "r3"
+            ],
+            [
+              "l6",
+              "r5"
+            ]
           ]
         },
         {
           "type": "matching",
           "id": "match-2",
           "pairsLeft": [
-            { "id": "l1", "text": "Feuerwerk" },
-            { "id": "l2", "text": "Trauben" },
-            { "id": "l3", "text": "Bleifigur" },
-            { "id": "l4", "text": "Sektglas" },
-            { "id": "l5", "text": "altes Geschirr" },
-            { "id": "l6", "text": "Kuhglocke" }
+            {
+              "id": "l1",
+              "text": "Feuerwerk"
+            },
+            {
+              "id": "l2",
+              "text": "Trauben"
+            },
+            {
+              "id": "l3",
+              "text": "Bleifigur"
+            },
+            {
+              "id": "l4",
+              "text": "Sektglas"
+            },
+            {
+              "id": "l5",
+              "text": "altes Geschirr"
+            },
+            {
+              "id": "l6",
+              "text": "Kuhglocke"
+            }
           ],
           "pairsRight": [
-            { "id": "r1", "text": "wird in der Silvesternacht gezündet" },
-            { "id": "r2", "text": "Bringt Glück, wenn man sie um Mitternacht isst" },
-            { "id": "r3", "text": "zeigt Zukunftsformen beim Schmelzen" },
-            { "id": "r4", "text": "wird zum Anstoßen in der Silvesternacht benutzt" },
-            { "id": "r5", "text": "wird aus dem Fenster geworfen, um Neues zu beginnen" },
-            { "id": "r6", "text": "klingt bei alpinen Neujahrsumzügen" }
+            {
+              "id": "r6",
+              "text": "klingt bei alpinen Neujahrsumzügen"
+            },
+            {
+              "id": "r1",
+              "text": "wird in der Silvesternacht gezündet"
+            },
+            {
+              "id": "r2",
+              "text": "bringen Glück, wenn man sie um Mitternacht isst"
+            },
+            {
+              "id": "r3",
+              "text": "soll beim Bleigießen die Zukunft zeigen"
+            },
+            {
+              "id": "r4",
+              "text": "wird zum Anstoßen in der Silvesternacht benutzt"
+            },
+            {
+              "id": "r5",
+              "text": "wird in Dänemark gegen Türen geworfen"
+            }
           ],
           "correctPairs": [
-            ["l1", "r1"],
-            ["l2", "r2"],
-            ["l3", "r3"],
-            ["l4", "r4"],
-            ["l5", "r5"],
-            ["l6", "r6"]
+            [
+              "l1",
+              "r1"
+            ],
+            [
+              "l2",
+              "r2"
+            ],
+            [
+              "l3",
+              "r3"
+            ],
+            [
+              "l4",
+              "r4"
+            ],
+            [
+              "l5",
+              "r5"
+            ],
+            [
+              "l6",
+              "r6"
+            ]
           ]
         },
         {
           "type": "matching",
           "id": "match-3",
           "pairsLeft": [
-            { "id": "l1", "text": "Feuerwerk" },
-            { "id": "l2", "text": "Traube" },
-            { "id": "l3", "text": "Neujahrsvorsatz" },
-            { "id": "l4", "text": "Geschirr" },
-            { "id": "l5", "text": "Glocke" },
-            { "id": "l6", "text": "Sektglas" }
+            {
+              "id": "l1",
+              "text": "Feuerwerk"
+            },
+            {
+              "id": "l2",
+              "text": "Traube"
+            },
+            {
+              "id": "l3",
+              "text": "Neujahrsvorsatz"
+            },
+            {
+              "id": "l4",
+              "text": "Geschirr"
+            },
+            {
+              "id": "l5",
+              "text": "Glocke"
+            },
+            {
+              "id": "l6",
+              "text": "Sektglas"
+            }
           ],
           "pairsRight": [
-            { "id": "r1", "text": "winterQuestThirteen.dishes" },
-            { "id": "r2", "text": "winterQuestThirteen.fireworks" },
-            { "id": "r3", "text": "winterQuestThirteen.champagneGlass" },
-            { "id": "r4", "text": "winterQuestThirteen.newYearResolution" },
-            { "id": "r5", "text": "winterQuestThirteen.grape" },
-            { "id": "r6", "text": "winterQuestThirteen.bell" }
+            {
+              "id": "r2",
+              "text": "winterQuestThirteen.fireworks"
+            },
+            {
+              "id": "r3",
+              "text": "winterQuestThirteen.champagneGlass"
+            },
+            {
+              "id": "r4",
+              "text": "winterQuestThirteen.newYearResolution"
+            },
+            {
+              "id": "r5",
+              "text": "winterQuestThirteen.grape"
+            },
+            {
+              "id": "r6",
+              "text": "winterQuestThirteen.bell"
+            },
+            {
+              "id": "r1",
+              "text": "winterQuestThirteen.dishes"
+            }
           ],
           "correctPairs": [
-            ["l1", "r2"],
-            ["l2", "r5"],
-            ["l3", "r4"],
-            ["l4", "r1"],
-            ["l5", "r6"],
-            ["l6", "r3"]
+            [
+              "l1",
+              "r2"
+            ],
+            [
+              "l2",
+              "r5"
+            ],
+            [
+              "l3",
+              "r4"
+            ],
+            [
+              "l4",
+              "r1"
+            ],
+            [
+              "l5",
+              "r6"
+            ],
+            [
+              "l6",
+              "r3"
+            ]
           ]
         },
         {
           "type": "matching",
           "id": "match-4",
           "pairsLeft": [
-            { "id": "l1", "text": "Silvester" },
-            { "id": "l2", "text": "Neujahr" },
-            { "id": "l3", "text": "Heilige Drei Könige" },
-            { "id": "l4", "text": "Dreikönigsumzug" },
-            { "id": "l5", "text": "Neujahrsbaden" },
-            { "id": "l6", "text": "Neujahrskonzert" }
+            {
+              "id": "l1",
+              "text": "Silvester"
+            },
+            {
+              "id": "l2",
+              "text": "Neujahr"
+            },
+            {
+              "id": "l3",
+              "text": "Heilige Drei Könige"
+            },
+            {
+              "id": "l4",
+              "text": "Dreikönigsumzug"
+            },
+            {
+              "id": "l5",
+              "text": "Neujahrsbaden"
+            },
+            {
+              "id": "l6",
+              "text": "Neujahrskonzert"
+            }
           ],
           "pairsRight": [
-            { "id": "r1", "text": "31. Dezember" },
-            { "id": "r2", "text": "1. Januar" },
-            { "id": "r3", "text": "6. Januar" },
-            { "id": "r4", "text": "am 6. Januar in vielen Städten" },
-            { "id": "r5", "text": "frühmorgens im kalten Wasser" },
-            { "id": "r6", "text": "am Vormittag des 1. Januar" }
+            {
+              "id": "r3",
+              "text": "6. Januar"
+            },
+            {
+              "id": "r4",
+              "text": "Kinder ziehen als Könige verkleidet durch die Straßen"
+            },
+            {
+              "id": "r5",
+              "text": "frühmorgens im kalten Wasser"
+            },
+            {
+              "id": "r6",
+              "text": "klassische Musik aus Wien"
+            },
+            {
+              "id": "r1",
+              "text": "31. Dezember"
+            },
+            {
+              "id": "r2",
+              "text": "1. Januar"
+            }
           ],
           "correctPairs": [
-            ["l1", "r1"],
-            ["l2", "r2"],
-            ["l3", "r3"],
-            ["l4", "r4"],
-            ["l5", "r5"],
-            ["l6", "r6"]
+            [
+              "l1",
+              "r1"
+            ],
+            [
+              "l2",
+              "r2"
+            ],
+            [
+              "l3",
+              "r3"
+            ],
+            [
+              "l4",
+              "r4"
+            ],
+            [
+              "l5",
+              "r5"
+            ],
+            [
+              "l6",
+              "r6"
+            ]
           ]
         }
       ]
@@ -1637,112 +2778,328 @@
           "type": "matching",
           "id": "match-1",
           "pairsLeft": [
-            { "id": "l1", "text": "Perchtenlauf" },
-            { "id": "l2", "text": "La Befana" },
-            { "id": "l3", "text": "Día de los Reyes Magos" },
-            { "id": "l4", "text": "Krampusnacht" },
-            { "id": "l5", "text": "St. Lucia" },
-            { "id": "l6", "text": "Boxing Day" }
+            {
+              "id": "l1",
+              "text": "Perchtenlauf"
+            },
+            {
+              "id": "l2",
+              "text": "La Befana"
+            },
+            {
+              "id": "l3",
+              "text": "Día de los Reyes Magos"
+            },
+            {
+              "id": "l4",
+              "text": "Krampusnacht"
+            },
+            {
+              "id": "l5",
+              "text": "St. Lucia"
+            },
+            {
+              "id": "l6",
+              "text": "Boxing Day"
+            }
           ],
           "pairsRight": [
-            { "id": "r1", "text": "Österreich – Menschen tragen Masken gegen böse Geister" },
-            { "id": "r2", "text": "Italien – eine Hexe bringt Geschenke in der Nacht" },
-            { "id": "r3", "text": "Spanien – die Heiligen Drei Könige kommen mit Geschenken" },
-            { "id": "r4", "text": "Alpenregion – ein dunkler Begleiter des Nikolaus erscheint" },
-            { "id": "r5", "text": "Schweden – Mädchen tragen Kerzen auf dem Kopf" },
-            { "id": "r6", "text": "Großbritannien – Tag nach Weihnachten mit Geschenken für Angestellte" }
+            {
+              "id": "r5",
+              "text": "Schweden: Mädchen tragen Kerzen auf dem Kopf"
+            },
+            {
+              "id": "r6",
+              "text": "Großbritannien: der Tag nach Weihnachten"
+            },
+            {
+              "id": "r1",
+              "text": "Österreich: Menschen tragen Masken gegen böse Geister"
+            },
+            {
+              "id": "r2",
+              "text": "Italien: eine Hexe bringt Geschenke in der Nacht"
+            },
+            {
+              "id": "r3",
+              "text": "Spanien: die Heiligen Drei Könige bringen Geschenke"
+            },
+            {
+              "id": "r4",
+              "text": "Alpen: ein dunkler Begleiter des Nikolaus erscheint"
+            }
           ],
           "correctPairs": [
-            ["l1", "r1"],
-            ["l2", "r2"],
-            ["l3", "r3"],
-            ["l4", "r4"],
-            ["l5", "r5"],
-            ["l6", "r6"]
+            [
+              "l1",
+              "r1"
+            ],
+            [
+              "l2",
+              "r2"
+            ],
+            [
+              "l3",
+              "r3"
+            ],
+            [
+              "l4",
+              "r4"
+            ],
+            [
+              "l5",
+              "r5"
+            ],
+            [
+              "l6",
+              "r6"
+            ]
           ]
         },
         {
           "type": "matching",
           "id": "match-2",
           "pairsLeft": [
-            { "id": "l1", "text": "Mistelzweig" },
-            { "id": "l2", "text": "Schornsteinfeger" },
-            { "id": "l3", "text": "Linsen essen" },
-            { "id": "l4", "text": "Wasser vor die Tür" },
-            { "id": "l5", "text": "Erste Person am Neujahrstag" },
-            { "id": "l6", "text": "Sprechende Tiere" }
+            {
+              "id": "l1",
+              "text": "Mistelzweig"
+            },
+            {
+              "id": "l2",
+              "text": "Schornsteinfeger"
+            },
+            {
+              "id": "l3",
+              "text": "Linsen essen"
+            },
+            {
+              "id": "l4",
+              "text": "Glücksklee"
+            },
+            {
+              "id": "l5",
+              "text": "Erste Person am Neujahrstag"
+            },
+            {
+              "id": "l6",
+              "text": "Sprechende Tiere"
+            }
           ],
           "pairsRight": [
-            { "id": "r1", "text": "Glück durch Küssen" },
-            { "id": "r2", "text": "bringt Glück" },
-            { "id": "r3", "text": "steht für Geld" },
-            { "id": "r4", "text": "neuer Anfang" },
-            { "id": "r5", "text": "bringt Glück für das Jahr" },
-            { "id": "r6", "text": "alte Wintergeschichte" }
+            {
+              "id": "r6",
+              "text": "alte Wintergeschichte"
+            },
+            {
+              "id": "r1",
+              "text": "Glück durch Küssen"
+            },
+            {
+              "id": "r2",
+              "text": "bringt Glück"
+            },
+            {
+              "id": "r3",
+              "text": "steht für Geld"
+            },
+            {
+              "id": "r4",
+              "text": "ein kleiner Topf als Geschenk zu Silvester"
+            },
+            {
+              "id": "r5",
+              "text": "bringt Glück für das Jahr"
+            }
           ],
           "correctPairs": [
-            ["l1", "r1"],
-            ["l2", "r2"],
-            ["l3", "r3"],
-            ["l4", "r4"],
-            ["l5", "r5"],
-            ["l6", "r6"]
+            [
+              "l1",
+              "r1"
+            ],
+            [
+              "l2",
+              "r2"
+            ],
+            [
+              "l3",
+              "r3"
+            ],
+            [
+              "l4",
+              "r4"
+            ],
+            [
+              "l5",
+              "r5"
+            ],
+            [
+              "l6",
+              "r6"
+            ]
           ]
         },
         {
           "type": "matching",
           "id": "match-3",
           "pairsLeft": [
-            { "id": "l1", "text": "Mistelzweig" },
-            { "id": "l2", "text": "Krampus" },
-            { "id": "l3", "text": "Hexe" },
-            { "id": "l4", "text": "Linsen" },
-            { "id": "l5", "text": "Glück" },
-            { "id": "l6", "text": "Reichtum" }
+            {
+              "id": "l1",
+              "text": "Mistelzweig"
+            },
+            {
+              "id": "l2",
+              "text": "Krampus"
+            },
+            {
+              "id": "l3",
+              "text": "Hexe"
+            },
+            {
+              "id": "l4",
+              "text": "Linsen"
+            },
+            {
+              "id": "l5",
+              "text": "Glück"
+            },
+            {
+              "id": "l6",
+              "text": "Reichtum"
+            }
           ],
           "pairsRight": [
-            { "id": "r1", "text": "winterQuestFourteen.mistletoe" },
-            { "id": "r2", "text": "winterQuestFourteen.krampus" },
-            { "id": "r3", "text": "winterQuestFourteen.witch" },
-            { "id": "r4", "text": "winterQuestFourteen.lentils" },
-            { "id": "r5", "text": "winterQuestFourteen.luck" },
-            { "id": "r6", "text": "winterQuestFourteen.wealth" }
+            {
+              "id": "r2",
+              "text": "winterQuestFourteen.krampus"
+            },
+            {
+              "id": "r3",
+              "text": "winterQuestFourteen.witch"
+            },
+            {
+              "id": "r4",
+              "text": "winterQuestFourteen.lentils"
+            },
+            {
+              "id": "r5",
+              "text": "winterQuestFourteen.luck"
+            },
+            {
+              "id": "r6",
+              "text": "winterQuestFourteen.wealth"
+            },
+            {
+              "id": "r1",
+              "text": "winterQuestFourteen.mistletoe"
+            }
           ],
           "correctPairs": [
-            ["l1", "r1"],
-            ["l2", "r2"],
-            ["l3", "r3"],
-            ["l4", "r4"],
-            ["l5", "r5"],
-            ["l6", "r6"]
+            [
+              "l1",
+              "r1"
+            ],
+            [
+              "l2",
+              "r2"
+            ],
+            [
+              "l3",
+              "r3"
+            ],
+            [
+              "l4",
+              "r4"
+            ],
+            [
+              "l5",
+              "r5"
+            ],
+            [
+              "l6",
+              "r6"
+            ]
           ]
         },
         {
           "type": "matching",
           "id": "match-4",
           "pairsLeft": [
-            { "id": "l1", "text": "Krampusnacht" },
-            { "id": "l2", "text": "Perchtenlauf" },
-            { "id": "l3", "text": "La Befana" },
-            { "id": "l4", "text": "Día de los Reyes Magos" },
-            { "id": "l5", "text": "St. Lucia" },
-            { "id": "l6", "text": "Boxing Day" }
+            {
+              "id": "l1",
+              "text": "Krampusnacht"
+            },
+            {
+              "id": "l2",
+              "text": "Perchtenlauf"
+            },
+            {
+              "id": "l3",
+              "text": "La Befana"
+            },
+            {
+              "id": "l4",
+              "text": "Día de los Reyes Magos"
+            },
+            {
+              "id": "l5",
+              "text": "St. Lucia"
+            },
+            {
+              "id": "l6",
+              "text": "Boxing Day"
+            }
           ],
           "pairsRight": [
-            { "id": "r1", "text": "5. Dezember" },
-            { "id": "r2", "text": "Januar oder Februar – Winteraustreibung" },
-            { "id": "r3", "text": "6. Januar in Italien" },
-            { "id": "r4", "text": "6. Januar in Spanien" },
-            { "id": "r5", "text": "13. Dezember" },
-            { "id": "r6", "text": "26. Dezember" }
+            {
+              "id": "r3",
+              "text": "6. Januar in Italien"
+            },
+            {
+              "id": "r4",
+              "text": "6. Januar in Spanien"
+            },
+            {
+              "id": "r5",
+              "text": "13. Dezember"
+            },
+            {
+              "id": "r6",
+              "text": "26. Dezember"
+            },
+            {
+              "id": "r1",
+              "text": "5. Dezember"
+            },
+            {
+              "id": "r2",
+              "text": "in den Nächten um den Jahreswechsel"
+            }
           ],
           "correctPairs": [
-            ["l1", "r1"],
-            ["l2", "r2"],
-            ["l3", "r3"],
-            ["l4", "r4"],
-            ["l5", "r5"],
-            ["l6", "r6"]
+            [
+              "l1",
+              "r1"
+            ],
+            [
+              "l2",
+              "r2"
+            ],
+            [
+              "l3",
+              "r3"
+            ],
+            [
+              "l4",
+              "r4"
+            ],
+            [
+              "l5",
+              "r5"
+            ],
+            [
+              "l6",
+              "r6"
+            ]
           ]
         }
       ]
@@ -1757,117 +3114,332 @@
           "type": "matching",
           "id": "match-1",
           "pairsLeft": [
-            { "id": "l1", "text": "Schneemann" },
-            { "id": "l2", "text": "Eiszapfen" },
-            { "id": "l3", "text": "Heizung" },
-            { "id": "l4", "text": "Schneeschaufel" },
-            { "id": "l5", "text": "Winterjacke" },
-            { "id": "l6", "text": "Thermobecher" }
+            {
+              "id": "l1",
+              "text": "Schneemann"
+            },
+            {
+              "id": "l2",
+              "text": "Eiszapfen"
+            },
+            {
+              "id": "l3",
+              "text": "Heizung"
+            },
+            {
+              "id": "l4",
+              "text": "Schneeschaufel"
+            },
+            {
+              "id": "l5",
+              "text": "Winterjacke"
+            },
+            {
+              "id": "l6",
+              "text": "Thermobecher"
+            }
           ],
           "pairsRight": [
-            { "id": "r1", "text": "Man baut ihn aus Schnee im Garten" },
-            { "id": "r2", "text": "Hängt am Dach, wenn es sehr kalt ist" },
-            { "id": "r3", "text": "Macht das Haus warm im Winter" },
-            { "id": "r4", "text": "Hilft beim Räumen des Schnees" },
-            { "id": "r5", "text": "Schützt vor Kälte und Wind" },
-            { "id": "r6", "text": "Hält den Tee oder Kaffee lange warm" }
+            {
+              "id": "r5",
+              "text": "Schützt vor Kälte und Wind"
+            },
+            {
+              "id": "r6",
+              "text": "Hält den Tee oder Kaffee lange warm"
+            },
+            {
+              "id": "r1",
+              "text": "Man baut ihn aus Schnee im Garten"
+            },
+            {
+              "id": "r2",
+              "text": "Hängt am Dach, wenn es sehr kalt ist"
+            },
+            {
+              "id": "r3",
+              "text": "Macht das Haus warm im Winter"
+            },
+            {
+              "id": "r4",
+              "text": "Hilft beim Räumen des Schnees"
+            }
           ],
           "correctPairs": [
-            ["l1", "r1"],
-            ["l2", "r2"],
-            ["l3", "r3"],
-            ["l4", "r4"],
-            ["l5", "r5"],
-            ["l6", "r6"]
+            [
+              "l1",
+              "r1"
+            ],
+            [
+              "l2",
+              "r2"
+            ],
+            [
+              "l3",
+              "r3"
+            ],
+            [
+              "l4",
+              "r4"
+            ],
+            [
+              "l5",
+              "r5"
+            ],
+            [
+              "l6",
+              "r6"
+            ]
           ]
         },
         {
           "type": "matching",
           "id": "match-2",
           "pairsLeft": [
-            { "id": "l1", "text": "Schlittschuh laufen" },
-            { "id": "l2", "text": "Schlitten fahren" },
-            { "id": "l3", "text": "Skifahren" },
-            { "id": "l4", "text": "Schneeballschlacht" },
-            { "id": "l5", "text": "Weihnachtsfilme schauen" },
-            { "id": "l6", "text": "Plätzchen backen" }
+            {
+              "id": "l1",
+              "text": "Schlittschuh laufen"
+            },
+            {
+              "id": "l2",
+              "text": "Schlitten fahren"
+            },
+            {
+              "id": "l3",
+              "text": "Skifahren"
+            },
+            {
+              "id": "l4",
+              "text": "Schneeballschlacht"
+            },
+            {
+              "id": "l5",
+              "text": "Weihnachtsfilme schauen"
+            },
+            {
+              "id": "l6",
+              "text": "Plätzchen backen"
+            }
           ],
           "pairsRight": [
-            { "id": "r1", "text": "Mit Freunden auf dem Eis fahren" },
-            { "id": "r2", "text": "Vom Hügel hinunterrutschen" },
-            { "id": "r3", "text": "Mit Stöcken im Schnee fahren" },
-            { "id": "r4", "text": "Mit Schnee werfen und lachen" },
-            { "id": "r5", "text": "Gemütlich zu Hause auf dem Sofa" },
-            { "id": "r6", "text": "Süßes Gebäck im Ofen machen" }
+            {
+              "id": "r6",
+              "text": "Süßes Gebäck im Ofen machen"
+            },
+            {
+              "id": "r1",
+              "text": "Mit Freunden auf dem Eis fahren"
+            },
+            {
+              "id": "r2",
+              "text": "Vom Hügel hinunterrutschen"
+            },
+            {
+              "id": "r3",
+              "text": "Mit Stöcken im Schnee fahren"
+            },
+            {
+              "id": "r4",
+              "text": "Mit Schnee werfen und lachen"
+            },
+            {
+              "id": "r5",
+              "text": "Gemütlich zu Hause auf dem Sofa"
+            }
           ],
           "correctPairs": [
-            ["l1", "r1"],
-            ["l2", "r2"],
-            ["l3", "r3"],
-            ["l4", "r4"],
-            ["l5", "r5"],
-            ["l6", "r6"]
+            [
+              "l1",
+              "r1"
+            ],
+            [
+              "l2",
+              "r2"
+            ],
+            [
+              "l3",
+              "r3"
+            ],
+            [
+              "l4",
+              "r4"
+            ],
+            [
+              "l5",
+              "r5"
+            ],
+            [
+              "l6",
+              "r6"
+            ]
           ]
         },
         {
           "type": "matching",
           "id": "match-3",
           "pairsLeft": [
-            { "id": "l1", "text": "Schnee" },
-            { "id": "l2", "text": "Kälte" },
-            { "id": "l3", "text": "Mütze" },
-            { "id": "l4", "text": "Handschuhe" },
-            { "id": "l5", "text": "Ofen" },
-            { "id": "l6", "text": "Fensterbrett" }
+            {
+              "id": "l1",
+              "text": "Schnee"
+            },
+            {
+              "id": "l2",
+              "text": "Kälte"
+            },
+            {
+              "id": "l3",
+              "text": "Mütze"
+            },
+            {
+              "id": "l4",
+              "text": "Handschuhe"
+            },
+            {
+              "id": "l5",
+              "text": "Ofen"
+            },
+            {
+              "id": "l6",
+              "text": "Fensterbrett"
+            }
           ],
           "pairsRight": [
-            { "id": "r1", "text": "winterQuestFifteen.snow" },
-            { "id": "r2", "text": "winterQuestFifteen.cold" },
-            { "id": "r3", "text": "winterQuestFifteen.hat" },
-            { "id": "r4", "text": "winterQuestFifteen.gloves" },
-            { "id": "r5", "text": "winterQuestFifteen.stove" },
-            { "id": "r6", "text": "winterQuestFifteen.windowsill" }
+            {
+              "id": "r2",
+              "text": "winterQuestFifteen.cold"
+            },
+            {
+              "id": "r3",
+              "text": "winterQuestFifteen.hat"
+            },
+            {
+              "id": "r4",
+              "text": "winterQuestFifteen.gloves"
+            },
+            {
+              "id": "r5",
+              "text": "winterQuestFifteen.stove"
+            },
+            {
+              "id": "r6",
+              "text": "winterQuestFifteen.windowsill"
+            },
+            {
+              "id": "r1",
+              "text": "winterQuestFifteen.snow"
+            }
           ],
           "correctPairs": [
-            ["l1", "r1"],
-            ["l2", "r2"],
-            ["l3", "r3"],
-            ["l4", "r4"],
-            ["l5", "r5"],
-            ["l6", "r6"]
+            [
+              "l1",
+              "r1"
+            ],
+            [
+              "l2",
+              "r2"
+            ],
+            [
+              "l3",
+              "r3"
+            ],
+            [
+              "l4",
+              "r4"
+            ],
+            [
+              "l5",
+              "r5"
+            ],
+            [
+              "l6",
+              "r6"
+            ]
           ]
         },
         {
           "type": "matching",
           "id": "match-4",
           "pairsLeft": [
-            { "id": "l1", "text": "Erster Schnee" },
-            { "id": "l2", "text": "Weihnachten" },
-            { "id": "l3", "text": "Silvester" },
-            { "id": "l4", "text": "Neujahr" },
-            { "id": "l5", "text": "Wintersportwoche" },
-            { "id": "l6", "text": "Karnevalsbeginn" }
+            {
+              "id": "l1",
+              "text": "Erster Schnee"
+            },
+            {
+              "id": "l2",
+              "text": "Nikolaustag"
+            },
+            {
+              "id": "l3",
+              "text": "Silvester"
+            },
+            {
+              "id": "l4",
+              "text": "Neujahr"
+            },
+            {
+              "id": "l5",
+              "text": "Heiligabend"
+            },
+            {
+              "id": "l6",
+              "text": "Rosenmontag"
+            }
           ],
           "pairsRight": [
-            { "id": "r1", "text": "meist im November" },
-            { "id": "r2", "text": "24. Dezember" },
-            { "id": "r3", "text": "31. Dezember" },
-            { "id": "r4", "text": "1. Januar" },
-            { "id": "r5", "text": "im Januar oder Februar" },
-            { "id": "r6", "text": "im Februar" }
+            {
+              "id": "r3",
+              "text": "31. Dezember"
+            },
+            {
+              "id": "r4",
+              "text": "1. Januar"
+            },
+            {
+              "id": "r5",
+              "text": "24. Dezember"
+            },
+            {
+              "id": "r6",
+              "text": "im Februar"
+            },
+            {
+              "id": "r1",
+              "text": "oft im November"
+            },
+            {
+              "id": "r2",
+              "text": "6. Dezember"
+            }
           ],
           "correctPairs": [
-            ["l1", "r1"],
-            ["l2", "r2"],
-            ["l3", "r3"],
-            ["l4", "r4"],
-            ["l5", "r5"],
-            ["l6", "r6"]
+            [
+              "l1",
+              "r1"
+            ],
+            [
+              "l2",
+              "r2"
+            ],
+            [
+              "l3",
+              "r3"
+            ],
+            [
+              "l4",
+              "r4"
+            ],
+            [
+              "l5",
+              "r5"
+            ],
+            [
+              "l6",
+              "r6"
+            ]
           ]
         }
       ]
     },
-
     {
       "id": "quest-16",
       "title": "Выбери правильное слово — Зима и Новый год",
@@ -1878,56 +3450,96 @@
           "type": "choose-word",
           "id": "cw-1",
           "sentence": "Am 31. Dezember feiern die Menschen ___.",
-          "options": ["Weihnachten", "Silvester", "Ostern", "Pfingsten"],
+          "options": [
+            "Weihnachten",
+            "Silvester",
+            "Ostern",
+            "Pfingsten"
+          ],
           "correctOptionIndex": 1
         },
         {
           "type": "choose-word",
           "id": "cw-2",
-          "sentence": "Um Mitternacht sieht man am Himmel viele ___.",
-          "options": ["Sterne", "Flugzeuge", "Feuerwerke", "Kerzen"],
+          "sentence": "Um Mitternacht sieht man am Himmel buntes ___.",
+          "options": [
+            "Laub",
+            "Gras",
+            "Feuerwerk",
+            "Wasser"
+          ],
           "correctOptionIndex": 2
         },
         {
           "type": "choose-word",
           "id": "cw-3",
           "sentence": "Viele Menschen stoßen mit ___ an.",
-          "options": ["Sekt", "Milch", "Kakao", "Wasser"],
+          "options": [
+            "Sekt",
+            "Milch",
+            "Kakao",
+            "Wasser"
+          ],
           "correctOptionIndex": 0
         },
         {
           "type": "choose-word",
           "id": "cw-4",
           "sentence": "Am Neujahrstag wünschen sich alle ein ___ neues Jahr.",
-          "options": ["kurzes", "falsches", "glückliches", "langes"],
+          "options": [
+            "kurzes",
+            "falsches",
+            "glückliches",
+            "langes"
+          ],
           "correctOptionIndex": 2
         },
         {
           "type": "choose-word",
           "id": "cw-5",
           "sentence": "Im Winter tragen die Leute warme ___ und Mützen.",
-          "options": ["Jacken", "Hemden", "Kleider", "Hosen"],
+          "options": [
+            "Jacken",
+            "Hemden",
+            "Kleider",
+            "T-Shirts"
+          ],
           "correctOptionIndex": 0
         },
         {
           "type": "choose-word",
           "id": "cw-6",
-          "sentence": "Auf den Straßen liegt viel ___.",
-          "options": ["Sand", "Laub", "Schnee", "Wasser"],
+          "sentence": "Im Winter liegt auf den Straßen viel ___.",
+          "options": [
+            "Gras",
+            "Obst",
+            "Schnee",
+            "Blumen"
+          ],
           "correctOptionIndex": 2
         },
         {
           "type": "choose-word",
           "id": "cw-7",
           "sentence": "Kinder fahren gern mit dem ___ den Hügel hinunter.",
-          "options": ["Schlitten", "Auto", "Fahrrad", "Bus"],
+          "options": [
+            "Schlitten",
+            "Auto",
+            "Fahrrad",
+            "Bus"
+          ],
           "correctOptionIndex": 0
         },
         {
           "type": "choose-word",
           "id": "cw-8",
           "sentence": "Viele Menschen machen zu Neujahr gute ___.",
-          "options": ["Pläne", "Freunde", "Vorsätze", "Kuchen"],
+          "options": [
+            "Schuhe",
+            "Freunde",
+            "Vorsätze",
+            "Kuchen"
+          ],
           "correctOptionIndex": 2
         }
       ]
@@ -1941,57 +3553,97 @@
         {
           "type": "choose-word",
           "id": "cw-1",
-          "sentence": "Am 24. Dezember steht der ___ im Wohnzimmer.",
-          "options": ["Tannenbaum", "Schrank", "Tisch", "Sessel"],
+          "sentence": "Am 24. Dezember steht der geschmückte ___ im Wohnzimmer.",
+          "options": [
+            "Tannenbaum",
+            "Schrank",
+            "Tisch",
+            "Sessel"
+          ],
           "correctOptionIndex": 0
         },
         {
           "type": "choose-word",
           "id": "cw-2",
           "sentence": "Die Kinder bekommen viele ___ zu Weihnachten.",
-          "options": ["Kekse", "Geschenke", "Kerzen", "Schuhe"],
+          "options": [
+            "Steine",
+            "Geschenke",
+            "Rechnungen",
+            "Schuhe"
+          ],
           "correctOptionIndex": 1
         },
         {
           "type": "choose-word",
           "id": "cw-3",
           "sentence": "Der Weihnachtsmann trägt einen ___ Mantel.",
-          "options": ["grünen", "blauen", "roten", "gelben"],
+          "options": [
+            "grünen",
+            "blauen",
+            "roten",
+            "gelben"
+          ],
           "correctOptionIndex": 2
         },
         {
           "type": "choose-word",
           "id": "cw-4",
           "sentence": "Auf dem Tisch stehen vier ___ vom Adventskranz.",
-          "options": ["Teller", "Kerzen", "Geschenke", "Karten"],
+          "options": [
+            "Teller",
+            "Kerzen",
+            "Geschenke",
+            "Karten"
+          ],
           "correctOptionIndex": 1
         },
         {
           "type": "choose-word",
           "id": "cw-5",
           "sentence": "Die Familie ___ zusammen Weihnachtslieder.",
-          "options": ["tanzt", "singt", "liest", "spielt"],
+          "options": [
+            "kocht",
+            "singt",
+            "liest",
+            "putzt"
+          ],
           "correctOptionIndex": 1
         },
         {
           "type": "choose-word",
           "id": "cw-6",
-          "sentence": "Es ist kalt, und draußen fällt ___ .",
-          "options": ["Regen", "Schnee", "Sonne", "Nebel"],
+          "sentence": "Es ist kalt, und draußen fällt ___.",
+          "options": [
+            "Sonne",
+            "Schnee",
+            "Wind",
+            "Hitze"
+          ],
           "correctOptionIndex": 1
         },
         {
           "type": "choose-word",
           "id": "cw-7",
-          "sentence": "Am Abend essen alle ___ und trinken Kakao.",
-          "options": ["Plätzchen", "Bananen", "Pommes", "Äpfel"],
+          "sentence": "Zu Weihnachten backt die Familie süße ___.",
+          "options": [
+            "Plätzchen",
+            "Pommes",
+            "Würstchen",
+            "Salate"
+          ],
           "correctOptionIndex": 0
         },
         {
           "type": "choose-word",
           "id": "cw-8",
           "sentence": "Die Kinder hängen bunte ___ an den Baum.",
-          "options": ["Lichter", "Blätter", "Kleider", "Poster"],
+          "options": [
+            "Kugeln",
+            "Blätter",
+            "Kleider",
+            "Poster"
+          ],
           "correctOptionIndex": 0
         }
       ]
@@ -2005,57 +3657,97 @@
         {
           "type": "choose-word",
           "id": "cw-1",
-          "sentence": "Am Nachmittag kaufen die Leute viele ___.",
-          "options": ["Raketen", "Bücher", "Kerzen", "Karten"],
+          "sentence": "Vor Silvester kaufen viele Leute ___ für das Feuerwerk.",
+          "options": [
+            "Raketen",
+            "Bücher",
+            "Kerzen",
+            "Karten"
+          ],
           "correctOptionIndex": 0
         },
         {
           "type": "choose-word",
           "id": "cw-2",
           "sentence": "Die Familie deckt den Tisch und stellt viele ___ darauf.",
-          "options": ["Teller", "Schuhe", "Kissen", "Tüten"],
+          "options": [
+            "Teller",
+            "Schuhe",
+            "Kissen",
+            "Tüten"
+          ],
           "correctOptionIndex": 0
         },
         {
           "type": "choose-word",
           "id": "cw-3",
           "sentence": "Viele Menschen tragen an Silvester elegante ___.",
-          "options": ["Kleidung", "Mützen", "Uniformen", "Schlafanzüge"],
+          "options": [
+            "Kleidung",
+            "Mützen",
+            "Uniformen",
+            "Schlafanzüge"
+          ],
           "correctOptionIndex": 0
         },
         {
           "type": "choose-word",
           "id": "cw-4",
           "sentence": "Die Kinder helfen, den Tisch mit ___ zu schmücken.",
-          "options": ["Luftballons", "Papier", "Spielzeug", "Plastik"],
+          "options": [
+            "Konfetti",
+            "Steinen",
+            "Socken",
+            "Werkzeug"
+          ],
           "correctOptionIndex": 0
         },
         {
           "type": "choose-word",
           "id": "cw-5",
           "sentence": "In der Küche riecht es nach leckerem ___.",
-          "options": ["Essen", "Rauch", "Parfüm", "Brot"],
+          "options": [
+            "Essen",
+            "Rauch",
+            "Parfüm",
+            "Benzin"
+          ],
           "correctOptionIndex": 0
         },
         {
           "type": "choose-word",
           "id": "cw-6",
-          "sentence": "Am Abend zündet der Vater die ersten ___ an.",
-          "options": ["Kerzen", "Raketen", "Lichter", "Spiele"],
+          "sentence": "Um Mitternacht zündet der Vater die ersten ___ an.",
+          "options": [
+            "Schuhe",
+            "Raketen",
+            "Bücher",
+            "Teller"
+          ],
           "correctOptionIndex": 1
         },
         {
           "type": "choose-word",
           "id": "cw-7",
           "sentence": "Alle sind fröhlich und warten auf ___.",
-          "options": ["Mitternacht", "Weihnachten", "Frühstück", "Ostern"],
+          "options": [
+            "Mitternacht",
+            "Weihnachten",
+            "Frühstück",
+            "Ostern"
+          ],
           "correctOptionIndex": 0
         },
         {
           "type": "choose-word",
           "id": "cw-8",
           "sentence": "Die Mutter legt Süßigkeiten und kleine ___ auf den Tisch.",
-          "options": ["Geschenke", "Zeitungen", "Lampen", "Schlüssel"],
+          "options": [
+            "Geschenke",
+            "Zeitungen",
+            "Lampen",
+            "Schlüssel"
+          ],
           "correctOptionIndex": 0
         }
       ]
@@ -2069,57 +3761,97 @@
         {
           "type": "choose-word",
           "id": "cw-1",
-          "sentence": "Um Mitternacht hört man überall laute ___.",
-          "options": ["Feuerwerke", "Autos", "Klingeln", "Tiere"],
+          "sentence": "Um Mitternacht hört man überall lautes ___.",
+          "options": [
+            "Feuerwerk",
+            "Flüstern",
+            "Schweigen",
+            "Vogelgezwitscher"
+          ],
           "correctOptionIndex": 0
         },
         {
           "type": "choose-word",
           "id": "cw-2",
           "sentence": "Die Menschen umarmen sich und sagen ___.",
-          "options": ["Gute Nacht!", "Frohes neues Jahr!", "Schönen Tag!", "Bis bald!"],
+          "options": [
+            "Gute Nacht!",
+            "Frohes neues Jahr!",
+            "Schönen Tag!",
+            "Bis bald!"
+          ],
           "correctOptionIndex": 1
         },
         {
           "type": "choose-word",
           "id": "cw-3",
           "sentence": "Viele Nachbarn kommen auf die Straße und ___ zusammen.",
-          "options": ["tanzen", "essen", "arbeiten", "laufen"],
+          "options": [
+            "feiern",
+            "schlafen",
+            "arbeiten",
+            "lernen"
+          ],
           "correctOptionIndex": 0
         },
         {
           "type": "choose-word",
           "id": "cw-4",
           "sentence": "Am Himmel sieht man bunte ___.",
-          "options": ["Raketen", "Sterne", "Blätter", "Wolken"],
+          "options": [
+            "Raketen",
+            "Blätter",
+            "Fische",
+            "Häuser"
+          ],
           "correctOptionIndex": 0
         },
         {
           "type": "choose-word",
           "id": "cw-5",
           "sentence": "Die Kinder lachen und schauen das Feuerwerk aus dem ___.",
-          "options": ["Fenster", "Auto", "Bett", "Hausflur"],
+          "options": [
+            "Fenster",
+            "Kühlschrank",
+            "Bett",
+            "Schrank"
+          ],
           "correctOptionIndex": 0
         },
         {
           "type": "choose-word",
           "id": "cw-6",
           "sentence": "Im Radio läuft fröhliche ___.",
-          "options": ["Musik", "Werbung", "Nachricht", "Kritik"],
+          "options": [
+            "Musik",
+            "Werbung",
+            "Stille",
+            "Kritik"
+          ],
           "correctOptionIndex": 0
         },
         {
           "type": "choose-word",
           "id": "cw-7",
-          "sentence": "Manche Leute machen Fotos vom ___.",
-          "options": ["Feuerwerk", "Essen", "Tisch", "Baum"],
+          "sentence": "Manche Leute machen Fotos vom bunten ___ am Himmel.",
+          "options": [
+            "Feuerwerk",
+            "Essen",
+            "Tisch",
+            "Baum"
+          ],
           "correctOptionIndex": 0
         },
         {
           "type": "choose-word",
           "id": "cw-8",
-          "sentence": "Nach Mitternacht trinken viele noch etwas ___.",
-          "options": ["Kakao", "Sekt", "Wasser", "Milch"],
+          "sentence": "Nach Mitternacht wünschen sich alle ein frohes neues ___.",
+          "options": [
+            "Auto",
+            "Jahr",
+            "Haus",
+            "Bett"
+          ],
           "correctOptionIndex": 1
         }
       ]
@@ -2134,70 +3866,120 @@
           "type": "choose-word",
           "id": "cw-1",
           "sentence": "In Deutschland sieht man an Silvester überall buntes ___.",
-          "options": ["Feuerwerk", "Laub", "Konfetti", "Licht"],
+          "options": [
+            "Feuerwerk",
+            "Laub",
+            "Gras",
+            "Eis"
+          ],
           "correctOptionIndex": 0
         },
         {
           "type": "choose-word",
           "id": "cw-2",
           "sentence": "Viele essen zu Mitternacht Glücksbringer aus ___.",
-          "options": ["Schokolade", "Marzipan", "Käse", "Zuckerwatte"],
+          "options": [
+            "Holz",
+            "Marzipan",
+            "Käse",
+            "Papier"
+          ],
           "correctOptionIndex": 1
         },
         {
           "type": "choose-word",
           "id": "cw-3",
           "sentence": "Ein typisches Gericht an Silvester ist ___.",
-          "options": ["Raclette", "Spaghetti", "Kartoffelsuppe", "Pizza"],
+          "options": [
+            "Raclette",
+            "Spaghetti",
+            "Kartoffelsuppe",
+            "Pizza"
+          ],
           "correctOptionIndex": 0
         },
         {
           "type": "choose-word",
           "id": "cw-4",
           "sentence": "Um Mitternacht stoßen Freunde und Familie mit ___ an.",
-          "options": ["Sekt", "Saft", "Kaffee", "Wasser"],
+          "options": [
+            "Sekt",
+            "Saft",
+            "Kaffee",
+            "Wasser"
+          ],
           "correctOptionIndex": 0
         },
         {
           "type": "choose-word",
           "id": "cw-5",
-          "sentence": "Ein altes Ritual ist das Bleigießen – man gießt heißes Blei in ___.",
-          "options": ["Wasser", "Milch", "Öl", "Kakao"],
+          "sentence": "Ein altes Ritual ist das Bleigießen: Man gießt heißes Blei in kaltes ___.",
+          "options": [
+            "Wasser",
+            "Milch",
+            "Öl",
+            "Kakao"
+          ],
           "correctOptionIndex": 0
         },
         {
           "type": "choose-word",
           "id": "cw-6",
           "sentence": "Was das Blei zeigt, soll Glück oder ___ im neuen Jahr bedeuten.",
-          "options": ["Erfolg", "Armut", "Schnee", "Ferien"],
+          "options": [
+            "Erfolg",
+            "Schnee",
+            "Ferien",
+            "Hausaufgaben"
+          ],
           "correctOptionIndex": 0
         },
         {
           "type": "choose-word",
           "id": "cw-7",
           "sentence": "Viele wünschen sich im neuen Jahr Gesundheit und ___.",
-          "options": ["Glück", "Hitze", "Regen", "Ruhe"],
+          "options": [
+            "Glück",
+            "Hitze",
+            "Regen",
+            "Husten"
+          ],
           "correctOptionIndex": 0
         },
         {
           "type": "choose-word",
           "id": "cw-8",
           "sentence": "In manchen Regionen bringt ein Schornsteinfeger ___.",
-          "options": ["Unglück", "Glück", "Arbeit", "Schnee"],
+          "options": [
+            "Unglück",
+            "Glück",
+            "Arbeit",
+            "Schnee"
+          ],
           "correctOptionIndex": 1
         },
         {
           "type": "choose-word",
           "id": "cw-9",
           "sentence": "Am nächsten Tag wünschen sich alle: „___ neues Jahr!“",
-          "options": ["Schönes", "Frohes", "Altes", "Kaltes"],
+          "options": [
+            "Trauriges",
+            "Frohes",
+            "Altes",
+            "Kaltes"
+          ],
           "correctOptionIndex": 1
         },
         {
           "type": "choose-word",
           "id": "cw-10",
           "sentence": "In Berlin feiern viele Menschen am Brandenburger ___.",
-          "options": ["Tor", "Markt", "See", "Haus"],
+          "options": [
+            "Tor",
+            "Markt",
+            "See",
+            "Haus"
+          ],
           "correctOptionIndex": 0
         }
       ]
@@ -2314,7 +4096,7 @@
             "das Eis",
             "der Weihnachtsschmuck"
           ],
-          "correctOptionIndex":2
+          "correctOptionIndex": 2
         },
         {
           "type": "multiple-choice",
@@ -2565,6 +4347,443 @@
             "der Kuchen",
             "der Kalender",
             "der Stern"
+          ],
+          "correctOptionIndex": 2
+        }
+      ]
+    },
+    {
+      "id": "quest-22",
+      "title": "Большой рождественский тест",
+      "rewardCoins": 10,
+      "rewardRep": 0,
+      "steps": [
+        {
+          "type": "multiple-choice",
+          "id": "final-img-1",
+          "title": "Was siehst du?",
+          "image": "/assets/images/event-rewards/winter-event/winter-words/cake.svg",
+          "options": [
+            "der Kuchen",
+            "der Kalender",
+            "die Kerze"
+          ],
+          "correctOptionIndex": 0
+        },
+        {
+          "type": "multiple-choice",
+          "id": "final-img-2",
+          "title": "Was siehst du?",
+          "image": "/assets/images/event-rewards/winter-event/winter-words/calendar.svg",
+          "options": [
+            "das Bonbon",
+            "der Kalender",
+            "der Kamin"
+          ],
+          "correctOptionIndex": 1
+        },
+        {
+          "type": "choose-word",
+          "id": "final-cw-1",
+          "sentence": "Der Weihnachtsmann bringt ___ Kindern Geschenke.",
+          "options": [
+            "der",
+            "die",
+            "den",
+            "das"
+          ],
+          "correctOptionIndex": 2
+        },
+        {
+          "type": "multiple-choice",
+          "id": "final-mc-1",
+          "title": "Silvester",
+          "question": "Was sagt man am 31. Dezember um Mitternacht?",
+          "options": [
+            "Frohe Ostern!",
+            "Frohes neues Jahr!",
+            "Gute Besserung!",
+            "Alles Gute zum Geburtstag!"
+          ],
+          "correctOptionIndex": 1
+        },
+        {
+          "type": "multiple-choice",
+          "id": "final-img-3",
+          "title": "Was siehst du?",
+          "image": "/assets/images/event-rewards/winter-event/winter-words/candle.svg",
+          "options": [
+            "die Kerze",
+            "der Champagner",
+            "die Christbaumkugel"
+          ],
+          "correctOptionIndex": 0
+        },
+        {
+          "type": "matching",
+          "id": "final-match-1",
+          "pairsLeft": [
+            {
+              "id": "l1",
+              "text": "der Stern"
+            },
+            {
+              "id": "l2",
+              "text": "das Geschenk"
+            },
+            {
+              "id": "l3",
+              "text": "die Kerze"
+            },
+            {
+              "id": "l4",
+              "text": "der Baum"
+            },
+            {
+              "id": "l5",
+              "text": "das Plätzchen"
+            },
+            {
+              "id": "l6",
+              "text": "die Glocke"
+            }
+          ],
+          "pairsRight": [
+            {
+              "id": "r4",
+              "text": "die Bäume"
+            },
+            {
+              "id": "r6",
+              "text": "die Glocken"
+            },
+            {
+              "id": "r1",
+              "text": "die Sterne"
+            },
+            {
+              "id": "r5",
+              "text": "die Plätzchen"
+            },
+            {
+              "id": "r2",
+              "text": "die Geschenke"
+            },
+            {
+              "id": "r3",
+              "text": "die Kerzen"
+            }
+          ],
+          "correctPairs": [
+            [
+              "l1",
+              "r1"
+            ],
+            [
+              "l2",
+              "r2"
+            ],
+            [
+              "l3",
+              "r3"
+            ],
+            [
+              "l4",
+              "r4"
+            ],
+            [
+              "l5",
+              "r5"
+            ],
+            [
+              "l6",
+              "r6"
+            ]
+          ]
+        },
+        {
+          "type": "multiple-choice",
+          "id": "final-img-4",
+          "title": "Was siehst du?",
+          "image": "/assets/images/event-rewards/winter-event/winter-words/candy.svg",
+          "options": [
+            "der Kamin",
+            "die Glocke",
+            "das Bonbon"
+          ],
+          "correctOptionIndex": 2
+        },
+        {
+          "type": "choose-word",
+          "id": "final-cw-2",
+          "sentence": "Wir ___ am 24. Dezember zusammen den Baum.",
+          "options": [
+            "schmückt",
+            "schmücken",
+            "schmücke",
+            "schmückst"
+          ],
+          "correctOptionIndex": 1
+        },
+        {
+          "type": "multiple-choice",
+          "id": "final-img-5",
+          "title": "Was siehst du?",
+          "image": "/assets/images/event-rewards/winter-event/winter-words/champagne.svg",
+          "options": [
+            "der Weihnachtsschmuck",
+            "der Champagner",
+            "der Weihnachtsstrumpf"
+          ],
+          "correctOptionIndex": 1
+        },
+        {
+          "type": "multiple-choice",
+          "id": "final-mc-2",
+          "title": "Wunschzettel",
+          "question": "Was ist ein Wunschzettel?",
+          "options": [
+            "ein Kalender",
+            "ein Kochrezept",
+            "eine Liste mit Wünschen",
+            "eine Fahrkarte"
+          ],
+          "correctOptionIndex": 2
+        },
+        {
+          "type": "reading",
+          "id": "final-reading-1",
+          "title": "Weihnachten bei Oma und Opa",
+          "text": "Am 24. Dezember besucht Paul seine Großeltern. Zuerst schmücken sie zusammen den Weihnachtsbaum. Dann backt die Oma Plätzchen, und Paul hilft ihr. Am Abend singen alle Lieder und öffnen die Geschenke. Paul bekommt einen roten Schlitten. Er freut sich sehr und hofft auf viel Schnee.",
+          "questions": [
+            {
+              "question": "Wen besucht Paul am 24. Dezember?",
+              "options": [
+                "seine Freunde",
+                "seine Großeltern",
+                "seinen Lehrer",
+                "seine Nachbarn"
+              ],
+              "correctOptionIndex": 1
+            },
+            {
+              "question": "Was machen sie zuerst?",
+              "options": [
+                "sie schmücken den Baum",
+                "sie backen Plätzchen",
+                "sie singen Lieder",
+                "sie öffnen Geschenke"
+              ],
+              "correctOptionIndex": 0
+            },
+            {
+              "question": "Wer backt die Plätzchen?",
+              "options": [
+                "der Opa",
+                "Pauls Mutter",
+                "die Oma mit Paul",
+                "ein Bäcker"
+              ],
+              "correctOptionIndex": 2
+            },
+            {
+              "question": "Was bekommt Paul?",
+              "options": [
+                "ein Fahrrad",
+                "ein Buch",
+                "einen Ball",
+                "einen roten Schlitten"
+              ],
+              "correctOptionIndex": 3
+            },
+            {
+              "question": "Worauf hofft Paul?",
+              "options": [
+                "auf Sonne",
+                "auf viel Schnee",
+                "auf Regen",
+                "auf Ferien"
+              ],
+              "correctOptionIndex": 1
+            }
+          ]
+        },
+        {
+          "type": "multiple-choice",
+          "id": "final-img-6",
+          "title": "Was siehst du?",
+          "image": "/assets/images/event-rewards/winter-event/winter-words/chimney.svg",
+          "options": [
+            "der Weihnachtsbaum",
+            "der Kamin",
+            "der Adventskranz"
+          ],
+          "correctOptionIndex": 1
+        },
+        {
+          "type": "choose-word",
+          "id": "final-cw-3",
+          "sentence": "Ein Adventskranz hat vier ___.",
+          "options": [
+            "Kerze",
+            "Kerzes",
+            "Kerzen",
+            "Kerzer"
+          ],
+          "correctOptionIndex": 2
+        },
+        {
+          "type": "multiple-choice",
+          "id": "final-img-7",
+          "title": "Was siehst du?",
+          "image": "/assets/images/event-rewards/winter-event/winter-words/christmas-ball.svg",
+          "options": [
+            "die Christbaumkugel",
+            "die Plätzchen",
+            "die Fee"
+          ],
+          "correctOptionIndex": 0
+        },
+        {
+          "type": "matching",
+          "id": "final-match-2",
+          "pairsLeft": [
+            {
+              "id": "l1",
+              "text": "den Baum"
+            },
+            {
+              "id": "l2",
+              "text": "Geschenke"
+            },
+            {
+              "id": "l3",
+              "text": "Plätzchen"
+            },
+            {
+              "id": "l4",
+              "text": "Kerzen"
+            },
+            {
+              "id": "l5",
+              "text": "Lieder"
+            },
+            {
+              "id": "l6",
+              "text": "einen Schneemann"
+            }
+          ],
+          "pairsRight": [
+            {
+              "id": "r3",
+              "text": "backen"
+            },
+            {
+              "id": "r5",
+              "text": "singen"
+            },
+            {
+              "id": "r1",
+              "text": "schmücken"
+            },
+            {
+              "id": "r6",
+              "text": "bauen"
+            },
+            {
+              "id": "r4",
+              "text": "anzünden"
+            },
+            {
+              "id": "r2",
+              "text": "auspacken"
+            }
+          ],
+          "correctPairs": [
+            [
+              "l1",
+              "r1"
+            ],
+            [
+              "l2",
+              "r2"
+            ],
+            [
+              "l3",
+              "r3"
+            ],
+            [
+              "l4",
+              "r4"
+            ],
+            [
+              "l5",
+              "r5"
+            ],
+            [
+              "l6",
+              "r6"
+            ]
+          ]
+        },
+        {
+          "type": "multiple-choice",
+          "id": "final-img-8",
+          "title": "Was siehst du?",
+          "image": "/assets/images/event-rewards/winter-event/winter-words/christmas-bell.svg",
+          "options": [
+            "die Glocke",
+            "das Feuerwerk",
+            "das Geschenk"
+          ],
+          "correctOptionIndex": 0
+        },
+        {
+          "type": "multiple-choice",
+          "id": "final-mc-3",
+          "title": "Weihnachten",
+          "question": "Welcher Tag kommt direkt nach Heiligabend?",
+          "options": [
+            "der erste Weihnachtstag",
+            "Silvester",
+            "der Nikolaustag",
+            "Neujahr"
+          ],
+          "correctOptionIndex": 0
+        },
+        {
+          "type": "choose-word",
+          "id": "final-cw-4",
+          "sentence": "Gestern ___ es den ganzen Tag geschneit.",
+          "options": [
+            "hat",
+            "ist",
+            "haben",
+            "wird"
+          ],
+          "correctOptionIndex": 0
+        },
+        {
+          "type": "multiple-choice",
+          "id": "final-img-9",
+          "title": "Was siehst du?",
+          "image": "/assets/images/event-rewards/winter-event/winter-words/christmas-decoration.svg",
+          "options": [
+            "die Geschenktüte",
+            "das Eis",
+            "der Weihnachtsschmuck"
+          ],
+          "correctOptionIndex": 2
+        },
+        {
+          "type": "multiple-choice",
+          "id": "final-img-10",
+          "title": "Was siehst du?",
+          "image": "/assets/images/event-rewards/winter-event/winter-words/christmas-stocking.svg",
+          "options": [
+            "die Schlittschuhe",
+            "die Fäustlinge",
+            "der Weihnachtsstrumpf"
           ],
           "correctOptionIndex": 2
         }
@@ -3699,7 +5918,7 @@
           "id": "adv15-sent",
           "sentence": "Im Winter laufen wir ___.",
           "options": [
-            "Treppe",
+            "Fahrrad",
             "Schlittschuh",
             "Tennis"
           ],

@@ -2,9 +2,10 @@
 import { ref, computed, watch, nextTick, onMounted, onBeforeUnmount } from 'vue'
 import { isSoundEnabled } from '~/utils/soundManager.js'
 import SoundBtn from '~/src/components/soundBtn.vue'
-import { useEventSessionStore } from '~/store/eventsStore.js'
+import { useEventSessionStore, WINTER_FORCE_OPEN } from '~/store/eventsStore.js'
 import adventDays from './adventDays.json'
 import SnowClose from '~/assets/images/event-rewards/winter-event/winter-words/snowflake.svg'
+import LockedGift from '~/assets/images/mery-christmas/Present.svg'
 import { treeImageUrl, TREE_VIEWBOX, TREE_LIGHTS, TREE_STAR, starPoints } from './adventTree.js'
 
 const props = defineProps({
@@ -84,9 +85,13 @@ const treeSparkles = Array.from({ length: 14 }, (_, i) => ({
   delay: (i * 0.29) % 2
 }))
 
+// В тестовом режиме дни идут по очереди: «сегодня» — первое непройденное окошко
+const firstUndoneDay = computed(() => adventDays.map(item => item.day).sort((a, b) => a - b).find(day => !isDone(day)) ?? null)
+
+// Окошко N открывается N декабря; в январе (до конца ивента) открыты все, чтобы догнать пропущенное.
+// В тестовом режиме открыты пройденные и следующее за ними
 const isUnlocked = (day) => {
-  // Тестовый режим: все окошки и задания доступны сразу, без привязки к дате
-  if (eventStore.isTestMode) return true
+  if (WINTER_FORCE_OPEN) return isDone(day) || day === firstUndoneDay.value
   const date = now.value
   const month = date.getMonth()
   if (month === 0) return true
@@ -108,9 +113,7 @@ const boardDays = computed(() => BOARD_ORDER.map((day, index) => ({
 
 // Сегодняшнее окошко: в декабре по дате, в тестовом режиме первое неоткрытое
 const todayDay = computed(() => {
-  if (eventStore.isTestMode) {
-    return days.value.find(item => !item.done)?.day ?? null
-  }
+  if (WINTER_FORCE_OPEN) return firstUndoneDay.value
   const date = now.value
   if (date.getMonth() !== 11 || date.getDate() > 24) return null
   const today = days.value.find(item => item.day === date.getDate())
@@ -266,16 +269,13 @@ watch(() => props.questsProgress, (value) => {
 const openingDay = ref(null)
 const shakingDay = ref(null)
 const activeDay = ref(null)
-const lockedToast = ref(null)
-let toastTimer = null
+const lockedDay = ref(null)
 
 function onDoorClick(item) {
   animReady.value = true
   if (!item.unlocked) {
     shakingDay.value = item.day
-    lockedToast.value = item.day
-    clearTimeout(toastTimer)
-    toastTimer = setTimeout(() => { lockedToast.value = null }, 2400)
+    lockedDay.value = item.day
     setTimeout(() => { shakingDay.value = null }, 500)
     return
   }
@@ -314,7 +314,6 @@ onMounted(() => {
 
 onBeforeUnmount(() => {
   clearInterval(clockTimer)
-  clearTimeout(toastTimer)
   try { audioCtx?.close() } catch (e) {}
   boardObserver?.disconnect()
 })
@@ -397,10 +396,25 @@ onBeforeUnmount(() => {
            :style="{ left: coin.x, top: coin.y, '--dx': coin.dx, '--dy': coin.dy, animationDelay: coin.delay }"/>
     </Teleport>
 
-    <transition name="toast">
-      <div v-if="lockedToast" class="advent-toast">
-        <strong>{{ t('adventCalendar.lockedTitle') }}</strong>
-        {{ t('adventCalendar.lockedText', { day: lockedToast }) }}
+    <!-- Окна в body: внутри прокручиваемой вкладки iOS Safari обрезает position: fixed -->
+    <Teleport to="body">
+    <transition name="modal">
+      <div v-if="lockedDay" class="day-modal" @click.self="lockedDay = null">
+        <div class="day-modal__card locked-sheet">
+          <div class="day-modal__head">
+            <div class="day-modal__ribbon">{{ lockedDay }}. Dezember</div>
+            <button class="day-modal__close" type="button" :aria-label="t('adventCalendar.close')" @click="lockedDay = null">
+              <img :src="SnowClose" alt="">
+            </button>
+          </div>
+          <div class="day-modal__bauble">
+            <span class="day-modal__bauble-cap"></span>
+            <img :src="LockedGift" alt="" class="day-modal__img"/>
+          </div>
+          <div class="locked-sheet__title">{{ t('adventCalendar.lockedTitle') }}</div>
+          <p class="locked-sheet__text">{{ t('adventCalendar.lockedText', { day: lockedDay }) }}</p>
+          <button type="button" class="day-modal__btn" @click="lockedDay = null">{{ t('adventCalendar.lockedOk') }}</button>
+        </div>
       </div>
     </transition>
 
@@ -441,6 +455,7 @@ onBeforeUnmount(() => {
         </div>
       </div>
     </transition>
+    </Teleport>
   </div>
 </template>
 
@@ -754,8 +769,9 @@ onBeforeUnmount(() => {
   text-shadow: 0 1px 0 rgb(0 0 0 / 0.3);
 }
 
+/* Закрытые окошки чуть приглушены, чтобы открытое сегодня выделялось, но цвета подарков оставались праздничными */
 .door.is-locked .gift {
-  filter: saturate(0.4) brightness(0.8);
+  filter: saturate(0.8) brightness(0.94);
 }
 
 .door.is-locked {
@@ -890,30 +906,30 @@ onBeforeUnmount(() => {
   100% { transform: translate(var(--dx), var(--dy)) scale(0.7); opacity: 0; }
 }
 
-.advent-toast {
-  position: fixed;
-  left: 50%;
-  bottom: 28px;
-  transform: translateX(-50%);
-  z-index: 300;
-  background: #1A2140;
-  color: #fff;
-  border-radius: 50px;
-  padding: 12px 18px;
-  font-weight: 600;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
-  display: flex;
-  gap: 8px;
-  max-width: calc(100% - 32px);
+.locked-sheet__title {
+  font-family: "Lilita One", sans-serif;
+  font-size: 28px;
+  letter-spacing: 0.5px;
+  color: #ffffff;
+  text-align: center;
+  text-shadow: 0 2px 0 rgb(0 0 0 / 0.18);
 }
 
-.advent-toast strong { color: #ffd45e; }
+.locked-sheet__text {
+  margin: 0 0 6px;
+  font-size: 17px;
+  font-weight: 700;
+  color: rgb(255 255 255 / 0.85);
+  text-align: center;
+  line-height: 1.4;
+}
+
 
 /* Карточка дня выезжает снизу шторкой, как фидбек в заданиях */
 .day-modal {
   position: fixed;
   inset: 0;
-  z-index: 999;
+  z-index: 19000;
   background: rgba(8, 16, 36, 0.6);
   display: flex;
   align-items: flex-end;
@@ -1132,8 +1148,6 @@ onBeforeUnmount(() => {
   50% { transform: rotate(3deg); }
 }
 
-.toast-enter-active, .toast-leave-active { transition: opacity 0.25s, transform 0.25s; }
-.toast-enter-from, .toast-leave-to { opacity: 0; transform: translate(-50%, 12px); }
 
 .modal-enter-active, .modal-leave-active { transition: opacity 0.3s ease; }
 .modal-enter-from, .modal-leave-to { opacity: 0; }

@@ -206,7 +206,9 @@
 html.orange body,
 html.orange #__nuxt,
 html.halloween-fx body,
-html.halloween-fx #__nuxt {
+html.halloween-fx #__nuxt,
+html.winter-fx body,
+html.winter-fx #__nuxt {
     background-color: transparent;
 }
 

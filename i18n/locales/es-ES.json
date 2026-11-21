@@ -12264,7 +12264,9 @@
     "answerHighlighted": "¡Incorrecto! La respuesta correcta está resaltada.",
     "excellentAnswers": "¡Excelente, todo correcto!",
     "rightAnswer": "Error. Respuesta correcta:",
-    "connectPaar": "Conecta los pares"
+    "connectPaar": "Conecta los pares",
+    "showTranslation": "Traducción",
+    "hideTranslation": "Ocultar traducción"
   },
   "winterQuestEleven": {
     "firTree": "Árbol de Navidad",
@@ -12327,7 +12329,8 @@
     "quest-17": "Navidad",
     "quest-18": "Preparación",
     "quest-19": "Nochevieja",
-    "quest-20": "Fiesta alemana"
+    "quest-20": "Fiesta alemana",
+    "quest-22": "El gran test de Navidad"
   },
   "valentineEventQuests": {
     "quest-1": "Lista de palabras",
@@ -21272,5 +21275,204 @@
     "courseTitle": "Palabras del curso",
     "yes": "Sí",
     "no": "No"
+  },
+  "eventTile": {
+    "startsIn": "en {time}",
+    "days": "{d} d",
+    "daysHours": "{d} d {h} h",
+    "hoursMinutes": "{h} h {m} min"
+  },
+  "adventCalendar": {
+    "tab": "Calendario",
+    "title": "Calendario de Adviento",
+    "subtitle": "Cada día hasta Nochebuena se abre una nueva ventanita. ¡Ábrelas todas e ilumina todo el pueblo!",
+    "progress": "{count} de 24 ventanitas abiertas",
+    "lockedTitle": "¡Todavía no!",
+    "lockedText": "Esta ventanita se abre el {day} de diciembre.",
+    "lockedOk": "Entendido",
+    "wordOfDay": "Palabra del día",
+    "didYouKnow": "¿Sabías que…?",
+    "start": "Empezar la tarea",
+    "repeat": "Repetir",
+    "done": "Abierta",
+    "close": "Cerrar",
+    "testBadge": "Modo de prueba: todas las ventanitas están abiertas",
+    "finalTitle": "¡El pueblo brilla!",
+    "finalText": "Has abierto las 24 ventanitas. Frohe Weihnachten!",
+    "tasks": {
+      "build": "Forma las palabras: une las dos mitades",
+      "review": "Relaciona cada palabra con su traducción"
+    },
+    "kinds": {
+      "classic": "Quiz de palabras",
+      "listen": "Comprensión auditiva",
+      "build": "Constructor de palabras",
+      "odd": "¿Cuál sobra?",
+      "review": "Repaso semanal",
+      "finale": "Final de Nochebuena"
+    },
+    "days": {
+      "d1": {
+        "word": "calendario de Adviento",
+        "example": "Cada día abro una ventanita del calendario de Adviento.",
+        "fact": "El 1 de diciembre, los niños en Alemania abren la primera ventanita. Detrás suele haber un trocito de chocolate."
+      },
+      "d2": {
+        "word": "vela",
+        "example": "La vela arde sobre la mesa.",
+        "fact": "En Adviento, a los alemanes les encanta la luz de las velas. Muchas casas tienen velas en cada alféizar."
+      },
+      "d3": {
+        "word": "corona de Adviento",
+        "example": "En la corona de Adviento hay cuatro velas.",
+        "fact": "Cada domingo de Adviento se enciende una vela más. Cuando arden las cuatro, la Navidad está cerca."
+      },
+      "d4": {
+        "word": "copo de nieve",
+        "example": "Un copo de nieve cae sobre mi nariz.",
+        "fact": "No hay dos copos de nieve exactamente iguales. En alemán, «es schneit» significa «está nevando»."
+      },
+      "d5": {
+        "word": "calcetín navideño",
+        "example": "El calcetín cuelga de la chimenea.",
+        "fact": "Los niños alemanes no cuelgan calcetines. La noche del 5 de diciembre ponen una bota limpia (der Stiefel) delante de la puerta."
+      },
+      "d6": {
+        "word": "San Nicolás",
+        "example": "San Nicolás trae nueces y chocolate.",
+        "fact": "El 6 de diciembre es el Nikolaustag. Por la mañana, las botas están llenas de dulces, nueces y mandarinas."
+      },
+      "d7": {
+        "word": "galleta navideña",
+        "example": "Hacemos galletas con la abuela.",
+        "fact": "En Adviento, las familias alemanas hornean muchos tipos de Plätzchen. El plural es igual: die Plätzchen."
+      },
+      "d8": {
+        "word": "muñeco de nieve",
+        "example": "El muñeco de nieve tiene una nariz de zanahoria.",
+        "fact": "En alemán, el muñeco de nieve es un «hombre de nieve»: der Schnee + der Mann = der Schneemann."
+      },
+      "d9": {
+        "word": "trineo",
+        "example": "Los niños montan en trineo.",
+        "fact": "En alemán, el trineo se «conduce»: Schlitten fahren."
+      },
+      "d10": {
+        "word": "guante",
+        "example": "Sin guantes se me enfrían las manos.",
+        "fact": "Handschuh significa literalmente «zapato de mano». Las manoplas se llaman Fäustlinge."
+      },
+      "d11": {
+        "word": "bufanda",
+        "example": "Llevo una bufanda calentita.",
+        "fact": "Der Schal viene de la palabra persa «shal». Muchas palabras alemanas han viajado muy lejos."
+      },
+      "d12": {
+        "word": "reno",
+        "example": "El reno tira del trineo.",
+        "fact": "Das Rentier es neutro, aunque sea un animal grande. Los artículos no siguen la lógica, así que apréndelos junto con la palabra."
+      },
+      "d13": {
+        "word": "campana",
+        "example": "Las campanas suenan en Nochebuena.",
+        "fact": "En Nochebuena, por la tarde, las campanas de las iglesias suenan en toda Alemania."
+      },
+      "d14": {
+        "word": "estrella",
+        "example": "Una estrella brilla en la punta del árbol.",
+        "fact": "Muchos alemanes ponen una estrella o una «Spitze» (una punta de cristal) en lo alto del árbol de Navidad."
+      },
+      "d15": {
+        "word": "patín de hielo",
+        "example": "En invierno vamos a patinar sobre hielo.",
+        "fact": "En alemán, con los patines se «corre»: Schlittschuh laufen."
+      },
+      "d16": {
+        "word": "bola de Navidad",
+        "example": "La bola roja cuelga del árbol.",
+        "fact": "Las bolas de Navidad de cristal se inventaron en Lauscha, un pueblo de Turingia, en Alemania."
+      },
+      "d17": {
+        "word": "lazo",
+        "example": "El regalo tiene un lazo.",
+        "fact": "Die Schleife también significa «bucle», por ejemplo un bucle en programación."
+      },
+      "d18": {
+        "word": "chimenea",
+        "example": "Arde el fuego en la chimenea.",
+        "fact": "En los cuentos, Papá Noel baja por la chimenea. En Alemania, muchas veces es el Christkind (el Niño Jesús) quien trae los regalos."
+      },
+      "d19": {
+        "word": "pastel",
+        "example": "Con el café hay pastel.",
+        "fact": "El Stollen es un famoso pastel navideño alemán. El más conocido es el de Dresde."
+      },
+      "d20": {
+        "word": "gorro",
+        "example": "Papá Noel lleva un gorro rojo.",
+        "fact": "Die Mütze es un gorro suave y abrigado. Un sombrero con ala es der Hut."
+      },
+      "d21": {
+        "word": "adornos navideños",
+        "example": "Colgamos los adornos en el árbol.",
+        "fact": "El 21 de diciembre es el día más corto del año. Las luces y los adornos iluminan las tardes oscuras."
+      },
+      "d22": {
+        "word": "dulces",
+        "example": "A los niños les encantan los dulces.",
+        "fact": "Süßigkeiten casi siempre se usa en plural, igual que «dulces» en español."
+      },
+      "d23": {
+        "word": "árbol de Navidad",
+        "example": "Decoramos el árbol de Navidad.",
+        "fact": "La tradición del árbol de Navidad viene de Alemania. También se llama Tannenbaum o Christbaum."
+      },
+      "d24": {
+        "word": "regalo",
+        "example": "En Nochebuena abrimos los regalos.",
+        "fact": "En Alemania los regalos se abren la tarde del 24 de diciembre. Ese momento se llama die Bescherung."
+      }
+    }
+  },
+  "winterChapters": {
+    "words": "Palabras de fiesta",
+    "advent": "Adviento y San Nicolás",
+    "christmas": "Navidad",
+    "silvester": "Nochevieja y Año Nuevo",
+    "winter": "Invierno y fiestas",
+    "legends": "Leyendas y costumbres",
+    "final": "Final",
+    "finalLocked": "Se abre cuando completes todos los capítulos",
+    "chapterLocked": "Se abre cuando completes el capítulo anterior",
+    "lockedTitle": "Primero completa la tarea «{title}»",
+    "lockedGo": "Ir a la tarea",
+    "kinds": {
+      "choice": "Quiz",
+      "reading": "Lectura",
+      "matching": "Parejas de palabras",
+      "chooseWord": "Completa el hueco",
+      "pictures": "Palabras con imágenes",
+      "final": "Test final"
+    },
+    "counts": {
+      "choice": "{n} preguntas",
+      "reading": "{n} textos",
+      "matching": "{n} rondas",
+      "chooseWord": "{n} frases",
+      "pictures": "{n} palabras",
+      "final": "{n} tareas"
+    }
+  },
+  "winterBanner": {
+    "advent": "Calendario de Adviento",
+    "quests": "Tareas por copos de nieve",
+    "shop": "Regalos por copos de nieve"
+  },
+  "winterShop": {
+    "reqCoins": "Copos de nieve",
+    "reqDoors": "Ventanitas del calendario",
+    "ok": "Entendido",
+    "needDoors": "abre {count} ventanitas del calendario",
+    "doorsProgress": "Ventanitas del calendario: {done} de {need}"
   }
 }
