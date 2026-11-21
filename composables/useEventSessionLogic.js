@@ -7,18 +7,17 @@ import DefaultLeaveLesson from "~/assets/images/LeaveLesson.svg"
 import PumpkinLeave from '~/assets/animation/hedgehog_pumpkin_oh.json'
 import HalloweenSuccessAnim from '~/assets/animation/hedgehog_wolf_howl.json'
 import HalloweenFailAnim from '~/assets/animation/hedgehog_devil.json'
-import DefaultSuccessAnim from '~/assets/animation/hedgehog_wolf_howl.json'
-import DefaultFailAnim from '~/assets/animation/hedgehog_pumpkin_oh.json'
+// Обычные ежи из квестов на карте (locations): успех, ошибки, выход из задания
+import DefaultSuccessAnim from '~/assets/animation/hedgehog_thumbs_up.json'
+import DefaultFailAnim from '~/assets/animation/hedgehog_shrug_2.json'
+import DefaultLeaveAnim from '~/assets/animation/hedgehog_leave_session.json'
 
-export function useEventSessionLogic() {
-    const currentMonth = new Date().getMonth()
-
+// Хэллоуинские ежи только у хэллоуинского ивента, остальные ивенты получают обычных.
+// Раньше выбор шёл по месяцу, и в ноябре зимний ивент показывал тыкву
+export function useEventSessionLogic(eventId) {
     const currentSeason = computed(() => {
-        if (currentMonth >= 8 && currentMonth <= 10) return 'halloween'
-        if (currentMonth === 11 || currentMonth === 0) return 'winter'
-        if (currentMonth === 1) return 'february'
-        if (currentMonth === 3) return 'april'
-        return 'default'
+        const id = typeof eventId === 'function' ? eventId() : eventId?.value ?? eventId
+        return id === 'halloween' ? 'halloween' : 'default'
     })
 
     const getResultIcon = (isFullyCompleted) => {
@@ -37,7 +36,7 @@ export function useEventSessionLogic() {
 
     const getLeaveAnimation = () => {
         if (currentSeason.value === 'halloween') return PumpkinLeave
-        return PumpkinLeave
+        return DefaultLeaveAnim
     }
 
     const animStep = ref(0)

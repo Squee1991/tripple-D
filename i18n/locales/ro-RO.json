@@ -12264,7 +12264,9 @@
     "answerHighlighted": "Incorect! Răspunsul corect este evidențiat.",
     "excellentAnswers": "Excelent, totul este corect!",
     "rightAnswer": "Eroare! Răspunsul corect:",
-    "connectPaar": "Unește perechile"
+    "connectPaar": "Unește perechile",
+    "showTranslation": "Traducere",
+    "hideTranslation": "Ascunde traducerea"
   },
   "winterQuestEleven": {
     "firTree": "Brad",
@@ -12327,7 +12329,8 @@
     "quest-17": "Crăciunul",
     "quest-18": "Pregătiri",
     "quest-19": "Noaptea de Revelion",
-    "quest-20": "Sărbătoarea germană"
+    "quest-20": "Sărbătoarea germană",
+    "quest-22": "Marele test de Crăciun"
   },
   "valentineEventQuests": {
     "quest-1": "Lista de cuvinte",
@@ -12389,8 +12392,6 @@
     "christmasBallDescription": "Cumpără acest glob magic de zăpadă pentru a surprinde un moment de iarnă.",
     "christmasWreathName": "Coroniță de Crăciun",
     "christmasWreathDescription": "Cumpără o coroniță tradițională, simbolul sărbătorii și al confortului casei.",
-    "winterHonorName": "Respect de Iarnă",
-    "winterHonorDescription": "Merită respectul iernii îndeplinind sarcini în evenimentul „Șoaptul iernii”.",
     "metaChristmasName": "Maestrul Crăciunului",
     "metaChristmasDescription": "Deblochează toate realizările evenimentului „Șoaptul iernii” și devino o legendă a sezonului de sărbători."
   },
@@ -21142,5 +21143,336 @@
     "mediaCulture": "Media și cultură",
     "consumerMoney": "Consum și bani",
     "scienceTech": "Știință și tehnologie"
+  },
+  "flashCards": {
+    "menuTitle": "Cardurile mele",
+    "pageTitle": "Cardurile mele",
+    "reviewTitle": "Recapitularea de azi",
+    "reviewText": "Așteaptă recapitularea: {count}",
+    "reviewDone": "Totul e recapitulat pentru azi",
+    "reviewBtn": "Recapitulează",
+    "emptyTitle": "Încă nu ai pachete",
+    "emptyText": "Creează un pachet și adaugă cuvinte: articolul, pluralul și traducerea le completăm noi",
+    "newDeck": "Pachet nou",
+    "deckCards": "Carduri: {count}",
+    "createTitle": "Pachet nou",
+    "editTitle": "Editează pachetul",
+    "deckName": "Nume",
+    "deckNamePlaceholder": "De exemplu: Bucătărie",
+    "level": "Nivel",
+    "levelNone": "Fără nivel",
+    "color": "Culoare",
+    "create": "Creează",
+    "save": "Salvează",
+    "cancel": "Anulează",
+    "delete": "Șterge",
+    "deleteDeck": "Șterge pachetul",
+    "deleteDeckConfirm": "Sigur ștergi și cardurile?",
+    "notFound": "Pachetul nu a fost găsit",
+    "toDecks": "La pachetele mele",
+    "statNew": "Noi",
+    "statLearning": "Învăț",
+    "statMastered": "Învățate",
+    "learn": "Învață",
+    "review": "Recapitulează",
+    "flashcards": "Carduri",
+    "addTitle": "Adaugă un card",
+    "searchPlaceholder": "Un cuvânt în germană sau în limba ta",
+    "manualHint": "Nu e în dicționar? Completează cardul singur",
+    "manualOther": "Alt cuvânt? Completează cardul singur",
+    "kindNoun": "Substantiv",
+    "kindVerb": "Verb",
+    "kindPhrase": "Expresie",
+    "kindVerbShort": "vb.",
+    "word": "În germană",
+    "plural": "Plural",
+    "translation": "Traducere",
+    "praeteritum": "Präteritum",
+    "perfekt": "Perfekt",
+    "example": "Exemplu",
+    "optional": "Opțional",
+    "duplicate": "Acest cuvânt există deja în pachet",
+    "addCard": "Adaugă",
+    "saveCard": "Salvează",
+    "editCard": "Editează",
+    "listen": "Ascultă",
+    "cardsList": "Cardurile din pachet",
+    "noCards": "Adaugă primul cuvânt mai sus",
+    "sessionLearn": "Învățăm",
+    "sessionReview": "Recapitulare",
+    "sessionFlash": "Carduri",
+    "noNew": "Nu există carduri noi: adaugă cuvinte în pachet",
+    "noDue": "Acum nu ai nimic de recapitulat",
+    "needCards": "Adaugă cel puțin un card",
+    "backToDeck": "Înapoi la pachet",
+    "tapToFlip": "Amintește-ți traducerea și atinge cardul",
+    "rateYourself": "Ți-ai amintit corect?",
+    "know": "Știu",
+    "again": "Nu știu",
+    "newWord": "Cuvânt nou",
+    "chooseTranslation": "Alege traducerea",
+    "chooseArticle": "Alege articolul",
+    "writeWord": "Scrie în germană",
+    "writeWithArticle": "Scrie cu articol",
+    "writePlural": "Scrie pluralul",
+    "listenWrite": "Ascultă și scrie",
+    "genderRule": "Cuvintele terminate în {suffix} sunt de obicei {article}",
+    "check": "Verifică",
+    "next": "Mai departe",
+    "correct": "Corect!",
+    "almost": "Aproape! Verifică scrierea",
+    "wrong": "Răspunsul corect:",
+    "resultTitle": "Bravo!",
+    "resultLearned": "Cuvinte învățate: {count}",
+    "resultCorrect": "Corect din prima: {count} din {total}",
+    "resultNext": "Le aducem înapoi în ziua potrivită ca să nu le uiți",
+    "repeatSession": "Încă o dată",
+    "studyNew": "noi: {count}",
+    "studyDue": "de recapitulat: {count}",
+    "studyEmpty": "Adaugă cuvinte ca să începi",
+    "studyDoneSub": "Totul e recapitulat. Revino mâine sau adaugă cuvinte noi",
+    "studyDoneTitle": "Gata pentru azi",
+    "browse": "Răsfoire rapidă",
+    "repeatUnknown": "Repetă cele necunoscute ({count})",
+    "previewTitle": "Verifică cuvintele",
+    "backStep": "Înapoi",
+    "tabList": "Listă",
+    "tabCourse": "Din curs",
+    "listPlaceholder": "De exemplu:\nTisch\nApfel\nschlafen",
+    "listHint": "Scrie sau lipește cuvinte, fiecare pe un rând nou. Articolul, pluralul și traducerea le găsim noi",
+    "listTip": "Poți adăuga traducerea ta după cratimă: Tisch - masă",
+    "listParse": "Găsește cuvinte ({count})",
+    "noWords": "Acest ținut nu are cuvinte",
+    "loading": "Se încarcă...",
+    "showWords": "Arată cuvintele",
+    "previewHint": "Debifează cuvintele de care nu ai nevoie. Poți corecta traducerea",
+    "inDeck": "Există deja",
+    "notInDictionary": "Nu e în dicționar",
+    "addMany": "Adaugă: {count}",
+    "addedMany": "Adăugate: {count}",
+    "aiWorking": "AI completează cardurile...",
+    "aiFill": "Completează cu AI",
+    "aiLimit": "Limita zilnică AI s-a terminat, mâine se reînnoiește",
+    "aiFailed": "AI nu a răspuns, încearcă din nou",
+    "aiOffline": "Nu există conexiune la server, verifică internetul",
+    "addExamples": "Scrie exemple (AI)",
+    "examplesAllDone": "Toate cardurile au exemple",
+    "examplesAdded": "Exemple adăugate: {count}",
+    "toMyCards": "În cardurile mele",
+    "toDeckTitle": "Cuvinte în cardurile mele ({count})",
+    "newDeckNamed": "Pachet nou „{title}”",
+    "skippedInDeck": "Celelalte cuvinte erau deja în pachet",
+    "openDeck": "Deschide pachetul",
+    "close": "Închide",
+    "articleInDictionary": "În dicționar:",
+    "articleFix": "Corectează",
+    "statusNew": "Nou",
+    "statusToday": "Recapitulare azi",
+    "statusTomorrow": "Recapitulare mâine",
+    "statusOn": "Recapitulare pe {date}",
+    "statusMastered": "Învățat",
+    "listTitle": "Listă de cuvinte",
+    "courseTitle": "Cuvinte din curs",
+    "yes": "Da",
+    "no": "Nu"
+  },
+  "eventTile": {
+    "startsIn": "în {time}",
+    "days": "{d} z",
+    "daysHours": "{d} z {h} h",
+    "hoursMinutes": "{h} h {m} min"
+  },
+  "adventCalendar": {
+    "tab": "Calendar",
+    "title": "Calendar de Advent",
+    "subtitle": "În fiecare zi până în Ajunul Crăciunului se deschide o nouă ferestruică. Deschide-le pe toate și luminează tot satul!",
+    "progress": "{count} din 24 de ferestruici deschise",
+    "lockedTitle": "Încă nu!",
+    "lockedText": "Această ferestruică se deschide pe {day} decembrie.",
+    "lockedOk": "Am înțeles",
+    "wordOfDay": "Cuvântul zilei",
+    "didYouKnow": "Știai că…?",
+    "start": "Începe sarcina",
+    "repeat": "Repetă",
+    "done": "Deschisă",
+    "close": "Închide",
+    "testBadge": "Mod de test: toate ferestruicile sunt deschise",
+    "finalTitle": "Satul strălucește!",
+    "finalText": "Ai deschis toate cele 24 de ferestruici. Frohe Weihnachten!",
+    "tasks": {
+      "build": "Formează cuvintele: unește cele două jumătăți",
+      "review": "Potrivește fiecare cuvânt cu traducerea lui"
+    },
+    "kinds": {
+      "classic": "Quiz de cuvinte",
+      "listen": "Ascultare",
+      "build": "Constructor de cuvinte",
+      "odd": "Intrusul",
+      "review": "Recapitularea săptămânii",
+      "finale": "Finala din Ajun"
+    },
+    "days": {
+      "d1": {
+        "word": "calendar de Advent",
+        "example": "În fiecare zi deschid o ferestruică în calendarul de Advent.",
+        "fact": "Pe 1 decembrie, copiii din Germania deschid prima ferestruică. În spatele ei se află adesea o bucățică de ciocolată."
+      },
+      "d2": {
+        "word": "lumânare",
+        "example": "Lumânarea arde pe masă.",
+        "fact": "În Advent, nemții iubesc lumina lumânărilor. Multe case au lumânări pe fiecare pervaz."
+      },
+      "d3": {
+        "word": "coroniță de Advent",
+        "example": "Pe coronița de Advent sunt patru lumânări.",
+        "fact": "În fiecare duminică din Advent se mai aprinde o lumânare. Când ard toate patru, Crăciunul e aproape."
+      },
+      "d4": {
+        "word": "fulg de zăpadă",
+        "example": "Un fulg de zăpadă îmi cade pe nas.",
+        "fact": "Nu există doi fulgi de zăpadă identici. În germană, „es schneit” înseamnă „ninge”."
+      },
+      "d5": {
+        "word": "șosetă de Crăciun",
+        "example": "Șoseta atârnă pe șemineu.",
+        "fact": "Copiii germani nu atârnă șosete. În noaptea de 5 decembrie, ei pun o cizmă curată (der Stiefel) în fața ușii."
+      },
+      "d6": {
+        "word": "Sfântul Nicolae",
+        "example": "Sfântul Nicolae aduce nuci și ciocolată.",
+        "fact": "Pe 6 decembrie este Nikolaustag. Dimineața, cizmele sunt pline de dulciuri, nuci și mandarine."
+      },
+      "d7": {
+        "word": "fursec de Crăciun",
+        "example": "Facem fursecuri cu bunica.",
+        "fact": "În Advent, familiile germane coc multe feluri de Plätzchen. Pluralul este la fel: die Plätzchen."
+      },
+      "d8": {
+        "word": "om de zăpadă",
+        "example": "Omul de zăpadă are nasul din morcov.",
+        "fact": "Și în germană este un „om de zăpadă”: der Schnee + der Mann = der Schneemann."
+      },
+      "d9": {
+        "word": "sanie",
+        "example": "Copiii se dau cu sania.",
+        "fact": "În germană, sania se „conduce”: Schlitten fahren."
+      },
+      "d10": {
+        "word": "mănușă",
+        "example": "Fără mănuși îmi îngheață mâinile.",
+        "fact": "Handschuh înseamnă literal „pantof de mână”. Mănușile cu un deget se numesc Fäustlinge."
+      },
+      "d11": {
+        "word": "fular",
+        "example": "Port un fular călduros.",
+        "fact": "Der Schal vine din cuvântul persan „shal”. Multe cuvinte germane au călătorit mult."
+      },
+      "d12": {
+        "word": "ren",
+        "example": "Renul trage sania.",
+        "fact": "Das Rentier este neutru, deși e un animal mare. Articolele nu urmează logica, așa că învață-le odată cu cuvântul."
+      },
+      "d13": {
+        "word": "clopot",
+        "example": "Clopotele bat în Ajunul Crăciunului.",
+        "fact": "În seara de Ajun, clopotele bisericilor bat în toată Germania."
+      },
+      "d14": {
+        "word": "stea",
+        "example": "În vârful bradului strălucește o stea.",
+        "fact": "Mulți germani pun o stea sau o „Spitze” (un vârf de sticlă) în vârful bradului de Crăciun."
+      },
+      "d15": {
+        "word": "patină",
+        "example": "Iarna mergem la patinaj.",
+        "fact": "În germană, pe patine se „aleargă”: Schlittschuh laufen."
+      },
+      "d16": {
+        "word": "glob de Crăciun",
+        "example": "Globul roșu atârnă în brad.",
+        "fact": "Globurile de Crăciun din sticlă au fost inventate în Lauscha, un orășel din Turingia, Germania."
+      },
+      "d17": {
+        "word": "fundă",
+        "example": "Pe cadou este o fundă.",
+        "fact": "Die Schleife înseamnă și „buclă”, de exemplu o buclă în programare."
+      },
+      "d18": {
+        "word": "șemineu",
+        "example": "În șemineu arde focul.",
+        "fact": "În povești, Moș Crăciun coboară pe horn. În Germania, de multe ori Christkind (Pruncul Iisus) aduce cadourile."
+      },
+      "d19": {
+        "word": "prăjitură",
+        "example": "La cafea avem prăjitură.",
+        "fact": "Stollen este un faimos cozonac german de Crăciun. Cel mai cunoscut vine din Dresda."
+      },
+      "d20": {
+        "word": "căciulă",
+        "example": "Moș Crăciun poartă o căciulă roșie.",
+        "fact": "Die Mütze este o căciulă moale și călduroasă. O pălărie cu boruri este der Hut."
+      },
+      "d21": {
+        "word": "decorațiuni de Crăciun",
+        "example": "Agățăm decorațiunile în brad.",
+        "fact": "21 decembrie este cea mai scurtă zi a anului. Luminițele și decorațiunile luminează serile întunecate."
+      },
+      "d22": {
+        "word": "dulciuri",
+        "example": "Copiii adoră dulciurile.",
+        "fact": "Süßigkeiten se folosește aproape mereu la plural, la fel ca „dulciuri” în română."
+      },
+      "d23": {
+        "word": "brad de Crăciun",
+        "example": "Împodobim bradul de Crăciun.",
+        "fact": "Tradiția bradului de Crăciun vine din Germania. Se mai numește Tannenbaum sau Christbaum."
+      },
+      "d24": {
+        "word": "cadou",
+        "example": "În Ajun desfacem cadourile.",
+        "fact": "În Germania, cadourile se deschid în seara de 24 decembrie. Acest moment se numește die Bescherung."
+      }
+    }
+  },
+  "winterChapters": {
+    "words": "Cuvinte de sărbătoare",
+    "advent": "Advent și Sfântul Nicolae",
+    "christmas": "Crăciun",
+    "silvester": "Revelion și Anul Nou",
+    "winter": "Iarnă și sărbători",
+    "legends": "Legende și obiceiuri",
+    "final": "Finala",
+    "finalLocked": "Se deschide după ce termini toate capitolele",
+    "chapterLocked": "Se deschide după ce termini capitolul anterior",
+    "lockedTitle": "Mai întâi termină sarcina „{title}”",
+    "lockedGo": "Mergi la sarcină",
+    "kinds": {
+      "choice": "Quiz",
+      "reading": "Citire",
+      "matching": "Perechi de cuvinte",
+      "chooseWord": "Completează spațiul",
+      "pictures": "Cuvinte în imagini",
+      "final": "Test final"
+    },
+    "counts": {
+      "choice": "Întrebări: {n}",
+      "reading": "Texte: {n}",
+      "matching": "Runde: {n}",
+      "chooseWord": "Propoziții: {n}",
+      "pictures": "Cuvinte: {n}",
+      "final": "Sarcini: {n}"
+    }
+  },
+  "winterBanner": {
+    "advent": "Calendar de Advent",
+    "quests": "Sarcini pentru fulgi de zăpadă",
+    "shop": "Cadouri pentru fulgi de zăpadă"
+  },
+  "winterShop": {
+    "reqCoins": "Fulgi de zăpadă",
+    "reqDoors": "Ferestruici din calendar",
+    "ok": "Am înțeles",
+    "needDoors": "deschide ferestruici din calendar: {count}",
+    "doorsProgress": "Ferestruici din calendar: {done} din {need}"
   }
 }

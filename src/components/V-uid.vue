@@ -189,7 +189,8 @@ const displayEvent = computed(() => {
     };
   } else {
     const daysUntil = Math.ceil((nextEvent.startDate - now) / msPerDay);
-    if (daysUntil <= 10) {
+    // Баннер «до ивента N дней» появляется за 7 дней до старта
+    if (daysUntil <= 7) {
       return {
         ...nextEvent,
         isActive: false,

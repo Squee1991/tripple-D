@@ -92,6 +92,9 @@
           </div>
         </transition>
         <div class="map-right-container">
+          <div class="map__event" :class="{ 'is-rtl': locale === 'ar' }">
+            <VEventTile/>
+          </div>
           <!-- пагинация разделов пока скрыта, раздел виден по прокрутке карты
           <div class="map-pagination-arrows">
             <button
@@ -168,6 +171,7 @@ import {userlangStore} from '../../store/learningStore.js'
 import {userAuthStore} from "~/store/authStore.js";
 import {visibleRegionCategories, requiredLandLevel, levelOfCategory, LEVEL_SUMMITS, isLevelFinished} from "~/utils/germanLevel.js";
 import VLandsMap from "~/src/components/V-landsMap.vue";
+import VEventTile from "~/src/components/V-eventTile.vue";
 import VTestLockedModal from "~/src/components/V-testLockedModal.vue";
 import {userChainStore} from "~/store/chainStore.js";
 import {landsWithProgress, landCompletion, isPrevLandDone, previousRegion} from "~/utils/landProgress.js";
@@ -462,6 +466,19 @@ onBeforeUnmount(() => {
   align-items: center;
   max-width: 1200px;
   margin: 0 auto;
+}
+
+/* плитка идущего ивента: в левом верхнем углу колонки с картой, поверх карты, дорогу не сдвигает */
+.map__event {
+  position: absolute;
+  top: 8px;
+  left: 10px;
+  z-index: 6;
+}
+
+.map__event.is-rtl {
+  left: auto;
+  right: 14px;
 }
 
 /* заголовок карты: лента в цвет приложения на всю ширину, максимум 768px */
@@ -1141,6 +1158,7 @@ html.orange .map__title {
 }
 
 .map-right-container {
+  position: relative;
   flex: 2;
   display: flex;
   flex-direction: column;

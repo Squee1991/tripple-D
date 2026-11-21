@@ -38,12 +38,12 @@
             <img v-else :src="mascotSrc" class="success-hedgehog" alt="Result"/>
           </div>
           <div class="success-rewards" v-if="isQuestFullyCompleted && !previouslyCleared">
-            <div class="reward-row --xp" :class="{ 'visible': animStep >= 2 }">
+            <div v-if="showXp" class="reward-row --xp" :class="{ 'visible': animStep >= 2 }">
               <span class="xp-badge-3d reward-icon-xp">XP</span>
               <span class="reward-val text-xp">+{{ displayXp }}</span>
             </div>
             <div class="reward-row --coins" :class="{ 'visible': animStep >= 3 }">
-              <span class="xp-badge-3d">🎃</span>
+              <span class="xp-badge-3d"><img v-if="coinImage" :src="coinImage" alt="" class="reward-coin-img"><template v-else>{{ coinIcon }}</template></span>
               <span class="reward-val text-coins">+{{ displayCoins }}</span>
             </div>
           </div>
@@ -87,7 +87,10 @@ defineProps({
   displayCoins: Number,
   confettiParticles: Array,
   mascotSrc: String,
-  lottieData: Object
+  lottieData: Object,
+  showXp: { type: Boolean, default: true },
+  coinIcon: { type: String, default: '🎃' },
+  coinImage: { type: String, default: '' }
 })
 
 defineEmits(['themes', 'retryMistakes'])
@@ -116,7 +119,8 @@ const handleLottieError = () => {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 10px;
+  /* сверху и снизу место под системные полосы телефона */
+  padding: calc(10px + env(safe-area-inset-top, 0px)) 10px calc(10px + env(safe-area-inset-bottom, 0px));
   color: white;
   text-align: center;
   position: relative;
@@ -345,4 +349,10 @@ const handleLottieError = () => {
 .modal-fade-enter-from, .modal-fade-leave-to {
   opacity: 0;
 }
+.reward-coin-img {
+  width: 1em;
+  height: 1em;
+  display: block;
+}
+
 </style>

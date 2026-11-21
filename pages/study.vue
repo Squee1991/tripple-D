@@ -165,6 +165,7 @@ function setTab(id) {
 
 const practiceCategories = computed(() => [
   { id: 'words', icon: BannerIcon, url: '/articles', title: t('sub.words') },
+  { id: 'cards', icon: Cards, url: '/cards', title: t('flashCards.menuTitle') },
   { id: 'words', icon: SpeakingIcon, url: '/speak-practice', title: t('sub.speak') },
   { id: 'audio', icon: Sound, url: '/audio-tasks', title: t('sub.audio') },
   { id: 'description', icon: Photo, url: '/image-description', title: t('sub.describePicture') },
