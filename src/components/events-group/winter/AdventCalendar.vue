@@ -396,6 +396,8 @@ onBeforeUnmount(() => {
            :style="{ left: coin.x, top: coin.y, '--dx': coin.dx, '--dy': coin.dy, animationDelay: coin.delay }"/>
     </Teleport>
 
+    <!-- Окна в body: внутри прокручиваемой вкладки iOS Safari обрезает position: fixed -->
+    <Teleport to="body">
     <transition name="modal">
       <div v-if="lockedDay" class="day-modal" @click.self="lockedDay = null">
         <div class="day-modal__card locked-sheet">
@@ -453,6 +455,7 @@ onBeforeUnmount(() => {
         </div>
       </div>
     </transition>
+    </Teleport>
   </div>
 </template>
 
@@ -926,7 +929,7 @@ onBeforeUnmount(() => {
 .day-modal {
   position: fixed;
   inset: 0;
-  z-index: 999;
+  z-index: 19000;
   background: rgba(8, 16, 36, 0.6);
   display: flex;
   align-items: flex-end;

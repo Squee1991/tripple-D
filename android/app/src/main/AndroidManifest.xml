@@ -42,6 +42,15 @@
             android:name="com.google.android.gms.ads.APPLICATION_ID"
             android:value="ca-app-pub-7535671094319234~8726618547"
         />
+        <!-- Инициализация и загрузка рекламы AdMob в фоновом потоке, а не в главном: меньше ANR -->
+        <meta-data
+            android:name="com.google.android.gms.ads.flag.OPTIMIZE_INITIALIZATION"
+            android:value="true"
+        />
+        <meta-data
+            android:name="com.google.android.gms.ads.flag.OPTIMIZE_AD_LOADING"
+            android:value="true"
+        />
         <meta-data
             android:name="applovin.sdk.key"
             android:value="IRNGsxJABA4oIhrlX0nHc49BTyPesVHUQRzLlor54bgpqiDJV7qbp99bqhVQCGR3EppZRrQHei1xJzqUIi_vVC"
