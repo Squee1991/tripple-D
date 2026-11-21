@@ -69,7 +69,6 @@
 <script setup>
 import {ref} from 'vue'
 import {useRouter} from 'vue-router'
-import {useI18n} from 'vue-i18n'
 import VBackBtn from "~/src/components/V-backBtnNav.vue";
 
 const { t } = useI18n()
