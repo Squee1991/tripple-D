@@ -89,9 +89,9 @@ const treeSparkles = Array.from({ length: 14 }, (_, i) => ({
 const firstUndoneDay = computed(() => adventDays.map(item => item.day).sort((a, b) => a - b).find(day => !isDone(day)) ?? null)
 
 // Окошко N открывается N декабря; в январе (до конца ивента) открыты все, чтобы догнать пропущенное.
-// В тестовом режиме открыты пройденные и следующее за ними
+// В тестовом режиме открыты все окошки
 const isUnlocked = (day) => {
-  if (WINTER_FORCE_OPEN) return isDone(day) || day === firstUndoneDay.value
+  if (WINTER_FORCE_OPEN) return true
   const date = now.value
   const month = date.getMonth()
   if (month === 0) return true

@@ -5,7 +5,7 @@ import { useSeoMeta, useI18n, useLocalePath } from '#imports'
 import VShowFall from '../V-showFall.vue'
 import AdventCalendar from './winter/AdventCalendar.vue'
 import WinterVillage from './winter/WinterVillage.vue'
-import { useEventSessionStore } from '../../../store/eventsStore.js'
+import { useEventSessionStore, WINTER_FORCE_OPEN } from '../../../store/eventsStore.js'
 
 import Snow from 'assets/images/mery-christmas/Snow.svg'
 import SnowCoin from 'assets/images/event-rewards/winter-event/winter-words/snowflake.svg'
@@ -138,6 +138,8 @@ const chapters = computed(() => {
   const isQuestOpen = (id) => {
     // пройденное задание всегда можно повторить, даже если проходили не по нынешнему порядку
     if (byId[id]?.isDone) return true
+    // Тестовый режим: открыты все задания, включая финал
+    if (WINTER_FORCE_OPEN) return true
     if (id === FINAL_QUEST_ID) return isFinalOpen.value
     const index = QUEST_ORDER.indexOf(id)
     return index <= 0 || !!byId[QUEST_ORDER[index - 1]]?.isDone
