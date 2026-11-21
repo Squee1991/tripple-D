@@ -434,6 +434,8 @@ onMounted(() => {
           </section>
         </div>
       </div>
+      <!-- Шторки в body: на iOS Safari position: fixed внутри страницы ивента обрезается -->
+      <Teleport to="body">
       <transition name="sheet">
         <div v-if="isLockedSheetOpen" class="req-modal" @click.self="isLockedSheetOpen = false">
           <div class="req-modal__card">
@@ -487,6 +489,7 @@ onMounted(() => {
           </div>
         </div>
       </transition>
+      </Teleport>
     </div>
   </div>
   <div v-else class="event-closed">
@@ -1114,7 +1117,7 @@ onMounted(() => {
 .req-modal {
   position: fixed;
   inset: 0;
-  z-index: 999;
+  z-index: 19000;
   background: rgba(8, 16, 36, 0.6);
   display: flex;
   align-items: flex-end;
