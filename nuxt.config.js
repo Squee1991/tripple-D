@@ -13,7 +13,6 @@ const firebaseConfig = {
 	messagingSenderId: process.env.FIREBASE_MESSAGING_SENDER_ID || env.FIREBASE_MESSAGING_SENDER_ID,
 	appId: process.env.FIREBASE_APP_ID || env.FIREBASE_APP_ID,
 }
-
 let adminConfig = undefined
 const rawJson = process.env.GOOGLE_APPLICATION_CREDENTIALS_JSON || env.GOOGLE_APPLICATION_CREDENTIALS_JSON
 
