@@ -155,6 +155,7 @@ export default defineNuxtConfig({
 	routeRules: {
 		'/**': { ssr: false },
 		'/info-about': { ssr: false },
+		'/privacy': { ssr: true },
 		'/admin/**': {status: 404},
 		'/wp-login.php': {status: 404},
 		'/sounds/**': {headers: {'Cache-Control': 'no-cache, no-store, must-revalidate'}},
