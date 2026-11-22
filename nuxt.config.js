@@ -32,7 +32,7 @@ if (rawJson) {
 const siteUrl = process.env.NUXT_SITE_URL || (process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` : 'http://localhost:3000')
 
 export default defineNuxtConfig({
-	ssr: false,
+	ssr: true,
 	experimental: {
 		payloadExtraction: true,
 		appManifest: false
