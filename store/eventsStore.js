@@ -9,6 +9,10 @@ import ValentineNav from '~/assets/images/valentineIcon.svg'
 import FoolDayNav from '~/assets/images/fooldayNav.svg'
 import HalloweenNav from '~/assets/images/halloweenIconNav.svg'
 
+// ВРЕМЕННО для проверки сборки: зимний ивент и все окошки календаря открыты вне дат.
+// ПЕРЕД РЕЛИЗОМ ПОСТАВИТЬ false
+export const WINTER_FORCE_OPEN = true
+
 export const useEventSessionStore = defineStore('eventSession', () => {
 	const db = getFirestore()
 	const auth = getAuth()
@@ -97,6 +101,7 @@ export const useEventSessionStore = defineStore('eventSession', () => {
 	const isEventActive = (id, now = new Date()) => {
 		const event = events.value.find(e => e.id === id)
 		if (!event) return false
+		if (WINTER_FORCE_OPEN && id === 'winter') return true
 		const parse = (str, y) => {
 			const [datePart, timePart] = str.split(' ')
 			const [month, day] = datePart.split('-').map(Number)
