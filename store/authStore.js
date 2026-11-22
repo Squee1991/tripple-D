@@ -808,6 +808,7 @@ export const userAuthStore = defineStore('auth', () => {
             batch.delete(doc(db, LEADERBOARD_GUESS, user.uid));
             await batch.commit();
             await deleteUser(user);
+            clearLoggedFlag();
             setUserData({});
 
         } catch (err) {
@@ -821,6 +822,13 @@ export const userAuthStore = defineStore('auth', () => {
         }
     };
 
+    // Флаг для главной: по нему скрипт в head прячет серверный лендинг у вошедших (pages/index.vue)
+    const clearLoggedFlag = () => {
+        if (typeof window === 'undefined') return;
+        localStorage.removeItem('app_user_logged');
+        document.documentElement.classList.remove('is-logged');
+    };
+
     const logOut = async () => {
         if (authStateUnsubscribe) {
             authStateUnsubscribe();
@@ -829,6 +837,7 @@ export const userAuthStore = defineStore('auth', () => {
 
         if (typeof window !== 'undefined') {
             localStorage.removeItem('cached_premium');
+            clearLoggedFlag();
         }
 
         if (Capacitor.isNativePlatform()) {

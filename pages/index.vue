@@ -72,8 +72,12 @@ definePageMeta({
 onMounted(() => {
   hydrated.value = true
   isLocallyLogged.value = localStorage.getItem('app_user_logged') === 'true'
-  // вышли на другой странице и пришли сюда: класс из head больше не нужен
-  if (authStore.initialized && !authStore.uid) document.documentElement.classList.remove('is-logged')
+  // вышли на другой странице и пришли сюда: флаг и класс из head больше не нужны
+  if (authStore.initialized && !authStore.uid) {
+    localStorage.removeItem('app_user_logged')
+    isLocallyLogged.value = false
+    document.documentElement.classList.remove('is-logged')
+  }
 })
 
 // До отрисовки прячем серверный лендинг у тех, кто уже входил, чтобы он не мелькал до загрузки аккаунта
@@ -81,7 +85,8 @@ useHead({
   script: [{
     key: 'landing-logged-flag',
     tagPosition: 'head',
-    innerHTML: "try{if(localStorage.getItem('app_user_logged')==='true')document.documentElement.classList.add('is-logged')}catch(e){}"
+    // только при первой загрузке документа (#__nuxt ещё нет), при переходах внутри приложения не срабатывает
+    innerHTML: "try{if(!document.getElementById('__nuxt')&&localStorage.getItem('app_user_logged')==='true')document.documentElement.classList.add('is-logged')}catch(e){}"
   }]
 })
 
