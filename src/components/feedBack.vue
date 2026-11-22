@@ -11,6 +11,7 @@
             @submit.prevent="sendMessage"
         >
           <div class="form__header">
+            <span class="form__label">{{ t('feedBack.label') }}</span>
             <h2 class="form__title">{{ t(data.title) }}</h2>
           </div>
           <div class="form__field">
@@ -89,7 +90,7 @@ const contactSection = ref(null)
 const contactFormRef = ref(null)
 const msgAnimationWrapper = ref(null)
 const formRef = ref(null)
-const userEmail = ref(authStore.email || '')
+const userEmail = ref('')
 const userMessage = ref('')
 const images = ref([])
 const isSending = ref(false)
@@ -186,6 +187,7 @@ const sendMessage = async () => {
 }
 
 onMounted(() => {
+  if (!userEmail.value && authStore.email) userEmail.value = authStore.email
   if (msgAnimationWrapper.value) {
     Lottie.loadAnimation({
       container: msgAnimationWrapper.value,
@@ -244,37 +246,37 @@ onUnmounted(() => {
 
 .form__content {
   flex: 1;
-  border-radius: 24px;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
   display: flex;
   flex-direction: column;
-  padding: 15px;
+  padding: 28px;
+  background: var(--menuItemsBg);
+  border: 3px solid var(--menuBorder);
+  border-radius: 28px;
+  box-shadow: var(--boxShadowMobile);
 }
 
 .form__header {
-  text-align: center;
-  margin-bottom: 2rem;
+  margin-bottom: 22px;
 }
 
 .form__label {
-  font-size: 0.9rem;
-  font-weight: 700;
-  color: #EB5757;
+  display: inline-block;
+  padding: 5px 14px;
+  font-size: 0.8rem;
+  font-weight: 800;
+  color: #fff;
   text-transform: uppercase;
-  letter-spacing: 0.05em;
-  margin: 0;
+  letter-spacing: 0.06em;
+  background: #6368bb;
+  border-radius: 999px;
 }
 
 .form__title {
-  font-size: 18px;
-  font-weight: 500;
-  color: white;
-  margin-top: 0.5rem;
-  margin-bottom: 0;
-  background: goldenrod;
-  box-shadow: 4px 4px 0 #a87f17;
-  padding: 15px 10px;
-  border-radius: 20px;
+  margin: 12px 0 0;
+  font-size: 1.3rem;
+  font-weight: 800;
+  line-height: 1.35;
+  color: var(--titleColor);
 }
 
 .form__field {
@@ -291,14 +293,13 @@ onUnmounted(() => {
   width: 100%;
   font-family: "Nunito", sans-serif;
   font-weight: 600;
-  background: white;
-  border: none;
+  background: #fff;
+  border: 2px solid #d9dbe6;
   border-radius: 16px;
   font-size: 1rem;
-  padding: 14px;
-  transition: all 0.2s ease;
+  padding: 14px 16px;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
   box-sizing: border-box;
-  box-shadow: inset 0 3px 6px rgba(0, 0, 0, 0.15);
 }
 
 .input::placeholder,
@@ -310,7 +311,8 @@ onUnmounted(() => {
 .input:focus,
 .area:focus {
   outline: none;
-  box-shadow: inset 0 3px 6px rgba(0, 0, 0, 0.1), 0 0 0 2px #55a8f5;
+  border-color: #6368bb;
+  box-shadow: 0 0 0 3px rgba(99, 104, 187, 0.25);
 }
 
 .area {
@@ -342,19 +344,19 @@ onUnmounted(() => {
   justify-content: center;
   gap: 10px;
   cursor: pointer;
-  background-color: #323647;
-  color: #ffffff;
-  padding: 12px 20px;
+  background: transparent;
+  color: var(--titleColor);
+  padding: 10px 18px;
+  border: 2px dashed var(--menuBorder);
   border-radius: 16px;
   font-weight: 700;
-  font-size: 1rem;
-  transition: transform 0.1s, box-shadow 0.1s;
-  box-shadow: 0 5px 0 #222532;
+  font-size: 0.95rem;
+  transition: border-color 0.15s ease, color 0.15s ease;
 }
 
-.custom-btn:active {
-  transform: translateY(5px);
-  box-shadow: 0 0 0 #222532;
+.custom-btn:hover {
+  border-color: #6368bb;
+  color: #8b90e6;
 }
 
 .paper_clip {
@@ -419,8 +421,11 @@ onUnmounted(() => {
   transition: transform 0.1s ease, box-shadow 0.1s ease;
   background-color: #2ECC71;
   color: #ffffff;
-  text-transform: lowercase;
   box-shadow: 0 6px 0 #24A055;
+}
+
+.btn--submit::first-letter {
+  text-transform: uppercase;
 }
 
 .btn--submit:active {
@@ -444,6 +449,14 @@ onUnmounted(() => {
 }
 
 @media (max-width: 640px) {
+  .form__content {
+    padding: 20px 16px;
+  }
+
+  .form__title {
+    font-size: 1.1rem;
+  }
+
   .input, .area {
     padding: 1rem;
   }

@@ -3,62 +3,34 @@
   <transition name="slide">
     <SignIn v-if="showAuth" initial-mode="register" @close-auth-form="closeAuth"/>
   </transition>
-  <div class="banner">
-    <section ref="bannerRef" class="banner__section">
-      <div class="banner__wrapper">
-        <div class="banner__content">
-          <div class="banner__orbit">
-            <div v-for="(word, index) in orbitWords"
-                 :key="index"
-                 class="banner__orbit-word"
-                 :class="[ word.class,  {
-                    'glow-black': glowType === word.type && word.type === 'der',
-                    'glow-red': glowType === word.type && word.type === 'die',
-                    'glow-gold': glowType === word.type && word.type === 'das',
-                    'fade-glow': fadingGlow === word.type}]"
-            >
-              <span>{{ word.text }}</span>
-<!--              <img class="snow" :src="Snow" alt="">-->
-            </div>
-          </div>
-          <h1 class="banner__title">{{ t('banner.title') }}</h1>
-          <button class="banner__button" @click="startLearning">{{ t('banner.btn') }}</button>
-        </div>
-        <div ref="orbit" class="banner__mage-container" aria-hidden="true">
-          <div class="banner__mage"></div>
-        </div>
+  <section class="hero">
+    <div class="hero__inner">
+      <div class="hero__text">
+        <h1 class="hero__brand">SkillUpGerman</h1>
+        <p class="hero__lead">{{ t('banner.title') }}</p>
+        <button class="hero__cta" @click="openAuth">{{ t('banner.btn') }}</button>
       </div>
-    </section>
-  </div>
+      <div class="hero__art" aria-hidden="true">
+        <div class="hero__ring"></div>
+        <div class="hero__stage"></div>
+        <img class="hero__mascot" :src="BannerMascot" alt="" draggable="false">
+        <span class="hero__tag hero__tag--der">der</span>
+        <span class="hero__tag hero__tag--die">die</span>
+        <span class="hero__tag hero__tag--das">das</span>
+      </div>
+    </div>
+  </section>
 </template>
 
 <script setup>
 import SignIn from '../components/logIn.vue'
 import Overlay from '../components/Uioverlay.vue'
-import {gsap} from 'gsap'
-import {ScrollTrigger} from "gsap/ScrollTrigger";
-import Snow from "../../assets/images/shovel.svg";
-import {onMounted, ref, watch} from 'vue'
-import {useRouter} from 'vue-router'
-import {userAuthStore} from '../../store/authStore.js'
+import BannerMascot from '../../assets/images/BannerMascot.svg'
+import {ref, watch} from 'vue'
 import {useI18n} from 'vue-i18n'
 
-gsap.registerPlugin(ScrollTrigger);
-
-const orbitWords = [
-  {text: 'Der', type: 'der', class: 'banner__orbit-word--der'},
-  {text: 'Die', type: 'die', class: 'banner__orbit-word--die'},
-  {text: 'Das', type: 'das', class: 'banner__orbit-word--das'}
-]
-
 const {t} = useI18n()
-const orbit = ref(null)
 const showAuth = ref(false)
-const userAuth = userAuthStore()
-const router = useRouter()
-const glowType = ref(null)
-const fadingGlow = ref(null)
-const bannerRef = ref(null);
 
 const openAuth = () => {
   showAuth.value = true
@@ -68,34 +40,12 @@ const closeAuth = () => {
   showAuth.value = false
 }
 
-const startLearning = () => {
-  openAuth()
-}
-
 watch(showAuth, (val) => {
   document.body.style.overflow = val ? 'hidden' : ''
 })
-
-onMounted(() => {
-  if (!bannerRef.value || !orbit.value) {
-    return;
-  }
-  gsap.to(orbit.value, {
-    rotation: 360,
-    x: "100vw",
-    ease: "none",
-    scrollTrigger: {
-      trigger: document.body,
-      start: "top top",
-      end: "bottom top",
-      scrub: true,
-    }
-  });
-});
 </script>
 
 <style scoped>
-
 .slide-enter-active,
 .slide-leave-active {
   transition: transform 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
@@ -106,194 +56,186 @@ onMounted(() => {
   transform: translateX(100%);
 }
 
-.banner {
-  font-family: "Nunito", sans-serif;
+.hero {
+  font-family: Nunito, sans-serif;
   overflow: hidden;
-  font-weight: bold;
+  padding: 56px 24px 40px;
 }
 
-.banner__section {
-  padding: 5rem 1rem 5rem 1rem;
-}
-
-.banner__wrapper {
-  display: flex;
+.hero__inner {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
   align-items: center;
-  max-width: 1280px;
+  gap: 56px;
+  max-width: 1120px;
   margin: 0 auto;
-  justify-content: center;
-  gap: 30px;
-  position: relative;
-  z-index: 1;
 }
 
-.banner__content {
-  flex: 1;
-  max-width: 650px;
-}
-
-.banner__orbit {
-  display: flex;
-  gap: 1.5rem;
-  margin-bottom: 2rem;
-}
-
-.banner__orbit-word {
-  position: relative;
-  padding: 0.8rem 2rem;
-  font-size: 1.8rem;
-  font-weight: 400;
-  border-radius: 16px;
-  color: #1e1e1e;
-  cursor: pointer;
-  user-select: none;
-  transition: all 0.1s ease-in-out;
-  box-shadow: 2px 2px 0 black;
-  border: 2px solid #1e1e1e;
-}
-
-.snow {
-  position: absolute;
-  top: -145%;
-  left: 0;
-  width: 100%;
-}
-
-.banner__orbit-word--der {
-  background-color: #60a5fa;
-}
-
-.banner__orbit-word--die {
-  background-color: #fca5a5;
-}
-
-.banner__orbit-word--das {
-  background-color: #fde68a;
-}
-
-.banner__title {
-  font-size: 3.2rem;
-  font-weight: 400;
-  color: var(--titleColor);
-  line-height: 1.1;
-  letter-spacing: -0.03em;
-  margin-bottom: 2.5rem;
-  text-wrap: balance;
-}
-
-.banner__button {
-  font-family: "Nunito", sans-serif;
-  padding: 14px;
-  width: 100%;
-  max-width: 380px;
-  font-size: 1.5rem;
+.hero__brand {
+  font-family: Fredoka, Nunito, sans-serif;
+  font-size: 4rem;
   font-weight: 600;
-  border-radius: 50px;
-  cursor: pointer;
-  border: none;
-  transition: all 0.1s ease-in-out;
-  background-color: #6368bb;
-  color: #ffffff;
-  box-shadow: 0 6px 0 #4a4fa1;
+  line-height: 1.05;
+  color: var(--titleColor);
 }
 
-@media (min-width: 1024px) {
-  .banner__button:hover {
+.hero__lead {
+  margin: 18px 0 34px;
+  max-width: 32rem;
+  font-size: 1.25rem;
+  font-weight: 500;
+  line-height: 1.55;
+  color: var(--titleColor);
+  opacity: 0.75;
+  text-wrap: pretty;
+}
+
+.hero__cta {
+  font-family: Nunito, sans-serif;
+  padding: 16px 44px;
+  font-size: 1.2rem;
+  font-weight: 700;
+  border: none;
+  border-radius: 50px;
+  background-color: #6368bb;
+  color: #fff;
+  box-shadow: 0 6px 0 #4a4fa1;
+  cursor: pointer;
+  transition: transform 0.1s ease, box-shadow 0.1s ease;
+}
+
+.hero__cta:active {
+  transform: translateY(4px);
+  box-shadow: 0 2px 0 #4a4fa1;
+}
+
+@media (hover: hover) {
+  .hero__cta:hover {
     transform: translateY(2px);
+    box-shadow: 0 4px 0 #4a4fa1;
   }
 }
 
-.banner__mage-container {
-  flex: 1;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  max-width: 450px;
-  padding: 30px;
-}
-
-.banner__mage {
-  width: 100%;
-  aspect-ratio: 1 / 1;
+.hero__art {
   position: relative;
-  background: none;
-  padding: 20px;
-  transform: rotate(-20deg);
-  border: none;
+  justify-self: center;
+  width: 400px;
+  max-width: 100%;
+  aspect-ratio: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.banner__mage::before, .banner__mage::after {
-  content: '';
+/* Мягкий круг под ежом, чтобы он не висел в пустоте */
+.hero__stage {
   position: absolute;
-  transition: all 0.3s ease;
+  inset: 10%;
+  border-radius: 50%;
+  background: radial-gradient(circle at 50% 40%, #7b80d6, #4a4fa1 75%);
+  box-shadow: 0 10px 0 #383c86;
 }
 
-.banner__mage::before {
-  background: #f1c40f;
-  box-shadow: 8px 8px 0px #c29e0b;
-  width: 70%;
-  height: 70%;
-  border-radius: 24px;
-  z-index: 1;
-  top: 0;
-  left: 0;
+/* Пунктирное кольцо вокруг круга */
+.hero__ring {
+  position: absolute;
+  inset: 2%;
+  border-radius: 50%;
+  border: 2px dashed rgba(123, 128, 214, 0.45);
 }
 
-.banner__mage::after {
-  width: 55%;
-  height: 55%;
-  background: #a855f7;
-  box-shadow: 8px 8px 0px #8a3bd5;
-  border-radius: 24px;
-  z-index: 2;
-  bottom: 0;
+.hero__mascot {
+  position: relative;
+  width: 74%;
+  height: auto;
+  user-select: none;
+  filter: drop-shadow(0 16px 20px rgba(0, 0, 0, 0.28));
+}
+
+.hero__tag {
+  position: absolute;
+  padding: 6px 18px;
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #1e1e1e;
+  border: 2px solid #1e1e1e;
+  border-radius: 14px;
+  box-shadow: 3px 3px 0 #1e1e1e;
+  user-select: none;
+}
+
+.hero__tag--der {
+  top: 10%;
+  left: 2%;
+  background: #60a5fa;
+  transform: rotate(-8deg);
+}
+
+.hero__tag--die {
+  top: 40%;
   right: 0;
+  background: #fca5a5;
+  transform: rotate(7deg);
+}
+
+.hero__tag--das {
+  bottom: 8%;
+  left: 10%;
+  background: #fde68a;
+  transform: rotate(-4deg);
 }
 
 @media (max-width: 1023px) {
-  .banner__title {
-    font-size: 2rem;
+  .hero__inner {
+    gap: 32px;
   }
 
-  .banner__mage-container {
-    max-width: 350px;
+  .hero__brand {
+    font-size: 3.2rem;
+  }
+
+  .hero__lead {
+    font-size: 1.15rem;
+  }
+
+  .hero__art {
+    width: 340px;
   }
 }
 
 @media (max-width: 900px) {
-  .banner__wrapper {
-    flex-direction: column;
+  .hero {
+    padding: 40px 20px 32px;
+  }
+
+  .hero__inner {
+    grid-template-columns: 1fr;
     text-align: center;
   }
 
-  .banner__orbit {
-    justify-content: center;
+  .hero__lead {
+    margin-left: auto;
+    margin-right: auto;
   }
 
-  .banner__content {
-    max-width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .banner__mage-container {
+  /* на узких экранах ежа не показываем */
+  .hero__art {
     display: none;
   }
 }
 
-@media (max-width: 767px) {
-  .banner__section {
-    padding: 3rem 1.5rem;
+@media (max-width: 480px) {
+  .hero__brand {
+    font-size: 2.5rem;
   }
 
-  .banner__title {
-    font-size: 24px;
+  .hero__lead {
+    font-size: 1.05rem;
   }
 
-  .banner__orbit-word {
-    font-size: 1.5rem;
-    padding: 0.6rem 1.5rem;
+  .hero__cta {
+    width: 100%;
   }
+
 }
 </style>

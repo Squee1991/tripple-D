@@ -154,6 +154,7 @@ export default defineNuxtConfig({
 	routeRules: {
 		'/**': { ssr: false },
 		'/info-about': { ssr: false },
+		'/': { ssr: true },
 		'/privacy': { ssr: true },
 		'/admin/**': {status: 404},
 		'/wp-login.php': {status: 404},

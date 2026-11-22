@@ -8,3 +8,9 @@ export const formatLegalDate = (locale = 'en-US') => {
     const [year, month, day] = LEGAL_LAST_UPDATED.split('-').map(Number)
     return new Date(year, month - 1, day).toLocaleDateString(locale, { year: 'numeric', month: 'long', day: 'numeric' })
 }
+
+// Соцсети в футере главной. Пустой url = иконка видна, но не кликается
+export const SOCIAL_LINKS = [
+    { id: 'tiktok', label: 'TikTok', url: 'https://www.tiktok.com/@skillupgerman.com' },
+    { id: 'telegram', label: 'Telegram', url: 'https://t.me/skilupgerman1' }
+]

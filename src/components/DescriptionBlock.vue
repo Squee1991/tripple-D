@@ -2,36 +2,76 @@
   <section class="features">
     <div class="features__inner">
       <div class="f__title">
-        <h1 class="features__title">{{ t('features.title') }}</h1>
+        <h2 class="features__title">{{ t('features.title') }}</h2>
       </div>
-      <div
-          class="features__slider"
-          ref="sliderRef"
-          @mousedown="startDrag"
-          @mouseleave="stopDrag"
-          @mouseup="stopDrag"
-          @mousemove="onDrag"
-      >
-        <div class="features__card" v-for="(item, index) in items" :key="index">
-          <h2 class="features__card-title">{{ t(item.title) }}</h2>
-          <div class="features__icon-wrapper">
-            <img :src="item.src" :alt="item.alt" class="features__icon"/>
-          </div>
-          <div class="features__card-wrapper">
+
+      <div class="features__carousel">
+        <button
+            class="features__arrow features__arrow--prev"
+            type="button"
+            :disabled="atStart"
+            aria-label="Previous"
+            @click="scrollByCard(-1)"
+        >
+          <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="3.5"
+               stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="15 18 9 12 15 6"></polyline>
+          </svg>
+        </button>
+
+        <div
+            class="features__slider"
+            ref="sliderRef"
+            @scroll.passive="onScroll"
+            @mousedown="startDrag"
+            @mouseleave="stopDrag"
+            @mouseup="stopDrag"
+            @mousemove="onDrag"
+        >
+          <article class="features__card" v-for="(item, index) in items" :key="index">
+            <div class="features__icon-wrapper">
+              <img :src="item.src" :alt="item.alt" class="features__icon" draggable="false"/>
+            </div>
+            <h3 class="features__card-title">{{ item.title }}</h3>
             <ul class="features__list">
               <li v-for="(row, i) in item.description" :key="i" class="features__list-item">
-                {{ row.text }}
+                {{ row }}
               </li>
             </ul>
-          </div>
+          </article>
         </div>
+
+        <button
+            class="features__arrow features__arrow--next"
+            type="button"
+            :disabled="atEnd"
+            aria-label="Next"
+            @click="scrollByCard(1)"
+        >
+          <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="3.5"
+               stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="9 18 15 12 9 6"></polyline>
+          </svg>
+        </button>
+      </div>
+
+      <div class="features__dots">
+        <button
+            v-for="(item, index) in items"
+            :key="index"
+            type="button"
+            class="features__dot"
+            :class="{ 'is-active': index === activeIndex }"
+            :aria-label="item.title"
+            @click="scrollToCard(index)"
+        ></button>
       </div>
     </div>
   </section>
 </template>
 
 <script setup>
-import {ref} from 'vue'
+import {computed, onBeforeUnmount, onMounted, ref} from 'vue'
 import {useI18n} from 'vue-i18n'
 import Book from '../../assets/images/DescBook.svg'
 import Brain from '../../assets/images/brain.svg'
@@ -44,110 +84,121 @@ import Cards from '../../assets/images/greeting-card.svg'
 
 const {t} = useI18n()
 
+const card = (src, alt, key, rows) => ({
+  src,
+  alt,
+  title: t(`${key}.title`),
+  description: rows.map(row => t(`${key}.${row}`))
+})
+
+const FOUR = ['textOne', 'textTwo', 'textThree', 'textFour']
+
 const items = computed(() => [
-      {
-        src: Book, alt: 'Book', title: t('descriptionCardTheme.title'), description: [
-          {text: t('descriptionCardTheme.textOne')},
-          {text: t('descriptionCardTheme.textTwo')},
-          {text: t('descriptionCardTheme.textThree')},
-          {text: t('descriptionCardTheme.textFour')}
-        ]
-      },
-      {
-        src: Brain, alt: 'Brain', title: t('descriptionCardArticle.title'), description: [
-          {text: t('descriptionCardArticle.textOne')},
-          {text: t('descriptionCardArticle.textTwo')},
-          {text: t('descriptionCardArticle.textThree')},
-          {text: t('descriptionCardArticle.textFour')},
-        ]
-      },
-      {
-        src: Controller, alt: 'Controller', title: t('descriptionCardGame.title'), description: [
-          {text: t('descriptionCardGame.textOne')},
-          {text: t('descriptionCardGame.textTwo')},
-          {text: t('descriptionCardGame.textThree')},
-          {text: t('descriptionCardGame.textFour')}
-        ]
-      },
-      {
-        src: AchCup, alt: 'Achievement icon', title: t('descriptionCardRewards.title'), description: [
-          {text: t('descriptionCardRewards.textOne')},
-          {text: t('descriptionCardRewards.textTwo')},
-          {text: t('descriptionCardRewards.textThree')},
-          {text: t('descriptionCardRewards.textFour')}
-        ]
-      },
-      {
-        src: Ranked, alt: 'Ranked', title: t('descriptionCardRanked.title'), description: [
-          {text: t('descriptionCardRanked.textOne')},
-          {text: t('descriptionCardRanked.textTwo')},
-          {text: t('descriptionCardRanked.textThree')},
-          {text: t('descriptionCardRanked.textFour')},
-        ]
-      },
-      {
-        src: Exam, alt: 'Exam', title: t('descriptionCardExam.title'), description: [
-          {text: t('descriptionCardExam.textOne')},
-          {text: t('descriptionCardExam.textTwo')},
-          {text: t('descriptionCardExam.textThree')},
-          {text: t('descriptionCardExam.textFour')},
-          {text: t('descriptionCardExam.textFive')},
-        ]
-      },
-      {
-        src: Dictionary, alt: 'Dictionary', title: t('descriptionCardEvents.title'), description: [
-          {text: t('descriptionCardEvents.textOne')},
-          {text: t('descriptionCardEvents.textTwo')},
-          {text: t('descriptionCardEvents.textThree')},
-          {text: t('descriptionCardEvents.textFour')}
-        ]
-      },
-      {
-        src: Cards, alt: 'Cup', title: t('descriptionCardCards.title'), description: [
-          {text: t('descriptionCardCards.textOne')},
-          {text: t('descriptionCardCards.textTwo')},
-          {text: t('descriptionCardCards.textThree')},
-          {text: t('descriptionCardCards.textFour')}
-        ]
-      }
-    ]
-)
+  card(Book, 'Book', 'descriptionCardTheme', FOUR),
+  card(Brain, 'Brain', 'descriptionCardArticle', FOUR),
+  card(Controller, 'Controller', 'descriptionCardGame', FOUR),
+  card(AchCup, 'Achievement icon', 'descriptionCardRewards', FOUR),
+  card(Ranked, 'Ranked', 'descriptionCardRanked', FOUR),
+  card(Exam, 'Exam', 'descriptionCardExam', [...FOUR, 'textFive']),
+  card(Dictionary, 'Events', 'descriptionCardEvents', FOUR),
+  card(Cards, 'Cards', 'descriptionCardCards', FOUR)
+])
+
 const sliderRef = ref(null)
+const atStart = ref(true)
+const atEnd = ref(false)
+const activeIndex = ref(0)
+
+// Шаг прокрутки: ширина карточки плюс отступ между карточками
+const cardStep = () => {
+  const el = sliderRef.value
+  const first = el?.querySelector('.features__card')
+  if (!first) return 0
+  const gap = parseFloat(getComputedStyle(el).columnGap) || 0
+  return first.offsetWidth + gap
+}
+
+const updateState = () => {
+  const el = sliderRef.value
+  if (!el) return
+  const max = el.scrollWidth - el.clientWidth
+  atStart.value = el.scrollLeft <= 4
+  atEnd.value = el.scrollLeft >= max - 4
+  const step = cardStep()
+  if (!step) return
+  activeIndex.value = atEnd.value
+      ? items.value.length - 1
+      : Math.min(items.value.length - 1, Math.round(el.scrollLeft / step))
+}
+
+let frame = 0
+const onScroll = () => {
+  cancelAnimationFrame(frame)
+  frame = requestAnimationFrame(updateState)
+}
+
+const scrollByCard = (direction) => {
+  sliderRef.value?.scrollBy({left: direction * cardStep(), behavior: 'smooth'})
+}
+
+const scrollToCard = (index) => {
+  sliderRef.value?.scrollTo({left: index * cardStep(), behavior: 'smooth'})
+}
+
+// Перетаскивание мышью на компьютере
 let isDown = false
-let startX
-let scrollLeft
+let moved = false
+let startX = 0
+let startScroll = 0
 
 const startDrag = (e) => {
   isDown = true
-  sliderRef.value.classList.add('is-dragging')
-  startX = e.pageX - sliderRef.value.offsetLeft
-  scrollLeft = sliderRef.value.scrollLeft
+  moved = false
+  startX = e.pageX
+  startScroll = sliderRef.value.scrollLeft
 }
 
 const stopDrag = () => {
+  if (!isDown) return
   isDown = false
   sliderRef.value.classList.remove('is-dragging')
+  // после перетаскивания доводим до ближайшей карточки
+  if (moved) scrollToCard(Math.round(sliderRef.value.scrollLeft / (cardStep() || 1)))
 }
 
 const onDrag = (e) => {
   if (!isDown) return
+  const walk = e.pageX - startX
+  if (!moved && Math.abs(walk) < 5) return
+  if (!moved) {
+    moved = true
+    sliderRef.value.classList.add('is-dragging')
+  }
   e.preventDefault()
-  const x = e.pageX - sliderRef.value.offsetLeft
-  const walk = (x - startX) * 1.5
-  sliderRef.value.scrollLeft = scrollLeft - walk
+  sliderRef.value.scrollLeft = startScroll - walk
 }
+
+onMounted(() => {
+  updateState()
+  window.addEventListener('resize', updateState)
+})
+
+onBeforeUnmount(() => {
+  cancelAnimationFrame(frame)
+  window.removeEventListener('resize', updateState)
+})
 </script>
 
 <style scoped>
 .features {
-  padding: 6rem 1.5rem;
+  padding: 4rem 1.5rem 5rem;
   font-family: "Nunito", sans-serif;
   overflow-x: hidden;
 }
 
 .features__inner {
   width: 100%;
-  max-width: 1280px;
+  max-width: 1200px;
   margin: 0 auto;
 }
 
@@ -158,7 +209,7 @@ const onDrag = (e) => {
 
 .features__title {
   text-align: center;
-  margin-bottom: 4rem;
+  margin-bottom: 3.5rem;
   font-size: 3rem;
   font-family: "Nunito", sans-serif;
   font-weight: 400;
@@ -172,10 +223,45 @@ const onDrag = (e) => {
   border-radius: 10px;
 }
 
-.features__slider {
+.features__carousel {
   display: flex;
-  gap: 2rem;
-  padding: 10px 10px 20px 10px;
+  align-items: center;
+  gap: 16px;
+}
+
+/* Стрелки в стиле кнопок меню: белые, с рамкой и твёрдой тенью */
+.features__arrow {
+  flex-shrink: 0;
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #fff;
+  color: #1e1e1e;
+  border: 3px solid #1e1e1e;
+  border-radius: 14px;
+  box-shadow: 3px 3px 0 #1e1e1e;
+  cursor: pointer;
+  transition: transform 0.1s ease, box-shadow 0.1s ease, opacity 0.2s ease;
+}
+
+.features__arrow:active:not(:disabled) {
+  transform: translate(3px, 3px);
+  box-shadow: 0 0 0 #1e1e1e;
+}
+
+.features__arrow:disabled {
+  opacity: 0.35;
+  cursor: default;
+}
+
+.features__slider {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  gap: 24px;
+  padding: 8px 8px 16px;
   overflow-x: auto;
   scroll-snap-type: x mandatory;
   -webkit-overflow-scrolling: touch;
@@ -192,28 +278,16 @@ const onDrag = (e) => {
   cursor: grabbing;
 }
 
-.features__slider.is-dragging .features__card {
-  cursor: grabbing;
-}
-
 .features__card {
-  flex: 0 0 calc(33.333% - 1.33rem);
+  flex: 0 0 calc((100% - 48px) / 3);
   scroll-snap-align: start;
-  border-radius: 24px;
-  border: none;
-  box-shadow: 5px 5px 0px #1e1e1e;
-  padding: 16px 10px;
-  text-align: center;
   display: flex;
   flex-direction: column;
   align-items: center;
-  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+  padding: 24px 20px 26px;
+  border-radius: 24px;
+  text-align: center;
   user-select: none;
-}
-
-.features__card:hover {
-  transform: translate(4px, 4px);
-  box-shadow: 4px 4px 0px #1e1e1e;
 }
 
 /* Цвета карточек */
@@ -261,69 +335,112 @@ const onDrag = (e) => {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 86px;
-  height: 86px;
-  border-radius: 20px;
-  margin-bottom: 5px;
+  width: 84px;
+  height: 84px;
+  margin-bottom: 12px;
+  border-radius: 22px;
+  background: rgba(255, 255, 255, 0.22);
   pointer-events: none;
 }
 
 .features__icon {
-  width: 100%;
+  width: 64px;
+  height: 64px;
+  object-fit: contain;
 }
 
 .features__card-title {
+  margin-bottom: 14px;
   font-family: "Nunito", sans-serif;
-  font-size: 17px;
-  font-weight: 600;
-  margin-bottom: 0.75rem;
-  color: #ffffff;
+  font-size: 1.3rem;
+  font-weight: 800;
+  color: #fff;
+}
+
+.features__list {
+  align-self: stretch;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding: 0;
+  list-style: none;
+}
+
+.features__list-item {
+  position: relative;
+  padding-left: 1.3rem;
+  font-size: 0.98rem;
+  font-weight: 700;
+  line-height: 1.35;
+  text-align: start;
+  color: #fff;
 }
 
 .features__list-item::before {
   content: "";
   position: absolute;
-  left: .7rem;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 6px;
-  height: 6px;
+  left: 0.3rem;
+  top: 0.5em;
+  width: 7px;
+  height: 7px;
   border-radius: 50%;
   background: #fff;
 }
 
-.features__list-item {
-  position: relative;
-  padding: 4px 4px 4px 1.5rem;
-  font-size: 13px;
-  text-align: start;
-  font-weight: 600;
-  color: #fff;
-  letter-spacing: .1px;
+.features__dots {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 20px;
+}
+
+.features__dot {
+  width: 10px;
+  height: 10px;
+  padding: 0;
+  border: none;
+  border-radius: 999px;
+  background: var(--titleColor);
+  opacity: 0.25;
+  cursor: pointer;
+  transition: width 0.2s ease, opacity 0.2s ease;
+}
+
+.features__dot.is-active {
+  width: 26px;
+  opacity: 0.9;
 }
 
 @media (max-width: 1024px) {
   .features__card {
-    flex: 0 0 calc(50% - 1rem);
+    flex-basis: calc((100% - 24px) / 2);
   }
 }
 
+/* На телефоне листаем пальцем, стрелки не нужны */
 @media (max-width: 768px) {
   .features {
-    padding: 4rem 1rem;
+    padding: 3rem 0 4rem;
   }
 
   .features__title {
     font-size: 2.2rem;
-    margin-bottom: 3rem;
+    margin: 0 1rem 2.5rem;
+  }
+
+  .features__arrow {
+    display: none;
   }
 
   .features__slider {
-    gap: 26px;
+    gap: 16px;
+    padding: 8px 20px 16px;
+    scroll-padding: 0 20px;
+    cursor: auto;
   }
 
   .features__card {
-    flex: 0 0 60%;
+    flex-basis: 78%;
   }
 }
 </style>
