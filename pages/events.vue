@@ -64,7 +64,7 @@
 <script setup>
 import { ref, computed, watch, onBeforeUnmount, onMounted } from 'vue'
 import { useRouter } from 'vue-router'
-import { useEventSessionStore, WINTER_FORCE_OPEN } from '~/store/eventsStore.js'
+import { useEventSessionStore } from '~/store/eventsStore.js'
 import ModalDev from '../src/components/modal.vue'
 import VBanner from "~/src/components/V-banner.vue"
 import PadLock from '../assets/images/padlock.svg'
@@ -153,7 +153,7 @@ const formatToDisplayDate = (dateStr) => {
 
 const processedEvents = computed(() => {
   return eventStore.events.map(event => {
-    const active = isEventActive(event.start, event.end) || (WINTER_FORCE_OPEN && event.id === 'winter')
+    const active = isEventActive(event.start, event.end)
     return {
       ...event,
       title: t(event.valueKey),

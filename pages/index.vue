@@ -22,6 +22,7 @@ import VAppBanner from "~/src/components/V-appBanner.vue";
 import VHedgehogGuide from "~/src/components/V-hedgehogGuide.vue";
 import { useUiSettingsStore } from '~/store/uiSettingsStore.js'
 import VLevelPicker from "~/src/components/V-levelPicker.vue";
+import VSiteFooter from "~/src/components/V-siteFooter.vue";
 
 
 const showLogin = ref(false)
@@ -31,12 +32,14 @@ const uiSettings = useUiSettingsStore()
 const hydrated = ref(false)
 const isLocallyLogged = ref(false)
 const colorMode = useColorMode()
+// Вошёл ли пользователь, с учётом гидрации: до монтирования страница такая же, как с сервера (гостевая)
+const isAuthed = computed(() => hydrated.value && !!authStore.uid)
 
 // Эффекты Хэллоуина — только на главной после входа:
 // пока идёт его событие (в любой теме) или включена купленная тема
 // Уровень спрашиваем один раз у каждого вошедшего, у кого его ещё нет (и у старых пользователей).
 // Пока не выбрал, модалку ивента не показываем, а за ней ждёт и модалка марафона (app.vue)
-const needsLevel = computed(() => authStore.initialized && !!authStore.uid && !authStore.germanLevel)
+const needsLevel = computed(() => hydrated.value && authStore.initialized && !!authStore.uid && !authStore.germanLevel)
 const showLevelPicker = ref(false)
 watch(needsLevel, (need) => {
   if (need) showLevelPicker.value = true
@@ -69,6 +72,17 @@ definePageMeta({
 onMounted(() => {
   hydrated.value = true
   isLocallyLogged.value = localStorage.getItem('app_user_logged') === 'true'
+  // вышли на другой странице и пришли сюда: класс из head больше не нужен
+  if (authStore.initialized && !authStore.uid) document.documentElement.classList.remove('is-logged')
+})
+
+// До отрисовки прячем серверный лендинг у тех, кто уже входил, чтобы он не мелькал до загрузки аккаунта
+useHead({
+  script: [{
+    key: 'landing-logged-flag',
+    tagPosition: 'head',
+    innerHTML: "try{if(localStorage.getItem('app_user_logged')==='true')document.documentElement.classList.add('is-logged')}catch(e){}"
+  }]
 })
 
 watch(() => authStore.uid, (newUid) => {
@@ -78,14 +92,16 @@ watch(() => authStore.uid, (newUid) => {
   } else if (authStore.initialized && !newUid) {
     localStorage.removeItem('app_user_logged')
     isLocallyLogged.value = false
+    // вход не подтвердился: показываем лендинг
+    if (process.client) document.documentElement.classList.remove('is-logged')
   }
 })
 </script>
 
 <template>
   <VLevelPicker v-model="showLevelPicker" mode="onboarding"/>
-  <VEventAvailableModal @close="false" v-if="authStore.initialized && !needsLevel"/>
-  <VShowFall v-if="eventStore.isSnowEnabled" :image="Snow"/>
+  <VEventAvailableModal @close="false" v-if="hydrated && authStore.initialized && !needsLevel"/>
+  <VShowFall v-if="hydrated && eventStore.isSnowEnabled" :image="Snow"/>
   <ClientOnly>
     <template v-if="isHalloweenFx">
       <div class="halloween-layer halloween-layer--back" aria-hidden="true">
@@ -114,19 +130,27 @@ watch(() => authStore.uid, (newUid) => {
         <VHedgehogGuide v-if="uiSettings.hedgehogGuideEnabled"/>
       </template>
     </ClientOnly>
-    <template v-if="authStore.initialized && !authStore.uid">
+    <!-- Лендинг рендерится и на сервере (SSR для '/'), чтобы боты и проверка Google видели описание сайта.
+         Вошедшим он не мелькает: скрипт в head прячет его по флагу app_user_logged -->
+    <div v-if="!isAuthed" class="landing">
       <Header/>
       <Banner/>
       <Description/>
       <About/>
       <!--      <VAppBanner/>-->
       <FeedBack/>
-    </template>
+    </div>
   </div>
+  <!-- Футер на всю ширину, поэтому вне .container -->
+  <VSiteFooter v-if="!isAuthed" class="landing"/>
 </template>
 
 <style scoped>
 /* Эффекты поверх контента главной (клики проходят насквозь), но ниже меню и модалок */
+:global(html.is-logged .landing) {
+  display: none;
+}
+
 .halloween-layer {
   position: fixed;
   inset: 0;

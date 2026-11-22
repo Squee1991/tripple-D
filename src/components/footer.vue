@@ -1,5 +1,5 @@
 <template>
-  <footer v-if="authStore.uid" class="footer" role="contentinfo">
+  <footer v-if="isMounted && authStore.uid" class="footer" role="contentinfo">
     <div class="footer__container">
       <nav class="nav">
         <div class="sliding-bg" :style="{ transform: `translateX(${getTransformX(activeIndex)}%)`,   opacity: activeIndex === -1 ? 0 : 1 }">
@@ -21,7 +21,7 @@
 </template>
 
 <script setup>
-import { computed } from 'vue'
+import { computed, ref, onMounted } from 'vue'
 import { useRoute } from 'vue-router'
 import { userAuthStore } from "~/store/authStore.js";
 const { t , locale } = useI18n();
@@ -42,6 +42,9 @@ const getTransformX = (index) => {
 };
 
 const authStore = userAuthStore()
+// после монтирования, чтобы не расходиться с серверным рендером главной
+const isMounted = ref(false)
+onMounted(() => { isMounted.value = true })
 const route = useRoute()
 const footerNav = computed(()=> [
   { id: 'study', path: '/study', label: t('footerNavLabel.learn'), icon: Study, alt: 'Study' },

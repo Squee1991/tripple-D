@@ -15,12 +15,12 @@
         @button="onDevModalButton"
     />
     <div class="header-container">
-      <NuxtLink v-if="!userAuth.uid" @click="click" to="/" class="logo" aria-label="Skillupgerman logo">
-        <img class="logo__img" src="../../assets/images/logoReview.webp" alt="logo">
+      <NuxtLink v-if="!isLoggedIn" to="/" class="logo" aria-label="SkillUpGerman">
+        <img class="logo__img" src="../../assets/images/logoReview.webp" alt="SkillUpGerman">
       </NuxtLink>
       <nav ref="dropdownRefNav" class="header-nav" :class="{ 'is-open': isMobileMenuOpen, 'is-rtl': isAr }"
            aria-label="Main">
-        <ul v-if="!userAuth.uid" class="header-nav__list">
+        <ul v-if="!isLoggedIn" class="header-nav__list">
           <li v-for="item in menuItems" :key="item.id" :id="item.id" class="header-nav__item">
             <NuxtLink v-if="item.url" :to="item.url" class="header-nav__link" @click="closeAllMenus">
               {{ t(item.valueKey) }}
@@ -67,7 +67,7 @@
         </ul>
       </nav>
       <div class="header-stats-wrapper">
-        <VHeaderUserStats v-if="userAuth.uid"/>
+        <VHeaderUserStats v-if="isLoggedIn"/>
       </div>
       <div class="header-right">
         <!--        <div v-if="userAuth.name" class="header-user-wrapper">-->
@@ -98,7 +98,7 @@
         <!--            </button>-->
         <!--          </div>-->
         <!--        </div>-->
-        <div class="header-lang" v-if="!userAuth.uid" ref="langDropdownRef">
+        <div class="header-lang" v-if="!isLoggedIn" ref="langDropdownRef">
           <button class="header-lang__btn" @click="toggleLangDropdown" :aria-expanded="isLangDropdownOpen.toString()">
             <span class="header-lang__code">{{ locale }}</span>
             <svg class="header-lang__arrow" :class="{ 'is-open': isLangDropdownOpen }" viewBox="0 0 24 24" fill="none"
@@ -120,8 +120,8 @@
             </ul>
           </transition>
         </div>
-        <button v-if="!userAuth.uid" class="btn-login" @click="openAuth">{{ t('auth.logIn') }}</button>
-        <BurgerMenu v-if="!userAuth.uid && !showAuth" class="burger-button" v-model="isMobileMenuOpen"/>
+        <button v-if="!isLoggedIn" class="btn-login" @click="openAuth">{{ t('auth.logIn') }}</button>
+        <BurgerMenu v-if="!isLoggedIn && !showAuth" class="burger-button" v-model="isMobileMenuOpen"/>
       </div>
     </div>
   </header>
@@ -136,7 +136,6 @@ import {userAuthStore} from '../../store/authStore.js'
 import {useBreakPointsStore} from '../../store/breakPointsStore.js'
 import {useEasterEggsStore} from '../../store/easterEggsStore.js'
 import {useRankUserStore} from "../../store/rankStore.js";
-import { WINTER_FORCE_OPEN } from '../../store/eventsStore.js'
 
 const rankStore = useRankUserStore()
 import SignIn from '../components/logIn.vue'
@@ -159,6 +158,10 @@ const router = useRouter()
 const {t, locale, locales, setLocale} = useI18n()
 const bp = useBreakPointsStore()
 const userAuth = userAuthStore()
+// До монтирования рисуем как для гостя: так совпадает с серверным рендером главной
+const isMounted = ref(false)
+const isLoggedIn = computed(() => isMounted.value && !!userAuth.uid)
+onMounted(() => { isMounted.value = true })
 
 // const click = () => {
 //   easterEggsStore.triggerTaps()
@@ -223,7 +226,7 @@ const menuItems = computed(() => {
     {id: 'contact', valueKey: 'nav.contact', url: '/support-request'},
     {id: 'faq', valueKey: 'nav.quest', url: '/faq'}
   ]
-  if (userAuth.uid) {
+  if (isLoggedIn.value) {
     const allEvents = [
       {
         id: 'winter-event',
@@ -264,7 +267,7 @@ const menuItems = computed(() => {
     ]
     const processedEvents = allEvents.map(event => ({
       ...event,
-      url: (isEventActive(event.startDate, event.endDate) || (WINTER_FORCE_OPEN && event.eventKey === 'winter')) ? event.url : null,
+      url: isEventActive(event.startDate, event.endDate) ? event.url : null,
     }))
     items.push(
         {id: 'events', valueKey: 'nav.events', children: processedEvents}
