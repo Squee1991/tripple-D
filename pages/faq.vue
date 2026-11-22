@@ -46,7 +46,6 @@
                   </template>
                 </div>
               </div>
-
               <div :class="{ hidetitle: openId === `${sectionIndex}-${questionIndex}` }" class="accordion-title">
                 <div>{{ item.question }}</div>
                 <div class="arrow" @click="toggleQuestion(sectionIndex, questionIndex)">
