@@ -130,7 +130,7 @@ const KIND_ICON = { choice: '✅', reading: '📖', matching: '🧩', chooseWord
 const isFinalOpen = computed(() => quests.value.every(q => q.id === FINAL_QUEST_ID || q.isDone))
 
 // Задания проходятся строго по порядку глав: следующее открывается, когда пройдено предыдущее.
-// Пройденные можно повторять. Порядок не зависит от дат, поэтому действует и в тестовом режиме
+// Пройденные можно повторять
 const QUEST_ORDER = CHAPTERS.flatMap(chapter => chapter.quests)
 
 const chapters = computed(() => {
