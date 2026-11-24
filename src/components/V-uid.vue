@@ -1,14 +1,5 @@
 <template>
   <div class="uid__container">
-    <ModalDev
-        :visible="showDevModal"
-        @close="closeDevModal"
-        :title="modalConfig.title"
-        :img="modalConfig.img"
-        :text="modalConfig.text"
-        :button="modalConfig.button"
-        @button="onDevModalButton"
-    />
     <template v-if="!isMobile">
       <div class="lands__container">
         <VLands/>
@@ -32,31 +23,6 @@
           <img class="tab__icon" :src="tab.icon" :alt="tab.alt">
         </button>
       </nav>
-      <div class="event-wrapper" v-if="displayEvent">
-        <NuxtLink
-            :to="displayEvent.isActive ? displayEvent.url : ''"
-            class="event"
-            :class="{ 'event--inactive': !displayEvent.isActive }"
-            @click="handleEventClick"
-        >
-          <img class="bg" src="~/assets/images/EventNotificationBg.png" alt="" aria-hidden="true">
-          <div class="event__content">
-            <div class="event__info">
-              <span class="event__badge">{{ t(displayEvent.valueKey) }}</span>
-              <span class="event__title" v-if="displayEvent.isActive">
-                 <strong>{{ t('eventsNotification.left') }} {{ displayEvent.daysNum }} {{
-                  displayEvent.daysWord
-                }}</strong>
-              </span>
-              <span class="event__title" v-else>
-                {{ t('eventsNotification.untilEvent') }} <strong>{{ displayEvent.daysNum }} {{
-                  displayEvent.daysWord
-                }}</strong>
-              </span>
-            </div>
-          </div>
-        </NuxtLink>
-      </div>
       <div class="mobile-panel" role="tabpanel">
         <VTransition>
           <div class="mobile-content" :key="currentTab.id">
@@ -69,9 +35,7 @@
 </template>
 
 <script setup>
-import { ref, computed, onMounted, onBeforeUnmount, watch } from 'vue'
-import { useRouter } from 'vue-router'
-import { useEventSessionStore } from '~/store/eventsStore.js'
+import { ref, computed, onMounted, onBeforeUnmount } from 'vue'
 import VPoints from "~/src/components/V-points.vue";
 import VDaily from "~/src/components/Vdaily.vue";
 import VLands from "~/src/components/V-lands.vue";
@@ -80,13 +44,7 @@ import Daily from '../../assets/images/daily.svg'
 import Card from '../../assets/images/card.svg'
 import VTransition from "~/src/components/V-transition.vue";
 
-
-import PadLock from '~/assets/images/padlock.svg'
-import ModalDev from '~/src/components/modal.vue'
-
 const { t, locale } = useI18n();
-const eventStore = useEventSessionStore();
-const router = useRouter();
 
 const tabs = computed(() => [
   {
@@ -111,103 +69,6 @@ const tabs = computed(() => [
     component: VPoints
   },
 ]);
-
-const showDevModal = ref(false)
-
-const modalConfig = computed(() => {
-  return {
-    title: t('eventLocked.title'),
-    text: t('eventLocked.text'),
-    button: t('eventLocked.btn'),
-    to: '/calendar',
-    img: PadLock
-  }
-})
-
-const closeDevModal = () => {
-  showDevModal.value = false
-}
-
-const onDevModalButton = () => {
-  showDevModal.value = false
-  router.push(modalConfig.value.to)
-}
-
-watch(showDevModal, (val) => {
-  document.body.style.overflow = val ? 'hidden' : ''
-})
-
-function getDaysWord(num) {
-  const n = Math.abs(num) % 100;
-  const n1 = n % 10;
-  if (n > 10 && n < 20) return t('shopDaysRaw.dayThird');
-  if (n1 > 1 && n1 < 5) return t('shopDaysRaw.daySecond');
-  if (n1 === 1) return t('shopDaysRaw.dayFirst');
-  return t('shopDaysRaw.dayThird');
-}
-
-const displayEvent = computed(() => {
-  const now = new Date();
-  const currentYear = now.getFullYear();
-
-  const parse = (str, y) => {
-    const [datePart, timePart] = str.split(" ");
-    const [month, day] = datePart.split("-").map(Number);
-    const [hours, minutes] = (timePart || "00:00").split(":").map(Number);
-    return new Date(y, month - 1, day, hours ?? 0, minutes ?? 0, 0, 0);
-  };
-
-  const upcomingEvents = eventStore.events.map(event => {
-    let startDate = parse(event.start, currentYear);
-    let endDate = parse(event.end, currentYear);
-    if (startDate > endDate) {
-      if (now.getMonth() < startDate.getMonth()) {
-        startDate.setFullYear(currentYear - 1);
-      } else {
-        endDate.setFullYear(currentYear + 1);
-      }
-    }
-    if (endDate < now) {
-      startDate.setFullYear(startDate.getFullYear() + 1);
-      endDate.setFullYear(endDate.getFullYear() + 1);
-    }
-
-    return { ...event, startDate, endDate };
-  }).sort((a, b) => a.startDate - b.startDate);
-
-  const nextEvent = upcomingEvents.find(e => e.endDate >= now);
-  if (!nextEvent) return null;
-
-  const msPerDay = 1000 * 60 * 60 * 24;
-  if (now >= nextEvent.startDate && now <= nextEvent.endDate) {
-    const daysLeft = Math.ceil((nextEvent.endDate - now) / msPerDay);
-    return {
-      ...nextEvent,
-      isActive: true,
-      daysNum: daysLeft,
-      daysWord: getDaysWord(daysLeft)
-    };
-  } else {
-    const daysUntil = Math.ceil((nextEvent.startDate - now) / msPerDay);
-    if (daysUntil <= 10) {
-      return {
-        ...nextEvent,
-        isActive: false,
-        daysNum: daysUntil,
-        daysWord: getDaysWord(daysUntil)
-      };
-    }
-  }
-
-  return null;
-});
-
-function handleEventClick(e) {
-  if (displayEvent.value && !displayEvent.value.isActive) {
-    e.preventDefault();
-    showDevModal.value = true;
-  }
-}
 
 const getTransformX = (index) => {
   if (index === -1) return 0;
@@ -247,7 +108,6 @@ onBeforeUnmount(() => {
   if (!mql) return
   if (mql.removeEventListener) mql.removeEventListener('change', updateIsMobile)
   else mql.removeListener(updateIsMobile)
-  document.body.style.overflow = ''
 })
 </script>
 
@@ -281,88 +141,6 @@ onBeforeUnmount(() => {
   flex: 1;
 }
 
-.event-wrapper {
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  gap: 10px;
-  margin: 6px 6px 2px 6px;
-}
-
-.event__speaker {
-  width: 60px;
-  height: auto;
-  object-fit: contain;
-  flex-shrink: 0;
-  z-index: 2;
-  filter: drop-shadow(0 2px 6px rgba(255, 140, 0, 0.45));
-}
-
-.event {
-  position: relative;
-  overflow: hidden;
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-  flex: 1;
-  padding: 12px 16px;
-  cursor: pointer;
-  text-decoration: none;
-}
-
-.event .bg {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-position: left center;
-  z-index: 0;
-  pointer-events: none;
-}
-
-.event--inactive {
-  cursor: pointer;
-}
-
-.event__content {
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-  z-index: 1;
-  position: relative;
-  margin-left: auto;
-}
-
-.event__info {
-  display: flex;
-  flex-direction: column;
-  gap: 3px;
-  margin-right: 40px;
-}
-
-.event__badge {
-  font-size: 16px;
-  font-family: "Rubik Wet Paint", system-ui;
-  text-transform: uppercase;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  color: #464242;
-  margin-bottom: 4px;
-}
-
-.event__title {
-  font-size: 14px;
-  font-weight: 600;
-  color: #f1f1f5;
-  line-height: 1.2;
-}
-
-.event__title strong {
-  color: #ffffff;
-  font-weight: 800;
-}
-
 .stats__wrapper {
   max-width: 400px;
   flex-shrink: 0;
@@ -374,9 +152,6 @@ onBeforeUnmount(() => {
   max-height: 100vh;
   overflow: auto;
   scrollbar-width: none;
-  /* плавное растворение у верхнего края при скролле вместо резкого среза */
-  -webkit-mask-image: linear-gradient(to bottom, transparent 0, #000 16px);
-  mask-image: linear-gradient(to bottom, transparent 0, #000 16px);
 }
 
 .lands__container {
@@ -476,13 +251,9 @@ onBeforeUnmount(() => {
     width: 100%;
     overflow-y: auto;
     padding: 8px;
-    padding-top: 8px;
     padding-bottom: 100px;
     scrollbar-width: none;
     -ms-overflow-style: none;
-    /* плавное растворение контента у краёв при скролле вместо резкого среза */
-    -webkit-mask-image: linear-gradient(to bottom, transparent 0, #000 8px, #000 calc(100% - 40px), transparent 100%);
-    mask-image: linear-gradient(to bottom, transparent 0, #000 8px, #000 calc(100% - 40px), transparent 100%);
   }
 
   .mobile-content::-webkit-scrollbar {
