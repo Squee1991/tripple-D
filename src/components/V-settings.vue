@@ -94,6 +94,15 @@
           {{ item.label }}
           <VArrowNav/>
         </NuxtLink>
+        <button
+            v-if="canRateApp"
+            type="button"
+            class="section-row link-row rate-app-row"
+            @click="onRateApp"
+        >
+          {{ t('rateApp.settingsRow') }}
+          <VArrowNav/>
+        </button>
       </div>
     </div>
     <div v-if="isLockedModalOpen && activeRestriction" class="modal-overlay locked-priority"
@@ -130,6 +139,7 @@ import SettingIcon from '../../assets/images/settings.svg'
 import VArrowNav from '~/src/components/V-arrowNav.vue'
 import VLevelPicker from '~/src/components/V-levelPicker.vue'
 import {userAuthStore} from '~/store/authStore.js'
+import {canOpenStoreReview, openStoreReview} from '~/utils/appReview.js'
 
 import {
   RESTRICTIONS_MAP,
@@ -139,6 +149,14 @@ import {
 } from '~/constants/settings.constants.js'
 
 const router = useRouter()
+
+// Оценить приложение: только в мобильном приложении, открывает страницу в магазине
+const canRateApp = canOpenStoreReview()
+const {$track} = useNuxtApp()
+const onRateApp = () => {
+  $track('app_review_settings_click')
+  openStoreReview()
+}
 defineProps({
   settingsIcon: String,
   activeTabKey: {type: String, default: 'info'}
@@ -322,6 +340,15 @@ onMounted(async () => {
 
 .section-row:last-child {
   border-bottom: none;
+}
+
+.rate-app-row {
+  width: 100%;
+  background: none;
+  border: none;
+  border-radius: 0;
+  font-family: inherit;
+  text-align: start;
 }
 
 .link-row {

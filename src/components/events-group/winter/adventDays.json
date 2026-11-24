@@ -1,0 +1,218 @@
+[
+  {
+    "day": 1,
+    "article": "der",
+    "word": "Adventskalender",
+    "image": "calendar.svg",
+    "example": "Jeden Tag öffne ich ein Türchen im Adventskalender.",
+    "kind": "classic",
+    "rewardCoins": 5
+  },
+  {
+    "day": 2,
+    "article": "die",
+    "word": "Kerze",
+    "image": "candle.svg",
+    "example": "Die Kerze brennt auf dem Tisch.",
+    "kind": "listen",
+    "rewardCoins": 5
+  },
+  {
+    "day": 3,
+    "article": "der",
+    "word": "Adventskranz",
+    "image": "christmas-wreath.svg",
+    "example": "Auf dem Adventskranz sind vier Kerzen.",
+    "kind": "build",
+    "rewardCoins": 5
+  },
+  {
+    "day": 4,
+    "article": "die",
+    "word": "Schneeflocke",
+    "image": "snowflake.svg",
+    "example": "Eine Schneeflocke fällt auf meine Nase.",
+    "kind": "odd",
+    "rewardCoins": 5
+  },
+  {
+    "day": 5,
+    "article": "der",
+    "word": "Strumpf",
+    "image": "christmas-stocking.svg",
+    "example": "Der Strumpf hängt am Kamin.",
+    "kind": "classic",
+    "rewardCoins": 5
+  },
+  {
+    "day": 6,
+    "article": "der",
+    "word": "Nikolaus",
+    "image": "Santa.svg",
+    "example": "Der Nikolaus bringt Nüsse und Schokolade.",
+    "kind": "listen",
+    "rewardCoins": 5
+  },
+  {
+    "day": 7,
+    "article": "das",
+    "word": "Plätzchen",
+    "image": "cookies.svg",
+    "example": "Wir backen Plätzchen mit Oma.",
+    "kind": "review",
+    "rewardCoins": 5
+  },
+  {
+    "day": 8,
+    "article": "der",
+    "word": "Schneemann",
+    "image": "snowman.svg",
+    "example": "Der Schneemann hat eine Nase aus einer Karotte.",
+    "kind": "build",
+    "rewardCoins": 5
+  },
+  {
+    "day": 9,
+    "article": "der",
+    "word": "Schlitten",
+    "image": "sled.svg",
+    "example": "Die Kinder fahren Schlitten.",
+    "kind": "odd",
+    "rewardCoins": 5
+  },
+  {
+    "day": 10,
+    "article": "der",
+    "word": "Handschuh",
+    "image": "mittens.svg",
+    "example": "Ohne Handschuhe sind meine Hände kalt.",
+    "kind": "classic",
+    "rewardCoins": 5
+  },
+  {
+    "day": 11,
+    "article": "der",
+    "word": "Schal",
+    "image": "scarf.svg",
+    "example": "Ich trage einen warmen Schal.",
+    "kind": "listen",
+    "rewardCoins": 5
+  },
+  {
+    "day": 12,
+    "article": "das",
+    "word": "Rentier",
+    "image": "reindeer.svg",
+    "example": "Das Rentier zieht den Schlitten.",
+    "kind": "build",
+    "rewardCoins": 5
+  },
+  {
+    "day": 13,
+    "article": "die",
+    "word": "Glocke",
+    "image": "christmas-bell.svg",
+    "example": "Die Glocken läuten am Heiligabend.",
+    "kind": "odd",
+    "rewardCoins": 5
+  },
+  {
+    "day": 14,
+    "article": "der",
+    "word": "Stern",
+    "image": "star.svg",
+    "example": "Oben auf dem Baum leuchtet ein Stern.",
+    "kind": "review",
+    "rewardCoins": 5
+  },
+  {
+    "day": 15,
+    "article": "der",
+    "word": "Schlittschuh",
+    "image": "ice-skates.svg",
+    "example": "Im Winter laufen wir Schlittschuh.",
+    "kind": "classic",
+    "rewardCoins": 5
+  },
+  {
+    "day": 16,
+    "article": "die",
+    "word": "Kugel",
+    "image": "christmas-ball.svg",
+    "example": "Die rote Kugel hängt am Baum.",
+    "kind": "listen",
+    "rewardCoins": 5
+  },
+  {
+    "day": 17,
+    "article": "die",
+    "word": "Schleife",
+    "image": "ribbon.svg",
+    "example": "Auf dem Geschenk ist eine Schleife.",
+    "kind": "build",
+    "rewardCoins": 5
+  },
+  {
+    "day": 18,
+    "article": "der",
+    "word": "Kamin",
+    "image": "chimney.svg",
+    "example": "Im Kamin brennt ein Feuer.",
+    "kind": "odd",
+    "rewardCoins": 5
+  },
+  {
+    "day": 19,
+    "article": "der",
+    "word": "Kuchen",
+    "image": "cake.svg",
+    "example": "Zum Kaffee gibt es Kuchen.",
+    "kind": "classic",
+    "rewardCoins": 5
+  },
+  {
+    "day": 20,
+    "article": "die",
+    "word": "Mütze",
+    "image": "santa-hat.svg",
+    "example": "Der Weihnachtsmann trägt eine rote Mütze.",
+    "kind": "listen",
+    "rewardCoins": 5
+  },
+  {
+    "day": 21,
+    "article": "der",
+    "word": "Weihnachtsschmuck",
+    "image": "christmas-decoration.svg",
+    "example": "Wir hängen den Weihnachtsschmuck an den Baum.",
+    "kind": "review",
+    "rewardCoins": 5
+  },
+  {
+    "day": 22,
+    "article": "die",
+    "word": "Süßigkeiten",
+    "image": "candy.svg",
+    "example": "Die Kinder lieben Süßigkeiten.",
+    "kind": "build",
+    "rewardCoins": 5
+  },
+  {
+    "day": 23,
+    "article": "der",
+    "word": "Weihnachtsbaum",
+    "image": "christmas-tree.svg",
+    "example": "Wir schmücken den Weihnachtsbaum.",
+    "kind": "odd",
+    "rewardCoins": 5
+  },
+  {
+    "day": 24,
+    "article": "das",
+    "word": "Geschenk",
+    "image": "gift.svg",
+    "example": "Am Heiligabend packen wir die Geschenke aus.",
+    "kind": "finale",
+    "rewardCoins": 5
+  }
+]

@@ -12264,7 +12264,9 @@
     "answerHighlighted": "Błędnie! Poprawna odpowiedź jest zaznaczona.",
     "excellentAnswers": "Świetnie, wszystko poprawnie!",
     "rightAnswer": "Błąd! Poprawna odpowiedź:",
-    "connectPaar": "Połącz pary"
+    "connectPaar": "Połącz pary",
+    "showTranslation": "Tłumaczenie",
+    "hideTranslation": "Ukryj tłumaczenie"
   },
   "winterQuestEleven": {
     "firTree": "Choinka",
@@ -12327,7 +12329,8 @@
     "quest-17": "Boże Narodzenie",
     "quest-18": "Przygotowania",
     "quest-19": "Noc Sylwestrowa",
-    "quest-20": "Niemieckie święto"
+    "quest-20": "Niemieckie święto",
+    "quest-22": "Wielki test świąteczny"
   },
   "valentineEventQuests": {
     "quest-1": "Lista słów",
@@ -12389,8 +12392,6 @@
     "christmasBallDescription": "Kup tę magiczną śnieżną kulę, aby zatrzymać zimową chwilę.",
     "christmasWreathName": "Świąteczny wieniec",
     "christmasWreathDescription": "Kup tradycyjny wieniec — symbol świąt i domowej atmosfery.",
-    "winterHonorName": "Zimowy honor",
-    "winterHonorDescription": "Zdobądź zimowy honor, wykonując zadania w wydarzeniu „Szept zimy”.",
     "metaChristmasName": "Mistrz Świąt",
     "metaChristmasDescription": "Odblokuj wszystkie osiągnięcia wydarzenia „Szept zimy” i zostań legendą świątecznego sezonu."
   },
@@ -17682,7 +17683,6 @@
     "guessfifthLabel": "Strażnik Mądrości",
     "guessfifthText": "Odgadnij 600 słów.",
     "guessfifthAward": "Nagroda: Statuetka mądrości"
-
   },
   "marathonEasyMode": {
     "correctLabel": "Odgadnięte Przedimki",
@@ -17916,7 +17916,9 @@
     "found": "Znaleziono przeciwnika!",
     "prepare": "Przygotuj się, gra zaraz się zacznie...",
     "cancel": "Anuluj",
-    "btnBack": "Wróć do strony głównej"
+    "btnBack": "Wróć do strony głównej",
+    "online": "Online",
+    "local": "Lokalnie"
   },
   "wordDuelSession": {
     "start": "Start!",
@@ -19474,7 +19476,7 @@
     "loading": "Ładowanie...",
     "errorText": "Wystąpił błąd podczas analizy...",
     "errorTip": "Spróbuj ponownie nieco później...",
-    "hintAds": " \uD83D\uDCFA Obejrzyj reklamę (+1 podpowiedź)"
+    "hintAds": " 📺 Obejrzyj reklamę (+1 podpowiedź)"
   },
   "hedgehogHleper": {
     "greetings": "Halli hallo! W czym mogę pomóc?",
@@ -19505,6 +19507,9 @@
     "descriptionThematic": "Wyjaśni przypadki i rodzajniki bezpośrednio podczas ćwiczeń, jeśli masz wątpliwości."
   },
   "questModals": {
+    "fixMistakesTitle": "Poprawmy błędy",
+    "fixMistakesText": "Powtórz zadania, w których był błąd. Popraw je, a lekcja zostanie zaliczona.",
+    "fixMistakesBtn": "Popraw błędy ({count})",
     "repeat": "Powtórz błędy",
     "next": "Następne zadanie ➔",
     "back": "Do tematów",
@@ -21131,5 +21136,207 @@
     "mediaCulture": "Media i kultura",
     "consumerMoney": "Konsumpcja i pieniądze",
     "scienceTech": "Nauka i technologia"
+  },
+  "rateApp": {
+    "settingsRow": "Oceń aplikację"
+  },
+  "eventTile": {
+    "startsIn": "za {time}",
+    "days": "{d} d",
+    "daysHours": "{d} d {h} godz.",
+    "hoursMinutes": "{h} godz. {m} min"
+  },
+  "adventCalendar": {
+    "tab": "Kalendarz",
+    "title": "Kalendarz adwentowy",
+    "subtitle": "Każdego dnia aż do Wigilii otwiera się nowe okienko. Otwórz je wszystkie i rozświetl całą wioskę!",
+    "progress": "Otwarto {count} z 24 okienek",
+    "lockedTitle": "Jeszcze nie!",
+    "lockedText": "To okienko otworzy się {day} grudnia.",
+    "lockedOk": "Rozumiem",
+    "wordOfDay": "Słowo dnia",
+    "didYouKnow": "Czy wiesz, że…?",
+    "start": "Rozpocznij zadanie",
+    "repeat": "Powtórz",
+    "done": "Otwarte",
+    "close": "Zamknij",
+    "testBadge": "Tryb testowy: wszystkie okienka są otwarte",
+    "finalTitle": "Wioska błyszczy!",
+    "finalText": "Otworzyłeś wszystkie 24 okienka. Frohe Weihnachten!",
+    "tasks": {
+      "build": "Ułóż słowa: połącz dwie połówki",
+      "review": "Dopasuj każde słowo do tłumaczenia"
+    },
+    "kinds": {
+      "classic": "Quiz słówek",
+      "listen": "Słuchanie",
+      "build": "Budowanie słów",
+      "odd": "Znajdź intruza",
+      "review": "Powtórka tygodnia",
+      "finale": "Finał wigilijny"
+    },
+    "days": {
+      "d1": {
+        "word": "kalendarz adwentowy",
+        "example": "Codziennie otwieram małe okienko w kalendarzu adwentowym.",
+        "fact": "1 grudnia dzieci w Niemczech otwierają pierwsze okienko. Często kryje się za nim kawałek czekolady."
+      },
+      "d2": {
+        "word": "świeca",
+        "example": "Na stole pali się świeca.",
+        "fact": "W adwencie Niemcy uwielbiają blask świec. W wielu domach świece stoją na każdym parapecie."
+      },
+      "d3": {
+        "word": "wieniec adwentowy",
+        "example": "Na wieńcu adwentowym są cztery świece.",
+        "fact": "W każdą niedzielę adwentu zapala się o jedną świecę więcej. Gdy palą się wszystkie cztery, święta są blisko."
+      },
+      "d4": {
+        "word": "płatek śniegu",
+        "example": "Płatek śniegu spada mi na nos.",
+        "fact": "Nie ma dwóch identycznych płatków śniegu. Po niemiecku „es schneit” znaczy „pada śnieg”."
+      },
+      "d5": {
+        "word": "skarpeta świąteczna",
+        "example": "Skarpeta wisi na kominku.",
+        "fact": "Niemieckie dzieci nie wieszają skarpet. W nocy z 5 na 6 grudnia stawiają przed drzwiami czysty but (der Stiefel)."
+      },
+      "d6": {
+        "word": "Święty Mikołaj",
+        "example": "Święty Mikołaj przynosi orzechy i czekoladę.",
+        "fact": "6 grudnia to Nikolaustag. Rano buty są pełne słodyczy, orzechów i mandarynek."
+      },
+      "d7": {
+        "word": "świąteczne ciasteczko",
+        "example": "Pieczemy ciasteczka z babcią.",
+        "fact": "W adwencie niemieckie rodziny pieką wiele rodzajów Plätzchen. Liczba mnoga brzmi tak samo: die Plätzchen."
+      },
+      "d8": {
+        "word": "bałwan",
+        "example": "Bałwan ma nos z marchewki.",
+        "fact": "Po niemiecku bałwan to dosłownie „śnieżny człowiek”: der Schnee + der Mann = der Schneemann."
+      },
+      "d9": {
+        "word": "sanki",
+        "example": "Dzieci jeżdżą na sankach.",
+        "fact": "Po niemiecku sankami się „jeździ” jak autem: Schlitten fahren."
+      },
+      "d10": {
+        "word": "rękawiczka",
+        "example": "Bez rękawiczek marzną mi ręce.",
+        "fact": "Handschuh dosłownie znaczy „but na rękę”. Rękawiczki z jednym palcem to Fäustlinge."
+      },
+      "d11": {
+        "word": "szalik",
+        "example": "Mam na sobie ciepły szalik.",
+        "fact": "Der Schal pochodzi od perskiego słowa „shal”. Wiele niemieckich słów przebyło długą drogę."
+      },
+      "d12": {
+        "word": "renifer",
+        "example": "Renifer ciągnie sanie.",
+        "fact": "Das Rentier jest rodzaju nijakiego, choć to duże zwierzę. Rodzajniki nie kierują się logiką, więc ucz się ich razem ze słowem."
+      },
+      "d13": {
+        "word": "dzwon",
+        "example": "W Wigilię biją dzwony.",
+        "fact": "W Wigilię wieczorem w całych Niemczech biją dzwony kościelne."
+      },
+      "d14": {
+        "word": "gwiazda",
+        "example": "Na czubku choinki świeci gwiazda.",
+        "fact": "Wielu Niemców zakłada na czubek choinki gwiazdę albo „Spitze” (szklany szpic)."
+      },
+      "d15": {
+        "word": "łyżwa",
+        "example": "Zimą jeździmy na łyżwach.",
+        "fact": "Po niemiecku na łyżwach się „biega”: Schlittschuh laufen."
+      },
+      "d16": {
+        "word": "bombka",
+        "example": "Czerwona bombka wisi na choince.",
+        "fact": "Szklane bombki wymyślono w Lauscha, małym miasteczku w Turyngii w Niemczech."
+      },
+      "d17": {
+        "word": "kokarda",
+        "example": "Na prezencie jest kokarda.",
+        "fact": "Die Schleife znaczy też „pętla”, na przykład pętla w programowaniu."
+      },
+      "d18": {
+        "word": "kominek",
+        "example": "W kominku pali się ogień.",
+        "fact": "W bajkach Mikołaj schodzi przez komin. W Niemczech prezenty często przynosi za to Christkind (Dzieciątko)."
+      },
+      "d19": {
+        "word": "ciasto",
+        "example": "Do kawy jest ciasto.",
+        "fact": "Stollen to słynne niemieckie ciasto świąteczne. Najbardziej znane pochodzi z Drezna."
+      },
+      "d20": {
+        "word": "czapka",
+        "example": "Mikołaj nosi czerwoną czapkę.",
+        "fact": "Die Mütze to miękka, ciepła czapka. Kapelusz z rondem to der Hut."
+      },
+      "d21": {
+        "word": "ozdoby świąteczne",
+        "example": "Wieszamy ozdoby na choince.",
+        "fact": "21 grudnia to najkrótszy dzień w roku. Światełka i ozdoby rozjaśniają ciemne wieczory."
+      },
+      "d22": {
+        "word": "słodycze",
+        "example": "Dzieci uwielbiają słodycze.",
+        "fact": "Süßigkeiten prawie zawsze występuje w liczbie mnogiej, tak jak polskie „słodycze”."
+      },
+      "d23": {
+        "word": "choinka",
+        "example": "Ubieramy choinkę.",
+        "fact": "Tradycja choinki pochodzi z Niemiec. Nazywa się ją też Tannenbaum albo Christbaum."
+      },
+      "d24": {
+        "word": "prezent",
+        "example": "W Wigilię rozpakowujemy prezenty.",
+        "fact": "W Niemczech prezenty otwiera się wieczorem 24 grudnia. Ta chwila nazywa się die Bescherung."
+      }
+    }
+  },
+  "winterChapters": {
+    "words": "Świąteczne słówka",
+    "advent": "Adwent i Mikołajki",
+    "christmas": "Boże Narodzenie",
+    "silvester": "Sylwester i Nowy Rok",
+    "winter": "Zima i święta",
+    "legends": "Legendy i zwyczaje",
+    "final": "Finał",
+    "finalLocked": "Otworzy się, gdy ukończysz wszystkie rozdziały",
+    "chapterLocked": "Otworzy się, gdy ukończysz poprzedni rozdział",
+    "lockedTitle": "Najpierw ukończ zadanie „{title}”",
+    "lockedGo": "Przejdź do zadania",
+    "kinds": {
+      "choice": "Quiz",
+      "reading": "Czytanie",
+      "matching": "Pary słów",
+      "chooseWord": "Uzupełnij lukę",
+      "pictures": "Słowa z obrazkami",
+      "final": "Test końcowy"
+    },
+    "counts": {
+      "choice": "Pytania: {n}",
+      "reading": "Teksty: {n}",
+      "matching": "Rundy: {n}",
+      "chooseWord": "Zdania: {n}",
+      "pictures": "Słowa: {n}",
+      "final": "Zadania: {n}"
+    }
+  },
+  "winterBanner": {
+    "advent": "Kalendarz adwentowy",
+    "quests": "Zadania za płatki śniegu",
+    "shop": "Prezenty za płatki śniegu"
+  },
+  "winterShop": {
+    "reqCoins": "Płatki śniegu",
+    "reqDoors": "Okienka kalendarza",
+    "ok": "Rozumiem",
+    "needDoors": "otwórz okienka kalendarza: {count}",
+    "doorsProgress": "Okienka kalendarza: {done} z {need}"
   }
 }

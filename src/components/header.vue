@@ -123,6 +123,7 @@ import {ref, computed, watch, onMounted, onBeforeUnmount} from 'vue'
 import {useRouter} from 'vue-router'
 import {userAuthStore} from '../../store/authStore.js'
 import {useBreakPointsStore} from '../../store/breakPointsStore.js'
+import { WINTER_FORCE_OPEN } from '../../store/eventsStore.js'
 import { useEasterEggsStore } from '../../store/easterEggsStore.js'
 import { useRankUserStore} from "../../store/rankStore.js";
 const rankStore = useRankUserStore()
@@ -279,8 +280,8 @@ const menuItems = computed(() => {
         url: '/event-winter',
         isEvent: true,
         eventKey: 'winter',
-        startDate: '18.12 00:00',
-        endDate: '02.01 23:59'
+        startDate: '01.12 00:00',
+        endDate: '03.01 23:59'
       },
       {
         id: 'valentine',
@@ -312,7 +313,7 @@ const menuItems = computed(() => {
     ]
     const processedEvents = allEvents.map(event => ({
       ...event,
-      url: isEventActive(event.startDate, event.endDate) ? event.url : null,
+      url: (isEventActive(event.startDate, event.endDate) || (WINTER_FORCE_OPEN && event.eventKey === 'winter')) ? event.url : null,
     }))
     items.push(
         {id: 'events', valueKey: 'nav.events', children: processedEvents}

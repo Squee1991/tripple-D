@@ -23,7 +23,7 @@ export const eventWinterAchievements = [
 				name: 'winterAchievements.everyQuestName',
 				description: 'winterAchievements.everyQuestDescription',
 				currentProgress: 0,
-				targetProgress: 21,
+				targetProgress: 22,
 				icon: '🏔️'
 			},
 			{
@@ -59,19 +59,11 @@ export const eventWinterAchievements = [
 				icon: '🎀'
 			},
 			{
-				id: 'winterHonor',
-				name: 'winterAchievements.winterHonorName',
-				description: 'winterAchievements.winterHonorDescription',
-				currentProgress: 0,
-				targetProgress: 1000,
-				icon: '💠'
-			},
-			{
 				id: 'metaChristmas',
 				name: 'winterAchievements.metaChristmasName',
 				description: 'winterAchievements.metaChristmasDescription',
 				currentProgress: 0,
-				targetProgress: 8,
+				targetProgress: 7,
 				icon: '🎄'
 			}
 		]

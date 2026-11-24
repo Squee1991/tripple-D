@@ -9697,7 +9697,7 @@
     "questFourteen": "Je vais à la vieille école.",
     "questFourteenTip": "Accusatif (féminin) : l'article 'die' ne change pas, on met la terminaison -e.",
     "questFifteen": "Inscrivez la forme (nett) : Wo sind die ___ Leute?",
-    "questFifteenTip" : "Pluriel : avec l'article défini, on écrit toujours la terminaison -en."
+    "questFifteenTip": "Pluriel : avec l'article défini, on écrit toujours la terminaison -en."
   },
   "edgeImagesQuestTwo": {
     "title": "Mélange",
@@ -12264,7 +12264,9 @@
     "answerHighlighted": "Incorrect ! La bonne réponse est mise en évidence.",
     "excellentAnswers": "Excellent, tout est correct !",
     "rightAnswer": "Erreur ! La bonne réponse était :",
-    "connectPaar": "Relie les paires"
+    "connectPaar": "Relie les paires",
+    "showTranslation": "Traduction",
+    "hideTranslation": "Masquer la traduction"
   },
   "winterQuestEleven": {
     "firTree": "Sapin",
@@ -12327,7 +12329,8 @@
     "quest-17": "Noël",
     "quest-18": "Préparatifs",
     "quest-19": "Réveillon du Nouvel An",
-    "quest-20": "Fête allemande"
+    "quest-20": "Fête allemande",
+    "quest-22": "Le grand test de Noël"
   },
   "valentineEventQuests": {
     "quest-1": "Liste de mots",
@@ -12389,8 +12392,6 @@
     "christmasBallDescription": "Achète cette boule à neige magique pour capturer un instant d'hiver.",
     "christmasWreathName": "Couronne de Noël",
     "christmasWreathDescription": "Achète la couronne traditionnelle, symbole de fête et de confort intérieur.",
-    "winterHonorName": "Honneur hivernal",
-    "winterHonorDescription": "Gagne le respect de l'hiver en accomplissant les missions de l'événement « Murmures d'hiver ».",
     "metaChristmasName": "Maître de Noël",
     "metaChristmasDescription": "Débloque tous les succès de l'événement « Murmures d'hiver » et deviens une légende de la saison."
   },
@@ -19475,7 +19476,7 @@
     "loading": "Chargement...",
     "errorText": "Une erreur s'est produite lors de l'analyse...",
     "errorTip": "Réessaie un peu plus tard...",
-    "hintAds": " \uD83D\uDCFA Regarder une pub (+1 indice)"
+    "hintAds": " 📺 Regarder une pub (+1 indice)"
   },
   "hedgehogHleper": {
     "greetings": "Halli hallo ! Comment puis-je aider ?",
@@ -19506,6 +19507,9 @@
     "descriptionThematic": "Explique les cas et les articles directement pendant la pratique en cas de doute."
   },
   "questModals": {
+    "fixMistakesTitle": "Corrigeons les erreurs",
+    "fixMistakesText": "Refais les tâches ratées. Corrige-les et la leçon sera validée.",
+    "fixMistakesBtn": "Corriger les erreurs ({count})",
     "repeat": "Réviser les erreurs",
     "next": "Tâche suivante ➔",
     "back": "Aux thèmes",
@@ -21132,5 +21136,207 @@
     "mediaCulture": "Médias et culture",
     "consumerMoney": "Consommation et argent",
     "scienceTech": "Science et technologie"
+  },
+  "rateApp": {
+    "settingsRow": "Noter l'appli"
+  },
+  "eventTile": {
+    "startsIn": "dans {time}",
+    "days": "{d} j",
+    "daysHours": "{d} j {h} h",
+    "hoursMinutes": "{h} h {m} min"
+  },
+  "adventCalendar": {
+    "tab": "Calendrier",
+    "title": "Calendrier de l'Avent",
+    "subtitle": "Chaque jour jusqu'au réveillon, une nouvelle case s'ouvre. Ouvre-les toutes et illumine tout le village !",
+    "progress": "{count} cases ouvertes sur 24",
+    "lockedTitle": "Pas encore !",
+    "lockedText": "Cette case s'ouvre le {day} décembre.",
+    "lockedOk": "Compris",
+    "wordOfDay": "Mot du jour",
+    "didYouKnow": "Le savais-tu ?",
+    "start": "Commencer la tâche",
+    "repeat": "Recommencer",
+    "done": "Ouverte",
+    "close": "Fermer",
+    "testBadge": "Mode test : toutes les cases sont ouvertes",
+    "finalTitle": "Le village brille !",
+    "finalText": "Tu as ouvert les 24 cases. Frohe Weihnachten !",
+    "tasks": {
+      "build": "Construis les mots : relie les deux moitiés",
+      "review": "Associe chaque mot à sa traduction"
+    },
+    "kinds": {
+      "classic": "Quiz de mots",
+      "listen": "Écoute",
+      "build": "Construction de mots",
+      "odd": "L'intrus",
+      "review": "Révision de la semaine",
+      "finale": "Finale du réveillon"
+    },
+    "days": {
+      "d1": {
+        "word": "calendrier de l'Avent",
+        "example": "Chaque jour, j'ouvre une petite case du calendrier de l'Avent.",
+        "fact": "Le 1er décembre, les enfants en Allemagne ouvrent la première case. Derrière, il y a souvent un morceau de chocolat."
+      },
+      "d2": {
+        "word": "bougie",
+        "example": "La bougie brûle sur la table.",
+        "fact": "Pendant l'Avent, les Allemands adorent la lumière des bougies. Beaucoup de maisons en ont sur chaque rebord de fenêtre."
+      },
+      "d3": {
+        "word": "couronne de l'Avent",
+        "example": "Il y a quatre bougies sur la couronne de l'Avent.",
+        "fact": "Chaque dimanche de l'Avent, on allume une bougie de plus. Quand les quatre brûlent, Noël est proche."
+      },
+      "d4": {
+        "word": "flocon de neige",
+        "example": "Un flocon de neige tombe sur mon nez.",
+        "fact": "Il n'existe pas deux flocons de neige identiques. En allemand, « es schneit » signifie « il neige »."
+      },
+      "d5": {
+        "word": "chaussette de Noël",
+        "example": "La chaussette est accrochée à la cheminée.",
+        "fact": "Les enfants allemands n'accrochent pas de chaussettes. La nuit du 5 décembre, ils posent une botte propre (der Stiefel) devant la porte."
+      },
+      "d6": {
+        "word": "saint Nicolas",
+        "example": "Saint Nicolas apporte des noix et du chocolat.",
+        "fact": "Le 6 décembre, c'est le Nikolaustag. Le matin, les bottes sont pleines de bonbons, de noix et de mandarines."
+      },
+      "d7": {
+        "word": "biscuit de Noël",
+        "example": "Nous faisons des biscuits avec mamie.",
+        "fact": "Pendant l'Avent, les familles allemandes préparent de nombreuses sortes de Plätzchen. Le pluriel est identique : die Plätzchen."
+      },
+      "d8": {
+        "word": "bonhomme de neige",
+        "example": "Le bonhomme de neige a un nez en carotte.",
+        "fact": "En allemand, le bonhomme de neige est un « homme de neige » : der Schnee + der Mann = der Schneemann."
+      },
+      "d9": {
+        "word": "luge",
+        "example": "Les enfants font de la luge.",
+        "fact": "En allemand, on « conduit » une luge : Schlitten fahren."
+      },
+      "d10": {
+        "word": "gant",
+        "example": "Sans gants, j'ai froid aux mains.",
+        "fact": "Handschuh signifie littéralement « chaussure de main ». Les moufles s'appellent Fäustlinge."
+      },
+      "d11": {
+        "word": "écharpe",
+        "example": "Je porte une écharpe chaude.",
+        "fact": "Der Schal vient du mot persan « shal ». Beaucoup de mots allemands ont fait un long voyage."
+      },
+      "d12": {
+        "word": "renne",
+        "example": "Le renne tire le traîneau.",
+        "fact": "Das Rentier est neutre, même si c'est un grand animal. Les articles ne suivent pas la logique : apprends-les avec le mot."
+      },
+      "d13": {
+        "word": "cloche",
+        "example": "Les cloches sonnent le soir du réveillon.",
+        "fact": "Le soir du 24 décembre, les cloches des églises sonnent dans toute l'Allemagne."
+      },
+      "d14": {
+        "word": "étoile",
+        "example": "Une étoile brille en haut du sapin.",
+        "fact": "Beaucoup d'Allemands mettent une étoile ou une « Spitze » (une pointe en verre) en haut du sapin de Noël."
+      },
+      "d15": {
+        "word": "patin à glace",
+        "example": "En hiver, nous faisons du patin à glace.",
+        "fact": "En allemand, on « court » en patins : Schlittschuh laufen."
+      },
+      "d16": {
+        "word": "boule de Noël",
+        "example": "La boule rouge est accrochée au sapin.",
+        "fact": "Les boules de Noël en verre ont été inventées à Lauscha, une petite ville de Thuringe, en Allemagne."
+      },
+      "d17": {
+        "word": "nœud",
+        "example": "Il y a un nœud sur le cadeau.",
+        "fact": "Die Schleife veut aussi dire « boucle », par exemple une boucle en programmation."
+      },
+      "d18": {
+        "word": "cheminée",
+        "example": "Un feu brûle dans la cheminée.",
+        "fact": "Dans les histoires, le père Noël descend par la cheminée. En Allemagne, c'est souvent le Christkind (l'Enfant Jésus) qui apporte les cadeaux."
+      },
+      "d19": {
+        "word": "gâteau",
+        "example": "Il y a du gâteau avec le café.",
+        "fact": "Le Stollen est un célèbre gâteau de Noël allemand. Le plus connu vient de Dresde."
+      },
+      "d20": {
+        "word": "bonnet",
+        "example": "Le père Noël porte un bonnet rouge.",
+        "fact": "Die Mütze est un bonnet doux et chaud. Un chapeau à bord, c'est der Hut."
+      },
+      "d21": {
+        "word": "décorations de Noël",
+        "example": "Nous accrochons les décorations au sapin.",
+        "fact": "Le 21 décembre est le jour le plus court de l'année. Les lumières et les décorations égaient les soirées sombres."
+      },
+      "d22": {
+        "word": "sucreries",
+        "example": "Les enfants adorent les sucreries.",
+        "fact": "Süßigkeiten s'emploie presque toujours au pluriel, comme « sucreries » en français."
+      },
+      "d23": {
+        "word": "sapin de Noël",
+        "example": "Nous décorons le sapin de Noël.",
+        "fact": "La tradition du sapin de Noël vient d'Allemagne. On l'appelle aussi Tannenbaum ou Christbaum."
+      },
+      "d24": {
+        "word": "cadeau",
+        "example": "Le soir du réveillon, nous déballons les cadeaux.",
+        "fact": "En Allemagne, on ouvre les cadeaux le soir du 24 décembre. Ce moment s'appelle die Bescherung."
+      }
+    }
+  },
+  "winterChapters": {
+    "words": "Mots de fête",
+    "advent": "Avent et saint Nicolas",
+    "christmas": "Noël",
+    "silvester": "Saint-Sylvestre et Nouvel An",
+    "winter": "Hiver et fêtes",
+    "legends": "Légendes et coutumes",
+    "final": "Finale",
+    "finalLocked": "S'ouvre quand tu as terminé tous les chapitres",
+    "chapterLocked": "S'ouvre quand tu as terminé le chapitre précédent",
+    "lockedTitle": "Termine d'abord la tâche « {title} »",
+    "lockedGo": "Aller à la tâche",
+    "kinds": {
+      "choice": "Quiz",
+      "reading": "Lecture",
+      "matching": "Paires de mots",
+      "chooseWord": "Texte à trous",
+      "pictures": "Mots en images",
+      "final": "Test final"
+    },
+    "counts": {
+      "choice": "{n} questions",
+      "reading": "{n} textes",
+      "matching": "{n} manches",
+      "chooseWord": "{n} phrases",
+      "pictures": "{n} mots",
+      "final": "{n} tâches"
+    }
+  },
+  "winterBanner": {
+    "advent": "Calendrier de l'Avent",
+    "quests": "Tâches contre des flocons",
+    "shop": "Cadeaux contre des flocons"
+  },
+  "winterShop": {
+    "reqCoins": "Flocons",
+    "reqDoors": "Cases du calendrier",
+    "ok": "Compris",
+    "needDoors": "ouvre {count} cases du calendrier",
+    "doorsProgress": "Cases du calendrier : {done} sur {need}"
   }
 }

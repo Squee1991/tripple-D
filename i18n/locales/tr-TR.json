@@ -9139,8 +9139,6 @@
     "questFifteen": "Doğru seçeneği belirleyin: Harika bir gündü",
     "questFifteenTip": "Belirsiz artikel (ilk kez). Eril cins (der). 'ein' artikeli boştur, bu nedenle sıfat 'der' artikelinden -er ekini alır."
   },
-
-
   "secretLandsQuestOne": {
     "title": "Sonuç",
     "description": "Karışık eğitim: Perfekt ve Futur 1'de belirsiz artikellerle çalışma. Temalar: günlük yaşam, şehir, ulaşım, yemek.",
@@ -9666,10 +9664,6 @@
     "questFifteen": "Cümleyi kur: İlginç bir sergi göreceğiz",
     "questFifteenTip": "Sergi: dişil (die). 'eine' artikeli -e ile biter, bu yüzden sıfat artikelden -e ekini alır."
   },
-
-
-
-
   "edgeImagesQuestOne": {
     "title": "Başlangıç",
     "description": "Der, die, das'tan sonra sıfat tamlamalarını doğru yapmayı öğreniyoruz.",
@@ -10195,12 +10189,6 @@
     "questFifteen": "Formu yazın (lecker): Ich werde die ___ Pizza essen.",
     "questFifteenTip": "Akkusativ (dişil): 'die' temel artikeli, sıfat artikelden -e ekini alır."
   },
-
-
-
-
-
-
   "timeGageQuestOne": {
     "title": "Tanışma ve İletişim",
     "description": "İletişim durumlarında gramer çalışıyoruz: buluşma planlarından geçmişe dair anlatılara kadar.",
@@ -10705,7 +10693,6 @@
     "questFifteen": "Vaktim olursa bilet alacağım.",
     "questFifteenTip": "Wenn fiili sona atar."
   },
-
   "pastValleyQuestOne": {
     "title": "Perfekt Temelleri",
     "description": "Ne yaptın? Geçmiş zamanla tanışıyoruz: 'Satın aldım', 'Yaptık'.",
@@ -11043,7 +11030,6 @@
     "questFourteenTip": "singen: güçlü bir fiildir. 'ge-' ön eki eklenir ve '-en' takısı korunur. Kökte ünlü değişimi olur (i, u olarak değişir).",
     "questFifteen": "Seçin: Spor yaptım."
   },
-
   "actionValleyQuestOne": {
     "title": "Bana, Sana, Ona",
     "description": "Kişi zamirleriyle Dativ çalışıyoruz. Kime yardım ediyoruz ve kime hediye veriyoruz?",
@@ -11410,7 +11396,6 @@
     "questFifteen": "Seçin: Kiminle konuşuyorsun?",
     "questFifteenTip": "İnsanlar için edat + soru (Mit wem?) kullanın."
   },
-
   "pluralLandQuestOne": {
     "title": "Yolculuk",
     "description": "Futur I kullanarak bir gezi planlıyoruz. Zamanı, mekanı ve eylemi birleştirmeyi öğreniyoruz.",
@@ -11712,7 +11697,6 @@
     "questFourteen": "Kurun: Bayramı unutmayacağız.",
     "questFifteen": "Doğru seçeneği belirleyin"
   },
-
   "orderValleyQuestOne": {
     "title": "Fiil Sonda!",
     "description": "Yan cümlelerde kelime sırası çalışıyoruz. Temel kural: Fiil en sona gider.",
@@ -12130,7 +12114,6 @@
     "questEleven": "Dinleyin ve cümleyi yazın",
     "questElevenTip": "'dass' bağlacı 'wäscht' fiilini sona koyar. Kendini (tamamen) yıkadığı için Akkusativ — 'sich' kullanılır."
   },
-
   "pwa": {
     "title": "Skillupgerman'ı Yükleyin",
     "sub": "Hızlı erişim ve kolaylık için uygulamayı ana ekrana ekleyin!",
@@ -12279,7 +12262,9 @@
     "answerHighlighted": "Yanlış! Doğru cevap vurgulandı.",
     "excellentAnswers": "Harika, her şey doğru!",
     "rightAnswer": "Hata! Doğru cevap:",
-    "connectPaar": "Eşleştir"
+    "connectPaar": "Eşleştir",
+    "showTranslation": "Çeviri",
+    "hideTranslation": "Çeviriyi gizle"
   },
   "winterQuestEleven": {
     "firTree": "Yılbaşı ağacı",
@@ -12342,7 +12327,8 @@
     "quest-17": "Noel",
     "quest-18": "Hazırlık",
     "quest-19": "Yılbaşı Gecesi",
-    "quest-20": "Alman Bayramı"
+    "quest-20": "Alman Bayramı",
+    "quest-22": "Büyük Noel testi"
   },
   "valentineEventQuests": {
     "quest-1": "Kelime Listesi",
@@ -12404,8 +12390,6 @@
     "christmasBallDescription": "Bu büyülü kar küresini satın al ve kışın bir anını yakala.",
     "christmasWreathName": "Noel çelengi",
     "christmasWreathDescription": "Bayramın ve ev sıcaklığının sembolü olan geleneksel çelengi satın al.",
-    "winterHonorName": "Kış onuru",
-    "winterHonorDescription": "“Kışın Fısıltısı” etkinliğinde görevler yaparak kış onuru kazan.",
     "metaChristmasName": "Noel ustası",
     "metaChristmasDescription": "“Kışın Fısıltısı” etkinliğinin tüm başarılarını aç ve yılbaşı sezonunun efsanesi ol."
   },
@@ -19169,7 +19153,6 @@
     "correct": "Doğru",
     "incorrect": "Yanlış, doğrusu"
   },
-
   "stripeCancel": {
     "cancelSub": "Aboneliği iptal et",
     "cancelPayment": "Ödeme iptal edildi",
@@ -19491,7 +19474,7 @@
     "loading": "Yükleniyor...",
     "errorText": "Analiz sırasında bir hata oluştu...",
     "errorTip": "Biraz sonra tekrar dene...",
-    "hintAds": " \uD83D\uDCFA Reklam izle (+1 ipucu)"
+    "hintAds": " 📺 Reklam izle (+1 ipucu)"
   },
   "hedgehogHleper": {
     "greetings": "Halli hallo! Nasıl yardımı olabilirim?",
@@ -19522,14 +19505,17 @@
     "descriptionThematic": "Tereddütte kaldığınızda doğrudan alıştırma sırasında artikelleri ve ismin hallerini açıklar."
   },
   "questModals": {
-    "repeat": "Xatolarni takrorlash",
-    "next": "Keyingi vazifa ➔",
-    "back": "Mavzularga",
-    "mistakes": "Mukofot olinmadi",
-    "areErrors": "XATOLAR BOR",
-    "succesCompleted": "BAJARILDI",
-    "rewardGot": "Siz mukofot oldingiz:",
-    "questCompletedAgain": "Vazifa qaytadan bajarildi:"
+    "fixMistakesTitle": "Hatalarını düzeltelim",
+    "fixMistakesText": "Yanlış yaptığın görevleri tekrar çöz. Düzeltirsen ders tamamlanır.",
+    "fixMistakesBtn": "Hataları düzelt ({count})",
+    "repeat": "Hataları tekrarla",
+    "next": "Sonraki görev ➔",
+    "back": "Konulara",
+    "mistakes": "Ödül alınmadı",
+    "areErrors": "HATALAR VAR",
+    "succesCompleted": "TAMAMLANDI",
+    "rewardGot": "Ödül kazandın:",
+    "questCompletedAgain": "Görev tekrar tamamlandı:"
   },
   "calendarHints": {
     "first": "Bu hafta harika bir tempo! Aynen böyle devam",
@@ -21148,5 +21134,207 @@
     "mediaCulture": "Medya ve kültür",
     "consumerMoney": "Tüketim ve para",
     "scienceTech": "Bilim ve teknoloji"
+  },
+  "rateApp": {
+    "settingsRow": "Uygulamayı değerlendir"
+  },
+  "eventTile": {
+    "startsIn": "{time} sonra",
+    "days": "{d} g",
+    "daysHours": "{d} g {h} sa",
+    "hoursMinutes": "{h} sa {m} dk"
+  },
+  "adventCalendar": {
+    "tab": "Takvim",
+    "title": "Advent takvimi",
+    "subtitle": "Noel arifesine kadar her gün yeni bir pencere açılıyor. Hepsini aç ve tüm köyü aydınlat!",
+    "progress": "24 pencereden {count} tanesi açıldı",
+    "lockedTitle": "Henüz değil!",
+    "lockedText": "Bu pencere {day} Aralık'ta açılır.",
+    "lockedOk": "Anladım",
+    "wordOfDay": "Günün kelimesi",
+    "didYouKnow": "Biliyor muydun?",
+    "start": "Göreve başla",
+    "repeat": "Tekrarla",
+    "done": "Açıldı",
+    "close": "Kapat",
+    "testBadge": "Test modu: tüm pencereler açık",
+    "finalTitle": "Köy ışıl ışıl!",
+    "finalText": "24 pencerenin hepsini açtın. Frohe Weihnachten!",
+    "tasks": {
+      "build": "Kelimeleri oluştur: iki yarıyı birleştir",
+      "review": "Her kelimeyi çevirisiyle eşleştir"
+    },
+    "kinds": {
+      "classic": "Kelime testi",
+      "listen": "Dinleme",
+      "build": "Kelime kurma",
+      "odd": "Farklı olanı bul",
+      "review": "Haftalık tekrar",
+      "finale": "Noel arifesi finali"
+    },
+    "days": {
+      "d1": {
+        "word": "advent takvimi",
+        "example": "Her gün advent takviminde küçük bir pencere açıyorum.",
+        "fact": "1 Aralık'ta Almanya'daki çocuklar ilk pencereyi açar. Arkasında genellikle bir parça çikolata olur."
+      },
+      "d2": {
+        "word": "mum",
+        "example": "Mum masanın üzerinde yanıyor.",
+        "fact": "Advent döneminde Almanlar mum ışığını çok sever. Birçok evde her pencere kenarında mum bulunur."
+      },
+      "d3": {
+        "word": "advent çelengi",
+        "example": "Advent çelenginde dört mum var.",
+        "fact": "Advent'in her pazar günü bir mum daha yakılır. Dördü de yandığında Noel yakındır."
+      },
+      "d4": {
+        "word": "kar tanesi",
+        "example": "Burnuma bir kar tanesi düşüyor.",
+        "fact": "Birbirinin tıpatıp aynısı iki kar tanesi yoktur. Almancada \"es schneit\" \"kar yağıyor\" demektir."
+      },
+      "d5": {
+        "word": "Noel çorabı",
+        "example": "Çorap şöminede asılı duruyor.",
+        "fact": "Alman çocukları çorap asmaz. 5 Aralık gecesi kapının önüne temiz bir çizme (der Stiefel) koyarlar."
+      },
+      "d6": {
+        "word": "Aziz Nikolaus",
+        "example": "Aziz Nikolaus fındık ve çikolata getirir.",
+        "fact": "6 Aralık Nikolaustag'dır. Sabah çizmeler şeker, fındık ve mandalinayla dolu olur."
+      },
+      "d7": {
+        "word": "Noel kurabiyesi",
+        "example": "Büyükannemle kurabiye pişiriyoruz.",
+        "fact": "Alman aileleri Advent döneminde birçok çeşit Plätzchen pişirir. Çoğulu da aynıdır: die Plätzchen."
+      },
+      "d8": {
+        "word": "kardan adam",
+        "example": "Kardan adamın burnu havuçtan.",
+        "fact": "Almancada da kardan adam bir \"kar adamı\"dır: der Schnee + der Mann = der Schneemann."
+      },
+      "d9": {
+        "word": "kızak",
+        "example": "Çocuklar kızak kayıyor.",
+        "fact": "Almancada kızak \"sürülür\", tıpkı araba gibi: Schlitten fahren."
+      },
+      "d10": {
+        "word": "eldiven",
+        "example": "Eldivensiz ellerim üşüyor.",
+        "fact": "Handschuh kelimesi \"el ayakkabısı\" anlamına gelir. Tek parmaklı eldivenlere Fäustlinge denir."
+      },
+      "d11": {
+        "word": "atkı",
+        "example": "Sıcak bir atkı takıyorum.",
+        "fact": "Der Schal, Farsça \"shal\" kelimesinden gelir. Birçok Almanca kelime uzun bir yolculuk yapmıştır."
+      },
+      "d12": {
+        "word": "ren geyiği",
+        "example": "Ren geyiği kızağı çekiyor.",
+        "fact": "Das Rentier büyük bir hayvan olsa da nötr cinstendir. Artikeller mantığa uymaz, bu yüzden onları kelimeyle birlikte öğren."
+      },
+      "d13": {
+        "word": "çan",
+        "example": "Noel arifesinde çanlar çalar.",
+        "fact": "Noel arifesinde akşam tüm Almanya'da kilise çanları çalar."
+      },
+      "d14": {
+        "word": "yıldız",
+        "example": "Ağacın tepesinde bir yıldız parlıyor.",
+        "fact": "Birçok Alman Noel ağacının tepesine bir yıldız ya da bir \"Spitze\" (cam bir uç) koyar."
+      },
+      "d15": {
+        "word": "paten",
+        "example": "Kışın buz patenine gideriz.",
+        "fact": "Almancada patenle \"koşulur\": Schlittschuh laufen."
+      },
+      "d16": {
+        "word": "Noel topu",
+        "example": "Kırmızı top ağaçta asılı.",
+        "fact": "Cam Noel topları, Almanya'nın Thüringen eyaletindeki küçük Lauscha kasabasında icat edildi."
+      },
+      "d17": {
+        "word": "fiyonk",
+        "example": "Hediyenin üzerinde bir fiyonk var.",
+        "fact": "Die Schleife aynı zamanda \"döngü\" demektir, örneğin programlamadaki döngü."
+      },
+      "d18": {
+        "word": "şömine",
+        "example": "Şöminede ateş yanıyor.",
+        "fact": "Hikâyelerde Noel Baba bacadan iner. Almanya'da ise hediyeleri çoğu zaman Christkind (Çocuk İsa) getirir."
+      },
+      "d19": {
+        "word": "kek, pasta",
+        "example": "Kahvenin yanında kek var.",
+        "fact": "Stollen ünlü bir Alman Noel kekidir. En ünlüsü Dresden'den gelir."
+      },
+      "d20": {
+        "word": "bere",
+        "example": "Noel Baba kırmızı bir bere takıyor.",
+        "fact": "Die Mütze yumuşak ve sıcak bir beredir. Kenarlı şapkaya der Hut denir."
+      },
+      "d21": {
+        "word": "Noel süsleri",
+        "example": "Süsleri ağaca asıyoruz.",
+        "fact": "21 Aralık yılın en kısa günüdür. Işıklar ve süsler karanlık akşamları aydınlatır."
+      },
+      "d22": {
+        "word": "tatlılar, şekerlemeler",
+        "example": "Çocuklar şekerlemelere bayılır.",
+        "fact": "Süßigkeiten neredeyse her zaman çoğul kullanılır, tıpkı İngilizcedeki \"sweets\" gibi."
+      },
+      "d23": {
+        "word": "Noel ağacı",
+        "example": "Noel ağacını süslüyoruz.",
+        "fact": "Noel ağacı geleneği Almanya'dan gelir. Ona Tannenbaum ya da Christbaum da denir."
+      },
+      "d24": {
+        "word": "hediye",
+        "example": "Noel arifesinde hediyeleri açarız.",
+        "fact": "Almanya'da hediyeler 24 Aralık akşamı açılır. Bu ana die Bescherung denir."
+      }
+    }
+  },
+  "winterChapters": {
+    "words": "Bayram kelimeleri",
+    "advent": "Advent ve Nikolaus",
+    "christmas": "Noel",
+    "silvester": "Yılbaşı gecesi ve Yeni Yıl",
+    "winter": "Kış ve bayramlar",
+    "legends": "Efsaneler ve gelenekler",
+    "final": "Final",
+    "finalLocked": "Tüm bölümleri bitirince açılır",
+    "chapterLocked": "Önceki bölümü bitirince açılır",
+    "lockedTitle": "Önce \"{title}\" görevini tamamla",
+    "lockedGo": "Göreve git",
+    "kinds": {
+      "choice": "Test",
+      "reading": "Okuma",
+      "matching": "Kelime çiftleri",
+      "chooseWord": "Boşluğu doldur",
+      "pictures": "Resimli kelimeler",
+      "final": "Final testi"
+    },
+    "counts": {
+      "choice": "{n} soru",
+      "reading": "{n} metin",
+      "matching": "{n} tur",
+      "chooseWord": "{n} cümle",
+      "pictures": "{n} kelime",
+      "final": "{n} görev"
+    }
+  },
+  "winterBanner": {
+    "advent": "Advent takvimi",
+    "quests": "Kar taneleri için görevler",
+    "shop": "Kar tanelerine hediyeler"
+  },
+  "winterShop": {
+    "reqCoins": "Kar taneleri",
+    "reqDoors": "Takvim pencereleri",
+    "ok": "Anladım",
+    "needDoors": "{count} takvim penceresi aç",
+    "doorsProgress": "Takvim pencereleri: {done} / {need}"
   }
 }

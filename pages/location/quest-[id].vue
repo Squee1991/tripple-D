@@ -193,6 +193,15 @@
           </div>
         </div>
       </div>
+      <div v-if="showFixMistakes" class="fix-mistakes">
+        <div class="fix-mistakes__card">
+          <h2 class="fix-mistakes__title">{{ t('questModals.fixMistakesTitle') }}</h2>
+          <p class="fix-mistakes__text">{{ t('questModals.fixMistakesText') }}</p>
+          <button class="btn btn-next fix-mistakes__btn" data-track="quest_fix_mistakes" @click="startFixMistakes">
+            {{ t('questModals.fixMistakesBtn', {count: mistakesToFix}) }}
+          </button>
+        </div>
+      </div>
       <VQuestResultScreen
           :finished="shouldShowResultScreen"
           :has-mistakes="questStore.hasMistakes"
@@ -279,7 +288,7 @@ import {useGermanKeyboard} from '~/composables/useGermanKeyboard.js'
 import {useQuestLives} from '~/composables/useQuestLives.js'
 import VStreakModal from '~/src/components/V-streak.vue'
 import VReminderModal from '~/src/components/V-reminderModal.vue'
-import {onQuestSuccessForReview} from '~/utils/appReview.js'
+import {onQuestSuccessForReview, isStreakMilestone} from '~/utils/appReview.js'
 import {shouldAskForReminders, postponeReminderPrompt, enableReminders, markLessonDoneToday} from '~/utils/reminders.js'
 import { dailyStore } from '~/store/dailyStore.js'
 import hedgehogLeaveSession from 'assets/animation/hedgehog_leave_session.json'
@@ -324,8 +333,20 @@ function isStreakDot(index) {
   return !!f && index >= f.from && index <= f.to
 }
 
+// Квест закончился с ошибками, а жизни есть: вместо экрана «Есть ошибки» сразу предлагаем их исправить.
+// Квест засчитывается, когда исправлены все ошибки
+const showFixMistakes = ref(false)
+const mistakesToFix = ref(0)
+
+function startFixMistakes() {
+  $track('quest_mistakes_retry_started', {quest_id: questId.value, mistakes: mistakesToFix.value})
+  showFixMistakes.value = false
+  consecutiveCorrectCount.value = 0
+  questStore.startRetryMistakes()
+}
+
 const shouldShowResultScreen = computed(() => {
-  return questStore.finished && !showStreakModal.value && !isWaitingForStreakClose.value
+  return questStore.finished && !showStreakModal.value && !isWaitingForStreakClose.value && !showFixMistakes.value
 })
 
 // Напоминания: после успешного квеста сегодняшнее уведомление снимается
@@ -333,6 +354,10 @@ const showReminderModal = ref(false)
 let afterReminderPrompt = null
 
 let reviewCheckedForSession = false
+// Системное окно оценки запрошено в этом квесте: тогда на выходе с экрана результатов без рекламы
+let reviewAskedThisQuest = false
+// Сегодняшняя серия засчитана в этом квесте (показали окно серии)
+let streakShownThisQuest = false
 
 watch(shouldShowResultScreen, (visible) => {
   if (!visible || !questStore.success) return
@@ -341,9 +366,15 @@ watch(shouldShowResultScreen, (visible) => {
   if (reviewCheckedForSession) return
   reviewCheckedForSession = true
   const canPrompt = !shouldAskForReminders()
+  const streakMilestone = streakShownThisQuest && isStreakMilestone(authStore.streakCount)
   setTimeout(async () => {
-    const requested = await onQuestSuccessForReview(canPrompt && shouldShowResultScreen.value)
-    if (requested) $track('app_review_requested', {quest_id: questId.value})
+    const reason = await onQuestSuccessForReview({
+      canPrompt: canPrompt && shouldShowResultScreen.value,
+      streakMilestone
+    })
+    if (!reason) return
+    reviewAskedThisQuest = true
+    $track('app_review_requested', {quest_id: questId.value, reason})
   }, 1500)
 })
 
@@ -357,6 +388,7 @@ function withReminderPrompt(next) {
 // Выход с экрана результатов: сначала все модалки (напоминания), в самом конце реклама → переход.
 // Реклама и после успеха, и после проигрыша
 function leaveResultScreen(next) {
+  if (reviewAskedThisQuest) return withReminderPrompt(next)
   withReminderPrompt(() => showInterstitial(next))
 }
 
@@ -735,6 +767,14 @@ watch(() => questStore.finished, (isFinished) => {
     required_tasks: questStore.requiredTasks
   })
 
+  // Жизни кончились — тут свой путь (окно восстановления), повтор не предлагаем
+  const canFixMistakes = questStore.lives > 0 || authStore.isPremium
+  if (!questStore.success && questStore.wrongCount > 0 && canFixMistakes) {
+    mistakesToFix.value = questStore.wrongCount
+    showFixMistakes.value = true
+    return
+  }
+
   if (questStore.success) {
     isWaitingForStreakClose.value = true
     setTimeout(async () => {
@@ -746,6 +786,7 @@ watch(() => questStore.finished, (isFinished) => {
           await daily.markStreakModalShown()
         }
         showStreakModal.value = true
+        streakShownThisQuest = true
       } else {
         isWaitingForStreakClose.value = false
         playLevelCompleted()
@@ -759,10 +800,13 @@ watch([questId, regionKey], async () => {
       showPremiumModal.value = false
       hasShownPremiumForRevive.value = false
       reviewCheckedForSession = false
+      reviewAskedThisQuest = false
+      streakShownThisQuest = false
       initialStreak.value = authStore.streakCount || 0
       streakWasIncremented.value = false
       showStreakModal.value = false
       isWaitingForStreakClose.value = false
+      showFixMistakes.value = false
       questStore.loading = true
       questStore.error = ''
       questStore.quest = null
@@ -1249,6 +1293,46 @@ watchEffect(() => {
 .btn-wrong {
   background-color: #ef4444;
   box-shadow: 0 5px 0 #dc2626;
+}
+
+.fix-mistakes {
+  position: fixed;
+  inset: 0;
+  z-index: 50;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: max(16px, env(safe-area-inset-top)) 16px max(16px, env(safe-area-inset-bottom));
+  background: var(--bg);
+}
+
+.fix-mistakes__card {
+  width: 100%;
+  max-width: 420px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  text-align: center;
+}
+
+.fix-mistakes__title {
+  margin: 0;
+  font-size: 28px;
+  font-weight: 800;
+  color: var(--titleColor);
+}
+
+.fix-mistakes__text {
+  margin: 0;
+  font-size: 17px;
+  line-height: 1.45;
+  color: var(--titleColor);
+  opacity: .8;
+}
+
+.fix-mistakes__btn {
+  margin-top: 8px;
 }
 
 .btn:active:not(:disabled) {

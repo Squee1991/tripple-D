@@ -101,15 +101,14 @@ const onToastFinished = () => {
 }
 
 onMounted(async () => {
+  // Сплэш убираем первым делом: пока он на экране, окно не в фокусе и тапы копятся в ANR
+  if (Capacitor.isNativePlatform()) {
+    SplashScreen.hide({ fadeOutDuration: 0 }).catch(e => console.error(e));
+  }
   rankStore.restorePendingReward()
   scheduleReminders(t);
   achStore.initializeProgressTracking()
   if (Capacitor.isNativePlatform()) {
-    try {
-      await SplashScreen.hide({ fadeOutDuration: 0 });
-    } catch (e) {
-      console.error(e);
-    }
     initAdmob($track);
     App.addListener('backButton', ({ canGoBack }) => {
       const state = window.history.state || {}

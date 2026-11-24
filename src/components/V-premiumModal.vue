@@ -1,5 +1,7 @@
 <script setup>
+import {ref, computed, watch} from 'vue'
 import {useRouter} from 'vue-router'
+import {useBillingStore} from '~/store/billingStore'
 
 const props = defineProps({
   show: {
@@ -18,6 +20,66 @@ const goToPay = () => {
   close()
   router.push('/pay')
 }
+
+// Price, same logic as pages/pay.vue (plan Plus, no coupon)
+const billingStore = useBillingStore()
+const displayPrice = ref('12.99')
+const displayCurrency = ref('€')
+const priceLoaded = ref(false)
+
+const selectedPackage = computed(() => {
+  if (!billingStore.offerings || billingStore.offerings.length === 0) return null
+  return billingStore.offerings[0]
+})
+
+const trialInfo = computed(() => {
+  if (!billingStore.isMobile) return null
+  const product = selectedPackage.value?.product
+  if (product?.introPrice && product.introPrice.price === 0) {
+    return {days: 3}
+  }
+  return null
+})
+
+const postTrialPrice = computed(() => {
+  if (billingStore.isMobile) {
+    return selectedPackage.value?.product?.priceString || ''
+  }
+  const base = parseFloat(displayPrice.value) || 12.99
+  return `${base.toFixed(2)} ${displayCurrency.value}`
+})
+
+const priceLabel = computed(() => {
+  if (trialInfo.value) {
+    return `0.00 ${displayCurrency.value} / ${trialInfo.value.days} ${t('shopDaysRaw.dayThird')}`
+  }
+  if (!postTrialPrice.value) return ''
+  return `${postTrialPrice.value} / ${t('eulaText.month')}`
+})
+
+const loadPrice = async () => {
+  if (priceLoaded.value) return
+  priceLoaded.value = true
+  if (billingStore.isMobile) {
+    if (!billingStore.offerings || billingStore.offerings.length === 0) {
+      await billingStore.initialize()
+    }
+    return
+  }
+  try {
+    const data = await $fetch('/api/stripe/get-price')
+    if (data) {
+      displayPrice.value = data.amount
+      displayCurrency.value = data.currency
+    }
+  } catch (err) {
+    console.error(err)
+  }
+}
+
+watch(() => props.show, (val) => {
+  if (val) loadPrice()
+}, {immediate: true})
 </script>
 
 <template>
@@ -30,7 +92,10 @@ const goToPay = () => {
             <img src="../../assets/images/PlusLogo.png" alt="">
           </div>
           <p class="premium-sheet__text">{{ t('premiumBannerText.text')}}</p>
-          <button class="premium-sheet__btn" @click="goToPay">{{ t('cabinet.buyPremium') }}</button>
+          <button class="premium-sheet__btn" @click="goToPay">
+            {{ t('cabinet.buyPremium') }}
+            <span v-if="priceLabel" class="premium-sheet__price">{{ priceLabel }}</span>
+          </button>
         </div>
       </div>
     </transition>
@@ -110,6 +175,14 @@ const goToPay = () => {
   border-bottom: 5px solid #1d4ed8;
   cursor: pointer;
   font-family: inherit;
+}
+
+.premium-sheet__price {
+  display: block;
+  margin-top: 2px;
+  font-size: 14px;
+  font-weight: 700;
+  opacity: 0.9;
 }
 
 .premium-sheet__btn:active {

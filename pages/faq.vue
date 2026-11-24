@@ -46,7 +46,6 @@
                   </template>
                 </div>
               </div>
-
               <div :class="{ hidetitle: openId === `${sectionIndex}-${questionIndex}` }" class="accordion-title">
                 <div>{{ item.question }}</div>
                 <div class="arrow" @click="toggleQuestion(sectionIndex, questionIndex)">
@@ -69,7 +68,6 @@
 <script setup>
 import {ref} from 'vue'
 import {useRouter} from 'vue-router'
-import {useI18n} from 'vue-i18n'
 import VBackBtn from "~/src/components/V-backBtnNav.vue";
 
 const { t } = useI18n()

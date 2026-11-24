@@ -1,6 +1,6 @@
 import {defineStore} from 'pinia'
 import {ref, computed} from 'vue'
-import {doc, setDoc, getDoc, getFirestore, updateDoc} from 'firebase/firestore'
+import {doc, setDoc, getDoc, getFirestore, updateDoc, runTransaction} from 'firebase/firestore'
 import {getAuth, onAuthStateChanged} from 'firebase/auth'
 import {dailyStore} from './dailyStore.js'
 import {
@@ -31,6 +31,8 @@ export const userlangStore = defineStore('learning', () => {
 	const exp = ref(0)
 	const isLeveling = ref(0)
 	const isLoaded = ref(false)
+	// Чей прогресс сейчас в памяти. Сохраняем только в документ этого же пользователя
+	const loadedUid = ref(null)
 	const bestStreakAnyMode = ref(0)
 	const bestStreakEasyArticle = ref(0)
 
@@ -209,17 +211,20 @@ export const userlangStore = defineStore('learning', () => {
 		let isChanged = false
 		let oldLearnedCount = 0
 		for (const word of words.value) {
-			if (word.level !== undefined) continue
+			// Уровень 0 тоже проверяем: слово могли доучить в старой версии приложения уже после миграции.
+			// Новые уроки не отмечают article и audio, так что ложного срабатывания не будет
+			if (isWordInReview(word)) continue
 			if (isPassedInOldSystem(word)) {
 				word.level = 2
 				word.nextReviewDate = getDateKeyAfterDays(oldLearnedCount % OLD_LEARNED_SPREAD_DAYS)
 				oldLearnedCount++
 				addToLearnedWords(word, {countForDailyTask: false})
-			} else {
+				isChanged = true
+			} else if (word.level === undefined) {
 				word.level = 0
 				word.nextReviewDate = null
+				isChanged = true
 			}
-			isChanged = true
 		}
 		return isChanged
 	}
@@ -322,15 +327,64 @@ export const userlangStore = defineStore('learning', () => {
 		points.value = 0
 		currentIndex.value = 0
 		currentModeIndex.value = 0
-		await saveToFirebase()
+		await saveToFirebase({replaceWords: true})
 	}
+	// ===== Защита прогресса слов от затирания =====
+	// Слова хранятся в документе одним массивом, и сохранение записывает его целиком.
+	// Поэтому перед записью слова из базы, которых нет в памяти (выучены на другом устройстве
+	// или в другой вкладке), добавляются, а не удаляются.
+
+	const getWordKey = word => `${keyTopic(word.topic)}|${word.de}`
+
+	// Объединить два списка слов. При совпадении берём слово из main, но если в extra оно уже
+	// выучено, а в main нет — берём из extra. Пройденные шаги складываются
+	const mergeWordLists = (mainList, extraList) => {
+		const result = mainList.map(word => ({...word}))
+		const indexByKey = new Map(result.map((word, index) => [getWordKey(word), index]))
+		for (const extraWord of extraList || []) {
+			if (!extraWord?.de) continue
+			const index = indexByKey.get(getWordKey(extraWord))
+			if (index === undefined) {
+				indexByKey.set(getWordKey(extraWord), result.length)
+				result.push({...extraWord})
+				continue
+			}
+			const mainWord = result[index]
+			const chosen = isWordInReview(extraWord) && !isWordInReview(mainWord) ? {...extraWord} : mainWord
+			const progress = {...(chosen.progress || {})}
+			for (const source of [mainWord.progress, extraWord.progress]) {
+				for (const [mode, value] of Object.entries(source || {})) {
+					if (value === true) progress[mode] = true
+				}
+			}
+			result[index] = {...chosen, progress}
+		}
+		return result
+	}
+
+	const mergeLearnedWords = (mainList, extraList) => {
+		const keys = new Set(mainList.map(getWordKey))
+		return [...mainList, ...(extraList || []).filter(word => word?.de && !keys.has(getWordKey(word)))]
+	}
+
 	const loadFromFirebase = async () => {
 		const auth = getAuth()
 		const user = auth.currentUser
 		if (!user) return
 		const db = getFirestore()
 		const userDoc = doc(db, 'users', user.uid)
-		const docSnap = await getDoc(userDoc)
+		let docSnap
+		try {
+			docSnap = await getDoc(userDoc)
+		} catch (error) {
+			// Нет сети и т.п.: прогресс не загружен, значит и сохранять его нельзя — иначе затрём базу пустым
+			console.error('learningStore: load failed', error)
+			return
+		}
+		// Повторная загрузка того же пользователя не должна терять то, что ещё не успели сохранить
+		const isSameUser = loadedUid.value === user.uid
+		const localWords = isSameUser ? words.value : []
+		const localLearnedWords = isSameUser ? learnedWords.value : []
 		if (docSnap.exists()) {
 			const data = docSnap.data()
 			if (!data.expRecovered && data.questProgress) {
@@ -345,8 +399,8 @@ export const userlangStore = defineStore('learning', () => {
 					await updateDoc(userDoc, { exp: data.exp, expRecovered: true });
 				}
 			}
-			words.value = data.words || []
-			learnedWords.value = data.learnedWords || []
+			words.value = mergeWordLists(data.words || [], localWords)
+			learnedWords.value = mergeLearnedWords(data.learnedWords || [], localLearnedWords)
 			wrongAnswers.value = data.wrongAnswers || []
 			selectedTopics.value = data.selectedTopics || []
 			selectedWords.value = data.selectedWords || []
@@ -361,8 +415,13 @@ export const userlangStore = defineStore('learning', () => {
 			learningLang.value = data.learningLang || 'de'
 			bestStreakAnyMode.value = data.bestStreakAnyMode || 0
 			bestStreakEasyArticle.value = data.bestStreakEasyArticle || 0
+		} else if (!isSameUser) {
+			// Документа ещё нет: начинаем с чистого листа, а не с прогресса прошлого аккаунта на этом устройстве
+			words.value = []
+			learnedWords.value = []
 		}
 
+		loadedUid.value = user.uid
 		isLoaded.value = true
 		const prevExp = exp.value
 		const prevLvl = isLeveling.value
@@ -391,10 +450,47 @@ export const userlangStore = defineStore('learning', () => {
 		return doc(db, 'users', user.uid)
 	}
 
-	const saveToFirebase = async () => {
+	// replaceWords: true — записать слова как есть, без объединения с базой (только для намеренного сброса)
+	const saveToFirebase = async ({replaceWords = false} = {}) => {
 		const userDoc = getUserDocRef()
 		if (!userDoc) return
-		await setDoc(userDoc, {
+		// Прогресс этого пользователя ещё не загружен: в памяти пусто или чужие данные. Не пишем
+		if (!isLoaded.value || loadedUid.value !== getAuth().currentUser?.uid) {
+			console.warn('learningStore: save skipped, progress is not loaded')
+			return
+		}
+		if (!replaceWords) {
+			try {
+				await saveWithServerWords(userDoc)
+				return
+			} catch (error) {
+				// Транзакция не работает без сети. Прогресс загружен, так что пишем его как есть:
+				// setDoc без сети встаёт в очередь и уйдёт, когда сеть появится
+				console.warn('learningStore: merge save failed, saving local state', error)
+			}
+		}
+		await setDoc(userDoc, getSavePayload(), {merge: true})
+	}
+
+	// Записать прогресс, добавив к словам в памяти слова из базы, которых в памяти нет
+	const saveWithServerWords = async (userDoc) => {
+		const {mergedWords, mergedLearnedWords} = await runTransaction(db, async transaction => {
+			const snap = await transaction.get(userDoc)
+			const data = snap.exists() ? snap.data() : {}
+			const merged = {
+				mergedWords: mergeWordLists(words.value, data.words),
+				mergedLearnedWords: mergeLearnedWords(learnedWords.value, data.learnedWords)
+			}
+			transaction.set(userDoc, {...getSavePayload(), words: merged.mergedWords, learnedWords: merged.mergedLearnedWords}, {merge: true})
+			return merged
+		})
+		// Подтягиваем в память слова, пришедшие из базы (только если их стало больше)
+		if (mergedWords.length > words.value.length) words.value = mergedWords
+		if (mergedLearnedWords.length > learnedWords.value.length) learnedWords.value = mergedLearnedWords
+	}
+
+	const getSavePayload = () => {
+		return {
 			words: words.value,
 			learnedWords: learnedWords.value,
 			wrongAnswers: wrongAnswers.value,
@@ -410,9 +506,8 @@ export const userlangStore = defineStore('learning', () => {
 			gotPremiumBonus: gotPremiumBonus.value,
 			learningLang: learningLang.value,
 			bestStreakAnyMode: bestStreakAnyMode.value,
-			bestStreakEasyArticle: bestStreakEasyArticle.value,
-
-		}, {merge: true})
+			bestStreakEasyArticle: bestStreakEasyArticle.value
+		}
 	}
 
 	const syncSelectedWordsProgress = () => {
@@ -439,7 +534,7 @@ export const userlangStore = defineStore('learning', () => {
 		bestStreakAnyMode.value = 0
 		bestStreakEasyArticle.value = 0
 		learningLang.value = 'de'
-		await saveToFirebase()
+		await saveToFirebase({replaceWords: true})
 	}
 
 	return {

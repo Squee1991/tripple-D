@@ -43,7 +43,7 @@ const isUserCancelledAuth = (error) => {
     return msg.includes('cancel');
 };
 
-// Уровни, которые можно выбрать. Сохранённый уровень вне списка сбрасываем и спрашиваем заново
+// Уровни, которые можно выбрать. Сохранённый уровень вне списка сбрасываем и  заново
 export const GERMAN_LEVELS = ['A1', 'A2', 'B1'];
 
 export const userAuthStore = defineStore('auth', () => {
