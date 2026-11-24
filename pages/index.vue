@@ -63,7 +63,13 @@ definePageMeta({
 onMounted(() => {
 
   hydrated.value = true
-  isLocallyLogged.value = localStorage.getItem('app_user_logged') === 'true'
+  // Флагу верим, только пока Firebase не ответил: если уже известно, что пользователя нет, флаг устарел
+  if (authStore.initialized && !authStore.uid) {
+    localStorage.removeItem('app_user_logged')
+    isLocallyLogged.value = false
+  } else {
+    isLocallyLogged.value = localStorage.getItem('app_user_logged') === 'true'
+  }
   if (authStore.initialized) {
     SplashScreen.hide()
   }
