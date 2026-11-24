@@ -69,14 +69,19 @@ const formatDuration = (ms) => {
   return t('eventTile.hoursMinutes', { h: hours, m: minutes })
 }
 
-// Идёт: сколько до конца. Скоро: «через …» до начала
+// Сколько календарных дней до даты: 24.11 → 01.12 = 7, в любое время суток
+const calendarDaysUntil = (date) => {
+  const from = new Date(now.value.getFullYear(), now.value.getMonth(), now.value.getDate())
+  const to = new Date(date.getFullYear(), date.getMonth(), date.getDate())
+  return Math.round((to - from) / 86400000)
+}
+
+// Идёт: сколько до конца. Скоро: «через N д» по календарю, в день старта часы и минуты
 const timeLeft = computed(() => {
   if (activeEvent.value) return formatDuration(activeEvent.value.endDate - now.value)
   if (upcomingEvent.value) {
-    // до начала коротко, чтобы влезло в плитку: дни, а в последние сутки часы и минуты
-    const ms = upcomingEvent.value.startDate - now.value
-    const days = Math.floor(ms / 86400000)
-    const time = days > 0 ? t('eventTile.days', { d: days }) : formatDuration(ms)
+    const days = calendarDaysUntil(upcomingEvent.value.startDate)
+    const time = days > 0 ? t('eventTile.days', { d: days }) : formatDuration(upcomingEvent.value.startDate - now.value)
     return t('eventTile.startsIn', { time })
   }
   return ''
