@@ -45,7 +45,7 @@
                     <p class="faq__answer">{{ item.answer }}</p>
                   </template>
                 </div>
-              </div>
+              </div>m
 
               <div :class="{ hidetitle: openId === `${sectionIndex}-${questionIndex}` }" class="accordion-title">
                 <div>{{ item.question }}</div>
