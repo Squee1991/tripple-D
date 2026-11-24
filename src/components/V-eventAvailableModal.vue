@@ -6,51 +6,9 @@
   >
     <div class="modal-content" :class="`--${activeEvent.id}`" role="dialog" aria-modal="true">
       <VShowFall
-          v-if="activeEvent && activeEvent.effectImage && activeEvent.id !== 'winter'"
+          v-if="activeEvent && activeEvent.effectImage"
           :image="activeEvent.effectImage"
       />
-      <div v-if="activeEvent.id === 'winter'" class="winter-decor" aria-hidden="true">
-        <div class="winter-decor__moon"></div>
-        <span v-for="star in WINTER_STARS" :key="star.id" class="winter-decor__star"
-              :style="{ left: star.x + '%', top: star.y + '%', animationDelay: star.delay + 's', '--s': star.size + 'px' }"></span>
-        <svg class="winter-decor__balls winter-decor__balls--left" viewBox="0 0 90 72">
-          <g class="swing" style="transform-origin: 30px 0">
-            <line x1="30" y1="0" x2="30" y2="36" stroke="#cfe3ff" stroke-opacity="0.6" stroke-width="1.2"/>
-            <rect x="26" y="34" width="8" height="5" rx="1.5" fill="#f3c74f"/>
-            <circle cx="30" cy="49" r="11" fill="#e8424f"/>
-            <circle cx="26" cy="45" r="3.2" fill="#fff" fill-opacity="0.55"/>
-          </g>
-          <g class="swing swing--slow" style="transform-origin: 64px 0">
-            <line x1="64" y1="0" x2="64" y2="18" stroke="#cfe3ff" stroke-opacity="0.6" stroke-width="1.2"/>
-            <rect x="61" y="17" width="6" height="4" rx="1.2" fill="#f3c74f"/>
-            <circle cx="64" cy="28" r="8" fill="#f3c74f"/>
-            <circle cx="61.5" cy="25.5" r="2.3" fill="#fff" fill-opacity="0.6"/>
-          </g>
-        </svg>
-        <svg class="winter-decor__balls winter-decor__balls--right" viewBox="0 0 90 72">
-          <g class="swing swing--slow" style="transform-origin: 26px 0">
-            <line x1="26" y1="0" x2="26" y2="22" stroke="#cfe3ff" stroke-opacity="0.6" stroke-width="1.2"/>
-            <rect x="23" y="21" width="6" height="4" rx="1.2" fill="#f3c74f"/>
-            <circle cx="26" cy="32" r="8" fill="#4dd97a"/>
-            <circle cx="23.5" cy="29.5" r="2.3" fill="#fff" fill-opacity="0.55"/>
-          </g>
-          <g class="swing" style="transform-origin: 60px 0">
-            <line x1="60" y1="0" x2="60" y2="32" stroke="#cfe3ff" stroke-opacity="0.6" stroke-width="1.2"/>
-            <rect x="56" y="30" width="8" height="5" rx="1.5" fill="#f3c74f"/>
-            <circle cx="60" cy="45" r="11" fill="#5ab8ff"/>
-            <circle cx="56" cy="41" r="3.2" fill="#fff" fill-opacity="0.55"/>
-          </g>
-        </svg>
-        <svg class="winter-decor__hills" viewBox="0 0 320 110" preserveAspectRatio="none">
-          <path d="M0 62 C50 40 95 46 140 60 C190 76 240 44 320 54 V110 H0Z" fill="#ffffff" fill-opacity="0.07"/>
-          <path d="M0 84 C60 66 110 72 170 82 C230 92 270 70 320 76 V110 H0Z" fill="#ffffff" fill-opacity="0.12"/>
-          <g fill="#0a1d42" fill-opacity="0.75">
-            <path d="M28 76 L38 52 L48 76Z"/><path d="M31 64 L38 46 L45 64Z"/>
-            <path d="M268 72 L276 54 L284 72Z"/><path d="M270 63 L276 49 L282 63Z"/>
-            <path d="M290 76 L296 62 L302 76Z"/>
-          </g>
-        </svg>
-      </div>
       <div class="modal-icon">
         <img class="modal__icon-item" :src="activeEvent.modalIcon" :alt="`${activeEvent.title} icon`"/>
       </div>
@@ -71,10 +29,9 @@
 import { useRouter } from "vue-router";
 import { ref, watch, computed, onMounted, onUnmounted } from "vue";
 import { userAuthStore } from '~/store/authStore.js';
-import { useEventSessionStore } from '~/store/eventsStore.js';
+import { useEventSessionStore, WINTER_FORCE_OPEN } from '~/store/eventsStore.js';
 
 import VShowFall from "../components/V-showFall.vue";
-import Wreath from "../../assets/images/mery-christmas/santa-claus.svg";
 import Pumpkin from "~/assets/images/event-rewards/halloween-event/halloween-assets/HalloweenStart.png";
 import Valentine from "../../assets/images/mery-christmas/valentine.svg";
 import SnowFall from '../../assets/images/mery-christmas/Snow.svg'
@@ -82,6 +39,7 @@ import HeartFall from '../../assets/images/mery-christmas/heartFall.svg'
 import PumpkinFall from '../../assets/images/mery-christmas/pumpkinFall.svg'
 import FoolIcon from '../../assets/images/mery-christmas/fooldayFall.svg'
 import FoolIFall from '../../assets/images/mery-christmas/foolFall.svg'
+import ChristmasBannerPic from '../../assets/images/mery-christmas/ChristmasBannerPic.png'
 
 const { t } = useI18n();
 const authStore = userAuthStore();
@@ -98,16 +56,6 @@ const props = defineProps({
 
 const emit = defineEmits(["close"]);
 
-// Звёздочки на фоне зимней модалки: позиции фиксированные, чтобы не прыгали при перерисовке
-const WINTER_STARS = [
-  { id: 1, x: 12, y: 30, size: 6, delay: 0 },
-  { id: 2, x: 85, y: 26, size: 5, delay: 0.7 },
-  { id: 3, x: 20, y: 52, size: 4, delay: 1.3 },
-  { id: 4, x: 80, y: 50, size: 6, delay: 0.4 },
-  { id: 5, x: 50, y: 6, size: 4, delay: 1.8 },
-  { id: 6, x: 8, y: 70, size: 4, delay: 1 },
-  { id: 7, x: 92, y: 68, size: 5, delay: 2.2 }
-];
 const isModalOpen = ref(true);
 const currentTime = ref(new Date());
 const lastEventKey = ref(null);
@@ -117,7 +65,7 @@ const modalVisuals = computed(() => ({
     title: t('eventsModal.winterLabel'),
     text: t('eventsModal.winterText'),
     btnText: t('eventsModalButtons.winter'),
-    modalIcon: Wreath,
+    modalIcon: ChristmasBannerPic,
     effectImage: SnowFall,
   },
   'valentine': {
@@ -169,7 +117,7 @@ function isEventActive(startStr, endStr, now) {
 
 const activeEvent = computed(() => {
   const now = currentTime.value;
-  const currentEvent = eventStore.events.find(e => isEventActive(e.start, e.end, now));
+  const currentEvent = eventStore.events.find(e => isEventActive(e.start, e.end, now) || (WINTER_FORCE_OPEN && e.id === 'winter'));
   if (!currentEvent) return null;
   const visuals = modalVisuals.value[currentEvent.id] || {};
   // Год старта, а не текущий: зимний ивент идёт через Новый год, и в январе ключ «уже видел» должен остаться прежним
@@ -353,97 +301,18 @@ watch(() => authStore.uid, (uid) => {
   }
 }
 
-/* Зимний ивент: своя карточка с декором внутри (шары, луна, звёзды, холмы с ёлками).
-   Свой снег модалке не нужен: на главной во время зимнего ивента снег уже идёт */
-.modal-content.--winter {
-  max-width: 330px;
-  border: 2px solid rgb(190 225 255 / 0.35);
-  border-radius: 30px;
-  background: linear-gradient(180deg, #1f5aa6 0%, #12387a 50%, #0b2350 100%);
-  box-shadow: 0 0 0 6px rgb(120 180 255 / 0.12), 0 24px 60px rgba(0, 0, 0, 0.6);
-}
-
-.winter-decor {
-  position: absolute;
-  inset: 0;
-  z-index: 0;
-  pointer-events: none;
-  overflow: hidden;
-  border-radius: inherit;
-}
-
-.winter-decor__moon {
-  position: absolute;
-  top: 8px;
-  left: 50%;
-  width: 190px;
-  height: 190px;
-  margin-left: -95px;
-  border-radius: 50%;
-  background: radial-gradient(circle, rgb(190 225 255 / 0.45) 0%, rgb(190 225 255 / 0.12) 50%, transparent 70%);
-}
-
-.winter-decor__star {
-  position: absolute;
-  width: var(--s);
-  height: var(--s);
-  background: #fff;
-  clip-path: polygon(50% 0, 62% 38%, 100% 50%, 62% 62%, 50% 100%, 38% 62%, 0 50%, 38% 38%);
-  animation: winter-twinkle 2.6s ease-in-out infinite;
-}
-
-.winter-decor__balls {
-  position: absolute;
-  top: 0;
-  width: 90px;
-  height: 72px;
-}
-
-.winter-decor__balls--left {
-  left: 6px;
-}
-
-.winter-decor__balls--right {
-  right: 6px;
-}
-
-.winter-decor .swing {
-  animation: winter-swing 3.2s ease-in-out infinite alternate;
-}
-
-.winter-decor .swing--slow {
-  animation-duration: 4.4s;
-  animation-direction: alternate-reverse;
-}
-
-.winter-decor__hills {
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  width: 100%;
-  height: 110px;
-}
-
-.--winter .modal-icon,
+/* Зимний ивент: расположение как у хэллоуина (картинка сверху, ниже текст), цвета и шрифты зимние */
+.modal-content.--winter,
 .--winter .modal__main {
-  position: relative;
-  z-index: 1;
+  background: #0b2350;
 }
 
-.--winter .modal-icon {
-  padding-top: 26px;
-}
-
+/* картинка вертикальная (9:16): режем квадрат, как у хэллоуина, кадр ниже центра, чтобы попал ёж с подарками */
 .--winter .modal__icon-item {
-  height: 150px;
-  width: auto;
-  filter: drop-shadow(0 6px 10px rgb(0 0 0 / 0.35));
-}
-
-.--winter .modal__main {
-  background: transparent;
-  padding: 2px 22px 24px;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  object-position: center 70%;
 }
 
 .--winter .modal-title {
@@ -492,29 +361,11 @@ watch(() => authStore.uid, (uid) => {
   color: #0f2c5c;
   background: linear-gradient(180deg, #ffffff, #cfe8ff);
   box-shadow: 0 5px 0 #6fa8dc, 0 10px 20px rgb(0 0 0 / 0.3);
-  border: none;
 }
 
 .--winter .btn-start:active {
   transform: translateY(3px);
   box-shadow: 0 2px 0 #6fa8dc;
-}
-
-@keyframes winter-twinkle {
-  0%, 100% { opacity: 0.9; transform: scale(1); }
-  50% { opacity: 0.25; transform: scale(0.6); }
-}
-
-@keyframes winter-swing {
-  from { transform: rotate(-5deg); }
-  to { transform: rotate(5deg); }
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .winter-decor__star,
-  .winter-decor .swing {
-    animation: none;
-  }
 }
 
 @keyframes float {
