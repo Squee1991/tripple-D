@@ -829,6 +829,9 @@ export const userAuthStore = defineStore('auth', () => {
 
         if (typeof window !== 'undefined') {
             localStorage.removeItem('cached_premium');
+            // флаг быстрого входа главной: выход идёт с профиля, где главная не смонтирована и сама его не снимет,
+            // иначе после выхода главная рисует экран вошедшего без пользователя (без футера)
+            localStorage.removeItem('app_user_logged');
         }
 
         if (Capacitor.isNativePlatform()) {
